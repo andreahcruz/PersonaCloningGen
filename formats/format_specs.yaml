@@ -1,0 +1,28 @@
+linkedin_post:
+  output_type: "markdown"
+  length_target_words: [120, 220]
+  structure:
+    - hook: "1–2 punchy sentences. No greeting."
+    - whitespace: "Use short paragraphs (1–2 lines) with blank lines."
+    - body: "2–4 short sections, each with a clear point."
+    - list: "Exactly one list (3–5 items). Bullets or numbered."
+    - takeaway: "1 sentence that generalizes the point."
+    - cta: "End with a question to invite comments."
+    - hashtags: "0–3 hashtags on final line (optional)."
+  banned:
+    - "Overly salesy language (buy now, limited time, etc.)"
+    - "More than 3 hashtags"
+
+blog_draft:
+  output_type: "markdown"
+  length_target_words: [600, 1000]
+  structure:
+    - title: "Single line title"
+    - tldr: "2–3 sentences"
+    - intro: "Short intro framing the problem"
+    - sections: "3–5 H2 sections, each 2–4 paragraphs"
+    - examples: "At least one concrete example"
+    - takeaways: "3–5 bullets at the end"
+  style:
+    - "Clear, direct sentences"
+    - "Avoid hype; favor reasoning + examples"
