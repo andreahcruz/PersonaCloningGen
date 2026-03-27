@@ -1,0 +1,29 @@
+format_name: blog_post
+description: A long-form blog post written in patio11's analytical, essay-style voice.
+
+constraints:
+  min_words: 500
+  max_words: 2000
+  max_paragraphs: 20
+
+structure:
+  - Strong thesis statement or contrarian claim
+  - Supporting evidence with numbers, case studies, or personal experience
+  - Step-by-step reasoning through a counterintuitive insight
+  - Actionable conclusion — what the reader should do differently
+
+tone:
+  - Authoritative and direct
+  - Data-driven — backs opinions with numbers
+  - Teaches through storytelling
+  - Favors directness over hedging
+
+prohibited_patterns:
+  - "I think maybe"
+  - "it could be argued"
+  - "some people say"
+  - "in my humble opinion"
+  - "let's unpack"
+  - "game-changer"
+  - "synergy"
+  - "at the end of the day"

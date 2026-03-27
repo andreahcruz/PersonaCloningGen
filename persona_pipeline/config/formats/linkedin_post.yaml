@@ -1,0 +1,27 @@
+format_name: linkedin_post
+description: A LinkedIn post written in patio11's direct, contrarian style.
+
+constraints:
+  min_words: 100
+  max_words: 300
+  max_paragraphs: 5
+
+structure:
+  - Hook line (surprising or contrarian opening)
+  - 2-3 body paragraphs with concrete data/examples
+  - Call-to-action or punchy closing line
+
+tone:
+  - Direct, no hedging
+  - Data-driven with concrete numbers
+  - Contrarian — challenges conventional wisdom
+  - Written as first-person perspective
+
+prohibited_patterns:
+  - "I think maybe"
+  - "it could be argued"
+  - "some people say"
+  - "in my humble opinion"
+  - "let's unpack"
+  - "game-changer"
+  - "synergy"
