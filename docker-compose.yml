@@ -1,0 +1,210 @@
+version: '3.8'
+
+# ─────────────────────────────────────────────
+#  Persona Cloning Pipeline — Docker Compose
+#  Services: MinIO, Airflow, Spark, Streamlit
+# ─────────────────────────────────────────────
+
+x-airflow-common: &airflow-common
+  build:
+    context: .
+    dockerfile: Dockerfile.airflow
+  environment:
+    AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+    AIRFLOW__CORE__FERNET_KEY: ''
+    AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
+    AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+    AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth'
+    # MinIO connection info available to all DAGs
+    MINIO_ENDPOINT: http://minio:9000
+    MINIO_ACCESS_KEY: minioadmin
+    MINIO_SECRET_KEY: minioadmin
+    MINIO_BUCKET_RAW: pg-raw
+    MINIO_BUCKET_PROCESSED: pg-processed
+    # Snowflake — set values in .env (Compose substitutes ${...} from project .env)
+    SNOWFLAKE_ACCOUNT: ${SNOWFLAKE_ACCOUNT:-your_account}
+    SNOWFLAKE_USER: ${SNOWFLAKE_USER:-your_user}
+    SNOWFLAKE_PASSWORD: ${SNOWFLAKE_PASSWORD:-your_password}
+    SNOWFLAKE_DATABASE: ${SNOWFLAKE_DATABASE:-PERSONA_DB}
+    SNOWFLAKE_SCHEMA: ${SNOWFLAKE_SCHEMA:-CLEANED}
+    SNOWFLAKE_WAREHOUSE: ${SNOWFLAKE_WAREHOUSE:-COMPUTE_WH}
+    # Chroma vector store
+    CHROMA_HOST: chroma
+    CHROMA_PORT: "8000"
+    # Ollama (runs on host machine)
+    OLLAMA_BASE: http://host.docker.internal:11434
+  volumes:
+    - ./dags:/opt/airflow/dags          # your DAG files
+    - ./spark_jobs:/opt/airflow/spark_jobs
+    - ./data:/opt/airflow/data
+    - airflow-logs:/opt/airflow/logs
+  depends_on:
+    postgres:
+      condition: service_healthy
+
+services:
+
+  # ── 1. PostgreSQL (Airflow metadata database) ──────────────────────────────
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "airflow"]
+      interval: 10s
+      retries: 5
+    restart: always
+
+  # ── 2. MinIO (local S3 replacement) ────────────────────────────────────────
+  minio:
+    image: minio/minio:latest
+    container_name: minio
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    ports:
+      - "9000:9000"   # S3 API endpoint  → your code talks to this
+      - "9001:9001"   # MinIO web console → visit http://localhost:9001
+    volumes:
+      - minio-data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 10s
+      retries: 5
+    restart: always
+
+  # ── 3. MinIO bucket setup (runs once on startup) ───────────────────────────
+  minio-setup:
+    image: minio/mc:latest
+    container_name: minio-setup
+    depends_on:
+      minio:
+        condition: service_healthy
+    entrypoint: >
+      /bin/sh -c "
+      mc alias set local http://minio:9000 minioadmin minioadmin;
+      mc mb -p local/pg-raw;
+      mc mb -p local/pg-processed;
+      echo 'MinIO buckets created successfully';
+      "
+    restart: on-failure
+
+  # ── 4. Airflow webserver ───────────────────────────────────────────────────
+  airflow-webserver:
+    <<: *airflow-common
+    container_name: airflow-webserver
+    command: webserver
+    ports:
+      - "8080:8080"   # Airflow dashboard → visit http://localhost:8080
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
+      interval: 30s
+      retries: 5
+    restart: always
+
+  # ── 5. Airflow scheduler ───────────────────────────────────────────────────
+  airflow-scheduler:
+    <<: *airflow-common
+    container_name: airflow-scheduler
+    command: scheduler
+    restart: always
+
+  # ── 6. Airflow init (creates admin user on first run) ─────────────────────
+  airflow-init:
+    <<: *airflow-common
+    container_name: airflow-init
+    command: >
+      bash -c "
+        airflow db init &&
+        airflow users create
+          --username admin
+          --password admin
+          --firstname Admin
+          --lastname User
+          --role Admin
+          --email admin@example.com
+      "
+    restart: on-failure
+
+  # ── 7. Apache Spark ────────────────────────────────────────────────────────
+  spark-master:
+    build:
+      context: .
+      dockerfile: Dockerfile.spark
+    container_name: spark-master
+    environment:
+      SPARK_MODE: master
+      SPARK_RPC_AUTHENTICATION_ENABLED: "no"
+      SPARK_RPC_ENCRYPTION_ENABLED: "no"
+    ports:
+      - "7077:7077"   # Spark master port
+      - "8081:8080"   # Spark web UI → visit http://localhost:8081
+    volumes:
+      - ./spark_jobs:/opt/spark_jobs   # your PySpark scripts go here
+      - ./data:/opt/data
+    restart: always
+
+  spark-worker:
+    build:
+      context: .
+      dockerfile: Dockerfile.spark
+    container_name: spark-worker
+    environment:
+      SPARK_MODE: worker
+      SPARK_MASTER_URL: spark://spark-master:7077
+      SPARK_WORKER_MEMORY: 2G
+      SPARK_WORKER_CORES: 2
+    depends_on:
+      - spark-master
+    volumes:
+      - ./spark_jobs:/opt/spark_jobs
+      - ./data:/opt/data
+    restart: always
+
+  # ── 8. Chroma (vector store) ───────────────────────────────────────────────
+  chroma:
+    image: chromadb/chroma:latest
+    container_name: chroma
+    ports:
+      - "8000:8000"
+    volumes:
+      - chroma-data:/chroma/chroma
+    restart: always
+
+  # ── 9. Streamlit app ───────────────────────────────────────────────────────
+  streamlit:
+    build:
+      context: .
+      dockerfile: Dockerfile          # we will create this next
+    container_name: streamlit-app
+    ports:
+      - "8501:8501"   # Streamlit UI → visit http://localhost:8501
+    environment:
+      MINIO_ENDPOINT: http://minio:9000
+      MINIO_ACCESS_KEY: minioadmin
+      MINIO_SECRET_KEY: minioadmin
+      SNOWFLAKE_ACCOUNT: ${SNOWFLAKE_ACCOUNT:-your_account}
+      SNOWFLAKE_USER: ${SNOWFLAKE_USER:-your_user}
+      SNOWFLAKE_PASSWORD: ${SNOWFLAKE_PASSWORD:-your_password}
+      SNOWFLAKE_DATABASE: ${SNOWFLAKE_DATABASE:-PERSONA_DB}
+      SNOWFLAKE_SCHEMA: ${SNOWFLAKE_SCHEMA:-CLEANED}
+      OLLAMA_BASE: http://host.docker.internal:11434  # Ollama runs on your laptop
+    volumes:
+      - ./formats:/app/formats
+      - ./data:/app/data
+    depends_on:
+      - minio
+    restart: always
+
+# ── Volumes ────────────────────────────────────────────────────────────────
+volumes:
+  postgres-data:
+  minio-data:
+  airflow-logs:
+  chroma-data:
