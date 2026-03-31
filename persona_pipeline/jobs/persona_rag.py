@@ -2,9 +2,10 @@
 Phase 6 — PersonaRAG retrieval logic.
 
 Key difference from naive RAG: the user query is *rewritten* to include
-patio11's framing and vocabulary before retrieval, and results are *reranked*
-by persona vocabulary alignment — so we retrieve chunks that sound like patio11
-talking about the topic, not just topically-relevant chunks.
+the persona's framing and vocabulary before retrieval, and results are
+*reranked* by persona vocabulary alignment — so we retrieve chunks that
+sound like Jason Lemkin talking about the topic, not just
+topically-relevant chunks.
 
 Reference: PersonaRAG (Zerhoudi & Granitzer, 2024, arXiv 2407.09394)
 
@@ -26,7 +27,7 @@ import chromadb
 
 from persona_pipeline.config.config import CHROMA_PATH, PERSONA_PROFILE_PATH
 
-COLLECTION_NAME = "patio11_persona"
+COLLECTION_NAME = "lemkin_persona"
 
 
 def load_persona_profile(path: str | None = None) -> dict:
@@ -37,8 +38,9 @@ def load_persona_profile(path: str | None = None) -> dict:
 
 def rewrite_query(user_query: str, persona_profile: dict) -> str:
     """
-    Rewrite user query to include patio11's framing so that embedding-based
-    retrieval surfaces content matching BOTH the topic AND his voice.
+    Rewrite user query to include the persona's framing so that
+    embedding-based retrieval surfaces content matching BOTH the topic
+    AND the author's voice.
     """
     core_topics = persona_profile.get("core_topics", [])
     char_words = persona_profile.get("style", {}).get("characteristic_words", [])
@@ -55,7 +57,7 @@ def rewrite_query(user_query: str, persona_profile: dict) -> str:
 
 def persona_alignment_score(chunk_text: str, characteristic_words: list[str]) -> float:
     """
-    Score a chunk by how much its vocabulary overlaps with patio11's
+    Score a chunk by how much its vocabulary overlaps with the persona's
     characteristic words (higher = more persona-aligned).
     """
     if not chunk_text or not characteristic_words:
@@ -135,8 +137,8 @@ def main() -> None:
 
     test_queries = [
         "How should a SaaS founder price their product?",
-        "What are salary negotiation tips for engineers?",
-        "How to do content marketing for a B2B startup?",
+        "When should a startup hire their first VP of Sales?",
+        "What does net negative churn look like in practice?",
     ]
 
     for q in test_queries:

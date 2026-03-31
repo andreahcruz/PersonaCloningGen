@@ -23,7 +23,7 @@ import duckdb
 
 from persona_pipeline.config.config import CHROMA_PATH, DB_PATH
 
-COLLECTION_NAME = "patio11_persona"
+COLLECTION_NAME = "lemkin_persona"
 CHUNK_SIZE = 500       # words
 CHUNK_OVERLAP = 50     # words
 BATCH_SIZE = 100

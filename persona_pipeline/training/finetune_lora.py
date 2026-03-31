@@ -1,5 +1,5 @@
 """
-Phase 8 — QLoRA fine-tuning of LLaMA 3.1 8B on patio11's writing.
+Phase 8 — QLoRA fine-tuning of LLaMA 3.1 8B on Jason Lemkin's writing.
 
 Designed for Google Colab A100 (free tier).  Freezes the base model weights
 and trains only small LoRA adapter matrices (~1 % of parameters).

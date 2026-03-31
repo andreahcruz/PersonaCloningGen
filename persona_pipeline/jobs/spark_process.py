@@ -104,10 +104,10 @@ def _is_b2b(text: str | None) -> bool:
 
 
 def _instruction_format(text: str | None, title: str | None) -> str:
-    topic = title if title and title.strip() else "B2B software and business strategy"
+    topic = title if title and title.strip() else "B2B SaaS and founder growth strategy"
     body = text or ""
     return (
-        f"### Instruction:\nWrite in the style of patio11 about: {topic}\n\n"
+        f"### Instruction:\nWrite in the style of Jason Lemkin about: {topic}\n\n"
         f"### Response:\n{body}"
     )
 
@@ -166,9 +166,9 @@ def run_etl() -> None:
 
     # 2. Load raw data
     sources = {
-        "patio11_blog.json": "blog",
-        "patio11_hn.json": "hackernews",
-        "patio11_reddit.json": "reddit_comment",
+        "lemkin_blog.json": "blog",
+        "lemkin_yt.json": "podcast",
+        "saastr_yt.json": "saastr_video",
     }
 
     dfs: list[DataFrame] = []

@@ -22,8 +22,8 @@ import pandas as pd
 
 from persona_pipeline.config.config import DB_PATH, PERSONA_PROFILE_PATH, TRAINING_DIR
 
-st.set_page_config(page_title="patio11 Persona Pipeline", layout="wide")
-st.title("patio11 Persona Pipeline Dashboard")
+st.set_page_config(page_title="Jason Lemkin Persona Pipeline", layout="wide")
+st.title("Jason Lemkin Persona Pipeline Dashboard")
 
 
 # ── Helpers ───────────────────────────────────────────────────────────
@@ -130,7 +130,7 @@ with tab2:
     else:
         st.info("Persona profile not built yet. Run `build_persona_profile.py` first.")
 
-    topic = st.text_input("Topic", value="Why most SaaS companies underprice their product by 5-10x")
+    topic = st.text_input("Topic", value="Why every SaaS founder should hire two sales reps at the same time")
     format_type = st.selectbox("Format", ["linkedin_post", "blog_post"])
 
     if st.button("Generate"):

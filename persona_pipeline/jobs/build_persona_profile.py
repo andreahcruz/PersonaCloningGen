@@ -1,6 +1,6 @@
 """
-Phase 4 — Build a structured JSON persona profile ("fingerprint") of patio11's
-writing from the DuckDB analytics tables.
+Phase 4 — Build a structured JSON persona profile ("fingerprint") of
+Jason Lemkin's writing from the DuckDB analytics tables.
 
 Run: python persona_pipeline/jobs/build_persona_profile.py
 """
@@ -80,9 +80,9 @@ def build_profile(con: duckdb.DuckDBPyConnection) -> dict:
     samples = _top_posts(con, 5)
 
     profile = {
-        "name": "patio11",
-        "real_name": "Patrick McKenzie",
-        "domain": "B2B SaaS, software pricing, salary negotiation, marketing",
+        "name": "jasonlemkin",
+        "real_name": "Jason Lemkin",
+        "domain": "B2B SaaS, venture capital, SaaStr, founder growth",
         "style": {
             "avg_word_count": round(float(avg_wc or 0), 1),
             "avg_sentence_length": round(float(avg_sl or 0), 1),
@@ -92,26 +92,27 @@ def build_profile(con: duckdb.DuckDBPyConnection) -> dict:
             "characteristic_words": char_words,
         },
         "rhetorical_patterns": [
-            "Uses concrete numbers and percentages to back opinions",
-            "Challenges conventional wisdom directly",
-            "Draws from personal B2B software experience",
-            "Explains counterintuitive business insights step by step",
-            "Favors directness over hedging — states opinions as facts",
-            "Often starts with a surprising or contrarian claim",
+            "Uses numbered lists and concrete SaaS benchmarks",
+            "Answers in direct Q&A 'Dear SaaStr' format",
+            "Draws from personal experience scaling EchoSign to $100M+ ARR",
+            "States bold opinions as rules: 'You need X to do Y'",
+            "Frequently references specific ARR / MRR thresholds",
+            "Provides tactical hiring and go-to-market playbooks",
         ],
         "core_topics": [
-            "SaaS pricing strategy",
-            "Salary negotiation",
-            "Software marketing and positioning",
-            "B2B sales tactics",
-            "Technical founder advice",
-            "Business automation and leverage",
+            "SaaS metrics (ARR, MRR, NRR, churn)",
+            "Fundraising and venture capital",
+            "Hiring VPs of Sales and Customer Success",
+            "Go-to-market strategy",
+            "Scaling from $1M to $100M ARR",
+            "SaaStr Annual conference and community",
         ],
         "opinions": {
-            "pricing": "Most software is dramatically underpriced",
-            "sales": "Engineers can and should learn to sell",
-            "marketing": "Content that teaches converts better than content that promotes",
-            "hiring": "Salary negotiation is a learnable skill companies exploit",
+            "fundraising": "Get to $10k MRR before raising — investors fund traction, not ideas",
+            "sales": "Hire 2 sales reps at the same time so you can compare and iterate",
+            "churn": "Net negative churn is the #1 indicator of a great SaaS business",
+            "hiring": "A great VP of Sales should close deals in their first 30 days",
+            "pricing": "Raise prices — almost every SaaS company undercharges by 20-40%",
         },
         "sample_writing": samples,
     }

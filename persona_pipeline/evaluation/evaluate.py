@@ -2,7 +2,7 @@
 Phase 10 — Evaluate generated content quality across multiple dimensions.
 
 Metrics:
-  1. BERTScore  — semantic similarity to real patio11 posts
+  1. BERTScore  — semantic similarity to real persona posts
   2. RAGAS faithfulness — are claims supported by retrieved context?
   3. Style consistency — authorship-verification classifier (LogReg on TF-IDF)
   4. BLEU / ROUGE-L — surface similarity
@@ -152,7 +152,7 @@ def compute_style_consistency(
     # Train on full set, score generated texts
     clf.fit(X, y)
     gen_features = vectorizer.transform(generated)
-    gen_probs = clf.predict_proba(gen_features)[:, 1]  # prob of being patio11
+    gen_probs = clf.predict_proba(gen_features)[:, 1]
 
     return {
         "style_score": float(np.mean(gen_probs)),

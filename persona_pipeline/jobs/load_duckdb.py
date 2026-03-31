@@ -99,9 +99,9 @@ def export_training_data(con: duckdb.DuckDBPyConnection) -> None:
 
     # instruction_format.jsonl
     INSTRUCTION_BY_SOURCE = {
-        "blog": "Write a long-form B2B blog post about software business strategy",
-        "hackernews": "Write a detailed comment about software business or SaaS",
-        "reddit_comment": "Write an in-depth Reddit comment about startups",
+        "blog": "Write a long-form B2B blog post about SaaS growth strategy",
+        "podcast": "Write a detailed talk about B2B SaaS metrics and founder advice",
+        "saastr_video": "Write a SaaStr keynote about scaling SaaS companies",
     }
     instr_path = str(TRAINING_DIR / "instruction_format.jsonl")
     with open(instr_path, "w", encoding="utf-8") as f:

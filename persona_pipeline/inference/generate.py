@@ -1,5 +1,5 @@
 """
-Phase 9 — Content generation in patio11's voice.
+Phase 9 — Content generation in Jason Lemkin's voice.
 
 Given a topic and format type, uses PersonaRAG retrieval + the fine-tuned
 LoRA model to generate B2B content.  Produces 3 candidates and returns the
@@ -67,7 +67,7 @@ def _build_prompt(
     char_words = ", ".join(style.get("characteristic_words", [])[:15])
 
     system = (
-        f"Write in the style of patio11 (Patrick McKenzie). "
+        f"Write in the style of Jason Lemkin (SaaStr). "
         f"Use these characteristics: {pattern_str}. "
         f"Characteristic vocabulary: {char_words}."
     )
@@ -96,7 +96,7 @@ def _build_prompt(
     prompt = (
         f"### System:\n{system}\n\n"
         f"### Format:\n{format_instr}\n\n"
-        f"### Context (relevant writing from patio11):\n{context_str}\n\n"
+        f"### Context (relevant writing from Jason Lemkin):\n{context_str}\n\n"
         f"### Request:\n{user_request}\n\n"
         f"### Response:\n"
     )
@@ -217,7 +217,7 @@ def generate_content(
 
 
 def main() -> None:
-    topic = "Why most SaaS companies underprice their product by 5-10x"
+    topic = "Why every SaaS founder should hire two sales reps at the same time"
     fmt = "linkedin_post"
     print(f"Generating {fmt} about: {topic}\n")
 
