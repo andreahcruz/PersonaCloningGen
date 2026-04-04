@@ -12,34 +12,31 @@
  *
  * --first-page     Expand + extract visible tweets only; no long scroll to bottom.
  * --keep-open      After run, leave Chrome open until Enter (persistent / ephemeral only).
- * --fresh          Delete resume state and start from top.
- * --no-resume      Do not read/write resume state.
- *
- * Resume:
- *   State file defaults next to profile: X_USER_DATA/.x_collect_state.json
- *   Override: X_STATE_FILE or --state-file <path>
- *   Same --user and same phase key (timeline vs with_replies) must match for resume.
  *
  * Env (mirror LinkedIn-style LI_* but prefixed X_):
  *   X_USER_DATA          Chrome profile dir (default ./x_user_data)
  *   X_ROUNDS             Max scroll rounds per profile phase (0 = unlimited). Ignored for --search-chunks
  *                        (search uses --max-rounds-per-pass or unlimited); avoids 1-round search exits.
- *   X_PAUSE_MIN, X_PAUSE_MAX   Random pause seconds between rounds (default 2 / 4.5)
+ *   X_PAUSE_MIN, X_PAUSE_MAX   Random pause seconds between rounds (default 3.5 / 8)
  *   X_PASSES             Repeat full cycle: timeline + with_replies (default 1)
- *   X_STATE_FILE         Resume JSON path
  *   X_KEEP_OPEN=1        Same as --keep-open
  *   X_BLOCK_MEDIA=1      Same as --block-media
  *   X_PRUNE_DOM=1        Same as --prune-dom
- *   X_FULL_SCROLL_EVERY  Same as --full-scroll-every
+ *   X_MAX_ARTICLES_BEFORE_PRUNE  With --prune-dom: trim oldest only when article count exceeds this (default 200)
  *   X_LEGACY_SCROLL=1    Same as --legacy-scroll
  *   X_RELOAD_DOM_EVERY_ROUNDS, X_RELOAD_DOM_EVERY_PASSES
  *   X_RECYCLE_BROWSER_EVERY_PASSES
  *   X_MAX_ROUNDS_PER_PASS
  *   X_EXPAND_FULL_FEED=1 Same as --expand-scan-full-feed
  *   X_MOBILE=1           Same as --mobile
- *   X_CHUNK_DAYS         With --search-chunks: days per search window (default 2)
- *   X_NO_NEW_LIMIT       Stop after N consecutive "no new tweet id" loops (default 2)
+ *   X_CHUNK_DAYS         With --search-chunks: days per search window (default 3)
+ *   X_NO_NEW_LIMIT       Consecutive loops with no rows written (default 10 search, 2 profile)
  *   X_LOG_EVERY          Log every N scroll loops (default 1 = every loop)
+ *   X_SCROLL_SHAKE=0     Disable wheel nudge + settle when a loop has no new tweets
+ *   X_SCROLL_PACE        Wheel/scroll step scale (default 0.75); lower = gentler + longer post-scroll waits
+ *   X_STRICT_NO_NEW_STREAK=0  With --search-only/--search-chunks: allow scroll position to reset no-new streak
+ *   X_EARLY_STOP_STUCK_BOTTOM  Stop after N stuck loops at max scroll (default 2; 0 = off)
+ *   X_NO_GPU_ARGS=1       Omit GPU-related Chrome flags (if VM/GPU issues)
  *
  * Alternate modes:
  *   --ephemeral          launch()+storageState (no persistent folder); default headless true
@@ -50,7 +47,6 @@
 "use strict";
 
 const fs = require("fs");
-const fsPromises = require("fs/promises");
 const path = require("path");
 const readline = require("readline");
 const { devices } = require("playwright");
@@ -60,6 +56,37 @@ const StealthPlugin = require("puppeteer-extra-plugin-stealth");
 chromium.use(StealthPlugin());
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+/**
+ * Match typical desktop Chrome. X’s Search index is picky: missing Accept-Language looks bot-like.
+ * Never block service workers (see serviceWorkers: "allow" on every context): search uses SW for fetch.
+ */
+const BROWSER_EXTRA_HEADERS = {
+  "Accept-Language": "en-US,en;q=0.9"
+};
+
+/** Prefer real GPU rendering over software raster (helps Canvas/WebGL look like normal Chrome). */
+const CHROME_GPU_ARGS = ["--enable-gpu", "--disable-software-rasterizer", "--ignore-gpu-blocklist"];
+
+/**
+ * "Ghost bottom" recovery: scroll up slightly, then down, then wait so X's observer
+ * can issue the next search/timeline cursor fetch (manual users pause naturally).
+ */
+function clampScrollPace(p) {
+  const n = Number(p);
+  if (!Number.isFinite(n) || n <= 0) return 1;
+  return Math.min(1.5, Math.max(0.15, n));
+}
+
+/** Lower pace = gentler wheel deltas; waits scale by 1/pace so the loop stays human-slow. */
+async function scrollShakeSettle(page, scrollPace = 1) {
+  const p = clampScrollPace(scrollPace);
+  const inv = 1 / p;
+  await page.mouse.wheel(0, Math.round(-280 * p)).catch(() => {});
+  await sleep(Math.floor((1200 + Math.random() * 900) * inv));
+  await page.mouse.wheel(0, Math.round((320 + Math.floor(Math.random() * 180)) * p)).catch(() => {});
+  await sleep(Math.floor((2800 + Math.random() * 4200) * inv));
+}
 
 function parseYmd(s) {
   const t = String(s || "").trim();
@@ -171,6 +198,13 @@ function intArg(name, fallback) {
   return Number.isFinite(n) ? n : fallback;
 }
 
+function floatArg(name, fallback) {
+  const v = getArg(name, undefined);
+  if (v == null) return fallback;
+  const n = Number.parseFloat(String(v));
+  return Number.isFinite(n) ? n : fallback;
+}
+
 function boolArg(name, fallback) {
   const v = getArg(name, fallback ? "true" : "false");
   return String(v).toLowerCase() === "true";
@@ -222,43 +256,6 @@ function loadExistingIds(jsonlPath) {
   return ids;
 }
 
-async function readState(statePath) {
-  try {
-    const raw = await fsPromises.readFile(statePath, "utf8");
-    return JSON.parse(raw);
-  } catch {
-    return null;
-  }
-}
-
-async function writeState(statePath, snap) {
-  ensureDir(path.dirname(statePath));
-  const payload = { ...snap, savedAt: nowIso() };
-  await fsPromises.writeFile(statePath, JSON.stringify(payload, null, 2), "utf8");
-}
-
-function activityKey(username, scrapedFrom) {
-  return `x:${username}:${scrapedFrom}`;
-}
-
-async function migrateLegacyResumeState(statePath) {
-  if (process.env.X_STATE_FILE) return;
-  try {
-    await fsPromises.access(statePath);
-    return;
-  } catch {
-    /* missing */
-  }
-  const legacy = path.join(process.cwd(), ".x_collect_state.json");
-  try {
-    await fsPromises.access(legacy);
-    await fsPromises.copyFile(legacy, statePath);
-    console.log("[x] Copied old resume state from cwd →", statePath);
-  } catch {
-    /* no legacy */
-  }
-}
-
 async function waitForEnterBeforeClose(prompt) {
   if (!process.stdin.isTTY) {
     console.log("[x] stdin is not a TTY (--keep-open ignored); closing.");
@@ -281,56 +278,17 @@ async function gotoAndStabilize(page, url) {
   }
 }
 
-/** Capture scroll + URL for X (window scroll; no LinkedIn nested scroller). */
-async function captureXScrollState(page, actKey) {
-  const scrollY = await page.evaluate(() => window.scrollY).catch(() => 0);
-  return {
-    activityKey: actKey,
-    pageUrl: page.url(),
-    scrollY,
-    anchorTweetId: "",
-    anchorPrefix: ""
-  };
-}
-
-async function applyResumeXScroll(page, st) {
-  const y = Number(st.scrollY) || 0;
-  await sleep(800);
-  for (let attempt = 0; attempt < 4; attempt++) {
-    await page.evaluate((yy) => window.scrollTo(0, yy), y);
-    await sleep(500 + attempt * 400);
-  }
-}
-
-async function gotoXWithResume(page, targetUrl, { statePath, useResume, actKey, firstPage }) {
-  if (firstPage || !useResume) {
-    await gotoAndStabilize(page, targetUrl);
-    await sleep(1500);
-    return;
-  }
-
-  const st = await readState(statePath);
-  if (st && st.pageUrl && st.activityKey === actKey) {
-    console.log(`[x] Resuming scrollY≈${st.scrollY} — ${String(st.pageUrl).slice(0, 72)}…`);
-    try {
-      await page.goto(st.pageUrl, { waitUntil: "domcontentloaded", timeout: 120_000 });
-      await sleep(2500);
-      await applyResumeXScroll(page, st);
-      if (st.anchorTweetId) {
-        const ok = await resumeByAnchorId(page, String(st.anchorTweetId), { maxSteps: 25 });
-        console.log(`[x] Anchor id resume ${ok ? "matched" : "not found"}.`);
-      }
-      await sleep(1000);
-      return;
-    } catch (e) {
-      console.warn("[x] Resume goto failed, falling back:", e.message || e);
-    }
-  } else if (st && st.activityKey !== actKey) {
-    console.log("[x] State file is for another phase; opening target URL from top.");
-  }
-
+/** Open URL and wait long enough for tweet rows to hydrate (no scroll-position restore). */
+async function gotoXPage(page, targetUrl) {
   await gotoAndStabilize(page, targetUrl);
-  await sleep(1500);
+  await sleep(1800 + Math.random() * 1400);
+  await page
+    .waitForFunction(
+      () => document.querySelectorAll('a[href*="/status/"]').length > 0,
+      { timeout: 60_000 }
+    )
+    .catch(() => {});
+  await sleep(900 + Math.random() * 800);
 }
 
 /**
@@ -447,7 +405,9 @@ async function extractVisibleTweets(page) {
       const m = href.match(/\/status\/(\d+)/);
       const id = m?.[1];
       if (!id) continue;
-      const url = href.startsWith("http") ? href : `https://x.com${href}`;
+      const url = href.startsWith("http")
+        ? href
+        : `https://x.com${href.startsWith("/") ? href : `/${href}`}`;
       const created_at = art.querySelector("time")?.getAttribute("datetime") ?? undefined;
       const textEl = art.querySelector('[data-testid="tweetText"]');
       const text = (textEl && textEl.innerText && textEl.innerText.trim()) || undefined;
@@ -463,6 +423,15 @@ async function extractVisibleTweets(page) {
       return true;
     });
   });
+}
+
+async function extractVisibleTweetsWithRetry(page) {
+  let batch = await extractVisibleTweets(page);
+  if (batch.length === 0) {
+    await sleep(2000 + Math.random() * 1500);
+    batch = await extractVisibleTweets(page);
+  }
+  return batch;
 }
 
 async function pruneOldArticles(page, keepLast) {
@@ -481,181 +450,166 @@ async function pruneOldArticles(page, keepLast) {
   }, keepLast);
 }
 
-async function removeArticlesByIds(page, ids) {
-  if (!ids.length) return 0;
-  const slice = ids.slice(0, 200);
-  return page.evaluate((wantedIds) => {
-    const wanted = new Set(wantedIds);
-    let removed = 0;
-    const arts = Array.from(document.querySelectorAll("article"));
-    for (const art of arts) {
-      const a = art.querySelector('a[href*="/status/"]');
-      const href = a?.getAttribute("href") ?? "";
-      const m = href.match(/\/status\/(\d+)/);
-      const id = m?.[1];
-      if (id && wanted.has(id)) {
-        try {
-          art.remove();
-          removed++;
-        } catch {
-          // ignore
-        }
-      }
-    }
-    return removed;
-  }, slice);
-}
-
-async function resumeByAnchorId(page, anchorId, { maxSteps = 35 } = {}) {
-  if (!anchorId) return false;
-  for (let i = 0; i < maxSteps; i++) {
-    const found = await page.evaluate((aid) => {
-      const arts = Array.from(document.querySelectorAll("article"));
-      let matchIdx = -1;
-      for (let j = 0; j < arts.length; j++) {
-        const a = arts[j].querySelector('a[href*="/status/"]');
-        const href = a?.getAttribute("href") ?? "";
-        const m = href.match(/\/status\/(\d+)/);
-        const id = m?.[1];
-        if (id && id === aid) {
-          matchIdx = j;
-          break;
-        }
-      }
-      if (matchIdx === -1) return false;
-      try {
-        arts[matchIdx].scrollIntoView({ block: "start", behavior: "instant" });
-      } catch {}
-      for (let k = 0; k < matchIdx; k++) {
-        try {
-          arts[k].remove();
-        } catch {}
-      }
-      return true;
-    }, anchorId);
-    if (found) {
-      await sleep(800);
-      return true;
-    }
-    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
-    await page.keyboard.press("PageDown").catch(() => {});
-    await sleep(900);
-  }
-  return false;
-}
-
-async function nudgeScroll(page, fractionOfViewport) {
+async function nudgeScroll(page, fractionOfViewport, scrollPace = 1) {
+  const p = clampScrollPace(scrollPace);
+  const inv = 1 / p;
   const vp = page.viewportSize() || { height: 800 };
-  const delta = Math.floor(vp.height * fractionOfViewport);
+  const delta = Math.floor(vp.height * fractionOfViewport * p);
   await page.mouse.wheel(0, delta);
-  await sleep(900 + Math.random() * 600);
+  await sleep(Math.floor((900 + Math.random() * 600) * inv));
 }
 
-async function scrollXRound(page, roundIndex, { fullScrollEvery = 3, legacyScroll = false } = {}) {
-  if (legacyScroll) {
-    const vp = page.viewportSize() || { height: 800 };
-    await page.mouse.wheel(0, Math.floor(vp.height * 0.85));
-    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
-    return;
-  }
-  const viewportFraction = 0.82 + Math.random() * 0.18;
-  const full = fullScrollEvery > 0 && (roundIndex + 1) % fullScrollEvery === 0;
-  const vp = page.viewportSize() || { height: 800 };
-  const delta = Math.floor(vp.height * viewportFraction);
+async function countArticlesInDom(page) {
+  return page.evaluate(() => document.querySelectorAll("article").length);
+}
 
-  // Search results (and sometimes profiles) can scroll inside a nested container.
-  // If we scroll only the window, X may not fire the "load more" logic.
+/**
+ * Scroll the feed down using the same column X uses (primaryColumn / main), then wheel.
+ * Returns pixel movement on the feed scroller + window (window.scrollY is often 0 on /search).
+ */
+async function scrollFeedDown(page, { legacyScroll = false, scrollPace = 1 } = {}) {
+  const p = clampScrollPace(scrollPace);
+  const vp = page.viewportSize() || { height: 800, width: 1100 };
+  const delta = Math.floor(vp.height * (0.48 + Math.random() * 0.32) * p);
+
+  if (legacyScroll) {
+    await page.mouse.wheel(0, Math.floor(vp.height * 0.55 * p));
+    await sleep(350 + Math.random() * 400);
+    await page.mouse.wheel(0, Math.floor(vp.height * 0.38 * p));
+    const m = await readFeedScrollMetrics(page);
+    return {
+      moved: true,
+      scDelta: 0,
+      winDelta: 0,
+      nearBottom: m.scTop >= m.scMax - 40,
+      metricsAfter: m
+    };
+  }
+
+  const before = await readFeedScrollMetrics(page);
+
   await page
     .evaluate(
-      ({ delta, full }) => {
+      (d) => {
         function isScrollable(el) {
           if (!el) return false;
           const cs = getComputedStyle(el);
           const oy = cs.overflowY;
           return (
-            el.scrollHeight > el.clientHeight + 50 &&
+            el.scrollHeight > el.clientHeight + 40 &&
             (oy === "auto" || oy === "scroll" || oy === "overlay")
           );
         }
-
-        function findBestScroller() {
-          // Prefer obvious app roots
-          const roots = [];
-          const main = document.querySelector("main");
-          if (main) roots.push(main);
-          if (document.body) roots.push(document.body);
-
-          // Scan a bounded number of elements for scrollable containers and pick the one
-          // with the largest scrollTop (active scroller) or largest scrollHeight.
-          const maxNodes = 6000;
-          const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_ELEMENT);
-          let best = null;
-          let bestScore = -1;
-          let node = walker.currentNode;
-          let seen = 0;
-          while (seen < maxNodes && (node = walker.nextNode())) {
-            seen++;
-            const tag = node.tagName ? String(node.tagName).toUpperCase() : "";
-            if (tag === "HTML" || tag === "BODY") continue;
-            if (!isScrollable(node)) continue;
-            const score =
-              (Number(node.scrollTop) || 0) * 2 +
-              Math.min(5_000_000, Number(node.scrollHeight) || 0);
-            if (score > bestScore) {
-              bestScore = score;
-              best = node;
-            }
+        const order = [
+          document.querySelector('[data-testid="primaryColumn"]'),
+          document.querySelector('main[role="main"]'),
+          document.querySelector("main")
+        ];
+        let el = null;
+        for (const c of order) {
+          if (c && isScrollable(c)) {
+            el = c;
+            break;
           }
-          return best || document.scrollingElement || document.documentElement;
         }
-
-        const scroller = findBestScroller();
-        const max = Math.max(0, scroller.scrollHeight - scroller.clientHeight);
-        if (full) scroller.scrollTop = max;
-        else scroller.scrollTop = Math.min(max, scroller.scrollTop + delta);
+        const root = document.scrollingElement || document.documentElement;
+        if (!el) {
+          root.scrollTop = Math.min(
+            Math.max(0, root.scrollHeight - window.innerHeight),
+            root.scrollTop + d
+          );
+          return;
+        }
+        const max = Math.max(0, el.scrollHeight - el.clientHeight);
+        el.scrollTop = Math.min(max, el.scrollTop + d);
       },
-      { delta, full }
+      delta
     )
     .catch(() => {});
 
-  // Also emit a small wheel to trigger listeners.
-  await page.mouse.wheel(0, Math.floor(delta * 0.25)).catch(() => {});
+  await page.mouse.wheel(0, delta).catch(() => {});
+  await sleep(220 + Math.floor(Math.random() * 200));
+
+  let after = await readFeedScrollMetrics(page);
+  let scDelta = Math.abs(after.scTop - before.scTop);
+  let winDelta = Math.abs(after.winY - before.winY);
+  let moved = scDelta > 6 || winDelta > 6;
+
+  if (!moved && before.scTop < before.scMax - 30) {
+    for (let i = 0; i < 3; i++) {
+      await page.mouse.wheel(0, Math.floor(vp.height * 0.42 * p)).catch(() => {});
+      await sleep(200 + Math.random() * 150);
+    }
+    after = await readFeedScrollMetrics(page);
+    scDelta = Math.abs(after.scTop - before.scTop);
+    winDelta = Math.abs(after.winY - before.winY);
+    moved = scDelta > 6 || winDelta > 6;
+  }
+
+  const nearBottom = after.scTop >= after.scMax - 48;
+  return { moved, scDelta, winDelta, nearBottom, metricsAfter: after };
 }
 
-async function reloadDomPreserveScroll(page, targetUrl, statePath, actKey, useResume) {
-  if (!useResume) {
-    await gotoAndStabilize(page, targetUrl);
-    return;
+async function readFeedScrollMetrics(page) {
+  return page.evaluate(() => {
+    function isScrollable(el) {
+      if (!el) return false;
+      const cs = getComputedStyle(el);
+      const oy = cs.overflowY;
+      return (
+        el.scrollHeight > el.clientHeight + 40 &&
+        (oy === "auto" || oy === "scroll" || oy === "overlay")
+      );
+    }
+    const winY = window.scrollY;
+    const order = [
+      document.querySelector('[data-testid="primaryColumn"]'),
+      document.querySelector('main[role="main"]'),
+      document.querySelector("main")
+    ];
+    for (const c of order) {
+      if (c && isScrollable(c)) {
+        const scTop = c.scrollTop;
+        const scMax = Math.max(0, c.scrollHeight - c.clientHeight);
+        return { winY, scTop, scMax };
+      }
+    }
+    const root = document.scrollingElement || document.documentElement;
+    const scTop = root.scrollTop;
+    const scMax = Math.max(0, root.scrollHeight - window.innerHeight);
+    return { winY, scTop, scMax };
+  });
+}
+
+async function reloadDomGentle(page, targetUrl) {
+  console.log("[x] Reloading tab to trim DOM…");
+  await gotoXPage(page, targetUrl);
+}
+
+async function scrollToTopGentle(page, scrollPace = 1) {
+  const p = clampScrollPace(scrollPace);
+  const inv = 1 / p;
+  for (let i = 0; i < 10; i++) {
+    await page.mouse.wheel(0, -Math.floor((90 + Math.random() * 70) * p)).catch(() => {});
+    await sleep(Math.floor((280 + Math.random() * 220) * inv));
   }
-  const base = await captureXScrollState(page, actKey);
-  const snap = await readState(statePath);
-  if (snap && snap.anchorTweetId) base.anchorTweetId = snap.anchorTweetId;
-  await writeState(statePath, base);
-  const gotoUrl = base.pageUrl || targetUrl;
-  console.log("[x] Reloading tab to trim DOM (resume after load)…");
-  await page.goto(gotoUrl, { waitUntil: "domcontentloaded", timeout: 120_000 });
-  await sleep(2500);
-  await applyResumeXScroll(page, base);
-  if (base.anchorTweetId) {
-    await resumeByAnchorId(page, String(base.anchorTweetId), { maxSteps: 20 });
-  }
-  await sleep(800);
 }
 
 async function runFirstPageOnly(page, expandOpts) {
   const viewportOnly = expandOpts.viewportOnly !== false;
+  const scrollPace = expandOpts.scrollPace != null ? expandOpts.scrollPace : 1;
   await sleep(2500);
   await expandAllShowMoreInView(page, {
     maxNoProgress: 6,
     maxClicks: 45,
     viewportOnly
   });
-  await nudgeScroll(page, 0.45);
+  await nudgeScroll(page, 0.45, scrollPace);
   await expandAllShowMoreInView(page, { maxNoProgress: 4, maxClicks: 30, viewportOnly });
-  await nudgeScroll(page, 0.5);
+  await nudgeScroll(page, 0.5, scrollPace);
   await expandAllShowMoreInView(page, { maxNoProgress: 3, maxClicks: 24, viewportOnly });
-  await page.evaluate(() => window.scrollTo(0, 0));
-  await sleep(800);
+  await scrollToTopGentle(page, scrollPace);
+  await sleep(900 + Math.random() * 500);
 }
 
 async function scrollAllTime(opts) {
@@ -671,31 +625,31 @@ async function scrollAllTime(opts) {
     maxBackoffS,
     acceptRow,
     writeRow,
-    pruneEvery,
+    maxArticlesBeforePrune,
     keepLastArticles,
     errorCheckEvery,
     maxRounds,
-    checkpointEveryRounds,
-    statePath,
-    actKey,
-    pageUrlForState,
     pruneDomAfterExtract,
     pauseMin,
     pauseMax,
-    fullScrollEvery,
     legacyScroll,
     reloadDomEveryRounds,
     expandViewportOnly,
     targetUrl,
-    strictNoNewStreak
+    scrollShakeOnNoNew,
+    scrollPace,
+    earlyStopStuckBottom,
+    stopOnBottom
   } = opts;
+
+  const pace = clampScrollPace(scrollPace != null ? scrollPace : 1);
+  const paceInv = 1 / pace;
 
   let totalWritten = 0;
   let noNewStreak = 0;
   let loops = 0;
   let backoffS = 0;
-  let lastAnchorId = "";
-  let lastTextPrefix = "";
+  let stuckBottomNoMove = 0;
 
   const net = { lastBadStatus: null, badCount: 0 };
   page.on("response", (resp) => {
@@ -718,14 +672,8 @@ async function scrollAllTime(opts) {
   ) {
     loops += 1;
 
-    if (
-      reloadDomEveryRounds > 0 &&
-      loops > 1 &&
-      (loops - 1) % reloadDomEveryRounds === 0 &&
-      statePath &&
-      targetUrl
-    ) {
-      await reloadDomPreserveScroll(page, targetUrl, statePath, actKey, !!statePath);
+    if (reloadDomEveryRounds > 0 && loops > 1 && (loops - 1) % reloadDomEveryRounds === 0 && targetUrl) {
+      await reloadDomGentle(page, targetUrl);
     }
 
     let expanded = 0;
@@ -742,12 +690,12 @@ async function scrollAllTime(opts) {
     await sleep(
       Math.floor((pauseMin + Math.random() * Math.max(0.01, pauseMax - pauseMin)) * 1000)
     );
+    await sleep(600 + Math.floor(Math.random() * 900));
 
-    const batch = await extractVisibleTweets(page);
+    const batch = await extractVisibleTweetsWithRetry(page);
     const batchCount = Array.isArray(batch) ? batch.length : 0;
     let newSeen = 0;
     let newWritten = 0;
-    const processedIds = [];
 
     for (const t of batch) {
       const tid = t?.id;
@@ -755,10 +703,6 @@ async function scrollAllTime(opts) {
       if (seenIds.has(tid)) continue;
       seenIds.add(tid);
       newSeen += 1;
-      processedIds.push(tid);
-      lastAnchorId = tid;
-      const tx = t.text || "";
-      lastTextPrefix = tx.replace(/\s+/g, " ").trim().slice(0, 120);
 
       const row = {
         id: tid,
@@ -795,56 +739,53 @@ async function scrollAllTime(opts) {
       continue;
     }
 
-    let prunedById = 0;
-    if (pruneDomAfterExtract && processedIds.length) {
-      prunedById = await removeArticlesByIds(page, processedIds).catch(() => 0);
-    }
-
-    const prevScrollY = await page.evaluate(() => window.scrollY).catch(() => 0);
-    await scrollXRound(page, loops - 1, { fullScrollEvery, legacyScroll });
-    await sleep(800 + Math.random() * 800);
-    await page.waitForTimeout(baseDelayMs);
-    await page.waitForTimeout(500 + Math.floor(baseDelayMs * 0.5));
-    const scrollYAfter = await page.evaluate(() => window.scrollY).catch(() => prevScrollY);
-
-    // "No new IDs" is not always "no progress" — search chunking may scroll past duplicates.
-    // --strict-no-new-streak: count only newSeen===0 (stop after noNewLimit consecutive such loops).
-    const scrolled = Math.abs(Number(scrollYAfter) - Number(prevScrollY)) > 25;
-    if (strictNoNewStreak) {
-      if (newSeen > 0) noNewStreak = 0;
-      else noNewStreak += 1;
-    } else {
-      if (newSeen > 0) noNewStreak = 0;
-      else if (batchCount > 0 && scrolled) noNewStreak = 0;
-      else noNewStreak += 1;
-    }
-
+    const articleCount = await countArticlesInDom(page).catch(() => 0);
     let pruned = 0;
-    if (pruneEvery && loops % pruneEvery === 0) {
-      pruned = await pruneOldArticles(page, keepLastArticles).catch(() => 0);
+    if (pruneDomAfterExtract && articleCount > maxArticlesBeforePrune) {
+      const keepTail = Math.max(50, keepLastArticles);
+      pruned = await pruneOldArticles(page, keepTail).catch(() => 0);
     }
 
-    if (statePath && checkpointEveryRounds > 0 && loops % checkpointEveryRounds === 0) {
-      const snap = {
-        activityKey: actKey,
-        pageUrl: page.url() || pageUrlForState,
-        scrollY: await page.evaluate(() => window.scrollY).catch(() => 0),
-        anchorTweetId: lastAnchorId,
-        anchorPrefix: lastTextPrefix,
-        seenCount: seenIds.size,
-        writtenThisRun: totalWritten
-      };
-      try {
-        await writeState(statePath, snap);
-      } catch {
-        // ignore
+    const scrollOut = await scrollFeedDown(page, { legacyScroll, scrollPace: pace });
+
+    // Optional: stop the moment we reach the feed bottom.
+    if (stopOnBottom && scrollOut.nearBottom) {
+      console.log(`[${scrapedFrom}] stop-on-bottom: nearBottom=true`);
+      break;
+    }
+
+    await sleep(Math.floor((800 + Math.random() * 800) * paceInv));
+    await page.waitForTimeout(Math.floor(baseDelayMs * paceInv));
+    await page.waitForTimeout(Math.floor((500 + Math.floor(baseDelayMs * 0.5)) * paceInv));
+
+    if (newSeen === 0 && scrollShakeOnNoNew) {
+      await scrollShakeSettle(page, pace);
+    }
+
+    const feedMoved = scrollOut.moved;
+    // Streak = loops with nothing appended to JSONL. Using newSeen reset was wrong: new IDs can
+    // fail acceptRow (e.g. replies in originals phase) and never write, which pinned streak at 0 forever.
+    if (newWritten > 0) noNewStreak = 0;
+    else noNewStreak += 1;
+
+    if (earlyStopStuckBottom > 0 && newSeen === 0 && scrollOut.nearBottom && !feedMoved) {
+      stuckBottomNoMove += 1;
+      if (stuckBottomNoMove >= earlyStopStuckBottom) {
+        console.log(
+          `[${scrapedFrom}] early stop: ${stuckBottomNoMove} loop(s) at max scroll with no movement and no new ids (end of chunk or stalled search)`
+        );
+        break;
       }
+    } else {
+      stuckBottomNoMove = 0;
     }
 
     if (logEvery && loops % logEvery === 0) {
-      const scrollY = await page.evaluate(() => window.scrollY).catch(() => null);
+      const m = scrollOut.metricsAfter || (await readFeedScrollMetrics(page).catch(() => null));
+      const scTop = m?.scTop ?? "?";
+      const scMax = m?.scMax ?? "?";
       console.log(
-        `[${scrapedFrom}] loops=${loops} written=${totalWritten} seen=${seenIds.size} batch=${batchCount} newSeen=${newSeen} newWritten=${newWritten} expanded=${expanded} pruned=${pruned} prunedById=${prunedById} noNewStreak=${noNewStreak} scrollY=${scrollY} prevScrollY=${prevScrollY}`
+        `[${scrapedFrom}] loop=${loops} sessWrites=${totalWritten} idsInSet=${seenIds.size} newIds=${newSeen} savedLoop=${newWritten} vis=${batchCount} arts=${articleCount} pruned=${pruned} expand=${expanded} scΔ=${scrollOut.scDelta.toFixed(0)} winΔ=${scrollOut.winDelta.toFixed(0)} moved=${feedMoved} bottom≈${scrollOut.nearBottom} sc=${scTop}/${scMax} streak=${noNewStreak}`
       );
     }
 
@@ -858,16 +799,33 @@ async function scrollAllTime(opts) {
   }
 }
 
+function shouldUseGpuLaunchArgs() {
+  return !(
+    process.argv.includes("--no-gpu-args") ||
+    process.argv.includes("--noGpuArgs") ||
+    String(process.env.X_NO_GPU_ARGS || "").trim() === "1"
+  );
+}
+
 function buildPersistentContextOpts(mobile) {
+  const common = {
+    extraHTTPHeaders: { ...BROWSER_EXTRA_HEADERS },
+    // Required for X search: blocking SW breaks search timelines after a few pages.
+    serviceWorkers: "allow"
+  };
   const base = {
     headless: false,
     channel: "chrome",
-    viewport: { width: 1280, height: 900 }
+    viewport: { width: 1280, height: 900 },
+    locale: "en-US",
+    ...common,
+    ...(shouldUseGpuLaunchArgs() ? { args: [...CHROME_GPU_ARGS] } : {})
   };
   if (!mobile) return base;
   const phone = devices["iPhone 13"];
   return {
     ...base,
+    locale: "en-US",
     userAgent: phone.userAgent,
     viewport: phone.viewport,
     deviceScaleFactor: phone.deviceScaleFactor,
@@ -886,6 +844,87 @@ async function installMediaBlockerOnContext(context) {
   });
 }
 
+/** Open a search URL with the same browser profile / headers as a normal run; no scrolling or scraping. */
+async function runOpenSearchOnlyFlow(opts) {
+  const {
+    targetUrl,
+    userDataDir,
+    connectURL,
+    ephemeral,
+    headlessEphemeral,
+    slowmo,
+    channel,
+    storageStatePath,
+    blockMedia,
+    mobile,
+    keepOpen
+  } = opts;
+
+  console.log("[x] --open-search-only (no scroll / no scrape)\n", targetUrl);
+
+  if (connectURL) {
+    console.warn(
+      "[x] CDP (--connectURL): remote debugging can reduce search trust vs launchPersistentContext; avoid CDP for heavy search scraping if you see shallow results."
+    );
+    const browser = await chromium.connectOverCDP(connectURL);
+    const context = browser.contexts()[0];
+    if (!context) throw new Error("connectOverCDP: no context");
+    await context.setExtraHTTPHeaders({ ...BROWSER_EXTRA_HEADERS });
+    const page = context.pages()[0] || (await context.newPage());
+    try {
+      await gotoXPage(page, targetUrl);
+      if (keepOpen) {
+        await waitForEnterBeforeClose("[x] Press Enter to disconnect CDP…\n");
+      }
+    } finally {
+      await browser.close();
+    }
+    return;
+  }
+
+  if (ephemeral) {
+    const launchOpts = { headless: headlessEphemeral, slowMo: slowmo, channel };
+    if (shouldUseGpuLaunchArgs()) launchOpts.args = [...CHROME_GPU_ARGS];
+    const browser = await chromium.launch(launchOpts);
+    const ctxOpts = {
+      locale: "en-US",
+      extraHTTPHeaders: { ...BROWSER_EXTRA_HEADERS },
+      serviceWorkers: "allow"
+    };
+    if (fs.existsSync(storageStatePath)) ctxOpts.storageState = storageStatePath;
+    const context = await browser.newContext(ctxOpts);
+    if (blockMedia) await installMediaBlockerOnContext(context);
+    const page = await context.newPage();
+    try {
+      await gotoXPage(page, targetUrl);
+      if (keepOpen) {
+        await waitForEnterBeforeClose("[x] Press Enter to close the browser…\n");
+      }
+    } finally {
+      await page.close().catch(() => {});
+      await context.close();
+      await browser.close();
+    }
+    return;
+  }
+
+  const contextOpts = buildPersistentContextOpts(mobile);
+  const context = await chromium.launchPersistentContext(userDataDir, contextOpts);
+  let page = context.pages()[0];
+  if (!page) page = await context.newPage();
+  if (blockMedia) await installMediaBlockerOnContext(context);
+  try {
+    await gotoXPage(page, targetUrl);
+    if (keepOpen) {
+      await waitForEnterBeforeClose(
+        "[x] Press Enter to close Chrome (same as scrape:x with --keep-open)…\n"
+      );
+    }
+  } finally {
+    await context.close();
+  }
+}
+
 async function main() {
   if (wantsHelp()) {
     console.log(`
@@ -896,14 +935,11 @@ LinkedIn-aligned flags:
   --user-data-dir DIR     (env X_USER_DATA, default ./x_user_data)
   --first-page
   --keep-open             (env X_KEEP_OPEN=1)
-  --fresh / --no-resume
-  --state-file PATH       (env X_STATE_FILE; default <user-data>/.x_collect_state.json)
   --passes N              (env X_PASSES)
-  --checkpoint-rounds N
-  --no-checkpoint
-  --prune-dom             (env X_PRUNE_DOM=1)
+  --prune-dom             (env X_PRUNE_DOM=1) trim oldest articles only when DOM is long
+  --max-articles-before-prune N  With --prune-dom: trim when article count exceeds N (default 200; env X_MAX_ARTICLES_BEFORE_PRUNE)
+  --keepLastArticles N   Keep this many newest articles after a trim (default 100)
   --block-media           (env X_BLOCK_MEDIA=1)
-  --full-scroll-every N   (env X_FULL_SCROLL_EVERY)
   --legacy-scroll         (env X_LEGACY_SCROLL=1)
   --reload-dom-every-rounds N
   --reload-dom-every-passes N
@@ -911,22 +947,31 @@ LinkedIn-aligned flags:
   --recycle-every-passes N
   --expand-scan-full-feed (env X_EXPAND_FULL_FEED=1)
   --mobile                (env X_MOBILE=1)
-  --noNewLimit N          Stop after N consecutive loops with no new tweet ids (default 2; env X_NO_NEW_LIMIT)
+  --noNewLimit N          Stop after N loops with no JSONL writes (default 10 search / 2 profile; env X_NO_NEW_LIMIT)
   --logEvery N            Print progress every N loops (default 1 = every loop; env X_LOG_EVERY)
-  --strict-no-new-streak  Streak counts only newSeen=0 (ignores scroll-based streak reset)
+  --strict-no-new-streak   Streak counts only newSeen=0 (ignores scroll-based streak reset)
+  --no-strict-no-new-streak  Re-enable scroll-based streak reset (default on: --search-only / --search-chunks)
+  --scroll-pace N         Wheel delta scale vs baseline (default 0.75; env X_SCROLL_PACE; 1 = faster)
+  --no-scroll-shake       Disable wheel up/down + settle when a loop finds no new tweets (env X_SCROLL_SHAKE=0)
+  --early-stop-stuck-bottom N  Stop after N loops stuck at bottom (default 2; 0=off; env X_EARLY_STOP_STUCK_BOTTOM)
+  --stop-on-bottom       Stop immediately when the feed reports nearBottom=true
+  --originals-only       Only scrape originals (skip replies / with_replies)
 
 Search chunking (older history workaround):
   --search-chunks          Scrape via search timelines instead of profile timeline
   --since YYYY-MM-DD       Oldest date (inclusive)
   --until YYYY-MM-DD       Newest date (exclusive-ish; used in query). Default: tomorrow (UTC)
-  --chunk-days N           Days per window (default 2; env X_CHUNK_DAYS). Use 2 for narrow slices.
+  --chunk-days N           Days per window (default 3 with --search-chunks; env X_CHUNK_DAYS)
   --max-search-chunks N    Stop after N windows (0 = unlimited). For testing.
   --search-live true|false Use Latest (f=live). Default true
   --search-only            Only scrape search chunks (skip profile timeline)
+  --open-search-only       Open search URL only: no scroll, no scrape (use with --search-query or --search-chunks+dates)
+  --search-query \"...\"    Raw X search query for --open-search-only (env X_SEARCH_QUERY)
 
-Env: X_ROUNDS (0=unlimited per phase), X_PAUSE_MIN (2), X_PAUSE_MAX (4.5), X_NO_NEW_LIMIT (2), X_LOG_EVERY (1)
+Env: X_ROUNDS (0=unlimited per phase), X_PAUSE_MIN (3.5), X_PAUSE_MAX (8), X_NO_NEW_LIMIT (2), X_LOG_EVERY (1)
 
 Other:
+  --no-gpu-args           Do not add --enable-gpu / --ignore-gpu-blocklist (env X_NO_GPU_ARGS=1)
   --ephemeral             launch()+storageState instead of persistent profile
   --storageState PATH
   --connectURL http://127.0.0.1:9222
@@ -951,17 +996,8 @@ Other:
     getArg("user-data-dir", "") || process.env.X_USER_DATA || "./x_user_data"
   );
 
-  const defaultStateInProfile = path.join(userDataDir, ".x_collect_state.json");
-  const statePath = path.resolve(
-    getArg("state-file", "") ||
-      process.env.X_STATE_FILE ||
-      getArg("stateFile", "") ||
-      defaultStateInProfile
-  );
-
   const firstPage = hasFlag("first-page") || hasFlag("firstPage");
-  const noResume = hasFlag("no-resume") || hasFlag("noResume");
-  const fresh = hasFlag("fresh");
+  const openSearchOnly = hasFlag("open-search-only") || hasFlag("openSearchOnly");
   const keepOpen =
     hasFlag("keep-open") || hasFlag("keepOpen") || String(process.env.X_KEEP_OPEN || "") === "1";
 
@@ -970,36 +1006,28 @@ Other:
     intArg("passes", envInt("X_PASSES", 1))
   );
   const rounds = intArg("rounds", envInt("X_ROUNDS", 0));
-  const pauseMin = envFloat("X_PAUSE_MIN", 2);
-  const pauseMax = envFloat("X_PAUSE_MAX", 4.5);
+  const pauseMin = envFloat("X_PAUSE_MIN", 3.5);
+  const pauseMax = envFloat("X_PAUSE_MAX", 8);
 
-  const noNewLimit = intArg("noNewLimit", envInt("X_NO_NEW_LIMIT", 2));
   const maxTweets = intArg("maxTweets", 2_000_000_000);
   const logEvery = intArg("logEvery", envInt("X_LOG_EVERY", 1));
-  const baseDelayMs = intArg("baseDelayMs", 250);
+  const baseDelayMs = intArg("baseDelayMs", 600);
   const maxBackoffS = intArg("maxBackoffS", 60);
   const channelRaw = getArg("channel", "");
   const channel = channelRaw && channelRaw.trim() ? channelRaw.trim() : undefined;
   const slowmo = intArg("slowmo", 0);
 
-  const pruneEvery = intArg("pruneEvery", 5);
+  const maxArticlesBeforePrune = intArg(
+    "max-articles-before-prune",
+    intArg("maxArticlesBeforePrune", envInt("X_MAX_ARTICLES_BEFORE_PRUNE", 200))
+  );
   const keepLastArticles = intArg("keepLastArticles", 100);
   const errorCheckEvery = intArg("errorCheckEvery", 25);
-
-  let checkpointRounds = intArg("checkpoint-rounds", 5);
-  if (hasFlag("no-checkpoint") || hasFlag("noCheckpoint")) checkpointRounds = 0;
-  if (getArg("checkpointRounds", "") !== "") {
-    checkpointRounds = intArg("checkpointRounds", checkpointRounds);
-  }
 
   const pruneDom = hasFlag("prune-dom") || hasFlag("pruneDom") || String(process.env.X_PRUNE_DOM || "") === "1";
   const blockMedia =
     hasFlag("block-media") || hasFlag("blockMedia") || String(process.env.X_BLOCK_MEDIA || "") === "1";
 
-  let fullScrollEvery = intArg("full-scroll-every", 3);
-  if (process.env.X_FULL_SCROLL_EVERY !== undefined && process.env.X_FULL_SCROLL_EVERY !== "") {
-    fullScrollEvery = envInt("X_FULL_SCROLL_EVERY", fullScrollEvery);
-  }
   const legacyScroll =
     hasFlag("legacy-scroll") || hasFlag("legacyScroll") || String(process.env.X_LEGACY_SCROLL || "") === "1";
 
@@ -1031,7 +1059,6 @@ Other:
 
   const mobile = hasFlag("mobile") || String(process.env.X_MOBILE || "") === "1";
 
-  const useResume = !firstPage && !noResume;
   const headlessEphemeral = boolArg("headless", true);
 
   const searchChunks =
@@ -1043,36 +1070,95 @@ Other:
     hasFlag("searchOnly") ||
     String(process.env.X_SEARCH_ONLY || "") === "1";
   const chunkDaysDefault = searchChunks
-    ? envInt("X_CHUNK_DAYS", 2)
+    ? envInt("X_CHUNK_DAYS", 3)
     : envInt("X_CHUNK_DAYS", 180);
   const chunkDays = Math.max(
     1,
     intArg("chunk-days", intArg("chunkDays", chunkDaysDefault))
   );
   const maxSearchChunks = Math.max(0, intArg("max-search-chunks", intArg("maxSearchChunks", 0)));
-  const strictNoNewStreak =
+  const strictNoNewOptOut =
+    hasFlag("no-strict-no-new-streak") ||
+    hasFlag("noStrictNoNewStreak") ||
+    String(process.env.X_STRICT_NO_NEW_STREAK || "").trim() === "0";
+  const strictNoNewOptIn =
     hasFlag("strict-no-new-streak") ||
     hasFlag("strictNoNewStreak") ||
-    String(process.env.X_STRICT_NO_NEW_STREAK || "") === "1";
+    String(process.env.X_STRICT_NO_NEW_STREAK || "").trim() === "1";
+  const strictNoNewStreak =
+    !strictNoNewOptOut &&
+    (strictNoNewOptIn || searchOnly || searchChunks);
+  const noNewLimit = intArg(
+    "noNewLimit",
+    envInt("X_NO_NEW_LIMIT", searchChunks || searchOnly ? 10 : 2)
+  );
+  const scrollShakeOnNoNew =
+    !hasFlag("no-scroll-shake") &&
+    !hasFlag("noScrollShake") &&
+    String(process.env.X_SCROLL_SHAKE || "") !== "0";
+  let scrollPace = floatArg("scroll-pace", floatArg("scrollPace", envFloat("X_SCROLL_PACE", 0.75)));
+  if (!Number.isFinite(scrollPace) || scrollPace <= 0) scrollPace = 0.75;
+  scrollPace = clampScrollPace(scrollPace);
+  const earlyStopStuckBottom = intArg(
+    "early-stop-stuck-bottom",
+    intArg("earlyStopStuckBottom", envInt("X_EARLY_STOP_STUCK_BOTTOM", 2))
+  );
+  // Needs to be a flag (no value) like other boolean switches; boolArg requires `true|false`.
+  const stopOnBottom = hasFlag("stop-on-bottom") || hasFlag("stopOnBottom");
+  const originalsOnly =
+    hasFlag("originals-only") ||
+    hasFlag("originalsOnly") ||
+    String(process.env.X_ORIGINALS_ONLY || "") === "1" ||
+    // Default: when doing only search chunks, don't also scrape replies yet.
+    (searchOnly && searchChunks);
   const searchLive = boolArg("search-live", boolArg("searchLive", true));
   const sinceArg = getArg("since", "") || process.env.X_SINCE || "";
   const untilArg = getArg("until", "") || process.env.X_UNTIL || "";
   const sinceDate = sinceArg ? parseYmd(sinceArg) : null;
   const untilDate = untilArg ? parseYmd(untilArg) : null;
 
-  if (searchChunks && !sinceDate) {
+  if (searchChunks && !sinceDate && !openSearchOnly) {
     console.error('[x] --search-chunks requires --since YYYY-MM-DD (or env X_SINCE).');
     process.exitCode = 2;
     return;
   }
 
-  if (fresh && fs.existsSync(statePath)) {
-    try {
-      fs.unlinkSync(statePath);
-      console.log("[x] --fresh cleared state:", statePath);
-    } catch {
-      // ignore
+  if (openSearchOnly) {
+    const rawQ = (getArg("search-query", "") || getArg("searchQuery", "") || process.env.X_SEARCH_QUERY || "").trim();
+    let targetUrl = null;
+    if (rawQ) {
+      targetUrl = buildSearchUrl({ query: rawQ, live: searchLive });
+    } else if (searchChunks && sinceDate) {
+      const end = untilDate || addDaysUtc(todayUtcYmd(), 1);
+      if (end > sinceDate) {
+        const windowEnd = end;
+        const windowStartRaw = addDaysUtc(windowEnd, -chunkDays);
+        const windowStart = windowStartRaw < sinceDate ? sinceDate : windowStartRaw;
+        const q = `from:${username} since:${fmtYmd(windowStart)} until:${fmtYmd(windowEnd)} -filter:replies -filter:retweets`;
+        targetUrl = buildSearchUrl({ query: q, live: searchLive });
+      }
     }
+    if (!targetUrl) {
+      console.error(
+        "[x] --open-search-only requires --search-query \"...\" OR (--search-chunks --since YYYY-MM-DD [--until YYYY-MM-DD])"
+      );
+      process.exitCode = 2;
+      return;
+    }
+    await runOpenSearchOnlyFlow({
+      targetUrl,
+      userDataDir,
+      connectURL,
+      ephemeral,
+      headlessEphemeral,
+      slowmo,
+      channel,
+      storageStatePath,
+      blockMedia,
+      mobile,
+      keepOpen
+    });
+    return;
   }
 
   const originalSeen = loadExistingIds(originalsPath);
@@ -1082,12 +1168,11 @@ Other:
   const repliesUrl = `https://x.com/${username}/with_replies`;
 
   async function runPhase(page, { scrapedFrom, url, seenIds, acceptRow, outPath }) {
-    const actKey = activityKey(username, scrapedFrom);
-    await gotoXWithResume(page, url, { statePath, useResume, actKey, firstPage });
+    await gotoXPage(page, url);
 
     if (firstPage) {
-      await runFirstPageOnly(page, { viewportOnly: expandViewportOnly });
-      const batch = await extractVisibleTweets(page);
+      await runFirstPageOnly(page, { viewportOnly: expandViewportOnly, scrollPace });
+      const batch = await extractVisibleTweetsWithRetry(page);
       let wrote = 0;
       for (const t of batch) {
         const tid = t?.id;
@@ -1110,12 +1195,6 @@ Other:
         }
       }
       console.log(`[${scrapedFrom}] --first-page wrote=${wrote}`);
-      if (useResume) {
-        const snap = await captureXScrollState(page, actKey);
-        const last = batch.length ? batch[batch.length - 1] : null;
-        if (last?.id) snap.anchorTweetId = last.id;
-        await writeState(statePath, snap);
-      }
       return;
     }
 
@@ -1138,27 +1217,25 @@ Other:
       maxBackoffS,
       acceptRow,
       writeRow: (row) => appendJsonl(outPath, [row]),
-      pruneEvery,
+      maxArticlesBeforePrune,
       keepLastArticles,
       errorCheckEvery,
       maxRounds: cap,
-      checkpointEveryRounds: useResume ? checkpointRounds : 0,
-      statePath: useResume ? statePath : null,
-      actKey,
-      pageUrlForState: url,
       pruneDomAfterExtract: pruneDom,
       pauseMin,
       pauseMax,
-      fullScrollEvery,
       legacyScroll,
       reloadDomEveryRounds,
       expandViewportOnly,
       targetUrl: url,
-      strictNoNewStreak
+      scrollShakeOnNoNew,
+      scrollPace,
+      earlyStopStuckBottom,
+      stopOnBottom
     });
   }
 
-  async function runSearchChunks(page) {
+  async function runSearchChunks(context) {
     const start = sinceDate;
     const end = untilDate || addDaysUtc(todayUtcYmd(), 1);
     if (!start) return;
@@ -1196,49 +1273,68 @@ Other:
       const urlOriginals = buildSearchUrl({ query: qOriginals, live: searchLive });
       const urlReplies = buildSearchUrl({ query: qReplies, live: searchLive });
 
-      console.log(`[x] Search originals @${username} ${sinceStr}..${untilStr}`);
-      await runPhase(page, {
-        scrapedFrom: `search_originals:${sinceStr}:${untilStr}`,
-        url: urlOriginals,
-        seenIds: originalSeen,
-        acceptRow: (r) => !r.is_reply && !r.is_repost_or_quote,
-        outPath: originalsPath
-      });
+      // Fresh "window" per chunk so scroll/DOM state can't leak between date windows.
+      const chunkPage = await context.newPage();
+      try {
+        console.log(`[x] Search originals @${username} ${sinceStr}..${untilStr}`);
+        await runPhase(chunkPage, {
+          scrapedFrom: `search_originals:${sinceStr}:${untilStr}`,
+          url: urlOriginals,
+          seenIds: originalSeen,
+          acceptRow: (r) => !r.is_reply && !r.is_repost_or_quote,
+          outPath: originalsPath
+        });
 
-      console.log(`[x] Search replies @${username} ${sinceStr}..${untilStr}`);
-      await runPhase(page, {
-        scrapedFrom: `search_replies:${sinceStr}:${untilStr}`,
-        url: urlReplies,
-        seenIds: replySeen,
-        acceptRow: (r) => !!r.is_reply,
-        outPath: repliesPath
-      });
+        if (!originalsOnly) {
+          console.log(`[x] Search replies @${username} ${sinceStr}..${untilStr}`);
+          await runPhase(chunkPage, {
+            scrapedFrom: `search_replies:${sinceStr}:${untilStr}`,
+            url: urlReplies,
+            seenIds: replySeen,
+            acceptRow: (r) => !!r.is_reply,
+            outPath: repliesPath
+          });
+        }
+      } finally {
+        await chunkPage.close().catch(() => {});
+      }
 
       windowEnd = windowStart;
-      const gapMs =
-        chunkDays <= 2 ? 500 + Math.random() * 700 : 1200 + Math.random() * 1200;
+      const gapMs = 10_000 + Math.random() * 10_000;
       await sleep(gapMs);
     }
   }
 
   /** CDP or ephemeral launch: one phase per browser session (old behavior). */
   async function runPhaseStandalone({ scrapedFrom, url, seenIds, acceptRow, outPath }) {
-    const actKey = activityKey(username, scrapedFrom);
     let browser;
     let context;
     let cdp = false;
 
     if (connectURL) {
+      console.warn(
+        "[x] CDP: connectOverCDP can lower search trust vs persistent launch; prefer default Chrome profile for deep search."
+      );
       browser = await chromium.connectOverCDP(connectURL);
       cdp = true;
       context = browser.contexts()[0];
       if (!context) throw new Error("connectOverCDP: no context");
       console.log("[x] Connected over CDP:", connectURL);
-    } else {
-      browser = await chromium.launch({ headless: headlessEphemeral, slowMo: slowmo, channel });
-      context = await browser.newContext(
-        fs.existsSync(storageStatePath) ? { storageState: storageStatePath } : undefined
+      await context.setExtraHTTPHeaders({ ...BROWSER_EXTRA_HEADERS });
+      console.log(
+        "[x] CDP: set Accept-Language on context (ensure Chrome was not launched blocking service workers)"
       );
+    } else {
+      const launchOpts = { headless: headlessEphemeral, slowMo: slowmo, channel };
+      if (shouldUseGpuLaunchArgs()) launchOpts.args = [...CHROME_GPU_ARGS];
+      browser = await chromium.launch(launchOpts);
+      const ctxOpts = {
+        locale: "en-US",
+        extraHTTPHeaders: { ...BROWSER_EXTRA_HEADERS },
+        serviceWorkers: "allow"
+      };
+      if (fs.existsSync(storageStatePath)) ctxOpts.storageState = storageStatePath;
+      context = await browser.newContext(ctxOpts);
     }
 
     if (blockMedia) await installMediaBlockerOnContext(context);
@@ -1264,12 +1360,8 @@ Other:
   /** Persistent: one Chrome profile for all phases (LinkedIn-style). */
   async function runPersistentSession() {
     ensureDir(userDataDir);
-    await migrateLegacyResumeState(statePath);
 
     if (!firstPage) {
-      console.log(
-        `[x] Resume file: ${statePath} (${useResume ? "will load/save" : "disabled"})`
-      );
       console.log(`[x] Profile: ${userDataDir}`);
       const roundDesc = rounds > 0 ? `${rounds} rounds/phase` : "unlimited rounds/phase (X_ROUNDS=0)";
       console.log(`[x] ${passes} pass(es), ${roundDesc}; pause ${pauseMin}-${pauseMax}s`);
@@ -1277,9 +1369,7 @@ Other:
     if (blockMedia) console.log("[x] --block-media on");
     if (pruneDom) console.log("[x] --prune-dom on");
     if (!legacyScroll) {
-      console.log(
-        `[x] scroll: full jump every ${fullScrollEvery || "never"} round(s); --legacy-scroll for wheel+body`
-      );
+      console.log("[x] scroll: incremental wheel + nested scroller (no jump-to-bottom); --legacy-scroll for wheel-only");
     } else {
       console.log("[x] --legacy-scroll");
     }
@@ -1289,7 +1379,24 @@ Other:
       console.log("[x] --expand-scan-full-feed");
     }
     if (strictNoNewStreak) {
-      console.log("[x] --strict-no-new-streak: noNewLimit = consecutive loops with newSeen=0");
+      console.log(
+        "[x] --strict-no-new-streak is legacy; stop streak now uses saved rows only (newWritten). Use --noNewLimit."
+      );
+    }
+    console.log(`[x] scroll pace: ${scrollPace} (post-scroll waits scale as 1/pace; --scroll-pace 1 = baseline)`);
+    console.log(
+      "[x] browser: locale=en-US, serviceWorkers=allow, Accept-Language=en-US,en;q=0.9 (search index)"
+    );
+    if (shouldUseGpuLaunchArgs()) {
+      console.log("[x] GPU-ish Chrome flags enabled (Canvas/WebGL); --no-gpu-args or X_NO_GPU_ARGS=1 to disable");
+    }
+    if (earlyStopStuckBottom > 0) {
+      console.log(
+        `[x] early stop: after ${earlyStopStuckBottom} stuck loop(s) at feed bottom with no scroll delta (--early-stop-stuck-bottom 0 to disable)`
+      );
+    }
+    if (scrollShakeOnNoNew) {
+      console.log("[x] scroll shake on no-new: on (wheel up/down + settle; --no-scroll-shake to disable)");
     }
 
     const contextOpts = buildPersistentContextOpts(mobile);
@@ -1319,23 +1426,24 @@ Other:
               outPath: originalsPath
             });
 
-            console.log(`Scraping replies @${username}`);
-            await runPhase(page, {
-              scrapedFrom: "with_replies",
-              url: repliesUrl,
-              seenIds: replySeen,
-              acceptRow: (r) => !!r.is_reply,
-              outPath: repliesPath
-            });
+            if (!originalsOnly) {
+              console.log(`Scraping replies @${username}`);
+              await runPhase(page, {
+                scrapedFrom: "with_replies",
+                url: repliesUrl,
+                seenIds: replySeen,
+                acceptRow: (r) => !!r.is_reply,
+                outPath: repliesPath
+              });
+            }
           }
 
           if (searchChunks) {
-            await runSearchChunks(page);
+            await runSearchChunks(context);
           }
 
           if (reloadDomEveryPasses > 0 && p % reloadDomEveryPasses === 0 && p < passTo) {
-            const actKey = activityKey(username, "timeline");
-            await reloadDomPreserveScroll(page, timelineUrl, statePath, actKey, useResume);
+            await reloadDomGentle(page, timelineUrl);
           }
 
           if (p < passTo) await sleep(1200 + Math.random() * 800);
@@ -1347,19 +1455,6 @@ Other:
           );
         }
       } finally {
-        if (useResume) {
-          try {
-            const snap = await captureXScrollState(
-              page,
-              activityKey(username, "with_replies")
-            );
-            const st = await readState(statePath);
-            if (st?.anchorTweetId) snap.anchorTweetId = st.anchorTweetId;
-            await writeState(statePath, snap);
-          } catch {
-            // ignore
-          }
-        }
         await context.close();
       }
 
@@ -1382,13 +1477,15 @@ Other:
           acceptRow: (r) => !r.is_reply && !r.is_repost_or_quote,
           outPath: originalsPath
         });
-        await runPhaseStandalone({
-          scrapedFrom: "with_replies",
-          url: repliesUrl,
-          seenIds: replySeen,
-          acceptRow: (r) => !!r.is_reply,
-          outPath: repliesPath
-        });
+        if (!originalsOnly) {
+          await runPhaseStandalone({
+            scrapedFrom: "with_replies",
+            url: repliesUrl,
+            seenIds: replySeen,
+            acceptRow: (r) => !!r.is_reply,
+            outPath: repliesPath
+          });
+        }
       }
       if (searchChunks) {
         console.log(
