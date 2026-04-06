@@ -1,6 +1,20 @@
-# Persona cloning ETL pipeline
+# Persona cloning ETL pipeline (Jason Lemkin)
 
-Dockerized stack: Airflow, Spark, MinIO, Chroma, Streamlit. Paul Graham essays are extracted, cleaned, embedded (Ollama), loaded to Snowflake and Chroma, with a Streamlit UI for RAG-style generation.
+Dockerized stack: Airflow, Spark, MinIO, Chroma, Streamlit. **Local Lemkin JSONL** (blog, LinkedIn, X, YouTube transcripts) is ingested into MinIO, cleaned and chunked in Spark, embedded with **Ollama** (`nomic-embed-text`), then loaded into **Chroma**, with a **Streamlit** UI for RAG-style generation.
+
+## Data files (place under `./data`)
+
+The Airflow task `extract_to_minio` reads these files from the host `./data` folder (mounted at `/opt/airflow/data` in the scheduler):
+
+| File | Role |
+|------|------|
+| `jasonlemkin_blog.jsonl` | SaaStr blog posts (`title`, `date`, `url`, `content`) |
+| `jasonlemkinlinkedin.jsonl` | LinkedIn posts (`content`, `published_text`, …) |
+| `jasonlk_originals.jsonl` | X posts (`text`, `url`, `created_at`; replies/reposts skipped; very short stubs skipped) |
+| `jasonmlemkinyoutubetranscripts.jsonl` | Jason channel transcripts (`video_title`, `video_url`, `transcript_text`, …) |
+| `saastryoutubetranscripts.jsonl` | SaaStr channel transcripts (same shape) |
+
+Rows without usable body text are skipped (e.g. YouTube rows with `transcript_text: null`). After a DAG run, **`./data/persona_profile.json`** is written on the host for Streamlit / `generate.py`.
 
 ## Prerequisites
 
@@ -8,18 +22,16 @@ Dockerized stack: Airflow, Spark, MinIO, Chroma, Streamlit. Paul Graham essays a
 2. **Ollama on the host** — Containers call Ollama at `host.docker.internal:11434`. Install [Ollama](https://ollama.com), then pull the models the pipeline expects:
    - `ollama pull nomic-embed-text` (embeddings in Spark + RAG)
    - `ollama pull llama3.1` (default generation model in `generate.py` / Streamlit)
-3. **Snowflake** — Put real values in `.env` (same keys as `.env.example`). The DAG loads processed data into Snowflake.
 
 ## One-time setup
 
 ```bash
-cd /path/to/298etlpipeline
-cp .env.example .env
-# Edit .env with your Snowflake account, user, password, database, schema, warehouse
+cd /path/to/298P
 mkdir -p data
+# Copy your Lemkin JSONL files into ./data (see table above)
 ```
 
-`.env` is gitignored; secrets are not committed.
+Optional: `cp .env.example .env` if you add custom env overrides.
 
 ## Start the stack
 
@@ -41,23 +53,33 @@ First startup can take several minutes (images build, Airflow DB init, admin use
 
 Keep **`ollama serve`** running on your machine while Spark/Airflow embed (default URL `http://localhost:11434`).
 
+MinIO buckets used: **`lemkin-raw`** (normalized JSON under `raw/`) and **`lemkin-processed`** (Spark output under `chunks/`, plus `persona_profile.json`).
+
 ## Run the pipeline (Airflow)
 
 1. Open the Airflow UI at http://localhost:8080.
-2. Find DAG **`pg_essay_pipeline`**.
+2. Find DAG **`lemkin_content_pipeline`**.
 3. **Unpause** it, then **Trigger** (play button) for a manual run.
 
-Tasks run in order: Hugging Face → MinIO → Spark clean/embed → Snowflake → Chroma → persona extraction. Spark needs Ollama for `nomic-embed-text`.
+Tasks: **extract_to_minio** → **trigger_spark_clean** → **load_to_chroma**. **extract_persona** runs after raw load (in parallel with Spark) and writes persona stats to MinIO and `./data/persona_profile.json`.
+
+Rebuild Airflow images after dependency changes: `docker compose build --no-cache airflow-webserver airflow-scheduler airflow-init`.
+
+Spark needs Ollama for `nomic-embed-text`.
 
 ## Streamlit UI
 
-With the stack up, open **http://localhost:8501**. Adjust the Ollama URL field if needed (from inside Docker, the default points at the host Ollama).
+With the stack up, open **http://localhost:8501**. The app uses **Chroma over HTTP** (`chroma:8000`) and `./data/persona_profile.json`. Run the DAG through **extract_persona** (or copy a persona file) before generating.
 
 ## Optional: CLI generation (outside Docker)
 
-After data exists in Chroma (pipeline has run at least through the Chroma step):
+Point at Chroma on localhost (port **8000** published from the container) and set:
 
 ```bash
+set CHROMA_USE_HTTP=true
+set CHROMA_HOST=localhost
+set CHROMA_PORT=8000
+set CHROMA_COLLECTION_NAME=lemkin_content
 pip install -r requirements.txt
 python generate.py --format linkedin_post --topic "..." --audience "..." --goal "..." --cta "..." --k 8 --out outputs/example.md
 ```
@@ -68,3 +90,14 @@ Create an `outputs/` folder if you want files there.
 
 - If **`airflow-init`** errors because the admin user already exists, that is normal on later runs; the webserver and scheduler should still work.
 - If something fails on first boot, check container logs for `airflow-init`, `airflow-webserver`, and `spark-worker`.
+- **`minio-setup`** and **`airflow-init`** exit after finishing; not staying “running” in Docker Desktop is expected.
+- **`trigger_spark_clean` fails with `Could not parse Master URL`** — Airflow’s Spark hook builds `--master` as `host:port` without the `spark://` scheme. The connection must use **`host`: `spark://spark-master:7077`** and **no separate port** (see `AIRFLOW_CONN_SPARK_DEFAULT` in `docker-compose.yml`). Recreate Airflow containers after edits.
+
+### Debugging a failed Airflow task yourself
+
+1. In the Airflow UI, open the DAG → click the red task → **Log**. The traceback and `spark-submit` output are there, not in `docker compose` stdout.
+2. From the project directory:  
+   `docker compose exec airflow-scheduler ls /opt/airflow/logs/dag_id=lemkin_content_pipeline/`  
+   then open the latest `task_id=trigger_spark_clean/attempt=*.log` with `cat`.
+3. Confirm Spark is up: **http://localhost:8081** (Spark UI) and that `spark-master` / `spark-worker` containers are running.
+4. Tail scheduler: `docker compose logs -f airflow-scheduler` (less detail than the task log for SparkSubmit).

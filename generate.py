@@ -8,6 +8,7 @@ and RAG retrieval. Uses Ollama /api/embed and /api/generate.
 """
 import argparse
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -18,7 +19,7 @@ from chromadb.config import Settings
 
 
 OLLAMA_BASE_DEFAULT = "http://localhost:11434"
-COLLECTION_NAME = "pg_essays"
+COLLECTION_NAME = os.environ.get("CHROMA_COLLECTION_NAME", "lemkin_content")
 DEFAULT_EMBED_MODEL = "nomic-embed-text"
 DEFAULT_GEN_MODEL = "llama3.1"
 CONTEXT_MAX_CHARS = 5000
@@ -42,19 +43,21 @@ def summarize_persona(profile: dict) -> str:
     structure = profile.get("structure_patterns", {})
     framing = profile.get("favorite_framing", {})
     themes = profile.get("favorite_themes", {})
+    meta = profile.get("meta", {})
     top_words = ", ".join(vocab.get("top_50_content_words", [])[:15])
     starters = ", ".join(structure.get("common_sentence_starters_bigrams", [])[:8])
     framing_phrases = ", ".join(framing.get("favorite_framing_phrases", [])[:10])
     theme_list = themes.get("top_content_words_and_bigrams", [])[:10]
-    theme_examples = ", ".join(str(t) for t in theme_list) if theme_list else "startups, writing, ideas"
+    theme_examples = ", ".join(str(t) for t in theme_list) if theme_list else "B2B SaaS, GTM, fundraising"
+    source_hint = meta.get("source", "Jason Lemkin — operator voice")
     lines = [
-        "You are writing in the persona of Paul Graham's essays.",
-        "Emulate: plain language, concrete examples, conversational essay style.",
+        f"You are writing in the persona of {source_hint}.",
+        "Emulate: direct, experienced B2B / SaaS operator tone; concrete metrics and examples.",
         f"Vocabulary tendencies: {top_words}.",
         f"Sentence openers to echo (sparingly): {starters}.",
         f"Framing phrases: {framing_phrases}.",
         f"Themes to lean on: {theme_examples}.",
-        "Avoid corporate buzzwords; favor clear reasoning and examples.",
+        "Favor clarity and specificity over generic hype.",
     ]
     return "\n".join(lines)
 
@@ -99,7 +102,13 @@ def ollama_generate(prompt: str, base_url: str, model: str) -> str:
 
 
 def retrieve(index_path: Path, query_embedding: list[float], k: int, embed_model: str) -> list[dict]:
-    client = chromadb.PersistentClient(path=str(index_path), settings=Settings(anonymized_telemetry=False))
+    use_http = os.environ.get("CHROMA_USE_HTTP", "").lower() in ("1", "true", "yes")
+    if use_http:
+        host = os.environ.get("CHROMA_HOST", "localhost")
+        port = int(os.environ.get("CHROMA_PORT", "8000"))
+        client = chromadb.HttpClient(host=host, port=port)
+    else:
+        client = chromadb.PersistentClient(path=str(index_path), settings=Settings(anonymized_telemetry=False))
     collection = client.get_collection(COLLECTION_NAME)
     results = collection.query(
         query_embeddings=[query_embedding],
@@ -112,7 +121,7 @@ def retrieve(index_path: Path, query_embedding: list[float], k: int, embed_model
 
 
 def format_context(chunks: list[dict], max_chars: int = CONTEXT_MAX_CHARS) -> str:
-    lines = ["[CONTEXT — EXCERPTS FROM PG ESSAYS]"]
+    lines = ["[CONTEXT — EXCERPTS FROM JASON LEMKIN CORPUS]"]
     total = 0
     for i, ch in enumerate(chunks):
         text = str(ch.get("chunk_text", "")).strip()
@@ -165,7 +174,7 @@ def build_prompt(
 
 
 def main():
-    p = argparse.ArgumentParser(description="Generate PG-style content via RAG + Ollama.")
+    p = argparse.ArgumentParser(description="Generate Lemkin-style B2B content via RAG + Ollama.")
     p.add_argument("--format", required=True, help="Format name (e.g. linkedin_post, blog_draft)")
     p.add_argument("--topic", required=True, help="Topic or title")
     p.add_argument("--audience", required=True, help="Target audience")
@@ -174,7 +183,7 @@ def main():
     p.add_argument("--k", type=int, default=8, help="Number of chunks to retrieve (default: 8)")
     p.add_argument("--out", required=True, help="Output markdown file path")
     p.add_argument("--index", default="data/index", help="Chroma index directory (default: data/index)")
-    p.add_argument("--persona", default="persona_profile_pg.json", help="Persona JSON path")
+    p.add_argument("--persona", default="data/persona_profile.json", help="Persona JSON path")
     p.add_argument("--format-specs", default="formats/format_specs.yaml", help="Format specs YAML path")
     p.add_argument("--ollama-base", default=OLLAMA_BASE_DEFAULT, help="Ollama base URL")
     p.add_argument("--embed-model", default=DEFAULT_EMBED_MODEL, help="Ollama embed model")
@@ -193,7 +202,8 @@ def main():
     if not persona_path.exists():
         print(f"Error: persona profile not found: {persona_path}", file=sys.stderr)
         sys.exit(1)
-    if not index_path.exists():
+    use_http = os.environ.get("CHROMA_USE_HTTP", "").lower() in ("1", "true", "yes")
+    if not use_http and not index_path.exists():
         print(f"Error: index not found: {index_path}. Run build_index.py first.", file=sys.stderr)
         sys.exit(1)
 

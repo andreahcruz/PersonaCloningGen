@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
-Streamlit UI for PG-style content generation.
+Streamlit UI for Lemkin-style B2B content generation.
 Run: streamlit run user_interface.py
 """
+import os
 from pathlib import Path
 
 import streamlit as st
@@ -54,9 +55,12 @@ def run_generation(
     return ollama_generate(prompt, ollama_base, gen_model)
 
 
-st.set_page_config(page_title="PG-style Generator", layout="wide")
-st.title("Paul Graham–style content generator")
-st.caption("Uses RAG over PG essays + Ollama to generate content in his voice.")
+use_chroma_http = os.environ.get("CHROMA_USE_HTTP", "").lower() in ("1", "true", "yes")
+default_ollama = os.environ.get("OLLAMA_BASE", OLLAMA_BASE_DEFAULT)
+
+st.set_page_config(page_title="Lemkin-style Generator", layout="wide")
+st.title("Jason Lemkin–style content generator")
+st.caption("RAG over your Lemkin corpus (blog, LinkedIn, YouTube) in Chroma + Ollama.")
 
 with st.sidebar:
     st.header("Content brief")
@@ -67,16 +71,16 @@ with st.sidebar:
     )
     topic = st.text_input(
         "Topic",
-        placeholder="e.g. Reducing churn in B2B SaaS",
+        placeholder="e.g. Hiring a VP Sales in 2026",
         help="Subject or working title.",
     )
     audience = st.text_input(
         "Audience",
-        placeholder="e.g. seed-stage founders",
+        placeholder="e.g. B2B founders at $5–20M ARR",
     )
     goal = st.text_input(
         "Goal",
-        placeholder="e.g. share 3 practical ideas",
+        placeholder="e.g. share one sharp takeaway",
     )
     cta = st.text_input(
         "Call to action",
@@ -93,18 +97,18 @@ with st.sidebar:
 
     with st.expander("Advanced"):
         index_path = st.text_input(
-            "Index path",
+            "Local Chroma path (ignored when CHROMA_USE_HTTP is set)",
             value="data/index",
-            help="Chroma DB directory. Use chroma_pg if built from notebook.",
+            help="PersistentClient path for local dev only.",
         )
-        ollama_base = st.text_input("Ollama base URL", value=OLLAMA_BASE_DEFAULT)
+        ollama_base = st.text_input("Ollama base URL", value=default_ollama)
         embed_model = st.text_input("Embed model", value=DEFAULT_EMBED_MODEL)
         gen_model = st.text_input("Generate model", value=DEFAULT_GEN_MODEL)
 
     generate_btn = st.button("Generate", type="primary", use_container_width=True)
 
 index_path_resolved = BASE / index_path
-persona_path = BASE / "persona_profile_pg.json"
+persona_path = BASE / "data" / "persona_profile.json"
 format_specs_path = BASE / "formats" / "format_specs.yaml"
 
 if generate_btn:
@@ -117,11 +121,14 @@ if generate_btn:
     elif not format_specs_path.exists():
         st.error(f"Format specs not found: {format_specs_path}")
     elif not persona_path.exists():
-        st.error(f"Persona profile not found: {persona_path}")
-    elif not index_path_resolved.exists():
+        st.error(
+            f"Persona profile not found: {persona_path}. "
+            "Run the Airflow DAG through extract_persona (or copy persona_profile.json into ./data)."
+        )
+    elif not use_chroma_http and not index_path_resolved.exists():
         st.error(
             f"Index not found at {index_path_resolved}. "
-            "Run: python build_index.py --corpus data/pg_chunks.parquet --out data/index/"
+            "Set CHROMA_USE_HTTP=true for Docker, or build a local Chroma index."
         )
     else:
         with st.spinner("Embedding query, retrieving chunks, generating..."):
@@ -146,7 +153,7 @@ if generate_btn:
                 st.download_button(
                     label="Download as .md",
                     data=draft,
-                    file_name=f"pg_{format_name}_{topic[:30].replace(' ', '_')}.md",
+                    file_name=f"lemkin_{format_name}_{topic[:30].replace(' ', '_')}.md",
                     mime="text/markdown",
                     use_container_width=True,
                 )

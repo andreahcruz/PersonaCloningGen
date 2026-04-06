@@ -11,8 +11,6 @@ USER airflow
 RUN pip install --no-cache-dir \
     pyspark==3.5.0 \
     boto3 \
-    datasets \
-    snowflake-connector-python \
     chromadb \
     requests \
     beautifulsoup4 \

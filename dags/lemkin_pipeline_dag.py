@@ -1,15 +1,16 @@
 """
-Airflow DAG — Paul Graham Essay ETL Pipeline
+Airflow DAG — Jason Lemkin content ETL
 
-Task 1: extract_to_minio      — HuggingFace → MinIO (pg-raw)
-Task 2: trigger_spark_clean    — Spark job: clean, chunk, embed → MinIO (pg-processed)
-Task 3: load_to_snowflake      — pg-processed → Snowflake table
-Task 4: load_to_chroma         — pg-processed embeddings → Chroma collection
-Task 5: extract_persona        — pg-raw → stylometric analysis → persona_profile.json → pg-processed
+Task 1: extract_to_minio      — local JSONL (blog, LinkedIn, YouTube, X) → MinIO (raw/)
+Task 2: trigger_spark_clean   — Spark: clean, chunk, embed → MinIO (chunks/)
+Task 3: load_to_chroma        — chunks → Chroma
+Task 4: extract_persona       — raw JSON → persona_profile → MinIO + host data/
 """
 import json
 import os
 from datetime import datetime
+from pathlib import Path
+from typing import Any, Callable, Dict, List, Optional, Tuple
 
 from airflow import DAG
 from airflow.operators.python import PythonOperator
@@ -27,99 +28,124 @@ def _minio_client():
     )
 
 
-# ── Task 1 ───────────────────────────────────────────────────────────────────
+def _normalize_blog(row: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+    text = (row.get("content") or row.get("text") or "").strip()
+    if not text:
+        return None
+    title = (row.get("title") or "Blog post")[:500]
+    return {
+        "title": title,
+        "date": row.get("date") or "",
+        "url": row.get("url") or "",
+        "text": text,
+        "source": "blog",
+    }
+
+
+def _normalize_linkedin(row: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+    text = (row.get("content") or "").strip()
+    if not text:
+        return None
+    short = text[:120] + ("..." if len(text) > 120 else "")
+    return {
+        "title": short,
+        "date": row.get("published_text") or "",
+        "url": "",
+        "text": text,
+        "source": "linkedin",
+    }
+
+
+def _normalize_youtube(row: Dict[str, Any], source_tag: str) -> Optional[Dict[str, Any]]:
+    text = (row.get("transcript_text") or "").strip()
+    if not text:
+        return None
+    date = row.get("upload_date_iso") or ""
+    if not date and row.get("fetched_at_utc"):
+        date = str(row["fetched_at_utc"])[:10]
+    return {
+        "title": (row.get("video_title") or "YouTube video")[:500],
+        "date": date,
+        "url": row.get("video_url") or "",
+        "text": text,
+        "source": source_tag,
+    }
+
+
+def _normalize_x(row: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+    """X/Twitter timeline export: skip replies, reposts/quotes, and very short stubs."""
+    if row.get("is_reply") or row.get("is_repost_or_quote"):
+        return None
+    text = (row.get("text") or "").strip()
+    if len(text) < 25:
+        return None
+    preview = text[:120] + ("..." if len(text) > 120 else "")
+    return {
+        "title": preview,
+        "date": row.get("created_at") or "",
+        "url": row.get("url") or "",
+        "text": text,
+        "source": "x",
+    }
+
 
 def extract_to_minio():
-    from datasets import load_dataset
-
-    ds = load_dataset("aadi-blogs/paul_graham_essays", split="train")
+    """Read Lemkin JSONL files from LEMKIN_DATA_DIR and upload normalized JSON to MinIO raw/."""
+    data_dir = Path(os.environ.get("LEMKIN_DATA_DIR", "/opt/airflow/data"))
     s3 = _minio_client()
-    bucket = os.environ.get("MINIO_BUCKET_RAW", "pg-raw")
+    bucket = os.environ.get("MINIO_BUCKET_RAW", "lemkin-raw")
+    raw_prefix = "raw"
 
-    for i, row in enumerate(ds):
-        body = json.dumps(dict(row), default=str)
-        s3.put_object(Bucket=bucket, Key=f"essay_{i}.json", Body=body)
+    loaders: List[Tuple[str, Callable[[Dict[str, Any]], Optional[Dict[str, Any]]]]] = [
+        ("jasonlemkin_blog.jsonl", lambda r: _normalize_blog(r)),
+        ("jasonlemkinlinkedin.jsonl", lambda r: _normalize_linkedin(r)),
+        ("jasonmlemkinyoutubetranscripts.jsonl", lambda r: _normalize_youtube(r, "youtube_jason")),
+        ("saastryoutubetranscripts.jsonl", lambda r: _normalize_youtube(r, "youtube_saastr")),
+        ("jasonlk_originals.jsonl", lambda r: _normalize_x(r)),
+    ]
 
-    print(f"Uploaded {len(ds)} essays to MinIO bucket '{bucket}'")
-
-
-# ── Task 3 ───────────────────────────────────────────────────────────────────
-
-def load_to_snowflake():
-    import snowflake.connector
-
-    s3 = _minio_client()
-    bucket = os.environ.get("MINIO_BUCKET_PROCESSED", "pg-processed")
-
-    objects = s3.list_objects_v2(Bucket=bucket, Prefix="chunks/")
-    rows = []
-    for obj in objects.get("Contents", []):
-        key = obj["Key"]
-        if not key.endswith(".json") or key.startswith("chunks/_"):
+    total = 0
+    for filename, normalizer in loaders:
+        path = data_dir / filename
+        if not path.is_file():
+            print(f"Skip missing file: {path}")
             continue
-        data = s3.get_object(Bucket=bucket, Key=key)["Body"].read().decode()
-        for line in data.strip().splitlines():
-            if line.strip():
-                rows.append(json.loads(line))
+        idx = 0
+        with open(path, encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                try:
+                    row = json.loads(line)
+                except json.JSONDecodeError as e:
+                    print(f"Skip bad JSON in {filename}: {e}")
+                    continue
+                rec = normalizer(row)
+                if not rec:
+                    continue
+                key = f"{raw_prefix}/{Path(filename).stem}_{idx:06d}.json"
+                body = json.dumps(rec, ensure_ascii=False)
+                s3.put_object(Bucket=bucket, Key=key, Body=body.encode("utf-8"))
+                idx += 1
+                total += 1
+        print(f"Uploaded {idx} records from {filename}")
 
-    conn = snowflake.connector.connect(
-        account=os.environ["SNOWFLAKE_ACCOUNT"],
-        user=os.environ["SNOWFLAKE_USER"],
-        password=os.environ["SNOWFLAKE_PASSWORD"],
-        database=os.environ["SNOWFLAKE_DATABASE"],
-        schema=os.environ["SNOWFLAKE_SCHEMA"],
-        warehouse=os.environ["SNOWFLAKE_WAREHOUSE"],
-    )
-    cur = conn.cursor()
-
-    cur.execute("""
-        CREATE TABLE IF NOT EXISTS PG_ESSAYS_CLEANED (
-            essay_id       INTEGER,
-            chunk_index    INTEGER,
-            title          VARCHAR(500),
-            date_original  VARCHAR(100),
-            date_ts        TIMESTAMP_NTZ,
-            url            VARCHAR(1000),
-            chunk_text     VARCHAR(16777216),
-            word_count     INTEGER
+    if total == 0:
+        raise RuntimeError(
+            f"No documents uploaded from {data_dir}. "
+            "Add at least one of: jasonlemkin_blog.jsonl, jasonlemkinlinkedin.jsonl, "
+            "jasonmlemkinyoutubetranscripts.jsonl, saastryoutubetranscripts.jsonl, "
+            "jasonlk_originals.jsonl under ./data (mounted in the container)."
         )
-    """)
-    cur.execute("TRUNCATE TABLE IF EXISTS PG_ESSAYS_CLEANED")
+    print(f"Uploaded {total} total documents to s3://{bucket}/{raw_prefix}/")
 
-    insert_sql = """
-        INSERT INTO PG_ESSAYS_CLEANED
-            (essay_id, chunk_index, title, date_original, date_ts, url, chunk_text, word_count)
-        VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
-    """
-    batch = []
-    for r in rows:
-        batch.append((
-            r.get("essay_id"),
-            r.get("chunk_index"),
-            r.get("title"),
-            r.get("date"),
-            r.get("date_ts"),
-            r.get("url"),
-            r.get("chunk_text"),
-            r.get("word_count"),
-        ))
-
-    if batch:
-        cur.executemany(insert_sql, batch)
-
-    conn.commit()
-    cur.close()
-    conn.close()
-    print(f"Loaded {len(batch)} rows into Snowflake PG_ESSAYS_CLEANED")
-
-
-# ── Task 4 ───────────────────────────────────────────────────────────────────
 
 def load_to_chroma():
     import chromadb
 
     s3 = _minio_client()
-    bucket = os.environ.get("MINIO_BUCKET_PROCESSED", "pg-processed")
+    bucket = os.environ.get("MINIO_BUCKET_PROCESSED", "lemkin-processed")
 
     objects = s3.list_objects_v2(Bucket=bucket, Prefix="chunks/")
     rows = []
@@ -134,8 +160,9 @@ def load_to_chroma():
 
     chroma_host = os.environ.get("CHROMA_HOST", "chroma")
     chroma_port = int(os.environ.get("CHROMA_PORT", "8000"))
+    collection_name = os.environ.get("CHROMA_COLLECTION_NAME", "lemkin_content")
     client = chromadb.HttpClient(host=chroma_host, port=chroma_port)
-    collection = client.get_or_create_collection("pg_essays")
+    collection = client.get_or_create_collection(collection_name)
 
     batch_size = 100
     for start in range(0, len(rows), batch_size):
@@ -150,12 +177,14 @@ def load_to_chroma():
             if not emb or not isinstance(emb, list) or len(emb) == 0:
                 continue
 
-            doc_id = f"essay_{r.get('essay_id', 0)}_chunk_{r.get('chunk_index', 0)}"
+            src = r.get("source") or "unknown"
+            doc_id = f"{src}_{r.get('essay_id', 0)}_{r.get('chunk_index', 0)}"
             ids.append(doc_id)
             documents.append(r.get("chunk_text", ""))
             embeddings.append(emb)
             metadatas.append({
                 "essay_id": r.get("essay_id", 0),
+                "source": src,
                 "title": r.get("title", ""),
                 "chunk_index": r.get("chunk_index", 0),
                 "date": r.get("date", ""),
@@ -171,34 +200,35 @@ def load_to_chroma():
                 metadatas=metadatas,
             )
 
-    print(f"Upserted {len(rows)} chunks into Chroma collection 'pg_essays'")
+    print(f"Upserted {len(rows)} chunks into Chroma collection '{collection_name}'")
 
-
-# ── Task 5 ───────────────────────────────────────────────────────────────────
 
 def extract_persona():
     from collections import Counter
 
     import nltk
     nltk.download("punkt", quiet=True)
-    nltk.download("punkt_tab", quiet=True)
+    try:
+        nltk.download("punkt_tab", quiet=True)
+    except Exception:
+        pass
     nltk.download("stopwords", quiet=True)
     from nltk.corpus import stopwords
     from nltk.tokenize import sent_tokenize, word_tokenize
 
     s3 = _minio_client()
-    bucket_raw = os.environ.get("MINIO_BUCKET_RAW", "pg-raw")
-    bucket_processed = os.environ.get("MINIO_BUCKET_PROCESSED", "pg-processed")
+    bucket_raw = os.environ.get("MINIO_BUCKET_RAW", "lemkin-raw")
+    bucket_processed = os.environ.get("MINIO_BUCKET_PROCESSED", "lemkin-processed")
 
-    objects = s3.list_objects_v2(Bucket=bucket_raw)
+    objects = s3.list_objects_v2(Bucket=bucket_raw, Prefix="raw/")
     all_text = []
     for obj in objects.get("Contents", []):
         key = obj["Key"]
         if not key.endswith(".json"):
             continue
         data = s3.get_object(Bucket=bucket_raw, Key=key)["Body"].read().decode()
-        essay = json.loads(data)
-        text = essay.get("text", "")
+        rec = json.loads(data)
+        text = rec.get("text", "")
         if text:
             all_text.append(text)
 
@@ -227,13 +257,11 @@ def extract_persona():
     common_starters = [b for b, _ in starter_bigrams.most_common(20)]
 
     FRAMING_PATTERNS = [
-        "the thing is", "in other words", "the problem is",
-        "the point is", "what i mean is", "the question is",
-        "the reason is", "the trick is", "the way to",
-        "one of the", "it turns out", "the key is",
-        "what matters is", "the real", "in practice",
+        "the thing is", "in other words", "the bottom line",
+        "here is", "here's what", "the reality is",
+        "what matters is", "at the end of the day",
         "in fact", "for example", "in general",
-        "the most important", "it seems like",
+        "if you", "when you", "the key is",
     ]
     framing_counts = Counter()
     lower_corpus = " ".join(all_text).lower()
@@ -267,31 +295,37 @@ def extract_persona():
             "top_content_words_and_bigrams": top_themes,
         },
         "meta": {
-            "source": "Paul Graham essays (HuggingFace)",
-            "num_essays": len(all_text),
+            "source": "Jason Lemkin — blog, LinkedIn, X posts, SaaStr / channel YouTube transcripts",
+            "num_documents": len(all_text),
             "num_sentences": len(all_sentences),
             "num_content_words": len(all_words),
             "generated_at": datetime.utcnow().isoformat(),
         },
     }
 
+    body = json.dumps(persona_profile, indent=2)
     s3.put_object(
         Bucket=bucket_processed,
         Key="persona_profile.json",
-        Body=json.dumps(persona_profile, indent=2),
+        Body=body,
     )
+    local_path = os.environ.get("PERSONA_LOCAL_PATH", "/opt/airflow/data/persona_profile.json")
+    try:
+        Path(local_path).write_text(body, encoding="utf-8")
+        print(f"Also wrote persona to {local_path} (host ./data when mounted)")
+    except OSError as e:
+        print(f"Could not write local persona file: {e}")
+
     print(f"Wrote persona_profile.json to MinIO bucket '{bucket_processed}'")
 
 
-# ── DAG definition ────────────────────────────────────────────────────────────
-
 with DAG(
-    dag_id="pg_essay_pipeline",
-    description="Paul Graham Essay ETL: Extract → Spark Transform → Snowflake + Chroma + Persona",
+    dag_id="lemkin_content_pipeline",
+    description="Lemkin ETL: local JSONL → MinIO → Spark → Chroma + Persona",
     start_date=datetime(2024, 1, 1),
     schedule=None,
     catchup=False,
-    tags=["etl", "paul-graham", "persona"],
+    tags=["etl", "lemkin", "persona", "jason-lemkin"],
 ) as dag:
 
     task_extract = PythonOperator(
@@ -315,16 +349,11 @@ with DAG(
             "MINIO_ENDPOINT": os.environ.get("MINIO_ENDPOINT", "http://minio:9000"),
             "MINIO_ACCESS_KEY": os.environ.get("MINIO_ACCESS_KEY", "minioadmin"),
             "MINIO_SECRET_KEY": os.environ.get("MINIO_SECRET_KEY", "minioadmin"),
-            "MINIO_BUCKET_RAW": os.environ.get("MINIO_BUCKET_RAW", "pg-raw"),
-            "MINIO_BUCKET_PROCESSED": os.environ.get("MINIO_BUCKET_PROCESSED", "pg-processed"),
+            "MINIO_BUCKET_RAW": os.environ.get("MINIO_BUCKET_RAW", "lemkin-raw"),
+            "MINIO_BUCKET_PROCESSED": os.environ.get("MINIO_BUCKET_PROCESSED", "lemkin-processed"),
             "OLLAMA_BASE": os.environ.get("OLLAMA_BASE", "http://host.docker.internal:11434"),
         },
         verbose=True,
-    )
-
-    task_snowflake = PythonOperator(
-        task_id="load_to_snowflake",
-        python_callable=load_to_snowflake,
     )
 
     task_chroma = PythonOperator(
@@ -337,5 +366,5 @@ with DAG(
         python_callable=extract_persona,
     )
 
-    task_extract >> task_spark >> [task_snowflake, task_chroma]
+    task_extract >> task_spark >> task_chroma
     task_extract >> task_persona

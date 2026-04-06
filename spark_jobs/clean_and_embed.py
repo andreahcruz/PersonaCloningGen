@@ -1,13 +1,13 @@
 """
-PySpark job: reads raw PG essays from MinIO (pg-raw), applies six transforms,
-writes cleaned + embedded chunks to MinIO (pg-processed).
+PySpark job: reads normalized Lemkin JSON from MinIO (raw/), applies transforms,
+writes cleaned + embedded chunks to MinIO (chunks/).
 
 Transforms:
   1. Strip HTML tags
   2. Parse date → timestamp
   3. Deduplicate rows
   4. Chunk text into ~500-word segments
-  5. Add chunk_index
+  5. Add chunk_index + preserve source
   6. Generate nomic-embed-text vectors via Ollama
 """
 import os
@@ -30,8 +30,8 @@ from pyspark.sql.types import (
 MINIO_ENDPOINT = os.environ.get("MINIO_ENDPOINT", "http://minio:9000")
 MINIO_ACCESS_KEY = os.environ.get("MINIO_ACCESS_KEY", "minioadmin")
 MINIO_SECRET_KEY = os.environ.get("MINIO_SECRET_KEY", "minioadmin")
-BUCKET_RAW = os.environ.get("MINIO_BUCKET_RAW", "pg-raw")
-BUCKET_PROCESSED = os.environ.get("MINIO_BUCKET_PROCESSED", "pg-processed")
+BUCKET_RAW = os.environ.get("MINIO_BUCKET_RAW", "lemkin-raw")
+BUCKET_PROCESSED = os.environ.get("MINIO_BUCKET_PROCESSED", "lemkin-processed")
 OLLAMA_BASE = os.environ.get("OLLAMA_BASE", "http://host.docker.internal:11434")
 EMBED_MODEL = "nomic-embed-text"
 CHUNK_WORD_LIMIT = 500
@@ -46,12 +46,21 @@ def strip_html(text):
 def parse_date(date_str):
     if not date_str:
         return None
-    for fmt in ("%B %Y", "%Y", "%B %d, %Y", "%b %Y", "%m/%Y"):
+    s = str(date_str).strip()
+    if not s:
+        return None
+    try:
+        if s.endswith("Z"):
+            s = s[:-1] + "+00:00"
+        return datetime.fromisoformat(s)
+    except ValueError:
+        pass
+    for fmt in ("%B %Y", "%Y", "%B %d, %Y", "%b %Y", "%m/%Y", "%Y-%m-%d"):
         try:
-            return datetime.strptime(date_str.strip(), fmt)
-        except (ValueError, TypeError):
+            return datetime.strptime(s, fmt)
+        except ValueError:
             continue
-    digits = re.search(r"\d{4}", str(date_str))
+    digits = re.search(r"\d{4}", s)
     if digits:
         try:
             return datetime.strptime(digits.group(), "%Y")
@@ -88,7 +97,7 @@ def embed_text(text):
 def main():
     spark = (
         SparkSession.builder
-        .appName("PG Essays — Clean, Chunk, Embed")
+        .appName("Lemkin content — clean, chunk, embed")
         .config("spark.hadoop.fs.s3a.endpoint", MINIO_ENDPOINT)
         .config("spark.hadoop.fs.s3a.access.key", MINIO_ACCESS_KEY)
         .config("spark.hadoop.fs.s3a.secret.key", MINIO_SECRET_KEY)
@@ -103,9 +112,10 @@ def main():
         StructField("date", StringType(), True),
         StructField("url", StringType(), True),
         StructField("text", StringType(), True),
+        StructField("source", StringType(), True),
     ])
 
-    df = spark.read.schema(raw_schema).json(f"s3a://{BUCKET_RAW}/essay_*.json")
+    df = spark.read.schema(raw_schema).json(f"s3a://{BUCKET_RAW}/raw/")
 
     strip_html_udf = F.udf(strip_html, StringType())
     df = df.withColumn("text", strip_html_udf(F.col("text")))
@@ -113,7 +123,7 @@ def main():
     parse_date_udf = F.udf(parse_date, TimestampType())
     df = df.withColumn("date_ts", parse_date_udf(F.col("date")))
 
-    df = df.dropDuplicates(["title", "text"])
+    df = df.dropDuplicates(["source", "title", "url", "text"])
 
     df = df.withColumn("essay_id", F.monotonically_increasing_id())
 
@@ -121,7 +131,7 @@ def main():
     df = df.withColumn("chunks", chunk_udf(F.col("text")))
 
     df = df.select(
-        "essay_id", "title", "date", "date_ts", "url",
+        "essay_id", "source", "title", "date", "date_ts", "url",
         F.posexplode("chunks").alias("chunk_index", "chunk_text"),
     )
 
