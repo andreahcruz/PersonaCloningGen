@@ -30,8 +30,9 @@ x-airflow-common: &airflow-common
     CHROMA_PORT: "8000"
     # Ollama (runs on host machine)
     OLLAMA_BASE: http://host.docker.internal:11434
-    # SparkSubmitOperator — full spark:// URL required (Airflow joins host:port and omits spark://)
-    AIRFLOW_CONN_SPARK_DEFAULT: '{"conn_type":"spark","host":"spark://spark-master:7077"}'
+    # SparkSubmitOperator: local[*] runs entirely in the Airflow container (pip PySpark).
+    # spark://spark-master:7077 uses Bitnami workers; their Spark JARs differ from pip PySpark → InvalidClassException on org.apache.spark.scheduler.Task.
+    AIRFLOW_CONN_SPARK_DEFAULT: '{"conn_type":"spark","host":"local[*]"}'
   volumes:
     - ./dags:/opt/airflow/dags          # your DAG files
     - ./spark_jobs:/opt/airflow/spark_jobs

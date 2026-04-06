@@ -337,7 +337,10 @@ with DAG(
         task_id="trigger_spark_clean",
         application="/opt/airflow/spark_jobs/clean_and_embed.py",
         conn_id="spark_default",
+        # PySpark in the Airflow image does not ship S3A jars; MinIO/s3a needs these on the classpath
+        packages="org.apache.hadoop:hadoop-aws:3.3.4,com.amazonaws:aws-java-sdk-bundle:1.12.262",
         conf={
+            "spark.driver.memory": "2g",
             "spark.hadoop.fs.s3a.endpoint": "{{ var.value.get('MINIO_ENDPOINT', 'http://minio:9000') }}",
             "spark.hadoop.fs.s3a.access.key": "minioadmin",
             "spark.hadoop.fs.s3a.secret.key": "minioadmin",

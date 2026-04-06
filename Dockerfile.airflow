@@ -1,4 +1,5 @@
-FROM apache/airflow:2.8.1
+# Python 3.10+ so chromadb → posthog (telemetry) types using dict[str, ...] work (3.8 raises TypeError).
+FROM apache/airflow:2.8.1-python3.10
 
 USER root
 RUN apt-get update \
@@ -12,6 +13,7 @@ RUN pip install --no-cache-dir \
     pyspark==3.5.0 \
     boto3 \
     chromadb \
+    "posthog>=2.4.0,<3.0.0" \
     requests \
     beautifulsoup4 \
     nltk \

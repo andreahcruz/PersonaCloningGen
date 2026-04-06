@@ -91,7 +91,10 @@ Create an `outputs/` folder if you want files there.
 - If **`airflow-init`** errors because the admin user already exists, that is normal on later runs; the webserver and scheduler should still work.
 - If something fails on first boot, check container logs for `airflow-init`, `airflow-webserver`, and `spark-worker`.
 - **`minio-setup`** and **`airflow-init`** exit after finishing; not staying “running” in Docker Desktop is expected.
-- **`trigger_spark_clean` fails with `Could not parse Master URL`** — Airflow’s Spark hook builds `--master` as `host:port` without the `spark://` scheme. The connection must use **`host`: `spark://spark-master:7077`** and **no separate port** (see `AIRFLOW_CONN_SPARK_DEFAULT` in `docker-compose.yml`). Recreate Airflow containers after edits.
+- **`trigger_spark_clean` fails with `Could not parse Master URL`** — Airflow’s Spark hook builds `--master` from the connection. For a **standalone** cluster, use **`host`: `spark://spark-master:7077`** and **no separate port**. The default in `docker-compose.yml` is **`local[*]`** (all Spark work in the Airflow container) to avoid driver/worker Spark JAR mismatches. Recreate Airflow containers after changing `AIRFLOW_CONN_SPARK_DEFAULT`.
+- **`InvalidClassException: org.apache.spark.scheduler.Task`** — The Spark **driver** (pip `pyspark` in the Airflow image) and **executors** (Bitnami `spark-worker`) were different builds. Use **`local[*]`** (default) or run `spark-submit` from the same image as the workers with matching `SPARK_HOME`.
+- **`ClassNotFoundException: org.apache.hadoop.fs.s3a.S3AFileSystem`** — The Airflow image uses PySpark without S3A JARs. The DAG’s `SparkSubmitOperator` passes `--packages` for `hadoop-aws` and the AWS bundle (first run downloads from Maven; the scheduler container needs outbound internet, or pre-cache the JARs).
+- **`load_to_chroma` / `TypeError: 'type' object is not subscriptable` in `posthog.types`** — The Airflow image must be **Python 3.10** (`Dockerfile.airflow` uses `apache/airflow:2.8.1-python3.10`) and pin **`posthog<3`**. If the log still shows **`python3.8`** in paths, you are on an **old container**: run `docker compose build --no-cache` then `docker compose up -d --force-recreate airflow-webserver airflow-scheduler` and confirm `docker compose exec airflow-scheduler python --version` prints **3.10.x**.
 
 ### Debugging a failed Airflow task yourself
 
@@ -99,5 +102,5 @@ Create an `outputs/` folder if you want files there.
 2. From the project directory:  
    `docker compose exec airflow-scheduler ls /opt/airflow/logs/dag_id=lemkin_content_pipeline/`  
    then open the latest `task_id=trigger_spark_clean/attempt=*.log` with `cat`.
-3. Confirm Spark is up: **http://localhost:8081** (Spark UI) and that `spark-master` / `spark-worker` containers are running.
+3. With **`local[*]`**, the job does not use `spark-worker`; confirm MinIO and Ollama are reachable. For standalone Spark, check **http://localhost:8081** and that `spark-master` / `spark-worker` are running.
 4. Tail scheduler: `docker compose logs -f airflow-scheduler` (less detail than the task log for SparkSubmit).
