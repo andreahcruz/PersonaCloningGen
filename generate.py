@@ -5,6 +5,8 @@ and RAG retrieval. Uses Ollama /api/embed and /api/generate.
 
   python generate.py --format linkedin_post --topic "..." --audience "..." --goal "..." --cta "..." --k 8 --out outputs/pg_linkedin_001.md
   python generate.py --format blog_draft --topic "..." --audience "..." --goal "..." --k 10 --out outputs/pg_blog_001.md
+  python generate.py --format x_thread --topic "..." --audience "..." --goal "..." --k 8 --out outputs/thread_001.md
+  python generate.py --format youtube_script --topic "..." --audience "..." --goal "..." --k 10 --out outputs/script_001.md
 """
 import argparse
 import json
@@ -15,7 +17,8 @@ from pathlib import Path
 import requests
 import yaml
 import chromadb
-from chromadb.config import Settings
+from chromadb.config import DEFAULT_DATABASE, DEFAULT_TENANT, Settings
+from chromadb.errors import NotFoundError
 
 
 OLLAMA_BASE_DEFAULT = "http://localhost:11434"
@@ -106,10 +109,28 @@ def retrieve(index_path: Path, query_embedding: list[float], k: int, embed_model
     if use_http:
         host = os.environ.get("CHROMA_HOST", "localhost")
         port = int(os.environ.get("CHROMA_PORT", "8000"))
-        client = chromadb.HttpClient(host=host, port=port)
+        tenant = os.environ.get("CHROMA_TENANT", DEFAULT_TENANT)
+        database = os.environ.get("CHROMA_DATABASE", DEFAULT_DATABASE)
+        client = chromadb.HttpClient(
+            host=host, port=port, tenant=tenant, database=database
+        )
     else:
         client = chromadb.PersistentClient(path=str(index_path), settings=Settings(anonymized_telemetry=False))
-    collection = client.get_collection(COLLECTION_NAME)
+    try:
+        collection = client.get_collection(COLLECTION_NAME)
+    except NotFoundError as err:
+        try:
+            existing = [c.name for c in client.list_collections()]
+        except Exception:
+            existing = []
+        hint = (
+            f"Chroma has no collection {COLLECTION_NAME!r}. "
+            "In Airflow, run the DAG through **load_to_chroma** (MinIO → Chroma). "
+            "If you removed the **chroma-data** Docker volume or upgraded Chroma, reload once."
+        )
+        if existing:
+            hint += f" Existing collections: {existing}."
+        raise RuntimeError(hint) from err
     results = collection.query(
         query_embeddings=[query_embedding],
         n_results=k,

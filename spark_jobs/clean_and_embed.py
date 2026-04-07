@@ -9,13 +9,22 @@ Transforms:
   4. Chunk text into ~500-word segments
   5. Add chunk_index + preserve source
   6. Generate nomic-embed-text vectors via Ollama
+
+Embedding reliability: each Spark partition calls Ollama concurrently. Too many
+partitions → timeouts / empty embeddings. Before embedding, the DataFrame is
+repartitioned to SPARK_EMBED_PARTITIONS (default 2). Use 1 for a single-threaded
+embed stream (slowest, safest for laptop Ollama). Increase if your Ollama host
+handles parallel /api/embed load well.
 """
 import os
+import random
 import re
+import time
 from datetime import datetime
 
 import requests as req
 from bs4 import BeautifulSoup
+from pyspark import StorageLevel
 from pyspark.sql import SparkSession
 from pyspark.sql import functions as F
 from pyspark.sql.types import (
@@ -33,8 +42,14 @@ MINIO_SECRET_KEY = os.environ.get("MINIO_SECRET_KEY", "minioadmin")
 BUCKET_RAW = os.environ.get("MINIO_BUCKET_RAW", "lemkin-raw")
 BUCKET_PROCESSED = os.environ.get("MINIO_BUCKET_PROCESSED", "lemkin-processed")
 OLLAMA_BASE = os.environ.get("OLLAMA_BASE", "http://host.docker.internal:11434")
-EMBED_MODEL = "nomic-embed-text"
+EMBED_MODEL = os.environ.get("OLLAMA_EMBED_MODEL", "nomic-embed-text")
 CHUNK_WORD_LIMIT = 500
+OLLAMA_EMBED_MAX_RETRIES = int(os.environ.get("OLLAMA_EMBED_MAX_RETRIES", "5"))
+OLLAMA_EMBED_RETRY_BASE_SEC = float(os.environ.get("OLLAMA_EMBED_RETRY_BASE_SEC", "1.5"))
+OLLAMA_EMBED_DELAY_SEC = float(os.environ.get("OLLAMA_EMBED_DELAY_SEC", "0.03"))
+# Hard cap on characters sent to /api/embed (safety for model context)
+OLLAMA_EMBED_MAX_CHARS = int(os.environ.get("OLLAMA_EMBED_MAX_CHARS", "12000"))
+SPARK_EMBED_PARTITIONS = int(os.environ.get("SPARK_EMBED_PARTITIONS", "2"))
 
 
 def strip_html(text):
@@ -81,17 +96,45 @@ def chunk_text(text, limit=CHUNK_WORD_LIMIT):
 
 
 def embed_text(text):
-    try:
-        resp = req.post(
-            f"{OLLAMA_BASE}/api/embed",
-            json={"model": EMBED_MODEL, "input": text},
-            timeout=120,
-        )
-        resp.raise_for_status()
-        return resp.json()["embeddings"][0]
-    except Exception as e:
-        print(f"Embedding failed: {e}")
+    """Call Ollama /api/embed with retries. Returns [] only after all attempts fail."""
+    if text is None:
         return []
+    t = str(text).strip()
+    if not t:
+        return []
+    if len(t) > OLLAMA_EMBED_MAX_CHARS:
+        t = t[:OLLAMA_EMBED_MAX_CHARS]
+
+    url = f"{OLLAMA_BASE}/api/embed"
+    last_err = None
+    for attempt in range(OLLAMA_EMBED_MAX_RETRIES):
+        try:
+            resp = req.post(
+                url,
+                json={"model": EMBED_MODEL, "input": t},
+                timeout=180,
+            )
+            resp.raise_for_status()
+            data = resp.json()
+            vecs = data.get("embeddings") or []
+            if not vecs:
+                last_err = "empty embeddings in response"
+            else:
+                emb = vecs[0]
+                if isinstance(emb, list) and len(emb) > 0:
+                    if OLLAMA_EMBED_DELAY_SEC > 0:
+                        time.sleep(OLLAMA_EMBED_DELAY_SEC)
+                    return emb
+                last_err = "invalid embedding vector"
+        except Exception as e:
+            last_err = str(e)
+        # backoff + jitter before retry
+        if attempt < OLLAMA_EMBED_MAX_RETRIES - 1:
+            sleep_s = OLLAMA_EMBED_RETRY_BASE_SEC * (2**attempt) + random.uniform(0, 0.75)
+            time.sleep(sleep_s)
+
+    print(f"Embedding failed after {OLLAMA_EMBED_MAX_RETRIES} tries: {last_err}")
+    return []
 
 
 def main():
@@ -137,12 +180,36 @@ def main():
 
     df = df.withColumn("word_count", F.size(F.split(F.col("chunk_text"), r"\s+")))
 
+    # Drop empty chunk lines (nothing to embed or store)
+    df = df.filter(F.length(F.trim(F.col("chunk_text"))) > 0)
+
+    # Critical: limit parallel Ollama calls (one HTTP client storm per partition).
+    parts = max(SPARK_EMBED_PARTITIONS, 1)
+    print(
+        f"Repartitioning to {parts} partition(s) before embedding "
+        f"(set SPARK_EMBED_PARTITIONS to tune Ollama concurrency)."
+    )
+    df = df.repartition(parts)
+
     embed_udf = F.udf(embed_text, ArrayType(FloatType()))
     df = df.withColumn("embedding", embed_udf(F.col("chunk_text")))
 
-    df.write.mode("overwrite").json(f"s3a://{BUCKET_PROCESSED}/chunks/")
+    out_path = f"s3a://{BUCKET_PROCESSED}/chunks/"
+    # Materialize once in memory/disk, then count + write — avoids a second Spark job
+    # that re-reads all JSON from S3A (often slow or flaky vs. killing long embed work).
+    df = df.persist(StorageLevel.MEMORY_AND_DISK)
+    try:
+        total = df.count()
+        with_emb = df.filter(F.size(F.col("embedding")) > 0).count()
+        print(
+            f"Chunk rows: {total}; with non-empty embedding: {with_emb} "
+            f"(missing: {total - with_emb})"
+        )
+        df.write.mode("overwrite").json(out_path)
+        print(f"Wrote to {out_path}")
+    finally:
+        df.unpersist()
 
-    print(f"Wrote {df.count()} chunks to s3a://{BUCKET_PROCESSED}/chunks/")
     spark.stop()
 
 

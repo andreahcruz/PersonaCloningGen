@@ -8,7 +8,7 @@ Task 4: extract_persona       — raw JSON → persona_profile → MinIO + host 
 """
 import json
 import os
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Any, Callable, Dict, List, Optional, Tuple
 
@@ -161,10 +161,18 @@ def load_to_chroma():
     chroma_host = os.environ.get("CHROMA_HOST", "chroma")
     chroma_port = int(os.environ.get("CHROMA_PORT", "8000"))
     collection_name = os.environ.get("CHROMA_COLLECTION_NAME", "lemkin_content")
-    client = chromadb.HttpClient(host=chroma_host, port=chroma_port)
+    from chromadb.config import DEFAULT_DATABASE, DEFAULT_TENANT
+
+    tenant = os.environ.get("CHROMA_TENANT", DEFAULT_TENANT)
+    database = os.environ.get("CHROMA_DATABASE", DEFAULT_DATABASE)
+    client = chromadb.HttpClient(
+        host=chroma_host, port=chroma_port, tenant=tenant, database=database
+    )
     collection = client.get_or_create_collection(collection_name)
 
     batch_size = 100
+    upserted = 0
+    skipped_no_embedding = 0
     for start in range(0, len(rows), batch_size):
         chunk = rows[start : start + batch_size]
         ids = []
@@ -175,6 +183,7 @@ def load_to_chroma():
         for r in chunk:
             emb = r.get("embedding")
             if not emb or not isinstance(emb, list) or len(emb) == 0:
+                skipped_no_embedding += 1
                 continue
 
             src = r.get("source") or "unknown"
@@ -199,8 +208,13 @@ def load_to_chroma():
                 embeddings=embeddings,
                 metadatas=metadatas,
             )
+            upserted += len(ids)
 
-    print(f"Upserted {len(rows)} chunks into Chroma collection '{collection_name}'")
+    print(
+        f"Chroma collection '{collection_name}': upserted {upserted} rows with embeddings; "
+        f"skipped {skipped_no_embedding} JSON lines with missing/empty embedding "
+        f"(out of {len(rows)} lines read from MinIO)."
+    )
 
 
 def extract_persona():
@@ -355,7 +369,13 @@ with DAG(
             "MINIO_BUCKET_RAW": os.environ.get("MINIO_BUCKET_RAW", "lemkin-raw"),
             "MINIO_BUCKET_PROCESSED": os.environ.get("MINIO_BUCKET_PROCESSED", "lemkin-processed"),
             "OLLAMA_BASE": os.environ.get("OLLAMA_BASE", "http://host.docker.internal:11434"),
+            # Fewer partitions = fewer parallel Ollama calls (see spark_jobs/clean_and_embed.py)
+            "SPARK_EMBED_PARTITIONS": os.environ.get("SPARK_EMBED_PARTITIONS", "1"),
+            "OLLAMA_EMBED_MAX_RETRIES": os.environ.get("OLLAMA_EMBED_MAX_RETRIES", "5"),
+            "OLLAMA_EMBED_DELAY_SEC": os.environ.get("OLLAMA_EMBED_DELAY_SEC", "0.03"),
         },
+        # Long embed + write; Airflow default is no cap, but this documents intent and avoids surprises if a cap is set globally.
+        execution_timeout=timedelta(hours=12),
         verbose=True,
     )
 

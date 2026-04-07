@@ -60,14 +60,26 @@ default_ollama = os.environ.get("OLLAMA_BASE", OLLAMA_BASE_DEFAULT)
 
 st.set_page_config(page_title="Lemkin-style Generator", layout="wide")
 st.title("Jason Lemkin–style content generator")
-st.caption("RAG over your Lemkin corpus (blog, LinkedIn, YouTube) in Chroma + Ollama.")
+st.caption(
+    "RAG over your Lemkin corpus (blog, LinkedIn, X, YouTube) in Chroma + Ollama. "
+    "Formats control output shape only — retrieval uses the full collection."
+)
 
 with st.sidebar:
     st.header("Content brief")
     format_name = st.selectbox(
         "Format",
-        ["linkedin_post", "blog_draft"],
-        help="linkedin_post: 120–220 words. blog_draft: 600–1000 words.",
+        [
+            "linkedin_post",
+            "blog_draft",
+            "x_thread",
+            "youtube_script",
+        ],
+        help=(
+            "linkedin_post / blog_draft: classic long-form social + article. "
+            "x_thread: 3–7 short posts (thread). "
+            "youtube_script: spoken outline + sections (~450–900 words)."
+        ),
     )
     topic = st.text_input(
         "Topic",

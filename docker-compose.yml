@@ -13,6 +13,8 @@ x-airflow-common: &airflow-common
     AIRFLOW__CORE__EXECUTOR: LocalExecutor
     AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
     AIRFLOW__CORE__FERNET_KEY: ''
+    # Same value on webserver + scheduler; otherwise log streaming returns 403 JWT InvalidSignatureError
+    AIRFLOW__WEBSERVER__SECRET_KEY: '298p-dev-airflow-webserver-secret-key-min-32chars'
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
     AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth'
@@ -30,6 +32,9 @@ x-airflow-common: &airflow-common
     CHROMA_PORT: "8000"
     # Ollama (runs on host machine)
     OLLAMA_BASE: http://host.docker.internal:11434
+    # Spark embed: number of partitions *before* the Ollama UDF = max concurrent /api/embed streams per job.
+    # 1 = slowest, quiet logs (one task); 4–8 = faster on a strong Ollama host; too high → timeouts / empty embeddings → lower it.
+    SPARK_EMBED_PARTITIONS: "16"
     # SparkSubmitOperator: local[*] runs entirely in the Airflow container (pip PySpark).
     # spark://spark-master:7077 uses Bitnami workers; their Spark JARs differ from pip PySpark → InvalidClassException on org.apache.spark.scheduler.Task.
     AIRFLOW_CONN_SPARK_DEFAULT: '{"conn_type":"spark","host":"local[*]"}'
@@ -99,6 +104,11 @@ services:
     <<: *airflow-common
     container_name: airflow-webserver
     command: webserver
+    depends_on:
+      postgres:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully
     ports:
       - "8080:8080"   # Airflow dashboard → visit http://localhost:8080
     healthcheck:
@@ -112,18 +122,26 @@ services:
     <<: *airflow-common
     container_name: airflow-scheduler
     command: scheduler
+    depends_on:
+      postgres:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully
     restart: always
 
   # ── 6. Airflow init (creates admin user on first run) ─────────────────────
+  # Runs once: DB migrate + admin user. Override entrypoint so `airflow` is on PATH (image entrypoint + bash -c breaks that).
   airflow-init:
     <<: *airflow-common
     container_name: airflow-init
-    command: >
-      bash -c "
-        airflow db init &&
-        airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com
-      "
-    restart: on-failure
+    entrypoint: ["/bin/bash", "-lc"]
+    command:
+      - |
+        set -e
+        # Use python -m airflow so we do not depend on the `airflow` shim (PATH / entrypoint quirks).
+        python -m airflow db migrate
+        python -m airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com || true
+    restart: "no"
 
   # ── 7. Apache Spark ────────────────────────────────────────────────────────
   spark-master:
@@ -162,7 +180,9 @@ services:
 
   # ── 8. Chroma (vector store) ───────────────────────────────────────────────
   chroma:
-    image: chromadb/chroma:latest
+    # Pin to match pip `chromadb` in Airflow + Streamlit; `latest` vs old volume causes
+    # "Could not connect to tenant default_tenant" (client/server/API or DB mismatch).
+    image: chromadb/chroma:1.5.5
     container_name: chroma
     ports:
       - "8000:8000"

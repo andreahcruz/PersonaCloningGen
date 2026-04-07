@@ -26,3 +26,37 @@ blog_draft:
   style:
     - "Clear, direct sentences"
     - "Avoid hype; favor reasoning + examples"
+
+x_thread:
+  output_type: "markdown"
+  length_target_words: [40, 560]
+  structure:
+    - form: "A numbered thread: 3–7 posts labeled Post 1, Post 2, … (or 1/, 2/, …)."
+    - post_1: "Hook + claim in under 280 characters (one line)."
+    - middle: "Each middle post: one idea, under 280 characters per post; no walls of text."
+    - last: "Final post: takeaway or question + optional 0–2 hashtags."
+    - spacing: "Blank line between posts."
+  banned:
+    - "A single paragraph blob pretending to be one tweet"
+    - "More than 7 posts in the thread"
+    - "Salesy CTAs (DM me, link in bio) unless the brief explicitly asks"
+  style:
+    - "Punchy, specific, operator voice"
+    - "Short lines; no threadbare clichés (game-changer, crushing it)"
+
+youtube_script:
+  output_type: "markdown"
+  length_target_words: [450, 900]
+  structure:
+    - title: "Working video title on first line"
+    - hook: "0:00–0:30 spoken hook (2–4 short sentences); label section ## Hook"
+    - outline: "Bulleted beat list: 4–8 beats with rough timestamps (e.g. 0:30, 2:00)"
+    - body: "Script sections as ## sections; conversational spoken English; stage directions in parentheses sparingly"
+    - cta: "Short outro + subscribe/reminder line"
+    - b_roll: "Optional final bullet list: B-roll or visual suggestions (not full script)"
+  banned:
+    - "Essay-style paragraphs with no sense of pacing or pauses"
+    - "Reading dense stats lists without framing for a listener"
+  style:
+    - "Sounds natural aloud; varied sentence length"
+    - "Concrete examples and one clear thesis"

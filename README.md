@@ -73,6 +73,10 @@ With the stack up, open **http://localhost:8501**. The app uses **Chroma over HT
 
 The Streamlit **Docker** image installs **`requirements-streamlit.txt`** only (not the full `requirements.txt`), so Chroma’s Pydantic/FastAPI stack can use **`email-validator>=2`** without conflicting with **Airflow**’s older `email-validator<2` pin in the monolithic requirements file.
 
+**Chroma “default_tenant” / tenant errors** — The **Chroma server image** and **`chromadb` pip version** are pinned together in `docker-compose.yml` and the Dockerfiles. If you still see *Could not connect to tenant default_tenant*, the **`chroma-data` volume** may be from an older server layout: stop the stack, remove that volume (Docker Desktop → Volumes, or `docker volume rm <project>_chroma-data`), bring Chroma back up, and **re-run `load_to_chroma`** to repopulate the collection.
+
+**Streamlit: *Collection lemkin_content does not exist*** — Chroma is empty for the current tenant/database. In Airflow, trigger **`lemkin_content_pipeline`** through **`load_to_chroma`** (upstream: **`extract_to_minio`** → **`trigger_spark_clean`** if chunks are missing in MinIO). Rebuild/restart Airflow after Dockerfile changes so **`chromadb==1.5.5`** matches the Chroma container.
+
 ## Optional: CLI generation (outside Docker)
 
 Point at Chroma on localhost (port **8000** published from the container) and set:
