@@ -71,6 +71,8 @@ Spark needs Ollama for `nomic-embed-text`.
 
 With the stack up, open **http://localhost:8501**. The app uses **Chroma over HTTP** (`chroma:8000`) and `./data/persona_profile.json`. Run the DAG through **extract_persona** (or copy a persona file) before generating.
 
+The Streamlit **Docker** image installs **`requirements-streamlit.txt`** only (not the full `requirements.txt`), so Chroma’s Pydantic/FastAPI stack can use **`email-validator>=2`** without conflicting with **Airflow**’s older `email-validator<2` pin in the monolithic requirements file.
+
 ## Optional: CLI generation (outside Docker)
 
 Point at Chroma on localhost (port **8000** published from the container) and set:
