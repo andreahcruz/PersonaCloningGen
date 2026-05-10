@@ -22,17 +22,19 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from host_finetune.config import GGUF_DIR, MODELFILE_PATH, OLLAMA_MODEL_NAME
+from host_finetune.config import GGUF_DIR, GGUF_SIDECAR_DIR, MODELFILE_PATH, OLLAMA_MODEL_NAME
 
 
 def find_gguf() -> Path:
-    if not GGUF_DIR.is_dir():
-        raise FileNotFoundError(
-            f"GGUF dir not found: {GGUF_DIR}. Run `python -m host_finetune.merge_and_export` first."
-        )
-    candidates = sorted(GGUF_DIR.glob("*.gguf"))
+    candidates: list[Path] = []
+    for root in (GGUF_DIR, GGUF_SIDECAR_DIR):
+        if root.is_dir():
+            candidates.extend(root.glob("*.gguf"))
     if not candidates:
-        raise FileNotFoundError(f"No *.gguf files under {GGUF_DIR}.")
+        raise FileNotFoundError(
+            f"No *.gguf files under {GGUF_DIR} or {GGUF_SIDECAR_DIR}. "
+            "Run `python -m host_finetune.merge_and_export` first."
+        )
     # Prefer Q4_K_M if present, else newest by mtime.
     q4 = [c for c in candidates if "q4_k_m" in c.name.lower()]
     return (q4[-1] if q4 else max(candidates, key=lambda p: p.stat().st_mtime))

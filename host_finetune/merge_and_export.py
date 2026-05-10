@@ -25,6 +25,7 @@ if str(REPO_ROOT) not in sys.path:
 from host_finetune.config import (
     GGUF_DIR,
     GGUF_QUANT,
+    GGUF_SIDECAR_DIR,
     HF_MODEL_NAME,
     LORA_ADAPTER_PATH,
     MAX_SEQ_LENGTH,
@@ -148,10 +149,15 @@ def main() -> None:
         quantization_method=GGUF_QUANT,
     )
 
-    ggufs = sorted(GGUF_DIR.glob("*.gguf"))
+    ggufs: list[Path] = []
+    for root in (GGUF_DIR, GGUF_SIDECAR_DIR):
+        if root.is_dir():
+            ggufs.extend(root.glob("*.gguf"))
+    ggufs = sorted(set(ggufs))
     if not ggufs:
         raise RuntimeError(
-            f"GGUF export finished but no *.gguf file was written under {GGUF_DIR}."
+            f"GGUF export finished but no *.gguf file was found under {GGUF_DIR} "
+            f"or {GGUF_SIDECAR_DIR}."
         )
     print(f"Wrote: {ggufs[-1]}  ({ggufs[-1].stat().st_size / 1e9:.2f} GB)")
 

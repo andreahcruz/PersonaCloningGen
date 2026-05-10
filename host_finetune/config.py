@@ -28,6 +28,9 @@ LORA_ADAPTER_PATH = Path(
     os.environ.get("LORA_ADAPTER_PATH", str(ADAPTER_DIR))
 ).expanduser()
 GGUF_DIR = OUTPUT_DIR / "lemkin-clone"
+# Newer Unsloth writes *.gguf under ``{GGUF_DIR.name}_gguf`` next to the HF merge dir,
+# not inside GGUF_DIR itself.
+GGUF_SIDECAR_DIR = OUTPUT_DIR / f"{GGUF_DIR.name}_gguf"
 LAST_RUN_FILE = HERE / ".last_run"
 DATASET_LOCAL = DATA_DIR / "dataset.jsonl"
 

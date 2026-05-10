@@ -27,6 +27,9 @@ DEFAULT_EMBED_MODEL = "nomic-embed-text"
 DEFAULT_GEN_MODEL = "llama3.1"
 CONTEXT_MAX_CHARS = 5000
 
+# Ollama /api/generate can exceed 5 min on cold model load + long prompts (Docker → host).
+_GEN_TIMEOUT = float(os.environ.get("OLLAMA_GENERATE_TIMEOUT", "900"))
+
 
 def load_format_spec(path: Path, format_name: str) -> dict:
     with open(path, encoding="utf-8") as f:
@@ -98,7 +101,7 @@ def ollama_generate(prompt: str, base_url: str, model: str) -> str:
     resp = requests.post(
         url,
         json={"model": model, "prompt": prompt, "stream": False},
-        timeout=300,
+        timeout=_GEN_TIMEOUT,
     )
     resp.raise_for_status()
     return resp.json().get("response", "").strip()
