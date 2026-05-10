@@ -16,6 +16,7 @@ repartitioned to SPARK_EMBED_PARTITIONS (default 2). Use 1 for a single-threaded
 embed stream (slowest, safest for laptop Ollama). Increase if your Ollama host
 handles parallel /api/embed load well.
 """
+import json
 import os
 import random
 import re
@@ -95,6 +96,44 @@ def chunk_text(text, limit=CHUNK_WORD_LIMIT):
     return chunks
 
 
+# Per-source fallback "topic" so LinkedIn/X posts (which have no real title)
+# still produce a usable instruction prompt for SFT. Keep these short and natural.
+_SOURCE_FALLBACK_TOPIC = {
+    "blog": "a B2B SaaS topic",
+    "linkedin": "a SaaS founder takeaway",
+    "x": "a sharp SaaS observation",
+    "youtube_jason": "a SaaStr lesson",
+    "youtube_saastr": "a SaaStr conference talking point",
+}
+
+
+def to_instruction(title, source, text):
+    """Emit one Alpaca-style instruction/input/output JSON line per essay.
+
+    Used for StyleAdaptedLM-style LoRA: train the model to produce founder text
+    when asked to write *in the founder's voice* about a derived topic.
+    """
+    if not text:
+        return None
+    body = str(text).strip()
+    if not body:
+        return None
+    raw_topic = (title or "").strip()
+    if raw_topic:
+        # Clip long LinkedIn/X "first 120 chars" titles so the instruction stays readable
+        topic = raw_topic[:200]
+    else:
+        topic = _SOURCE_FALLBACK_TOPIC.get(source or "", "B2B SaaS")
+    return json.dumps(
+        {
+            "instruction": f"Write in the style of Jason Lemkin about: {topic}",
+            "input": "",
+            "output": body,
+        },
+        ensure_ascii=False,
+    )
+
+
 def embed_text(text):
     """Call Ollama /api/embed with retries. Returns [] only after all attempts fail."""
     if text is None:
@@ -170,6 +209,13 @@ def main():
 
     df = df.withColumn("essay_id", F.monotonically_increasing_id())
 
+    # Branch off a *document-grain* view before chunking. SFT training works better
+    # on whole essays/posts than on 500-word chunks (which lose narrative arc).
+    docs_df = df.select(
+        "essay_id", "source", "title", "url", "date_ts", "text",
+        F.size(F.split(F.col("text"), r"\s+")).alias("doc_word_count"),
+    )
+
     chunk_udf = F.udf(chunk_text, ArrayType(StringType()))
     df = df.withColumn("chunks", chunk_udf(F.col("text")))
 
@@ -209,6 +255,31 @@ def main():
         print(f"Wrote to {out_path}")
     finally:
         df.unpersist()
+
+    # ── Training dataset export (StyleAdaptedLM-style SFT input) ──────────
+    # One JSON line per essay, *not* per chunk. Filter very short posts that
+    # would teach the model nothing and slow training. coalesce(1) so the host
+    # watcher only has to download a single file.
+    to_instruction_udf = F.udf(to_instruction, StringType())
+    train_df = (
+        docs_df
+        .filter(F.col("doc_word_count") >= 50)
+        .withColumn(
+            "training_line",
+            to_instruction_udf(F.col("title"), F.col("source"), F.col("text")),
+        )
+        .filter(F.col("training_line").isNotNull())
+        .select("training_line")
+    )
+    train_count = train_df.count()
+    train_path = f"s3a://{BUCKET_PROCESSED}/training/dataset_jsonl"
+    (
+        train_df
+        .coalesce(1)
+        .write.mode("overwrite")
+        .text(train_path)
+    )
+    print(f"Wrote {train_count} training rows to {train_path} (one part-*.txt JSONL file)")
 
     spark.stop()
 

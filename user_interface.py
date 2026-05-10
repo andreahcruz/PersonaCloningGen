@@ -115,7 +115,29 @@ with st.sidebar:
         )
         ollama_base = st.text_input("Ollama base URL", value=default_ollama)
         embed_model = st.text_input("Embed model", value=DEFAULT_EMBED_MODEL)
-        gen_model = st.text_input("Generate model", value=DEFAULT_GEN_MODEL)
+        # Persona-fine-tuned model is registered by host_finetune/register_ollama.py
+        # as `lemkin-clone` (StyleAdaptedLM-style LoRA on top of llama3.1).
+        # Picking it here is enough — generate.py already passes --gen-model through
+        # to Ollama unchanged.
+        GEN_MODEL_PRESETS = [DEFAULT_GEN_MODEL, "lemkin-clone", "Other..."]
+        gen_model_choice = st.selectbox(
+            "Generate model",
+            GEN_MODEL_PRESETS,
+            index=0,
+            help=(
+                f"`{DEFAULT_GEN_MODEL}` = stock base model with persona prompt. "
+                "`lemkin-clone` = your fine-tuned LoRA (run host_finetune/watcher.py first). "
+                "Pick `Other...` to type any locally-pulled Ollama model name."
+            ),
+        )
+        if gen_model_choice == "Other...":
+            gen_model = st.text_input(
+                "Custom Ollama model",
+                value=DEFAULT_GEN_MODEL,
+                help="Any model name visible in `ollama list`.",
+            )
+        else:
+            gen_model = gen_model_choice
 
     generate_btn = st.button("Generate", type="primary", use_container_width=True)
 

@@ -92,6 +92,134 @@ python generate.py --format linkedin_post --topic "..." --audience "..." --goal 
 
 Create an `outputs/` folder if you want files there.
 
+## Fine-tuning (StyleAdaptedLM-style LoRA on the host GPU)
+
+Adds a fine-tuned generation model on top of the existing RAG pipeline. The base
+model stays frozen (no catastrophic forgetting), a small LoRA adapter is trained
+on your full corpus reframed as instruction/response pairs, the merged result is
+exported to GGUF, and Ollama serves it as a custom model named **`lemkin-clone`**
+that the existing Streamlit UI / `generate.py` can select.
+
+### Prerequisites
+
+- NVIDIA GPU with 12 GB+ VRAM (developed on RTX 5070 Ti, 16 GB Blackwell sm_120).
+- NVIDIA driver 555+ on the **host** (not Docker). Driver-bundled CUDA 12.x or 13.x both work; the wheels target CUDA 12.8 runtime.
+- **Python 3.11** on the host. Newer (3.12, 3.13, 3.14) won't work — Unsloth and bitsandbytes ship wheels for 3.10–3.11. Install via `winget install Python.Python.3.11` if needed.
+- `ollama serve` running on the host (the same one the Docker stack already calls via `host.docker.internal`).
+- The Docker stack already running (Airflow + MinIO + Spark + Chroma).
+
+### One-time host setup
+
+The trainer lives in `host_finetune/` and runs **outside Docker** so it can use
+the GPU directly. **Install order matters** — see the comment at the top of
+[host_finetune/requirements.txt](host_finetune/requirements.txt) for why.
+
+```powershell
+py -3.11 -m venv host_finetune\.venv
+host_finetune\.venv\Scripts\activate
+python -m pip install --upgrade pip
+# Step 1: install a torch in the Unsloth-compatible range FROM the cu128 index.
+# If you skip this step, pip will silently downgrade torch to a CPU-only
+# PyPI wheel when resolving Unsloth's `torch<2.11` constraint.
+pip install "torch>=2.10.0,<2.11.0" "torchvision>=0.25.0,<0.26.0" --index-url https://download.pytorch.org/whl/cu128
+# Step 2: everything else (Unsloth, peft, trl, datasets, bitsandbytes, boto3, ...).
+pip install -r host_finetune\requirements.txt
+ollama pull llama3.1
+```
+
+Sanity-check the GPU stack before training:
+
+```powershell
+python -c "import torch; print(torch.__version__, torch.cuda.is_available(), torch.cuda.get_device_name(0))"
+```
+
+Expected: `2.10.0+cu128 True NVIDIA GeForce RTX 5070 Ti` (or whatever your card is).
+If it prints `False`, your torch got downgraded to CPU-only — re-run step 1 with
+`--force-reinstall` added.
+
+(Linux/macOS: `python3.11 -m venv host_finetune/.venv && source host_finetune/.venv/bin/activate && ...`)
+
+### Run the fine-tune flow
+
+1. Trigger the Airflow DAG (`lemkin_content_pipeline`) end-to-end. The Spark job
+   now writes a training dataset under
+   `s3://lemkin-processed/training/dataset_jsonl/`, and the new
+   **`mark_training_ready`** task promotes it to a stable
+   `s3://lemkin-processed/training/dataset.jsonl` plus a `_READY` sentinel.
+2. With the venv active, run the watcher on the host:
+   ```powershell
+   python -m host_finetune.watcher --once
+   ```
+   It downloads the dataset, runs `host_finetune.finetune` (QLoRA on
+   `unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit`, ~30–60 min on a 5070 Ti),
+   `host_finetune.merge_and_export` (merges + writes Q4_K_M GGUF), and
+   `host_finetune.register_ollama` (`ollama create lemkin-clone -f Modelfile`).
+3. Open Streamlit at <http://localhost:8501>. Under **Advanced**, set
+   *Generate model* to **`lemkin-clone`** and generate as usual. RAG retrieval
+   still runs against the same Chroma collection — the model itself just
+   produces more native-sounding output.
+
+For continuous polling (re-train every time the DAG runs):
+```powershell
+python -m host_finetune.watcher
+```
+
+To re-train without a new sentinel (e.g. after tweaking hyperparams):
+```powershell
+python -m host_finetune.watcher --once --force
+```
+
+### Tunable knobs
+
+All read from environment variables in `host_finetune/config.py`:
+
+| Variable | Default | Notes |
+|---|---|---|
+| `HF_MODEL_NAME` | `unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit` | Drop to `unsloth/Llama-3.2-3B-Instruct-bnb-4bit` if you OOM. |
+| `PER_DEVICE_BATCH` / `GRAD_ACCUM` | `2` / `8` | Effective batch 16; lower batch first if OOM. |
+| `NUM_EPOCHS` | `3` | 1–2 is usually enough for style transfer; 3+ risks overfitting on small corpora. |
+| `LORA_R` / `LORA_ALPHA` | `16` / `32` | Standard StyleAdaptedLM defaults. |
+| `GGUF_QUANT` | `q4_k_m` | `q5_k_m` for higher fidelity at ~25 % more disk. |
+| `OLLAMA_MODEL_NAME` | `lemkin-clone` | Change if you want to keep multiple personas around. |
+| `MINIO_ENDPOINT_HOST` | `http://localhost:9000` | Override only if you remapped MinIO's host port. |
+
+### Fine-tune troubleshooting
+
+- **`AssertionError: Torch not compiled with CUDA enabled` after install.** Pip
+  silently swapped your cu128 torch for a CPU-only PyPI wheel during dependency
+  resolution. Recover with:
+  ```powershell
+  pip install --force-reinstall "torch>=2.10.0,<2.11.0" "torchvision>=0.25.0,<0.26.0" --index-url https://download.pytorch.org/whl/cu128
+  ```
+  Verify `torch.cuda.is_available()` is True before re-running training.
+- **`datasets X requires fsspec[http]<=2025.9.0, but you have fsspec 2026.x`.**
+  Force-reinstalling torch pulls in too-new fsspec. Pin it back:
+  ```powershell
+  pip install "fsspec<=2025.9.0"
+  ```
+- **`RuntimeError: No or negligible GPU memory available for fused cross entropy.`**
+  On Windows, `torch.cuda.mem_get_info()` often reports almost no *free* VRAM
+  while the 8B weights are loaded, so Unsloth's fused CE auto-tuner aborts.
+  `host_finetune/finetune.py` sets `UNSLOTH_CE_LOSS_TARGET_GB=2` before import.
+  If training still fails, try `3`, or free VRAM by closing games/browsers, then:
+  ```powershell
+  $env:UNSLOTH_CE_LOSS_TARGET_GB="3"
+  python -m host_finetune.finetune
+  ```
+- **OOM during training.** Drop `HF_MODEL_NAME` to Llama 3.2 3B, lower
+  `PER_DEVICE_BATCH` to 1 (and raise `GRAD_ACCUM` to 16 to keep effective batch
+  size constant), or shorten `MAX_SEQ_LENGTH` to 768.
+- **`save_pretrained_gguf` is slow on first run.** Unsloth builds llama.cpp into
+  its cache the first time; subsequent runs reuse it. Resulting GGUF is ~5 GB
+  for Llama 3.1 8B at Q4_K_M.
+- **`ollama create` says "model not found".** Ensure `ollama serve` is running
+  before the watcher reaches the `register_ollama` step. The watcher chains
+  scripts in order, so you can re-run just the register step if needed:
+  `python -m host_finetune.register_ollama`.
+- **Streamlit dropdown still shows the old options.** Streamlit caches the
+  module — refresh the browser tab or restart the `streamlit` container:
+  `docker compose restart streamlit`.
+
 ## Troubleshooting
 
 - If **`airflow-init`** errors because the admin user already exists, that is normal on later runs; the webserver and scheduler should still work.

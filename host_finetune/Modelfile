@@ -1,0 +1,25 @@
+# Ollama Modelfile for the Lemkin-style fine-tuned Llama 3.1 8B.
+# register_ollama.py rewrites the FROM line to point at the actual GGUF file
+# Unsloth produced, so the relative path here is just a placeholder.
+FROM ./output/lemkin-clone/unsloth.Q4_K_M.gguf
+
+# Match the Alpaca template that finetune.py trained on.
+TEMPLATE """{{ if .System }}### System:
+{{ .System }}
+
+{{ end }}### Instruction:
+{{ .Prompt }}
+
+### Input:
+
+
+### Response:
+"""
+
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER repeat_penalty 1.1
+PARAMETER num_ctx 4096
+PARAMETER stop "### Instruction:"
+PARAMETER stop "### Input:"
+PARAMETER stop "### System:"

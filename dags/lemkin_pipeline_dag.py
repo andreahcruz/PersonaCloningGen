@@ -1,10 +1,13 @@
 """
 Airflow DAG — Jason Lemkin content ETL
 
-Task 1: extract_to_minio      — local JSONL (blog, LinkedIn, YouTube, X) → MinIO (raw/)
-Task 2: trigger_spark_clean   — Spark: clean, chunk, embed → MinIO (chunks/)
-Task 3: load_to_chroma        — chunks → Chroma
-Task 4: extract_persona       — raw JSON → persona_profile → MinIO + host data/
+Task 1: extract_to_minio       — local JSONL (blog, LinkedIn, YouTube, X) → MinIO (raw/)
+Task 2: trigger_spark_clean    — Spark: clean, chunk, embed → MinIO (chunks/) + training/
+Task 3: load_to_chroma         — chunks → Chroma
+Task 4: extract_persona        — raw JSON → persona_profile → MinIO + host data/
+Task 5: mark_training_ready    — promote Spark's part-*.txt to a stable
+                                 training/dataset.jsonl + write _READY sentinel
+                                 so the host-side fine-tune watcher can pick it up.
 """
 import json
 import os
@@ -217,6 +220,68 @@ def load_to_chroma():
     )
 
 
+def mark_training_ready():
+    """Promote Spark's training output to a stable filename + write a _READY sentinel.
+
+    Spark writes ``s3://lemkin-processed/training/dataset_jsonl/part-*.txt`` (one
+    JSONL line per essay, but a directory + part file because of Spark semantics).
+    The host-side fine-tune watcher wants a single, deterministic key
+    (``training/dataset.jsonl``) and a sentinel it can poll for change detection.
+    """
+    s3 = _minio_client()
+    bucket = os.environ.get("MINIO_BUCKET_PROCESSED", "lemkin-processed")
+    src_prefix = "training/dataset_jsonl/"
+    dest_key = "training/dataset.jsonl"
+    sentinel_key = "training/_READY"
+
+    listing = s3.list_objects_v2(Bucket=bucket, Prefix=src_prefix)
+    part_keys = [
+        obj["Key"]
+        for obj in listing.get("Contents", [])
+        if obj["Key"].endswith(".txt") and not obj["Key"].rsplit("/", 1)[-1].startswith("_")
+    ]
+    if not part_keys:
+        raise RuntimeError(
+            f"No Spark training output found at s3://{bucket}/{src_prefix}. "
+            "Did trigger_spark_clean succeed and write the training dataset?"
+        )
+
+    # Spark with coalesce(1) writes a single part file; if there are multiple
+    # (e.g. someone bumped the partition count), concatenate in stable order so
+    # the watcher always sees one dataset.jsonl regardless of part count.
+    part_keys.sort()
+    buf = bytearray()
+    total_lines = 0
+    for k in part_keys:
+        body = s3.get_object(Bucket=bucket, Key=k)["Body"].read()
+        if not body:
+            continue
+        if buf and not buf.endswith(b"\n"):
+            buf.extend(b"\n")
+        buf.extend(body)
+        total_lines += body.count(b"\n")
+    if not buf.endswith(b"\n"):
+        buf.extend(b"\n")
+
+    s3.put_object(Bucket=bucket, Key=dest_key, Body=bytes(buf))
+    sentinel = {
+        "ready_at": datetime.utcnow().isoformat() + "Z",
+        "dataset_key": dest_key,
+        "dataset_bytes": len(buf),
+        "approx_rows": total_lines,
+        "source_parts": part_keys,
+    }
+    s3.put_object(
+        Bucket=bucket,
+        Key=sentinel_key,
+        Body=json.dumps(sentinel, indent=2).encode("utf-8"),
+    )
+    print(
+        f"Promoted {len(part_keys)} part file(s) into s3://{bucket}/{dest_key} "
+        f"({len(buf)} bytes, ~{total_lines} rows). Wrote sentinel s3://{bucket}/{sentinel_key}."
+    )
+
+
 def extract_persona():
     from collections import Counter
 
@@ -389,5 +454,10 @@ with DAG(
         python_callable=extract_persona,
     )
 
-    task_extract >> task_spark >> task_chroma
+    task_training_ready = PythonOperator(
+        task_id="mark_training_ready",
+        python_callable=mark_training_ready,
+    )
+
+    task_extract >> task_spark >> [task_chroma, task_training_ready]
     task_extract >> task_persona

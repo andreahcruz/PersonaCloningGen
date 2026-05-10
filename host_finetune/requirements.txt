@@ -1,0 +1,46 @@
+# Host-side venv for QLoRA fine-tuning + GGUF export. NOT installed inside Docker.
+# Target: Windows 11 + RTX 5070 Ti (16 GB, Blackwell sm_120) on CUDA 12.x / driver 555+.
+#
+# IMPORTANT: install order matters. Unsloth pins torch<2.11, so pip will silently
+# downgrade a torch>=2.11 wheel to a CPU-only PyPI torch unless torch is already
+# at a satisfying version FROM the cu128 index. The recipe:
+#
+#   py -3.11 -m venv host_finetune\.venv
+#   host_finetune\.venv\Scripts\activate
+#   python -m pip install --upgrade pip
+#   pip install "torch>=2.10.0,<2.11.0" "torchvision>=0.25.0,<0.26.0" --index-url https://download.pytorch.org/whl/cu128
+#   pip install -r host_finetune/requirements.txt
+#
+# After installing, sanity-check with:
+#   python -c "import torch; print(torch.__version__, torch.cuda.is_available(), torch.cuda.get_device_name(0))"
+# Expect: "2.10.0+cu128 True NVIDIA GeForce RTX 5070 Ti".
+#
+# Unsloth bundles a Blackwell-aware bitsandbytes wheel for QLoRA and ships
+# save_pretrained_gguf(), so we don't need llama.cpp installed separately.
+
+# Hard-pin the torch range here so that if requirements.txt is installed without
+# the prior step, pip still demands a torch in the unsloth-compatible window
+# (and will fail loudly rather than swap in CPU-only torch).
+torch>=2.10.0,<2.11.0
+torchvision>=0.25.0,<0.26.0
+
+# torch 2.10 transitively pulls fsspec 2026.x, but `datasets` requires
+# fsspec[http]<=2025.9.0. Pin here so re-installs / `--force-reinstall torch`
+# don't silently break HF dataset loading at runtime.
+fsspec>=2023.1.0,<=2025.9.0
+
+unsloth>=2026.5.0
+transformers>=4.46.0
+peft>=0.13.0
+trl>=0.11.0
+datasets>=3.0.0
+accelerate>=1.0.0
+bitsandbytes>=0.44.1
+sentencepiece>=0.2.0
+protobuf>=4.25.0
+
+# MinIO/S3 client + dataset loader
+boto3>=1.34.0
+
+# CLI niceties
+tqdm>=4.66.1
