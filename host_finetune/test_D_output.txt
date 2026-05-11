@@ -1,0 +1,75 @@
+﻿
+========================================================================
+  TEST D: base bnb-4bit + LoRA adapter, NO MERGE -> generate
+========================================================================
+python.exe : W0511 02:41:17.172000 47560 
+host_finetune\.venv\Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are 
+currently not supported in Windows or MacOs.
+At C:\Users\okevi\AppData\Local\Temp\ps-script-7cb1142a-8546-4b5c-9a32-de92b0f1aa2c.ps1:104 char:71
++ ... NG="utf-8"; & "host_finetune\.venv\Scripts\python.exe" -X utf8 -m hos ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (W0511 02:41:17....ndows or MacOs.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+≡ƒªÑ Unsloth: Will patch your computer to enable 2x faster free finetuning.
+Unsloth: Your Flash Attention 2 installation seems to be broken. Using Xformers instead. No performance changes will be seen.
+≡ƒªÑ Unsloth Zoo will now patch everything to make training faster!
+Adapter dir: C:\Users\okevi\SJSU\DATA298\298P\host_finetune\output\lemkin_lora_stash
+Loading base + adapter via Unsloth (load_in_4bit=True)...
+==((====))==  Unsloth 2026.5.2: Fast Llama patching. Transformers: 5.5.0.
+   \\   /|    NVIDIA GeForce RTX 5070 Ti. Num GPUs = 1. Max memory: 15.92 GB. Platform: Windows.
+O^O/ \_/ \    Torch: 2.10.0+cu128. CUDA: 12.0. CUDA Toolkit: 12.8. Triton: 3.6.0
+\        /    Bfloat16 = TRUE. FA [Xformers = 0.0.35. FA2 = False]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/291 [00:00<01:12,  4.01it/s]
+Loading weights:   1%|          | 2/291 [00:00<01:14,  3.86it/s]
+Loading weights:  10%|Γûë         | 29/291 [00:00<00:03, 67.77it/s]
+Loading weights:  20%|ΓûêΓûë        | 58/291 [00:00<00:01, 124.40it/s]
+Loading weights:  29%|ΓûêΓûêΓûë       | 85/291 [00:00<00:01, 161.54it/s]
+Loading weights:  40%|ΓûêΓûêΓûêΓûê      | 117/291 [00:00<00:00, 204.02it/s]
+Loading weights:  50%|ΓûêΓûêΓûêΓûêΓûë     | 145/291 [00:01<00:00, 224.82it/s]
+Loading weights:  59%|ΓûêΓûêΓûêΓûêΓûêΓûë    | 173/291 [00:01<00:00, 238.88it/s]
+Loading weights:  70%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûë   | 203/291 [00:01<00:00, 251.61it/s]
+Loading weights:  80%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê  | 233/291 [00:01<00:00, 260.42it/s]
+Loading weights:  90%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê | 262/291 [00:01<00:00, 268.36it/s]
+Loading weights: 100%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê| 291/291 [00:01<00:00, 190.66it/s]
+Unsloth: Will load unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit as a legacy tokenizer.
+Not an error, but Unsloth cannot patch MLP layers with our manual autograd engine since either LoRA adapters
+are not enabled or a bias term (like in Qwen) is used.
+Unsloth 2026.5.2 patched 32 layers with 32 QKV layers, 32 O layers and 0 MLP layers.
+  loaded in 6.8s
+
+--- prompt: 'Give one short SaaS growth tip.' ---
+Both `max_new_tokens` (=80) and `max_length`(=131072) seem to have been set. `max_new_tokens` will take precedence. 
+Please refer to the documentation for more information. 
+(https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+C:\Users\okevi\SJSU\DATA298\298P\host_finetune\.venv\Lib\site-packages\transformers\modeling_attn_mask_utils.py:71: 
+FutureWarning: The attention mask API under `transformers.modeling_attn_mask_utils` (`AttentionMaskConverter`) is 
+deprecated and will be removed in Transformers v5.10. Please use the new API in `transformers.masking_utils`.
+  warnings.warn(DEPRECATION_MESSAGE, FutureWarning)
+C:\Users\okevi\SJSU\DATA298\298P\host_finetune\.venv\Lib\site-packages\transformers\modeling_attn_mask_utils.py:281: 
+FutureWarning: The attention mask API under `transformers.modeling_attn_mask_utils` (`AttentionMaskConverter`) is 
+deprecated and will be removed in Transformers v5.10. Please use the new API in `transformers.masking_utils`.
+  warnings.warn(DEPRECATION_MESSAGE, FutureWarning)
+  [elapsed 3.3s]
+  > Here's a short SaaS growth tip:
+
+  > **Tip:** **Create a "Jobs-to-Be-Done" (JTBD) framework to understand your customer's pain points and tailor your product to solve them.**
+
+  > In other words, instead of just listing features, identify the specific tasks or outcomes your customers are trying to achieve and design your product to solve those specific problems.
+
+  > This will help you
+
+--- prompt: 'Write three sentences about why SaaS margins matter.' ---
+Both `max_new_tokens` (=80) and `max_length`(=131072) seem to have been set. `max_new_tokens` will take precedence. 
+Please refer to the documentation for more information. 
+(https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  [elapsed 2.6s]
+  > SaaS (Software as a Service) margins matter because they directly impact a company's profitability and ability to scale. High margins allow SaaS companies to reinvest in growth, improve their products, and maintain a competitive edge in the market. Additionally, strong margins enable SaaS companies to attract and retain top talent, invest in research and development, and navigate economic downturns.
+
+========================================================================
+  DONE
+========================================================================

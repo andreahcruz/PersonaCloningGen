@@ -4,7 +4,13 @@ Reads `host_finetune/data/dataset.jsonl` (one Alpaca-style record per line:
 ``{"instruction": ..., "input": "", "output": ...}``) and writes the LoRA
 adapter to `host_finetune/output/lemkin_lora/`.
 
-Uses **completion-only loss**: gradients only on tokens after ``### Response:``.
+Rows are converted with the model tokenizer’s **Llama 3 Instruct** chat template
+(``apply_chat_template``). Supervision is **assistant-only** via
+``unsloth.chat_templates.train_on_responses_only`` (not raw Alpaca ``###`` loss).
+
+Quick sanity run (smoke / “vibe-check”): set ``MAX_STEPS`` (e.g. ``20``) and optionally
+``FINETUNE_TRAIN_HEAD_N`` to slice the train split; then merge, register Ollama, and run
+``python -m host_finetune.smoke_lemkin_infer``.
 
 Run directly:
     python -m host_finetune.finetune
@@ -17,10 +23,21 @@ import os
 import sys
 from pathlib import Path
 
+# Unsloth chunks the LM head + CE loss to fit within this many GB of peak VRAM.
+# Llama-3 has a 128k vocab so the materialized logits tensor is huge; 0.5 GB is
+# the sweet spot for ~16 GB GPUs (1.0 GB peaks above what your activation
+# budget can spare). Override via env if you have more headroom.
 if os.environ.get("UNSLOTH_CE_LOSS_TARGET_GB") is None:
-    os.environ["UNSLOTH_CE_LOSS_TARGET_GB"] = "2"
+    os.environ["UNSLOTH_CE_LOSS_TARGET_GB"] = "0.5"
 
-os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
+# Aggressive allocator settings for a small-VRAM box: expandable segments
+# avoids permanent fragmentation, garbage_collection_threshold:0.6 forces
+# torch to release more aggressively before OOM, and the smaller max-split
+# size reduces "200 MB free but no contiguous block" stalls.
+os.environ.setdefault(
+    "PYTORCH_CUDA_ALLOC_CONF",
+    "expandable_segments:True,garbage_collection_threshold:0.6,max_split_size_mb:128",
+)
 
 # Unsloth must be imported before transformers/peft for patches.
 from unsloth import FastLanguageModel  # noqa: E402
@@ -29,11 +46,13 @@ import torch
 from datasets import Dataset
 from transformers import BitsAndBytesConfig
 from trl import SFTConfig, SFTTrainer
+from unsloth.chat_templates import train_on_responses_only
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
+from host_finetune.llama_chat_format import training_text_from_row, unsloth_response_markers
 from host_finetune.config import (
     ADAPTER_DIR,
     DATASET_LOCAL,
@@ -42,11 +61,13 @@ from host_finetune.config import (
     HF_MODEL_NAME,
     LEARNING_RATE,
     LOAD_BEST_MODEL_AT_END,
+    LOG_VRAM_USAGE,
     LORA_ALPHA,
     LORA_DROPOUT,
     LORA_R,
     LORA_TARGET_MODULES,
     MAX_SEQ_LENGTH,
+    MAX_VRAM_FRACTION,
     NUM_EPOCHS,
     OUTPUT_DIR,
     PACKING,
@@ -56,14 +77,12 @@ from host_finetune.config import (
     SAVE_TOTAL_LIMIT,
     SKIP_EVAL,
     TRAIN_DATALOADER_NUM_WORKERS,
+    TRAIN_OPTIM,
     USE_EXPLICIT_BNB_CONFIG,
+    USE_LIGER_KERNEL,
+    MAX_STEPS,
+    FINETUNE_TRAIN_HEAD_N,
 )
-
-# Same Alpaca layout as Spark export + Ollama Modelfile. Only the completion is supervised.
-_INSTRUCTION_AND_INPUT_PROMPT = (
-    "### Instruction:\n{instruction}\n\n### Input:\n{input}\n\n### Response:\n"
-)
-
 
 def load_dataset(path: Path) -> Dataset:
     if not path.is_file():
@@ -87,9 +106,8 @@ def load_dataset(path: Path) -> Dataset:
     return Dataset.from_list(rows)
 
 
-def _prompt_completion_batches(examples: dict) -> dict:
-    prompts: list[str] = []
-    completions: list[str] = []
+def _chat_text_batches(examples: dict, tokenizer) -> dict:
+    """One Llama-3 chat-formatted string per row (system defaults come from the tokenizer)."""
     inst_col = examples.get("instruction")
     inp_col = examples.get("input")
     out_col = examples.get("output")
@@ -103,15 +121,17 @@ def _prompt_completion_batches(examples: dict) -> dict:
         inp_col = [""] * n
     if out_col is None:
         out_col = [""] * n
+    texts: list[str] = []
     for i in range(n):
-        inst = inst_col[i] or ""
-        inp = inp_col[i] or ""
-        out = str(out_col[i] or "").strip()
-        prompts.append(
-            _INSTRUCTION_AND_INPUT_PROMPT.format(instruction=str(inst), input=str(inp))
+        texts.append(
+            training_text_from_row(
+                tokenizer,
+                str(inst_col[i] or ""),
+                str(inp_col[i] or ""),
+                str(out_col[i] or ""),
+            )
         )
-        completions.append(out)
-    return {"prompt": prompts, "completion": completions}
+    return {"text": texts}
 
 
 def _resolve_eval_steps() -> int | None:
@@ -151,6 +171,30 @@ def _filter_sft_config_kwargs(desired: dict) -> dict:
     return out
 
 
+def _print_vram(label: str, *, trainer=None) -> None:
+    """Print compact CUDA / system memory summary. Helps spot Windows sysmem fallback."""
+    try:
+        free_b, total_b = torch.cuda.mem_get_info()
+        alloc_b = torch.cuda.memory_allocated()
+        reserved_b = torch.cuda.memory_reserved()
+        max_alloc_b = torch.cuda.max_memory_allocated()
+        print(
+            f"[vram:{label}] alloc={alloc_b / 1e9:.2f}GB "
+            f"reserved={reserved_b / 1e9:.2f}GB "
+            f"peak_alloc={max_alloc_b / 1e9:.2f}GB "
+            f"free={free_b / 1e9:.2f}GB / total={total_b / 1e9:.2f}GB"
+        )
+        # Warn loudly if peak alloc already exceeds physical VRAM — that means
+        # Windows is paging into shared system RAM (huge slowdown).
+        if max_alloc_b > total_b:
+            print(
+                "  [vram:WARNING] peak_alloc > total VRAM — Windows is spilling "
+                "into shared memory. Close apps or lower CE_LOSS_TARGET_GB."
+            )
+    except Exception as e:
+        print(f"[vram:{label}] (unavailable: {e!r})")
+
+
 def _quantize_load_kwargs() -> dict:
     if not USE_EXPLICIT_BNB_CONFIG:
         return {"load_in_4bit": True}
@@ -169,6 +213,26 @@ def main() -> None:
     if torch.cuda.is_available():
         torch.backends.cuda.matmul.allow_tf32 = True
         torch.backends.cudnn.allow_tf32 = True
+        # Cap the caching allocator before any large allocation; this prevents
+        # silent paging into Windows shared memory under VRAM pressure.
+        try:
+            torch.cuda.set_per_process_memory_fraction(MAX_VRAM_FRACTION)
+            free_b, total_b = torch.cuda.mem_get_info()
+            cap_gb = MAX_VRAM_FRACTION * total_b / 1e9
+            print(
+                f"[finetune] VRAM cap: {MAX_VRAM_FRACTION:.0%} of "
+                f"{total_b / 1e9:.2f} GB = {cap_gb:.2f} GB usable "
+                f"(currently {free_b / 1e9:.2f} GB free)"
+            )
+            if free_b < 8 * 1024 * 1024 * 1024:
+                print(
+                    "[finetune] WARNING: < 8 GB free VRAM before training starts. "
+                    "Close GPU-accelerated apps (browsers, Discord, Wallpaper Engine, "
+                    "Cursor renderers) or training will OOM at peak. nvidia-smi -q -d "
+                    "MEMORY shows current holders."
+                )
+        except Exception as e:
+            print(f"[finetune] could not set VRAM cap: {e!r}")
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     ADAPTER_DIR.mkdir(parents=True, exist_ok=True)
@@ -196,16 +260,6 @@ def main() -> None:
         print("[finetune] SKIP_DATASET_PREP: skipped chunk + clean (use with care).")
 
     raw_ds = load_dataset(DATASET_LOCAL)
-    col_names = list(raw_ds.column_names)
-    ds = raw_ds.map(
-        _prompt_completion_batches,
-        batched=True,
-        remove_columns=col_names,
-        desc="format prompt+completion",
-    )
-    split = ds.train_test_split(test_size=0.1, seed=42)
-    train_ds, eval_ds = split["train"], split["test"]
-    print(f"train={len(train_ds)} eval={len(eval_ds)}")
 
     print(
         f"Loading {HF_MODEL_NAME} via Unsloth (4-bit, "
@@ -233,6 +287,35 @@ def main() -> None:
             )
         else:
             raise
+
+    col_names = list(raw_ds.column_names)
+
+    def _map_chat_rows(examples: dict) -> dict:
+        return _chat_text_batches(examples, tokenizer)
+
+    ds = raw_ds.map(
+        _map_chat_rows,
+        batched=True,
+        remove_columns=col_names,
+        desc="format Llama-3 chat (apply_chat_template)",
+    )
+    split = ds.train_test_split(test_size=0.1, seed=42)
+    train_ds, eval_ds = split["train"], split["test"]
+    if FINETUNE_TRAIN_HEAD_N is not None:
+        n_keep = min(FINETUNE_TRAIN_HEAD_N, len(train_ds))
+        train_ds = train_ds.select(range(n_keep))
+        print(
+            f"[finetune] FINETUNE_TRAIN_HEAD_N={FINETUNE_TRAIN_HEAD_N}: "
+            f"using {n_keep} train rows (subset)"
+        )
+    print(f"train={len(train_ds)} eval={len(eval_ds)}")
+
+    ip_dbg, rp_dbg = unsloth_response_markers(tokenizer)
+    print(
+        "[finetune] Llama-3 chat SFT | "
+        f"train_on_responses_only markers len(user_header)={len(ip_dbg)} "
+        f"len(assistant_header)={len(rp_dbg)}"
+    )
 
     print(f"[finetune] LoRA targets={LORA_TARGET_MODULES} r={LORA_R} alpha={LORA_ALPHA}")
     model = FastLanguageModel.get_peft_model(
@@ -280,11 +363,12 @@ def main() -> None:
         "dataloader_pin_memory": torch.cuda.is_available(),
         "dataloader_persistent_workers": TRAIN_DATALOADER_NUM_WORKERS > 0,
         "report_to": "none",
-        "optim": "adamw_8bit",
+        "optim": TRAIN_OPTIM,
+        "use_liger_kernel": USE_LIGER_KERNEL,
         "seed": 42,
         "max_length": MAX_SEQ_LENGTH,
         "packing": packing_effective,
-        "completion_only_loss": True,
+        "dataset_text_field": "text",
         # Unsloth enables checkpointing on the wrapped model; avoid double-enable from TRL.
         "gradient_checkpointing": False,
         "dataset_num_proc": None,
@@ -300,6 +384,10 @@ def main() -> None:
             cfg_fields["metric_for_best_model"] = "eval_loss"
             cfg_fields["greater_is_better"] = False
 
+    # Unsloth's Trainer.train() wrapper does not accept ``max_steps=``; use TrainingArguments.
+    if MAX_STEPS is not None:
+        cfg_fields["max_steps"] = MAX_STEPS
+
     sft_args = SFTConfig(**_filter_sft_config_kwargs(cfg_fields))
 
     resume = _resolve_resume()
@@ -310,15 +398,38 @@ def main() -> None:
         train_dataset=train_ds,
         eval_dataset=eval_ds_arg,
     )
+    instr_part, resp_part = unsloth_response_markers(tokenizer)
+    trainer = train_on_responses_only(
+        trainer,
+        instruction_part=instr_part,
+        response_part=resp_part,
+    )
     if resume:
         print(f"Resuming from checkpoint ({resume!r})...")
-    print(
-        f"Training: completion-only loss | save every {SAVE_STEPS} (keep {SAVE_TOTAL_LIMIT}), "
+    msg = (
+        f"Training: Llama-3 chat + assistant-only loss | save every {SAVE_STEPS} (keep {SAVE_TOTAL_LIMIT}), "
         f"eval={'off' if SKIP_EVAL else f'every {eval_steps}'}, "
         f"packing={packing_effective}, workers={TRAIN_DATALOADER_NUM_WORKERS}, "
-        f"max_length={MAX_SEQ_LENGTH}"
+        f"max_length={MAX_SEQ_LENGTH}, optim={TRAIN_OPTIM}, "
+        f"liger={'on' if USE_LIGER_KERNEL else 'off'}, "
+        f"ce_target_gb={os.environ.get('UNSLOTH_CE_LOSS_TARGET_GB')}"
     )
-    trainer.train(resume_from_checkpoint=resume)
+    if MAX_STEPS is not None:
+        msg += f", max_steps={MAX_STEPS} (caps run length)"
+    print(msg)
+    if LOG_VRAM_USAGE and torch.cuda.is_available():
+        _print_vram("pre-train", trainer=trainer)
+    if MAX_STEPS is not None and SAVE_STEPS > MAX_STEPS:
+        print(
+            f"[finetune] hint: SAVE_STEPS ({SAVE_STEPS}) > MAX_STEPS ({MAX_STEPS}); "
+            "no mid-run checkpoint unless you lower SAVE_STEPS."
+        )
+    train_kw: dict = {}
+    if resume:
+        train_kw["resume_from_checkpoint"] = resume
+    trainer.train(**train_kw)
+    if LOG_VRAM_USAGE and torch.cuda.is_available():
+        _print_vram("post-train", trainer=trainer)
 
     print(f"Saving LoRA adapter -> {ADAPTER_DIR}")
     trainer.model.save_pretrained(str(ADAPTER_DIR))

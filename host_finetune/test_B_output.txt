@@ -1,0 +1,43 @@
+﻿
+========================================================================
+  TEST B: Transformers -> merged HF model (bf16 + CPU offload, pre-GGUF)
+========================================================================
+python.exe : The tokenizer you are loading from 'C:\Users\okevi\SJSU\DATA298\298P\host_finetune\output\lemkin-clone' 
+with an incorrect regex pattern: 
+https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This 
+will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to 
+fix this issue.
+At C:\Users\okevi\AppData\Local\Temp\ps-script-2ce4a688-7365-4dc9-8e1e-5761234bdcb9.ps1:104 char:71
++ ... NG="utf-8"; & "host_finetune\.venv\Scripts\python.exe" -X utf8 -m hos ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (The tokenizer y...fix this issue.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+HF dir: C:\Users\okevi\SJSU\DATA298\298P\host_finetune\output\lemkin-clone
+Loading merged model in bf16 with explicit CPU offload (max_memory={0: '13GiB', 'cpu': '48GiB'}, offload_folder=C:\Users\okevi\SJSU\DATA298\298P\host_finetune\_offload_tmp)...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Skipping import of cpp extensions due to incompatible torch version. Please upgrade to torch >= 2.11.0 (found 
+2.10.0+cu128).
+W0511 02:31:44.566000 45788 
+host_finetune\.venv\Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are 
+currently not supported in Windows or MacOs.
+
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]
+Loading weights:   1%|          | 2/291 [00:00<01:40,  2.86it/s]
+Loading weights:   2%|ΓûÅ         | 5/291 [00:00<00:42,  6.79it/s]
+Loading weights:   3%|ΓûÄ         | 9/291 [00:00<00:22, 12.67it/s]
+Loading weights:   4%|Γûì         | 13/291 [00:01<00:15, 18.15it/s]
+Loading weights:   5%|Γûî         | 16/291 [00:01<00:15, 18.18it/s]
+Loading weights:   8%|Γûè         | 22/291 [00:01<00:10, 24.73it/s]
+Loading weights:   9%|Γûë         | 26/291 [00:01<00:11, 23.69it/s]
+Loading weights:  11%|Γûê         | 31/291 [00:01<00:09, 26.22it/s]
+Loading weights:  12%|ΓûêΓûÅ        | 34/291 [00:01<00:10, 23.64it/s]
+Loading weights:  14%|ΓûêΓûÄ        | 40/291 [00:02<00:08, 28.83it/s]
+Loading weights:  15%|ΓûêΓûî        | 44/291 [00:02<00:09, 27.27it/s]
+Loading weights:  17%|ΓûêΓûï        | 49/291 [00:02<00:08, 29.76it/s]
+Loading weights:  18%|ΓûêΓûè        | 53/291 [00:02<00:08, 27.20it/s]
+Loading weights:  20%|ΓûêΓûë        | 58/291 [00:02<00:08, 28.70it/s]
+Loading weights:  21%|ΓûêΓûê        | 61/291 [00:02<00:08, 25.75it/s]
+Loading weights:  23%|ΓûêΓûêΓûÄ       | 67/291 [00:02<00:07, 30.49it/s]
+Loading weights:  24%|ΓûêΓûêΓûì       | 71/291 [00:03<00:07, 28.92it/s]
+Loading weights:  26%|ΓûêΓûêΓûî       | 76/291 [00:03<00:06, 32.03it/s]

@@ -1,0 +1,94 @@
+﻿
+========================================================================
+  TEST C: llama-cli.exe -> Q4_K_M GGUF (no Ollama, no Modelfile)
+========================================================================
+llama-cli: C:\Users\okevi\.unsloth\llama.cpp\build\bin\Release\llama-cli.exe
+GGUF:      C:\Users\okevi\SJSU\DATA298\298P\host_finetune\output\lemkin-clone_gguf_direct\lemkin-Q4_K_M.gguf  (4.92 GB)
+
+--- prompt: 'Give one short SaaS growth tip.' ---
+  [elapsed 58.7s, exit=0]
+  > --no-conversation is not supported by llama-cli
+  > please use llama-completion instead
+
+  > Loading model... 
+
+
+  > ΓûäΓûä ΓûäΓûä
+  > ΓûêΓûê ΓûêΓûê
+  > ΓûêΓûê ΓûêΓûê  ΓûÇΓûÇΓûêΓûä ΓûêΓûêΓûêΓûäΓûêΓûêΓûêΓûä  ΓûÇΓûÇΓûêΓûä    ΓûäΓûêΓûêΓûêΓûê ΓûêΓûêΓûêΓûêΓûä ΓûêΓûêΓûêΓûêΓûä
+  > ΓûêΓûê ΓûêΓûê ΓûäΓûêΓûÇΓûêΓûê ΓûêΓûê ΓûêΓûê ΓûêΓûê ΓûäΓûêΓûÇΓûêΓûê    ΓûêΓûê    ΓûêΓûê ΓûêΓûê ΓûêΓûê ΓûêΓûê
+  > ΓûêΓûê ΓûêΓûê ΓûÇΓûêΓûäΓûêΓûê ΓûêΓûê ΓûêΓûê ΓûêΓûê ΓûÇΓûêΓûäΓûêΓûê ΓûêΓûê ΓûÇΓûêΓûêΓûêΓûê ΓûêΓûêΓûêΓûêΓûÇ ΓûêΓûêΓûêΓûêΓûÇ
+  >                                     ΓûêΓûê    ΓûêΓûê
+  >                                     ΓûÇΓûÇ    ΓûÇΓûÇ
+
+  > build      : b9101-389ff61d7
+  > model      : lemkin-Q4_K_M.gguf
+  > modalities : text
+
+  > available commands:
+  >   /exit or Ctrl+C     stop or exit
+  >   /regen              regenerate the last response
+  >   /clear              clear the chat history
+  >   /read <file>        add a text file
+  >   /glob <pattern>     add text files using globbing pattern
+
+
+  > > <|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+  > Cutting Knowledge Date: December 2023
+  > Today Date: 26 Jul 2024
+
+  > <|eot_id|><|start_header_id|>user<|end_header_id|>
+
+  > Give one short SaaS growth tip.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+  >  vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vib
+  ... [truncated 507 more chars]
+
+--- prompt: 'Write three sentences about why SaaS margins matter.' ---
+  [elapsed 43.0s, exit=0]
+  > --no-conversation is not supported by llama-cli
+  > please use llama-completion instead
+
+  > Loading model... 
+
+
+  > ΓûäΓûä ΓûäΓûä
+  > ΓûêΓûê ΓûêΓûê
+  > ΓûêΓûê ΓûêΓûê  ΓûÇΓûÇΓûêΓûä ΓûêΓûêΓûêΓûäΓûêΓûêΓûêΓûä  ΓûÇΓûÇΓûêΓûä    ΓûäΓûêΓûêΓûêΓûê ΓûêΓûêΓûêΓûêΓûä ΓûêΓûêΓûêΓûêΓûä
+  > ΓûêΓûê ΓûêΓûê ΓûäΓûêΓûÇΓûêΓûê ΓûêΓûê ΓûêΓûê ΓûêΓûê ΓûäΓûêΓûÇΓûêΓûê    ΓûêΓûê    ΓûêΓûê ΓûêΓûê ΓûêΓûê ΓûêΓûê
+  > ΓûêΓûê ΓûêΓûê ΓûÇΓûêΓûäΓûêΓûê ΓûêΓûê ΓûêΓûê ΓûêΓûê ΓûÇΓûêΓûäΓûêΓûê ΓûêΓûê ΓûÇΓûêΓûêΓûêΓûê ΓûêΓûêΓûêΓûêΓûÇ ΓûêΓûêΓûêΓûêΓûÇ
+  >                                     ΓûêΓûê    ΓûêΓûê
+  >                                     ΓûÇΓûÇ    ΓûÇΓûÇ
+
+  > build      : b9101-389ff61d7
+  > model      : lemkin-Q4_K_M.gguf
+  > modalities : text
+
+  > available commands:
+  >   /exit or Ctrl+C     stop or exit
+  >   /regen              regenerate the last response
+  >   /clear              clear the chat history
+  >   /read <file>        add a text file
+  >   /glob <pattern>     add text files using globbing pattern
+
+
+  > > <|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+  > Cutting Knowledge Date: December 2023
+  > Today Date: 26 Jul 2024
+
+  > <|eot_id|><|start_header_id|>user<|end_header_id|>
+
+  > Write three sentences about why SaaS margins matter.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+  >  vibe vibe vibe mint vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe peg vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vibe vib
+  ... [truncated 527 more chars]
+
+========================================================================
+  DONE
+========================================================================

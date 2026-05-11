@@ -1,25 +1,28 @@
-# Ollama Modelfile for the Lemkin-style fine-tuned Llama 3.1 8B.
-# register_ollama.py rewrites the FROM line to point at the actual GGUF file
-# Unsloth produced, so the relative path here is just a placeholder.
+# Ollama Modelfile for Lemkin fine-tune (Llama 3.1 Instruct family).
+# register_ollama.py rewrites the FROM line to the GGUF Unsloth exported.
 FROM ./output/lemkin-clone/unsloth.Q4_K_M.gguf
 
-# Match the Alpaca template that finetune.py trained on.
-TEMPLATE """{{ if .System }}### System:
-{{ .System }}
+# Align with HF tokenizer.apply_chat_template for Llama 3.1 Instruct (system block +
+# user / assistant headers). {{ .Prompt }} must match training: instruction-only, or
+# instruction + "\\n\\n" + input when the JSONL row has Input text — use the same
+# combined string you trained with (see host_finetune.llama_chat_format).
+# If you add a custom SYSTEM block via Ollama or edit the fixed Meta dates below,
+# mirror that same system message in training (apply_chat_template(messages including
+# {"role":"system", ...})), or you risk train/serve mismatch.
+TEMPLATE """<|begin_of_text|><|start_header_id|>system<|end_header_id|>
 
-{{ end }}### Instruction:
-{{ .Prompt }}
+Cutting Knowledge Date: December 2023
+Today Date: 26 Jul 2024
 
-### Input:
+<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+{{ .Prompt }}<|eot_id|><|start_header_id|>assistant<|end_header_id|>
 
 
-### Response:
 """
 
 PARAMETER temperature 0.7
 PARAMETER top_p 0.9
 PARAMETER repeat_penalty 1.1
 PARAMETER num_ctx 4096
-PARAMETER stop "### Instruction:"
-PARAMETER stop "### Input:"
-PARAMETER stop "### System:"
+PARAMETER stop "<|eot_id|>"

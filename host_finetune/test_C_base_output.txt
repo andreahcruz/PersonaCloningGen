@@ -1,0 +1,101 @@
+﻿
+========================================================================
+  TEST C: llama-cli.exe -> Q4_K_M GGUF (no Ollama, no Modelfile)
+========================================================================
+llama-cli: C:\Users\okevi\.unsloth\llama.cpp\build\bin\Release\llama-cli.exe
+GGUF:      C:\Users\okevi\.ollama\models\blobs\sha256-667b0c1932bc6ffc593ed1d03f895bf2dc8dc6df21db3042284a6f4416b06a29  (4.92 GB)
+
+--- prompt: 'Give one short SaaS growth tip.' ---
+  [elapsed 47.4s, exit=0]
+  > --no-conversation is not supported by llama-cli
+  > please use llama-completion instead
+
+  > Loading model... 
+
+
+  > ΓûäΓûä ΓûäΓûä
+  > ΓûêΓûê ΓûêΓûê
+  > ΓûêΓûê ΓûêΓûê  ΓûÇΓûÇΓûêΓûä ΓûêΓûêΓûêΓûäΓûêΓûêΓûêΓûä  ΓûÇΓûÇΓûêΓûä    ΓûäΓûêΓûêΓûêΓûê ΓûêΓûêΓûêΓûêΓûä ΓûêΓûêΓûêΓûêΓûä
+  > ΓûêΓûê ΓûêΓûê ΓûäΓûêΓûÇΓûêΓûê ΓûêΓûê ΓûêΓûê ΓûêΓûê ΓûäΓûêΓûÇΓûêΓûê    ΓûêΓûê    ΓûêΓûê ΓûêΓûê ΓûêΓûê ΓûêΓûê
+  > ΓûêΓûê ΓûêΓûê ΓûÇΓûêΓûäΓûêΓûê ΓûêΓûê ΓûêΓûê ΓûêΓûê ΓûÇΓûêΓûäΓûêΓûê ΓûêΓûê ΓûÇΓûêΓûêΓûêΓûê ΓûêΓûêΓûêΓûêΓûÇ ΓûêΓûêΓûêΓûêΓûÇ
+  >                                     ΓûêΓûê    ΓûêΓûê
+  >                                     ΓûÇΓûÇ    ΓûÇΓûÇ
+
+  > build      : b9101-389ff61d7
+  > model      : sha256-667b0c1932bc6ffc593ed1d03f895bf2dc8dc6df21db3042284a6f4416b06a29
+  > modalities : text
+
+  > available commands:
+  >   /exit or Ctrl+C     stop or exit
+  >   /regen              regenerate the last response
+  >   /clear              clear the chat history
+  >   /read <file>        add a text file
+  >   /glob <pattern>     add text files using globbing pattern
+
+
+  > > <|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+  > Cutting Knowledge Date: December 2023
+  > Today Date: 26 Jul 2024
+
+  > <|eot_id|><|start_header_id|>user<|end_header_id|>
+
+  > Give one short SaaS growth tip.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+  > Here's a simple SaaS growth tip:
+
+  > **Focus on Customer Success**: Prioritize providing exceptional support and value to your existing customers. Happy customers are more likely to refer your product to others, provide testimonials, and stick with your service, which can lead to word-of-mouth marketing and increased retention rates.
+
+  > [ Prompt: 35.7 t/s | Generation: 8.7 t/s ]
+
+  > Exiting...
+
+--- prompt: 'Write three sentences about why SaaS margins matter.' ---
+  [elapsed 35.2s, exit=0]
+  > --no-conversation is not supported by llama-cli
+  > please use llama-completion instead
+
+  > Loading model... 
+
+
+  > ΓûäΓûä ΓûäΓûä
+  > ΓûêΓûê ΓûêΓûê
+  > ΓûêΓûê ΓûêΓûê  ΓûÇΓûÇΓûêΓûä ΓûêΓûêΓûêΓûäΓûêΓûêΓûêΓûä  ΓûÇΓûÇΓûêΓûä    ΓûäΓûêΓûêΓûêΓûê ΓûêΓûêΓûêΓûêΓûä ΓûêΓûêΓûêΓûêΓûä
+  > ΓûêΓûê ΓûêΓûê ΓûäΓûêΓûÇΓûêΓûê ΓûêΓûê ΓûêΓûê ΓûêΓûê ΓûäΓûêΓûÇΓûêΓûê    ΓûêΓûê    ΓûêΓûê ΓûêΓûê ΓûêΓûê ΓûêΓûê
+  > ΓûêΓûê ΓûêΓûê ΓûÇΓûêΓûäΓûêΓûê ΓûêΓûê ΓûêΓûê ΓûêΓûê ΓûÇΓûêΓûäΓûêΓûê ΓûêΓûê ΓûÇΓûêΓûêΓûêΓûê ΓûêΓûêΓûêΓûêΓûÇ ΓûêΓûêΓûêΓûêΓûÇ
+  >                                     ΓûêΓûê    ΓûêΓûê
+  >                                     ΓûÇΓûÇ    ΓûÇΓûÇ
+
+  > build      : b9101-389ff61d7
+  > model      : sha256-667b0c1932bc6ffc593ed1d03f895bf2dc8dc6df21db3042284a6f4416b06a29
+  > modalities : text
+
+  > available commands:
+  >   /exit or Ctrl+C     stop or exit
+  >   /regen              regenerate the last response
+  >   /clear              clear the chat history
+  >   /read <file>        add a text file
+  >   /glob <pattern>     add text files using globbing pattern
+
+
+  > > <|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+  > Cutting Knowledge Date: December 2023
+  > Today Date: 26 Jul 2024
+
+  > <|eot_id|><|start_header_id|>user<|end_header_id|>
+
+  > Write three sentences about why SaaS margins matter.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+
+  > SaaS (Software as a Service) margins are crucial for businesses as they directly impact profitability, allowing companies to reinvest in growth and expansion. High margins in SaaS enable companies to maintain a competitive edge, invest in research and development, and adapt to changing market conditions. A significant margin also provides SaaS businesses with the financial stability needed to weather economic downturns and invest in long-term growth strategies.
+
+  > [ Prompt
+  ... [truncated 47 more chars]
+
+========================================================================
+  DONE
+========================================================================

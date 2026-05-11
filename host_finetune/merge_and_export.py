@@ -1,22 +1,46 @@
 """Merge the LoRA adapter into the base model and export GGUF for Ollama.
 
-Loads ``host_finetune/output/lemkin_lora/`` on top of ``HF_MODEL_NAME`` and
-writes a merged GGUF (default Q4_K_M) to ``host_finetune/output/lemkin-clone/``.
+Loads ``host_finetune/output/lemkin_lora/`` on top of ``MERGE_BASE_MODEL`` (the
+**un-quantized** Llama 3.1 8B Instruct by default) and writes:
 
-Run directly:
+    host_finetune/output/lemkin-clone/                 # merged bf16 HF model
+    host_finetune/output/lemkin-clone_gguf/*.gguf      # Q4_K_M GGUF (default)
+
+**Why not Unsloth's ``save_pretrained_gguf``?**
+
+On the user's stack (torch 2.10.0+cu128 + Blackwell RTX 5070 Ti +
+``bitsandbytes`` whose C++ extensions can't load — you'll see
+``Skipping import of cpp extensions due to incompatible torch version``),
+Unsloth's GGUF export calls ``bitsandbytes.functional.dequantize_4bit`` to
+materialize bf16 weights from the bnb-4bit base. Without the CUDA kernel, bnb
+falls back to a Python path that produces **numerically wrong but
+statistically plausible** floats. The merged model on disk looks healthy
+(no NaN/Inf, sensible weight stats) but generates pure garbage when used
+(``vibe vibe vibe ...``). Loss curves during training look normal because
+training uses a different bnb code path (CUDA matmul kernel) that works.
+
+To prove this, ``host_finetune/diagnose_pipeline.py`` runs four tests and shows:
+  • Base bnb-4bit (no LoRA) generates clean text          (sanity)
+  • Base + LoRA adapter, no merge, generates clean text   (LoRA itself is fine)
+  • Merged HF → GGUF (Unsloth wrapper) → garbage          (merge is the bug)
+  • Merged HF → GGUF (llama.cpp directly) → still garbage (the saved HF is bad)
+
+Workaround implemented here: load the **un-quantized** base in bf16 (no bnb on
+the merge path at all), apply the LoRA via ``peft.PeftModel``, call
+``merge_and_unload()``, save bf16 safetensors, then shell out to llama.cpp's
+own ``convert_hf_to_gguf.py`` + ``llama-quantize.exe`` (which we proved produce
+correct GGUFs when the source HF model is healthy).
+
+Run:
     python -m host_finetune.merge_and_export
-
-Unsloth's ``save_pretrained_gguf`` calls llama.cpp under the hood; the first
-run downloads/builds llama.cpp into the unsloth cache (a few minutes), then
-subsequent runs are fast.
 """
 from __future__ import annotations
 
 import os
+import shutil
+import subprocess
 import sys
 from pathlib import Path
-
-from unsloth import FastLanguageModel  # noqa: E402  (must precede transformers)
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
@@ -26,140 +50,149 @@ from host_finetune.config import (
     GGUF_DIR,
     GGUF_QUANT,
     GGUF_SIDECAR_DIR,
-    HF_MODEL_NAME,
+    LLAMA_CPP_DIR,
     LORA_ADAPTER_PATH,
-    MAX_SEQ_LENGTH,
+    MERGE_BASE_MODEL,
+    MERGE_DEVICE,
 )
 
 
-OPENSSL_INSTALL_HELP = """
-OpenSSL Win64 for llama.cpp / CMake:
-  • The **Light** winget/npm-style build only ships `openssl.exe` — CMake still fails
-    because **`include/` and `lib/` are missing.**
-  • Install the **full Win64 installer** from Shining Light (NOT "Light"):
-       https://slproweb.com/products/Win32OpenSSL.html
-    Under "Win64 OpenSSL" download an EXE whose name does **NOT** contain `Light`,
-    e.g. `Win64OpenSSL-3_*.exe` vs `Win64OpenSSL-*_Light.exe`.
-  • Accept the default path: **C:\\Program Files\\OpenSSL-Win64**
-  • Optionally copy **lib\\*.dll** into **bin\\** when the wizard offers it (recommended).
-  • Fully quit Cursor, reopen a terminal, then run `merge_and_export` again.
-
-You also need **Visual Studio Build Tools** → workload **Desktop development with C++**.
-"""
-
-
-def _openssl_install_has_dev_libs(root: Path) -> bool:
-    """CMake needs headers + import libs — Light installers omit these."""
-    if not (root / "include" / "openssl" / "ssl.h").is_file():
-        return False
-    lib_root = root / "lib"
-    if not lib_root.is_dir():
-        return False
-    if any(lib_root.glob("*.lib")) or any(lib_root.glob("*.LIB")):
-        return True
-    vc_md = lib_root / "VC" / "x64" / "MD"
-    vc_mt = lib_root / "VC" / "x64" / "MT"
-    return (vc_md.is_dir() and any(vc_md.glob("*.lib"))) or (
-        vc_mt.is_dir() and any(vc_mt.glob("*.lib"))
-    )
-
-
-def _ensure_windows_openssl_on_path() -> None:
-    """Unsloth's llama.cpp install checks ``shutil.which('openssl')``. Cursor/PowerShell
-    often inherits a different PATH than cmd.exe, so we prepend common install dirs.
-    Also set CMake variables so **non-Light** installs (headers + libs) are found.
-    """
-    if os.name != "nt":
-        return
-    candidates = [
-        Path(r"C:\Program Files\OpenSSL-Win64"),
-        Path(r"C:\Program Files (x86)\OpenSSL-Win64"),
-        Path(r"C:\OpenSSL-Win64"),
-        Path(os.environ.get("LOCALAPPDATA", "")) / "Programs" / "OpenSSL-Win64",
-    ]
-    for root in candidates:
-        if not root.is_dir():
-            continue
-        bin_dir = root / "bin"
-        exe = bin_dir / "openssl.exe"
-        if not exe.is_file():
-            continue
-        path = os.environ.get("PATH", "")
-        bin_s = str(bin_dir)
-        if bin_s not in path:
-            os.environ["PATH"] = bin_s + os.pathsep + path
-
-        root_s = str(root)
-        os.environ.setdefault("OPENSSL_ROOT_DIR", root_s)
-        cmake_prefix = os.environ.get("CMAKE_PREFIX_PATH", "")
-        if root_s not in cmake_prefix.split(os.pathsep):
-            os.environ["CMAKE_PREFIX_PATH"] = (
-                root_s + (os.pathsep + cmake_prefix if cmake_prefix else "")
-            )
-
-        dev_ok = _openssl_install_has_dev_libs(root)
-        print(
-            f"[merge_and_export] OpenSSL binaries: {exe}\n"
-            f"[merge_and_export] OPENSSL_ROOT_DIR={root_s}\n"
-            f"[merge_and_export] OpenSSL headers+libs present (CMake): {dev_ok}"
+def _ensure_llama_cpp_tools() -> tuple[Path, Path]:
+    convert_py = LLAMA_CPP_DIR / "convert_hf_to_gguf.py"
+    quantize_exe = LLAMA_CPP_DIR / "build" / "bin" / "Release" / "llama-quantize.exe"
+    if not convert_py.is_file():
+        raise FileNotFoundError(
+            f"llama.cpp converter not found at {convert_py}.\n"
+            "Either build llama.cpp under LLAMA_CPP_DIR (default: ~/.unsloth/llama.cpp) "
+            "or set LLAMA_CPP_DIR=<your-llama.cpp-checkout>."
         )
-
-        if not dev_ok:
-            raise RuntimeError(
-                "Installed OpenSSL is missing **development files** "
-                "(no `include/openssl/ssl.h` / `lib\\*.lib`). "
-                "**Win64 Light** installers cause this.\n"
-                + OPENSSL_INSTALL_HELP
+    if not quantize_exe.is_file():
+        # Try platform-agnostic fallback (Linux/macOS).
+        alt = LLAMA_CPP_DIR / "build" / "bin" / "llama-quantize"
+        if alt.is_file():
+            quantize_exe = alt
+        else:
+            raise FileNotFoundError(
+                f"llama-quantize not found at {quantize_exe} (or {alt}).\n"
+                "Build llama.cpp first (the same build Unsloth produced under "
+                "~/.unsloth/llama.cpp/build is fine)."
             )
+    return convert_py, quantize_exe
 
-        return
 
-    raise RuntimeError(
-        "Could not find `openssl.exe` under common Win64 paths. "
-        "Install Win64 OpenSSL (full installer) from slproweb, then reopen Cursor.\n"
-        + OPENSSL_INSTALL_HELP
+def _resolve_resolved_adapter() -> Path:
+    if not LORA_ADAPTER_PATH.is_dir() or not (LORA_ADAPTER_PATH / "adapter_config.json").is_file():
+        raise FileNotFoundError(
+            f"No adapter_config.json at {LORA_ADAPTER_PATH}. "
+            "Run `python -m host_finetune.finetune`, or set LORA_ADAPTER_PATH to a "
+            "checkpoint-* folder (e.g. host_finetune\\output\\lemkin_lora\\checkpoint-800)."
+        )
+    return LORA_ADAPTER_PATH
+
+
+def _merge_lora_into_base() -> Path:
+    """Load un-quantized base + LoRA, merge, save bf16 HF model. Returns merged dir."""
+    import torch
+    from peft import PeftModel
+    from transformers import AutoModelForCausalLM, AutoTokenizer
+
+    adapter_dir = _resolve_resolved_adapter()
+
+    print(f"[merge] base:    {MERGE_BASE_MODEL}")
+    print(f"[merge] adapter: {adapter_dir}")
+    print(f"[merge] device:  {MERGE_DEVICE}")
+    print(f"[merge] output:  {GGUF_DIR}")
+
+    print(
+        "[merge] loading un-quantized base in bf16 "
+        f"(device_map={MERGE_DEVICE}, low_cpu_mem_usage=True)...",
+        flush=True,
     )
+    base = AutoModelForCausalLM.from_pretrained(
+        MERGE_BASE_MODEL,
+        torch_dtype=torch.bfloat16,
+        device_map=MERGE_DEVICE,
+        low_cpu_mem_usage=True,
+    )
+    print("[merge] loading adapter on top of base...", flush=True)
+    model = PeftModel.from_pretrained(base, str(adapter_dir))
+    print("[merge] merge_and_unload()...", flush=True)
+    merged = model.merge_and_unload()
+
+    if GGUF_DIR.exists():
+        for child in GGUF_DIR.iterdir():
+            try:
+                if child.is_dir():
+                    shutil.rmtree(child)
+                else:
+                    child.unlink()
+            except OSError as e:
+                print(f"  [warn] could not remove {child}: {e}")
+    GGUF_DIR.mkdir(parents=True, exist_ok=True)
+
+    print(f"[merge] save_pretrained -> {GGUF_DIR}", flush=True)
+    merged.save_pretrained(str(GGUF_DIR), safe_serialization=True)
+
+    # Save tokenizer from the adapter dir (carries any FT-side template tweaks);
+    # fall back to the merge base if the adapter dir has no tokenizer files.
+    tok_src = adapter_dir if (adapter_dir / "tokenizer.json").is_file() else MERGE_BASE_MODEL
+    print(f"[merge] tokenizer source: {tok_src}", flush=True)
+    tok = AutoTokenizer.from_pretrained(str(tok_src))
+    tok.save_pretrained(str(GGUF_DIR))
+
+    return GGUF_DIR
+
+
+def _convert_to_gguf(merged_dir: Path, quant: str = GGUF_QUANT) -> Path:
+    """Convert merged HF -> bf16 GGUF -> requested quant (via llama.cpp directly)."""
+    convert_py, quantize_exe = _ensure_llama_cpp_tools()
+    GGUF_SIDECAR_DIR.mkdir(parents=True, exist_ok=True)
+
+    bf16_gguf = GGUF_SIDECAR_DIR / "merged.BF16.gguf"
+    quant_upper = quant.upper()
+    final_name = f"Meta-Llama-3.1-8B-Instruct.{quant_upper}.gguf"
+    final_gguf = GGUF_SIDECAR_DIR / final_name
+
+    for p in (bf16_gguf, final_gguf):
+        if p.exists():
+            try:
+                p.unlink()
+            except OSError as e:
+                print(f"  [warn] could not remove existing {p}: {e}")
+
+    print(f"[gguf] convert HF -> bf16 GGUF: {bf16_gguf}", flush=True)
+    subprocess.run(
+        [
+            sys.executable,
+            str(convert_py),
+            str(merged_dir),
+            "--outfile", str(bf16_gguf),
+            "--outtype", "bf16",
+        ],
+        check=True,
+    )
+    print(f"[gguf] quantize -> {quant_upper}: {final_gguf}", flush=True)
+    subprocess.run(
+        [str(quantize_exe), str(bf16_gguf), str(final_gguf), quant_upper],
+        check=True,
+    )
+
+    # Drop the giant intermediate bf16 GGUF (16 GB) unless explicitly kept.
+    if os.environ.get("KEEP_BF16_GGUF", "").lower() not in ("1", "true", "yes"):
+        try:
+            bf16_gguf.unlink()
+        except OSError:
+            pass
+
+    return final_gguf
 
 
 def main() -> None:
-    _ensure_windows_openssl_on_path()
-
-    if not LORA_ADAPTER_PATH.is_dir() or not any(LORA_ADAPTER_PATH.iterdir()):
-        raise FileNotFoundError(
-            f"No adapter at {LORA_ADAPTER_PATH}. Run `python -m host_finetune.finetune` "
-            "(or set LORA_ADAPTER_PATH to a checkpoint-* folder)."
-        )
-
-    GGUF_DIR.mkdir(parents=True, exist_ok=True)
-
-    print(f"Loading base {HF_MODEL_NAME} + adapter {LORA_ADAPTER_PATH} ...")
-    model, tokenizer = FastLanguageModel.from_pretrained(
-        model_name=str(LORA_ADAPTER_PATH),
-        max_seq_length=MAX_SEQ_LENGTH,
-        dtype=None,
-        load_in_4bit=True,
-    )
-
-    print(f"Exporting GGUF (quant={GGUF_QUANT}) -> {GGUF_DIR}")
-    # Unsloth handles: dequantize 4-bit -> merge LoRA -> save merged HF model ->
-    # invoke llama.cpp converter -> quantize to the requested format.
-    model.save_pretrained_gguf(
-        str(GGUF_DIR),
-        tokenizer,
-        quantization_method=GGUF_QUANT,
-    )
-
-    ggufs: list[Path] = []
-    for root in (GGUF_DIR, GGUF_SIDECAR_DIR):
-        if root.is_dir():
-            ggufs.extend(root.glob("*.gguf"))
-    ggufs = sorted(set(ggufs))
-    if not ggufs:
-        raise RuntimeError(
-            f"GGUF export finished but no *.gguf file was found under {GGUF_DIR} "
-            f"or {GGUF_SIDECAR_DIR}."
-        )
-    print(f"Wrote: {ggufs[-1]}  ({ggufs[-1].stat().st_size / 1e9:.2f} GB)")
+    merged_dir = _merge_lora_into_base()
+    final_gguf = _convert_to_gguf(merged_dir)
+    size_gb = final_gguf.stat().st_size / 1e9
+    print(f"\nWrote: {final_gguf}  ({size_gb:.2f} GB)")
+    print("\nNext: python -m host_finetune.register_ollama")
 
 
 if __name__ == "__main__":

@@ -1,16 +1,18 @@
 """Match-training smoke test against Ollama (Lemkin SFT GGUF).
 
-Your Modelfile puts ``instruction`` training text under ``### Instruction:`` via
-``.Prompt``. So API mode ``modelfile`` sends only the JSON ``instruction`` string
-(one training row).
+Training now uses **Llama 3 Instruct** ``apply_chat_template`` (see ``finetune.py``).
+The bundled ``Modelfile`` wraps ``{{ .Prompt }}`` in the same control tokens.
 
-Mode ``full_prefix`` sends everything up through ``### Response:\\n``, matching the
-literal prefix ``finetune.py`` concatenates before the label — use if you created a
-custom Ollama model without the bundled template.
+Mode ``modelfile`` sends the **user** message string only (instruction, or
+instruction + ``\\n\\n`` + input when the row has Input) — Ollama fills the template.
+
+Mode ``full_prefix`` bypasses the Modelfile and POSTs the exact **generation-prefix**
+string from ``tokenizer.apply_chat_template(..., add_generation_prompt=True)``,
+for debugging template drift.
 
 Examples:
-    python -m host_finetune.smoke_lemkin_infer --model lemkin-model-2
-    python -m host_finetune.smoke_lemkin_infer --model lemkin-model-2 --mode full_prefix
+    python -m host_finetune.smoke_lemkin_infer --model lemkin-lora-v3
+    python -m host_finetune.smoke_lemkin_infer --model lemkin-lora-v3 --mode full_prefix
     python -m host_finetune.smoke_lemkin_infer --model lemkin-clone --row 42
 """
 from __future__ import annotations
@@ -28,12 +30,10 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from host_finetune.config import DATASET_LOCAL
-
-# Match ``finetune._INSTRUCTION_AND_INPUT_PROMPT`` + ``\\n{{output}}`` (avoid importing finetune here).
-_ALPACA = (
-    "### Instruction:\n{instruction}\n\n"
-    "### Input:\n{input}\n\n"
-    "### Response:\n{output}"
+from host_finetune.llama_chat_format import (
+    inference_prompt_from_user_text,
+    load_tokenizer_for_prompt_build,
+    user_message_from_alpaca_row,
 )
 
 
@@ -63,10 +63,10 @@ def _build_prompts(example: dict) -> tuple[str, str]:
     """(modelfile_prompt, full_prefix_prompt)."""
     inst = example.get("instruction") or ""
     inp = example.get("input") or ""
-    modelfile_p = inst  # Same as `.Prompt` in Modelfile; empty input omitted from template anyway.
-    full_prefix = _ALPACA.format(instruction=inst, input=inp, output="").rstrip()
-    if not full_prefix.endswith("\n"):
-        full_prefix += "\n"
+    user_msg = user_message_from_alpaca_row(str(inst), str(inp))
+    modelfile_p = user_msg
+    tok = load_tokenizer_for_prompt_build()
+    full_prefix = inference_prompt_from_user_text(tok, user_msg)
     return modelfile_p, full_prefix
 
 
@@ -106,8 +106,8 @@ def main() -> None:
         "--mode",
         choices=("modelfile", "full_prefix"),
         default="modelfile",
-        help='modelfile = instruction-only (Modelfile TEMPLATE wraps it). '
-        'full_prefix = ### Instruction ... ### Response on empty continuation.',
+        help="modelfile = user message only (Ollama TEMPLATE). "
+        "full_prefix = full Llama-3 generation prefix from HF tokenizer (no Modelfile).",
     )
     p.add_argument("--row", type=int, default=0, help="N-th nonempty dataset row")
     p.add_argument("--dataset", type=Path, default=DATASET_LOCAL)

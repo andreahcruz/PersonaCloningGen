@@ -1,0 +1,90 @@
+﻿
+========================================================================
+  TEST A: base unsloth bnb-4bit, NO LoRA -> generate (sanity)
+========================================================================
+python.exe : W0511 02:39:17.894000 33148 
+host_finetune\.venv\Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are 
+currently not supported in Windows or MacOs.
+At C:\Users\okevi\AppData\Local\Temp\ps-script-2d9c6714-f509-4389-91c6-9f153d862a25.ps1:105 char:71
++ ... NG="utf-8"; & "host_finetune\.venv\Scripts\python.exe" -X utf8 -m hos ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (W0511 02:39:17....ndows or MacOs.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+≡ƒªÑ Unsloth: Will patch your computer to enable 2x faster free finetuning.
+Unsloth: Your Flash Attention 2 installation seems to be broken. Using Xformers instead. No performance changes will be seen.
+≡ƒªÑ Unsloth Zoo will now patch everything to make training faster!
+Loading base: unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit
+==((====))==  Unsloth 2026.5.2: Fast Llama patching. Transformers: 5.5.0.
+   \\   /|    NVIDIA GeForce RTX 5070 Ti. Num GPUs = 1. Max memory: 15.92 GB. Platform: Windows.
+O^O/ \_/ \    Torch: 2.10.0+cu128. CUDA: 12.0. CUDA Toolkit: 12.8. Triton: 3.6.0
+\        /    Bfloat16 = TRUE. FA [Xformers = 0.0.35. FA2 = False]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/291 [00:00<03:05,  1.57it/s]
+Loading weights:   1%|          | 2/291 [00:01<03:13,  1.49it/s]
+Loading weights:   3%|ΓûÄ         | 9/291 [00:01<00:31,  9.09it/s]
+Loading weights:   7%|Γûï         | 19/291 [00:01<00:12, 20.96it/s]
+Loading weights:  11%|Γûê         | 31/291 [00:01<00:07, 35.66it/s]
+Loading weights:  14%|ΓûêΓûÄ        | 40/291 [00:01<00:05, 45.12it/s]
+Loading weights:  17%|ΓûêΓûï        | 49/291 [00:01<00:04, 53.30it/s]
+Loading weights:  20%|ΓûêΓûë        | 57/291 [00:02<00:04, 57.40it/s]
+Loading weights:  23%|ΓûêΓûêΓûÄ       | 67/291 [00:02<00:03, 64.56it/s]
+Loading weights:  26%|ΓûêΓûêΓûî       | 75/291 [00:02<00:03, 66.71it/s]
+Loading weights:  29%|ΓûêΓûêΓûë       | 85/291 [00:02<00:02, 71.91it/s]
+Loading weights:  32%|ΓûêΓûêΓûêΓûÅ      | 93/291 [00:02<00:02, 72.76it/s]
+Loading weights:  35%|ΓûêΓûêΓûêΓûî      | 103/291 [00:02<00:02, 76.42it/s]
+Loading weights:  38%|ΓûêΓûêΓûêΓûè      | 112/291 [00:02<00:02, 74.85it/s]
+Loading weights:  42%|ΓûêΓûêΓûêΓûêΓûÅ     | 121/291 [00:02<00:02, 75.17it/s]
+Loading weights:  46%|ΓûêΓûêΓûêΓûêΓûï     | 135/291 [00:02<00:01, 90.49it/s]
+Loading weights:  50%|ΓûêΓûêΓûêΓûêΓûë     | 145/291 [00:03<00:01, 87.60it/s]
+Loading weights:  53%|ΓûêΓûêΓûêΓûêΓûêΓûÄ    | 155/291 [00:03<00:01, 89.19it/s]
+Loading weights:  57%|ΓûêΓûêΓûêΓûêΓûêΓûï    | 165/291 [00:03<00:01, 89.31it/s]
+Loading weights:  60%|ΓûêΓûêΓûêΓûêΓûêΓûê    | 175/291 [00:03<00:01, 86.63it/s]
+Loading weights:  63%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûÄ   | 184/291 [00:03<00:01, 86.70it/s]
+Loading weights:  66%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûï   | 193/291 [00:03<00:01, 81.35it/s]
+Loading weights:  70%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûë   | 203/291 [00:03<00:01, 85.86it/s]
+Loading weights:  73%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûÄ  | 212/291 [00:03<00:00, 85.88it/s]
+Loading weights:  76%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûî  | 221/291 [00:03<00:00, 82.00it/s]
+Loading weights:  79%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûë  | 230/291 [00:04<00:00, 82.36it/s]
+Loading weights:  82%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûÅ | 239/291 [00:04<00:00, 84.10it/s]
+Loading weights:  85%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûî | 248/291 [00:04<00:00, 83.37it/s]
+Loading weights:  88%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûè | 257/291 [00:04<00:00, 82.60it/s]
+Loading weights:  91%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûÅ| 266/291 [00:04<00:00, 82.61it/s]
+Loading weights:  95%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûì| 275/291 [00:04<00:00, 82.36it/s]
+Loading weights:  98%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûè| 284/291 [00:04<00:00, 81.39it/s]
+Loading weights: 100%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê| 291/291 [00:04<00:00, 61.33it/s]
+Unsloth: Will load unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit as a legacy tokenizer.
+  loaded in 10.4s
+
+--- prompt: 'Give one short SaaS growth tip.' ---
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a 
+consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Both `max_new_tokens` (=200) and `max_length`(=131072) seem to have been set. `max_new_tokens` will take precedence. 
+Please refer to the documentation for more information. 
+(https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+C:\Users\okevi\SJSU\DATA298\298P\host_finetune\.venv\Lib\site-packages\transformers\modeling_attn_mask_utils.py:71: 
+FutureWarning: The attention mask API under `transformers.modeling_attn_mask_utils` (`AttentionMaskConverter`) is 
+deprecated and will be removed in Transformers v5.10. Please use the new API in `transformers.masking_utils`.
+  warnings.warn(DEPRECATION_MESSAGE, FutureWarning)
+C:\Users\okevi\SJSU\DATA298\298P\host_finetune\.venv\Lib\site-packages\transformers\modeling_attn_mask_utils.py:281: 
+FutureWarning: The attention mask API under `transformers.modeling_attn_mask_utils` (`AttentionMaskConverter`) is 
+deprecated and will be removed in Transformers v5.10. Please use the new API in `transformers.masking_utils`.
+  warnings.warn(DEPRECATION_MESSAGE, FutureWarning)
+  [elapsed 3.6s]
+  > Here's a short SaaS growth tip:
+
+  > **Tip:** **Offer a Free Trial with a Clear Goal**: Provide a free trial for your SaaS product, but set a clear goal or constraint, such as limited features or a time-limited trial. This encourages potential customers to try your product and experience its value, increasing the likelihood of conversion to a paid plan.
+
+--- prompt: 'Write three sentences about why SaaS margins matter.' ---
+Both `max_new_tokens` (=200) and `max_length`(=131072) seem to have been set. `max_new_tokens` will take precedence. 
+Please refer to the documentation for more information. 
+(https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+  [elapsed 2.5s]
+  > SaaS (Software as a Service) margins matter because they directly impact the profitability and sustainability of a company's business model. High margins enable SaaS companies to invest in growth, improve their products, and maintain a competitive edge in the market. Conversely, low margins can lead to financial strain, making it challenging for companies to scale and adapt to changing market conditions.
+
+========================================================================
+  DONE
+========================================================================

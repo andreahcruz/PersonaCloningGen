@@ -3,9 +3,12 @@
 Streamlit UI for Lemkin-style B2B content generation.
 Run: streamlit run user_interface.py
 """
+from __future__ import annotations
+
 import os
 from pathlib import Path
 
+import requests
 import streamlit as st
 
 from generate import (
@@ -24,6 +27,60 @@ from generate import (
 )
 
 BASE = Path(__file__).parent
+
+# Shown first when those tags exist in Ollama (see ``register_ollama.py`` / ``ollama create``).
+_FT_MODEL_ORDER = (
+    "llama3.1",
+    "lemkin-clone",
+    "lemkin-smoke20",
+    "lemkin-lora-v3",
+)
+
+
+def _ollama_model_tags(base_url: str) -> list[str]:
+    """Names returned by Ollama (e.g. ``lemkin-clone:latest``). Empty if unreachable."""
+    url = (base_url or "").strip().rstrip("/")
+    if not url:
+        return []
+    try:
+        r = requests.get(f"{url}/api/tags", timeout=5)
+        r.raise_for_status()
+        out: list[str] = []
+        for m in r.json().get("models") or []:
+            n = (m.get("name") or "").strip()
+            if n:
+                out.append(n)
+        return sorted(set(out))
+    except Exception:
+        return []
+
+
+def _gen_model_options(ollama_base: str) -> tuple[list[str], bool]:
+    """Build selectbox options + whether Ollama listing succeeded."""
+    tags = _ollama_model_tags(ollama_base)
+    if not tags:
+        # Offline / wrong URL: still offer common names + Other
+        return list(_FT_MODEL_ORDER) + ["Other..."], False
+
+    def base_name(tag: str) -> str:
+        return tag.split(":", 1)[0]
+
+    seen: set[str] = set()
+    ordered: list[str] = []
+
+    def add(tag: str) -> None:
+        if tag not in seen:
+            ordered.append(tag)
+            seen.add(tag)
+
+    hint_bases = {base_name(t): t for t in tags}
+    for hint in _FT_MODEL_ORDER:
+        if hint in hint_bases:
+            add(hint_bases[hint])
+    for t in tags:
+        add(t)
+    add("Other...")
+    return ordered, True
 
 
 def run_generation(
@@ -115,19 +172,26 @@ with st.sidebar:
         )
         ollama_base = st.text_input("Ollama base URL", value=default_ollama)
         embed_model = st.text_input("Embed model", value=DEFAULT_EMBED_MODEL)
-        # Persona-fine-tuned model is registered by host_finetune/register_ollama.py
-        # as `lemkin-clone` (StyleAdaptedLM-style LoRA on top of llama3.1).
-        # Picking it here is enough — generate.py already passes --gen-model through
-        # to Ollama unchanged.
-        GEN_MODEL_PRESETS = [DEFAULT_GEN_MODEL, "lemkin-clone", "Other..."]
+
+        gen_opts, ollama_ok = _gen_model_options(ollama_base)
+        if ollama_ok:
+            st.caption(f"Models from Ollama at `{ollama_base}` ({len(gen_opts) - 1} tags).")
+        else:
+            st.caption(
+                "Could not list models from Ollama — showing common names. "
+                "Check the URL and that `ollama serve` is running."
+            )
+
+        # Fine-tuned GGUFs are registered via ``python -m host_finetune.register_ollama``.
+        # Options refresh each run from GET /api/tags (same as ``ollama list``).
         gen_model_choice = st.selectbox(
             "Generate model",
-            GEN_MODEL_PRESETS,
+            gen_opts,
             index=0,
             help=(
-                f"`{DEFAULT_GEN_MODEL}` = stock base model with persona prompt. "
-                "`lemkin-clone` = your fine-tuned LoRA (run host_finetune/watcher.py first). "
-                "Pick `Other...` to type any locally-pulled Ollama model name."
+                f"`{DEFAULT_GEN_MODEL}` = stock base with persona prompt in the RAG prompt. "
+                "`lemkin-*` = merged LoRA GGUF you created with merge_and_export + register_ollama. "
+                "Pick `Other...` for any name from `ollama list`."
             ),
         )
         if gen_model_choice == "Other...":
@@ -195,4 +259,3 @@ if generate_btn:
                 st.error(f"Generation failed: {e}")
                 if "Connection" in str(e) or "refused" in str(e).lower():
                     st.info("Make sure Ollama is running: ollama serve")
-                raise

@@ -98,6 +98,23 @@ PER_DEVICE_BATCH = int(os.environ.get("PER_DEVICE_BATCH", "2"))
 GRAD_ACCUM = int(os.environ.get("GRAD_ACCUM", "8"))
 LEARNING_RATE = float(os.environ.get("LEARNING_RATE", "1e-4"))
 
+# ── VRAM-saving knobs (RTX 5070 Ti is 16 GB; Windows apps eat ~1-3 GB at idle) ──
+# ``adamw_8bit`` keeps Adam state on GPU; ``paged_adamw_8bit`` lets bnb page
+# optimizer state to CPU on pressure (slightly slower but no spillover stalls).
+TRAIN_OPTIM = os.environ.get("TRAIN_OPTIM", "paged_adamw_8bit")
+# Liger Kernel ships a fused / chunked cross-entropy that drops final-layer
+# memory by ~30-50% on Llama-3 (vocab=128k). Off by default for portability;
+# turn on if ``pip install liger-kernel`` succeeded for your CUDA build.
+USE_LIGER_KERNEL = _truthy("USE_LIGER_KERNEL", False)
+# Print VRAM telemetry at every logging step (helps spot spillover into
+# Windows shared-memory fallback, which silently slows training).
+LOG_VRAM_USAGE = _truthy("LOG_VRAM_USAGE", True)
+# Cap PyTorch's CUDA allocator at this fraction of physical VRAM so it can't
+# silently overflow into Windows' shared-memory fallback (which paging through
+# PCIe makes training 5-10× slower). On a 16 GB card 0.93 ≈ 15.2 GB of usable
+# budget; anything above this throws a clean OOM instead of a multi-hour stall.
+MAX_VRAM_FRACTION = float(os.environ.get("MAX_VRAM_FRACTION", "0.93"))
+
 # Checkpoints + eval (long runs: frequent saves, rarer eval avoids slowdown from
 # full validation passes every N steps).
 SAVE_STEPS = int(os.environ.get("SAVE_STEPS", "200"))
@@ -117,6 +134,22 @@ LOAD_BEST_MODEL_AT_END = os.environ.get("LOAD_BEST_MODEL_AT_END", "1").lower() n
 # checkpoint under the training output dir.
 RESUME_FROM_CHECKPOINT = os.environ.get("RESUME_FROM_CHECKPOINT", "").strip()
 
+
+def _optional_positive_int(env_name: str) -> int | None:
+    raw = os.environ.get(env_name, "").strip()
+    if not raw or not str(raw).isdigit():
+        return None
+    v = int(raw)
+    return v if v > 0 else None
+
+
+# Smoke / vibe-check: ``MAX_STEPS`` caps total optimizer steps via ``TrainingArguments``
+# (``SFTConfig(max_steps=...)`` — do not pass ``max_steps`` to ``Trainer.train`` under Unsloth).
+# ``FINETUNE_TRAIN_HEAD_N`` keeps only the first N rows of the train split after the 90/10 split
+# (full eval split unchanged unless you shrink it too).
+MAX_STEPS = _optional_positive_int("MAX_STEPS")
+FINETUNE_TRAIN_HEAD_N = _optional_positive_int("FINETUNE_TRAIN_HEAD_N")
+
 # On Windows, dataloader workers > 0 can cause slowdowns or instability; override if needed.
 _TRAIN_WORKERS_DEFAULT = "0" if os.name == "nt" else "2"
 TRAIN_DATALOADER_NUM_WORKERS = int(
@@ -129,6 +162,25 @@ TRAIN_DATALOADER_NUM_WORKERS = int(
 PACKING = os.environ.get("PACKING", "1").lower() not in ("0", "false", "no")
 
 GGUF_QUANT = os.environ.get("GGUF_QUANT", "q4_k_m")
+
+# ── merge_and_export.py ──────────────────────────────────────────────────
+# Unsloth's ``save_pretrained_gguf`` calls bitsandbytes' ``dequantize_4bit`` to
+# materialize bf16 weights for saving. On torch 2.10.0+cu128 + Blackwell GPUs,
+# bnb's C++ extensions can't load and the Python fallback produces numerically
+# wrong floats — the resulting GGUF generates garbage tokens. We bypass by
+# merging against the **un-quantized** base in plain bf16 (no bnb in merge
+# path) and then invoking llama.cpp's converter + quantizer directly.
+# See ``host_finetune/diagnose_pipeline.py`` for the evidence chain.
+MERGE_BASE_MODEL = os.environ.get(
+    "MERGE_BASE_MODEL",
+    HF_MODEL_NAME[: -len("-bnb-4bit")] if HF_MODEL_NAME.endswith("-bnb-4bit") else HF_MODEL_NAME,
+)
+# CPU merge is slow but reliable; set MERGE_DEVICE=cuda only if you have enough
+# VRAM for the un-quantized base in bf16 (~16 GB for Llama 3.1 8B).
+MERGE_DEVICE = os.environ.get("MERGE_DEVICE", "cpu")
+LLAMA_CPP_DIR = Path(
+    os.environ.get("LLAMA_CPP_DIR", str(Path.home() / ".unsloth" / "llama.cpp"))
+).expanduser()
 
 # ── Ollama ───────────────────────────────────────────────────────────────
 OLLAMA_MODEL_NAME = os.environ.get("OLLAMA_MODEL_NAME", "lemkin-clone")
