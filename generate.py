@@ -68,8 +68,8 @@ def summarize_persona(profile: dict) -> str:
     return "\n".join(lines)
 
 
-def format_spec_to_prompt(spec: dict) -> str:
-    lines = ["[FORMAT RULES]"]
+def format_spec_to_prompt(spec: dict, heading: str = "Format requirements") -> str:
+    lines = [heading]
     lines.append(f"Output type: {spec.get('output_type', 'markdown')}.")
     if "length_target_words" in spec:
         lo, hi = spec["length_target_words"][0], spec["length_target_words"][1]
@@ -145,7 +145,7 @@ def retrieve(index_path: Path, query_embedding: list[float], k: int, embed_model
 
 
 def format_context(chunks: list[dict], max_chars: int = CONTEXT_MAX_CHARS) -> str:
-    lines = ["[CONTEXT — EXCERPTS FROM JASON LEMKIN CORPUS]"]
+    lines = ["Reference excerpts from the Jason Lemkin corpus (tone and ideas only; do not copy verbatim):"]
     total = 0
     for i, ch in enumerate(chunks):
         text = str(ch.get("chunk_text", "")).strip()
@@ -175,26 +175,37 @@ def build_prompt(
     cta: str,
     context_block: str,
 ) -> str:
+    """Single user prompt for Ollama: matches the fine-tune ``instruction`` prefix.
+
+    Training rows look like
+    ``Write in the style of Jason Lemkin about: <title>`` — keep that opening so
+    the Modelfile ``### Instruction:`` block aligns with SFT.
+    """
+    title = topic.strip() or "the topic below"
+    instruction_head = f"Write in the style of Jason Lemkin about: {title}."
     brief = "\n".join([
-        "[CONTENT BRIEF]",
-        f"Topic: {topic}",
-        f"Audience: {audience}",
-        f"Goal: {goal}",
-        f"Call to action: {cta}",
+        "Content brief:",
+        f"- Audience: {audience.strip()}",
+        f"- Goal: {goal.strip()}",
+        f"- Call to action: {cta.strip() or 'none'}",
     ])
     format_block = format_spec_to_prompt(format_spec)
-    return "\n\n".join([
-        "[PERSONA]",
-        persona_summary,
-        format_block,
-        brief,
-        context_block,
-        "[INSTRUCTIONS]",
-        "Write a single draft that matches the format rules and content brief. "
-        "Use the context excerpts for tone and ideas; do not copy long verbatim passages. "
-        "Output only the draft (markdown), with no preamble or commentary.",
-        "[OUTPUT]",
-    ])
+    voice = "Voice and persona (emulate this tone):\n" + persona_summary.strip()
+    closing = (
+        "Write the draft now: follow the format requirements and content brief. "
+        "Use the reference excerpts for tone and ideas only; do not copy long passages verbatim. "
+        "Output only the draft in markdown, with no preamble or meta-commentary."
+    )
+    return "\n\n".join(
+        [
+            instruction_head,
+            voice,
+            format_block,
+            brief,
+            context_block.strip(),
+            closing,
+        ]
+    )
 
 
 def main():

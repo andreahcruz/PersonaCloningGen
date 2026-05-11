@@ -107,31 +107,150 @@ _SOURCE_FALLBACK_TOPIC = {
 }
 
 
-def to_instruction(title, source, text):
-    """Emit one Alpaca-style instruction/input/output JSON line per essay.
+# Match host_finetune defaults (keep split logic + legacy truncate cap in sync).
+_TRAINING_OUTPUT_MAX_CHARS = int(os.environ.get("DATASET_MAX_OUTPUT_CHARS", "2000"))
+_MIN_TRAINING_OUTPUT_CHARS = 80
+_JUNK_TITLE_FRAGMENTS = ("test post with ai chat",)
+# Default 1600 chars/label pairs with host MAX_SEQ_LENGTH=512 (same 3200/1024 ratio).
+# Set to 0 for legacy single-row export + truncate at _TRAINING_OUTPUT_MAX_CHARS.
+SFT_CHUNK_OUTPUT_CHARS = int(os.environ.get("SFT_CHUNK_OUTPUT_CHARS", "1600"))
 
-    Used for StyleAdaptedLM-style LoRA: train the model to produce founder text
-    when asked to write *in the founder's voice* about a derived topic.
-    """
+
+def _split_oversized_segment(chunk: str, max_chars: int) -> list[str]:
+    """Split one segment into pieces each <= max_chars (paragraph cuts preferred)."""
+    chunk = chunk.strip()
+    if not chunk:
+        return []
+    if len(chunk) <= max_chars:
+        return [chunk]
+    out: list[str] = []
+    rest = chunk
+    while len(rest) > max_chars:
+        window = rest[:max_chars]
+        cut = window.rfind("\n\n")
+        if cut < max_chars // 5:
+            cut = max_chars
+        piece = rest[:cut].strip()
+        rest = rest[cut:].lstrip()
+        if piece:
+            out.append(piece)
+    if rest.strip():
+        out.append(rest.strip())
+    return out
+
+
+def split_long_body_for_sft(body: str, max_chars: int) -> list[str]:
+    """Mirrors host_finetune/sft_chunk_utils.split_long_body_for_sft — keep in sync."""
+    body = body.strip()
+    if not body:
+        return []
+    if max_chars <= 0 or len(body) <= max_chars:
+        return [body]
+
+    parts: list[str] = []
+    rest = body
+    while rest:
+        if len(rest) <= max_chars:
+            p = rest.strip()
+            if p:
+                parts.append(p)
+            break
+        window = rest[:max_chars]
+        cut = window.rfind("\n\n")
+        if cut < max_chars // 5:
+            cut = max_chars
+        piece = rest[:cut].strip()
+        rest = rest[cut:].lstrip()
+        if piece:
+            parts.append(piece)
+
+    merged: list[str] = []
+    for p in parts:
+        if merged and len(p) < _MIN_TRAINING_OUTPUT_CHARS:
+            cand = merged[-1] + "\n\n" + p
+            if len(cand) <= max_chars:
+                merged[-1] = cand.strip()
+                continue
+        merged.append(p)
+
+    capped: list[str] = []
+    for m in merged:
+        if len(m) <= max_chars:
+            capped.append(m)
+        else:
+            capped.extend(_split_oversized_segment(m, max_chars))
+
+    final: list[str] = []
+    for x in capped:
+        if len(x) >= _MIN_TRAINING_OUTPUT_CHARS:
+            final.append(x)
+        elif final:
+            cand = final[-1] + "\n\n" + x
+            if len(cand) <= max_chars:
+                final[-1] = cand.strip()
+            else:
+                final.append(x)
+        else:
+            final.append(x)
+
+    return final if final else [body[:max_chars]]
+
+
+def to_training_json_lines(title, source, text):
+    """Return a list of Alpaca JSON strings (one per chunk for long documents)."""
     if not text:
-        return None
+        return []
     body = str(text).strip()
     if not body:
-        return None
+        return []
+    if "\ufffd" in body:
+        return []
+    if len(body) < _MIN_TRAINING_OUTPUT_CHARS:
+        return []
     raw_topic = (title or "").strip()
     if raw_topic:
-        # Clip long LinkedIn/X "first 120 chars" titles so the instruction stays readable
+        lt = raw_topic.lower()
+        if any(f in lt for f in _JUNK_TITLE_FRAGMENTS):
+            return []
+        if "\ufffd" in raw_topic:
+            return []
         topic = raw_topic[:200]
     else:
         topic = _SOURCE_FALLBACK_TOPIC.get(source or "", "B2B SaaS")
-    return json.dumps(
-        {
-            "instruction": f"Write in the style of Jason Lemkin about: {topic}",
-            "input": "",
-            "output": body,
-        },
-        ensure_ascii=False,
-    )
+
+    if SFT_CHUNK_OUTPUT_CHARS <= 0:
+        if len(body) > _TRAINING_OUTPUT_MAX_CHARS:
+            cut = body[:_TRAINING_OUTPUT_MAX_CHARS]
+            last_nl = cut.rfind("\n\n")
+            if last_nl > len(cut) * 4 // 5:
+                cut = cut[:last_nl]
+            body = cut.rstrip() + "\n\n[Truncated for training.]"
+        line = json.dumps(
+            {
+                "instruction": f"Write in the style of Jason Lemkin about: {topic}",
+                "input": "",
+                "output": body,
+            },
+            ensure_ascii=False,
+        )
+        return [line]
+
+    chunks = split_long_body_for_sft(body, SFT_CHUNK_OUTPUT_CHARS)
+    n = len(chunks)
+    lines = []
+    for i, chunk in enumerate(chunks):
+        t = topic if n == 1 else f"{topic} (part {i + 1} of {n})"
+        lines.append(
+            json.dumps(
+                {
+                    "instruction": f"Write in the style of Jason Lemkin about: {t}",
+                    "input": "",
+                    "output": chunk,
+                },
+                ensure_ascii=False,
+            )
+        )
+    return lines
 
 
 def embed_text(text):
@@ -257,22 +376,21 @@ def main():
         df.unpersist()
 
     # ── Training dataset export (StyleAdaptedLM-style SFT input) ──────────
-    # One JSON line per essay, *not* per chunk. Filter very short posts that
-    # would teach the model nothing and slow training. coalesce(1) so the host
-    # watcher only has to download a single file.
-    to_instruction_udf = F.udf(to_instruction, StringType())
+    # Long essays → multiple JSON lines (see SFT_CHUNK_OUTPUT_CHARS). RAG chunk rows
+    # above remain separate (~500-word embed chunks). coalesce(1) for one part file.
+    train_lines_udf = F.udf(to_training_json_lines, ArrayType(StringType()))
     train_df = (
-        docs_df
-        .filter(F.col("doc_word_count") >= 50)
-        .withColumn(
-            "training_line",
-            to_instruction_udf(F.col("title"), F.col("source"), F.col("text")),
-        )
-        .filter(F.col("training_line").isNotNull())
-        .select("training_line")
+        docs_df.filter(F.col("doc_word_count") >= 50)
+        .withColumn("_lines", train_lines_udf(F.col("title"), F.col("source"), F.col("text")))
+        .filter(F.size(F.col("_lines")) > 0)
+        .select(F.explode("_lines").alias("training_line"))
     )
     train_count = train_df.count()
     train_path = f"s3a://{BUCKET_PROCESSED}/training/dataset_jsonl"
+    print(
+        f"SFT export: SFT_CHUNK_OUTPUT_CHARS={SFT_CHUNK_OUTPUT_CHARS} "
+        "(each label chunk ≤ this size; 0 = legacy single row + truncate)"
+    )
     (
         train_df
         .coalesce(1)

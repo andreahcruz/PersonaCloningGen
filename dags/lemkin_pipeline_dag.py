@@ -438,6 +438,9 @@ with DAG(
             "SPARK_EMBED_PARTITIONS": os.environ.get("SPARK_EMBED_PARTITIONS", "1"),
             "OLLAMA_EMBED_MAX_RETRIES": os.environ.get("OLLAMA_EMBED_MAX_RETRIES", "5"),
             "OLLAMA_EMBED_DELAY_SEC": os.environ.get("OLLAMA_EMBED_DELAY_SEC", "0.03"),
+            "SFT_CHUNK_OUTPUT_CHARS": os.environ.get("SFT_CHUNK_OUTPUT_CHARS", "1600"),
+            "DATASET_MAX_OUTPUT_CHARS": os.environ.get("DATASET_MAX_OUTPUT_CHARS", "2000"),
+            "MAX_SEQ_LENGTH": os.environ.get("MAX_SEQ_LENGTH", "512"),
         },
         # Long embed + write; Airflow default is no cap, but this documents intent and avoids surprises if a cap is set globally.
         execution_timeout=timedelta(hours=12),

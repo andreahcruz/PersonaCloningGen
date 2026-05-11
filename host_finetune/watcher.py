@@ -29,6 +29,7 @@ from host_finetune.config import (
     DATASET_LOCAL,
     LAST_RUN_FILE,
     SENTINEL_KEY,
+    SKIP_DATASET_CLEAN,
 )
 from host_finetune.s3util import download_to, minio_client, read_sentinel
 
@@ -73,6 +74,24 @@ def run_pipeline_once(force: bool = False) -> bool:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     print(f"Downloading {DATASET_KEY} -> {DATASET_LOCAL}")
     download_to(s3, DATASET_KEY, DATASET_LOCAL)
+
+    from host_finetune.dataset_prepare import prepare_dataset_file
+
+    prep = prepare_dataset_file(DATASET_LOCAL)
+    if prep.get("chunk_expand"):
+        ce = prep["chunk_expand"]
+        print(
+            f"Chunk expand: rows {ce.get('rows_in')} -> {ce.get('rows_out')}, "
+            f"long_docs_split={ce.get('split_from_long')}"
+        )
+    if prep.get("clean"):
+        cl = prep["clean"]
+        print(
+            f"Cleaned dataset: rows {cl.get('rows_in')} -> {cl.get('rows_out')}, "
+            f"dropped_junk={cl.get('dropped_junk')} truncated={cl.get('truncated_outputs')}"
+        )
+    elif SKIP_DATASET_CLEAN:
+        print("SKIP_DATASET_CLEAN: skipped clean_dataset.")
 
     py = sys.executable
     _run("finetune", [py, "-m", "host_finetune.finetune"])

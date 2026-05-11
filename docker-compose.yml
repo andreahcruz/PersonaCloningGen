@@ -35,6 +35,10 @@ x-airflow-common: &airflow-common
     # Spark embed: number of partitions *before* the Ollama UDF = max concurrent /api/embed streams per job.
     # 1 = slowest, quiet logs (one task); 4–8 = faster on a strong Ollama host; too high → timeouts / empty embeddings → lower it.
     SPARK_EMBED_PARTITIONS: "16"
+    # SFT export chunk sizing (must match host_finetune defaults / fine-tune MAX_SEQ_LENGTH).
+    MAX_SEQ_LENGTH: "512"
+    SFT_CHUNK_OUTPUT_CHARS: "1600"
+    DATASET_MAX_OUTPUT_CHARS: "2000"
     # SparkSubmitOperator: local[*] runs entirely in the Airflow container (pip PySpark).
     # spark://spark-master:7077 uses Bitnami workers; their Spark JARs differ from pip PySpark → InvalidClassException on org.apache.spark.scheduler.Task.
     AIRFLOW_CONN_SPARK_DEFAULT: '{"conn_type":"spark","host":"local[*]"}'

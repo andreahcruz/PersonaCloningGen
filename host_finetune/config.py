@@ -33,21 +33,40 @@ GGUF_DIR = OUTPUT_DIR / "lemkin-clone"
 GGUF_SIDECAR_DIR = OUTPUT_DIR / f"{GGUF_DIR.name}_gguf"
 LAST_RUN_FILE = HERE / ".last_run"
 DATASET_LOCAL = DATA_DIR / "dataset.jsonl"
+# Per-label chunk size (chars): keep ~3.125 chars per MAX_SEQ_LENGTH slot (3200/1024).
+# At MAX_SEQ_LENGTH=512 → 1600 chars/label. Override via SFT_CHUNK_OUTPUT_CHARS.
+SFT_CHUNK_OUTPUT_CHARS = int(os.environ.get("SFT_CHUNK_OUTPUT_CHARS", "1600"))
+# clean_dataset per-row cap; should exceed a single chunk (rare long rows / old exports).
+DATASET_MAX_OUTPUT_CHARS = int(os.environ.get("DATASET_MAX_OUTPUT_CHARS", "2000"))
+# Set to 1 to skip ``clean_dataset`` (use raw MinIO export as-is).
+SKIP_DATASET_CLEAN = os.environ.get("SKIP_DATASET_CLEAN", "").lower() in (
+    "1",
+    "true",
+    "yes",
+)
+# After MinIO download / before clean_dataset: split long outputs (matches Spark chunking).
+# Set SKIP_CHUNK_DATASET=1 only if Spark already chunked (and you trust no mega-rows).
+CHUNK_DATASET_AFTER_DOWNLOAD = os.environ.get("SKIP_CHUNK_DATASET", "").lower() not in (
+    "1",
+    "true",
+    "yes",
+)
 
 # ── Training hyperparams (16 GB VRAM on Llama 3.1 8B QLoRA) ──────────────
 # Override the model with HF_MODEL_NAME if dropping to Llama 3.2 3B for OOM.
 HF_MODEL_NAME = os.environ.get(
     "HF_MODEL_NAME", "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit"
 )
-MAX_SEQ_LENGTH = int(os.environ.get("MAX_SEQ_LENGTH", "1024"))
-LORA_R = int(os.environ.get("LORA_R", "16"))
-LORA_ALPHA = int(os.environ.get("LORA_ALPHA", "32"))
+# 512 + 1600-char SFT chunks: lighter VRAM footprint (raise via env if probe allows).
+MAX_SEQ_LENGTH = int(os.environ.get("MAX_SEQ_LENGTH", "512"))
+LORA_R = int(os.environ.get("LORA_R", "8"))
+LORA_ALPHA = int(os.environ.get("LORA_ALPHA", "16"))
 # 0 enables Unsloth's fast LoRA patch path; >0 disables it (noticeable slowdown).
 LORA_DROPOUT = float(os.environ.get("LORA_DROPOUT", "0"))
-NUM_EPOCHS = int(os.environ.get("NUM_EPOCHS", "3"))
+NUM_EPOCHS = int(os.environ.get("NUM_EPOCHS", "1"))
 PER_DEVICE_BATCH = int(os.environ.get("PER_DEVICE_BATCH", "2"))
 GRAD_ACCUM = int(os.environ.get("GRAD_ACCUM", "8"))
-LEARNING_RATE = float(os.environ.get("LEARNING_RATE", "2e-4"))
+LEARNING_RATE = float(os.environ.get("LEARNING_RATE", "1e-4"))
 
 # Checkpoints + eval (long runs: frequent saves, rarer eval avoids slowdown from
 # full validation passes every N steps).
@@ -57,6 +76,12 @@ SAVE_TOTAL_LIMIT = int(os.environ.get("SAVE_TOTAL_LIMIT", "4"))
 # SKIP_EVAL=1 to disable validation entirely (fastest).
 EVAL_STEPS = os.environ.get("EVAL_STEPS")
 SKIP_EVAL = os.environ.get("SKIP_EVAL", "").lower() in ("1", "true", "yes")
+# Ignored when SKIP_EVAL=1 (no metric to compare).
+LOAD_BEST_MODEL_AT_END = os.environ.get("LOAD_BEST_MODEL_AT_END", "1").lower() not in (
+    "0",
+    "false",
+    "no",
+)
 
 # Resume: pass path to a checkpoint folder, or "1"/"true" to pick the latest
 # checkpoint under the training output dir.

@@ -7,7 +7,8 @@ adapter to `host_finetune/output/lemkin_lora/`.
 Run directly:
     python -m host_finetune.finetune
 
-Tuned for a 16 GB Blackwell GPU (RTX 5070 Ti). Drop to Llama 3.2 3B by setting
+Tuned for a 16 GB Blackwell GPU (RTX 5070 Ti). Defaults: ``MAX_SEQ_LENGTH`` 512,
+``SFT_CHUNK_OUTPUT_CHARS`` ~1600 for label sizing. Drop to Llama 3.2 3B by setting
 ``HF_MODEL_NAME=unsloth/Llama-3.2-3B-Instruct-bnb-4bit`` if you OOM.
 """
 from __future__ import annotations
@@ -50,6 +51,7 @@ from host_finetune.config import (
     GRAD_ACCUM,
     HF_MODEL_NAME,
     LEARNING_RATE,
+    LOAD_BEST_MODEL_AT_END,
     LORA_ALPHA,
     LORA_DROPOUT,
     LORA_R,
@@ -125,6 +127,9 @@ def _resolve_eval_steps() -> int | None:
         return None
     if EVAL_STEPS is not None and str(EVAL_STEPS).strip().isdigit():
         return max(int(str(EVAL_STEPS).strip()), 1)
+    # Align eval frequency with saves when picking best checkpoint; otherwise rare eval.
+    if LOAD_BEST_MODEL_AT_END:
+        return max(SAVE_STEPS, 1)
     return max(SAVE_STEPS * 5, 500)
 
 
@@ -162,6 +167,26 @@ def main() -> None:
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     ADAPTER_DIR.mkdir(parents=True, exist_ok=True)
+
+    st = None
+    if not (os.environ.get("SKIP_DATASET_PREP", "").lower() in ("1", "true", "yes")):
+        from host_finetune.dataset_prepare import prepare_dataset_file
+
+        st = prepare_dataset_file(DATASET_LOCAL)
+        if st.get("chunk_expand"):
+            ce = st["chunk_expand"]
+            print(
+                f"[finetune] chunk expand: rows {ce.get('rows_in')} -> {ce.get('rows_out')}, "
+                f"long_docs_split={ce.get('split_from_long')}"
+            )
+        if st.get("clean"):
+            cl = st["clean"]
+            print(
+                f"[finetune] dataset clean: rows {cl.get('rows_in')} -> {cl.get('rows_out')}, "
+                f"dropped_junk={cl.get('dropped_junk')} truncated={cl.get('truncated_outputs')}"
+            )
+    else:
+        print("[finetune] SKIP_DATASET_PREP: skipped chunk + clean (use with care).")
 
     ds = load_dataset(DATASET_LOCAL).map(format_example, remove_columns=None)
     split = ds.train_test_split(test_size=0.1, seed=42)
@@ -258,6 +283,10 @@ def main() -> None:
     else:
         arg_fields["eval_strategy"] = "steps"
         arg_fields["eval_steps"] = eval_steps
+        if LOAD_BEST_MODEL_AT_END:
+            arg_fields["load_best_model_at_end"] = True
+            arg_fields["metric_for_best_model"] = "eval_loss"
+            arg_fields["greater_is_better"] = False
 
     training_args = TrainingArguments(**_filter_training_arguments_kwargs(arg_fields))
 
@@ -278,6 +307,7 @@ def main() -> None:
     print(
         f"Training: save every {SAVE_STEPS} steps (keep {SAVE_TOTAL_LIMIT}), "
         f"eval={'off' if SKIP_EVAL else f'every {eval_steps} steps'}, "
+        f"load_best_at_end={bool(not SKIP_EVAL and LOAD_BEST_MODEL_AT_END)}, "
         f"packing={packing_effective}, dataloader_workers={TRAIN_DATALOADER_NUM_WORKERS}"
     )
     trainer.train(resume_from_checkpoint=resume)
