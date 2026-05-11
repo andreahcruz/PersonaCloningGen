@@ -26,7 +26,7 @@ Rows without usable body text are skipped (e.g. YouTube rows with `transcript_te
 ## One-time setup
 
 ```bash
-cd /path/to/298P
+cd /path/to/ftv2
 mkdir -p data
 # Copy your Lemkin JSONL files into ./data (see table above)
 ```
@@ -91,6 +91,27 @@ python generate.py --format linkedin_post --topic "..." --audience "..." --goal 
 ```
 
 Create an `outputs/` folder if you want files there.
+
+## OpenAI nano fine-tuning experiment
+
+This repo now includes a small host-side prep path for a first supervised fine-tuning run on OpenAI using the cleanest source slice in the repo: Jason Lemkin blog posts only.
+
+1. Prepare the dataset:
+   `python openai_ft/prepare_nano_dataset.py`
+2. Inspect the manifest:
+   `data/openai_ft/lemkin_blog_nano_manifest.json`
+3. Install the OpenAI-side extras if needed:
+   `pip install -r requirements-openai.txt`
+4. Dry-run the fine-tune job config:
+   `python openai_ft/run_fine_tune.py --dry-run`
+5. Launch it:
+   `python openai_ft/run_fine_tune.py`
+
+The root generator also supports `--provider openai` now, so after training completes you can swap generation from Ollama to either `gpt-4.1-nano` or your fine-tuned model ID while keeping the existing local retrieval flow:
+
+```bash
+python generate.py --provider openai --gen-model gpt-4.1-nano --format blog_draft --topic "..." --audience "..." --goal "..." --out outputs/example.md
+```
 
 ## Troubleshooting
 

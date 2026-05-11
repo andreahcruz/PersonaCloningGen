@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 Generate PG-style content from a format (linkedin_post, blog_draft), content brief,
-and RAG retrieval. Uses Ollama /api/embed and /api/generate.
+and RAG retrieval. Retrieval uses Ollama embeddings and Chroma, while generation
+can target either Ollama or OpenAI.
 
   python generate.py --format linkedin_post --topic "..." --audience "..." --goal "..." --cta "..." --k 8 --out outputs/pg_linkedin_001.md
   python generate.py --format blog_draft --topic "..." --audience "..." --goal "..." --k 10 --out outputs/pg_blog_001.md
@@ -25,6 +26,7 @@ OLLAMA_BASE_DEFAULT = "http://localhost:11434"
 COLLECTION_NAME = os.environ.get("CHROMA_COLLECTION_NAME", "lemkin_content")
 DEFAULT_EMBED_MODEL = "nomic-embed-text"
 DEFAULT_GEN_MODEL = "llama3.1"
+DEFAULT_PROVIDER = "ollama"
 CONTEXT_MAX_CHARS = 5000
 
 
@@ -102,6 +104,25 @@ def ollama_generate(prompt: str, base_url: str, model: str) -> str:
     )
     resp.raise_for_status()
     return resp.json().get("response", "").strip()
+
+
+def openai_generate(prompt: str, model: str) -> str:
+    try:
+        from openai import OpenAI
+    except ImportError as err:
+        raise RuntimeError(
+            "OpenAI SDK not installed. Install requirements-openai.txt to use --provider openai."
+        ) from err
+
+    client = OpenAI()
+    response = client.responses.create(
+        model=model,
+        input=prompt,
+    )
+    text = getattr(response, "output_text", None)
+    if text:
+        return text.strip()
+    raise RuntimeError("OpenAI response did not include output_text.")
 
 
 def retrieve(index_path: Path, query_embedding: list[float], k: int, embed_model: str) -> list[dict]:
@@ -195,7 +216,7 @@ def build_prompt(
 
 
 def main():
-    p = argparse.ArgumentParser(description="Generate Lemkin-style B2B content via RAG + Ollama.")
+    p = argparse.ArgumentParser(description="Generate Lemkin-style B2B content via RAG.")
     p.add_argument("--format", required=True, help="Format name (e.g. linkedin_post, blog_draft)")
     p.add_argument("--topic", required=True, help="Topic or title")
     p.add_argument("--audience", required=True, help="Target audience")
@@ -206,9 +227,19 @@ def main():
     p.add_argument("--index", default="data/index", help="Chroma index directory (default: data/index)")
     p.add_argument("--persona", default="data/persona_profile.json", help="Persona JSON path")
     p.add_argument("--format-specs", default="formats/format_specs.yaml", help="Format specs YAML path")
+    p.add_argument(
+        "--provider",
+        default=DEFAULT_PROVIDER,
+        choices=["ollama", "openai"],
+        help="Generation provider. Retrieval still uses local embeddings + Chroma.",
+    )
     p.add_argument("--ollama-base", default=OLLAMA_BASE_DEFAULT, help="Ollama base URL")
     p.add_argument("--embed-model", default=DEFAULT_EMBED_MODEL, help="Ollama embed model")
-    p.add_argument("--gen-model", default=DEFAULT_GEN_MODEL, help="Ollama generate model")
+    p.add_argument(
+        "--gen-model",
+        default=DEFAULT_GEN_MODEL,
+        help="Generation model name. Use an Ollama model for --provider ollama, or an OpenAI model/fine-tuned model ID for --provider openai.",
+    )
     args = p.parse_args()
 
     base = Path(".")
@@ -249,8 +280,11 @@ def main():
         args.topic, args.audience, args.goal, args.cta,
         context_block,
     )
-    print(f"Generating with {args.gen_model}...")
-    draft = ollama_generate(prompt, args.ollama_base, args.gen_model)
+    print(f"Generating with {args.provider}:{args.gen_model}...")
+    if args.provider == "openai":
+        draft = openai_generate(prompt, args.gen_model)
+    else:
+        draft = ollama_generate(prompt, args.ollama_base, args.gen_model)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(draft, encoding="utf-8")
