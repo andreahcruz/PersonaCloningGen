@@ -49,13 +49,35 @@ if os.environ.get("UNSLOTH_CE_LOSS_TARGET_GB") is None:
 os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
 
 import torch
+from transformers import BitsAndBytesConfig  # noqa: E402
 from unsloth import FastLanguageModel  # noqa: E402
 
-from host_finetune.config import HF_MODEL_NAME, LORA_ALPHA, LORA_DROPOUT, LORA_R
+from host_finetune.config import (
+    HF_MODEL_NAME,
+    LORA_ALPHA,
+    LORA_DROPOUT,
+    LORA_R,
+    LORA_TARGET_MODULES,
+    USE_EXPLICIT_BNB_CONFIG,
+)
 
 
 def _bytes_gb(b: int) -> float:
     return b / (1024**3)
+
+
+def _quantize_kw() -> dict:
+    if not USE_EXPLICIT_BNB_CONFIG:
+        return {"load_in_4bit": True}
+    dt = torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16
+    return {
+        "quantization_config": BitsAndBytesConfig(
+            load_in_4bit=True,
+            bnb_4bit_quant_type="nf4",
+            bnb_4bit_use_double_quant=True,
+            bnb_4bit_compute_dtype=dt,
+        )
+    }
 
 
 def _fit_one_step(model, seq_len: int, device: torch.device, vocab_size: int) -> int:
@@ -137,18 +159,34 @@ def main() -> None:
         "One-synthetic-step estimate only — SFTTrainer + eval + Windows often need a lower "
         "MAX_SEQ_LENGTH than reported if shared GPU memory is still high.\n"
     )
-    print(f"Loading {HF_MODEL_NAME} (4-bit) + LoRA r={LORA_R} alpha={LORA_ALPHA} ...")
-
-    model, tokenizer = FastLanguageModel.from_pretrained(
-        model_name=HF_MODEL_NAME,
-        max_seq_length=args.high,
-        dtype=None,
-        load_in_4bit=True,
+    print(
+        f"Loading {HF_MODEL_NAME} (4-bit dq={USE_EXPLICIT_BNB_CONFIG}) + LoRA "
+        f"targets={len(LORA_TARGET_MODULES)} modules r={LORA_R} alpha={LORA_ALPHA} ..."
     )
+
+    lw = _quantize_kw()
+    try:
+        model, tokenizer = FastLanguageModel.from_pretrained(
+            model_name=HF_MODEL_NAME,
+            max_seq_length=args.high,
+            dtype=None,
+            **lw,
+        )
+    except Exception as exc:
+        if USE_EXPLICIT_BNB_CONFIG:
+            print(f"[probe_max_seq] BNB retry after {exc!r}")
+            model, tokenizer = FastLanguageModel.from_pretrained(
+                model_name=HF_MODEL_NAME,
+                max_seq_length=args.high,
+                dtype=None,
+                load_in_4bit=True,
+            )
+        else:
+            raise
     model = FastLanguageModel.get_peft_model(
         model,
         r=LORA_R,
-        target_modules=["q_proj", "k_proj", "v_proj", "o_proj"],
+        target_modules=list(LORA_TARGET_MODULES),
         lora_alpha=LORA_ALPHA,
         lora_dropout=LORA_DROPOUT,
         bias="none",

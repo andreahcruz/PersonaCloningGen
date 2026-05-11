@@ -5,13 +5,14 @@ Steps:
 2. Render a temporary Modelfile with ``FROM`` pointing at that GGUF (absolute
    path — Ollama on Windows sometimes resolves relative paths from the wrong cwd).
 3. ``ollama create lemkin-clone -f <tmp_modelfile>``.
-4. Smoke-test with a short prompt.
+4. Optionally smoke-test with ``ollama run`` (disable with ``SKIP_OLLAMA_SMOKE_TEST=1``).
 
 Run:
     python -m host_finetune.register_ollama
 """
 from __future__ import annotations
 
+import os
 import shutil
 import subprocess
 import sys
@@ -87,15 +88,25 @@ def main() -> None:
             f"`ollama create` failed (exit {proc.returncode}). Check `ollama serve` is running."
         )
 
-    print("\nSmoke test...")
-    test_cmd = ["ollama", "run", OLLAMA_MODEL_NAME, "Write one sentence about ARR."]
-    test_proc = subprocess.run(test_cmd, check=False, capture_output=True, text=True, encoding="utf-8")
-    if test_proc.returncode == 0:
-        print("--- model output ---")
-        print((test_proc.stdout or "").strip())
-        print("--------------------")
+    skip_smoke = os.environ.get("SKIP_OLLAMA_SMOKE_TEST", "").lower() in (
+        "1",
+        "true",
+        "yes",
+    )
+    if skip_smoke:
+        print("\nSKIP_OLLAMA_SMOKE_TEST: skipping post-create `ollama run` smoke test.")
     else:
-        print(f"Smoke test exited {test_proc.returncode}; stderr:\n{test_proc.stderr}")
+        print("\nSmoke test...")
+        test_cmd = ["ollama", "run", OLLAMA_MODEL_NAME, "Write one sentence about ARR."]
+        test_proc = subprocess.run(
+            test_cmd, check=False, capture_output=True, text=True, encoding="utf-8"
+        )
+        if test_proc.returncode == 0:
+            print("--- model output ---")
+            print((test_proc.stdout or "").strip())
+            print("--------------------")
+        else:
+            print(f"Smoke test exited {test_proc.returncode}; stderr:\n{test_proc.stderr}")
 
     print(f"\nModel '{OLLAMA_MODEL_NAME}' is ready. Pick it in Streamlit's Generate model dropdown.")
 

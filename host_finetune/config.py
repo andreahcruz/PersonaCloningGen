@@ -3,9 +3,20 @@ from __future__ import annotations
 
 import os
 from pathlib import Path
-
 HERE = Path(__file__).resolve().parent
 REPO_ROOT = HERE.parent
+
+
+def _parse_csv_list(value: str) -> list[str]:
+    parts = value.replace(";", ",").split(",")
+    return [p.strip() for p in parts if p.strip()]
+
+
+def _truthy(env_name: str, default: bool = True) -> bool:
+    raw = os.environ.get(env_name)
+    if raw is None or not str(raw).strip():
+        return default
+    return str(raw).strip().lower() in ("1", "true", "yes", "on")
 
 # ── MinIO (the Docker stack's MinIO is published on localhost from host POV) ──
 MINIO_ENDPOINT = os.environ.get("MINIO_ENDPOINT_HOST", "http://localhost:9000")
@@ -38,6 +49,11 @@ DATASET_LOCAL = DATA_DIR / "dataset.jsonl"
 SFT_CHUNK_OUTPUT_CHARS = int(os.environ.get("SFT_CHUNK_OUTPUT_CHARS", "1600"))
 # clean_dataset per-row cap; should exceed a single chunk (rare long rows / old exports).
 DATASET_MAX_OUTPUT_CHARS = int(os.environ.get("DATASET_MAX_OUTPUT_CHARS", "2000"))
+# Remove transcript stage directions ([Music], …) and drop exact-duplicate outputs after scrub.
+SCRUB_TRANSCRIPT_TAGS = _truthy("SCRUB_TRANSCRIPT_TAGS", True)
+DEDUPE_EXACT_OUTPUT = _truthy("DEDUPE_EXACT_OUTPUT", True)
+# Explicit NF4 + double quant (BitsAndBytesConfig) in finetune. Set USE_EXPLICIT_BNB_CONFIG=0 to rely on defaults.
+USE_EXPLICIT_BNB_CONFIG = _truthy("USE_EXPLICIT_BNB_CONFIG", True)
 # Set to 1 to skip ``clean_dataset`` (use raw MinIO export as-is).
 SKIP_DATASET_CLEAN = os.environ.get("SKIP_DATASET_CLEAN", "").lower() in (
     "1",
@@ -59,8 +75,22 @@ HF_MODEL_NAME = os.environ.get(
 )
 # 512 + 1600-char SFT chunks: lighter VRAM footprint (raise via env if probe allows).
 MAX_SEQ_LENGTH = int(os.environ.get("MAX_SEQ_LENGTH", "512"))
-LORA_R = int(os.environ.get("LORA_R", "8"))
-LORA_ALPHA = int(os.environ.get("LORA_ALPHA", "16"))
+# LoRA defaults widened slightly (VRAM permitting). Narrow with LORA_TARGET_MODULES / lower LORA_R.
+LORA_R = int(os.environ.get("LORA_R", "16"))
+LORA_ALPHA = int(os.environ.get("LORA_ALPHA", "32"))
+_lora_tgt = os.environ.get("LORA_TARGET_MODULES")
+if _lora_tgt:
+    LORA_TARGET_MODULES = _parse_csv_list(_lora_tgt)
+else:
+    LORA_TARGET_MODULES = [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj",
+    ]
 # 0 enables Unsloth's fast LoRA patch path; >0 disables it (noticeable slowdown).
 LORA_DROPOUT = float(os.environ.get("LORA_DROPOUT", "0"))
 NUM_EPOCHS = int(os.environ.get("NUM_EPOCHS", "1"))

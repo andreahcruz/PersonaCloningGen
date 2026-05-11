@@ -8,12 +8,30 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import tempfile
 from pathlib import Path
 
 from host_finetune.config import DATASET_LOCAL
 
 REPLACEMENT_CHAR = "\ufffd"
+
+_TRANSCRIPT_TAGS = re.compile(
+    r"\s*\[(?:[^\]]*\b(?:music|applause|laughter|crowd noise|crosstalk|sound break)\b[^\]]*)\]\s*",
+    re.IGNORECASE,
+)
+_WS_RUN = re.compile(r"[ \t]{2,}")
+_MULTI_NL = re.compile(r"\n{3,}")
+
+
+def _scrub_transcript_markup(text: str) -> tuple[str, bool]:
+    """Strip common transcript stage directions; tighten whitespace."""
+    prev = text
+    t = _TRANSCRIPT_TAGS.sub(" ", text)
+    t = _WS_RUN.sub(" ", t)
+    t = _MULTI_NL.sub("\n\n", t)
+    t = "\n".join(line.rstrip() for line in t.splitlines())
+    return t.strip(), t.strip() != prev.strip()
 
 # Rows matching these are dropped (substring match on instruction or output).
 _JUNK_SUBSTRINGS = (
@@ -52,24 +70,40 @@ def _is_junk_row(instr: str, out: str) -> bool:
 def clean_dataset_records(
     rows: list[dict],
     max_output_chars: int,
+    *,
+    scrub_transcript_tags: bool = True,
+    dedupe_exact_output: bool = True,
 ) -> tuple[list[dict], dict]:
     stats = {
         "rows_in": len(rows),
         "rows_out": 0,
         "dropped_junk": 0,
         "truncated_outputs": 0,
+        "rows_scrubbed_transcript_tags": 0,
+        "dropped_duplicate_output": 0,
     }
     out_rows: list[dict] = []
+    seen_output: set[str] = set()
     for row in rows:
         instr = str(row.get("instruction", ""))
         inp = str(row.get("input", ""))
         output = str(row.get("output", ""))
+        if scrub_transcript_tags:
+            output, scrubbed = _scrub_transcript_markup(output)
+            if scrubbed:
+                stats["rows_scrubbed_transcript_tags"] += 1
         if _is_junk_row(instr, output):
             stats["dropped_junk"] += 1
             continue
         output, did_trunc = _truncate_output(output, max_output_chars)
         if did_trunc:
             stats["truncated_outputs"] += 1
+        if dedupe_exact_output:
+            norm = output.strip()
+            if norm in seen_output:
+                stats["dropped_duplicate_output"] += 1
+                continue
+            seen_output.add(norm)
         out_rows.append(
             {"instruction": instr, "input": inp, "output": output}
         )
@@ -84,9 +118,13 @@ def clean_dataset_file(
 ) -> dict:
     """Rewrite ``path`` in place with filtered rows. Returns stats dict."""
     path = path or DATASET_LOCAL
-    if max_output_chars is None:
-        from host_finetune.config import DATASET_MAX_OUTPUT_CHARS
+    from host_finetune.config import (
+        DATASET_MAX_OUTPUT_CHARS,
+        DEDUPE_EXACT_OUTPUT,
+        SCRUB_TRANSCRIPT_TAGS,
+    )
 
+    if max_output_chars is None:
         max_output_chars = DATASET_MAX_OUTPUT_CHARS
 
     if not path.is_file():
@@ -104,7 +142,12 @@ def clean_dataset_file(
             except json.JSONDecodeError:
                 bad_lines += 1
 
-    cleaned, stats = clean_dataset_records(rows, max_output_chars)
+    cleaned, stats = clean_dataset_records(
+        rows,
+        max_output_chars,
+        scrub_transcript_tags=SCRUB_TRANSCRIPT_TAGS,
+        dedupe_exact_output=DEDUPE_EXACT_OUTPUT,
+    )
     stats["bad_json_lines"] = bad_lines
     stats["path"] = str(path)
 

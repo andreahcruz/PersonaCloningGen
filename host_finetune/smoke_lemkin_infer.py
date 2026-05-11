@@ -29,7 +29,7 @@ if str(REPO_ROOT) not in sys.path:
 
 from host_finetune.config import DATASET_LOCAL
 
-# Must match ``host_finetune.finetune.ALPACA_TEMPLATE`` (avoid importing torch/unsloth here).
+# Match ``finetune._INSTRUCTION_AND_INPUT_PROMPT`` + ``\\n{{output}}`` (avoid importing finetune here).
 _ALPACA = (
     "### Instruction:\n{instruction}\n\n"
     "### Input:\n{input}\n\n"
