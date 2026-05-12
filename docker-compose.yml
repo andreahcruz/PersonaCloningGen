@@ -214,6 +214,7 @@ services:
     volumes:
       - ./user_interface.py:/app/user_interface.py
       - ./generate.py:/app/generate.py
+      - ./spark_jobs:/app/spark_jobs
       - ./formats:/app/formats
       - ./data:/app/data
     depends_on:

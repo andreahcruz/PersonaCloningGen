@@ -20,6 +20,11 @@ import chromadb
 from chromadb.config import DEFAULT_DATABASE, DEFAULT_TENANT, Settings
 from chromadb.errors import NotFoundError
 
+_SJ = Path(__file__).resolve().parent / "spark_jobs"
+if str(_SJ) not in sys.path:
+    sys.path.insert(0, str(_SJ))
+from corpus_footer_scrub import strip_footer_noise
+
 
 OLLAMA_BASE_DEFAULT = "http://localhost:11434"
 COLLECTION_NAME = os.environ.get("CHROMA_COLLECTION_NAME", "lemkin_content")
@@ -148,7 +153,7 @@ def format_context(chunks: list[dict], max_chars: int = CONTEXT_MAX_CHARS) -> st
     lines = ["Reference excerpts from the Jason Lemkin corpus (tone and ideas only; do not copy verbatim):"]
     total = 0
     for i, ch in enumerate(chunks):
-        text = str(ch.get("chunk_text", "")).strip()
+        text = strip_footer_noise(str(ch.get("chunk_text", "")).strip())
         if not text:
             continue
         doc_id = ch.get("doc_id", "?")
@@ -194,6 +199,7 @@ def build_prompt(
     closing = (
         "Write the draft now: follow the format requirements and content brief. "
         "Use the reference excerpts for tone and ideas only; do not copy long passages verbatim. "
+        "Do not include link-recirculation blocks (e.g. 'Related Posts'), raw tweet embeds, or newsletter footers. "
         "Output only the draft in markdown, with no preamble or meta-commentary."
     )
     return "\n\n".join(

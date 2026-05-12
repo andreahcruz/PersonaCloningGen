@@ -22,6 +22,7 @@ import random
 import re
 import time
 from datetime import datetime
+from pathlib import Path
 
 import requests as req
 from bs4 import BeautifulSoup
@@ -36,6 +37,8 @@ from pyspark.sql.types import (
     StructType,
     TimestampType,
 )
+
+from corpus_footer_scrub import strip_footer_noise
 
 MINIO_ENDPOINT = os.environ.get("MINIO_ENDPOINT", "http://minio:9000")
 MINIO_ACCESS_KEY = os.environ.get("MINIO_ACCESS_KEY", "minioadmin")
@@ -308,6 +311,12 @@ def main():
         .getOrCreate()
     )
 
+    # UDFs are unpickled in separate Python workers; sibling ``corpus_footer_scrub.py``
+    # is not on their sys.path unless we ship it with the job.
+    _scrub = Path(__file__).resolve().parent / "corpus_footer_scrub.py"
+    if _scrub.is_file():
+        spark.sparkContext.addPyFile(str(_scrub))
+
     raw_schema = StructType([
         StructField("title", StringType(), True),
         StructField("date", StringType(), True),
@@ -320,6 +329,8 @@ def main():
 
     strip_html_udf = F.udf(strip_html, StringType())
     df = df.withColumn("text", strip_html_udf(F.col("text")))
+    footer_udf = F.udf(strip_footer_noise, StringType())
+    df = df.withColumn("text", footer_udf(F.col("text")))
 
     parse_date_udf = F.udf(parse_date, TimestampType())
     df = df.withColumn("date_ts", parse_date_udf(F.col("date")))

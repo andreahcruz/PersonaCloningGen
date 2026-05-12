@@ -7,7 +7,10 @@ For each row in an eval-set JSONL:
   2. Call Ollama ``/api/generate`` and store a trace row
      ``{id, model, query, contexts, answer, latency_seconds, ...}``.
   3. Score:
-       • G-Eval rubric via an Ollama judge model (default ``llama3.1``).
+       • G-Eval rubric via an Ollama judge: corpus-backed author profile
+         (``persona_profile.json``), optional real-post excerpt anchors from
+         ``data/jasonlemkinlinkedin.jsonl`` + ``data/jasonlemkin_blog.jsonl`` (and
+         ``--dataset-jsonl`` when present), plus per-dimension Lemkin-style scores.
        • BERTScore vs a sample of real Lemkin outputs from ``dataset.jsonl``.
        • BLEU + ROUGE-L vs the same reference sample.
        • Style consistency — TF-IDF + LogisticRegression authorship classifier
@@ -34,6 +37,7 @@ Outputs (under ``host_finetune/output/eval/`` by default):
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import statistics
@@ -74,6 +78,11 @@ DEFAULT_REF_PER_CANDIDATE = 20
 # Reference corpus sizes (load this many positives, train style classifier on this many).
 REF_SAMPLE_SIZE = 500
 STYLE_NEG_SAMPLE_SIZE = 500
+# Raw Lemkin sources used only for G-Eval style anchors (short excerpts in judge prompt).
+DEFAULT_STYLE_ANCHOR_JSONLS: tuple[Path, ...] = (
+    REPO_ROOT / "data" / "jasonlemkinlinkedin.jsonl",
+    REPO_ROOT / "data" / "jasonlemkin_blog.jsonl",
+)
 
 
 # ── Eval set ───────────────────────────────────────────────────────────
@@ -155,45 +164,204 @@ def generate_trace(
 
 
 # ── G-Eval rubric (Ollama judge) ──────────────────────────────────────
+# Style dimensions are grounded in raw Lemkin posts (LinkedIn + SaaStr blog JSONL)
+# and in ``persona_profile.json`` (corpus statistics). The judge sees a short real
+# excerpt as a texture anchor, not as a fact source to agree with.
 
 RUBRIC_DIMENSIONS: list[tuple[str, str]] = [
-    ("voice_authenticity",
-     "Sounds like Jason Lemkin (direct B2B/SaaS operator tone, concrete metrics, no hype)."),
-    ("coherence",
-     "Logical flow, sentence-level clarity, no contradictions."),
-    ("format_adherence",
-     "Follows the requested format (length, structure, headings if applicable)."),
-    ("specificity",
-     "Concrete examples / numbers vs generic claims."),
-    ("non_hype",
-     "Absence of marketing fluff and listicle-bait phrases."),
-    ("context_use",
-     "Uses retrieved context for ideas without copying long passages verbatim."),
+    (
+        "lemkin_concreteness",
+        "Uses specific numbers, $, %, time horizons, headcounts, or other quantified "
+        "facts when the topic allows; penalize empty superlatives ('massive traction') "
+        "with no anchors.",
+    ),
+    (
+        "lemkin_operator_voice",
+        "Direct founder-to-operator advice: blunt where useful, practical, confident. "
+        "Penalize generic LinkedIn inspo, corporate polish, or hypey listicle voice.",
+    ),
+    (
+        "lemkin_structure_rhythm",
+        "High-signal pacing: short paragraphs, clear pivots ('Here's what...', "
+        "contrasts, numbered actions when fitting). Penalize long essay walls that "
+        "read unlike Lemkin's usual punch.",
+    ),
+    (
+        "lemkin_domain_register",
+        "Natural SaaS / GTM vocabulary when relevant (ARR, NRR/MRR, churn, pipeline, "
+        "ACV, CS, AE, enterprise vs SMB, etc.) used correctly — not jargon salad.",
+    ),
+    (
+        "coherence",
+        "Logical flow; no internal contradictions; claims hang together.",
+    ),
+    (
+        "format_adherence",
+        "Matches the requested format (length band, structural cues from the prompt).",
+    ),
+    (
+        "context_use",
+        "Uses retrieved context for substance without copying long chunks verbatim; "
+        "no invented 'facts' unsupported by context or obvious common knowledge.",
+    ),
 ]
 
 
-def _geval_prompt(trace: dict) -> str:
+def _row_text_for_style_anchor(row: dict) -> str:
+    for key in ("output", "content", "text", "body"):
+        val = row.get(key)
+        if isinstance(val, str) and val.strip():
+            return val.strip()
+    return ""
+
+
+def _strip_trailing_blog_noise(text: str) -> str:
+    """Drop trailing boilerplate so anchors focus on Lemkin's voice."""
+    lower = text.lower()
+    cut = lower.rfind("\nrelated posts")
+    if cut > 120:
+        text = text[:cut].strip()
+    return text
+
+
+def collect_style_anchor_source_paths(primary_dataset: Path) -> list[Path]:
+    """De-duplicated list of JSONL files that may supply real-post anchors."""
+    paths: list[Path] = [primary_dataset, *DEFAULT_STYLE_ANCHOR_JSONLS]
+    seen: set[Path] = set()
+    out: list[Path] = []
+    for p in paths:
+        rp = p.resolve()
+        if rp in seen or not rp.is_file():
+            continue
+        seen.add(rp)
+        out.append(rp)
+    return out
+
+
+def load_style_anchor_texts(
+    paths: list[Path],
+    *,
+    max_samples: int = 400,
+    min_words: int = 32,
+) -> list[str]:
+    """Load short-post candidates from JSONL (``output`` / ``content`` / …)."""
+    texts: list[str] = []
+    seen_hashes: set[str] = set()
+    for path in paths:
+        if len(texts) >= max_samples:
+            break
+        try:
+            with open(path, encoding="utf-8") as f:
+                for line in f:
+                    if len(texts) >= max_samples:
+                        break
+                    line = line.strip()
+                    if not line:
+                        continue
+                    try:
+                        row = json.loads(line)
+                    except json.JSONDecodeError:
+                        continue
+                    raw = _row_text_for_style_anchor(row)
+                    if not raw:
+                        continue
+                    raw = _strip_trailing_blog_noise(raw)
+                    if len(raw.split()) < min_words:
+                        continue
+                    h = hashlib.sha256(raw[:240].encode("utf-8", errors="ignore")).hexdigest()[:16]
+                    if h in seen_hashes:
+                        continue
+                    seen_hashes.add(h)
+                    texts.append(raw)
+        except OSError:
+            continue
+    return texts
+
+
+def _truncate_anchor(text: str, max_chars: int = 680) -> str:
+    if len(text) <= max_chars:
+        return text
+    chunk = text[:max_chars]
+    last_period = chunk.rfind(". ")
+    if last_period > max_chars // 2:
+        return chunk[: last_period + 1].strip()
+    return chunk.rsplit(maxsplit=1)[0].strip() + "…"
+
+
+def _pick_style_anchor(anchors: list[str], seed_key: str) -> str | None:
+    if not anchors:
+        return None
+    h = int(hashlib.md5(seed_key.encode("utf-8")).hexdigest()[:8], 16)
+    return _truncate_anchor(anchors[h % len(anchors)])
+
+
+def _geval_author_profile_for_judge(persona: dict) -> str:
+    """Factual checklist from ``persona_profile.json`` (same stats used for generation)."""
+    vocab = persona.get("vocabulary_tendencies", {})
+    structure = persona.get("structure_patterns", {})
+    framing = persona.get("favorite_framing", {})
+    themes = persona.get("favorite_themes", {})
+    meta = persona.get("meta", {})
+    words = ", ".join(vocab.get("top_50_content_words", [])[:22])
+    starters = ", ".join(structure.get("common_sentence_starters_bigrams", [])[:10])
+    phrases = ", ".join(framing.get("favorite_framing_phrases", [])[:12])
+    theme_bits = themes.get("top_content_words_and_bigrams", [])[:14]
+    theme_line = ", ".join(str(t) for t in theme_bits) if theme_bits else "B2B SaaS, GTM, fundraising"
+    src = meta.get("source", "Jason Lemkin — blog, LinkedIn, SaaStr")
+    return (
+        f"Target author (corpus-derived): {src}\n"
+        f"- Frequent operator vocabulary (examples): {words}.\n"
+        f"- Recurrent openings / pivots (natural use, not forced every sentence): {starters}.\n"
+        f"- Common framing moves: {phrases}.\n"
+        f"- Recurring themes / collocations: {theme_line}."
+    )
+
+
+def _geval_json_shape() -> str:
+    lines = [f'  "{k}": <int>,' for k, _ in RUBRIC_DIMENSIONS]
+    lines.append('  "comment": "<one short sentence>"')
+    return "{\n" + "\n".join(lines) + "\n}"
+
+
+def _geval_prompt(
+    trace: dict,
+    *,
+    author_profile: str,
+    style_anchor: str | None,
+) -> str:
     contexts = "\n\n---\n".join(trace.get("contexts", [])[:6])
     rubric_lines = "\n".join(f"- {k}: {desc}" for k, desc in RUBRIC_DIMENSIONS)
+    gold = (trace.get("gold_reference") or "").strip()
+    anchor_block = ""
+    if gold:
+        anchor_block = (
+            "OPTIONAL HUMAN REFERENCE (same assignment if provided — compare tone/texture, "
+            "not factual overlap):\n"
+            f"{_truncate_anchor(gold, 720)}\n\n"
+        )
+    elif style_anchor:
+        anchor_block = (
+            "REAL POST EXCERPT (same author, unrelated topic — judge voice, pacing, and "
+            "texture only; do not penalize the DRAFT for disagreeing on facts):\n"
+            f"{style_anchor}\n\n"
+        )
     return (
-        "You are an impartial reviewer. Rate the DRAFT below on each dimension "
-        "1-5 (integer), where 5 = excellent.\n"
+        "You are an impartial reviewer. Score the DRAFT on each rubric dimension "
+        "1–5 (integer), where 5 = strong match to that dimension.\n"
+        "For the four lemkin_* dimensions, prioritize similarity to Jason Lemkin's "
+        "observed writing (see AUTHOR PROFILE and optional excerpt below), not generic "
+        "'good writing'.\n"
         "Return STRICT JSON only, with this exact shape and nothing else:\n"
-        '{\n'
-        '  "voice_authenticity": <int>,\n'
-        '  "coherence": <int>,\n'
-        '  "format_adherence": <int>,\n'
-        '  "specificity": <int>,\n'
-        '  "non_hype": <int>,\n'
-        '  "context_use": <int>,\n'
-        '  "comment": "<one short sentence>"\n'
-        '}\n\n'
+        f"{_geval_json_shape()}\n\n"
+        "AUTHOR PROFILE (corpus statistics — style target):\n"
+        f"{author_profile}\n\n"
+        f"{anchor_block}"
         f"Rubric:\n{rubric_lines}\n\n"
         f"Topic: {trace.get('topic')}\n"
         f"Audience: {trace.get('audience')}\n"
         f"Goal: {trace.get('goal')}\n"
         f"Format: {trace.get('format')}\n\n"
-        "Retrieved context (excerpts, for context-use scoring):\n"
+        "Retrieved context (excerpts; use for context_use and factual grounding):\n"
         f"{contexts[:3500]}\n\n"
         "DRAFT:\n"
         f"{(trace.get('answer') or '')[:6000]}\n\n"
@@ -220,8 +388,21 @@ def _extract_json_object(text: str) -> dict | None:
         return None
 
 
-def geval_score(trace: dict, judge_model: str, ollama_base: str) -> dict | None:
-    raw = ollama_generate(_geval_prompt(trace), ollama_base, judge_model)
+def geval_score(
+    trace: dict,
+    judge_model: str,
+    ollama_base: str,
+    *,
+    author_profile: str,
+    style_anchors: list[str],
+) -> dict | None:
+    key = f"{trace.get('id', '')}|{trace.get('model', '')}|{trace.get('topic', '')}"
+    anchor = _pick_style_anchor(style_anchors, key) if style_anchors else None
+    raw = ollama_generate(
+        _geval_prompt(trace, author_profile=author_profile, style_anchor=anchor),
+        ollama_base,
+        judge_model,
+    )
     parsed = _extract_json_object(raw)
     if not parsed:
         return None
@@ -689,12 +870,40 @@ def main() -> None:
         print(f"[eval_rag] skipped G-Eval; loaded {len(judge_rows)} cached judge rows")
     else:
         print(f"[eval_rag] G-Eval judge={args.judge_model}")
+        try:
+            author_profile = _geval_author_profile_for_judge(
+                load_persona(Path(args.persona)),
+            )
+        except Exception as e:
+            print(f"[eval_rag] WARNING: persona load failed ({e!r}); using minimal author profile")
+            author_profile = (
+                "Target author: Jason Lemkin — direct B2B/SaaS operator; concrete metrics; "
+                "low hype."
+            )
+        anchor_paths = collect_style_anchor_source_paths(Path(args.dataset_jsonl))
+        style_anchors = load_style_anchor_texts(anchor_paths)
+        if style_anchors:
+            print(
+                f"[eval_rag] G-Eval style anchors: {len(style_anchors)} posts from "
+                f"{len(anchor_paths)} JSONL source(s)"
+            )
+        else:
+            print(
+                "[eval_rag] WARNING: no style-anchor JSONL found; "
+                "G-Eval omits real-post excerpt (set --dataset-jsonl or add data/*.jsonl)"
+            )
         judge_rows = []
         for i, t in enumerate(traces, 1):
             print(f"  [judge] {i}/{len(traces)} model={t.get('model')} id={t.get('id')}")
             scores: dict | None = None
             try:
-                scores = geval_score(t, args.judge_model, args.ollama_base)
+                scores = geval_score(
+                    t,
+                    args.judge_model,
+                    args.ollama_base,
+                    author_profile=author_profile,
+                    style_anchors=style_anchors,
+                )
             except Exception as e:
                 print(f"    judge failed: {e!r}")
             judge_rows.append({

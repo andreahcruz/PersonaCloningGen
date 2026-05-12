@@ -11,6 +11,12 @@ import os
 import re
 import tempfile
 from pathlib import Path
+import sys
+
+_SPARK_JOBS = Path(__file__).resolve().parents[1] / "spark_jobs"
+if str(_SPARK_JOBS) not in sys.path:
+    sys.path.insert(0, str(_SPARK_JOBS))
+from corpus_footer_scrub import strip_footer_noise
 
 from host_finetune.config import DATASET_LOCAL
 
@@ -92,6 +98,7 @@ def clean_dataset_records(
             output, scrubbed = _scrub_transcript_markup(output)
             if scrubbed:
                 stats["rows_scrubbed_transcript_tags"] += 1
+        output = strip_footer_noise(output)
         if _is_junk_row(instr, output):
             stats["dropped_junk"] += 1
             continue

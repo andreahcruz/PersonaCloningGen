@@ -14,6 +14,11 @@ Quick sanity run (smoke / “vibe-check”): set ``MAX_STEPS`` (e.g. ``20``) and
 
 Run directly:
     python -m host_finetune.finetune
+
+After ``python -m host_finetune.clean_dataset_v2`` (no repunct), your rows are
+already chunked; set ``SKIP_DATASET_PREP=1`` before training to skip the
+download-prep path entirely. If you leave prep enabled, long rows expand with
+sentence-aware splits and ``clean_dataset`` may still scrub tags and dedupe.
 """
 from __future__ import annotations
 
