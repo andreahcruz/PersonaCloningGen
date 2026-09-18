@@ -5,6 +5,14 @@ version: '3.8'
 #  Services: MinIO, Airflow, Spark, Streamlit
 # ─────────────────────────────────────────────
 
+# Rotate container logs so a long-running stack cannot fill the disk; read them with
+# `docker compose logs <service>` (Streamlit, Airflow, Spark, Chroma, MinIO all use this).
+x-logging: &default-logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "5"
+
 x-airflow-common: &airflow-common
   build:
     context: .
@@ -17,6 +25,10 @@ x-airflow-common: &airflow-common
     AIRFLOW__WEBSERVER__SECRET_KEY: '298p-dev-airflow-webserver-secret-key-min-32chars'
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
     AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+    LOG_LEVEL: INFO
+    # load_to_chroma and the Spark job refuse to run on chunk sets where more than this share
+    # of rows has no embedding (Ollama down/overloaded during embedding).
+    MAX_MISSING_EMBEDDING_FRACTION: "0.10"
     AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth'
     # MinIO connection info available to all DAGs
     MINIO_ENDPOINT: http://minio:9000
@@ -66,6 +78,7 @@ services:
       test: ["CMD", "pg_isready", "-U", "airflow"]
       interval: 10s
       retries: 5
+    logging: *default-logging
     restart: always
 
   # ── 2. MinIO (local S3 replacement) ────────────────────────────────────────
@@ -85,6 +98,7 @@ services:
       test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
       interval: 10s
       retries: 5
+    logging: *default-logging
     restart: always
 
   # ── 3. MinIO bucket setup (runs once on startup) ───────────────────────────
@@ -101,6 +115,7 @@ services:
       mc mb -p local/lemkin-processed;
       echo 'MinIO buckets created successfully';
       "
+    logging: *default-logging
     restart: on-failure
 
   # ── 4. Airflow webserver ───────────────────────────────────────────────────
@@ -119,6 +134,7 @@ services:
       test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
       interval: 30s
       retries: 5
+    logging: *default-logging
     restart: always
 
   # ── 5. Airflow scheduler ───────────────────────────────────────────────────
@@ -131,6 +147,7 @@ services:
         condition: service_healthy
       airflow-init:
         condition: service_completed_successfully
+    logging: *default-logging
     restart: always
 
   # ── 6. Airflow init (creates admin user on first run) ─────────────────────
@@ -145,6 +162,7 @@ services:
         # Use python -m airflow so we do not depend on the `airflow` shim (PATH / entrypoint quirks).
         python -m airflow db migrate
         python -m airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com || true
+    logging: *default-logging
     restart: "no"
 
   # ── 7. Apache Spark ────────────────────────────────────────────────────────
@@ -163,6 +181,7 @@ services:
     volumes:
       - ./spark_jobs:/opt/spark_jobs   # your PySpark scripts go here
       - ./data:/opt/data
+    logging: *default-logging
     restart: always
 
   spark-worker:
@@ -180,6 +199,7 @@ services:
     volumes:
       - ./spark_jobs:/opt/spark_jobs
       - ./data:/opt/data
+    logging: *default-logging
     restart: always
 
   # ── 8. Chroma (vector store) ───────────────────────────────────────────────
@@ -192,6 +212,7 @@ services:
       - "8000:8000"
     volumes:
       - chroma-data:/chroma/chroma
+    logging: *default-logging
     restart: always
 
   # ── 9. Streamlit app ───────────────────────────────────────────────────────
@@ -211,6 +232,8 @@ services:
       CHROMA_HOST: chroma
       CHROMA_PORT: "8000"
       CHROMA_COLLECTION_NAME: lemkin_content
+      PYTHONUNBUFFERED: "1"   # show app logs in `docker compose logs streamlit` immediately
+      LOG_LEVEL: INFO
     volumes:
       - ./user_interface.py:/app/user_interface.py
       - ./generate.py:/app/generate.py
@@ -220,6 +243,7 @@ services:
     depends_on:
       - minio
       - chroma
+    logging: *default-logging
     restart: always
 
 # ── Volumes ────────────────────────────────────────────────────────────────

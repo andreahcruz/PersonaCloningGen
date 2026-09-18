@@ -220,6 +220,40 @@ All read from environment variables in `host_finetune/config.py`:
   module — refresh the browser tab or restart the `streamlit` container:
   `docker compose restart streamlit`.
 
+## Logging and error handling
+
+Where to read logs:
+
+| Component | Where |
+|---|---|
+| Streamlit app / `generate.py` | `docker compose logs streamlit` (CLI: stderr). Every generation has a request id, e.g. `docker compose logs streamlit \| grep a1b2c3d4` |
+| Airflow tasks | Airflow UI → DAG → task → **Log**. Failures and retries also log a `TASK FAILED` / `TASK WILL RETRY` line with the dag, task and run id |
+| Spark job | The `trigger_spark_clean` task log (`lemkin.spark` lines) |
+| Fine-tune watcher | Console and `host_finetune/output/watcher.log` |
+| All containers | Rotated json-file logs (10 MB x 5 per service) |
+
+Set `LOG_LEVEL=DEBUG` for more detail. Expected failures carry a hint that says how to fix them (shown in Streamlit as an info box and printed by the CLI). The **System check** button in the Streamlit sidebar reports Ollama, the selected models, Chroma and local files in one go.
+
+| Failure | What you see | Fix |
+|---|---|---|
+| Ollama not running / wrong URL | `Cannot connect to Ollama at ...` (retried automatically) | `ollama serve`; inside Docker use `http://host.docker.internal:11434` |
+| Model not pulled | `Ollama model '...' not found` | `ollama pull <model>`, or `python -m host_finetune.register_ollama` for `lemkin-clone` |
+| Chroma unreachable / wrong version | `Cannot connect to Chroma` or `rejected the tenant/database` | `docker compose ps chroma`; see *Chroma "default_tenant"* above |
+| Chroma empty | `returned no chunks` | Run the DAG through `load_to_chroma` |
+| Embedding model mismatch | `does not match the collection` | Use `nomic-embed-text` (what the Spark job used) or rebuild the collection |
+| Broken fine-tune export | `produced degenerate output` (also checked in the `register_ollama` smoke test) | `python -m host_finetune.diagnose_pipeline`, then re-run `merge_and_export` |
+| Ollama down during Spark embedding | `trigger_spark_clean` fails at start (`Ollama preflight failed`), or `load_to_chroma` fails with `have no embedding` | Start Ollama and re-run; the previous `chunks/` output is kept |
+
+Pipeline behavior worth knowing:
+
+- Airflow tasks retry twice (Spark once) with a delay; every task overwrites its output, so retries are safe.
+- `trigger_spark_clean` checks that Ollama can embed before starting, and does **not** overwrite `chunks/` if more than `MAX_MISSING_EMBEDDING_FRACTION` (default 10%) of rows have no embedding.
+- `mark_training_ready` only writes the `_READY` sentinel when the dataset has valid `instruction`/`output` rows, so the watcher never starts a GPU run on bad data.
+- MinIO calls retry automatically, and every task checks MinIO and its bucket first.
+- The fine-tune watcher backs off (up to 1 hour) after a failed run instead of retrying every poll.
+
+Tests for all of the above live in `tests/` (`pip install pytest`, then `python -m pytest`). They stub Chroma, boto3 and Airflow when those are not installed, so they run on a plain Python 3.10+ environment in a few seconds.
+
 ## Troubleshooting
 
 - If **`airflow-init`** errors because the admin user already exists, that is normal on later runs; the webserver and scheduler should still work.

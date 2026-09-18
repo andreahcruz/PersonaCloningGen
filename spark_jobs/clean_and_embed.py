@@ -17,6 +17,7 @@ embed stream (slowest, safest for laptop Ollama). Increase if your Ollama host
 handles parallel /api/embed load well.
 """
 import json
+import logging
 import os
 import random
 import re
@@ -54,6 +55,66 @@ OLLAMA_EMBED_DELAY_SEC = float(os.environ.get("OLLAMA_EMBED_DELAY_SEC", "0.03"))
 # Hard cap on characters sent to /api/embed (safety for model context)
 OLLAMA_EMBED_MAX_CHARS = int(os.environ.get("OLLAMA_EMBED_MAX_CHARS", "12000"))
 SPARK_EMBED_PARTITIONS = int(os.environ.get("SPARK_EMBED_PARTITIONS", "2"))
+# Refuse to write chunks/ when more than this share of chunk rows has no embedding, so a
+# dead Ollama cannot overwrite the last good output with empty vectors.
+MAX_MISSING_EMBEDDING_FRACTION = float(os.environ.get("MAX_MISSING_EMBEDDING_FRACTION", "0.10"))
+
+logger = logging.getLogger("lemkin.spark")
+
+
+def preflight_ollama():
+    """Fail in seconds, not after hours of empty embeddings, if Ollama cannot embed."""
+    url = f"{OLLAMA_BASE}/api/embed"
+    try:
+        resp = req.post(url, json={"model": EMBED_MODEL, "input": "preflight"}, timeout=60)
+    except Exception as e:
+        raise RuntimeError(
+            f"Ollama preflight failed: cannot reach {OLLAMA_BASE} ({e}). Start `ollama serve` on the "
+            "host; from Docker the URL must be http://host.docker.internal:11434 (OLLAMA_BASE)."
+        ) from e
+    if resp.status_code == 404:
+        raise RuntimeError(
+            f"Ollama preflight failed: embed model '{EMBED_MODEL}' not found. "
+            f"Run `ollama pull {EMBED_MODEL}` on the host."
+        )
+    if not resp.ok:
+        raise RuntimeError(
+            f"Ollama preflight failed: HTTP {resp.status_code} from {url}: {resp.text[:200]}"
+        )
+    try:
+        vec = resp.json()["embeddings"][0]
+    except (ValueError, KeyError, IndexError, TypeError) as e:
+        raise RuntimeError(
+            f"Ollama preflight failed: unusable /api/embed response for '{EMBED_MODEL}' "
+            "(is it an embedding model?)."
+        ) from e
+    if not vec:
+        raise RuntimeError(f"Ollama preflight failed: empty embedding from '{EMBED_MODEL}'.")
+    logger.info("Ollama preflight ok: %s at %s (dim=%d)", EMBED_MODEL, OLLAMA_BASE, len(vec))
+
+
+def check_embedding_coverage(total, with_embedding, max_missing_fraction=None):
+    """Raise if too many chunk rows have no embedding. Called before anything is written."""
+    if max_missing_fraction is None:
+        max_missing_fraction = MAX_MISSING_EMBEDDING_FRACTION
+    if total == 0:
+        raise RuntimeError(
+            "No chunk rows were produced. Check that raw/ in MinIO has documents "
+            "(run extract_to_minio) and that they contain text."
+        )
+    missing = total - with_embedding
+    if missing:
+        logger.warning(
+            "%d of %d chunk rows (%.1f%%) have no embedding (limit %.0f%%).",
+            missing, total, 100.0 * missing / total, 100.0 * max_missing_fraction,
+        )
+    if with_embedding == 0 or missing / total > max_missing_fraction:
+        raise RuntimeError(
+            f"{missing} of {total} chunk rows have no embedding, above the "
+            f"{max_missing_fraction:.0%} limit (MAX_MISSING_EMBEDDING_FRACTION). Not writing chunks/ "
+            "so the previous good output is kept. Check `ollama serve`, lower "
+            "SPARK_EMBED_PARTITIONS, and re-run."
+        )
 
 
 def strip_html(text):
@@ -294,11 +355,19 @@ def embed_text(text):
             sleep_s = OLLAMA_EMBED_RETRY_BASE_SEC * (2**attempt) + random.uniform(0, 0.75)
             time.sleep(sleep_s)
 
-    print(f"Embedding failed after {OLLAMA_EMBED_MAX_RETRIES} tries: {last_err}")
+    # Runs inside Spark Python workers, which have no logging config: WARNING goes to stderr.
+    logging.getLogger("lemkin.spark.embed").warning(
+        "Embedding failed after %d tries: %s", OLLAMA_EMBED_MAX_RETRIES, last_err
+    )
     return []
 
 
 def main():
+    logging.basicConfig(
+        level=getattr(logging, os.environ.get("LOG_LEVEL", "INFO").upper(), logging.INFO),
+        format="%(asctime)s %(levelname)s %(name)s: %(message)s",
+    )
+    preflight_ollama()
     spark = (
         SparkSession.builder
         .appName("Lemkin content — clean, chunk, embed")
@@ -310,7 +379,16 @@ def main():
         .config("spark.hadoop.fs.s3a.connection.ssl.enabled", "false")
         .getOrCreate()
     )
+    try:
+        _run(spark)
+    except Exception:
+        logger.exception("Spark job failed (see the traceback above; Airflow marks the task failed)")
+        raise
+    finally:
+        spark.stop()
 
+
+def _run(spark):
     # UDFs are unpickled in separate Python workers; sibling ``corpus_footer_scrub.py``
     # is not on their sys.path unless we ship it with the job.
     _scrub = Path(__file__).resolve().parent / "corpus_footer_scrub.py"
@@ -361,9 +439,9 @@ def main():
 
     # Critical: limit parallel Ollama calls (one HTTP client storm per partition).
     parts = max(SPARK_EMBED_PARTITIONS, 1)
-    print(
-        f"Repartitioning to {parts} partition(s) before embedding "
-        f"(set SPARK_EMBED_PARTITIONS to tune Ollama concurrency)."
+    logger.info(
+        "Repartitioning to %d partition(s) before embedding "
+        "(set SPARK_EMBED_PARTITIONS to tune Ollama concurrency).", parts,
     )
     df = df.repartition(parts)
 
@@ -377,12 +455,14 @@ def main():
     try:
         total = df.count()
         with_emb = df.filter(F.size(F.col("embedding")) > 0).count()
-        print(
-            f"Chunk rows: {total}; with non-empty embedding: {with_emb} "
-            f"(missing: {total - with_emb})"
+        logger.info(
+            "Chunk rows: %d; with non-empty embedding: %d (missing: %d)",
+            total, with_emb, total - with_emb,
         )
+        # Gate before the overwrite below: a bad embed pass must not replace good chunks.
+        check_embedding_coverage(total, with_emb)
         df.write.mode("overwrite").json(out_path)
-        print(f"Wrote to {out_path}")
+        logger.info("Wrote to %s", out_path)
     finally:
         df.unpersist()
 
@@ -398,9 +478,9 @@ def main():
     )
     train_count = train_df.count()
     train_path = f"s3a://{BUCKET_PROCESSED}/training/dataset_jsonl"
-    print(
-        f"SFT export: SFT_CHUNK_OUTPUT_CHARS={SFT_CHUNK_OUTPUT_CHARS} "
-        "(each label chunk ≤ this size; 0 = legacy single row + truncate)"
+    logger.info(
+        "SFT export: SFT_CHUNK_OUTPUT_CHARS=%d "
+        "(each label chunk ≤ this size; 0 = legacy single row + truncate)", SFT_CHUNK_OUTPUT_CHARS,
     )
     (
         train_df
@@ -408,9 +488,7 @@ def main():
         .write.mode("overwrite")
         .text(train_path)
     )
-    print(f"Wrote {train_count} training rows to {train_path} (one part-*.txt JSONL file)")
-
-    spark.stop()
+    logger.info("Wrote %d training rows to %s (one part-*.txt JSONL file)", train_count, train_path)
 
 
 if __name__ == "__main__":
