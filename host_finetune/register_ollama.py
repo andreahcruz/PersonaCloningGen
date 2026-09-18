@@ -23,6 +23,11 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
+_SPARK_JOBS = REPO_ROOT / "spark_jobs"
+if str(_SPARK_JOBS) not in sys.path:
+    sys.path.insert(0, str(_SPARK_JOBS))
+from output_checks import looks_degenerate
+
 from host_finetune.config import GGUF_DIR, GGUF_SIDECAR_DIR, MODELFILE_PATH, OLLAMA_MODEL_NAME
 
 
@@ -74,6 +79,14 @@ def main() -> None:
             "`ollama serve` is running before re-running this script."
         )
 
+    # Fail before the slow `ollama create` if the server is not answering.
+    probe = subprocess.run(["ollama", "list"], check=False, capture_output=True, text=True)
+    if probe.returncode != 0:
+        raise RuntimeError(
+            "`ollama list` failed, so the Ollama server is not reachable. Start `ollama serve` "
+            f"and re-run. stderr: {(probe.stderr or '').strip()[:300]}"
+        )
+
     gguf_path = find_gguf()
     print(f"Using GGUF: {gguf_path}  ({gguf_path.stat().st_size / 1e9:.2f} GB)")
 
@@ -101,12 +114,23 @@ def main() -> None:
         test_proc = subprocess.run(
             test_cmd, check=False, capture_output=True, text=True, encoding="utf-8"
         )
-        if test_proc.returncode == 0:
-            print("--- model output ---")
-            print((test_proc.stdout or "").strip())
-            print("--------------------")
-        else:
-            print(f"Smoke test exited {test_proc.returncode}; stderr:\n{test_proc.stderr}")
+        if test_proc.returncode != 0:
+            raise RuntimeError(
+                f"Smoke test exited {test_proc.returncode}, so '{OLLAMA_MODEL_NAME}' cannot generate. "
+                f"stderr:\n{test_proc.stderr}"
+            )
+        answer = (test_proc.stdout or "").strip()
+        print("--- model output ---")
+        print(answer)
+        print("--------------------")
+        # A bad GGUF export once produced pure garbage while training loss looked normal.
+        # min_words is low because the smoke answer is a single short sentence.
+        if not answer or looks_degenerate(answer, min_words=8):
+            raise RuntimeError(
+                f"Smoke test output from '{OLLAMA_MODEL_NAME}' is empty or degenerate (repeated "
+                "tokens). The export is probably broken: run `python -m host_finetune.diagnose_pipeline` "
+                "and re-export with `python -m host_finetune.merge_and_export`."
+            )
 
     print(f"\nModel '{OLLAMA_MODEL_NAME}' is ready. Pick it in Streamlit's Generate model dropdown.")
 

@@ -5,6 +5,7 @@ Run: streamlit run user_interface.py
 """
 from __future__ import annotations
 
+import logging
 import os
 from pathlib import Path
 
@@ -12,19 +13,17 @@ import requests
 import streamlit as st
 
 from generate import (
-    build_prompt,
-    format_context,
-    load_format_spec,
-    load_persona,
-    ollama_embed,
-    ollama_generate,
-    retrieve,
-    summarize_persona,
-    CONTEXT_MAX_CHARS,
     DEFAULT_EMBED_MODEL,
     DEFAULT_GEN_MODEL,
     OLLAMA_BASE_DEFAULT,
+    LemkinError,
+    check_dependencies,
+    configure_logging,
+    run_rag_pipeline,
 )
+
+configure_logging()
+logger = logging.getLogger("lemkin.ui")
 
 BASE = Path(__file__).parent
 
@@ -51,7 +50,8 @@ def _ollama_model_tags(base_url: str) -> list[str]:
             if n:
                 out.append(n)
         return sorted(set(out))
-    except Exception:
+    except Exception as e:  # noqa: BLE001 - the UI falls back to common names
+        logger.warning("could not list Ollama models at %s: %s", url, e)
         return []
 
 
@@ -97,19 +97,20 @@ def run_generation(
     embed_model: str,
     gen_model: str,
 ) -> str:
-    format_spec = load_format_spec(format_specs_path, format_name)
-    profile = load_persona(persona_path)
-    persona_summary = summarize_persona(profile)
-    query_text = f"{topic}. {goal}. Audience: {audience}."
-    query_embed = ollama_embed(query_text, ollama_base, embed_model)
-    chunks = retrieve(index_path, query_embed, k, embed_model)
-    context_block = format_context(chunks, max_chars=CONTEXT_MAX_CHARS)
-    prompt = build_prompt(
-        format_spec, persona_summary,
-        topic, audience, goal, cta,
-        context_block,
+    return run_rag_pipeline(
+        format_name=format_name,
+        topic=topic,
+        audience=audience,
+        goal=goal,
+        cta=cta,
+        k=k,
+        index_path=index_path,
+        persona_path=persona_path,
+        format_specs_path=format_specs_path,
+        ollama_base=ollama_base,
+        embed_model=embed_model,
+        gen_model=gen_model,
     )
-    return ollama_generate(prompt, ollama_base, gen_model)
 
 
 use_chroma_http = os.environ.get("CHROMA_USE_HTTP", "").lower() in ("1", "true", "yes")
@@ -205,9 +206,22 @@ with st.sidebar:
 
     generate_btn = st.button("Generate", type="primary", use_container_width=True)
 
+    with st.expander("System check"):
+        st.caption("Checks Ollama, the selected models, Chroma and the local files.")
+        run_check = st.button("Run system check", use_container_width=True)
+
 index_path_resolved = BASE / index_path
 persona_path = BASE / "data" / "persona_profile.json"
 format_specs_path = BASE / "formats" / "format_specs.yaml"
+
+if run_check:
+    with st.spinner("Checking dependencies..."):
+        check_rows = check_dependencies(
+            ollama_base, embed_model, gen_model,
+            persona_path, format_specs_path, index_path_resolved,
+        )
+    for check_name, check_ok, check_detail in check_rows:
+        (st.success if check_ok else st.error)(f"{check_name}: {check_detail}")
 
 if generate_btn:
     if not topic.strip():
@@ -255,7 +269,12 @@ if generate_btn:
                     mime="text/markdown",
                     use_container_width=True,
                 )
-            except Exception as e:
+            except LemkinError as e:
+                # Already logged with a request id inside run_rag_pipeline.
                 st.error(f"Generation failed: {e}")
-                if "Connection" in str(e) or "refused" in str(e).lower():
-                    st.info("Make sure Ollama is running: ollama serve")
+                if e.hint:
+                    st.info(e.hint)
+            except Exception as e:  # noqa: BLE001 - last resort; full traceback is in the logs
+                logger.exception("unexpected error in Streamlit generate handler")
+                st.error(f"Unexpected error: {e}")
+                st.info("See the app log for the traceback: `docker compose logs streamlit`.")

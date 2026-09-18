@@ -432,7 +432,24 @@ def main() -> None:
     train_kw: dict = {}
     if resume:
         train_kw["resume_from_checkpoint"] = resume
-    trainer.train(**train_kw)
+    try:
+        trainer.train(**train_kw)
+    except torch.cuda.OutOfMemoryError:
+        print(
+            "[finetune] CUDA out of memory. Try, in order: PER_DEVICE_BATCH=1 with GRAD_ACCUM=16; "
+            "a shorter MAX_SEQ_LENGTH; HF_MODEL_NAME=unsloth/Llama-3.2-3B-Instruct-bnb-4bit; closing "
+            "other GPU apps. Continue a cut-off run with RESUME_FROM_CHECKPOINT=1.",
+            file=sys.stderr,
+        )
+        raise
+    except RuntimeError as e:
+        if "fused cross entropy" in str(e).lower():
+            print(
+                "[finetune] Unsloth fused cross-entropy could not find free VRAM. Raise "
+                "UNSLOTH_CE_LOSS_TARGET_GB (try 3) or free GPU memory, then re-run.",
+                file=sys.stderr,
+            )
+        raise
     if LOG_VRAM_USAGE and torch.cuda.is_available():
         _print_vram("post-train", trainer=trainer)
 
