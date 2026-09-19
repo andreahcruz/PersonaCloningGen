@@ -258,6 +258,23 @@ def test_training_ready_warns_about_partially_bad_rows(monkeypatch, caplog):
     assert "1 of 2 training rows are malformed" in caplog.text
 
 
+def test_training_ready_does_not_split_rows_on_unicode_line_separators(monkeypatch, caplog):
+    # Found in the first real run: 6 of 19,961 rows contain U+2028, which str.splitlines() treats
+    # as a line break, producing false "malformed row" warnings.
+    caplog.set_level(logging.WARNING, logger="airflow.task")
+    rows = [
+        {"instruction": "Write ...", "input": "", "output": "first line second line"},
+        {"instruction": "Write ...", "input": "", "output": "plain"},
+    ]
+    body = ("\n".join(json.dumps(r, ensure_ascii=False) for r in rows) + "\n").encode("utf-8")
+    assert " ".encode("utf-8") in body
+    s3 = FakeS3({TRAIN: body})
+    monkeypatch.setattr(dag, "_minio_client", lambda: s3)
+    dag.mark_training_ready()
+    assert json.loads(s3.puts["training/_READY"])["valid_rows"] == 2
+    assert "malformed" not in caplog.text
+
+
 def test_training_ready_still_fails_when_spark_wrote_nothing(monkeypatch):
     monkeypatch.setattr(dag, "_minio_client", lambda: FakeS3())
     with pytest.raises(RuntimeError, match="No Spark training output"):

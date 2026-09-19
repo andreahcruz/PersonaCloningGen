@@ -411,7 +411,9 @@ def mark_training_ready():
     # GPU run on an empty / corrupt dataset wastes an hour.
     valid_rows = 0
     bad_rows = 0
-    for line in buf.decode("utf-8", errors="replace").splitlines():
+    # Split on "\n" only. str.splitlines() also breaks on U+2028 and similar characters, which
+    # legitimately appear inside JSON strings here and would be counted as malformed rows.
+    for line in buf.decode("utf-8", errors="replace").split("\n"):
         if not line.strip():
             continue
         try:
