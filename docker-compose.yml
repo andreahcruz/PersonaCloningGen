@@ -222,6 +222,38 @@ services:
       - chroma
     restart: always
 
+  # ── 10. Backend API (FastAPI) ──────────────────────────────────────────────
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: lemkin-backend
+    ports:
+      - "8001:8000"   # Backend API → visit http://localhost:8001/health
+    environment:
+      OLLAMA_BASE: http://host.docker.internal:11434  # Ollama runs on your laptop
+      CHROMA_USE_HTTP: "true"
+      CHROMA_HOST: chroma
+      CHROMA_PORT: "8000"
+      CHROMA_COLLECTION_NAME: lemkin_content
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      - chroma
+    restart: always
+
+  # ── 11. Frontend (static web UI, proxies /api to backend) ──────────────────
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: lemkin-frontend
+    ports:
+      - "3000:80"   # Web UI → visit http://localhost:3000
+    depends_on:
+      - backend
+    restart: always
+
 # ── Volumes ────────────────────────────────────────────────────────────────
 volumes:
   postgres-data:
