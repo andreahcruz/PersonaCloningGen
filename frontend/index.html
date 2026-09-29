@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jason Lemkin–style content generator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <h1>Jason Lemkin–style content generator</h1>
+    <p class="subtitle">
+      RAG over the Lemkin corpus (blog, LinkedIn, X, YouTube) — pick a format and content brief.
+    </p>
+
+    <form id="brief-form" class="brief-form">
+      <label for="format">Format</label>
+      <select id="format" name="format" required></select>
+
+      <label for="topic">Topic</label>
+      <input id="topic" name="topic" type="text" placeholder="e.g. Hiring a VP Sales in 2026" required />
+
+      <label for="audience">Audience</label>
+      <input id="audience" name="audience" type="text" placeholder="e.g. B2B founders at $5–20M ARR" required />
+
+      <label for="goal">Goal</label>
+      <input id="goal" name="goal" type="text" placeholder="e.g. share one sharp takeaway" required />
+
+      <label for="cta">Call to action</label>
+      <input id="cta" name="cta" type="text" value="none" />
+
+      <label for="k">Chunks to retrieve (4–20)</label>
+      <input id="k" name="k" type="number" min="4" max="20" value="8" />
+
+      <button id="submit-btn" type="submit">Generate</button>
+    </form>
+
+    <p id="error" class="error" role="alert"></p>
+
+    <section>
+      <h2>Output</h2>
+      <pre id="output" class="output"></pre>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
