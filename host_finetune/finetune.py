@@ -25,6 +25,7 @@ from __future__ import annotations
 import inspect
 import json
 import os
+import random
 import sys
 from pathlib import Path
 
@@ -58,6 +59,7 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from host_finetune.llama_chat_format import training_text_from_row, unsloth_response_markers
+from host_finetune.sft_chunk_utils import extract_base_topic
 from host_finetune.config import (
     ADAPTER_DIR,
     DATASET_LOCAL,
@@ -109,6 +111,45 @@ def load_dataset(path: Path) -> Dataset:
         raise RuntimeError(f"No usable rows in {path}.")
     print(f"Loaded {len(rows)} training rows from {path}")
     return Dataset.from_list(rows)
+
+
+def split_by_source_document(raw_ds: Dataset, test_fraction: float = 0.1, seed: int = 42) -> tuple[Dataset, Dataset]:
+    """Split whole source documents before chunk formatting.
+
+    Chunk-level splitting leaks parts of the same original post into both
+    training and evaluation.  New prepared datasets carry ``source_file`` and
+    ``source_line``; older datasets fall back to the base instruction title.
+    The fallback is conservative: identically titled rows stay together.
+    """
+    groups: dict[tuple[str, str], list[int]] = {}
+    for idx, row in enumerate(raw_ds):
+        source_file = str(row.get("source_file") or "").strip()
+        source_line = str(row.get("source_line") or "").strip()
+        if source_file and source_line:
+            key = (source_file, source_line)
+        else:
+            key = ("instruction_title", extract_base_topic(str(row.get("instruction") or "")))
+        groups.setdefault(key, []).append(idx)
+
+    keys = list(groups)
+    random.Random(seed).shuffle(keys)
+    target_test_rows = max(1, round(len(raw_ds) * test_fraction))
+    test_indices: list[int] = []
+    for key in keys:
+        # Keep adding whole documents until the desired evaluation size is met.
+        # A slight overshoot is preferable to leaking chunks between splits.
+        if len(test_indices) >= target_test_rows:
+            break
+        test_indices.extend(groups[key])
+    test_set = set(test_indices)
+    train_indices = [i for i in range(len(raw_ds)) if i not in test_set]
+    if not train_indices or not test_indices:
+        raise RuntimeError("Document-level split produced an empty train or eval set.")
+    print(
+        f"[finetune] document-level split: {len(groups)} source groups; "
+        f"train={len(train_indices)} eval={len(test_indices)}"
+    )
+    return raw_ds.select(train_indices), raw_ds.select(sorted(test_indices))
 
 
 def _chat_text_batches(examples: dict, tokenizer) -> dict:
@@ -293,19 +334,23 @@ def main() -> None:
         else:
             raise
 
-    col_names = list(raw_ds.column_names)
-
     def _map_chat_rows(examples: dict) -> dict:
         return _chat_text_batches(examples, tokenizer)
 
-    ds = raw_ds.map(
+    train_raw, eval_raw = split_by_source_document(raw_ds, test_fraction=0.1, seed=42)
+
+    train_ds = train_raw.map(
         _map_chat_rows,
         batched=True,
-        remove_columns=col_names,
-        desc="format Llama-3 chat (apply_chat_template)",
+        remove_columns=list(train_raw.column_names),
+        desc="format train Llama-3 chat (apply_chat_template)",
     )
-    split = ds.train_test_split(test_size=0.1, seed=42)
-    train_ds, eval_ds = split["train"], split["test"]
+    eval_ds = eval_raw.map(
+        _map_chat_rows,
+        batched=True,
+        remove_columns=list(eval_raw.column_names),
+        desc="format eval Llama-3 chat (apply_chat_template)",
+    )
     if FINETUNE_TRAIN_HEAD_N is not None:
         n_keep = min(FINETUNE_TRAIN_HEAD_N, len(train_ds))
         train_ds = train_ds.select(range(n_keep))
