@@ -1,0 +1,122 @@
+{
+  "dataset_sha256": "d2d0e297c9722317f5bd8c458035d0448b66e847349798b715f7febb02041149",
+  "n_rows": 31874,
+  "n_groups": 17626,
+  "target_shares": {
+    "train": 0.8,
+    "validation": 0.1,
+    "test": 0.1
+  },
+  "source_platform": "source_file+source_line",
+  "source_note": "Chunks that share source_file and source_line are one document and stay in one split. Each source medium is assigned its own 80/10/10 quota, so validation and test keep that medium's share of the rows. source_platform on each assignment is the scraped medium.",
+  "near_duplicate_pairs_crossing_splits": 0,
+  "normalized_exact_groups_crossing_splits": 0,
+  "groups_in_multiple_splits": 0,
+  "share_residual": {
+    "train": 0.0,
+    "validation": 0.0,
+    "test": 0.0
+  },
+  "row_remainder_vs_quota": {
+    "train": -0.2,
+    "validation": -0.4,
+    "test": 0.6
+  },
+  "within_one_percentage_point": true,
+  "residual_note": null,
+  "splits": {
+    "train": {
+      "n_rows": 25499,
+      "share": 0.8,
+      "n_groups": 12957,
+      "n_base_titles": 18269,
+      "rows_per_base_title": {
+        "n": 18269,
+        "min": 1,
+        "p25": 1,
+        "p50": 1,
+        "p75": 1,
+        "mean": 1.4,
+        "max": 67
+      },
+      "word_count": {
+        "n": 25499,
+        "min": 1,
+        "p25": 21,
+        "p50": 50,
+        "p75": 204,
+        "mean": 105.19,
+        "max": 348
+      },
+      "near_duplicate_pairs_within_split": 1402,
+      "medium_counts": {
+        "blog": 11661,
+        "linkedin": 760,
+        "x": 11722,
+        "youtube_jason": 1356
+      }
+    },
+    "validation": {
+      "n_rows": 3187,
+      "share": 0.1,
+      "n_groups": 2335,
+      "n_base_titles": 2392,
+      "rows_per_base_title": {
+        "n": 2392,
+        "min": 1,
+        "p25": 1,
+        "p50": 1,
+        "p75": 1,
+        "mean": 1.33,
+        "max": 7
+      },
+      "word_count": {
+        "n": 3187,
+        "min": 5,
+        "p25": 22,
+        "p50": 62,
+        "p75": 241,
+        "mean": 121.35,
+        "max": 331
+      },
+      "near_duplicate_pairs_within_split": 22,
+      "medium_counts": {
+        "blog": 1466,
+        "linkedin": 120,
+        "x": 1430,
+        "youtube_jason": 171
+      }
+    },
+    "test": {
+      "n_rows": 3188,
+      "share": 0.1,
+      "n_groups": 2334,
+      "n_base_titles": 2389,
+      "rows_per_base_title": {
+        "n": 2389,
+        "min": 1,
+        "p25": 1,
+        "p50": 1,
+        "p75": 1,
+        "mean": 1.33,
+        "max": 7
+      },
+      "word_count": {
+        "n": 3188,
+        "min": 1,
+        "p25": 21,
+        "p50": 59,
+        "p75": 241,
+        "mean": 120.73,
+        "max": 336
+      },
+      "near_duplicate_pairs_within_split": 27,
+      "medium_counts": {
+        "blog": 1459,
+        "linkedin": 124,
+        "x": 1434,
+        "youtube_jason": 171
+      }
+    }
+  }
+}

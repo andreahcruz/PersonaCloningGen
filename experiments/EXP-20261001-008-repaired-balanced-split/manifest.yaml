@@ -1,0 +1,49 @@
+experiment_id: EXP-20261001-008-repaired-balanced-split
+timestamp: "2026-10-01T19:51:00-07:00"
+execution_commands:
+  - host_finetune\.venv\Scripts\python.exe -m host_finetune.fit_sft_to_context --dataset host_finetune/data/dataset_from_cleaned_sources_nopromo.jsonl --tokenizer unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit --out host_finetune/data/dataset_from_cleaned_sources_fit512_keepbreaks.jsonl
+  - .venv-test\Scripts\python.exe -m host_finetune.split_groups --dataset host_finetune/data/dataset_fit512_keepbreaks_balanced.jsonl --out-dir experiments/EXP-20261001-008-repaired-balanced-split
+
+git:
+  commit: ebe5d8ebb4a9a8b5d700b45c7d50d40930c55a36
+  dirty: true
+
+data:
+  source_manifest: n/a
+  source_hashes: n/a
+  processed_dataset_hash: 6e99b414733eafdfa27a5e94dd26beff1498bbfd58af132251e24044fef4f057
+  processed_dataset_path: host_finetune/data/dataset_fit512_keepbreaks_balanced.jsonl
+  full_fit_path: host_finetune/data/dataset_from_cleaned_sources_fit512_keepbreaks.jsonl
+  split_manifest_hash: n/a
+  split_manifest_path: experiments/EXP-20261001-008-repaired-balanced-split/raw/split_assignments.jsonl
+  gold_eval_hash: n/a
+  gold_eval_used_as_split: false
+
+rag:
+  persona_profile_hash: n/a
+  chroma_collection: n/a
+  index_version_or_snapshot: n/a
+  embedding_model: n/a
+
+model:
+  model_name: n/a
+  model_or_adapter_hash: n/a
+  config: n/a
+  random_seed: n/a
+
+evaluation:
+  evaluator_commit: n/a
+  judge_model: n/a
+  judge_config: n/a
+
+environment:
+  python_version: n/a
+  package_snapshot: n/a
+  hardware: n/a
+
+outputs:
+  raw:
+    - experiments/EXP-20261001-008-repaired-balanced-split/raw/split_assignments.jsonl
+  metrics:
+    - experiments/EXP-20261001-008-repaired-balanced-split/metrics/split_report.json
+  warnings_and_failures: []

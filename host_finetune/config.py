@@ -32,18 +32,32 @@ ADAPTER_PREFIX = "training/adapters/lemkin_lora/"
 # ── Local layout ─────────────────────────────────────────────────────────
 DATA_DIR = HERE / "data"
 OUTPUT_DIR = HERE / "output"
-ADAPTER_DIR = OUTPUT_DIR / "lemkin_lora"
+ADAPTER_DIR = Path(
+    os.environ.get("ADAPTER_DIR", str(OUTPUT_DIR / "lemkin_lora"))
+).expanduser()
 # Merge step only: after a cancelled run, point at a checkpoint dir, e.g.
 # host_finetune\output\lemkin_lora\checkpoint-800
 LORA_ADAPTER_PATH = Path(
     os.environ.get("LORA_ADAPTER_PATH", str(ADAPTER_DIR))
 ).expanduser()
-GGUF_DIR = OUTPUT_DIR / "lemkin-clone"
+GGUF_DIR = Path(os.environ.get("GGUF_DIR", str(OUTPUT_DIR / "lemkin-clone"))).expanduser()
 # Newer Unsloth writes *.gguf under ``{GGUF_DIR.name}_gguf`` next to the HF merge dir,
 # not inside GGUF_DIR itself.
-GGUF_SIDECAR_DIR = OUTPUT_DIR / f"{GGUF_DIR.name}_gguf"
+GGUF_SIDECAR_DIR = Path(
+    os.environ.get("GGUF_SIDECAR_DIR", str(OUTPUT_DIR / f"{GGUF_DIR.name}_gguf"))
+).expanduser()
 LAST_RUN_FILE = HERE / ".last_run"
 DATASET_LOCAL = DATA_DIR / "dataset.jsonl"
+# Cleaned-source QLoRA file. finetune.py trains this by default.
+# DATASET_LOCAL stays the MinIO download path so the watcher cannot overwrite it.
+CLEANED_SFT_DATASET = DATA_DIR / "dataset_from_cleaned_sources_fit512.jsonl"
+DEFAULT_SPLIT_MANIFEST = (
+    REPO_ROOT
+    / "experiments"
+    / "EXP-20261001-002-medium-stratified-split"
+    / "raw"
+    / "split_assignments.jsonl"
+)
 # Per-label chunk size (chars): keep ~3.125 chars per MAX_SEQ_LENGTH slot (3200/1024).
 # At MAX_SEQ_LENGTH=512 → 1600 chars/label. Override via SFT_CHUNK_OUTPUT_CHARS.
 SFT_CHUNK_OUTPUT_CHARS = int(os.environ.get("SFT_CHUNK_OUTPUT_CHARS", "1600"))

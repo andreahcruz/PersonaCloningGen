@@ -1,0 +1,75 @@
+experiment_id: EXP-20260928-002-grouped-split
+timestamp: "2026-09-28T02:33:12-07:00"
+execution_commands:
+  - host_finetune\.venv\Scripts\python.exe -m host_finetune.split_groups --dataset host_finetune/data/dataset.jsonl --out-dir experiments/EXP-20260928-002-grouped-split
+  - .venv-test\Scripts\python.exe -m pytest tests/test_split_groups.py -q
+
+git:
+  commit: ebe5d8ebb4a9a8b5d700b45c7d50d40930c55a36
+  dirty: true
+
+data:
+  source_manifest:
+    - data/jasonlemkin_blog.jsonl
+    - data/jasonlemkinlinkedin.jsonl
+    - data/jasonmlemkinyoutubetranscripts.jsonl
+    - data/saastryoutubetranscripts.jsonl
+    - data/jasonlk_originals.jsonl
+  source_hashes:
+    data/jasonlemkin_blog.jsonl: 8492ef11acacd767ce6bcdbdf6215467b6ba74d3e57dc50ffcd0af7deebc34a8
+    data/jasonlemkinlinkedin.jsonl: a2899576ac75ebb5fe05af15bdd0425eef9636de42bb058e82b9c456ae71ef09
+    data/jasonmlemkinyoutubetranscripts.jsonl: a943eb049b79b75e6aa17073cfcd4a7431e7a163b3a4276f4f8116cc31a1e337
+    data/saastryoutubetranscripts.jsonl: 89e4de78a7e3e947625523b27fbc29a0b75ef217f5c6e7a76d1aaca41916560d
+    data/jasonlk_originals.jsonl: a2021528bf4a34cd34c074d252d6bf246fddbe422033e7b88ebc0e11c74044c1
+  processed_dataset_hash: a4bfe637b9c178a29bb885ef8502ff45d348fe743d8d2938ba56f8ea3f71e4f5
+  processed_dataset_path: host_finetune/data/dataset.jsonl
+  split_manifest_hash: 3f43e90f636c063bdc3d3764221af6bf0ccfab44a8ded209d082c96854b8a7bd
+  split_manifest_path: experiments/EXP-20260928-002-grouped-split/raw/split_assignments.jsonl
+  split_report_hash: 3e3ecce43f2025d94619dd1803d31e8474e61b48ab18674de10d8991e9a821bd
+  gold_eval_hash: d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e
+  gold_eval_path: data/openai_ft/lemkin_gold_eval.jsonl
+  gold_eval_used_as_split: false
+
+rag:
+  persona_profile_hash: a9e9831e58218496bd1d195e1f360a0245c6a99fb4f5f15bb6e6a68086b3f513
+  persona_profile_path: data/persona_profile.json
+  chroma_collection: n/a
+  index_version_or_snapshot: n/a
+  embedding_model: n/a
+
+model:
+  model_name: n/a
+  model_or_adapter_hash: n/a
+  config:
+    split: grouped-title union-find jaccard>=0.8
+    target_shares: {train: 0.80, validation: 0.10, test: 0.10}
+    row_counts: {train: 15457, validation: 1932, test: 1932}
+    finetune_invoked: false
+  random_seed: n/a
+
+evaluation:
+  evaluator_commit: ebe5d8ebb4a9a8b5d700b45c7d50d40930c55a36
+  evaluator: host_finetune.split_groups
+  judge_model: n/a
+  judge_config: n/a
+  status: MEASURED
+  validated_model_outputs: false
+
+environment:
+  python_version: 3.11.9
+  package_snapshot: n/a
+  hardware: Windows-10-10.0.26200-SP0
+
+outputs:
+  raw:
+    - experiments/EXP-20260928-002-grouped-split/raw/split_assignments.jsonl
+  metrics:
+    - experiments/EXP-20260928-002-grouped-split/metrics/split_report.json
+  warnings_and_failures:
+    - "git.dirty is true because this worktree has untracked and modified files."
+    - "No platform or B2B source tag exists on dataset.jsonl. source_platform is unavailable on every assignment row."
+    - "Quotas 0.8/0.1/0.1 of 19321 are 15456.8/1932.1/1932.1. Whole groups landed on 15457/1932/1932."
+    - "3549 of 3568 near-duplicate pairs sit in train because the largest groups are assigned while the train quota is still the largest."
+    - "No model was trained. lemkin-clone and lemkin-clone-v4 scores stay tied to the old in-memory 90/10 split and are not comparable to a later run that opts into this manifest."
+    - "Chroma, embeddings, and persona text were not read for the assignment. Their hashes above are file identities only."
+    - "split_groups.py imports only the standard library, so there is no package snapshot for the assignment command. Unit tests ran on .venv-test Python 3.10.11."

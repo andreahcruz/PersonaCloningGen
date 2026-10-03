@@ -1,0 +1,100 @@
+{
+  "data_dir": "C:\\Users\\okevi\\SJSU\\DATA298\\298P\\data",
+  "out_dir": "C:\\Users\\okevi\\SJSU\\DATA298\\298P\\data\\cleaned",
+  "files": [
+    {
+      "file": "jasonlemkin_blog.jsonl",
+      "rows_in": 3502,
+      "rows_out": 3466,
+      "dropped": {
+        "event_promo": 36
+      },
+      "changed": {
+        "footer": 3431,
+        "url": 27
+      },
+      "bad_json": 0
+    },
+    {
+      "file": "jasonlemkinlinkedin.jsonl",
+      "rows_in": 2675,
+      "rows_out": 2006,
+      "dropped": {
+        "event_promo": 46,
+        "linkedin_feed_chrome": 623
+      },
+      "changed": {
+        "hashtag": 57,
+        "url": 1
+      },
+      "bad_json": 0
+    },
+    {
+      "file": "jasonlk_originals.jsonl",
+      "rows_in": 25997,
+      "rows_out": 24277,
+      "dropped": {
+        "too_short": 1203,
+        "event_promo": 367,
+        "empty": 150
+      },
+      "changed": {
+        "url": 9103
+      },
+      "bad_json": 0
+    },
+    {
+      "file": "jasonmlemkinyoutubetranscripts.jsonl",
+      "rows_in": 462,
+      "rows_out": 428,
+      "dropped": {
+        "empty_transcript": 34
+      },
+      "changed": {
+        "html": 27
+      },
+      "bad_json": 0
+    },
+    {
+      "file": "saastryoutubetranscripts.jsonl",
+      "rows_in": 199,
+      "rows_out": 193,
+      "dropped": {
+        "event_promo": 1,
+        "empty_transcript": 5
+      },
+      "changed": {
+        "html": 71
+      },
+      "bad_json": 0
+    }
+  ],
+  "examples": {
+    "dropped_event_promo": {
+      "file": "jasonlemkin_blog.jsonl",
+      "title": "We’re 60 Days Out from SaaStr AI Annual 2026. Last Chance to Apply to Speak. And Why You Should Sponsor.",
+      "before": "May 12-14. SF Bay (San Mateo County Events Center). 40 acres. 300+ sessions. 10,000+ B2B and AI leaders. SaaStr AI Annual is 60 days away , and two clocks are ticking down fast: the final speaker submission window and the final custom sponsorship deadline. Last Chance To Apply t…"
+    },
+    "dropped_linkedin_chrome": {
+      "file": "jasonlemkinlinkedin.jsonl",
+      "before": "Feed post number 132 Jason M. Lemkin Jason M. Lemkin • 3rd+ Influencer • 3rd+ SaaStr AI 2026 is May 12-14 in SF Bay!! See You There!! SaaStr AI 2026 is May 12-14 in SF Bay!! See You There!! Visit my website 1mo • 1 month ago • Visible to anyone on or off LinkedIn Follow We're ba…"
+    },
+    "blog_footer_removed": {
+      "file": "jasonlemkin_blog.jsonl",
+      "title": "5 Ways to Turn Your Support Data Into a Customer Acquisition Channel with HappyFox’s Founder CEO",
+      "before_tail": "Related Posts Will The Only Humans Left In Customer Support and Customer Success Be The Ones Selling You Something? Outsourcing Support is a Lot Better Than Not Providing Su",
+      "after_tail": "…e question is whether anyone besides your support team is actually listening. Want to meet Shalin and 1000+ other B2B + AI leaders sharing real playbooks like this? Join us at SaaStr AI Annual 2026, May 12-14 in SF Bay ."
+    },
+    "repaired_url": {
+      "file": "jasonlk_originals.jsonl",
+      "before": "http://\\nSaaStrDeploy.com '26 — our first-ever AI ",
+      "after": "http://SaaStrDeploy.com '26 — our first-ever AI GTM Agent Summi"
+    },
+    "unescaped_html": {
+      "file": "saastryoutubetranscripts.jsonl",
+      "title": "AI Replaces Sales Jobs: Future of Sales with Jason Lemkin #shorts",
+      "before": "isplacing the midpack and the mediocre. &gt;&gt; How do you see the future of the sa",
+      "after": "isplacing the midpack and the mediocre. >> How do you see the future of the sa"
+    }
+  }
+}

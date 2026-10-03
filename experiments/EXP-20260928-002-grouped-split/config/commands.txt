@@ -1,0 +1,3 @@
+host_finetune\.venv\Scripts\python.exe -m host_finetune.split_groups --dataset host_finetune/data/dataset.jsonl --out-dir experiments/EXP-20260928-002-grouped-split
+
+.venv-test\Scripts\python.exe -m pytest tests/test_split_groups.py -q

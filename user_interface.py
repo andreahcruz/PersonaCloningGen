@@ -30,6 +30,9 @@ BASE = Path(__file__).parent
 # Shown first when those tags exist in Ollama (see ``register_ollama.py`` / ``ollama create``).
 _FT_MODEL_ORDER = (
     "llama3.1",
+    "lemkin-cleaned",
+    "lemkin-balanced",
+    "lemkin-r32",
     "lemkin-clone",
     "lemkin-smoke20",
     "lemkin-lora-v3",

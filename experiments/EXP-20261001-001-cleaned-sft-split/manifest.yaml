@@ -1,0 +1,96 @@
+experiment_id: EXP-20261001-001-cleaned-sft-split
+timestamp: "2026-10-01T02:30:26-07:00"
+execution_commands:
+  - .venv-test\Scripts\python.exe -m host_finetune.clean_scraped
+  - .venv-test\Scripts\python.exe -m host_finetune.build_sft_from_cleaned_sources --cleaned-dir data/cleaned
+  - .venv-test\Scripts\python.exe -m host_finetune.filter_event_promos --dataset host_finetune/data/dataset_from_cleaned_sources.jsonl --out host_finetune/data/dataset_from_cleaned_sources_nopromo.jsonl
+  - host_finetune\.venv\Scripts\python.exe -m host_finetune.fit_sft_to_context --dataset host_finetune/data/dataset_from_cleaned_sources_nopromo.jsonl --tokenizer unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit --out host_finetune/data/dataset_from_cleaned_sources_fit512.jsonl
+  - host_finetune\.venv\Scripts\python.exe -m host_finetune.token_length_audit --dataset host_finetune/data/dataset_from_cleaned_sources_fit512.jsonl --tokenizer unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit --report host_finetune/data/dataset_from_cleaned_sources_fit512.token_audit.json
+  - .venv-test\Scripts\python.exe -m host_finetune.split_groups --dataset host_finetune/data/dataset_from_cleaned_sources_fit512.jsonl --out-dir experiments/EXP-20261001-001-cleaned-sft-split
+
+git:
+  commit: ebe5d8ebb4a9a8b5d700b45c7d50d40930c55a36
+  dirty: true
+
+data:
+  source_manifest:
+    - data/jasonlemkin_blog.jsonl
+    - data/jasonlemkinlinkedin.jsonl
+    - data/jasonmlemkinyoutubetranscripts.jsonl
+    - data/saastryoutubetranscripts.jsonl
+    - data/jasonlk_originals.jsonl
+  source_hashes:
+    data/jasonlemkin_blog.jsonl: 8492ef11acacd767ce6bcdbdf6215467b6ba74d3e57dc50ffcd0af7deebc34a8
+    data/jasonlemkinlinkedin.jsonl: a2899576ac75ebb5fe05af15bdd0425eef9636de42bb058e82b9c456ae71ef09
+    data/jasonmlemkinyoutubetranscripts.jsonl: a943eb049b79b75e6aa17073cfcd4a7431e7a163b3a4276f4f8116cc31a1e337
+    data/saastryoutubetranscripts.jsonl: 89e4de78a7e3e947625523b27fbc29a0b75ef217f5c6e7a76d1aaca41916560d
+    data/jasonlk_originals.jsonl: a2021528bf4a34cd34c074d252d6bf246fddbe422033e7b88ebc0e11c74044c1
+  cleaned_hashes:
+    data/cleaned/jasonlemkin_blog.jsonl: 07dc0623f567ec5e05cee71b3577e62be143ddf651bec4257b9955593f2a7bab
+    data/cleaned/jasonlemkinlinkedin.jsonl: da4361c56f93820291fb583d3386e7a211aadaf9e66d8d0a971873a9920ccbf2
+    data/cleaned/jasonlk_originals.jsonl: e779f42fbb951d6ea4da9e8e35862563bd267d0fb635c2619aefb1ba593770c5
+    data/cleaned/jasonmlemkinyoutubetranscripts.jsonl: e13d7f0a45b4279281dd2ae4946a702b9036b4349ea90a220364d017a18e8484
+    data/cleaned/saastryoutubetranscripts.jsonl: b673ee254840edd2e26bfcd3f8ab88d5033ba8b9f896de73eaccafbf21024cb7
+  processed_dataset_hash: f044b5f731b2a3c21f77fed124486c67b7b08ac3fba2b89735602b972c6c41c8
+  processed_dataset_path: host_finetune/data/dataset_from_cleaned_sources_fit512.jsonl
+  sft_before_promo_hash: fb3a566eba808c2e3bb186c9dbe10307e8a132dc64ef5aa2deed8ca34e5ca901
+  sft_after_promo_hash: c8a0e729427b0c53980cfe5fe10f1f3f60938df2a56645c1f14a7b847114bfc3
+  split_manifest_hash: 9336d8e5790facf1b24396ef7737712e99ade4a3ad6b014787a452a6c015373b
+  split_manifest_path: experiments/EXP-20261001-001-cleaned-sft-split/raw/split_assignments.jsonl
+  split_report_hash: aab48fce30b9bfaf5079b87602ab5f7614789e85aec2f96a97ce197ce63e3b91
+  gold_eval_hash: d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e
+  gold_eval_path: data/openai_ft/lemkin_gold_eval.jsonl
+  gold_eval_used_as_split: false
+
+rag:
+  persona_profile_hash: a9e9831e58218496bd1d195e1f360a0245c6a99fb4f5f15bb6e6a68086b3f513
+  persona_profile_path: data/persona_profile.json
+  chroma_collection: n/a
+  index_version_or_snapshot: n/a
+  embedding_model: n/a
+
+model:
+  model_name: unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit
+  model_or_adapter_hash: n/a
+  config:
+    tokenizer_used_for: chat-template token count and 512-token fit only
+    max_seq_length: 512
+    over_limit: 0
+    split: grouped source_file+source_line, then title, exact text, and Jaccard >= 0.8
+    target_shares: {train: 0.80, validation: 0.10, test: 0.10}
+    row_counts: {train: 31750, validation: 3969, test: 3969}
+    finetune_invoked: false
+  random_seed: n/a
+
+evaluation:
+  evaluator_commit: ebe5d8ebb4a9a8b5d700b45c7d50d40930c55a36
+  evaluator: host_finetune.split_groups
+  token_audit: host_finetune/data/dataset_from_cleaned_sources_fit512.token_audit.json
+  token_audit_hash: f5cf99eeabfea0c2c81dcdf979ade9b8fbc37c813c7bb54eb92edb11ce93a237
+  judge_model: n/a
+  judge_config: n/a
+  status: MEASURED
+  validated_model_outputs: false
+
+environment:
+  python_version: 3.10.11
+  package_snapshot: n/a
+  hardware: Windows-10-10.0.26200-SP0
+
+outputs:
+  raw:
+    - experiments/EXP-20261001-001-cleaned-sft-split/raw/split_assignments.jsonl
+    - host_finetune/data/dataset_from_cleaned_sources_fit512.jsonl
+  metrics:
+    - experiments/EXP-20261001-001-cleaned-sft-split/metrics/split_report.json
+    - host_finetune/data/dataset_from_cleaned_sources_fit512.token_audit.json
+  warnings_and_failures:
+    - "git.dirty is true. The cleaner, SFT builders, and split_groups.py are uncommitted on top of ebe5d8e."
+    - "No model was trained. host_finetune/config.py DATASET_LOCAL is still host_finetune/data/dataset.jsonl. This manifest hashes the fit512 file, so finetune.py will refuse it until DATASET_LOCAL is that file."
+    - "EXP-20260928-002 was not modified. Its manifest still hashes the old dataset.jsonl."
+    - "Quotas 0.8/0.1/0.1 of 39688 are 31750.4/3968.8/3968.8. Whole groups landed on 31750/3969/3969."
+    - "Largest groups are assigned while the train quota is still the largest, so multi-chunk essays and talks sit in train. Validation and test are 3,969 single-row groups each, mostly X posts."
+    - "Train word-count minimum is 1. One inspected blog chunk is the two-word sentence 'Full stop.'"
+    - "YouTube auto-captions and multi-speaker interviews remain, labeled as talks."
+    - "Chroma, embeddings, and persona text were not read for the assignment. The persona hash is a file identity only."
+    - "split_groups.py imports only the standard library. The token fit and audit used host_finetune/.venv. Unit tests ran on .venv-test Python 3.10.11."

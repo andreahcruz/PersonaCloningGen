@@ -1,0 +1,24 @@
+# EXP-20260927-001-baseline-reproduction
+# Interpreter: host_finetune\.venv\Scripts\python.exe (Python 3.11.9)
+# Run from the repository root.
+# These commands do not start Docker, Airflow, Chroma, Ollama, or training.
+
+# File SHA-256 (raw sources, dataset variants, gold set, persona, copied traces)
+# Written to raw/sha256.txt. Algorithm: SHA-256 of raw file bytes.
+
+# Leakage audit and split-index approximation
+# Read host_finetune/data/dataset.jsonl, data/openai_ft/lemkin_gold_eval.jsonl,
+# and the copied traces. Wrote metrics/leakage_report.json and
+# metrics/split_indices.jsonl. Did not write back to data/ or host_finetune/data/.
+# datasets==4.3.0 train_test_split(test_size=0.1, seed=42) on a row-index column.
+
+# Offline gold re-score. Output path is this experiment, not host_finetune/output/eval/.
+host_finetune\.venv\Scripts\python.exe -m host_finetune.eval_gold_rag --input-jsonl experiments/EXP-20260927-001-baseline-reproduction/raw/gold_eval_baseline_traces_30.jsonl --input-format trace --gold-jsonl data/openai_ft/lemkin_gold_eval.jsonl --out experiments/EXP-20260927-001-baseline-reproduction/metrics/gold_rag_rescore.json
+
+# Package snapshot of that interpreter
+host_finetune\.venv\Scripts\python.exe -m pip freeze
+# saved as config/package_snapshot.txt
+
+# Not run: docker compose up, Airflow DAG, extract_persona, load_to_chroma,
+# rebuild_chroma, finetune, watcher, generate_gold_eval_outputs, eval_rag.
+# Port 8000 was not accepting connections, so Chroma was not queried.

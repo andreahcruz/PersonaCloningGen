@@ -1,0 +1,104 @@
+{
+  "dataset_sha256": "a4bfe637b9c178a29bb885ef8502ff45d348fe743d8d2938ba56f8ea3f71e4f5",
+  "n_rows": 19321,
+  "n_groups": 4379,
+  "target_shares": {
+    "train": 0.8,
+    "validation": 0.1,
+    "test": 0.1
+  },
+  "source_platform": "unavailable",
+  "source_note": "source, url, date, and essay_id are dropped by to_training_json_lines and clean_dataset_records. No platform or B2B source tag is stored on these rows. base_title is the only document key that survives, via the instruction string.",
+  "near_duplicate_pairs_crossing_splits": 0,
+  "normalized_exact_groups_crossing_splits": 0,
+  "groups_in_multiple_splits": 0,
+  "share_residual": {
+    "train": 0.0,
+    "validation": 0.0,
+    "test": 0.0
+  },
+  "row_remainder_vs_quota": {
+    "train": 0.2,
+    "validation": -0.1,
+    "test": -0.1
+  },
+  "within_one_percentage_point": true,
+  "residual_note": null,
+  "splits": {
+    "train": {
+      "n_rows": 15457,
+      "share": 0.8,
+      "n_groups": 2338,
+      "n_base_titles": 2541,
+      "rows_per_base_title": {
+        "n": 2541,
+        "min": 1,
+        "p25": 2,
+        "p50": 4,
+        "p75": 7,
+        "mean": 6.08,
+        "max": 67
+      },
+      "word_count": {
+        "n": 15457,
+        "min": 12,
+        "p25": 224,
+        "p50": 273,
+        "p75": 304,
+        "mean": 246.95,
+        "max": 345
+      },
+      "near_duplicate_pairs_within_split": 3549
+    },
+    "validation": {
+      "n_rows": 1932,
+      "share": 0.1,
+      "n_groups": 1021,
+      "n_base_titles": 1030,
+      "rows_per_base_title": {
+        "n": 1030,
+        "min": 1,
+        "p25": 1,
+        "p50": 2,
+        "p75": 2,
+        "mean": 1.88,
+        "max": 4
+      },
+      "word_count": {
+        "n": 1932,
+        "min": 14,
+        "p25": 104,
+        "p50": 212,
+        "p75": 275,
+        "mean": 190.37,
+        "max": 338
+      },
+      "near_duplicate_pairs_within_split": 11
+    },
+    "test": {
+      "n_rows": 1932,
+      "share": 0.1,
+      "n_groups": 1020,
+      "n_base_titles": 1026,
+      "rows_per_base_title": {
+        "n": 1026,
+        "min": 1,
+        "p25": 1,
+        "p50": 2,
+        "p75": 2,
+        "mean": 1.88,
+        "max": 4
+      },
+      "word_count": {
+        "n": 1932,
+        "min": 14,
+        "p25": 112,
+        "p50": 213,
+        "p75": 274,
+        "mean": 191.93,
+        "max": 346
+      },
+      "near_duplicate_pairs_within_split": 8
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "n_rows": 120,
+  "gold_rubric": {
+    "overall": 0.2441,
+    "format_score": 0.2857,
+    "brief_alignment": 0.3861,
+    "expected_fact_coverage": 0.3306,
+    "gold_reference_coverage": 0.1742,
+    "rubric_must_have_coverage": 0.0437
+  },
+  "retrieval_grounding": {
+    "answer_relevance": 0.7177,
+    "faithfulness": 0.0,
+    "context_precision": 0.0,
+    "context_recall": 0.0
+  },
+  "paired_bleu": 0.004,
+  "paired_rouge_l": 0.0793,
+  "n": 120,
+  "by_medium": {
+    "blog": {
+      "n_rows": 30,
+      "gold_rubric": {
+        "overall": 0.2576,
+        "format_score": 0.3363,
+        "brief_alignment": 0.3415,
+        "expected_fact_coverage": 0.3444,
+        "gold_reference_coverage": 0.1908,
+        "rubric_must_have_coverage": 0.075
+      },
+      "retrieval_grounding": {
+        "answer_relevance": 0.5661,
+        "faithfulness": 0.0,
+        "context_precision": 0.0,
+        "context_recall": 0.0
+      },
+      "paired_bleu": 0.0041,
+      "paired_rouge_l": 0.0773,
+      "n": 30
+    },
+    "linkedin": {
+      "n_rows": 30,
+      "gold_rubric": {
+        "overall": 0.2902,
+        "format_score": 0.2877,
+        "brief_alignment": 0.4554,
+        "expected_fact_coverage": 0.4444,
+        "gold_reference_coverage": 0.2133,
+        "rubric_must_have_coverage": 0.05
+      },
+      "retrieval_grounding": {
+        "answer_relevance": 0.8748,
+        "faithfulness": 0.0,
+        "context_precision": 0.0,
+        "context_recall": 0.0
+      },
+      "paired_bleu": 0.005,
+      "paired_rouge_l": 0.0818,
+      "n": 30
+    },
+    "x": {
+      "n_rows": 30,
+      "gold_rubric": {
+        "overall": 0.2072,
+        "format_score": 0.3129,
+        "brief_alignment": 0.4515,
+        "expected_fact_coverage": 0.1556,
+        "gold_reference_coverage": 0.1075,
+        "rubric_must_have_coverage": 0.0083
+      },
+      "retrieval_grounding": {
+        "answer_relevance": 0.9622,
+        "faithfulness": 0.0,
+        "context_precision": 0.0,
+        "context_recall": 0.0
+      },
+      "paired_bleu": 0.0047,
+      "paired_rouge_l": 0.0908,
+      "n": 30
+    },
+    "talk": {
+      "n_rows": 30,
+      "gold_rubric": {
+        "overall": 0.2213,
+        "format_score": 0.206,
+        "brief_alignment": 0.2958,
+        "expected_fact_coverage": 0.3778,
+        "gold_reference_coverage": 0.1852,
+        "rubric_must_have_coverage": 0.0417
+      },
+      "retrieval_grounding": {
+        "answer_relevance": 0.4678,
+        "faithfulness": 0.0,
+        "context_precision": 0.0,
+        "context_recall": 0.0
+      },
+      "paired_bleu": 0.0024,
+      "paired_rouge_l": 0.0672,
+      "n": 30
+    }
+  }
+}

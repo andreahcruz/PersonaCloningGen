@@ -1,0 +1,20 @@
+{
+  "n_rows": 30,
+  "gold_rubric": {
+    "overall": 0.2153,
+    "format_score": 0.3207,
+    "brief_alignment": 0.3381,
+    "expected_fact_coverage": 0.2111,
+    "gold_reference_coverage": 0.1484,
+    "rubric_must_have_coverage": 0.0583
+  },
+  "retrieval_grounding": {
+    "answer_relevance": 0.6771,
+    "faithfulness": 0.0,
+    "context_precision": 0.0,
+    "context_recall": 0.0
+  },
+  "paired_bleu": 0.0049,
+  "paired_rouge_l": 0.0956,
+  "n": 30
+}

@@ -17,9 +17,17 @@ MIN_OUTPUT_CHARS = 80
 DEFAULT_CHUNK_OUTPUT_CHARS = int(os.environ.get("SFT_CHUNK_OUTPUT_CHARS", "1600"))
 
 _TOPIC_RE = re.compile(
-    r"^Write in the style of Jason Lemkin about:\s*(.+?)\s*$",
+    r"^Write (?:(?P<medium>a blog post|a LinkedIn post|an X post|a talk) )?"
+    r"in the style of Jason Lemkin about:\s*(?P<topic>.+?)\s*$",
     re.DOTALL | re.IGNORECASE,
 )
+_MEDIUM_BY_SOURCE = {
+    "blog": "a blog post",
+    "linkedin": "a LinkedIn post",
+    "x": "an X post",
+    "youtube_jason": "a talk",
+    "youtube_saastr": "a talk",
+}
 
 
 def _split_oversized_segment(chunk: str, max_chars: int) -> list[str]:
@@ -115,6 +123,10 @@ def split_long_body_for_sft(body: str, max_chars: int) -> list[str]:
 # slices unpunctuated transcripts mid-word (64% of rows in the pre-v2 dataset).
 _SENT_BOUND_RE = re.compile(r"(?<=[.!?])\s+(?=[\"'\u201c\u2018(\[]?[A-Z])")
 _PARA_BREAK_RE = re.compile(r"\n{2,}")
+# Numbered or markdown section titles. Line-wrapped prose is left alone.
+_SECTION_HEADING_RE = re.compile(
+    r"^(?:#{1,3}\s+\S+|#?\d{1,2}[.)]\s+[A-Z].{0,120})$"
+)
 
 
 def _split_sentences(paragraph: str) -> list[str]:
@@ -212,11 +224,72 @@ def split_sentence_aware(body: str, max_chars: int) -> list[str]:
     return _pack_units(packed_paragraphs, max_chars, joiner="\n\n")
 
 
+def split_long_document(body: str, max_chars: int) -> list[tuple[str | None, str]]:
+    """Split a training document only when it exceeds ``max_chars``.
+
+    A document that fits is returned as one piece. A longer document is cut
+    on numbered or markdown headings when at least two of those headings
+    exist, so each piece stays on one section. A section that is still too
+    long is then split on sentence boundaries. Documents without those
+    headings, including most talks, use the sentence splitter for the whole
+    text.
+    """
+    body = (body or "").strip()
+    if not body:
+        return []
+    if max_chars <= 0 or len(body) <= max_chars:
+        return [(None, body)]
+
+    lines = body.splitlines()
+    heading_at = [
+        index for index, line in enumerate(lines) if _SECTION_HEADING_RE.match(line.strip())
+    ]
+    if len(heading_at) < 2:
+        return [(None, chunk) for chunk in split_sentence_aware(body, max_chars)]
+
+    sections: list[tuple[str | None, str]] = []
+    if heading_at[0] > 0:
+        preamble = "\n".join(lines[: heading_at[0]]).strip()
+        if preamble:
+            sections.append((None, preamble))
+    for position, start in enumerate(heading_at):
+        end = heading_at[position + 1] if position + 1 < len(heading_at) else len(lines)
+        heading = lines[start].strip().lstrip("#").strip()
+        block = "\n".join(lines[start:end]).strip()
+        if block:
+            sections.append((heading or None, block))
+
+    pieces: list[tuple[str | None, str]] = []
+    for heading, block in sections:
+        if len(block) <= max_chars:
+            pieces.append((heading, block))
+            continue
+        pieces.extend((heading, chunk) for chunk in split_sentence_aware(block, max_chars))
+    return pieces or [(None, body[:max_chars])]
+
+
+def style_prefix(instruction: str) -> str:
+    """The instruction stem, including the medium when one was stored."""
+    match = _TOPIC_RE.match((instruction or "").strip())
+    medium = match.group("medium") if match else None
+    if medium:
+        return f"Write {medium} in the style of Jason Lemkin about: "
+    return "Write in the style of Jason Lemkin about: "
+
+
+def instruction_for(source: str, topic: str) -> str:
+    """Alpaca instruction that names the medium the example was scraped from."""
+    medium = _MEDIUM_BY_SOURCE.get(source)
+    if medium:
+        return f"Write {medium} in the style of Jason Lemkin about: {topic}"
+    return f"Write in the style of Jason Lemkin about: {topic}"
+
+
 def extract_base_topic(instruction: str) -> str:
     m = _TOPIC_RE.match((instruction or "").strip())
     if not m:
         return (instruction or "").strip() or "this topic"
-    inner = m.group(1).strip()
+    inner = (m.group("topic") or "").strip()
     inner = re.sub(r"\s*\(part\s+\d+\s+of\s+\d+\)\s*$", "", inner, flags=re.I)
     return inner.strip() or "this topic"
 

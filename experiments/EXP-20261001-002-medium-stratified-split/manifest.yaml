@@ -1,0 +1,87 @@
+experiment_id: EXP-20261001-002-medium-stratified-split
+timestamp: "2026-10-01T03:02:52-07:00"
+execution_commands:
+  - .venv-test\Scripts\python.exe -m host_finetune.build_sft_from_cleaned_sources --cleaned-dir data/cleaned
+  - .venv-test\Scripts\python.exe -m host_finetune.filter_event_promos --dataset host_finetune/data/dataset_from_cleaned_sources.jsonl --out host_finetune/data/dataset_from_cleaned_sources_nopromo.jsonl
+  - host_finetune\.venv\Scripts\python.exe -m host_finetune.fit_sft_to_context --dataset host_finetune/data/dataset_from_cleaned_sources_nopromo.jsonl --tokenizer unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit --out host_finetune/data/dataset_from_cleaned_sources_fit512.jsonl
+  - host_finetune\.venv\Scripts\python.exe -m host_finetune.token_length_audit --dataset host_finetune/data/dataset_from_cleaned_sources_fit512.jsonl --tokenizer unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit --report host_finetune/data/dataset_from_cleaned_sources_fit512.token_audit.json
+  - .venv-test\Scripts\python.exe -m host_finetune.split_groups --dataset host_finetune/data/dataset_from_cleaned_sources_fit512.jsonl --out-dir experiments/EXP-20261001-002-medium-stratified-split
+  - .venv-test\Scripts\python.exe -m pytest tests/test_sft_chunk_utils.py tests/test_split_groups.py tests/test_filter_event_promos.py -q
+
+git:
+  commit: ebe5d8ebb4a9a8b5d700b45c7d50d40930c55a36
+  dirty: true
+
+data:
+  source_manifest:
+    - data/jasonlemkin_blog.jsonl
+    - data/jasonlemkinlinkedin.jsonl
+    - data/jasonmlemkinyoutubetranscripts.jsonl
+    - data/saastryoutubetranscripts.jsonl
+    - data/jasonlk_originals.jsonl
+  source_hashes:
+    data/jasonlemkin_blog.jsonl: 8492ef11acacd767ce6bcdbdf6215467b6ba74d3e57dc50ffcd0af7deebc34a8
+    data/jasonlemkinlinkedin.jsonl: a2899576ac75ebb5fe05af15bdd0425eef9636de42bb058e82b9c456ae71ef09
+    data/jasonmlemkinyoutubetranscripts.jsonl: a943eb049b79b75e6aa17073cfcd4a7431e7a163b3a4276f4f8116cc31a1e337
+    data/saastryoutubetranscripts.jsonl: 89e4de78a7e3e947625523b27fbc29a0b75ef217f5c6e7a76d1aaca41916560d
+    data/jasonlk_originals.jsonl: a2021528bf4a34cd34c074d252d6bf246fddbe422033e7b88ebc0e11c74044c1
+  processed_dataset_hash: 3fd28492da7c4eecce2b596d3696ac51b65ee9fe4313696b6b952b15c55c7c5c
+  processed_dataset_path: host_finetune/data/dataset_from_cleaned_sources_fit512.jsonl
+  sft_before_promo_hash: 07fd903ac8d93f2087147f5dff29c31d7abedb8a5c9c5f2cbb8019d0ec725bff
+  sft_after_promo_hash: 55b9680657ed72a424d47ea7102214d9b2c6693a535572e02520e406d57f8241
+  split_manifest_hash: d5dde8da39ea54f38c3f077f5763e3544130a07c029dc2812b58eaeda202ce98
+  split_manifest_path: experiments/EXP-20261001-002-medium-stratified-split/raw/split_assignments.jsonl
+  split_report_hash: bee585a8ad3e95a8849f32bad9e01258915019111bcd9d26663db10a8036630f
+  gold_eval_hash: d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e
+  gold_eval_path: data/openai_ft/lemkin_gold_eval.jsonl
+  gold_eval_used_as_split: false
+
+rag:
+  persona_profile_hash: a9e9831e58218496bd1d195e1f360a0245c6a99fb4f5f15bb6e6a68086b3f513
+  persona_profile_path: data/persona_profile.json
+  chroma_collection: n/a
+  index_version_or_snapshot: n/a
+  embedding_model: n/a
+
+model:
+  model_name: unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit
+  model_or_adapter_hash: n/a
+  config:
+    tokenizer_used_for: chat-template token count and 512-token fit only
+    max_seq_length: 512
+    over_limit: 0
+    split: per-medium 80/10/10 after source-line and near-duplicate grouping
+    target_shares: {train: 0.80, validation: 0.10, test: 0.10}
+    row_counts: {train: 34302, validation: 4287, test: 4288}
+    finetune_invoked: false
+  random_seed: n/a
+
+evaluation:
+  evaluator_commit: ebe5d8ebb4a9a8b5d700b45c7d50d40930c55a36
+  evaluator: host_finetune.split_groups
+  token_audit: host_finetune/data/dataset_from_cleaned_sources_fit512.token_audit.json
+  token_audit_hash: 8a8a768c84f1aa3fd9b69158bb997eb78752a78b836f80da0fbb059c23bb8b54
+  judge_model: n/a
+  judge_config: n/a
+  status: MEASURED
+  validated_model_outputs: false
+
+environment:
+  python_version: 3.10.11
+  package_snapshot: n/a
+  hardware: Windows-10-10.0.26200-SP0
+
+outputs:
+  raw:
+    - experiments/EXP-20261001-002-medium-stratified-split/raw/split_assignments.jsonl
+    - host_finetune/data/dataset_from_cleaned_sources_fit512.jsonl
+  metrics:
+    - experiments/EXP-20261001-002-medium-stratified-split/metrics/split_report.json
+    - host_finetune/data/dataset_from_cleaned_sources_fit512.token_audit.json
+  warnings_and_failures:
+    - "git.dirty is true. split_groups.py, the SFT builders, and finetune.py are uncommitted on top of ebe5d8e."
+    - "No model was trained. finetune.py now defaults to this fit512 file and this manifest."
+    - "EXP-20261001-001 hashed the previous sentence-only fit file. This rebuild replaced that file."
+    - "Talks have no section headings, so they are still split on sentences once they exceed the chunk cap."
+    - "LinkedIn validation and test shares are about 12.5 percent because groups are assigned whole."
+    - "Chroma, embeddings, and persona text were not read. The persona hash is a file identity only."

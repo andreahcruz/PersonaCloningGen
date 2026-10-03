@@ -12,9 +12,15 @@ Task 5: mark_training_ready    — promote Spark's part-*.txt to a stable
 import json
 import logging
 import os
+import sys
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Any, Callable, Dict, List, Optional, Tuple
+
+_SPARK_JOBS = Path(__file__).resolve().parents[1] / "spark_jobs"
+if _SPARK_JOBS.is_dir() and str(_SPARK_JOBS) not in sys.path:
+    sys.path.insert(0, str(_SPARK_JOBS))
+from corpus_footer_scrub import scrub_corpus_text
 
 from airflow import DAG
 from airflow.operators.python import PythonOperator
@@ -121,8 +127,11 @@ def _log_task_retry(context: Dict[str, Any]) -> None:
 
 
 def _normalize_blog(row: Dict[str, Any]) -> Optional[Dict[str, Any]]:
-    text = (row.get("content") or row.get("text") or "").strip()
-    if not text:
+    text, reason, _flags = scrub_corpus_text(
+        row.get("content") or row.get("text") or "",
+        title=row.get("title") or "",
+    )
+    if reason:
         return None
     title = (row.get("title") or "Blog post")[:500]
     return {
@@ -135,8 +144,8 @@ def _normalize_blog(row: Dict[str, Any]) -> Optional[Dict[str, Any]]:
 
 
 def _normalize_linkedin(row: Dict[str, Any]) -> Optional[Dict[str, Any]]:
-    text = (row.get("content") or "").strip()
-    if not text:
+    text, reason, _flags = scrub_corpus_text(row.get("content") or "", linkedin=True)
+    if reason:
         return None
     short = text[:120] + ("..." if len(text) > 120 else "")
     return {
@@ -149,8 +158,12 @@ def _normalize_linkedin(row: Dict[str, Any]) -> Optional[Dict[str, Any]]:
 
 
 def _normalize_youtube(row: Dict[str, Any], source_tag: str) -> Optional[Dict[str, Any]]:
-    text = (row.get("transcript_text") or "").strip()
-    if not text:
+    text, reason, _flags = scrub_corpus_text(
+        row.get("transcript_text") or "",
+        title=row.get("video_title") or "",
+        unescape=True,
+    )
+    if reason:
         return None
     date = row.get("upload_date_iso") or ""
     if not date and row.get("fetched_at_utc"):
@@ -168,8 +181,11 @@ def _normalize_x(row: Dict[str, Any]) -> Optional[Dict[str, Any]]:
     """X/Twitter timeline export: skip replies, reposts/quotes, and very short stubs."""
     if row.get("is_reply") or row.get("is_repost_or_quote"):
         return None
-    text = (row.get("text") or "").strip()
-    if len(text) < 25:
+    raw = (row.get("text") or "").strip()
+    if len(raw) < 25:
+        return None
+    text, reason, _flags = scrub_corpus_text(raw)
+    if reason:
         return None
     preview = text[:120] + ("..." if len(text) > 120 else "")
     return {

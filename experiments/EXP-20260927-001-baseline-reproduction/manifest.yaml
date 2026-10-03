@@ -1,0 +1,80 @@
+experiment_id: EXP-20260927-001-baseline-reproduction
+timestamp: "2026-09-27T22:56:06-07:00"
+execution_commands:
+  - host_finetune\.venv\Scripts\python.exe -m host_finetune.eval_gold_rag --input-jsonl experiments/EXP-20260927-001-baseline-reproduction/raw/gold_eval_baseline_traces_30.jsonl --input-format trace --gold-jsonl data/openai_ft/lemkin_gold_eval.jsonl --out experiments/EXP-20260927-001-baseline-reproduction/metrics/gold_rag_rescore.json
+
+git:
+  commit: ebe5d8ebb4a9a8b5d700b45c7d50d40930c55a36
+  dirty: true
+
+data:
+  source_manifest:
+    - data/jasonlemkin_blog.jsonl
+    - data/jasonlemkinlinkedin.jsonl
+    - data/jasonmlemkinyoutubetranscripts.jsonl
+    - data/saastryoutubetranscripts.jsonl
+    - data/jasonlk_originals.jsonl
+  source_hashes:
+    data/jasonlemkin_blog.jsonl: 8492ef11acacd767ce6bcdbdf6215467b6ba74d3e57dc50ffcd0af7deebc34a8
+    data/jasonlemkinlinkedin.jsonl: a2899576ac75ebb5fe05af15bdd0425eef9636de42bb058e82b9c456ae71ef09
+    data/jasonmlemkinyoutubetranscripts.jsonl: a943eb049b79b75e6aa17073cfcd4a7431e7a163b3a4276f4f8116cc31a1e337
+    data/saastryoutubetranscripts.jsonl: 89e4de78a7e3e947625523b27fbc29a0b75ef217f5c6e7a76d1aaca41916560d
+    data/jasonlk_originals.jsonl: a2021528bf4a34cd34c074d252d6bf246fddbe422033e7b88ebc0e11c74044c1
+  processed_dataset_hash: a4bfe637b9c178a29bb885ef8502ff45d348fe743d8d2938ba56f8ea3f71e4f5
+  processed_dataset_path: host_finetune/data/dataset.jsonl
+  split_manifest_hash: 28137672d7159481dd42d0b5d05eaa6230ffbbec3479223079d4218e09b9bc81
+  split_manifest_path: experiments/EXP-20260927-001-baseline-reproduction/metrics/split_indices.jsonl
+  gold_eval_hash: d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e
+  gold_eval_path: data/openai_ft/lemkin_gold_eval.jsonl
+  sibling_dataset_hashes_path: experiments/EXP-20260927-001-baseline-reproduction/raw/sha256.txt
+
+rag:
+  persona_profile_hash: a9e9831e58218496bd1d195e1f360a0245c6a99fb4f5f15bb6e6a68086b3f513
+  persona_profile_path: data/persona_profile.json
+  persona_num_documents: 1000
+  persona_generated_at: "2026-05-12T02:51:08.348792"
+  chroma_collection: lemkin_content
+  index_version_or_snapshot: unknown
+  embedding_model: nomic-embed-text
+
+model:
+  model_name: "historical eval_rag traces: llama3.1 and lemkin-clone-v4; gold-script default not invoked: llama3.2:latest"
+  model_or_adapter_hash: n/a
+  config:
+    finetune_seed: 42
+    finetune_test_size: 0.1
+    num_epochs_code_default: 1
+    gold_generate_temperature: 0.2
+    gold_generate_invoked: false
+  random_seed: 42
+
+evaluation:
+  evaluator_commit: ebe5d8ebb4a9a8b5d700b45c7d50d40930c55a36
+  evaluator: host_finetune.eval_gold_rag
+  judge_model: n/a
+  judge_config: n/a
+  status: MEASURED
+  validated_model_outputs: false
+
+environment:
+  python_version: 3.11.9
+  package_snapshot: experiments/EXP-20260927-001-baseline-reproduction/config/package_snapshot.txt
+  hardware: "Windows-10-10.0.26200-SP0; AMD64 Family 26 Model 68 Stepping 0; NVIDIA GeForce RTX 5070 Ti 16303 MiB present and unused by this offline run"
+
+outputs:
+  raw:
+    - experiments/EXP-20260927-001-baseline-reproduction/raw/sha256.txt
+    - experiments/EXP-20260927-001-baseline-reproduction/raw/gold_eval_baseline_traces_30.jsonl
+  metrics:
+    - experiments/EXP-20260927-001-baseline-reproduction/metrics/leakage_report.json
+    - experiments/EXP-20260927-001-baseline-reproduction/metrics/gold_rag_rescore.json
+    - experiments/EXP-20260927-001-baseline-reproduction/metrics/split_indices.jsonl
+  warnings_and_failures:
+    - "git.dirty is true because untracked files exist (including docs/research/)."
+    - "Chroma was not listening on 127.0.0.1:8000. index_version_or_snapshot is unknown. Collection was not created or rebuilt."
+    - "No persisted train/validation/test assignment exists. split_indices.jsonl is a datasets==4.3.0 index approximation (17388 train / 1933 eval)."
+    - "Training file host_finetune/data/dataset.jsonl has 19321 rows, 0 exact duplicate output groups, 4 normalized-exact groups (8 rows), and 3568 token-set near-duplicate pairs at Jaccard >= 0.8."
+    - "605 of those near-duplicate pairs cross the approximated 90/10 index split. 0 exact output hashes sit in both sides."
+    - "Gold topics, gold references, and copied trace contexts have no exact, normalized-exact, or Jaccard>=0.8 match against training outputs or, for topics and references, training instructions. Highest observed context Jaccard was 0.2706."
+    - "Sibling dataset files under host_finetune/data/ were hashed and were not selected as the trainer input."
+    - "eval_rag generation and the Ollama judge were not run."

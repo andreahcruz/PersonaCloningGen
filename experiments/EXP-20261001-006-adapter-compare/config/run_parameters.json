@@ -1,0 +1,33 @@
+{
+  "experiment_id": "EXP-20261001-006-adapter-compare",
+  "git_commit": "ebe5d8ebb4a9a8b5d700b45c7d50d40930c55a36",
+  "worktree_dirty": true,
+  "gold_eval": "data/openai_ft/lemkin_gold_eval.jsonl",
+  "format_specs": "formats/format_specs.yaml",
+  "n_prompts": 30,
+  "format": "blog_draft",
+  "instruction": "Write a blog post in the style of Jason Lemkin about: {topic}",
+  "generation": {
+    "max_seq_length": 512,
+    "max_new_tokens": 320,
+    "do_sample": true,
+    "temperature": 0.35,
+    "top_p": 0.9,
+    "load_in_4bit": true
+  },
+  "adapters": {
+    "cleaned": "host_finetune/output/lemkin_lora_cleaned",
+    "balanced": "host_finetune/output/lemkin_lora_balanced",
+    "r32": "host_finetune/output/lemkin_lora_r32"
+  },
+  "metrics": [
+    "eval_gold_rag gold rubric: format, brief alignment, expected-fact coverage, gold-reference token coverage, rubric must-haves",
+    "paired BLEU against that row's gold_reference",
+    "paired ROUGE-L against that row's gold_reference"
+  ],
+  "outputs": {
+    "generated": "experiments/EXP-20261001-006-adapter-compare/raw/<adapter>.jsonl",
+    "metrics": "experiments/EXP-20261001-006-adapter-compare/metrics/<adapter>.json",
+    "combined": "experiments/EXP-20261001-006-adapter-compare/metrics/summary.json"
+  }
+}

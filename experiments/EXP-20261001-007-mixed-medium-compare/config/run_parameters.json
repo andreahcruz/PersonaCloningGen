@@ -1,0 +1,40 @@
+{
+  "experiment_id": "EXP-20261001-007-mixed-medium-compare",
+  "gold_eval": "data/openai_ft/lemkin_gold_eval.jsonl",
+  "n_topics": 30,
+  "mediums": [
+    {
+      "medium": "blog",
+      "format": "blog_draft",
+      "instruction": "Write a blog post in the style of Jason Lemkin about: {topic}",
+      "max_new_tokens": 768
+    },
+    {
+      "medium": "linkedin",
+      "format": "linkedin_post",
+      "instruction": "Write a LinkedIn post in the style of Jason Lemkin about: {topic}",
+      "max_new_tokens": 320
+    },
+    {
+      "medium": "x",
+      "format": "x_thread",
+      "instruction": "Write an X post in the style of Jason Lemkin about: {topic}",
+      "max_new_tokens": 160
+    },
+    {
+      "medium": "talk",
+      "format": "youtube_script",
+      "instruction": "Write a talk in the style of Jason Lemkin about: {topic}",
+      "max_new_tokens": 768
+    }
+  ],
+  "generation": {
+    "max_seq_length": 2048,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "repetition_penalty": 1.15,
+    "do_sample": true,
+    "load_in_4bit": true
+  },
+  "expected_facts_in_prompt": false
+}

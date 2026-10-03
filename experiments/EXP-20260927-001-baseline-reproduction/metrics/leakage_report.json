@@ -1,0 +1,1807 @@
+{
+  "status": "MEASURED",
+  "training_file": "host_finetune/data/dataset.jsonl",
+  "n_training_rows": 19321,
+  "training_bad_json_lines": 0,
+  "gold_file": "data/openai_ft/lemkin_gold_eval.jsonl",
+  "n_gold_rows": 30,
+  "gold_bad_json_lines": 0,
+  "n_trace_rows": 30,
+  "trace_bad_json_lines": 0,
+  "jaccard_threshold": 0.8,
+  "normalization": "NFKC, lower case, collapse whitespace",
+  "near_duplicate_method": "Token-set Jaccard on normalized text. Pairs already counted as normalized-exact duplicates are excluded. Candidate pairs use the rare-token prefix filter for threshold 0.8, then exact Jaccard.",
+  "exact_duplicate_output_groups": {
+    "n_groups": 0,
+    "n_rows_in_groups": 0,
+    "examples": []
+  },
+  "normalized_exact_duplicate_output_groups": {
+    "n_groups": 4,
+    "n_rows_in_groups": 8,
+    "examples": [
+      {
+        "sha256": "cc491e1b04d07a22f2ea7eca0d0ce9af9186e344af18e120fa8477cb57e10845",
+        "n": 2,
+        "indices": [
+          750,
+          3780
+        ],
+        "n_indices_truncated": 0
+      },
+      {
+        "sha256": "ec093819fdc4839d672b40356989d97a35b03211e4e328557722bbfae1258b30",
+        "n": 2,
+        "indices": [
+          2347,
+          3493
+        ],
+        "n_indices_truncated": 0
+      },
+      {
+        "sha256": "f18fc5ed4337aad9c9ab2961de862b831aa3bce6ae22f960ab931712c443279b",
+        "n": 2,
+        "indices": [
+          3540,
+          8567
+        ],
+        "n_indices_truncated": 0
+      },
+      {
+        "sha256": "98cdb0886b6aa39f074e79b6992505e775b8cb193a446e135abc4fc9907bd109",
+        "n": 2,
+        "indices": [
+          3775,
+          9380
+        ],
+        "n_indices_truncated": 0
+      }
+    ]
+  },
+  "near_duplicate_pairs_within_training": {
+    "n_pairs": 3568,
+    "examples": [
+      {
+        "i": 988,
+        "j": 1003,
+        "jaccard": 1.0
+      },
+      {
+        "i": 1234,
+        "j": 12936,
+        "jaccard": 1.0
+      },
+      {
+        "i": 1236,
+        "j": 1277,
+        "jaccard": 1.0
+      },
+      {
+        "i": 2703,
+        "j": 17505,
+        "jaccard": 1.0
+      },
+      {
+        "i": 3678,
+        "j": 11819,
+        "jaccard": 1.0
+      },
+      {
+        "i": 3768,
+        "j": 11905,
+        "jaccard": 1.0
+      },
+      {
+        "i": 4886,
+        "j": 8457,
+        "jaccard": 1.0
+      },
+      {
+        "i": 6203,
+        "j": 12593,
+        "jaccard": 1.0
+      },
+      {
+        "i": 7369,
+        "j": 12985,
+        "jaccard": 1.0
+      },
+      {
+        "i": 7369,
+        "j": 14059,
+        "jaccard": 1.0
+      },
+      {
+        "i": 8342,
+        "j": 12819,
+        "jaccard": 1.0
+      },
+      {
+        "i": 8526,
+        "j": 16251,
+        "jaccard": 1.0
+      },
+      {
+        "i": 8932,
+        "j": 12443,
+        "jaccard": 1.0
+      },
+      {
+        "i": 10636,
+        "j": 19038,
+        "jaccard": 1.0
+      },
+      {
+        "i": 10637,
+        "j": 19039,
+        "jaccard": 1.0
+      },
+      {
+        "i": 11948,
+        "j": 13206,
+        "jaccard": 1.0
+      },
+      {
+        "i": 12985,
+        "j": 14059,
+        "jaccard": 1.0
+      },
+      {
+        "i": 14976,
+        "j": 17180,
+        "jaccard": 1.0
+      },
+      {
+        "i": 15025,
+        "j": 19094,
+        "jaccard": 1.0
+      },
+      {
+        "i": 12882,
+        "j": 18919,
+        "jaccard": 0.9943
+      },
+      {
+        "i": 2921,
+        "j": 9822,
+        "jaccard": 0.9938
+      },
+      {
+        "i": 983,
+        "j": 1018,
+        "jaccard": 0.9936
+      },
+      {
+        "i": 986,
+        "j": 998,
+        "jaccard": 0.9936
+      },
+      {
+        "i": 986,
+        "j": 1008,
+        "jaccard": 0.9936
+      },
+      {
+        "i": 2459,
+        "j": 17138,
+        "jaccard": 0.9936
+      },
+      {
+        "i": 9762,
+        "j": 17693,
+        "jaccard": 0.9933
+      },
+      {
+        "i": 1132,
+        "j": 14963,
+        "jaccard": 0.9932
+      },
+      {
+        "i": 2705,
+        "j": 17507,
+        "jaccard": 0.9932
+      },
+      {
+        "i": 7302,
+        "j": 16146,
+        "jaccard": 0.9931
+      },
+      {
+        "i": 9786,
+        "j": 17717,
+        "jaccard": 0.9929
+      }
+    ]
+  },
+  "gold_vs_training_output": {
+    "topic": {
+      "n": 30,
+      "exact": 0,
+      "normalized": 0,
+      "near_duplicate_jaccard_ge_0_8": 0,
+      "rows": [
+        {
+          "field": "topic_vs_output",
+          "index": 0,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0645,
+          "best_training_index": 7668,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_output",
+          "index": 1,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_output",
+          "index": 2,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0385,
+          "best_training_index": 13900,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_output",
+          "index": 3,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_output",
+          "index": 4,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_output",
+          "index": 5,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1429,
+          "best_training_index": 4899,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_output",
+          "index": 6,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_output",
+          "index": 7,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_output",
+          "index": 8,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.5,
+          "best_training_index": 18843,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_output",
+          "index": 9,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_output",
+          "index": 10,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1463,
+          "best_training_index": 10617,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_output",
+          "index": 11,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_output",
+          "index": 12,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_output",
+          "index": 13,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.2286,
+          "best_training_index": 10543,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_output",
+          "index": 14,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_output",
+          "index": 15,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.093,
+          "best_training_index": 10378,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_output",
+          "index": 16,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_output",
+          "index": 17,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_output",
+          "index": 18,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_output",
+          "index": 19,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_output",
+          "index": 20,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_output",
+          "index": 21,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0882,
+          "best_training_index": 4275,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_output",
+          "index": 22,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_output",
+          "index": 23,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0294,
+          "best_training_index": 4579,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_output",
+          "index": 24,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.2188,
+          "best_training_index": 8078,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_output",
+          "index": 25,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.2,
+          "best_training_index": 5722,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_output",
+          "index": 26,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1935,
+          "best_training_index": 4275,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_output",
+          "index": 27,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.069,
+          "best_training_index": 11631,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_output",
+          "index": 28,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_output",
+          "index": 29,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0938,
+          "best_training_index": 5726,
+          "near_duplicate": false
+        }
+      ]
+    },
+    "gold_reference": {
+      "n": 30,
+      "exact": 0,
+      "normalized": 0,
+      "near_duplicate_jaccard_ge_0_8": 0,
+      "rows": [
+        {
+          "field": "gold_reference_vs_output",
+          "index": 0,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1553,
+          "best_training_index": 15144,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_output",
+          "index": 1,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.102,
+          "best_training_index": 6097,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_output",
+          "index": 2,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0938,
+          "best_training_index": 14608,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_output",
+          "index": 3,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1319,
+          "best_training_index": 18808,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_output",
+          "index": 4,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0833,
+          "best_training_index": 13801,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_output",
+          "index": 5,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.098,
+          "best_training_index": 1808,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_output",
+          "index": 6,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1429,
+          "best_training_index": 7917,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_output",
+          "index": 7,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1136,
+          "best_training_index": 1920,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_output",
+          "index": 8,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1392,
+          "best_training_index": 15988,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_output",
+          "index": 9,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.093,
+          "best_training_index": 13464,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_output",
+          "index": 10,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0865,
+          "best_training_index": 16151,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_output",
+          "index": 11,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1146,
+          "best_training_index": 4593,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_output",
+          "index": 12,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1364,
+          "best_training_index": 4593,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_output",
+          "index": 13,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1711,
+          "best_training_index": 11577,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_output",
+          "index": 14,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1358,
+          "best_training_index": 14089,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_output",
+          "index": 15,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1205,
+          "best_training_index": 4976,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_output",
+          "index": 16,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1143,
+          "best_training_index": 13703,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_output",
+          "index": 17,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.08,
+          "best_training_index": 6119,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_output",
+          "index": 18,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1341,
+          "best_training_index": 12620,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_output",
+          "index": 19,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1081,
+          "best_training_index": 10373,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_output",
+          "index": 20,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1463,
+          "best_training_index": 9324,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_output",
+          "index": 21,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1395,
+          "best_training_index": 9324,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_output",
+          "index": 22,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1456,
+          "best_training_index": 8458,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_output",
+          "index": 23,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1333,
+          "best_training_index": 4711,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_output",
+          "index": 24,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1619,
+          "best_training_index": 15061,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_output",
+          "index": 25,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0649,
+          "best_training_index": 18463,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_output",
+          "index": 26,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1111,
+          "best_training_index": 17395,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_output",
+          "index": 27,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1,
+          "best_training_index": 17919,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_output",
+          "index": 28,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1642,
+          "best_training_index": 10519,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_output",
+          "index": 29,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.134,
+          "best_training_index": 14608,
+          "near_duplicate": false
+        }
+      ]
+    },
+    "trace_context": {
+      "n": 30,
+      "exact": 0,
+      "normalized": 0,
+      "near_duplicate_jaccard_ge_0_8": 0,
+      "rows": [
+        {
+          "field": "trace_context_vs_output",
+          "index": 0,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "trace_context_vs_output",
+          "index": 1,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.2532,
+          "best_training_index": 14938,
+          "near_duplicate": false
+        },
+        {
+          "field": "trace_context_vs_output",
+          "index": 2,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "trace_context_vs_output",
+          "index": 3,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "trace_context_vs_output",
+          "index": 4,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1451,
+          "best_training_index": 4418,
+          "near_duplicate": false
+        },
+        {
+          "field": "trace_context_vs_output",
+          "index": 5,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "trace_context_vs_output",
+          "index": 6,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1702,
+          "best_training_index": 5421,
+          "near_duplicate": false
+        },
+        {
+          "field": "trace_context_vs_output",
+          "index": 7,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "trace_context_vs_output",
+          "index": 8,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.231,
+          "best_training_index": 1250,
+          "near_duplicate": false
+        },
+        {
+          "field": "trace_context_vs_output",
+          "index": 9,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "trace_context_vs_output",
+          "index": 10,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1395,
+          "best_training_index": 11404,
+          "near_duplicate": false
+        },
+        {
+          "field": "trace_context_vs_output",
+          "index": 11,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1432,
+          "best_training_index": 5421,
+          "near_duplicate": false
+        },
+        {
+          "field": "trace_context_vs_output",
+          "index": 12,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1624,
+          "best_training_index": 5421,
+          "near_duplicate": false
+        },
+        {
+          "field": "trace_context_vs_output",
+          "index": 13,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "trace_context_vs_output",
+          "index": 14,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "trace_context_vs_output",
+          "index": 15,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1731,
+          "best_training_index": 4257,
+          "near_duplicate": false
+        },
+        {
+          "field": "trace_context_vs_output",
+          "index": 16,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1597,
+          "best_training_index": 5421,
+          "near_duplicate": false
+        },
+        {
+          "field": "trace_context_vs_output",
+          "index": 17,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.2193,
+          "best_training_index": 6106,
+          "near_duplicate": false
+        },
+        {
+          "field": "trace_context_vs_output",
+          "index": 18,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1658,
+          "best_training_index": 18405,
+          "near_duplicate": false
+        },
+        {
+          "field": "trace_context_vs_output",
+          "index": 19,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.2706,
+          "best_training_index": 12770,
+          "near_duplicate": false
+        },
+        {
+          "field": "trace_context_vs_output",
+          "index": 20,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "trace_context_vs_output",
+          "index": 21,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "trace_context_vs_output",
+          "index": 22,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "trace_context_vs_output",
+          "index": 23,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1917,
+          "best_training_index": 5371,
+          "near_duplicate": false
+        },
+        {
+          "field": "trace_context_vs_output",
+          "index": 24,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "trace_context_vs_output",
+          "index": 25,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1569,
+          "best_training_index": 2188,
+          "near_duplicate": false
+        },
+        {
+          "field": "trace_context_vs_output",
+          "index": 26,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1882,
+          "best_training_index": 18185,
+          "near_duplicate": false
+        },
+        {
+          "field": "trace_context_vs_output",
+          "index": 27,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1545,
+          "best_training_index": 5371,
+          "near_duplicate": false
+        },
+        {
+          "field": "trace_context_vs_output",
+          "index": 28,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "trace_context_vs_output",
+          "index": 29,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1902,
+          "best_training_index": 17959,
+          "near_duplicate": false
+        }
+      ]
+    }
+  },
+  "gold_vs_training_instruction": {
+    "topic": {
+      "n": 30,
+      "exact": 0,
+      "normalized": 0,
+      "near_duplicate_jaccard_ge_0_8": 0,
+      "rows": [
+        {
+          "field": "topic_vs_instruction",
+          "index": 0,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1379,
+          "best_training_index": 4950,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_instruction",
+          "index": 1,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_instruction",
+          "index": 2,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_instruction",
+          "index": 3,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0741,
+          "best_training_index": 8507,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_instruction",
+          "index": 4,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_instruction",
+          "index": 5,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1667,
+          "best_training_index": 3745,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_instruction",
+          "index": 6,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_instruction",
+          "index": 7,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_instruction",
+          "index": 8,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_instruction",
+          "index": 9,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_instruction",
+          "index": 10,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1765,
+          "best_training_index": 10618,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_instruction",
+          "index": 11,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.04,
+          "best_training_index": 4750,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_instruction",
+          "index": 12,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0357,
+          "best_training_index": 6166,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_instruction",
+          "index": 13,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1944,
+          "best_training_index": 16866,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_instruction",
+          "index": 14,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_instruction",
+          "index": 15,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.125,
+          "best_training_index": 8085,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_instruction",
+          "index": 16,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.3226,
+          "best_training_index": 17203,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_instruction",
+          "index": 17,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_instruction",
+          "index": 18,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_instruction",
+          "index": 19,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_instruction",
+          "index": 20,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0714,
+          "best_training_index": 19261,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_instruction",
+          "index": 21,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1515,
+          "best_training_index": 4920,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_instruction",
+          "index": 22,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1154,
+          "best_training_index": 5929,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_instruction",
+          "index": 23,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.05,
+          "best_training_index": 3380,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_instruction",
+          "index": 24,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1765,
+          "best_training_index": 8381,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_instruction",
+          "index": 25,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1786,
+          "best_training_index": 17201,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_instruction",
+          "index": 26,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.2069,
+          "best_training_index": 14897,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_instruction",
+          "index": 27,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1613,
+          "best_training_index": 19225,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_instruction",
+          "index": 28,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1667,
+          "best_training_index": 14026,
+          "near_duplicate": false
+        },
+        {
+          "field": "topic_vs_instruction",
+          "index": 29,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.1333,
+          "best_training_index": 15854,
+          "near_duplicate": false
+        }
+      ]
+    },
+    "gold_reference": {
+      "n": 30,
+      "exact": 0,
+      "normalized": 0,
+      "near_duplicate_jaccard_ge_0_8": 0,
+      "rows": [
+        {
+          "field": "gold_reference_vs_instruction",
+          "index": 0,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_instruction",
+          "index": 1,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_instruction",
+          "index": 2,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_instruction",
+          "index": 3,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_instruction",
+          "index": 4,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_instruction",
+          "index": 5,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_instruction",
+          "index": 6,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_instruction",
+          "index": 7,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_instruction",
+          "index": 8,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_instruction",
+          "index": 9,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_instruction",
+          "index": 10,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_instruction",
+          "index": 11,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_instruction",
+          "index": 12,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_instruction",
+          "index": 13,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_instruction",
+          "index": 14,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_instruction",
+          "index": 15,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_instruction",
+          "index": 16,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_instruction",
+          "index": 17,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_instruction",
+          "index": 18,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_instruction",
+          "index": 19,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_instruction",
+          "index": 20,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_instruction",
+          "index": 21,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_instruction",
+          "index": 22,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_instruction",
+          "index": 23,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_instruction",
+          "index": 24,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_instruction",
+          "index": 25,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_instruction",
+          "index": 26,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_instruction",
+          "index": 27,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_instruction",
+          "index": 28,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        },
+        {
+          "field": "gold_reference_vs_instruction",
+          "index": 29,
+          "exact_training_index": null,
+          "normalized_training_index": null,
+          "best_jaccard": 0.0,
+          "best_training_index": null,
+          "near_duplicate": false
+        }
+      ]
+    }
+  },
+  "validation_split_vs_train_split": {
+    "persisted_test_split": false,
+    "index_approximation_written": true,
+    "datasets_version": "4.3.0",
+    "statement": "No test assignment is stored by the trainer. The figures below compare the in-memory 10% validation indices to the other 90%. They are not a held-out test set.",
+    "exact_output_hashes_in_both_splits": 0,
+    "normalized_output_hashes_in_both_splits": 0,
+    "near_duplicate_pairs_across_splits": 605,
+    "near_duplicate_examples": [
+      {
+        "i": 2703,
+        "j": 17505,
+        "jaccard": 1.0
+      },
+      {
+        "i": 8526,
+        "j": 16251,
+        "jaccard": 1.0
+      },
+      {
+        "i": 10637,
+        "j": 19039,
+        "jaccard": 1.0
+      },
+      {
+        "i": 983,
+        "j": 1018,
+        "jaccard": 0.9936
+      },
+      {
+        "i": 986,
+        "j": 998,
+        "jaccard": 0.9936
+      },
+      {
+        "i": 986,
+        "j": 1008,
+        "jaccard": 0.9936
+      },
+      {
+        "i": 1125,
+        "j": 1126,
+        "jaccard": 0.9912
+      },
+      {
+        "i": 947,
+        "j": 956,
+        "jaccard": 0.9893
+      },
+      {
+        "i": 1034,
+        "j": 3572,
+        "jaccard": 0.9886
+      },
+      {
+        "i": 2920,
+        "j": 9821,
+        "jaccard": 0.9883
+      },
+      {
+        "i": 1113,
+        "j": 1134,
+        "jaccard": 0.9881
+      },
+      {
+        "i": 1113,
+        "j": 1146,
+        "jaccard": 0.9881
+      },
+      {
+        "i": 1121,
+        "j": 1134,
+        "jaccard": 0.9881
+      },
+      {
+        "i": 1121,
+        "j": 1146,
+        "jaccard": 0.9881
+      },
+      {
+        "i": 1134,
+        "j": 9458,
+        "jaccard": 0.9881
+      },
+      {
+        "i": 1146,
+        "j": 9458,
+        "jaccard": 0.9881
+      },
+      {
+        "i": 1032,
+        "j": 1038,
+        "jaccard": 0.9879
+      },
+      {
+        "i": 1032,
+        "j": 1060,
+        "jaccard": 0.9879
+      },
+      {
+        "i": 1032,
+        "j": 3567,
+        "jaccard": 0.9879
+      },
+      {
+        "i": 1032,
+        "j": 4755,
+        "jaccard": 0.9879
+      }
+    ]
+  },
+  "file_hashes": [
+    {
+      "path": "data/jasonlemkin_blog.jsonl",
+      "sha256": "8492ef11acacd767ce6bcdbdf6215467b6ba74d3e57dc50ffcd0af7deebc34a8",
+      "bytes": 16656994,
+      "role": "sibling_or_source"
+    },
+    {
+      "path": "data/jasonlemkinlinkedin.jsonl",
+      "sha256": "a2899576ac75ebb5fe05af15bdd0425eef9636de42bb058e82b9c456ae71ef09",
+      "bytes": 2688063,
+      "role": "sibling_or_source"
+    },
+    {
+      "path": "data/jasonmlemkinyoutubetranscripts.jsonl",
+      "sha256": "a943eb049b79b75e6aa17073cfcd4a7431e7a163b3a4276f4f8116cc31a1e337",
+      "bytes": 2709562,
+      "role": "sibling_or_source"
+    },
+    {
+      "path": "data/saastryoutubetranscripts.jsonl",
+      "sha256": "89e4de78a7e3e947625523b27fbc29a0b75ef217f5c6e7a76d1aaca41916560d",
+      "bytes": 8829457,
+      "role": "sibling_or_source"
+    },
+    {
+      "path": "data/jasonlk_originals.jsonl",
+      "sha256": "a2021528bf4a34cd34c074d252d6bf246fddbe422033e7b88ebc0e11c74044c1",
+      "bytes": 11916461,
+      "role": "sibling_or_source"
+    },
+    {
+      "path": "data/openai_ft/lemkin_gold_eval.jsonl",
+      "sha256": "d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e",
+      "bytes": 34902,
+      "role": "sibling_or_source"
+    },
+    {
+      "path": "data/persona_profile.json",
+      "sha256": "a9e9831e58218496bd1d195e1f360a0245c6a99fb4f5f15bb6e6a68086b3f513",
+      "bytes": 2928,
+      "role": "sibling_or_source"
+    },
+    {
+      "path": "host_finetune/data/dataset.jsonl",
+      "sha256": "a4bfe637b9c178a29bb885ef8502ff45d348fe743d8d2938ba56f8ea3f71e4f5",
+      "bytes": 29213680,
+      "role": "trainer_input"
+    },
+    {
+      "path": "host_finetune/data/dataset.preclean.jsonl",
+      "sha256": "b0d5e2d00b42f3cced4931d9264e4ce54cbcd344c6d93eb782b7966d927ed509",
+      "bytes": 32565312,
+      "role": "sibling_or_source"
+    },
+    {
+      "path": "host_finetune/data/dataset.before_v2_no_repunct.jsonl",
+      "sha256": "219c5e31a32c6ebad9046e600930710b7de03c3329b821fecc5b9283bd188d92",
+      "bytes": 31053215,
+      "role": "sibling_or_source"
+    },
+    {
+      "path": "host_finetune/data/dataset.clean_v2.jsonl",
+      "sha256": "097593cf9bb0f3169f290dbca0d459780c8d2fa21507989175638fd4705793d8",
+      "bytes": 30639378,
+      "role": "sibling_or_source"
+    },
+    {
+      "path": "host_finetune/data/dataset.clean_v2_smoke3.jsonl",
+      "sha256": "d98b8ceca26121588e31db5b543076eb12bf3dd4ab4a7a9408d427a28c839e4f",
+      "bytes": 30243560,
+      "role": "sibling_or_source"
+    },
+    {
+      "path": "host_finetune/data/dataset.cleaned_smoke.jsonl",
+      "sha256": "3ef5a1dc66e4725dc0495cc1abc9000013c8b7ffbd4a12f4d8eca3dbbd9a8cab",
+      "bytes": 170628,
+      "role": "sibling_or_source"
+    },
+    {
+      "path": "experiments/EXP-20260927-001-baseline-reproduction/raw/gold_eval_baseline_traces_30.jsonl",
+      "sha256": "1664045a83370dc3c9b3302b044accf8309f014c752e90ac868171f6c11c9aec",
+      "bytes": 317616,
+      "role": "copied_historical_traces"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "dataset_sha256": "f044b5f731b2a3c21f77fed124486c67b7b08ac3fba2b89735602b972c6c41c8",
+  "n_rows": 39688,
+  "n_groups": 22288,
+  "target_shares": {
+    "train": 0.8,
+    "validation": 0.1,
+    "test": 0.1
+  },
+  "source_platform": "source_file+source_line",
+  "source_note": "Chunks that share source_file and source_line are one document and stay in one split. source_platform on each assignment is the scraped medium.",
+  "near_duplicate_pairs_crossing_splits": 0,
+  "normalized_exact_groups_crossing_splits": 0,
+  "groups_in_multiple_splits": 0,
+  "share_residual": {
+    "train": 0.0,
+    "validation": 0.0,
+    "test": 0.0
+  },
+  "row_remainder_vs_quota": {
+    "train": -0.4,
+    "validation": 0.2,
+    "test": 0.2
+  },
+  "within_one_percentage_point": true,
+  "residual_note": null,
+  "splits": {
+    "train": {
+      "n_rows": 31750,
+      "share": 0.8,
+      "n_groups": 14350,
+      "n_base_titles": 15292,
+      "rows_per_base_title": {
+        "n": 15292,
+        "min": 1,
+        "p25": 1,
+        "p50": 1,
+        "p75": 2,
+        "mean": 2.08,
+        "max": 68
+      },
+      "word_count": {
+        "n": 31750,
+        "min": 1,
+        "p25": 27,
+        "p50": 167,
+        "p75": 286,
+        "mean": 157.95,
+        "max": 348
+      },
+      "near_duplicate_pairs_within_split": 2453
+    },
+    "validation": {
+      "n_rows": 3969,
+      "share": 0.1,
+      "n_groups": 3969,
+      "n_base_titles": 3969,
+      "rows_per_base_title": {
+        "n": 3969,
+        "min": 1,
+        "p25": 1,
+        "p50": 1,
+        "p75": 1,
+        "mean": 1.0,
+        "max": 1
+      },
+      "word_count": {
+        "n": 3969,
+        "min": 12,
+        "p25": 17,
+        "p50": 22,
+        "p75": 36,
+        "mean": 34.44,
+        "max": 294
+      },
+      "near_duplicate_pairs_within_split": 0
+    },
+    "test": {
+      "n_rows": 3969,
+      "share": 0.1,
+      "n_groups": 3969,
+      "n_base_titles": 3969,
+      "rows_per_base_title": {
+        "n": 3969,
+        "min": 1,
+        "p25": 1,
+        "p50": 1,
+        "p75": 1,
+        "mean": 1.0,
+        "max": 1
+      },
+      "word_count": {
+        "n": 3969,
+        "min": 12,
+        "p25": 17,
+        "p50": 23,
+        "p75": 37,
+        "mean": 35.15,
+        "max": 311
+      },
+      "near_duplicate_pairs_within_split": 0
+    }
+  }
+}

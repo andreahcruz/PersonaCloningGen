@@ -1,0 +1,410 @@
+{
+  "repaired": {
+    "n_rows": 120,
+    "gold_rubric": {
+      "overall": 0.2441,
+      "format_score": 0.2857,
+      "brief_alignment": 0.3861,
+      "expected_fact_coverage": 0.3306,
+      "gold_reference_coverage": 0.1742,
+      "rubric_must_have_coverage": 0.0437
+    },
+    "retrieval_grounding": {
+      "answer_relevance": 0.7177,
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    "paired_bleu": 0.004,
+    "paired_rouge_l": 0.0793,
+    "n": 120,
+    "by_medium": {
+      "blog": {
+        "n_rows": 30,
+        "gold_rubric": {
+          "overall": 0.2576,
+          "format_score": 0.3363,
+          "brief_alignment": 0.3415,
+          "expected_fact_coverage": 0.3444,
+          "gold_reference_coverage": 0.1908,
+          "rubric_must_have_coverage": 0.075
+        },
+        "retrieval_grounding": {
+          "answer_relevance": 0.5661,
+          "faithfulness": 0.0,
+          "context_precision": 0.0,
+          "context_recall": 0.0
+        },
+        "paired_bleu": 0.0041,
+        "paired_rouge_l": 0.0773,
+        "n": 30
+      },
+      "linkedin": {
+        "n_rows": 30,
+        "gold_rubric": {
+          "overall": 0.2902,
+          "format_score": 0.2877,
+          "brief_alignment": 0.4554,
+          "expected_fact_coverage": 0.4444,
+          "gold_reference_coverage": 0.2133,
+          "rubric_must_have_coverage": 0.05
+        },
+        "retrieval_grounding": {
+          "answer_relevance": 0.8748,
+          "faithfulness": 0.0,
+          "context_precision": 0.0,
+          "context_recall": 0.0
+        },
+        "paired_bleu": 0.005,
+        "paired_rouge_l": 0.0818,
+        "n": 30
+      },
+      "x": {
+        "n_rows": 30,
+        "gold_rubric": {
+          "overall": 0.2072,
+          "format_score": 0.3129,
+          "brief_alignment": 0.4515,
+          "expected_fact_coverage": 0.1556,
+          "gold_reference_coverage": 0.1075,
+          "rubric_must_have_coverage": 0.0083
+        },
+        "retrieval_grounding": {
+          "answer_relevance": 0.9622,
+          "faithfulness": 0.0,
+          "context_precision": 0.0,
+          "context_recall": 0.0
+        },
+        "paired_bleu": 0.0047,
+        "paired_rouge_l": 0.0908,
+        "n": 30
+      },
+      "talk": {
+        "n_rows": 30,
+        "gold_rubric": {
+          "overall": 0.2213,
+          "format_score": 0.206,
+          "brief_alignment": 0.2958,
+          "expected_fact_coverage": 0.3778,
+          "gold_reference_coverage": 0.1852,
+          "rubric_must_have_coverage": 0.0417
+        },
+        "retrieval_grounding": {
+          "answer_relevance": 0.4678,
+          "faithfulness": 0.0,
+          "context_precision": 0.0,
+          "context_recall": 0.0
+        },
+        "paired_bleu": 0.0024,
+        "paired_rouge_l": 0.0672,
+        "n": 30
+      }
+    }
+  },
+  "llama3.1": {
+    "n_rows": 120,
+    "gold_rubric": {
+      "overall": 0.3684,
+      "format_score": 0.4473,
+      "brief_alignment": 0.4864,
+      "expected_fact_coverage": 0.5444,
+      "gold_reference_coverage": 0.2515,
+      "rubric_must_have_coverage": 0.1125
+    },
+    "retrieval_grounding": {
+      "answer_relevance": 0.888,
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    "paired_bleu": 0.0042,
+    "paired_rouge_l": 0.079,
+    "n": 120,
+    "by_medium": {
+      "blog": {
+        "n_rows": 30,
+        "gold_rubric": {
+          "overall": 0.426,
+          "format_score": 0.5558,
+          "brief_alignment": 0.519,
+          "expected_fact_coverage": 0.6222,
+          "gold_reference_coverage": 0.2994,
+          "rubric_must_have_coverage": 0.1333
+        },
+        "retrieval_grounding": {
+          "answer_relevance": 0.9122,
+          "faithfulness": 0.0,
+          "context_precision": 0.0,
+          "context_recall": 0.0
+        },
+        "paired_bleu": 0.0025,
+        "paired_rouge_l": 0.0618,
+        "n": 30
+      },
+      "linkedin": {
+        "n_rows": 30,
+        "gold_rubric": {
+          "overall": 0.3579,
+          "format_score": 0.4042,
+          "brief_alignment": 0.4928,
+          "expected_fact_coverage": 0.5444,
+          "gold_reference_coverage": 0.2479,
+          "rubric_must_have_coverage": 0.1
+        },
+        "retrieval_grounding": {
+          "answer_relevance": 0.8707,
+          "faithfulness": 0.0,
+          "context_precision": 0.0,
+          "context_recall": 0.0
+        },
+        "paired_bleu": 0.0047,
+        "paired_rouge_l": 0.0861,
+        "n": 30
+      },
+      "x": {
+        "n_rows": 30,
+        "gold_rubric": {
+          "overall": 0.278,
+          "format_score": 0.5,
+          "brief_alignment": 0.408,
+          "expected_fact_coverage": 0.2889,
+          "gold_reference_coverage": 0.1517,
+          "rubric_must_have_coverage": 0.0417
+        },
+        "retrieval_grounding": {
+          "answer_relevance": 0.854,
+          "faithfulness": 0.0,
+          "context_precision": 0.0,
+          "context_recall": 0.0
+        },
+        "paired_bleu": 0.0073,
+        "paired_rouge_l": 0.1099,
+        "n": 30
+      },
+      "talk": {
+        "n_rows": 30,
+        "gold_rubric": {
+          "overall": 0.4119,
+          "format_score": 0.3292,
+          "brief_alignment": 0.5259,
+          "expected_fact_coverage": 0.7222,
+          "gold_reference_coverage": 0.307,
+          "rubric_must_have_coverage": 0.175
+        },
+        "retrieval_grounding": {
+          "answer_relevance": 0.915,
+          "faithfulness": 0.0,
+          "context_precision": 0.0,
+          "context_recall": 0.0
+        },
+        "paired_bleu": 0.0025,
+        "paired_rouge_l": 0.0581,
+        "n": 30
+      }
+    }
+  },
+  "lemkin-clone-v5": {
+    "n_rows": 120,
+    "gold_rubric": {
+      "overall": 0.2581,
+      "format_score": 0.3498,
+      "brief_alignment": 0.4006,
+      "expected_fact_coverage": 0.3111,
+      "gold_reference_coverage": 0.173,
+      "rubric_must_have_coverage": 0.0563
+    },
+    "retrieval_grounding": {
+      "answer_relevance": 0.7476,
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    "paired_bleu": 0.0048,
+    "paired_rouge_l": 0.0886,
+    "n": 120,
+    "by_medium": {
+      "blog": {
+        "n_rows": 30,
+        "gold_rubric": {
+          "overall": 0.3052,
+          "format_score": 0.3722,
+          "brief_alignment": 0.4336,
+          "expected_fact_coverage": 0.4222,
+          "gold_reference_coverage": 0.2062,
+          "rubric_must_have_coverage": 0.0917
+        },
+        "retrieval_grounding": {
+          "answer_relevance": 0.7929,
+          "faithfulness": 0.0,
+          "context_precision": 0.0,
+          "context_recall": 0.0
+        },
+        "paired_bleu": 0.0043,
+        "paired_rouge_l": 0.0827,
+        "n": 30
+      },
+      "linkedin": {
+        "n_rows": 30,
+        "gold_rubric": {
+          "overall": 0.2551,
+          "format_score": 0.3309,
+          "brief_alignment": 0.4218,
+          "expected_fact_coverage": 0.3,
+          "gold_reference_coverage": 0.173,
+          "rubric_must_have_coverage": 0.05
+        },
+        "retrieval_grounding": {
+          "answer_relevance": 0.778,
+          "faithfulness": 0.0,
+          "context_precision": 0.0,
+          "context_recall": 0.0
+        },
+        "paired_bleu": 0.0056,
+        "paired_rouge_l": 0.0919,
+        "n": 30
+      },
+      "x": {
+        "n_rows": 30,
+        "gold_rubric": {
+          "overall": 0.2574,
+          "format_score": 0.5,
+          "brief_alignment": 0.3901,
+          "expected_fact_coverage": 0.2222,
+          "gold_reference_coverage": 0.133,
+          "rubric_must_have_coverage": 0.0417
+        },
+        "retrieval_grounding": {
+          "answer_relevance": 0.7754,
+          "faithfulness": 0.0,
+          "context_precision": 0.0,
+          "context_recall": 0.0
+        },
+        "paired_bleu": 0.0054,
+        "paired_rouge_l": 0.1046,
+        "n": 30
+      },
+      "talk": {
+        "n_rows": 30,
+        "gold_rubric": {
+          "overall": 0.2148,
+          "format_score": 0.1959,
+          "brief_alignment": 0.3568,
+          "expected_fact_coverage": 0.3,
+          "gold_reference_coverage": 0.1796,
+          "rubric_must_have_coverage": 0.0417
+        },
+        "retrieval_grounding": {
+          "answer_relevance": 0.644,
+          "faithfulness": 0.0,
+          "context_precision": 0.0,
+          "context_recall": 0.0
+        },
+        "paired_bleu": 0.0038,
+        "paired_rouge_l": 0.0751,
+        "n": 30
+      }
+    }
+  },
+  "lemkin-clone-v6": {
+    "n_rows": 120,
+    "gold_rubric": {
+      "overall": 0.2639,
+      "format_score": 0.3494,
+      "brief_alignment": 0.3967,
+      "expected_fact_coverage": 0.3583,
+      "gold_reference_coverage": 0.1716,
+      "rubric_must_have_coverage": 0.0437
+    },
+    "retrieval_grounding": {
+      "answer_relevance": 0.7306,
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    "paired_bleu": 0.0047,
+    "paired_rouge_l": 0.0893,
+    "n": 120,
+    "by_medium": {
+      "blog": {
+        "n_rows": 30,
+        "gold_rubric": {
+          "overall": 0.3092,
+          "format_score": 0.3642,
+          "brief_alignment": 0.4321,
+          "expected_fact_coverage": 0.4778,
+          "gold_reference_coverage": 0.2135,
+          "rubric_must_have_coverage": 0.0583
+        },
+        "retrieval_grounding": {
+          "answer_relevance": 0.7537,
+          "faithfulness": 0.0,
+          "context_precision": 0.0,
+          "context_recall": 0.0
+        },
+        "paired_bleu": 0.0032,
+        "paired_rouge_l": 0.0792,
+        "n": 30
+      },
+      "linkedin": {
+        "n_rows": 30,
+        "gold_rubric": {
+          "overall": 0.248,
+          "format_score": 0.32,
+          "brief_alignment": 0.4091,
+          "expected_fact_coverage": 0.3222,
+          "gold_reference_coverage": 0.1554,
+          "rubric_must_have_coverage": 0.0333
+        },
+        "retrieval_grounding": {
+          "answer_relevance": 0.8041,
+          "faithfulness": 0.0,
+          "context_precision": 0.0,
+          "context_recall": 0.0
+        },
+        "paired_bleu": 0.005,
+        "paired_rouge_l": 0.0951,
+        "n": 30
+      },
+      "x": {
+        "n_rows": 30,
+        "gold_rubric": {
+          "overall": 0.2396,
+          "format_score": 0.5,
+          "brief_alignment": 0.3392,
+          "expected_fact_coverage": 0.2222,
+          "gold_reference_coverage": 0.1201,
+          "rubric_must_have_coverage": 0.0167
+        },
+        "retrieval_grounding": {
+          "answer_relevance": 0.6339,
+          "faithfulness": 0.0,
+          "context_precision": 0.0,
+          "context_recall": 0.0
+        },
+        "paired_bleu": 0.0079,
+        "paired_rouge_l": 0.1062,
+        "n": 30
+      },
+      "talk": {
+        "n_rows": 30,
+        "gold_rubric": {
+          "overall": 0.259,
+          "format_score": 0.2135,
+          "brief_alignment": 0.4062,
+          "expected_fact_coverage": 0.4111,
+          "gold_reference_coverage": 0.1972,
+          "rubric_must_have_coverage": 0.0667
+        },
+        "retrieval_grounding": {
+          "answer_relevance": 0.7308,
+          "faithfulness": 0.0,
+          "context_precision": 0.0,
+          "context_recall": 0.0
+        },
+        "paired_bleu": 0.0026,
+        "paired_rouge_l": 0.0769,
+        "n": 30
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.venv-test\Scripts\python.exe -m host_finetune.build_sft_from_cleaned_sources --cleaned-dir data/cleaned
+
+.venv-test\Scripts\python.exe -m host_finetune.filter_event_promos --dataset host_finetune/data/dataset_from_cleaned_sources.jsonl --out host_finetune/data/dataset_from_cleaned_sources_nopromo.jsonl
+
+host_finetune\.venv\Scripts\python.exe -m host_finetune.fit_sft_to_context --dataset host_finetune/data/dataset_from_cleaned_sources_nopromo.jsonl --tokenizer unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit --out host_finetune/data/dataset_from_cleaned_sources_fit512.jsonl
+
+host_finetune\.venv\Scripts\python.exe -m host_finetune.token_length_audit --dataset host_finetune/data/dataset_from_cleaned_sources_fit512.jsonl --tokenizer unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit --report host_finetune/data/dataset_from_cleaned_sources_fit512.token_audit.json
+
+.venv-test\Scripts\python.exe -m host_finetune.split_groups --dataset host_finetune/data/dataset_from_cleaned_sources_fit512.jsonl --out-dir experiments/EXP-20261001-002-medium-stratified-split
+
+.venv-test\Scripts\python.exe -m pytest tests/test_sft_chunk_utils.py tests/test_split_groups.py tests/test_filter_event_promos.py -q

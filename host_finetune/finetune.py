@@ -1,8 +1,10 @@
 """QLoRA fine-tune of Llama 3.1 8B on the Lemkin SFT dataset (Unsloth + TRL).
 
-Reads `host_finetune/data/dataset.jsonl` (one Alpaca-style record per line:
-``{"instruction": ..., "input": "", "output": ...}``) and writes the LoRA
-adapter to `host_finetune/output/lemkin_lora/`.
+Reads the cleaned-source file `host_finetune/data/dataset_from_cleaned_sources_fit512.jsonl`
+(one Alpaca-style record per line: ``{"instruction": ..., "input": "", "output": ...}``)
+and writes the LoRA adapter to `host_finetune/output/lemkin_lora/`.
+Override the file with ``FINETUNE_DATASET``. The MinIO download path
+``DATASET_LOCAL`` is left unchanged.
 
 Rows are converted with the model tokenizer’s **Llama 3 Instruct** chat template
 (``apply_chat_template``). Supervision is **assistant-only** via
@@ -19,6 +21,12 @@ After ``python -m host_finetune.clean_dataset_v2`` (no repunct), your rows are
 already chunked; set ``SKIP_DATASET_PREP=1`` before training to skip the
 download-prep path entirely. If you leave prep enabled, long rows expand with
 sentence-aware splits and ``clean_dataset`` may still scrub tags and dedupe.
+
+``SPLIT_MANIFEST`` defaults to the medium-stratified 80/10/10 assignment in
+``experiments/EXP-20261001-002-medium-stratified-split/``. The manifest hash
+must match the training file exactly, and dataset prep is skipped so that
+file is not rewritten. Set ``SPLIT_MANIFEST`` to an empty string to fall
+back to the in-memory 90/10 shuffle.
 """
 from __future__ import annotations
 
@@ -57,10 +65,12 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
+from host_finetune.best_metric_checkpoints import BestMetricCheckpointCallback, medium_name
 from host_finetune.llama_chat_format import training_text_from_row, unsloth_response_markers
 from host_finetune.config import (
     ADAPTER_DIR,
-    DATASET_LOCAL,
+    CLEANED_SFT_DATASET,
+    DEFAULT_SPLIT_MANIFEST,
     EVAL_STEPS,
     GRAD_ACCUM,
     HF_MODEL_NAME,
@@ -127,6 +137,9 @@ def _chat_text_batches(examples: dict, tokenizer) -> dict:
     if out_col is None:
         out_col = [""] * n
     texts: list[str] = []
+    sources = examples.get("source")
+    if sources is None:
+        sources = [""] * n
     for i in range(n):
         texts.append(
             training_text_from_row(
@@ -136,7 +149,7 @@ def _chat_text_batches(examples: dict, tokenizer) -> dict:
                 str(out_col[i] or ""),
             )
         )
-    return {"text": texts}
+    return {"text": texts, "source": [str(sources[i] or "") for i in range(n)]}
 
 
 def _resolve_eval_steps() -> int | None:
@@ -243,10 +256,32 @@ def main() -> None:
     ADAPTER_DIR.mkdir(parents=True, exist_ok=True)
 
     st = None
-    if os.environ.get("SKIP_DATASET_PREP", "").lower() not in ("1", "true", "yes"):
+    dataset_path = Path(os.environ.get("FINETUNE_DATASET", str(CLEANED_SFT_DATASET)))
+    # Unset uses the stratified cleaned-source manifest. An explicit empty
+    # value keeps the old in-memory shuffle for the selected file.
+    if "SPLIT_MANIFEST" in os.environ:
+        manifest_env = os.environ.get("SPLIT_MANIFEST", "").strip()
+    else:
+        manifest_env = str(DEFAULT_SPLIT_MANIFEST)
+    split_rows = None
+    if manifest_env:
+        from host_finetune.split_groups import assert_manifest_matches
+
+        _split_meta, split_rows = assert_manifest_matches(Path(manifest_env), dataset_path)
+        print(
+            "[finetune] SPLIT_MANIFEST set: skipping dataset prep so the frozen file "
+            f"{dataset_path} is not rewritten. The grouped 80/10/10 assignment "
+            "replaces the in-memory 90/10 shuffle."
+        )
+    elif dataset_path.resolve() == CLEANED_SFT_DATASET.resolve():
+        raise RuntimeError(
+            f"{dataset_path} is already chunked and filtered. Refusing to run dataset "
+            "prep on it. Set SPLIT_MANIFEST to its assignment file."
+        )
+    elif os.environ.get("SKIP_DATASET_PREP", "").lower() not in ("1", "true", "yes"):
         from host_finetune.dataset_prepare import prepare_dataset_file
 
-        st = prepare_dataset_file(DATASET_LOCAL)
+        st = prepare_dataset_file(dataset_path)
         if st.get("chunk_expand"):
             ce = st["chunk_expand"]
             print(
@@ -264,7 +299,7 @@ def main() -> None:
     else:
         print("[finetune] SKIP_DATASET_PREP: skipped chunk + clean (use with care).")
 
-    raw_ds = load_dataset(DATASET_LOCAL)
+    raw_ds = load_dataset(dataset_path)
 
     print(
         f"Loading {HF_MODEL_NAME} via Unsloth (4-bit, "
@@ -304,8 +339,27 @@ def main() -> None:
         remove_columns=col_names,
         desc="format Llama-3 chat (apply_chat_template)",
     )
-    split = ds.train_test_split(test_size=0.1, seed=42)
-    train_ds, eval_ds = split["train"], split["test"]
+    if split_rows is not None:
+        from host_finetune.split_groups import indices_for_split
+
+        if len(ds) != len(split_rows):
+            raise RuntimeError(
+                f"SPLIT_MANIFEST has {len(split_rows)} rows but the loaded dataset has {len(ds)}."
+            )
+        train_ds = ds.select(indices_for_split(split_rows, "train"))
+        eval_ds = ds.select(indices_for_split(split_rows, "validation"))
+        held_out = len(indices_for_split(split_rows, "test"))
+        print(
+            f"[finetune] grouped split train={len(train_ds)} "
+            f"validation={len(eval_ds)} held_out_test={held_out}"
+        )
+    else:
+        print(
+            "[finetune] SPLIT_MANIFEST unset: in-memory train_test_split(test_size=0.1, seed=42). "
+            "This is not the leakage-safe grouped 80/10/10 manifest."
+        )
+        split = ds.train_test_split(test_size=0.1, seed=42)
+        train_ds, eval_ds = split["train"], split["test"]
     if FINETUNE_TRAIN_HEAD_N is not None:
         n_keep = min(FINETUNE_TRAIN_HEAD_N, len(train_ds))
         train_ds = train_ds.select(range(n_keep))
@@ -313,6 +367,15 @@ def main() -> None:
             f"[finetune] FINETUNE_TRAIN_HEAD_N={FINETUNE_TRAIN_HEAD_N}: "
             f"using {n_keep} train rows (subset)"
         )
+    eval_mediums = (
+        [medium_name(source) for source in eval_ds["source"]]
+        if "source" in eval_ds.column_names
+        else []
+    )
+    if "source" in train_ds.column_names:
+        train_ds = train_ds.remove_columns(["source"])
+    if "source" in eval_ds.column_names:
+        eval_ds = eval_ds.remove_columns(["source"])
     print(f"train={len(train_ds)} eval={len(eval_ds)}")
 
     ip_dbg, rp_dbg = unsloth_response_markers(tokenizer)
@@ -409,6 +472,14 @@ def main() -> None:
         instruction_part=instr_part,
         response_part=resp_part,
     )
+    best_metrics = BestMetricCheckpointCallback(
+        ADAPTER_DIR.parent / f"{ADAPTER_DIR.name}_best_metrics",
+        tokenizer,
+        eval_ds if eval_mediums else None,
+        eval_mediums,
+    )
+    best_metrics.trainer = trainer
+    trainer.add_callback(best_metrics)
     if resume:
         print(f"Resuming from checkpoint ({resume!r})...")
     msg = (
@@ -456,6 +527,13 @@ def main() -> None:
     print(f"Saving LoRA adapter -> {ADAPTER_DIR}")
     trainer.model.save_pretrained(str(ADAPTER_DIR))
     tokenizer.save_pretrained(str(ADAPTER_DIR))
+    if best_metrics.paths:
+        print("[finetune] BEST CHECKPOINTS")
+        for name, path in best_metrics.paths.items():
+            print(f"  {name}: {best_metrics.best[name]:.4f} -> {path}")
+        average_path = best_metrics.paths.get("eval_loss_average")
+        if average_path:
+            print(f"[finetune] AVERAGE BEST MODEL {average_path}")
 
     if trainer.state.log_history:
         print("\n=== Loss curve ===")
