@@ -3,8 +3,9 @@
 #   docker compose -f docker-compose.yml -f docker-compose.aws.yml up -d --build
 #   docker compose -f docker-compose.yml -f docker-compose.aws.yml exec ollama ollama pull nomic-embed-text
 #   docker compose -f docker-compose.yml -f docker-compose.aws.yml exec ollama ollama pull llama3.1
+#   docker compose -f docker-compose.yml -f docker-compose.aws.yml exec ollama ollama create lemkin-qlora -f /models/Modelfile
 #
-# - Ollama runs as a private container for embeddings and base-Llama PersonaRAG generation.
+# - Ollama runs as a private container for embeddings, base-Llama PersonaRAG, and QLoRA comparison generation.
 # - Airflow reads the cleaned corpus (data/cleaned/) and writes the persona copy under data/deploy/
 #   so the tracked data/persona_profile.json is not overwritten. MinIO keeps the canonical copy.
 # - Streamlit (profile "ui") and the unused Spark master/worker (profile "spark-cluster";
@@ -23,6 +24,7 @@ services:
     container_name: ollama
     volumes:
       - ollama-data:/root/.ollama
+      - ./models:/models:ro
     healthcheck:
       test: ["CMD", "ollama", "list"]
       interval: 15s
@@ -51,6 +53,7 @@ services:
       OLLAMA_BASE: http://ollama:11434
       EMBED_MODEL: nomic-embed-text
       GEN_MODEL: llama3.1
+      QLORA_MODEL: lemkin-qlora
       CHROMA_USE_HTTP: "true"
       CHROMA_HOST: chroma
       CHROMA_PORT: "8000"

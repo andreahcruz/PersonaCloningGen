@@ -51,6 +51,7 @@ def test_generate_returns_real_source_metadata(monkeypatch, tmp_path):
     body = response.json()
     assert body["draft"] == "A grounded draft."
     assert body["model"] == "llama3.1"
+    assert body["method"] == "personarag"
     assert body["latency_ms"] >= 0
     assert body["request_id"]
     assert body["sources"] == [
@@ -81,6 +82,13 @@ def test_dependency_health_is_exposed(monkeypatch):
         "check_dependencies",
         lambda *_: [("chroma collection", True, "lemkin_content: 15 chunks")],
     )
+    monkeypatch.setattr(
+        main.requests,
+        "get",
+        lambda *_args, **_kwargs: type(
+            "Response", (), {"json": lambda self: {"models": [{"name": "lemkin-qlora:latest"}]}}
+        )(),
+    )
 
     response = TestClient(main.app).get("/health/dependencies")
 
@@ -93,6 +101,40 @@ def test_dependency_health_is_exposed(monkeypatch):
                 "name": "chroma collection",
                 "status": "ok",
                 "detail": "lemkin_content: 15 chunks",
-            }
+            },
+            {"name": "qlora model", "status": "ok", "detail": "lemkin-qlora"},
         ],
     }
+
+
+def test_qlora_generation_bypasses_retrieval(monkeypatch):
+    monkeypatch.setattr(main, "load_format_spec", lambda *_: {"output_type": "markdown"})
+    monkeypatch.setattr(main, "ollama_generate", lambda prompt, _base, model: f"{model}: {prompt}")
+    monkeypatch.setattr(
+        main,
+        "retrieve",
+        lambda *_: pytest.fail("QLoRA must not retrieve Chroma source chunks"),
+    )
+    monkeypatch.setattr(
+        main,
+        "ollama_embed",
+        lambda *_: pytest.fail("QLoRA must not embed the content brief"),
+    )
+
+    response = TestClient(main.app).post(
+        "/generate",
+        json={
+            "format": "linkedin_post",
+            "topic": "Series A",
+            "audience": "founders",
+            "goal": "explain the investment case",
+            "method": "qlora",
+        },
+    )
+
+    assert response.status_code == 200
+    body = response.json()
+    assert body["method"] == "qlora"
+    assert body["model"] == "lemkin-qlora"
+    assert body["sources"] == []
+    assert "Reference excerpts" not in body["draft"]

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run one reproducible PersonaRAG request and save its deployment evidence.
+"""Run one reproducible PersonaRAG or QLoRA request and save deployment evidence.
 
 Example (on the EC2 host after the DAG succeeds):
   python scripts/capture_personarag_smoke.py \
@@ -24,6 +24,11 @@ DEMO_REQUEST = {
     "goal": "Explain why Series A is the best entry point in cloud and SaaS right now",
     "cta": "What do you think about investing in Series A?",
     "k": 4,
+}
+
+EXPECTED = {
+    "personarag": {"model": "llama3.1", "sources": True},
+    "qlora": {"model": "lemkin-qlora", "sources": False},
 }
 
 
@@ -52,28 +57,37 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--api-base", default="http://localhost:8000")
     parser.add_argument("--output", required=True, type=Path)
+    parser.add_argument("--method", choices=sorted(EXPECTED), default="personarag")
     args = parser.parse_args()
 
     api_base = args.api_base.rstrip("/")
     try:
         health = get_json(f"{api_base}/health")
-        response = post_json(f"{api_base}/generate", DEMO_REQUEST)
+        request_payload = {**DEMO_REQUEST, "method": args.method}
+        response = post_json(f"{api_base}/generate", request_payload)
     except (HTTPError, URLError, TimeoutError, json.JSONDecodeError) as exc:
         print(f"PersonaRAG smoke test failed: {exc}", file=sys.stderr)
         return 1
 
-    if not response.get("draft") or response.get("model") != "llama3.1" or not response.get("sources"):
-        print("PersonaRAG response is missing a draft, real sources, or the base llama3.1 model.", file=sys.stderr)
+    expected = EXPECTED[args.method]
+    if (
+        not response.get("draft")
+        or response.get("model") != expected["model"]
+        or bool(response.get("sources")) != expected["sources"]
+        or response.get("method") != args.method
+    ):
+        print(f"{args.method} response did not match the expected model or source behavior.", file=sys.stderr)
         return 1
 
     now = datetime.now(UTC).isoformat()
-    write_json(args.output / "config" / "request.json", DEMO_REQUEST)
+    write_json(args.output / "config" / "request.json", request_payload)
     write_json(args.output / "raw" / "health.json", health)
     write_json(args.output / "raw" / "generate.json", response)
     write_json(
         args.output / "metrics" / "summary.json",
         {
             "recorded_at": now,
+            "method": args.method,
             "model": response["model"],
             "latency_ms": response.get("latency_ms"),
             "request_id": response.get("request_id"),

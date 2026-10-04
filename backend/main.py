@@ -9,8 +9,9 @@ import os
 import time
 import uuid
 from pathlib import Path
-from typing import Any
+from typing import Any, Literal
 
+import requests
 import yaml
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
@@ -47,6 +48,7 @@ class GenerateRequest(BaseModel):
     goal: str
     cta: str = "none"
     k: int = Field(default=8, ge=1, le=20)
+    method: Literal["personarag", "qlora"] = "personarag"
 
 
 class GenerateResponse(BaseModel):
@@ -55,14 +57,36 @@ class GenerateResponse(BaseModel):
     model: str
     latency_ms: int
     request_id: str
+    method: Literal["personarag", "qlora"]
 
 
-def _settings() -> tuple[str, str, str]:
+def _settings() -> tuple[str, str, str, str]:
     return (
         os.environ.get("OLLAMA_BASE", OLLAMA_BASE_DEFAULT),
         os.environ.get("EMBED_MODEL", DEFAULT_EMBED_MODEL),
         os.environ.get("GEN_MODEL", DEFAULT_GEN_MODEL),
+        os.environ.get("QLORA_MODEL", "lemkin-qlora"),
     )
+
+
+def _qlora_prompt(format_spec: dict[str, Any], req: GenerateRequest) -> str:
+    """Use the same brief and output shape without PersonaRAG retrieval/context."""
+    requirements = yaml.safe_dump(format_spec, sort_keys=False, allow_unicode=True).strip()
+    return f"""Write a {req.format} about: {req.topic}.
+
+You are a fine-tuned Jason Lemkin-style writer. Be direct, concrete, and useful to B2B SaaS
+operators. Use your learned writing style; do not claim to have searched or quoted source material.
+
+Format requirements:
+{requirements}
+
+Content brief:
+- Audience: {req.audience}
+- Goal: {req.goal}
+- Call to action: {req.cta}
+
+Output only the draft in markdown, with no preamble or meta-commentary.
+"""
 
 
 def _source_type(value: object) -> str:
@@ -91,10 +115,18 @@ def _source_payload(chunks: list[dict]) -> list[dict[str, Any]]:
 
 @app.get("/health")
 def health() -> dict:
-    ollama_base, embed_model, gen_model = _settings()
+    ollama_base, embed_model, gen_model, qlora_model = _settings()
     checks = check_dependencies(
         ollama_base, embed_model, gen_model, PERSONA_PATH, FORMAT_SPECS_PATH, INDEX_PATH
     )
+    try:
+        tags = {(model.get("name") or "") for model in requests.get(
+            f"{ollama_base.rstrip('/')}/api/tags", timeout=5
+        ).json().get("models") or []}
+        qlora_ready = qlora_model in tags or f"{qlora_model}:latest" in tags
+        checks.append(("qlora model", qlora_ready, qlora_model if qlora_ready else f"'{qlora_model}' not in `ollama list`"))
+    except Exception as e:  # noqa: BLE001 - health must always be a response
+        checks.append(("qlora model", False, f"cannot reach Ollama: {e}"))
     return {
         "status": "ok" if all(ok for _, ok, _ in checks) else "degraded",
         "model": gen_model,
@@ -120,7 +152,7 @@ def list_formats() -> list[str]:
 
 @app.post("/generate", response_model=GenerateResponse)
 def generate(req: GenerateRequest) -> GenerateResponse:
-    if not PERSONA_PATH.exists():
+    if req.method == "personarag" and not PERSONA_PATH.exists():
         raise HTTPException(500, f"Persona profile not found: {PERSONA_PATH}")
 
     try:
@@ -128,34 +160,39 @@ def generate(req: GenerateRequest) -> GenerateResponse:
     except (KeyError, FileNotFoundError) as e:
         raise HTTPException(400, str(e)) from e
 
-    ollama_base, embed_model, gen_model = _settings()
-
-    profile = load_persona(PERSONA_PATH)
-    persona_summary = summarize_persona(profile)
-    query_text = f"{req.topic}. {req.goal}. Audience: {req.audience}."
+    ollama_base, embed_model, gen_model, qlora_model = _settings()
 
     started = time.perf_counter()
     request_id = uuid.uuid4().hex
-    try:
-        query_embed = ollama_embed(query_text, ollama_base, embed_model)
-        chunks = retrieve(INDEX_PATH, query_embed, req.k, embed_model)
-    except Exception as e:
-        raise HTTPException(502, f"Retrieval failed: {e}") from e
+    chunks: list[dict] = []
+    if req.method == "personarag":
+        profile = load_persona(PERSONA_PATH)
+        persona_summary = summarize_persona(profile)
+        query_text = f"{req.topic}. {req.goal}. Audience: {req.audience}."
+        try:
+            query_embed = ollama_embed(query_text, ollama_base, embed_model)
+            chunks = retrieve(INDEX_PATH, query_embed, req.k, embed_model)
+        except Exception as e:
+            raise HTTPException(502, f"Retrieval failed: {e}") from e
+        context_block = format_context(chunks, max_chars=CONTEXT_MAX_CHARS)
+        prompt = build_prompt(
+            format_spec, persona_summary, req.topic, req.audience, req.goal, req.cta, context_block
+        )
+        model = gen_model
+    else:
+        prompt = _qlora_prompt(format_spec, req)
+        model = qlora_model
 
-    context_block = format_context(chunks, max_chars=CONTEXT_MAX_CHARS)
-    prompt = build_prompt(
-        format_spec, persona_summary, req.topic, req.audience, req.goal, req.cta, context_block
-    )
-
     try:
-        draft = ollama_generate(prompt, ollama_base, gen_model)
+        draft = ollama_generate(prompt, ollama_base, model)
     except Exception as e:
         raise HTTPException(502, f"Generation failed: {e}") from e
 
     return GenerateResponse(
         draft=draft,
         sources=_source_payload(chunks),
-        model=gen_model,
+        model=model,
         latency_ms=round((time.perf_counter() - started) * 1000),
         request_id=request_id,
+        method=req.method,
     )

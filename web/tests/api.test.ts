@@ -8,6 +8,7 @@ const REQ: GenerateRequest = {
   goal: "One takeaway",
   cta: "none",
   k: 5,
+  method: "personarag",
   model: "lemkin-clone",
   temperature: 0.7,
 };

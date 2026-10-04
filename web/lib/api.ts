@@ -12,6 +12,7 @@ import type {
   FormatId,
   GenerateRequest,
   GenerateResult,
+  GenerationMethod,
   ModelInfo,
   ServiceStatus,
   Source,
@@ -126,6 +127,7 @@ interface RawGenerate {
   model?: string;
   latency_ms?: number;
   request_id?: string;
+  method?: GenerationMethod;
 }
 
 const SOURCE_TYPES: SourceType[] = ["blog", "linkedin", "x", "youtube"];
@@ -163,6 +165,7 @@ export async function generate(req: GenerateRequest): Promise<GenerateResult> {
     model: raw.model ?? req.model ?? "default",
     latencyMs: raw.latency_ms ?? Math.round(performance.now() - started),
     requestId: raw.request_id,
+    method: raw.method ?? req.method,
     mock: false,
   };
 }

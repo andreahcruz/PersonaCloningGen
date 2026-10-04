@@ -96,6 +96,7 @@ export function mockGenerate(req: GenerateRequest): GenerateResult {
     model: req.model ?? "lemkin-clone",
     latencyMs: 1200,
     requestId: "demo",
+    method: req.method,
     mock: true,
   };
 }

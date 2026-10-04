@@ -6,6 +6,7 @@ import { addHistory } from "@/lib/history";
 import {
   FORMATS,
   type FormatId,
+  type GenerationMethod,
   type GenerateResult,
 } from "@/lib/types";
 import {
@@ -20,7 +21,25 @@ import {
   inputClass,
 } from "@/components/ui";
 
-const BASE_MODEL = "llama3.1";
+const METHODS: Array<{
+  id: GenerationMethod;
+  label: string;
+  model: string;
+  detail: string;
+}> = [
+  {
+    id: "personarag",
+    label: "PersonaRAG",
+    model: "Base Llama 3.1",
+    detail: "Searches Jason Lemkin source chunks first, then writes a grounded draft.",
+  },
+  {
+    id: "qlora",
+    label: "QLoRA fine-tuned",
+    model: "Lemkin Clone",
+    detail: "Writes directly with Kevin's fine-tuned model. It does not retrieve sources.",
+  },
+];
 
 function slug(text: string): string {
   return (
@@ -39,6 +58,7 @@ export default function GeneratorPage() {
   const [goal, setGoal] = useState("");
   const [cta, setCta] = useState("none");
   const [k, setK] = useState(8);
+  const [method, setMethod] = useState<GenerationMethod>("personarag");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<ApiError | null>(null);
   const [result, setResult] = useState<GenerateResult | null>(null);
@@ -65,7 +85,7 @@ export default function GeneratorPage() {
         goal: goal.trim(),
         cta: cta.trim() || "none",
         k,
-        model: BASE_MODEL,
+        method,
       });
       setResult(res);
       addHistory({
@@ -109,12 +129,13 @@ export default function GeneratorPage() {
   }
 
   const words = result ? result.content.trim().split(/\s+/).filter(Boolean).length : 0;
+  const activeMethod = METHODS.find((item) => item.id === method) ?? METHODS[0];
 
   return (
     <>
       <PageHeader
         title="Content generator"
-        subtitle="Write a brief, retrieve Jason Lemkin sources, and generate a draft in his voice."
+        subtitle="Compare source-grounded PersonaRAG with Kevin's fine-tuned QLoRA writer."
       />
 
       <div className="grid gap-5 xl:grid-cols-[260px_minmax(0,1fr)_320px]">
@@ -152,19 +173,47 @@ export default function GeneratorPage() {
           </Card>
 
           <Card className="space-y-4">
-            <Field label="Generation model" hint="Fixed for this deployed PersonaRAG demo.">
-              <input className={inputClass} value="Base Llama 3.1" readOnly />
-            </Field>
-            <Field label={`Retrieved chunks: ${k}`}>
-              <input
-                type="range"
-                min={1}
-                max={20}
-                value={k}
-                onChange={(e) => setK(Number(e.target.value))}
-                className="w-full accent-primary"
-              />
-            </Field>
+            <fieldset>
+              <legend className="mb-2 text-xs font-medium uppercase tracking-wide text-mute">
+                Writing method
+              </legend>
+              <div className="space-y-2">
+                {METHODS.map((item) => (
+                  <label
+                    key={item.id}
+                    className={`block cursor-pointer rounded-xl border p-3 transition ${
+                      method === item.id
+                        ? "border-primary bg-primary/10"
+                        : "border-line hover:border-primary/50"
+                    }`}
+                  >
+                    <input
+                      type="radio"
+                      name="method"
+                      value={item.id}
+                      checked={method === item.id}
+                      onChange={() => setMethod(item.id)}
+                      className="sr-only"
+                    />
+                    <span className="block text-sm font-medium">{item.label}</span>
+                    <span className="block text-xs text-mute">{item.model}</span>
+                  </label>
+                ))}
+              </div>
+            </fieldset>
+            <p className="text-xs leading-relaxed text-mute">{activeMethod.detail}</p>
+            {method === "personarag" ? (
+              <Field label={`Retrieved chunks: ${k}`}>
+                <input
+                  type="range"
+                  min={1}
+                  max={20}
+                  value={k}
+                  onChange={(e) => setK(Number(e.target.value))}
+                  className="w-full accent-primary"
+                />
+              </Field>
+            ) : null}
           </Card>
         </div>
 
@@ -233,8 +282,9 @@ export default function GeneratorPage() {
 
             {busy ? (
               <p className="animate-pulse text-sm text-mute" role="status">
-                Embedding your brief, retrieving sources and generating. This can take a minute on a
-                local model.
+                {method === "personarag"
+                  ? "Embedding your brief, retrieving sources and generating."
+                  : "Generating with the fine-tuned QLoRA model."} This can take a minute on a local model.
               </p>
             ) : result ? (
               <>
@@ -249,7 +299,7 @@ export default function GeneratorPage() {
                   {result.content}
                 </div>
                 <p className="mt-3 text-xs text-mute">
-                  {words} words - {result.model}
+                  {words} words - {result.method === "personarag" ? "PersonaRAG" : "QLoRA"} - {result.model}
                   {result.latencyMs !== null ? ` - ${(result.latencyMs / 1000).toFixed(1)} s` : ""}
                 </p>
               </>
@@ -279,6 +329,10 @@ export default function GeneratorPage() {
                 </li>
               ))}
             </ul>
+          ) : result?.method === "qlora" ? (
+            <p className="text-sm text-mute">
+              QLoRA writes from its fine-tuned weights. It does not retrieve Chroma sources by design.
+            </p>
           ) : result ? (
             <p className="text-sm text-mute">
               The backend did not return sources for this draft. The API needs to include them; see

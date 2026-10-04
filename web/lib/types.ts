@@ -19,6 +19,7 @@ export const FORMATS: FormatOption[] = [
 ];
 
 export type SourceType = "blog" | "linkedin" | "x" | "youtube" | "unknown";
+export type GenerationMethod = "personarag" | "qlora";
 
 export interface Source {
   id: string;
@@ -38,6 +39,7 @@ export interface GenerateRequest {
   goal: string;
   cta: string;
   k: number;
+  method: GenerationMethod;
   model?: string;
   temperature?: number;
 }
@@ -49,6 +51,7 @@ export interface GenerateResult {
   /** Server-reported latency, else measured in the browser. */
   latencyMs: number | null;
   requestId?: string;
+  method: GenerationMethod;
   /** True when the data is sample data, not real model output. */
   mock: boolean;
 }

@@ -219,7 +219,8 @@ services:
     ports:
       - "127.0.0.1:8000:8000"
     volumes:
-      - chroma-data:/chroma/chroma
+      # Chroma 1.5 persists its SQLite/HNSW data under /data.
+      - chroma-data:/data
     logging: *default-logging
     restart: always
 
