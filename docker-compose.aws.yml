@@ -142,6 +142,27 @@ services:
         max-file: "5"
     restart: always
 
+  # The only internet-facing service for the short professor demo.  It proxies
+  # to the React app on Docker's private network; FastAPI, Chroma, Ollama,
+  # Airflow, and storage remain unpublished.
+  public-web:
+    image: caddy:2.8-alpine
+    environment:
+      CADDY_BASICAUTH_HASH: ${CADDY_BASICAUTH_HASH:?set CADDY_BASICAUTH_HASH in .env}
+    ports:
+      - "80:80"
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+    depends_on:
+      web:
+        condition: service_started
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
+    restart: always
+
   streamlit:
     profiles: ["ui"]
 

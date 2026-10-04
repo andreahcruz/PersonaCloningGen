@@ -1,0 +1,11 @@
+# Public, password-protected entry point for the short EC2 demo.
+# This intentionally exposes only the React/Next.js service.
+:80 {
+	encode zstd gzip
+
+	basic_auth {
+		demo {$CADDY_BASICAUTH_HASH}
+	}
+
+	reverse_proxy web:3000
+}
