@@ -109,7 +109,7 @@ services:
 
   # ── 3. MinIO bucket setup (runs once on startup) ───────────────────────────
   minio-setup:
-    image: minio/mc:latest
+    image: quay.io/minio/mc:latest
     container_name: minio-setup
     depends_on:
       minio:
