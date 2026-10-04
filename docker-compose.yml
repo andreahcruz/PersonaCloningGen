@@ -88,8 +88,8 @@ services:
 
   # ── 2. MinIO (local S3 replacement) ────────────────────────────────────────
   minio:
-    # MinIO's maintained public container registry; Docker Hub's old mirror is archived.
-    image: quay.io/minio/minio:latest
+    # Legacy MinIO image; preload it on EC2 from a verified local archive before startup.
+    image: minio/minio:latest
     container_name: minio
     command: server /data --console-address ":9001"
     environment:
@@ -109,7 +109,7 @@ services:
 
   # ── 3. MinIO bucket setup (runs once on startup) ───────────────────────────
   minio-setup:
-    image: quay.io/minio/mc:latest
+    image: minio/mc:latest
     container_name: minio-setup
     depends_on:
       minio:
