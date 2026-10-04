@@ -86,7 +86,8 @@ services:
     ulimits:
       nofile:
         soft: 65535
-        hard: 65535    build:
+        hard: 65535
+    build:
       context: .
       dockerfile: backend/Dockerfile
     environment:
