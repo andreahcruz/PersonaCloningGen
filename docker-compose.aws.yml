@@ -49,8 +49,8 @@ services:
       AWS_DEFAULT_REGION: us-east-2
     entrypoint: >
       /bin/sh -c "
-      awslocal --endpoint-url http://minio:4566 s3api create-bucket --bucket lemkin-raw || true;
-      awslocal --endpoint-url http://minio:4566 s3api create-bucket --bucket lemkin-processed || true;
+      awslocal --endpoint-url http://minio:4566 s3api create-bucket --bucket lemkin-raw --create-bucket-configuration LocationConstraint=us-east-2 || true;
+      awslocal --endpoint-url http://minio:4566 s3api create-bucket --bucket lemkin-processed --create-bucket-configuration LocationConstraint=us-east-2 || true;
       echo 'S3-compatible buckets created successfully';
       "
 
