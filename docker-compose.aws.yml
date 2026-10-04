@@ -25,7 +25,8 @@ services:
   minio:
     # LocalStack provides the S3 API the pipeline uses; service name stays `minio`
     # so no DAG or Spark code needs a special EC2 path.
-    image: localstack/localstack:latest
+    # Pin the last free community image; current `latest` requires a LocalStack license token.
+    image: localstack/localstack:3.8
     command: ""
     environment:
       SERVICES: s3
@@ -41,7 +42,7 @@ services:
       retries: 12
 
   minio-setup:
-    image: localstack/localstack:latest
+    image: localstack/localstack:3.8
     environment:
       AWS_ACCESS_KEY_ID: test
       AWS_SECRET_ACCESS_KEY: test
