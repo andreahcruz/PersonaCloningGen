@@ -34,7 +34,7 @@ services:
       AWS_ACCESS_KEY_ID: test
       AWS_SECRET_ACCESS_KEY: test
     ports:
-      - "127.0.0.1:${MINIO_HOST_API_PORT:-9000}:4566"
+      - "127.0.0.1:${MINIO_HOST_API_PORT:-9002}:4566"
     healthcheck:
       test: ["CMD-SHELL", "curl -fsS http://localhost:4566/_localstack/health | grep -q '\"s3\"'"]
       interval: 10s
