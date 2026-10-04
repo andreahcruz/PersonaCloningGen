@@ -8,9 +8,6 @@ import { IS_MOCK } from "@/lib/config";
 const NAV = [
   { href: "/", label: "Home" },
   { href: "/generate", label: "Generator" },
-  { href: "/dashboard", label: "Dashboard" },
-  { href: "/sources", label: "Sources" },
-  { href: "/evaluation", label: "Evaluation" },
   { href: "/health", label: "System health" },
   { href: "/about", label: "About" },
 ];

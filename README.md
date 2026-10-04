@@ -44,10 +44,11 @@ docker compose up --build
 All published ports bind to `127.0.0.1`. On a remote host (EC2), use an SSH tunnel, e.g.
 `ssh -L 8080:localhost:8080 -L 9001:localhost:9001 <host>`.
 
-**AWS / single EC2 (pipeline only):** `docker compose -f docker-compose.yml -f docker-compose.aws.yml up -d --build`,
-then `... exec ollama ollama pull nomic-embed-text`. This adds a private Ollama container, reads
-`data/cleaned/`, and leaves Streamlit and the unused Spark master/worker off (see the header of
-`docker-compose.aws.yml`).
+**AWS / single EC2 (live PersonaRAG):** `docker compose -f docker-compose.yml -f docker-compose.aws.yml up -d --build`,
+then pull both `nomic-embed-text` and `llama3.1` in the private Ollama container. This reads
+`data/cleaned/`, leaves Streamlit and the unused Spark master/worker off, and exposes the React
+demo only on `127.0.0.1:3000`. Tunnel it from your laptop with
+`ssh -L 3000:localhost:3000 <host>`, then open `http://localhost:3000`.
 
 Use `docker-compose` instead of `docker compose` if you only have the older CLI.
 

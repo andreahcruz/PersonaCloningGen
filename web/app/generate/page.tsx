@@ -1,13 +1,12 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
-import { ApiError, generate, getModels } from "@/lib/api";
+import { useMemo, useState } from "react";
+import { ApiError, generate } from "@/lib/api";
 import { addHistory } from "@/lib/history";
 import {
   FORMATS,
   type FormatId,
   type GenerateResult,
-  type ModelInfo,
 } from "@/lib/types";
 import {
   Button,
@@ -21,7 +20,7 @@ import {
   inputClass,
 } from "@/components/ui";
 
-const DEFAULT_MODEL = "lemkin-clone";
+const BASE_MODEL = "llama3.1";
 
 function slug(text: string): string {
   return (
@@ -40,25 +39,10 @@ export default function GeneratorPage() {
   const [goal, setGoal] = useState("");
   const [cta, setCta] = useState("none");
   const [k, setK] = useState(8);
-  const [temperature, setTemperature] = useState(0.7);
-  const [models, setModels] = useState<ModelInfo[]>([]);
-  const [model, setModel] = useState(DEFAULT_MODEL);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<ApiError | null>(null);
   const [result, setResult] = useState<GenerateResult | null>(null);
   const [copied, setCopied] = useState(false);
-
-  useEffect(() => {
-    getModels()
-      .then(({ models: list }) => {
-        const usable = list.filter((m) => m.kind !== "embedding" && m.available);
-        setModels(usable);
-        if (usable.length && !usable.some((m) => m.name === DEFAULT_MODEL)) {
-          setModel(usable[0].name);
-        }
-      })
-      .catch(() => setModels([]));
-  }, []);
 
   const missing = useMemo(() => {
     const out: string[] = [];
@@ -81,8 +65,7 @@ export default function GeneratorPage() {
         goal: goal.trim(),
         cta: cta.trim() || "none",
         k,
-        model,
-        temperature,
+        model: BASE_MODEL,
       });
       setResult(res);
       addHistory({
@@ -169,21 +152,8 @@ export default function GeneratorPage() {
           </Card>
 
           <Card className="space-y-4">
-            <Field label="Generation model">
-              <select
-                className={inputClass}
-                value={model}
-                onChange={(e) => setModel(e.target.value)}
-              >
-                {(models.length ? models : [{ name: DEFAULT_MODEL, kind: "fine-tuned", available: true }]).map(
-                  (m) => (
-                    <option key={m.name} value={m.name}>
-                      {m.name}
-                      {m.kind === "fine-tuned" ? " (fine-tuned)" : ""}
-                    </option>
-                  ),
-                )}
-              </select>
+            <Field label="Generation model" hint="Fixed for this deployed PersonaRAG demo.">
+              <input className={inputClass} value="Base Llama 3.1" readOnly />
             </Field>
             <Field label={`Retrieved chunks: ${k}`}>
               <input
@@ -193,20 +163,6 @@ export default function GeneratorPage() {
                 value={k}
                 onChange={(e) => setK(Number(e.target.value))}
                 className="w-full accent-primary"
-              />
-            </Field>
-            <Field
-              label={`Temperature: ${temperature.toFixed(1)}`}
-              hint="Sent to the API. Applied once the backend supports it."
-            >
-              <input
-                type="range"
-                min={0}
-                max={1.5}
-                step={0.1}
-                value={temperature}
-                onChange={(e) => setTemperature(Number(e.target.value))}
-                className="w-full accent-violet"
               />
             </Field>
           </Card>
