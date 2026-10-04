@@ -1,0 +1,75 @@
+{
+  "checks": {
+    "targets_unchanged": true,
+    "split_ownership_unchanged": true,
+    "original_groups_do_not_cross_splits": true
+  },
+  "counts_by_split": {
+    "train": {
+      "rows": 21377,
+      "medium:blog": 9434,
+      "role:opening": 1711,
+      "source_flag:guest_recap_attribution_requires_review": 353,
+      "role:continuation": 8050,
+      "target_prefix_in_prompt": 11890,
+      "source_flag:gold_overlap_family": 183,
+      "source_flag:scraped_word_break_requires_review": 384,
+      "source_flag:missing_visual_context_requires_review": 159,
+      "ambiguous_section_ending": 72,
+      "role:unchanged": 11616,
+      "continuation_without_previous_context": 12,
+      "source_flag:full_source_cross_split_family": 13,
+      "source_flag:content_link_roundup": 36,
+      "medium:linkedin": 713,
+      "medium:x": 11190,
+      "medium:youtube_jason": 40,
+      "transcript_retained": 40
+    },
+    "validation": {
+      "rows": 2588,
+      "medium:blog": 1064,
+      "role:opening": 390,
+      "target_prefix_in_prompt": 1580,
+      "source_flag:gold_overlap_family": 16,
+      "role:continuation": 474,
+      "role:unchanged": 1724,
+      "source_flag:guest_recap_attribution_requires_review": 20,
+      "continuation_without_previous_context": 3,
+      "source_flag:scraped_word_break_requires_review": 36,
+      "ambiguous_section_ending": 6,
+      "source_flag:full_source_cross_split_family": 7,
+      "source_flag:content_link_roundup": 28,
+      "source_flag:missing_visual_context_requires_review": 19,
+      "medium:linkedin": 121,
+      "medium:x": 1400,
+      "medium:youtube_jason": 3,
+      "transcript_retained": 3
+    },
+    "test": {
+      "rows": 2580,
+      "medium:blog": 1053,
+      "role:opening": 389,
+      "source_flag:gold_overlap_family": 4,
+      "role:unchanged": 1722,
+      "target_prefix_in_prompt": 1583,
+      "role:continuation": 469,
+      "source_flag:guest_recap_attribution_requires_review": 14,
+      "ambiguous_section_ending": 7,
+      "source_flag:scraped_word_break_requires_review": 21,
+      "source_flag:full_source_cross_split_family": 8,
+      "source_flag:content_link_roundup": 27,
+      "source_flag:missing_visual_context_requires_review": 22,
+      "unchanged_target_not_whole_cleaned_body": 1,
+      "medium:linkedin": 123,
+      "medium:x": 1403,
+      "medium:youtube_jason": 1,
+      "transcript_retained": 1
+    }
+  },
+  "limitations": [
+    "Source flags reuse the v3 full-source audit; no new semantic leakage search.",
+    "Flags are review candidates, not automatic deletion decisions.",
+    "No model evaluation or tokenizer run; no test bodies manually reviewed."
+  ],
+  "all_inputs_unchanged": true
+}

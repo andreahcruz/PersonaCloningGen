@@ -1,5 +1,24 @@
 # DATA 298B Rubric Traceability Matrix
 
+Post-audit evidence: [complete-source preparation](data/COMPLETE_SOURCE_SFT.md)
+now contributes MEASURED preprocessing, split and eligibility evidence to D1-1,
+D1-2, D1-3 and WB-5.3. EXP-20261003-003 independently verifies structural
+split/token/source invariants, but its content-quality gate failed. This does not
+complete the demo, validate authorship or establish any new model-quality result.
+The matrix below retains the broader outstanding rubric requirements.
+
+Audit update (2026-10-03): local workbook rubric PDF page 1 (printed page 2 of 6)
+confirms five or more proposals and at least one improved/innovative model. Demo rubric
+pages 1–3 confirms the five demonstration categories below; its saved deadline is Oct 6
+at noon, not live LMS verification. See [context](PROJECT_CONTEXT.md) for provenance.
+The table below is the earlier planning baseline: its statements that no registered
+rescoring/splits exist are superseded by [current state](project_state.md). Source/split
+records and incomplete training/comparison registrations now exist, but they do not
+establish independently validated model quality. [Model catalog](research/model_catalog.md)
+and [proposed matrix](architecture/EXPERIMENT_MATRIX.md) now provide naming and proposal
+coverage; descriptive keys have not been approved as canonical historical M numbering.
+Immediate next work maps to D1-1, D1-2, D1-3, WB-4.4 and WB-5.3 in [PLAN.md](PLAN.md).
+
 Status definitions come from `AGENTS.md`:
 PROPOSED → IMPLEMENTED → TESTED → MEASURED → VALIDATED
 

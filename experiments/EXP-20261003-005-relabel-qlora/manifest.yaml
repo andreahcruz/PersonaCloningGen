@@ -1,0 +1,61 @@
+{
+  "experiment_id": "EXP-20261003-005-relabel-qlora",
+  "timestamp": "2026-10-04T06:45:00+00:00",
+  "status": "MEASURED",
+  "execution_commands": [
+    "see config/commands.txt"
+  ],
+  "git": {
+    "commit": "ea1d58b30cafcb4cf18a03ded39963f64ce6aee7",
+    "dirty": true
+  },
+  "data": {
+    "source_manifest": "experiments/EXP-20261003-004-relabel-continuations/raw/split_assignments.jsonl",
+    "source_hashes": {
+      "experiments/EXP-20261003-004-relabel-continuations/raw/dataset.jsonl": "1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b"
+    },
+    "processed_dataset_hash": "1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b",
+    "split_manifest_hash": "6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb",
+    "gold_eval_hash": "n/a: generation scoring is a later step"
+  },
+  "rag": {
+    "persona_profile_hash": "n/a: this train does not retrieve",
+    "chroma_collection": "n/a: this train does not retrieve",
+    "index_version_or_snapshot": "n/a: this train does not retrieve",
+    "embedding_model": "n/a: this train does not retrieve"
+  },
+  "model": {
+    "model_name": "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit",
+    "model_or_adapter_hash": "pending file hash; adapter saved at host_finetune/output/lemkin_lora_relabel. Best eval_loss 1.3316 at step 2674. train_loss 1.797.",
+    "config": {
+      "lora_r": 16,
+      "lora_alpha": 32,
+      "learning_rate": 0.0001,
+      "num_epochs": 2,
+      "per_device_batch": 1,
+      "grad_accum": 16,
+      "max_seq_length": 512,
+      "optim": "adamw_8bit",
+      "max_vram_fraction": 0.85,
+      "seed": 42
+    },
+    "random_seed": 42
+  },
+  "evaluation": {
+    "evaluator_commit": "ea1d58b30cafcb4cf18a03ded39963f64ce6aee7",
+    "judge_model": "n/a: not run yet",
+    "judge_config": "n/a: not run yet"
+  },
+  "environment": {
+    "python_version": "3.11.9",
+    "package_snapshot": "host_finetune/.venv",
+    "hardware": "NVIDIA GeForce RTX 5070 Ti, 16303 MiB"
+  },
+  "outputs": {
+    "raw": [
+      "raw/train.log"
+    ],
+    "metrics": [],
+    "warnings_and_failures": "Per-medium training eval OOM at every checkpoint; eval_loss still recorded. First launch failed on cp1252 before step 1; relaunch exited 0."
+  }
+}

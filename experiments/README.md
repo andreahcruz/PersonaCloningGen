@@ -24,7 +24,22 @@ Artifacts inside a registered `experiments/EXP-*` directory are evidence of what
 
 Do not modify raw source data in place. Do not change train, validation, or test assignments inside an experiment unless that change was explicitly approved and is recorded in `manifest.yaml`.
 
-No experiment run has been created yet.
+As of the 2026-10-03 audit, 13 EXP directories exist; five have manifests and eight
+have incomplete registration. See [inventory](../docs/experiment_inventory.csv) and
+[state](../docs/project_state.md). Preserve existing artifacts: do not invent missing
+run metadata or retroactively treat recorded logs as independently validated results.
+
+After the approved preparation task, three additional registered runs exist:
+EXP-20261003-001/002/003. EXP-20261003-004 records the relabeled continuation
+file. EXP-20261003-005 is the finished rank-16 train on that file (exit 0,
+best eval loss 1.3316). Generation scores have not been recorded. EXP-20261004-001 is a failed
+audit attempt; EXP-20261004-002 is the successful CPU audit of that relabel
+file. The `lemkin_train_only` embed finished on 2026-10-04 at 03:55 with
+21,194 documents. It is a local Chroma build, not a registered
+`experiments/EXP-*` run. The latest whole-source
+candidate passes structural verification but fails the content-quality gate;
+see [preparation evidence](../docs/data/COMPLETE_SOURCE_SFT.md).
+The relabel file is a different dataset and is not that candidate.
 
 ## Required manifest
 

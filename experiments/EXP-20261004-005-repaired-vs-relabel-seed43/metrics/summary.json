@@ -1,0 +1,418 @@
+{
+  "repaired": {
+    "n_rows": 120,
+    "gold_rubric": {
+      "overall": 0.2633,
+      "format_score": 0.2941,
+      "brief_alignment": 0.3933,
+      "expected_fact_coverage": 0.3861,
+      "gold_reference_coverage": 0.1867,
+      "rubric_must_have_coverage": 0.0563
+    },
+    "retrieval_grounding": {
+      "answer_relevance": 0.7527,
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    "paired_bleu": 0.0037,
+    "paired_rouge_l": 0.0784,
+    "n": 120,
+    "stopping": {
+      "n": 120,
+      "stop_metadata_available": 120,
+      "early_eos_rate": 0.6083333333333333,
+      "length_limit_rate": 0.225,
+      "interpretation": "Early EOS and absent final punctuation are not semantic incompleteness."
+    },
+    "decision": {
+      "n": 120,
+      "early_eot_rate": 0.6083333333333333,
+      "early_eot_observed": 120,
+      "mid_sentence_stop_rate": 0.6,
+      "use_for_selection": [
+        "early_eot_rate",
+        "mid_sentence_stop_rate"
+      ],
+      "logged_not_for_selection": [
+        "paired_bleu",
+        "paired_rouge_l"
+      ]
+    },
+    "selection_warning": "Legacy lexical/format scores are not validated voice metrics. X is prompted as a single post but legacy format scoring expects a thread; other format constraints are not all requested in these prompts. Do not select an adapter by overall score. Early EOS alone is not an incomplete answer. Gold topics are a development set.",
+    "by_medium": {
+      "blog": {
+        "n_rows": 30,
+        "gold_rubric": {
+          "overall": 0.3127,
+          "format_score": 0.3506,
+          "brief_alignment": 0.3806,
+          "expected_fact_coverage": 0.5222,
+          "gold_reference_coverage": 0.2101,
+          "rubric_must_have_coverage": 0.1
+        },
+        "retrieval_grounding": {
+          "answer_relevance": 0.63,
+          "faithfulness": 0.0,
+          "context_precision": 0.0,
+          "context_recall": 0.0
+        },
+        "paired_bleu": 0.0037,
+        "paired_rouge_l": 0.0705,
+        "n": 30,
+        "stopping": {
+          "n": 30,
+          "stop_metadata_available": 30,
+          "early_eos_rate": 0.8666666666666667,
+          "length_limit_rate": 0.0,
+          "interpretation": "Early EOS and absent final punctuation are not semantic incompleteness."
+        },
+        "decision": {
+          "n": 30,
+          "early_eot_rate": 0.8666666666666667,
+          "early_eot_observed": 30,
+          "mid_sentence_stop_rate": 0.13333333333333333,
+          "use_for_selection": [
+            "early_eot_rate",
+            "mid_sentence_stop_rate"
+          ],
+          "logged_not_for_selection": [
+            "paired_bleu",
+            "paired_rouge_l"
+          ]
+        }
+      },
+      "linkedin": {
+        "n_rows": 30,
+        "gold_rubric": {
+          "overall": 0.3127,
+          "format_score": 0.2949,
+          "brief_alignment": 0.4788,
+          "expected_fact_coverage": 0.4889,
+          "gold_reference_coverage": 0.2257,
+          "rubric_must_have_coverage": 0.075
+        },
+        "retrieval_grounding": {
+          "answer_relevance": 0.9317,
+          "faithfulness": 0.0,
+          "context_precision": 0.0,
+          "context_recall": 0.0
+        },
+        "paired_bleu": 0.0037,
+        "paired_rouge_l": 0.0788,
+        "n": 30,
+        "stopping": {
+          "n": 30,
+          "stop_metadata_available": 30,
+          "early_eos_rate": 0.06666666666666667,
+          "length_limit_rate": 0.5666666666666667,
+          "interpretation": "Early EOS and absent final punctuation are not semantic incompleteness."
+        },
+        "decision": {
+          "n": 30,
+          "early_eot_rate": 0.06666666666666667,
+          "early_eot_observed": 30,
+          "mid_sentence_stop_rate": 0.7333333333333333,
+          "use_for_selection": [
+            "early_eot_rate",
+            "mid_sentence_stop_rate"
+          ],
+          "logged_not_for_selection": [
+            "paired_bleu",
+            "paired_rouge_l"
+          ]
+        }
+      },
+      "x": {
+        "n_rows": 30,
+        "gold_rubric": {
+          "overall": 0.2155,
+          "format_score": 0.3271,
+          "brief_alignment": 0.4484,
+          "expected_fact_coverage": 0.1667,
+          "gold_reference_coverage": 0.1185,
+          "rubric_must_have_coverage": 0.0167
+        },
+        "retrieval_grounding": {
+          "answer_relevance": 0.9718,
+          "faithfulness": 0.0,
+          "context_precision": 0.0,
+          "context_recall": 0.0
+        },
+        "paired_bleu": 0.0045,
+        "paired_rouge_l": 0.0933,
+        "n": 30,
+        "stopping": {
+          "n": 30,
+          "stop_metadata_available": 30,
+          "early_eos_rate": 0.5333333333333333,
+          "length_limit_rate": 0.3333333333333333,
+          "interpretation": "Early EOS and absent final punctuation are not semantic incompleteness."
+        },
+        "decision": {
+          "n": 30,
+          "early_eot_rate": 0.5333333333333333,
+          "early_eot_observed": 30,
+          "mid_sentence_stop_rate": 0.7,
+          "use_for_selection": [
+            "early_eot_rate",
+            "mid_sentence_stop_rate"
+          ],
+          "logged_not_for_selection": [
+            "paired_bleu",
+            "paired_rouge_l"
+          ]
+        }
+      },
+      "talk": {
+        "n_rows": 30,
+        "gold_rubric": {
+          "overall": 0.2123,
+          "format_score": 0.2039,
+          "brief_alignment": 0.2652,
+          "expected_fact_coverage": 0.3667,
+          "gold_reference_coverage": 0.1924,
+          "rubric_must_have_coverage": 0.0333
+        },
+        "retrieval_grounding": {
+          "answer_relevance": 0.4772,
+          "faithfulness": 0.0,
+          "context_precision": 0.0,
+          "context_recall": 0.0
+        },
+        "paired_bleu": 0.0028,
+        "paired_rouge_l": 0.0711,
+        "n": 30,
+        "stopping": {
+          "n": 30,
+          "stop_metadata_available": 30,
+          "early_eos_rate": 0.9666666666666667,
+          "length_limit_rate": 0.0,
+          "interpretation": "Early EOS and absent final punctuation are not semantic incompleteness."
+        },
+        "decision": {
+          "n": 30,
+          "early_eot_rate": 0.9666666666666667,
+          "early_eot_observed": 30,
+          "mid_sentence_stop_rate": 0.8333333333333334,
+          "use_for_selection": [
+            "early_eot_rate",
+            "mid_sentence_stop_rate"
+          ],
+          "logged_not_for_selection": [
+            "paired_bleu",
+            "paired_rouge_l"
+          ]
+        }
+      }
+    }
+  },
+  "relabel": {
+    "n_rows": 120,
+    "gold_rubric": {
+      "overall": 0.2619,
+      "format_score": 0.2722,
+      "brief_alignment": 0.438,
+      "expected_fact_coverage": 0.3417,
+      "gold_reference_coverage": 0.1869,
+      "rubric_must_have_coverage": 0.0708
+    },
+    "retrieval_grounding": {
+      "answer_relevance": 0.8659,
+      "faithfulness": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    "paired_bleu": 0.0034,
+    "paired_rouge_l": 0.0752,
+    "n": 120,
+    "stopping": {
+      "n": 120,
+      "stop_metadata_available": 120,
+      "early_eos_rate": 0.55,
+      "length_limit_rate": 0.15,
+      "interpretation": "Early EOS and absent final punctuation are not semantic incompleteness."
+    },
+    "decision": {
+      "n": 120,
+      "early_eot_rate": 0.55,
+      "early_eot_observed": 120,
+      "mid_sentence_stop_rate": 0.3,
+      "use_for_selection": [
+        "early_eot_rate",
+        "mid_sentence_stop_rate"
+      ],
+      "logged_not_for_selection": [
+        "paired_bleu",
+        "paired_rouge_l"
+      ]
+    },
+    "selection_warning": "Legacy lexical/format scores are not validated voice metrics. X is prompted as a single post but legacy format scoring expects a thread; other format constraints are not all requested in these prompts. Do not select an adapter by overall score. Early EOS alone is not an incomplete answer. Gold topics are a development set.",
+    "by_medium": {
+      "blog": {
+        "n_rows": 30,
+        "gold_rubric": {
+          "overall": 0.3358,
+          "format_score": 0.3728,
+          "brief_alignment": 0.4071,
+          "expected_fact_coverage": 0.5222,
+          "gold_reference_coverage": 0.2435,
+          "rubric_must_have_coverage": 0.1333
+        },
+        "retrieval_grounding": {
+          "answer_relevance": 0.7062,
+          "faithfulness": 0.0,
+          "context_precision": 0.0,
+          "context_recall": 0.0
+        },
+        "paired_bleu": 0.0028,
+        "paired_rouge_l": 0.0685,
+        "n": 30,
+        "stopping": {
+          "n": 30,
+          "stop_metadata_available": 30,
+          "early_eos_rate": 0.5,
+          "length_limit_rate": 0.0,
+          "interpretation": "Early EOS and absent final punctuation are not semantic incompleteness."
+        },
+        "decision": {
+          "n": 30,
+          "early_eot_rate": 0.5,
+          "early_eot_observed": 30,
+          "mid_sentence_stop_rate": 0.03333333333333333,
+          "use_for_selection": [
+            "early_eot_rate",
+            "mid_sentence_stop_rate"
+          ],
+          "logged_not_for_selection": [
+            "paired_bleu",
+            "paired_rouge_l"
+          ]
+        }
+      },
+      "linkedin": {
+        "n_rows": 30,
+        "gold_rubric": {
+          "overall": 0.2727,
+          "format_score": 0.2652,
+          "brief_alignment": 0.4879,
+          "expected_fact_coverage": 0.3555,
+          "gold_reference_coverage": 0.1967,
+          "rubric_must_have_coverage": 0.0583
+        },
+        "retrieval_grounding": {
+          "answer_relevance": 0.9905,
+          "faithfulness": 0.0,
+          "context_precision": 0.0,
+          "context_recall": 0.0
+        },
+        "paired_bleu": 0.0034,
+        "paired_rouge_l": 0.0772,
+        "n": 30,
+        "stopping": {
+          "n": 30,
+          "stop_metadata_available": 30,
+          "early_eos_rate": 0.23333333333333334,
+          "length_limit_rate": 0.5,
+          "interpretation": "Early EOS and absent final punctuation are not semantic incompleteness."
+        },
+        "decision": {
+          "n": 30,
+          "early_eot_rate": 0.23333333333333334,
+          "early_eot_observed": 30,
+          "mid_sentence_stop_rate": 0.5666666666666667,
+          "use_for_selection": [
+            "early_eot_rate",
+            "mid_sentence_stop_rate"
+          ],
+          "logged_not_for_selection": [
+            "paired_bleu",
+            "paired_rouge_l"
+          ]
+        }
+      },
+      "x": {
+        "n_rows": 30,
+        "gold_rubric": {
+          "overall": 0.1837,
+          "format_score": 0.2617,
+          "brief_alignment": 0.4403,
+          "expected_fact_coverage": 0.1222,
+          "gold_reference_coverage": 0.0862,
+          "rubric_must_have_coverage": 0.0083
+        },
+        "retrieval_grounding": {
+          "answer_relevance": 1.0,
+          "faithfulness": 0.0,
+          "context_precision": 0.0,
+          "context_recall": 0.0
+        },
+        "paired_bleu": 0.0045,
+        "paired_rouge_l": 0.0853,
+        "n": 30,
+        "stopping": {
+          "n": 30,
+          "stop_metadata_available": 30,
+          "early_eos_rate": 0.8,
+          "length_limit_rate": 0.1,
+          "interpretation": "Early EOS and absent final punctuation are not semantic incompleteness."
+        },
+        "decision": {
+          "n": 30,
+          "early_eot_rate": 0.8,
+          "early_eot_observed": 30,
+          "mid_sentence_stop_rate": 0.5333333333333333,
+          "use_for_selection": [
+            "early_eot_rate",
+            "mid_sentence_stop_rate"
+          ],
+          "logged_not_for_selection": [
+            "paired_bleu",
+            "paired_rouge_l"
+          ]
+        }
+      },
+      "talk": {
+        "n_rows": 30,
+        "gold_rubric": {
+          "overall": 0.2554,
+          "format_score": 0.1891,
+          "brief_alignment": 0.4167,
+          "expected_fact_coverage": 0.3667,
+          "gold_reference_coverage": 0.2211,
+          "rubric_must_have_coverage": 0.0833
+        },
+        "retrieval_grounding": {
+          "answer_relevance": 0.7668,
+          "faithfulness": 0.0,
+          "context_precision": 0.0,
+          "context_recall": 0.0
+        },
+        "paired_bleu": 0.0027,
+        "paired_rouge_l": 0.07,
+        "n": 30,
+        "stopping": {
+          "n": 30,
+          "stop_metadata_available": 30,
+          "early_eos_rate": 0.6666666666666666,
+          "length_limit_rate": 0.0,
+          "interpretation": "Early EOS and absent final punctuation are not semantic incompleteness."
+        },
+        "decision": {
+          "n": 30,
+          "early_eot_rate": 0.6666666666666666,
+          "early_eot_observed": 30,
+          "mid_sentence_stop_rate": 0.06666666666666667,
+          "use_for_selection": [
+            "early_eot_rate",
+            "mid_sentence_stop_rate"
+          ],
+          "logged_not_for_selection": [
+            "paired_bleu",
+            "paired_rouge_l"
+          ]
+        }
+      }
+    }
+  }
+}

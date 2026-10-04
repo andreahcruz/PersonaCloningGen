@@ -1,0 +1,63 @@
+{
+  "candidate_rows": 1498,
+  "splits": {
+    "train": 867,
+    "validation": 318,
+    "test": 313
+  },
+  "mediums": {
+    "blog": 1498
+  },
+  "dispositions": {
+    "quarantined": 28872,
+    "candidate": 1498
+  },
+  "reason_counts": {
+    "promotional_tail_requires_review": 10,
+    "gold_overlap_family": 39,
+    "ending_requires_review": 16955,
+    "over_context_budget": 281,
+    "ambiguous_or_incomplete_ending": 5126,
+    "not_in_frozen_dataset": 11693,
+    "promotional_document": 19,
+    "full_source_cross_split_family": 13,
+    "missing_independent_topic": 26283,
+    "below_existing_word_floor": 5518,
+    "uncertain_author": 68,
+    "unverified_speaker": 621
+  },
+  "full_source_duplicate_links": 3199,
+  "cross_split_family_documents": 13,
+  "gold_matching_documents_including_family": 39,
+  "eligibility_by_chat_budget": {
+    "512": {
+      "validation": 136,
+      "test": 137,
+      "train": 161
+    },
+    "1024": {
+      "train": 505,
+      "validation": 289,
+      "test": 279
+    },
+    "2048": {
+      "train": 867,
+      "validation": 318,
+      "test": 313
+    },
+    "4096": {
+      "train": 1116,
+      "validation": 318,
+      "test": 313
+    }
+  },
+  "input_hashes_unchanged": true,
+  "training_ready": false,
+  "limitations": [
+    "Lexical Jaccard is not semantic or exhaustive substring detection.",
+    "Authorship uses source attribution, not independent author verification.",
+    "Whole-source candidates require manual review; no training authorized by output.",
+    "Cross-split families quarantined without reassigning any source.",
+    "Untitled social posts and transcripts deferred; this candidate is not medium-comparable to prior SFT."
+  ]
+}

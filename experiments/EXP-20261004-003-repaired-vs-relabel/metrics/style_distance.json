@@ -1,0 +1,43 @@
+{
+  "role": "diagnostic_not_a_voice_decision",
+  "method": "mean absolute z-score of surface counts versus unchanged train posts",
+  "limits": "Closer surface counts are not authorship accuracy. Talk has no unchanged train references, so those pairs stay unavailable.",
+  "reference_counts": {
+    "blog": 40,
+    "linkedin": 40,
+    "x": 40,
+    "talk": 0
+  },
+  "closer_counts": {
+    "repaired": 31,
+    "relabel": 31,
+    "tie": 28,
+    "unavailable": 30
+  },
+  "by_medium": {
+    "blog": {
+      "repaired": 9,
+      "relabel": 18,
+      "tie": 3,
+      "unavailable": 0
+    },
+    "linkedin": {
+      "repaired": 15,
+      "relabel": 9,
+      "tie": 6,
+      "unavailable": 0
+    },
+    "talk": {
+      "repaired": 0,
+      "relabel": 0,
+      "tie": 0,
+      "unavailable": 30
+    },
+    "x": {
+      "repaired": 7,
+      "relabel": 4,
+      "tie": 19,
+      "unavailable": 0
+    }
+  }
+}

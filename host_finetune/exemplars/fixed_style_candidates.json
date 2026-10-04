@@ -1,0 +1,91 @@
+{
+  "status": "review_candidate",
+  "loaded_by_default": false,
+  "per_medium": 2,
+  "selection": "Earliest train rows with sft_role unchanged. Gold-overlap families are excluded. Not loaded unless --fixed-style is set.",
+  "gold_overlap_excluded": true,
+  "empty_platforms": [
+    "youtube_jason"
+  ],
+  "exemplars": {
+    "blog": [
+      {
+        "row_id": 718,
+        "group_id": "5bbde357ba1ca702b92b0c5000582c9e0f1357a1f45fbcae4038bd4ed0f12a4d",
+        "medium": "blog",
+        "comparison_medium": "blog",
+        "sft_role": "unchanged",
+        "source_file": "jasonlemkin_blog.jsonl",
+        "source_line": 108,
+        "base_title": "Dear SaaStr: How Can You Ensure a Smooth Transition When A New Team Member Takes Over a Customer Account?",
+        "text": "Dear SaaStr: How Can You Ensure a Smooth Transition When A New Team Member Takes Over a Customer Account?\nAdd value in the first interaction.  This is so rare.\nThere’s nothing more frustrating than getting a random email, “Hi, Tony is gone from the company. I know nothing about you, but I’m your new rep. Can we schedule a call?”\nFind some way to add value.\nOne great way is to demo upcoming features / an upcoming release.\n“Hi, I’m Jason, your next account exec. I’d love to find a way to help even more. Can I show you or anyone on your team the new AI features we’re launching shortly? There’s no additional cost for them and based on what I can see, they may radically increase your efficiency.”\nNot perfect. But much better.\nA second, albeit riskier, way to add value is to set up a call asking for “honest feedback on how we’re doing.”\nThis works, too.  Customers often just want to be heard.  The “problem” is you might have to do something about it.",
+        "use": "voice_only_not_evidence"
+      },
+      {
+        "row_id": 787,
+        "group_id": "4fb30d6dfd79f7f4f663b9fe2e1502b3e43cbf282284f09a513436e1ca54d34c",
+        "medium": "blog",
+        "comparison_medium": "blog",
+        "sft_role": "unchanged",
+        "source_file": "jasonlemkin_blog.jsonl",
+        "source_line": 119,
+        "base_title": "Dear SaaStr: When Is It Too Soon to Target Enterprise Customers in SaaS?",
+        "text": "Dear SaaStr: When Is It Too Soon to Target Enterprise Customers in SaaS?\nIt too soon to target enterprise clients when you can’t support their needs 90 days\nafter\nyou close them.\nIt’s sort of OK in the enterprise to promise features and functionality that are sort of there … so long as you deliver them fairly promptly after the deal closes.\nIn fact, it happens all the time. Enterprise customers will even sign contracts agreeing to buy so long as you implement a key feature with X number of days.\nBut if you don’t have the team, commitment and experience to deliver that functionality at least X days after you close a Big Customer … you aren’t ready.  They’ll churn or at least, never fully deploy.\nYou don’t have to have the full enterprise package in the early days to close enterprise customers, especially if they have interest in you.  You’ll get some slack as a new, emerging vendor.  Especially if you have a strong deployment team.\nBut you have to meet your commitments and promises to them fairly soon after the deal closes.\nMore here:\nSecrets to Closing Your First 6 Figure Deal (Video + Transcript) | SaaStr\nSecrets to Closing Your First 6 Figure Deal (Video + Transcript)",
+        "use": "voice_only_not_evidence"
+      }
+    ],
+    "linkedin": [
+      {
+        "row_id": 11552,
+        "group_id": "69d3b02cba775f2db487da0f1e830f7db2453634006a39fab62fdf0a31661305",
+        "medium": "linkedin",
+        "comparison_medium": "linkedin",
+        "sft_role": "unchanged",
+        "source_file": "jasonlemkinlinkedin.jsonl",
+        "source_line": 4,
+        "base_title": "A truly great human is still better than any AI agent at most complex, judgment-intensive work. Full stop. If you can fi...",
+        "text": "A truly great human is still better than any AI agent at most complex, judgment-intensive work. Full stop. If you can find and keep exceptional people, do it. But here’s the honest truth: most hires aren’t great hires. A lot of folks don't want to discuss it, or want to challenge it. But deploying a great AI Agent is just easier, and less stressful, than making a mediocre hire. This is why 2027 will be brutal for tech employment. We'll default to picking an AI Agent over a human for many \"hires\" because it's just ... easier.",
+        "use": "voice_only_not_evidence"
+      },
+      {
+        "row_id": 11554,
+        "group_id": "23e068e61a2c378a896228ba4b1fa7f25446c47f74cd289b26da3555a7f3bf3b",
+        "medium": "linkedin",
+        "comparison_medium": "linkedin",
+        "sft_role": "unchanged",
+        "source_file": "jasonlemkinlinkedin.jsonl",
+        "source_line": 8,
+        "base_title": "I know so many CROs and VPs of Sales that used to be truly great ... And are just burnt now. Fried. Some tried to mask i...",
+        "text": "I know so many CROs and VPs of Sales that used to be truly great ... And are just burnt now. Fried. Some tried to mask it by hiring CROs and VPs under them to do the work. And sometimes, that does work. But man sales isn't easy. Each month, each quarter, it's a new battle. It's epic but also can take its toll. Just make sure when you hire one with the perfect LinkedIn ... that they really, truly can go into battle again. Not just talk the talk. And share great stories, of epic battles past.",
+        "use": "voice_only_not_evidence"
+      }
+    ],
+    "x": [
+      {
+        "row_id": 12508,
+        "group_id": "c35e6ca89d6bcde8c427f2db1237e07054093b5539c4bb5559aba290d4209520",
+        "medium": "x",
+        "comparison_medium": "x",
+        "sft_role": "unchanged",
+        "source_file": "jasonlk_originals.jsonl",
+        "source_line": 1,
+        "base_title": "Everyone has an AI strategy. Almost nobody has agents in production. That's the gap. Get ahead of the pack. Take 1 day o...",
+        "text": "Everyone has an AI strategy. Almost nobody has agents in production.\n\nThat's the gap.\n\nGet ahead of the pack. Take 1 day our and join \nhttp://SaaStrDeploy.com '26 — our first-ever AI GTM Agent Summit inside of SaaStr AI 2026. May 12, SF.\n\nOne day. One mission. Deploy your AI agents.  No more excuses.",
+        "use": "voice_only_not_evidence"
+      },
+      {
+        "row_id": 12509,
+        "group_id": "dd8cf54afdd5f2ff98dbacc075de2725e7dbb7e1f3fcc1fe9710c36445221253",
+        "medium": "x",
+        "comparison_medium": "x",
+        "sft_role": "unchanged",
+        "source_file": "jasonlk_originals.jsonl",
+        "source_line": 2,
+        "base_title": "\"The public markets just don't believe public leaders' revenue is durable anymore. So the markets are going to panic eve...",
+        "text": "\"The public markets just don't believe public leaders' revenue is durable anymore.\n\nSo the markets are going to panic every time we see any evidence their revenue might be even ... less durable.\" with \n@HarryStebbings\n \n@rodriscoll\n + me",
+        "use": "voice_only_not_evidence"
+      }
+    ],
+    "youtube_jason": []
+  }
+}

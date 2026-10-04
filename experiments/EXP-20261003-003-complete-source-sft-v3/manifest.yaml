@@ -1,0 +1,106 @@
+{
+  "experiment_id": "EXP-20261003-003-complete-source-sft-v3",
+  "timestamp": "2026-10-04T05:09:21.889407+00:00",
+  "status": "MEASURED_PREPARATION_REVIEW_REQUIRED",
+  "execution_commands": [
+    "C:\\Users\\okevi\\SJSU\\DATA298\\298P\\host_finetune\\.venv\\Scripts\\python.exe -m host_finetune.prepare_complete_sft --prior-dataset host_finetune/data/dataset_fit512_keepbreaks_balanced.jsonl --assignments experiments/EXP-20261001-008-repaired-balanced-split/raw/split_assignments.jsonl --tokenizer C:/Users/okevi/.cache/huggingface/hub/models--unsloth--Meta-Llama-3.1-8B-Instruct-bnb-4bit/snapshots/f15c379fb32bb402fa06a7ae9aecb1febf4b79ec --out experiments/EXP-20261003-003-complete-source-sft-v3"
+  ],
+  "git": {
+    "commit": "ea1d58b30cafcb4cf18a03ded39963f64ce6aee7",
+    "dirty": true
+  },
+  "data": {
+    "source_manifest": "config/input_hashes.json",
+    "source_hashes": {
+      "C:\\Users\\okevi\\SJSU\\DATA298\\298P\\host_finetune\\data\\dataset_fit512_keepbreaks_balanced.jsonl": "6e99b414733eafdfa27a5e94dd26beff1498bbfd58af132251e24044fef4f057",
+      "C:\\Users\\okevi\\SJSU\\DATA298\\298P\\experiments\\EXP-20261001-008-repaired-balanced-split\\raw\\split_assignments.jsonl": "1e3ae21d2dd857c097b8d6816bb0941376d3f6719d142bd0f78a8c1848a8b3f6",
+      "C:\\Users\\okevi\\SJSU\\DATA298\\298P\\data\\openai_ft\\lemkin_gold_eval.jsonl": "d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e",
+      "C:\\Users\\okevi\\.cache\\huggingface\\hub\\models--unsloth--Meta-Llama-3.1-8B-Instruct-bnb-4bit\\snapshots\\f15c379fb32bb402fa06a7ae9aecb1febf4b79ec\\config.json": "4a1f6ac044b8d8d419d7ef3840aa463c225915857e4848bc66fcb1a3fd5a56ed",
+      "C:\\Users\\okevi\\.cache\\huggingface\\hub\\models--unsloth--Meta-Llama-3.1-8B-Instruct-bnb-4bit\\snapshots\\f15c379fb32bb402fa06a7ae9aecb1febf4b79ec\\generation_config.json": "280388b9a56fc9ad1f05d9096dc399ff6b5cf4a9c0a0a48d9ccc1dbc15290f7f",
+      "C:\\Users\\okevi\\.cache\\huggingface\\hub\\models--unsloth--Meta-Llama-3.1-8B-Instruct-bnb-4bit\\snapshots\\f15c379fb32bb402fa06a7ae9aecb1febf4b79ec\\special_tokens_map.json": "94e708c3f5e64acf85bbe5ad01467a1248faadb73e83b41793087ecced586e8f",
+      "C:\\Users\\okevi\\.cache\\huggingface\\hub\\models--unsloth--Meta-Llama-3.1-8B-Instruct-bnb-4bit\\snapshots\\f15c379fb32bb402fa06a7ae9aecb1febf4b79ec\\tokenizer.json": "6b9e4e7fb171f92fd137b777cc2714bf87d11576700a1dcd7a399e7bbe39537b",
+      "C:\\Users\\okevi\\.cache\\huggingface\\hub\\models--unsloth--Meta-Llama-3.1-8B-Instruct-bnb-4bit\\snapshots\\f15c379fb32bb402fa06a7ae9aecb1febf4b79ec\\tokenizer_config.json": "4d18eae3017839b17cb3598f589b62ec212652d183582ee0fc33a4f1e8b3da67",
+      "C:\\Users\\okevi\\SJSU\\DATA298\\298P\\data\\jasonlemkin_blog.jsonl": "8492ef11acacd767ce6bcdbdf6215467b6ba74d3e57dc50ffcd0af7deebc34a8",
+      "C:\\Users\\okevi\\SJSU\\DATA298\\298P\\data\\jasonlemkinlinkedin.jsonl": "a2899576ac75ebb5fe05af15bdd0425eef9636de42bb058e82b9c456ae71ef09",
+      "C:\\Users\\okevi\\SJSU\\DATA298\\298P\\data\\jasonlk_originals.jsonl": "a2021528bf4a34cd34c074d252d6bf246fddbe422033e7b88ebc0e11c74044c1",
+      "C:\\Users\\okevi\\SJSU\\DATA298\\298P\\data\\jasonmlemkinyoutubetranscripts.jsonl": "a943eb049b79b75e6aa17073cfcd4a7431e7a163b3a4276f4f8116cc31a1e337",
+      "C:\\Users\\okevi\\SJSU\\DATA298\\298P\\data\\saastryoutubetranscripts.jsonl": "89e4de78a7e3e947625523b27fbc29a0b75ef217f5c6e7a76d1aaca41916560d",
+      "C:\\Users\\okevi\\SJSU\\DATA298\\298P\\data\\cleaned\\jasonlemkin_blog.jsonl": "07dc0623f567ec5e05cee71b3577e62be143ddf651bec4257b9955593f2a7bab",
+      "C:\\Users\\okevi\\SJSU\\DATA298\\298P\\data\\cleaned\\jasonlemkinlinkedin.jsonl": "da4361c56f93820291fb583d3386e7a211aadaf9e66d8d0a971873a9920ccbf2",
+      "C:\\Users\\okevi\\SJSU\\DATA298\\298P\\data\\cleaned\\jasonlk_originals.jsonl": "e779f42fbb951d6ea4da9e8e35862563bd267d0fb635c2619aefb1ba593770c5",
+      "C:\\Users\\okevi\\SJSU\\DATA298\\298P\\data\\cleaned\\jasonmlemkinyoutubetranscripts.jsonl": "e13d7f0a45b4279281dd2ae4946a702b9036b4349ea90a220364d017a18e8484",
+      "C:\\Users\\okevi\\SJSU\\DATA298\\298P\\data\\cleaned\\saastryoutubetranscripts.jsonl": "b673ee254840edd2e26bfcd3f8ab88d5033ba8b9f896de73eaccafbf21024cb7"
+    },
+    "processed_dataset_hash": "dcde9732154e73550d5ba536cb900d354a8c7484c6dcdcac0e0f15ad0c4092ea",
+    "split_manifest_hash": "8cb934e6a40ffef31c27992f8096329ba79b7e34e1cb66ee648abba229093ee7",
+    "gold_eval_hash": "d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e"
+  },
+  "rag": {
+    "persona_profile_hash": "n/a: preparation only; no retrieval/profile construction",
+    "chroma_collection": "n/a: preparation only; no retrieval/profile construction",
+    "index_version_or_snapshot": "n/a: preparation only; no retrieval/profile construction",
+    "embedding_model": "n/a: preparation only; no retrieval/profile construction"
+  },
+  "model": {
+    "model_name": "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit tokenizer only",
+    "model_or_adapter_hash": "n/a: no weights loaded",
+    "config": {
+      "tokenizer_snapshot": "C:\\Users\\okevi\\.cache\\huggingface\\hub\\models--unsloth--Meta-Llama-3.1-8B-Instruct-bnb-4bit\\snapshots\\f15c379fb32bb402fa06a7ae9aecb1febf4b79ec",
+      "max_tokens": 2048,
+      "policy": "complete-source-v3"
+    },
+    "random_seed": "n/a: deterministic"
+  },
+  "evaluation": {
+    "evaluator_commit": "ea1d58b30cafcb4cf18a03ded39963f64ce6aee7",
+    "evaluator_source_hashes": {
+      "C:\\Users\\okevi\\SJSU\\DATA298\\298P\\host_finetune\\prepare_complete_sft.py": "a6e72598c4acc278d04a79b935eb2955879a0a1125f39e567026ea88a193c8bc",
+      "host_finetune\\clean_scraped.py": "0f37a91c9ac153d6cd7c1e2bbf791e7290074a3a765f42654f4ab9e9b794233f",
+      "spark_jobs\\corpus_footer_scrub.py": "c17c3cff79e93210f0c87b4ce498845fb2d2f4b215cbdd482b6302650a685f74",
+      "host_finetune\\split_groups.py": "0efadd742cf51f5b86ed3383f864151583b6a2e53816dc29f30d26c1e00e4134",
+      "host_finetune\\sft_chunk_utils.py": "d4222d014c0471fba860d460e97e82963ca882e7d0e654dea9bc9f2b8a4eba9f",
+      "host_finetune\\filter_event_promos.py": "9d5a567effb43f68aca7bfa636702de37ec69178d1691cd389471f262e18c2c6",
+      "host_finetune\\llama_chat_format.py": "eb3cd9e785a22901bf746405ae500e4250681cc7ecda13935e390f825f004aa6",
+      "host_finetune\\build_sft_from_cleaned_sources.py": "93f96af1fdd0e373f317a20e6f3824844031a5429b772c8c0d8505cb3f644bbf"
+    },
+    "judge_model": "n/a: lexical diagnostics only",
+    "judge_config": "n/a"
+  },
+  "environment": {
+    "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "package_snapshot": "config/package_snapshot.txt",
+    "hardware": "Windows-10-10.0.26200-SP0; AMD64 Family 26 Model 68 Stepping 0, AuthenticAMD; CPU preparation; no GPU model load"
+  },
+  "outputs": {
+    "raw": "raw/",
+    "metrics": "metrics/summary.json",
+    "warnings_and_failures": [
+      "Lexical Jaccard is not semantic or exhaustive substring detection.",
+      "Authorship uses source attribution, not independent author verification.",
+      "Whole-source candidates require manual review; no training authorized by output.",
+      "Cross-split families quarantined without reassigning any source.",
+      "Untitled social posts and transcripts deferred; this candidate is not medium-comparable to prior SFT.",
+      "Content-quality review not passed: missing embeds, guest summaries, scrape artifacts remain. See raw/content_review.jsonl."
+    ]
+  },
+  "verification": {
+    "command": "C:\\Users\\okevi\\SJSU\\DATA298\\298P\\host_finetune\\.venv\\Scripts\\python.exe -m host_finetune.verify_complete_sft experiments\\EXP-20261003-003-complete-source-sft-v3",
+    "source_sha256": "0f7da9727bb4d3b6001af9b196a2ae26d216301a56b788b66b0ba9f5a92a2186",
+    "report": "metrics/verification.json"
+  },
+  "content_review": {
+    "status": "NOT_PASSED",
+    "sample_count": 16,
+    "report": "raw/content_review.jsonl",
+    "report_sha256": "306fd0f05146fe8ad752f98b26b0dd37162b108d338c1da2862667adaf9cf7b6",
+    "test_bodies_reviewed": false,
+    "method": "Deterministic train/validation sample, assistant textual inspection; not population quality estimate"
+  },
+  "tests": {
+    "command": ".venv-test/Scripts/python.exe -m pytest -q",
+    "passed": 129,
+    "skipped": 4,
+    "observed_output_transcription": "raw/unit_tests.txt",
+    "test_source_sha256": "121d14414afb6b6354f32f9e187d0bcb34fd4476d7446856fe405040430ea824"
+  }
+}

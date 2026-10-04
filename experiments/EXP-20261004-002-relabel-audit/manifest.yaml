@@ -1,0 +1,63 @@
+{
+  "experiment_id": "EXP-20261004-002-relabel-audit",
+  "timestamp": "2026-10-04T08:32:11.530352+00:00",
+  "status": "MEASURED",
+  "git": {
+    "commit": "ea1d58b30cafcb4cf18a03ded39963f64ce6aee7",
+    "dirty": true
+  },
+  "execution_commands": [
+    "C:\\Users\\okevi\\SJSU\\DATA298\\298P\\.venv-test\\Scripts\\python.exe -m host_finetune.audit_relabel_run --out experiments/EXP-20261004-002-relabel-audit"
+  ],
+  "data": {
+    "source_manifest": "config/input_hashes.json",
+    "source_hashes": {
+      "experiments\\EXP-20261003-004-relabel-continuations\\raw\\dataset.jsonl": "1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b",
+      "experiments\\EXP-20261003-004-relabel-continuations\\raw\\split_assignments.jsonl": "6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb",
+      "host_finetune\\data\\dataset_fit512_keepbreaks_balanced.jsonl": "6e99b414733eafdfa27a5e94dd26beff1498bbfd58af132251e24044fef4f057",
+      "experiments\\EXP-20261001-008-repaired-balanced-split\\raw\\split_assignments.jsonl": "1e3ae21d2dd857c097b8d6816bb0941376d3f6719d142bd0f78a8c1848a8b3f6",
+      "experiments\\EXP-20261003-003-complete-source-sft-v3\\raw\\dispositions.jsonl": "7720577a062c7e3fccfc98487a0fa2dc269a5e1d8b53a6b0ec4f82511d9e81f6",
+      "data\\cleaned\\jasonlemkinlinkedin.jsonl": "da4361c56f93820291fb583d3386e7a211aadaf9e66d8d0a971873a9920ccbf2",
+      "data\\cleaned\\jasonlemkin_blog.jsonl": "07dc0623f567ec5e05cee71b3577e62be143ddf651bec4257b9955593f2a7bab",
+      "data\\cleaned\\jasonlk_originals.jsonl": "e779f42fbb951d6ea4da9e8e35862563bd267d0fb635c2619aefb1ba593770c5",
+      "data\\cleaned\\jasonmlemkinyoutubetranscripts.jsonl": "e13d7f0a45b4279281dd2ae4946a702b9036b4349ea90a220364d017a18e8484",
+      "data\\cleaned\\saastryoutubetranscripts.jsonl": "b673ee254840edd2e26bfcd3f8ab88d5033ba8b9f896de73eaccafbf21024cb7",
+      "C:\\Users\\okevi\\SJSU\\DATA298\\298P\\host_finetune\\audit_relabel_run.py": "d7c7db45aac90d30a02f6d19965a0e8acd8c908cb047eb6f97ec77e8307a02de"
+    },
+    "processed_dataset_hash": "1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b",
+    "split_manifest_hash": "6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb",
+    "gold_eval_hash": "d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e"
+  },
+  "model": {
+    "model_name": "n/a: dataset audit",
+    "model_or_adapter_hash": "n/a: no weights loaded",
+    "config": {},
+    "random_seed": "n/a: deterministic"
+  },
+  "rag": {
+    "persona_profile_hash": "n/a: no retrieval",
+    "chroma_collection": "n/a: no retrieval",
+    "index_version_or_snapshot": "n/a: no retrieval",
+    "embedding_model": "n/a: no retrieval"
+  },
+  "evaluation": {
+    "evaluator_commit": "ea1d58b30cafcb4cf18a03ded39963f64ce6aee7",
+    "source_sha256": "d7c7db45aac90d30a02f6d19965a0e8acd8c908cb047eb6f97ec77e8307a02de",
+    "judge_model": "n/a",
+    "judge_config": "n/a"
+  },
+  "environment": {
+    "python_version": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]",
+    "hardware": "Windows-10-10.0.26200-SP0 AMD64 Family 26 Model 68 Stepping 0, AuthenticAMD CPU only",
+    "package_snapshot": "config/package_snapshot.txt"
+  },
+  "outputs": {
+    "raw": "raw/findings.jsonl",
+    "metrics": "metrics/audit.json",
+    "warnings_and_failures": [
+      "Source flags reuse the v3 full-source audit; no new semantic leakage search.",
+      "Flags are review candidates, not automatic deletion decisions.",
+      "No model evaluation or tokenizer run; no test bodies manually reviewed."
+    ]
+  }
+}

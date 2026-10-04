@@ -1,0 +1,4 @@
+$env:PYTHONUNBUFFERED='1'
+$env:PYTHONUTF8='1'
+$env:PYTHONIOENCODING='utf-8'
+host_finetune\.venv\Scripts\python.exe -u -m host_finetune.compare_adapters --adapters repaired-vs-relabel --out-dir experiments\EXP-20261004-003-repaired-vs-relabel

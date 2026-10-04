@@ -1,0 +1,854 @@
+{
+  "role": "diagnostic_not_a_voice_decision",
+  "method": "mean absolute z-score of surface counts versus unchanged train posts",
+  "not_used": "TF-IDF authorship classifier",
+  "limits": "Closer surface counts are not authorship accuracy. Talk has no unchanged train references, so those pairs stay unavailable.",
+  "reference_counts": {
+    "blog": 40,
+    "linkedin": 40,
+    "x": 40,
+    "talk": 0
+  },
+  "pairs": [
+    {
+      "pair_id": "pair_0001",
+      "medium": "blog",
+      "distance_a": 0.6222,
+      "distance_b": 0.4279,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0002",
+      "medium": "linkedin",
+      "distance_a": 0.2517,
+      "distance_b": 1.4266,
+      "closer": "a"
+    },
+    {
+      "pair_id": "pair_0003",
+      "medium": "talk",
+      "distance_a": null,
+      "distance_b": null,
+      "closer": "unavailable"
+    },
+    {
+      "pair_id": "pair_0004",
+      "medium": "x",
+      "distance_a": 1.0222,
+      "distance_b": 1.0222,
+      "closer": "tie"
+    },
+    {
+      "pair_id": "pair_0005",
+      "medium": "blog",
+      "distance_a": 0.4971,
+      "distance_b": 1.6069,
+      "closer": "a"
+    },
+    {
+      "pair_id": "pair_0006",
+      "medium": "linkedin",
+      "distance_a": 1.2679,
+      "distance_b": 0.5135,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0007",
+      "medium": "talk",
+      "distance_a": null,
+      "distance_b": null,
+      "closer": "unavailable"
+    },
+    {
+      "pair_id": "pair_0008",
+      "medium": "x",
+      "distance_a": 0.9736,
+      "distance_b": 0.9736,
+      "closer": "tie"
+    },
+    {
+      "pair_id": "pair_0009",
+      "medium": "blog",
+      "distance_a": 0.5592,
+      "distance_b": 0.5455,
+      "closer": "tie"
+    },
+    {
+      "pair_id": "pair_0010",
+      "medium": "linkedin",
+      "distance_a": 1.5636,
+      "distance_b": 0.5896,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0011",
+      "medium": "talk",
+      "distance_a": null,
+      "distance_b": null,
+      "closer": "unavailable"
+    },
+    {
+      "pair_id": "pair_0012",
+      "medium": "x",
+      "distance_a": 0.646,
+      "distance_b": 0.646,
+      "closer": "tie"
+    },
+    {
+      "pair_id": "pair_0013",
+      "medium": "blog",
+      "distance_a": 0.6177,
+      "distance_b": 0.4486,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0014",
+      "medium": "linkedin",
+      "distance_a": 0.6866,
+      "distance_b": 0.3993,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0015",
+      "medium": "talk",
+      "distance_a": null,
+      "distance_b": null,
+      "closer": "unavailable"
+    },
+    {
+      "pair_id": "pair_0016",
+      "medium": "x",
+      "distance_a": 0.5479,
+      "distance_b": 0.5479,
+      "closer": "tie"
+    },
+    {
+      "pair_id": "pair_0017",
+      "medium": "blog",
+      "distance_a": 0.7837,
+      "distance_b": 0.6389,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0018",
+      "medium": "linkedin",
+      "distance_a": 0.8543,
+      "distance_b": 0.5423,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0019",
+      "medium": "talk",
+      "distance_a": null,
+      "distance_b": null,
+      "closer": "unavailable"
+    },
+    {
+      "pair_id": "pair_0020",
+      "medium": "x",
+      "distance_a": 0.7093,
+      "distance_b": 0.4728,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0021",
+      "medium": "blog",
+      "distance_a": 0.5279,
+      "distance_b": 0.5175,
+      "closer": "tie"
+    },
+    {
+      "pair_id": "pair_0022",
+      "medium": "linkedin",
+      "distance_a": 5.8967,
+      "distance_b": 2.1545,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0023",
+      "medium": "talk",
+      "distance_a": null,
+      "distance_b": null,
+      "closer": "unavailable"
+    },
+    {
+      "pair_id": "pair_0024",
+      "medium": "x",
+      "distance_a": 1.247,
+      "distance_b": 1.247,
+      "closer": "tie"
+    },
+    {
+      "pair_id": "pair_0025",
+      "medium": "blog",
+      "distance_a": 0.4133,
+      "distance_b": 0.5979,
+      "closer": "a"
+    },
+    {
+      "pair_id": "pair_0026",
+      "medium": "linkedin",
+      "distance_a": 0.4014,
+      "distance_b": 0.5355,
+      "closer": "a"
+    },
+    {
+      "pair_id": "pair_0027",
+      "medium": "talk",
+      "distance_a": null,
+      "distance_b": null,
+      "closer": "unavailable"
+    },
+    {
+      "pair_id": "pair_0028",
+      "medium": "x",
+      "distance_a": 0.4855,
+      "distance_b": 0.4855,
+      "closer": "tie"
+    },
+    {
+      "pair_id": "pair_0029",
+      "medium": "blog",
+      "distance_a": 0.4343,
+      "distance_b": 1.1408,
+      "closer": "a"
+    },
+    {
+      "pair_id": "pair_0030",
+      "medium": "linkedin",
+      "distance_a": 0.3175,
+      "distance_b": 0.5902,
+      "closer": "a"
+    },
+    {
+      "pair_id": "pair_0031",
+      "medium": "talk",
+      "distance_a": null,
+      "distance_b": null,
+      "closer": "unavailable"
+    },
+    {
+      "pair_id": "pair_0032",
+      "medium": "x",
+      "distance_a": 1.3034,
+      "distance_b": 0.5115,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0033",
+      "medium": "blog",
+      "distance_a": 0.5387,
+      "distance_b": 0.3775,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0034",
+      "medium": "linkedin",
+      "distance_a": 1.3389,
+      "distance_b": 1.2443,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0035",
+      "medium": "talk",
+      "distance_a": null,
+      "distance_b": null,
+      "closer": "unavailable"
+    },
+    {
+      "pair_id": "pair_0036",
+      "medium": "x",
+      "distance_a": 0.4728,
+      "distance_b": 0.4728,
+      "closer": "tie"
+    },
+    {
+      "pair_id": "pair_0037",
+      "medium": "blog",
+      "distance_a": 0.2857,
+      "distance_b": 0.6794,
+      "closer": "a"
+    },
+    {
+      "pair_id": "pair_0038",
+      "medium": "linkedin",
+      "distance_a": 0.6451,
+      "distance_b": 0.6009,
+      "closer": "tie"
+    },
+    {
+      "pair_id": "pair_0039",
+      "medium": "talk",
+      "distance_a": null,
+      "distance_b": null,
+      "closer": "unavailable"
+    },
+    {
+      "pair_id": "pair_0040",
+      "medium": "x",
+      "distance_a": 0.6034,
+      "distance_b": 0.6034,
+      "closer": "tie"
+    },
+    {
+      "pair_id": "pair_0041",
+      "medium": "blog",
+      "distance_a": 0.767,
+      "distance_b": 0.6874,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0042",
+      "medium": "linkedin",
+      "distance_a": 0.3798,
+      "distance_b": 0.4342,
+      "closer": "a"
+    },
+    {
+      "pair_id": "pair_0043",
+      "medium": "talk",
+      "distance_a": null,
+      "distance_b": null,
+      "closer": "unavailable"
+    },
+    {
+      "pair_id": "pair_0044",
+      "medium": "x",
+      "distance_a": 0.497,
+      "distance_b": 0.493,
+      "closer": "tie"
+    },
+    {
+      "pair_id": "pair_0045",
+      "medium": "blog",
+      "distance_a": 0.5703,
+      "distance_b": 0.262,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0046",
+      "medium": "linkedin",
+      "distance_a": 0.2938,
+      "distance_b": 1.5512,
+      "closer": "a"
+    },
+    {
+      "pair_id": "pair_0047",
+      "medium": "talk",
+      "distance_a": null,
+      "distance_b": null,
+      "closer": "unavailable"
+    },
+    {
+      "pair_id": "pair_0048",
+      "medium": "x",
+      "distance_a": 0.4361,
+      "distance_b": 0.4484,
+      "closer": "tie"
+    },
+    {
+      "pair_id": "pair_0049",
+      "medium": "blog",
+      "distance_a": 0.66,
+      "distance_b": 1.2334,
+      "closer": "a"
+    },
+    {
+      "pair_id": "pair_0050",
+      "medium": "linkedin",
+      "distance_a": 0.5465,
+      "distance_b": 0.4692,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0051",
+      "medium": "talk",
+      "distance_a": null,
+      "distance_b": null,
+      "closer": "unavailable"
+    },
+    {
+      "pair_id": "pair_0052",
+      "medium": "x",
+      "distance_a": 0.3239,
+      "distance_b": 0.334,
+      "closer": "tie"
+    },
+    {
+      "pair_id": "pair_0053",
+      "medium": "blog",
+      "distance_a": 0.6711,
+      "distance_b": 0.325,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0054",
+      "medium": "linkedin",
+      "distance_a": 3.5744,
+      "distance_b": 0.5333,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0055",
+      "medium": "talk",
+      "distance_a": null,
+      "distance_b": null,
+      "closer": "unavailable"
+    },
+    {
+      "pair_id": "pair_0056",
+      "medium": "x",
+      "distance_a": 0.7439,
+      "distance_b": 0.7439,
+      "closer": "tie"
+    },
+    {
+      "pair_id": "pair_0057",
+      "medium": "blog",
+      "distance_a": 0.4611,
+      "distance_b": 0.5181,
+      "closer": "a"
+    },
+    {
+      "pair_id": "pair_0058",
+      "medium": "linkedin",
+      "distance_a": 0.6174,
+      "distance_b": 0.1974,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0059",
+      "medium": "talk",
+      "distance_a": null,
+      "distance_b": null,
+      "closer": "unavailable"
+    },
+    {
+      "pair_id": "pair_0060",
+      "medium": "x",
+      "distance_a": 0.5819,
+      "distance_b": 0.5819,
+      "closer": "tie"
+    },
+    {
+      "pair_id": "pair_0061",
+      "medium": "blog",
+      "distance_a": 0.6878,
+      "distance_b": 0.5764,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0062",
+      "medium": "linkedin",
+      "distance_a": 0.4887,
+      "distance_b": 0.5156,
+      "closer": "tie"
+    },
+    {
+      "pair_id": "pair_0063",
+      "medium": "talk",
+      "distance_a": null,
+      "distance_b": null,
+      "closer": "unavailable"
+    },
+    {
+      "pair_id": "pair_0064",
+      "medium": "x",
+      "distance_a": 0.6916,
+      "distance_b": 0.5085,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0065",
+      "medium": "blog",
+      "distance_a": 0.6349,
+      "distance_b": 0.6627,
+      "closer": "tie"
+    },
+    {
+      "pair_id": "pair_0066",
+      "medium": "linkedin",
+      "distance_a": 0.2799,
+      "distance_b": 0.3396,
+      "closer": "a"
+    },
+    {
+      "pair_id": "pair_0067",
+      "medium": "talk",
+      "distance_a": null,
+      "distance_b": null,
+      "closer": "unavailable"
+    },
+    {
+      "pair_id": "pair_0068",
+      "medium": "x",
+      "distance_a": 0.8068,
+      "distance_b": 0.7423,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0069",
+      "medium": "blog",
+      "distance_a": 0.5715,
+      "distance_b": 0.6962,
+      "closer": "a"
+    },
+    {
+      "pair_id": "pair_0070",
+      "medium": "linkedin",
+      "distance_a": 0.5397,
+      "distance_b": 1.4688,
+      "closer": "a"
+    },
+    {
+      "pair_id": "pair_0071",
+      "medium": "talk",
+      "distance_a": null,
+      "distance_b": null,
+      "closer": "unavailable"
+    },
+    {
+      "pair_id": "pair_0072",
+      "medium": "x",
+      "distance_a": 0.5712,
+      "distance_b": 0.5712,
+      "closer": "tie"
+    },
+    {
+      "pair_id": "pair_0073",
+      "medium": "blog",
+      "distance_a": 0.7541,
+      "distance_b": 0.4901,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0074",
+      "medium": "linkedin",
+      "distance_a": 0.4103,
+      "distance_b": 0.3445,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0075",
+      "medium": "talk",
+      "distance_a": null,
+      "distance_b": null,
+      "closer": "unavailable"
+    },
+    {
+      "pair_id": "pair_0076",
+      "medium": "x",
+      "distance_a": 0.3857,
+      "distance_b": 0.7759,
+      "closer": "a"
+    },
+    {
+      "pair_id": "pair_0077",
+      "medium": "blog",
+      "distance_a": 0.3521,
+      "distance_b": 0.2565,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0078",
+      "medium": "linkedin",
+      "distance_a": 0.5546,
+      "distance_b": 0.5694,
+      "closer": "tie"
+    },
+    {
+      "pair_id": "pair_0079",
+      "medium": "talk",
+      "distance_a": null,
+      "distance_b": null,
+      "closer": "unavailable"
+    },
+    {
+      "pair_id": "pair_0080",
+      "medium": "x",
+      "distance_a": 0.5011,
+      "distance_b": 0.4345,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0081",
+      "medium": "blog",
+      "distance_a": 0.4735,
+      "distance_b": 1.1778,
+      "closer": "a"
+    },
+    {
+      "pair_id": "pair_0082",
+      "medium": "linkedin",
+      "distance_a": 0.4206,
+      "distance_b": 0.4814,
+      "closer": "a"
+    },
+    {
+      "pair_id": "pair_0083",
+      "medium": "talk",
+      "distance_a": null,
+      "distance_b": null,
+      "closer": "unavailable"
+    },
+    {
+      "pair_id": "pair_0084",
+      "medium": "x",
+      "distance_a": 0.6515,
+      "distance_b": 0.6515,
+      "closer": "tie"
+    },
+    {
+      "pair_id": "pair_0085",
+      "medium": "blog",
+      "distance_a": 1.1072,
+      "distance_b": 0.7111,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0086",
+      "medium": "linkedin",
+      "distance_a": 0.338,
+      "distance_b": 0.3192,
+      "closer": "tie"
+    },
+    {
+      "pair_id": "pair_0087",
+      "medium": "talk",
+      "distance_a": null,
+      "distance_b": null,
+      "closer": "unavailable"
+    },
+    {
+      "pair_id": "pair_0088",
+      "medium": "x",
+      "distance_a": 0.6141,
+      "distance_b": 0.6188,
+      "closer": "tie"
+    },
+    {
+      "pair_id": "pair_0089",
+      "medium": "blog",
+      "distance_a": 0.8027,
+      "distance_b": 0.6114,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0090",
+      "medium": "linkedin",
+      "distance_a": 0.4118,
+      "distance_b": 0.4961,
+      "closer": "a"
+    },
+    {
+      "pair_id": "pair_0091",
+      "medium": "talk",
+      "distance_a": null,
+      "distance_b": null,
+      "closer": "unavailable"
+    },
+    {
+      "pair_id": "pair_0092",
+      "medium": "x",
+      "distance_a": 0.6251,
+      "distance_b": 0.9584,
+      "closer": "a"
+    },
+    {
+      "pair_id": "pair_0093",
+      "medium": "blog",
+      "distance_a": 1.5536,
+      "distance_b": 0.523,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0094",
+      "medium": "linkedin",
+      "distance_a": 0.5893,
+      "distance_b": 2.162,
+      "closer": "a"
+    },
+    {
+      "pair_id": "pair_0095",
+      "medium": "talk",
+      "distance_a": null,
+      "distance_b": null,
+      "closer": "unavailable"
+    },
+    {
+      "pair_id": "pair_0096",
+      "medium": "x",
+      "distance_a": 0.7445,
+      "distance_b": 0.9334,
+      "closer": "a"
+    },
+    {
+      "pair_id": "pair_0097",
+      "medium": "blog",
+      "distance_a": 1.0871,
+      "distance_b": 1.1906,
+      "closer": "a"
+    },
+    {
+      "pair_id": "pair_0098",
+      "medium": "linkedin",
+      "distance_a": 0.2688,
+      "distance_b": 0.2913,
+      "closer": "tie"
+    },
+    {
+      "pair_id": "pair_0099",
+      "medium": "talk",
+      "distance_a": null,
+      "distance_b": null,
+      "closer": "unavailable"
+    },
+    {
+      "pair_id": "pair_0100",
+      "medium": "x",
+      "distance_a": 0.8817,
+      "distance_b": 0.5032,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0101",
+      "medium": "blog",
+      "distance_a": 0.7251,
+      "distance_b": 0.4147,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0102",
+      "medium": "linkedin",
+      "distance_a": 0.2366,
+      "distance_b": 0.5637,
+      "closer": "a"
+    },
+    {
+      "pair_id": "pair_0103",
+      "medium": "talk",
+      "distance_a": null,
+      "distance_b": null,
+      "closer": "unavailable"
+    },
+    {
+      "pair_id": "pair_0104",
+      "medium": "x",
+      "distance_a": 0.6625,
+      "distance_b": 0.6625,
+      "closer": "tie"
+    },
+    {
+      "pair_id": "pair_0105",
+      "medium": "blog",
+      "distance_a": 0.5827,
+      "distance_b": 0.5047,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0106",
+      "medium": "linkedin",
+      "distance_a": 0.1972,
+      "distance_b": 0.2254,
+      "closer": "tie"
+    },
+    {
+      "pair_id": "pair_0107",
+      "medium": "talk",
+      "distance_a": null,
+      "distance_b": null,
+      "closer": "unavailable"
+    },
+    {
+      "pair_id": "pair_0108",
+      "medium": "x",
+      "distance_a": 0.3345,
+      "distance_b": 0.5035,
+      "closer": "a"
+    },
+    {
+      "pair_id": "pair_0109",
+      "medium": "blog",
+      "distance_a": 0.5404,
+      "distance_b": 0.4013,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0110",
+      "medium": "linkedin",
+      "distance_a": 1.7126,
+      "distance_b": 0.9189,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0111",
+      "medium": "talk",
+      "distance_a": null,
+      "distance_b": null,
+      "closer": "unavailable"
+    },
+    {
+      "pair_id": "pair_0112",
+      "medium": "x",
+      "distance_a": 1.3662,
+      "distance_b": 1.3662,
+      "closer": "tie"
+    },
+    {
+      "pair_id": "pair_0113",
+      "medium": "blog",
+      "distance_a": 0.5208,
+      "distance_b": 0.699,
+      "closer": "a"
+    },
+    {
+      "pair_id": "pair_0114",
+      "medium": "linkedin",
+      "distance_a": 0.4644,
+      "distance_b": 0.3903,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0115",
+      "medium": "talk",
+      "distance_a": null,
+      "distance_b": null,
+      "closer": "unavailable"
+    },
+    {
+      "pair_id": "pair_0116",
+      "medium": "x",
+      "distance_a": 1.1077,
+      "distance_b": 0.4745,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0117",
+      "medium": "blog",
+      "distance_a": 0.7283,
+      "distance_b": 0.6531,
+      "closer": "b"
+    },
+    {
+      "pair_id": "pair_0118",
+      "medium": "linkedin",
+      "distance_a": 0.2979,
+      "distance_b": 0.7525,
+      "closer": "a"
+    },
+    {
+      "pair_id": "pair_0119",
+      "medium": "talk",
+      "distance_a": null,
+      "distance_b": null,
+      "closer": "unavailable"
+    },
+    {
+      "pair_id": "pair_0120",
+      "medium": "x",
+      "distance_a": 0.7444,
+      "distance_b": 0.7444,
+      "closer": "tie"
+    }
+  ]
+}

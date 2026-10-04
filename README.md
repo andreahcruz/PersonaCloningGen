@@ -1,5 +1,23 @@
 # Persona cloning ETL pipeline (Jason Lemkin)
 
+Start with [project context](docs/PROJECT_CONTEXT.md), [verified state](docs/project_state.md),
+and the [next-task plan](docs/PLAN.md). The 2026-10-03 audit distinguishes the current
+Compose application, separate persona pipeline, and host QLoRA comparisons. Historical
+scores and older setup/default claims below are not substitutes for current configuration
+or registered experiment evidence. In particular, the watcher download and trainer
+default dataset differ; see the state document before using automated training.
+
+Approved whole-source SFT preparation now has three registered runs and independent
+structural verification. The latest 1,011-row candidate still requires source-quality
+work before training; see [preparation evidence and commands](docs/data/COMPLETE_SOURCE_SFT.md).
+
+A separate 512-token correction has a saved adapter. EXP-20261003-004 keeps whole posts,
+relabels section slices as openings or continuations, and drops mid-sentence cuts.
+EXP-20261003-005 finished that file into `host_finetune/output/lemkin_lora_relabel`
+(train loss 1.797, best eval loss 1.3316). A CPU job finished embedding the train split into
+Chroma collection `lemkin_train_only` (21,194 documents) and did not replace `lemkin_content`.
+Neither result is a finished comparison or a Streamlit deployment. See [project state](docs/project_state.md).
+
 Dockerized stack: Airflow, Spark, MinIO, Chroma, Streamlit. **Local Lemkin JSONL** (blog, LinkedIn, X, YouTube transcripts) is ingested into MinIO, cleaned and chunked in Spark, embedded with **Ollama** (`nomic-embed-text`), then loaded into **Chroma**, with a **Streamlit** UI for RAG-style generation.
 
 ## Data files (place under `./data`)

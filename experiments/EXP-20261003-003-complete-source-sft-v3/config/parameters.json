@@ -1,0 +1,10 @@
+{
+  "raw_dir": "data",
+  "cleaned_dir": "data\\cleaned",
+  "prior_dataset": "host_finetune\\data\\dataset_fit512_keepbreaks_balanced.jsonl",
+  "assignments": "experiments\\EXP-20261001-008-repaired-balanced-split\\raw\\split_assignments.jsonl",
+  "gold": "data\\openai_ft\\lemkin_gold_eval.jsonl",
+  "tokenizer": "C:\\Users\\okevi\\.cache\\huggingface\\hub\\models--unsloth--Meta-Llama-3.1-8B-Instruct-bnb-4bit\\snapshots\\f15c379fb32bb402fa06a7ae9aecb1febf4b79ec",
+  "max_tokens": 2048,
+  "out": "experiments\\EXP-20261003-003-complete-source-sft-v3"
+}

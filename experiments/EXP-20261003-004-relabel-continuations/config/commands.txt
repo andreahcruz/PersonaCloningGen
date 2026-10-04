@@ -1,0 +1,2 @@
+.\.venv-test\Scripts\python.exe -m pytest -q tests/test_relabel_continuations.py
+.\host_finetune\.venv\Scripts\python.exe -m host_finetune.relabel_continuations --dataset host_finetune/data/dataset_fit512_keepbreaks_balanced.jsonl --assignments experiments/EXP-20261001-008-repaired-balanced-split/raw/split_assignments.jsonl --out experiments/EXP-20261003-004-relabel-continuations --tokenizer C:\Users\okevi\.cache\huggingface\hub\models--unsloth--Meta-Llama-3.1-8B-Instruct-bnb-4bit\snapshots\f15c379fb32bb402fa06a7ae9aecb1febf4b79ec --max-seq-length 512

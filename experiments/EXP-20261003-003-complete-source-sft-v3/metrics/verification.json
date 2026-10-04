@@ -1,0 +1,19 @@
+{
+  "status": "PASSED",
+  "rows_checked": 1011,
+  "splits": {
+    "train": 601,
+    "validation": 206,
+    "test": 204
+  },
+  "cross_split_pairs_checked_brute_force": 288434,
+  "cross_split_exact_or_jaccard_0_8_matches": 0,
+  "normalized_exact_duplicate_rows_within_splits": 0,
+  "prior_audit_artifacts_unchanged": 34,
+  "all_input_hashes_unchanged": true,
+  "full_source_targets_verified": true,
+  "full_chat_token_counts_verified": true,
+  "split_ownership_preserved": true,
+  "review_sample_excludes_test": true,
+  "scope": "Structural/token/lexical checks only; not semantic completeness or verified authorship."
+}

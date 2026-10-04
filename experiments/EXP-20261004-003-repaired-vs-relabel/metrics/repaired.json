@@ -1,0 +1,208 @@
+{
+  "n_rows": 120,
+  "gold_rubric": {
+    "overall": 0.2713,
+    "format_score": 0.2926,
+    "brief_alignment": 0.3867,
+    "expected_fact_coverage": 0.4111,
+    "gold_reference_coverage": 0.1972,
+    "rubric_must_have_coverage": 0.0688
+  },
+  "retrieval_grounding": {
+    "answer_relevance": 0.7391,
+    "faithfulness": 0.0,
+    "context_precision": 0.0,
+    "context_recall": 0.0
+  },
+  "paired_bleu": 0.0033,
+  "paired_rouge_l": 0.0753,
+  "n": 120,
+  "stopping": {
+    "n": 120,
+    "stop_metadata_available": 120,
+    "early_eos_rate": 0.65,
+    "length_limit_rate": 0.25,
+    "interpretation": "Early EOS and absent final punctuation are not semantic incompleteness."
+  },
+  "decision": {
+    "n": 120,
+    "early_eot_rate": 0.65,
+    "early_eot_observed": 120,
+    "mid_sentence_stop_rate": 0.6333333333333333,
+    "use_for_selection": [
+      "early_eot_rate",
+      "mid_sentence_stop_rate"
+    ],
+    "logged_not_for_selection": [
+      "paired_bleu",
+      "paired_rouge_l"
+    ]
+  },
+  "selection_warning": "Legacy lexical/format scores are not validated voice metrics. X is prompted as a single post but legacy format scoring expects a thread; other format constraints are not all requested in these prompts. Do not select an adapter by overall score. Early EOS alone is not an incomplete answer. Gold topics are a development set.",
+  "by_medium": {
+    "blog": {
+      "n_rows": 30,
+      "gold_rubric": {
+        "overall": 0.3112,
+        "format_score": 0.3528,
+        "brief_alignment": 0.3382,
+        "expected_fact_coverage": 0.5333,
+        "gold_reference_coverage": 0.2486,
+        "rubric_must_have_coverage": 0.0833
+      },
+      "retrieval_grounding": {
+        "answer_relevance": 0.6008,
+        "faithfulness": 0.0,
+        "context_precision": 0.0,
+        "context_recall": 0.0
+      },
+      "paired_bleu": 0.0031,
+      "paired_rouge_l": 0.0716,
+      "n": 30,
+      "stopping": {
+        "n": 30,
+        "stop_metadata_available": 30,
+        "early_eos_rate": 0.9333333333333333,
+        "length_limit_rate": 0.0,
+        "interpretation": "Early EOS and absent final punctuation are not semantic incompleteness."
+      },
+      "decision": {
+        "n": 30,
+        "early_eot_rate": 0.9333333333333333,
+        "early_eot_observed": 30,
+        "mid_sentence_stop_rate": 0.13333333333333333,
+        "use_for_selection": [
+          "early_eot_rate",
+          "mid_sentence_stop_rate"
+        ],
+        "logged_not_for_selection": [
+          "paired_bleu",
+          "paired_rouge_l"
+        ]
+      }
+    },
+    "linkedin": {
+      "n_rows": 30,
+      "gold_rubric": {
+        "overall": 0.3152,
+        "format_score": 0.2954,
+        "brief_alignment": 0.4538,
+        "expected_fact_coverage": 0.5111,
+        "gold_reference_coverage": 0.2157,
+        "rubric_must_have_coverage": 0.1
+      },
+      "retrieval_grounding": {
+        "answer_relevance": 0.8423,
+        "faithfulness": 0.0,
+        "context_precision": 0.0,
+        "context_recall": 0.0
+      },
+      "paired_bleu": 0.0038,
+      "paired_rouge_l": 0.0774,
+      "n": 30,
+      "stopping": {
+        "n": 30,
+        "stop_metadata_available": 30,
+        "early_eos_rate": 0.1,
+        "length_limit_rate": 0.7,
+        "interpretation": "Early EOS and absent final punctuation are not semantic incompleteness."
+      },
+      "decision": {
+        "n": 30,
+        "early_eot_rate": 0.1,
+        "early_eot_observed": 30,
+        "mid_sentence_stop_rate": 0.7333333333333333,
+        "use_for_selection": [
+          "early_eot_rate",
+          "mid_sentence_stop_rate"
+        ],
+        "logged_not_for_selection": [
+          "paired_bleu",
+          "paired_rouge_l"
+        ]
+      }
+    },
+    "x": {
+      "n_rows": 30,
+      "gold_rubric": {
+        "overall": 0.2054,
+        "format_score": 0.3025,
+        "brief_alignment": 0.445,
+        "expected_fact_coverage": 0.1333,
+        "gold_reference_coverage": 0.1131,
+        "rubric_must_have_coverage": 0.0333
+      },
+      "retrieval_grounding": {
+        "answer_relevance": 0.9905,
+        "faithfulness": 0.0,
+        "context_precision": 0.0,
+        "context_recall": 0.0
+      },
+      "paired_bleu": 0.004,
+      "paired_rouge_l": 0.0888,
+      "n": 30,
+      "stopping": {
+        "n": 30,
+        "stop_metadata_available": 30,
+        "early_eos_rate": 0.5666666666666667,
+        "length_limit_rate": 0.3,
+        "interpretation": "Early EOS and absent final punctuation are not semantic incompleteness."
+      },
+      "decision": {
+        "n": 30,
+        "early_eot_rate": 0.5666666666666667,
+        "early_eot_observed": 30,
+        "mid_sentence_stop_rate": 0.8,
+        "use_for_selection": [
+          "early_eot_rate",
+          "mid_sentence_stop_rate"
+        ],
+        "logged_not_for_selection": [
+          "paired_bleu",
+          "paired_rouge_l"
+        ]
+      }
+    },
+    "talk": {
+      "n_rows": 30,
+      "gold_rubric": {
+        "overall": 0.2532,
+        "format_score": 0.2196,
+        "brief_alignment": 0.3098,
+        "expected_fact_coverage": 0.4667,
+        "gold_reference_coverage": 0.2115,
+        "rubric_must_have_coverage": 0.0583
+      },
+      "retrieval_grounding": {
+        "answer_relevance": 0.5228,
+        "faithfulness": 0.0,
+        "context_precision": 0.0,
+        "context_recall": 0.0
+      },
+      "paired_bleu": 0.0025,
+      "paired_rouge_l": 0.0632,
+      "n": 30,
+      "stopping": {
+        "n": 30,
+        "stop_metadata_available": 30,
+        "early_eos_rate": 1.0,
+        "length_limit_rate": 0.0,
+        "interpretation": "Early EOS and absent final punctuation are not semantic incompleteness."
+      },
+      "decision": {
+        "n": 30,
+        "early_eot_rate": 1.0,
+        "early_eot_observed": 30,
+        "mid_sentence_stop_rate": 0.8666666666666667,
+        "use_for_selection": [
+          "early_eot_rate",
+          "mid_sentence_stop_rate"
+        ],
+        "logged_not_for_selection": [
+          "paired_bleu",
+          "paired_rouge_l"
+        ]
+      }
+    }
+  }
+}

@@ -25,6 +25,11 @@ Knobs (env vars / CLI):
     CHROMA_COLLECTION_NAME (default lemkin_content)
     OLLAMA_BASE          (default http://localhost:11434)
     OLLAMA_EMBED_MODEL   (default nomic-embed-text)
+
+``--train-only`` is a separate build. It reads the EXP-004 relabel file, keeps
+the train split, drops gold-overlap families, and writes ``lemkin_train_only``.
+It refuses to delete or upsert ``lemkin_content``. Embeddings send
+``options.num_gpu = 0``.
 """
 from __future__ import annotations
 
@@ -41,6 +46,21 @@ from pathlib import Path
 import requests
 
 from host_finetune.config import DATA_DIR
+from host_finetune.train_only_index import (
+    DEFAULT_ASSIGNMENTS,
+    DEFAULT_DATASET as TRAIN_ONLY_DATASET,
+    DEFAULT_GOLD_DISPOSITIONS,
+    DEFAULT_PERSIST_DIR,
+    TRAIN_ONLY_COLLECTION,
+    assert_collection_allowed,
+    blocked_group_ids,
+    index_documents,
+    load_jsonl,
+    ollama_embed_body,
+    gpu_used_conflict,
+    select_train_documents,
+    vram_conflict,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -69,13 +89,13 @@ def _parse_title(instr: str) -> tuple[str, int | None, int | None]:
 
 
 def _embed_batch(
-    texts: list[str], base_url: str, model: str
+    texts: list[str], base_url: str, model: str, *, cpu: bool = False
 ) -> list[list[float]]:
     """Embed a batch of texts in a single Ollama call.
 
     Ollama ``/api/embed`` accepts ``input`` as either ``str`` or ``list[str]``;
     batching is dramatically faster (20 ms/embed at batch=128 vs 2 s/embed at
-    batch=1 on this hardware).
+    batch=1 on this hardware). ``cpu=True`` sends ``num_gpu: 0``.
     """
     if not texts:
         return []
@@ -84,7 +104,7 @@ def _embed_batch(
     for attempt in range(EMBED_RETRIES):
         try:
             resp = requests.post(
-                url, json={"model": model, "input": texts}, timeout=300
+                url, json=ollama_embed_body(texts, model, cpu=cpu), timeout=300
             )
             resp.raise_for_status()
             data = resp.json()
@@ -112,10 +132,124 @@ def _load_rows(path: Path) -> list[dict]:
     return rows
 
 
+def _nvidia_csv(query: str) -> str:
+    import subprocess
+
+    return subprocess.check_output(
+        ["nvidia-smi", f"--query-{query}", "--format=csv,noheader,nounits"],
+        text=True,
+        encoding="utf-8",
+    )
+
+
+def query_compute_apps() -> dict[int, int]:
+    """Map GPU compute-app pid to used MiB. Skip Windows ``[N/A]`` cells."""
+    apps: dict[int, int] = {}
+    for line in _nvidia_csv("compute-apps=pid,used_gpu_memory").splitlines():
+        line = line.strip()
+        if not line or "," not in line:
+            continue
+        pid_text, mem_text = [part.strip() for part in line.split(",", 1)]
+        if not mem_text.isdigit():
+            continue
+        apps[int(pid_text)] = int(mem_text)
+    return apps
+
+
+def query_gpu_used_mib() -> list[int]:
+    """Total memory.used for each GPU, in MiB."""
+    used = []
+    for line in _nvidia_csv("gpu=memory.used").splitlines():
+        text = line.strip()
+        if text.isdigit():
+            used.append(int(text))
+    if not used:
+        raise RuntimeError("nvidia-smi did not report GPU memory.used")
+    return used
+
+
+def _probe_cpu_embed(embed_fn) -> None:
+    """Embed one short string and stop if GPU memory rises."""
+    before_apps = query_compute_apps()
+    before_gpu = query_gpu_used_mib()
+    embed_fn(["train-only index probe"])
+    after_apps = query_compute_apps()
+    after_gpu = query_gpu_used_mib()
+    conflict = vram_conflict(before_apps, after_apps) or gpu_used_conflict(before_gpu, after_gpu)
+    if conflict:
+        raise SystemExit(f"stopping train-only embed: {conflict}")
+    logger.info(
+        "CPU embed probe left GPU memory within tolerance (%s -> %s MiB)",
+        before_gpu,
+        after_gpu,
+    )
+
+
+def run_train_only(args: argparse.Namespace) -> None:
+    """Index EXP-004 train rows into a new persistent collection."""
+    collection_name = args.collection or TRAIN_ONLY_COLLECTION
+    assert_collection_allowed(collection_name)
+    dataset = Path(args.dataset)
+    assignments_path = Path(args.assignments)
+    dispositions_path = Path(args.gold_dispositions)
+    for path in (dataset, assignments_path, dispositions_path):
+        if not path.is_file():
+            raise SystemExit(f"error: missing {path}")
+    docs, stats = select_train_documents(
+        load_jsonl(dataset),
+        load_jsonl(assignments_path),
+        blocked_group_ids(load_jsonl(assignments_path), load_jsonl(dispositions_path)),
+    )
+    logger.info("train-only selection %s", stats)
+    if args.sample is not None:
+        docs = docs[: args.sample]
+    if not docs:
+        raise SystemExit("error: train-only selection is empty")
+
+    def embed_fn(texts: list[str]) -> list[list[float]]:
+        return _embed_batch(texts, args.ollama_base, args.embed_model, cpu=True)
+
+    if not args.skip_vram_probe:
+        _probe_cpu_embed(embed_fn)
+    if args.probe_only:
+        logger.info("probe only; no documents upserted")
+        return
+
+    import chromadb
+    from chromadb.config import Settings
+
+    persist = Path(args.persist_dir)
+    persist.mkdir(parents=True, exist_ok=True)
+    client = chromadb.PersistentClient(
+        path=str(persist), settings=Settings(anonymized_telemetry=False)
+    )
+    try:
+        client.delete_collection(collection_name)
+        logger.info("dropped existing collection %r in %s", collection_name, persist)
+    except Exception as exc:  # noqa: BLE001
+        logger.info("no existing collection %r to drop (%s)", collection_name, exc)
+    collection = client.get_or_create_collection(
+        collection_name, metadata={"hnsw:space": "cosine"}
+    )
+    # Batches of 64 long posts stalled Ollama. 16 stayed on CPU and returned.
+    batch_size = min(args.batch_size, 16)
+    count = index_documents(docs, collection, embed_fn, batch_size=batch_size)
+    logger.info("train-only index count=%d persist=%s", count, persist)
+
+
 def main() -> None:
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--dataset", default=str(DEFAULT_DATASET))
-    p.add_argument("--collection", default=DEFAULT_COLLECTION)
+    p.add_argument("--dataset", default=None)
+    p.add_argument("--collection", default=None)
+    p.add_argument("--train-only", action="store_true",
+                   help="Index the EXP-004 train split into lemkin_train_only.")
+    p.add_argument("--assignments", default=str(DEFAULT_ASSIGNMENTS))
+    p.add_argument("--gold-dispositions", default=str(DEFAULT_GOLD_DISPOSITIONS))
+    p.add_argument("--persist-dir", default=str(DEFAULT_PERSIST_DIR))
+    p.add_argument("--probe-only", action="store_true",
+                   help="CPU-embed one string, check VRAM, and do not upsert.")
+    p.add_argument("--skip-vram-probe", action="store_true",
+                   help="Skip the nvidia-smi check. Tests and offline stubs only.")
     p.add_argument("--chroma-host", default=DEFAULT_CHROMA_HOST)
     p.add_argument("--chroma-port", type=int, default=DEFAULT_CHROMA_PORT)
     p.add_argument("--ollama-base", default=DEFAULT_OLLAMA_BASE)
@@ -130,6 +264,16 @@ def main() -> None:
         level=logging.DEBUG if args.verbose else logging.INFO,
         format="%(asctime)s %(levelname)s %(name)s: %(message)s",
     )
+
+    if args.train_only:
+        if args.dataset is None:
+            args.dataset = str(TRAIN_ONLY_DATASET)
+        run_train_only(args)
+        return
+    if args.dataset is None:
+        args.dataset = str(DEFAULT_DATASET)
+    if args.collection is None:
+        args.collection = DEFAULT_COLLECTION
 
     src = Path(args.dataset)
     if not src.is_file():

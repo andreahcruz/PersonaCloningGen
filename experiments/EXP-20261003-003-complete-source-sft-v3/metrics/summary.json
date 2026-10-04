@@ -1,0 +1,71 @@
+{
+  "candidate_rows": 1011,
+  "splits": {
+    "train": 601,
+    "validation": 206,
+    "test": 204
+  },
+  "mediums": {
+    "blog": 1011
+  },
+  "dispositions": {
+    "quarantined": 29359,
+    "candidate": 1011
+  },
+  "reason_counts": {
+    "promotional_tail_requires_review": 10,
+    "guest_recap_attribution_requires_review": 151,
+    "gold_overlap_family": 39,
+    "ending_requires_review": 16955,
+    "embedded_or_external_context_requires_review": 4954,
+    "over_context_budget": 186,
+    "trailing_related_link_requires_review": 263,
+    "ambiguous_or_incomplete_ending": 5126,
+    "scraped_word_break_requires_review": 104,
+    "missing_visual_context_requires_review": 78,
+    "not_in_frozen_dataset": 11693,
+    "promotional_document": 19,
+    "event_titled_document_requires_review": 136,
+    "full_source_cross_split_family": 13,
+    "content_link_roundup": 68,
+    "question_link_roundup": 2,
+    "missing_independent_topic": 26283,
+    "below_existing_word_floor": 5518,
+    "uncertain_author": 68,
+    "unverified_speaker": 621
+  },
+  "full_source_duplicate_links": 3199,
+  "cross_split_family_documents": 13,
+  "gold_matching_documents_including_family": 39,
+  "eligibility_by_chat_budget": {
+    "512": {
+      "validation": 87,
+      "test": 88,
+      "train": 120
+    },
+    "1024": {
+      "train": 369,
+      "validation": 187,
+      "test": 179
+    },
+    "2048": {
+      "train": 601,
+      "validation": 206,
+      "test": 204
+    },
+    "4096": {
+      "train": 766,
+      "validation": 206,
+      "test": 204
+    }
+  },
+  "input_hashes_unchanged": true,
+  "training_ready": false,
+  "limitations": [
+    "Lexical Jaccard is not semantic or exhaustive substring detection.",
+    "Authorship uses source attribution, not independent author verification.",
+    "Whole-source candidates require manual review; no training authorized by output.",
+    "Cross-split families quarantined without reassigning any source.",
+    "Untitled social posts and transcripts deferred; this candidate is not medium-comparable to prior SFT."
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "rows_in": 31328,
+  "rows_out": 26545,
+  "train_groups": {
+    "G3_artificial_sentence_complete": 8430,
+    "source_final_fragment": 2247,
+    "G4_artificial_unfinished": 1332,
+    "G5_structural_continuation": 99,
+    "G4_mid_sentence": 1148,
+    "G2_whole_document": 642,
+    "G1_whole_x_post": 10974,
+    "G6_transcript_tail": 103,
+    "G6_whole_transcript_no_sentence_end": 87
+  },
+  "actions": {
+    "train:opening": 1711,
+    "train:continuation": 8050,
+    "validation:opening": 390,
+    "validation:continuation": 474,
+    "validation:source_final_fragment:drop": 265,
+    "validation:unchanged": 1724,
+    "train:G4_artificial_unfinished:drop": 1332,
+    "test:opening": 389,
+    "test:source_final_fragment:drop": 273,
+    "train:source_final_fragment:drop": 1015,
+    "test:unchanged": 1722,
+    "test:continuation": 469,
+    "train:G4_mid_sentence:drop": 1148,
+    "train:unchanged": 11616,
+    "validation:G4_artificial_unfinished:drop": 112,
+    "test:G4_artificial_unfinished:drop": 114,
+    "test:G4_mid_sentence:drop": 50,
+    "validation:G4_mid_sentence:drop": 54,
+    "train:G6_transcript_tail:drop": 103,
+    "validation:G6_transcript_tail:drop": 19,
+    "test:G6_transcript_tail:drop": 19,
+    "train:G6_whole_transcript_no_sentence_end:drop": 87,
+    "validation:G6_whole_transcript_no_sentence_end:drop": 95,
+    "test:G6_whole_transcript_no_sentence_end:drop": 97
+  },
+  "by_split": {
+    "train": 21377,
+    "validation": 2588,
+    "test": 2580
+  }
+}

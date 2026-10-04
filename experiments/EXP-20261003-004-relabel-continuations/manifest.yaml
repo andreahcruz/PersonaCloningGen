@@ -1,0 +1,58 @@
+{
+  "experiment_id": "EXP-20261003-004-relabel-continuations",
+  "timestamp": "2026-10-04T06:40:00+00:00",
+  "status": "MEASURED",
+  "execution_commands": [
+    ".\\.venv-test\\Scripts\\python.exe -m pytest -q tests/test_relabel_continuations.py",
+    ".\\host_finetune\\.venv\\Scripts\\python.exe -m host_finetune.relabel_continuations --dataset host_finetune/data/dataset_fit512_keepbreaks_balanced.jsonl --assignments experiments/EXP-20261001-008-repaired-balanced-split/raw/split_assignments.jsonl --out experiments/EXP-20261003-004-relabel-continuations --tokenizer C:\\Users\\okevi\\.cache\\huggingface\\hub\\models--unsloth--Meta-Llama-3.1-8B-Instruct-bnb-4bit\\snapshots\\f15c379fb32bb402fa06a7ae9aecb1febf4b79ec --max-seq-length 512"
+  ],
+  "git": {
+    "commit": "ea1d58b30cafcb4cf18a03ded39963f64ce6aee7",
+    "dirty": true
+  },
+  "data": {
+    "source_manifest": "experiments/EXP-20261001-008-repaired-balanced-split/raw/split_assignments.jsonl",
+    "source_hashes": {
+      "host_finetune/data/dataset_fit512_keepbreaks_balanced.jsonl": "6e99b414733eafdfa27a5e94dd26beff1498bbfd58af132251e24044fef4f057"
+    },
+    "processed_dataset_hash": "1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b",
+    "split_manifest_hash": "6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb",
+    "gold_eval_hash": "n/a: this run does not score generations"
+  },
+  "rag": {
+    "persona_profile_hash": "n/a: no retrieval",
+    "chroma_collection": "n/a: no retrieval",
+    "index_version_or_snapshot": "n/a: no retrieval",
+    "embedding_model": "n/a: no retrieval"
+  },
+  "model": {
+    "model_name": "n/a: dataset build only. Tokenizer unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit snapshot f15c379fb32bb402fa06a7ae9aecb1febf4b79ec used to enforce the 512-token chat budget",
+    "model_or_adapter_hash": "n/a: no adapter trained in this run",
+    "config": {
+      "max_seq_length": 512,
+      "policy": "keep G1 and G2; relabel G3, G5, and sentence-final last slices; drop G4 and G6"
+    },
+    "random_seed": "n/a: no sampling"
+  },
+  "evaluation": {
+    "evaluator_commit": "ea1d58b30cafcb4cf18a03ded39963f64ce6aee7",
+    "judge_model": "n/a: no judge",
+    "judge_config": "n/a: no judge"
+  },
+  "environment": {
+    "python_version": "3.11.9",
+    "package_snapshot": "tests on .venv-test; token counts on host_finetune/.venv",
+    "hardware": "tokenization only; NVIDIA GeForce RTX 5070 Ti present and unused"
+  },
+  "outputs": {
+    "raw": [
+      "raw/dataset.jsonl",
+      "raw/split_assignments.jsonl",
+      "raw/dispositions.jsonl"
+    ],
+    "metrics": [
+      "metrics/relabel_report.json"
+    ],
+    "warnings_and_failures": "Group 3 is 8430 and the paragraph-cut bucket is 1332. The summary table had 8315 and 1447. The same 115 rows end on the sentence regex and were relabeled."
+  }
+}
