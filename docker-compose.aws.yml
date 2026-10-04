@@ -19,6 +19,8 @@ x-pipeline-env: &pipeline-env
   MINIO_ENDPOINT: http://minio:4566
   LEMKIN_DATA_DIR: /opt/airflow/data/cleaned
   PERSONA_LOCAL_PATH: /opt/airflow/data/deploy/persona_profile.json
+  # A pipeline proof run uses its own collection so it never replaces PersonaRAG's restored corpus.
+  CHROMA_COLLECTION_NAME: ${PIPELINE_CHROMA_COLLECTION_NAME:-lemkin_content}
   SPARK_EMBED_PARTITIONS: ${SPARK_EMBED_PARTITIONS:-4}
 
 services:
