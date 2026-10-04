@@ -14,11 +14,45 @@
 
 x-pipeline-env: &pipeline-env
   OLLAMA_BASE: http://ollama:11434
+  # Current S3-compatible endpoint used only by the EC2 demo.  It preserves the
+  # pipeline's boto3/Spark S3 contract after the legacy MinIO images were retired.
+  MINIO_ENDPOINT: http://minio:4566
   LEMKIN_DATA_DIR: /opt/airflow/data/cleaned
   PERSONA_LOCAL_PATH: /opt/airflow/data/deploy/persona_profile.json
   SPARK_EMBED_PARTITIONS: ${SPARK_EMBED_PARTITIONS:-4}
 
 services:
+  minio:
+    # LocalStack provides the S3 API the pipeline uses; service name stays `minio`
+    # so no DAG or Spark code needs a special EC2 path.
+    image: localstack/localstack:latest
+    command: ""
+    environment:
+      SERVICES: s3
+      AWS_DEFAULT_REGION: us-east-2
+      AWS_ACCESS_KEY_ID: test
+      AWS_SECRET_ACCESS_KEY: test
+    ports:
+      - "127.0.0.1:${MINIO_HOST_API_PORT:-9000}:4566"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://localhost:4566/_localstack/health | grep -q '\"s3\"'"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+
+  minio-setup:
+    image: amazon/aws-cli:2
+    environment:
+      AWS_ACCESS_KEY_ID: test
+      AWS_SECRET_ACCESS_KEY: test
+      AWS_DEFAULT_REGION: us-east-2
+    entrypoint: >
+      /bin/sh -c "
+      aws --endpoint-url http://minio:4566 s3api create-bucket --bucket lemkin-raw || true;
+      aws --endpoint-url http://minio:4566 s3api create-bucket --bucket lemkin-processed || true;
+      echo 'S3-compatible buckets created successfully';
+      "
+
   ollama:
     image: ${OLLAMA_IMAGE:-ollama/ollama:latest}
     container_name: ollama
