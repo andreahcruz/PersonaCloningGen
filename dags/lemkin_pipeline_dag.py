@@ -84,6 +84,25 @@ def _list_keys(s3, bucket: str, prefix: str) -> List[str]:
     return keys
 
 
+def _delete_keys(s3, bucket: str, keys: List[str]) -> None:
+    """Delete keys in batches of 1000 (the delete_objects limit)."""
+    for start in range(0, len(keys), 1000):
+        batch = keys[start : start + 1000]
+        s3.delete_objects(Bucket=bucket, Delete={"Objects": [{"Key": k} for k in batch], "Quiet": True})
+
+
+def _collection_ids(collection, page_size: int = 5000) -> List[str]:
+    """Every id currently in a Chroma collection, paged."""
+    ids: List[str] = []
+    offset = 0
+    while True:
+        page = collection.get(include=[], limit=page_size, offset=offset).get("ids") or []
+        ids.extend(page)
+        if len(page) < page_size:
+            return ids
+        offset += page_size
+
+
 def _has_embedding(row: Dict[str, Any]) -> bool:
     emb = row.get("embedding")
     return isinstance(emb, list) and len(emb) > 0
@@ -214,6 +233,7 @@ def extract_to_minio():
     ]
 
     total = 0
+    written = set()
     for filename, normalizer in loaders:
         path = data_dir / filename
         if not path.is_file():
@@ -245,6 +265,7 @@ def extract_to_minio():
                     key = f"{raw_prefix}/{Path(filename).stem}_{idx:06d}.json"
                     body = json.dumps(rec, ensure_ascii=False)
                     s3.put_object(Bucket=bucket, Key=key, Body=body.encode("utf-8"))
+                    written.add(key)
                     idx += 1
                     total += 1
         except UnicodeDecodeError as e:
@@ -265,6 +286,12 @@ def extract_to_minio():
             "jasonmlemkinyoutubetranscripts.jsonl, saastryoutubetranscripts.jsonl, "
             "jasonlk_originals.jsonl under ./data (mounted in the container)."
         )
+    # Spark and extract_persona read all of raw/, so records left over from an earlier, larger
+    # input (e.g. raw data/ before switching to data/cleaned/) would leak into this run.
+    stale = [k for k in _list_keys(s3, bucket, f"{raw_prefix}/") if k not in written]
+    if stale:
+        _delete_keys(s3, bucket, stale)
+        log.info("Deleted %d stale objects under s3://%s/%s/ from a previous run.", len(stale), bucket, raw_prefix)
     log.info("Uploaded %d total documents to s3://%s/%s/", total, bucket, raw_prefix)
 
 
@@ -331,6 +358,7 @@ def load_to_chroma():
     batch_size = 100
     upserted = 0
     skipped_no_embedding = 0
+    current_ids = set()
     for start in range(0, len(rows), batch_size):
         chunk = rows[start : start + batch_size]
         ids = []
@@ -373,6 +401,15 @@ def load_to_chroma():
                     f"of {len(rows)} (already upserted: {upserted}): {e}"
                 ) from e
             upserted += len(ids)
+            current_ids.update(ids)
+
+    # Spark's essay_id (monotonically_increasing_id) is not stable across runs, so ids from an
+    # earlier run would otherwise accumulate. Prune only after every upsert succeeded.
+    stale_ids = [i for i in _collection_ids(collection) if i not in current_ids]
+    for start in range(0, len(stale_ids), 5000):
+        collection.delete(ids=stale_ids[start : start + 5000])
+    if stale_ids:
+        log.info("Deleted %d stale ids from Chroma collection '%s'.", len(stale_ids), collection_name)
 
     log.info(
         "Chroma collection '%s': upserted %d rows with embeddings; skipped %d JSON lines with "
@@ -611,6 +648,7 @@ def extract_persona():
     )
     local_path = os.environ.get("PERSONA_LOCAL_PATH", "/opt/airflow/data/persona_profile.json")
     try:
+        Path(local_path).parent.mkdir(parents=True, exist_ok=True)
         Path(local_path).write_text(body, encoding="utf-8")
         log.info("Also wrote persona to %s (host ./data when mounted)", local_path)
     except OSError as e:
@@ -647,19 +685,20 @@ with DAG(
         conn_id="spark_default",
         # PySpark in the Airflow image does not ship S3A jars; MinIO/s3a needs these on the classpath
         packages="org.apache.hadoop:hadoop-aws:3.3.4,com.amazonaws:aws-java-sdk-bundle:1.12.262",
+        # Credentials come from the environment (.env via docker-compose), never from this file.
         conf={
             "spark.driver.memory": "2g",
-            "spark.hadoop.fs.s3a.endpoint": "{{ var.value.get('MINIO_ENDPOINT', 'http://minio:9000') }}",
-            "spark.hadoop.fs.s3a.access.key": "minioadmin",
-            "spark.hadoop.fs.s3a.secret.key": "minioadmin",
+            "spark.hadoop.fs.s3a.endpoint": os.environ.get("MINIO_ENDPOINT", "http://minio:9000"),
+            "spark.hadoop.fs.s3a.access.key": os.environ.get("MINIO_ACCESS_KEY", ""),
+            "spark.hadoop.fs.s3a.secret.key": os.environ.get("MINIO_SECRET_KEY", ""),
             "spark.hadoop.fs.s3a.path.style.access": "true",
             "spark.hadoop.fs.s3a.impl": "org.apache.hadoop.fs.s3a.S3AFileSystem",
             "spark.hadoop.fs.s3a.connection.ssl.enabled": "false",
         },
         env_vars={
             "MINIO_ENDPOINT": os.environ.get("MINIO_ENDPOINT", "http://minio:9000"),
-            "MINIO_ACCESS_KEY": os.environ.get("MINIO_ACCESS_KEY", "minioadmin"),
-            "MINIO_SECRET_KEY": os.environ.get("MINIO_SECRET_KEY", "minioadmin"),
+            "MINIO_ACCESS_KEY": os.environ.get("MINIO_ACCESS_KEY", ""),
+            "MINIO_SECRET_KEY": os.environ.get("MINIO_SECRET_KEY", ""),
             "MINIO_BUCKET_RAW": os.environ.get("MINIO_BUCKET_RAW", "lemkin-raw"),
             "MINIO_BUCKET_PROCESSED": os.environ.get("MINIO_BUCKET_PROCESSED", "lemkin-processed"),
             "OLLAMA_BASE": os.environ.get("OLLAMA_BASE", "http://host.docker.internal:11434"),

@@ -40,6 +40,11 @@ class FakeS3:
         self.puts[Key] = Body
         self.objects[Key] = Body if isinstance(Body, bytes) else Body.encode()
 
+    def delete_objects(self, Bucket, Delete):
+        assert len(Delete["Objects"]) <= 1000
+        for obj in Delete["Objects"]:
+            self.objects.pop(obj["Key"], None)
+
 
 def jl(*rows):
     return ("\n".join(json.dumps(r) for r in rows) + "\n").encode()
@@ -134,6 +139,26 @@ def test_extract_reports_a_file_that_is_not_utf8(extract_env):
         dag.extract_to_minio()
 
 
+def test_extract_deletes_raw_records_left_from_a_larger_previous_input(extract_env):
+    s3, data_dir = extract_env
+    s3.objects.update({
+        "raw/jasonlemkin_blog_000000.json": b"{}",
+        "raw/jasonlemkin_blog_000001.json": b"{}",
+        "raw/jasonlemkinlinkedin_000000.json": b"{}",
+    })
+    (data_dir / "jasonlemkin_blog.jsonl").write_bytes(b'{"title": "T", "content": "hello world"}\n')
+    dag.extract_to_minio()
+    assert sorted(k for k in s3.objects if k.startswith("raw/")) == ["raw/jasonlemkin_blog_000000.json"]
+
+
+def test_extract_keeps_previous_raw_records_when_no_input_exists(extract_env):
+    s3, _ = extract_env
+    s3.objects["raw/jasonlemkin_blog_000000.json"] = b"{}"
+    with pytest.raises(RuntimeError, match="No documents uploaded"):
+        dag.extract_to_minio()
+    assert "raw/jasonlemkin_blog_000000.json" in s3.objects
+
+
 def test_extract_stops_before_reading_files_if_minio_is_down(monkeypatch, tmp_path):
     monkeypatch.setattr(dag, "_minio_client", lambda: FakeS3(missing_buckets={"lemkin-raw"}))
     monkeypatch.setenv("LEMKIN_DATA_DIR", str(tmp_path))
@@ -143,11 +168,20 @@ def test_extract_stops_before_reading_files_if_minio_is_down(monkeypatch, tmp_pa
 
 # ── load_to_chroma ────────────────────────────────────────────────────────
 class FakeCollection:
-    def __init__(self):
+    def __init__(self, existing_ids=()):
         self.upserts = []
+        self.ids = list(existing_ids)
 
     def upsert(self, **kw):
         self.upserts.append(kw)
+        self.ids.extend(i for i in kw["ids"] if i not in self.ids)
+
+    def get(self, include, limit, offset):
+        assert include == []
+        return {"ids": self.ids[offset:offset + limit]}
+
+    def delete(self, ids):
+        self.ids = [i for i in self.ids if i not in set(ids)]
 
 
 def _chunk(i, emb=True):
@@ -192,6 +226,47 @@ def test_load_upserts_good_rows_and_ignores_success_marker_and_bad_lines(monkeyp
     assert ids == ["blog_0_0", "blog_1_0"]
     assert "1 unparseable lines" in caplog.text
     assert "upserted 2 rows" in caplog.text
+
+
+def test_load_prunes_ids_from_a_previous_run(monkeypatch, caplog):
+    caplog.set_level(logging.INFO, logger="airflow.task")
+    s3 = FakeS3({"chunks/part-0.json": jl(_chunk(0), _chunk(1))})
+    collection = FakeCollection(existing_ids=["blog_0_0", "blog_77_0", "blog_78_0"])
+    monkeypatch.setattr(dag, "_minio_client", lambda: s3)
+    _patch_chroma(monkeypatch, collection)
+    dag.load_to_chroma()
+    assert sorted(collection.ids) == ["blog_0_0", "blog_1_0"]
+    assert "Deleted 2 stale ids" in caplog.text
+
+
+def test_load_rerun_keeps_the_collection_size_stable(monkeypatch):
+    s3 = FakeS3({"chunks/part-0.json": jl(*[_chunk(i) for i in range(5)])})
+    collection = FakeCollection()
+    monkeypatch.setattr(dag, "_minio_client", lambda: s3)
+    _patch_chroma(monkeypatch, collection)
+    dag.load_to_chroma()
+    dag.load_to_chroma()
+    assert len(collection.ids) == 5
+
+
+def test_collection_ids_pages_past_the_first_response():
+    collection = FakeCollection(existing_ids=[f"id{i}" for i in range(7)])
+    assert dag._collection_ids(collection, page_size=3) == [f"id{i}" for i in range(7)]
+
+
+def test_load_does_not_prune_when_an_upsert_fails(monkeypatch):
+    s3 = FakeS3({"chunks/part-0.json": jl(_chunk(0))})
+
+    class FailingAfterOld(FakeCollection):
+        def upsert(self, **kw):
+            raise ValueError("disk full")
+
+    collection = FailingAfterOld(existing_ids=["blog_99_0"])
+    monkeypatch.setattr(dag, "_minio_client", lambda: s3)
+    _patch_chroma(monkeypatch, collection)
+    with pytest.raises(RuntimeError, match="upsert failed"):
+        dag.load_to_chroma()
+    assert collection.ids == ["blog_99_0"]
 
 
 def test_load_explains_a_chroma_tenant_error(monkeypatch):
@@ -279,6 +354,29 @@ def test_training_ready_still_fails_when_spark_wrote_nothing(monkeypatch):
     monkeypatch.setattr(dag, "_minio_client", lambda: FakeS3())
     with pytest.raises(RuntimeError, match="No Spark training output"):
         dag.mark_training_ready()
+
+
+# ── trigger_spark_clean ───────────────────────────────────────────────────
+def test_spark_submit_takes_minio_credentials_from_the_environment(monkeypatch):
+    import importlib
+    from pathlib import Path
+
+    assert "minioadmin" not in Path(dag.__file__).read_text(encoding="utf-8")
+    monkeypatch.setenv("MINIO_ENDPOINT", "http://minio.test:9000")
+    monkeypatch.setenv("MINIO_ACCESS_KEY", "env-user")
+    monkeypatch.setenv("MINIO_SECRET_KEY", "env-secret")
+    reloaded = importlib.reload(dag)
+    try:
+        task = reloaded.task_spark
+        conf = getattr(task, "kwargs", {}).get("conf") or getattr(task, "_conf", None) or task.conf
+        env = getattr(task, "kwargs", {}).get("env_vars") or getattr(task, "_env_vars", None) or task.env_vars
+        assert conf["spark.hadoop.fs.s3a.endpoint"] == "http://minio.test:9000"
+        assert conf["spark.hadoop.fs.s3a.access.key"] == "env-user"
+        assert conf["spark.hadoop.fs.s3a.secret.key"] == "env-secret"
+        assert env["MINIO_ACCESS_KEY"] == "env-user" and env["MINIO_SECRET_KEY"] == "env-secret"
+    finally:
+        monkeypatch.undo()
+        importlib.reload(dag)
 
 
 # ── extract_persona ───────────────────────────────────────────────────────

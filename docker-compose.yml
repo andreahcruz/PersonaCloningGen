@@ -1,8 +1,9 @@
-version: '3.8'
-
 # ─────────────────────────────────────────────
 #  Persona Cloning Pipeline — Docker Compose
 #  Services: MinIO, Airflow, Spark, Streamlit
+#  Credentials are read from .env (copy .env.example); `docker compose` refuses to start
+#  without them. Published ports bind to 127.0.0.1 only — use an SSH tunnel to reach them
+#  on a remote host. AWS: add `-f docker-compose.aws.yml`.
 # ─────────────────────────────────────────────
 
 # Rotate container logs so a long-running stack cannot fill the disk; read them with
@@ -19,10 +20,10 @@ x-airflow-common: &airflow-common
     dockerfile: Dockerfile.airflow
   environment:
     AIRFLOW__CORE__EXECUTOR: LocalExecutor
-    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
-    AIRFLOW__CORE__FERNET_KEY: ''
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}@postgres/airflow
+    AIRFLOW__CORE__FERNET_KEY: ${AIRFLOW__CORE__FERNET_KEY:?set AIRFLOW__CORE__FERNET_KEY in .env}
     # Same value on webserver + scheduler; otherwise log streaming returns 403 JWT InvalidSignatureError
-    AIRFLOW__WEBSERVER__SECRET_KEY: '298p-dev-airflow-webserver-secret-key-min-32chars'
+    AIRFLOW__WEBSERVER__SECRET_KEY: ${AIRFLOW__WEBSERVER__SECRET_KEY:?set AIRFLOW__WEBSERVER__SECRET_KEY in .env}
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
     AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     LOG_LEVEL: INFO
@@ -32,21 +33,22 @@ x-airflow-common: &airflow-common
     AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth'
     # MinIO connection info available to all DAGs
     MINIO_ENDPOINT: http://minio:9000
-    MINIO_ACCESS_KEY: minioadmin
-    MINIO_SECRET_KEY: minioadmin
+    MINIO_ACCESS_KEY: ${MINIO_ROOT_USER:?set MINIO_ROOT_USER in .env}
+    MINIO_SECRET_KEY: ${MINIO_ROOT_PASSWORD:?set MINIO_ROOT_PASSWORD in .env}
     MINIO_BUCKET_RAW: lemkin-raw
     MINIO_BUCKET_PROCESSED: lemkin-processed
-    LEMKIN_DATA_DIR: /opt/airflow/data
+    # Input JSONL directory inside the container; /opt/airflow/data/cleaned = the cleaned corpus.
+    LEMKIN_DATA_DIR: ${LEMKIN_DATA_DIR:-/opt/airflow/data}
     CHROMA_COLLECTION_NAME: lemkin_content
-    PERSONA_LOCAL_PATH: /opt/airflow/data/persona_profile.json
+    PERSONA_LOCAL_PATH: ${PERSONA_LOCAL_PATH:-/opt/airflow/data/persona_profile.json}
     # Chroma vector store
     CHROMA_HOST: chroma
     CHROMA_PORT: "8000"
-    # Ollama (runs on host machine)
-    OLLAMA_BASE: http://host.docker.internal:11434
+    # Ollama: host machine by default; docker-compose.aws.yml deployments use http://ollama:11434
+    OLLAMA_BASE: ${OLLAMA_BASE:-http://host.docker.internal:11434}
     # Spark embed: number of partitions *before* the Ollama UDF = max concurrent /api/embed streams per job.
     # 1 = slowest, quiet logs (one task); 4–8 = faster on a strong Ollama host; too high → timeouts / empty embeddings → lower it.
-    SPARK_EMBED_PARTITIONS: "16"
+    SPARK_EMBED_PARTITIONS: ${SPARK_EMBED_PARTITIONS:-16}
     # SFT export chunk sizing (must match host_finetune defaults / fine-tune MAX_SEQ_LENGTH).
     MAX_SEQ_LENGTH: "512"
     SFT_CHUNK_OUTPUT_CHARS: "1600"
@@ -54,6 +56,8 @@ x-airflow-common: &airflow-common
     # SparkSubmitOperator: local[*] runs entirely in the Airflow container (pip PySpark).
     # spark://spark-master:7077 uses Bitnami workers; their Spark JARs differ from pip PySpark → InvalidClassException on org.apache.spark.scheduler.Task.
     AIRFLOW_CONN_SPARK_DEFAULT: '{"conn_type":"spark","host":"local[*]"}'
+  extra_hosts:
+    - "host.docker.internal:host-gateway"
   volumes:
     - ./dags:/opt/airflow/dags          # your DAG files
     - ./spark_jobs:/opt/airflow/spark_jobs
@@ -70,7 +74,8 @@ services:
     image: postgres:15
     environment:
       POSTGRES_USER: airflow
-      POSTGRES_PASSWORD: airflow
+      # Applied only when postgres-data is first created; an existing local volume keeps "airflow".
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
       POSTGRES_DB: airflow
     volumes:
       - postgres-data:/var/lib/postgresql/data
@@ -87,11 +92,11 @@ services:
     container_name: minio
     command: server /data --console-address ":9001"
     environment:
-      MINIO_ROOT_USER: minioadmin
-      MINIO_ROOT_PASSWORD: minioadmin
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER:?set MINIO_ROOT_USER in .env}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:?set MINIO_ROOT_PASSWORD in .env}
     ports:
-      - "9000:9000"   # S3 API endpoint  → your code talks to this
-      - "9001:9001"   # MinIO web console → visit http://localhost:9001
+      - "127.0.0.1:${MINIO_HOST_API_PORT:-9000}:9000"   # S3 API; containers still use minio:9000
+      - "127.0.0.1:${MINIO_HOST_CONSOLE_PORT:-9001}:9001"   # MinIO console
     volumes:
       - minio-data:/data
     healthcheck:
@@ -108,9 +113,12 @@ services:
     depends_on:
       minio:
         condition: service_healthy
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER:?set MINIO_ROOT_USER in .env}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:?set MINIO_ROOT_PASSWORD in .env}
     entrypoint: >
       /bin/sh -c "
-      mc alias set local http://minio:9000 minioadmin minioadmin;
+      mc alias set local http://minio:9000 \"$$MINIO_ROOT_USER\" \"$$MINIO_ROOT_PASSWORD\";
       mc mb -p local/lemkin-raw;
       mc mb -p local/lemkin-processed;
       echo 'MinIO buckets created successfully';
@@ -129,7 +137,7 @@ services:
       airflow-init:
         condition: service_completed_successfully
     ports:
-      - "8080:8080"   # Airflow dashboard → visit http://localhost:8080
+      - "127.0.0.1:8080:8080"   # Airflow dashboard → visit http://localhost:8080
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
       interval: 30s
@@ -161,7 +169,7 @@ services:
         set -e
         # Use python -m airflow so we do not depend on the `airflow` shim (PATH / entrypoint quirks).
         python -m airflow db migrate
-        python -m airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com || true
+        python -m airflow users create --username "${AIRFLOW_ADMIN_USER:?set AIRFLOW_ADMIN_USER in .env}" --password "${AIRFLOW_ADMIN_PASSWORD:?set AIRFLOW_ADMIN_PASSWORD in .env}" --firstname Admin --lastname User --role Admin --email admin@example.com || true
     logging: *default-logging
     restart: "no"
 
@@ -176,8 +184,8 @@ services:
       SPARK_RPC_AUTHENTICATION_ENABLED: "no"
       SPARK_RPC_ENCRYPTION_ENABLED: "no"
     ports:
-      - "7077:7077"   # Spark master port
-      - "8081:8080"   # Spark web UI → visit http://localhost:8081
+      - "127.0.0.1:7077:7077"   # Spark master port
+      - "127.0.0.1:8081:8080"   # Spark web UI → visit http://localhost:8081
     volumes:
       - ./spark_jobs:/opt/spark_jobs   # your PySpark scripts go here
       - ./data:/opt/data
@@ -209,7 +217,7 @@ services:
     image: chromadb/chroma:1.5.5
     container_name: chroma
     ports:
-      - "8000:8000"
+      - "127.0.0.1:8000:8000"
     volumes:
       - chroma-data:/chroma/chroma
     logging: *default-logging
@@ -222,12 +230,12 @@ services:
       dockerfile: Dockerfile          # we will create this next
     container_name: streamlit-app
     ports:
-      - "8501:8501"   # Streamlit UI → visit http://localhost:8501
+      - "127.0.0.1:8501:8501"   # Streamlit UI → visit http://localhost:8501
     environment:
       MINIO_ENDPOINT: http://minio:9000
-      MINIO_ACCESS_KEY: minioadmin
-      MINIO_SECRET_KEY: minioadmin
-      OLLAMA_BASE: http://host.docker.internal:11434  # Ollama runs on your laptop
+      MINIO_ACCESS_KEY: ${MINIO_ROOT_USER:?set MINIO_ROOT_USER in .env}
+      MINIO_SECRET_KEY: ${MINIO_ROOT_PASSWORD:?set MINIO_ROOT_PASSWORD in .env}
+      OLLAMA_BASE: ${OLLAMA_BASE:-http://host.docker.internal:11434}
       CHROMA_USE_HTTP: "true"
       CHROMA_HOST: chroma
       CHROMA_PORT: "8000"

@@ -31,7 +31,9 @@ mkdir -p data
 # Copy your Lemkin JSONL files into ./data (see table above)
 ```
 
-Optional: `cp .env.example .env` if you add custom env overrides.
+Required: `cp .env.example .env` and fill in the credentials block (MinIO, Postgres, Airflow admin,
+webserver secret, Fernet key). `docker compose` refuses to start without them. If you already have a
+`postgres-data` volume from an earlier run, set `POSTGRES_PASSWORD=airflow` (or `docker compose down -v`).
 
 ## Start the stack
 
@@ -39,15 +41,23 @@ Optional: `cp .env.example .env` if you add custom env overrides.
 docker compose up --build
 ```
 
+All published ports bind to `127.0.0.1`. On a remote host (EC2), use an SSH tunnel, e.g.
+`ssh -L 8080:localhost:8080 -L 9001:localhost:9001 <host>`.
+
+**AWS / single EC2 (pipeline only):** `docker compose -f docker-compose.yml -f docker-compose.aws.yml up -d --build`,
+then `... exec ollama ollama pull nomic-embed-text`. This adds a private Ollama container, reads
+`data/cleaned/`, and leaves Streamlit and the unused Spark master/worker off (see the header of
+`docker-compose.aws.yml`).
+
 Use `docker-compose` instead of `docker compose` if you only have the older CLI.
 
 First startup can take several minutes (images build, Airflow DB init, admin user). When things settle:
 
 | Service | URL |
 |--------|-----|
-| **Airflow** | http://localhost:8080 — user `admin`, password `admin` (from `docker-compose.yml`) |
+| **Airflow** | http://localhost:8080 — `AIRFLOW_ADMIN_USER` / `AIRFLOW_ADMIN_PASSWORD` from `.env` |
 | **Streamlit** | http://localhost:8501 |
-| **MinIO console** | http://localhost:9001 — `minioadmin` / `minioadmin` |
+| **MinIO console** | http://localhost:9001 — `MINIO_ROOT_USER` / `MINIO_ROOT_PASSWORD` from `.env` |
 | **Spark UI** | http://localhost:8081 |
 | **Chroma** | API on port **8000** (used by the app, not a browser UI) |
 
