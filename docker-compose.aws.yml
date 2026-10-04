@@ -17,7 +17,7 @@ x-pipeline-env: &pipeline-env
   # Current S3-compatible endpoint used only by the EC2 demo.  It preserves the
   # pipeline's boto3/Spark S3 contract after the legacy MinIO images were retired.
   MINIO_ENDPOINT: http://minio:4566
-  LEMKIN_DATA_DIR: /opt/airflow/data/cleaned
+  LEMKIN_DATA_DIR: ${LEMKIN_DATA_DIR:-/opt/airflow/data/cleaned}
   PERSONA_LOCAL_PATH: /opt/airflow/data/deploy/persona_profile.json
   # A pipeline proof run uses its own collection so it never replaces PersonaRAG's restored corpus.
   CHROMA_COLLECTION_NAME: ${PIPELINE_CHROMA_COLLECTION_NAME:-lemkin_content}
