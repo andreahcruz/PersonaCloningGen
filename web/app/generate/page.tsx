@@ -57,7 +57,7 @@ export default function GeneratorPage() {
   const [audience, setAudience] = useState("");
   const [goal, setGoal] = useState("");
   const [cta, setCta] = useState("none");
-  const [k, setK] = useState(8);
+  const [k, setK] = useState(4);
   const [method, setMethod] = useState<GenerationMethod>("personarag");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<ApiError | null>(null);

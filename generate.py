@@ -34,7 +34,9 @@ OLLAMA_BASE_DEFAULT = "http://localhost:11434"
 COLLECTION_NAME = os.environ.get("CHROMA_COLLECTION_NAME", "lemkin_content")
 DEFAULT_EMBED_MODEL = "nomic-embed-text"
 DEFAULT_GEN_MODEL = "llama3.1"
-CONTEXT_MAX_CHARS = 5000
+# CPU-only demo instances need a compact RAG prompt: enough evidence for grounding,
+# without several minutes of prompt evaluation before any draft is produced.
+CONTEXT_MAX_CHARS = 2400
 
 # Ollama /api/generate can exceed 5 min on cold model load + long prompts (Docker → host).
 _GEN_TIMEOUT = float(os.environ.get("OLLAMA_GENERATE_TIMEOUT", "900"))
@@ -272,9 +274,18 @@ def ollama_embed(text: str, base_url: str, model: str) -> list[float]:
     return vec
 
 
-def ollama_generate(prompt: str, base_url: str, model: str) -> str:
+def ollama_generate(
+    prompt: str,
+    base_url: str,
+    model: str,
+    *,
+    max_tokens: int | None = None,
+) -> str:
+    payload: dict[str, object] = {"model": model, "prompt": prompt, "stream": False}
+    if max_tokens is not None:
+        payload["options"] = {"num_predict": max_tokens}
     resp = _ollama_post(
-        "/api/generate", {"model": model, "prompt": prompt, "stream": False},
+        "/api/generate", payload,
         base_url, model, _GEN_TIMEOUT, _GEN_RETRIES, "generate",
     )
     try:

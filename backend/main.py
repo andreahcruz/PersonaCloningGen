@@ -184,7 +184,9 @@ def generate(req: GenerateRequest) -> GenerateResponse:
         model = qlora_model
 
     try:
-        draft = ollama_generate(prompt, ollama_base, model)
+        # 120–220 words is the UI contract.  A token cap prevents a CPU-only
+        # demo from exceeding the browser relay while still leaving room for it.
+        draft = ollama_generate(prompt, ollama_base, model, max_tokens=280)
     except Exception as e:
         raise HTTPException(502, f"Generation failed: {e}") from e
 
