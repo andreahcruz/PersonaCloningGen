@@ -83,7 +83,10 @@ services:
     environment: *pipeline-env
 
   backend:
-    build:
+    ulimits:
+      nofile:
+        soft: 65535
+        hard: 65535    build:
       context: .
       dockerfile: backend/Dockerfile
     environment:
