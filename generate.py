@@ -280,10 +280,14 @@ def ollama_generate(
     model: str,
     *,
     max_tokens: int | None = None,
+    options: dict[str, object] | None = None,
 ) -> str:
     payload: dict[str, object] = {"model": model, "prompt": prompt, "stream": False}
+    request_options = dict(options or {})
     if max_tokens is not None:
-        payload["options"] = {"num_predict": max_tokens}
+        request_options["num_predict"] = max_tokens
+    if request_options:
+        payload["options"] = request_options
     resp = _ollama_post(
         "/api/generate", payload,
         base_url, model, _GEN_TIMEOUT, _GEN_RETRIES, "generate",

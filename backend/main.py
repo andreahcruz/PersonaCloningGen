@@ -20,6 +20,7 @@ from generate import (
     CONTEXT_MAX_CHARS,
     DEFAULT_EMBED_MODEL,
     DEFAULT_GEN_MODEL,
+    GenerationError,
     OLLAMA_BASE_DEFAULT,
     build_prompt,
     check_dependencies,
@@ -87,6 +88,33 @@ Content brief:
 
 Output only the draft in markdown, with no preamble or meta-commentary.
 """
+
+
+def _qlora_retry_prompt(req: GenerateRequest) -> str:
+    """A short completion-style retry for imported GGUFs that echo instructions."""
+    return f"""Write the final {req.format} now.
+
+Topic: {req.topic}
+Audience: {req.audience}
+Goal: {req.goal}
+Call to action: {req.cta}
+
+Write 120-220 words in a direct Jason Lemkin-style B2B SaaS voice. Start with the post itself.
+Do not repeat this brief, format instructions, or labels. Output only the finished markdown post.
+"""
+
+
+def _looks_like_instruction_echo(draft: str) -> bool:
+    """Detect a common imported-GGUF failure: returning the request rather than a draft."""
+    text = (draft or "").lower()
+    markers = (
+        "format requirements:",
+        "content brief:",
+        "output only the draft",
+        "you are a fine-tuned jason lemkin-style writer",
+        "length_target_words:",
+    )
+    return sum(marker in text for marker in markers) >= 2
 
 
 def _source_type(value: object) -> str:
@@ -186,7 +214,25 @@ def generate(req: GenerateRequest) -> GenerateResponse:
     try:
         # 120–220 words is the UI contract.  A token cap prevents a CPU-only
         # demo from exceeding the browser relay while still leaving room for it.
-        draft = ollama_generate(prompt, ollama_base, model, max_tokens=280)
+        draft = ollama_generate(
+            prompt,
+            ollama_base,
+            model,
+            max_tokens=280,
+            # A lower temperature makes the imported QLoRA GGUF less likely to
+            # continue by copying its own request instead of writing the post.
+            options={"temperature": 0.4, "repeat_penalty": 1.1} if req.method == "qlora" else None,
+        )
+        if req.method == "qlora" and _looks_like_instruction_echo(draft):
+            draft = ollama_generate(
+                _qlora_retry_prompt(req),
+                ollama_base,
+                model,
+                max_tokens=260,
+                options={"temperature": 0.25, "repeat_penalty": 1.1},
+            )
+            if _looks_like_instruction_echo(draft):
+                raise GenerationError("QLoRA returned its instructions instead of a draft after retry.")
     except Exception as e:
         raise HTTPException(502, f"Generation failed: {e}") from e
 
