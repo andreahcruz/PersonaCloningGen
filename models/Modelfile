@@ -1,7 +1,24 @@
-FROM /models/lemkin-repaired-Q4_K_M.gguf
+# Direct QLoRA writer for the merged Relabel GGUF.
+# Same Llama 3.1 Instruct chat template as host_finetune/Modelfile.
+# Copy Meta-Llama-3.1-8B-Instruct.Q4_K_M.gguf from
+# host_finetune/output/lemkin-relabel_gguf/ into this directory before
+# `ollama create`. The backend sends only the user sentence.
+FROM /models/Meta-Llama-3.1-8B-Instruct.Q4_K_M.gguf
 
-# The QLoRA comparison receives its content brief through FastAPI. Keep this file
-# intentionally small so the model's fine-tuned weights, rather than another
-# persona prompt, are what distinguish it from PersonaRAG.
+TEMPLATE """<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Cutting Knowledge Date: December 2023
+Today Date: 26 Jul 2024
+
+<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+{{ .Prompt }}<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+"""
+
 PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER repeat_penalty 1.1
 PARAMETER num_ctx 4096
+PARAMETER stop "<|eot_id|>"
