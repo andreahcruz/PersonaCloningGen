@@ -76,7 +76,7 @@ Membership, order, and content match `data/cleaned/` for all five sources: same 
 
 Those same shadow records, passed through the existing SFT chunker and promo filter in memory, reproduce the frozen nopromo file: 42,771 rows, including instruction, output, `source_file`, and `source_line`.
 
-Fit is out of scope. The 8,988 unpaired fit chunks stay a later-stage issue. The tokenizer was not loaded.
+Fit is out of scope. Exact fit parentage is recorded in `docs/data/FIT_STAGE_REPRODUCTION.md`.
 
 ## Consolidation status
 

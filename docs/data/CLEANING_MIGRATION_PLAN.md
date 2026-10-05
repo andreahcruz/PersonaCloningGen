@@ -233,7 +233,7 @@ Changing scrub ownership by moving the file would break those imports. Leaving t
 
 ## Known deferred issues
 
-- 8,988 fit rows do not map one-to-one onto a single nopromo chunk. Document and capture identity are known. Do not load the tokenizer or edit `fit_sft_to_context.py` for this migration.
+- 8,988 fit rows were unpaired before the tokenizer replay. Exact parentage is now in `docs/data/FIT_STAGE_REPRODUCTION.md`. Do not edit `fit_sft_to_context.py` as part of the cleaning migration.
 - Persisted Chroma parity is a read-only PASS: 21,193 documents, `train_26148` absent. The historical embedding command is still unrecorded.
 - The historical balance write command and the embedding-build command remain unrecorded.
 - `reply_or_repost` and `empty_after_scrub` are real gates and did not fire on this corpus. The contract tests cover them with synthetic rows. The corpus counts stay 2,465.

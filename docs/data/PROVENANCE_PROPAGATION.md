@@ -77,7 +77,7 @@ RELABEL
 |---|---:|---:|---:|---:|---:|---:|
 | RAW → CLEANED | 32,835 | 30,370 | 2,465 | 0 | 0 | 0 |
 | CLEANED → SFT | 30,370 | 42,771 | 5,642 | 3,312 | 0 | 0 |
-| SFT → FIT | 42,771 | 43,012 | 0 | 751 | 8,988 | 0 |
+| SFT → FIT | 42,771 | 43,012 | 0 | 947 | 0 | 0 |
 | FIT → BALANCE | 43,012 | 31,328 | 11,684 | 0 | 0 | 0 |
 | BALANCE → SPLIT | 31,328 | 31,328 | 0 | 0 | 0 | 0 |
 | SPLIT → RELABEL | 31,328 | 26,545 | 4,783 | 0 | 0 | 0 |
@@ -87,7 +87,7 @@ RAW → CLEANED drops are explicit cleaner reasons: event promo 450, LinkedIn fe
 
 CLEANED → SFT drops 5,518 cleaned lines under the word floor and 124 whose chunks were all removed. Promo filter drops 170 chunks. One chunk is dropped after a trailing CTA strip. 3,312 cleaned lines become more than one nopromo row. The replay matches `dataset_from_cleaned_sources_nopromo.jsonl` in order, including output text.
 
-SFT → FIT does not drop a whole document: every nopromo `source_file` and `source_line` is present in the keep-breaks file, and every fit row has that locator. 751 extra fit rows come from documents that grew. 510 SFT rows sit in documents that shrank. The net change is 43,012 − 42,771 = 241. 8,988 fit rows belong to documents whose chunk texts are not the same sequence as the nopromo chunks. Those rows keep the document id and receive no single parent SFT index. The tokenizer was not loaded, so the fit split was not replayed.
+SFT → FIT was replayed with the local Llama 3.1 tokenizer snapshot `f15c379fb32bb402fa06a7ae9aecb1febf4b79ec`. 706 colon lead-in rows are attached to the next chunk of the same document and are not emitted on their own. The remaining 42,065 merged rows produce 43,012 fit rows. 947 of those rows are additional parts from splits. No parent is dropped. Every fit row has `parent_sft_row_indices`. The earlier 8,988 unpaired count was text-sequence pairing without the tokenizer. The contract is `docs/data/FIT_STAGE_REPRODUCTION.md`.
 
 FIT → BALANCE drops 5,492 SaaStr rows and 6,192 X rows over the cap. 31,328 rows stay. Their `model_row_id` values are copied from the fit sidecar. Renamed ids: 0.
 
@@ -112,10 +112,10 @@ RELABEL train → RAG starts from 21,377 train rows, excludes 183 gold-overlap-f
 
 ## Unresolved anomalies
 
-- 8,988 fit rows do not have a one-chunk parent inside their nopromo document. Document lineage is intact. Chunk-to-chunk lineage is unpaired. That is the fit stage, not the cleaner.
+- Fit parentage is exact for all 43,012 keep-breaks rows. See `docs/data/FIT_STAGE_REPRODUCTION.md`.
 - 954 LinkedIn Relabel rows still use `content_fallback` because the raw post has no URN or URL.
 - Eighteen Jason YouTube videos have more than one raw capture. None of those pairs both survive as separate captures in the Relabel file.
 - The historical balance write command and the embedding-build command remain unrecorded.
 - Persisted `lemkin_train_only` matches the in-memory 21,193-row selection. The historical command that embedded it is still unrecorded.
 
-A shadow cleaner now lives in `host_finetune/canonical_cleaning.py`. `clean_record` owns the L2 record policy and calls `scrub_corpus_text`. `clean_row` is a compatibility shim. Provenance replay calls `clean_record` and still stores the historical reason string. The production writer was not run, and `data/cleaned/` was not replaced. Airflow and Spark were not switched. The contract is `docs/data/CANONICAL_CLEANING_SPEC.md`. The migration note is `docs/data/CLEANING_MIGRATION_PLAN.md`. The 8,988 unpaired fit rows remain a fit-stage issue.
+A shadow cleaner now lives in `host_finetune/canonical_cleaning.py`. `clean_record` owns the L2 record policy and calls `scrub_corpus_text`. `clean_row` is a compatibility shim. Provenance replay calls `clean_record` and still stores the historical reason string. The production writer was not run, and `data/cleaned/` was not replaced. Airflow and Spark were not switched. The contract is `docs/data/CANONICAL_CLEANING_SPEC.md`. The migration note is `docs/data/CLEANING_MIGRATION_PLAN.md`. Fit lineage is recorded separately in `docs/data/FIT_STAGE_REPRODUCTION.md`.

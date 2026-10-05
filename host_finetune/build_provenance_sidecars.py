@@ -446,6 +446,49 @@ def build_fit_rows(sft_rows: list[dict]) -> tuple[list[dict], dict]:
     stats["contracted_sft_rows"] = sum(
         max(0, len(parents) - len(fit_groups.get(key) or [])) for key, parents in sft_groups.items()
     )
+    return _overlay_exact_fit_lineage(manifest, fit_source, stats)
+
+
+def _overlay_exact_fit_lineage(
+    manifest: list[dict],
+    fit_source: list[dict],
+    stats: Counter,
+) -> tuple[list[dict], list[dict], Counter]:
+    """Replace heuristic fit parentage when the tokenizer replay sidecar is present."""
+    lineage_path = OUT / "fit_lineage_exact.preview.jsonl"
+    report_path = OUT / "fit_lineage_exact.report.json"
+    if not lineage_path.exists() or not report_path.exists():
+        return manifest, fit_source, stats
+    exact = []
+    with lineage_path.open(encoding="utf-8") as handle:
+        for line in handle:
+            if line.strip():
+                exact.append(json.loads(line))
+    if len(exact) != len(manifest):
+        raise RuntimeError("exact fit lineage row count does not match the fit manifest")
+    report = json.loads(report_path.read_text(encoding="utf-8"))
+    if report.get("status") != "PASS":
+        raise RuntimeError("exact fit lineage report is not PASS")
+    for row, item in zip(manifest, exact):
+        if row["model_row_id"] != item["model_row_id"]:
+            raise RuntimeError("exact fit lineage would rename model_row_id")
+        if row["fit_row_index"] != item["fit_row_index"]:
+            raise RuntimeError("exact fit lineage is not in frozen fit order")
+        row["parent_sft_row_index"] = item["parent_sft_row_index"]
+        row["parent_sft_row_indices"] = item["parent_sft_row_indices"]
+        row["relationship_type"] = item["relationship_type"]
+        row["chunk_alignment"] = "exact_replay"
+        row["parent_sft_chunk_count"] = len(item["parent_sft_row_indices"])
+    accounting = report["accounting"]
+    stats["unpaired_fit_rows"] = 0
+    stats["unmapped_fit_rows"] = 0
+    stats["expanded_fit_rows"] = accounting["additional_parts"]
+    stats["contracted_sft_rows"] = accounting["parents_with_zero_outputs"]
+    stats["exact_lineage"] = True
+    stats["lead_in_rows_consumed"] = accounting["lead_in_rows_consumed"]
+    stats["merged_rows"] = accounting["merged_rows"]
+    stats["additional_parts"] = accounting["additional_parts"]
+    stats["dropped_parents"] = accounting["parents_with_zero_outputs"]
     return manifest, fit_source, stats
 
 
@@ -701,15 +744,26 @@ def build_coverage(
             "SFT → FIT",
             fit_stats["sft_rows"],
             fit_stats["fit_rows"],
-            0,
+            fit_stats["dropped_parents"] if fit_stats.get("exact_lineage") else 0,
             fit_stats["expanded_fit_rows"],
             fit_stats["unpaired_fit_rows"],
             fit_stats["unmapped_fit_rows"],
-            "Every fit row keeps the nopromo source_file and source_line. "
-            "Ambiguous counts fit rows whose document chunk texts are not an exact sequence match, "
-            "so those rows do not receive a single parent SFT index. "
-            f"Contracted SFT rows inside those documents={fit_stats['contracted_sft_rows']}. "
-            "The tokenizer was not loaded.",
+            (
+                "Exact tokenizer replay. "
+                f"Lead-in rows consumed={fit_stats['lead_in_rows_consumed']}. "
+                f"Merged rows={fit_stats['merged_rows']}. "
+                f"Parents with zero outputs={fit_stats['dropped_parents']}. "
+                f"Additional parts={fit_stats['additional_parts']}. "
+                "No fit row is left without parent SFT indices."
+            )
+            if fit_stats.get("exact_lineage")
+            else (
+                "Every fit row keeps the nopromo source_file and source_line. "
+                "Ambiguous counts fit rows whose document chunk texts are not an exact sequence match, "
+                "so those rows do not receive a single parent SFT index. "
+                f"Contracted SFT rows inside those documents={fit_stats['contracted_sft_rows']}. "
+                "The tokenizer was not loaded."
+            ),
         ),
         _transition(
             "FIT → BALANCE",
