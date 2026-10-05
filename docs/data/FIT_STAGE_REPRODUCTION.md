@@ -1,6 +1,6 @@
 # Fit-stage reproduction
 
-Status: **MEASURED** for this worktree. The keep-breaks file was replayed in memory from the nopromo SFT file with the local Llama 3.1 tokenizer snapshot. The replay matches the frozen file byte for byte. `host_finetune/fit_sft_to_context.py` was not modified.
+Status: **MEASURED** for this worktree. The keep-breaks file was replayed in memory from the nopromo SFT file with the local Llama 3.1 tokenizer snapshot. The replay matches the frozen file byte for byte. The same bytes are now produced by `host_finetune/canonical_fit.py`. `fit_sft_to_context.py` is the compatibility command line. The contract is `docs/data/CANONICAL_FIT_SPEC.md`.
 
 This stage is an L3 model-dataset transformation. It changes chunk boundaries and instruction text under a tokenizer budget. It is not L2 cleaning.
 

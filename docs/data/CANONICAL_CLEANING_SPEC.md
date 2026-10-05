@@ -95,6 +95,6 @@ Not implemented. The migration plan is the sequence. This table is the target, n
 | SFT word floor | `build_sft_from_cleaned_sources.py` | That module, or a later model-policy module | No | It is L3. It is not cleaning. |
 | SFT promo policy | `filter_event_promos.py` | That module | No | Different rule from L2 event promo. |
 | Chunking | `sft_chunk_utils.py` | `sft_chunk_utils.py` | No | Model-dataset construction. |
-| Context fit | `fit_sft_to_context.py` | `fit_sft_to_context.py` | No | The unpaired chunk map is a fit issue. |
+| Context fit | `canonical_fit.py` | `canonical_fit.py`, with `fit_sft_to_context.py` as the command-line shim | Done for the frozen algorithm | See `docs/data/CANONICAL_FIT_SPEC.md`. |
 
 The L2 record owner is `canonical_cleaning.clean_record`. `clean_row` is the compatibility shim. `clean_file` remains the writer and was not run against `data/cleaned/`. Airflow and Spark still import the scrub module themselves.
