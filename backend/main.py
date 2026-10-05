@@ -86,6 +86,7 @@ DIRECT_QLORA_MAX_TOKENS = {
 DIRECT_QLORA_OPTIONS = {
     "temperature": 0.7,
     "top_p": 0.9,
+    "repeat_penalty": 1.15,
     "stop": ["<|eot_id|>"],
 }
 # Negative keep_alive asks Ollama to leave the merged GGUF loaded after the reply.

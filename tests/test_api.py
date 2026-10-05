@@ -153,7 +153,7 @@ def test_qlora_generation_bypasses_retrieval(monkeypatch):
             "lemkin-qlora",
             {
                 "max_tokens": 320,
-                "options": {"temperature": 0.7, "top_p": 0.9, "stop": ["<|eot_id|>"]},
+                "options": {"temperature": 0.7, "top_p": 0.9, "repeat_penalty": 1.15, "stop": ["<|eot_id|>"]},
                 "keep_alive": -1,
             },
         )

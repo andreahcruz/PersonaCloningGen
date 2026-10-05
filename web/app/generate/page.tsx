@@ -67,10 +67,12 @@ export default function GeneratorPage() {
   const missing = useMemo(() => {
     const out: string[] = [];
     if (!topic.trim()) out.push("topic");
-    if (!audience.trim()) out.push("audience");
-    if (!goal.trim()) out.push("goal");
+    if (method === "personarag") {
+      if (!audience.trim()) out.push("audience");
+      if (!goal.trim()) out.push("goal");
+    }
     return out;
-  }, [topic, audience, goal]);
+  }, [topic, audience, goal, method]);
 
   async function run() {
     if (missing.length || busy) return;
@@ -228,27 +230,31 @@ export default function GeneratorPage() {
                 placeholder="e.g. Hiring your first salesperson"
               />
             </Field>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <Field label="Audience">
-                <input
-                  className={inputClass}
-                  value={audience}
-                  onChange={(e) => setAudience(e.target.value)}
-                  placeholder="e.g. B2B SaaS founders"
-                />
-              </Field>
-              <Field label="Goal">
-                <input
-                  className={inputClass}
-                  value={goal}
-                  onChange={(e) => setGoal(e.target.value)}
-                  placeholder="e.g. Share one sharp takeaway"
-                />
-              </Field>
-            </div>
-            <Field label="Call to action">
-              <input className={inputClass} value={cta} onChange={(e) => setCta(e.target.value)} />
-            </Field>
+            {method === "personarag" ? (
+              <>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <Field label="Audience">
+                    <input
+                      className={inputClass}
+                      value={audience}
+                      onChange={(e) => setAudience(e.target.value)}
+                      placeholder="e.g. B2B SaaS founders"
+                    />
+                  </Field>
+                  <Field label="Goal">
+                    <input
+                      className={inputClass}
+                      value={goal}
+                      onChange={(e) => setGoal(e.target.value)}
+                      placeholder="e.g. Share one sharp takeaway"
+                    />
+                  </Field>
+                </div>
+                <Field label="Call to action">
+                  <input className={inputClass} value={cta} onChange={(e) => setCta(e.target.value)} />
+                </Field>
+              </>
+            ) : null}
             <div className="flex flex-wrap items-center gap-3">
               <Button onClick={run} disabled={busy || missing.length > 0}>
                 {busy ? "Generating..." : result ? "Regenerate" : "Generate"}
