@@ -13,21 +13,16 @@ import argparse
 import html
 import json
 import re
-import sys
 from collections import Counter
 from pathlib import Path
 
-_SPARK_JOBS = Path(__file__).resolve().parents[1] / "spark_jobs"
-if str(_SPARK_JOBS) not in sys.path:
-    sys.path.insert(0, str(_SPARK_JOBS))
-from corpus_footer_scrub import scrub_corpus_text
+from host_finetune.canonical_cleaning import SOURCE_SPECS, apply_source_policy, clean_record
 
 REPO = Path(__file__).resolve().parents[1]
 DEFAULT_DATA = REPO / "data"
 DEFAULT_OUT = REPO / "data" / "cleaned"
 
-# Same minimum the Airflow X normalizer uses.
-MIN_X_CHARS = 25
+_FLAG_ORDER = ("footer", "url", "hashtag", "html")
 
 # filename, kind, text field, title field, extra scrub kwargs
 _SOURCES = (
@@ -83,31 +78,27 @@ def _entity_window(text: str) -> str:
 
 
 def clean_row(kind: str, row: dict, text_field: str, title_field: str | None, scrub_kwargs: dict) -> tuple[dict | None, str | None, dict]:
-    """Return ``(cleaned_row, drop_reason, flags)``."""
-    flags = {"footer": False, "url": False, "hashtag": False, "html": False}
-    if kind == "x" and (row.get("is_reply") or row.get("is_repost_or_quote")):
-        return None, "reply_or_repost", flags
-    raw = row.get(text_field)
-    raw_text = raw if isinstance(raw, str) else ""
-    if kind == "x":
-        stripped = raw_text.strip()
-        if not stripped:
-            return None, "empty", flags
-        if len(stripped) < MIN_X_CHARS:
-            return None, "too_short", flags
-    title = ""
-    if title_field:
-        title = row.get(title_field) or ""
-        if not isinstance(title, str):
-            title = str(title)
-    cleaned, reason, flags = scrub_corpus_text(raw_text, title=title, **scrub_kwargs)
-    if reason == "empty" and kind == "youtube":
-        reason = "empty_transcript"
-    if reason:
-        return None, reason, flags
-    out = dict(row)
-    out[text_field] = cleaned
-    return out, None, flags
+    """Compatibility shim. Record policy lives in ``canonical_cleaning``.
+
+    Returns the historical ``(cleaned_row, drop_reason, flags)`` tuple.
+    Both YouTube files share one text policy, so either matching spec is the
+    same cleaned object. Identity fields stay on ``CleaningResult`` and are
+    not part of this tuple.
+    """
+    matches = [
+        spec
+        for spec in SOURCE_SPECS
+        if spec[1] == kind
+        and spec[3] == text_field
+        and spec[4] == title_field
+        and spec[5] == scrub_kwargs
+    ]
+    if not matches:
+        return apply_source_policy(kind, row, text_field, title_field, scrub_kwargs)
+    result = clean_record(matches[0][2], row)
+    flags = {key: False for key in _FLAG_ORDER}
+    flags.update(dict(result.flags))
+    return result.cleaned_record, result.frozen_reason, flags
 
 
 def _maybe_example(examples: dict, kind: str, payload: dict) -> None:
