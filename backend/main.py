@@ -20,7 +20,6 @@ from generate import (
     CONTEXT_MAX_CHARS,
     DEFAULT_EMBED_MODEL,
     DEFAULT_GEN_MODEL,
-    GenerationError,
     OLLAMA_BASE_DEFAULT,
     build_prompt,
     check_dependencies,
@@ -70,56 +69,36 @@ def _settings() -> tuple[str, str, str, str]:
     )
 
 
-def _qlora_prompt(format_spec: dict[str, Any], req: GenerateRequest) -> str:
-    """Use the same brief and output shape without PersonaRAG retrieval/context."""
-    requirements = yaml.safe_dump(format_spec, sort_keys=False, allow_unicode=True).strip()
-    return f"""Write a {req.format} about: {req.topic}.
-
-You are a fine-tuned Jason Lemkin-style writer. Be direct, concrete, and useful to B2B SaaS
-operators. Use your learned writing style; do not claim to have searched or quoted source material.
-
-Format requirements:
-{requirements}
-
-Content brief:
-- Audience: {req.audience}
-- Goal: {req.goal}
-- Call to action: {req.cta}
-
-Output only the draft in markdown, with no preamble or meta-commentary.
-"""
-
-
-def _qlora_retry_prompt(req: GenerateRequest) -> str:
-    """A short completion-style retry for imported GGUFs that echo instructions."""
-    return f"""Write the final {req.format} now.
-
-Topic: {req.topic}
-Audience: {req.audience}
-Goal: {req.goal}
-Call to action: {req.cta}
-
-Write 120-220 words in a direct Jason Lemkin-style B2B SaaS voice. Start with the post itself.
-Do not repeat this brief, format instructions, or labels. Output only the finished markdown post.
-"""
+# Training rows are one user sentence. The Modelfile wraps this sentence in the
+# Llama 3.1 Instruct chat template, so the application prompt stays plain text.
+DIRECT_QLORA_PROMPTS = {
+    "linkedin_post": "Write a LinkedIn post in the style of Jason Lemkin about: {topic}",
+    "blog_draft": "Write a blog post in the style of Jason Lemkin about: {topic}",
+    "x_thread": "Write an X post in the style of Jason Lemkin about: {topic}",
+    "youtube_script": "Write a talk in the style of Jason Lemkin about: {topic}",
+}
+DIRECT_QLORA_MAX_TOKENS = {
+    "linkedin_post": 320,
+    "x_thread": 160,
+    "blog_draft": 768,
+    "youtube_script": 768,
+}
+DIRECT_QLORA_OPTIONS = {
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "stop": ["<|eot_id|>"],
+}
+# Negative keep_alive asks Ollama to leave the merged GGUF loaded after the reply.
+DIRECT_QLORA_KEEP_ALIVE = -1
 
 
-def _looks_like_instruction_echo(draft: str) -> bool:
-    """Detect a common imported-GGUF failure: returning the request rather than a draft."""
-    text = (draft or "").lower()
-    markers = (
-        "format requirements:",
-        "content brief:",
-        "output only the draft",
-        "you are a fine-tuned jason lemkin-style writer",
-        "length_target_words:",
-    )
-    if sum(marker in text for marker in markers) >= 2:
-        return True
-    # A shorter retry prompt can be echoed as four field labels. It is never a
-    # valid 120–220 word draft, even though it lacks the longer instructions.
-    field_markers = ("topic:", "audience:", "goal:", "call to action:")
-    return sum(marker in text for marker in field_markers) >= 3 and len(text.split()) < 80
+def direct_qlora_prompt(format_name: str, topic: str) -> str:
+    """One training-style sentence. No brief, persona, format rules, or retrieved text."""
+    template = DIRECT_QLORA_PROMPTS.get(format_name)
+    if template is None:
+        known = ", ".join(DIRECT_QLORA_PROMPTS)
+        raise HTTPException(400, f"Unknown format for direct QLoRA: {format_name}. Expected: {known}")
+    return template.format(topic=topic)
 
 
 def _source_type(value: object) -> str:
@@ -213,31 +192,26 @@ def generate(req: GenerateRequest) -> GenerateResponse:
         )
         model = gen_model
     else:
-        prompt = _qlora_prompt(format_spec, req)
+        prompt = direct_qlora_prompt(req.format, req.topic)
         model = qlora_model
 
     try:
-        # 120–220 words is the UI contract.  A token cap prevents a CPU-only
-        # demo from exceeding the browser relay while still leaving room for it.
-        draft = ollama_generate(
-            prompt,
-            ollama_base,
-            model,
-            max_tokens=280,
-            # A lower temperature makes the imported QLoRA GGUF less likely to
-            # continue by copying its own request instead of writing the post.
-            options={"temperature": 0.4, "repeat_penalty": 1.1} if req.method == "qlora" else None,
-        )
-        if req.method == "qlora" and _looks_like_instruction_echo(draft):
+        if req.method == "qlora":
             draft = ollama_generate(
-                _qlora_retry_prompt(req),
+                prompt,
                 ollama_base,
                 model,
-                max_tokens=260,
-                options={"temperature": 0.25, "repeat_penalty": 1.1},
+                max_tokens=DIRECT_QLORA_MAX_TOKENS[req.format],
+                options=DIRECT_QLORA_OPTIONS,
+                keep_alive=DIRECT_QLORA_KEEP_ALIVE,
             )
-            if _looks_like_instruction_echo(draft):
-                raise GenerationError("QLoRA returned its instructions instead of a draft after retry.")
+        else:
+            draft = ollama_generate(
+                prompt,
+                ollama_base,
+                model,
+                max_tokens=280,
+            )
     except Exception as e:
         raise HTTPException(502, f"Generation failed: {e}") from e
 

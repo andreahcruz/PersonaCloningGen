@@ -35,9 +35,9 @@ const METHODS: Array<{
   },
   {
     id: "qlora",
-    label: "QLoRA fine-tuned",
-    model: "Lemkin Clone",
-    detail: "Writes directly with Kevin's fine-tuned model. It does not retrieve sources.",
+    label: "direct QLoRA",
+    model: "Relabel GGUF",
+    detail: "Writes from the merged Relabel model. It does not retrieve sources.",
   },
 ];
 
@@ -135,7 +135,7 @@ export default function GeneratorPage() {
     <>
       <PageHeader
         title="Content generator"
-        subtitle="Compare source-grounded PersonaRAG with Kevin's fine-tuned QLoRA writer."
+        subtitle="Compare source-grounded PersonaRAG with direct QLoRA."
       />
 
       <div className="grid gap-5 xl:grid-cols-[260px_minmax(0,1fr)_320px]">
@@ -284,7 +284,7 @@ export default function GeneratorPage() {
               <p className="animate-pulse text-sm text-mute" role="status">
                 {method === "personarag"
                   ? "Embedding your brief, retrieving sources and generating."
-                  : "Generating with the fine-tuned QLoRA model."} This can take a minute on a local model.
+                  : "Generating with direct QLoRA."} This can take a minute on a local model.
               </p>
             ) : result ? (
               <>
@@ -299,7 +299,7 @@ export default function GeneratorPage() {
                   {result.content}
                 </div>
                 <p className="mt-3 text-xs text-mute">
-                  {words} words - {result.method === "personarag" ? "PersonaRAG" : "QLoRA"} - {result.model}
+                  {words} words - {result.method === "personarag" ? "PersonaRAG" : "direct QLoRA"} - {result.model}
                   {result.latencyMs !== null ? ` - ${(result.latencyMs / 1000).toFixed(1)} s` : ""}
                 </p>
               </>
@@ -331,7 +331,7 @@ export default function GeneratorPage() {
             </ul>
           ) : result?.method === "qlora" ? (
             <p className="text-sm text-mute">
-              QLoRA writes from its fine-tuned weights. It does not retrieve Chroma sources by design.
+              direct QLoRA writes from the merged model. It does not retrieve Chroma sources.
             </p>
           ) : result ? (
             <p className="text-sm text-mute">

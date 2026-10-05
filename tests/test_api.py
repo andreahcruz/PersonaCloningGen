@@ -108,33 +108,84 @@ def test_dependency_health_is_exposed(monkeypatch):
 
 
 def test_qlora_generation_bypasses_retrieval(monkeypatch):
+    calls = []
+
+    def fake_generate(prompt, _base, model, **kwargs):
+        calls.append((prompt, model, kwargs))
+        return f"{model}: {prompt}"
+
     monkeypatch.setattr(main, "load_format_spec", lambda *_: {"output_type": "markdown"})
-    monkeypatch.setattr(main, "ollama_generate", lambda prompt, _base, model: f"{model}: {prompt}")
+    monkeypatch.setattr(main, "ollama_generate", fake_generate)
     monkeypatch.setattr(
         main,
         "retrieve",
-        lambda *_: pytest.fail("QLoRA must not retrieve Chroma source chunks"),
+        lambda *_: pytest.fail("direct QLoRA must not retrieve Chroma source chunks"),
     )
     monkeypatch.setattr(
         main,
         "ollama_embed",
-        lambda *_: pytest.fail("QLoRA must not embed the content brief"),
+        lambda *_: pytest.fail("direct QLoRA must not embed the content brief"),
     )
 
     response = TestClient(main.app).post(
         "/generate",
         json={
             "format": "linkedin_post",
-            "topic": "Series A",
-            "audience": "founders",
-            "goal": "explain the investment case",
+            "topic": "Hiring your first salesperson",
+            "audience": "B2B SaaS founders",
+            "goal": "Share one takeaway",
+            "cta": "none",
+            "k": 4,
             "method": "qlora",
         },
     )
 
     assert response.status_code == 200
     body = response.json()
+    sentence = "Write a LinkedIn post in the style of Jason Lemkin about: Hiring your first salesperson"
     assert body["method"] == "qlora"
     assert body["model"] == "lemkin-qlora"
     assert body["sources"] == []
-    assert "Reference excerpts" not in body["draft"]
+    assert body["draft"] == f"lemkin-qlora: {sentence}"
+    assert calls == [
+        (
+            sentence,
+            "lemkin-qlora",
+            {
+                "max_tokens": 320,
+                "options": {"temperature": 0.7, "top_p": 0.9, "stop": ["<|eot_id|>"]},
+                "keep_alive": -1,
+            },
+        )
+    ]
+
+
+@pytest.mark.parametrize(
+    ("format_name", "sentence", "max_tokens"),
+    [
+        (
+            "linkedin_post",
+            "Write a LinkedIn post in the style of Jason Lemkin about: Hiring your first salesperson",
+            320,
+        ),
+        (
+            "blog_draft",
+            "Write a blog post in the style of Jason Lemkin about: Hiring your first salesperson",
+            768,
+        ),
+        (
+            "x_thread",
+            "Write an X post in the style of Jason Lemkin about: Hiring your first salesperson",
+            160,
+        ),
+        (
+            "youtube_script",
+            "Write a talk in the style of Jason Lemkin about: Hiring your first salesperson",
+            768,
+        ),
+    ],
+)
+def test_direct_qlora_prompt_is_one_training_sentence(format_name, sentence, max_tokens):
+    assert main.direct_qlora_prompt(format_name, "Hiring your first salesperson") == sentence
+    assert not sentence.endswith(".")
+    assert main.DIRECT_QLORA_MAX_TOKENS[format_name] == max_tokens

@@ -281,6 +281,7 @@ def ollama_generate(
     *,
     max_tokens: int | None = None,
     options: dict[str, object] | None = None,
+    keep_alive: int | str | None = None,
 ) -> str:
     payload: dict[str, object] = {"model": model, "prompt": prompt, "stream": False}
     request_options = dict(options or {})
@@ -288,6 +289,9 @@ def ollama_generate(
         request_options["num_predict"] = max_tokens
     if request_options:
         payload["options"] = request_options
+    # Ollama unloads a model after a few minutes unless the request says otherwise.
+    if keep_alive is not None:
+        payload["keep_alive"] = keep_alive
     resp = _ollama_post(
         "/api/generate", payload,
         base_url, model, _GEN_TIMEOUT, _GEN_RETRIES, "generate",
