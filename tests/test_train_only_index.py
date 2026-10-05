@@ -219,6 +219,7 @@ def test_query_excerpts_filters_by_medium_and_returns_hit_fields():
         "medium": "youtube_jason",
         "group_id": "g",
         "row_id": 9,
+        "split": "train",
         "distance": None,
     }]
     assert medium_where("blog") == {"medium": "blog"}
@@ -372,7 +373,8 @@ def test_fixed_exemplars_keep_complete_train_posts_only():
     assert "Gold blog." not in json.dumps(payload["exemplars"]["blog"])
 
 
-def test_repaired_vs_relabel_preset_keeps_the_other_adapters():
+def test_repaired_vs_relabel_preset_keeps_the_other_adapters(monkeypatch):
+    monkeypatch.delenv("RELABEL_ADAPTER_PATH", raising=False)
     assert [name for name, _path in adapter_list("")] == ["cleaned", "balanced", "r32"]
     pair = adapter_list("repaired-vs-relabel")
     assert [name for name, path in pair] == ["repaired", "relabel"]

@@ -284,8 +284,10 @@ def format_factual_excerpts(excerpts: list[str] | None) -> str:
         return ""
     lines = [
         "Factual excerpts from train-owned source text.",
-        "Use them as evidence for claims. They are not style examples.",
-        "Do not copy long passages verbatim.",
+        "Use the excerpts only as factual evidence.",
+        "They are not style examples.",
+        "Rewrite all evidence in your own words.",
+        "Do not reproduce 8 or more consecutive words from any excerpt.",
     ]
     for number, text in enumerate(cleaned, 1):
         lines.append(f"[Excerpt {number}]\n{text}")
@@ -359,6 +361,7 @@ def query_excerpts(collection, embedding: list[float], k: int, where: dict | Non
                 "medium": meta.get("medium"),
                 "group_id": meta.get("group_id"),
                 "row_id": meta.get("row_id"),
+                "split": meta.get("split"),
                 "distance": distance,
             }
         )

@@ -11,13 +11,45 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import statistics
 import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 
 from host_finetune.eval_gold_rag import aggregate, load_format_specs, score_row
+from host_finetune.evidence_capsule import (
+    DISTILL_BACKEND,
+    DISTILL_DO_SAMPLE,
+    DISTILL_SEED,
+    EXTRACT_MAX_NEW_TOKENS,
+    EvidenceParseError,
+    EvidenceStageError,
+    evidence_provenance,
+    extraction_user_prompt,
+    final_evidence_instruction,
+    freeze_hits,
+    media_jobs,
+    parse_atomic_evidence,
+    partition_evidence,
+    require_adapter_toggle,
+    verified_claim_block,
+)
 from host_finetune.generation_diagnostics import stop_metadata, summarize_stops
+from host_finetune.grounding_repair import (
+    REPAIR_DO_SAMPLE,
+    REPAIR_MAX_NEW_TOKENS,
+    repair_under_disabled_adapter,
+    repair_user_prompt,
+    unsupported_surfaces,
+)
+from host_finetune.numeric_grounding import allowed_numbers, evaluate_numeric_grounding
+from host_finetune.rag_source_copying import (
+    RAG_SOURCE_COPY_THRESHOLD,
+    RETRY_SEED_OFFSET,
+    evaluate_rag_source_copying,
+    retry_seed,
+)
 from host_finetune.relabel_continuations import sentence_final
 from host_finetune.train_only_index import (
     DEFAULT_PERSIST_DIR,
@@ -141,7 +173,9 @@ def generation_closer(medium: dict, topic: str) -> str:
     name = _TASK_NAME[medium["medium"]]
     return (
         f"Now write the requested {name} about: {topic}\n"
-        "Use the excerpts only to ground claims.\n"
+        "Use the excerpts only to ground factual claims.\n"
+        "Rewrite the evidence in your own words.\n"
+        "Do not reproduce 8 or more consecutive words from any excerpt.\n"
         "Do not mention the excerpts, retrieval process, excerpt labels, or these instructions."
     )
 
@@ -224,10 +258,306 @@ def decision_metrics(traces: list[dict]) -> dict:
     }
 
 
-def generate(adapter: Path, gold: list[dict], retriever=None, style_for=None, seed_base: int = GENERATION_SEED) -> list[dict]:
+def _complete_once(model, tokenizer, instruction: str, seed: int, max_new_tokens: int, hits: list[dict], retrieval_enabled: bool) -> dict:
+    """One sample. Decoding settings stay at the module constants."""
+    import torch
+    from transformers import set_seed
+
+    set_seed(seed)
+    prompt = tokenizer.apply_chat_template(
+        [{"role": "user", "content": instruction}],
+        tokenize=False,
+        add_generation_prompt=True,
+    )
+    encoded = tokenizer(prompt, return_tensors="pt")
+    input_ids = encoded["input_ids"].to(model.device)
+    attention = encoded.get("attention_mask")
+    if attention is not None:
+        attention = attention.to(model.device)
+    with torch.inference_mode():
+        output = model.generate(
+            input_ids,
+            attention_mask=attention,
+            max_new_tokens=max_new_tokens,
+            do_sample=True,
+            temperature=TEMPERATURE,
+            top_p=TOP_P,
+            repetition_penalty=REPETITION_PENALTY,
+            pad_token_id=tokenizer.eos_token_id,
+        )
+    generated_ids = output[0][input_ids.shape[1]:].tolist()
+    answer = tokenizer.decode(generated_ids, skip_special_tokens=True).strip()
+    stopping = stop_metadata(
+        generated_ids, model.generation_config.eos_token_id, max_new_tokens
+    )
+    report = evaluate_rag_source_copying(answer, hits, enabled=retrieval_enabled)
+    return {
+        "answer": answer,
+        "seed": seed,
+        "rendered_prompt": prompt,
+        "prompt_tokens": input_ids.shape[1],
+        "report": report,
+        "word_count": len(answer.split()),
+        **stopping,
+    }
+
+
+def _greedy_user(model, tokenizer, user: str, max_new_tokens: int) -> dict:
+    """One adapter-off completion. The caller holds disable_adapter."""
+    import time
+
+    import torch
+    from transformers import set_seed
+
+    rendered = tokenizer.apply_chat_template(
+        [{"role": "user", "content": user}],
+        tokenize=False,
+        add_generation_prompt=True,
+    )
+    encoded = tokenizer(rendered, return_tensors="pt")
+    input_ids = encoded["input_ids"].to(model.device)
+    attention = encoded.get("attention_mask")
+    if attention is not None:
+        attention = attention.to(model.device)
+    set_seed(DISTILL_SEED)
+    started = time.perf_counter()
+    with torch.inference_mode():
+        output = model.generate(
+            input_ids,
+            attention_mask=attention,
+            max_new_tokens=max_new_tokens,
+            do_sample=DISTILL_DO_SAMPLE,
+            pad_token_id=tokenizer.eos_token_id,
+        )
+    seconds = round(time.perf_counter() - started, 3)
+    generated_ids = output[0][input_ids.shape[1]:].tolist()
+    text = tokenizer.decode(generated_ids, skip_special_tokens=True).strip()
+    stopping = stop_metadata(
+        generated_ids, model.generation_config.eos_token_id, max_new_tokens
+    )
+    return {
+        "text": text,
+        "seconds": seconds,
+        "prompt": user,
+        "rendered": rendered,
+        "prompt_tokens": int(input_ids.shape[1]),
+        "generated_tokens": len(generated_ids),
+        "stop_reason": stopping["stop_reason"],
+    }
+
+
+def _prepare_evidence(model, tokenizer, topic: str, hits: list[dict]) -> dict:
+    """Extract claims with the adapter off, then accept them deterministically."""
+    require_adapter_toggle(model)
+    frozen = freeze_hits(hits)
+    user = extraction_user_prompt(topic, frozen)
+    record = {
+        "proposed": [],
+        "raw_extraction": "",
+        "validation_rejected": [],
+        "verifier_rejected": [],
+        "verified": [],
+        "evidence_block": "",
+        "extraction_prompt": user,
+        "rendered_extraction_prompt": "",
+        "extraction_seconds": None,
+        "verification_seconds": 0.0,
+        "verification_records": [],
+        "allowed_numeric_values": [],
+        "reason": None,
+    }
+    with model.disable_adapter():
+        extracted = _greedy_user(model, tokenizer, user, EXTRACT_MAX_NEW_TOKENS)
+    record["raw_extraction"] = extracted["text"]
+    record["rendered_extraction_prompt"] = extracted["rendered"]
+    record["extraction_seconds"] = extracted["seconds"]
+    record["extraction_stop_reason"] = extracted["stop_reason"]
+    try:
+        proposed = parse_atomic_evidence(extracted["text"])
+    except EvidenceParseError as exc:
+        record["reason"] = "unparseable"
+        raise EvidenceStageError("unparseable", record) from exc
+    if freeze_hits(hits) != frozen:
+        raise RuntimeError("evidence preparation changed the retrieved passages")
+    record["proposed"] = proposed
+    accepted, rejected = partition_evidence(proposed, frozen, topic)
+    record["validation_rejected"] = rejected
+    record["verified"] = accepted
+    record["allowed_numeric_values"] = sorted(allowed_numbers(topic, accepted))
+    record["evidence_block"] = verified_claim_block(accepted)
+    return record
+
+
+def _repair_draft(model, tokenizer, topic: str, draft: str, claims: list[dict], hits: list[dict], numeric_report: dict) -> dict:
+    """One greedy edit. The Relabel adapter is off for this call only."""
+    prompt = repair_user_prompt(topic, draft, claims, unsupported_surfaces(numeric_report))
+
+    def _run():
+        return _greedy_user(model, tokenizer, prompt, REPAIR_MAX_NEW_TOKENS)
+
+    generated = repair_under_disabled_adapter(model, _run)
+    repaired = {
+        "answer": generated["text"],
+        "prompt": prompt,
+        "rendered_prompt": generated["rendered"],
+        "seconds": generated["seconds"],
+        "stop_reason": generated["stop_reason"],
+        "generated_tokens": generated["generated_tokens"],
+        "adapter_enabled": False,
+        "do_sample": REPAIR_DO_SAMPLE,
+        "max_new_tokens": REPAIR_MAX_NEW_TOKENS,
+        "temperature": None,
+        "top_p": None,
+        "repair_index": 1,
+    }
+    repaired["report"] = evaluate_rag_source_copying(repaired["answer"], hits, enabled=True)
+    repaired["numeric"] = evaluate_numeric_grounding(repaired["answer"], topic, claims, enabled=True)
+    return repaired
+
+
+def _base_diagnostic(model, tokenizer, instruction: str, seed: int, max_new_tokens: int, hits: list[dict], topic: str, claims: list[dict]) -> dict:
+    """Same prompt and sampling, adapter off. Not a deployment output."""
+
+    def _run():
+        return _complete_once(model, tokenizer, instruction, seed, max_new_tokens, hits, True)
+
+    completion = repair_under_disabled_adapter(model, _run)
+    completion = _attach_numeric(completion, topic, claims, True)
+    return {
+        "adapter_enabled": False,
+        "used_as_deployment": False,
+        "word_count": len(completion["answer"].split()),
+        "unsupported_quantities": unsupported_surfaces(completion["numeric"]),
+        "source_copy_overlap": completion["report"].get("max_contiguous_words"),
+        "source_copy_pass": completion["report"].get("pass"),
+        "numeric_pass": completion["numeric"].get("pass"),
+    }
+
+
+def _attach_numeric(completion: dict, topic: str, claims: list[dict], enabled: bool) -> dict:
+    completion["numeric"] = evaluate_numeric_grounding(
+        completion["answer"], topic, claims, enabled=enabled
+    )
+    return completion
+
+
+def final_response(copy_report: dict) -> str:
+    """Numeric grounding is diagnostic. Only a source-copy failure may retry once."""
+    if copy_report.get("applicable") and not copy_report.get("pass"):
+        return "copy_retry"
+    return "keep"
+
+
+def kept_draft(first: dict, retry: dict | None) -> dict:
+    """Keep a draft. The copy retry replaces it only when that retry is clean."""
+    if retry is not None and retry["report"].get("pass"):
+        chosen = retry
+        attempt = 2
+    else:
+        chosen = first
+        attempt = 1
+    flagged = bool(chosen["report"].get("applicable") and not chosen["report"].get("pass"))
+    return {"chosen": chosen, "attempt": attempt, "source_copy_flag": flagged}
+
+
+def _append_generation(
+    traces: list[dict],
+    row: dict,
+    medium: dict,
+    instruction: str,
+    payload: dict | None,
+    first: dict,
+    second: dict | None,
+    retrieval_enabled: bool,
+    extra: dict | None = None,
+    repair: dict | None = None,
+) -> None:
+    if repair is not None:
+        raise RuntimeError("post-generation repair is not on the deployment path")
+    if second is not None and second["seed"] != retry_seed(first["seed"]):
+        raise ValueError("retry seed must be the original seed plus the fixed offset")
+    kept = kept_draft(first, second)
+    chosen = kept["chosen"]
+    traces.append({
+        **row,
+        "format": medium["format"],
+        "medium": medium["medium"],
+        "prompt": instruction,
+        "rendered_prompt": chosen["rendered_prompt"],
+        "answer": chosen["answer"],
+        "raw_model_output": first["answer"],
+        "deployment_output": chosen["answer"],
+        "first_attempt_answer": first["answer"],
+        "retry_answer": None if second is None else second["answer"],
+        "query": row["topic"],
+        "max_new_tokens": medium["max_new_tokens"],
+        "seed": first["seed"],
+        "retry_seed": None if second is None else second["seed"],
+        "deployment_accepted": bool((chosen["answer"] or "").strip()),
+        "repair_occurred": False,
+        "generation_attempt": {
+            "seed": first["seed"],
+            "answer": first["answer"],
+            "numeric_grounding": first["numeric"],
+            "rag_source_copying": first["report"],
+            "stop_reason": first["stop_reason"],
+        },
+        "repair_attempt": None,
+        "accepted_attempt": kept["attempt"],
+        "rag_source_copying": {
+            "applicable": chosen["report"]["applicable"],
+            "threshold": chosen["report"].get("threshold", RAG_SOURCE_COPY_THRESHOLD),
+            "pass": chosen["report"].get("pass"),
+            "flagged": kept["source_copy_flag"],
+            "max_contiguous_words": chosen["report"].get("max_contiguous_words"),
+            "document_id": chosen["report"].get("document_id"),
+            "matched_generated_span": chosen["report"].get("matched_generated_span"),
+            "first_attempt": first["report"],
+            "retry": None if second is None else second["report"],
+            "retry_occurred": second is not None,
+            "repair_occurred": False,
+        },
+        "numeric_grounding": {
+            "role": "diagnostic_only",
+            "applicable": chosen["numeric"]["applicable"],
+            "pass": chosen["numeric"].get("pass"),
+            "failure": chosen["numeric"].get("failure"),
+            "unsupported": chosen["numeric"].get("unsupported") or [],
+            "blocks_output": False,
+            "first_attempt": first["numeric"],
+            "retry": None if second is None else second["numeric"],
+        },
+        "prompt_tokens": chosen["prompt_tokens"],
+        "backend": "unsloth",
+        **retrieval_trace_fields(payload, chosen["answer"], retrieval_enabled),
+        **(extra or {}),
+        "generated_tokens_including_stop": chosen["generated_tokens_including_stop"],
+        "last_token_id": chosen["last_token_id"],
+        "effective_eos_token_ids": chosen["effective_eos_token_ids"],
+        "stop_reason": chosen["stop_reason"],
+        "budget_fraction": chosen["budget_fraction"],
+        "early_eos": chosen["early_eos"],
+        "first_attempt_stop_reason": first["stop_reason"],
+        "retry_stop_reason": None if second is None else second["stop_reason"],
+    })
+    print(
+        f"  {row['id']} {medium['medium']} words={len(chosen['answer'].split())} "
+        f"copy_pass={chosen['report'].get('pass')} copy_flag={kept['source_copy_flag']} "
+        f"numeric_pass={chosen['numeric'].get('pass')} retry={second is not None}",
+        flush=True,
+    )
+
+
+def generate(
+    adapter: Path,
+    gold: list[dict],
+    retriever=None,
+    style_for=None,
+    seed_base: int = GENERATION_SEED,
+    topic_rows: list[tuple[int, dict]] | None = None,
+) -> list[dict]:
     import torch
     from unsloth import FastLanguageModel
-    from transformers import set_seed
 
     model, tokenizer = FastLanguageModel.from_pretrained(
         model_name=str(adapter),
@@ -236,57 +566,105 @@ def generate(adapter: Path, gold: list[dict], retriever=None, style_for=None, se
         load_in_4bit=True,
     )
     FastLanguageModel.for_inference(model)
+    if retriever is not None:
+        require_adapter_toggle(model)
     traces = []
-    for topic_index, row in enumerate(gold):
-        for medium_index, medium in enumerate(MEDIUMS):
-            seed = seed_base + topic_index * len(MEDIUMS) + medium_index
-            set_seed(seed)
-            instruction, payload = instruction_for_request(
-                medium, row["topic"], retriever, style_for
-            )
-            prompt = tokenizer.apply_chat_template(
-                [{"role": "user", "content": instruction}],
-                tokenize=False,
-                add_generation_prompt=True,
-            )
-            encoded = tokenizer(prompt, return_tensors="pt")
-            input_ids = encoded["input_ids"].to(model.device)
-            attention = encoded.get("attention_mask")
-            if attention is not None:
-                attention = attention.to(model.device)
-            with torch.inference_mode():
-                output = model.generate(
-                    input_ids,
-                    attention_mask=attention,
-                    max_new_tokens=medium["max_new_tokens"],
-                    do_sample=True,
-                    temperature=TEMPERATURE,
-                    top_p=TOP_P,
-                    repetition_penalty=REPETITION_PENALTY,
-                    pad_token_id=tokenizer.eos_token_id,
+    retrieval_enabled = retriever is not None
+    indexed = list(enumerate(gold)) if topic_rows is None else topic_rows
+    for topic_index, row in indexed:
+        if not retrieval_enabled:
+            for medium_index, medium in enumerate(MEDIUMS):
+                seed = seed_base + topic_index * len(MEDIUMS) + medium_index
+                instruction, payload = instruction_for_request(
+                    medium, row["topic"], None, style_for
                 )
-            generated_ids = output[0][input_ids.shape[1]:].tolist()
-            answer = tokenizer.decode(generated_ids, skip_special_tokens=True).strip()
-            stopping = stop_metadata(generated_ids, model.generation_config.eos_token_id,
-                                     medium['max_new_tokens'])
+                first = _attach_numeric(
+                    _complete_once(
+                        model, tokenizer, instruction, seed, medium["max_new_tokens"], [], False
+                    ),
+                    row["topic"],
+                    [],
+                    False,
+                )
+                _append_generation(
+                    traces, row, medium, instruction, payload, first, None, False
+                )
+            continue
+        payload = retriever(row["topic"], MEDIUMS[0]["medium"])
+        hits = [
+            hit for hit in (payload or {}).get("hits") or []
+            if (hit.get("text") or "").strip()
+        ]
+        frozen = freeze_hits(hits)
+        payload = {**payload, "hits": frozen}
+        print(f"  extract {row['id']} hits={[hit.get('id') for hit in frozen]}", flush=True)
+        try:
+            evidence_record = _prepare_evidence(model, tokenizer, row["topic"], frozen)
+        except EvidenceStageError as exc:
+            print(
+                f"evidence stage failed for {row['id']}: {exc.reason}; "
+                "skipping generation for this topic",
+                flush=True,
+            )
             traces.append({
                 **row,
-                "format": medium["format"],
-                "medium": medium["medium"],
-                "prompt": instruction,
-                "rendered_prompt": prompt,
-                "answer": answer,
+                "medium": None,
+                "format": None,
+                "prompt": "",
+                "answer": "",
                 "query": row["topic"],
-                "max_new_tokens": medium["max_new_tokens"],
-                "seed": seed,
-                "prompt_tokens": input_ids.shape[1],
+                "evidence_rejected": True,
                 "backend": "unsloth",
-                **retrieval_trace_fields(payload, answer, retriever is not None),
-                **stopping,
+                **retrieval_trace_fields(payload, "", True),
+                **evidence_provenance(frozen, exc.record),
             })
-            print(
-                f"  {row['id']} {medium['medium']} words={len(answer.split())}",
-                flush=True,
+            continue
+        print(
+            f"  evidence {row['id']} accepted={len(evidence_record['verified'])} "
+            f"rejected={len(evidence_record['validation_rejected'])} "
+            f"extract_s={evidence_record['extraction_seconds']}",
+            flush=True,
+        )
+        jobs = media_jobs(row["topic"], frozen, evidence_record["verified"])
+        if len({job["evidence_block"] for job in jobs}) != 1:
+            raise RuntimeError("media reused more than one evidence set")
+        provenance = evidence_provenance(frozen, evidence_record)
+        for medium_index, job in enumerate(jobs):
+            seed = seed_base + topic_index * len(MEDIUMS) + medium_index
+            instruction = final_evidence_instruction(job["medium"], row["topic"], job["claims"])
+            first = _attach_numeric(
+                _complete_once(
+                    model,
+                    tokenizer,
+                    instruction,
+                    seed,
+                    job["medium"]["max_new_tokens"],
+                    job["hits"],
+                    True,
+                ),
+                row["topic"],
+                job["claims"],
+                True,
+            )
+            second = None
+            if final_response(first["report"]) == "copy_retry":
+                print(f"  copy retry {row['id']} {job['medium']['medium']}", flush=True)
+                second = _attach_numeric(
+                    _complete_once(
+                        model,
+                        tokenizer,
+                        instruction,
+                        retry_seed(seed),
+                        job["medium"]["max_new_tokens"],
+                        job["hits"],
+                        True,
+                    ),
+                    row["topic"],
+                    job["claims"],
+                    True,
+                )
+            _append_generation(
+                traces, row, job["medium"], instruction, payload, first, second, True, dict(provenance)
             )
     del model
     torch.cuda.empty_cache()
@@ -398,7 +776,11 @@ def generate_ollama(
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--out-dir", type=Path, default=DEFAULT_OUT)
+    parser.add_argument(
+        "--out-dir",
+        type=Path,
+        default=os.environ.get("EXPERIMENT_OUT_DIR", str(DEFAULT_OUT)),
+    )
     parser.add_argument(
         "--adapters",
         default="",
@@ -409,14 +791,21 @@ def parse_args() -> argparse.Namespace:
         default="",
         help="Comma-separated Ollama model names to score after the adapters.",
     )
-    parser.add_argument("--ollama-base", default="http://localhost:11434")
+    parser.add_argument(
+        "--ollama-base",
+        default=os.environ.get("OLLAMA_BASE", "http://localhost:11434"),
+    )
     parser.add_argument(
         "--retrieval",
         action="store_true",
         help="Append factual excerpts from lemkin_train_only. Default is off.",
     )
     parser.add_argument("--collection", default=TRAIN_ONLY_COLLECTION)
-    parser.add_argument("--chroma-path", type=Path, default=DEFAULT_PERSIST_DIR)
+    parser.add_argument(
+        "--chroma-path",
+        type=Path,
+        default=os.environ.get("CHROMA_PERSIST_DIR", str(DEFAULT_PERSIST_DIR)),
+    )
     parser.add_argument("--k", type=int, default=4)
     parser.add_argument("--embed-model", default="nomic-embed-text")
     parser.add_argument(
@@ -442,6 +831,11 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Write generation traces and skip unified_eval.",
     )
+    parser.add_argument(
+        "--topic-ids",
+        default=None,
+        help="Comma-separated gold ids to generate. Uses each topic's original index for the seed.",
+    )
     return parser.parse_args()
 
 
@@ -451,6 +845,9 @@ def adapter_list(raw: str) -> tuple[tuple[str, Path], ...]:
     if raw.strip() == "repaired-vs-relabel":
         return RELABEL_PAIR
     if not raw.strip():
+        configured = os.environ.get("RELABEL_ADAPTER_PATH", "").strip()
+        if configured:
+            return (("relabel", Path(configured)),)
         return ADAPTERS
     found = []
     for item in raw.split(","):
@@ -491,6 +888,25 @@ def limit_topics(gold: list[dict], max_topics: int | None) -> list[dict]:
     return gold[:max_topics]
 
 
+def selected_topic_rows(
+    gold: list[dict],
+    topic_ids: str | None,
+    max_topics: int | None,
+) -> list[tuple[int, dict]]:
+    """Original gold indexes. A targeted id keeps the seed it would have had in the full run."""
+    if not topic_ids:
+        return list(enumerate(limit_topics(gold, max_topics)))
+    wanted = [part.strip() for part in topic_ids.split(",") if part.strip()]
+    if not wanted:
+        raise SystemExit("--topic-ids did not name any topics")
+    positions = {row["id"]: index for index, row in enumerate(gold)}
+    missing = [item for item in wanted if item not in positions]
+    if missing:
+        raise SystemExit(f"unknown topic ids: {', '.join(missing)}")
+    ordered = sorted(set(wanted), key=lambda item: positions[item])
+    return [(positions[item], gold[positions[item]]) for item in ordered]
+
+
 def row_provenance(args: argparse.Namespace, adapter: Path, stamp: dict) -> dict:
     """Identity fields stored on every new trace. Scoring can be rerun later."""
     return {
@@ -512,6 +928,7 @@ def write_parameters(
     seed_base: int = GENERATION_SEED,
     n_topics: int = 30,
     max_topics: int | None = None,
+    topic_ids: str | None = None,
     skip_score: bool = False,
     embed_model: str | None = None,
     retrieval_k: int | None = None,
@@ -523,6 +940,7 @@ def write_parameters(
         "gold_eval": "data/openai_ft/lemkin_gold_eval.jsonl",
         "n_topics": n_topics,
         "max_topics": max_topics,
+        "topic_ids": topic_ids,
         "skip_score": skip_score,
         "git": git,
         "mediums": [
@@ -543,6 +961,36 @@ def write_parameters(
             "load_in_4bit": True,
             "seed_base": seed_base,
             "seed_policy": "base + topic_index * n_mediums + medium_index; reset per request",
+            "rag_source_copy_threshold": RAG_SOURCE_COPY_THRESHOLD,
+            "rag_source_copy_retry_seed_offset": RETRY_SEED_OFFSET,
+            "rag_source_copy_max_retries": 1,
+        },
+        "evidence_distillation": {
+            "enabled": retrieval,
+            "representation": "atomic_claims" if retrieval else None,
+            "once_per_topic": True,
+            "adapter_enabled": False,
+            "backend": DISTILL_BACKEND if retrieval else None,
+            "do_sample": DISTILL_DO_SAMPLE if retrieval else None,
+            "extraction_max_new_tokens": EXTRACT_MAX_NEW_TOKENS if retrieval else None,
+            "seed": DISTILL_SEED if retrieval else None,
+            "temperature": None,
+            "top_p": None,
+            "repetition_penalty": None,
+            "second_model": None,
+            "llm_verifier_on_critical_path": False,
+            "internal_copy_gate": False,
+            "support_spans_in_generator_prompt": False,
+            "numeric_grounding": True if retrieval else False,
+            "numeric_role": "diagnostic_only" if retrieval else None,
+            "numeric_blocks_output": False,
+            "numeric_failure_response": "record_only" if retrieval else None,
+            "numeric_seed_retry": False,
+            "repair_on_critical_path": False,
+            "style_rewrite_on_critical_path": False,
+            "base_generation_on_critical_path": False,
+            "lora_scale": 1.0 if retrieval else None,
+            "closer": "minimal" if retrieval else None,
         },
         "expected_facts_in_prompt": False,
         "retrieval": {
@@ -623,9 +1071,15 @@ def _stamp_traces(traces: list[dict], provenance: dict) -> None:
 
 def main() -> None:
     args = parse_args()
-    gold = limit_topics(load_gold(), args.max_topics)
+    plan = selected_topic_rows(load_gold(), args.topic_ids, args.max_topics)
+    gold = [row for _index, row in plan]
     specs = load_format_specs(SPECS)
     out = args.out_dir
+    if args.topic_ids and (out / "raw" / "relabel.jsonl").exists():
+        raise SystemExit(
+            "refusing to overwrite an existing relabel.jsonl during targeted recovery; "
+            "choose a new --out-dir"
+        )
     out.mkdir(parents=True, exist_ok=True)
     (out / "raw").mkdir(exist_ok=True)
     (out / "metrics").mkdir(exist_ok=True)
@@ -637,6 +1091,7 @@ def main() -> None:
         seed_base=args.seed_base,
         n_topics=len(gold),
         max_topics=args.max_topics,
+        topic_ids=args.topic_ids,
         skip_score=args.skip_score,
         embed_model=args.embed_model,
         retrieval_k=args.k,
@@ -657,7 +1112,12 @@ def main() -> None:
     for name, adapter in adapter_list(args.adapters):
         print(f"=== {name} {adapter}", flush=True)
         traces = generate(
-            adapter, gold, retriever=retriever, style_for=style_for, seed_base=args.seed_base
+            adapter,
+            gold,
+            retriever=retriever,
+            style_for=style_for,
+            seed_base=args.seed_base,
+            topic_rows=plan,
         )
         _stamp_traces(traces, row_provenance(args, adapter, run_stamp))
         traces_by_name[name] = traces
@@ -715,12 +1175,21 @@ def main() -> None:
         for name, traces in traces_by_name.items():
             review.extend(evidence_review_rows(traces, name))
         _write_jsonl(out / "raw" / "evidence_review.jsonl", review)
+    rejected = any(
+        row.get("evidence_rejected")
+        for traces in traces_by_name.values()
+        for row in traces
+    )
     if args.skip_score:
         (out / "metrics" / "scoring_skipped.json").write_text(
             json.dumps({"scoring": "skipped", "reason": "--skip-score"}, indent=2) + "\n",
             encoding="utf-8",
         )
+        if rejected:
+            raise SystemExit(2)
         return
+    if rejected:
+        raise SystemExit(2)
     (out / "metrics" / "summary.json").write_text(
         json.dumps(combined, indent=2) + "\n",
         encoding="utf-8",

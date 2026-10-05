@@ -22,7 +22,8 @@ Knobs (env vars / CLI):
 
     CHROMA_HOST          (default localhost)
     CHROMA_PORT          (default 8000)
-    CHROMA_COLLECTION_NAME (default lemkin_content)
+    CHROMA_COLLECTION_NAME (default lemkin_content; not the train-only index)
+    CHROMA_PERSIST_DIR   (train-only persist dir; default host_finetune/output/chroma_lemkin_train_only)
     OLLAMA_BASE          (default http://localhost:11434)
     OLLAMA_EMBED_MODEL   (default nomic-embed-text)
 
@@ -273,7 +274,10 @@ def main() -> None:
     p.add_argument("--assignments", default=str(DEFAULT_ASSIGNMENTS))
     p.add_argument("--gold-dispositions", default=str(DEFAULT_GOLD_DISPOSITIONS))
     p.add_argument("--gold", default=str(DEFAULT_GOLD_EVAL))
-    p.add_argument("--persist-dir", default=str(DEFAULT_PERSIST_DIR))
+    p.add_argument(
+        "--persist-dir",
+        default=os.environ.get("CHROMA_PERSIST_DIR", str(DEFAULT_PERSIST_DIR)),
+    )
     p.add_argument("--probe-only", action="store_true",
                    help="CPU-embed one string, check VRAM, and do not upsert.")
     p.add_argument("--skip-vram-probe", action="store_true",
