@@ -114,7 +114,12 @@ def _looks_like_instruction_echo(draft: str) -> bool:
         "you are a fine-tuned jason lemkin-style writer",
         "length_target_words:",
     )
-    return sum(marker in text for marker in markers) >= 2
+    if sum(marker in text for marker in markers) >= 2:
+        return True
+    # A shorter retry prompt can be echoed as four field labels. It is never a
+    # valid 120–220 word draft, even though it lacks the longer instructions.
+    field_markers = ("topic:", "audience:", "goal:", "call to action:")
+    return sum(marker in text for marker in field_markers) >= 3 and len(text.split()) < 80
 
 
 def _source_type(value: object) -> str:
