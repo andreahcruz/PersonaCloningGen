@@ -1,0 +1,12 @@
+# Optional GPU override for the EC2 G5 demo instance.
+# Use only after the host has an NVIDIA driver and NVIDIA Container Toolkit:
+#   docker compose --env-file .env -f docker-compose.yml -f docker-compose.aws.yml -f docker-compose.gpu.yml up -d
+services:
+  ollama:
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
