@@ -1,0 +1,481 @@
+{
+  "baseline": {
+    "n": 120,
+    "eligible": 77,
+    "gate_failures": {
+      "completion": 41,
+      "copying_memorization": 1,
+      "format": 5,
+      "rag_grounding": 0,
+      "rag_grounding_applicable": 0
+    },
+    "blog_voice_eligible": {
+      "n": 28,
+      "mean": 0.7119,
+      "median": 0.6903,
+      "role": "selector"
+    },
+    "voice_by_medium_all_drafts": {
+      "blog": {
+        "n": 30,
+        "mean": 0.7095,
+        "median": 0.6767,
+        "role": "selector"
+      },
+      "linkedin": {
+        "n": 30,
+        "mean": 0.7545,
+        "median": 0.5574,
+        "role": "diagnostic_only"
+      },
+      "x": {
+        "n": 30,
+        "mean": 0.7857,
+        "median": 0.8126,
+        "role": "diagnostic_only"
+      },
+      "talk": {
+        "n": 0,
+        "mean": null,
+        "median": null,
+        "role": "diagnostic_only"
+      }
+    },
+    "stance_eligible": {
+      "n": 68,
+      "mean": 0.9583,
+      "median": 1.0,
+      "share_at_one": 0.9412
+    },
+    "writing_eligible": {
+      "n": 77,
+      "mean": 3.1537,
+      "median": 3.3333,
+      "dimensions": {
+        "coherence": 3.3896,
+        "fluency": 3.1558,
+        "logical_progression": 2.7403,
+        "relevance": 4.3636,
+        "specificity": 2.3506,
+        "usefulness": 2.9221
+      }
+    },
+    "task_eligible": {
+      "n": 77,
+      "mean": 0.716,
+      "median": 0.7143
+    },
+    "persona_utility": {
+      "n": 23,
+      "mean": 0.705,
+      "median": 0.7109,
+      "range": [
+        0.5316,
+        0.7541
+      ]
+    },
+    "rag_claims": {
+      "claims_examined": 0,
+      "verifiable": 0,
+      "supported": 0,
+      "unsupported": 0,
+      "contradicted": 0,
+      "not_verifiable": 0,
+      "not_applicable": 0,
+      "pooled_claim_support_rate": null
+    },
+    "generation": {
+      "word_count_mean": 192.9083,
+      "word_count_median": 229.0,
+      "stop_reasons": {
+        "eos": 101,
+        "length": 19
+      },
+      "unsupported_numeric_diagnostics": null,
+      "source_copy_flags": null,
+      "latency_seconds_mean": null
+    },
+    "generation_by_medium": {
+      "blog": {
+        "word_count_mean": 284.8333,
+        "word_count_median": 294.5,
+        "stop_reasons": {
+          "eos": 30
+        },
+        "unsupported_numeric_diagnostics": null,
+        "source_copy_flags": null,
+        "latency_seconds_mean": null
+      },
+      "linkedin": {
+        "word_count_mean": 174.4,
+        "word_count_median": 212.0,
+        "stop_reasons": {
+          "eos": 15,
+          "length": 15
+        },
+        "unsupported_numeric_diagnostics": null,
+        "source_copy_flags": null,
+        "latency_seconds_mean": null
+      },
+      "x": {
+        "word_count_mean": 33.9,
+        "word_count_median": 16.0,
+        "stop_reasons": {
+          "eos": 26,
+          "length": 4
+        },
+        "unsupported_numeric_diagnostics": null,
+        "source_copy_flags": null,
+        "latency_seconds_mean": null
+      },
+      "talk": {
+        "word_count_mean": 278.5,
+        "word_count_median": 298.0,
+        "stop_reasons": {
+          "eos": 30
+        },
+        "unsupported_numeric_diagnostics": null,
+        "source_copy_flags": null,
+        "latency_seconds_mean": null
+      }
+    },
+    "by_medium": {
+      "blog": {
+        "n": 30,
+        "eligible": 28,
+        "completion_failures": 1,
+        "copying_failures": 1,
+        "format_failures": 0,
+        "grounding_failures": 0,
+        "voice_all_mean": 0.7095,
+        "voice_eligible_mean": 0.7119,
+        "stance_eligible_mean": 0.9565,
+        "writing_eligible_mean": 3.5952,
+        "task_eligible_mean": 0.7025,
+        "utility_n": 23,
+        "utility_mean": 0.705
+      },
+      "linkedin": {
+        "n": 30,
+        "eligible": 7,
+        "completion_failures": 23,
+        "copying_failures": 0,
+        "format_failures": 4,
+        "grounding_failures": 0,
+        "voice_all_mean": 0.7545,
+        "voice_eligible_mean": 0.7723,
+        "stance_eligible_mean": 1.0,
+        "writing_eligible_mean": 3.1667,
+        "task_eligible_mean": 0.7393,
+        "utility_n": 0,
+        "utility_mean": null
+      },
+      "x": {
+        "n": 30,
+        "eligible": 14,
+        "completion_failures": 16,
+        "copying_failures": 0,
+        "format_failures": 0,
+        "grounding_failures": 0,
+        "voice_all_mean": 0.7857,
+        "voice_eligible_mean": 0.8888,
+        "stance_eligible_mean": 0.8974,
+        "writing_eligible_mean": 1.7738,
+        "task_eligible_mean": 0.7396,
+        "utility_n": 0,
+        "utility_mean": null
+      },
+      "talk": {
+        "n": 30,
+        "eligible": 28,
+        "completion_failures": 1,
+        "copying_failures": 0,
+        "format_failures": 1,
+        "grounding_failures": 0,
+        "voice_all_mean": null,
+        "voice_eligible_mean": null,
+        "stance_eligible_mean": 0.9808,
+        "writing_eligible_mean": 3.3988,
+        "task_eligible_mean": 0.7119,
+        "utility_n": 0,
+        "utility_mean": null
+      }
+    }
+  },
+  "rag": {
+    "n": 120,
+    "eligible": 72,
+    "gate_failures": {
+      "completion": 36,
+      "copying_memorization": 2,
+      "format": 3,
+      "rag_grounding": 14,
+      "rag_grounding_applicable": 120
+    },
+    "blog_voice_eligible": {
+      "n": 25,
+      "mean": 0.7765,
+      "median": 0.7562,
+      "role": "selector"
+    },
+    "voice_by_medium_all_drafts": {
+      "blog": {
+        "n": 30,
+        "mean": 0.8135,
+        "median": 0.7509,
+        "role": "selector"
+      },
+      "linkedin": {
+        "n": 30,
+        "mean": 0.8276,
+        "median": 0.6433,
+        "role": "diagnostic_only"
+      },
+      "x": {
+        "n": 30,
+        "mean": 0.775,
+        "median": 0.8117,
+        "role": "diagnostic_only"
+      },
+      "talk": {
+        "n": 0,
+        "mean": null,
+        "median": null,
+        "role": "diagnostic_only"
+      }
+    },
+    "stance_eligible": {
+      "n": 53,
+      "mean": 0.9906,
+      "median": 1.0,
+      "share_at_one": 0.9811
+    },
+    "writing_eligible": {
+      "n": 72,
+      "mean": 3.0602,
+      "median": 3.0,
+      "dimensions": {
+        "coherence": 3.2917,
+        "fluency": 3.1389,
+        "logical_progression": 2.5278,
+        "relevance": 4.2778,
+        "specificity": 2.3333,
+        "usefulness": 2.7917
+      }
+    },
+    "task_eligible": {
+      "n": 72,
+      "mean": 0.7157,
+      "median": 0.7143
+    },
+    "persona_utility": {
+      "n": 19,
+      "mean": 0.6878,
+      "median": 0.6846,
+      "range": [
+        0.585,
+        0.7531
+      ]
+    },
+    "rag_claims": {
+      "claims_examined": 600,
+      "verifiable": 498,
+      "supported": 495,
+      "unsupported": 1,
+      "contradicted": 2,
+      "not_verifiable": 1,
+      "not_applicable": 101,
+      "pooled_claim_support_rate": 0.994
+    },
+    "generation": {
+      "word_count_mean": 183.0667,
+      "word_count_median": 234.0,
+      "stop_reasons": {
+        "eos": 103,
+        "length": 17
+      },
+      "unsupported_numeric_diagnostics": 60,
+      "source_copy_flags": 2,
+      "latency_seconds_mean": null
+    },
+    "generation_by_medium": {
+      "blog": {
+        "word_count_mean": 259.7,
+        "word_count_median": 279.0,
+        "stop_reasons": {
+          "eos": 30
+        },
+        "unsupported_numeric_diagnostics": 23,
+        "source_copy_flags": 2,
+        "latency_seconds_mean": null
+      },
+      "linkedin": {
+        "word_count_mean": 151.9333,
+        "word_count_median": 179.0,
+        "stop_reasons": {
+          "eos": 17,
+          "length": 13
+        },
+        "unsupported_numeric_diagnostics": 15,
+        "source_copy_flags": 0,
+        "latency_seconds_mean": null
+      },
+      "x": {
+        "word_count_mean": 39.4667,
+        "word_count_median": 16.5,
+        "stop_reasons": {
+          "eos": 26,
+          "length": 4
+        },
+        "unsupported_numeric_diagnostics": 3,
+        "source_copy_flags": 0,
+        "latency_seconds_mean": null
+      },
+      "talk": {
+        "word_count_mean": 281.1667,
+        "word_count_median": 296.0,
+        "stop_reasons": {
+          "eos": 30
+        },
+        "unsupported_numeric_diagnostics": 19,
+        "source_copy_flags": 0,
+        "latency_seconds_mean": null
+      }
+    },
+    "by_medium": {
+      "blog": {
+        "n": 30,
+        "eligible": 25,
+        "completion_failures": 1,
+        "copying_failures": 1,
+        "format_failures": 0,
+        "grounding_failures": 3,
+        "voice_all_mean": 0.8135,
+        "voice_eligible_mean": 0.7765,
+        "stance_eligible_mean": 0.9737,
+        "writing_eligible_mean": 3.4133,
+        "task_eligible_mean": 0.7092,
+        "utility_n": 19,
+        "utility_mean": 0.6878
+      },
+      "linkedin": {
+        "n": 30,
+        "eligible": 9,
+        "completion_failures": 20,
+        "copying_failures": 1,
+        "format_failures": 3,
+        "grounding_failures": 3,
+        "voice_all_mean": 0.8276,
+        "voice_eligible_mean": 0.9253,
+        "stance_eligible_mean": 1.0,
+        "writing_eligible_mean": 2.7778,
+        "task_eligible_mean": 0.7241,
+        "utility_n": 0,
+        "utility_mean": null
+      },
+      "x": {
+        "n": 30,
+        "eligible": 12,
+        "completion_failures": 15,
+        "copying_failures": 0,
+        "format_failures": 0,
+        "grounding_failures": 4,
+        "voice_all_mean": 0.775,
+        "voice_eligible_mean": 0.8277,
+        "stance_eligible_mean": 1.0,
+        "writing_eligible_mean": 1.9861,
+        "task_eligible_mean": 0.7384,
+        "utility_n": 0,
+        "utility_mean": null
+      },
+      "talk": {
+        "n": 30,
+        "eligible": 26,
+        "completion_failures": 0,
+        "copying_failures": 0,
+        "format_failures": 0,
+        "grounding_failures": 4,
+        "voice_all_mean": null,
+        "voice_eligible_mean": null,
+        "stance_eligible_mean": 1.0,
+        "writing_eligible_mean": 3.3141,
+        "task_eligible_mean": 0.7085,
+        "utility_n": 0,
+        "utility_mean": null
+      }
+    }
+  },
+  "selector": {
+    "selected": "EXP-20261004-003-repaired-vs-relabel/relabel",
+    "reason": "passed_gates_then_ranked_persona_style_then_later_axes",
+    "used_for_selection": [
+      "persona_style",
+      "perspective_fidelity",
+      "writing_quality",
+      "task_adherence",
+      "persona_utility"
+    ],
+    "refused_diagnostics": [
+      "bleu",
+      "rouge_l",
+      "bertscore",
+      "gold_rubric_overall",
+      "early_eot_rate",
+      "mid_sentence_stop_rate"
+    ],
+    "ranking": [
+      "EXP-20261004-003-repaired-vs-relabel/relabel",
+      "EXP-20261005-003-relabel-rag-final/relabel"
+    ],
+    "weights_are_project_decision": true,
+    "utility_weights": {
+      "persona_style": 0.45,
+      "perspective_fidelity": 0.2,
+      "writing_quality": 0.25,
+      "task_adherence": 0.1
+    }
+  },
+  "paired": {
+    "writing": {
+      "n": 120,
+      "mean_rag_minus_baseline": -0.1042,
+      "median_rag_minus_baseline": 0.0
+    },
+    "task": {
+      "n": 120,
+      "mean_rag_minus_baseline": 0.0084,
+      "median_rag_minus_baseline": 0.0
+    },
+    "stance": {
+      "n": 82,
+      "mean_rag_minus_baseline": 0.003,
+      "median_rag_minus_baseline": 0.0
+    },
+    "blog_voice": {
+      "n": 30,
+      "mean_rag_minus_baseline": 0.104,
+      "median_rag_minus_baseline": 0.0569
+    },
+    "persona_utility": {
+      "n": 15,
+      "mean_rag_minus_baseline": -0.0255,
+      "median_rag_minus_baseline": -0.0276
+    },
+    "word_count": {
+      "n": 120,
+      "mean_rag_minus_baseline": -9.8417,
+      "median_rag_minus_baseline": 0.0
+    }
+  },
+  "notes": {
+    "voice_direction": "lower style distance is closer to the held-out Lemkin blog profile",
+    "paired_direction": "rag minus retrieval-off baseline",
+    "significance": "not computed; the evaluator has no paired test",
+    "numeric_is_not_a_validity_gate": true,
+    "baseline_source": "experiments/EXP-20261004-008-writing-evidence/metrics/rows.jsonl",
+    "baseline_reused": true,
+    "stance_calibration_note": "A fresh stance-control draw labeled the real control as facts only. The comparison uses the registered EXP-008 calibration judgments for the same prompts.",
+    "baseline_numeric_and_source_copy": "not recorded on the retrieval-off traces",
+    "rag_grounding_failures": "14 drafts fail the gate. 12 have no verifiable claim (all not_applicable). 2 contain one contradicted claim: gold_008 x and gold_028 x."
+  }
+}

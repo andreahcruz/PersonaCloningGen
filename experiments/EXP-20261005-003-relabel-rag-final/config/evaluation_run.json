@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-10-05T09:16:57.752481+00:00",
+  "command": "python -m host_finetune.score_saved_experiment --traces experiments/EXP-20261005-003-relabel-rag-final/raw/relabel.jsonl --out-dir experiments/EXP-20261005-003-relabel-rag-final",
+  "git": {
+    "commit": "b5daa239e2c064448bba2224d6702444d5fb815d",
+    "dirty": true
+  },
+  "judge_model": "qwen2.5:14b",
+  "judge_config": {
+    "family": "qwen",
+    "temperature": 0,
+    "blinded": true,
+    "candidate_family": "llama"
+  },
+  "generation_sha256": "266507aca9effe008596ca64dc199d2e0de32bafbd7a9765d738adb1d34ec550",
+  "python": "3.10.11",
+  "schema": "unified_eval.v1",
+  "utility_weights": {
+    "persona_style": 0.45,
+    "perspective_fidelity": 0.2,
+    "writing_quality": 0.25,
+    "task_adherence": 0.1
+  }
+}

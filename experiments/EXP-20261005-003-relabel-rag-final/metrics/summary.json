@@ -1,0 +1,107 @@
+{
+  "schema": "unified_eval.v1",
+  "utility_weights": {
+    "persona_style": 0.45,
+    "perspective_fidelity": 0.2,
+    "writing_quality": 0.25,
+    "task_adherence": 0.1
+  },
+  "judge_model": "qwen2.5:14b",
+  "judge_family": "qwen",
+  "candidate_family": "llama",
+  "generation_sha256": "266507aca9effe008596ca64dc199d2e0de32bafbd7a9765d738adb1d34ec550",
+  "n_traces": 120,
+  "writing_quality_calibration": {
+    "calibrated": true,
+    "role": "selector",
+    "reason": "writing_order_holds"
+  },
+  "stance_calibration": {
+    "calibrated": true,
+    "role": "selector",
+    "reason": "real_more_consistent_than_opposed_draft",
+    "real_rate": 1.0,
+    "opposed_rate": 0.0,
+    "judge_model": "qwen2.5:14b"
+  },
+  "evidence_documents": 1603,
+  "model": {
+    "schema": "unified_eval.v1",
+    "model_id": "EXP-20261005-003-relabel-rag-final/relabel",
+    "source_experiment": "EXP-20261005-003-relabel-rag-final",
+    "n": 120,
+    "n_eligible": 72,
+    "eligible_rate": 0.6,
+    "gates": {
+      "completion_pass_rate": 0.7,
+      "copying_pass_rate": 0.9833,
+      "format_pass_rate": 0.975,
+      "grounding_applicable_rows": 120,
+      "grounding_pass_rate": 0.8833
+    },
+    "persona_style": {
+      "role": "selector",
+      "mediums_in_mean": [
+        "blog"
+      ],
+      "mean_distance_eligible": 0.7765,
+      "limits": "Closer surface counts are not authorship accuracy. This is a style-distance diagnostic, not proof of authorship identity."
+    },
+    "perspective_fidelity": {
+      "role": "selector",
+      "mediums_in_mean": [
+        "blog",
+        "linkedin",
+        "talk",
+        "x"
+      ],
+      "mean_distance_eligible": 0.8116,
+      "mean_stance_consistency": 0.9906,
+      "method": "stance_consistency_vs_held_out_evidence",
+      "framing_role": "diagnostic_only",
+      "limits": "Stance consistency is the perspective score. Framing distance is diagnostic."
+    },
+    "writing_quality": {
+      "available": true,
+      "role": "selector",
+      "calibrated": true,
+      "reason": "writing_order_holds",
+      "mean_eligible": 3.0602
+    },
+    "task_adherence": {
+      "mean_eligible": 0.7157,
+      "role": "quality_dimension"
+    },
+    "grounding": {
+      "applicable": true,
+      "mean_claim_support_rate": 0.994,
+      "mean_contradiction_rate": 0.0037,
+      "method": "claim_vs_saved_retrieval_hits",
+      "rag_grounding": "scored"
+    },
+    "lemkin_evidence_support": {
+      "mean_claim_support_rate": 0.9602,
+      "not_rag_grounding": true
+    },
+    "persona_utility": 0.6878,
+    "utility_weights": {
+      "persona_style": 0.45,
+      "perspective_fidelity": 0.2,
+      "writing_quality": 0.25,
+      "task_adherence": 0.1
+    },
+    "diagnostics": {
+      "reference_similarity": {
+        "bertscore": null,
+        "bleu": 0.0107,
+        "rouge_l": 0.0769,
+        "role": "diagnostic_not_persona_fidelity"
+      },
+      "brief_overlap": {
+        "gold_rubric_overall": 0.2752,
+        "role": "brief_task_agreement_not_persona_quality"
+      },
+      "latency_seconds": null
+    }
+  }
+}

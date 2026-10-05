@@ -1,0 +1,34 @@
+{
+  "backup_sha256": "aec13324527b6e99c403b2592fa62a48518a466d3a06de96f69abe987896d90f",
+  "backup_path": "experiments/EXP-20261005-003-relabel-rag-final/backup/relabel.jsonl.before-recovery",
+  "original_generated_drafts": 104,
+  "recovered_drafts": 16,
+  "merged_drafts": 120,
+  "merged_sha256": "266507aca9effe008596ca64dc199d2e0de32bafbd7a9765d738adb1d34ec550",
+  "topics": 30,
+  "per_medium": {
+    "blog": 30,
+    "linkedin": 30,
+    "x": 30,
+    "talk": 30
+  },
+  "numeric_diagnostic_failures": 60,
+  "source_copy_flags": 2,
+  "stop_reasons": {
+    "eos": 103,
+    "length": 17
+  },
+  "original_rows_unchanged": true,
+  "placeholders_excluded": [
+    "gold_009",
+    "gold_015",
+    "gold_025",
+    "gold_029"
+  ],
+  "recovery_sources": {
+    "gold_009": "experiments/EXP-20261005-003-relabel-rag-final-recovery",
+    "gold_015": "experiments/EXP-20261005-003-relabel-rag-final-recovery",
+    "gold_025": "experiments/EXP-20261005-003-relabel-rag-final-recovery-rest",
+    "gold_029": "experiments/EXP-20261005-003-relabel-rag-final-recovery-rest"
+  }
+}

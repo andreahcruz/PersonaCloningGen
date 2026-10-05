@@ -1,0 +1,50 @@
+experiment_id: EXP-20261005-003-relabel-rag-final
+timestamp: 2026-10-05T08:47:02Z
+execution_commands:
+  - host_finetune\.venv\Scripts\python.exe -m host_finetune.compare_adapters --adapters relabel=host_finetune/output/lemkin_lora_relabel --retrieval --skip-score --out-dir experiments/EXP-20261005-003-relabel-rag-final
+  - host_finetune\.venv\Scripts\python.exe -m host_finetune.compare_adapters --adapters relabel=host_finetune/output/lemkin_lora_relabel --retrieval --skip-score --topic-ids gold_009,gold_015,gold_025,gold_029 --out-dir experiments/EXP-20261005-003-relabel-rag-final-recovery
+  - host_finetune\.venv\Scripts\python.exe -m host_finetune.compare_adapters --adapters relabel=host_finetune/output/lemkin_lora_relabel --retrieval --skip-score --topic-ids gold_025,gold_029 --out-dir experiments/EXP-20261005-003-relabel-rag-final-recovery-rest
+git:
+  commit: b5daa239e2c064448bba2224d6702444d5fb815d
+  dirty: true
+data:
+  source_manifest: n/a
+  source_hashes: {}
+  processed_dataset_hash: 1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b
+  split_manifest_hash: 6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb
+  gold_eval_hash: d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e
+rag:
+  persona_profile_hash: n/a
+  chroma_collection: lemkin_train_only
+  index_version_or_snapshot: frozen factual dense rag v1; 21193 docs; not rebuilt
+  embedding_model: nomic-embed-text
+model:
+  model_name: unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit
+  model_or_adapter_hash: host_finetune/output/lemkin_lora_relabel
+  config: Relabel at trained scale 1.0; atomic evidence; numeric grounding diagnostic only; one source-copy retry. Initial extraction budget 1536. Recovery extraction budget 2560. Relabel budgets unchanged.
+  random_seed: generation seed_base 42; seed = 42 + original gold index * 4 + medium index
+evaluation:
+  evaluator_commit: b5daa239e2c064448bba2224d6702444d5fb815d
+  evaluator_dirty: true
+  evaluator_schema: unified_eval.v1
+  evaluation_timestamp: 2026-10-05T09:16:57Z
+  evaluation_command: .venv-test\Scripts\python.exe -m host_finetune.score_saved_experiment --traces experiments/EXP-20261005-003-relabel-rag-final/raw/relabel.jsonl --out-dir experiments/EXP-20261005-003-relabel-rag-final
+  generation_sha256: 266507aca9effe008596ca64dc199d2e0de32bafbd7a9765d738adb1d34ec550
+  baseline: experiments/EXP-20261004-003-repaired-vs-relabel relabel rows, scored in experiments/EXP-20261004-008-writing-evidence
+  judge_model: qwen2.5:14b
+  judge_config: family qwen; temperature 0; blinded; candidate family llama; 100 percent GPU
+  utility_weights:
+    persona_style: 0.45
+    perspective_fidelity: 0.20
+    writing_quality: 0.25
+    task_adherence: 0.10
+  known_limitations: 60 of 120 drafts have unsupported-numeric diagnostics. Those diagnostics are not a validity gate. Two drafts are source-copy flagged. A fresh stance-control draw did not yield an advice claim; scoring reused the registered EXP-008 calibration judgments for the same prompts.
+environment:
+  python_version: 3.11
+  package_snapshot: host_finetune venv; Unsloth 2026.5.2; PEFT 0.19.1; Torch 2.10.0+cu128
+  hardware: NVIDIA GeForce RTX 5070 Ti
+outputs:
+  raw: raw/relabel.jsonl
+  metrics: metrics/rows.jsonl
+  comparison: metrics/comparison.json
+  warnings_and_failures: Initial pass wrote 104/120 drafts and exited 2. Targeted recovery completed 120/120 without regenerating the original drafts. Unified evaluation then scored the saved file. 72 of 120 drafts are eligible. 14 fail RAG grounding. 60 have unsupported-numeric diagnostics, which are not a validity gate. Two drafts are source-copy flagged.
