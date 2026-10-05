@@ -14,3 +14,9 @@ host_finetune/output/lemkin-clone/
 host_finetune/output/lemkin-clone_gguf/
 host_finetune/output/lemkin-clone_gguf_direct/
 .venv-test/
+
+# Local weights, indexes, and scratch outputs. Do not commit.
+host_finetune/output/
+artifacts/
+_sanity_check_tmp.py
+data/cleaned (2).zip

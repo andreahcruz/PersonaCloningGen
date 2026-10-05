@@ -1,5 +1,7 @@
 # DATA 298B project state
 
+Deployment status as of 2026-10-05: the candidate is Relabel QLoRA plus Factual Dense RAG v1 (21,193 train-only documents) plus atomic evidence extraction. Start with the [deployment handoff](deployment/DEPLOYMENT_HANDOFF.md) and the [README](../README.md). The audit below is the 2026-10-04 record. It is not the deployment description.
+
 ## 2026-10-04 update: relabel adapter saved
 
 EXP-20261003-004 relabeled the repaired 512-token file. EXP-20261003-005 finished and saved `host_finetune/output/lemkin_lora_relabel`. Train loss 1.797. Best eval loss 1.3316 at step 2,674. That loss is not comparable to the repaired adapter’s 1.5311, because the validation prompts changed. Per-medium training eval ran out of memory and was skipped. A separate CPU embed finished collection `lemkin_train_only` from the train split only. It does not replace `lemkin_content`, and it was not an input to the trainer. EXP-20261004-003 scored both adapters with retrieval off. Relabel is the cutoff baseline: early stop 0.550 versus 0.650, mid-sentence 0.342 versus 0.633. That is not a voice promotion. EXP-20261004-004 repeated the pair with `lemkin_train_only` excerpts. Seeds 43 and 44 are EXP-20261004-005 and EXP-20261004-006. No new fine-tune was started. No Ollama export. Follow [the relabeled FT protocol](evaluation/RELABEL_FT_NEXT_STEPS.md). Whole-source v3 remains a separate candidate.

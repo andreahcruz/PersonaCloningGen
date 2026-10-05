@@ -1,292 +1,174 @@
-# Persona cloning ETL pipeline (Jason Lemkin)
+# Jason Lemkin persona generation (DATA 298B)
 
-Start with [project context](docs/PROJECT_CONTEXT.md), [verified state](docs/project_state.md),
-and the [next-task plan](docs/PLAN.md). The 2026-10-03 audit distinguishes the current
-Compose application, separate persona pipeline, and host QLoRA comparisons. Historical
-scores and older setup/default claims below are not substitutes for current configuration
-or registered experiment evidence. In particular, the watcher download and trainer
-default dataset differ; see the state document before using automated training.
+This repository generates Jason Lemkin / SaaStr writing in four media: blog, LinkedIn, X, and talk.
 
-Approved whole-source SFT preparation now has three registered runs and independent
-structural verification. The latest 1,011-row candidate still requires source-quality
-work before training; see [preparation evidence and commands](docs/data/COMPLETE_SOURCE_SFT.md).
+The deployment candidate is **Relabel QLoRA + Factual Dense RAG v1 + atomic evidence extraction**. RAG is deployed because it grounds verifiable claims. It does not improve Blog Voice or Writing Quality, and it slightly lowers Persona Utility. Those limits are part of the decision. See [deployment handoff](docs/deployment/DEPLOYMENT_HANDOFF.md) and [artifact locations](docs/deployment/ARTIFACTS.md).
 
-A separate 512-token correction has a saved adapter. EXP-20261003-004 keeps whole posts,
-relabels section slices as openings or continuations, and drops mid-sentence cuts.
-EXP-20261003-005 finished that file into `host_finetune/output/lemkin_lora_relabel`
-(train loss 1.797, best eval loss 1.3316). A CPU job finished embedding the train split into
-Chroma collection `lemkin_train_only` (21,194 documents) and did not replace `lemkin_content`.
-Neither result is a finished comparison or a Streamlit deployment. See [project state](docs/project_state.md).
+`docs/project_state.md` is a 2026-10-04 audit. It is not the deployment description.
 
-Dockerized stack: Airflow, Spark, MinIO, Chroma, Streamlit. **Local Lemkin JSONL** (blog, LinkedIn, X, YouTube transcripts) is ingested into MinIO, cleaned and chunked in Spark, embedded with **Ollama** (`nomic-embed-text`), then loaded into **Chroma**, with a **Streamlit** UI for RAG-style generation.
+## Final architecture
 
-## Data files (place under `./data`)
-
-The Airflow task `extract_to_minio` reads these files from the host `./data` folder (mounted at `/opt/airflow/data` in the scheduler):
-
-| File | Role |
-|------|------|
-| `jasonlemkin_blog.jsonl` | SaaStr blog posts (`title`, `date`, `url`, `content`) |
-| `jasonlemkinlinkedin.jsonl` | LinkedIn posts (`content`, `published_text`, …) |
-| `jasonlk_originals.jsonl` | X posts (`text`, `url`, `created_at`; replies/reposts skipped; very short stubs skipped) |
-| `jasonmlemkinyoutubetranscripts.jsonl` | Jason channel transcripts (`video_title`, `video_url`, `transcript_text`, …) |
-| `saastryoutubetranscripts.jsonl` | SaaStr channel transcripts (same shape) |
-
-Rows without usable body text are skipped (e.g. YouTube rows with `transcript_text: null`). After a DAG run, **`./data/persona_profile.json`** is written on the host for Streamlit / `generate.py`.
-
-## Prerequisites
-
-1. **Docker** — Docker Desktop (or Docker Engine + Compose v2) running.
-2. **Ollama on the host** — Containers call Ollama at `host.docker.internal:11434`. Install [Ollama](https://ollama.com), then pull the models the pipeline expects:
-   - `ollama pull nomic-embed-text` (embeddings in Spark + RAG)
-   - `ollama pull llama3.1` (default generation model in `generate.py` / Streamlit)
-
-## One-time setup
-
-```bash
-cd /path/to/298P
-mkdir -p data
-# Copy your Lemkin JSONL files into ./data (see table above)
+```
+user topic
+  -> nomic-embed-text (Ollama, CPU)
+  -> Chroma collection lemkin_train_only (cosine, top 4)
+  -> atomic evidence extraction (same 4-bit Llama, Relabel adapter off)
+  -> deterministic evidence validation
+  -> Relabel QLoRA at trained scale 1.0
+  -> generated blog, LinkedIn, X, or talk
 ```
 
-Optional: `cp .env.example .env` if you add custom env overrides.
+Raw retrieved prose is not inserted into the final generation prompt. The generator sees accepted claim text only. Support spans stay in provenance.
 
-## Start the stack
+Retrieval uses the topic string only. There is no medium filter and no reranker. One topic is retrieved once and reused across the four media. Expected facts from the gold file are never placed in the prompt.
 
-```bash
-docker compose up --build
-```
+Numeric mismatches are recorded and do not block the draft. A source-copy span of 12 or more words may trigger one retry. Post-generation repair is not on this path.
 
-Use `docker-compose` instead of `docker compose` if you only have the older CLI.
+## Frozen RAG
 
-First startup can take several minutes (images build, Airflow DB init, admin user). When things settle:
+| Setting | Value |
+|---|---|
+| Collection | `lemkin_train_only` |
+| Documents | 21,193 |
+| Split | every document is `split=train` |
+| Excluded leakage row | `train_26148` is absent |
+| Embedding model | `nomic-embed-text` |
+| Distance | cosine |
+| Query | topic text only |
+| `retrieval_k` | 4 |
+| Medium filter | off |
+| Reranker | none |
+| Persist directory | `host_finetune/output/chroma_lemkin_train_only` |
 
-| Service | URL |
-|--------|-----|
-| **Airflow** | http://localhost:8080 — user `admin`, password `admin` (from `docker-compose.yml`) |
-| **Streamlit** | http://localhost:8501 |
-| **MinIO console** | http://localhost:9001 — `minioadmin` / `minioadmin` |
-| **Spark UI** | http://localhost:8081 |
-| **Chroma** | API on port **8000** (used by the app, not a browser UI) |
+This is not the older 21,194-document build, and it is not the Compose collection `lemkin_content`.
 
-Keep **`ollama serve`** running on your machine while Spark/Airflow embed (default URL `http://localhost:11434`).
+## Working model
 
-MinIO buckets used: **`lemkin-raw`** (normalized JSON under `raw/`) and **`lemkin-processed`** (Spark output under `chunks/`, plus `persona_profile.json`).
+Relabel QLoRA, loaded at trained scale 1.0.
 
-## Run the pipeline (Airflow)
+- Base: `unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit`
+- Adapter directory: `host_finetune/output/lemkin_lora_relabel`
+- LoRA rank 16, alpha 32
+- Generation length budget: blog 768, LinkedIn 320, X 160, talk 768
+- Sampling: temperature 0.7, top-p 0.9, repetition penalty 1.15, seed base 42
 
-1. Open the Airflow UI at http://localhost:8080.
-2. Find DAG **`lemkin_content_pipeline`**.
-3. **Unpause** it, then **Trigger** (play button) for a manual run.
+The inference entry point is `host_finetune.compare_adapters`. Streamlit and `generate.py` still target the older Compose collection and an Ollama generator. They are not this deployment path.
 
-Tasks: **extract_to_minio** → **trigger_spark_clean** → **load_to_chroma**. **extract_persona** runs after raw load (in parallel with Spark) and writes persona stats to MinIO and `./data/persona_profile.json`.
+## Local services and dependencies
 
-Rebuild Airflow images after dependency changes: `docker compose build --no-cache airflow-webserver airflow-scheduler airflow-init`.
+Inference needs:
 
-Spark needs Ollama for `nomic-embed-text`.
+- Python 3.11 and the host fine-tune environment in `host_finetune/requirements.txt`
+- NVIDIA GPU, 4-bit Llama 3.1 8B (developed on an RTX 5070 Ti, 16 GB)
+- [Ollama](https://ollama.com) running locally, with `nomic-embed-text` pulled
+- The Relabel adapter directory and the Chroma persist directory on disk
 
-## Streamlit UI
+Those model and index files are not in Git. Paths, sizes, and copy-or-rebuild notes are in [ARTIFACTS.md](docs/deployment/ARTIFACTS.md).
 
-With the stack up, open **http://localhost:8501**. The app uses **Chroma over HTTP** (`chroma:8000`) and `./data/persona_profile.json`. Run the DAG through **extract_persona** (or copy a persona file) before generating.
+Evaluation of a saved run also needs Ollama model `qwen2.5:14b`. That judge is not the generator.
 
-The Streamlit **Docker** image installs **`requirements-streamlit.txt`** only (not the full `requirements.txt`), so Chroma’s Pydantic/FastAPI stack can use **`email-validator>=2`** without conflicting with **Airflow**’s older `email-validator<2` pin in the monolithic requirements file.
-
-**Chroma “default_tenant” / tenant errors** — The **Chroma server image** and **`chromadb` pip version** are pinned together in `docker-compose.yml` and the Dockerfiles. If you still see *Could not connect to tenant default_tenant*, the **`chroma-data` volume** may be from an older server layout: stop the stack, remove that volume (Docker Desktop → Volumes, or `docker volume rm <project>_chroma-data`), bring Chroma back up, and **re-run `load_to_chroma`** to repopulate the collection.
-
-**Streamlit: *Collection lemkin_content does not exist*** — Chroma is empty for the current tenant/database. In Airflow, trigger **`lemkin_content_pipeline`** through **`load_to_chroma`** (upstream: **`extract_to_minio`** → **`trigger_spark_clean`** if chunks are missing in MinIO). Rebuild/restart Airflow after Dockerfile changes so **`chromadb==1.5.5`** matches the Chroma container.
-
-## Optional: CLI generation (outside Docker)
-
-Point at Chroma on localhost (port **8000** published from the container) and set:
-
-```bash
-set CHROMA_USE_HTTP=true
-set CHROMA_HOST=localhost
-set CHROMA_PORT=8000
-set CHROMA_COLLECTION_NAME=lemkin_content
-pip install -r requirements.txt
-python generate.py --format linkedin_post --topic "..." --audience "..." --goal "..." --cta "..." --k 8 --out outputs/example.md
-```
-
-Create an `outputs/` folder if you want files there.
-
-## Fine-tuning (StyleAdaptedLM-style LoRA on the host GPU)
-
-Adds a fine-tuned generation model on top of the existing RAG pipeline. The base
-model stays frozen (no catastrophic forgetting), a small LoRA adapter is trained
-on your full corpus reframed as instruction/response pairs, the merged result is
-exported to GGUF, and Ollama serves it as a custom model named **`lemkin-clone`**
-that the existing Streamlit UI / `generate.py` can select.
-
-### Prerequisites
-
-- NVIDIA GPU with 12 GB+ VRAM (developed on RTX 5070 Ti, 16 GB Blackwell sm_120).
-- NVIDIA driver 555+ on the **host** (not Docker). Driver-bundled CUDA 12.x or 13.x both work; the wheels target CUDA 12.8 runtime.
-- **Python 3.11** on the host. Newer (3.12, 3.13, 3.14) won't work — Unsloth and bitsandbytes ship wheels for 3.10–3.11. Install via `winget install Python.Python.3.11` if needed.
-- `ollama serve` running on the host (the same one the Docker stack already calls via `host.docker.internal`).
-- The Docker stack already running (Airflow + MinIO + Spark + Chroma).
-
-### One-time host setup
-
-The trainer lives in `host_finetune/` and runs **outside Docker** so it can use
-the GPU directly. **Install order matters** — see the comment at the top of
-[host_finetune/requirements.txt](host_finetune/requirements.txt) for why.
+## Setup
 
 ```powershell
 py -3.11 -m venv host_finetune\.venv
 host_finetune\.venv\Scripts\activate
 python -m pip install --upgrade pip
-# Step 1: install a torch in the Unsloth-compatible range FROM the cu128 index.
-# If you skip this step, pip will silently downgrade torch to a CPU-only
-# PyPI wheel when resolving Unsloth's `torch<2.11` constraint.
 pip install "torch>=2.10.0,<2.11.0" "torchvision>=0.25.0,<0.26.0" --index-url https://download.pytorch.org/whl/cu128
-# Step 2: everything else (Unsloth, peft, trl, datasets, bitsandbytes, boto3, ...).
 pip install -r host_finetune\requirements.txt
-ollama pull llama3.1
+ollama pull nomic-embed-text
 ```
 
-Sanity-check the GPU stack before training:
+Optional environment file, with placeholders only:
 
 ```powershell
-python -c "import torch; print(torch.__version__, torch.cuda.is_available(), torch.cuda.get_device_name(0))"
+copy .env.example .env
 ```
 
-Expected: `2.10.0+cu128 True NVIDIA GeForce RTX 5070 Ti` (or whatever your card is).
-If it prints `False`, your torch got downgraded to CPU-only — re-run step 1 with
-`--force-reinstall` added.
+Inference reads these variables when they are set. Unset, the batch command below is unchanged.
 
-(Linux/macOS: `python3.11 -m venv host_finetune/.venv && source host_finetune/.venv/bin/activate && ...`)
-
-### Run the fine-tune flow
-
-1. Trigger the Airflow DAG (`lemkin_content_pipeline`) end-to-end. The Spark job
-   now writes a training dataset under
-   `s3://lemkin-processed/training/dataset_jsonl/`, and the new
-   **`mark_training_ready`** task promotes it to a stable
-   `s3://lemkin-processed/training/dataset.jsonl` plus a `_READY` sentinel.
-2. With the venv active, run the watcher on the host:
-   ```powershell
-   python -m host_finetune.watcher --once
-   ```
-   It downloads the dataset, runs `host_finetune.finetune` (QLoRA on
-   `unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit`, ~30–60 min on a 5070 Ti),
-   `host_finetune.merge_and_export` (merges + writes Q4_K_M GGUF), and
-   `host_finetune.register_ollama` (`ollama create lemkin-clone -f Modelfile`).
-3. Open Streamlit at <http://localhost:8501>. Under **Advanced**, set
-   *Generate model* to **`lemkin-clone`** and generate as usual. RAG retrieval
-   still runs against the same Chroma collection — the model itself just
-   produces more native-sounding output.
-
-For continuous polling (re-train every time the DAG runs):
-```powershell
-python -m host_finetune.watcher
-```
-
-To re-train without a new sentinel (e.g. after tweaking hyperparams):
-```powershell
-python -m host_finetune.watcher --once --force
-```
-
-### Tunable knobs
-
-All read from environment variables in `host_finetune/config.py`:
-
-| Variable | Default | Notes |
-|---|---|---|
-| `HF_MODEL_NAME` | `unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit` | Drop to `unsloth/Llama-3.2-3B-Instruct-bnb-4bit` if you OOM. |
-| `PER_DEVICE_BATCH` / `GRAD_ACCUM` | `2` / `8` | Effective batch 16; lower batch first if OOM. |
-| `NUM_EPOCHS` | `3` | 1–2 is usually enough for style transfer; 3+ risks overfitting on small corpora. |
-| `LORA_R` / `LORA_ALPHA` | `16` / `32` | Standard StyleAdaptedLM defaults. |
-| `GGUF_QUANT` | `q4_k_m` | `q5_k_m` for higher fidelity at ~25 % more disk. |
-| `OLLAMA_MODEL_NAME` | `lemkin-clone` | Change if you want to keep multiple personas around. |
-| `MINIO_ENDPOINT_HOST` | `http://localhost:9000` | Override only if you remapped MinIO's host port. |
-
-### Fine-tune troubleshooting
-
-- **`AssertionError: Torch not compiled with CUDA enabled` after install.** Pip
-  silently swapped your cu128 torch for a CPU-only PyPI wheel during dependency
-  resolution. Recover with:
-  ```powershell
-  pip install --force-reinstall "torch>=2.10.0,<2.11.0" "torchvision>=0.25.0,<0.26.0" --index-url https://download.pytorch.org/whl/cu128
-  ```
-  Verify `torch.cuda.is_available()` is True before re-running training.
-- **`datasets X requires fsspec[http]<=2025.9.0, but you have fsspec 2026.x`.**
-  Force-reinstalling torch pulls in too-new fsspec. Pin it back:
-  ```powershell
-  pip install "fsspec<=2025.9.0"
-  ```
-- **`RuntimeError: No or negligible GPU memory available for fused cross entropy.`**
-  On Windows, `torch.cuda.mem_get_info()` often reports almost no *free* VRAM
-  while the 8B weights are loaded, so Unsloth's fused CE auto-tuner aborts.
-  `host_finetune/finetune.py` sets `UNSLOTH_CE_LOSS_TARGET_GB=2` before import.
-  If training still fails, try `3`, or free VRAM by closing games/browsers, then:
-  ```powershell
-  $env:UNSLOTH_CE_LOSS_TARGET_GB="3"
-  python -m host_finetune.finetune
-  ```
-- **OOM during training.** Drop `HF_MODEL_NAME` to Llama 3.2 3B, lower
-  `PER_DEVICE_BATCH` to 1 (and raise `GRAD_ACCUM` to 16 to keep effective batch
-  size constant), or shorten `MAX_SEQ_LENGTH` to 768.
-- **`save_pretrained_gguf` is slow on first run.** Unsloth builds llama.cpp into
-  its cache the first time; subsequent runs reuse it. Resulting GGUF is ~5 GB
-  for Llama 3.1 8B at Q4_K_M.
-- **`ollama create` says "model not found".** Ensure `ollama serve` is running
-  before the watcher reaches the `register_ollama` step. The watcher chains
-  scripts in order, so you can re-run just the register step if needed:
-  `python -m host_finetune.register_ollama`.
-- **Streamlit dropdown still shows the old options.** Streamlit caches the
-  module — refresh the browser tab or restart the `streamlit` container:
-  `docker compose restart streamlit`.
-
-## Logging and error handling
-
-Where to read logs:
-
-| Component | Where |
+| Variable | Role |
 |---|---|
-| Streamlit app / `generate.py` | `docker compose logs streamlit` (CLI: stderr). Every generation has a request id, e.g. `docker compose logs streamlit \| grep a1b2c3d4` |
-| Airflow tasks | Airflow UI → DAG → task → **Log**. Failures and retries also log a `TASK FAILED` / `TASK WILL RETRY` line with the dag, task and run id |
-| Spark job | The `trigger_spark_clean` task log (`lemkin.spark` lines) |
-| Fine-tune watcher | Console and `host_finetune/output/watcher.log` |
-| All containers | Rotated json-file logs (10 MB x 5 per service) |
+| `RELABEL_ADAPTER_PATH` | Relabel adapter directory. Used when `--adapters` is omitted. |
+| `CHROMA_PERSIST_DIR` | Train-only Chroma directory. |
+| `OLLAMA_BASE` | Ollama host. Default `http://localhost:11434`. |
+| `OLLAMA_EMBED_MODEL` | Embedding model for index builds. Default `nomic-embed-text`. |
+| `EXPERIMENT_OUT_DIR` | Default output directory for `compare_adapters`. |
 
-Set `LOG_LEVEL=DEBUG` for more detail. Expected failures carry a hint that says how to fix them (shown in Streamlit as an info box and printed by the CLI). The **System check** button in the Streamlit sidebar reports Ollama, the selected models, Chroma and local files in one go.
+Do not set `CHROMA_COLLECTION_NAME` to steer this path. That variable belongs to the older `lemkin_content` rebuild. This path defaults to `lemkin_train_only` and refuses `lemkin_content`.
 
-| Failure | What you see | Fix |
+## Run inference
+
+From the repository root, with the host venv active and Ollama running:
+
+```powershell
+python -m host_finetune.compare_adapters --adapters relabel=host_finetune/output/lemkin_lora_relabel --retrieval --skip-score --out-dir experiments/EXP-YYYYMMDD-NNN-name
+```
+
+`--retrieval` turns on the frozen factual path. `--skip-score` writes drafts and does not call the judge. The gold topic file is `data/openai_ft/lemkin_gold_eval.jsonl` (30 topics, 120 drafts when all four media are generated).
+
+`--topic-ids gold_009,gold_015` regenerates named topics and keeps each topic's original seed index. The command refuses to overwrite an existing `raw/relabel.jsonl` during a targeted run. Use a new `--out-dir`.
+
+This command loads the GPU model. It is the generation entry point, not a long-running API.
+
+## Evaluate an existing experiment
+
+Scoring does not train or regenerate. It requires `qwen2.5:14b` in Ollama. The saved final run is already scored. Run this only to rescore that frozen file:
+
+```powershell
+python -m host_finetune.score_saved_experiment --traces experiments/EXP-20261005-003-relabel-rag-final/raw/relabel.jsonl --out-dir experiments/EXP-20261005-003-relabel-rag-final
+```
+
+The scorer refuses a trace file whose SHA-256 is not `266507aca9effe008596ca64dc199d2e0de32bafbd7a9765d738adb1d34ec550`.
+
+## Where artifacts live
+
+| Artifact | Path | In Git |
 |---|---|---|
-| Ollama not running / wrong URL | `Cannot connect to Ollama at ...` (retried automatically) | `ollama serve`; inside Docker use `http://host.docker.internal:11434` |
-| Model not pulled | `Ollama model '...' not found` | `ollama pull <model>`, or `python -m host_finetune.register_ollama` for `lemkin-clone` |
-| Chroma unreachable / wrong version | `Cannot connect to Chroma` or `rejected the tenant/database` | `docker compose ps chroma`; see *Chroma "default_tenant"* above |
-| Chroma empty | `returned no chunks` | Run the DAG through `load_to_chroma` |
-| Embedding model mismatch | `does not match the collection` | Use `nomic-embed-text` (what the Spark job used) or rebuild the collection |
-| Broken fine-tune export | `produced degenerate output` (also checked in the `register_ollama` smoke test) | `python -m host_finetune.diagnose_pipeline`, then re-run `merge_and_export` |
-| Ollama down during Spark embedding | `trigger_spark_clean` fails at start (`Ollama preflight failed`), or `load_to_chroma` fails with `have no embedding` | Start Ollama and re-run; the previous `chunks/` output is kept |
+| Relabel adapter | `host_finetune/output/lemkin_lora_relabel` | no |
+| Train-only Chroma | `host_finetune/output/chroma_lemkin_train_only` | no |
+| 4-bit base model | Hugging Face cache for `unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit` | no |
+| `nomic-embed-text` | Ollama local model store | no |
+| Final 120 drafts and scores | `experiments/EXP-20261005-003-relabel-rag-final` | yes |
 
-Pipeline behavior worth knowing:
+## Known limitations
 
-- Airflow tasks retry twice (Spark once) with a delay; every task overwrites its output, so retries are safe.
-- `trigger_spark_clean` checks that Ollama can embed before starting, and does **not** overwrite `chunks/` if more than `MAX_MISSING_EMBEDDING_FRACTION` (default 10%) of rows have no embedding.
-- `mark_training_ready` only writes the `_READY` sentinel when the dataset has valid `instruction`/`output` rows, so the watcher never starts a GPU run on bad data.
-- MinIO calls retry automatically, and every task checks MinIO and its bucket first.
-- The fine-tune watcher backs off (up to 1 hour) after a failed run instead of retrying every poll.
+- Unsupported numeric details can still be generated. On the final run, 60 of 120 drafts have an unsupported-number diagnostic. That diagnostic does not reject the draft.
+- RAG improves grounding of verifiable claims. It does not improve Blog Voice or Writing Quality, and Persona Utility is slightly lower than retrieval-off Relabel.
+- Source copying is monitored. Two of 120 final drafts are flagged. The gate can retry once.
+- Some outputs stop because they hit the generation budget. The final run has 103 EOS stops and 17 length stops.
+- Eligible-draft counts are lower with RAG (72/120) than without it (77/120). Fourteen RAG drafts fail the grounding gate.
 
-Tests for all of the above live in `tests/` (`pip install pytest`, then `python -m pytest`). They stub Chroma, boto3 and Airflow when those are not installed, so they run on a plain Python 3.10+ environment in a few seconds.
+## Final evaluation
 
-## Troubleshooting
+Registered run: `experiments/EXP-20261005-003-relabel-rag-final`.
 
-- If **`airflow-init`** errors because the admin user already exists, that is normal on later runs; the webserver and scheduler should still work.
-- If something fails on first boot, check container logs for `airflow-init`, `airflow-webserver`, and `spark-worker`.
-- **`minio-setup`** and **`airflow-init`** exit after finishing; not staying “running” in Docker Desktop is expected.
-- **`trigger_spark_clean` fails with `Could not parse Master URL`** — Airflow’s Spark hook builds `--master` from the connection. For a **standalone** cluster, use **`host`: `spark://spark-master:7077`** and **no separate port**. The default in `docker-compose.yml` is **`local[*]`** (all Spark work in the Airflow container) to avoid driver/worker Spark JAR mismatches. Recreate Airflow containers after changing `AIRFLOW_CONN_SPARK_DEFAULT`.
-- **`InvalidClassException: org.apache.spark.scheduler.Task`** — The Spark **driver** (pip `pyspark` in the Airflow image) and **executors** (Bitnami `spark-worker`) were different builds. Use **`local[*]`** (default) or run `spark-submit` from the same image as the workers with matching `SPARK_HOME`.
-- **`ClassNotFoundException: org.apache.hadoop.fs.s3a.S3AFileSystem`** — The Airflow image uses PySpark without S3A JARs. The DAG’s `SparkSubmitOperator` passes `--packages` for `hadoop-aws` and the AWS bundle (first run downloads from Maven; the scheduler container needs outbound internet, or pre-cache the JARs).
-- **`load_to_chroma` / `TypeError: 'type' object is not subscriptable` in `posthog.types`** — The Airflow image must be **Python 3.10** (`Dockerfile.airflow` uses `apache/airflow:2.8.1-python3.10`) and pin **`posthog<3`**. If the log still shows **`python3.8`** in paths, you are on an **old container**: run `docker compose build --no-cache` then `docker compose up -d --force-recreate airflow-webserver airflow-scheduler` and confirm `docker compose exec airflow-scheduler python --version` prints **3.10.x**.
+Generation file: `raw/relabel.jsonl`, 120 drafts, 30 topics, 30 of each medium. SHA-256 `266507aca9effe008596ca64dc199d2e0de32bafbd7a9765d738adb1d34ec550`. The first pass saved 104 drafts. Four topics were recovered without regenerating those 104. The merged file is the scored file.
 
-### Debugging a failed Airflow task yourself
+Judge: blinded `qwen2.5:14b`, temperature 0. Schema `unified_eval.v1`. Blog Voice is a style distance. Lower is closer to the held-out Lemkin blog profile. It is not an authorship proof.
 
-1. In the Airflow UI, open the DAG → click the red task → **Log**. The traceback and `spark-submit` output are there, not in `docker compose` stdout.
-2. From the project directory:  
-   `docker compose exec airflow-scheduler ls /opt/airflow/logs/dag_id=lemkin_content_pipeline/`  
-   then open the latest `task_id=trigger_spark_clean/attempt=*.log` with `cat`.
-3. With **`local[*]`**, the job does not use `spark-worker`; confirm MinIO and Ollama are reachable. For standalone Spark, check **http://localhost:8081** and that `spark-master` / `spark-worker` are running.
-4. Tail scheduler: `docker compose logs -f airflow-scheduler` (less detail than the task log for SparkSubmit).
+| | Relabel, no RAG | Relabel + RAG |
+|---|---:|---:|
+| Eligible drafts | 77/120 | 72/120 |
+| Eligible Blog Voice | 0.7119 | 0.7765 |
+| Writing Quality | 3.1537 | 3.0602 |
+| Stance | 0.9583 | 0.9906 |
+| Task | 0.7160 | 0.7157 |
+| Persona Utility | 0.705 on 23 eligible blogs | 0.6878 on 19 eligible blogs |
+
+RAG grounding on the retrieved-evidence run: 600 claims examined, 498 verifiable, 495 supported, 1 unsupported, 2 contradicted. Pooled support rate 0.994.
+
+The selector ranks retrieval-off first because Blog Voice is the first ranking key. Relabel + RAG is still the deployment candidate because grounded claims are a required system property.
+
+## Tests
+
+Unit tests for the deployment path do not load weights:
+
+```powershell
+python -m pytest tests/test_compare_prompts.py tests/test_evidence_capsule.py tests/test_numeric_grounding.py tests/test_rag_source_copying.py tests/test_train_only_index.py tests/test_grounding_repair.py tests/test_generation_diagnostics.py -q
+```
+
+## Older Compose application
+
+`docker-compose.yml` still defines Airflow, Spark, MinIO, a Chroma server, and Streamlit. That stack loads collection `lemkin_content` and generates with an Ollama model. It is an earlier application. It is not the Relabel adapter, not `lemkin_train_only`, and not the atomic-evidence prompt.
+
+Do not treat a Streamlit reply from that stack as output from this deployment candidate.
