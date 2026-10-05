@@ -57,6 +57,7 @@ x-airflow-common: &airflow-common
   volumes:
     - ./dags:/opt/airflow/dags          # your DAG files
     - ./spark_jobs:/opt/airflow/spark_jobs
+    - ./host_finetune:/opt/airflow/host_finetune:ro
     - ./data:/opt/airflow/data
     - airflow-logs:/opt/airflow/logs
   depends_on:
