@@ -52,9 +52,7 @@ from host_finetune.rag_source_copying import (
 )
 from host_finetune.relabel_continuations import sentence_final
 from host_finetune.train_only_index import (
-    DEFAULT_PERSIST_DIR,
     DEFAULT_STYLE_PATH,
-    TRAIN_ONLY_COLLECTION,
     evidence_review_rows,
     format_factual_excerpts,
     format_voice_exemplars,
@@ -798,14 +796,15 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--retrieval",
         action="store_true",
-        help="Append factual excerpts from lemkin_train_only. Default is off.",
+        help="Append factual excerpts from the active train-only index. Default is off.",
     )
-    parser.add_argument("--collection", default=TRAIN_ONLY_COLLECTION)
     parser.add_argument(
-        "--chroma-path",
-        type=Path,
-        default=os.environ.get("CHROMA_PERSIST_DIR", str(DEFAULT_PERSIST_DIR)),
+        "--rag-version",
+        default=None,
+        help="v1 or v2. Default reads host_finetune/rag_active.json.",
     )
+    parser.add_argument("--collection", default=None)
+    parser.add_argument("--chroma-path", type=Path, default=None)
     parser.add_argument("--k", type=int, default=4)
     parser.add_argument("--embed-model", default="nomic-embed-text")
     parser.add_argument(
@@ -933,6 +932,7 @@ def write_parameters(
     embed_model: str | None = None,
     retrieval_k: int | None = None,
     chroma_path: str | None = None,
+    collection: str | None = None,
     git: dict | None = None,
 ) -> None:
     payload = {
@@ -995,7 +995,7 @@ def write_parameters(
         "expected_facts_in_prompt": False,
         "retrieval": {
             "enabled": retrieval,
-            "collection": TRAIN_ONLY_COLLECTION if retrieval else None,
+            "collection": collection if retrieval else None,
             "chroma_path": chroma_path if retrieval else None,
             "embedding_model": embed_model if retrieval else None,
             "top_k": retrieval_k if retrieval else None,
@@ -1014,8 +1014,23 @@ def write_parameters(
     )
 
 
+def apply_active_rag(args: argparse.Namespace):
+    """Fill a missing path or collection from rag_active.json. Explicit flags win."""
+    from host_finetune.rag_runtime import LEGACY_COLLECTION, resolve_rag
+
+    selected = resolve_rag(args.rag_version)
+    if args.collection is None:
+        args.collection = selected["collection"]
+    if args.chroma_path is None:
+        args.chroma_path = selected["path"]
+    if args.collection == LEGACY_COLLECTION:
+        raise SystemExit("refusing lemkin_content")
+    args.rag_version_resolved = selected["version"]
+    return selected
+
+
 def build_runtime_retriever(args: argparse.Namespace):
-    """CPU retrieval against lemkin_train_only. Used only when --retrieval is set."""
+    """CPU retrieval against the selected train-only index. Used only when --retrieval is set."""
     import chromadb
     from chromadb.config import Settings
 
@@ -1023,15 +1038,19 @@ def build_runtime_retriever(args: argparse.Namespace):
     from host_finetune.train_only_index import assert_collection_allowed
 
     assert_collection_allowed(args.collection)
+    if args.collection == "lemkin_content":
+        raise SystemExit("refusing lemkin_content")
     if not args.chroma_path.exists():
-        raise SystemExit(
-            f"train-only index not found at {args.chroma_path}. "
-            "Build it with: python -m host_finetune.rebuild_chroma --train-only"
-        )
+        raise SystemExit(f"train-only index not found at {args.chroma_path}")
     client = chromadb.PersistentClient(
         path=str(args.chroma_path), settings=Settings(anonymized_telemetry=False)
     )
     collection = client.get_collection(args.collection)
+    print(
+        f"RAG version={args.rag_version_resolved} path={args.chroma_path} "
+        f"collection={args.collection} documents={collection.count()}",
+        flush=True,
+    )
 
     def retriever(topic: str, comparison_medium: str) -> dict:
         # Output medium selects the generation instruction only. Factual
@@ -1071,6 +1090,7 @@ def _stamp_traces(traces: list[dict], provenance: dict) -> None:
 
 def main() -> None:
     args = parse_args()
+    apply_active_rag(args)
     plan = selected_topic_rows(load_gold(), args.topic_ids, args.max_topics)
     gold = [row for _index, row in plan]
     specs = load_format_specs(SPECS)
@@ -1096,6 +1116,7 @@ def main() -> None:
         embed_model=args.embed_model,
         retrieval_k=args.k,
         chroma_path=str(args.chroma_path),
+        collection=args.collection,
         git=recorded_git,
     )
     retriever = build_runtime_retriever(args) if args.retrieval else None

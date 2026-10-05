@@ -1,6 +1,6 @@
 # Airflow / Spark v2 architecture
 
-Status: shadow pipeline through a staging Chroma index. It reproduces the Python oracle through the 21,193-document corpus, embeds those documents with the current CPU `nomic-embed-text` call, and writes `lemkin_train_only_v2_shadow`. It does not replace `lemkin_content_pipeline` or `lemkin_train_only`.
+Status: shadow pipeline through a staging Chroma index. It reproduces the Python oracle through the 21,193-document corpus, embeds those documents with the current CPU `nomic-embed-text` call, and writes `lemkin_train_only_v2_shadow`. It does not replace `lemkin_content_pipeline` or `lemkin_train_only`. Active `compare_adapters` inference uses the promoted copy in `docs/architecture/CURRENT_PRODUCTION_PIPELINE.md`. `lemkin_content` stays legacy.
 
 ## Current versus target
 
@@ -47,7 +47,7 @@ validate_raw
     → parity_summary
 ```
 
-`embedding_parity` runs before the shadow collection is built. A vector-contract failure stops the run before Chroma publication. Production cutover is not a task.
+`embedding_parity` runs before the shadow collection is built. A vector-contract failure stops the run before Chroma publication. The DAG does not copy or replace production Chroma. Promotion is a separate manual copy of a validated shadow directory to `host_finetune/output/chroma_lemkin_train_only_v2`, recorded in `docs/deployment/RAG_V2_PROMOTION.md`. A future promotion task could wrap that copy, and it still must not overwrite `chroma_lemkin_train_only`.
 
 Airflow orders the tasks, records the run id, and stops the run when a stage raises `ParityError`. A parity task reads the previous manifest and fails the run when that manifest is missing or not `PASS`. The algorithms stay in `host_finetune`. The DAG callables and `python -m host_finetune.spark_v2` call the same stage functions.
 

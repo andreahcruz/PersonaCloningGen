@@ -4,6 +4,7 @@ import sys
 from host_finetune.compare_adapters import (
     MEDIUMS,
     adapter_list,
+    apply_active_rag,
     comparison_instruction,
     generation_closer,
     limit_topics,
@@ -11,7 +12,7 @@ from host_finetune.compare_adapters import (
     prompt_for,
     selected_topic_rows,
 )
-from host_finetune.train_only_index import DEFAULT_PERSIST_DIR
+from host_finetune.rag_runtime import V2_COLLECTION, V2_DIR
 
 
 def test_four_mediums_use_training_stems():
@@ -87,10 +88,14 @@ def test_frozen_retrieval_defaults(monkeypatch):
     assert args.retrieval is False
     assert args.fixed_style is False
     assert args.embed_model == "nomic-embed-text"
-    assert args.collection == "lemkin_train_only"
+    assert args.collection is None
+    assert args.chroma_path is None
     assert args.seed_base == 42
     assert args.ollama_base == "http://localhost:11434"
-    assert args.chroma_path == DEFAULT_PERSIST_DIR
+    selected = apply_active_rag(args)
+    assert selected["version"] == "v2"
+    assert args.collection == V2_COLLECTION
+    assert args.chroma_path == V2_DIR
 
 
 def test_relabel_adapter_path_overrides_an_empty_adapter_list(monkeypatch):

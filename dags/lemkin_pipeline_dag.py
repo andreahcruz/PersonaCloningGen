@@ -1,4 +1,9 @@
 """
+LEGACY / HISTORICAL. This DAG publishes ``lemkin_content``. It is not the
+current RAG oracle. The train-only index is selected by
+``host_finetune/rag_active.json``. Do not delete this DAG until the school
+demo, ``host_finetune/watcher.py``, and old experiments have been checked.
+
 Airflow DAG — Jason Lemkin content ETL
 
 Task 1: extract_to_minio       — local JSONL (blog, LinkedIn, YouTube, X) → MinIO (raw/)
