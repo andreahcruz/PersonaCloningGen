@@ -19,3 +19,21 @@ RUN pip install --no-cache-dir \
     beautifulsoup4 \
     nltk \
     apache-airflow-providers-apache-spark==4.7.1
+# Tokenizer-only stack matching the host oracle. No model weights and no torch.
+RUN pip install --no-cache-dir --no-deps \
+    "transformers==5.5.0" \
+    "tokenizers==0.22.2" \
+    "huggingface_hub==1.14.0" \
+    "safetensors==0.4.5" \
+    "regex" \
+    "tqdm" \
+    "pyyaml" \
+    "packaging" \
+    "filelock"
+
+USER root
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends git \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+USER airflow

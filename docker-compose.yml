@@ -54,10 +54,21 @@ x-airflow-common: &airflow-common
     # SparkSubmitOperator: local[*] runs entirely in the Airflow container (pip PySpark).
     # spark://spark-master:7077 uses Bitnami workers; their Spark JARs differ from pip PySpark → InvalidClassException on org.apache.spark.scheduler.Task.
     AIRFLOW_CONN_SPARK_DEFAULT: '{"conn_type":"spark","host":"local[*]"}'
+    # Shadow v2 reads canonical code and the local tokenizer snapshot. It does not download weights.
+    LEMKIN_V2_CLEAN_EXECUTOR: spark
+    LEMKIN_V2_CLEAN_SLICES: "4"
+    PYTHONDONTWRITEBYTECODE: "1"
+    PYTHONPATH: /opt/airflow
+    HF_HUB_OFFLINE: "1"
+    TRANSFORMERS_OFFLINE: "1"
   volumes:
     - ./dags:/opt/airflow/dags          # your DAG files
     - ./spark_jobs:/opt/airflow/spark_jobs
     - ./host_finetune:/opt/airflow/host_finetune:ro
+    - ./artifacts:/opt/airflow/artifacts
+    - ./experiments:/opt/airflow/experiments:ro
+    - ./.git:/opt/airflow/.git:ro
+    - ${LEMKIN_HF_CACHE:-C:/Users/okevi/.cache/huggingface}:/home/airflow/.cache/huggingface:ro
     - ./data:/opt/airflow/data
     - airflow-logs:/opt/airflow/logs
   depends_on:
