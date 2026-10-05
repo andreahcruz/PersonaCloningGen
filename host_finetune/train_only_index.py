@@ -10,6 +10,14 @@ import json
 import logging
 from pathlib import Path
 
+from host_finetune.split_groups import (
+    OVERLAP_JACCARD,
+    _jaccard,
+    matches_gold_field,
+    normalize_overlap_text,
+    tokens,
+)
+
 logger = logging.getLogger(__name__)
 
 PROTECTED_COLLECTION = "lemkin_content"
@@ -32,6 +40,7 @@ DEFAULT_GOLD_DISPOSITIONS = (
     / "raw"
     / "dispositions.jsonl"
 )
+DEFAULT_GOLD_EVAL = ROOT / "data" / "openai_ft" / "lemkin_gold_eval.jsonl"
 DEFAULT_PERSIST_DIR = ROOT / "host_finetune" / "output" / "chroma_lemkin_train_only"
 DEFAULT_STYLE_PATH = ROOT / "host_finetune" / "exemplars" / "fixed_style_candidates.json"
 # Comparison mediums in compare_adapters.py. Talk searches the transcript
@@ -73,6 +82,102 @@ def load_jsonl(path: Path) -> list[dict]:
 
 def assignment_rows(records: list[dict]) -> list[dict]:
     return [row for row in records if row.get("record_type") != "meta"]
+
+
+def gold_field_values(gold_rows: list[dict]) -> list[tuple[str, str, str]]:
+    """Gold id, field name, and raw value. Empty values are omitted."""
+    fields: list[tuple[str, str, str]] = []
+    for row in gold_rows:
+        gold_id = str(row.get("id") or "")
+        for field in ("topic", "gold_reference"):
+            value = row.get(field) or ""
+            if str(value).strip():
+                fields.append((gold_id, field, str(value)))
+        for value in row.get("expected_facts") or []:
+            if str(value).strip():
+                fields.append((gold_id, "expected_fact", str(value)))
+    return fields
+
+
+def matching_gold_fields(text: str, title: str, gold_fields: list[tuple[str, str, str]]) -> list[dict]:
+    """Gold fields this text hits under the overlap normalizer."""
+    hits = []
+    for gold_id, field, value in gold_fields:
+        matched, score = matches_gold_field(text, title, value, field)
+        if matched:
+            hits.append({"gold_id": gold_id, "field": field, "jaccard": round(score, 4)})
+    return hits
+
+
+def headline_overlap_groups(
+    dataset_rows: list[dict],
+    assignments: list[dict],
+    gold_rows: list[dict],
+    already_blocked: set[str] | None = None,
+) -> tuple[set[str], list[dict]]:
+    """Group ids whose text matches gold after URL, dash, and punctuation folding.
+
+    A match excludes the whole ``group_id``, including sibling chunks that do
+    not themselves match. Groups already blocked by recorded dispositions are
+    not listed again in the detail rows.
+    """
+    records = assignment_rows(assignments)
+    if len(records) != len(dataset_rows):
+        raise ValueError(
+            f"assignment rows ({len(records)}) != dataset rows ({len(dataset_rows)})"
+        )
+    prior = already_blocked or set()
+    prepared = []
+    for gold_id, field, value in gold_field_values(gold_rows):
+        value_n = normalize_overlap_text(value)
+        if not value_n:
+            continue
+        prepared.append(
+            {
+                "gold_id": gold_id,
+                "field": field,
+                "value_n": value_n,
+                "tokens": tokens(value_n),
+                "words": len(value_n.split()),
+            }
+        )
+    groups: set[str] = set()
+    direct: dict[str, dict] = {}
+    for index, (row, rec) in enumerate(zip(dataset_rows, records)):
+        if rec.get("row_index") != index:
+            raise ValueError(f"assignment row_index {rec.get('row_index')} != {index}")
+        text_n = normalize_overlap_text(row.get("output") or "")
+        title_n = normalize_overlap_text(rec.get("base_title") or "")
+        text_tokens = tokens(text_n)
+        hits = []
+        for item in prepared:
+            score = _jaccard(text_tokens, item["tokens"])
+            matched = (
+                bool(text_n) and text_n == item["value_n"]
+                or (item["field"] == "topic" and bool(title_n) and title_n == item["value_n"])
+                or (item["words"] >= 8 and item["value_n"] in text_n)
+                or score >= OVERLAP_JACCARD
+            )
+            if matched:
+                hits.append(
+                    {"gold_id": item["gold_id"], "field": item["field"], "jaccard": round(score, 4)}
+                )
+        if not hits:
+            continue
+        group_id = rec["group_id"]
+        groups.add(group_id)
+        if group_id in prior or group_id in direct:
+            continue
+        direct[group_id] = {
+            "row_id": index,
+            "group_id": group_id,
+            "split": rec.get("split"),
+            "source_platform": rec.get("source_platform"),
+            "source_file": rec.get("source_file"),
+            "source_line": rec.get("source_line"),
+            "hits": hits,
+        }
+    return groups, list(direct.values())
 
 
 def blocked_group_ids(assignments: list[dict], dispositions: list[dict]) -> set[str]:
@@ -227,7 +332,7 @@ def query_excerpts(collection, embedding: list[float], k: int, where: dict | Non
     kwargs = {
         "query_embeddings": [embedding],
         "n_results": k,
-        "include": ["documents", "metadatas"],
+        "include": ["documents", "metadatas", "distances"],
     }
     if where is not None:
         kwargs["where"] = where
@@ -235,12 +340,15 @@ def query_excerpts(collection, embedding: list[float], k: int, where: dict | Non
     documents = (result.get("documents") or [[]])[0] or []
     metadatas = (result.get("metadatas") or [[]])[0] or []
     ids = (result.get("ids") or [[]])[0] or []
+    distances = (result.get("distances") or [[]])[0] or []
     if len(ids) < len(documents):
         ids = list(ids) + [None] * (len(documents) - len(ids))
     if len(metadatas) < len(documents):
         metadatas = list(metadatas) + [{}] * (len(documents) - len(metadatas))
+    if len(distances) < len(documents):
+        distances = list(distances) + [None] * (len(documents) - len(distances))
     hits = []
-    for doc_id, text, meta in zip(ids, documents, metadatas):
+    for doc_id, text, meta, distance in zip(ids, documents, metadatas, distances):
         if not text:
             continue
         meta = meta or {}
@@ -251,6 +359,7 @@ def query_excerpts(collection, embedding: list[float], k: int, where: dict | Non
                 "medium": meta.get("medium"),
                 "group_id": meta.get("group_id"),
                 "row_id": meta.get("row_id"),
+                "distance": distance,
             }
         )
     return hits

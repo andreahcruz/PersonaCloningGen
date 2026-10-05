@@ -12,6 +12,8 @@ from __future__ import annotations
 import argparse
 import json
 import statistics
+import subprocess
+from datetime import datetime, timezone
 from pathlib import Path
 
 from host_finetune.eval_gold_rag import aggregate, load_format_specs, score_row
@@ -126,6 +128,24 @@ def prompt_for(medium: dict, topic: str) -> str:
     return medium["instruction"].format(topic=topic)
 
 
+_TASK_NAME = {
+    "blog": "blog post",
+    "linkedin": "LinkedIn post",
+    "x": "X post",
+    "talk": "talk",
+}
+
+
+def generation_closer(medium: dict, topic: str) -> str:
+    """Restate the writing task after excerpts so the user turn does not end on evidence."""
+    name = _TASK_NAME[medium["medium"]]
+    return (
+        f"Now write the requested {name} about: {topic}\n"
+        "Use the excerpts only to ground claims.\n"
+        "Do not mention the excerpts, retrieval process, excerpt labels, or these instructions."
+    )
+
+
 def comparison_instruction(
     medium: dict,
     topic: str,
@@ -134,22 +154,24 @@ def comparison_instruction(
 ) -> str:
     """Retrieval-off prompts stay identical to ``prompt_for``.
 
-    A non-empty excerpt list appends a factual block. A non-empty style list
-    appends a voice block. Expected facts are never inserted by this function.
-    Empty lists leave the one-line instruction unchanged.
+    A non-empty excerpt list appends a factual block, then a short restatement
+    of the writing task. A non-empty style list appends a voice block. Expected
+    facts are never inserted by this function. Empty lists leave the one-line
+    instruction unchanged.
     """
     instruction = prompt_for(medium, topic)
+    factual = format_factual_excerpts(excerpts)
     blocks = [
         block
-        for block in (
-            format_voice_exemplars(style_exemplars),
-            format_factual_excerpts(excerpts),
-        )
+        for block in (format_voice_exemplars(style_exemplars), factual)
         if block
     ]
     if not blocks:
         return instruction
-    return instruction + "\n\n" + "\n\n".join(blocks)
+    text = instruction + "\n\n" + "\n\n".join(blocks)
+    if factual:
+        text += "\n\n" + generation_closer(medium, topic)
+    return text
 
 
 def instruction_for_request(medium: dict, topic: str, retriever, style_for):
@@ -195,8 +217,10 @@ def decision_metrics(traces: list[dict]) -> dict:
         "early_eot_rate": (early / len(observed)) if observed else None,
         "early_eot_observed": len(observed),
         "mid_sentence_stop_rate": (mid / len(traces)) if traces else None,
-        "use_for_selection": ["early_eot_rate", "mid_sentence_stop_rate"],
-        "logged_not_for_selection": ["paired_bleu", "paired_rouge_l"],
+        "use_for_selection": [],
+        "gate_not_selector": ["early_eot_rate", "mid_sentence_stop_rate"],
+        "logged_not_for_selection": ["paired_bleu", "paired_rouge_l", "gold_rubric.overall"],
+        "selector": "host_finetune.unified_eval.rank_models",
     }
 
 
@@ -250,6 +274,7 @@ def generate(adapter: Path, gold: list[dict], retriever=None, style_for=None, se
                 "format": medium["format"],
                 "medium": medium["medium"],
                 "prompt": instruction,
+                "rendered_prompt": prompt,
                 "answer": answer,
                 "query": row["topic"],
                 "max_new_tokens": medium["max_new_tokens"],
@@ -280,17 +305,17 @@ def _paired(traces: list[dict]) -> dict:
     }
 
 
-def score(traces: list[dict], specs: dict) -> dict:
+def score(traces: list[dict], specs: dict, pack: dict | None = None, copy_index=None) -> dict:
     scored = [score_row(row, specs) for row in traces]
     summary = aggregate(scored)
     summary.update(_paired(traces))
     summary['stopping'] = summarize_stops(traces)
     summary['decision'] = decision_metrics(traces)
     summary['selection_warning'] = (
-        'Legacy lexical/format scores are not validated voice metrics. X is prompted as a '
-        'single post but legacy format scoring expects a thread; other format constraints '
-        'are not all requested in these prompts. Do not select an adapter by overall score. '
-        'Early EOS alone is not an incomplete answer. Gold topics are a development set.'
+        'Stop rates are a completion gate, not persona fidelity. Gold rubric overall is '
+        'brief/task agreement. BLEU, ROUGE-L, and BERTScore are reference-overlap diagnostics. '
+        'Ranking uses unified_eval.rank_models after completion, copying, format, and '
+        'applicable grounding gates. Gold topics are a development set.'
     )
     by_medium = {}
     for medium in MEDIUMS:
@@ -303,7 +328,13 @@ def score(traces: list[dict], specs: dict) -> dict:
         medium_summary['decision'] = decision_metrics(subset)
         by_medium[medium["medium"]] = medium_summary
     summary["by_medium"] = by_medium
-    return {"summary": summary, "rows": scored}
+    unified_rows = []
+    if pack is not None:
+        from host_finetune.unified_eval import evaluate_row, summarize_model
+
+        unified_rows = [evaluate_row(row, pack, copy_index, specs) for row in traces]
+        summary["unified"] = summarize_model(unified_rows, "pending", "this_run")
+    return {"summary": summary, "rows": scored, "unified_rows": unified_rows}
 
 
 def generate_ollama(
@@ -345,6 +376,7 @@ def generate_ollama(
                 "format": medium["format"],
                 "medium": medium["medium"],
                 "prompt": instruction,
+                "rendered_prompt": instruction,
                 "answer": answer,
                 "query": row["topic"],
                 "max_new_tokens": medium["max_new_tokens"],
@@ -399,6 +431,17 @@ def parse_args() -> argparse.Namespace:
         help="Append the review-candidate voice file. Default is off.",
     )
     parser.add_argument("--style-path", type=Path, default=DEFAULT_STYLE_PATH)
+    parser.add_argument(
+        "--max-topics",
+        type=int,
+        default=None,
+        help="Use only the first N gold topics. Default is the full gold file.",
+    )
+    parser.add_argument(
+        "--skip-score",
+        action="store_true",
+        help="Write generation traces and skip unified_eval.",
+    )
     return parser.parse_args()
 
 
@@ -416,11 +459,72 @@ def adapter_list(raw: str) -> tuple[tuple[str, Path], ...]:
     return tuple(found)
 
 
-def write_parameters(out: Path, retrieval: bool = False, fixed_style: bool = False, seed_base: int = GENERATION_SEED) -> None:
+def git_state() -> dict:
+    """HEAD and dirty flag. A missing git binary leaves both null."""
+    try:
+        commit = subprocess.check_output(
+            ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True
+        ).strip()
+        dirty = bool(
+            subprocess.check_output(
+                ["git", "status", "--porcelain"], cwd=ROOT, text=True
+            ).strip()
+        )
+    except (OSError, subprocess.CalledProcessError):
+        return {"commit": None, "dirty": None}
+    return {"commit": commit, "dirty": dirty}
+
+
+def adapter_base_model(adapter: Path) -> str | None:
+    path = adapter / "adapter_config.json"
+    if not path.is_file():
+        return None
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    return payload.get("base_model_name_or_path")
+
+
+def limit_topics(gold: list[dict], max_topics: int | None) -> list[dict]:
+    if max_topics is None:
+        return gold
+    if max_topics < 1:
+        raise SystemExit("--max-topics must be at least 1")
+    return gold[:max_topics]
+
+
+def row_provenance(args: argparse.Namespace, adapter: Path, stamp: dict) -> dict:
+    """Identity fields stored on every new trace. Scoring can be rerun later."""
+    return {
+        "experiment_id": args.out_dir.name,
+        "adapter_path": str(adapter),
+        "base_model": adapter_base_model(adapter),
+        "collection": args.collection if args.retrieval else None,
+        "embedding_model": args.embed_model if args.retrieval else None,
+        "top_k": args.k if args.retrieval else None,
+        "git_sha": stamp["commit"],
+        "timestamp": stamp["timestamp"],
+    }
+
+
+def write_parameters(
+    out: Path,
+    retrieval: bool = False,
+    fixed_style: bool = False,
+    seed_base: int = GENERATION_SEED,
+    n_topics: int = 30,
+    max_topics: int | None = None,
+    skip_score: bool = False,
+    embed_model: str | None = None,
+    retrieval_k: int | None = None,
+    chroma_path: str | None = None,
+    git: dict | None = None,
+) -> None:
     payload = {
         "experiment_id": out.name,
         "gold_eval": "data/openai_ft/lemkin_gold_eval.jsonl",
-        "n_topics": 30,
+        "n_topics": n_topics,
+        "max_topics": max_topics,
+        "skip_score": skip_score,
+        "git": git,
         "mediums": [
             {
                 "medium": medium["medium"],
@@ -444,8 +548,11 @@ def write_parameters(out: Path, retrieval: bool = False, fixed_style: bool = Fal
         "retrieval": {
             "enabled": retrieval,
             "collection": TRAIN_ONLY_COLLECTION if retrieval else None,
-            "medium_filter": retrieval,
-            "note": "Default off. The repaired versus relabel run uses the EXP-010 prompts and budgets.",
+            "chroma_path": chroma_path if retrieval else None,
+            "embedding_model": embed_model if retrieval else None,
+            "top_k": retrieval_k if retrieval else None,
+            "medium_filter": False,
+            "note": "Factual retrieval searches all train-owned media. Output medium still selects the generation instruction.",
         },
         "fixed_style": {
             "enabled": fixed_style,
@@ -479,10 +586,12 @@ def build_runtime_retriever(args: argparse.Namespace):
     collection = client.get_collection(args.collection)
 
     def retriever(topic: str, comparison_medium: str) -> dict:
-        where = medium_where(comparison_medium)
+        # Output medium selects the generation instruction only. Factual
+        # evidence is the same top-k from the whole train-only collection.
+        del comparison_medium
         vectors = _embed_batch([topic], args.ollama_base, args.embed_model, cpu=True)
-        hits = query_excerpts(collection, vectors[0], args.k, where=where)
-        return {"query": topic, "filter": where, "k": args.k, "hits": hits}
+        hits = query_excerpts(collection, vectors[0], args.k, where=None)
+        return {"query": topic, "filter": None, "k": args.k, "hits": hits}
 
     return retriever
 
@@ -507,32 +616,59 @@ def _write_jsonl(path: Path, rows: list[dict]) -> None:
     )
 
 
+def _stamp_traces(traces: list[dict], provenance: dict) -> None:
+    for row in traces:
+        row.update(provenance)
+
+
 def main() -> None:
     args = parse_args()
-    gold = load_gold()
+    gold = limit_topics(load_gold(), args.max_topics)
     specs = load_format_specs(SPECS)
     out = args.out_dir
     out.mkdir(parents=True, exist_ok=True)
     (out / "raw").mkdir(exist_ok=True)
     (out / "metrics").mkdir(exist_ok=True)
+    recorded_git = git_state()
     write_parameters(
-        out, retrieval=args.retrieval, fixed_style=args.fixed_style, seed_base=args.seed_base
+        out,
+        retrieval=args.retrieval,
+        fixed_style=args.fixed_style,
+        seed_base=args.seed_base,
+        n_topics=len(gold),
+        max_topics=args.max_topics,
+        skip_score=args.skip_score,
+        embed_model=args.embed_model,
+        retrieval_k=args.k,
+        chroma_path=str(args.chroma_path),
+        git=recorded_git,
     )
     retriever = build_runtime_retriever(args) if args.retrieval else None
     style_for = load_style_for(args.style_path) if args.fixed_style else None
     combined = {}
     traces_by_name: dict[str, list[dict]] = {}
+    pack, copy_index = (None, None)
+    if not args.skip_score:
+        pack, copy_index = _evaluation_resources()
+    run_stamp = {
+        "commit": recorded_git["commit"],
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+    }
     for name, adapter in adapter_list(args.adapters):
         print(f"=== {name} {adapter}", flush=True)
         traces = generate(
             adapter, gold, retriever=retriever, style_for=style_for, seed_base=args.seed_base
         )
+        _stamp_traces(traces, row_provenance(args, adapter, run_stamp))
         traces_by_name[name] = traces
         (out / "raw" / f"{name}.jsonl").write_text(
             "\n".join(json.dumps(row, ensure_ascii=False) for row in traces) + "\n",
             encoding="utf-8",
         )
-        result = score(traces, specs)
+        if args.skip_score:
+            print("scoring skipped", flush=True)
+            continue
+        result = score(traces, specs, pack=pack, copy_index=copy_index)
         (out / "metrics" / f"{name}.json").write_text(
             json.dumps(result["summary"], indent=2) + "\n",
             encoding="utf-8",
@@ -546,12 +682,28 @@ def main() -> None:
             model_name, gold, args.ollama_base, retriever=retriever, style_for=style_for,
             seed_base=args.seed_base,
         )
+        _stamp_traces(
+            traces,
+            {
+                "experiment_id": args.out_dir.name,
+                "adapter_path": None,
+                "base_model": model_name,
+                "collection": args.collection if args.retrieval else None,
+                "embedding_model": args.embed_model if args.retrieval else None,
+                "top_k": args.k if args.retrieval else None,
+                "git_sha": run_stamp["commit"],
+                "timestamp": run_stamp["timestamp"],
+            },
+        )
         traces_by_name[label] = traces
         (out / "raw" / f"{label}.jsonl").write_text(
             "\n".join(json.dumps(row, ensure_ascii=False) for row in traces) + "\n",
             encoding="utf-8",
         )
-        result = score(traces, specs)
+        if args.skip_score:
+            print("scoring skipped", flush=True)
+            continue
+        result = score(traces, specs, pack=pack, copy_index=copy_index)
         (out / "metrics" / f"{label}.json").write_text(
             json.dumps(result["summary"], indent=2) + "\n",
             encoding="utf-8",
@@ -563,8 +715,54 @@ def main() -> None:
         for name, traces in traces_by_name.items():
             review.extend(evidence_review_rows(traces, name))
         _write_jsonl(out / "raw" / "evidence_review.jsonl", review)
+    if args.skip_score:
+        (out / "metrics" / "scoring_skipped.json").write_text(
+            json.dumps({"scoring": "skipped", "reason": "--skip-score"}, indent=2) + "\n",
+            encoding="utf-8",
+        )
+        return
     (out / "metrics" / "summary.json").write_text(
         json.dumps(combined, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    _write_unified_ranking(out, combined)
+
+
+def _evaluation_resources():
+    """Held-out style pack and training-text copy index. Generation prompts are unchanged."""
+    from host_finetune.train_only_index import (
+        DEFAULT_ASSIGNMENTS,
+        DEFAULT_DATASET,
+        DEFAULT_GOLD_DISPOSITIONS,
+        load_jsonl,
+    )
+    from host_finetune.unified_eval import CopyIndex, build_reference_pack
+    from host_finetune.voice_distance import iter_train_texts
+
+    dataset = load_jsonl(DEFAULT_DATASET)
+    assignments = load_jsonl(DEFAULT_ASSIGNMENTS)
+    dispositions = load_jsonl(DEFAULT_GOLD_DISPOSITIONS)
+    pack = build_reference_pack(dataset, assignments, dispositions)
+    copy_index = CopyIndex(iter_train_texts(dataset, assignments))
+    return pack, copy_index
+
+
+def _write_unified_ranking(out: Path, combined: dict) -> None:
+    from host_finetune.unified_eval import rank_models
+
+    models = []
+    for name, summary in combined.items():
+        unified = summary.get("unified")
+        if not unified:
+            continue
+        unified = dict(unified)
+        unified["model_id"] = name
+        models.append(unified)
+    if not models:
+        return
+    ranking = rank_models(models)
+    (out / "metrics" / "selection.json").write_text(
+        json.dumps(ranking, indent=2) + "\n",
         encoding="utf-8",
     )
 

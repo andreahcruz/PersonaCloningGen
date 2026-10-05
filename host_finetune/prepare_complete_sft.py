@@ -23,8 +23,8 @@ from host_finetune.filter_event_promos import _is_direct_event_announcement, _st
 from host_finetune.llama_chat_format import training_text_from_row
 from host_finetune.sft_chunk_utils import instruction_for
 from host_finetune.split_groups import (
-    assert_manifest_matches, file_sha256, load_rows, near_duplicate_pairs,
-    normalize_text, tokens, write_assignment_file,
+    assert_manifest_matches, file_sha256, load_rows, matches_gold_field,
+    near_duplicate_pairs, normalize_text, write_assignment_file,
 )
 from spark_jobs.corpus_footer_scrub import is_event_promo
 
@@ -181,23 +181,18 @@ def leakage_links(documents: list[dict], gold_rows: list[dict]):
         splits = {s for i in members for s in documents[i]['splits']}
         if len(splits) > 1: conflicts.update(members)
     gold_matches = []
-    gold_tokens = []
-    for row in gold_rows:
-        for field in ('topic', 'gold_reference'):
-            value = normalize_text(row.get(field, ''))
-            if value: gold_tokens.append((row.get('id'), field, value, tokens(value)))
-        for value in row.get('expected_facts', []):
-            value = normalize_text(value)
-            if value: gold_tokens.append((row.get('id'), 'expected_fact', value, tokens(value)))
-    for i, text in enumerate(normalized):
-        ts = tokens(text)
-        title = normalize_text(documents[i]['title'])
-        for gid, field, value, gt in gold_tokens:
-            union = ts | gt
-            score = len(ts & gt) / len(union) if union else 0
-            if (text == value or (field == 'topic' and title == value) or
-                    (len(value.split()) >= 8 and value in text) or score >= 0.8):
-                gold_matches.append({'document': i, 'gold_id': gid, 'field': field, 'jaccard': score})
+    for i, document in enumerate(documents):
+        text = document.get('text') or ''
+        title = document.get('title') or ''
+        for row in gold_rows:
+            fields = [('topic', row.get('topic', '')), ('gold_reference', row.get('gold_reference', ''))]
+            fields.extend(('expected_fact', value) for value in row.get('expected_facts') or [])
+            for field, value in fields:
+                matched, score = matches_gold_field(text, title, value, field)
+                if matched:
+                    gold_matches.append({
+                        'document': i, 'gold_id': row.get('id'), 'field': field, 'jaccard': score,
+                    })
     gold_hit = {m['document'] for m in gold_matches}
     gold_families = {find(i) for i in gold_hit}
     gold_hit = {i for i in range(len(documents)) if find(i) in gold_families}

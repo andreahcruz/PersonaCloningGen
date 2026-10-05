@@ -46,6 +46,52 @@ def normalize_text(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
+# Gold-overlap comparison only. Near-duplicate clustering still uses normalize_text
+# and JACCARD_T. This does not lower that threshold.
+OVERLAP_JACCARD = JACCARD_T
+_OVERLAP_URL_RE = re.compile(
+    r"(?:https?://|www\.)\S+|\b(?:[\w-]+\.)+(?:com|me|ly|be|io|org|net)/\S*",
+    re.IGNORECASE,
+)
+_OVERLAP_DASH_RE = re.compile(r"[\u2010\u2011\u2012\u2013\u2014\u2015\u2212]|--")
+
+
+def normalize_overlap_text(text: str) -> str:
+    """Strip URLs and fold dashes and punctuation so a headline repost can match.
+
+    Whitespace is collapsed last. ``$`` and ``%`` stay, matching the token
+    pattern used for the 0.80 Jaccard check.
+    """
+    text = unicodedata.normalize("NFKC", text or "")
+    text = _OVERLAP_URL_RE.sub(" ", text)
+    text = _OVERLAP_DASH_RE.sub("-", text)
+    text = text.casefold()
+    text = re.sub(r"[^\w\s$%]", " ", text, flags=re.UNICODE)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def matches_gold_field(text: str, title: str, value: str, field: str) -> tuple[bool, float]:
+    """Return whether overlap-normalized text hits one gold field, and the Jaccard.
+
+    The predicates are the existing ones: exact text, exact topic title,
+    an 8-word-or-longer value contained in the text, or token Jaccard at or
+    above 0.80. The threshold is not lowered.
+    """
+    text_n = normalize_overlap_text(text)
+    title_n = normalize_overlap_text(title)
+    value_n = normalize_overlap_text(value)
+    if not value_n:
+        return False, 0.0
+    score = _jaccard(tokens(text_n), tokens(value_n))
+    matched = (
+        text_n == value_n
+        or (field == "topic" and bool(title_n) and title_n == value_n)
+        or (len(value_n.split()) >= 8 and value_n in text_n)
+        or score >= OVERLAP_JACCARD
+    )
+    return matched, score
+
+
 def tokens(text: str) -> set[str]:
     return set(TOKEN_RE.findall(text))
 

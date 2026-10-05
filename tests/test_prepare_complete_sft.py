@@ -103,6 +103,43 @@ def test_gold_title_match_propagates_to_frozen_family():
     assert hits=={0,1}
 
 
+CIO_TOPIC = "Can an 8-Person StartUp Sell to a CIO? Yes — If You Understand The Social Contract."
+CIO_TWEET = (
+    "Can an 8-Person StartUp Sell to a CIO? Yes -- If You Understand The Social Contract. \n"
+    "http://wp.me/p2Gf8o-19j"
+)
+
+
+def test_ascii_dash_headline_repost_is_gold_overlap():
+    from host_finetune.split_groups import OVERLAP_JACCARD, normalize_text, tokens
+
+    assert OVERLAP_JACCARD == 0.8
+    old_left = set(tokens(normalize_text(CIO_TWEET)))
+    old_right = set(tokens(normalize_text(CIO_TOPIC)))
+    old_score = len(old_left & old_right) / len(old_left | old_right)
+    assert old_score < 0.8
+    assert normalize_text(CIO_TOPIC) not in normalize_text(CIO_TWEET)
+    rows = [
+        doc(CIO_TWEET, "train", "repost", CIO_TWEET),
+        doc("Unrelated quarterly note about hiring a manager.", "train", "repost"),
+    ]
+    _, _, matches, hits = leakage_links(rows, [{"id": "gold_001", "topic": CIO_TOPIC}])
+    assert hits == {0, 1}
+    assert matches[0]["gold_id"] == "gold_001"
+    assert matches[0]["field"] == "topic"
+    assert matches[0]["jaccard"] >= 0.8
+
+
+def test_related_sentence_stays_under_the_overlap_threshold():
+    near = (
+        "Can an 8-person startup sometimes really briefly sell to a CIO? "
+        "Yes if you understand the social contract tomorrow maybe."
+    )
+    _, _, matches, hits = leakage_links([doc(near, "train", "g")], [{"id": "gold_001", "topic": CIO_TOPIC}])
+    assert hits == set()
+    assert matches == []
+
+
 @pytest.mark.parametrize('title,body,reason', [
     ('Can’t Miss Sessions at SaaStr Annual 2021!!', 'Advice. '*60, 'event_titled_document_requires_review'),
     ('80% of Sponsor Expo Slots Sold for Annual', 'Advice. '*60, 'event_titled_document_requires_review'),

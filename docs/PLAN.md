@@ -6,7 +6,7 @@ Updated 2026-10-04. EXP-20261003-004 relabeled the existing 512-token rows (MEAS
 
 ## Exact next task
 
-**Select on early-stop and mid-sentence rates.** EXP-20261004-003 finished retrieval off, and EXP-20261004-004 through 006 added retrieval-on and seeds 43 and 44. [RELABEL_FT_NEXT_STEPS.md](evaluation/RELABEL_FT_NEXT_STEPS.md) records the selection rule: those two rates decide, and human voice preference is not collected. Log BLEU and ROUGE and do not decide on them. Do not overwrite `lemkin_lora_repaired`. Retrieval on raised the early-stop rate, so it is not the next step for fewer early stops.
+**Rank with the unified harness, not with stop rates.** DEC-008 keeps early-stop and mid-sentence rates as completion gates. DEC-009 scores writing quality with a blinded Qwen judge and replaces framing-only perspective with stance against held-out Lemkin evidence. RAG grounding is claim support on retrieval-on traces only. EXP-20261004-008 rescores the saved answers from EXP-007 without retraining or regenerating. Do not overwrite `lemkin_lora_repaired`.
 
 **In parallel, do not promote the whole-source candidate until attribution and scrape structure are resolved.** Preparation code and three recorded candidates now exist; see [results and reproduction](data/COMPLETE_SOURCE_SFT.md). The v3 fixed sample still contains missing embeds, guest summaries and scrape artifacts. Recover author/body/block metadata from original pages in a separate derived layer, or explicitly annotate complete author-written documents. Do not endlessly expand regexes and call the remaining corpus clean. Use train/validation for policy development and preserve held-out ownership.
 

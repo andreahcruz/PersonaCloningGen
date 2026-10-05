@@ -1,0 +1,49 @@
+{
+  "sources": [
+    {
+      "experiment": "EXP-20261001-007-mixed-medium-compare",
+      "models": [
+        "cleaned",
+        "balanced",
+        "r32"
+      ]
+    },
+    {
+      "experiment": "EXP-20261001-010-repaired-and-baselines",
+      "models": [
+        "llama3.1",
+        "lemkin-clone-v5",
+        "lemkin-clone-v6",
+        "repaired"
+      ]
+    },
+    {
+      "experiment": "EXP-20261004-003-repaired-vs-relabel",
+      "models": [
+        "repaired",
+        "relabel"
+      ]
+    },
+    {
+      "experiment": "EXP-20261004-004-repaired-vs-relabel-retrieval",
+      "models": [
+        "repaired",
+        "relabel"
+      ]
+    },
+    {
+      "experiment": "EXP-20261004-005-repaired-vs-relabel-seed43",
+      "models": [
+        "repaired",
+        "relabel"
+      ]
+    },
+    {
+      "experiment": "EXP-20261004-006-repaired-vs-relabel-seed44",
+      "models": [
+        "repaired",
+        "relabel"
+      ]
+    }
+  ]
+}

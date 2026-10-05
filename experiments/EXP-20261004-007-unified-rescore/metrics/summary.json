@@ -1,0 +1,1350 @@
+{
+  "schema": "unified_eval.v1",
+  "utility_weights": {
+    "persona_style": 0.45,
+    "perspective_fidelity": 0.2,
+    "writing_quality": 0.25,
+    "task_adherence": 0.1
+  },
+  "weights_are_project_decision_not_universal": true,
+  "limits": "Closer surface counts are not authorship accuracy. This is a style-distance diagnostic, not proof of authorship identity.",
+  "reference_counts": {
+    "blog": 80,
+    "linkedin": 80,
+    "x": 80,
+    "talk": 0
+  },
+  "blocked_group_count": 34,
+  "calibration": {
+    "blog": {
+      "n_profile": 40,
+      "n_real_controls": 40,
+      "n_base_controls": 30,
+      "style_role": "selector",
+      "perspective_role": "selector",
+      "style_calibration": {
+        "n_real": 40,
+        "n_generic": 4,
+        "real_mean": 0.8531,
+        "generic_mean": 2.7015,
+        "margin": 0.05,
+        "limits": "Closer surface counts are not authorship accuracy. This is a style-distance diagnostic, not proof of authorship identity.",
+        "n_base": 30,
+        "base_mean": 1.8671,
+        "n_degraded": 2,
+        "degraded_mean": 6.1342,
+        "calibrated": true,
+        "reason": "real_closer_than_controls"
+      },
+      "perspective_calibration": {
+        "n_real": 40,
+        "n_generic": 4,
+        "real_mean": 0.8933,
+        "generic_mean": 2.9228,
+        "margin": 0.05,
+        "limits": "Closer surface counts are not authorship accuracy. This is a style-distance diagnostic, not proof of authorship identity.",
+        "n_base": 30,
+        "base_mean": 1.0362,
+        "n_degraded": 2,
+        "degraded_mean": 1.0715,
+        "calibrated": true,
+        "reason": "real_closer_than_controls"
+      }
+    },
+    "linkedin": {
+      "n_profile": 40,
+      "n_real_controls": 40,
+      "n_base_controls": 30,
+      "style_role": "diagnostic_only",
+      "perspective_role": "diagnostic_only",
+      "style_calibration": {
+        "n_real": 40,
+        "n_generic": 4,
+        "real_mean": 0.8136,
+        "generic_mean": 1.4956,
+        "margin": 0.05,
+        "limits": "Closer surface counts are not authorship accuracy. This is a style-distance diagnostic, not proof of authorship identity.",
+        "n_base": 30,
+        "base_mean": 0.7395,
+        "calibrated": false,
+        "reason": "real_not_closer_than_base"
+      },
+      "perspective_calibration": {
+        "n_real": 40,
+        "n_generic": 4,
+        "real_mean": 1.0602,
+        "generic_mean": 2.336,
+        "margin": 0.05,
+        "limits": "Closer surface counts are not authorship accuracy. This is a style-distance diagnostic, not proof of authorship identity.",
+        "n_base": 30,
+        "base_mean": 1.2568,
+        "n_degraded": 2,
+        "degraded_mean": 0.6794,
+        "calibrated": false,
+        "reason": "real_not_closer_than_degraded"
+      }
+    },
+    "x": {
+      "n_profile": 40,
+      "n_real_controls": 40,
+      "n_base_controls": 30,
+      "style_role": "diagnostic_only",
+      "perspective_role": "diagnostic_only",
+      "style_calibration": {
+        "n_real": 40,
+        "n_generic": 4,
+        "real_mean": 0.7709,
+        "generic_mean": 0.7284,
+        "margin": 0.05,
+        "limits": "Closer surface counts are not authorship accuracy. This is a style-distance diagnostic, not proof of authorship identity.",
+        "calibrated": false,
+        "reason": "real_not_closer_than_generic"
+      },
+      "perspective_calibration": {
+        "n_real": 40,
+        "n_generic": 4,
+        "real_mean": 0.7542,
+        "generic_mean": 1.0502,
+        "margin": 0.05,
+        "limits": "Closer surface counts are not authorship accuracy. This is a style-distance diagnostic, not proof of authorship identity.",
+        "n_base": 30,
+        "base_mean": 0.7009,
+        "calibrated": false,
+        "reason": "real_not_closer_than_base"
+      }
+    },
+    "talk": {
+      "n_profile": 0,
+      "n_real_controls": 0,
+      "n_base_controls": 30,
+      "style_role": "diagnostic_only",
+      "perspective_role": "diagnostic_only",
+      "style_calibration": {
+        "n_real": 0,
+        "n_generic": 0,
+        "real_mean": null,
+        "generic_mean": null,
+        "margin": 0.05,
+        "limits": "Closer surface counts are not authorship accuracy. This is a style-distance diagnostic, not proof of authorship identity.",
+        "calibrated": false,
+        "reason": "not_enough_controls"
+      },
+      "perspective_calibration": {
+        "n_real": 0,
+        "n_generic": 0,
+        "real_mean": null,
+        "generic_mean": null,
+        "margin": 0.05,
+        "limits": "Closer surface counts are not authorship accuracy. This is a style-distance diagnostic, not proof of authorship identity.",
+        "calibrated": false,
+        "reason": "not_enough_controls"
+      }
+    }
+  },
+  "writing_quality_calibration": {
+    "calibrated": false,
+    "role": "diagnostic_only",
+    "reason": "judge_not_run"
+  },
+  "selection_by_experiment": {
+    "EXP-20261001-007-mixed-medium-compare": {
+      "selected": "EXP-20261001-007-mixed-medium-compare/cleaned",
+      "reason": "passed_gates_then_ranked_persona_style_then_later_axes",
+      "used_for_selection": [
+        "persona_style",
+        "perspective_fidelity",
+        "task_adherence"
+      ],
+      "refused_diagnostics": [
+        "bleu",
+        "rouge_l",
+        "bertscore",
+        "gold_rubric_overall",
+        "early_eot_rate",
+        "mid_sentence_stop_rate"
+      ],
+      "ranking": [
+        "EXP-20261001-007-mixed-medium-compare/cleaned",
+        "EXP-20261001-007-mixed-medium-compare/r32",
+        "EXP-20261001-007-mixed-medium-compare/balanced"
+      ],
+      "weights_are_project_decision": true,
+      "utility_weights": {
+        "persona_style": 0.45,
+        "perspective_fidelity": 0.2,
+        "writing_quality": 0.25,
+        "task_adherence": 0.1
+      }
+    },
+    "EXP-20261001-010-repaired-and-baselines": {
+      "selected": "EXP-20261001-010-repaired-and-baselines/repaired",
+      "reason": "passed_gates_then_ranked_persona_style_then_later_axes",
+      "used_for_selection": [
+        "persona_style",
+        "perspective_fidelity",
+        "task_adherence"
+      ],
+      "refused_diagnostics": [
+        "bleu",
+        "rouge_l",
+        "bertscore",
+        "gold_rubric_overall",
+        "early_eot_rate",
+        "mid_sentence_stop_rate"
+      ],
+      "ranking": [
+        "EXP-20261001-010-repaired-and-baselines/repaired",
+        "EXP-20261001-010-repaired-and-baselines/lemkin-clone-v6",
+        "EXP-20261001-010-repaired-and-baselines/lemkin-clone-v5",
+        "EXP-20261001-010-repaired-and-baselines/llama3.1"
+      ],
+      "weights_are_project_decision": true,
+      "utility_weights": {
+        "persona_style": 0.45,
+        "perspective_fidelity": 0.2,
+        "writing_quality": 0.25,
+        "task_adherence": 0.1
+      }
+    },
+    "EXP-20261004-003-repaired-vs-relabel": {
+      "selected": "EXP-20261004-003-repaired-vs-relabel/relabel",
+      "reason": "passed_gates_then_ranked_persona_style_then_later_axes",
+      "used_for_selection": [
+        "persona_style",
+        "perspective_fidelity",
+        "task_adherence"
+      ],
+      "refused_diagnostics": [
+        "bleu",
+        "rouge_l",
+        "bertscore",
+        "gold_rubric_overall",
+        "early_eot_rate",
+        "mid_sentence_stop_rate"
+      ],
+      "ranking": [
+        "EXP-20261004-003-repaired-vs-relabel/relabel",
+        "EXP-20261004-003-repaired-vs-relabel/repaired"
+      ],
+      "weights_are_project_decision": true,
+      "utility_weights": {
+        "persona_style": 0.45,
+        "perspective_fidelity": 0.2,
+        "writing_quality": 0.25,
+        "task_adherence": 0.1
+      }
+    },
+    "EXP-20261004-004-repaired-vs-relabel-retrieval": {
+      "selected": "EXP-20261004-004-repaired-vs-relabel-retrieval/repaired",
+      "reason": "passed_gates_then_ranked_persona_style_then_later_axes",
+      "used_for_selection": [
+        "persona_style",
+        "perspective_fidelity",
+        "task_adherence"
+      ],
+      "refused_diagnostics": [
+        "bleu",
+        "rouge_l",
+        "bertscore",
+        "gold_rubric_overall",
+        "early_eot_rate",
+        "mid_sentence_stop_rate"
+      ],
+      "ranking": [
+        "EXP-20261004-004-repaired-vs-relabel-retrieval/repaired",
+        "EXP-20261004-004-repaired-vs-relabel-retrieval/relabel"
+      ],
+      "weights_are_project_decision": true,
+      "utility_weights": {
+        "persona_style": 0.45,
+        "perspective_fidelity": 0.2,
+        "writing_quality": 0.25,
+        "task_adherence": 0.1
+      }
+    },
+    "EXP-20261004-005-repaired-vs-relabel-seed43": {
+      "selected": "EXP-20261004-005-repaired-vs-relabel-seed43/relabel",
+      "reason": "passed_gates_then_ranked_persona_style_then_later_axes",
+      "used_for_selection": [
+        "persona_style",
+        "perspective_fidelity",
+        "task_adherence"
+      ],
+      "refused_diagnostics": [
+        "bleu",
+        "rouge_l",
+        "bertscore",
+        "gold_rubric_overall",
+        "early_eot_rate",
+        "mid_sentence_stop_rate"
+      ],
+      "ranking": [
+        "EXP-20261004-005-repaired-vs-relabel-seed43/relabel",
+        "EXP-20261004-005-repaired-vs-relabel-seed43/repaired"
+      ],
+      "weights_are_project_decision": true,
+      "utility_weights": {
+        "persona_style": 0.45,
+        "perspective_fidelity": 0.2,
+        "writing_quality": 0.25,
+        "task_adherence": 0.1
+      }
+    },
+    "EXP-20261004-006-repaired-vs-relabel-seed44": {
+      "selected": "EXP-20261004-006-repaired-vs-relabel-seed44/relabel",
+      "reason": "passed_gates_then_ranked_persona_style_then_later_axes",
+      "used_for_selection": [
+        "persona_style",
+        "perspective_fidelity",
+        "task_adherence"
+      ],
+      "refused_diagnostics": [
+        "bleu",
+        "rouge_l",
+        "bertscore",
+        "gold_rubric_overall",
+        "early_eot_rate",
+        "mid_sentence_stop_rate"
+      ],
+      "ranking": [
+        "EXP-20261004-006-repaired-vs-relabel-seed44/relabel",
+        "EXP-20261004-006-repaired-vs-relabel-seed44/repaired"
+      ],
+      "weights_are_project_decision": true,
+      "utility_weights": {
+        "persona_style": 0.45,
+        "perspective_fidelity": 0.2,
+        "writing_quality": 0.25,
+        "task_adherence": 0.1
+      }
+    }
+  },
+  "models": [
+    {
+      "schema": "unified_eval.v1",
+      "model_id": "EXP-20261001-007-mixed-medium-compare/cleaned",
+      "source_experiment": "EXP-20261001-007-mixed-medium-compare",
+      "n": 120,
+      "n_eligible": 64,
+      "eligible_rate": 0.5333,
+      "gates": {
+        "completion_pass_rate": 0.55,
+        "copying_pass_rate": 0.9917,
+        "format_pass_rate": 0.9667,
+        "grounding_applicable_rows": 0,
+        "grounding_pass_rate": null
+      },
+      "persona_style": {
+        "role": "selector",
+        "mediums_in_mean": [
+          "blog"
+        ],
+        "mean_distance_eligible": 0.7409,
+        "limits": "Closer surface counts are not authorship accuracy. This is a style-distance diagnostic, not proof of authorship identity."
+      },
+      "perspective_fidelity": {
+        "role": "selector",
+        "mediums_in_mean": [
+          "blog"
+        ],
+        "mean_distance_eligible": 0.6708,
+        "method": "framing_rate_distance_vs_held_out",
+        "limits": "Framing-rate distance is not claim-level stance entailment."
+      },
+      "writing_quality": {
+        "available": false,
+        "role": "diagnostic_only",
+        "calibrated": false,
+        "reason": "judge_not_run",
+        "mean_eligible": null
+      },
+      "task_adherence": {
+        "mean_eligible": 0.6884,
+        "role": "quality_dimension"
+      },
+      "grounding": {
+        "applicable": false,
+        "mean_lexical_overlap": null,
+        "method": "not_applicable"
+      },
+      "persona_utility": null,
+      "utility_weights": {
+        "persona_style": 0.45,
+        "perspective_fidelity": 0.2,
+        "writing_quality": 0.25,
+        "task_adherence": 0.1
+      },
+      "diagnostics": {
+        "reference_similarity": {
+          "bertscore": null,
+          "bleu": 0.0103,
+          "rouge_l": 0.0774,
+          "role": "diagnostic_not_persona_fidelity"
+        },
+        "brief_overlap": {
+          "gold_rubric_overall": 0.235,
+          "role": "brief_task_agreement_not_persona_quality"
+        },
+        "latency_seconds": null
+      }
+    },
+    {
+      "schema": "unified_eval.v1",
+      "model_id": "EXP-20261001-007-mixed-medium-compare/balanced",
+      "source_experiment": "EXP-20261001-007-mixed-medium-compare",
+      "n": 120,
+      "n_eligible": 56,
+      "eligible_rate": 0.4667,
+      "gates": {
+        "completion_pass_rate": 0.4833,
+        "copying_pass_rate": 0.9917,
+        "format_pass_rate": 0.9833,
+        "grounding_applicable_rows": 0,
+        "grounding_pass_rate": null
+      },
+      "persona_style": {
+        "role": "selector",
+        "mediums_in_mean": [
+          "blog"
+        ],
+        "mean_distance_eligible": 0.7785,
+        "limits": "Closer surface counts are not authorship accuracy. This is a style-distance diagnostic, not proof of authorship identity."
+      },
+      "perspective_fidelity": {
+        "role": "selector",
+        "mediums_in_mean": [
+          "blog"
+        ],
+        "mean_distance_eligible": 0.7322,
+        "method": "framing_rate_distance_vs_held_out",
+        "limits": "Framing-rate distance is not claim-level stance entailment."
+      },
+      "writing_quality": {
+        "available": false,
+        "role": "diagnostic_only",
+        "calibrated": false,
+        "reason": "judge_not_run",
+        "mean_eligible": null
+      },
+      "task_adherence": {
+        "mean_eligible": 0.701,
+        "role": "quality_dimension"
+      },
+      "grounding": {
+        "applicable": false,
+        "mean_lexical_overlap": null,
+        "method": "not_applicable"
+      },
+      "persona_utility": null,
+      "utility_weights": {
+        "persona_style": 0.45,
+        "perspective_fidelity": 0.2,
+        "writing_quality": 0.25,
+        "task_adherence": 0.1
+      },
+      "diagnostics": {
+        "reference_similarity": {
+          "bertscore": null,
+          "bleu": 0.012,
+          "rouge_l": 0.0811,
+          "role": "diagnostic_not_persona_fidelity"
+        },
+        "brief_overlap": {
+          "gold_rubric_overall": 0.2346,
+          "role": "brief_task_agreement_not_persona_quality"
+        },
+        "latency_seconds": null
+      }
+    },
+    {
+      "schema": "unified_eval.v1",
+      "model_id": "EXP-20261001-007-mixed-medium-compare/r32",
+      "source_experiment": "EXP-20261001-007-mixed-medium-compare",
+      "n": 120,
+      "n_eligible": 52,
+      "eligible_rate": 0.4333,
+      "gates": {
+        "completion_pass_rate": 0.4417,
+        "copying_pass_rate": 0.9917,
+        "format_pass_rate": 0.9917,
+        "grounding_applicable_rows": 0,
+        "grounding_pass_rate": null
+      },
+      "persona_style": {
+        "role": "selector",
+        "mediums_in_mean": [
+          "blog"
+        ],
+        "mean_distance_eligible": 0.742,
+        "limits": "Closer surface counts are not authorship accuracy. This is a style-distance diagnostic, not proof of authorship identity."
+      },
+      "perspective_fidelity": {
+        "role": "selector",
+        "mediums_in_mean": [
+          "blog"
+        ],
+        "mean_distance_eligible": 0.6289,
+        "method": "framing_rate_distance_vs_held_out",
+        "limits": "Framing-rate distance is not claim-level stance entailment."
+      },
+      "writing_quality": {
+        "available": false,
+        "role": "diagnostic_only",
+        "calibrated": false,
+        "reason": "judge_not_run",
+        "mean_eligible": null
+      },
+      "task_adherence": {
+        "mean_eligible": 0.688,
+        "role": "quality_dimension"
+      },
+      "grounding": {
+        "applicable": false,
+        "mean_lexical_overlap": null,
+        "method": "not_applicable"
+      },
+      "persona_utility": null,
+      "utility_weights": {
+        "persona_style": 0.45,
+        "perspective_fidelity": 0.2,
+        "writing_quality": 0.25,
+        "task_adherence": 0.1
+      },
+      "diagnostics": {
+        "reference_similarity": {
+          "bertscore": null,
+          "bleu": 0.0117,
+          "rouge_l": 0.0781,
+          "role": "diagnostic_not_persona_fidelity"
+        },
+        "brief_overlap": {
+          "gold_rubric_overall": 0.2688,
+          "role": "brief_task_agreement_not_persona_quality"
+        },
+        "latency_seconds": null
+      }
+    },
+    {
+      "schema": "unified_eval.v1",
+      "model_id": "EXP-20261001-010-repaired-and-baselines/llama3.1",
+      "source_experiment": "EXP-20261001-010-repaired-and-baselines",
+      "n": 120,
+      "n_eligible": 45,
+      "eligible_rate": 0.375,
+      "gates": {
+        "completion_pass_rate": 0.375,
+        "copying_pass_rate": 1.0,
+        "format_pass_rate": 1.0,
+        "grounding_applicable_rows": 0,
+        "grounding_pass_rate": null
+      },
+      "persona_style": {
+        "role": "selector",
+        "mediums_in_mean": [
+          "blog"
+        ],
+        "mean_distance_eligible": 1.8083,
+        "limits": "Closer surface counts are not authorship accuracy. This is a style-distance diagnostic, not proof of authorship identity."
+      },
+      "perspective_fidelity": {
+        "role": "selector",
+        "mediums_in_mean": [
+          "blog"
+        ],
+        "mean_distance_eligible": 0.952,
+        "method": "framing_rate_distance_vs_held_out",
+        "limits": "Framing-rate distance is not claim-level stance entailment."
+      },
+      "writing_quality": {
+        "available": false,
+        "role": "diagnostic_only",
+        "calibrated": false,
+        "reason": "judge_not_run",
+        "mean_eligible": null
+      },
+      "task_adherence": {
+        "mean_eligible": 0.7549,
+        "role": "quality_dimension"
+      },
+      "grounding": {
+        "applicable": false,
+        "mean_lexical_overlap": null,
+        "method": "not_applicable"
+      },
+      "persona_utility": null,
+      "utility_weights": {
+        "persona_style": 0.45,
+        "perspective_fidelity": 0.2,
+        "writing_quality": 0.25,
+        "task_adherence": 0.1
+      },
+      "diagnostics": {
+        "reference_similarity": {
+          "bertscore": null,
+          "bleu": 0.0103,
+          "rouge_l": 0.079,
+          "role": "diagnostic_not_persona_fidelity"
+        },
+        "brief_overlap": {
+          "gold_rubric_overall": 0.3684,
+          "role": "brief_task_agreement_not_persona_quality"
+        },
+        "latency_seconds": null
+      }
+    },
+    {
+      "schema": "unified_eval.v1",
+      "model_id": "EXP-20261001-010-repaired-and-baselines/lemkin-clone-v5",
+      "source_experiment": "EXP-20261001-010-repaired-and-baselines",
+      "n": 120,
+      "n_eligible": 66,
+      "eligible_rate": 0.55,
+      "gates": {
+        "completion_pass_rate": 0.5583,
+        "copying_pass_rate": 0.9917,
+        "format_pass_rate": 0.9917,
+        "grounding_applicable_rows": 0,
+        "grounding_pass_rate": null
+      },
+      "persona_style": {
+        "role": "selector",
+        "mediums_in_mean": [
+          "blog"
+        ],
+        "mean_distance_eligible": 0.8401,
+        "limits": "Closer surface counts are not authorship accuracy. This is a style-distance diagnostic, not proof of authorship identity."
+      },
+      "perspective_fidelity": {
+        "role": "selector",
+        "mediums_in_mean": [
+          "blog"
+        ],
+        "mean_distance_eligible": 0.9055,
+        "method": "framing_rate_distance_vs_held_out",
+        "limits": "Framing-rate distance is not claim-level stance entailment."
+      },
+      "writing_quality": {
+        "available": false,
+        "role": "diagnostic_only",
+        "calibrated": false,
+        "reason": "judge_not_run",
+        "mean_eligible": null
+      },
+      "task_adherence": {
+        "mean_eligible": 0.7072,
+        "role": "quality_dimension"
+      },
+      "grounding": {
+        "applicable": false,
+        "mean_lexical_overlap": null,
+        "method": "not_applicable"
+      },
+      "persona_utility": null,
+      "utility_weights": {
+        "persona_style": 0.45,
+        "perspective_fidelity": 0.2,
+        "writing_quality": 0.25,
+        "task_adherence": 0.1
+      },
+      "diagnostics": {
+        "reference_similarity": {
+          "bertscore": null,
+          "bleu": 0.0143,
+          "rouge_l": 0.0886,
+          "role": "diagnostic_not_persona_fidelity"
+        },
+        "brief_overlap": {
+          "gold_rubric_overall": 0.2581,
+          "role": "brief_task_agreement_not_persona_quality"
+        },
+        "latency_seconds": null
+      }
+    },
+    {
+      "schema": "unified_eval.v1",
+      "model_id": "EXP-20261001-010-repaired-and-baselines/lemkin-clone-v6",
+      "source_experiment": "EXP-20261001-010-repaired-and-baselines",
+      "n": 120,
+      "n_eligible": 78,
+      "eligible_rate": 0.65,
+      "gates": {
+        "completion_pass_rate": 0.65,
+        "copying_pass_rate": 1.0,
+        "format_pass_rate": 1.0,
+        "grounding_applicable_rows": 0,
+        "grounding_pass_rate": null
+      },
+      "persona_style": {
+        "role": "selector",
+        "mediums_in_mean": [
+          "blog"
+        ],
+        "mean_distance_eligible": 0.8061,
+        "limits": "Closer surface counts are not authorship accuracy. This is a style-distance diagnostic, not proof of authorship identity."
+      },
+      "perspective_fidelity": {
+        "role": "selector",
+        "mediums_in_mean": [
+          "blog"
+        ],
+        "mean_distance_eligible": 0.8401,
+        "method": "framing_rate_distance_vs_held_out",
+        "limits": "Framing-rate distance is not claim-level stance entailment."
+      },
+      "writing_quality": {
+        "available": false,
+        "role": "diagnostic_only",
+        "calibrated": false,
+        "reason": "judge_not_run",
+        "mean_eligible": null
+      },
+      "task_adherence": {
+        "mean_eligible": 0.6984,
+        "role": "quality_dimension"
+      },
+      "grounding": {
+        "applicable": false,
+        "mean_lexical_overlap": null,
+        "method": "not_applicable"
+      },
+      "persona_utility": null,
+      "utility_weights": {
+        "persona_style": 0.45,
+        "perspective_fidelity": 0.2,
+        "writing_quality": 0.25,
+        "task_adherence": 0.1
+      },
+      "diagnostics": {
+        "reference_similarity": {
+          "bertscore": null,
+          "bleu": 0.0142,
+          "rouge_l": 0.0893,
+          "role": "diagnostic_not_persona_fidelity"
+        },
+        "brief_overlap": {
+          "gold_rubric_overall": 0.2639,
+          "role": "brief_task_agreement_not_persona_quality"
+        },
+        "latency_seconds": null
+      }
+    },
+    {
+      "schema": "unified_eval.v1",
+      "model_id": "EXP-20261001-010-repaired-and-baselines/repaired",
+      "source_experiment": "EXP-20261001-010-repaired-and-baselines",
+      "n": 120,
+      "n_eligible": 47,
+      "eligible_rate": 0.3917,
+      "gates": {
+        "completion_pass_rate": 0.4,
+        "copying_pass_rate": 0.9917,
+        "format_pass_rate": 0.9833,
+        "grounding_applicable_rows": 0,
+        "grounding_pass_rate": null
+      },
+      "persona_style": {
+        "role": "selector",
+        "mediums_in_mean": [
+          "blog"
+        ],
+        "mean_distance_eligible": 0.7681,
+        "limits": "Closer surface counts are not authorship accuracy. This is a style-distance diagnostic, not proof of authorship identity."
+      },
+      "perspective_fidelity": {
+        "role": "selector",
+        "mediums_in_mean": [
+          "blog"
+        ],
+        "mean_distance_eligible": 0.6893,
+        "method": "framing_rate_distance_vs_held_out",
+        "limits": "Framing-rate distance is not claim-level stance entailment."
+      },
+      "writing_quality": {
+        "available": false,
+        "role": "diagnostic_only",
+        "calibrated": false,
+        "reason": "judge_not_run",
+        "mean_eligible": null
+      },
+      "task_adherence": {
+        "mean_eligible": 0.7021,
+        "role": "quality_dimension"
+      },
+      "grounding": {
+        "applicable": false,
+        "mean_lexical_overlap": null,
+        "method": "not_applicable"
+      },
+      "persona_utility": null,
+      "utility_weights": {
+        "persona_style": 0.45,
+        "perspective_fidelity": 0.2,
+        "writing_quality": 0.25,
+        "task_adherence": 0.1
+      },
+      "diagnostics": {
+        "reference_similarity": {
+          "bertscore": null,
+          "bleu": 0.0126,
+          "rouge_l": 0.0793,
+          "role": "diagnostic_not_persona_fidelity"
+        },
+        "brief_overlap": {
+          "gold_rubric_overall": 0.2441,
+          "role": "brief_task_agreement_not_persona_quality"
+        },
+        "latency_seconds": null
+      }
+    },
+    {
+      "schema": "unified_eval.v1",
+      "model_id": "EXP-20261004-003-repaired-vs-relabel/repaired",
+      "source_experiment": "EXP-20261004-003-repaired-vs-relabel",
+      "n": 120,
+      "n_eligible": 43,
+      "eligible_rate": 0.3583,
+      "gates": {
+        "completion_pass_rate": 0.3667,
+        "copying_pass_rate": 0.9917,
+        "format_pass_rate": 1.0,
+        "grounding_applicable_rows": 0,
+        "grounding_pass_rate": null
+      },
+      "persona_style": {
+        "role": "selector",
+        "mediums_in_mean": [
+          "blog"
+        ],
+        "mean_distance_eligible": 0.7526,
+        "limits": "Closer surface counts are not authorship accuracy. This is a style-distance diagnostic, not proof of authorship identity."
+      },
+      "perspective_fidelity": {
+        "role": "selector",
+        "mediums_in_mean": [
+          "blog"
+        ],
+        "mean_distance_eligible": 0.6766,
+        "method": "framing_rate_distance_vs_held_out",
+        "limits": "Framing-rate distance is not claim-level stance entailment."
+      },
+      "writing_quality": {
+        "available": false,
+        "role": "diagnostic_only",
+        "calibrated": false,
+        "reason": "judge_not_run",
+        "mean_eligible": null
+      },
+      "task_adherence": {
+        "mean_eligible": 0.6929,
+        "role": "quality_dimension"
+      },
+      "grounding": {
+        "applicable": false,
+        "mean_lexical_overlap": null,
+        "method": "not_applicable"
+      },
+      "persona_utility": null,
+      "utility_weights": {
+        "persona_style": 0.45,
+        "perspective_fidelity": 0.2,
+        "writing_quality": 0.25,
+        "task_adherence": 0.1
+      },
+      "diagnostics": {
+        "reference_similarity": {
+          "bertscore": null,
+          "bleu": 0.0103,
+          "rouge_l": 0.0753,
+          "role": "diagnostic_not_persona_fidelity"
+        },
+        "brief_overlap": {
+          "gold_rubric_overall": 0.2713,
+          "role": "brief_task_agreement_not_persona_quality"
+        },
+        "latency_seconds": null
+      }
+    },
+    {
+      "schema": "unified_eval.v1",
+      "model_id": "EXP-20261004-003-repaired-vs-relabel/relabel",
+      "source_experiment": "EXP-20261004-003-repaired-vs-relabel",
+      "n": 120,
+      "n_eligible": 77,
+      "eligible_rate": 0.6417,
+      "gates": {
+        "completion_pass_rate": 0.6583,
+        "copying_pass_rate": 0.9917,
+        "format_pass_rate": 0.9583,
+        "grounding_applicable_rows": 0,
+        "grounding_pass_rate": null
+      },
+      "persona_style": {
+        "role": "selector",
+        "mediums_in_mean": [
+          "blog"
+        ],
+        "mean_distance_eligible": 0.7119,
+        "limits": "Closer surface counts are not authorship accuracy. This is a style-distance diagnostic, not proof of authorship identity."
+      },
+      "perspective_fidelity": {
+        "role": "selector",
+        "mediums_in_mean": [
+          "blog"
+        ],
+        "mean_distance_eligible": 0.6522,
+        "method": "framing_rate_distance_vs_held_out",
+        "limits": "Framing-rate distance is not claim-level stance entailment."
+      },
+      "writing_quality": {
+        "available": false,
+        "role": "diagnostic_only",
+        "calibrated": false,
+        "reason": "judge_not_run",
+        "mean_eligible": null
+      },
+      "task_adherence": {
+        "mean_eligible": 0.716,
+        "role": "quality_dimension"
+      },
+      "grounding": {
+        "applicable": false,
+        "mean_lexical_overlap": null,
+        "method": "not_applicable"
+      },
+      "persona_utility": null,
+      "utility_weights": {
+        "persona_style": 0.45,
+        "perspective_fidelity": 0.2,
+        "writing_quality": 0.25,
+        "task_adherence": 0.1
+      },
+      "diagnostics": {
+        "reference_similarity": {
+          "bertscore": null,
+          "bleu": 0.0099,
+          "rouge_l": 0.0759,
+          "role": "diagnostic_not_persona_fidelity"
+        },
+        "brief_overlap": {
+          "gold_rubric_overall": 0.2734,
+          "role": "brief_task_agreement_not_persona_quality"
+        },
+        "latency_seconds": null
+      }
+    },
+    {
+      "schema": "unified_eval.v1",
+      "model_id": "EXP-20261004-004-repaired-vs-relabel-retrieval/repaired",
+      "source_experiment": "EXP-20261004-004-repaired-vs-relabel-retrieval",
+      "n": 120,
+      "n_eligible": 19,
+      "eligible_rate": 0.1583,
+      "gates": {
+        "completion_pass_rate": 0.625,
+        "copying_pass_rate": 0.9917,
+        "format_pass_rate": 0.9083,
+        "grounding_applicable_rows": 120,
+        "grounding_pass_rate": 0.3083
+      },
+      "persona_style": {
+        "role": "selector",
+        "mediums_in_mean": [
+          "blog"
+        ],
+        "mean_distance_eligible": 1.1353,
+        "limits": "Closer surface counts are not authorship accuracy. This is a style-distance diagnostic, not proof of authorship identity."
+      },
+      "perspective_fidelity": {
+        "role": "selector",
+        "mediums_in_mean": [
+          "blog"
+        ],
+        "mean_distance_eligible": 1.1608,
+        "method": "framing_rate_distance_vs_held_out",
+        "limits": "Framing-rate distance is not claim-level stance entailment."
+      },
+      "writing_quality": {
+        "available": false,
+        "role": "diagnostic_only",
+        "calibrated": false,
+        "reason": "judge_not_run",
+        "mean_eligible": null
+      },
+      "task_adherence": {
+        "mean_eligible": 0.6343,
+        "role": "quality_dimension"
+      },
+      "grounding": {
+        "applicable": true,
+        "mean_lexical_overlap": 0.1834,
+        "method": "token_overlap_not_claim_entailment"
+      },
+      "persona_utility": null,
+      "utility_weights": {
+        "persona_style": 0.45,
+        "perspective_fidelity": 0.2,
+        "writing_quality": 0.25,
+        "task_adherence": 0.1
+      },
+      "diagnostics": {
+        "reference_similarity": {
+          "bertscore": null,
+          "bleu": 0.0144,
+          "rouge_l": 0.0782,
+          "role": "diagnostic_not_persona_fidelity"
+        },
+        "brief_overlap": {
+          "gold_rubric_overall": 0.1745,
+          "role": "brief_task_agreement_not_persona_quality"
+        },
+        "latency_seconds": null
+      }
+    },
+    {
+      "schema": "unified_eval.v1",
+      "model_id": "EXP-20261004-004-repaired-vs-relabel-retrieval/relabel",
+      "source_experiment": "EXP-20261004-004-repaired-vs-relabel-retrieval",
+      "n": 120,
+      "n_eligible": 13,
+      "eligible_rate": 0.1083,
+      "gates": {
+        "completion_pass_rate": 0.7417,
+        "copying_pass_rate": 0.9917,
+        "format_pass_rate": 0.9,
+        "grounding_applicable_rows": 120,
+        "grounding_pass_rate": 0.2667
+      },
+      "persona_style": {
+        "role": "selector",
+        "mediums_in_mean": [
+          "blog"
+        ],
+        "mean_distance_eligible": 1.1729,
+        "limits": "Closer surface counts are not authorship accuracy. This is a style-distance diagnostic, not proof of authorship identity."
+      },
+      "perspective_fidelity": {
+        "role": "selector",
+        "mediums_in_mean": [
+          "blog"
+        ],
+        "mean_distance_eligible": 1.0736,
+        "method": "framing_rate_distance_vs_held_out",
+        "limits": "Framing-rate distance is not claim-level stance entailment."
+      },
+      "writing_quality": {
+        "available": false,
+        "role": "diagnostic_only",
+        "calibrated": false,
+        "reason": "judge_not_run",
+        "mean_eligible": null
+      },
+      "task_adherence": {
+        "mean_eligible": 0.725,
+        "role": "quality_dimension"
+      },
+      "grounding": {
+        "applicable": true,
+        "mean_lexical_overlap": 0.1398,
+        "method": "token_overlap_not_claim_entailment"
+      },
+      "persona_utility": null,
+      "utility_weights": {
+        "persona_style": 0.45,
+        "perspective_fidelity": 0.2,
+        "writing_quality": 0.25,
+        "task_adherence": 0.1
+      },
+      "diagnostics": {
+        "reference_similarity": {
+          "bertscore": null,
+          "bleu": 0.0144,
+          "rouge_l": 0.077,
+          "role": "diagnostic_not_persona_fidelity"
+        },
+        "brief_overlap": {
+          "gold_rubric_overall": 0.1831,
+          "role": "brief_task_agreement_not_persona_quality"
+        },
+        "latency_seconds": null
+      }
+    },
+    {
+      "schema": "unified_eval.v1",
+      "model_id": "EXP-20261004-005-repaired-vs-relabel-seed43/repaired",
+      "source_experiment": "EXP-20261004-005-repaired-vs-relabel-seed43",
+      "n": 120,
+      "n_eligible": 46,
+      "eligible_rate": 0.3833,
+      "gates": {
+        "completion_pass_rate": 0.4,
+        "copying_pass_rate": 0.9917,
+        "format_pass_rate": 0.9917,
+        "grounding_applicable_rows": 0,
+        "grounding_pass_rate": null
+      },
+      "persona_style": {
+        "role": "selector",
+        "mediums_in_mean": [
+          "blog"
+        ],
+        "mean_distance_eligible": 0.7717,
+        "limits": "Closer surface counts are not authorship accuracy. This is a style-distance diagnostic, not proof of authorship identity."
+      },
+      "perspective_fidelity": {
+        "role": "selector",
+        "mediums_in_mean": [
+          "blog"
+        ],
+        "mean_distance_eligible": 0.701,
+        "method": "framing_rate_distance_vs_held_out",
+        "limits": "Framing-rate distance is not claim-level stance entailment."
+      },
+      "writing_quality": {
+        "available": false,
+        "role": "diagnostic_only",
+        "calibrated": false,
+        "reason": "judge_not_run",
+        "mean_eligible": null
+      },
+      "task_adherence": {
+        "mean_eligible": 0.6952,
+        "role": "quality_dimension"
+      },
+      "grounding": {
+        "applicable": false,
+        "mean_lexical_overlap": null,
+        "method": "not_applicable"
+      },
+      "persona_utility": null,
+      "utility_weights": {
+        "persona_style": 0.45,
+        "perspective_fidelity": 0.2,
+        "writing_quality": 0.25,
+        "task_adherence": 0.1
+      },
+      "diagnostics": {
+        "reference_similarity": {
+          "bertscore": null,
+          "bleu": 0.0112,
+          "rouge_l": 0.0784,
+          "role": "diagnostic_not_persona_fidelity"
+        },
+        "brief_overlap": {
+          "gold_rubric_overall": 0.2633,
+          "role": "brief_task_agreement_not_persona_quality"
+        },
+        "latency_seconds": null
+      }
+    },
+    {
+      "schema": "unified_eval.v1",
+      "model_id": "EXP-20261004-005-repaired-vs-relabel-seed43/relabel",
+      "source_experiment": "EXP-20261004-005-repaired-vs-relabel-seed43",
+      "n": 120,
+      "n_eligible": 81,
+      "eligible_rate": 0.675,
+      "gates": {
+        "completion_pass_rate": 0.7,
+        "copying_pass_rate": 0.9917,
+        "format_pass_rate": 0.9417,
+        "grounding_applicable_rows": 0,
+        "grounding_pass_rate": null
+      },
+      "persona_style": {
+        "role": "selector",
+        "mediums_in_mean": [
+          "blog"
+        ],
+        "mean_distance_eligible": 0.7396,
+        "limits": "Closer surface counts are not authorship accuracy. This is a style-distance diagnostic, not proof of authorship identity."
+      },
+      "perspective_fidelity": {
+        "role": "selector",
+        "mediums_in_mean": [
+          "blog"
+        ],
+        "mean_distance_eligible": 0.7607,
+        "method": "framing_rate_distance_vs_held_out",
+        "limits": "Framing-rate distance is not claim-level stance entailment."
+      },
+      "writing_quality": {
+        "available": false,
+        "role": "diagnostic_only",
+        "calibrated": false,
+        "reason": "judge_not_run",
+        "mean_eligible": null
+      },
+      "task_adherence": {
+        "mean_eligible": 0.7152,
+        "role": "quality_dimension"
+      },
+      "grounding": {
+        "applicable": false,
+        "mean_lexical_overlap": null,
+        "method": "not_applicable"
+      },
+      "persona_utility": null,
+      "utility_weights": {
+        "persona_style": 0.45,
+        "perspective_fidelity": 0.2,
+        "writing_quality": 0.25,
+        "task_adherence": 0.1
+      },
+      "diagnostics": {
+        "reference_similarity": {
+          "bertscore": null,
+          "bleu": 0.0101,
+          "rouge_l": 0.0752,
+          "role": "diagnostic_not_persona_fidelity"
+        },
+        "brief_overlap": {
+          "gold_rubric_overall": 0.2619,
+          "role": "brief_task_agreement_not_persona_quality"
+        },
+        "latency_seconds": null
+      }
+    },
+    {
+      "schema": "unified_eval.v1",
+      "model_id": "EXP-20261004-006-repaired-vs-relabel-seed44/repaired",
+      "source_experiment": "EXP-20261004-006-repaired-vs-relabel-seed44",
+      "n": 120,
+      "n_eligible": 42,
+      "eligible_rate": 0.35,
+      "gates": {
+        "completion_pass_rate": 0.3583,
+        "copying_pass_rate": 0.9917,
+        "format_pass_rate": 1.0,
+        "grounding_applicable_rows": 0,
+        "grounding_pass_rate": null
+      },
+      "persona_style": {
+        "role": "selector",
+        "mediums_in_mean": [
+          "blog"
+        ],
+        "mean_distance_eligible": 0.8361,
+        "limits": "Closer surface counts are not authorship accuracy. This is a style-distance diagnostic, not proof of authorship identity."
+      },
+      "perspective_fidelity": {
+        "role": "selector",
+        "mediums_in_mean": [
+          "blog"
+        ],
+        "mean_distance_eligible": 0.7194,
+        "method": "framing_rate_distance_vs_held_out",
+        "limits": "Framing-rate distance is not claim-level stance entailment."
+      },
+      "writing_quality": {
+        "available": false,
+        "role": "diagnostic_only",
+        "calibrated": false,
+        "reason": "judge_not_run",
+        "mean_eligible": null
+      },
+      "task_adherence": {
+        "mean_eligible": 0.6958,
+        "role": "quality_dimension"
+      },
+      "grounding": {
+        "applicable": false,
+        "mean_lexical_overlap": null,
+        "method": "not_applicable"
+      },
+      "persona_utility": null,
+      "utility_weights": {
+        "persona_style": 0.45,
+        "perspective_fidelity": 0.2,
+        "writing_quality": 0.25,
+        "task_adherence": 0.1
+      },
+      "diagnostics": {
+        "reference_similarity": {
+          "bertscore": null,
+          "bleu": 0.0112,
+          "rouge_l": 0.076,
+          "role": "diagnostic_not_persona_fidelity"
+        },
+        "brief_overlap": {
+          "gold_rubric_overall": 0.2594,
+          "role": "brief_task_agreement_not_persona_quality"
+        },
+        "latency_seconds": null
+      }
+    },
+    {
+      "schema": "unified_eval.v1",
+      "model_id": "EXP-20261004-006-repaired-vs-relabel-seed44/relabel",
+      "source_experiment": "EXP-20261004-006-repaired-vs-relabel-seed44",
+      "n": 120,
+      "n_eligible": 80,
+      "eligible_rate": 0.6667,
+      "gates": {
+        "completion_pass_rate": 0.675,
+        "copying_pass_rate": 0.9917,
+        "format_pass_rate": 0.975,
+        "grounding_applicable_rows": 0,
+        "grounding_pass_rate": null
+      },
+      "persona_style": {
+        "role": "selector",
+        "mediums_in_mean": [
+          "blog"
+        ],
+        "mean_distance_eligible": 0.7085,
+        "limits": "Closer surface counts are not authorship accuracy. This is a style-distance diagnostic, not proof of authorship identity."
+      },
+      "perspective_fidelity": {
+        "role": "selector",
+        "mediums_in_mean": [
+          "blog"
+        ],
+        "mean_distance_eligible": 0.7151,
+        "method": "framing_rate_distance_vs_held_out",
+        "limits": "Framing-rate distance is not claim-level stance entailment."
+      },
+      "writing_quality": {
+        "available": false,
+        "role": "diagnostic_only",
+        "calibrated": false,
+        "reason": "judge_not_run",
+        "mean_eligible": null
+      },
+      "task_adherence": {
+        "mean_eligible": 0.7154,
+        "role": "quality_dimension"
+      },
+      "grounding": {
+        "applicable": false,
+        "mean_lexical_overlap": null,
+        "method": "not_applicable"
+      },
+      "persona_utility": null,
+      "utility_weights": {
+        "persona_style": 0.45,
+        "perspective_fidelity": 0.2,
+        "writing_quality": 0.25,
+        "task_adherence": 0.1
+      },
+      "diagnostics": {
+        "reference_similarity": {
+          "bertscore": null,
+          "bleu": 0.0108,
+          "rouge_l": 0.0773,
+          "role": "diagnostic_not_persona_fidelity"
+        },
+        "brief_overlap": {
+          "gold_rubric_overall": 0.2671,
+          "role": "brief_task_agreement_not_persona_quality"
+        },
+        "latency_seconds": null
+      }
+    }
+  ],
+  "not_recomputed": [
+    "bertscore",
+    "writing_quality judge scores",
+    "latency except where a source row already stored latency_seconds",
+    "early_eot where the source row has no stop metadata"
+  ]
+}

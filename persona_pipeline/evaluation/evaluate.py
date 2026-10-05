@@ -1,5 +1,9 @@
 """
-Phase 10 — Evaluate generated content quality across multiple dimensions.
+Phase 10 — Historical multi-metric scorer. Not the model selector.
+
+``host_finetune.unified_eval`` is the evaluation harness. BERTScore, BLEU,
+ROUGE, the TF-IDF authorship score, and RAGAS in this file are diagnostics.
+Do not average them into a persona-quality score.
 
 Metrics:
   1. BERTScore  — semantic similarity to real persona posts

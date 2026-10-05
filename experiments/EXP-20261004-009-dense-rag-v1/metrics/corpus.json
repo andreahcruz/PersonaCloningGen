@@ -1,0 +1,268 @@
+{
+  "document_count": 21193,
+  "platforms": {
+    "blog": 9255,
+    "linkedin": 713,
+    "x": 11185,
+    "youtube_jason": 40
+  },
+  "splits": {
+    "train": 21193
+  },
+  "missing_split": 0,
+  "train_26148_present": false,
+  "flag_counts": {
+    "very_short": 5141,
+    "short": 10427,
+    "mid_list": 1525,
+    "no_sentence_end": 7036,
+    "starts_lower": 437,
+    "headline_or_link": 4333
+  },
+  "sft_role_counts": {
+    "opening": 1687,
+    "continuation": 7895,
+    "unchanged": 11611
+  },
+  "n_groups": 12370,
+  "groups_with_multiple_chunks": 2314,
+  "documents_in_multi_chunk_groups": 11137,
+  "max_group_size": 52,
+  "word_count_p10": 15,
+  "word_count_p50": 41,
+  "word_count_p90": 263,
+  "examples": {
+    "mid_list": [
+      {
+        "id": "train_62",
+        "medium": "blog",
+        "row_id": 62,
+        "words": 156,
+        "preview": "#1. Scheduling Short 15-30 Minute VC Calls Back to Back\nI get the efficiency play here. You’re busy. You’re in demand. You want to run a tight process.\nBut here’s the problem: if a"
+      },
+      {
+        "id": "train_63",
+        "medium": "blog",
+        "row_id": 63,
+        "words": 131,
+        "preview": "#2. Refusing to Share More Information When Asked\nSome VCs don’t want anything before the first meeting. They want to come in cold and hear the pitch fresh.\nI’m not one of those VC"
+      },
+      {
+        "id": "train_64",
+        "medium": "blog",
+        "row_id": 64,
+        "words": 119,
+        "preview": "#4. Claiming Very Tight Deadlines That Aren’t Real\nIn an ideal world, any investor would want at least a few weeks to think before wiring millions of dollars. Due diligence takes t"
+      },
+      {
+        "id": "train_65",
+        "medium": "blog",
+        "row_id": 65,
+        "words": 195,
+        "preview": "#5. Being Too Much of a “Flyover Fundraiser”\nThere’s nothing wrong with being headquartered outside the Bay Area and flying in to raise. Plenty of great companies do exactly this.\n"
+      },
+      {
+        "id": "train_303",
+        "medium": "blog",
+        "row_id": 303,
+        "words": 135,
+        "preview": "#1. You Have Two Jobs. Everything Else Is Secondary.\nHire great people. Make your existing people better.\nThat’s it. If you’re not spending at least 30% of your calendar on recruit"
+      },
+      {
+        "id": "train_304",
+        "medium": "blog",
+        "row_id": 304,
+        "words": 148,
+        "preview": "#2. You Have to Keep Selling. Not “Coaching.” Actually Selling.\nThis is the one that trips up most first-time VPs of Sales, especially the ones who came up through enterprise or wh"
+      },
+      {
+        "id": "train_305",
+        "medium": "blog",
+        "row_id": 305,
+        "words": 126,
+        "preview": "#3. Set Goals That Are Clear and That You Actually Believe In\nYour team needs to know exactly what’s expected: pipeline by week, bookings by month, activity metrics by rep. No ambi"
+      },
+      {
+        "id": "train_306",
+        "medium": "blog",
+        "row_id": 306,
+        "words": 111,
+        "preview": "#4. Pipeline Is Oxygen. Treat It That Way.\nIf you don’t have 3x pipeline coverage, you’re already behind — regardless of how confident your reps feel about their deals.\nPush outbou"
+      }
+    ],
+    "very_short": [
+      {
+        "id": "train_6",
+        "medium": "blog",
+        "row_id": 6,
+        "words": 13,
+        "preview": "Join us at\nSaaStr AI Annual 2026, May 12-14 in SF Bay\n."
+      },
+      {
+        "id": "train_186",
+        "medium": "blog",
+        "row_id": 186,
+        "words": 13,
+        "preview": "Have a question for SaaStr? We answer the real ones at\nSaaStr.ai\n."
+      },
+      {
+        "id": "train_508",
+        "medium": "blog",
+        "row_id": 508,
+        "words": 17,
+        "preview": ": down 6% to $292.4M\nConsulting\n: $21.8M in Q4, down 16%. Full year $88.2M, down 9%."
+      },
+      {
+        "id": "train_626",
+        "medium": "blog",
+        "row_id": 626,
+        "words": 18,
+        "preview": "The question is whether your product, your pricing, and your go-to-market are positioned to grab it. Are you?"
+      },
+      {
+        "id": "train_795",
+        "medium": "blog",
+        "row_id": 795,
+        "words": 7,
+        "preview": "Buying Cursor doesn’t help—it’s not big enough."
+      },
+      {
+        "id": "train_817",
+        "medium": "blog",
+        "row_id": 817,
+        "words": 18,
+        "preview": "The ones who do will have a structural advantage. The ones who don’t will watch their margins disappear."
+      },
+      {
+        "id": "train_917",
+        "medium": "blog",
+        "row_id": 917,
+        "words": 17,
+        "preview": ". Twice the logos. Twice the market presence. Twice the expansion opportunity in Year 2, 3, 4."
+      },
+      {
+        "id": "train_1152",
+        "medium": "blog",
+        "row_id": 1152,
+        "words": 12,
+        "preview": "on the platform. Twilio: The Incumbent Fighting Back\nTwilio isn’t standing still."
+      }
+    ],
+    "headline_or_link": [
+      {
+        "id": "train_12568",
+        "medium": "x",
+        "row_id": 12568,
+        "words": 15,
+        "preview": "Want to know all of our AI Agents?\n\nCheck them all out here -> \nhttp://SaaStr.ai/agents"
+      },
+      {
+        "id": "train_12633",
+        "medium": "x",
+        "row_id": 12633,
+        "words": 22,
+        "preview": "More on what we built -- and what we didn't -- and an update on our 20+ AI Agents here:\n\nhttps://saastr.com/the-90-10-rule-for-ai-agents-updated-we-replaced-a-paid-saas-tool-in-a-d"
+      },
+      {
+        "id": "train_12648",
+        "medium": "x",
+        "row_id": 12648,
+        "words": 26,
+        "preview": "New!!  Mike Cannon-Brookes CEO Atlassian on Why B2B Software Isn’t Dead, But Many Won’t Thrive In The Age of AI, and What Actually Matters Now \nhttp://dlvr.it/TQxy6C"
+      },
+      {
+        "id": "train_12653",
+        "medium": "x",
+        "row_id": 12653,
+        "words": 14,
+        "preview": "And come meet the Monaco team at \nhttp://SaaStrAIAnnual.com 2026, May 12-14 in SF Bay!!"
+      },
+      {
+        "id": "train_12663",
+        "medium": "x",
+        "row_id": 12663,
+        "words": 23,
+        "preview": "The latest on what we've vibe coded on \n@replit\n and more: Our AI VP Marketing, and our AI Sponsor Portal \nhttps://x.com/i/broadcasts/1\nZkKzZYmkqRKv\n…"
+      },
+      {
+        "id": "train_12714",
+        "medium": "x",
+        "row_id": 12714,
+        "words": 26,
+        "preview": "Go from founding to YC to IPO to $1T … and beyond.\n\n-> Try \nhttp://FounderScape.ai\n\nBuild. Scale. Exit. Crush The Competition.\n\nThe ultimate AI startup simulation."
+      },
+      {
+        "id": "train_12746",
+        "medium": "x",
+        "row_id": 12746,
+        "words": 15,
+        "preview": "Typical equity rich, cash poor founder on \nhttp://Foundescape.ai\n\n$370B net worth, but only $19M liquid"
+      },
+      {
+        "id": "train_12748",
+        "medium": "x",
+        "row_id": 12748,
+        "words": 12,
+        "preview": "Grab 20% OFF tix with my VIP code here -> \nhttps://saastrannual2026.com/buy-tickets?promo=jason20\n…"
+      }
+    ],
+    "starts_lower": [
+      {
+        "id": "train_977",
+        "medium": "blog",
+        "row_id": 977,
+        "words": 97,
+        "preview": "a16z released their inaugural\n“State of Markets” deck this week\n. Here are the 10 top takeaways for B2B founders and execs:\n#1. $5.5 Trillion in Private Unicorns — 10x Growth in 10"
+      },
+      {
+        "id": "train_1103",
+        "medium": "blog",
+        "row_id": 1103,
+        "words": 54,
+        "preview": "is down 26.9% YTD. Twenty-seven percent in eighteen days. This is a company that basically invented modern developer collaboration. Jira is in every engineering org on the planet. "
+      },
+      {
+        "id": "train_1152",
+        "medium": "blog",
+        "row_id": 1152,
+        "words": 12,
+        "preview": "on the platform. Twilio: The Incumbent Fighting Back\nTwilio isn’t standing still."
+      },
+      {
+        "id": "train_1291",
+        "medium": "blog",
+        "row_id": 1291,
+        "words": 16,
+        "preview": "at prices ranging from $12.65 to $16.16 per share — well below the $25 IPO price."
+      },
+      {
+        "id": "train_1538",
+        "medium": "blog",
+        "row_id": 1538,
+        "words": 10,
+        "preview": "on the metric that matters most for the next decade."
+      },
+      {
+        "id": "train_1567",
+        "medium": "blog",
+        "row_id": 1567,
+        "words": 58,
+        "preview": "hit a peak $40B valuation in September 2021 on ~$1B ARR. By late 2024, secondary sales valued them at $32B—technically a down round. But revenue had grown to $2.7B. The multiple we"
+      },
+      {
+        "id": "train_2010",
+        "medium": "blog",
+        "row_id": 2010,
+        "words": 146,
+        "preview": "feel like processes — they’re cultivated over months with 3-4 investors ready before the data room opens Taking a term sheet immediately versus “running a process” depends on capit"
+      },
+      {
+        "id": "train_2118",
+        "medium": "blog",
+        "row_id": 2118,
+        "words": 14,
+        "preview": "launched after ChatGPT\n(Nov 2022). They’re not pivots from existing companies—they’re ground-up AI-native builds."
+      }
+    ]
+  }
+}

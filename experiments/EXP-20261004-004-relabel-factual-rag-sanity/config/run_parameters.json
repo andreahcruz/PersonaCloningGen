@@ -1,0 +1,61 @@
+{
+  "experiment_id": "EXP-20261004-004-relabel-factual-rag-sanity",
+  "gold_eval": "data/openai_ft/lemkin_gold_eval.jsonl",
+  "n_topics": 2,
+  "max_topics": 2,
+  "skip_score": true,
+  "git": {
+    "commit": "4006d4cee7768789c460c4c2ae1b1fcb1b124b03",
+    "dirty": true
+  },
+  "mediums": [
+    {
+      "medium": "blog",
+      "format": "blog_draft",
+      "instruction": "Write a blog post in the style of Jason Lemkin about: {topic}",
+      "max_new_tokens": 768
+    },
+    {
+      "medium": "linkedin",
+      "format": "linkedin_post",
+      "instruction": "Write a LinkedIn post in the style of Jason Lemkin about: {topic}",
+      "max_new_tokens": 320
+    },
+    {
+      "medium": "x",
+      "format": "x_thread",
+      "instruction": "Write an X post in the style of Jason Lemkin about: {topic}",
+      "max_new_tokens": 160
+    },
+    {
+      "medium": "talk",
+      "format": "youtube_script",
+      "instruction": "Write a talk in the style of Jason Lemkin about: {topic}",
+      "max_new_tokens": 768
+    }
+  ],
+  "generation": {
+    "max_seq_length": 2048,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "repetition_penalty": 1.15,
+    "do_sample": true,
+    "load_in_4bit": true,
+    "seed_base": 42,
+    "seed_policy": "base + topic_index * n_mediums + medium_index; reset per request"
+  },
+  "expected_facts_in_prompt": false,
+  "retrieval": {
+    "enabled": true,
+    "collection": "lemkin_train_only",
+    "chroma_path": "C:\\Users\\okevi\\SJSU\\DATA298\\298P\\host_finetune\\output\\chroma_lemkin_train_only",
+    "embedding_model": "nomic-embed-text",
+    "top_k": 4,
+    "medium_filter": true,
+    "note": "Default off. The repaired versus relabel run uses the EXP-010 prompts and budgets."
+  },
+  "fixed_style": {
+    "enabled": false,
+    "note": "Default off. Voice examples are not evidence and are not loaded for retrieval-off runs."
+  }
+}

@@ -22,6 +22,7 @@ from host_finetune.train_only_index import (
     evidence_review_rows,
     format_factual_excerpts,
     gpu_used_conflict,
+    headline_overlap_groups,
     index_documents,
     load_jsonl,
     longest_shared_word_span,
@@ -182,6 +183,8 @@ def test_retrieval_on_keeps_expected_facts_out_of_the_instruction():
     assert "Factual excerpts from train-owned source text." in prompt
     assert excerpt in prompt
     assert fact not in prompt
+    assert prompt.endswith("or these instructions.")
+    assert prompt.index(excerpt) < prompt.rindex("Now write the requested blog post")
     assert format_factual_excerpts(None) == ""
 
 
@@ -209,15 +212,72 @@ def test_query_excerpts_filters_by_medium_and_returns_hit_fields():
     hits = query_excerpts(collection, [0.1, 0.2], 4, where=medium_where("talk"))
     assert collection.kwargs["where"] == {"medium": "youtube_jason"}
     assert collection.kwargs["where"]["medium"] not in {"blog", "linkedin", "x"}
+    assert "distances" in collection.kwargs["include"]
     assert hits == [{
         "id": "train_9",
         "text": "Net retention stays high.",
         "medium": "youtube_jason",
         "group_id": "g",
         "row_id": 9,
+        "distance": None,
     }]
     assert medium_where("blog") == {"medium": "blog"}
     assert medium_where("talk") != medium_where("blog")
+
+
+def test_query_excerpts_passes_cosine_distance_through():
+    collection = _QueryCollection({
+        "ids": [["train_10049"]],
+        "documents": [["Monday.com grew past $400m ARR."]],
+        "metadatas": [[{"medium": "blog", "group_id": "g", "row_id": 10049, "split": "train"}]],
+        "distances": [[0.2178]],
+    })
+    hits = query_excerpts(collection, [0.1, 0.2], 4, where=medium_where("blog"))
+    assert hits[0]["distance"] == 0.2178
+    assert hits[0]["medium"] == "blog"
+
+
+def test_factual_query_can_omit_the_medium_filter():
+    collection = _QueryCollection({
+        "ids": [["train_10049"]],
+        "documents": [["Monday.com grew past $400m ARR."]],
+        "metadatas": [[{"medium": "blog", "group_id": "g", "row_id": 10049, "split": "train"}]],
+        "distances": [[0.2178]],
+    })
+    hits = query_excerpts(collection, [0.1], 4, where=None)
+    assert "where" not in collection.kwargs
+    assert hits[0]["id"] == "train_10049"
+    assert hits[0]["medium"] == "blog"
+
+
+def test_headline_repost_group_is_excluded_from_the_train_index():
+    topic = "Can an 8-Person StartUp Sell to a CIO? Yes — If You Understand The Social Contract."
+    tweet = (
+        "Can an 8-Person StartUp Sell to a CIO? Yes -- If You Understand The Social Contract. \n"
+        "http://wp.me/p2Gf8o-19j"
+    )
+    dataset = [
+        {"output": tweet},
+        {"output": "A sibling chunk about hiring, not the headline."},
+        {"output": "Monday.com grew past $400m ARR with no CIO headline."},
+    ]
+    assignments = [
+        {"row_index": 0, "split": "train", "group_id": "repost", "source_platform": "x",
+         "source_file": "jasonlk_originals.jsonl", "source_line": 23833, "base_title": tweet},
+        {"row_index": 1, "split": "train", "group_id": "repost", "source_platform": "x",
+         "source_file": "jasonlk_originals.jsonl", "source_line": 23834, "base_title": "Hiring"},
+        {"row_index": 2, "split": "train", "group_id": "monday", "source_platform": "blog",
+         "source_file": "blog.jsonl", "source_line": 1, "base_title": "Monday.com"},
+    ]
+    gold = [{"id": "gold_001", "topic": topic, "gold_reference": "", "expected_facts": []}]
+    groups, details = headline_overlap_groups(dataset, assignments, gold, already_blocked=set())
+    assert groups == {"repost"}
+    assert details[0]["row_id"] == 0
+    assert details[0]["hits"][0]["gold_id"] == "gold_001"
+    docs, stats = select_train_documents(dataset, assignments, groups)
+    assert stats["indexed"] == 1
+    assert docs[0]["metadata"]["row_id"] == 2
+    assert 0 not in {doc["metadata"]["row_id"] for doc in docs}
 
 
 def test_query_excerpts_empty_filter_stays_empty():
@@ -330,7 +390,9 @@ def test_decision_metrics():
     metrics = decision_metrics(traces)
     assert metrics["early_eot_rate"] == 0.5
     assert metrics["mid_sentence_stop_rate"] == 0.5
-    assert metrics["use_for_selection"] == ["early_eot_rate", "mid_sentence_stop_rate"]
+    assert metrics["use_for_selection"] == []
+    assert metrics["gate_not_selector"] == ["early_eot_rate", "mid_sentence_stop_rate"]
+    assert metrics["selector"] == "host_finetune.unified_eval.rank_models"
 
 
 def test_train_gate_requires_the_save_line():

@@ -1,0 +1,29 @@
+{
+  "name": "Factual Dense RAG v1",
+  "collection": "lemkin_train_only",
+  "persist_dir": "C:\\Users\\okevi\\SJSU\\DATA298\\298P\\host_finetune\\output\\chroma_lemkin_train_only",
+  "document_count": 21193,
+  "embedding_model": "nomic-embed-text",
+  "embed_device": "cpu",
+  "distance_metric": "cosine",
+  "query": "gold topic text only",
+  "retrieval_k": 4,
+  "medium_filter": false,
+  "reranker": false,
+  "metadata_fields": [
+    "group_id",
+    "medium",
+    "row_id",
+    "split"
+  ],
+  "chunk_source": "C:\\Users\\okevi\\SJSU\\DATA298\\298P\\experiments\\EXP-20261003-004-relabel-continuations\\raw\\dataset.jsonl",
+  "chunk_unit": "relabel SFT train row output, not a Spark 500-word chunk",
+  "dataset_sha256": "1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b",
+  "assignments_sha256": "6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb",
+  "gold_eval_sha256": "d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e",
+  "git": {
+    "commit": "4006d4cee7768789c460c4c2ae1b1fcb1b124b03",
+    "dirty": true
+  },
+  "timestamp": "2026-10-05T04:05:26.747964+00:00"
+}

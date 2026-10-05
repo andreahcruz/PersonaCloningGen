@@ -36,11 +36,13 @@ The comparison summary warns against selecting a model using its legacy aggregat
 2. Register a new comparison experiment. Compare the unadapted instruction model, repaired adapter and relabeled adapter with the same base revision, tokenizer/chat template, backend/quantization, prompt set and generation settings. Record separate adapter identities; do not compare old stochastic outputs with a new seeded run as if fully controlled.
 3. Freeze fresh development briefs by medium: X, LinkedIn and blog first. Include full-post requests, opening requests and continuations with supplied context; score these task families separately. Treat talk as exploratory while transcript supervision is sparse/unverified. Use self-contained factual briefs to reduce topic-knowledge confounding. No target text should be hidden inside a supposedly neutral topic prompt.
 4. Start with a modest paired development panel (proposed: 20 topics in each written medium). Use identical requests for all three models. When multiple generations are used, retain seeds and aggregate/uncertainty by topic, not each generation as an independent sample. Do not tune on held-out test sources. The familiar 30-topic set can serve as a regression panel with its known limitations.
-5. Select on the measured stop rates, by medium. Human voice preference is not collected. Lower validation loss can shortlist checkpoints; it does not decide stopping.
+5. Apply the unified gates, then rank calibrated persona style, perspective, writing quality, and task adherence by medium. Human voice preference is not collected. Stop rates do not decide persona quality. Lower validation loss can shortlist checkpoints; it does not decide stopping.
 
 ## Selection rule
 
-DEC-007 removed the blinded voice review. The comparison does not write a preference sheet. An adapter is selected by two rates on the same prompts: early `<|eot_id|>` before half of `max_new_tokens`, and answers that are not sentence-final. On EXP-20261004-003, retrieval off, relabel won both (early 0.550 vs 0.650, mid-sentence 0.342 vs 0.633). BLEU, ROUGE, and the gold lexical overall stay in the log and do not select.
+DEC-008 narrows DEC-007. Human voice preference is still not collected. Early `<|eot_id|>` and mid-sentence stops stay in the completion gate and no longer choose the adapter. On EXP-20261004-003 those rates were early 0.550 vs 0.650 and mid-sentence 0.342 vs 0.633; that remains a cutoff result, not a persona result.
+
+A later rescore ranks gate-passing drafts by calibrated persona-style distance, then perspective fidelity, then writing quality when the judge has passed its sanity check, then task adherence. BLEU, ROUGE, BERTScore, and the gold lexical overall stay in the diagnostic log. See [EVALUATION_PLAN.md](EVALUATION_PLAN.md) and EXP-20261004-007.
 
 Supporting diagnostics:
 

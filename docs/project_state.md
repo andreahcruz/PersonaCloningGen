@@ -93,4 +93,4 @@ Inspected: branch/history/tree, instructions, README, compose/dependencies, rele
 
 ## Active and next task
 
-Active: relabel is the recorded cutoff baseline from EXP-20261004-003. Retrieval-on and seeds 43 and 44 are registered. Human voice preference is not a selection step. The harness selects on early-`<|eot_id|>` and mid-sentence rates. Export and Streamlit selection wait on those stop rates. The whole-source content-quality gate remains a separate track. See [decisions](DECISION_LOG.md).
+Active: DEC-009 scores saved drafts with blinded `qwen2.5:14b`. Writing quality and stance both passed their sanity checks, so Persona Utility can be filled on gate-passing blog drafts. RAG grounding stays empty unless that run retrieved passages. Framing distance is diagnostic. EXP-20261004-008 is the rescore; it does not retrain or regenerate. Human voice preference is still not a selection step. See [decisions](DECISION_LOG.md).

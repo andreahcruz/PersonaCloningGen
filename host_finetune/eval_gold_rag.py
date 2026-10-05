@@ -10,10 +10,10 @@ LLM judge or RAGAS backend is unavailable:
    - optional expected-fact coverage
 
 2. Retrieval-grounded evaluation
-   - answer relevance
-   - faithfulness (sentence support ratio)
-   - context precision
-   - context recall
+   - answer relevance (query token overlap)
+   - lexical overlap with retrieved passages
+   Token overlap is not claim-support faithfulness. A trace with no passages
+   does not receive a zero faithfulness score.
 
 It can score either:
   - a JSONL of trace rows with ``query``, ``answer``, and ``contexts`` fields, or
@@ -314,31 +314,70 @@ def best_context_support(sentence: str, contexts: list[str]) -> tuple[float, int
     return best_score, best_idx
 
 
+def grounding_passages(row: dict) -> tuple[list[str], str]:
+    """Prefer explicit context strings. Fall back to retrieval hit text.
+
+    An empty ``contexts`` list is not evidence that the answer was unsupported.
+    """
+    contexts = []
+    for item in row.get("contexts") or []:
+        if isinstance(item, str) and item.strip():
+            contexts.append(item.strip())
+        elif isinstance(item, dict) and str(item.get("text") or item.get("chunk_text") or "").strip():
+            contexts.append(str(item.get("text") or item.get("chunk_text")).strip())
+    if contexts:
+        return contexts, "contexts"
+    hits = []
+    for item in row.get("retrieval_hits") or []:
+        if isinstance(item, str) and item.strip():
+            hits.append(item.strip())
+        elif isinstance(item, dict) and str(item.get("text") or "").strip():
+            hits.append(str(item["text"]).strip())
+    if hits:
+        return hits, "retrieval_hits"
+    return [], "none"
+
+
 def grounding_scores(row: dict) -> dict:
     answer = row.get("answer", "")
-    contexts = row.get("contexts", []) or []
-    query = row.get("query", "")
+    passages, source = grounding_passages(row)
+    retrieval_on = row.get("retrieval") is True
+    applicable = retrieval_on or bool(passages)
+    query = row.get("query") or row.get("topic") or ""
     sentences = split_sentences(answer)
+    answer_tokens = content_tokens(answer)
+    query_tokens = content_tokens(query)
+    answer_relevance = token_coverage(query_tokens, answer_tokens)
+    base = {
+        "applicable": applicable,
+        "method": "token_overlap_not_claim_entailment" if applicable else "not_applicable",
+        "not_claim_entailment": True,
+        "passage_source": source,
+        "n_passages": len(passages),
+        "answer_relevance": normalize_score(answer_relevance),
+        "n_sentences": len(sentences),
+    }
+    if not applicable:
+        return {
+            **base,
+            "lexical_overlap": None,
+            "context_recall": None,
+            "n_supported_sentences": 0,
+        }
     supported = 0
     used_contexts: set[int] = set()
     for sent in sentences:
-        score, idx = best_context_support(sent, contexts)
+        score, idx = best_context_support(sent, passages)
         if score >= 0.2:
             supported += 1
             if idx >= 0:
                 used_contexts.add(idx)
-
-    answer_tokens = content_tokens(answer)
-    query_tokens = content_tokens(query)
-    answer_relevance = token_coverage(query_tokens, answer_tokens)
     precision = supported / len(sentences) if sentences else 0.0
-    recall = len(used_contexts) / len(contexts) if contexts else 0.0
+    recall = len(used_contexts) / len(passages) if passages else 0.0
     return {
-        "answer_relevance": normalize_score(answer_relevance),
-        "faithfulness": normalize_score(precision),
-        "context_precision": normalize_score(precision),
+        **base,
+        "lexical_overlap": normalize_score(precision),
         "context_recall": normalize_score(recall),
-        "n_sentences": len(sentences),
         "n_supported_sentences": supported,
     }
 
@@ -372,19 +411,32 @@ def score_row(row: dict, format_specs: dict) -> dict:
 
 
 def aggregate(scores: list[dict]) -> dict:
-    def avg(path: str) -> float:
+    def values(path: str) -> list[float]:
         vals = []
         for row in scores:
             cur = row
             for key in path.split("."):
                 cur = cur[key]
+            if cur is None:
+                continue
             vals.append(float(cur))
+        return vals
+
+    def avg(path: str) -> float:
+        vals = values(path)
         return normalize_score(statistics.mean(vals) if vals else 0.0)
+
+    def avg_optional(path: str) -> float | None:
+        vals = values(path)
+        if not vals:
+            return None
+        return normalize_score(statistics.mean(vals))
 
     return {
         "n_rows": len(scores),
         "gold_rubric": {
             "overall": avg("gold_rubric.overall"),
+            "role": "brief_task_agreement_not_persona_quality",
             "format_score": avg("gold_rubric.score"),
             "brief_alignment": avg("gold_rubric.brief_alignment"),
             "expected_fact_coverage": avg("gold_rubric.expected_fact_coverage"),
@@ -393,9 +445,9 @@ def aggregate(scores: list[dict]) -> dict:
         },
         "retrieval_grounding": {
             "answer_relevance": avg("retrieval_grounding.answer_relevance"),
-            "faithfulness": avg("retrieval_grounding.faithfulness"),
-            "context_precision": avg("retrieval_grounding.context_precision"),
-            "context_recall": avg("retrieval_grounding.context_recall"),
+            "lexical_overlap": avg_optional("retrieval_grounding.lexical_overlap"),
+            "context_recall": avg_optional("retrieval_grounding.context_recall"),
+            "method": "token_overlap_not_claim_entailment",
         },
     }
 

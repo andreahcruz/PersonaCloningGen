@@ -50,10 +50,12 @@ from host_finetune.train_only_index import (
     DEFAULT_ASSIGNMENTS,
     DEFAULT_DATASET as TRAIN_ONLY_DATASET,
     DEFAULT_GOLD_DISPOSITIONS,
+    DEFAULT_GOLD_EVAL,
     DEFAULT_PERSIST_DIR,
     TRAIN_ONLY_COLLECTION,
     assert_collection_allowed,
     blocked_group_ids,
+    headline_overlap_groups,
     index_documents,
     load_jsonl,
     ollama_embed_body,
@@ -195,11 +197,36 @@ def run_train_only(args: argparse.Namespace) -> None:
     for path in (dataset, assignments_path, dispositions_path):
         if not path.is_file():
             raise SystemExit(f"error: missing {path}")
-    docs, stats = select_train_documents(
-        load_jsonl(dataset),
-        load_jsonl(assignments_path),
-        blocked_group_ids(load_jsonl(assignments_path), load_jsonl(dispositions_path)),
+    dataset_rows = load_jsonl(dataset)
+    assignment_rows = load_jsonl(assignments_path)
+    prior_blocked = blocked_group_ids(assignment_rows, load_jsonl(dispositions_path))
+    gold_path = Path(args.gold)
+    if not gold_path.is_file():
+        raise SystemExit(f"error: missing {gold_path}")
+    extra_groups, extra_rows = headline_overlap_groups(
+        dataset_rows, assignment_rows, load_jsonl(gold_path), prior_blocked
     )
+    logger.info(
+        "headline-overlap groups not already blocked=%d direct_matches=%d",
+        len(extra_groups - prior_blocked),
+        len(extra_rows),
+    )
+    for item in extra_rows:
+        logger.info(
+            "newly excluded row=%s group=%s split=%s platform=%s hits=%s",
+            item["row_id"],
+            item["group_id"],
+            item["split"],
+            item["source_platform"],
+            item["hits"],
+        )
+    docs, stats = select_train_documents(
+        dataset_rows,
+        assignment_rows,
+        prior_blocked | extra_groups,
+    )
+    stats["headline_overlap_new_groups"] = len(extra_groups - prior_blocked)
+    stats["headline_overlap_direct_matches"] = len(extra_rows)
     logger.info("train-only selection %s", stats)
     if args.sample is not None:
         docs = docs[: args.sample]
@@ -245,6 +272,7 @@ def main() -> None:
                    help="Index the EXP-004 train split into lemkin_train_only.")
     p.add_argument("--assignments", default=str(DEFAULT_ASSIGNMENTS))
     p.add_argument("--gold-dispositions", default=str(DEFAULT_GOLD_DISPOSITIONS))
+    p.add_argument("--gold", default=str(DEFAULT_GOLD_EVAL))
     p.add_argument("--persist-dir", default=str(DEFAULT_PERSIST_DIR))
     p.add_argument("--probe-only", action="store_true",
                    help="CPU-embed one string, check VRAM, and do not upsert.")

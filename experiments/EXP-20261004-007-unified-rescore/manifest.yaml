@@ -1,0 +1,67 @@
+{
+  "experiment_id": "EXP-20261004-007-unified-rescore",
+  "timestamp": "2026-10-04T23:10:08.480862+00:00",
+  "execution_commands": [
+    "C:\\Users\\okevi\\SJSU\\DATA298\\298P\\.venv-test\\Scripts\\python.exe -m host_finetune.rescore_unified"
+  ],
+  "git": {
+    "commit": "4006d4cee7768789c460c4c2ae1b1fcb1b124b03",
+    "dirty": true
+  },
+  "data": {
+    "source_manifest": "saved generation traces listed in config/sources.json",
+    "source_hashes": {
+      "experiments/EXP-20261001-007-mixed-medium-compare/raw/cleaned.jsonl": "256a3f3f77df8d0bd6c019f12f89181e6b6ba1cc08aedc3fa6caf1d3b1ce79f9",
+      "experiments/EXP-20261001-007-mixed-medium-compare/raw/balanced.jsonl": "aeddf72cdc93e172fb28e65c0d3e56f2bfad9160de435fbe1a538427d858c652",
+      "experiments/EXP-20261001-007-mixed-medium-compare/raw/r32.jsonl": "2c648a43d6d23b386589fb55df3a6b9d2998acf79b56b6825c7fdad07976fb02",
+      "experiments/EXP-20261001-010-repaired-and-baselines/raw/llama3.1.jsonl": "b535e1f142331622208e0cdcb07644ca26f88674b4ca8f39cee990e67f7c768a",
+      "experiments/EXP-20261001-010-repaired-and-baselines/raw/lemkin-clone-v5.jsonl": "6e1d61a592ca93a23f08e9bfa6ff57a80a2eadc6c7f9addd5d9cbc3627a76405",
+      "experiments/EXP-20261001-010-repaired-and-baselines/raw/lemkin-clone-v6.jsonl": "ded53a3a09716e8b99f8f66460514c000b0f48b6a57c3cd08e2b38ee4e77bf75",
+      "experiments/EXP-20261001-010-repaired-and-baselines/raw/repaired.jsonl": "8287e35502b533d727c3b85ea647ba0f7c337231c90823cd1c3ffeba88ff664b",
+      "experiments/EXP-20261004-003-repaired-vs-relabel/raw/repaired.jsonl": "3bf5a1393aa221ee1344d648fb8be6967286e5fe2f533e6bc59e9a85c2173792",
+      "experiments/EXP-20261004-003-repaired-vs-relabel/raw/relabel.jsonl": "8f0a4067de3b7f906b665289ecc77df986aeb8255ee1713bb29d12541de4e2c1",
+      "experiments/EXP-20261004-004-repaired-vs-relabel-retrieval/raw/repaired.jsonl": "7b867a8be0a2ffd99f5a0dcb23ac76c4bb804924926cad0fa652deb471e7bb2f",
+      "experiments/EXP-20261004-004-repaired-vs-relabel-retrieval/raw/relabel.jsonl": "1e51afec3ff4e5fb0a3182efa2a256a0a7577dd32b2f9d7b603f7ab172537bfd",
+      "experiments/EXP-20261004-005-repaired-vs-relabel-seed43/raw/repaired.jsonl": "b2280338c2174f9ef01156e3b2eeb4fe23ec4c8f752ac8182e7ca2f037a36a31",
+      "experiments/EXP-20261004-005-repaired-vs-relabel-seed43/raw/relabel.jsonl": "33a0619b783512f136bd3e28c6dd2a196466fd7406806a66864c8da58c9afd98",
+      "experiments/EXP-20261004-006-repaired-vs-relabel-seed44/raw/repaired.jsonl": "7c004b2d7f6b6ee58667641e38e7a83820c9faf859191ba756a07701509f1f07",
+      "experiments/EXP-20261004-006-repaired-vs-relabel-seed44/raw/relabel.jsonl": "e16fdb19c61c3068383d067b313b3b925b511b30a212d46189754dcac6fa062e"
+    },
+    "processed_dataset_hash": "1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b",
+    "split_manifest_hash": "6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb",
+    "gold_eval_hash": "d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e"
+  },
+  "rag": {
+    "persona_profile_hash": "n/a: rescore does not build a profile file; held-out posts are the style reference",
+    "chroma_collection": "n/a: no retrieval was executed in this rescore",
+    "index_version_or_snapshot": "n/a",
+    "embedding_model": "n/a"
+  },
+  "model": {
+    "model_name": "n/a: no model was loaded",
+    "model_or_adapter_hash": "n/a",
+    "config": "evaluation only",
+    "random_seed": "n/a: no sampling"
+  },
+  "evaluation": {
+    "evaluator_commit": "4006d4cee7768789c460c4c2ae1b1fcb1b124b03",
+    "judge_model": "n/a: writing-quality judge was not run",
+    "judge_config": "writing_quality.py schema only; role diagnostic_only until calibration"
+  },
+  "environment": {
+    "python_version": "3.10.11",
+    "package_snapshot": "config/package_snapshot.txt",
+    "hardware": "Windows-10-10.0.26200-SP0"
+  },
+  "outputs": {
+    "raw": "n/a: source traces were not copied",
+    "metrics": "metrics/summary.json",
+    "warnings_and_failures": [
+      "Writing-quality judge was not run, so persona utility is unavailable.",
+      "BERTScore was not computed.",
+      "Early EOS is unavailable for EXP-20261001 traces that did not record stop metadata.",
+      "gold_rubric.overall is brief/task agreement, not persona quality.",
+      "Perspective fidelity is framing-rate distance, not claim-level stance entailment."
+    ]
+  }
+}

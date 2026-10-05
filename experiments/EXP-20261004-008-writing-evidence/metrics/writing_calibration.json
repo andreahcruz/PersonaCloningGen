@@ -1,0 +1,120 @@
+{
+  "calibrated": true,
+  "role": "selector",
+  "reason": "writing_order_holds",
+  "separation": 0.5,
+  "means": {
+    "real": {
+      "coherence": 2.6666666666666665,
+      "n": 3
+    },
+    "normal": {
+      "coherence": 3.3333333333333335,
+      "n": 3
+    },
+    "degraded": {
+      "coherence": 1.0,
+      "n": 3
+    }
+  },
+  "checks": [
+    {
+      "name": "real_normal_degraded_present",
+      "pass": true
+    },
+    {
+      "name": "real_coherence_above_degraded",
+      "pass": true
+    },
+    {
+      "name": "normal_coherence_above_degraded",
+      "pass": true
+    }
+  ],
+  "judge_model": "qwen2.5:14b",
+  "judge_family": "qwen",
+  "candidate_family": "llama",
+  "samples": [
+    {
+      "bucket": "real",
+      "coherence": 3.0,
+      "fluency": 3.0,
+      "logical_progression": 2.0,
+      "relevance": 4.0,
+      "specificity": 2.0,
+      "usefulness": 3.0
+    },
+    {
+      "bucket": "real",
+      "coherence": 2.0,
+      "fluency": 2.0,
+      "logical_progression": 1.0,
+      "relevance": 3.0,
+      "specificity": 1.0,
+      "usefulness": 1.0
+    },
+    {
+      "bucket": "real",
+      "coherence": 3.0,
+      "fluency": 3.0,
+      "logical_progression": 2.0,
+      "relevance": 4.0,
+      "specificity": 2.0,
+      "usefulness": 2.0
+    },
+    {
+      "bucket": "normal",
+      "coherence": 4.0,
+      "fluency": 4.0,
+      "logical_progression": 3.0,
+      "relevance": 5.0,
+      "specificity": 2.0,
+      "usefulness": 3.0
+    },
+    {
+      "bucket": "normal",
+      "coherence": 3.0,
+      "fluency": 3.0,
+      "logical_progression": 2.0,
+      "relevance": 4.0,
+      "specificity": 2.0,
+      "usefulness": 2.0
+    },
+    {
+      "bucket": "normal",
+      "coherence": 3.0,
+      "fluency": 3.0,
+      "logical_progression": 2.0,
+      "relevance": 4.0,
+      "specificity": 2.0,
+      "usefulness": 2.0
+    },
+    {
+      "bucket": "degraded",
+      "coherence": 1.0,
+      "fluency": 1.0,
+      "logical_progression": 1.0,
+      "relevance": 1.0,
+      "specificity": 1.0,
+      "usefulness": 1.0
+    },
+    {
+      "bucket": "degraded",
+      "coherence": 1.0,
+      "fluency": 1.0,
+      "logical_progression": 1.0,
+      "relevance": 1.0,
+      "specificity": 1.0,
+      "usefulness": 1.0
+    },
+    {
+      "bucket": "degraded",
+      "coherence": 1.0,
+      "fluency": 1.0,
+      "logical_progression": 1.0,
+      "relevance": 1.0,
+      "specificity": 1.0,
+      "usefulness": 1.0
+    }
+  ]
+}

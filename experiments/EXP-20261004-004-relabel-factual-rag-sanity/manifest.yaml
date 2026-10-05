@@ -1,0 +1,41 @@
+experiment_id: EXP-20261004-004-relabel-factual-rag-sanity
+timestamp: "2026-10-05T00:03:56.453150+00:00"
+status: development sanity; generation complete; scoring skipped
+git:
+  commit: 4006d4cee7768789c460c4c2ae1b1fcb1b124b03
+  dirty: true
+execution_command: >-
+  host_finetune\.venv\Scripts\python.exe -u -m host_finetune.compare_adapters
+  --adapters relabel=host_finetune/output/lemkin_lora_relabel
+  --retrieval --max-topics 2 --skip-score
+  --out-dir experiments/EXP-20261004-004-relabel-factual-rag-sanity
+data:
+  gold_eval: data/openai_ft/lemkin_gold_eval.jsonl
+  n_topics: 2
+  note: First two gold topics only. EXP-20261004-003 was not regenerated.
+model:
+  adapter: host_finetune/output/lemkin_lora_relabel
+  base_model: unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit
+  temperature: 0.7
+  top_p: 0.9
+  repetition_penalty: 1.15
+  seed_base: 42
+  load_in_4bit: true
+rag:
+  collection: lemkin_train_only
+  chroma_path: host_finetune/output/chroma_lemkin_train_only
+  embedding_model: nomic-embed-text
+  num_gpu: 0
+  top_k: 4
+  query: gold topic only
+  medium_filter: true
+  fixed_style: false
+  reranker: false
+evaluator:
+  skipped: true
+  reason: --skip-score
+hardware: NVIDIA GeForce RTX 5070 Ti
+warnings:
+  - gold_001 X hit train_26148 is a near copy of the topic title (cosine distance 0.0087).
+  - Talk excerpts are transcript fragments with weak topical match.
+  - Six of eight drafts stopped on EOS before half the token budget.

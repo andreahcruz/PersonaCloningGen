@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 """End-to-end RAG eval harness for the Lemkin fine-tune.
 
+This module is not the model selector. ``host_finetune.unified_eval`` ranks
+models after validity gates. G-Eval scores here stay diagnostic until
+``writing_quality.calibration_gate`` passes on blinded real, base, and degraded
+texts, preferably with a judge from a different model family.
+
 For each row in an eval-set JSONL:
   1. Build the same RAG prompt as ``generate.py`` / Streamlit (same persona,
      same Chroma retrieval, same format spec) for every model under test.
