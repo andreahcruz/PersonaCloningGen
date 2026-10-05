@@ -1,6 +1,6 @@
 # Airflow / Spark v2 architecture
 
-Status: shadow pipeline through RAG governance. It reproduces the Python oracle through the 21,193-document corpus. It does not replace `lemkin_content_pipeline`, and it does not embed.
+Status: shadow pipeline through a staging Chroma index. It reproduces the Python oracle through the 21,193-document corpus, embeds those documents with the current CPU `nomic-embed-text` call, and writes `lemkin_train_only_v2_shadow`. It does not replace `lemkin_content_pipeline` or `lemkin_train_only`.
 
 ## Current versus target
 
@@ -10,8 +10,8 @@ Status: shadow pipeline through RAG governance. It reproduces the Python oracle 
 | Clean | DAG normalizers plus `spark_jobs/clean_and_embed.py` | `canonical_cleaning.clean_record` inside Spark `mapPartitions` |
 | Chunking | about 500 words for retrieval | frozen SFT chunker, promo filter, then `canonical_fit` |
 | Balance, split, relabel, RAG | not this DAG | `select_balanced_rows`, `assign_groups`, `transform_rows`, `select_train_documents` |
-| Embeddings | Ollama inside Spark | not in this stage |
-| Chroma | `lemkin_content` | not written; the persisted `lemkin_train_only` database is opened SQLite `mode=ro` for comparison only |
+| Embeddings | Ollama inside Spark | `POST /api/embed` for `nomic-embed-text` with `num_gpu=0`, batch 16, no prefix |
+| Chroma | `lemkin_content` | new collection `lemkin_train_only_v2_shadow` under the run directory; production is never opened for write |
 | Training handoff | `host_finetune/watcher.py` watches MinIO `training/_READY` | not used |
 | Output | MinIO `lemkin-raw` and `lemkin-processed` | `artifacts/refactor/spark_v2/<run_id>/` |
 
@@ -39,10 +39,15 @@ validate_raw
     → relabel_parity
     → rag_governance           21,193
     → rag_parity
+    → embed_rag                21,193 vectors
+    → embedding_parity
+    → build_chroma_shadow      lemkin_train_only_v2_shadow
+    → logical_chroma_parity
+    → retrieval_parity         gold topics, k=4, one shared query vector
     → parity_summary
 ```
 
-Embeddings and Chroma publication are named and not implemented.
+`embedding_parity` runs before the shadow collection is built. A vector-contract failure stops the run before Chroma publication. Production cutover is not a task.
 
 Airflow orders the tasks, records the run id, and stops the run when a stage raises `ParityError`. A parity task reads the previous manifest and fails the run when that manifest is missing or not `PASS`. The algorithms stay in `host_finetune`. The DAG callables and `python -m host_finetune.spark_v2` call the same stage functions.
 
@@ -60,6 +65,10 @@ Fit calls `canonical_fit.fit_rows` on the full ordered nopromo list. Lead-in mer
 
 Balance calls `select_balanced_rows` and writes explicit CRLF JSONL. Split calls `assign_groups`. Relabel calls `transform_rows` with the same local tokenizer. RAG calls `blocked_group_ids`, `headline_overlap_groups`, and `select_train_documents`.
 
+Embedding calls `canonical_embeddings.embed_documents` on the stored document string, which is the stripped Relabel output. The request is the same body `rebuild_chroma._embed_batch` posts for the train-only index: model `nomic-embed-text`, `options.num_gpu=0`, batches of 16, no `search_document` prefix, and no extra normalization. The historical command that first built `lemkin_train_only` is still unrecorded. A vector matches when the fresh vector, cast to float32, is within one float32 unit in the last place of the stored production vector. That limit comes from the sample, where every component was identical or exactly one step away. On the full 21,193 rows the same limit held: 15,751 float32 vectors were bit-identical and 5,442 differed by one unit in the last place. Retrieval uses the 30 gold topics at k=4 with one shared query vector. Two topics, `gold_013` and `gold_028`, swap the fourth hit with another document at the identical distance. Brute-force cosine places those pairs in a tie, so that swap is not counted as a different result.
+
+The shadow collection is written under `artifacts/refactor/spark_v2/<run_id>/chroma` with cosine distance and metadata `group_id`, `medium`, `row_id`, and `split`. Production vectors are read from a byte copy of `host_finetune/output/chroma_lemkin_train_only`. The live database is only hashed.
+
 ## Local command
 
 ```text
@@ -71,7 +80,7 @@ python -m host_finetune.spark_v2 --executor spark --partition-counts 1,2,4,8 --r
 
 ## Manifest
 
-Each stage writes `manifests/<stage>.json` with `run_id`, `stage`, `executor`, input and output artifact paths, row counts, hashes, `git_sha`, `dirty`, `config_version` (`spark-v2-shadow-rag-v1`), `status`, and `mismatches`. A nonzero mismatch raises `ParityError`, and Airflow does not start the next task.
+Each stage writes `manifests/<stage>.json` with `run_id`, `stage`, `executor`, input and output artifact paths, row counts, hashes, `git_sha`, `dirty`, `config_version` (`spark-v2-shadow-embed-v1`), `status`, and `mismatches`. A nonzero mismatch raises `ParityError`, and Airflow does not start the next task.
 
 ## Measured Airflow run
 
@@ -87,6 +96,14 @@ Split counts were train 25,062, validation 3,133, test 3,133. Crossing groups we
 
 Relabel wrote 26,545 rows with SHA-256 `1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b`.
 
-RAG governance wrote 21,193 rows. Gold exclusions were 183. The headline exclusion was `train_26148`. Role counts were unchanged 11,611, opening 1,687, continuation 7,895. Missing ids, unexpected ids, and document, group, medium, and split mismatches against the persisted collection were 0. Nothing was embedded.
+RAG governance wrote 21,193 rows. Gold exclusions were 183. The headline exclusion was `train_26148`. Role counts were unchanged 11,611, opening 1,687, continuation 7,895. Missing ids, unexpected ids, and document, group, medium, and split mismatches against the persisted collection were 0. Nothing was embedded in that run.
+
+A separate poller process exited after that run had already reached success. That exit is monitoring-process termination, not an Airflow task failure.
 
 The frozen datasets and the production collections were not rewritten.
+
+## Measured embedding run
+
+Run id `v2-embed-airflow-20261005`. Every task state was success, including `embed_rag`, `embedding_parity`, `build_chroma_shadow`, `logical_chroma_parity`, `retrieval_parity`, and `parity_summary`.
+
+The RAG artifact SHA-256 was again `240e7bccfb2458e05f99f33a2643f2e7ebff0ecf68af65d615155965d4a49b49` for 21,193 rows. Embeddings used installed `nomic-embed-text` digest `0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f` through Ollama 0.34.1. The model was not pulled. Dimension 768. Float32 comparison: 15,751 exact, 5,442 within one unit in the last place, 0 outside that limit. The shadow collection `lemkin_train_only_v2_shadow` has 21,193 rows, cosine distance, and `train_26148` absent. Served vectors matched production on all 21,193 ids. Thirty gold topics were queried at k=4. Twenty-nine top-k lists matched in order. `gold_013` swapped the fourth hit with another document at the same distance, `0.24499374628067017`. No score differed. Production `chroma.sqlite3` hash stayed `a87c12d31eda36cc81f831bb6b5114d3c545e5e98e1fb20836a7ca718b1e7bb9`.

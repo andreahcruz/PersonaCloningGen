@@ -1,7 +1,7 @@
-"""Shadow DAG for the canonical Python oracle through RAG governance.
+"""Shadow DAG for the canonical Python oracle through a staging Chroma index.
 
-This does not replace ``lemkin_content_pipeline``. It does not embed, and it
-does not write ``lemkin_content`` or ``lemkin_train_only``.
+This does not replace ``lemkin_content_pipeline``. It does not write
+``lemkin_content`` or ``lemkin_train_only``.
 """
 
 from __future__ import annotations
@@ -18,6 +18,12 @@ if str(ROOT) not in sys.path:
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 
+from host_finetune.spark_v2_embed import (
+    stage_build_chroma,
+    stage_embed,
+    stage_logical_chroma,
+    stage_retrieval,
+)
 from host_finetune.spark_v2 import (
     STAGING_ROOT,
     assert_raw_hashes,
@@ -26,6 +32,7 @@ from host_finetune.spark_v2 import (
     load_cleaned,
     load_fit,
     load_nopromo,
+    load_rag,
     load_relabel,
     load_split,
     stage_balance,
@@ -41,11 +48,8 @@ from host_finetune.spark_v2 import (
 )
 
 DAG_ID = "lemkin_canonical_v2_shadow"
-# Embedding and Chroma publication stay out of the graph.
-FUTURE_STAGES = (
-    "embeddings",
-    "chroma_publish",
-)
+# Production promotion stays out of the graph.
+FUTURE_STAGES = ("production_cutover",)
 TASK_ORDER = (
     "validate_raw",
     "canonical_clean",
@@ -62,6 +66,11 @@ TASK_ORDER = (
     "relabel_parity",
     "rag_governance",
     "rag_parity",
+    "embed_rag",
+    "embedding_parity",
+    "build_chroma_shadow",
+    "logical_chroma_parity",
+    "retrieval_parity",
     "parity_summary",
 )
 
@@ -157,6 +166,31 @@ def rag_parity(**context):
     stage_recorded_parity(staging, run_id, "rag_governance", "rag_parity")
 
 
+def embed_rag(**context):
+    staging, run_id = _staging(context)
+    stage_embed(staging, run_id, load_rag(staging))
+
+
+def embedding_parity(**context):
+    staging, run_id = _staging(context)
+    stage_recorded_parity(staging, run_id, "embed_rag", "embedding_parity")
+
+
+def build_chroma_shadow(**context):
+    staging, run_id = _staging(context)
+    stage_build_chroma(staging, run_id, load_rag(staging))
+
+
+def logical_chroma_parity(**context):
+    staging, run_id = _staging(context)
+    stage_logical_chroma(staging, run_id, load_rag(staging))
+
+
+def retrieval_parity(**context):
+    staging, run_id = _staging(context)
+    stage_retrieval(staging, run_id)
+
+
 def parity_summary(**context):
     staging, run_id = _staging(context)
     stage_summary(staging, run_id)
@@ -178,6 +212,11 @@ TASK_CALLABLES = {
     "relabel_parity": relabel_parity,
     "rag_governance": rag_governance,
     "rag_parity": rag_parity,
+    "embed_rag": embed_rag,
+    "embedding_parity": embedding_parity,
+    "build_chroma_shadow": build_chroma_shadow,
+    "logical_chroma_parity": logical_chroma_parity,
+    "retrieval_parity": retrieval_parity,
     "parity_summary": parity_summary,
 }
 
@@ -197,7 +236,7 @@ with DAG(
     previous = None
     for task_id in TASK_ORDER:
         options = {}
-        if task_id in {"canonical_fit", "relabel", "split"}:
+        if task_id in {"canonical_fit", "relabel", "split", "embed_rag", "retrieval_parity"}:
             options["execution_timeout"] = timedelta(hours=2)
         operator = PythonOperator(
             task_id=task_id,

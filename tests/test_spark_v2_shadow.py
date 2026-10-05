@@ -77,12 +77,12 @@ def test_staging_directory_cannot_be_a_frozen_corpus_path():
 
 def test_shadow_dag_orders_parity_gates_ahead_of_the_next_stage():
     assert shadow_dag.DAG_ID == "lemkin_canonical_v2_shadow"
-    assert shadow_dag.FUTURE_STAGES == ("embeddings", "chroma_publish")
+    assert shadow_dag.FUTURE_STAGES == ("production_cutover",)
     order = shadow_dag.TASK_ORDER
     assert order[0] == "validate_raw"
     assert order[-1] == "parity_summary"
-    assert "embeddings" not in order
-    assert "chroma_publish" not in order
+    assert "production_cutover" not in order
+    assert "lemkin_train_only" not in order
     for gate, downstream in (
         ("clean_parity", "build_nopromo"),
         ("nopromo_parity", "canonical_fit"),
@@ -90,7 +90,9 @@ def test_shadow_dag_orders_parity_gates_ahead_of_the_next_stage():
         ("balance_parity", "split"),
         ("split_parity", "relabel"),
         ("relabel_parity", "rag_governance"),
-        ("rag_parity", "parity_summary"),
+        ("rag_parity", "embed_rag"),
+        ("embedding_parity", "build_chroma_shadow"),
+        ("retrieval_parity", "parity_summary"),
     ):
         assert order.index(gate) < order.index(downstream)
 
@@ -123,7 +125,7 @@ def test_manifest_records_the_executor(tmp_path):
     )
     document = json.loads(path.read_text(encoding="utf-8"))
     assert document["executor"] == "spark"
-    assert document["config_version"] == "spark-v2-shadow-rag-v1"
+    assert document["config_version"] == "spark-v2-shadow-embed-v1"
 
 
 def test_shadow_pipeline_matches_the_python_oracle_through_fit(tmp_path):
@@ -164,7 +166,7 @@ def test_shadow_pipeline_matches_the_python_oracle_through_fit(tmp_path):
     cleaned = json.loads((staging / "manifests" / "canonical_clean.json").read_text(encoding="utf-8"))
     nopromo = json.loads((staging / "manifests" / "build_nopromo.json").read_text(encoding="utf-8"))
     assert summary["status"] == "PASS"
-    assert summary["config_version"] == "spark-v2-shadow-rag-v1"
+    assert summary["config_version"] == "spark-v2-shadow-embed-v1"
     assert cleaned["executor"] == "ordered"
     assert cleaned["output_rows"] == 30370
     assert cleaned["mismatches"] == {
@@ -263,3 +265,74 @@ print(json.dumps({
     assert file_sha256(FROZEN_BALANCED) == before["balanced"]
     assert file_sha256(RELABEL_DATASET) == before["relabel"]
     assert "host_finetune/data" not in staging.as_posix()
+
+
+def test_embedding_request_uses_the_document_text_and_cpu_body():
+    from host_finetune.canonical_embeddings import request_body
+    from host_finetune.spark_v2_embed import embedding_input_is_document, select_sample
+
+    row = {"row_id": "train_1", "document": "the output", "instruction": "write a post", "split": "train"}
+    assert embedding_input_is_document(row) == "the output"
+    body = request_body(["the output"])
+    assert body == {"model": "nomic-embed-text", "input": ["the output"], "options": {"num_gpu": 0}}
+    rows = [
+        {"row_id": "train_26148", "document": "held", "medium": "blog", "sft_role": "unchanged", "split": "train"},
+        {"row_id": "train_1", "document": "a", "medium": "blog", "sft_role": "unchanged", "split": "train"},
+        {"row_id": "train_2", "document": "b", "medium": "x", "sft_role": "opening", "split": "train"},
+    ]
+    assert "train_26148" not in {item["row_id"] for item in select_sample(rows)}
+
+
+def test_vector_contract_accepts_float32_storage_and_rejects_a_different_vector():
+    from host_finetune.spark_v2_embed import (
+        ParityError,
+        assert_shadow_target,
+        compare_rankings,
+        contract_from_sample,
+        vector_delta,
+    )
+
+    fresh = [0.1, -0.2, 0.3]
+    stored = [struct_f32(value) for value in fresh]
+    pair = {
+        "raw": vector_delta(fresh, stored),
+        "float32": vector_delta([struct_f32(value) for value in fresh], stored),
+    }
+    contract = contract_from_sample([pair])
+    assert contract["mode"] == "float32_storage"
+    assert pair["float32"]["exact"] is True
+    far = vector_delta(fresh, [1.0, 1.0, 1.0])
+    with pytest.raises(ParityError):
+        contract_from_sample([{"raw": far, "float32": far, "float32_ulps": 100}])
+    nudged = list(stored)
+    nudged[0] = struct_f32(stored[0] + 1.5e-7)
+    one_ulp = {
+        "raw": vector_delta(fresh, nudged),
+        "float32": vector_delta(stored, nudged),
+        "float32_ulps": 1,
+    }
+    assert contract_from_sample([one_ulp])["mode"] == "float32_one_ulp"
+    assert compare_rankings(
+        [{"id": "a", "distance": 0.1}, {"id": "b", "distance": 0.2}],
+        [{"id": "a", "distance": 0.1}, {"id": "b", "distance": 0.25}],
+    )["exact_rank"] is True
+    tied = compare_rankings(
+        [{"id": "a", "distance": 0.1}, {"id": "b", "distance": 0.2}],
+        [{"id": "a", "distance": 0.1}, {"id": "c", "distance": 0.2}],
+    )
+    assert tied["cutoff_tie"] is True
+    assert tied["exact_rank"] is False
+    assert compare_rankings(
+        [{"id": "a", "distance": 0.1}, {"id": "b", "distance": 0.2}],
+        [{"id": "b", "distance": 0.2}, {"id": "a", "distance": 0.1}],
+    )["same_set"] is True
+    with pytest.raises(ParityError):
+        assert_shadow_target(ROOT / "host_finetune" / "output" / "chroma_lemkin_train_only", "lemkin_train_only_v2_shadow")
+    with pytest.raises(ParityError):
+        assert_shadow_target(ROOT / "artifacts" / "refactor" / "spark_v2" / "shadow", "lemkin_train_only")
+
+
+def struct_f32(value: float) -> float:
+    import struct
+
+    return struct.unpack("<f", struct.pack("<f", value))[0]

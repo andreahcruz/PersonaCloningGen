@@ -53,7 +53,7 @@ from host_finetune.train_only_index import (
 from host_finetune.verify_frozen_parity import explicit_crlf_jsonl_bytes
 
 ROOT = Path(__file__).resolve().parents[1]
-CONFIG_VERSION = "spark-v2-shadow-rag-v1"
+CONFIG_VERSION = "spark-v2-shadow-embed-v1"
 ORDERED_EXECUTOR = "ordered-python"
 SFT_CHUNK_CHARS = 1600
 STAGING_ROOT = ROOT / "artifacts" / "refactor" / "spark_v2"
@@ -126,6 +126,11 @@ SUMMARY_STAGES = (
     "relabel_parity",
     "rag_governance",
     "rag_parity",
+    "embed_rag",
+    "embedding_parity",
+    "build_chroma_shadow",
+    "logical_chroma_parity",
+    "retrieval_parity",
 )
 FORBIDDEN_OUTPUT_PARTS = (
     "host_finetune/data",
@@ -787,6 +792,10 @@ def load_split(staging: Path) -> list[dict]:
     return assignment_rows(_read_jsonl(staging / "split" / "assignments.jsonl"))
 
 
+def load_rag(staging: Path) -> list[dict]:
+    return _read_jsonl(staging / "rag" / "rows.jsonl")
+
+
 def load_relabel(staging: Path) -> tuple[list[dict], list[dict]]:
     return (
         _read_jsonl(staging / "relabel" / "dataset.jsonl"),
@@ -1250,6 +1259,23 @@ def run_shadow(
     stage_recorded_parity(staging, run_id, "rag_governance", "rag_parity")
     if through == "rag_parity":
         return {"rag": len(rag_rows)}
+    from host_finetune.spark_v2_embed import stage_build_chroma, stage_embed, stage_logical_chroma, stage_retrieval
+
+    embedded = stage_embed(staging, run_id, rag_rows)
+    if through == "embed_rag":
+        return embedded
+    stage_recorded_parity(staging, run_id, "embed_rag", "embedding_parity")
+    if through == "embedding_parity":
+        return embedded
+    built = stage_build_chroma(staging, run_id, rag_rows)
+    if through == "build_chroma_shadow":
+        return built
+    logical = stage_logical_chroma(staging, run_id, rag_rows)
+    if through == "logical_chroma_parity":
+        return logical
+    retrieved = stage_retrieval(staging, run_id)
+    if through == "retrieval_parity":
+        return retrieved
     return stage_summary(staging, run_id)
 
 
