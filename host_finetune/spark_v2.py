@@ -331,17 +331,41 @@ def _ensure_worker_pythonpath() -> str:
     return path
 
 
+def _env_flag(name: str) -> bool:
+    return os.environ.get(name, "").strip().lower() in {"1", "true", "yes"}
+
+
+def _ensure_event_dir(event_dir: str) -> None:
+    """Create the directory behind a ``file:`` event-log URI before Spark starts."""
+    path = event_dir
+    if path.startswith("file:"):
+        path = path[5:]
+        while path.startswith("//"):
+            path = path[1:]
+    Path(path).mkdir(parents=True, exist_ok=True)
+
+
 def _spark_session(SparkSession):
     pythonpath = _ensure_worker_pythonpath()
-    return (
+    ui_enabled = _env_flag("LEMKIN_SPARK_UI")
+    builder = (
         SparkSession.builder.master("local[*]")
         .appName("lemkin-v2-shadow-clean")
-        .config("spark.ui.enabled", "false")
+        .config("spark.ui.enabled", "true" if ui_enabled else "false")
         .config("spark.executorEnv.PYTHONPATH", pythonpath)
         .config("spark.pyspark.python", sys.executable)
         .config("spark.pyspark.driver.python", sys.executable)
-        .getOrCreate()
     )
+    if ui_enabled:
+        builder = builder.config("spark.ui.port", os.environ.get("LEMKIN_SPARK_UI_PORT", "4040"))
+        event_dir = os.environ.get("LEMKIN_SPARK_EVENT_DIR", "").strip()
+        if event_dir:
+            _ensure_event_dir(event_dir)
+            builder = (
+                builder.config("spark.eventLog.enabled", "true")
+                .config("spark.eventLog.dir", event_dir)
+            )
+    return builder.getOrCreate()
 
 
 def _clean_on_spark(spark, pyspark_module, items: list[dict], slices: int) -> tuple[list[dict], dict]:

@@ -1,0 +1,82 @@
+{
+  "experiment_id": "EXP-20261004-015-relabel-atomic-evidence",
+  "gold_eval": "data/openai_ft/lemkin_gold_eval.jsonl",
+  "n_topics": 2,
+  "max_topics": 2,
+  "skip_score": true,
+  "git": {
+    "commit": "b5daa239e2c064448bba2224d6702444d5fb815d",
+    "dirty": true
+  },
+  "mediums": [
+    {
+      "medium": "blog",
+      "format": "blog_draft",
+      "instruction": "Write a blog post in the style of Jason Lemkin about: {topic}",
+      "max_new_tokens": 768
+    },
+    {
+      "medium": "linkedin",
+      "format": "linkedin_post",
+      "instruction": "Write a LinkedIn post in the style of Jason Lemkin about: {topic}",
+      "max_new_tokens": 320
+    },
+    {
+      "medium": "x",
+      "format": "x_thread",
+      "instruction": "Write an X post in the style of Jason Lemkin about: {topic}",
+      "max_new_tokens": 160
+    },
+    {
+      "medium": "talk",
+      "format": "youtube_script",
+      "instruction": "Write a talk in the style of Jason Lemkin about: {topic}",
+      "max_new_tokens": 768
+    }
+  ],
+  "generation": {
+    "max_seq_length": 2048,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "repetition_penalty": 1.15,
+    "do_sample": true,
+    "load_in_4bit": true,
+    "seed_base": 42,
+    "seed_policy": "base + topic_index * n_mediums + medium_index; reset per request",
+    "rag_source_copy_threshold": 12,
+    "rag_source_copy_retry_seed_offset": 10000,
+    "rag_source_copy_max_retries": 1
+  },
+  "evidence_distillation": {
+    "enabled": true,
+    "representation": "atomic_claims",
+    "once_per_topic": true,
+    "adapter_enabled": false,
+    "backend": "same_loaded_4bit_base_adapter_off",
+    "do_sample": false,
+    "extraction_max_new_tokens": 1536,
+    "verification_max_new_tokens": 24,
+    "seed": 0,
+    "temperature": null,
+    "top_p": null,
+    "repetition_penalty": null,
+    "second_model": null,
+    "internal_copy_gate": false,
+    "support_spans_in_generator_prompt": false,
+    "verifier": "same_loaded_4bit_base_adapter_off"
+  },
+  "expected_facts_in_prompt": false,
+  "retrieval": {
+    "enabled": true,
+    "collection": "lemkin_train_only",
+    "chroma_path": "C:\\Users\\okevi\\SJSU\\DATA298\\298P\\host_finetune\\output\\chroma_lemkin_train_only",
+    "embedding_model": "nomic-embed-text",
+    "top_k": 4,
+    "medium_filter": false,
+    "note": "Factual retrieval searches all train-owned media. Output medium still selects the generation instruction."
+  },
+  "fixed_style": {
+    "enabled": false,
+    "note": "Default off. Voice examples are not evidence and are not loaded for retrieval-off runs."
+  }
+}

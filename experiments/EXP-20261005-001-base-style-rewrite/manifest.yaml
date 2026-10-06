@@ -1,0 +1,35 @@
+experiment_id: EXP-20261005-001-base-style-rewrite
+timestamp: 2026-10-05T07:07:40Z
+execution_commands:
+  - host_finetune\.venv\Scripts\python.exe -m host_finetune.run_style_rewrite
+git:
+  commit: b5daa239e2c064448bba2224d6702444d5fb815d
+  dirty: true
+data:
+  source_manifest: n/a
+  source_hashes: {}
+  processed_dataset_hash: 1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b
+  split_manifest_hash: 6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb
+  gold_eval_hash: d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e
+rag:
+  persona_profile_hash: n/a
+  chroma_collection: lemkin_train_only
+  index_version_or_snapshot: frozen factual dense rag v1; hits and accepted claims reused from EXP-017; index not rebuilt
+  embedding_model: nomic-embed-text
+model:
+  model_name: unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit
+  model_or_adapter_hash: host_finetune/output/lemkin_lora_relabel
+  config: adapter off for the grounded draft; Relabel scale 1.0 for one style rewrite; failed rewrite falls back to the base draft
+  random_seed: same per-cell seeds as EXP-017
+evaluation:
+  evaluator_commit: b5daa239e2c064448bba2224d6702444d5fb815d
+  judge_model: n/a
+  judge_config: scoring skipped; source-copy gate, numeric grounding gate, sentence-final check, held-out blog style distance
+environment:
+  python_version: 3.11
+  package_snapshot: host_finetune venv; Unsloth 2026.5.2; PEFT 0.19.1; Torch 2.10.0+cu128
+  hardware: NVIDIA GeForce RTX 5070 Ti
+outputs:
+  raw: raw/style_rewrite.jsonl
+  metrics: metrics/summary.json
+  warnings_and_failures: 0 of 5 style rewrites passed; 3 base drafts stopped mid-sentence at the token budget

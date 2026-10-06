@@ -57,6 +57,10 @@ x-airflow-common: &airflow-common
     # Shadow v2 reads canonical code and the local tokenizer snapshot. It does not download weights.
     LEMKIN_V2_CLEAN_EXECUTOR: spark
     LEMKIN_V2_CLEAN_SLICES: "4"
+    # Live Spark UI is published from the scheduler. Event logs stay visible on the history server.
+    LEMKIN_SPARK_UI: "true"
+    LEMKIN_SPARK_UI_PORT: "4040"
+    LEMKIN_SPARK_EVENT_DIR: file:///opt/airflow/artifacts/refactor/spark_v2/spark-events
     PYTHONDONTWRITEBYTECODE: "1"
     PYTHONPATH: /opt/airflow
     HF_HUB_OFFLINE: "1"
@@ -154,6 +158,8 @@ services:
     <<: *airflow-common
     container_name: airflow-scheduler
     command: scheduler
+    ports:
+      - "4040:4040"   # Spark application UI while canonical_clean is running
     depends_on:
       postgres:
         condition: service_healthy

@@ -1,0 +1,43 @@
+{
+  "pool_origin": "dense_rag_v1",
+  "frozen_baseline_experiment": "EXP-20261004-009-dense-rag-v1",
+  "frozen_git_sha": "4006d4cee7768789c460c4c2ae1b1fcb1b124b03",
+  "collection": "lemkin_train_only",
+  "document_count": 21193,
+  "train_26148_present": false,
+  "embedding_model": "nomic-embed-text",
+  "embed_device": "cpu",
+  "distance_metric": "cosine",
+  "query": "gold topic text only",
+  "pool_k": 20,
+  "production_retrieval_k": 4,
+  "medium_filter": false,
+  "reranker": false,
+  "n_queries": 30,
+  "raw_candidate_rows": 600,
+  "judgment_units_after_group_dedup": 499,
+  "unique_document_ids": 574,
+  "unique_group_ids": 442,
+  "dataset_sha256": "1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b",
+  "assignments_sha256": "6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb",
+  "gold_eval_sha256": "d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e",
+  "candidate_file_sha256": "0c1b73b2f932ff113c066c1fe96df095f07f245596dcba805cbedddbcc203adf",
+  "accepted_judgments": 0,
+  "ranked_metrics": "omitted; no accepted qrels",
+  "relevance_scope": "none",
+  "git": {
+    "commit": "b5daa239e2c064448bba2224d6702444d5fb815d",
+    "dirty": true
+  },
+  "timestamp": "2026-10-05T04:24:53.341819+00:00",
+  "existing_labels": {
+    "evidence_review_files": [
+      "experiments\\EXP-20261004-004-relabel-factual-rag-sanity\\raw\\evidence_review.jsonl",
+      "experiments\\EXP-20261004-004-repaired-vs-relabel-retrieval\\raw\\evidence_review.jsonl"
+    ],
+    "evidence_review_rows": 992,
+    "nonempty_on_topic": 0,
+    "nonempty_claim_support": 0,
+    "retrieval_qrels_found": false
+  }
+}

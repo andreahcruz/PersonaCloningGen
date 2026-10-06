@@ -1,0 +1,21 @@
+{
+  "experiment_id": "EXP-20261005-001-base-style-rewrite",
+  "system": "Base + Factual RAG + Relabel Style Rewrite",
+  "not_equivalent_to": "Relabel + Factual RAG",
+  "evidence_source": "EXP-20261004-017-relabel-grounding-repair",
+  "base_adapter_enabled": false,
+  "rewrite_adapter_scale": 1.0,
+  "retry": false,
+  "repair": false,
+  "fallback": "grounded_base_draft",
+  "git": {
+    "commit": "b5daa239e2c064448bba2224d6702444d5fb815d",
+    "dirty": true
+  },
+  "generation": {
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "repetition_penalty": 1.15,
+    "do_sample": true
+  }
+}

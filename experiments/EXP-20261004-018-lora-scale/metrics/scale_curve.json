@@ -1,0 +1,40 @@
+{
+  "blog_voice": "held-out blog style distance; lower is closer to Lemkin; role=selector",
+  "scales": [
+    {
+      "scale": 1.0,
+      "source": "EXP-017 raw Relabel draw",
+      "numeric_pass_cells": "0/4",
+      "copy_pass_cells": "4/4",
+      "blog_voice": {"gold_001": 0.6286, "gold_002": 0.8284}
+    },
+    {
+      "scale": 0.75,
+      "source": "generated",
+      "numeric_pass_cells": "0/4",
+      "copy_pass_cells": "4/4",
+      "blog_voice": {"gold_001": 0.5618, "gold_002": 0.7865}
+    },
+    {
+      "scale": 0.5,
+      "source": "generated",
+      "numeric_pass_cells": "1/4",
+      "copy_pass_cells": "4/4",
+      "blog_voice": {"gold_001": 1.0069, "gold_002": 0.6027}
+    },
+    {
+      "scale": 0.25,
+      "source": "generated",
+      "numeric_pass_cells": "3/4",
+      "copy_pass_cells": "4/4",
+      "blog_voice": {"gold_001": 1.9367, "gold_002": 1.3148}
+    },
+    {
+      "scale": 0.0,
+      "source": "blogs regenerated adapter-off and matched saved word counts; linkedin and talk remain the EXP-017 diagnostic",
+      "numeric_pass_cells": "4/4",
+      "copy_pass_cells": "4/4",
+      "blog_voice": {"gold_001": 1.2839, "gold_002": 1.4543}
+    }
+  ]
+}

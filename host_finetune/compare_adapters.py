@@ -546,6 +546,15 @@ def _append_generation(
     )
 
 
+def _bnb_flag(model, name: str) -> bool:
+    """PEFT wraps the quantized base. The flag can sit on the wrapper or the inner module."""
+    candidates = [model, getattr(model, "base_model", None)]
+    base = candidates[1]
+    if base is not None:
+        candidates.append(getattr(base, "model", None))
+    return any(getattr(item, name, False) for item in candidates if item is not None)
+
+
 def generate(
     adapter: Path,
     gold: list[dict],
@@ -553,17 +562,38 @@ def generate(
     style_for=None,
     seed_base: int = GENERATION_SEED,
     topic_rows: list[tuple[int, dict]] | None = None,
-) -> list[dict]:
+    quantization: str = "4bit",
+) -> tuple[list[dict], dict]:
     import torch
     from unsloth import FastLanguageModel
 
+    if quantization == "8bit":
+        # The adapter config still names the bnb-4bit repo. load_in_4bit=False
+        # makes Unsloth resolve the full Instruct weights, then bitsandbytes
+        # quantizes those weights to 8-bit. The LoRA file is not retrained.
+        load_kwargs = {"load_in_4bit": False, "load_in_8bit": True}
+    elif quantization == "4bit":
+        load_kwargs = {"load_in_4bit": True}
+    else:
+        raise ValueError(f"unsupported quantization: {quantization}")
     model, tokenizer = FastLanguageModel.from_pretrained(
         model_name=str(adapter),
         max_seq_length=MAX_SEQ_LENGTH,
         dtype=None,
-        load_in_4bit=True,
+        **load_kwargs,
     )
     FastLanguageModel.for_inference(model)
+    load_report = {
+        "requested": quantization,
+        "load_in_4bit": quantization == "4bit",
+        "load_in_8bit": quantization == "8bit",
+        "is_loaded_in_4bit": _bnb_flag(model, "is_loaded_in_4bit"),
+        "is_loaded_in_8bit": _bnb_flag(model, "is_loaded_in_8bit"),
+        "name_or_path": getattr(getattr(model, "config", None), "_name_or_path", None),
+    }
+    print(f"quantization load {json.dumps(load_report)}", flush=True)
+    if quantization == "8bit" and not load_report["is_loaded_in_8bit"]:
+        raise RuntimeError("8-bit load was requested but the model is not loaded in 8-bit")
     if retriever is not None:
         require_adapter_toggle(model)
     traces = []
@@ -666,7 +696,7 @@ def generate(
             )
     del model
     torch.cuda.empty_cache()
-    return traces
+    return traces, load_report
 
 
 def _paired(traces: list[dict]) -> dict:
@@ -835,6 +865,12 @@ def parse_args() -> argparse.Namespace:
         default=None,
         help="Comma-separated gold ids to generate. Uses each topic's original index for the seed.",
     )
+    parser.add_argument(
+        "--quantization",
+        choices=("4bit", "8bit"),
+        default="4bit",
+        help="BitsAndBytes width of the frozen base. 8bit quantizes the full Instruct weights on load. The adapter file is unchanged.",
+    )
     return parser.parse_args()
 
 
@@ -912,6 +948,7 @@ def row_provenance(args: argparse.Namespace, adapter: Path, stamp: dict) -> dict
         "experiment_id": args.out_dir.name,
         "adapter_path": str(adapter),
         "base_model": adapter_base_model(adapter),
+        "inference_quantization": args.quantization,
         "collection": args.collection if args.retrieval else None,
         "embedding_model": args.embed_model if args.retrieval else None,
         "top_k": args.k if args.retrieval else None,
@@ -934,6 +971,7 @@ def write_parameters(
     chroma_path: str | None = None,
     collection: str | None = None,
     git: dict | None = None,
+    quantization: str = "4bit",
 ) -> None:
     payload = {
         "experiment_id": out.name,
@@ -958,7 +996,9 @@ def write_parameters(
             "top_p": TOP_P,
             "repetition_penalty": REPETITION_PENALTY,
             "do_sample": True,
-            "load_in_4bit": True,
+            "quantization": quantization,
+            "load_in_4bit": quantization == "4bit",
+            "load_in_8bit": quantization == "8bit",
             "seed_base": seed_base,
             "seed_policy": "base + topic_index * n_mediums + medium_index; reset per request",
             "rag_source_copy_threshold": RAG_SOURCE_COPY_THRESHOLD,
@@ -1118,11 +1158,13 @@ def main() -> None:
         chroma_path=str(args.chroma_path),
         collection=args.collection,
         git=recorded_git,
+        quantization=args.quantization,
     )
     retriever = build_runtime_retriever(args) if args.retrieval else None
     style_for = load_style_for(args.style_path) if args.fixed_style else None
     combined = {}
     traces_by_name: dict[str, list[dict]] = {}
+    load_reports: dict[str, dict] = {}
     pack, copy_index = (None, None)
     if not args.skip_score:
         pack, copy_index = _evaluation_resources()
@@ -1132,13 +1174,19 @@ def main() -> None:
     }
     for name, adapter in adapter_list(args.adapters):
         print(f"=== {name} {adapter}", flush=True)
-        traces = generate(
+        traces, load_report = generate(
             adapter,
             gold,
             retriever=retriever,
             style_for=style_for,
             seed_base=args.seed_base,
             topic_rows=plan,
+            quantization=args.quantization,
+        )
+        load_reports[name] = load_report
+        (out / "config" / "quantization_load.json").write_text(
+            json.dumps(load_reports, indent=2) + "\n",
+            encoding="utf-8",
         )
         _stamp_traces(traces, row_provenance(args, adapter, run_stamp))
         traces_by_name[name] = traces

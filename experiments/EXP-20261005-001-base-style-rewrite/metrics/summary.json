@@ -1,0 +1,18 @@
+{
+  "system": "Base + Factual RAG + Relabel Style Rewrite",
+  "base_numeric_and_copy_pass": "8/8",
+  "base_structurally_complete": "5/8",
+  "style_rewrites_attempted": 5,
+  "style_rewrites_accepted": 0,
+  "base_fallback": 5,
+  "stopped_before_style": 3,
+  "blog_voice": {
+    "role": "selector",
+    "lower_is_closer": true,
+    "gold_001": {"base": 1.0976, "rewrite": 0.9049},
+    "gold_002": {"base": 1.6316, "rewrite": 0.5873}
+  },
+  "mean_base_seconds": 10.783,
+  "mean_rewrite_seconds": 18.588,
+  "reused_extraction_seconds": {"gold_001": 10.531, "gold_002": 25.75}
+}

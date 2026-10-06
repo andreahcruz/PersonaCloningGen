@@ -1,0 +1,41 @@
+{
+  "relevance_grade": {
+    "0": "irrelevant",
+    "1": "tangentially related",
+    "2": "useful topical evidence",
+    "3": "directly supports an important claim, position, example, or fact for the query"
+  },
+  "quality_flags_are_not_grades": [
+    "fragment",
+    "continuation",
+    "duplicate_of",
+    "near_duplicate",
+    "source_family_redundant",
+    "headline_only",
+    "URL_heavy",
+    "insufficient_context",
+    "held_out_overlap_suspected",
+    "reviewer_notes"
+  ],
+  "review_status": ["unlabeled", "proposed", "accepted", "rejected"],
+  "candidate_identity": ["query_id", "document_id", "pool_origin", "candidate_text_hash"],
+  "judgment_row": [
+    "query_id",
+    "document_id",
+    "relevance_grade",
+    "reviewer",
+    "review_status",
+    "candidate_text_hash",
+    "source_config",
+    "pool_origin",
+    "notes"
+  ],
+  "rules": [
+    "A quality flag does not set or imply relevance_grade.",
+    "A missing judgment is unlabeled. It is not grade 0.",
+    "Append judgments. Do not overwrite an accepted row.",
+    "Same-group siblings inherit a grade only inside one pool_origin, and only after the representative judgment is accepted. An explicit sibling judgment wins.",
+    "A later pool_origin such as dense_rag_v2 does not inherit dense_rag_v1 grades, even when group_id matches.",
+    "Judged-pool recall is not corpus recall."
+  ]
+}
