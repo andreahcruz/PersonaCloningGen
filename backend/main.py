@@ -89,8 +89,10 @@ DIRECT_QLORA_OPTIONS = {
     "repeat_penalty": 1.15,
     "stop": ["<|eot_id|>"],
 }
-# Negative keep_alive asks Ollama to leave the merged GGUF loaded after the reply.
-DIRECT_QLORA_KEEP_ALIVE = -1
+# This CPU-only demo has enough memory for one 8B writer at a time, not both
+# the fine-tuned GGUF and base Llama indefinitely.  Unload QLoRA after each
+# reply so switching back to PersonaRAG can load `llama3.1` reliably.
+DIRECT_QLORA_KEEP_ALIVE = 0
 
 
 def direct_qlora_prompt(format_name: str, topic: str) -> str:
