@@ -95,6 +95,11 @@ services:
       EMBED_MODEL: nomic-embed-text
       GEN_MODEL: llama3.1
       QLORA_MODEL: lemkin-qlora
+      # CPU cold starts can take longer than the library default of 60 seconds
+      # when Ollama switches from a writer GGUF to the embedding model. Keep
+      # this aligned with the ten-minute relay window used by the React app.
+      OLLAMA_EMBED_TIMEOUT: ${OLLAMA_EMBED_TIMEOUT:-180}
+      OLLAMA_GENERATE_TIMEOUT: ${OLLAMA_GENERATE_TIMEOUT:-600}
       CHROMA_USE_HTTP: "true"
       CHROMA_HOST: chroma
       CHROMA_PORT: "8000"
