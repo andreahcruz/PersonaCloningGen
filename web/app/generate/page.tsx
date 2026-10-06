@@ -41,20 +41,36 @@ const METHODS: Array<{
   },
 ];
 
-// The Relabel QLoRA was trained on a single user sentence followed directly by
-// the post. Keep the browser experience aligned with that training format.
-const QLORA_PROMPTS: Record<FormatId, string> = {
-  linkedin_post: "Write a LinkedIn post in the style of Jason Lemkin about:",
-  blog_draft: "Write a blog post in the style of Jason Lemkin about:",
-  x_thread: "Write an X post in the style of Jason Lemkin about:",
-  youtube_script: "Write a talk in the style of Jason Lemkin about:",
+// Kevin's tested medium grid: a deterministic prompt per format. LinkedIn and
+// X constraints deliberately precede the topic so headline-like topics are not
+// copied as the entire draft. The backend owns this same mapping.
+const QLORA_TEMPLATES: Record<FormatId, string> = {
+  linkedin_post:
+    "About 80 words. The first line is a claim, not a headline. No hashtags. Write a LinkedIn post in the style of Jason Lemkin about {topic}.",
+  blog_draft:
+    "Write a blog post in the style of Jason Lemkin about {topic}. Write the post itself in about 250 words, with no title line.",
+  x_thread:
+    "Write one X post in the style of Jason Lemkin. Exactly 3 sentences, under 60 words, no headline, and no hashtags. Topic: {topic}",
+  youtube_script:
+    "Write a spoken talk in the style of Jason Lemkin about {topic}. Use short spoken sentences to founders, about 160 words, with no title and no headings.",
 };
 
+const LEGACY_QLORA_PREFIXES = [
+  "Write a LinkedIn post in the style of Jason Lemkin about:",
+  "Write a blog post in the style of Jason Lemkin about:",
+  "Write an X post in the style of Jason Lemkin about:",
+  "Write a talk in the style of Jason Lemkin about:",
+];
+
 function qloraTopicOnly(value: string): string {
-  const prefixes = Object.values(QLORA_PROMPTS)
+  const prefixes = LEGACY_QLORA_PREFIXES
     .map((prefix) => prefix.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
     .join("|");
   return value.replace(new RegExp(`^\\s*(?:${prefixes})\\s*`, "i"), "");
+}
+
+function qloraPrompt(format: FormatId, topic: string): string {
+  return QLORA_TEMPLATES[format].replace("{topic}", topic || "[your topic]");
 }
 
 function slug(text: string): string {
@@ -264,9 +280,9 @@ export default function GeneratorPage() {
             </Field>
             {method === "qlora" ? (
               <div className="rounded-xl border border-line bg-bg p-3 text-xs leading-relaxed text-mute">
-                <p className="font-medium text-text">QLoRA receives only this training-style request:</p>
+                <p className="font-medium text-text">QLoRA receives this tested format-specific request:</p>
                 <p className="mt-1 break-words font-mono text-[11px] text-mute">
-                  {QLORA_PROMPTS[format]} {qloraTopicOnly(topic).trim() || "[your topic]"}
+                  {qloraPrompt(format, qloraTopicOnly(topic).trim())}
                 </p>
                 <p className="mt-2">
                   Audience, goal, call to action, and retrieved-chunk settings are PersonaRAG-only and are not
