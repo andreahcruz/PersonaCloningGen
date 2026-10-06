@@ -305,6 +305,42 @@ def ollama_generate(
         ) from e
 
 
+def ollama_chat(
+    user_message: str,
+    base_url: str,
+    model: str,
+    *,
+    options: dict[str, object] | None = None,
+    keep_alive: int | str | None = None,
+) -> str:
+    """Generate one assistant reply through Ollama's chat endpoint.
+
+    This deliberately sends *only* a user message.  The Relabel QLoRA was
+    evaluated with Llama 3.1's own chat template and no application-provided
+    system prompt; adding one changes the training distribution.
+    """
+    payload: dict[str, object] = {
+        "model": model,
+        "messages": [{"role": "user", "content": user_message}],
+        "stream": False,
+    }
+    if options:
+        payload["options"] = dict(options)
+    if keep_alive is not None:
+        payload["keep_alive"] = keep_alive
+    resp = _ollama_post(
+        "/api/chat", payload,
+        base_url, model, _GEN_TIMEOUT, _GEN_RETRIES, "chat",
+    )
+    try:
+        return ((resp.json().get("message") or {}).get("content") or "").strip()
+    except (ValueError, AttributeError) as e:
+        raise GenerationError(
+            f"Ollama returned invalid JSON from /api/chat for model '{model}'.",
+            hint="Check the Ollama server log; restarting `ollama serve` usually clears this.",
+        ) from e
+
+
 def validate_draft(draft: str, gen_model: str) -> str:
     """Reject empty or collapsed model output instead of showing it as a result.
 

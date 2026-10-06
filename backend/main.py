@@ -26,6 +26,7 @@ from generate import (
     format_context,
     load_format_spec,
     load_persona,
+    ollama_chat,
     ollama_embed,
     ollama_generate,
     retrieve,
@@ -69,24 +70,46 @@ def _settings() -> tuple[str, str, str, str]:
     )
 
 
-# Training rows are one user sentence. The Modelfile wraps this sentence in the
-# Llama 3.1 Instruct chat template, so the application prompt stays plain text.
+# The QLoRA path matches Kevin's medium-grid evaluation: one user sentence,
+# Llama 3.1's default chat wrapper, and no custom system message.  LinkedIn
+# and X rules intentionally appear *before* the topic so headline-shaped
+# topics are not copied as the whole answer.
 DIRECT_QLORA_PROMPTS = {
-    "linkedin_post": "Write a LinkedIn post in the style of Jason Lemkin about: {topic}",
-    "blog_draft": "Write a blog post in the style of Jason Lemkin about: {topic}",
-    "x_thread": "Write an X post in the style of Jason Lemkin about: {topic}",
-    "youtube_script": "Write a talk in the style of Jason Lemkin about: {topic}",
+    "linkedin_post": (
+        "About 80 words. The first line is a claim, not a headline. No hashtags. "
+        "Write a LinkedIn post in the style of Jason Lemkin about {topic}."
+    ),
+    "blog_draft": (
+        "Write a blog post in the style of Jason Lemkin about {topic}. "
+        "Write the post itself in about 250 words, with no title line."
+    ),
+    "x_thread": (
+        "Write one X post in the style of Jason Lemkin. "
+        "Exactly 3 sentences, under 60 words, no headline, and no hashtags. "
+        "Topic: {topic}"
+    ),
+    "youtube_script": (
+        "Write a spoken talk in the style of Jason Lemkin about {topic}. "
+        "Use short spoken sentences to founders, about 160 words, with no title and no headings."
+    ),
 }
 DIRECT_QLORA_MAX_TOKENS = {
     "linkedin_post": 320,
-    "x_thread": 160,
-    "blog_draft": 768,
-    "youtube_script": 768,
+    "x_thread": 120,
+    "blog_draft": 500,
+    "youtube_script": 400,
+}
+DIRECT_QLORA_REPEAT_PENALTIES = {
+    "linkedin_post": 1.1,
+    "x_thread": 1.1,
+    "blog_draft": 1.1,
+    "youtube_script": 1.15,
 }
 DIRECT_QLORA_OPTIONS = {
-    "temperature": 0.7,
+    "temperature": 0,
+    "seed": 42,
     "top_p": 0.9,
-    "repeat_penalty": 1.15,
+    "num_ctx": 4096,
     "stop": ["<|eot_id|>"],
 }
 # This CPU-only demo has enough memory for one 8B writer at a time, not both
@@ -96,12 +119,21 @@ DIRECT_QLORA_KEEP_ALIVE = 0
 
 
 def direct_qlora_prompt(format_name: str, topic: str) -> str:
-    """One training-style sentence. No brief, persona, format rules, or retrieved text."""
+    """Build Kevin's evaluated direct-QLoRA user message for one medium."""
     template = DIRECT_QLORA_PROMPTS.get(format_name)
     if template is None:
         known = ", ".join(DIRECT_QLORA_PROMPTS)
         raise HTTPException(400, f"Unknown format for direct QLoRA: {format_name}. Expected: {known}")
     return template.format(topic=topic)
+
+
+def direct_qlora_options(format_name: str) -> dict[str, object]:
+    """Return QLoRA decoding settings, including its medium-specific penalty."""
+    try:
+        repeat_penalty = DIRECT_QLORA_REPEAT_PENALTIES[format_name]
+    except KeyError as e:
+        raise HTTPException(400, f"Unknown format for direct QLoRA: {format_name}") from e
+    return {**DIRECT_QLORA_OPTIONS, "repeat_penalty": repeat_penalty, "num_predict": DIRECT_QLORA_MAX_TOKENS[format_name]}
 
 
 def _source_type(value: object) -> str:
@@ -200,12 +232,11 @@ def generate(req: GenerateRequest) -> GenerateResponse:
 
     try:
         if req.method == "qlora":
-            draft = ollama_generate(
+            draft = ollama_chat(
                 prompt,
                 ollama_base,
                 model,
-                max_tokens=DIRECT_QLORA_MAX_TOKENS[req.format],
-                options=DIRECT_QLORA_OPTIONS,
+                options=direct_qlora_options(req.format),
                 keep_alive=DIRECT_QLORA_KEEP_ALIVE,
             )
         else:

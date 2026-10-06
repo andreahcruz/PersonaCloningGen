@@ -110,12 +110,12 @@ def test_dependency_health_is_exposed(monkeypatch):
 def test_qlora_generation_bypasses_retrieval(monkeypatch):
     calls = []
 
-    def fake_generate(prompt, _base, model, **kwargs):
+    def fake_chat(prompt, _base, model, **kwargs):
         calls.append((prompt, model, kwargs))
         return f"{model}: {prompt}"
 
     monkeypatch.setattr(main, "load_format_spec", lambda *_: {"output_type": "markdown"})
-    monkeypatch.setattr(main, "ollama_generate", fake_generate)
+    monkeypatch.setattr(main, "ollama_chat", fake_chat)
     monkeypatch.setattr(
         main,
         "retrieve",
@@ -142,7 +142,10 @@ def test_qlora_generation_bypasses_retrieval(monkeypatch):
 
     assert response.status_code == 200
     body = response.json()
-    sentence = "Write a LinkedIn post in the style of Jason Lemkin about: Hiring your first salesperson"
+    sentence = (
+        "About 80 words. The first line is a claim, not a headline. No hashtags. "
+        "Write a LinkedIn post in the style of Jason Lemkin about Hiring your first salesperson."
+    )
     assert body["method"] == "qlora"
     assert body["model"] == "lemkin-qlora"
     assert body["sources"] == []
@@ -152,40 +155,56 @@ def test_qlora_generation_bypasses_retrieval(monkeypatch):
             sentence,
             "lemkin-qlora",
             {
-                "max_tokens": 320,
-                "options": {"temperature": 0.7, "top_p": 0.9, "repeat_penalty": 1.15, "stop": ["<|eot_id|>"]},
-                "keep_alive": -1,
+                "options": {
+                    "temperature": 0,
+                    "seed": 42,
+                    "top_p": 0.9,
+                    "num_ctx": 4096,
+                    "stop": ["<|eot_id|>"],
+                    "repeat_penalty": 1.1,
+                    "num_predict": 320,
+                },
+                "keep_alive": 0,
             },
         )
     ]
 
 
 @pytest.mark.parametrize(
-    ("format_name", "sentence", "max_tokens"),
+    ("format_name", "sentence", "max_tokens", "repeat_penalty"),
     [
         (
             "linkedin_post",
-            "Write a LinkedIn post in the style of Jason Lemkin about: Hiring your first salesperson",
+            "About 80 words. The first line is a claim, not a headline. No hashtags. "
+            "Write a LinkedIn post in the style of Jason Lemkin about Hiring your first salesperson.",
             320,
+            1.1,
         ),
         (
             "blog_draft",
-            "Write a blog post in the style of Jason Lemkin about: Hiring your first salesperson",
-            768,
+            "Write a blog post in the style of Jason Lemkin about Hiring your first salesperson. "
+            "Write the post itself in about 250 words, with no title line.",
+            500,
+            1.1,
         ),
         (
             "x_thread",
-            "Write an X post in the style of Jason Lemkin about: Hiring your first salesperson",
-            160,
+            "Write one X post in the style of Jason Lemkin. Exactly 3 sentences, under 60 words, "
+            "no headline, and no hashtags. Topic: Hiring your first salesperson",
+            120,
+            1.1,
         ),
         (
             "youtube_script",
-            "Write a talk in the style of Jason Lemkin about: Hiring your first salesperson",
-            768,
+            "Write a spoken talk in the style of Jason Lemkin about Hiring your first salesperson. "
+            "Use short spoken sentences to founders, about 160 words, with no title and no headings.",
+            400,
+            1.15,
         ),
     ],
 )
-def test_direct_qlora_prompt_is_one_training_sentence(format_name, sentence, max_tokens):
+def test_direct_qlora_prompt_matches_kevin_medium_grid(format_name, sentence, max_tokens, repeat_penalty):
     assert main.direct_qlora_prompt(format_name, "Hiring your first salesperson") == sentence
-    assert not sentence.endswith(".")
     assert main.DIRECT_QLORA_MAX_TOKENS[format_name] == max_tokens
+    assert main.direct_qlora_options(format_name)["repeat_penalty"] == repeat_penalty
+    assert main.direct_qlora_options(format_name)["num_predict"] == max_tokens
