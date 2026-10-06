@@ -41,6 +41,15 @@ const METHODS: Array<{
   },
 ];
 
+// The Relabel QLoRA was trained on a single user sentence followed directly by
+// the post. Keep the browser experience aligned with that training format.
+const QLORA_PROMPTS: Record<FormatId, string> = {
+  linkedin_post: "Write a LinkedIn post in the style of Jason Lemkin about:",
+  blog_draft: "Write a blog post in the style of Jason Lemkin about:",
+  x_thread: "Write an X post in the style of Jason Lemkin about:",
+  youtube_script: "Write a talk in the style of Jason Lemkin about:",
+};
+
 function slug(text: string): string {
   return (
     text
@@ -80,14 +89,30 @@ export default function GeneratorPage() {
     setError(null);
     setCopied(false);
     try {
+      // PersonaRAG uses the full creative brief. Direct QLoRA was not trained
+      // on audience/goal/CTA instructions, so do not send stale form values
+      // when the user selects that method.
+      const request = method === "qlora"
+        ? {
+            format,
+            topic: topic.trim(),
+            audience: "",
+            goal: "",
+            cta: "none",
+            k: 4,
+            method,
+          }
+        : {
+            format,
+            topic: topic.trim(),
+            audience: audience.trim(),
+            goal: goal.trim(),
+            cta: cta.trim() || "none",
+            k,
+            method,
+          };
       const res = await generate({
-        format,
-        topic: topic.trim(),
-        audience: audience.trim(),
-        goal: goal.trim(),
-        cta: cta.trim() || "none",
-        k,
-        method,
+        ...request,
       });
       setResult(res);
       addHistory({
@@ -230,6 +255,18 @@ export default function GeneratorPage() {
                 placeholder="e.g. Hiring your first salesperson"
               />
             </Field>
+            {method === "qlora" ? (
+              <div className="rounded-xl border border-line bg-bg p-3 text-xs leading-relaxed text-mute">
+                <p className="font-medium text-text">QLoRA receives only this training-style request:</p>
+                <p className="mt-1 break-words font-mono text-[11px] text-mute">
+                  {QLORA_PROMPTS[format]} {topic.trim() || "[your topic]"}
+                </p>
+                <p className="mt-2">
+                  Audience, goal, call to action, and retrieved-chunk settings are PersonaRAG-only and are not
+                  sent to QLoRA.
+                </p>
+              </div>
+            ) : null}
             {method === "personarag" ? (
               <>
                 <div className="grid gap-4 sm:grid-cols-2">
