@@ -184,6 +184,17 @@ def health() -> dict:
     }
 
 
+@app.get("/healthz")
+def healthz() -> dict:
+    """Fast liveness check for Docker.
+
+    Keep this separate from ``/health``: the latter intentionally validates the
+    Chroma collection and should be used for the UI/diagnostics, not every
+    container-health interval.
+    """
+    return {"status": "ok"}
+
+
 @app.get("/health/dependencies")
 def health_dependencies() -> dict:
     return health()
