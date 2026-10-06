@@ -50,6 +50,13 @@ const QLORA_PROMPTS: Record<FormatId, string> = {
   youtube_script: "Write a talk in the style of Jason Lemkin about:",
 };
 
+function qloraTopicOnly(value: string): string {
+  const prefixes = Object.values(QLORA_PROMPTS)
+    .map((prefix) => prefix.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
+    .join("|");
+  return value.replace(new RegExp(`^\\s*(?:${prefixes})\\s*`, "i"), "");
+}
+
 function slug(text: string): string {
   return (
     text
@@ -95,7 +102,7 @@ export default function GeneratorPage() {
       const request = method === "qlora"
         ? {
             format,
-            topic: topic.trim(),
+            topic: qloraTopicOnly(topic).trim(),
             audience: "",
             goal: "",
             cta: "none",
@@ -251,15 +258,15 @@ export default function GeneratorPage() {
               <input
                 className={inputClass}
                 value={topic}
-                onChange={(e) => setTopic(e.target.value)}
-                placeholder="e.g. Hiring your first salesperson"
+                onChange={(e) => setTopic(method === "qlora" ? qloraTopicOnly(e.target.value) : e.target.value)}
+                placeholder={method === "qlora" ? "e.g. Hiring your first salesperson" : "e.g. Hiring your first salesperson"}
               />
             </Field>
             {method === "qlora" ? (
               <div className="rounded-xl border border-line bg-bg p-3 text-xs leading-relaxed text-mute">
                 <p className="font-medium text-text">QLoRA receives only this training-style request:</p>
                 <p className="mt-1 break-words font-mono text-[11px] text-mute">
-                  {QLORA_PROMPTS[format]} {topic.trim() || "[your topic]"}
+                  {QLORA_PROMPTS[format]} {qloraTopicOnly(topic).trim() || "[your topic]"}
                 </p>
                 <p className="mt-2">
                   Audience, goal, call to action, and retrieved-chunk settings are PersonaRAG-only and are not
