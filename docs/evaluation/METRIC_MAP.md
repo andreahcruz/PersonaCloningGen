@@ -83,7 +83,7 @@ How to read the columns. "Role" is what the harness lets the metric do: a select
 
 ## 5. Gaps, with evidence
 
-**G1. Grammar is not measured.** The only grammar signal is the judge's "fluency" item. A judge rating is a weak grammar test, and nothing separates real errors (spelling, agreement, punctuation) from Lemkin's deliberate informal style.
+**G1. Grammar is not measured.** The only grammar signal is the judge's "fluency" item. A judge rating is a weak grammar test, and nothing separates real errors (spelling, agreement, punctuation) from Lemkin's deliberate informal style. *Update 2026-10-24:* a first rule based checker now exists (`eval_tools/grammar.py`, section 10). On Kevin's saved Relabel drafts it finds almost nothing: 0 to 0.04 mechanical errors per 100 words, against 0.015 to 0.14 for real Lemkin posts. So mechanics is not where the drafts are weak, but the checker is coarse and cannot see tense or awkward phrasing.
 
 **G2. Voice is only a valid selector for blog.** In the final run the style score is a selector for blog only. LinkedIn and X are diagnostic only, and talk has no held-out references (reference counts are 80 blog, 80 LinkedIn, 80 X and 0 talk). The reference counts come from EXP-20261004-007 and the selector roles from EXP-20261005-003. So we cannot compare architectures on voice for three of the four mediums.
 
@@ -95,11 +95,11 @@ How to read the columns. "Role" is what the harness lets the metric do: a select
 
 **G6. Two truth signals disagree.** The claim judge says 99.4 percent of verifiable claims are supported. The deterministic number check flags 60 of 120 drafts for numbers that are not in the accepted evidence. The judge is probably lenient about figures. Truth should not rest on the judge alone.
 
-**G7. The gates differ between arms, so the arms are not compared on the same drafts.** A retrieval arm gets one extra gate (grounding). In EXP-20261005-003, 72 of 120 drafts are eligible with RAG and 77 of 120 without. The voice, writing and utility numbers are computed only on eligible drafts, so each arm is measured on a different subset. Persona Utility itself uses only 19 blogs with RAG and 23 without.
+**G7. The gates differ between arms, so the arms are not compared on the same drafts.** A retrieval arm gets one extra gate (grounding). In EXP-20261005-003, 72 of 120 drafts are eligible with RAG and 77 of 120 without. The voice, writing and utility numbers are computed only on eligible drafts, so each arm is measured on a different subset. Persona Utility itself uses only 19 blogs with RAG and 23 without. *Update 2026-10-24:* `eval_tools.compare` shows the bias directly. On the common gates (completion, copying, format) the RAG run passes 83 of 120 drafts and the run without RAG passes 77. The headline "72 against 77 eligible" looks worse for RAG only because the grounding gate removes 11 more drafts from the RAG run.
 
 **G8. Persona Utility mixes things that are not on the same scale.** The style distance is turned into a score with 1 divided by (1 + distance), writing is the 1 to 5 mean divided by 5 (so the lowest possible score is 0.2), and stance is a 0 to 1 rate. The weights of 45, 20, 25 and 10 are a project decision with no sensitivity check. The plan also ranks drafts by style first, then perspective, then writing, which is a different rule from the weighted blend.
 
-**G9. The statistics are thin.** There are 30 topics in one development panel, one seed in the final run, one judge at temperature 0, and no confidence intervals. A gap such as writing quality 3.06 against 3.15 is not shown to be real. Kevin's own audit says small single seed gaps are not a settled ranking.
+**G9. The statistics are thin.** There are 30 topics in one development panel, one seed in the final run, one judge at temperature 0, and no confidence intervals. A gap such as writing quality 3.06 against 3.15 is not shown to be real. Kevin's own audit says small single seed gaps are not a settled ranking. *Update 2026-10-24:* `eval_tools.compare` adds the missing intervals (section 10). On the Relabel RAG pair, only the blog rows are clear: blog writing quality is lower with RAG (difference -0.22, interval -0.43 to -0.03) and blog style distance is farther from the profile (+0.10, interval 0.02 to 0.21). Overall rows and the other mediums show no clear difference.
 
 **G10. Nothing checks truth against the outside world.** Claims are checked against retrieved passages and against Lemkin's own posts. A claim that is consistent with Lemkin but factually wrong would pass.
 
@@ -122,6 +122,8 @@ How to read the columns. "Role" is what the harness lets the metric do: a select
 | R9 | Add a small human check (30 drafts) for grammar, coherence and claim support only. Measure how well the judge agrees with people (rank correlation). Keep voice out of it, as DEC-007 decided | G12 | Manual | Medium |
 | R10 | Add time per draft, tokens and memory per architecture to every comparison table | G11 | Kevin's machine | Small |
 
+**Status on 2026-10-24.** Built in `eval_tools/` (section 10): R1 (confidence intervals, by topic), R2 (all drafts and common gates views) and a first rule based version of R5 (grammar). R8 is partly covered, because `eval_tools.compare` prints each axis on its own and never a blended headline. R3 waits for Kevin's reference pack. R4, R6, R7, R9 and R10 are open.
+
 ## 7. How this feeds the next steps
 
 PUK-34 (before and after RAG per architecture) will use these rules: the same 120 prompts for every architecture, the separate axes from section 3 with no blended score as the headline, paired differences with confidence intervals (R1), both the all draft view and the common gate view (R2), and a clear "pending" label for any architecture without results. Today only the Relabel pair is complete.
@@ -133,10 +135,32 @@ For the workbook, sections 3 and 4 answer "evaluation methods and metrics for ea
 1. Do base Llama and PersonaRAG have saved 120 prompt results with retrieval on and off, or can you run them?
 2. Is the persona prompted base the same run as the untrained Llama in EXP-20261001-010?
 3. Do the style numbers in EXP-20261004-007 and EXP-20261005-003 use the same reference pack? (This decides how far we can trust G3.)
-4. Is a grammar axis (R5) wanted, and may we install a grammar checker?
+4. Is a grammar axis (R5) wanted? A first rule based version exists. Do you want a stronger checker such as LanguageTool (needs Java and about 200 MB), and may we install it?
 
 ## 9. Limits of this page
 
 - It is a review of the design and of saved numbers. We did not rerun the harness or the judge, because the judge model (qwen2.5:14b) and the 8B adapter do not run on the laptop used for this task.
 - G3 and G4 are hypotheses supported by the numbers above and should be tested before anything changes.
+- The grammar tool is a small rule set. It catches mechanical slips only and finds almost none in the saved drafts, so it cannot yet separate runs.
+- The intervals in section 10 come from one run per arm and 30 topics, with many comparisons (4 mediums, 10 metrics). Rows by medium are leads, not findings.
 - Nothing here claims a model is better or worse. It is about whether the measurements can be trusted and compared.
+
+## 10. Tools built for this task
+
+All in `eval_tools/` (see `eval_tools/README.md`). They read saved results, call no model and no judge, use only the Python standard library, and have 44 tests (`python -m pytest tests/test_eval_tools.py`).
+
+| Tool | What it does | Fixes |
+|---|---|---|
+| `python -m eval_tools.compare` | Compares two saved runs on the same drafts. Shows gates, an all drafts view and a common gates view, and for every metric the difference with a 95 percent interval (resampled by topic), a p value and a plain verdict | G7, G9 |
+| `python -m eval_tools.grammar` | Counts mechanical errors per 100 words and scores each draft against real Lemkin posts of the same medium | G1 (first version) |
+
+Check on real data. On Kevin's saved Relabel runs (RAG off against RAG on, 120 drafts each), the mean differences from `eval_tools.compare` equal the ones in his `metrics/comparison.json`: writing -0.104, task +0.008, stance +0.003 on 82 drafts, blog style distance +0.104 on 30, persona utility -0.026 on 15, word count -9.84. What is new is the interval and the p value, which his file marks as not computed. The full report is in `docs/evaluation/examples/relabel_rag_off_vs_on.md`.
+
+What the example shows:
+
+- Gates. On the common gates RAG passes 83 of 120 drafts and no RAG passes 77, so the lower "eligible" count for RAG comes from its extra grounding gate (G7).
+- Blog drafts. With RAG, blog writing quality is lower (-0.22) and blog style distance is farther from the real profile (+0.10). Both intervals exclude zero. Persona Utility is also lower (-0.026, 15 blogs), which matches Kevin's result.
+- Everything else. The overall rows, LinkedIn, X and talk show no clear difference, and the stance and evidence support scores stay near 1 in both runs (G5).
+- Grammar. Both runs are near zero errors per 100 words, below the real posts, so mechanics does not separate them.
+
+Rule checks on the grammar tool. Its rules were tried on 400 real posts per medium, and the false alarms found there were removed: "Series A in" read as a wrong article, the double dot that Lemkin uses on purpose, the word "hashtag" that LinkedIn exports insert, and bracket or quote counts. What is left in the real posts is mostly real slips (a doubled word, "you is", "dont", a lowercase sentence start).
