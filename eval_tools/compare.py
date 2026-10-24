@@ -57,12 +57,27 @@ def _mean(values: list[float]) -> float | None:
 
 P_CLEAR = 0.05
 
+# The four parts of Persona Utility (DEC-008), each at the scope where it is a valid selector.
+# They are the tests we would run before looking at any data, so they are corrected together.
+# Every other row is exploratory and is corrected as its own, much larger, family.
+PRIMARY = (
+    ("writing_quality", "all"),
+    ("style_distance", "blog"),
+    ("stance_consistency", "all"),
+    ("task_adherence", "all"),
+)
+
 
 def verdict(summary: dict, lower_is_better: bool, neutral: bool = False) -> str:
     """Plain words for one result.
 
-    A difference is called clear only when the interval excludes zero AND the sign-flip
-    p value is below 0.05, so a borderline result is not over-called.
+    Three outcomes, so a borderline result is neither over-called nor thrown away:
+
+    * "no clear difference": the interval includes zero, or the raw p value is 0.05 or more.
+    * "B better" / "B worse" (or "B higher" / "B lower" for neutral metrics like word count):
+      the interval excludes zero AND the p value corrected for many tests (``p_adj``) is below 0.05.
+    * the same words plus " (suggestive)": it looks real on its own (interval excludes zero,
+      raw p below 0.05) but does not survive the correction for many tests.
     """
     low, high, diff = summary.get("ci_low"), summary.get("ci_high"), summary.get("mean_diff")
     p = summary.get("p_value")
@@ -72,8 +87,32 @@ def verdict(summary: dict, lower_is_better: bool, neutral: bool = False) -> str:
         return "no clear difference"
     b_higher = diff > 0
     if neutral:
-        return "B higher" if b_higher else "B lower"
-    return "B better" if (b_higher != lower_is_better) else "B worse"
+        label = "B higher" if b_higher else "B lower"
+    else:
+        label = "B better" if (b_higher != lower_is_better) else "B worse"
+    p_adj = summary.get("p_adj")
+    if p_adj is not None and p_adj < P_CLEAR:
+        return label
+    return f"{label} (suggestive)"
+
+
+def apply_multiplicity(results: list[dict], primary: tuple = PRIMARY) -> None:
+    """Add ``family``, ``p_adj`` (Holm) and ``verdict`` to every result, in place.
+
+    Primary rows are corrected together. All other rows are exploratory and are corrected
+    together. Holm is valid however the tests depend on each other.
+    """
+    families: dict[str, list[dict]] = {"primary": [], "exploratory": []}
+    for item in results:
+        name = "primary" if (item["metric"], item["scope"]) in primary else "exploratory"
+        item["family"] = name
+        families[name].append(item)
+    for items in families.values():
+        adjusted = holm_adjust({str(i): item.get("p_value") for i, item in enumerate(items)})
+        for i, item in enumerate(items):
+            item["p_adj"] = adjusted[str(i)]
+    for item in results:
+        item["verdict"] = verdict(item, item["lower_is_better"], item["metric"] in NEUTRAL_METRICS)
 
 
 def arm_summary(rows: dict, keys: list) -> dict:
@@ -155,7 +194,6 @@ def compare_runs(
 
     for view_name, view_keys in views.items():
         view: dict = {"n_pairs": len(view_keys), "results": []}
-        overall_p: dict[str, float | None] = {}
         for metric in usable:
             for scope in ("all", *MEDIUMS):
                 scoped = [k for k in view_keys if scope == "all" or k[1] == scope]
@@ -176,13 +214,8 @@ def compare_runs(
                     mean_b=_mean([b for _, _, b in pairs]),
                     lower_is_better=metric in LOWER_IS_BETTER,
                 )
-                summary["verdict"] = verdict(summary, summary["lower_is_better"], metric in NEUTRAL_METRICS)
-                if scope == "all":
-                    overall_p[metric] = summary["p_value"]
                 view["results"].append(summary)
-        adjusted = holm_adjust(overall_p)
-        for item in view["results"]:
-            item["p_holm"] = adjusted.get(item["metric"]) if item["scope"] == "all" else None
+        apply_multiplicity(view["results"])
         result["views"][view_name] = view
     return result
 
@@ -197,7 +230,9 @@ def to_markdown(result: dict) -> str:
         f"# Comparison: {b} against {a}",
         "",
         f"Every difference is {result['direction']}. Intervals are 95 percent, resampled by topic. "
-        "p values are from a sign-flip test by topic; `p holm` corrects across metrics in the all-scope rows.",
+        "p is a sign-flip test by topic. `p adj` corrects for how many tests were run (Holm). The four primary rows, "
+        "which are the four parts of Persona Utility, are corrected together. Every other row is exploratory and is "
+        "corrected as its own, larger family.",
         "",
         f"Paired drafts: {result['n_paired']} (only in {a}: {result['only_in_a']}, only in {b}: {result['only_in_b']}).",
         "",
@@ -234,8 +269,8 @@ def to_markdown(result: dict) -> str:
     for view_name, view in result["views"].items():
         lines += ["", f"## {titles[view_name]}", "", f"Pairs in this view: {view['n_pairs']}", ""]
         lines += [
-            f"| Metric | Scope | n | {a} mean | {b} mean | Diff | 95% interval | p | p holm | Verdict |",
-            "|---|---|---|---|---|---|---|---|---|---|",
+            f"| Metric | Scope | n | {a} mean | {b} mean | Diff | 95% interval | p | p adj | Family | Verdict |",
+            "|---|---|---|---|---|---|---|---|---|---|---|",
         ]
         for item in view["results"]:
             interval = (
@@ -245,15 +280,16 @@ def to_markdown(result: dict) -> str:
             lines.append(
                 f"| {item['metric']}{lower} | {item['scope']} | {item['n']} | {_fmt(item['mean_a'])} | "
                 f"{_fmt(item['mean_b'])} | {_fmt(item['mean_diff'])} | {interval} | {_fmt(item['p_value'])} | "
-                f"{_fmt(item.get('p_holm'))} | {item['verdict']} |"
+                f"{_fmt(item.get('p_adj'))} | {item['family']} | {item['verdict']} |"
             )
     if result["skipped_metrics"]:
         lines += ["", "Skipped (no paired values in the files): " + ", ".join(result["skipped_metrics"])]
     lines += [
         "",
-        "How to read the verdict: a difference is called clear only when the interval excludes zero and the p value is "
-        "below 0.05. Rows by medium are not corrected for the many comparisons made, so treat a single medium result as "
-        "a lead, not a finding. Use `p holm` for the all-scope rows.",
+        "How to read the verdict: a difference is called clear only when the interval excludes zero and `p adj` is below "
+        "0.05. If it looks real on its own (interval excludes zero, p below 0.05) but `p adj` is not below 0.05, it is "
+        "marked (suggestive): a lead worth a second run, not a finding. Rows by medium are exploratory unless listed as "
+        "primary.",
         "",
         "Limits: one run per arm unless more seeds are added, and the 30 gold topics are a development panel. "
         "A result that is not clear here is not proof of no difference.",

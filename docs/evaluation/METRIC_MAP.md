@@ -1,4 +1,4 @@
-# Metric map and review of evaluation methods (PUK-28)
+﻿# Metric map and review of evaluation methods (PUK-28)
 
 Author: Vrushabh Bodarya. Written 2026-10-24 for the DATA 298B Team 2 group. Linear: PUK-28.
 
@@ -83,7 +83,7 @@ How to read the columns. "Role" is what the harness lets the metric do: a select
 
 ## 5. Gaps, with evidence
 
-**G1. Grammar is not measured.** The only grammar signal is the judge's "fluency" item. A judge rating is a weak grammar test, and nothing separates real errors (spelling, agreement, punctuation) from Lemkin's deliberate informal style. *Update 2026-10-24:* a first rule based checker now exists (`eval_tools/grammar.py`, section 10). On Kevin's saved Relabel drafts it finds almost nothing: 0 to 0.04 mechanical errors per 100 words, against 0.015 to 0.14 for real Lemkin posts. So mechanics is not where the drafts are weak, but the checker is coarse and cannot see tense or awkward phrasing.
+**G1. Grammar is not measured.** The only grammar signal is the judge's "fluency" item. A judge rating is a weak grammar test, and nothing separates real errors (spelling, agreement, punctuation) from Lemkin's deliberate informal style. *Update 2026-10-24:* a rule based checker now exists (`eval_tools/grammar.py`) and we measured it (section 10). It catches mechanical slips only. About 82 percent of what it flags on a fresh sample of real posts is a real error (33 of 40), and it catches 56 to 100 percent of injected errors of the kinds it has rules for. But it catches none of 40 ordinary grammar mistakes such as tense, wrong word or missing article. So it is a floor check for typos and punctuation slips, not a grammar score. On Kevin's saved Relabel drafts it finds almost nothing (0 to 0.04 errors per 100 words, against 0.009 to 0.08 for real posts), so mechanics is not where the drafts are weak. Real grammar coverage needs a stronger checker (section 8, question 4).
 
 **G2. Voice is only a valid selector for blog.** In the final run the style score is a selector for blog only. LinkedIn and X are diagnostic only, and talk has no held-out references (reference counts are 80 blog, 80 LinkedIn, 80 X and 0 talk). The reference counts come from EXP-20261004-007 and the selector roles from EXP-20261005-003. So we cannot compare architectures on voice for three of the four mediums.
 
@@ -99,7 +99,7 @@ How to read the columns. "Role" is what the harness lets the metric do: a select
 
 **G8. Persona Utility mixes things that are not on the same scale.** The style distance is turned into a score with 1 divided by (1 + distance), writing is the 1 to 5 mean divided by 5 (so the lowest possible score is 0.2), and stance is a 0 to 1 rate. The weights of 45, 20, 25 and 10 are a project decision with no sensitivity check. The plan also ranks drafts by style first, then perspective, then writing, which is a different rule from the weighted blend.
 
-**G9. The statistics are thin.** There are 30 topics in one development panel, one seed in the final run, one judge at temperature 0, and no confidence intervals. A gap such as writing quality 3.06 against 3.15 is not shown to be real. Kevin's own audit says small single seed gaps are not a settled ranking. *Update 2026-10-24:* `eval_tools.compare` adds the missing intervals (section 10). On the Relabel RAG pair, only the blog rows are clear: blog writing quality is lower with RAG (difference -0.22, interval -0.43 to -0.03) and blog style distance is farther from the profile (+0.10, interval 0.02 to 0.21). Overall rows and the other mediums show no clear difference.
+**G9. The statistics are thin.** There are 30 topics in one development panel, one seed in the final run, one judge at temperature 0, and no confidence intervals. A gap such as writing quality 3.06 against 3.15 is not shown to be real. Kevin's own audit says small single seed gaps are not a settled ranking. *Update 2026-10-24:* `eval_tools` adds the missing intervals, a correction for the number of tests, and a seed check (section 10). On the Relabel RAG pair, nothing is a clear difference once the correction is applied. The nearest are blog style distance (adjusted p 0.059) and blog writing quality, both marked "suggestive", and both point the same way as Kevin's finding that RAG does not help voice. Replication exists for the adapter comparison (relabel against repaired keeps its direction in all three seeds) but not for RAG, which has one seed. More seeds with RAG on are the next step.
 
 **G10. Nothing checks truth against the outside world.** Claims are checked against retrieved passages and against Lemkin's own posts. A claim that is consistent with Lemkin but factually wrong would pass.
 
@@ -115,14 +115,14 @@ How to read the columns. "Role" is what the harness lets the metric do: a select
 | R2 | For every comparison, report two views: all drafts, and the drafts that pass the same common gates in every arm. Show the eligibility rate beside every score | G7 | Saved drafts, CPU | Small |
 | R3 | Test whether the style score rewards typical text: compare real held-out posts and drafts under one reference pack. If real posts do not win, add a spread aware term or an authorship verification model trained on a proper held-out split | G3, G4 | Saved drafts and Kevin's reference pack | Medium |
 | R4 | Add harder calibration controls: real posts by other SaaS writers and the existing "good persona prompt" drafts, with more than 2 or 4 controls per bucket | G4 | Needs control texts | Medium |
-| R5 | Add a grammar axis: a rule based error rate per 100 words, reported relative to the same rate on real Lemkin posts of the same medium (so informal style is not punished). Keep the judge fluency item as a second opinion | G1 | CPU. Needs a grammar checker that we would install only with the team's approval | Medium |
+| R5 | Add a grammar axis: an error rate per 100 words, reported relative to the same rate on real Lemkin posts of the same medium (so informal style is not punished). Keep the judge fluency item as a second opinion. A rule based floor check is built; real coverage needs a stronger checker (LanguageTool, or a grammar prompt for the judge) | G1 | Floor check: CPU. Stronger checker: an install (Java, about 200 MB) or Kevin's GPU | Medium |
 | R6 | Make the deterministic number check a main truth metric next to the claim judge, and add atomic claim precision (the share of atomic claims that are supported) as in FActScore. Kevin's atomic evidence step already produces atomic claims | G5, G6 | Saved drafts, CPU | Medium |
 | R7 | Check truth against the outside world on a small manual sample (30 drafts) as a separate, clearly labeled number | G10 | Manual | Medium |
 | R8 | Report the four Persona Utility parts separately and rank by them without the blend, or run a sensitivity check of the weights and publish the range | G8 | Saved drafts, CPU | Small |
 | R9 | Add a small human check (30 drafts) for grammar, coherence and claim support only. Measure how well the judge agrees with people (rank correlation). Keep voice out of it, as DEC-007 decided | G12 | Manual | Medium |
 | R10 | Add time per draft, tokens and memory per architecture to every comparison table | G11 | Kevin's machine | Small |
 
-**Status on 2026-10-24.** Built in `eval_tools/` (section 10): R1 (confidence intervals, by topic), R2 (all drafts and common gates views) and a first rule based version of R5 (grammar). R8 is partly covered, because `eval_tools.compare` prints each axis on its own and never a blended headline. R3 waits for Kevin's reference pack. R4, R6, R7, R9 and R10 are open.
+**Status on 2026-10-24.** Built in `eval_tools/` (section 10): R1 (intervals by topic, a correction for the number of tests, and a seed check), R2 (all drafts and common gates views) and a floor check for R5 (mechanics only, measured). R8 is partly covered, because `eval_tools.compare` prints each axis on its own and never a blended headline. R3 waits for Kevin's reference pack. R4, R6, R7, R9 and R10 are open, and R5 still needs a stronger checker.
 
 ## 7. How this feeds the next steps
 
@@ -135,32 +135,46 @@ For the workbook, sections 3 and 4 answer "evaluation methods and metrics for ea
 1. Do base Llama and PersonaRAG have saved 120 prompt results with retrieval on and off, or can you run them?
 2. Is the persona prompted base the same run as the untrained Llama in EXP-20261001-010?
 3. Do the style numbers in EXP-20261004-007 and EXP-20261005-003 use the same reference pack? (This decides how far we can trust G3.)
-4. Is a grammar axis (R5) wanted? A first rule based version exists. Do you want a stronger checker such as LanguageTool (needs Java and about 200 MB), and may we install it?
+4. Is a real grammar axis (R5) wanted? The rule based tool only checks mechanics and misses ordinary grammar mistakes. Two ways to get more: LanguageTool on a laptop (needs Java and about 200 MB, so an approval), or a grammar prompt for your qwen judge on your machine, which we can check against our 40 test mistakes first. Which do you prefer?
 
 ## 9. Limits of this page
 
 - It is a review of the design and of saved numbers. We did not rerun the harness or the judge, because the judge model (qwen2.5:14b) and the 8B adapter do not run on the laptop used for this task.
 - G3 and G4 are hypotheses supported by the numbers above and should be tested before anything changes.
-- The grammar tool is a small rule set. It catches mechanical slips only and finds almost none in the saved drafts, so it cannot yet separate runs.
-- The intervals in section 10 come from one run per arm and 30 topics, with many comparisons (4 mediums, 10 metrics). Rows by medium are leads, not findings.
+- The grammar tool is a small rule set. It catches mechanical slips only, misses ordinary grammar mistakes, and finds almost nothing in the saved drafts, so it cannot separate runs.
+- Its precision (82 percent) was measured on 40 flags from a fresh sample, so the true value could be roughly 68 to 91 percent. Some real posts appear twice in the data, so the samples overlap a little.
+- The statistics use one run per arm and 30 topics. The correction for many tests makes a result harder to call clear, on purpose. A "suggestive" result needs more seeds, not a conclusion.
 - Nothing here claims a model is better or worse. It is about whether the measurements can be trusted and compared.
 
-## 10. Tools built for this task
+## 10. Tools built for this task, and how far they can be trusted
 
-All in `eval_tools/` (see `eval_tools/README.md`). They read saved results, call no model and no judge, use only the Python standard library, and have 44 tests (`python -m pytest tests/test_eval_tools.py`).
+All in `eval_tools/` (see `eval_tools/README.md`). They read saved results, call no model and no judge, use only the Python standard library, and have 70 tests (`python -m pytest tests/test_eval_tools.py`).
 
 | Tool | What it does | Fixes |
 |---|---|---|
-| `python -m eval_tools.compare` | Compares two saved runs on the same drafts. Shows gates, an all drafts view and a common gates view, and for every metric the difference with a 95 percent interval (resampled by topic), a p value and a plain verdict | G7, G9 |
-| `python -m eval_tools.grammar` | Counts mechanical errors per 100 words and scores each draft against real Lemkin posts of the same medium | G1 (first version) |
+| `python -m eval_tools.compare` | Compares two saved runs on the same drafts. Shows gates, an all drafts view and a common gates view, and for every metric the difference with a 95 percent interval (resampled by topic), a p value, a p value corrected for how many tests were run, and a plain verdict | G7, G9 |
+| `python -m eval_tools.seeds` | Runs the same comparison for several seeds and shows whether the direction repeats | G9 |
+| `python -m eval_tools.grammar` | Counts mechanical errors per 100 words and scores each draft against real Lemkin posts of the same medium | G1 (floor check) |
+| `python -m eval_tools.grammar_audit` | Measures the grammar tool itself: recall on injected errors, and coverage of ordinary grammar mistakes | G1 |
 
-Check on real data. On Kevin's saved Relabel runs (RAG off against RAG on, 120 drafts each), the mean differences from `eval_tools.compare` equal the ones in his `metrics/comparison.json`: writing -0.104, task +0.008, stance +0.003 on 82 drafts, blog style distance +0.104 on 30, persona utility -0.026 on 15, word count -9.84. What is new is the interval and the p value, which his file marks as not computed. The full report is in `docs/evaluation/examples/relabel_rag_off_vs_on.md`.
+### What we checked
 
-What the example shows:
+- It matches Kevin's numbers. On his saved Relabel runs (RAG off against RAG on, 120 drafts each), the mean differences from `eval_tools.compare` equal the ones in his `metrics/comparison.json`: writing -0.104, task +0.008, stance +0.003 on 82 drafts, blog style distance +0.104 on 30, persona utility -0.026 on 15, word count -9.84. What is new is the interval, the p value and the correction.
+- The statistics are calibrated. We swapped A and B at random inside each topic, which makes the true difference zero, and ran the comparison 300 times on real data. A primary test was wrongly called clear in 2.7 percent of runs (the target is at most 5 percent). Without the correction for many tests, a primary test would have crossed p below 0.05 in 13 percent of runs. A single row's raw p value crossed 0.05 in 4.2 percent of rows, as it should.
+- It does not break. The comparison ran on all 105 pairs of the 15 saved run groups (1800 rows) with no failure, and handles empty runs, runs with no drafts in common, a run against itself, and an unknown metric name.
+- The same drafts were scored. For both runs, all 120 drafts reproduce a writing quality entry in Kevin's judge cache (the cache key is a hash of the judge model and the writing prompt built from the first 1800 characters of the draft).
+- The example can be rerun without Kevin's branch. Copies of the needed result files, with source paths and SHA-256 hashes, are in `docs/evaluation/examples/data/` (about 0.8 MB).
+
+### What the RAG example shows (`examples/relabel_rag_off_vs_on.md`)
 
 - Gates. On the common gates RAG passes 83 of 120 drafts and no RAG passes 77, so the lower "eligible" count for RAG comes from its extra grounding gate (G7).
-- Blog drafts. With RAG, blog writing quality is lower (-0.22) and blog style distance is farther from the real profile (+0.10). Both intervals exclude zero. Persona Utility is also lower (-0.026, 15 blogs), which matches Kevin's result.
-- Everything else. The overall rows, LinkedIn, X and talk show no clear difference, and the stance and evidence support scores stay near 1 in both runs (G5).
-- Grammar. Both runs are near zero errors per 100 words, below the real posts, so mechanics does not separate them.
+- Differences. After correcting for the number of tests, nothing is a clear difference. Blog style distance (a primary test, adjusted p 0.059), blog writing quality and Persona Utility on 15 blogs are "suggestive": real looking on their own, not strong enough after the correction. They point the same way as Kevin's finding that RAG does not help voice.
+- Everything else shows no clear difference, and stance and evidence support stay near 1 in both runs (G5).
+- Repeats. Relabel against repaired (no RAG) keeps its direction in all three seeds for writing quality (higher), blog style distance (closer) and blog length (longer), and the intervals exclude zero in 2 of 3 seeds for the first two. That comparison replicates. The RAG comparison has one seed, so it cannot be checked this way yet (`examples/seed_stability_relabel_vs_repaired.md`).
 
-Rule checks on the grammar tool. Its rules were tried on 400 real posts per medium, and the false alarms found there were removed: "Series A in" read as a wrong article, the double dot that Lemkin uses on purpose, the word "hashtag" that LinkedIn exports insert, and bracket or quote counts. What is left in the real posts is mostly real slips (a doubled word, "you is", "dont", a lowercase sentence start).
+### The grammar tool, measured (`examples/grammar_audit.md`, `examples/grammar_precision_audit.csv`)
+
+- Precision. We labeled every flagged item in three samples of real posts, by reading each one. Precision was 41 of 68 (60 percent) at first, then 44 of 56 (79 percent) after fixing the false alarms we found, then 33 of 40 (82 percent) on a fresh sample. The false alarms were things like "a U.S. company", "what I can tell you is", URL slugs, "and/or" at the start of a line, and deliberate repeats. All labels are in the CSV.
+- Recall on its own rules. 93 to 100 percent for most rules, 73 percent for repeated words and 56 percent for agreement. Those two are lower on purpose: capitalized repeats ("Go Go Days") and "you is" or "I are" are skipped because they are usually names or correct English. Recall is also high partly by construction, because the injected errors are exactly the patterns the rules look for.
+- Coverage. The tool catches 0 of 40 ordinary grammar mistakes (tense, wrong word, missing article, preposition, run-on, pronoun case, plurals, double negative, awkward wording). It is a floor check for typos and punctuation slips, not a grammar score.
+- The real post reference rates fell when the false alarms were removed (blog 0.015 to 0.0097, LinkedIn 0.0275 to 0.0092, X 0.141 to 0.079). Before the fixes, false alarms were inflating the reference and making drafts look cleaner than real posts.

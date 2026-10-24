@@ -287,3 +287,148 @@ def test_deviation_is_none_without_a_reference():
     assert results[1]["grammar_deviation"] is None
     summary = grammar.summarize(results, reference)
     assert summary["drafts"]["talk"]["excess_over_reference"] is None
+
+
+# ------------------------------------------------------- multiplicity and seeds
+
+def _result(metric, scope, p, diff=0.5, low=0.1, high=0.9, lower_is_better=False):
+    return {
+        "metric": metric, "scope": scope, "p_value": p, "mean_diff": diff,
+        "ci_low": low, "ci_high": high, "lower_is_better": lower_is_better,
+    }
+
+
+def test_verdict_has_three_outcomes():
+    clear = {"mean_diff": 0.5, "ci_low": 0.1, "ci_high": 0.9, "p_value": 0.01, "p_adj": 0.02}
+    assert compare.verdict(clear, False) == "B better"
+    assert compare.verdict(clear, True) == "B worse"
+    assert compare.verdict({**clear, "p_adj": 0.2}, False) == "B better (suggestive)"
+    assert compare.verdict({**clear, "p_value": 0.2, "p_adj": 1.0}, False) == "no clear difference"
+    assert compare.verdict({**clear, "ci_low": -0.1}, False) == "no clear difference"
+    assert compare.verdict({**clear, "ci_low": None}, False) == "too few pairs"
+    assert compare.verdict(clear, False, neutral=True) == "B higher"
+
+
+def test_primary_rows_are_corrected_together_and_exploratory_separately():
+    results = [
+        _result("writing_quality", "all", 0.01),     # primary
+        _result("style_distance", "blog", 0.02),     # primary
+        _result("stance_consistency", "all", 0.5),   # primary
+        _result("task_adherence", "all", 0.6),       # primary
+        _result("word_count", "blog", 0.01),         # exploratory
+        _result("word_count", "x", 0.4),             # exploratory
+    ]
+    compare.apply_multiplicity(results)
+    by = {(r["metric"], r["scope"]): r for r in results}
+    assert by[("writing_quality", "all")]["family"] == "primary"
+    assert by[("word_count", "blog")]["family"] == "exploratory"
+    assert by[("writing_quality", "all")]["p_adj"] == pytest.approx(0.04)    # 0.01 x 4
+    assert by[("style_distance", "blog")]["p_adj"] == pytest.approx(0.06)    # 0.02 x 3
+    assert by[("word_count", "blog")]["p_adj"] == pytest.approx(0.02)        # 0.01 x 2
+    assert by[("writing_quality", "all")]["verdict"] == "B better"
+    assert by[("style_distance", "blog")]["verdict"] == "B better (suggestive)"
+
+
+def test_many_exploratory_tests_make_a_single_p_value_suggestive():
+    results = [_result("word_count", f"s{i}", 0.5) for i in range(30)]
+    results.append(_result("word_count", "blog", 0.03))
+    compare.apply_multiplicity(results)
+    blog = results[-1]
+    assert blog["p_adj"] >= 0.05
+    assert blog["verdict"].endswith("(suggestive)")
+
+
+def test_seed_stability_reports_sign_and_intervals():
+    from eval_tools import seeds
+
+    def runs_for(shift):
+        a = rows.index_rows([make_row(f"g{i}", writing=3.0 + (i % 3) * 0.1) for i in range(12)])
+        b = rows.index_rows([make_row(f"g{i}", writing=3.0 + (i % 3) * 0.1 + shift) for i in range(12)])
+        return a, b
+
+    runs = [("42", *runs_for(0.5)), ("43", *runs_for(0.4)), ("44", *runs_for(0.6))]
+    out = seeds.seed_stability(runs, ["writing_quality"], n_boot=300)
+    item = out[0]
+    assert item["same_sign"] is True
+    assert item["seeds_with_interval_excluding_zero"] == 3
+    assert [round(e["mean_diff"], 1) for e in item["per_seed"]] == [0.5, 0.4, 0.6]
+    flipped = seeds.seed_stability([runs[0], ("43", *runs_for(-0.4))], ["writing_quality"], n_boot=300)
+    assert flipped[0]["same_sign"] is False
+    text = seeds.to_markdown(out, ["42", "43", "44"])
+    assert "seed 42" in text and "Same sign" in text
+
+
+# --------------------------------------------- false alarms found by labeling real posts
+# Each text below was flagged by an earlier version of the grammar rules and is correct English
+# or a scraping artifact. They are kept so the false alarms do not come back
+# (see docs/evaluation/examples/grammar_precision_audit.csv).
+
+@pytest.mark.parametrize(
+    "text",
+    [
+        "WalkMe decided not to flip and become a U.S. company.",
+        "Pricing starts at $900 a month on a usage-based model.",
+        "All I can tell you is this is really hard, and rarely done.",
+        "Jason Lemkin and I are breaking down how our team works.",
+        "That Box would of course get to $1B in ARR given the momentum.",
+        "You can upsell in the first 6-18 mos. without it being hard.",
+        "You just lost a big deal.  and/or That great new initiative is not working.",
+        "Customers prefer honest assessment over over-promising and under-delivering.",
+        "Read http:// site.com/signs-your-vp-just-isnt-going-to-work-out/ for more.",
+        "Streaming live today! saastraiday.com has the details.",
+        "Is it worth it to respond? cc @someone on the thread.",
+        "How can a founder raise prices? by Jason M. Lemkin",
+        "We are far from the Go Go Days of 2021.",
+        "Gross margins were up (33% cons. currency) for the quarter.",
+        "You have to keep refreshing i\nt to make sure it works well.",
+    ],
+)
+def test_known_false_alarms_stay_fixed(text):
+    assert grammar.check_text(text) == []
+
+
+@pytest.mark.parametrize(
+    "text, rule",
+    [
+        ("It was an unproven space for a unproven team.", "a_an"),
+        ("They was always late to the board meeting.", "agreement"),
+        ("The deal closed.So we moved on.", "missing_space_after_punct"),
+        ("He said it was fine, but i think it is not.", "lowercase_i"),
+    ],
+)
+def test_real_errors_near_the_fixed_rules_are_still_caught(text, rule):
+    assert rule in {item["rule"] for item in grammar.check_text(text)}
+
+
+# --------------------------------------------------------------------- audit tool
+
+def test_audit_coverage_set_has_forty_broad_mistakes_in_ten_categories():
+    from eval_tools import grammar_audit
+
+    cov = grammar_audit.coverage()
+    assert cov["broad_total"] == 40
+    assert len(cov["categories"]) == 10
+    assert cov["rule_targeted_caught"] == cov["rule_targeted_total"] == 4   # the rules do fire on their own targets
+
+
+def test_audit_coverage_accepts_a_stronger_checker():
+    from eval_tools import grammar_audit
+
+    cov = grammar_audit.coverage(check=lambda text: [{"rule": "x"}])   # a checker that flags everything
+    assert cov["broad_share"] == 1.0
+
+
+def test_audit_windows_are_clean_and_recall_is_structured():
+    from eval_tools import grammar_audit
+
+    texts = [
+        "We definitely should hire earlier next year. It is because the market is hard to read, and it is slow. "
+        "They don't know why the deal closed. I think the team did well, but we could have moved faster."
+    ] * 3
+    windows = grammar_audit.clean_windows(texts, limit=10)
+    assert windows and all(grammar.check_text(w) == [] for w in windows)
+    recall = grammar_audit.rule_recall(windows, per_rule=3)
+    assert set(recall) == set(grammar_audit.INJECTORS)
+    assert all(item["tried"] <= 3 for item in recall.values())
+    assert recall["misspelling"]["recall"] == 1.0     # "definitely" -> "definately" is always caught
+    assert recall["modal_of"]["recall"] == 1.0        # "could have" -> "could of" is always caught

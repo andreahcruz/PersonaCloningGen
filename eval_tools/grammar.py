@@ -34,14 +34,23 @@ from typing import Iterable
 
 WORD_RE = re.compile(r"[A-Za-z0-9À-ɏ]+(?:['’][A-Za-z]+)?")
 URL_RE = re.compile(r"https?://\S+|www\.\S+")
-URL_MARKERS = ("http", "www.", ".com", ".org", ".net", ".io", ".ai", ".co/", "@", "/", "#")
+URL_MARKERS = (
+    "http", "www.", ".com", ".org", ".net", ".io", ".ai", ".co/", "@", "/", "#",
+    ".university", ".cloud", ".app", ".dev", ".tech", ".xyz",
+)
 
 # Repeats that are usually deliberate or grammatical ("net net", "very very", "what it is is").
-REPEAT_OK = {"had", "that", "very", "net", "no", "so", "ha", "bye", "yes", "really", "is", "more"}
+REPEAT_OK = {"had", "that", "very", "net", "no", "so", "ha", "bye", "yes", "really", "is", "more", "ever", "will"}
 ABBREVIATIONS = {
-    "vs", "etc", "eg", "ie", "approx", "inc", "ltd", "co", "mr", "mrs", "ms", "dr", "st", "no", "fig", "est",
+    "vs", "etc", "eg", "ie", "approx", "inc", "ltd", "co", "mr", "mrs", "ms", "dr", "st", "no", "fig", "est", "et",
+    "mos", "yrs", "hrs", "cons", "corp", "dept", "govt",
 }
-A_BEFORE_VOWEL_OK = ("uni", "use", "usu", "uti", "eu", "one", "once", "ubiq", "uber", "ufo", "ura", "uri")
+# Lowercase words that can follow a full stop without being a sentence start: a byline on a quoted
+# headline ("Question? by Jason"), "cc" and "via" in tweets, and the LinkedIn export word "hashtag".
+LOWER_AFTER_STOP_OK = {"by", "cc", "via", "hashtag"}
+A_BEFORE_VOWEL_OK = (
+    "uni", "use", "usu", "usa", "uti", "eu", "one", "once", "ubiq", "uber", "ufo", "ura", "uri", "uk",
+)
 AN_BEFORE_CONSONANT_OK = ("hour", "honest", "honor", "honour", "heir")
 MISSING_APOSTROPHE = (
     "dont|doesnt|didnt|isnt|arent|wasnt|werent|couldnt|wouldnt|shouldnt|havent|hasnt|hadnt|"
@@ -68,18 +77,23 @@ RULE_NAMES = (
 # * "hashtag" after a full stop is an export artifact of LinkedIn text.
 # * Bracket and quote balance is not counted: lists like "1)" and truncated drafts make it noisy,
 #   and truncation is already a completion gate.
-_REPEAT = re.compile(r"\b([A-Za-z]{2,})[ \t]+\1\b", re.IGNORECASE)
-_MISSING_SPACE = re.compile(r"[A-Za-z]{2}[.!?,;:][A-Z][a-z]")
+# (?![-\w]): "over over-promising" is a word and a hyphenated word, not a repeat.
+_REPEAT = re.compile(r"\b([A-Za-z]{2,})[ \t]+\1(?![-\w])", re.IGNORECASE)
+# Full stop, ! ? and comma only. A colon in "A:B" is usually deliberate.
+_MISSING_SPACE = re.compile(r"[A-Za-z]{2}[.!?,][A-Z][a-z]")
 _SPACE_BEFORE = re.compile(r"(?<=[A-Za-z0-9)])[ ]+[,;:!?](?=\s|$)")
 _SENTENCE_LOWER = re.compile(r"\b([a-z]{2,})[.!?][ ]+([a-z][a-z']+)")
-_LOWER_I = re.compile(r"(?<![A-Za-z0-9'’(\-/])i(?![A-Za-z0-9.)\-/])")
+# Not a lowercase "i" that is really half of a broken word such as "i t" or "i s".
+_LOWER_I = re.compile(r"(?<![A-Za-z0-9'’(\-/])i(?![A-Za-z0-9.)\-/])(?!\s+[a-z](?![A-Za-z]))")
 _DOUBLE_PUNCT = re.compile(r",{2,}|;{2,}|:{2,}|,\.(?!\.)")
 _A_ARTICLE = re.compile(r"\b(a)[ ]+([A-Za-z]+)")
 _AN_ARTICLE = re.compile(r"\b(an)[ ]+([A-Za-z]+)")
 _APOSTROPHE = re.compile(rf"\b({MISSING_APOSTROPHE})\b", re.IGNORECASE)
-_MODAL_OF = re.compile(r"\b(?:should|could|would|must|might)[ ]+of\b", re.IGNORECASE)
+# "would of course" is correct English, so "of course" is not a "should of" slip.
+_MODAL_OF = re.compile(r"\b(?:should|could|would|must|might)[ ]+of\b(?![ ]+course)", re.IGNORECASE)
 _AGREEMENT = re.compile(
-    r"\b(?:he|she|it)[ ]+(?:don't|don’t|dont)\b|\b(?:they|we|you)[ ]+(?:is|was)\b|\bI[ ]+(?:is|are)\b",
+    # "you is" and "I are" are left out on purpose: "what I can tell you is this" and "Jason and I are" are correct.
+    r"\b(?:he|she|it)[ ]+(?:don't|don’t|dont)\b|\b(?:they|we)[ ]+(?:is|was)\b|\byou[ ]+was\b|\bI[ ]+is\b",
     re.IGNORECASE,
 )
 _WORDISH = re.compile(r"[A-Za-z]+")
@@ -119,7 +133,9 @@ def check_text(text: str) -> list[dict]:
         found.append({"rule": rule, "text": match_text.strip()[:60]})
 
     for m in _REPEAT.finditer(text):
-        if m.group(1).lower() not in REPEAT_OK:
+        first, second = m.group(0).split()[0], m.group(0).split()[-1]
+        title_style = first[0].isupper() and second[0].isupper()   # "Go Go Days", "Triple Triple Double Double"
+        if m.group(1).lower() not in REPEAT_OK and not title_style:
             add("repeated_word", m.group(0))
     for m in _MISSING_SPACE.finditer(text):
         token = _token_at(text, m.start()).lower()
@@ -128,7 +144,9 @@ def check_text(text: str) -> list[dict]:
     for m in _SPACE_BEFORE.finditer(text):
         add("space_before_punct", text[max(0, m.start() - 8): m.end()])
     for m in _SENTENCE_LOWER.finditer(text):
-        if m.group(1) not in ABBREVIATIONS and m.group(2) != "hashtag":
+        is_domain = re.match(r"\.[a-z]{2,}", text[m.end():]) is not None    # "today! saastraiday.com"
+        is_and_or = text[m.end():m.end() + 1] == "/"                          # "and/or" starting a list line
+        if m.group(1) not in ABBREVIATIONS and m.group(2) not in LOWER_AFTER_STOP_OK and not is_domain and not is_and_or:
             add("lowercase_sentence_start", m.group(0))
     for m in _LOWER_I.finditer(text):
         add("lowercase_i", text[max(0, m.start() - 8): m.end() + 6])
@@ -137,7 +155,7 @@ def check_text(text: str) -> list[dict]:
     for m in _A_ARTICLE.finditer(text):
         word = m.group(2)
         low = word.lower()
-        if low[0] in "aeiou" and not low.startswith(A_BEFORE_VOWEL_OK) and not (word.isupper() and len(word) > 1):
+        if low[0] in "aeiou" and not low.startswith(A_BEFORE_VOWEL_OK) and not word.isupper():   # not "a U.S.", "a UI"
             add("a_an", m.group(0))
     for m in _AN_ARTICLE.finditer(text):
         word = m.group(2)
@@ -145,7 +163,10 @@ def check_text(text: str) -> list[dict]:
         if len(word) > 1 and low[0] not in "aeiou" and not low.startswith(AN_BEFORE_CONSONANT_OK) and not word.isupper():
             add("a_an", m.group(0))
     for m in _APOSTROPHE.finditer(text):
-        add("missing_apostrophe", m.group(0))
+        token = _token_at(text, m.start())
+        in_url_slug = "/" in token or "http" in token or "@" in token or token.count("-") >= 2
+        if not in_url_slug:
+            add("missing_apostrophe", m.group(0))
     for m in _MODAL_OF.finditer(text):
         add("modal_of", m.group(0))
     for m in _AGREEMENT.finditer(text):
