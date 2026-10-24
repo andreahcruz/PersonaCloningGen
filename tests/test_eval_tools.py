@@ -432,3 +432,75 @@ def test_audit_windows_are_clean_and_recall_is_structured():
     assert all(item["tried"] <= 3 for item in recall.values())
     assert recall["misspelling"]["recall"] == 1.0     # "definitely" -> "definately" is always caught
     assert recall["modal_of"]["recall"] == 1.0        # "could have" -> "could of" is always caught
+
+
+# ---------------------------------------------------------------- length control
+
+def _fake_distance(text):
+    """A distance that shrinks with length, like the real one: short texts are noisier."""
+    n = len(text.split())
+    return 2.0 / (1 + n / 50.0) if n else None
+
+
+def test_length_alone_can_create_a_gap_and_cutting_removes_it():
+    from eval_tools import length_control
+
+    # Same kind of text, but B is always 20 words shorter than A, so B looks farther from the profile.
+    a = {f"g{i}": " ".join(["word"] * (260 + i)) for i in range(12)}
+    b = {f"g{i}": " ".join(["word"] * (240 + i)) for i in range(12)}
+    result = length_control.length_controlled(a, b, _fake_distance, (100, 200), n_boot=300)
+    full = result["settings"][0]
+    assert full["setting"] == "full length" and full["mean_diff"] > 0     # B appears worse only because it is shorter
+    for cut in result["settings"][1:]:
+        assert cut["mean_diff"] == pytest.approx(0.0, abs=1e-9)         # equal length: the gap is gone
+    assert result["mean_words_a"] > result["mean_words_b"]
+
+
+def test_length_control_skips_drafts_that_are_too_short_and_unpaired():
+    from eval_tools import length_control
+
+    a = {"g1": "w " * 300, "g2": "w " * 50, "g3": "w " * 300}
+    b = {"g1": "w " * 300, "g2": "w " * 300}            # g3 is missing from B, g2 is too short in A
+    result = length_control.length_controlled(a, b, _fake_distance, (100,), n_boot=50)
+    assert result["n_topics"] == 2
+    assert result["settings"][0]["n"] == 2              # full length: g1 and g2
+    assert result["settings"][1]["n"] == 1              # first 100 words: only g1 has 100 words in both
+
+
+def test_length_correlation_is_negative_when_longer_means_closer():
+    from eval_tools import length_control
+
+    pairs = [(" ".join(["w"] * n), _fake_distance(" ".join(["w"] * n))) for n in (20, 40, 80, 160, 320, 640)]
+    assert length_control.length_correlation(pairs) < -0.8
+    assert length_control.length_correlation(pairs[:2]) is None     # too few points
+
+
+def test_length_report_mentions_the_reading_rule():
+    from eval_tools import length_control
+
+    a = {f"g{i}": " ".join(["word"] * (260 + i)) for i in range(8)}
+    b = {f"g{i}": " ".join(["word"] * (240 + i)) for i in range(8)}
+    text = length_control.to_markdown(
+        length_control.length_controlled(a, b, _fake_distance, (100,), n_boot=100), "RAG off", "RAG on", "blog", -0.66
+    )
+    assert "RAG on minus RAG off" in text and "-0.66" in text and "first 100 words" in text
+
+
+def test_real_vs_drafts_advantage_is_only_length():
+    from eval_tools import length_control
+
+    real = [" ".join(["w"] * n) for n in (60, 80, 100, 120, 140, 160, 180, 200)]
+    drafts = {f"g{i}": " ".join(["w"] * 300) for i in range(8)}        # all drafts are longer than every real post
+    out = length_control.real_vs_drafts(real, drafts, _fake_distance, n_draws=5, n_boot=50)
+    assert out["p_closer_full"] == 1.0                                   # looks closer, purely from length
+    assert out["p_closer_matched"] == pytest.approx(0.5, abs=0.3)        # cut to real lengths: about equal
+    assert out["median_words_drafts"] > out["median_words_real"]
+    assert "|" in length_control.real_vs_drafts_markdown("RAG on", out)
+
+
+def test_prob_closer_handles_ties_and_order():
+    from eval_tools import length_control
+
+    assert length_control.prob_closer([1, 1], [2, 2]) == 1.0
+    assert length_control.prob_closer([3, 3], [2, 2]) == 0.0
+    assert length_control.prob_closer([2, 2], [2, 2]) == 0.5

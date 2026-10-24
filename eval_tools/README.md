@@ -64,13 +64,23 @@ python -m eval_tools.grammar_audit --data-dir data --out-md audit.md --out-json 
 
 Injects known errors into real sentences that the tool finds clean, and counts how many it catches (recall per rule). Then runs a hand written set of 40 ordinary grammar mistakes in 10 categories, to measure coverage. A stronger checker can be passed to `coverage(check=...)` in Python to compare it on the same 40 sentences.
 
-## 5. Tests
+## 5. Is a style distance gap just a length effect?
+
+```
+GIT_LFS_SKIP_SMUDGE=1 git worktree add ../kevin-ws origin/kevin/298b-integration   # skips ~480 MB of adapters
+python -m eval_tools.length_control --kevin-root ../kevin-ws \
+  --a-drafts rag_off_raw.jsonl --b-drafts rag_on_raw.jsonl --label-a "RAG off" --label-b "RAG on" --medium blog
+```
+
+The style distance averages rates per 100 words, so longer texts land closer to the profile (log word count and distance correlate at -0.66 over real posts and drafts). This tool cuts every draft to the same number of words and repeats the paired comparison, and compares drafts with real held-out Lemkin posts at full length and at matched length. It uses Kevin's own `host_finetune` code and reference data, which are on his branch, so that checkout is needed. On the saved Relabel runs it showed that the RAG blog voice gap (+0.104) shrinks to about +0.04 with intervals that include zero at equal length.
+
+## 6. Tests
 
 ```
 python -m pytest tests/test_eval_tools.py
 ```
 
-70 tests on small made up data. They include a check that an extra gate on one run does not hide that run's gain, the correction for many tests, the seed check, and every false alarm the grammar rules have ever produced on real posts (so they stay fixed).
+76 tests on small made up data. They include a check that an extra gate on one run does not hide that run's gain, the correction for many tests, the seed check, and every false alarm the grammar rules have ever produced on real posts (so they stay fixed).
 
 ## Examples and evidence
 
@@ -78,6 +88,7 @@ In `docs/evaluation/examples/`:
 
 - `relabel_rag_off_vs_on.md`: Kevin's saved Relabel runs, RAG off against RAG on. The mean differences match his own `comparison.json`. Copies of the input files are in `data/`, with source paths and hashes in `data/SOURCES.md`, so it can be rerun without his branch.
 - `seed_stability_relabel_vs_repaired.md`: the same comparison for seeds 42, 43 and 44.
+- `style_length_check.md`: the length check on the same runs.
 - `grammar_audit.md`: recall and coverage of the grammar tool.
 - `grammar_precision_audit.csv`: every flagged item that was labeled by hand (real error, false alarm or text artifact), across three samples of real posts.
 

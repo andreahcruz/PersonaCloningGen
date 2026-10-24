@@ -87,7 +87,7 @@ How to read the columns. "Role" is what the harness lets the metric do: a select
 
 **G2. Voice is only a valid selector for blog.** In the final run the style score is a selector for blog only. LinkedIn and X are diagnostic only, and talk has no held-out references (reference counts are 80 blog, 80 LinkedIn, 80 X and 0 talk). The reference counts come from EXP-20261004-007 and the selector roles from EXP-20261005-003. So we cannot compare architectures on voice for three of the four mediums.
 
-**G3. The style score may reward average looking text.** The score is the mean absolute z score against the average Lemkin profile. In EXP-20261004-007, real held-out Lemkin blog posts sit at a mean distance of 0.8531. In EXP-20261005-003 the eligible blog drafts sit at 0.71 (retrieval off) and 0.78 (retrieval on). If both runs use the same reference pack, the drafts look closer to the profile than real posts do. We did not confirm that the packs match. A score that real posts do not win suggests it measures typical surface counts, not authorship. This is cheap to test on the saved data.
+**G3. The style distance is not length neutral, and that confounds comparisons.** The score averages rates per 100 words, and a rate measured on a longer text is less noisy, so longer texts land closer to the profile. Across real held-out blog posts and drafts, log word count and distance correlate at -0.66. We first suspected that the score rewards average looking text, and tested it on Kevin's own reference pack (the dataset and split files, identical by hash in all the scored runs). Real held-out blog posts score 0.853 and the drafts score 0.71 (RAG off) and 0.81 (RAG on), so a random RAG-off draft is closer to the profile than a random real post 70 percent of the time (interval 58 to 82 percent). But the drafts are longer (median 294 words against 222 for real posts). Cut to real post lengths, that chance falls to 53 percent, which is equal. So the advantage was length, not typicality. The practical problem is for comparisons: two runs with different draft lengths differ in "voice" partly because of length. The RAG blog drafts are 25 words shorter than the no RAG ones (260 against 285), and the blog voice gap between them (+0.104, suggestive) shrinks to +0.03 to +0.05, with intervals that include zero, when every draft is cut to the same length. So the suggestive result that RAG hurts blog voice is not established. See section 10.
 
 **G4. The calibration controls are very small.** The style check passes because real posts beat a few controls: 4 hand written generic sentences (mean 2.70) and 2 degraded strings (mean 6.13), plus 30 base model drafts (mean 1.87). Beating nonsense and corporate filler is a low bar. It does not show the score can tell Lemkin from another good SaaS writer.
 
@@ -99,7 +99,7 @@ How to read the columns. "Role" is what the harness lets the metric do: a select
 
 **G8. Persona Utility mixes things that are not on the same scale.** The style distance is turned into a score with 1 divided by (1 + distance), writing is the 1 to 5 mean divided by 5 (so the lowest possible score is 0.2), and stance is a 0 to 1 rate. The weights of 45, 20, 25 and 10 are a project decision with no sensitivity check. The plan also ranks drafts by style first, then perspective, then writing, which is a different rule from the weighted blend.
 
-**G9. The statistics are thin.** There are 30 topics in one development panel, one seed in the final run, one judge at temperature 0, and no confidence intervals. A gap such as writing quality 3.06 against 3.15 is not shown to be real. Kevin's own audit says small single seed gaps are not a settled ranking. *Update 2026-10-24:* `eval_tools` adds the missing intervals, a correction for the number of tests, and a seed check (section 10). On the Relabel RAG pair, nothing is a clear difference once the correction is applied. The nearest are blog style distance (adjusted p 0.059) and blog writing quality, both marked "suggestive", and both point the same way as Kevin's finding that RAG does not help voice. Replication exists for the adapter comparison (relabel against repaired keeps its direction in all three seeds) but not for RAG, which has one seed. More seeds with RAG on are the next step.
+**G9. The statistics are thin.** There are 30 topics in one development panel, one seed in the final run, one judge at temperature 0, and no confidence intervals. A gap such as writing quality 3.06 against 3.15 is not shown to be real. Kevin's own audit says small single seed gaps are not a settled ranking. *Update 2026-10-24:* `eval_tools` adds the missing intervals, a correction for the number of tests, and a seed check (section 10). On the Relabel RAG pair, nothing is a clear difference once the correction is applied. The nearest are blog style distance (adjusted p 0.059) and blog writing quality, both marked "suggestive", and both point the same way as Kevin's finding that RAG does not help voice (the blog voice one is mostly a length effect, see G3). Replication exists for the adapter comparison (relabel against repaired keeps its direction in all three seeds) but not for RAG, which has one seed. More seeds with RAG on are the next step.
 
 **G10. Nothing checks truth against the outside world.** Claims are checked against retrieved passages and against Lemkin's own posts. A claim that is consistent with Lemkin but factually wrong would pass.
 
@@ -113,7 +113,7 @@ How to read the columns. "Role" is what the harness lets the metric do: a select
 |---|---|---|---|---|
 | R1 | Report every metric with a bootstrap confidence interval, paired by topic, and use at least 3 seeds for the headline comparisons | G9 | Saved drafts, CPU | Small |
 | R2 | For every comparison, report two views: all drafts, and the drafts that pass the same common gates in every arm. Show the eligibility rate beside every score | G7 | Saved drafts, CPU | Small |
-| R3 | Test whether the style score rewards typical text: compare real held-out posts and drafts under one reference pack. If real posts do not win, add a spread aware term or an authorship verification model trained on a proper held-out split | G3, G4 | Saved drafts and Kevin's reference pack | Medium |
+| R3 | Make the style distance length neutral: score every draft on the same number of words, or compare only length matched drafts, and always print draft length next to the score. A check is built (`eval_tools.length_control`). If real posts still do not beat drafts after that, consider an authorship verification model trained on a proper held-out split | G3, G4 | Saved drafts and Kevin's reference data (it is on GitHub) | Medium |
 | R4 | Add harder calibration controls: real posts by other SaaS writers and the existing "good persona prompt" drafts, with more than 2 or 4 controls per bucket | G4 | Needs control texts | Medium |
 | R5 | Add a grammar axis: an error rate per 100 words, reported relative to the same rate on real Lemkin posts of the same medium (so informal style is not punished). Keep the judge fluency item as a second opinion. A rule based floor check is built; real coverage needs a stronger checker (LanguageTool, or a grammar prompt for the judge) | G1 | Floor check: CPU. Stronger checker: an install (Java, about 200 MB) or Kevin's GPU | Medium |
 | R6 | Make the deterministic number check a main truth metric next to the claim judge, and add atomic claim precision (the share of atomic claims that are supported) as in FActScore. Kevin's atomic evidence step already produces atomic claims | G5, G6 | Saved drafts, CPU | Medium |
@@ -122,7 +122,7 @@ How to read the columns. "Role" is what the harness lets the metric do: a select
 | R9 | Add a small human check (30 drafts) for grammar, coherence and claim support only. Measure how well the judge agrees with people (rank correlation). Keep voice out of it, as DEC-007 decided | G12 | Manual | Medium |
 | R10 | Add time per draft, tokens and memory per architecture to every comparison table | G11 | Kevin's machine | Small |
 
-**Status on 2026-10-24.** Built in `eval_tools/` (section 10): R1 (intervals by topic, a correction for the number of tests, and a seed check), R2 (all drafts and common gates views) and a floor check for R5 (mechanics only, measured). R8 is partly covered, because `eval_tools.compare` prints each axis on its own and never a blended headline. R3 waits for Kevin's reference pack. R4, R6, R7, R9 and R10 are open, and R5 still needs a stronger checker.
+**Status on 2026-10-24.** Built in `eval_tools/` (section 10): R1 (intervals by topic, a correction for the number of tests, and a seed check), R2 (all drafts and common gates views) and a floor check for R5 (mechanics only, measured). R8 is partly covered, because `eval_tools.compare` prints each axis on its own and never a blended headline. For R3 the check is built and run (it found a length effect); making the score itself length neutral is open. R4, R6, R7, R9 and R10 are open, and R5 still needs a stronger checker.
 
 ## 7. How this feeds the next steps
 
@@ -134,13 +134,14 @@ For the workbook, sections 3 and 4 answer "evaluation methods and metrics for ea
 
 1. Do base Llama and PersonaRAG have saved 120 prompt results with retrieval on and off, or can you run them?
 2. Is the persona prompted base the same run as the untrained Llama in EXP-20261001-010?
-3. Do the style numbers in EXP-20261004-007 and EXP-20261005-003 use the same reference pack? (This decides how far we can trust G3.)
+3. We found that the style distance depends on text length (G3). Do you agree to compute it on a fixed number of words, so runs with different draft lengths can be compared? (We checked the reference pack ourselves: all the scored runs use the same dataset and split files, by hash.)
 4. Is a real grammar axis (R5) wanted? The rule based tool only checks mechanics and misses ordinary grammar mistakes. Two ways to get more: LanguageTool on a laptop (needs Java and about 200 MB, so an approval), or a grammar prompt for your qwen judge on your machine, which we can check against our 40 test mistakes first. Which do you prefer?
 
 ## 9. Limits of this page
 
 - It is a review of the design and of saved numbers. We did not rerun the harness or the judge, because the judge model (qwen2.5:14b) and the 8B adapter do not run on the laptop used for this task.
-- G3 and G4 are hypotheses supported by the numbers above and should be tested before anything changes.
+- G3 was tested (section 10) and the typicality idea was not supported: the effect is length. G4 is still a hypothesis supported by the numbers above.
+- Cutting drafts to equal length drops the ends of drafts and a few topics (25 to 29 of 30 pairs remain), so the length check is a check, not a replacement score.
 - The grammar tool is a small rule set. It catches mechanical slips only, misses ordinary grammar mistakes, and finds almost nothing in the saved drafts, so it cannot separate runs.
 - Its precision (82 percent) was measured on 40 flags from a fresh sample, so the true value could be roughly 68 to 91 percent. Some real posts appear twice in the data, so the samples overlap a little.
 - The statistics use one run per arm and 30 topics. The correction for many tests makes a result harder to call clear, on purpose. A "suggestive" result needs more seeds, not a conclusion.
@@ -148,7 +149,7 @@ For the workbook, sections 3 and 4 answer "evaluation methods and metrics for ea
 
 ## 10. Tools built for this task, and how far they can be trusted
 
-All in `eval_tools/` (see `eval_tools/README.md`). They read saved results, call no model and no judge, use only the Python standard library, and have 70 tests (`python -m pytest tests/test_eval_tools.py`).
+All in `eval_tools/` (see `eval_tools/README.md`). They read saved results, call no model and no judge, use only the Python standard library, and have 76 tests (`python -m pytest tests/test_eval_tools.py`).
 
 | Tool | What it does | Fixes |
 |---|---|---|
@@ -156,6 +157,7 @@ All in `eval_tools/` (see `eval_tools/README.md`). They read saved results, call
 | `python -m eval_tools.seeds` | Runs the same comparison for several seeds and shows whether the direction repeats | G9 |
 | `python -m eval_tools.grammar` | Counts mechanical errors per 100 words and scores each draft against real Lemkin posts of the same medium | G1 (floor check) |
 | `python -m eval_tools.grammar_audit` | Measures the grammar tool itself: recall on injected errors, and coverage of ordinary grammar mistakes | G1 |
+| `python -m eval_tools.length_control` | Cuts every draft to the same number of words and repeats the paired style distance comparison, and compares drafts with real held-out posts at full and matched length. Uses Kevin's own code and reference data | G3 |
 
 ### What we checked
 
@@ -168,9 +170,18 @@ All in `eval_tools/` (see `eval_tools/README.md`). They read saved results, call
 ### What the RAG example shows (`examples/relabel_rag_off_vs_on.md`)
 
 - Gates. On the common gates RAG passes 83 of 120 drafts and no RAG passes 77, so the lower "eligible" count for RAG comes from its extra grounding gate (G7).
-- Differences. After correcting for the number of tests, nothing is a clear difference. Blog style distance (a primary test, adjusted p 0.059), blog writing quality and Persona Utility on 15 blogs are "suggestive": real looking on their own, not strong enough after the correction. They point the same way as Kevin's finding that RAG does not help voice.
+- Differences. After correcting for the number of tests, nothing is a clear difference. Blog style distance (a primary test, adjusted p 0.059), blog writing quality and Persona Utility on 15 blogs are "suggestive": real looking on their own, not strong enough after the correction. They point the same way as Kevin's finding that RAG does not help voice, but the blog voice one is mostly a length effect (next section).
 - Everything else shows no clear difference, and stance and evidence support stay near 1 in both runs (G5).
 - Repeats. Relabel against repaired (no RAG) keeps its direction in all three seeds for writing quality (higher), blog style distance (closer) and blog length (longer), and the intervals exclude zero in 2 of 3 seeds for the first two. That comparison replicates. The RAG comparison has one seed, so it cannot be checked this way yet (`examples/seed_stability_relabel_vs_repaired.md`).
+
+### The style distance and length (`examples/style_length_check.md`)
+
+The reference data Kevin's harness needs (dataset, split assignments and gold dispositions) is on GitHub, in `EXP-20261003-004-relabel-continuations` and `EXP-20261003-003-complete-source-sft-v3`. The scored runs EXP-20261004-007, EXP-20261004-008 and EXP-20261005-003 all record the same hashes for it, so they share one reference pack. Using his own code on it, `eval_tools.length_control` reproduces the stored distances exactly (90 of 90 RAG-on drafts) and the stored real post mean (0.8531).
+
+- Length matters. Over real blog posts and drafts, log word count and style distance correlate at -0.66.
+- Drafts do not really beat real posts. A random RAG-off blog draft is closer to the profile than a random real post 70 percent of the time (58 to 82), but only 53 percent of the time once drafts are cut to real post lengths. For LinkedIn it is 73 percent, then 52 percent. The "typical text" idea (old G3) was a length effect.
+- The RAG blog voice gap is not established. With RAG on, blog drafts are 25 words shorter (260 against 285 words). The gap of +0.104 (adjusted p 0.059) becomes +0.049, +0.034 and +0.042 when every draft is cut to its first 100, 150 and 200 words, with intervals that include zero (p 0.23, 0.39 and 0.31). LinkedIn shows no gap at any length. This does not show RAG is harmless for voice. It shows this run cannot tell.
+- What to do. Compare voice on equal length text, and print draft length beside every voice score.
 
 ### The grammar tool, measured (`examples/grammar_audit.md`, `examples/grammar_precision_audit.csv`)
 
