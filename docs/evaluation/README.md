@@ -36,7 +36,7 @@ flowchart LR
 | Tests and worked examples with data copies and hashes | Done (76 tests) |
 | A real grammar checker (LanguageTool or a judge prompt) | **Needs a decision** |
 | A length-neutral voice score | **Needs Kevin's agreement** |
-| More seeds with RAG on, and base Llama and PersonaRAG with RAG on and off | **Waiting on Kevin's machine** |
+| A PersonaRAG run on the 120 prompts, and more seeds of the Relabel adapter with RAG on | **Waiting on Kevin's machine** |
 | Review of this PR | **Needs a teammate** |
 | Harder calibration controls, outside-world truth check, human check, cost and speed | Open, not started |
 
@@ -151,7 +151,7 @@ The length check needs a checkout of Kevin's branch without its 480 MB of adapte
 | Vrushabh | Open the PR for review | Nobody has reviewed the code yet |
 | Kevin | Agree to compute the voice score on a fixed number of words | Right now runs with different draft lengths cannot be compared on voice |
 | Kevin | Choose the grammar route: a grammar prompt for the qwen judge on his machine, or LanguageTool (Java and about 200 MB) | The current check catches 0 of 40 ordinary grammar mistakes |
-| Kevin | Run more seeds with RAG on, and base Llama with RAG and PersonaRAG with RAG on and off, on the same 120 prompts | Without this the RAG voice result stays a lead, and PUK-34 stays incomplete |
+| Kevin | Run PersonaRAG (the semester 1 RAG model) on the same 120 prompts, and seeds 43 and 44 of the Relabel adapter with RAG on | Without PersonaRAG there is no base against RAG pair. Without more seeds the RAG voice result stays a lead. PUK-34 stays incomplete either way |
 | The team | Later: harder voice controls, a check of truth against the outside world, a small human check of the judge, and cost and speed per architecture | Listed as R4, R7, R9 and R10 in `METRIC_MAP.md` |
 
 ## How far you can trust this

@@ -26,6 +26,8 @@ The team has not agreed one numbering for the models (the old slides use M1 to M
 | Relabel QLoRA | QLoRA adapter trained on the relabeled data | Retrieval off (3 seeds) and plain retrieval on (one seed) |
 | Relabel QLoRA + factual RAG + atomic evidence | Kevin's frozen candidate | Both arms fully scored on the same 120 prompts (EXP-20261005-003) |
 
+**What "RAG on and off" means here** (corrected after Kevin's note). RAG on and off applies only to the fine-tuned models: an adapter can be run with or without retrieval. Base Llama is the baseline, so it has no RAG option. PersonaRAG is the RAG-only model (the semester 1 embeddings model: retrieval plus a frozen Llama), so it is the base model with RAG added, not a baseline with an option. So "before and after RAG" means two pairs: base Llama against PersonaRAG, and a QLoRA adapter against the same adapter plus RAG. Only the second pair has saved results today.
+
 ## 3. The metric map
 
 How to read the columns. "Role" is what the harness lets the metric do: a selector may rank models, a gate decides whether a draft may be ranked, a diagnostic is shown but never used to choose.
@@ -126,13 +128,13 @@ How to read the columns. "Role" is what the harness lets the metric do: a select
 
 ## 7. How this feeds the next steps
 
-PUK-34 (before and after RAG per architecture) will use these rules: the same 120 prompts for every architecture, the separate axes from section 3 with no blended score as the headline, paired differences with confidence intervals (R1), both the all draft view and the common gate view (R2), and a clear "pending" label for any architecture without results. Today only the Relabel pair is complete.
+PUK-34 (before and after RAG per architecture) will use these rules: the same 120 prompts for every architecture, the separate axes from section 3 with no blended score as the headline, paired differences with confidence intervals (R1), both the all draft view and the common gate view (R2), and a clear "pending" label for any architecture without results. The comparisons are the two pairs described in section 2: base Llama against PersonaRAG, and a QLoRA adapter against the same adapter plus RAG. Today only the Relabel adapter pair is complete.
 
 For the workbook, sections 3 and 4 answer "evaluation methods and metrics for each model" (item 4.4), and section 2 gives the model list for the comparison (item 4.3).
 
 ## 8. Open questions for Kevin
 
-1. Do base Llama and PersonaRAG have saved 120 prompt results with retrieval on and off, or can you run them?
+1. Can you run PersonaRAG (the semester 1 RAG model: retrieval plus a frozen Llama) on the same 120 prompts, so we have the base against RAG pair? Base Llama without RAG already exists. Can you also run seeds 43 and 44 of the Relabel adapter with RAG on, to check the RAG result?
 2. Is the persona prompted base the same run as the untrained Llama in EXP-20261001-010?
 3. We found that the style distance depends on text length (G3). Do you agree to compute it on a fixed number of words, so runs with different draft lengths can be compared? (We checked the reference pack ourselves: all the scored runs use the same dataset and split files, by hash.)
 4. Is a real grammar axis (R5) wanted? The rule based tool only checks mechanics and misses ordinary grammar mistakes. Two ways to get more: LanguageTool on a laptop (needs Java and about 200 MB, so an approval), or a grammar prompt for your qwen judge on your machine, which we can check against our 40 test mistakes first. Which do you prefer?
