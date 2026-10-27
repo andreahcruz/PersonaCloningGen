@@ -30,6 +30,7 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
+import matplotlib.ticker  # noqa: E402
 from matplotlib.ticker import MaxNLocator  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
@@ -155,7 +156,39 @@ def length_figure(out: Path) -> None:
     print("wrote", out)
 
 
+def passage_fit_figure(out: Path) -> None:
+    """PUK-34: how many retrieved passages are of the medium that was asked for (Relabel + RAG, seed 43)."""
+    import json
+
+    report = json.loads((ROOT / "docs/evaluation/examples/rag_effect/relabel_seed43.json").read_text(encoding="utf-8"))
+    by_medium = report["rag_only"]["by_medium"]
+    mediums = ["blog", "linkedin", "x", "talk"]
+    labels = ["Blog", "LinkedIn", "X post", "Talk"]
+    values = [by_medium[m]["passage_fits_medium"] * 100 for m in mediums]
+    fig, ax = plt.subplots(figsize=(7.5, 4.2))
+    ax.bar(range(4), values, width=0.5, color=BLUE, zorder=2)
+    for i, value in enumerate(values):
+        ax.annotate(f"{value:.0f}%", (i, value), xytext=(0, 4), textcoords="offset points", ha="center", fontsize=10, color=INK)
+    ax.set_xticks(range(4), labels)
+    ax.set_ylim(0, 100)
+    ax.set_ylabel("retrieved passages of the requested medium")
+    ax.yaxis.set_major_formatter(matplotlib.ticker.PercentFormatter())
+    ax.grid(axis="y", color=GRID, lw=0.8)
+    ax.set_axisbelow(True)
+    for side in ("top", "right"):
+        ax.spines[side].set_visible(False)
+    ax.set_title("Retrieval ignores the medium: only a quarter of passages match", loc="left", fontsize=12.5,
+                 fontweight="bold", color=INK, pad=14)
+    fig.text(0.01, -0.02, "Relabel + RAG, seed 43, 4 passages per topic. A talk draft gets no transcript passages at all.",
+             fontsize=9, color=INK2)
+    fig.savefig(out, dpi=160, bbox_inches="tight")
+    plt.close(fig)
+    print("wrote", out)
+
+
 def main() -> None:
+    if (ROOT / "docs/evaluation/examples/rag_effect/relabel_seed43.json").exists():
+        passage_fit_figure(HERE / "fig4_passage_fit_by_medium.png")
     if not COMBINED.exists():
         sys.exit("Run docs/evaluation/examples/data/architecture/rebuild_reports.py first.")
     difference_figure(

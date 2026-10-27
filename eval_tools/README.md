@@ -74,13 +74,27 @@ python -m eval_tools.length_control --kevin-root ../kevin-ws \
 
 The style distance averages rates per 100 words, so longer texts land closer to the profile (log word count and distance correlate at -0.66 over real posts and drafts). This tool cuts every draft to the same number of words and repeats the paired comparison, and compares drafts with real held-out Lemkin posts at full length and at matched length. It uses Kevin's own `host_finetune` code and reference data, which are on his branch, so that checkout is needed. On the saved Relabel runs it showed that the RAG blog voice gap (+0.104) shrinks to about +0.04 with intervals that include zero at equal length.
 
-## 6. Tests
+## 6. What did adding RAG change, and what did it cost? (PUK-34)
 
 ```
-python -m pytest tests/test_eval_tools.py
+python -m eval_tools.rag_effect report --a-drafts off_raw.jsonl --b-drafts on_raw.jsonl   --label-a "RAG off" --label-b "RAG on" --out-md effect.md
+python -m eval_tools.rag_effect slim --raw on_raw.jsonl --out on_slim.jsonl     # 4 MB down to about 70 KB
 ```
 
-76 tests on small made up data. They include a check that an extra gate on one run does not hide that run's gain, the correction for many tests, the seed check, and every false alarm the grammar rules have ever produced on real posts (so they stay fixed).
+`compare` answers "did quality change?". This answers the other half, from the fields saved with each draft:
+
+- Both runs, paired by topic and medium: prompt tokens, generated tokens, words, the share of drafts that hit the length limit, and the share that ended on their own using under half the token budget.
+- The retrieval run only: evidence extraction seconds (counted **once per topic**, because the four mediums of a topic share the same evidence), drafts with unsupported numbers, drafts flagged for copying a passage, how many proposed claims survive verification, drafts that needed a second attempt, and how many retrieved passages are of the requested medium.
+
+`report` takes raw or slim files. Generation time is not saved with the drafts, so cost is tokens and evidence seconds, not wall-clock time. Results and how to read them: `docs/evaluation/RAG_BEFORE_AFTER.md`.
+
+## 7. Tests
+
+```
+python -m pytest tests/test_eval_tools.py tests/test_rag_effect.py
+```
+
+96 tests on small made up data (76 for sections 1 to 5 and 20 for section 6). They include a check that an extra gate on one run does not hide that run's gain, the correction for many tests, the seed check, and every false alarm the grammar rules have ever produced on real posts (so they stay fixed).
 
 ## Examples and evidence
 

@@ -39,6 +39,7 @@ flowchart LR
 | A length-neutral voice score | **Needs Kevin's agreement** |
 | A PersonaRAG run on the 120 prompts, and more seeds of the Relabel adapter with RAG on | Done on Colab (2026-10-27). PersonaRAG is an approximation (base Llama 3.1 + train-only retrieval, one run); **someone should confirm it is the right stand-in** |
 | Architecture comparison on the new data (Base, PersonaRAG, Relabel with and without RAG) | Done: [`ARCHITECTURE_COMPARISON.md`](ARCHITECTURE_COMPARISON.md) |
+| PUK-34: before/after RAG metric set, with what RAG costs and how retrieval behaves | Done on this branch: [`RAG_BEFORE_AFTER.md`](RAG_BEFORE_AFTER.md) (`eval_tools.rag_effect`, 20 tests) |
 | Review of this PR | **Needs a teammate** |
 | Harder calibration controls, outside-world truth check, human check, cost and speed | Open, not started |
 
@@ -49,6 +50,7 @@ docs/evaluation/
   README.md                      <- you are here
   METRIC_MAP.md                  <- the full review: metric map, 12 gaps, 10 fixes
   ARCHITECTURE_COMPARISON.md     <- Base, PersonaRAG and Relabel (RAG on and off) compared on the new data
+  RAG_BEFORE_AFTER.md            <- PUK-34: the before/after RAG metric set, with cost and retrieval results
   colab/                         <- the Colab notebook that made the new runs, with its output
   figures/                       <- the three charts and the script that draws them
   examples/
@@ -66,7 +68,9 @@ eval_tools/
   compare.py  seeds.py           <- compare runs, check repeats
   grammar.py  grammar_audit.py   <- grammar check and its audit
   length_control.py              <- voice score against text length
+  rag_effect.py                  <- what RAG changed and cost (PUK-34)
 tests/test_eval_tools.py         <- 76 tests on small made-up data
+tests/test_rag_effect.py         <- 20 tests for rag_effect (PUK-34)
 ```
 
 How the pieces connect:
