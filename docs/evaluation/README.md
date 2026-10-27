@@ -14,7 +14,8 @@ Written by Vrushabh Bodarya, 2026-10-24. Linear: PUK-28. Branch: `vb-puk-28`.
   3. After correcting for how many tests we ran, nothing in the RAG comparison is a clear difference.
   4. Relabel against repaired (no RAG) keeps its direction in all three seeds. That result repeats.
   5. Our grammar tool finds typos and punctuation slips only. It catches 0 of 40 ordinary grammar mistakes, so grammar still needs a real checker.
-- **What is needed.** A choice for the grammar checker, Kevin's agreement on a length-neutral voice score, more seeds with RAG on, and a review. Details below.
+- **Update 2026-10-27 (architecture comparison).** The missing runs now exist: Relabel + RAG seeds 43 and 44, and PersonaRAG on the new data (made on Colab, notebook in `colab/`). Main results, in plain words: Relabel + RAG is much closer to Lemkin than PersonaRAG on blogs (and that survives equal length), but it writes shorter drafts and scores lower on writing quality. The RAG-on blog voice gap repeats in direction across three seeds, is not clear after correction, and shrinks to about zero at equal length, which confirms finding 2 below. Full write-up: [`ARCHITECTURE_COMPARISON.md`](ARCHITECTURE_COMPARISON.md).
+- **What is needed.** A choice for the grammar checker, Kevin's agreement on a length-neutral voice score, someone to confirm that our PersonaRAG stand-in is right, and a review. Details below.
 
 ## Where PUK-28 fits
 
@@ -36,7 +37,8 @@ flowchart LR
 | Tests and worked examples with data copies and hashes | Done (76 tests) |
 | A real grammar checker (LanguageTool or a judge prompt) | **Needs a decision** |
 | A length-neutral voice score | **Needs Kevin's agreement** |
-| A PersonaRAG run on the 120 prompts, and more seeds of the Relabel adapter with RAG on | **Waiting on Kevin's machine** |
+| A PersonaRAG run on the 120 prompts, and more seeds of the Relabel adapter with RAG on | Done on Colab (2026-10-27). PersonaRAG is an approximation (base Llama 3.1 + train-only retrieval, one run); **someone should confirm it is the right stand-in** |
+| Architecture comparison on the new data (Base, PersonaRAG, Relabel with and without RAG) | Done: [`ARCHITECTURE_COMPARISON.md`](ARCHITECTURE_COMPARISON.md) |
 | Review of this PR | **Needs a teammate** |
 | Harder calibration controls, outside-world truth check, human check, cost and speed | Open, not started |
 
@@ -46,7 +48,12 @@ flowchart LR
 docs/evaluation/
   README.md                      <- you are here
   METRIC_MAP.md                  <- the full review: metric map, 12 gaps, 10 fixes
+  ARCHITECTURE_COMPARISON.md     <- Base, PersonaRAG and Relabel (RAG on and off) compared on the new data
+  colab/                         <- the Colab notebook that made the new runs, with its output
+  figures/                       <- the three charts and the script that draws them
   examples/
+    architecture/                <- generated reports for ARCHITECTURE_COMPARISON.md
+    data/architecture/           <- saved rows of each run, hashes, and the script that rebuilds the reports
     relabel_rag_off_vs_on.md     <- RAG off against RAG on, with intervals
     seed_stability_relabel_vs_repaired.md
     style_length_check.md        <- the length finding
@@ -117,7 +124,7 @@ We tested this rule on real data with the true difference set to zero (A and B s
 |---|---|---|
 | 1 | The voice score depends on text length. Over real posts and drafts, word count and style distance correlate at -0.66. Drafts look closer to Lemkin than real posts do (70 percent chance), but only because they are longer. Cut to real post lengths, that is 53 percent, which is equal | `examples/style_length_check.md` |
 | 2 | The RAG blog voice gap (+0.104) shrinks to about +0.04, with intervals that include zero, once every draft is cut to the same length. RAG blog drafts are 25 words shorter. This does not show RAG is harmless. It shows this run cannot tell | `examples/style_length_check.md` |
-| 3 | After the correction for many tests, nothing in the RAG comparison is a clear difference. Blog voice and blog writing quality are only "suggestive", and there is one seed | `examples/relabel_rag_off_vs_on.md` |
+| 3 | After the correction for many tests, nothing in the RAG comparison is a clear difference. Blog voice and blog writing quality are only "suggestive". Update 2026-10-27: with seeds 43 and 44 added, the direction repeats but still nothing is clear after the correction | `examples/relabel_rag_off_vs_on.md` |
 | 4 | The run that looks worse for RAG on the headline numbers (72 against 77 eligible drafts) is not worse on the common gates (83 against 77). RAG alone has an extra grounding gate | `examples/relabel_rag_off_vs_on.md` |
 | 5 | Relabel against repaired (no RAG) keeps its direction in all three seeds for writing quality, blog voice and blog length. That comparison repeats | `examples/seed_stability_relabel_vs_repaired.md` |
 | 6 | Grammar. 82 percent of what the check flags on a fresh sample of real posts is a real error (33 of 40). It catches 56 to 100 percent of the errors it has rules for. It catches 0 of 40 ordinary grammar mistakes (tense, wrong word, missing article and so on) | `examples/grammar_audit.md`, `examples/grammar_precision_audit.csv` |
@@ -151,7 +158,7 @@ The length check needs a checkout of Kevin's branch without its 480 MB of adapte
 | Vrushabh | Open the PR for review | Nobody has reviewed the code yet |
 | Kevin | Agree to compute the voice score on a fixed number of words | Right now runs with different draft lengths cannot be compared on voice |
 | Kevin | Choose the grammar route: a grammar prompt for the qwen judge on his machine, or LanguageTool (Java and about 200 MB) | The current check catches 0 of 40 ordinary grammar mistakes |
-| Kevin | Run PersonaRAG (the semester 1 RAG model) on the same 120 prompts, and seeds 43 and 44 of the Relabel adapter with RAG on | Without PersonaRAG there is no base against RAG pair. Without more seeds the RAG voice result stays a lead. PUK-34 stays incomplete either way |
+| A teammate who knows the old PersonaRAG setup | Confirm that base Llama 3.1 + train-only retrieval is the right stand-in for PersonaRAG on the new data. If not, say what to run instead | The PersonaRAG row in `ARCHITECTURE_COMPARISON.md` depends on it. (The runs themselves were done on Colab on 2026-10-27.) |
 | The team | Later: harder voice controls, a check of truth against the outside world, a small human check of the judge, and cost and speed per architecture | Listed as R4, R7, R9 and R10 in `METRIC_MAP.md` |
 
 ## How far you can trust this

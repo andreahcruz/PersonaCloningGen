@@ -134,7 +134,7 @@ For the workbook, sections 3 and 4 answer "evaluation methods and metrics for ea
 
 ## 8. Open questions for Kevin
 
-1. Can you run PersonaRAG (the semester 1 RAG model: retrieval plus a frozen Llama) on the same 120 prompts, so we have the base against RAG pair? Base Llama without RAG already exists. Can you also run seeds 43 and 44 of the Relabel adapter with RAG on, to check the RAG result?
+1. *Update 2026-10-27: these runs were made on Colab and are analysed in `ARCHITECTURE_COMPARISON.md`. What is still open is whether our PersonaRAG stand-in is the right one.* Can you run PersonaRAG (the semester 1 RAG model: retrieval plus a frozen Llama) on the same 120 prompts, so we have the base against RAG pair? Base Llama without RAG already exists. Can you also run seeds 43 and 44 of the Relabel adapter with RAG on, to check the RAG result?
 2. Is the persona prompted base the same run as the untrained Llama in EXP-20261001-010?
 3. We found that the style distance depends on text length (G3). Do you agree to compute it on a fixed number of words, so runs with different draft lengths can be compared? (We checked the reference pack ourselves: all the scored runs use the same dataset and split files, by hash.)
 4. Is a real grammar axis (R5) wanted? The rule based tool only checks mechanics and misses ordinary grammar mistakes. Two ways to get more: LanguageTool on a laptop (needs Java and about 200 MB, so an approval), or a grammar prompt for your qwen judge on your machine, which we can check against our 40 test mistakes first. Which do you prefer?

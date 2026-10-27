@@ -2,7 +2,7 @@
 
 Output of `eval_tools.seeds` on Kevin's saved runs with no retrieval: the same 30 topics and four mediums generated with seeds 42, 43 and 44 (experiments `EXP-20261004-003`, `-005` and `-006`), scored rows from `EXP-20261004-008-writing-evidence/metrics/rows.jsonl` on branch `kevin/298b-integration`. A is the repaired adapter and B is the relabel adapter, so a positive difference means relabel is higher.
 
-What it shows: relabel keeps its direction in all three seeds for writing quality (higher), blog voice distance (closer to Lemkin) and blog length (longer). So the adapter comparison replicates. The RAG against no RAG comparison has only one seed, so this check cannot be run on it yet.
+What it shows: relabel keeps its direction in all three seeds for writing quality (higher), blog voice distance (closer to Lemkin) and blog length (longer). So the adapter comparison replicates. When this page was written the RAG against no RAG comparison had only one seed. It now has three (seeds 43 and 44 were run on Colab on 2026-10-27); see `../ARCHITECTURE_COMPARISON.md` and `architecture/seeds_relabel_rag_off_vs_on_blog.md`.
 
 To rerun:
 
