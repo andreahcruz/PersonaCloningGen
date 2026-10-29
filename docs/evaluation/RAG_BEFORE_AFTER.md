@@ -70,7 +70,7 @@ The base run and the PersonaRAG run were made through Ollama, which does not sav
 
 ## A concrete next step (not done here)
 
-Kevin asked us to try "type-specific RAG". That can mean two things: filtering the retrieved facts by the requested medium (a small patch to his retriever, which currently ignores the medium on purpose), or giving medium-specific style examples (his `--fixed-style` option, off by default, which has two fixed examples each for blog, LinkedIn and X and none for talk). Either is an experiment to run, not a known fix. `eval_tools.rag_effect` (passage fit, distance, cost) and `eval_tools.compare` (quality) will show whether it helped, and they should also show whether the small pools make the filtered passages less relevant.
+Kevin asked us to try "type-specific RAG". That can mean two things: filtering the retrieved facts by the requested medium (a small patch to his retriever, which currently ignores the medium on purpose), or giving medium-specific style examples (his `--fixed-style` option, off by default, which has two fixed examples each for blog, LinkedIn and X and none for talk). Either is an experiment to run, not a known fix. We have already done the cheap, GPU-free part for the first reading: a medium filter keeps blog retrieval about the same, costs LinkedIn some relevance, returns very short passages for X, and returns poor matches for talk (the index has only 40 transcript passages). See [`TYPE_SPECIFIC_RETRIEVAL_CHECK.md`](TYPE_SPECIFIC_RETRIEVAL_CHECK.md). `eval_tools.rag_effect` (passage fit, distance, cost) and `eval_tools.compare` (quality) will show whether it helped, and they should also show whether the small pools make the filtered passages less relevant.
 
 ## How to rebuild every number
 

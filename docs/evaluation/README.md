@@ -51,6 +51,7 @@ docs/evaluation/
   METRIC_MAP.md                  <- the full review: metric map, 12 gaps, 10 fixes
   ARCHITECTURE_COMPARISON.md     <- Base, PersonaRAG and Relabel (RAG on and off) compared on the new data
   RAG_BEFORE_AFTER.md            <- PUK-34: the before/after RAG metric set, with cost and retrieval results
+  TYPE_SPECIFIC_RETRIEVAL_CHECK.md <- what a medium filter would retrieve (blog, LinkedIn, X, talk)
   colab/                         <- the Colab notebook that made the new runs, with its output
   figures/                       <- the three charts and the script that draws them
   examples/

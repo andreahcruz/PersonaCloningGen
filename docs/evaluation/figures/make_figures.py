@@ -186,9 +186,48 @@ def passage_fit_figure(out: Path) -> None:
     print("wrote", out)
 
 
+def retrieval_filter_figure(out: Path) -> None:
+    """PUK-34: how close is the best passage for each of the 30 topics, with and without a medium filter."""
+    import json
+    import random
+
+    report = json.loads((ROOT / "docs/evaluation/examples/data/retrieval_by_medium/results.json").read_text(encoding="utf-8"))
+    rows = [("No filter (today)", [v[0] for v in report["unfiltered_top4_distances"].values()], INK2)]
+    names = {"blog": "Blog passages only", "linkedin": "LinkedIn passages only", "x": "X posts only", "talk": "Talk transcripts only (40 passages)"}
+    for medium in ("blog", "linkedin", "x", "talk"):
+        rows.append((names[medium], [v[0] for v in report["filtered_top4_distances"][medium].values()], BLUE))
+    worst_today = max(rows[0][1])
+    rng = random.Random(0)
+    fig, ax = plt.subplots(figsize=(9, 4.4))
+    for row, (label, values, color) in enumerate(rows):
+        ax.plot([min(values), max(values)], [row, row], color=GRID, lw=3, solid_capstyle="round", zorder=1)
+        ax.scatter(values, [row + rng.uniform(-0.18, 0.18) for _ in values], s=34, color=color, alpha=0.85, zorder=3)
+        median = sorted(values)[len(values) // 2]
+        ax.annotate(f"median {median:.2f}", (max(values), row), xytext=(10, -3), textcoords="offset points", fontsize=9.5, color=INK)
+    ax.axvline(worst_today, color=INK2, lw=1.1, ls=(0, (4, 3)), zorder=2)
+    ax.annotate(f"worst best-match\nwithout a filter ({worst_today:.2f})", (worst_today, -0.62), xytext=(6, 0), textcoords="offset points",
+                fontsize=8.5, color=INK2, va="top")
+    ax.set_yticks(range(len(rows)), [r[0] for r in rows])
+    ax.set_ylim(len(rows) - 0.4, -1.0)
+    ax.set_xlim(0.12, 0.68)
+    ax.set_xlabel("distance of the best retrieved passage, one dot per topic (lower = closer match)")
+    ax.grid(axis="x", color=GRID, lw=0.8)
+    ax.set_axisbelow(True)
+    for side in ("top", "right", "left"):
+        ax.spines[side].set_visible(False)
+    ax.tick_params(axis="y", length=0)
+    ax.set_title("A talk filter returns poor matches; a blog filter barely changes anything", loc="left", fontsize=12, fontweight="bold", color=INK, pad=14)
+    fig.text(0.01, -0.04, "30 gold topics, top 4 passages, Kevin's v1 index. Filtered search uses his unused medium_where helper.", fontsize=9, color=INK2)
+    fig.savefig(out, dpi=160, bbox_inches="tight")
+    plt.close(fig)
+    print("wrote", out)
+
+
 def main() -> None:
     if (ROOT / "docs/evaluation/examples/rag_effect/relabel_seed43.json").exists():
         passage_fit_figure(HERE / "fig4_passage_fit_by_medium.png")
+    if (ROOT / "docs/evaluation/examples/data/retrieval_by_medium/results.json").exists():
+        retrieval_filter_figure(HERE / "fig6_retrieval_filter_distance.png")
     if not COMBINED.exists():
         sys.exit("Run docs/evaluation/examples/data/architecture/rebuild_reports.py first.")
     difference_figure(
