@@ -47,6 +47,9 @@ DEFAULT_METRICS = (
     "word_count",
     "grammar_rate",
     "grammar_deviation",
+    "grammar_lt_rate",
+    "grammar_lt_deviation",
+    "style_distance_fixed",
 )
 MEDIUMS = ("blog", "linkedin", "x", "talk")
 

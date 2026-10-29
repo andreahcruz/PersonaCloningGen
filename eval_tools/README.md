@@ -64,6 +64,17 @@ python -m eval_tools.grammar_audit --data-dir data --out-md audit.md --out-json 
 
 Injects known errors into real sentences that the tool finds clean, and counts how many it catches (recall per rule). Then runs a hand written set of 40 ordinary grammar mistakes in 10 categories, to measure coverage. A stronger checker can be passed to `coverage(check=...)` in Python to compare it on the same 40 sentences.
 
+## 4b. Grammar with LanguageTool (Kevin's choice)
+
+```
+pip install language_tool_python        # needs Java 17 or newer; the first run downloads LanguageTool (about 260 MB)
+python -m eval_tools.grammar_lt --traces raw/relabel.jsonl --data-dir data   --out-jsonl grammar_lt_rows.jsonl --out-json grammar_lt_summary.json
+```
+
+The same idea as section 3, with a much better checker. It catches 19 of the 40 ordinary mistakes in section 4 (the rule based check catches 0). To keep Lemkin's informal style from being punished, it keeps only grammar, real-typo and confused-word rules, ignores names and his own vocabulary, and compares each draft with real posts of the same medium. Pass `--out-jsonl` to `compare` with `--extra-a` or `--extra-b` and use `grammar_lt_rate` or `grammar_lt_deviation`.
+
+**What it is not.** Most of its flags on our drafts are false alarms: 14 of 103 are clear mistakes (14 percent) in our own labeling. Use it as a screener and read the flags, not as a grade. Results, the 103 labeled flags, and the audit: `docs/evaluation/GRAMMAR_LANGUAGETOOL.md`. It runs on your computer; no text is sent anywhere. It is optional, and the other tools still need only Python.
+
 ## 5. Is a style distance gap just a length effect?
 
 ```
@@ -74,13 +85,22 @@ python -m eval_tools.length_control --kevin-root ../kevin-ws \
 
 The style distance averages rates per 100 words, so longer texts land closer to the profile (log word count and distance correlate at -0.66 over real posts and drafts). This tool cuts every draft to the same number of words and repeats the paired comparison, and compares drafts with real held-out Lemkin posts at full length and at matched length. It uses Kevin's own `host_finetune` code and reference data, which are on his branch, so that checkout is needed. On the saved Relabel runs it showed that the RAG blog voice gap (+0.104) shrinks to about +0.04 with intervals that include zero at equal length.
 
+## 5b. Voice score on a fixed number of words (Kevin's choice)
+
+```
+GIT_LFS_SKIP_SMUDGE=1 git worktree add ../kevin-ws origin/kevin/298b-integration
+python -m eval_tools.voice_fixed --kevin-root ../kevin-ws --traces raw/relabel.jsonl   --out-jsonl voice_fixed_rows.jsonl --out-json voice_fixed_summary.json
+```
+
+Scores the first 100 words of every blog and LinkedIn draft with Kevin's style distance, so length cannot drive the score (section 5 shows that it does). Drafts under 100 words are not scored, and the summary says how many. X and talk are not supported (X drafts are too short, talk has no reference). Compare with `--metrics style_distance_fixed`. Use `--blog-words 150 --linkedin-words 150` to check that the conclusion does not depend on the length. Results: `docs/evaluation/VOICE_FIXED_LENGTH.md`.
+
 ## 6. Tests
 
 ```
-python -m pytest tests/test_eval_tools.py
+python -m pytest tests
 ```
 
-76 tests on small made up data. They include a check that an extra gate on one run does not hide that run's gain, the correction for many tests, the seed check, and every false alarm the grammar rules have ever produced on real posts (so they stay fixed).
+115 tests on small made up data: 76 for the tools in sections 1 to 5, 26 for the LanguageTool tool (with a fake LanguageTool, so no Java is needed) and 13 for the fixed-length voice score (with a fake distance, so no checkout of Kevin's branch is needed). They include a check that an extra gate on one run does not hide that run's gain, the correction for many tests, the seed check, and every false alarm the grammar rules have ever produced on real posts (so they stay fixed).
 
 ## Examples and evidence
 

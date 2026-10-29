@@ -25,10 +25,18 @@ METRIC_PATHS: dict[str, str] = {
     # Filled from a side file (see ``attach_extra``), for example the grammar tool.
     "grammar_rate": "extra.grammar_rate",
     "grammar_deviation": "extra.grammar_deviation",
+    # LanguageTool version of the grammar check (eval_tools.grammar_lt).
+    "grammar_lt_rate": "extra.grammar_lt_rate",
+    "grammar_lt_deviation": "extra.grammar_lt_deviation",
+    # Style distance on the first N words only, so draft length cannot drive it (eval_tools.voice_fixed).
+    "style_distance_fixed": "extra.style_distance_fixed",
 }
 
 # For these, a lower number is better, so "B minus A" below zero means B is better.
-LOWER_IS_BETTER = {"style_distance", "framing_distance", "latency_seconds", "grammar_rate", "grammar_deviation"}
+LOWER_IS_BETTER = {
+    "style_distance", "framing_distance", "latency_seconds", "grammar_rate", "grammar_deviation",
+    "grammar_lt_rate", "grammar_lt_deviation", "style_distance_fixed",
+}
 
 # Neither direction is better (a longer draft is not a better draft). Reports say
 # "B higher" or "B lower" for these instead of "B better" or "B worse".

@@ -1,0 +1,104 @@
+n,run,id,medium,rule,flagged,context,label,note
+0,relabel_rag_off_seed42,gold_002,talk,IT_ITS,it,...aw similar results with Smartsheet when it IPO'd (which was acquired by Adobe) and...,false alarm,
+1,relabel_rag_off_seed42,gold_010,blog,MORFOLOGIK_RULE_EN_US,overindex,"...uld we do? A few thoughts: First, don’t overindex on “churn reduction” as your top goal. ...",false alarm,
+2,relabel_rag_off_seed42,gold_014,blog,HAD_TOO,too,"...g quickly enough (say 50%-80%), or have too low NPS / churn, etc. — don’t bother. I...",false alarm,
+3,relabel_rag_off_seed42,gold_019,linkedin,ALL_MOST_SOME_OF_NOUN,most of lead,...a hybrid that owns demand gen (and thus most of lead generation) as part of their job. Not a...,false alarm,
+4,relabel_rag_off_seed42,gold_022,blog,IN_1990s,in 1970s,...hat economist Roy Cowan identified back in 1970s Britain. He found something remarkable ...,false alarm,
+5,relabel_rag_off_seed42,gold_022,talk,FEWER_LESS,less,... But will it let me run my company with less people? Will it make my life easier? No...,colloquial or prescriptive,'less people' (spoken)
+6,relabel_rag_off_seed42,gold_023,talk,ENGLISH_WORD_REPEAT_RULE,for for,...Everything we’d been paying annual fees for for decades. Then we added Claude Co-Pilot ...,real mistake,doubled word 'for for'
+7,relabel_rag_off_seed42,gold_024,talk,MORFOLOGIK_RULE_EN_US,decelaration,... now it’s reaccelerating after years of decelaration across almost all SaaS and Cloud stocks...,real mistake,typo 'decelaration'
+8,relabel_rag_off_seed42,gold_027,blog,YOUR_YOU_2,you,...ts. The math looks great on paper until you factor in actual setup costs. Context I...,false alarm,
+9,relabel_rag_off_seed42,gold_028,linkedin,MORFOLOGIK_RULE_EN_US,hypers,...d providers are getting squeezed out by hypers,false alarm,
+10,relabel_rag_off_seed43,gold_005,talk,IT_ITS,It,... before it existed as a major category. It IPO'd twice (!) in '96 and again in '01...,false alarm,
+11,relabel_rag_off_seed43,gold_008,blog,AFFECT_EFFECT,effect,...nd on sales & marketing. And they don’t effect your ability to raise prices when appro...,real mistake,effect for affect
+12,relabel_rag_off_seed43,gold_011,talk,MORFOLOGIK_RULE_EN_US,overhiring,...e missing the burn target? Is it due to overhiring? Poor retention rates? Lack of pricing ...,false alarm,
+13,relabel_rag_off_seed43,gold_012,linkedin,MORFOLOGIK_RULE_EN_US,midpack,...today. The best AI SDRs are better than midpack human SDRs. So they need to hit the gro...,false alarm,
+14,relabel_rag_off_seed43,gold_012,linkedin,AFFORD_VBG,deploying,...se … there’s no ROI. What we’ve learned deploying 20+ AI GTM agents at SaaStr itself: • W...,false alarm,
+15,relabel_rag_off_seed43,gold_012,talk,ALL_MOST_SOME_OF_NOUN,most of outbound,...ne that really works well and automates most of outbound sales conversations: 8-12 weeks of work...,false alarm,
+16,relabel_rag_off_seed43,gold_016,blog,TOO_DETERMINER,Too This,"...Agents Need To Be Checked On Regularly, Too This new agent has gone dark since February....",false alarm,
+17,relabel_rag_off_seed43,gold_016,linkedin,ENGLISH_WORD_REPEAT_RULE,ai AI,... refining the training data. Our SaaStr.ai AI VPM works because Amelia checks it ever...,false alarm,
+18,relabel_rag_off_seed43,gold_017,blog,MORFOLOGIK_RULE_EN_US,battlecards,"...lateral, demos ready-to-go, competitive battlecards, etc.—you’re already behind before you ...",false alarm,
+19,relabel_rag_off_seed43,gold_018,talk,THERE_IS_A_LOT_OF,there's,So there's a lot of things that we all should be d...,colloquial or prescriptive,'there's a lot of things'
+20,relabel_rag_off_seed43,gold_019,blog,ARE_WE_HAVE,Is it demand,... sure you know why you are hiring them. Is it demand gen? Or field marketing? Or enterprise ...,false alarm,
+21,relabel_rag_off_seed43,gold_023,blog,RELATIVE_CLAUSE_AGREEMENT,needs,"...es follow-ups automatically, tracks who needs to pay, and provides full analytics and...",false alarm,
+22,relabel_rag_off_seed43,gold_025,blog,TOO_ADJECTIVE_TO,to Lovable to,... and early 2026 — from Harvey to Replit to Lovable to Clay to Cursor to Windsurf and more. Be...,false alarm,
+23,relabel_rag_off_seed43,gold_025,talk,MORFOLOGIK_RULE_EN_US,overhire,"...many founders and VPs of sales just way overhire here these days, especially when they a...",false alarm,
+24,relabel_rag_off_seed43,gold_026,blog,MORFOLOGIK_RULE_EN_US,overhire,"...es, you do need those resources.  Don’t overhire here.  Make sure each one has proven sh...",false alarm,
+25,relabel_rag_off_seed43,gold_028,linkedin,MORFOLOGIK_RULE_EN_US,wipeout,...~$1.9T to $1.5T — that’s a $400 billion wipeout. But DOOG is up almost 12% year-to-date...,false alarm,
+26,relabel_rag_off_seed44,gold_002,talk,MORFOLOGIK_RULE_EN_US,dapulse,...d off as an open source project called “dapulse” way back in 2012.  And then went Freem...,false alarm,
+27,relabel_rag_off_seed44,gold_008,talk,YOUR_NN,you're,"...iples, though, is two things: One is if you're late stage funded and you're looking fo...",false alarm,
+28,relabel_rag_off_seed44,gold_012,blog,ONE_ONCE,One,"...n AI SDR? We’ve deployed 2 AI SDRs now. One we trained ourselves (with some help), ...",false alarm,
+29,relabel_rag_off_seed44,gold_012,linkedin,MORFOLOGIK_RULE_EN_US,templ,...tly because we were trying to force-fit templ,not grammar (truncation or markup),draft cut off mid-word ('templ')
+30,relabel_rag_off_seed44,gold_012,x,ADVISE_VBG,Implementing,...d to do:  1. Pick an Agent and Get Help Implementing It (This Is Non-Negotiable) If you’re n...,false alarm,
+31,relabel_rag_off_seed44,gold_013,blog,AFFORD_VBG,using,...nce Integration One thing we’ve learned using Artisan is how important it is to lever...,false alarm,
+32,relabel_rag_off_seed44,gold_013,linkedin,ENGLISH_WORD_REPEAT_RULE,ai AI,...gent To Book Meetings At Scale | SaaStr.ai AI Annual 2025 + AI Summit,false alarm,
+33,relabel_rag_off_seed44,gold_014,blog,MORFOLOGIK_RULE_EN_US,decacorns,... true these days when many unicorns and decacorns have gone down or seen their valuations...,false alarm,
+34,relabel_rag_off_seed44,gold_014,blog,ENGLISH_WORD_REPEAT_RULE,New New,...more here and an example video from our New New School series below: And a few bonus re...,false alarm,
+35,relabel_rag_off_seed44,gold_015,talk,PLURAL_THAT_AGREEMENT,feels,...n. A head start on discovery calls that feels like cheating. Buyers have always used ...,false alarm,
+36,relabel_rag_off_seed44,gold_016,talk,HAPPEN_TO,with,... So I'm going to tell you what happened with us recently. A new AI BDR from Qualifie...,false alarm,
+37,relabel_rag_off_seed44,gold_022,blog,FEWER_LESS,less,...sier It will just make you do more with less humans And probably lead to layoffs -- ...,colloquial or prescriptive,'less humans'
+38,relabel_rag_off_seed44,gold_022,linkedin,MORFOLOGIK_RULE_EN_US,specialising,"...$50M ARR, maybe $100M ARR, people start specialising again. The VP of Marketing stops writin...",false alarm,
+39,relabel_rag_off_seed44,gold_022,talk,MORFOLOGIK_RULE_EN_US,cowan,...l the output is good enough. That's the cowan paradox. I'm not sure anyone wants to d...,real mistake,name 'cowan' lowercase
+40,relabel_rag_off_seed44,gold_023,linkedin,ENGLISH_WORD_REPEAT_RULE,Etc etc,...good at follow-ups and auto-sequencing. Etc etc. You’ll likely need some sort of sales ...,false alarm,
+41,relabel_rag_off_seed44,gold_023,talk,PLURAL_VERB_AFTER_THIS,buy,...you’ll hear me say all the time that go buy something off the shelf if it’s availab...,colloquial or prescriptive,'that go buy something'
+42,relabel_rag_off_seed44,gold_027,blog,AFFORD_VBG,deploying,"...l all day long. A few things we learned deploying almost 30 different agents: First, you ...",false alarm,
+43,relabel_rag_off_seed44,gold_028,talk,IF_OF,couple,...d it’s down 5%. And I think there are a couple reasons why that is. First one is AI. I...,colloquial or prescriptive,'a couple reasons'
+44,relabel_rag_on_seed42,gold_002,blog,NEEDNT_TO_DO_AND_DONT_NEED_DO,perfect,... accounts grow quickly.  You don’t need perfect NRR at first.  Just enough to scale qui...,false alarm,
+45,relabel_rag_on_seed42,gold_005,talk,MORFOLOGIK_RULE_EN_US,toolset,"...ications, so they built a comprehensive toolset to address those pain points. And here'...",false alarm,
+46,relabel_rag_on_seed42,gold_007,talk,THIS_NNS,these new age,"...e said, ""Jason, what do you think about these new age of AI tools?"" And I said, ""Well, they'r...",real mistake,'these new age of AI tools'
+47,relabel_rag_on_seed42,gold_008,blog,DEPEND_ON,depending,"...h $100 million instead of $300 million, depending how fast you grow. It means founders wh...",colloquial or prescriptive,'depending how fast'
+48,relabel_rag_on_seed42,gold_009,blog,ENGLISH_WORD_REPEAT_RULE,New New,...many SaaS leaders over the years on our New New Podcast and Live Wednesday series.  But...,false alarm,
+49,relabel_rag_on_seed42,gold_012,blog,IF_OF,couple,"...breaks down into three phases: setup (a couple hours), daily monitoring/tuning (30-60 ...",colloquial or prescriptive,'a couple hours'
+50,relabel_rag_on_seed42,gold_016,linkedin,ENGLISH_WORD_REPEAT_RULE,ai AI,"...Didn’t Even Know. For weeks, our SaaStr.ai AI chat has been giving out terrible advic...",false alarm,
+51,relabel_rag_on_seed42,gold_017,talk,AFFORD_VBG,deploying,...uncomfortable truths that we've learned deploying these agents at scale. And they're all ...,false alarm,
+52,relabel_rag_on_seed42,gold_018,talk,THERE_S_MANY,there's two types,...And I've found out over all these years there's two types of churn—there's voluntary churn and in...,colloquial or prescriptive,'there's two types'
+53,relabel_rag_on_seed42,gold_018,talk,FEWER_LESS,less,...ake up pricing. Don't claim someone has less seats than they actually do. It doesn't...,colloquial or prescriptive,'less seats'
+54,relabel_rag_on_seed42,gold_019,talk,UNDER_COMPOUNDS,under invest,...f there’s one thing that I see founders under invest in is marketing and demand gen as they ...,real mistake,'under invest' should be underinvest
+55,relabel_rag_on_seed42,gold_019,talk,HAVE_PART_AGREEMENT,say,...uld hire was a VP of Sales once you had say one sales rep hitting quota. Because yo...,false alarm,
+56,relabel_rag_on_seed42,gold_019,talk,ENGLISH_WORD_REPEAT_RULE,that that,.... And then usually the third role after that that you’d want to hire would be a VP of Pro...,false alarm,
+57,relabel_rag_on_seed42,gold_021,linkedin,DOUBLE_NEGATIVE,NOT to make,...aaS margins by 6x-12x. You can't afford NOT to make this work. But here's my real concern: ...,false alarm,
+58,relabel_rag_on_seed42,gold_025,talk,DEPEND_ON,depends,...wn into two playbooks because it really depends what kind of company you are. So playbo...,colloquial or prescriptive,'depends what kind'
+59,relabel_rag_on_seed42,gold_028,talk,THERE_S_MANY,there's three big areas,"...Well, let me take a step back here, and there's three big areas I want to focus on. Number one, the ove...",colloquial or prescriptive,'there's three big areas'
+60,relabel_rag_on_seed43,gold_006,blog,STEP_BY_STEP_HYPHEN,Step by Step,... Ever: “From $0 to $100M in One Year. A Step by Step Guide” . It was one of the very best se...,colloquial or prescriptive,'Step by Step' hyphens (title style)
+61,relabel_rag_on_seed43,gold_007,talk,MORFOLOGIK_RULE_EN_US,specialisation,...before. Before the first big change was specialisation. We had to learn how to sell enterprise...,false alarm,
+62,relabel_rag_on_seed43,gold_007,talk,EN_A_VS_AN,a,"...first company, we literally did not use a SDR. We thought they were spammy. Nobod...",real mistake,'a SDR' should be 'an SDR'
+63,relabel_rag_on_seed43,gold_012,talk,NOT_US1,us,...t an automated email and that's it. Not us though. We'll call them. We'll set up a...,false alarm,
+64,relabel_rag_on_seed43,gold_019,talk,NO_NOT,not room,"...et up above $2m-$3m in revenue, there’s not room anymore for error. There’s too much mon...",colloquial or prescriptive,'there's not room'
+65,relabel_rag_on_seed43,gold_025,talk,THERE_S_MANY,there's two playbooks,So there's two playbooks out there right now in how many salespe...,colloquial or prescriptive,'there's two playbooks'
+66,relabel_rag_on_seed43,gold_026,talk,THERE_S_MANY,there's two things,...y SaaS companies and start-ups. I think there's two things you can do to really minimize your chan...,colloquial or prescriptive,'there's two things'
+67,relabel_rag_on_seed43,gold_028,blog,AUXILIARY_DO_WITH_INCORRECT_VERB_FORM,did,...assive demand to keep margins clean. DO didn’t make those moves. They kept serving ...,false alarm,
+68,relabel_rag_on_seed44,gold_002,linkedin,IT_ITS,it,"...ite as SMB-focused today as it was when it IPO’d, many still rely heavily on SMBs....",false alarm,
+69,relabel_rag_on_seed44,gold_002,talk,MORFOLOGIK_RULE_EN_US,interestin,...om in your own space. I hope these five interestin'g learnings help inspire you to go buil...,real mistake,garbled word 'interestin'g'
+70,relabel_rag_on_seed44,gold_003,talk,A_NNS,A players,"...ow, is everyone says they want to hire ""A players."" Everyone wants A players. But what do...",false alarm,
+71,relabel_rag_on_seed44,gold_003,talk,A_NNS,A players,"...ant to hire ""A players."" Everyone wants A players. But what does that really mean? What's...",false alarm,
+72,relabel_rag_on_seed44,gold_003,talk,A_NNS,A players,...t the reason we care so much is because A players can do so much more. And this is true a...,false alarm,
+73,relabel_rag_on_seed44,gold_011,talk,THERE_IS_A_LOT_OF,there's,...ssues that comes up again and again. So there's a few reasons why your CFO isn't delive...,colloquial or prescriptive,'there's a few reasons'
+74,relabel_rag_on_seed44,gold_013,talk,IT_ITS,it,"...is person actually worked at Slack when it IPO'd. He says, ""I remember back then, ...",false alarm,
+75,relabel_rag_on_seed44,gold_014,linkedin,MORFOLOGIK_RULE_EN_US,href,"...etter / whatever. This usually takes <a href="" URL",not grammar (truncation or markup),stray HTML fragment
+76,relabel_rag_on_seed44,gold_016,talk,VBG_THEYRE,thinking they're,...Agents -- and I'm guilty here too -- is thinking they're set-it-and-forget-it once you get them ...,false alarm,
+77,relabel_rag_on_seed44,gold_017,talk,THERE_IS_A_LOT_OF,there's,So there's so many things we could talk about toda...,colloquial or prescriptive,'there's so many things'
+78,relabel_rag_on_seed44,gold_018,talk,THERE_S_MANY,there's some things,... to do. We don't want to lose them. Now there's some things you can do once the relationship starts...,colloquial or prescriptive,'there's some things'
+79,relabel_rag_on_seed44,gold_019,blog,OVER_TIME,over time,"...heir products, their industry, and more over time.  That doesn’t happen overnight.  But w...",false alarm,
+80,relabel_rag_on_seed44,gold_023,linkedin,PER_USER_BASIS_HYPHEN,per user,"... Instead of paying thousands of dollars per user license plus implementation fees, you m...",false alarm,
+81,relabel_rag_on_seed44,gold_024,blog,THERE_S_MANY,there’s real lessons,"... down why these numbers matter, because there’s real lessons here whether you’re building a startup ...",colloquial or prescriptive,'there's real lessons'
+82,relabel_rag_on_seed44,gold_029,blog,OVER_TIME,over time,... needed Happy customers who bought more over time A clear path to profitability It worked...,false alarm,
+83,personarag_seed42,gold_005,x,EN_A_VS_AN,a,... of Informatica: A Tale of Two IPOs and a $8 Billion Exit  Informatica's journey ...,real mistake,'a $8 Billion' should be 'an $8'
+84,personarag_seed42,gold_006,linkedin,STEP_BY_STEP_HYPHEN,Step by Step,...New at WordPress with Matt Mullenweg  A Step by Step Guide to Revenue Growth with Mark Rober...,false alarm,
+85,personarag_seed42,gold_006,talk,STEP_BY_STEP_HYPHEN,Step by Step,"...andout videos include Mark Roberge's ""A Step by Step Guide to Revenue Growth"" (79,000 views)...",false alarm,
+86,personarag_seed42,gold_012,talk,PRONOUN_NOUN,it if,"...ance, but the results can be well worth it if done correctly.",false alarm,
+87,personarag_seed42,gold_021,talk,MORFOLOGIK_RULE_EN_US,materialally,"...ss model. So, if your AI feature didn't materialally boost revenue – then try again.",real mistake,typo 'materialally'
+88,personarag_seed42,gold_028,blog,BEGINNING_TO_ADDING_BROAD,to changing,...more agile competitors who are adapting to changing market conditions. The reallocation of ...,false alarm,
+89,base_llama31,gold_001,linkedin,EN_A_VS_AN,a,"...ean? Well, in enterprise sales, there's a unwritten agreement between the buyer (...",real mistake,'a unwritten' should be 'an unwritten'
+90,base_llama31,gold_004,linkedin,BE_TO_VBG,to building,...t to individual career success as it is to building a successful company. How many of us ar...,false alarm,
+91,base_llama31,gold_005,blog,MORFOLOGIK_RULE_EN_US,heckuva,"...can I say? This company has been on one heckuva ride.  As you know, my passion is start...",false alarm,
+92,base_llama31,gold_005,blog,MORFOLOGIK_RULE_EN_US,informatic,...nd then... The second IPO (2015) helped informatic gain even more momentum – further solid...,real mistake,"'informatic' (name, lowercase and cut)"
+93,base_llama31,gold_007,blog,EN_A_VS_AN,a,...and I can confidently say that we're at a inflection point. A game-changer. The b...,real mistake,'a inflection' should be 'an inflection'
+94,base_llama31,gold_011,talk,RELATIVE_CLAUSE_AGREEMENT,is,...n. It comes from one of our members who is experiencing a very common challenge in...,false alarm,
+95,base_llama31,gold_011,talk,IT_IS_JJ_TO_VBG,running,...ning is not optional; it's essential to running a successful software company. I encour...,false alarm,
+96,base_llama31,gold_016,linkedin,EN_DIACRITICS_REPLACE_ORTHOGRAPHY_VOILA,voila,"...sets, fine-tuned its performance... and voila! Our AI-powered product was ready to ro...",false alarm,
+97,base_llama31,gold_018,blog,DIFFUSE_TENSIONS,diffuse,"...g.""  By listening actively, I'm able to diffuse the tension and create space for a more...",real mistake,'diffuse' for 'defuse'
+98,base_llama31,gold_018,blog,AM_I,am,... that I care about their experience and am willing to go the extra mile to resolve...,false alarm,
+99,base_llama31,gold_020,x,MORFOLOGIK_RULE_EN_US,piv,"...tell you why:  You're not failing, just piv",not grammar (truncation or markup),draft cut off mid-word ('piv')
+100,base_llama31,gold_020,talk,MORFOLOGIK_RULE_EN_US,storytime,"...dds are actually stacked against you.  [storytime]  Jason Lemkin: When I was at Echosign,...",false alarm,
+101,base_llama31,gold_022,blog,CONDITIONAL_CLAUSE,won't let,"... where does this leave us? If AI agents won't let us do less work, then we need to rethin...",false alarm,
+102,base_llama31,gold_025,linkedin,MANY_FEW_UNCOUNTABLE,many,"...eed to spend it all - on sales. Hire as many reps as possible, even if they don't qu...",false alarm,

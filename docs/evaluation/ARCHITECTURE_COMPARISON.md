@@ -2,7 +2,7 @@
 
 This page answers one question: **on the new relabeled data, how do the architectures compare when we generate the same 120 gold prompts with each of them?** It uses saved results only. The runs were made on Colab (`colab/PUK28_comparison_runs.ipynb`) and every number below can be rebuilt with two commands (last section).
 
-Voice metric design and grammar checking are **not** part of this page. Kevin is researching both and will tell us what to do. We implement them after that. This page only reports the existing voice numbers that come out of the comparison.
+This page uses the existing judge scores. Grammar (LanguageTool) and the fixed-length voice score were added afterwards, at Kevin's request, and are on their own pages: [`GRAMMAR_LANGUAGETOOL.md`](GRAMMAR_LANGUAGETOOL.md) and [`VOICE_FIXED_LENGTH.md`](VOICE_FIXED_LENGTH.md). They confirm the conclusions here: Relabel's blog voice advantage over PersonaRAG survives a fixed length, and the "RAG hurts blog voice" signal was length.
 
 ## The short answer
 
@@ -110,7 +110,7 @@ One seed only, so this is a lead and not a finding. Retrieval makes no clear dif
 - **Persona utility was not usable.** It can only be computed on about 15 blog drafts that pass every gate, which is too few.
 - **Thirty topics is a development panel, not a test set,** and three seeds show a pattern but are not a significance test.
 - **Why scores differ is a guess.** For example, "Relabel scores lower on writing quality because its drafts are short" fits the numbers but has not been tested.
-- **Not covered:** voice metric design, grammar checking (waiting for Kevin's research, then we implement), the ontology architecture (not built yet), and deployment of the old models (parked).
+- **Not covered:** the ontology architecture (not built yet), and deployment of the old models (parked).
 
 ## How to rebuild every number
 

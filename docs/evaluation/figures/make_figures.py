@@ -155,6 +155,47 @@ def length_figure(out: Path) -> None:
     print("wrote", out)
 
 
+def voice_fixed_figure(out: Path) -> None:
+    """PUK-28: blog voice distance on the first 100 words only, per architecture and seed, next to real Lemkin posts."""
+    import json
+
+    folder = ROOT / "docs/evaluation/examples/data/voice_fixed"
+    arms = [
+        ("Base Llama 3.1", BLUE, ["base_llama31"]),
+        ("PersonaRAG", ORANGE, ["personarag_seed42"]),
+        ("Relabel, RAG off", AQUA, [f"relabel_rag_off_seed{s}" for s in (42, 43, 44)]),
+        ("Relabel + RAG", AQUA, [f"relabel_rag_on_seed{s}" for s in (42, 43, 44)]),
+    ]
+    summaries = {name: json.loads((folder / f"{name}.summary.json").read_text(encoding="utf-8")) for _, _, names in arms for name in names}
+    real = next(iter(summaries.values()))["real_posts"]["blog"]
+    fig, ax = plt.subplots(figsize=(8.5, 3.8))
+    for row, (label, color, names) in enumerate(arms):
+        values = [summaries[n]["drafts"]["blog"]["mean_distance_fixed"] for n in names]
+        ax.plot([min(values), max(values)], [row, row], color=color, lw=2, solid_capstyle="round", zorder=2)
+        for value, name in zip(values, names):
+            hollow = "rag_off" in name
+            ax.plot(value, row, "o", ms=9, mfc=SURFACE if hollow else color, mec=color, mew=2, zorder=3)
+        ax.annotate(f"{sum(values) / len(values):.2f}", (max(values), row), xytext=(10, -3), textcoords="offset points", fontsize=10, color=INK)
+    ax.axvline(real["mean_distance_fixed"], color=INK2, lw=1.2, ls=(0, (4, 3)), zorder=1)
+    ax.annotate(f"real Lemkin posts\n({real['mean_distance_fixed']:.2f}, first {real['fixed_words']} words)", (real["mean_distance_fixed"], -0.55),
+                xytext=(6, 0), textcoords="offset points", fontsize=9, color=INK2, va="top")
+    ax.set_yticks(range(len(arms)), [a[0] for a in arms])
+    ax.set_ylim(len(arms) - 0.4, -0.9)
+    ax.set_xlim(0.8, 2.35)
+    ax.set_xlabel("voice distance on the first 100 words of a blog draft (lower is closer to Lemkin)")
+    ax.grid(axis="x", color=GRID, lw=0.8)
+    ax.set_axisbelow(True)
+    for side in ("top", "right", "left"):
+        ax.spines[side].set_visible(False)
+    ax.tick_params(axis="y", length=0)
+    ax.set_title("Relabel matches real posts on voice; PersonaRAG and base do not", loc="left", fontsize=12.5, fontweight="bold", color=INK, pad=14)
+    fig.text(0.01, -0.04, "One dot per seed (hollow = RAG off); line spans the seeds. The score uses the same number of words for every draft.",
+             fontsize=9, color=INK2)
+    fig.savefig(out, dpi=160, bbox_inches="tight")
+    plt.close(fig)
+    print("wrote", out)
+
+
 def main() -> None:
     if not COMBINED.exists():
         sys.exit("Run docs/evaluation/examples/data/architecture/rebuild_reports.py first.")
@@ -171,6 +212,8 @@ def main() -> None:
         HERE / "fig2_relabel_rag_vs_personarag.png",
     )
     length_figure(HERE / "fig3_draft_length_by_medium.png")
+    if (ROOT / "docs/evaluation/examples/data/voice_fixed/base_llama31.summary.json").exists():
+        voice_fixed_figure(HERE / "fig5_voice_fixed_blog.png")
 
 
 if __name__ == "__main__":

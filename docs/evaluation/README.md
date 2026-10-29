@@ -15,7 +15,8 @@ Written by Vrushabh Bodarya, 2026-10-24. Linear: PUK-28. Branch: `vb-puk-28`.
   4. Relabel against repaired (no RAG) keeps its direction in all three seeds. That result repeats.
   5. Our grammar tool finds typos and punctuation slips only. It catches 0 of 40 ordinary grammar mistakes, so grammar still needs a real checker.
 - **Update 2026-10-27 (architecture comparison).** The missing runs now exist: Relabel + RAG seeds 43 and 44, and PersonaRAG on the new data (made on Colab, notebook in `colab/`). Main results, in plain words: Relabel + RAG is much closer to Lemkin than PersonaRAG on blogs (and that survives equal length), but it writes shorter drafts and scores lower on writing quality. The RAG-on blog voice gap repeats in direction across three seeds, is not clear after correction, and shrinks to about zero at equal length, which confirms finding 2 below. Full write-up: [`ARCHITECTURE_COMPARISON.md`](ARCHITECTURE_COMPARISON.md).
-- **What is needed.** A choice for the grammar checker, Kevin's agreement on a length-neutral voice score, someone to confirm that our PersonaRAG stand-in is right, and a review. Details below.
+- **Update 2026-10-29 (Kevin's decisions).** Kevin chose LanguageTool for grammar and a fixed-length voice score, and both are built. LanguageTool catches 19 of 40 ordinary mistakes (the old checker caught 0), but most of its flags on our drafts are false alarms (14 of 103 are clear mistakes), and grammar does not separate the architectures. The fixed-length voice score confirms that Relabel is about as close to Lemkin as real posts are (PersonaRAG and base are not), and that "RAG hurts blog voice" was a length effect. Details: [`GRAMMAR_LANGUAGETOOL.md`](GRAMMAR_LANGUAGETOOL.md) and [`VOICE_FIXED_LENGTH.md`](VOICE_FIXED_LENGTH.md).
+- **What is needed.** Someone to confirm that our PersonaRAG stand-in is right, a teammate to re-label the 103 grammar flags (the CSV is ready), and a review. Details below.
 
 ## Where PUK-28 fits
 
@@ -35,8 +36,8 @@ flowchart LR
 | Grammar check, plus a measurement of how good it is | Done as a typo and punctuation check. Not a real grammar score |
 | Check whether the voice score is really a length effect | Done (`eval_tools.length_control`) |
 | Tests and worked examples with data copies and hashes | Done (76 tests) |
-| A real grammar checker (LanguageTool or a judge prompt) | **Needs a decision** |
-| A length-neutral voice score | **Needs Kevin's agreement** |
+| A real grammar checker | Done: LanguageTool, Kevin's choice (`eval_tools.grammar_lt`, [`GRAMMAR_LANGUAGETOOL.md`](GRAMMAR_LANGUAGETOOL.md)). Precision is low, so it is a screener |
+| A length-neutral voice score | Done: fixed-length score, Kevin's choice (`eval_tools.voice_fixed`, [`VOICE_FIXED_LENGTH.md`](VOICE_FIXED_LENGTH.md)) |
 | A PersonaRAG run on the 120 prompts, and more seeds of the Relabel adapter with RAG on | Done on Colab (2026-10-27). PersonaRAG is an approximation (base Llama 3.1 + train-only retrieval, one run); **someone should confirm it is the right stand-in** |
 | Architecture comparison on the new data (Base, PersonaRAG, Relabel with and without RAG) | Done: [`ARCHITECTURE_COMPARISON.md`](ARCHITECTURE_COMPARISON.md) |
 | Review of this PR | **Needs a teammate** |
@@ -49,6 +50,8 @@ docs/evaluation/
   README.md                      <- you are here
   METRIC_MAP.md                  <- the full review: metric map, 12 gaps, 10 fixes
   ARCHITECTURE_COMPARISON.md     <- Base, PersonaRAG and Relabel (RAG on and off) compared on the new data
+  GRAMMAR_LANGUAGETOOL.md        <- grammar with LanguageTool: what it catches, how noisy it is, results
+  VOICE_FIXED_LENGTH.md          <- the voice score on a fixed number of words, and what it changes
   colab/                         <- the Colab notebook that made the new runs, with its output
   figures/                       <- the three charts and the script that draws them
   examples/
@@ -66,6 +69,8 @@ eval_tools/
   compare.py  seeds.py           <- compare runs, check repeats
   grammar.py  grammar_audit.py   <- grammar check and its audit
   length_control.py              <- voice score against text length
+  grammar_lt.py                  <- grammar check with LanguageTool (needs Java)
+  voice_fixed.py                 <- voice score on the first N words
 tests/test_eval_tools.py         <- 76 tests on small made-up data
 ```
 
@@ -156,8 +161,8 @@ The length check needs a checkout of Kevin's branch without its 480 MB of adapte
 | Who | What | Why it matters |
 |---|---|---|
 | Vrushabh | Open the PR for review | Nobody has reviewed the code yet |
-| Kevin | Agree to compute the voice score on a fixed number of words | Right now runs with different draft lengths cannot be compared on voice |
-| Kevin | Choose the grammar route: a grammar prompt for the qwen judge on his machine, or LanguageTool (Java and about 200 MB) | The current check catches 0 of 40 ordinary grammar mistakes |
+| A teammate | Re-label the 103 LanguageTool flags in `examples/grammar_lt_flag_labels.csv` (real mistake, colloquial, false alarm) | The 14 percent precision is from our own labels, which are not independent |
+| Kevin (optional) | Say whether the judge's persona utility should switch to the fixed-length voice score | We did not change his pipeline, so it still uses the length-dependent score |
 | A teammate who knows the old PersonaRAG setup | Confirm that base Llama 3.1 + train-only retrieval is the right stand-in for PersonaRAG on the new data. If not, say what to run instead | The PersonaRAG row in `ARCHITECTURE_COMPARISON.md` depends on it. (The runs themselves were done on Colab on 2026-10-27.) |
 | The team | Later: harder voice controls, a check of truth against the outside world, a small human check of the judge, and cost and speed per architecture | Listed as R4, R7, R9 and R10 in `METRIC_MAP.md` |
 
