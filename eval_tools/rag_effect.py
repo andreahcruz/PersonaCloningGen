@@ -241,9 +241,10 @@ def to_markdown(cost: list[dict], effect: dict, label_a: str, label_b: str) -> s
             lines.append(f"| {title} | " + " | ".join(cells) + " |")
         lines += [
             "",
-            "How to read the last two rows: retrieval here searches by topic only and ignores the requested medium, so every "
-            "medium of a topic gets the same passages. A low fit means a LinkedIn or X draft is grounded mostly in blog text, "
-            "and a talk draft gets no transcript passages at all.",
+            "How to read the last two rows: by design (Kevin's v1 retriever) retrieval searches by topic only and does not filter "
+            "by the requested medium, so every medium of a topic gets the same passages. A low fit means a LinkedIn or X draft is "
+            "grounded mostly in blog text. The index holds only 40 transcript chunks, so a talk draft almost never gets one. "
+            "A low fit is a description of that design, not by itself a defect.",
         ]
     return "\n".join(lines) + "\n"
 

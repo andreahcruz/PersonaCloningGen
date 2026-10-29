@@ -211,7 +211,7 @@ def test_report_names_both_runs_and_says_how_to_read_the_fit_rows(tmp_path):
     assert "What On changed and what it cost, compared with Off" in text
     assert "counted once per topic" in text
     assert "Retrieved passages that fit the requested medium" in text
-    assert "ignores the requested medium" in text
+    assert "does not filter by the requested medium" in text
 
 
 def test_report_without_retrieval_has_no_retrieval_section():

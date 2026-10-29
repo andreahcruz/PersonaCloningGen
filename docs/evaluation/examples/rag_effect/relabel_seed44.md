@@ -48,4 +48,4 @@ Differences are Relabel RAG on (seed 44) minus Relabel RAG off (seed 44), paired
 | Retrieved passages that fit the requested medium | 25% | 57% | 9% | 33% | 0% |
 | Mean passage distance (lower is closer) | 0.243 | 0.243 | 0.243 | 0.243 | 0.243 |
 
-How to read the last two rows: retrieval here searches by topic only and ignores the requested medium, so every medium of a topic gets the same passages. A low fit means a LinkedIn or X draft is grounded mostly in blog text, and a talk draft gets no transcript passages at all.
+How to read the last two rows: by design (Kevin's v1 retriever) retrieval searches by topic only and does not filter by the requested medium, so every medium of a topic gets the same passages. A low fit means a LinkedIn or X draft is grounded mostly in blog text. The index holds only 40 transcript chunks, so a talk draft almost never gets one. A low fit is a description of that design, not by itself a defect.

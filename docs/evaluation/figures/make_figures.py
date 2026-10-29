@@ -177,9 +177,9 @@ def passage_fit_figure(out: Path) -> None:
     ax.set_axisbelow(True)
     for side in ("top", "right"):
         ax.spines[side].set_visible(False)
-    ax.set_title("Retrieval ignores the medium: only a quarter of passages match", loc="left", fontsize=12.5,
+    ax.set_title("Retrieval is not medium-specific (by design): a quarter of passages match", loc="left", fontsize=12.5,
                  fontweight="bold", color=INK, pad=14)
-    fig.text(0.01, -0.02, "Relabel + RAG, seed 43, 4 passages per topic. A talk draft gets no transcript passages at all.",
+    fig.text(0.01, -0.02, "Relabel + RAG, seed 43, 4 passages per topic. The index has only 40 transcript chunks, so a talk draft almost never gets one.",
              fontsize=9, color=INK2)
     fig.savefig(out, dpi=160, bbox_inches="tight")
     plt.close(fig)

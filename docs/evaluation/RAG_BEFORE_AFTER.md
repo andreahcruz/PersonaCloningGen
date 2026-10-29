@@ -7,7 +7,7 @@ The Linear task has no written description, so the scope here (a defined metric 
 ## The short answer
 
 1. **RAG makes the prompt about five times longer** (70 to 360 tokens) and adds about **28 to 33 seconds of evidence extraction per topic** (14 to 17 minutes for the 30 topics, about 8 seconds per draft). It does **not** change how much the model writes: draft length and the share of drafts that hit the length limit show no clear change.
-2. **Retrieval ignores the requested medium.** Only about 25% of retrieved passages are of the medium that was asked for: 57% for blogs, 33% for X, 9% for LinkedIn and **0% for talks**. Retrieval searches by topic only, so a LinkedIn or talk draft is grounded mostly in blog and X passages.
+2. **Retrieval is not medium-specific, and that is Kevin's design.** His v1 retriever fetches factual evidence from the whole index once per topic and shares it across the four mediums (his own audit, `EXP-20261004-009`, shows the same mix we measured). As a result only about 25% of retrieved passages are of the medium that was asked for: 57% for blogs, 33% for X, 9% for LinkedIn and **0% for talks**. Talk gets none because the index holds only **40 transcript chunks** (out of 21,193: blog 9,255, X 11,185, LinkedIn 713). Whether this matters for quality has not been tested.
 3. **About half of the RAG drafts contain numbers the evidence does not support** (47% to 55%). Copying a retrieved passage is rare (2% to 3%), and 80% to 82% of the claims the model proposed survive verification.
 4. **Put with PUK-28: in this setup RAG adds cost and shows no measurable benefit on our metrics.** The quality side showed no consistent change (writing quality, task adherence, stance), and the small blog voice drop mostly disappears at equal length.
 
@@ -66,11 +66,11 @@ The base run and the PersonaRAG run were made through Ollama, which does not sav
 - **The unsupported-number rate is a diagnostic, not a verdict.** In `METRIC_MAP.md` (gaps G5 and G6) the number check flags about half of the drafts while the claim judge says 99% of claims are supported, so the two truth checks disagree. And there is no "before" value, because a draft without retrieval has no evidence to compare against.
 - **Seed 42 used different hardware** than seeds 43 and 44, which affects the evidence seconds and a little of the evidence text.
 - **"No measurable benefit" is about our metrics and this panel.** Thirty topics is a development panel, and our metrics do not measure factual accuracy against the outside world.
-- **The medium mismatch is measured, not yet tested as a cause.** We have not run retrieval filtered by medium, so we cannot say how much quality it would recover.
+- **The medium mismatch is by design, and its effect is untested.** Kevin's pipeline deliberately does not filter by medium (the facts are meant to be shared). We have not run retrieval filtered by medium, so we cannot say whether it would help, and the small LinkedIn (713) and talk (40) pools suggest the passages could become less relevant, not more.
 
 ## A concrete next step (not done here)
 
-Retrieval searches by topic only. Trying it with a medium filter (blog passages for a blog draft, transcripts for a talk) is the cheapest change that targets a measured weakness. It is a pipeline change, so it belongs with Kevin or Andreah. If they try it, `eval_tools.rag_effect` and `eval_tools.compare` will show whether it helped.
+Kevin asked us to try "type-specific RAG". That can mean two things: filtering the retrieved facts by the requested medium (a small patch to his retriever, which currently ignores the medium on purpose), or giving medium-specific style examples (his `--fixed-style` option, off by default, which has two fixed examples each for blog, LinkedIn and X and none for talk). Either is an experiment to run, not a known fix. `eval_tools.rag_effect` (passage fit, distance, cost) and `eval_tools.compare` (quality) will show whether it helped, and they should also show whether the small pools make the filtered passages less relevant.
 
 ## How to rebuild every number
 
