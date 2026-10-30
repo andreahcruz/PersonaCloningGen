@@ -1,4 +1,4 @@
-"""Draw the three charts used in docs/evaluation/ARCHITECTURE_COMPARISON.md.
+"""Draw the charts used by the evaluation writeups.
 
 Run it from the repository root, after `rebuild_reports.py` has written the combined rows:
 
@@ -11,9 +11,14 @@ cannot disagree.
 
 The charts:
 
-1. fig1_relabel_rag_on_vs_off.png      Relabel with RAG on minus RAG off, one dot per seed.
-2. fig2_relabel_rag_vs_personarag.png  Relabel + RAG minus PersonaRAG, one dot per seed.
-3. fig3_draft_length_by_medium.png     Average draft length of each architecture, by medium.
+1. fig1_relabel_rag_on_vs_off.png         Relabel with RAG on minus RAG off, one dot per seed.
+2. fig2_relabel_rag_vs_personarag.png     Relabel + RAG minus PersonaRAG, one dot per seed.
+3. fig3_draft_length_by_medium.png        Average draft length of each architecture, by medium.
+4. fig4_passage_fit_by_medium.png         Share of retrieved passages that match the requested medium.
+5. fig5_voice_fixed_blog.png              Blog voice distance on the first 100 words.
+6. fig6_retrieval_filter_distance.png     Best-passage distance with and without a medium filter.
+
+Charts 4 and 6 are drawn only when the PUK-34 result files are present. Chart 5 is drawn only when the fixed-length voice summaries are present.
 
 How to read charts 1 and 2: each small panel is one metric. A dot is the average difference between the
 two runs for one seed and the line is its 95 percent interval. The dashed vertical line is "no difference".
@@ -30,6 +35,7 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
+import matplotlib.ticker  # noqa: E402
 from matplotlib.ticker import MaxNLocator  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
@@ -188,7 +194,7 @@ def voice_fixed_figure(out: Path) -> None:
     for side in ("top", "right", "left"):
         ax.spines[side].set_visible(False)
     ax.tick_params(axis="y", length=0)
-    ax.set_title("Relabel matches real posts on voice; PersonaRAG and base do not", loc="left", fontsize=12.5, fontweight="bold", color=INK, pad=14)
+    ax.set_title("Blog openings: Relabel is near real posts; PersonaRAG and base are not", loc="left", fontsize=12.5, fontweight="bold", color=INK, pad=14)
     fig.text(0.01, -0.04, "One dot per seed (hollow = RAG off); line spans the seeds. The score uses the same number of words for every draft.",
              fontsize=9, color=INK2)
     fig.savefig(out, dpi=160, bbox_inches="tight")
@@ -196,7 +202,78 @@ def voice_fixed_figure(out: Path) -> None:
     print("wrote", out)
 
 
+def passage_fit_figure(out: Path) -> None:
+    """PUK-34: how many retrieved passages are of the medium that was asked for (Relabel + RAG, seed 43)."""
+    import json
+
+    report = json.loads((ROOT / "docs/evaluation/examples/rag_effect/relabel_seed43.json").read_text(encoding="utf-8"))
+    by_medium = report["rag_only"]["by_medium"]
+    mediums = ["blog", "linkedin", "x", "talk"]
+    labels = ["Blog", "LinkedIn", "X post", "Talk"]
+    values = [by_medium[m]["passage_fits_medium"] * 100 for m in mediums]
+    fig, ax = plt.subplots(figsize=(7.5, 4.2))
+    ax.bar(range(4), values, width=0.5, color=BLUE, zorder=2)
+    for i, value in enumerate(values):
+        ax.annotate(f"{value:.0f}%", (i, value), xytext=(0, 4), textcoords="offset points", ha="center", fontsize=10, color=INK)
+    ax.set_xticks(range(4), labels)
+    ax.set_ylim(0, 100)
+    ax.set_ylabel("retrieved passages of the requested medium")
+    ax.yaxis.set_major_formatter(matplotlib.ticker.PercentFormatter())
+    ax.grid(axis="y", color=GRID, lw=0.8)
+    ax.set_axisbelow(True)
+    for side in ("top", "right"):
+        ax.spines[side].set_visible(False)
+    ax.set_title("Retrieval is not medium-specific (by design): a quarter of passages match", loc="left", fontsize=12.5,
+                 fontweight="bold", color=INK, pad=14)
+    fig.text(0.01, -0.02, "Relabel + RAG, seed 43, 4 passages per topic. The index has only 40 transcript chunks, so a talk draft almost never gets one.",
+             fontsize=9, color=INK2)
+    fig.savefig(out, dpi=160, bbox_inches="tight")
+    plt.close(fig)
+    print("wrote", out)
+
+
+def retrieval_filter_figure(out: Path) -> None:
+    """PUK-34: how close is the best passage for each of the 30 topics, with and without a medium filter."""
+    import json
+    import random
+
+    report = json.loads((ROOT / "docs/evaluation/examples/data/retrieval_by_medium/results.json").read_text(encoding="utf-8"))
+    rows = [("No filter (today)", [v[0] for v in report["unfiltered_top4_distances"].values()], INK2)]
+    names = {"blog": "Blog passages only", "linkedin": "LinkedIn passages only", "x": "X posts only", "talk": "Talk transcripts only (40 passages)"}
+    for medium in ("blog", "linkedin", "x", "talk"):
+        rows.append((names[medium], [v[0] for v in report["filtered_top4_distances"][medium].values()], BLUE))
+    worst_today = max(rows[0][1])
+    rng = random.Random(0)
+    fig, ax = plt.subplots(figsize=(9, 4.4))
+    for row, (label, values, color) in enumerate(rows):
+        ax.plot([min(values), max(values)], [row, row], color=GRID, lw=3, solid_capstyle="round", zorder=1)
+        ax.scatter(values, [row + rng.uniform(-0.18, 0.18) for _ in values], s=34, color=color, alpha=0.85, zorder=3)
+        median = sorted(values)[len(values) // 2]
+        ax.annotate(f"median {median:.2f}", (max(values), row), xytext=(10, -3), textcoords="offset points", fontsize=9.5, color=INK)
+    ax.axvline(worst_today, color=INK2, lw=1.1, ls=(0, (4, 3)), zorder=2)
+    ax.annotate(f"worst best-match\nwithout a filter ({worst_today:.2f})", (worst_today, -0.62), xytext=(6, 0), textcoords="offset points",
+                fontsize=8.5, color=INK2, va="top")
+    ax.set_yticks(range(len(rows)), [r[0] for r in rows])
+    ax.set_ylim(len(rows) - 0.4, -1.0)
+    ax.set_xlim(0.12, 0.68)
+    ax.set_xlabel("distance of the best retrieved passage, one dot per topic (lower = closer match)")
+    ax.grid(axis="x", color=GRID, lw=0.8)
+    ax.set_axisbelow(True)
+    for side in ("top", "right", "left"):
+        ax.spines[side].set_visible(False)
+    ax.tick_params(axis="y", length=0)
+    ax.set_title("A talk filter returns poor matches; a blog filter barely changes anything", loc="left", fontsize=12, fontweight="bold", color=INK, pad=14)
+    fig.text(0.01, -0.04, "30 gold topics, top 4 passages, Kevin's v1 index. Filtered search uses his unused medium_where helper.", fontsize=9, color=INK2)
+    fig.savefig(out, dpi=160, bbox_inches="tight")
+    plt.close(fig)
+    print("wrote", out)
+
+
 def main() -> None:
+    if (ROOT / "docs/evaluation/examples/rag_effect/relabel_seed43.json").exists():
+        passage_fit_figure(HERE / "fig4_passage_fit_by_medium.png")
+    if (ROOT / "docs/evaluation/examples/data/retrieval_by_medium/results.json").exists():
+        retrieval_filter_figure(HERE / "fig6_retrieval_filter_distance.png")
     if not COMBINED.exists():
         sys.exit("Run docs/evaluation/examples/data/architecture/rebuild_reports.py first.")
     difference_figure(

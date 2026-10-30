@@ -1,0 +1,2030 @@
+{
+ "reproduction_check": {
+  "topics_matching_saved_run": 28,
+  "topics": 30
+ },
+ "index_documents": 21193,
+ "index_by_medium": {
+  "blog": 9255,
+  "linkedin": 713,
+  "x": 11185,
+  "youtube_jason": 40
+ },
+ "k": 4,
+ "per_medium": {
+  "blog": {
+   "index_medium": "blog",
+   "pool_documents": 9255,
+   "unfiltered_share_of_medium": 0.5833,
+   "filtered_share_of_medium": 1.0,
+   "unfiltered_mean_distance": 0.243,
+   "filtered_mean_distance": 0.2554,
+   "distance_gap_mean": 0.0125,
+   "distance_gap_max": 0.0459,
+   "filtered_best_hit_distance_mean": 0.237,
+   "unfiltered_mean_words": 122.675,
+   "filtered_mean_words": 168.6167,
+   "unfiltered_very_short_share": 0.1417,
+   "filtered_very_short_share": 0.0167,
+   "overlap_with_unfiltered_share": 0.5833,
+   "filtered_unique_groups_mean": 3.6667
+  },
+  "linkedin": {
+   "index_medium": "linkedin",
+   "pool_documents": 713,
+   "unfiltered_share_of_medium": 0.1,
+   "filtered_share_of_medium": 1.0,
+   "unfiltered_mean_distance": 0.243,
+   "filtered_mean_distance": 0.3052,
+   "distance_gap_mean": 0.0623,
+   "distance_gap_max": 0.165,
+   "filtered_best_hit_distance_mean": 0.28,
+   "unfiltered_mean_words": 122.675,
+   "filtered_mean_words": 168.8833,
+   "unfiltered_very_short_share": 0.1417,
+   "filtered_very_short_share": 0.0083,
+   "overlap_with_unfiltered_share": 0.1,
+   "filtered_unique_groups_mean": 3.8
+  },
+  "x": {
+   "index_medium": "x",
+   "pool_documents": 11185,
+   "unfiltered_share_of_medium": 0.3167,
+   "filtered_share_of_medium": 1.0,
+   "unfiltered_mean_distance": 0.243,
+   "filtered_mean_distance": 0.2698,
+   "distance_gap_mean": 0.0269,
+   "distance_gap_max": 0.0873,
+   "filtered_best_hit_distance_mean": 0.246,
+   "unfiltered_mean_words": 122.675,
+   "filtered_mean_words": 44.375,
+   "unfiltered_very_short_share": 0.1417,
+   "filtered_very_short_share": 0.35,
+   "overlap_with_unfiltered_share": 0.3167,
+   "filtered_unique_groups_mean": 3.6667
+  },
+  "talk": {
+   "index_medium": "youtube_jason",
+   "pool_documents": 40,
+   "unfiltered_share_of_medium": 0.0,
+   "filtered_share_of_medium": 1.0,
+   "unfiltered_mean_distance": 0.243,
+   "filtered_mean_distance": 0.4292,
+   "distance_gap_mean": 0.1862,
+   "distance_gap_max": 0.3341,
+   "filtered_best_hit_distance_mean": 0.4064,
+   "unfiltered_mean_words": 122.675,
+   "filtered_mean_words": 263.9083,
+   "unfiltered_very_short_share": 0.1417,
+   "filtered_very_short_share": 0.0,
+   "overlap_with_unfiltered_share": 0.0,
+   "filtered_unique_groups_mean": 2.5333
+  }
+ },
+ "examples_best_filtered_hit": {
+  "blog": [
+   {
+    "id": "gold_001",
+    "topic": "Can an 8-Person StartUp Sell to a CIO? Yes — If You Understand The Social Contract.",
+    "distance": 0.3252,
+    "words": 65,
+    "passage": "8. They map and sell to all the key stakeholders.\nIn any meaningful deal, multiple stakeholders exist on the buyer’s side. Mediocre reps sell to whoever seems to be running point. Better reps get buy-in from everyone who matters — the economic buyer, the champion, the skeptic in the room. A deal wit"
+   },
+   {
+    "id": "gold_002",
+    "topic": "5 Interesting Learnings from Monday.com at $550,000,000 in ARR",
+    "distance": 0.2178,
+    "words": 165,
+    "passage": "We\nlast looked in on Monday.com at $240m ARR\n, but it’s grown so incredibly quickly, and so effectively, it’s worth checking in again at $400,000,000 in ARR.\nBecause at $400,000,000 in ARR …  Monday is growing a stunning 91% (!) year-over-year.  Goodness gracious!\n5 Interesting Learnings:\n\n#1.  Reve"
+   },
+   {
+    "id": "gold_003",
+    "topic": "How to Truly Stand Out in Any Job Interview, from SDR to COO",
+    "distance": 0.2979,
+    "words": 141,
+    "passage": "Dear SaaStr: How Do I Build a Great SDR Team?\nBuilding a great SDR team is one of the most critical steps in scaling a SaaS company, especially when you’re selling to the C-suite or enterprise. SDRs are the engine of your pipeline, and if you get this right, it can transform your sales organization."
+   },
+   {
+    "id": "gold_004",
+    "topic": "Doubling Down: Mark Roberge, Co-Founder and Managing Director at Stage 2 Capital",
+    "distance": 0.2834,
+    "words": 36,
+    "passage": "“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market. Kicking us off is Jay Levy, Managing Partner at Zelkova Ventures."
+   }
+  ],
+  "linkedin": [
+   {
+    "id": "gold_001",
+    "topic": "Can an 8-Person StartUp Sell to a CIO? Yes — If You Understand The Social Contract.",
+    "distance": 0.3729,
+    "words": 305,
+    "passage": "So how big of a sales team do you need with a hot AI B2B startup? I think there are roughly two playbooks being run: Playbook #1: Just focusing on servicing massive in-bound demand. Many AI B2B leaders are doing this and often end up with quotas as high as $4m per AE. That sounds high and it is high"
+   },
+   {
+    "id": "gold_002",
+    "topic": "5 Interesting Learnings from Monday.com at $550,000,000 in ARR",
+    "distance": 0.3544,
+    "words": 200,
+    "passage": "So it’s ending up a good year for Enterprise SaaS, fueled in part by AI Take ServiceNow: 📈 It’s now worth a cool $230 Billion at $11 Billion in ARR — the 20x club! Its stock is up a cool +64% this year! 5 Interesting Learnings: #1. Highly Durable Revenue Growth, Still Growing +23% a Year Even Well P"
+   },
+   {
+    "id": "gold_003",
+    "topic": "How to Truly Stand Out in Any Job Interview, from SDR to COO",
+    "distance": 0.3239,
+    "words": 225,
+    "passage": "Out there looking for a VP of Sales role, or just a senior AE role? Here's my #1 piece of advice to sales execs: 😴 Enough With The Phone It In Interview. What's that? It's something that I really only see sales execs do, that are confident in their sales skills. They go to interviews that they barel"
+   },
+   {
+    "id": "gold_004",
+    "topic": "Doubling Down: Mark Roberge, Co-Founder and Managing Director at Stage 2 Capital",
+    "distance": 0.3554,
+    "words": 197,
+    "passage": "So a lot of scale-ups and startups have fallen off the venture track. They aren’t growing at venture-scale rates anymore. Triple Triple Double Double is now in the rear-view mirror. That can be tough. It quickly becomes impossible to raise any capital other than from insiders. Folks leave. It’s a bi"
+   }
+  ],
+  "x": [
+   {
+    "id": "gold_001",
+    "topic": "Can an 8-Person StartUp Sell to a CIO? Yes — If You Understand The Social Contract.",
+    "distance": 0.3081,
+    "words": 23,
+    "passage": "What is the process of selling SaaS to a big corporation as a small startup? What are the usual purchasing guid... \nhttp://saastr.com/process-selling-saas-big-corporation-small-startup-usual-purchasing-guidelines-manager-convinced-wants-buy-certain-service-team/\n…"
+   },
+   {
+    "id": "gold_002",
+    "topic": "5 Interesting Learnings from Monday.com at $550,000,000 in ARR",
+    "distance": 0.2232,
+    "words": 30,
+    "passage": ".\n@mondaydotcom\n crosses:\n\n$1,000,000,000 in ARR\n+34% Revenue Growth\n110% NRR\n22% Free Cash Flow Margins\n\nCall it many things. But don't call it a downturn.\n\nGo find your Monday."
+   },
+   {
+    "id": "gold_003",
+    "topic": "How to Truly Stand Out in Any Job Interview, from SDR to COO",
+    "distance": 0.2755,
+    "words": 17,
+    "passage": "These 2 Questions Will Help You Stand Out in an Interview - SaaStr in TIME \nhttp://time.com/3834976/2-interview-questions/\n…"
+   },
+   {
+    "id": "gold_004",
+    "topic": "Doubling Down: Mark Roberge, Co-Founder and Managing Director at Stage 2 Capital",
+    "distance": 0.3185,
+    "words": 13,
+    "passage": "\"The Second-Timers:  Mark Organ, CEO/Founder of Influitive and Eloqua: Hard-Won Lessons\" \nhttp://saastr.com/2015/01/07/the-second-timers-mark-organ-ceofounder-of-influitive-and-eloqua-10-hard-won-lessons/\n…"
+   }
+  ],
+  "talk": [
+   {
+    "id": "gold_001",
+    "topic": "Can an 8-Person StartUp Sell to a CIO? Yes — If You Understand The Social Contract.",
+    "distance": 0.4183,
+    "words": 134,
+    "passage": "Predicting who wants to sell their company based on what they say in the abstract is waste of time. when you get so taking these offers when you get the 10 million or hund00 million offer from Meta it rocks you back I'd say and you know you go home you talk to your spouse do we want to do this this "
+   },
+   {
+    "id": "gold_002",
+    "topic": "5 Interesting Learnings from Monday.com at $550,000,000 in ARR",
+    "distance": 0.4247,
+    "words": 134,
+    "passage": "Predicting who wants to sell their company based on what they say in the abstract is waste of time. when you get so taking these offers when you get the 10 million or hund00 million offer from Meta it rocks you back I'd say and you know you go home you talk to your spouse do we want to do this this "
+   },
+   {
+    "id": "gold_003",
+    "topic": "How to Truly Stand Out in Any Job Interview, from SDR to COO",
+    "distance": 0.4126,
+    "words": 307,
+    "passage": "And goodness, those numbers just get bigger and bigger. And the number one mistake I see is not hiring managers that are better than you. can't as a VP when you come as a VP you can hire eight maybe 10 maybe even 12 people yourself and and make it and and maybe you can take a few of those top folks "
+   },
+   {
+    "id": "gold_004",
+    "topic": "Doubling Down: Mark Roberge, Co-Founder and Managing Director at Stage 2 Capital",
+    "distance": 0.416,
+    "words": 317,
+    "passage": "The number one sign I know a VP of sales will never make it is when they don't own up to a miss. Okay, I know it. There's a couple startups I'm working with right now that had a challenging last quarter. So be it. We're all going to have a rough quarter. Almost none of us never did. And I can alread"
+   }
+  ]
+ },
+ "unfiltered_top4_ids": {
+  "gold_001": [
+   "train_20783",
+   "train_26362",
+   "train_21878",
+   "train_25912"
+  ],
+  "gold_002": [
+   "train_10049",
+   "train_9156",
+   "train_14595",
+   "train_10774"
+  ],
+  "gold_003": [
+   "train_24912",
+   "train_24913",
+   "train_3199",
+   "train_3205"
+  ],
+  "gold_004": [
+   "train_7976",
+   "train_7930",
+   "train_7590",
+   "train_7888"
+  ],
+  "gold_005": [
+   "train_4140",
+   "train_6158",
+   "train_14283",
+   "train_10762"
+  ],
+  "gold_006": [
+   "train_6833",
+   "train_23306",
+   "train_24276",
+   "train_24623"
+  ],
+  "gold_007": [
+   "train_7876",
+   "train_25435",
+   "train_15820",
+   "train_25711"
+  ],
+  "gold_008": [
+   "train_22819",
+   "train_7403",
+   "train_7765",
+   "train_15003"
+  ],
+  "gold_009": [
+   "train_13786",
+   "train_7692",
+   "train_12216",
+   "train_7066"
+  ],
+  "gold_010": [
+   "train_1835",
+   "train_6611",
+   "train_9114",
+   "train_1542"
+  ],
+  "gold_011": [
+   "train_12272",
+   "train_9058",
+   "train_1822",
+   "train_4667"
+  ],
+  "gold_012": [
+   "train_176",
+   "train_180",
+   "train_78",
+   "train_13350"
+  ],
+  "gold_013": [
+   "train_176",
+   "train_12393",
+   "train_12657",
+   "train_11815"
+  ],
+  "gold_014": [
+   "train_17203",
+   "train_8111",
+   "train_3128",
+   "train_7249"
+  ],
+  "gold_015": [
+   "train_4226",
+   "train_12625",
+   "train_13789",
+   "train_11900"
+  ],
+  "gold_016": [
+   "train_12523",
+   "train_44",
+   "train_11564",
+   "train_11714"
+  ],
+  "gold_017": [
+   "train_6348",
+   "train_6351",
+   "train_1418",
+   "train_6347"
+  ],
+  "gold_018": [
+   "train_16129",
+   "train_921",
+   "train_11274",
+   "train_4669"
+  ],
+  "gold_019": [
+   "train_14164",
+   "train_21688",
+   "train_10562",
+   "train_21682"
+  ],
+  "gold_020": [
+   "train_6928",
+   "train_1254",
+   "train_7740",
+   "train_7713"
+  ],
+  "gold_021": [
+   "train_2689",
+   "train_1243",
+   "train_14260",
+   "train_2138"
+  ],
+  "gold_022": [
+   "train_5658",
+   "train_12534",
+   "train_12764",
+   "train_3359"
+  ],
+  "gold_023": [
+   "train_6305",
+   "train_4420",
+   "train_15616",
+   "train_11720"
+  ],
+  "gold_024": [
+   "train_9436",
+   "train_12125",
+   "train_7696",
+   "train_6515"
+  ],
+  "gold_025": [
+   "train_11587",
+   "train_11725",
+   "train_665",
+   "train_5401"
+  ],
+  "gold_026": [
+   "train_11459",
+   "train_9376",
+   "train_6479",
+   "train_9100"
+  ],
+  "gold_027": [
+   "train_1707",
+   "train_12557",
+   "train_5556",
+   "train_12610"
+  ],
+  "gold_028": [
+   "train_12540",
+   "train_10085",
+   "train_623",
+   "train_12642"
+  ],
+  "gold_029": [
+   "train_12669",
+   "train_5411",
+   "train_6660",
+   "train_2336"
+  ],
+  "gold_030": [
+   "train_12965",
+   "train_13283",
+   "train_12474",
+   "train_3026"
+  ]
+ },
+ "filtered_top4_ids": {
+  "blog": {
+   "gold_001": [
+    "train_565",
+    "train_1125",
+    "train_8901",
+    "train_9349"
+   ],
+   "gold_002": [
+    "train_10049",
+    "train_9156",
+    "train_10774",
+    "train_10147"
+   ],
+   "gold_003": [
+    "train_3199",
+    "train_3205",
+    "train_5378",
+    "train_5833"
+   ],
+   "gold_004": [
+    "train_7976",
+    "train_7930",
+    "train_7590",
+    "train_7888"
+   ],
+   "gold_005": [
+    "train_4140",
+    "train_6158",
+    "train_10762",
+    "train_3698"
+   ],
+   "gold_006": [
+    "train_6833",
+    "train_10702",
+    "train_11549",
+    "train_11449"
+   ],
+   "gold_007": [
+    "train_7876",
+    "train_4911",
+    "train_5586",
+    "train_4900"
+   ],
+   "gold_008": [
+    "train_7403",
+    "train_7765",
+    "train_10727",
+    "train_7612"
+   ],
+   "gold_009": [
+    "train_7692",
+    "train_7066",
+    "train_11284",
+    "train_6762"
+   ],
+   "gold_010": [
+    "train_1835",
+    "train_6611",
+    "train_9114",
+    "train_1542"
+   ],
+   "gold_011": [
+    "train_9058",
+    "train_1822",
+    "train_4667",
+    "train_2359"
+   ],
+   "gold_012": [
+    "train_176",
+    "train_180",
+    "train_78",
+    "train_1936"
+   ],
+   "gold_013": [
+    "train_176",
+    "train_1419",
+    "train_78",
+    "train_3922"
+   ],
+   "gold_014": [
+    "train_8111",
+    "train_3128",
+    "train_7249",
+    "train_9717"
+   ],
+   "gold_015": [
+    "train_4226",
+    "train_1418",
+    "train_5241",
+    "train_232"
+   ],
+   "gold_016": [
+    "train_44",
+    "train_1586",
+    "train_1437",
+    "train_3659"
+   ],
+   "gold_017": [
+    "train_6348",
+    "train_6351",
+    "train_1418",
+    "train_6347"
+   ],
+   "gold_018": [
+    "train_921",
+    "train_11274",
+    "train_4669",
+    "train_6911"
+   ],
+   "gold_019": [
+    "train_10562",
+    "train_9111",
+    "train_11462",
+    "train_6015"
+   ],
+   "gold_020": [
+    "train_6928",
+    "train_1254",
+    "train_7740",
+    "train_7713"
+   ],
+   "gold_021": [
+    "train_2689",
+    "train_1243",
+    "train_2138",
+    "train_6868"
+   ],
+   "gold_022": [
+    "train_5658",
+    "train_3359",
+    "train_5051",
+    "train_2296"
+   ],
+   "gold_023": [
+    "train_6305",
+    "train_4420",
+    "train_2946",
+    "train_6575"
+   ],
+   "gold_024": [
+    "train_9436",
+    "train_7696",
+    "train_6515",
+    "train_9439"
+   ],
+   "gold_025": [
+    "train_665",
+    "train_5401",
+    "train_730",
+    "train_4851"
+   ],
+   "gold_026": [
+    "train_11459",
+    "train_9376",
+    "train_6479",
+    "train_9100"
+   ],
+   "gold_027": [
+    "train_1707",
+    "train_5556",
+    "train_3347",
+    "train_3905"
+   ],
+   "gold_028": [
+    "train_10085",
+    "train_623",
+    "train_32",
+    "train_622"
+   ],
+   "gold_029": [
+    "train_5411",
+    "train_6660",
+    "train_2336",
+    "train_7183"
+   ],
+   "gold_030": [
+    "train_3026",
+    "train_1099",
+    "train_1955",
+    "train_4050"
+   ]
+  },
+  "linkedin": {
+   "gold_001": [
+    "train_11587",
+    "train_11963",
+    "train_12269",
+    "train_11788"
+   ],
+   "gold_002": [
+    "train_12154",
+    "train_12065",
+    "train_12447",
+    "train_12380"
+   ],
+   "gold_003": [
+    "train_12075",
+    "train_12112",
+    "train_12131",
+    "train_12390"
+   ],
+   "gold_004": [
+    "train_12202",
+    "train_12237",
+    "train_11786",
+    "train_11764"
+   ],
+   "gold_005": [
+    "train_11835",
+    "train_11796",
+    "train_11814",
+    "train_12354"
+   ],
+   "gold_006": [
+    "train_11784",
+    "train_11663",
+    "train_12314",
+    "train_12313"
+   ],
+   "gold_007": [
+    "train_12007",
+    "train_11622",
+    "train_12217",
+    "train_12370"
+   ],
+   "gold_008": [
+    "train_12183",
+    "train_12015",
+    "train_11717",
+    "train_12205"
+   ],
+   "gold_009": [
+    "train_12216",
+    "train_12125",
+    "train_11716",
+    "train_12154"
+   ],
+   "gold_010": [
+    "train_12485",
+    "train_12486",
+    "train_11770",
+    "train_11746"
+   ],
+   "gold_011": [
+    "train_12272",
+    "train_12392",
+    "train_12286",
+    "train_12273"
+   ],
+   "gold_012": [
+    "train_12393",
+    "train_11854",
+    "train_12405",
+    "train_11765"
+   ],
+   "gold_013": [
+    "train_12393",
+    "train_11815",
+    "train_12405",
+    "train_11765"
+   ],
+   "gold_014": [
+    "train_12286",
+    "train_12497",
+    "train_12205",
+    "train_12049"
+   ],
+   "gold_015": [
+    "train_11900",
+    "train_11772",
+    "train_12050",
+    "train_12041"
+   ],
+   "gold_016": [
+    "train_11564",
+    "train_11714",
+    "train_12349",
+    "train_11611"
+   ],
+   "gold_017": [
+    "train_12372",
+    "train_12377",
+    "train_11908",
+    "train_11839"
+   ],
+   "gold_018": [
+    "train_12033",
+    "train_12182",
+    "train_12097",
+    "train_11654"
+   ],
+   "gold_019": [
+    "train_12144",
+    "train_12142",
+    "train_12392",
+    "train_12164"
+   ],
+   "gold_020": [
+    "train_11700",
+    "train_11992",
+    "train_12429",
+    "train_12222"
+   ],
+   "gold_021": [
+    "train_11590",
+    "train_11765",
+    "train_12041",
+    "train_11900"
+   ],
+   "gold_022": [
+    "train_11702",
+    "train_11862",
+    "train_11771",
+    "train_11568"
+   ],
+   "gold_023": [
+    "train_11720",
+    "train_12360",
+    "train_11762",
+    "train_12358"
+   ],
+   "gold_024": [
+    "train_12125",
+    "train_12065",
+    "train_11606",
+    "train_12258"
+   ],
+   "gold_025": [
+    "train_11587",
+    "train_11725",
+    "train_11963",
+    "train_11756"
+   ],
+   "gold_026": [
+    "train_12020",
+    "train_12294",
+    "train_12429",
+    "train_12421"
+   ],
+   "gold_027": [
+    "train_11821",
+    "train_11812",
+    "train_12377",
+    "train_11714"
+   ],
+   "gold_028": [
+    "train_11597",
+    "train_11910",
+    "train_12195",
+    "train_12372"
+   ],
+   "gold_029": [
+    "train_12012",
+    "train_12383",
+    "train_11622",
+    "train_12217"
+   ],
+   "gold_030": [
+    "train_12474",
+    "train_12427",
+    "train_11829",
+    "train_12428"
+   ]
+  },
+  "x": {
+   "gold_001": [
+    "train_20783",
+    "train_26362",
+    "train_21878",
+    "train_25912"
+   ],
+   "gold_002": [
+    "train_14595",
+    "train_13368",
+    "train_14339",
+    "train_14145"
+   ],
+   "gold_003": [
+    "train_24912",
+    "train_24913",
+    "train_15265",
+    "train_17584"
+   ],
+   "gold_004": [
+    "train_25427",
+    "train_23459",
+    "train_15721",
+    "train_13889"
+   ],
+   "gold_005": [
+    "train_14283",
+    "train_22069",
+    "train_24966",
+    "train_13116"
+   ],
+   "gold_006": [
+    "train_23306",
+    "train_24276",
+    "train_24623",
+    "train_24633"
+   ],
+   "gold_007": [
+    "train_25435",
+    "train_15820",
+    "train_25711",
+    "train_22618"
+   ],
+   "gold_008": [
+    "train_22819",
+    "train_15003",
+    "train_19787",
+    "train_13687"
+   ],
+   "gold_009": [
+    "train_13786",
+    "train_14696",
+    "train_13368",
+    "train_12645"
+   ],
+   "gold_010": [
+    "train_14346",
+    "train_22735",
+    "train_19911",
+    "train_25978"
+   ],
+   "gold_011": [
+    "train_22315",
+    "train_18753",
+    "train_17337",
+    "train_18355"
+   ],
+   "gold_012": [
+    "train_13350",
+    "train_12590",
+    "train_12657",
+    "train_14284"
+   ],
+   "gold_013": [
+    "train_12657",
+    "train_13149",
+    "train_12590",
+    "train_13969"
+   ],
+   "gold_014": [
+    "train_17203",
+    "train_18601",
+    "train_24220",
+    "train_16351"
+   ],
+   "gold_015": [
+    "train_12625",
+    "train_13789",
+    "train_13337",
+    "train_13731"
+   ],
+   "gold_016": [
+    "train_12523",
+    "train_12715",
+    "train_12543",
+    "train_12905"
+   ],
+   "gold_017": [
+    "train_12570",
+    "train_13789",
+    "train_12526",
+    "train_14665"
+   ],
+   "gold_018": [
+    "train_16129",
+    "train_18589",
+    "train_22814",
+    "train_24404"
+   ],
+   "gold_019": [
+    "train_14164",
+    "train_21688",
+    "train_21682",
+    "train_15042"
+   ],
+   "gold_020": [
+    "train_26163",
+    "train_24708",
+    "train_26273",
+    "train_25212"
+   ],
+   "gold_021": [
+    "train_14260",
+    "train_13184",
+    "train_12554",
+    "train_12922"
+   ],
+   "gold_022": [
+    "train_12534",
+    "train_12764",
+    "train_13505",
+    "train_12976"
+   ],
+   "gold_023": [
+    "train_15616",
+    "train_17568",
+    "train_16689",
+    "train_22800"
+   ],
+   "gold_024": [
+    "train_16931",
+    "train_17667",
+    "train_14196",
+    "train_15921"
+   ],
+   "gold_025": [
+    "train_13433",
+    "train_13586",
+    "train_12966",
+    "train_12767"
+   ],
+   "gold_026": [
+    "train_15123",
+    "train_15336",
+    "train_15066",
+    "train_16026"
+   ],
+   "gold_027": [
+    "train_12557",
+    "train_12610",
+    "train_12508",
+    "train_13773"
+   ],
+   "gold_028": [
+    "train_12540",
+    "train_12642",
+    "train_12589",
+    "train_12591"
+   ],
+   "gold_029": [
+    "train_12669",
+    "train_14526",
+    "train_13645",
+    "train_14280"
+   ],
+   "gold_030": [
+    "train_12965",
+    "train_13283",
+    "train_13172",
+    "train_13173"
+   ]
+  },
+  "talk": {
+   "gold_001": [
+    "train_26541",
+    "train_26539",
+    "train_26502",
+    "train_26527"
+   ],
+   "gold_002": [
+    "train_26541",
+    "train_26534",
+    "train_26525",
+    "train_26502"
+   ],
+   "gold_003": [
+    "train_26505",
+    "train_26506",
+    "train_26503",
+    "train_26526"
+   ],
+   "gold_004": [
+    "train_26516",
+    "train_26536",
+    "train_26539",
+    "train_26525"
+   ],
+   "gold_005": [
+    "train_26538",
+    "train_26502",
+    "train_26525",
+    "train_26541"
+   ],
+   "gold_006": [
+    "train_26525",
+    "train_26505",
+    "train_26534",
+    "train_26536"
+   ],
+   "gold_007": [
+    "train_26502",
+    "train_26508",
+    "train_26525",
+    "train_26516"
+   ],
+   "gold_008": [
+    "train_26529",
+    "train_26530",
+    "train_26534",
+    "train_26524"
+   ],
+   "gold_009": [
+    "train_26541",
+    "train_26540",
+    "train_26502",
+    "train_26525"
+   ],
+   "gold_010": [
+    "train_26518",
+    "train_26519",
+    "train_26527",
+    "train_26534"
+   ],
+   "gold_011": [
+    "train_26516",
+    "train_26544",
+    "train_26515",
+    "train_26534"
+   ],
+   "gold_012": [
+    "train_26502",
+    "train_26522",
+    "train_26501",
+    "train_26534"
+   ],
+   "gold_013": [
+    "train_26534",
+    "train_26501",
+    "train_26502",
+    "train_26541"
+   ],
+   "gold_014": [
+    "train_26530",
+    "train_26525",
+    "train_26534",
+    "train_26529"
+   ],
+   "gold_015": [
+    "train_26541",
+    "train_26544",
+    "train_26502",
+    "train_26536"
+   ],
+   "gold_016": [
+    "train_26544",
+    "train_26522",
+    "train_26541",
+    "train_26510"
+   ],
+   "gold_017": [
+    "train_26541",
+    "train_26502",
+    "train_26534",
+    "train_26512"
+   ],
+   "gold_018": [
+    "train_26536",
+    "train_26535",
+    "train_26534",
+    "train_26538"
+   ],
+   "gold_019": [
+    "train_26544",
+    "train_26510",
+    "train_26539",
+    "train_26502"
+   ],
+   "gold_020": [
+    "train_26536",
+    "train_26531",
+    "train_26516",
+    "train_26539"
+   ],
+   "gold_021": [
+    "train_26501",
+    "train_26541",
+    "train_26502",
+    "train_26516"
+   ],
+   "gold_022": [
+    "train_26501",
+    "train_26541",
+    "train_26502",
+    "train_26540"
+   ],
+   "gold_023": [
+    "train_26538",
+    "train_26539",
+    "train_26536",
+    "train_26502"
+   ],
+   "gold_024": [
+    "train_26537",
+    "train_26516",
+    "train_26536",
+    "train_26525"
+   ],
+   "gold_025": [
+    "train_26540",
+    "train_26541",
+    "train_26510",
+    "train_26502"
+   ],
+   "gold_026": [
+    "train_26531",
+    "train_26532",
+    "train_26536",
+    "train_26525"
+   ],
+   "gold_027": [
+    "train_26502",
+    "train_26540",
+    "train_26501",
+    "train_26541"
+   ],
+   "gold_028": [
+    "train_26502",
+    "train_26544",
+    "train_26501",
+    "train_26538"
+   ],
+   "gold_029": [
+    "train_26516",
+    "train_26510",
+    "train_26517",
+    "train_26525"
+   ],
+   "gold_030": [
+    "train_26502",
+    "train_26516",
+    "train_26525",
+    "train_26517"
+   ]
+  }
+ },
+ "filtered_top4_distances": {
+  "blog": {
+   "gold_001": [
+    0.3252,
+    0.3285,
+    0.3381,
+    0.3402
+   ],
+   "gold_002": [
+    0.2178,
+    0.2184,
+    0.2378,
+    0.2445
+   ],
+   "gold_003": [
+    0.2979,
+    0.3105,
+    0.3185,
+    0.33
+   ],
+   "gold_004": [
+    0.2834,
+    0.288,
+    0.2925,
+    0.2956
+   ],
+   "gold_005": [
+    0.257,
+    0.278,
+    0.292,
+    0.2941
+   ],
+   "gold_006": [
+    0.1503,
+    0.1747,
+    0.2118,
+    0.2306
+   ],
+   "gold_007": [
+    0.2067,
+    0.2523,
+    0.2558,
+    0.2571
+   ],
+   "gold_008": [
+    0.3012,
+    0.3198,
+    0.3379,
+    0.3419
+   ],
+   "gold_009": [
+    0.1965,
+    0.2275,
+    0.2495,
+    0.2503
+   ],
+   "gold_010": [
+    0.3033,
+    0.3626,
+    0.368,
+    0.3696
+   ],
+   "gold_011": [
+    0.2793,
+    0.2818,
+    0.2864,
+    0.2913
+   ],
+   "gold_012": [
+    0.2133,
+    0.2143,
+    0.2296,
+    0.2421
+   ],
+   "gold_013": [
+    0.1944,
+    0.2541,
+    0.2551,
+    0.2563
+   ],
+   "gold_014": [
+    0.2447,
+    0.2597,
+    0.2622,
+    0.2664
+   ],
+   "gold_015": [
+    0.264,
+    0.2708,
+    0.2786,
+    0.2848
+   ],
+   "gold_016": [
+    0.2248,
+    0.2436,
+    0.2544,
+    0.2548
+   ],
+   "gold_017": [
+    0.2334,
+    0.2425,
+    0.2493,
+    0.2495
+   ],
+   "gold_018": [
+    0.2849,
+    0.2934,
+    0.3081,
+    0.3168
+   ],
+   "gold_019": [
+    0.2193,
+    0.2341,
+    0.2537,
+    0.2576
+   ],
+   "gold_020": [
+    0.2019,
+    0.2052,
+    0.2141,
+    0.2188
+   ],
+   "gold_021": [
+    0.1892,
+    0.1934,
+    0.2047,
+    0.2166
+   ],
+   "gold_022": [
+    0.2482,
+    0.2767,
+    0.2768,
+    0.2773
+   ],
+   "gold_023": [
+    0.2921,
+    0.3119,
+    0.317,
+    0.3182
+   ],
+   "gold_024": [
+    0.1569,
+    0.1747,
+    0.1766,
+    0.1817
+   ],
+   "gold_025": [
+    0.218,
+    0.2219,
+    0.2273,
+    0.2286
+   ],
+   "gold_026": [
+    0.2367,
+    0.2376,
+    0.2403,
+    0.2419
+   ],
+   "gold_027": [
+    0.2454,
+    0.2581,
+    0.2659,
+    0.266
+   ],
+   "gold_028": [
+    0.226,
+    0.2318,
+    0.2404,
+    0.2513
+   ],
+   "gold_029": [
+    0.2078,
+    0.2211,
+    0.2279,
+    0.2455
+   ],
+   "gold_030": [
+    0.1896,
+    0.2127,
+    0.2205,
+    0.2335
+   ]
+  },
+  "linkedin": {
+   "gold_001": [
+    0.3729,
+    0.3859,
+    0.3885,
+    0.3904
+   ],
+   "gold_002": [
+    0.3544,
+    0.3624,
+    0.3671,
+    0.3678
+   ],
+   "gold_003": [
+    0.3239,
+    0.3908,
+    0.3919,
+    0.3947
+   ],
+   "gold_004": [
+    0.3554,
+    0.3556,
+    0.3566,
+    0.3574
+   ],
+   "gold_005": [
+    0.3076,
+    0.3152,
+    0.3188,
+    0.3247
+   ],
+   "gold_006": [
+    0.2973,
+    0.3428,
+    0.3428,
+    0.3443
+   ],
+   "gold_007": [
+    0.268,
+    0.2696,
+    0.2962,
+    0.3025
+   ],
+   "gold_008": [
+    0.3745,
+    0.3969,
+    0.4093,
+    0.4119
+   ],
+   "gold_009": [
+    0.206,
+    0.3346,
+    0.3502,
+    0.3549
+   ],
+   "gold_010": [
+    0.4267,
+    0.458,
+    0.4708,
+    0.4782
+   ],
+   "gold_011": [
+    0.27,
+    0.3639,
+    0.365,
+    0.3737
+   ],
+   "gold_012": [
+    0.2673,
+    0.2687,
+    0.2883,
+    0.2893
+   ],
+   "gold_013": [
+    0.2243,
+    0.245,
+    0.2654,
+    0.2748
+   ],
+   "gold_014": [
+    0.3243,
+    0.3363,
+    0.3467,
+    0.3506
+   ],
+   "gold_015": [
+    0.27,
+    0.286,
+    0.2884,
+    0.2901
+   ],
+   "gold_016": [
+    0.2252,
+    0.2334,
+    0.2484,
+    0.2579
+   ],
+   "gold_017": [
+    0.2921,
+    0.2942,
+    0.3042,
+    0.308
+   ],
+   "gold_018": [
+    0.3465,
+    0.3469,
+    0.3522,
+    0.3592
+   ],
+   "gold_019": [
+    0.3322,
+    0.3341,
+    0.335,
+    0.3361
+   ],
+   "gold_020": [
+    0.2693,
+    0.2744,
+    0.2893,
+    0.3026
+   ],
+   "gold_021": [
+    0.2071,
+    0.2408,
+    0.246,
+    0.2461
+   ],
+   "gold_022": [
+    0.2812,
+    0.2874,
+    0.2981,
+    0.2988
+   ],
+   "gold_023": [
+    0.315,
+    0.3262,
+    0.3371,
+    0.3457
+   ],
+   "gold_024": [
+    0.1714,
+    0.2512,
+    0.2525,
+    0.259
+   ],
+   "gold_025": [
+    0.1125,
+    0.16,
+    0.2336,
+    0.2518
+   ],
+   "gold_026": [
+    0.277,
+    0.2793,
+    0.2976,
+    0.3
+   ],
+   "gold_027": [
+    0.2735,
+    0.2739,
+    0.2992,
+    0.3022
+   ],
+   "gold_028": [
+    0.2322,
+    0.2676,
+    0.2968,
+    0.3059
+   ],
+   "gold_029": [
+    0.2318,
+    0.2322,
+    0.2332,
+    0.2396
+   ],
+   "gold_030": [
+    0.1888,
+    0.2039,
+    0.2077,
+    0.215
+   ]
+  },
+  "x": {
+   "gold_001": [
+    0.3081,
+    0.3094,
+    0.3159,
+    0.3238
+   ],
+   "gold_002": [
+    0.2232,
+    0.2402,
+    0.2614,
+    0.2652
+   ],
+   "gold_003": [
+    0.2755,
+    0.2805,
+    0.3323,
+    0.3404
+   ],
+   "gold_004": [
+    0.3185,
+    0.3312,
+    0.3389,
+    0.342
+   ],
+   "gold_005": [
+    0.2822,
+    0.295,
+    0.3105,
+    0.3118
+   ],
+   "gold_006": [
+    0.1723,
+    0.1723,
+    0.1723,
+    0.1975
+   ],
+   "gold_007": [
+    0.2174,
+    0.236,
+    0.2369,
+    0.2507
+   ],
+   "gold_008": [
+    0.2997,
+    0.3251,
+    0.3312,
+    0.3343
+   ],
+   "gold_009": [
+    0.1632,
+    0.2351,
+    0.2557,
+    0.2779
+   ],
+   "gold_010": [
+    0.4164,
+    0.4365,
+    0.4409,
+    0.4415
+   ],
+   "gold_011": [
+    0.2888,
+    0.3142,
+    0.3152,
+    0.337
+   ],
+   "gold_012": [
+    0.2409,
+    0.2415,
+    0.2605,
+    0.2692
+   ],
+   "gold_013": [
+    0.2365,
+    0.245,
+    0.2546,
+    0.2641
+   ],
+   "gold_014": [
+    0.2403,
+    0.2985,
+    0.3143,
+    0.3202
+   ],
+   "gold_015": [
+    0.2664,
+    0.268,
+    0.2857,
+    0.286
+   ],
+   "gold_016": [
+    0.2106,
+    0.2603,
+    0.2665,
+    0.2731
+   ],
+   "gold_017": [
+    0.2757,
+    0.2961,
+    0.2969,
+    0.2987
+   ],
+   "gold_018": [
+    0.2643,
+    0.315,
+    0.3208,
+    0.324
+   ],
+   "gold_019": [
+    0.1253,
+    0.2166,
+    0.2233,
+    0.247
+   ],
+   "gold_020": [
+    0.2347,
+    0.2367,
+    0.2491,
+    0.25
+   ],
+   "gold_021": [
+    0.1985,
+    0.2208,
+    0.2323,
+    0.2388
+   ],
+   "gold_022": [
+    0.2558,
+    0.2759,
+    0.2776,
+    0.2818
+   ],
+   "gold_023": [
+    0.3144,
+    0.3192,
+    0.3238,
+    0.3326
+   ],
+   "gold_024": [
+    0.2498,
+    0.2537,
+    0.2597,
+    0.2656
+   ],
+   "gold_025": [
+    0.2328,
+    0.2341,
+    0.2518,
+    0.253
+   ],
+   "gold_026": [
+    0.2442,
+    0.2442,
+    0.2736,
+    0.2736
+   ],
+   "gold_027": [
+    0.2501,
+    0.2656,
+    0.2828,
+    0.2952
+   ],
+   "gold_028": [
+    0.1906,
+    0.2322,
+    0.2497,
+    0.2497
+   ],
+   "gold_029": [
+    0.2048,
+    0.2279,
+    0.2361,
+    0.2396
+   ],
+   "gold_030": [
+    0.1785,
+    0.183,
+    0.206,
+    0.2294
+   ]
+  },
+  "talk": {
+   "gold_001": [
+    0.4183,
+    0.4186,
+    0.426,
+    0.432
+   ],
+   "gold_002": [
+    0.4247,
+    0.4328,
+    0.4472,
+    0.4656
+   ],
+   "gold_003": [
+    0.4126,
+    0.4273,
+    0.4331,
+    0.4506
+   ],
+   "gold_004": [
+    0.416,
+    0.4423,
+    0.4462,
+    0.4553
+   ],
+   "gold_005": [
+    0.3563,
+    0.3937,
+    0.442,
+    0.4483
+   ],
+   "gold_006": [
+    0.4932,
+    0.4977,
+    0.5051,
+    0.5077
+   ],
+   "gold_007": [
+    0.4175,
+    0.4436,
+    0.451,
+    0.4576
+   ],
+   "gold_008": [
+    0.3902,
+    0.4349,
+    0.4614,
+    0.4707
+   ],
+   "gold_009": [
+    0.4541,
+    0.4657,
+    0.4697,
+    0.4885
+   ],
+   "gold_010": [
+    0.5291,
+    0.5291,
+    0.5579,
+    0.5599
+   ],
+   "gold_011": [
+    0.4282,
+    0.4349,
+    0.4515,
+    0.4542
+   ],
+   "gold_012": [
+    0.4579,
+    0.4733,
+    0.4933,
+    0.4959
+   ],
+   "gold_013": [
+    0.4691,
+    0.4769,
+    0.5047,
+    0.5185
+   ],
+   "gold_014": [
+    0.3923,
+    0.4106,
+    0.4108,
+    0.4114
+   ],
+   "gold_015": [
+    0.3967,
+    0.4384,
+    0.4462,
+    0.4551
+   ],
+   "gold_016": [
+    0.4322,
+    0.4645,
+    0.4673,
+    0.4742
+   ],
+   "gold_017": [
+    0.3964,
+    0.4118,
+    0.4142,
+    0.4219
+   ],
+   "gold_018": [
+    0.4115,
+    0.4456,
+    0.4469,
+    0.4621
+   ],
+   "gold_019": [
+    0.3808,
+    0.4146,
+    0.4212,
+    0.4391
+   ],
+   "gold_020": [
+    0.3897,
+    0.3957,
+    0.3985,
+    0.4075
+   ],
+   "gold_021": [
+    0.3832,
+    0.3885,
+    0.4066,
+    0.407
+   ],
+   "gold_022": [
+    0.3357,
+    0.3915,
+    0.3947,
+    0.4176
+   ],
+   "gold_023": [
+    0.3756,
+    0.3824,
+    0.4029,
+    0.405
+   ],
+   "gold_024": [
+    0.3804,
+    0.3833,
+    0.3985,
+    0.3986
+   ],
+   "gold_025": [
+    0.3401,
+    0.3416,
+    0.3484,
+    0.3592
+   ],
+   "gold_026": [
+    0.3124,
+    0.3259,
+    0.3505,
+    0.3565
+   ],
+   "gold_027": [
+    0.4311,
+    0.4335,
+    0.4447,
+    0.4565
+   ],
+   "gold_028": [
+    0.3504,
+    0.4148,
+    0.4312,
+    0.4339
+   ],
+   "gold_029": [
+    0.4139,
+    0.423,
+    0.4434,
+    0.446
+   ],
+   "gold_030": [
+    0.4019,
+    0.4158,
+    0.4395,
+    0.4442
+   ]
+  }
+ },
+ "unfiltered_top4_distances": {
+  "gold_001": [
+   0.3081,
+   0.3094,
+   0.3159,
+   0.3238
+  ],
+  "gold_002": [
+   0.2178,
+   0.2184,
+   0.2232,
+   0.2378
+  ],
+  "gold_003": [
+   0.2755,
+   0.2805,
+   0.2979,
+   0.3105
+  ],
+  "gold_004": [
+   0.2834,
+   0.288,
+   0.2925,
+   0.2956
+  ],
+  "gold_005": [
+   0.257,
+   0.278,
+   0.2822,
+   0.292
+  ],
+  "gold_006": [
+   0.1503,
+   0.1723,
+   0.1723,
+   0.1723
+  ],
+  "gold_007": [
+   0.2067,
+   0.2174,
+   0.236,
+   0.2369
+  ],
+  "gold_008": [
+   0.2997,
+   0.3012,
+   0.3198,
+   0.3251
+  ],
+  "gold_009": [
+   0.1632,
+   0.1965,
+   0.206,
+   0.2275
+  ],
+  "gold_010": [
+   0.3033,
+   0.3626,
+   0.368,
+   0.3696
+  ],
+  "gold_011": [
+   0.27,
+   0.2793,
+   0.2818,
+   0.2864
+  ],
+  "gold_012": [
+   0.2133,
+   0.2143,
+   0.2296,
+   0.2409
+  ],
+  "gold_013": [
+   0.1944,
+   0.2243,
+   0.2365,
+   0.245
+  ],
+  "gold_014": [
+   0.2403,
+   0.2447,
+   0.2597,
+   0.2622
+  ],
+  "gold_015": [
+   0.264,
+   0.2664,
+   0.268,
+   0.27
+  ],
+  "gold_016": [
+   0.2106,
+   0.2248,
+   0.2252,
+   0.2334
+  ],
+  "gold_017": [
+   0.2334,
+   0.2425,
+   0.2493,
+   0.2495
+  ],
+  "gold_018": [
+   0.2643,
+   0.2849,
+   0.2934,
+   0.3081
+  ],
+  "gold_019": [
+   0.1253,
+   0.2166,
+   0.2193,
+   0.2233
+  ],
+  "gold_020": [
+   0.2019,
+   0.2052,
+   0.2141,
+   0.2188
+  ],
+  "gold_021": [
+   0.1892,
+   0.1934,
+   0.1985,
+   0.2047
+  ],
+  "gold_022": [
+   0.2482,
+   0.2558,
+   0.2759,
+   0.2767
+  ],
+  "gold_023": [
+   0.2921,
+   0.3119,
+   0.3144,
+   0.315
+  ],
+  "gold_024": [
+   0.1569,
+   0.1714,
+   0.1747,
+   0.1766
+  ],
+  "gold_025": [
+   0.1125,
+   0.16,
+   0.218,
+   0.2219
+  ],
+  "gold_026": [
+   0.2367,
+   0.2376,
+   0.2403,
+   0.2419
+  ],
+  "gold_027": [
+   0.2454,
+   0.2501,
+   0.2581,
+   0.2656
+  ],
+  "gold_028": [
+   0.1906,
+   0.226,
+   0.2318,
+   0.2322
+  ],
+  "gold_029": [
+   0.2048,
+   0.2078,
+   0.2211,
+   0.2279
+  ],
+  "gold_030": [
+   0.1785,
+   0.183,
+   0.1888,
+   0.1896
+  ]
+ }
+}

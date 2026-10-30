@@ -94,13 +94,27 @@ python -m eval_tools.voice_fixed --kevin-root ../kevin-ws --traces raw/relabel.j
 
 Scores the first 100 words of every blog and LinkedIn draft with Kevin's style distance, so length cannot drive the score (section 5 shows that it does). Drafts under 100 words are not scored, and the summary says how many. X and talk are not supported (X drafts are too short, talk has no reference). Compare with `--metrics style_distance_fixed`. Use `--blog-words 150 --linkedin-words 150` to check that the conclusion does not depend on the length. Results: `docs/evaluation/VOICE_FIXED_LENGTH.md`.
 
-## 6. Tests
+## 6. What did adding RAG change, and what did it cost? (PUK-34)
 
 ```
-python -m pytest tests
+python -m eval_tools.rag_effect report --a-drafts off_raw.jsonl --b-drafts on_raw.jsonl   --label-a "RAG off" --label-b "RAG on" --out-md effect.md
+python -m eval_tools.rag_effect slim --raw on_raw.jsonl --out on_slim.jsonl     # 4 MB down to about 70 KB
 ```
 
-115 tests on small made up data: 76 for the tools in sections 1 to 5, 26 for the LanguageTool tool (with a fake LanguageTool, so no Java is needed) and 13 for the fixed-length voice score (with a fake distance, so no checkout of Kevin's branch is needed). They include a check that an extra gate on one run does not hide that run's gain, the correction for many tests, the seed check, and every false alarm the grammar rules have ever produced on real posts (so they stay fixed).
+`compare` answers "did quality change?". This answers the other half, from the fields saved with each draft:
+
+- Both runs, paired by topic and medium: prompt tokens, generated tokens, words, the share of drafts that hit the length limit, and the share that ended on their own using under half the token budget.
+- The retrieval run only: evidence extraction seconds (counted **once per topic**, because the four mediums of a topic share the same evidence), drafts with unsupported numbers, drafts flagged for copying a passage, how many proposed claims survive verification, drafts that needed a second attempt, and how many retrieved passages are of the requested medium.
+
+`report` takes raw or slim files. Generation time is not saved with the drafts, so cost is tokens and evidence seconds, not wall-clock time. Passage distance and claim counts are not precision, recall, or entailment. Results and how to read them: `docs/evaluation/RAG_BEFORE_AFTER.md`. The medium-filter check is a separate study in `docs/evaluation/TYPE_SPECIFIC_RETRIEVAL_CHECK.md`. It does not change the default retriever, which still searches the whole train-only collection.
+
+## 7. Tests
+
+```
+python -m pytest tests/test_eval_tools.py tests/test_grammar_lt.py tests/test_voice_fixed.py tests/test_rag_effect.py tests/test_retrieval_by_medium.py
+```
+
+141 tests on small made-up data: 76 for sections 1 to 5, 26 for LanguageTool (a fake server, so no Java), 13 for the fixed-length voice score (a fake distance), 20 for `rag_effect`, and 6 for the medium-filter summary math. They include a check that an extra gate on one run does not hide that run's gain, the correction for many tests, the seed check, and every false alarm the grammar rules have ever produced on real posts (so they stay fixed). The host Model E/F tests live in the same `tests/` directory and are separate from this count.
 
 ## Examples and evidence
 
