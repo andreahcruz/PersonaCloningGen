@@ -1,0 +1,37 @@
+experiment_id: EXP-20261029-009-hardened-generation
+timestamp: 2026-10-30T06:40:35Z
+execution_commands:
+  - host_finetune\.venv\Scripts\python.exe -X utf8 experiments\EXP-20261029-009-hardened-generation\config\generate_arms.py
+  - host_finetune\.venv\Scripts\python.exe -X utf8 experiments\EXP-20261029-009-hardened-generation\config\score_arms.py --judge
+git:
+  commit: 0fac41485ec3655ea1439d6d2484115f243fdab1
+  dirty: true
+data:
+  source_manifest: experiments/EXP-20261003-004-relabel-continuations/raw/split_assignments.jsonl
+  source_hashes:
+    graph_ready_v2_documents: d7bd01a01f288dda3582eddcfd2fc1539574f97b6e168b1124a0b43b76d9a118
+  processed_dataset_hash: 1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b
+  split_manifest_hash: 6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb
+  gold_eval_hash: d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e
+rag:
+  persona_profile_hash: n/a
+  chroma_collection: lemkin_train_only_v2_shadow
+  index_version_or_snapshot: artifacts/lightrag/model_f/storage_pilot160 read only; Chroma v2 opened read only
+  embedding_model: nomic-embed-text
+model:
+  model_name: unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit
+  model_or_adapter_hash: host_finetune/output/lemkin_lora_relabel
+  config: seed 42; k=4; max one chunk per source; LightRAG num_ctx 16384; modes naive and mix
+  random_seed: 42
+evaluation:
+  evaluator_commit: 0fac41485ec3655ea1439d6d2484115f243fdab1
+  judge_model: qwen2.5:14b
+  judge_config: temperature 0; writing dimensions only; Llama-family judge not used
+environment:
+  python_version: 3.11.9
+  package_snapshot: ../EXP-20261029-004-lightrag-pilot160/config/package_snapshot.txt
+  hardware: NVIDIA GeForce RTX 5070 Ti, 15.92 GB
+outputs:
+  raw: raw/generation_chroma_v2.json, raw/generation_pilot_dense.json, raw/generation_naive.json, raw/generation_mix.json
+  metrics: metrics/comparison.json
+  warnings_and_failures: Chroma Brex extraction_failed after two attempts; naive and mix VP X failed the retrieval-source copy check; mix X copied the speaker instruction

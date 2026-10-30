@@ -1,0 +1,1988 @@
+[
+  {
+    "mode": "dense",
+    "id": "q_brex_price",
+    "medium": "blog",
+    "words": 50,
+    "verified_claims": 4,
+    "validation_rejected": 1,
+    "rejection_reasons": [
+      "support_not_in_source"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": false,
+      "failure": "unsupported_numeric_grounding",
+      "unsupported": [
+        {
+          "value": "$2 Billion",
+          "canonical": "usd:2000000000",
+          "sentence": "Capital One announced today it\u2019s acquiring Brex for $5.15 Billion \u2014 up from their original deal last year of just $2 Billion"
+        }
+      ],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [
+          "usd:140000000",
+          "usd:5",
+          "usd:5150000000"
+        ],
+        "values": [
+          {
+            "value": "$5.15 Billion",
+            "canonical": "usd:5150000000",
+            "sentence": "Capital One announced today it\u2019s acquiring Brex for $5.15 Billion \u2014 up from their original deal last year of just $2 Billion"
+          },
+          {
+            "value": "$2 Billion",
+            "canonical": "usd:2000000000",
+            "sentence": "Capital One announced today it\u2019s acquiring Brex for $5.15 Billion \u2014 up from their original deal last year of just $2 Billion"
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "$2 Billion",
+            "canonical": "usd:2000000000",
+            "sentence": "Capital One announced today it\u2019s acquiring Brex for $5.15 Billion \u2014 up from their original deal last year of just $2 Billion"
+          }
+        ]
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": false,
+    "mentions_5_15": true,
+    "mentions_webflow": false,
+    "claim_texts": [
+      "Capital One acquired Brex for $5.15 billion.",
+      "Wrike's ARR was $140m.",
+      "Wrike's ARR growth rate was 30.",
+      "Nvidia's market cap sailed past $5 trillion."
+    ],
+    "answer": "So what happened to Brex?\nWell,\nCapital One announced today it\u2019s acquiring Brex for $5.15 Billion \u2014 up from their original deal last year of just $2 Billion\nBrex raised almost no dilutive venture capital at all since its founding, so this is an epic outcome:\nAnd that\u2019s the story!"
+  },
+  {
+    "mode": "dense",
+    "id": "q_brex_price",
+    "medium": "linkedin",
+    "words": 9,
+    "verified_claims": 4,
+    "validation_rejected": 1,
+    "rejection_reasons": [
+      "support_not_in_source"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [
+          "usd:140000000",
+          "usd:5",
+          "usd:5150000000"
+        ],
+        "values": [],
+        "unsupported": []
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": false,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [
+      "Capital One acquired Brex for $5.15 billion.",
+      "Wrike's ARR was $140m.",
+      "Wrike's ARR growth rate was 30.",
+      "Nvidia's market cap sailed past $5 trillion."
+    ],
+    "answer": "What price did Capital One announce for acquiring Brex?"
+  },
+  {
+    "mode": "dense",
+    "id": "q_brex_price",
+    "medium": "x",
+    "words": 17,
+    "verified_claims": 4,
+    "validation_rejected": 1,
+    "rejection_reasons": [
+      "support_not_in_source"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [
+          "usd:140000000",
+          "usd:5",
+          "usd:5150000000"
+        ],
+        "values": [
+          {
+            "value": "$5.15 billion",
+            "canonical": "usd:5150000000",
+            "sentence": "[E1] Capital One acquired Brex for $5.15 billion."
+          }
+        ],
+        "unsupported": []
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": false,
+    "mentions_5_15": true,
+    "mentions_webflow": false,
+    "claim_texts": [
+      "Capital One acquired Brex for $5.15 billion.",
+      "Wrike's ARR was $140m.",
+      "Wrike's ARR growth rate was 30.",
+      "Nvidia's market cap sailed past $5 trillion."
+    ],
+    "answer": "What price did Capital One announce for acquiring Brex?\n\n[E1] Capital One acquired Brex for $5.15 billion."
+  },
+  {
+    "mode": "dense",
+    "id": "q_brex_price",
+    "medium": "talk",
+    "words": 274,
+    "verified_claims": 4,
+    "validation_rejected": 1,
+    "rejection_reasons": [
+      "support_not_in_source"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": false,
+      "failure": "unsupported_numeric_grounding",
+      "unsupported": [
+        {
+          "value": "$12 billion",
+          "canonical": "usd:12000000000",
+          "sentence": "In fact, Brex itself was valued at over $12 billion"
+        },
+        {
+          "value": "$13 billion",
+          "canonical": "usd:13000000000",
+          "sentence": "Even though it raised less than half that in total capital, it was valued at more than twice its last round valuation at almost $13 billion"
+        },
+        {
+          "value": "$50 million",
+          "canonical": "usd:50000000",
+          "sentence": "But if you raise, let's say, $50 million in venture capital, and you sell your company for $500 million, well, isn't that great"
+        },
+        {
+          "value": "$500 million",
+          "canonical": "usd:500000000",
+          "sentence": "But if you raise, let's say, $50 million in venture capital, and you sell your company for $500 million, well, isn't that great"
+        }
+      ],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [
+          "usd:140000000",
+          "usd:5",
+          "usd:5150000000"
+        ],
+        "values": [
+          {
+            "value": "$5.15 billion",
+            "canonical": "usd:5150000000",
+            "sentence": "They were just acquired by Capital One for $5.15 billion"
+          },
+          {
+            "value": "$12 billion",
+            "canonical": "usd:12000000000",
+            "sentence": "In fact, Brex itself was valued at over $12 billion"
+          },
+          {
+            "value": "$13 billion",
+            "canonical": "usd:13000000000",
+            "sentence": "Even though it raised less than half that in total capital, it was valued at more than twice its last round valuation at almost $13 billion"
+          },
+          {
+            "value": "$5.15 billion",
+            "canonical": "usd:5150000000",
+            "sentence": "Now, again, that's before it got acquired for $5.15 billion"
+          },
+          {
+            "value": "$50 million",
+            "canonical": "usd:50000000",
+            "sentence": "But if you raise, let's say, $50 million in venture capital, and you sell your company for $500 million, well, isn't that great"
+          },
+          {
+            "value": "$500 million",
+            "canonical": "usd:500000000",
+            "sentence": "But if you raise, let's say, $50 million in venture capital, and you sell your company for $500 million, well, isn't that great"
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "$12 billion",
+            "canonical": "usd:12000000000",
+            "sentence": "In fact, Brex itself was valued at over $12 billion"
+          },
+          {
+            "value": "$13 billion",
+            "canonical": "usd:13000000000",
+            "sentence": "Even though it raised less than half that in total capital, it was valued at more than twice its last round valuation at almost $13 billion"
+          },
+          {
+            "value": "$50 million",
+            "canonical": "usd:50000000",
+            "sentence": "But if you raise, let's say, $50 million in venture capital, and you sell your company for $500 million, well, isn't that great"
+          },
+          {
+            "value": "$500 million",
+            "canonical": "usd:500000000",
+            "sentence": "But if you raise, let's say, $50 million in venture capital, and you sell your company for $500 million, well, isn't that great"
+          }
+        ]
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": false,
+    "mentions_5_15": true,
+    "mentions_webflow": false,
+    "claim_texts": [
+      "Capital One acquired Brex for $5.15 billion.",
+      "Wrike's ARR was $140m.",
+      "Wrike's ARR growth rate was 30.",
+      "Nvidia's market cap sailed past $5 trillion."
+    ],
+    "answer": "So we've all heard of these big SaaS acquisitions. You know, you hear about them in the press when they happen, right?\nAnd I think there are three things that make an acquisition interesting to me as a founder, first, if it's a crazy amount of money. That makes it exciting. The second thing is when it's a lot bigger than anyone expected. And thirdly, what does this say about us as founders today?\nAnd so let's take a look at one example recently where we saw a crazy amount of money being paid for a company, which is Brex. They were just acquired by Capital One for $5.15 billion. So we're going to break down why I find this interesting and then move on to another two examples.\nThe first reason this is interesting is because it seems like a huge amount of money. It doesn't seem like such a huge amount of money compared to some of the other deals out there. But at least to many people, it feels like a lot of money. Because there have been a bunch of companies, especially since Covid hit, that have sold for multiples of revenue. A few examples here. In fact, Brex itself was valued at over $12 billion. Even though it raised less than half that in total capital, it was valued at more than twice its last round valuation at almost $13 billion. Now, again, that's before it got acquired for $5.15 billion. But if you raise, let's say, $50 million in venture capital, and you sell your company for $500 million, well, isn't that great? Yeah, no kidding. That's good."
+  },
+  {
+    "mode": "dense",
+    "id": "q_vp_sales_tension",
+    "medium": "blog",
+    "words": 309,
+    "verified_claims": 7,
+    "validation_rejected": 6,
+    "rejection_reasons": [
+      "support_not_in_source"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [
+          "pct:40",
+          "usd:2000000",
+          "usd:500000"
+        ],
+        "values": [],
+        "unsupported": []
+      },
+      "retry": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [
+          "pct:40",
+          "usd:2000000",
+          "usd:500000"
+        ],
+        "values": [],
+        "unsupported": []
+      }
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": false,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [
+      "Criticizing a VP of Sales who cannot do better is counterproductive",
+      "A great VP of Sales should bring in more sales executives",
+      "A mediocre VP of Sales has no one to bring with them",
+      "A wrong-fit VP of Sales costs 6-12 months of lost momentum",
+      "A wrong-fit VP of Sales costs 20-40% team productivity drag",
+      "The opportunity cost of a wrong-fit VP of Sales is $500K-$2M",
+      "Hiring Early Reps (#1 \u2013 #3) That You Personally Wouldn\u2019t Buy From is a key mistake"
+    ],
+    "answer": "So I was asked recently what\u2019s worse \u2014 hiring a terrible VP of Sales, or keeping an underperforming / mediocre VP of Sales.\u00a0 And my answer surprised me:\nI think you are worse off after 30 days of keeping someone awful than if you\u2019d kept a mediocre VP of Sales for even longer. (Note: this doesn\u2019t apply as much today when there are so many talented VPs of Sales out there)\nHere\u2019s why:\nFirst, a mediocre VP of Sales never really does any real damage on her own. She might hire some bad reps and let a few slide out the door, but she won\u2019t burn all your cash, and close nothing. So you\u2019ll know how poorly things are going. But \u2026 most folks don\u2019t want to fire their first VP of Sales. They just hope they get better. And sometimes, they can grow into a good VP of Sales. It happens. So they often stick around too long, and you sort of learn to work around him/her.\nSecond, a \u201cbad\u201d VP of Sales is always at fault. Not the product. Not market timing. Not anything else. Just the VP of Sales. And everyone knows it. So you make excuses for the rest of the company, and the CEO takes the blame for low revenue growth. No one wants to take ownership of failure, especially the founder. And so everyone makes excuses for a bad VP of Sales. He hires his friends. The board says he needs help. No one will admit to making a mis-hire here. Now I\u2019m sure you\u2019ve heard this before, but trust me, it\u2019s true. Folks in SaaS don\u2019t like to talk about mistakes. Even CEOs. We rather gloss over them. Third, you also have to remember the opportunity cost here. If you replace a bad VP of Sales quickly, you give yourself time back."
+  },
+  {
+    "mode": "dense",
+    "id": "q_vp_sales_tension",
+    "medium": "linkedin",
+    "words": 29,
+    "verified_claims": 7,
+    "validation_rejected": 6,
+    "rejection_reasons": [
+      "support_not_in_source"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [
+          "pct:40",
+          "usd:2000000",
+          "usd:500000"
+        ],
+        "values": [],
+        "unsupported": []
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": true,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [
+      "Criticizing a VP of Sales who cannot do better is counterproductive",
+      "A great VP of Sales should bring in more sales executives",
+      "A mediocre VP of Sales has no one to bring with them",
+      "A wrong-fit VP of Sales costs 6-12 months of lost momentum",
+      "A wrong-fit VP of Sales costs 20-40% team productivity drag",
+      "The opportunity cost of a wrong-fit VP of Sales is $500K-$2M",
+      "Hiring Early Reps (#1 \u2013 #3) That You Personally Wouldn\u2019t Buy From is a key mistake"
+    ],
+    "answer": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive?"
+  },
+  {
+    "mode": "dense",
+    "id": "q_vp_sales_tension",
+    "medium": "x",
+    "words": 41,
+    "verified_claims": 7,
+    "validation_rejected": 6,
+    "rejection_reasons": [
+      "support_not_in_source"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [
+          "pct:40",
+          "usd:2000000",
+          "usd:500000"
+        ],
+        "values": [],
+        "unsupported": []
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": true,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [
+      "Criticizing a VP of Sales who cannot do better is counterproductive",
+      "A great VP of Sales should bring in more sales executives",
+      "A mediocre VP of Sales has no one to bring with them",
+      "A wrong-fit VP of Sales costs 6-12 months of lost momentum",
+      "A wrong-fit VP of Sales costs 20-40% team productivity drag",
+      "The opportunity cost of a wrong-fit VP of Sales is $500K-$2M",
+      "Hiring Early Reps (#1 \u2013 #3) That You Personally Wouldn\u2019t Buy From is a key mistake"
+    ],
+    "answer": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive? \n[E1]\n\nCriticizing a VP of Sales who cannot do better is counterproductive"
+  },
+  {
+    "mode": "dense",
+    "id": "q_vp_sales_tension",
+    "medium": "talk",
+    "words": 327,
+    "verified_claims": 7,
+    "validation_rejected": 6,
+    "rejection_reasons": [
+      "support_not_in_source"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": false,
+      "failure": "unsupported_numeric_grounding",
+      "unsupported": [
+        {
+          "value": "$50m",
+          "canonical": "usd:50000000",
+          "sentence": "In SaaS, especially in the earlier days, maybe even until $50m ARR, it's tough to make sure directors can recruit their full quota of folks"
+        }
+      ],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [
+          "pct:40",
+          "usd:2000000",
+          "usd:500000"
+        ],
+        "values": [
+          {
+            "value": "$50m",
+            "canonical": "usd:50000000",
+            "sentence": "In SaaS, especially in the earlier days, maybe even until $50m ARR, it's tough to make sure directors can recruit their full quota of folks"
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "$50m",
+            "canonical": "usd:50000000",
+            "sentence": "In SaaS, especially in the earlier days, maybe even until $50m ARR, it's tough to make sure directors can recruit their full quota of folks"
+          }
+        ]
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": false,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [
+      "Criticizing a VP of Sales who cannot do better is counterproductive",
+      "A great VP of Sales should bring in more sales executives",
+      "A mediocre VP of Sales has no one to bring with them",
+      "A wrong-fit VP of Sales costs 6-12 months of lost momentum",
+      "A wrong-fit VP of Sales costs 20-40% team productivity drag",
+      "The opportunity cost of a wrong-fit VP of Sales is $500K-$2M",
+      "Hiring Early Reps (#1 \u2013 #3) That You Personally Wouldn\u2019t Buy From is a key mistake"
+    ],
+    "answer": "So I've worked on this stuff for years. And there's so many questions. So let me answer some of 'em. It's time again. So first, does a great VP of sales have to bring in reps right away?\nWell, the truth is, most of us we're going to hire at least two if you haven't already as founders before your VP of sales comes. But here's what happens when you get a good VP of sales. If they are truly strong enough, then yes, they will probably want to hire their own director or two under them by month three. They'll be trying to scale the whole thing out. Now, I think this is super important. It works well in bigger companies. In SaaS, especially in the earlier days, maybe even until $50m ARR, it's tough to make sure directors can recruit their full quota of folks. I know it doesn't work everywhere, but my experience as an investor is almost always, when you get a great VP of sales, she wants to hire her own crew under her. She wants to hire at least one director pretty quickly, sometimes two, and then another director later. So this can take different forms, but I think this is part of being a great VP of sales. You don't see this all the time, but you do see it quite often when you find someone really good. Okay, now let's move on to the next question. Should you criticize a VP of sales who isn't doing better? This is a very common debate in social media today. My simple advice: do not criticize a bad VP of sales. First of all, I'm just telling you they never learn. We talked about this last week. Bad VPs of sales don't learn. And secondly, it demoralizes the rest of the team. When you attack your VP of sales, everyone looks down. Everyone goes home sad. No one knows how to help."
+  },
+  {
+    "mode": "dense",
+    "id": "q_personalized_saas_speaker",
+    "medium": "blog",
+    "words": 49,
+    "verified_claims": 3,
+    "validation_rejected": 1,
+    "rejection_reasons": [
+      "interrogative_assertion"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [],
+        "values": [],
+        "unsupported": []
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": false,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [
+      "AI means everything in SaaS needs to be a personalized experience.",
+      "Human-in-the-loop means humans handle the cases AI can't solve.",
+      "AI will join every human sales rep on every Zoom and call within a year."
+    ],
+    "answer": "Who said that AI means everything in SaaS needs to be a personalized experience?\nSalesforce CEO Marc Benioff did. He was speaking at the company\u2019s Dreamforce conference. His comment reflects broader trends in enterprise software where companies are using artificial intelligence to deliver more customized experiences for their customers."
+  },
+  {
+    "mode": "dense",
+    "id": "q_personalized_saas_speaker",
+    "medium": "linkedin",
+    "words": 14,
+    "verified_claims": 3,
+    "validation_rejected": 1,
+    "rejection_reasons": [
+      "interrogative_assertion"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [],
+        "values": [],
+        "unsupported": []
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": false,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [
+      "AI means everything in SaaS needs to be a personalized experience.",
+      "Human-in-the-loop means humans handle the cases AI can't solve.",
+      "AI will join every human sales rep on every Zoom and call within a year."
+    ],
+    "answer": "Who said that AI means everything in SaaS needs to be a personalized experience?"
+  },
+  {
+    "mode": "dense",
+    "id": "q_personalized_saas_speaker",
+    "medium": "x",
+    "words": 14,
+    "verified_claims": 3,
+    "validation_rejected": 1,
+    "rejection_reasons": [
+      "interrogative_assertion"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [],
+        "values": [],
+        "unsupported": []
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": false,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [
+      "AI means everything in SaaS needs to be a personalized experience.",
+      "Human-in-the-loop means humans handle the cases AI can't solve.",
+      "AI will join every human sales rep on every Zoom and call within a year."
+    ],
+    "answer": "Who said that AI means everything in SaaS needs to be a personalized experience?"
+  },
+  {
+    "mode": "dense",
+    "id": "q_personalized_saas_speaker",
+    "medium": "talk",
+    "words": 202,
+    "verified_claims": 3,
+    "validation_rejected": 1,
+    "rejection_reasons": [
+      "interrogative_assertion"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": false,
+      "failure": "unsupported_numeric_grounding",
+      "unsupported": [
+        {
+          "value": "200 million",
+          "canonical": "usd:200000000",
+          "sentence": "They have 200 million users"
+        },
+        {
+          "value": "300",
+          "canonical": "n:300",
+          "sentence": "It's like 300 plus now"
+        }
+      ],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [],
+        "values": [
+          {
+            "value": "200 million",
+            "canonical": "usd:200000000",
+            "sentence": "They have 200 million users"
+          },
+          {
+            "value": "300",
+            "canonical": "n:300",
+            "sentence": "It's like 300 plus now"
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "200 million",
+            "canonical": "usd:200000000",
+            "sentence": "They have 200 million users"
+          },
+          {
+            "value": "300",
+            "canonical": "n:300",
+            "sentence": "It's like 300 plus now"
+          }
+        ]
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": false,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [
+      "AI means everything in SaaS needs to be a personalized experience.",
+      "Human-in-the-loop means humans handle the cases AI can't solve.",
+      "AI will join every human sales rep on every Zoom and call within a year."
+    ],
+    "answer": "So we've got some interesting questions here. Let's do this one first. We'll take them all out. But who said that AI means everything in SaaS needs to be a personalized experience?\nThis was asked by our good friend and CMO at ServiceTitan, Jen Abernethy. And I think what they're asking for is, are there any exceptions where you don't need to personalize your software with AI? The answer is yes. Not everyone has to personalize their product with AI. That's the mistake people make when they hear personalization is the key to success today.\nI'm looking at Salesforce. You know how many different products Salesforce sells? It's like 300 plus now. They have 200 million users. But did Salesforce personalize HubSpot? No. Does Workday personalize its CRM? I highly doubt it. There are plenty of examples of successful SaaS companies that haven't been able to deliver truly personalized experiences to customers yet. So no, it doesn't always work. It does matter. And I would say most B2B companies should start off being as generic as possible and then move down into segmentation over time. If you try to go too far too fast, you end up building something that nobody wants."
+  },
+  {
+    "mode": "naive",
+    "id": "q_brex_price",
+    "medium": "blog",
+    "words": 110,
+    "verified_claims": 0,
+    "validation_rejected": 11,
+    "rejection_reasons": [
+      "unknown_source_id"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": false,
+      "failure": "unsupported_numeric_grounding",
+      "unsupported": [
+        {
+          "value": "$2 Billion",
+          "canonical": "usd:2000000000",
+          "sentence": "So we had no idea what to expect on an acquisition of Brex.\u00a0 It was a great company that raised $2 Billion at a peak valuation of $12B+, and then scaled back significantly with layoffs and more after Covid hit."
+        },
+        {
+          "value": "$12B+",
+          "canonical": "usd:12000000000",
+          "sentence": "So we had no idea what to expect on an acquisition of Brex.\u00a0 It was a great company that raised $2 Billion at a peak valuation of $12B+, and then scaled back significantly with layoffs and more after Covid hit."
+        },
+        {
+          "value": "$5.3 billion",
+          "canonical": "usd:5300000000",
+          "sentence": "Capital One has just announced they\u2019ll be buying them for $5.3 billion"
+        },
+        {
+          "value": "2019",
+          "canonical": "year:2019",
+          "sentence": "What happened to those crazy valuations of 2019-2020?"
+        },
+        {
+          "value": "2020",
+          "canonical": "year:2020",
+          "sentence": "What happened to those crazy valuations of 2019-2020?"
+        }
+      ],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [],
+        "values": [
+          {
+            "value": "$2 Billion",
+            "canonical": "usd:2000000000",
+            "sentence": "So we had no idea what to expect on an acquisition of Brex.\u00a0 It was a great company that raised $2 Billion at a peak valuation of $12B+, and then scaled back significantly with layoffs and more after Covid hit."
+          },
+          {
+            "value": "$12B+",
+            "canonical": "usd:12000000000",
+            "sentence": "So we had no idea what to expect on an acquisition of Brex.\u00a0 It was a great company that raised $2 Billion at a peak valuation of $12B+, and then scaled back significantly with layoffs and more after Covid hit."
+          },
+          {
+            "value": "$5.3 billion",
+            "canonical": "usd:5300000000",
+            "sentence": "Capital One has just announced they\u2019ll be buying them for $5.3 billion"
+          },
+          {
+            "value": "2019",
+            "canonical": "year:2019",
+            "sentence": "What happened to those crazy valuations of 2019-2020?"
+          },
+          {
+            "value": "2020",
+            "canonical": "year:2020",
+            "sentence": "What happened to those crazy valuations of 2019-2020?"
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "$2 Billion",
+            "canonical": "usd:2000000000",
+            "sentence": "So we had no idea what to expect on an acquisition of Brex.\u00a0 It was a great company that raised $2 Billion at a peak valuation of $12B+, and then scaled back significantly with layoffs and more after Covid hit."
+          },
+          {
+            "value": "$12B+",
+            "canonical": "usd:12000000000",
+            "sentence": "So we had no idea what to expect on an acquisition of Brex.\u00a0 It was a great company that raised $2 Billion at a peak valuation of $12B+, and then scaled back significantly with layoffs and more after Covid hit."
+          },
+          {
+            "value": "$5.3 billion",
+            "canonical": "usd:5300000000",
+            "sentence": "Capital One has just announced they\u2019ll be buying them for $5.3 billion"
+          },
+          {
+            "value": "2019",
+            "canonical": "year:2019",
+            "sentence": "What happened to those crazy valuations of 2019-2020?"
+          },
+          {
+            "value": "2020",
+            "canonical": "year:2020",
+            "sentence": "What happened to those crazy valuations of 2019-2020?"
+          }
+        ]
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": false,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [],
+    "answer": "So we had no idea what to expect on an acquisition of Brex.\u00a0 It was a great company that raised $2 Billion at a peak valuation of $12B+, and then scaled back significantly with layoffs and more after Covid hit.\nBut it\u2019s been quietly scaling up again since then, and IPO\u2019ing now as one of the hottest companies out there.\u00a0 And \u2026\nCapital One has just announced they\u2019ll be buying them for $5.3 billion\n.\nWow!\nThat\u2019s quite a markup over their last raise, isn\u2019t it?\nWhat happened to those crazy valuations of 2019-2020?\nMore here:\nThe Brex Story \u2014 From Boom To Bust And Back Again (Video + Transcript)"
+  },
+  {
+    "mode": "naive",
+    "id": "q_brex_price",
+    "medium": "linkedin",
+    "words": 9,
+    "verified_claims": 0,
+    "validation_rejected": 11,
+    "rejection_reasons": [
+      "unknown_source_id"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [],
+        "values": [],
+        "unsupported": []
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": false,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [],
+    "answer": "What price did Capital One announce for acquiring Brex?"
+  },
+  {
+    "mode": "naive",
+    "id": "q_brex_price",
+    "medium": "x",
+    "words": 9,
+    "verified_claims": 0,
+    "validation_rejected": 11,
+    "rejection_reasons": [
+      "unknown_source_id"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [],
+        "values": [],
+        "unsupported": []
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": false,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [],
+    "answer": "What price did Capital One announce for acquiring Brex?"
+  },
+  {
+    "mode": "naive",
+    "id": "q_brex_price",
+    "medium": "talk",
+    "words": 266,
+    "verified_claims": 0,
+    "validation_rejected": 11,
+    "rejection_reasons": [
+      "unknown_source_id"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": false,
+      "failure": "unsupported_numeric_grounding",
+      "unsupported": [
+        {
+          "value": "$5 billion",
+          "canonical": "usd:5000000000",
+          "sentence": "It has grown into a $5 billion business with over 400 employees"
+        },
+        {
+          "value": "$5.6 billion",
+          "canonical": "usd:5600000000",
+          "sentence": "And in fact, in July, Capital One announced it would acquire Brex for approximately $5.6 billion"
+        },
+        {
+          "value": "$2.8 billion",
+          "canonical": "usd:2800000000",
+          "sentence": "That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million"
+        },
+        {
+          "value": "$900 million",
+          "canonical": "usd:900000000",
+          "sentence": "That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million"
+        },
+        {
+          "value": "$5.6 billion",
+          "canonical": "usd:5600000000",
+          "sentence": "But overall, $5.6 billion"
+        },
+        {
+          "value": "40 million",
+          "canonical": "usd:40000000",
+          "sentence": "That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million"
+        },
+        {
+          "value": "12 million",
+          "canonical": "usd:12000000",
+          "sentence": "That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million"
+        },
+        {
+          "value": "12 million",
+          "canonical": "usd:12000000",
+          "sentence": "We'll have to wait and see how much of those 12 million are exercisable"
+        },
+        {
+          "value": "2017",
+          "canonical": "year:2017",
+          "sentence": "So Brex was founded back in 2017 by Pedro Franceschi and Henrique Dubugras, who sold their first company to PayPal when they were just teenagers"
+        },
+        {
+          "value": "400",
+          "canonical": "n:400",
+          "sentence": "It has grown into a $5 billion business with over 400 employees"
+        }
+      ],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [],
+        "values": [
+          {
+            "value": "$5 billion",
+            "canonical": "usd:5000000000",
+            "sentence": "It has grown into a $5 billion business with over 400 employees"
+          },
+          {
+            "value": "$5.6 billion",
+            "canonical": "usd:5600000000",
+            "sentence": "And in fact, in July, Capital One announced it would acquire Brex for approximately $5.6 billion"
+          },
+          {
+            "value": "$2.8 billion",
+            "canonical": "usd:2800000000",
+            "sentence": "That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million"
+          },
+          {
+            "value": "$900 million",
+            "canonical": "usd:900000000",
+            "sentence": "That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million"
+          },
+          {
+            "value": "$5.6 billion",
+            "canonical": "usd:5600000000",
+            "sentence": "But overall, $5.6 billion"
+          },
+          {
+            "value": "40 million",
+            "canonical": "usd:40000000",
+            "sentence": "That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million"
+          },
+          {
+            "value": "12 million",
+            "canonical": "usd:12000000",
+            "sentence": "That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million"
+          },
+          {
+            "value": "12 million",
+            "canonical": "usd:12000000",
+            "sentence": "We'll have to wait and see how much of those 12 million are exercisable"
+          },
+          {
+            "value": "2017",
+            "canonical": "year:2017",
+            "sentence": "So Brex was founded back in 2017 by Pedro Franceschi and Henrique Dubugras, who sold their first company to PayPal when they were just teenagers"
+          },
+          {
+            "value": "400",
+            "canonical": "n:400",
+            "sentence": "It has grown into a $5 billion business with over 400 employees"
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "$5 billion",
+            "canonical": "usd:5000000000",
+            "sentence": "It has grown into a $5 billion business with over 400 employees"
+          },
+          {
+            "value": "$5.6 billion",
+            "canonical": "usd:5600000000",
+            "sentence": "And in fact, in July, Capital One announced it would acquire Brex for approximately $5.6 billion"
+          },
+          {
+            "value": "$2.8 billion",
+            "canonical": "usd:2800000000",
+            "sentence": "That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million"
+          },
+          {
+            "value": "$900 million",
+            "canonical": "usd:900000000",
+            "sentence": "That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million"
+          },
+          {
+            "value": "$5.6 billion",
+            "canonical": "usd:5600000000",
+            "sentence": "But overall, $5.6 billion"
+          },
+          {
+            "value": "40 million",
+            "canonical": "usd:40000000",
+            "sentence": "That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million"
+          },
+          {
+            "value": "12 million",
+            "canonical": "usd:12000000",
+            "sentence": "That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million"
+          },
+          {
+            "value": "12 million",
+            "canonical": "usd:12000000",
+            "sentence": "We'll have to wait and see how much of those 12 million are exercisable"
+          },
+          {
+            "value": "2017",
+            "canonical": "year:2017",
+            "sentence": "So Brex was founded back in 2017 by Pedro Franceschi and Henrique Dubugras, who sold their first company to PayPal when they were just teenagers"
+          },
+          {
+            "value": "400",
+            "canonical": "n:400",
+            "sentence": "It has grown into a $5 billion business with over 400 employees"
+          }
+        ]
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": false,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [],
+    "answer": "So we're all watching as these big deals go through. And one I think that's interesting is the acquisition of Brex by Capital One. So Brex was founded back in 2017 by Pedro Franceschi and Henrique Dubugras, who sold their first company to PayPal when they were just teenagers. This one had some real momentum at scale, though it wasn't an overnight success. But today its founder CEO steps down after 10 years. He's going off to do something new. It has grown into a $5 billion business with over 400 employees. Now you can see here the team on stage right now, including the co-founder who took over as interim CEO. The team's still there. They've been doing this for a decade. And in fact, in July, Capital One announced it would acquire Brex for approximately $5.6 billion. That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million. We'll have to wait and see how much of those 12 million are exercisable. Those options could be valuable or worthless. But overall, $5.6 billion. Not a huge amount relative to the revenue being generated, but it shows that even if your valuation isn't sky high, capital will flow into startups if you build something really great. And also important, the deal gives Capital One access to Brex's credit card platform and what they call \"a unique technology stack.\" Credit cards are hard to build. You need to know how to do it. And the founders are staying involved post-acquisition. Sometimes the acquirer wants them gone."
+  },
+  {
+    "mode": "naive",
+    "id": "q_vp_sales_tension",
+    "medium": "blog",
+    "words": 58,
+    "verified_claims": 0,
+    "validation_rejected": 8,
+    "rejection_reasons": [
+      "unknown_source_id"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [],
+        "values": [],
+        "unsupported": []
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": true,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [],
+    "answer": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive?\nNo. A great VP of Sales will get results quickly with their existing team before hiring new reps. Criticism can be helpful if it challenges assumptions and sparks improvement."
+  },
+  {
+    "mode": "naive",
+    "id": "q_vp_sales_tension",
+    "medium": "linkedin",
+    "words": 29,
+    "verified_claims": 0,
+    "validation_rejected": 8,
+    "rejection_reasons": [
+      "unknown_source_id"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [],
+        "values": [],
+        "unsupported": []
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": true,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [],
+    "answer": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive?"
+  },
+  {
+    "mode": "naive",
+    "id": "q_vp_sales_tension",
+    "medium": "x",
+    "words": 31,
+    "verified_claims": 0,
+    "validation_rejected": 8,
+    "rejection_reasons": [
+      "unknown_source_id"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [],
+        "values": [],
+        "unsupported": []
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": true,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [],
+    "answer": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive? \nhttps://quora.com/Does-Jason-Lemkin-say-a-great-VP-of-Sales-should-immediately-bring-in-more-sales-executives-or-that-criticizing-a-VP-of-Sales-who-cannot-do-better-is-counterproductive/answer/Jason-M.-Lemkin?srid=dc&share=fedc9f50\n\u2026"
+  },
+  {
+    "mode": "naive",
+    "id": "q_vp_sales_tension",
+    "medium": "talk",
+    "words": 361,
+    "verified_claims": 0,
+    "validation_rejected": 8,
+    "rejection_reasons": [
+      "unknown_source_id"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [],
+        "values": [],
+        "unsupported": []
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": false,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [],
+    "answer": "So I've worked with so many VPs of Sales over the years. And there are a few things I know. One thing you learn as a founder at an earlier stage company is how much time you have to make your hire right. The CEO has to be right on her hires for sure. But what we find again and again is if you don't get your VP of Sales right, nothing really changes. Nothing good happens. So this is my advice. If you haven't made a VP of Sales hire yet, take it seriously because I just see these mistakes happen again and again where you don't make a VP of Sales hire. You think you're going to go longer without one and then it's too late. When you finally make the hire, they can't even change anything. They need three months to get up to speed. Then six months goes by and nothing changed. It never gets any better than that. It was all such wasted opportunity. This is why I sort of put out this little bit of advice when folks ask me. How long does it take to see if a new VP of Sales works out? What I said was it takes six months to figure out if they'll work out. That's fair. Six months is plenty of time to make a judgment. Not forever, but it gives them enough time to bring in some reps, start doing deals, get into the cadence of things. But here's the thing. Once you make the hire, once you make the decision, I always say give it four weeks max before you decide if you got it wrong. Now some people might push back on this and say well, I'm a process person. A lot of our SaaS companies, especially as they scale, want to have processes around hiring. We want to have an interview panel. We want to have three interviews. We want to have reference checks. All those things help. No doubt. But I would challenge anyone listening today that if you are truly struggling to close bigger customers, let alone smaller ones, you gotta move fast."
+  },
+  {
+    "mode": "naive",
+    "id": "q_personalized_saas_speaker",
+    "medium": "blog",
+    "words": 113,
+    "verified_claims": 0,
+    "validation_rejected": 29,
+    "rejection_reasons": [
+      "unknown_source_id"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [],
+        "values": [],
+        "unsupported": []
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": false,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [],
+    "answer": "Who said that AI means everything in SaaS needs to be a personalized experience?\nCEO Marc Benioff on Salesforce\u2019s Q1 FY25 earnings call.\u00a0 He didn\u2019t mention Agentforce specifically at all \u2014 he just said everything has to become more personal:\nBenioff also noted that sales reps are spending an average of \u201c20 hours per week\u201d training their AIs as part of this shift toward hyper-personalization. This isn\u2019t about adding features\u2014it\u2019s about fundamentally rethinking how software works for users who expect technology to understand them deeply enough to deliver genuinely unique experiences. The implication: every product will need to build deeper intelligence into user interactions rather than simply layering new interfaces over existing workflows."
+  },
+  {
+    "mode": "naive",
+    "id": "q_personalized_saas_speaker",
+    "medium": "linkedin",
+    "words": 14,
+    "verified_claims": 0,
+    "validation_rejected": 29,
+    "rejection_reasons": [
+      "unknown_source_id"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [],
+        "values": [],
+        "unsupported": []
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": false,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [],
+    "answer": "Who said that AI means everything in SaaS needs to be a personalized experience?"
+  },
+  {
+    "mode": "naive",
+    "id": "q_personalized_saas_speaker",
+    "medium": "x",
+    "words": 14,
+    "verified_claims": 0,
+    "validation_rejected": 29,
+    "rejection_reasons": [
+      "unknown_source_id"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [],
+        "values": [],
+        "unsupported": []
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": false,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [],
+    "answer": "Who said that AI means everything in SaaS needs to be a personalized experience?"
+  },
+  {
+    "mode": "naive",
+    "id": "q_personalized_saas_speaker",
+    "medium": "talk",
+    "words": 343,
+    "verified_claims": 0,
+    "validation_rejected": 29,
+    "rejection_reasons": [
+      "unknown_source_id"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": false,
+      "failure": "unsupported_numeric_grounding",
+      "unsupported": [
+        {
+          "value": "$1 billion",
+          "canonical": "usd:1000000000",
+          "sentence": "It's been true since I started as an investor in '08 when I saw Salesforce, I think it was $1 billion in revenue"
+        }
+      ],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [],
+        "values": [
+          {
+            "value": "$1 billion",
+            "canonical": "usd:1000000000",
+            "sentence": "It's been true since I started as an investor in '08 when I saw Salesforce, I think it was $1 billion in revenue"
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "$1 billion",
+            "canonical": "usd:1000000000",
+            "sentence": "It's been true since I started as an investor in '08 when I saw Salesforce, I think it was $1 billion in revenue"
+          }
+        ]
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": false,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [],
+    "answer": "So we've talked for years on this podcast and at our events, you've heard me say one thing again and again. It's been true since I started as an investor in '08 when I saw Salesforce, I think it was $1 billion in revenue. But then it went into the cloud, it exploded. And every single time I looked over the next five years I'd see them just leave us all behind. Every year I would look over the horizon. The next big thing was coming. That they were going to do something so powerful with data, with the future of apps, that it was almost impossible for any of us to keep up with. I know that sounds like hype, but if you remember back to those days of '13, '14, it seemed crazy that there could be more than Salesforce. That no matter how fast they grew, that someone could take off even faster. Today, it seems even crazier. Because now what we're seeing today are the fastest growing companies ever in B2B software. So who said that AI means everything in SaaS needs to be a personalized experience?\nI'm pretty sure that's right. There's a lot of debate around that today. Is it really worth it? Is it worth getting your team together and making sure everyone gets a highly customized email? I don't have answers for that. All I can tell you is that many of these leaders, including Wiz and Windsurf, seem to believe it's critical. At least in part, maybe sometimes. When I look at their product, I get some value out of it, but I also get a bunch of emails from the agents that are kind of generic. Some of them are very good. Some of them are quite bad. My guess is there will be some learning here as we go forward, because I don't think we fully understand yet which types of personalization work best, which ones don't, where the ROI makes sense and where it doesn't. What's the trade-off between the two?"
+  },
+  {
+    "mode": "mix",
+    "id": "q_brex_price",
+    "medium": "blog",
+    "words": 110,
+    "verified_claims": 0,
+    "validation_rejected": 11,
+    "rejection_reasons": [
+      "unknown_source_id"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": false,
+      "failure": "unsupported_numeric_grounding",
+      "unsupported": [
+        {
+          "value": "$2 Billion",
+          "canonical": "usd:2000000000",
+          "sentence": "So we had no idea what to expect on an acquisition of Brex.\u00a0 It was a great company that raised $2 Billion at a peak valuation of $12B+, and then scaled back significantly with layoffs and more after Covid hit."
+        },
+        {
+          "value": "$12B+",
+          "canonical": "usd:12000000000",
+          "sentence": "So we had no idea what to expect on an acquisition of Brex.\u00a0 It was a great company that raised $2 Billion at a peak valuation of $12B+, and then scaled back significantly with layoffs and more after Covid hit."
+        },
+        {
+          "value": "$5.3 billion",
+          "canonical": "usd:5300000000",
+          "sentence": "Capital One has just announced they\u2019ll be buying them for $5.3 billion"
+        },
+        {
+          "value": "2019",
+          "canonical": "year:2019",
+          "sentence": "What happened to those crazy valuations of 2019-2020?"
+        },
+        {
+          "value": "2020",
+          "canonical": "year:2020",
+          "sentence": "What happened to those crazy valuations of 2019-2020?"
+        }
+      ],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [],
+        "values": [
+          {
+            "value": "$2 Billion",
+            "canonical": "usd:2000000000",
+            "sentence": "So we had no idea what to expect on an acquisition of Brex.\u00a0 It was a great company that raised $2 Billion at a peak valuation of $12B+, and then scaled back significantly with layoffs and more after Covid hit."
+          },
+          {
+            "value": "$12B+",
+            "canonical": "usd:12000000000",
+            "sentence": "So we had no idea what to expect on an acquisition of Brex.\u00a0 It was a great company that raised $2 Billion at a peak valuation of $12B+, and then scaled back significantly with layoffs and more after Covid hit."
+          },
+          {
+            "value": "$5.3 billion",
+            "canonical": "usd:5300000000",
+            "sentence": "Capital One has just announced they\u2019ll be buying them for $5.3 billion"
+          },
+          {
+            "value": "2019",
+            "canonical": "year:2019",
+            "sentence": "What happened to those crazy valuations of 2019-2020?"
+          },
+          {
+            "value": "2020",
+            "canonical": "year:2020",
+            "sentence": "What happened to those crazy valuations of 2019-2020?"
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "$2 Billion",
+            "canonical": "usd:2000000000",
+            "sentence": "So we had no idea what to expect on an acquisition of Brex.\u00a0 It was a great company that raised $2 Billion at a peak valuation of $12B+, and then scaled back significantly with layoffs and more after Covid hit."
+          },
+          {
+            "value": "$12B+",
+            "canonical": "usd:12000000000",
+            "sentence": "So we had no idea what to expect on an acquisition of Brex.\u00a0 It was a great company that raised $2 Billion at a peak valuation of $12B+, and then scaled back significantly with layoffs and more after Covid hit."
+          },
+          {
+            "value": "$5.3 billion",
+            "canonical": "usd:5300000000",
+            "sentence": "Capital One has just announced they\u2019ll be buying them for $5.3 billion"
+          },
+          {
+            "value": "2019",
+            "canonical": "year:2019",
+            "sentence": "What happened to those crazy valuations of 2019-2020?"
+          },
+          {
+            "value": "2020",
+            "canonical": "year:2020",
+            "sentence": "What happened to those crazy valuations of 2019-2020?"
+          }
+        ]
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": false,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [],
+    "answer": "So we had no idea what to expect on an acquisition of Brex.\u00a0 It was a great company that raised $2 Billion at a peak valuation of $12B+, and then scaled back significantly with layoffs and more after Covid hit.\nBut it\u2019s been quietly scaling up again since then, and IPO\u2019ing now as one of the hottest companies out there.\u00a0 And \u2026\nCapital One has just announced they\u2019ll be buying them for $5.3 billion\n.\nWow!\nThat\u2019s quite a markup over their last raise, isn\u2019t it?\nWhat happened to those crazy valuations of 2019-2020?\nMore here:\nThe Brex Story \u2014 From Boom To Bust And Back Again (Video + Transcript)"
+  },
+  {
+    "mode": "mix",
+    "id": "q_brex_price",
+    "medium": "linkedin",
+    "words": 9,
+    "verified_claims": 0,
+    "validation_rejected": 11,
+    "rejection_reasons": [
+      "unknown_source_id"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [],
+        "values": [],
+        "unsupported": []
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": false,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [],
+    "answer": "What price did Capital One announce for acquiring Brex?"
+  },
+  {
+    "mode": "mix",
+    "id": "q_brex_price",
+    "medium": "x",
+    "words": 9,
+    "verified_claims": 0,
+    "validation_rejected": 11,
+    "rejection_reasons": [
+      "unknown_source_id"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [],
+        "values": [],
+        "unsupported": []
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": false,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [],
+    "answer": "What price did Capital One announce for acquiring Brex?"
+  },
+  {
+    "mode": "mix",
+    "id": "q_brex_price",
+    "medium": "talk",
+    "words": 266,
+    "verified_claims": 0,
+    "validation_rejected": 11,
+    "rejection_reasons": [
+      "unknown_source_id"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": false,
+      "failure": "unsupported_numeric_grounding",
+      "unsupported": [
+        {
+          "value": "$5 billion",
+          "canonical": "usd:5000000000",
+          "sentence": "It has grown into a $5 billion business with over 400 employees"
+        },
+        {
+          "value": "$5.6 billion",
+          "canonical": "usd:5600000000",
+          "sentence": "And in fact, in July, Capital One announced it would acquire Brex for approximately $5.6 billion"
+        },
+        {
+          "value": "$2.8 billion",
+          "canonical": "usd:2800000000",
+          "sentence": "That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million"
+        },
+        {
+          "value": "$900 million",
+          "canonical": "usd:900000000",
+          "sentence": "That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million"
+        },
+        {
+          "value": "$5.6 billion",
+          "canonical": "usd:5600000000",
+          "sentence": "But overall, $5.6 billion"
+        },
+        {
+          "value": "40 million",
+          "canonical": "usd:40000000",
+          "sentence": "That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million"
+        },
+        {
+          "value": "12 million",
+          "canonical": "usd:12000000",
+          "sentence": "That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million"
+        },
+        {
+          "value": "12 million",
+          "canonical": "usd:12000000",
+          "sentence": "We'll have to wait and see how much of those 12 million are exercisable"
+        },
+        {
+          "value": "2017",
+          "canonical": "year:2017",
+          "sentence": "So Brex was founded back in 2017 by Pedro Franceschi and Henrique Dubugras, who sold their first company to PayPal when they were just teenagers"
+        },
+        {
+          "value": "400",
+          "canonical": "n:400",
+          "sentence": "It has grown into a $5 billion business with over 400 employees"
+        }
+      ],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [],
+        "values": [
+          {
+            "value": "$5 billion",
+            "canonical": "usd:5000000000",
+            "sentence": "It has grown into a $5 billion business with over 400 employees"
+          },
+          {
+            "value": "$5.6 billion",
+            "canonical": "usd:5600000000",
+            "sentence": "And in fact, in July, Capital One announced it would acquire Brex for approximately $5.6 billion"
+          },
+          {
+            "value": "$2.8 billion",
+            "canonical": "usd:2800000000",
+            "sentence": "That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million"
+          },
+          {
+            "value": "$900 million",
+            "canonical": "usd:900000000",
+            "sentence": "That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million"
+          },
+          {
+            "value": "$5.6 billion",
+            "canonical": "usd:5600000000",
+            "sentence": "But overall, $5.6 billion"
+          },
+          {
+            "value": "40 million",
+            "canonical": "usd:40000000",
+            "sentence": "That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million"
+          },
+          {
+            "value": "12 million",
+            "canonical": "usd:12000000",
+            "sentence": "That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million"
+          },
+          {
+            "value": "12 million",
+            "canonical": "usd:12000000",
+            "sentence": "We'll have to wait and see how much of those 12 million are exercisable"
+          },
+          {
+            "value": "2017",
+            "canonical": "year:2017",
+            "sentence": "So Brex was founded back in 2017 by Pedro Franceschi and Henrique Dubugras, who sold their first company to PayPal when they were just teenagers"
+          },
+          {
+            "value": "400",
+            "canonical": "n:400",
+            "sentence": "It has grown into a $5 billion business with over 400 employees"
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "$5 billion",
+            "canonical": "usd:5000000000",
+            "sentence": "It has grown into a $5 billion business with over 400 employees"
+          },
+          {
+            "value": "$5.6 billion",
+            "canonical": "usd:5600000000",
+            "sentence": "And in fact, in July, Capital One announced it would acquire Brex for approximately $5.6 billion"
+          },
+          {
+            "value": "$2.8 billion",
+            "canonical": "usd:2800000000",
+            "sentence": "That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million"
+          },
+          {
+            "value": "$900 million",
+            "canonical": "usd:900000000",
+            "sentence": "That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million"
+          },
+          {
+            "value": "$5.6 billion",
+            "canonical": "usd:5600000000",
+            "sentence": "But overall, $5.6 billion"
+          },
+          {
+            "value": "40 million",
+            "canonical": "usd:40000000",
+            "sentence": "That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million"
+          },
+          {
+            "value": "12 million",
+            "canonical": "usd:12000000",
+            "sentence": "That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million"
+          },
+          {
+            "value": "12 million",
+            "canonical": "usd:12000000",
+            "sentence": "We'll have to wait and see how much of those 12 million are exercisable"
+          },
+          {
+            "value": "2017",
+            "canonical": "year:2017",
+            "sentence": "So Brex was founded back in 2017 by Pedro Franceschi and Henrique Dubugras, who sold their first company to PayPal when they were just teenagers"
+          },
+          {
+            "value": "400",
+            "canonical": "n:400",
+            "sentence": "It has grown into a $5 billion business with over 400 employees"
+          }
+        ]
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": false,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [],
+    "answer": "So we're all watching as these big deals go through. And one I think that's interesting is the acquisition of Brex by Capital One. So Brex was founded back in 2017 by Pedro Franceschi and Henrique Dubugras, who sold their first company to PayPal when they were just teenagers. This one had some real momentum at scale, though it wasn't an overnight success. But today its founder CEO steps down after 10 years. He's going off to do something new. It has grown into a $5 billion business with over 400 employees. Now you can see here the team on stage right now, including the co-founder who took over as interim CEO. The team's still there. They've been doing this for a decade. And in fact, in July, Capital One announced it would acquire Brex for approximately $5.6 billion. That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million. We'll have to wait and see how much of those 12 million are exercisable. Those options could be valuable or worthless. But overall, $5.6 billion. Not a huge amount relative to the revenue being generated, but it shows that even if your valuation isn't sky high, capital will flow into startups if you build something really great. And also important, the deal gives Capital One access to Brex's credit card platform and what they call \"a unique technology stack.\" Credit cards are hard to build. You need to know how to do it. And the founders are staying involved post-acquisition. Sometimes the acquirer wants them gone."
+  },
+  {
+    "mode": "mix",
+    "id": "q_vp_sales_tension",
+    "medium": "blog",
+    "words": 58,
+    "verified_claims": 0,
+    "validation_rejected": 8,
+    "rejection_reasons": [
+      "unknown_source_id"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [],
+        "values": [],
+        "unsupported": []
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": true,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [],
+    "answer": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive?\nNo. A great VP of Sales will get results quickly with their existing team before hiring new reps. Criticism can be helpful if it challenges assumptions and sparks improvement."
+  },
+  {
+    "mode": "mix",
+    "id": "q_vp_sales_tension",
+    "medium": "linkedin",
+    "words": 29,
+    "verified_claims": 0,
+    "validation_rejected": 8,
+    "rejection_reasons": [
+      "unknown_source_id"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [],
+        "values": [],
+        "unsupported": []
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": true,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [],
+    "answer": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive?"
+  },
+  {
+    "mode": "mix",
+    "id": "q_vp_sales_tension",
+    "medium": "x",
+    "words": 31,
+    "verified_claims": 0,
+    "validation_rejected": 8,
+    "rejection_reasons": [
+      "unknown_source_id"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [],
+        "values": [],
+        "unsupported": []
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": true,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [],
+    "answer": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive? \nhttps://quora.com/Does-Jason-Lemkin-say-a-great-VP-of-Sales-should-immediately-bring-in-more-sales-executives-or-that-criticizing-a-VP-of-Sales-who-cannot-do-better-is-counterproductive/answer/Jason-M.-Lemkin?srid=dc&share=fedc9f50\n\u2026"
+  },
+  {
+    "mode": "mix",
+    "id": "q_vp_sales_tension",
+    "medium": "talk",
+    "words": 361,
+    "verified_claims": 0,
+    "validation_rejected": 8,
+    "rejection_reasons": [
+      "unknown_source_id"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [],
+        "values": [],
+        "unsupported": []
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": false,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [],
+    "answer": "So I've worked with so many VPs of Sales over the years. And there are a few things I know. One thing you learn as a founder at an earlier stage company is how much time you have to make your hire right. The CEO has to be right on her hires for sure. But what we find again and again is if you don't get your VP of Sales right, nothing really changes. Nothing good happens. So this is my advice. If you haven't made a VP of Sales hire yet, take it seriously because I just see these mistakes happen again and again where you don't make a VP of Sales hire. You think you're going to go longer without one and then it's too late. When you finally make the hire, they can't even change anything. They need three months to get up to speed. Then six months goes by and nothing changed. It never gets any better than that. It was all such wasted opportunity. This is why I sort of put out this little bit of advice when folks ask me. How long does it take to see if a new VP of Sales works out? What I said was it takes six months to figure out if they'll work out. That's fair. Six months is plenty of time to make a judgment. Not forever, but it gives them enough time to bring in some reps, start doing deals, get into the cadence of things. But here's the thing. Once you make the hire, once you make the decision, I always say give it four weeks max before you decide if you got it wrong. Now some people might push back on this and say well, I'm a process person. A lot of our SaaS companies, especially as they scale, want to have processes around hiring. We want to have an interview panel. We want to have three interviews. We want to have reference checks. All those things help. No doubt. But I would challenge anyone listening today that if you are truly struggling to close bigger customers, let alone smaller ones, you gotta move fast."
+  },
+  {
+    "mode": "mix",
+    "id": "q_personalized_saas_speaker",
+    "medium": "blog",
+    "words": 113,
+    "verified_claims": 0,
+    "validation_rejected": 1,
+    "rejection_reasons": [
+      "unknown_source_id"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [],
+        "values": [],
+        "unsupported": []
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": false,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [],
+    "answer": "Who said that AI means everything in SaaS needs to be a personalized experience?\nCEO Marc Benioff on Salesforce\u2019s Q1 FY25 earnings call.\u00a0 He didn\u2019t mention Agentforce specifically at all \u2014 he just said everything has to become more personal:\nBenioff also noted that sales reps are spending an average of \u201c20 hours per week\u201d training their AIs as part of this shift toward hyper-personalization. This isn\u2019t about adding features\u2014it\u2019s about fundamentally rethinking how software works for users who expect technology to understand them deeply enough to deliver genuinely unique experiences. The implication: every product will need to build deeper intelligence into user interactions rather than simply layering new interfaces over existing workflows."
+  },
+  {
+    "mode": "mix",
+    "id": "q_personalized_saas_speaker",
+    "medium": "linkedin",
+    "words": 14,
+    "verified_claims": 0,
+    "validation_rejected": 1,
+    "rejection_reasons": [
+      "unknown_source_id"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [],
+        "values": [],
+        "unsupported": []
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": false,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [],
+    "answer": "Who said that AI means everything in SaaS needs to be a personalized experience?"
+  },
+  {
+    "mode": "mix",
+    "id": "q_personalized_saas_speaker",
+    "medium": "x",
+    "words": 14,
+    "verified_claims": 0,
+    "validation_rejected": 1,
+    "rejection_reasons": [
+      "unknown_source_id"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [],
+        "values": [],
+        "unsupported": []
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": false,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [],
+    "answer": "Who said that AI means everything in SaaS needs to be a personalized experience?"
+  },
+  {
+    "mode": "mix",
+    "id": "q_personalized_saas_speaker",
+    "medium": "talk",
+    "words": 343,
+    "verified_claims": 0,
+    "validation_rejected": 1,
+    "rejection_reasons": [
+      "unknown_source_id"
+    ],
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": false,
+      "failure": "unsupported_numeric_grounding",
+      "unsupported": [
+        {
+          "value": "$1 billion",
+          "canonical": "usd:1000000000",
+          "sentence": "It's been true since I started as an investor in '08 when I saw Salesforce, I think it was $1 billion in revenue"
+        }
+      ],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [],
+        "values": [
+          {
+            "value": "$1 billion",
+            "canonical": "usd:1000000000",
+            "sentence": "It's been true since I started as an investor in '08 when I saw Salesforce, I think it was $1 billion in revenue"
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "$1 billion",
+            "canonical": "usd:1000000000",
+            "sentence": "It's been true since I started as an investor in '08 when I saw Salesforce, I think it was $1 billion in revenue"
+          }
+        ]
+      },
+      "retry": null
+    },
+    "mentions_anneka": false,
+    "mentions_lemkin": false,
+    "mentions_5_15": false,
+    "mentions_webflow": false,
+    "claim_texts": [],
+    "answer": "So we've talked for years on this podcast and at our events, you've heard me say one thing again and again. It's been true since I started as an investor in '08 when I saw Salesforce, I think it was $1 billion in revenue. But then it went into the cloud, it exploded. And every single time I looked over the next five years I'd see them just leave us all behind. Every year I would look over the horizon. The next big thing was coming. That they were going to do something so powerful with data, with the future of apps, that it was almost impossible for any of us to keep up with. I know that sounds like hype, but if you remember back to those days of '13, '14, it seemed crazy that there could be more than Salesforce. That no matter how fast they grew, that someone could take off even faster. Today, it seems even crazier. Because now what we're seeing today are the fastest growing companies ever in B2B software. So who said that AI means everything in SaaS needs to be a personalized experience?\nI'm pretty sure that's right. There's a lot of debate around that today. Is it really worth it? Is it worth getting your team together and making sure everyone gets a highly customized email? I don't have answers for that. All I can tell you is that many of these leaders, including Wiz and Windsurf, seem to believe it's critical. At least in part, maybe sometimes. When I look at their product, I get some value out of it, but I also get a bunch of emails from the agents that are kind of generic. Some of them are very good. Some of them are quite bad. My guess is there will be some learning here as we go forward, because I don't think we fully understand yet which types of personalization work best, which ones don't, where the ROI makes sense and where it doesn't. What's the trade-off between the two?"
+  }
+]

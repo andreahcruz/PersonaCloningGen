@@ -69,7 +69,24 @@ def extraction_user_prompt(topic: str, hits: list[dict]) -> str:
     """Information extraction. Raw passages are the input, not the final prompt."""
     blocks = []
     for hit in hits:
-        blocks.append(f"[{hit.get('id')}]\n{(hit.get('text') or '').strip()}")
+        text = (hit.get("text") or "").strip()
+        status = hit.get("attribution_status")
+        prefix = ""
+        if status:
+            prefix = (
+                f"Attribution status: {status}. "
+                "Do not treat the passage as Jason Lemkin's personal position "
+                "unless the passage itself says so.\n"
+            )
+        speakers = [str(name) for name in (hit.get("quoted_speakers") or []) if name]
+        if speakers:
+            prefix += (
+                "Quoted speakers: "
+                + ", ".join(speakers)
+                + ". Text inside quotation marks is their statement, not "
+                "Jason Lemkin's, unless the passage says he agrees.\n"
+            )
+        blocks.append(f"[{hit.get('id')}]\n{prefix}{text}")
     supplied = "\n\n".join(blocks)
     kinds = ", ".join(CLAIM_TYPES)
     return (
@@ -297,25 +314,80 @@ def validate_item(item: dict, hits_by_id: dict[str, dict], topic: str = "") -> s
     return None
 
 
+def _resolve_hit(source_id: str | None, hits: list[dict]) -> dict | None:
+    """Match a copied id to one hit. A parent id and a chunk id name the same source."""
+    if not source_id:
+        return None
+    exact = [hit for hit in hits if hit.get("id") == source_id]
+    if len(exact) == 1:
+        return exact[0]
+    matches = []
+    for hit in hits:
+        keys = {
+            hit.get("id"),
+            hit.get("graph_document_id"),
+            hit.get("parent_graph_document_id"),
+        }
+        graph_id = hit.get("graph_document_id")
+        chunk_id = hit.get("chunk_id")
+        if graph_id and chunk_id:
+            keys.add(f"{graph_id}:{chunk_id}")
+        if source_id in keys:
+            matches.append(hit)
+    if len(matches) == 1:
+        return matches[0]
+    return None
+
+
+def annotate_attribution(claims: list[dict], hits: list[dict]) -> list[dict]:
+    """Keep a quoted speaker only when that name is already in the source text."""
+    by_id = {hit.get("id"): hit for hit in hits}
+    annotated = []
+    for claim in claims:
+        item = dict(claim)
+        hit = by_id.get(item.get("source_id"))
+        if hit is None:
+            annotated.append(item)
+            continue
+        status = hit.get("attribution_status")
+        if status:
+            item["attribution_status"] = status
+        source = normalize_support(hit.get("text") or "")
+        names = []
+        for name in hit.get("quoted_speakers") or []:
+            text = str(name).strip()
+            if text and normalize_support(text) in source:
+                names.append(text)
+        if names:
+            item["quoted_speakers"] = names
+        annotated.append(item)
+    return annotated
+
+
 def partition_evidence(items: list, hits: list[dict], topic: str = "") -> tuple[list[dict], list[dict]]:
     """Split proposed items. Invalid spans are dropped, not edited."""
     hits_by_id = {hit.get("id"): hit for hit in hits}
     accepted = []
     rejected = []
     for item in items:
-        reason = validate_item(item, hits_by_id, topic)
+        resolved = _resolve_hit(item.get("source_id") if isinstance(item, dict) else None, hits)
+        checked = item
+        if isinstance(item, dict) and resolved is not None and item.get("source_id") != resolved.get("id"):
+            checked = {**item, "source_id": resolved.get("id")}
+            hits_by_id = {**hits_by_id, resolved.get("id"): resolved}
+        reason = validate_item(checked, hits_by_id, topic)
         if reason:
             rejected.append(_public_item(item, reason))
             continue
         accepted.append(
             {
-                "source_id": item["source_id"],
-                "claim": item["claim"].strip(),
-                "support_span": item["support_span"],
-                "claim_type": item["claim_type"].strip().casefold(),
+                "source_id": checked["source_id"],
+                "claim": checked["claim"].strip(),
+                "support_span": checked["support_span"],
+                "claim_type": checked["claim_type"].strip().casefold(),
             }
         )
-    return accepted, rejected
+    return annotate_attribution(accepted, hits), rejected
 
 
 def apply_verdicts(accepted: list[dict], verdicts: list[str]) -> tuple[list[dict], list[dict]]:
@@ -336,14 +408,28 @@ def apply_verdicts(accepted: list[dict], verdicts: list[str]) -> tuple[list[dict
 
 def verified_claim_block(claims: list[dict]) -> str:
     """Accepted claims only. Spans and source ids stay out."""
-    lines = [f"[E{index}] {item['claim'].strip()}" for index, item in enumerate(claims, start=1)]
+    lines = []
+    for index, item in enumerate(claims, start=1):
+        lines.append(f"[E{index}] {item['claim'].strip()}")
+        speakers = [str(name) for name in (item.get("quoted_speakers") or []) if name]
+        if speakers:
+            lines.append("Speaker: " + ", ".join(speakers))
     body = "\n".join(lines)
     if body:
         return f"ALLOWED FACTUAL EVIDENCE\n\n{body}"
     return "ALLOWED FACTUAL EVIDENCE"
 
 
-def final_evidence_instruction(medium: dict, topic: str, claims: list[dict]) -> str:
+PROMPT_CONTRACT = "factual-reliability-v1"
+OPERATIONAL_X_MIN_WORDS = 20
+
+
+def final_evidence_instruction(
+    medium: dict,
+    topic: str,
+    claims: list[dict],
+    evidence_status: str = "verified",
+) -> str:
     """Relabel prompt. The closer is only the writing request."""
     from host_finetune.compare_adapters import prompt_for
 
@@ -354,34 +440,79 @@ def final_evidence_instruction(medium: dict, topic: str, claims: list[dict]) -> 
         "talk": "talk",
     }[medium["medium"]]
     block = verified_claim_block(claims)
+    status_note = ""
+    if evidence_status == "extraction_failed":
+        status_note = (
+            "Evidence extraction failed to return parseable claims. "
+            "That is an extraction failure, not a finding that the sources were irrelevant. "
+            "Do not invent specific facts, numbers, names, or quotations.\n\n"
+        )
+    elif evidence_status == "no_accepted_claims":
+        status_note = (
+            "No claim passed source-span validation. "
+            "Do not invent specific facts, numbers, names, or quotations.\n\n"
+        )
     return (
         f"{prompt_for(medium, topic)}\n\n"
         "Use only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\n"
         "Do not add factual numbers, percentages, dollar amounts, dates, customer "
         "counts, ARR, NRR, growth rates, or other specific metrics from memory.\n"
         "If a factual detail is not in the evidence, omit it.\n"
+        f"Prompt contract: {PROMPT_CONTRACT}.\n"
+        "When a claim has a Speaker line, attribute that statement to that person. "
+        "Do not present it as Jason Lemkin's own words unless the claim says he agrees.\n"
+        "Do not give a person a title, employer, or role unless that title and organization "
+        "are both written in the evidence.\n"
+        "Do not copy speaker labels or evidence tags into the draft.\n"
+        "Do not repeat the user's question as the draft or as its opening line.\n"
+        "Finish the last sentence.\n"
+        "A LinkedIn post must be at least 40 words. An X post must be at least 20 words.\n"
         "You may provide analysis, opinion, transitions, and stylistic commentary, "
         "but specific factual claims must come from the evidence.\n\n"
+        f"{status_note}"
         f"{block}\n\n"
         f"Now write the requested {name} about: {topic}"
     )
+
+
+_EXTRA_HIT_FIELDS = (
+    "rank",
+    "score",
+    "score_type",
+    "backend",
+    "retrieval_mode",
+    "attribution_status",
+    "author_position",
+    "graph_document_id",
+    "parent_graph_document_id",
+    "chunk_id",
+    "provenance",
+    "source_row_ids",
+    "source_file",
+    "source_line",
+    "quoted_speakers",
+)
 
 
 def freeze_hits(hits: list[dict]) -> list[dict]:
     """Copy retrieved rows so evidence text cannot replace them."""
     frozen = []
     for hit in hits:
-        frozen.append(
-            {
-                "id": hit.get("id"),
-                "text": hit.get("text"),
-                "medium": hit.get("medium"),
-                "group_id": hit.get("group_id"),
-                "row_id": hit.get("row_id"),
-                "split": hit.get("split"),
-                "distance": hit.get("distance"),
-            }
-        )
+        item = {
+            "id": hit.get("id"),
+            "text": hit.get("text"),
+            "medium": hit.get("medium"),
+            "group_id": hit.get("group_id"),
+            "row_id": hit.get("row_id"),
+            "split": hit.get("split"),
+            "distance": hit.get("distance"),
+        }
+        for key in _EXTRA_HIT_FIELDS:
+            if key not in hit or hit.get(key) is None:
+                continue
+            value = hit.get(key)
+            item[key] = list(value) if isinstance(value, list) else value
+        frozen.append(item)
     return frozen
 
 
@@ -397,14 +528,159 @@ def _public_item(item, reason: str) -> dict:
     }
 
 
-def media_jobs(topic: str, hits: list[dict], claims: list[dict]) -> list[dict]:
+def repeats_topic(answer: str, topic: str) -> bool:
+    """True when the draft is the question or opens by repeating it."""
+    def folded(text: str) -> str:
+        return re.sub(r"\s+", " ", (text or "").strip().casefold())
+
+    draft = folded(answer)
+    asked = folded(topic)
+    if not draft or not asked:
+        return False
+    return draft == asked or draft.startswith(asked)
+
+
+def draft_retry_reason(
+    answer: str,
+    topic: str,
+    medium: str,
+    numeric_report: dict | None,
+    claims: list[dict] | None = None,
+    evidence_status: str = "verified",
+) -> str | None:
+    """One reason for a single corrective retry. None means keep the draft."""
+    from host_finetune.factual_reliability import embeds_topic, instruction_leak, role_assertions, speaker_attribution
+    from host_finetune.relabel_continuations import sentence_final
+    from host_finetune.unified_eval import LENGTH_BANDS
+
+    checked_claims = claims if evidence_status == "verified" else []
+    if repeats_topic(answer, topic) or embeds_topic(answer, topic):
+        return "topic_echo"
+    if instruction_leak(answer):
+        return "instruction_leak"
+    words = len((answer or "").split())
+    floor, _ceiling = LENGTH_BANDS.get(medium, (1, 5000))
+    if words < floor:
+        return "below_length_band"
+    if medium == "x" and words < OPERATIONAL_X_MIN_WORDS:
+        return "x_below_operational_floor"
+    if (answer or "").strip() and not sentence_final(answer):
+        return "incomplete_sentence"
+    if numeric_report and numeric_report.get("applicable") and numeric_report.get("pass") is False:
+        return "unsupported_number"
+    if any(item["verdict"] != "supported" for item in role_assertions(answer, checked_claims)):
+        return "unsupported_role"
+    speaker = speaker_attribution(answer, checked_claims)
+    if speaker.get("applicable") and not speaker.get("pass"):
+        return "speaker_attribution"
+    return None
+
+
+def corrective_addendum(reason: str, numeric_report: dict | None) -> str:
+    """Tell the model what to change. Do not supply a replacement fact."""
+    from host_finetune.grounding_repair import unsupported_surfaces
+
+    if reason == "topic_echo":
+        return (
+            "The draft repeated the question. Write the requested piece itself. "
+            "Do not repeat the question."
+        )
+    if reason == "below_length_band":
+        return (
+            "The draft is too short for the requested medium. "
+            "Write a complete piece and do not repeat the question."
+        )
+    if reason == "incomplete_sentence":
+        return "The draft stopped mid-sentence. Finish the last sentence. Do not add new numbers."
+    if reason == "x_below_operational_floor":
+        return (
+            "The X post is under 20 words. Write at least 20 words of the post itself. "
+            "Do not repeat the question and do not add numbers, titles, or employers."
+        )
+    if reason == "instruction_leak":
+        return "Remove evidence labels, speaker labels, and prompt text from the draft. Do not add numbers."
+    if reason == "unsupported_role":
+        return (
+            "Remove titles, employers, and roles that are not written in the evidence. "
+            "Do not invent a replacement title or company."
+        )
+    if reason == "speaker_attribution":
+        return (
+            "Name the quoted speaker from the evidence when you use that speaker's statement. "
+            "Do not present the quotation as Jason Lemkin's own words, and do not add a title or company."
+        )
+    surfaces = unsupported_surfaces(numeric_report or {})
+    listed = ", ".join(surfaces[:8]) or "the quantities that are not in the evidence"
+    return (
+        f"Remove these quantities that are not in the evidence: {listed}. "
+        "Do not replace them with other numbers."
+    )
+
+
+def _still_echoes(answer: str, topic: str) -> bool:
+    from host_finetune.factual_reliability import embeds_topic
+
+    return repeats_topic(answer, topic) or embeds_topic(answer, topic)
+
+
+def corrective_retry_improves(
+    reason: str,
+    first_answer: str,
+    second_answer: str,
+    topic: str,
+    first_numeric: dict | None,
+    second_numeric: dict | None,
+    claims: list[dict] | None = None,
+) -> bool:
+    """Keep a retry only when it repairs the recorded failure."""
+    from host_finetune.factual_reliability import instruction_leak, role_assertions, speaker_attribution
+    from host_finetune.relabel_continuations import sentence_final
+
+    if reason == "topic_echo":
+        return not _still_echoes(second_answer, topic)
+    if reason == "below_length_band":
+        return len((second_answer or "").split()) > len((first_answer or "").split()) and not _still_echoes(
+            second_answer, topic
+        )
+    if reason == "incomplete_sentence":
+        return sentence_final(second_answer or "")
+    if reason == "x_below_operational_floor":
+        return len((second_answer or "").split()) > len((first_answer or "").split()) and not _still_echoes(
+            second_answer, topic
+        )
+    if reason == "instruction_leak":
+        return not instruction_leak(second_answer)
+    if reason == "unsupported_role":
+        def bad(text: str) -> int:
+            return sum(item["verdict"] != "supported" for item in role_assertions(text, claims))
+
+        return bad(second_answer) < bad(first_answer)
+    if reason == "speaker_attribution":
+        return bool(speaker_attribution(second_answer, claims).get("pass")) and not speaker_attribution(
+            first_answer, claims
+        ).get("pass")
+    if reason == "unsupported_number":
+        if (second_numeric or {}).get("pass"):
+            return True
+        before = len((first_numeric or {}).get("unsupported") or [])
+        after = len((second_numeric or {}).get("unsupported") or [])
+        return after < before
+    return False
+
+
+def media_jobs(
+    topic: str,
+    hits: list[dict],
+    claims: list[dict],
+    evidence_status: str = "verified",
+) -> list[dict]:
     """One verified set, four media. The copy gate is not applied to claims."""
     from host_finetune.compare_adapters import MEDIUMS
 
     raw = freeze_hits(hits)
     jobs = []
     for medium in MEDIUMS:
-        instruction = final_evidence_instruction(medium, topic, claims)
+        instruction = final_evidence_instruction(medium, topic, claims, evidence_status)
         for hit in raw:
             text = (hit.get("text") or "").strip()
             if text and text in instruction:
@@ -425,6 +701,8 @@ def media_jobs(topic: str, hits: list[dict], claims: list[dict]) -> list[dict]:
                 "hits": raw,
                 "claims": claims,
                 "evidence_block": verified_claim_block(claims),
+                "evidence_status": evidence_status,
+                "prompt_contract": PROMPT_CONTRACT,
             }
         )
     return jobs
@@ -456,5 +734,7 @@ def evidence_provenance(hits: list[dict], record: dict) -> dict:
         "distillation_seed": DISTILL_SEED,
         "support_spans_in_generator_prompt": False,
         "evidence_stage_reason": record.get("reason"),
+        "evidence_status": record.get("evidence_status"),
+        "extraction_attempts": record.get("extraction_attempts"),
         "extraction_stop_reason": record.get("extraction_stop_reason"),
     }

@@ -1,0 +1,122 @@
+{
+  "workdir": "artifacts\\lightrag\\model_f\\storage_pilot160",
+  "mutated_graph": false,
+  "failed_document_ids": [
+    "gd_1d361440c168ddd12ff26855",
+    "gd_5ffdc3a083492246413be6f2",
+    "gd_8276b7d28a0837fa1e71181a",
+    "gd_8a579b23707dd4f77e169619",
+    "gd_a4ad0243c9bcfec4c527a703",
+    "gd_aa82ba1eab089122de370f68",
+    "gd_f76cf95212bfc67508398f63",
+    "gd_f9a237e6ccf11fe4de9924ad"
+  ],
+  "failed_document_count": 8,
+  "stored_chunks": 348,
+  "chunks_from_failed_documents": 22,
+  "failed_chunk_file_paths": [
+    "gd_5ffdc3a083492246413be6f2",
+    "gd_8276b7d28a0837fa1e71181a",
+    "gd_8a579b23707dd4f77e169619",
+    "gd_a4ad0243c9bcfec4c527a703",
+    "gd_aa82ba1eab089122de370f68",
+    "gd_f76cf95212bfc67508398f63",
+    "gd_f9a237e6ccf11fe4de9924ad"
+  ],
+  "omission_marker_chunks": 19,
+  "chunks_missing_from_catalog": [],
+  "third_party_quotation_documents": [
+    "gd_043b769dd0d2fd156767e0ba"
+  ],
+  "graph_nodes": 1791,
+  "graph_edges": 2000,
+  "nodes_citing_failed_documents": 0,
+  "edges_citing_failed_documents": 0,
+  "edges_citing_omission_chunks": 238,
+  "weak_entity_flags": {
+    "generic_noun": 17,
+    "numeric_name": 219,
+    "month": 5,
+    "weekday": 3
+  },
+  "weak_entity_examples": [
+    {
+      "name": "Partner",
+      "flags": [
+        "generic_noun"
+      ]
+    },
+    {
+      "name": "Company",
+      "flags": [
+        "generic_noun"
+      ]
+    },
+    {
+      "name": "Investment",
+      "flags": [
+        "generic_noun"
+      ]
+    },
+    {
+      "name": "Round",
+      "flags": [
+        "generic_noun"
+      ]
+    },
+    {
+      "name": "Startups",
+      "flags": [
+        "generic_noun"
+      ]
+    },
+    {
+      "name": "B2B founders",
+      "flags": [
+        "numeric_name"
+      ]
+    },
+    {
+      "name": "B2B",
+      "flags": [
+        "numeric_name"
+      ]
+    },
+    {
+      "name": "B2B+AI Companies",
+      "flags": [
+        "numeric_name"
+      ]
+    },
+    {
+      "name": "23%",
+      "flags": [
+        "numeric_name"
+      ]
+    },
+    {
+      "name": "B2B+AI",
+      "flags": [
+        "numeric_name"
+      ]
+    },
+    {
+      "name": "Investor",
+      "flags": [
+        "generic_noun"
+      ]
+    },
+    {
+      "name": "December",
+      "flags": [
+        "month"
+      ]
+    }
+  ],
+  "query_time_exclusions": [
+    "failed_extraction_chunk",
+    "omission_marker_span",
+    "generated_summary_not_a_source_span",
+    "unknown_graph_document"
+  ]
+}

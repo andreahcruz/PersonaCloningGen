@@ -18,6 +18,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from host_finetune.eval_gold_rag import aggregate, load_format_specs, score_row
+from host_finetune.factual_reliability import assess_factual, grounding_regression
 from host_finetune.evidence_capsule import (
     DISTILL_BACKEND,
     DISTILL_DO_SAMPLE,
@@ -25,9 +26,11 @@ from host_finetune.evidence_capsule import (
     EXTRACT_MAX_NEW_TOKENS,
     EvidenceParseError,
     EvidenceStageError,
+    corrective_addendum,
+    corrective_retry_improves,
+    draft_retry_reason,
     evidence_provenance,
     extraction_user_prompt,
-    final_evidence_instruction,
     freeze_hits,
     media_jobs,
     parse_atomic_evidence,
@@ -51,6 +54,7 @@ from host_finetune.rag_source_copying import (
     retry_seed,
 )
 from host_finetune.relabel_continuations import sentence_final
+from host_finetune.retrieval_contract import LIGHTRAG_MODES, require_backend
 from host_finetune.train_only_index import (
     DEFAULT_STYLE_PATH,
     evidence_review_rows,
@@ -223,7 +227,7 @@ def retrieval_trace_fields(payload: dict | None, answer: str, enabled: bool) -> 
     if not enabled or payload is None:
         return {"retrieval": False}
     hits = payload.get("hits") or []
-    return {
+    fields = {
         "retrieval": True,
         "retrieval_query": payload.get("query"),
         "retrieval_filter": payload.get("filter"),
@@ -237,6 +241,18 @@ def retrieval_trace_fields(payload: dict | None, answer: str, enabled: bool) -> 
             for hit in hits
         ],
     }
+    if payload.get("backend"):
+        fields["retrieval_backend"] = payload["backend"]
+    if payload.get("mode"):
+        fields["retrieval_mode"] = payload["mode"]
+    excluded = payload.get("excluded")
+    if excluded is not None:
+        reasons: dict[str, int] = {}
+        for item in excluded:
+            reason = str((item or {}).get("reason") or "unknown")
+            reasons[reason] = reasons.get(reason, 0) + 1
+        fields["retrieval_excluded_reasons"] = reasons
+    return fields
 
 
 def decision_metrics(traces: list[dict]) -> dict:
@@ -364,25 +380,42 @@ def _prepare_evidence(model, tokenizer, topic: str, hits: list[dict]) -> dict:
         "allowed_numeric_values": [],
         "reason": None,
     }
-    with model.disable_adapter():
-        extracted = _greedy_user(model, tokenizer, user, EXTRACT_MAX_NEW_TOKENS)
+    def _extract(prompt: str) -> dict:
+        with model.disable_adapter():
+            return _greedy_user(model, tokenizer, prompt, EXTRACT_MAX_NEW_TOKENS)
+
+    extracted = _extract(user)
+    attempts = 1
+    proposed = None
+    try:
+        proposed = parse_atomic_evidence(extracted["text"])
+    except EvidenceParseError:
+        extracted = _extract(user)
+        attempts = 2
+        try:
+            proposed = parse_atomic_evidence(extracted["text"])
+        except EvidenceParseError:
+            proposed = None
     record["raw_extraction"] = extracted["text"]
     record["rendered_extraction_prompt"] = extracted["rendered"]
     record["extraction_seconds"] = extracted["seconds"]
     record["extraction_stop_reason"] = extracted["stop_reason"]
-    try:
-        proposed = parse_atomic_evidence(extracted["text"])
-    except EvidenceParseError as exc:
-        record["reason"] = "unparseable"
-        raise EvidenceStageError("unparseable", record) from exc
+    record["extraction_attempts"] = attempts
     if freeze_hits(hits) != frozen:
         raise RuntimeError("evidence preparation changed the retrieved passages")
+    if proposed is None:
+        record["reason"] = "extraction_failed"
+        record["evidence_status"] = "extraction_failed"
+        record["verified"] = []
+        record["evidence_block"] = verified_claim_block([])
+        return record
     record["proposed"] = proposed
     accepted, rejected = partition_evidence(proposed, frozen, topic)
     record["validation_rejected"] = rejected
     record["verified"] = accepted
     record["allowed_numeric_values"] = sorted(allowed_numbers(topic, accepted))
     record["evidence_block"] = verified_claim_block(accepted)
+    record["evidence_status"] = "verified" if accepted else "no_accepted_claims"
     return record
 
 
@@ -653,13 +686,19 @@ def generate(
             f"extract_s={evidence_record['extraction_seconds']}",
             flush=True,
         )
-        jobs = media_jobs(row["topic"], frozen, evidence_record["verified"])
+        jobs = media_jobs(
+            row["topic"],
+            frozen,
+            evidence_record["verified"],
+            evidence_record.get("evidence_status") or "verified",
+        )
         if len({job["evidence_block"] for job in jobs}) != 1:
             raise RuntimeError("media reused more than one evidence set")
         provenance = evidence_provenance(frozen, evidence_record)
+        provenance["prompt_contract"] = jobs[0]["prompt_contract"] if jobs else None
         for medium_index, job in enumerate(jobs):
             seed = seed_base + topic_index * len(MEDIUMS) + medium_index
-            instruction = final_evidence_instruction(job["medium"], row["topic"], job["claims"])
+            instruction = job["instruction"]
             first = _attach_numeric(
                 _complete_once(
                     model,
@@ -675,9 +714,21 @@ def generate(
                 True,
             )
             second = None
+            stored_instruction = instruction
+            status = job.get("evidence_status") or "verified"
+
+            def _facts(answer: str) -> dict:
+                return assess_factual(
+                    answer,
+                    row["topic"],
+                    job["claims"],
+                    evidence_status=status,
+                    hits=job["hits"],
+                )
+
             if final_response(first["report"]) == "copy_retry":
                 print(f"  copy retry {row['id']} {job['medium']['medium']}", flush=True)
-                second = _attach_numeric(
+                candidate = _attach_numeric(
                     _complete_once(
                         model,
                         tokenizer,
@@ -691,8 +742,52 @@ def generate(
                     job["claims"],
                     True,
                 )
+                if candidate["report"].get("pass") and not grounding_regression(
+                    _facts(first["answer"]), _facts(candidate["answer"])
+                ):
+                    second = candidate
+            else:
+                reason = draft_retry_reason(
+                    first["answer"],
+                    row["topic"],
+                    job["medium"]["medium"],
+                    first["numeric"],
+                    job["claims"],
+                    status,
+                )
+                if reason:
+                    print(f"  {reason} retry {row['id']} {job['medium']['medium']}", flush=True)
+                    augmented = instruction + "\n\n" + corrective_addendum(reason, first["numeric"])
+                    candidate = _attach_numeric(
+                        _complete_once(
+                            model,
+                            tokenizer,
+                            augmented,
+                            retry_seed(seed),
+                            job["medium"]["max_new_tokens"],
+                            job["hits"],
+                            True,
+                        ),
+                        row["topic"],
+                        job["claims"],
+                        True,
+                    )
+                    improves = corrective_retry_improves(
+                        reason,
+                        first["answer"],
+                        candidate["answer"],
+                        row["topic"],
+                        first["numeric"],
+                        candidate["numeric"],
+                        job["claims"],
+                    )
+                    if candidate["report"].get("pass") and improves and not grounding_regression(
+                        _facts(first["answer"]), _facts(candidate["answer"])
+                    ):
+                        second = candidate
+                        stored_instruction = augmented
             _append_generation(
-                traces, row, job["medium"], instruction, payload, first, second, True, dict(provenance)
+                traces, row, job["medium"], stored_instruction, payload, first, second, True, dict(provenance)
             )
     del model
     torch.cuda.empty_cache()
@@ -836,6 +931,42 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--collection", default=None)
     parser.add_argument("--chroma-path", type=Path, default=None)
     parser.add_argument("--k", type=int, default=4)
+    parser.add_argument(
+        "--retrieval-backend",
+        choices=("dense", "lightrag"),
+        default="dense",
+        help="dense keeps the active Chroma index. lightrag is off unless this flag is set.",
+    )
+    parser.add_argument(
+        "--lightrag-mode",
+        choices=LIGHTRAG_MODES,
+        default="hybrid",
+        help="Used only when --retrieval-backend lightrag. top_k inside LightRAG is not the evidence budget.",
+    )
+    parser.add_argument(
+        "--lightrag-workdir",
+        type=Path,
+        default=ROOT / "artifacts" / "lightrag" / "model_f" / "storage",
+    )
+    parser.add_argument(
+        "--evidence-budget",
+        type=int,
+        default=None,
+        help="Final source passages passed to evidence extraction. Default is --k.",
+    )
+    parser.add_argument(
+        "--lightrag-max-per-source",
+        type=int,
+        default=1,
+        help="Cap LightRAG chunks from one graph document. Dense retrieval is unchanged.",
+    )
+    parser.add_argument("--lightrag-model", default="llama3.1:latest")
+    parser.add_argument(
+        "--lightrag-fallback",
+        choices=("error", "dense"),
+        default="error",
+        help="error refuses a missing LightRAG catalog. dense uses the active Chroma index instead.",
+    )
     parser.add_argument("--embed-model", default="nomic-embed-text")
     parser.add_argument(
         "--seed-base",
@@ -870,6 +1001,18 @@ def parse_args() -> argparse.Namespace:
         choices=("4bit", "8bit"),
         default="4bit",
         help="BitsAndBytes width of the frozen base. 8bit quantizes the full Instruct weights on load. The adapter file is unchanged.",
+    )
+    parser.add_argument(
+        "--freeze-retrieval-out",
+        type=Path,
+        default=None,
+        help="Query each selected topic and write the payloads, then exit before loading the generator.",
+    )
+    parser.add_argument(
+        "--frozen-retrieval",
+        type=Path,
+        default=None,
+        help="Reuse a payload file from --freeze-retrieval-out. Does not call the retriever again.",
     )
     return parser.parse_args()
 
@@ -957,6 +1100,32 @@ def row_provenance(args: argparse.Namespace, adapter: Path, stamp: dict) -> dict
     }
 
 
+def _recorded_collection(
+    retrieval: bool,
+    collection: str | None,
+    chroma_path: str | None,
+) -> str | None:
+    """Keep an explicit collection. If one was omitted, recover it from a known path.
+
+    The frozen evidence test records a v1 path and no collection name. Production
+    calls pass the collection from ``rag_active.json``, and that value wins.
+    """
+    if not retrieval:
+        return None
+    if collection:
+        return collection
+    if not chroma_path:
+        return None
+    from host_finetune.rag_runtime import V1_COLLECTION, V1_DIR, V2_COLLECTION, V2_DIR
+
+    name = Path(chroma_path).name
+    if name == V1_DIR.name:
+        return V1_COLLECTION
+    if name == V2_DIR.name:
+        return V2_COLLECTION
+    return None
+
+
 def write_parameters(
     out: Path,
     retrieval: bool = False,
@@ -972,6 +1141,12 @@ def write_parameters(
     collection: str | None = None,
     git: dict | None = None,
     quantization: str = "4bit",
+    retrieval_backend: str = "dense",
+    lightrag_mode: str | None = None,
+    lightrag_workdir: str | None = None,
+    evidence_budget: int | None = None,
+    lightrag_fallback: str = "error",
+    frozen_retrieval: str | None = None,
 ) -> None:
     payload = {
         "experiment_id": out.name,
@@ -1035,11 +1210,19 @@ def write_parameters(
         "expected_facts_in_prompt": False,
         "retrieval": {
             "enabled": retrieval,
-            "collection": collection if retrieval else None,
+            "collection": _recorded_collection(retrieval, collection, chroma_path),
             "chroma_path": chroma_path if retrieval else None,
             "embedding_model": embed_model if retrieval else None,
             "top_k": retrieval_k if retrieval else None,
             "medium_filter": False,
+            "backend": retrieval_backend if retrieval else None,
+            "lightrag_mode": lightrag_mode if retrieval and retrieval_backend == "lightrag" else None,
+            "lightrag_workdir": lightrag_workdir if retrieval and retrieval_backend == "lightrag" else None,
+            "evidence_budget": (
+                evidence_budget if evidence_budget is not None else retrieval_k
+            ) if retrieval else None,
+            "lightrag_fallback": lightrag_fallback if retrieval and retrieval_backend == "lightrag" else None,
+            "frozen_retrieval": frozen_retrieval if retrieval else None,
             "note": "Factual retrieval searches all train-owned media. Output medium still selects the generation instruction.",
         },
         "fixed_style": {
@@ -1098,9 +1281,81 @@ def build_runtime_retriever(args: argparse.Namespace):
         del comparison_medium
         vectors = _embed_batch([topic], args.ollama_base, args.embed_model, cpu=True)
         hits = query_excerpts(collection, vectors[0], args.k, where=None)
-        return {"query": topic, "filter": None, "k": args.k, "hits": hits}
+        return {
+            "query": topic,
+            "filter": None,
+            "k": args.k,
+            "backend": "dense",
+            "mode": None,
+            "hits": hits,
+        }
 
     return retriever
+
+
+def write_frozen_retrieval(path: Path, topics: list[str], retriever) -> None:
+    """Save one retrieval payload per topic. The generator is not loaded."""
+    rows = []
+    for topic in topics:
+        payload = dict(retriever(topic, "blog"))
+        payload["query"] = topic
+        rows.append(payload)
+        print(
+            f"froze {topic[:80]} hits={len(payload.get('hits') or [])}",
+            flush=True,
+        )
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        "\n".join(json.dumps(row, ensure_ascii=False) for row in rows) + "\n",
+        encoding="utf-8",
+    )
+
+
+def load_frozen_retriever(path: Path):
+    """Return the saved payloads. This does not embed or call LightRAG."""
+    if not path.is_file():
+        raise SystemExit(f"frozen retrieval file is missing: {path}")
+    by_query = {}
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        row = json.loads(line)
+        query = row.get("query") or row.get("topic")
+        if not query:
+            raise SystemExit("frozen retrieval row is missing a query")
+        if query in by_query:
+            raise SystemExit(f"duplicate frozen retrieval for {query}")
+        by_query[query] = row
+
+    def retriever(topic: str, comparison_medium: str) -> dict:
+        del comparison_medium
+        if topic not in by_query:
+            raise SystemExit(f"frozen retrieval has no payload for {topic}")
+        payload = dict(by_query[topic])
+        payload.setdefault("query", topic)
+        payload.setdefault("hits", [])
+        return payload
+
+    return retriever
+
+
+def build_selected_retriever(args: argparse.Namespace):
+    """Dense Chroma unless LightRAG was explicitly selected."""
+    backend = require_backend(args.retrieval_backend)
+    if backend == "dense":
+        return build_runtime_retriever(args)
+    catalog = Path(args.lightrag_workdir) / "catalog.jsonl"
+    if not catalog.is_file():
+        if args.lightrag_fallback == "dense":
+            print(
+                f"LightRAG catalog missing at {catalog}; using dense retrieval",
+                flush=True,
+            )
+            return build_runtime_retriever(args)
+        raise SystemExit(f"LightRAG catalog missing: {catalog}")
+    from host_finetune.lightrag_backend import build_lightrag_retriever
+
+    return build_lightrag_retriever(args)
 
 
 def load_style_for(path: Path):
@@ -1159,8 +1414,31 @@ def main() -> None:
         collection=args.collection,
         git=recorded_git,
         quantization=args.quantization,
+        retrieval_backend=args.retrieval_backend,
+        lightrag_mode=args.lightrag_mode,
+        lightrag_workdir=str(args.lightrag_workdir),
+        evidence_budget=args.evidence_budget,
+        lightrag_fallback=args.lightrag_fallback,
+        frozen_retrieval=str(args.frozen_retrieval) if args.frozen_retrieval else None,
     )
-    retriever = build_runtime_retriever(args) if args.retrieval else None
+    if args.freeze_retrieval_out and args.frozen_retrieval:
+        raise SystemExit("choose either --freeze-retrieval-out or --frozen-retrieval")
+    if (args.freeze_retrieval_out or args.frozen_retrieval) and not args.retrieval:
+        raise SystemExit("frozen retrieval requires --retrieval so claim extraction stays on")
+    if args.frozen_retrieval:
+        retriever = load_frozen_retriever(args.frozen_retrieval)
+    else:
+        retriever = build_selected_retriever(args) if args.retrieval else None
+    if args.freeze_retrieval_out:
+        if retriever is None:
+            raise SystemExit("--freeze-retrieval-out requires a retriever")
+        write_frozen_retrieval(
+            args.freeze_retrieval_out,
+            [row["topic"] for row in gold],
+            retriever,
+        )
+        print(f"wrote {args.freeze_retrieval_out}", flush=True)
+        return
     style_for = load_style_for(args.style_path) if args.fixed_style else None
     combined = {}
     traces_by_name: dict[str, list[dict]] = {}

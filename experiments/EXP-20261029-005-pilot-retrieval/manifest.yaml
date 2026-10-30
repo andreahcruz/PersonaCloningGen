@@ -1,0 +1,37 @@
+experiment_id: EXP-20261029-005-pilot-retrieval
+timestamp: 2026-10-29T11:44:43Z
+execution_commands:
+  - host_finetune\.venv\Scripts\python.exe -X utf8 -m host_finetune.pilot_retrieval --workdir artifacts\lightrag\model_f\storage_pilot160 --out experiments\EXP-20261029-005-pilot-retrieval\raw\review_sheet.json --modes dense,chroma,naive,local,global,hybrid,mix
+git:
+  commit: 0fac41485ec3655ea1439d6d2484115f243fdab1
+  dirty: true
+data:
+  source_manifest: experiments/EXP-20261027-001-graph-ready-audit/config/sample_160_ids.json
+  source_hashes:
+    graph_ready_v2_documents: d7bd01a01f288dda3582eddcfd2fc1539574f97b6e168b1124a0b43b76d9a118
+    questions: host_finetune/pilot_questions.json
+  processed_dataset_hash: 1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b
+  split_manifest_hash: 6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb
+  gold_eval_hash: d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e
+rag:
+  persona_profile_hash: n/a
+  chroma_collection: lemkin_train_only_v2_shadow
+  index_version_or_snapshot: artifacts/lightrag/model_f/storage_pilot160 graphml sha256 302638b52a036064f9998cdf031b7281b82dcc73f99db43caff89219a6c5f599
+  embedding_model: nomic-embed-text
+model:
+  model_name: llama3.1:latest
+  model_or_adapter_hash: ollama id 46e0c10c039e; keywords only, Relabel adapter not loaded
+  config: LightRAG 1.5.7 modes naive, local, global, hybrid, mix; evidence budget 4; max one chunk per source; Chroma v2 count 21193
+  random_seed: n/a
+evaluation:
+  evaluator_commit: 0fac41485ec3655ea1439d6d2484115f243fdab1
+  judge_model: n/a
+  judge_config: designated-source overlap only; precision and recall not measured
+environment:
+  python_version: 3.11.9
+  package_snapshot: ../EXP-20261029-004-lightrag-pilot160/config/package_snapshot.txt
+  hardware: NVIDIA GeForce RTX 5070 Ti, 16303 MiB; Ollama 0.40.2
+outputs:
+  raw: raw/review_sheet.json
+  metrics: metrics/summary.json
+  warnings_and_failures: no mode abstained on the unsupported question; failed extraction documents can still be retrieved as chunks by naive and mix

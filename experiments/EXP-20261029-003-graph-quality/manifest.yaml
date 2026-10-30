@@ -1,0 +1,40 @@
+experiment_id: EXP-20261029-003-graph-quality
+timestamp: 2026-10-29T08:01:53Z
+execution_commands:
+  - host_finetune\.venv\Scripts\python.exe -X utf8 -m host_finetune.graph_ready_v2
+  - host_finetune\.venv\Scripts\python.exe -X utf8 -m host_finetune.lightrag_index --index --id-file artifacts\lightrag\model_f\extract_compare\fixture_ids.json --entity-guidance library --graph-ready artifacts\lightrag\model_f\graph_ready_v2 --workdir artifacts\lightrag\model_f\extract_compare\library
+  - host_finetune\.venv\Scripts\python.exe -X utf8 -m host_finetune.lightrag_index --index --id-file artifacts\lightrag\model_f\extract_compare\fixture_ids.json --entity-guidance project --graph-ready artifacts\lightrag\model_f\graph_ready_v2 --workdir artifacts\lightrag\model_f\extract_compare\project
+  - host_finetune\.venv\Scripts\python.exe -X utf8 -m host_finetune.lightrag_index --index --id-file artifacts\lightrag\model_f\extract_compare\x_only_ids.json --entity-guidance project --extraction-model hf.co/QuantFactory/Qwen2.5-7B-GGUF:latest --num-ctx 4096 --graph-ready artifacts\lightrag\model_f\graph_ready_v2 --workdir artifacts\lightrag\model_f\extract_compare\qwen7b
+git:
+  commit: 0fac41485ec3655ea1439d6d2484115f243fdab1
+  dirty: true
+data:
+  source_manifest: experiments/EXP-20261003-004-relabel-continuations/raw/split_assignments.jsonl
+  source_hashes:
+    graph_ready_v1_documents: 93d85bd3011f30af15d66179a6c963540bc02273083f9e3921536d9a21220b36
+    graph_ready_v2_documents: d7bd01a01f288dda3582eddcfd2fc1539574f97b6e168b1124a0b43b76d9a118
+  processed_dataset_hash: 1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b
+  split_manifest_hash: 6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb
+  gold_eval_hash: d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e
+rag:
+  persona_profile_hash: n/a
+  chroma_collection: not opened
+  index_version_or_snapshot: three-document extraction comparison only; the 160-document pilot is a separate run
+  embedding_model: nomic-embed-text
+model:
+  model_name: llama3.1:latest
+  model_or_adapter_hash: ollama id 46e0c10c039e
+  config: LightRAG 1.5.7; project entity guidance versus library default; Qwen 2.5 7B probe on one post
+  random_seed: 298
+evaluation:
+  evaluator_commit: 0fac41485ec3655ea1439d6d2484115f243fdab1
+  judge_model: n/a
+  judge_config: entity-name rules and one relation check; not a human grade
+environment:
+  python_version: 3.11.9
+  package_snapshot: ../EXP-20261027-002-lightrag-smoke/config/package_snapshot.txt
+  hardware: NVIDIA GeForce RTX 5070 Ti, 16303 MiB
+outputs:
+  raw: artifacts/lightrag/model_f/graph_ready_v2/diff_summary.json and extract_compare graphs
+  metrics: metrics/quality.json
+  warnings_and_failures: project guidance did not remove Tuesday; Qwen 2.5 7B emitted prompt placeholders; some quote labels such as Cat Rik remain outside the pilot

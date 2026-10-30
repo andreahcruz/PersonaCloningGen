@@ -1,0 +1,960 @@
+[
+  {
+    "question_id": "q_brex_price",
+    "mode": "dense",
+    "backend": "pilot_dense",
+    "designated_in_hits": [
+      "gd_22550cc95a46ded2d9a37c99"
+    ],
+    "designated_count": 1,
+    "designated_possible": 1,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 2.086,
+    "failed_extraction_ids_in_hits": [
+      "gd_de0b05c2882793b64fd76389"
+    ],
+    "excluded_reasons": {},
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "publication_page"
+  },
+  {
+    "question_id": "q_brex_price",
+    "mode": "naive",
+    "backend": "lightrag",
+    "designated_in_hits": [
+      "gd_22550cc95a46ded2d9a37c99"
+    ],
+    "designated_count": 1,
+    "designated_possible": 1,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 3.959,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {
+      "source_diversity_cap": 9
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "publication_page"
+  },
+  {
+    "question_id": "q_brex_price",
+    "mode": "local",
+    "backend": "lightrag",
+    "designated_in_hits": [
+      "gd_22550cc95a46ded2d9a37c99"
+    ],
+    "designated_count": 1,
+    "designated_possible": 1,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 3.608,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {
+      "source_diversity_cap": 10,
+      "generated_summary_not_a_source_span": 70
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "publication_page"
+  },
+  {
+    "question_id": "q_brex_price",
+    "mode": "global",
+    "backend": "lightrag",
+    "designated_in_hits": [
+      "gd_22550cc95a46ded2d9a37c99"
+    ],
+    "designated_count": 1,
+    "designated_possible": 1,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 3.438,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {
+      "source_diversity_cap": 9,
+      "generated_summary_not_a_source_span": 44
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "publication_page"
+  },
+  {
+    "question_id": "q_brex_price",
+    "mode": "hybrid",
+    "backend": "lightrag",
+    "designated_in_hits": [
+      "gd_22550cc95a46ded2d9a37c99"
+    ],
+    "designated_count": 1,
+    "designated_possible": 1,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 3.487,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {
+      "source_diversity_cap": 9,
+      "generated_summary_not_a_source_span": 92
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "publication_page"
+  },
+  {
+    "question_id": "q_brex_price",
+    "mode": "mix",
+    "backend": "lightrag",
+    "designated_in_hits": [
+      "gd_22550cc95a46ded2d9a37c99"
+    ],
+    "designated_count": 1,
+    "designated_possible": 1,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 3.418,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {
+      "source_diversity_cap": 9,
+      "generated_summary_not_a_source_span": 92
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "publication_page"
+  },
+  {
+    "question_id": "q_cvc_second_check",
+    "mode": "dense",
+    "backend": "pilot_dense",
+    "designated_in_hits": [
+      "gd_00c32ea8f146eb99c16e0974"
+    ],
+    "designated_count": 1,
+    "designated_possible": 1,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 2.057,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {},
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "publication_page"
+  },
+  {
+    "question_id": "q_cvc_second_check",
+    "mode": "naive",
+    "backend": "lightrag",
+    "designated_in_hits": [
+      "gd_00c32ea8f146eb99c16e0974"
+    ],
+    "designated_count": 1,
+    "designated_possible": 1,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 2.705,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {},
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "publication_page"
+  },
+  {
+    "question_id": "q_cvc_second_check",
+    "mode": "local",
+    "backend": "lightrag",
+    "designated_in_hits": [
+      "gd_00c32ea8f146eb99c16e0974"
+    ],
+    "designated_count": 1,
+    "designated_possible": 1,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 3.477,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 81
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "publication_page"
+  },
+  {
+    "question_id": "q_cvc_second_check",
+    "mode": "global",
+    "backend": "lightrag",
+    "designated_in_hits": [
+      "gd_00c32ea8f146eb99c16e0974"
+    ],
+    "designated_count": 1,
+    "designated_possible": 1,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 3.442,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 47
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "publication_page"
+  },
+  {
+    "question_id": "q_cvc_second_check",
+    "mode": "hybrid",
+    "backend": "lightrag",
+    "designated_in_hits": [
+      "gd_00c32ea8f146eb99c16e0974"
+    ],
+    "designated_count": 1,
+    "designated_possible": 1,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 3.489,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 118
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "publication_page"
+  },
+  {
+    "question_id": "q_cvc_second_check",
+    "mode": "mix",
+    "backend": "lightrag",
+    "designated_in_hits": [
+      "gd_00c32ea8f146eb99c16e0974"
+    ],
+    "designated_count": 1,
+    "designated_possible": 1,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 3.448,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 118
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "publication_page"
+  },
+  {
+    "question_id": "q_worst_mishire",
+    "mode": "dense",
+    "backend": "pilot_dense",
+    "designated_in_hits": [
+      "gd_8276b7d28a0837fa1e71181a"
+    ],
+    "designated_count": 1,
+    "designated_possible": 1,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 2.058,
+    "failed_extraction_ids_in_hits": [
+      "gd_8276b7d28a0837fa1e71181a"
+    ],
+    "excluded_reasons": {},
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "named_author"
+  },
+  {
+    "question_id": "q_worst_mishire",
+    "mode": "naive",
+    "backend": "lightrag",
+    "designated_in_hits": [
+      "gd_8276b7d28a0837fa1e71181a"
+    ],
+    "designated_count": 1,
+    "designated_possible": 1,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 2.704,
+    "failed_extraction_ids_in_hits": [
+      "gd_8276b7d28a0837fa1e71181a",
+      "gd_f76cf95212bfc67508398f63"
+    ],
+    "excluded_reasons": {},
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "named_author"
+  },
+  {
+    "question_id": "q_worst_mishire",
+    "mode": "local",
+    "backend": "lightrag",
+    "designated_in_hits": [],
+    "designated_count": 0,
+    "designated_possible": 1,
+    "rank1_is_designated": false,
+    "empty": false,
+    "seconds": 3.446,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 103
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [
+      "Alex Rosenblatt"
+    ],
+    "attribution_on_first_hit": "publication_page"
+  },
+  {
+    "question_id": "q_worst_mishire",
+    "mode": "global",
+    "backend": "lightrag",
+    "designated_in_hits": [],
+    "designated_count": 0,
+    "designated_possible": 1,
+    "rank1_is_designated": false,
+    "empty": false,
+    "seconds": 3.417,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {
+      "source_diversity_cap": 1,
+      "generated_summary_not_a_source_span": 53
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "publication_page"
+  },
+  {
+    "question_id": "q_worst_mishire",
+    "mode": "hybrid",
+    "backend": "lightrag",
+    "designated_in_hits": [],
+    "designated_count": 0,
+    "designated_possible": 1,
+    "rank1_is_designated": false,
+    "empty": false,
+    "seconds": 3.404,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 153
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "publication_page"
+  },
+  {
+    "question_id": "q_worst_mishire",
+    "mode": "mix",
+    "backend": "lightrag",
+    "designated_in_hits": [
+      "gd_8276b7d28a0837fa1e71181a"
+    ],
+    "designated_count": 1,
+    "designated_possible": 1,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 3.429,
+    "failed_extraction_ids_in_hits": [
+      "gd_8276b7d28a0837fa1e71181a"
+    ],
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 153
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "named_author"
+  },
+  {
+    "question_id": "q_first_vp_sales",
+    "mode": "dense",
+    "backend": "pilot_dense",
+    "designated_in_hits": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_8d4d38e0c3572b351003a51c",
+      "gd_5b654905b75669045fd65816"
+    ],
+    "designated_count": 3,
+    "designated_possible": 3,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 2.076,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {},
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "named_author"
+  },
+  {
+    "question_id": "q_first_vp_sales",
+    "mode": "naive",
+    "backend": "lightrag",
+    "designated_in_hits": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_8d4d38e0c3572b351003a51c"
+    ],
+    "designated_count": 2,
+    "designated_possible": 3,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 2.726,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {},
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "named_author"
+  },
+  {
+    "question_id": "q_first_vp_sales",
+    "mode": "local",
+    "backend": "lightrag",
+    "designated_in_hits": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_8d4d38e0c3572b351003a51c"
+    ],
+    "designated_count": 2,
+    "designated_possible": 3,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 3.467,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 96
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "named_author"
+  },
+  {
+    "question_id": "q_first_vp_sales",
+    "mode": "global",
+    "backend": "lightrag",
+    "designated_in_hits": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_8d4d38e0c3572b351003a51c"
+    ],
+    "designated_count": 2,
+    "designated_possible": 3,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 3.418,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 45
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "named_author"
+  },
+  {
+    "question_id": "q_first_vp_sales",
+    "mode": "hybrid",
+    "backend": "lightrag",
+    "designated_in_hits": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_8d4d38e0c3572b351003a51c"
+    ],
+    "designated_count": 2,
+    "designated_possible": 3,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 3.454,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 146
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "named_author"
+  },
+  {
+    "question_id": "q_first_vp_sales",
+    "mode": "mix",
+    "backend": "lightrag",
+    "designated_in_hits": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_8d4d38e0c3572b351003a51c"
+    ],
+    "designated_count": 2,
+    "designated_possible": 3,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 3.481,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 146
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "named_author"
+  },
+  {
+    "question_id": "q_five_percent_share",
+    "mode": "dense",
+    "backend": "pilot_dense",
+    "designated_in_hits": [
+      "gd_27f183b437e4f038d31cb0f6"
+    ],
+    "designated_count": 1,
+    "designated_possible": 1,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 2.061,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {},
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "author_account"
+  },
+  {
+    "question_id": "q_five_percent_share",
+    "mode": "naive",
+    "backend": "lightrag",
+    "designated_in_hits": [
+      "gd_27f183b437e4f038d31cb0f6"
+    ],
+    "designated_count": 1,
+    "designated_possible": 1,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 2.706,
+    "failed_extraction_ids_in_hits": [
+      "gd_f9a237e6ccf11fe4de9924ad"
+    ],
+    "excluded_reasons": {
+      "source_diversity_cap": 1
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "author_account"
+  },
+  {
+    "question_id": "q_five_percent_share",
+    "mode": "local",
+    "backend": "lightrag",
+    "designated_in_hits": [],
+    "designated_count": 0,
+    "designated_possible": 1,
+    "rank1_is_designated": false,
+    "empty": false,
+    "seconds": 3.426,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 103
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "author_account"
+  },
+  {
+    "question_id": "q_five_percent_share",
+    "mode": "global",
+    "backend": "lightrag",
+    "designated_in_hits": [
+      "gd_27f183b437e4f038d31cb0f6"
+    ],
+    "designated_count": 1,
+    "designated_possible": 1,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 3.419,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 49
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "author_account"
+  },
+  {
+    "question_id": "q_five_percent_share",
+    "mode": "hybrid",
+    "backend": "lightrag",
+    "designated_in_hits": [
+      "gd_27f183b437e4f038d31cb0f6"
+    ],
+    "designated_count": 1,
+    "designated_possible": 1,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 3.803,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 148
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "author_account"
+  },
+  {
+    "question_id": "q_five_percent_share",
+    "mode": "mix",
+    "backend": "lightrag",
+    "designated_in_hits": [
+      "gd_27f183b437e4f038d31cb0f6"
+    ],
+    "designated_count": 1,
+    "designated_possible": 1,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 3.448,
+    "failed_extraction_ids_in_hits": [
+      "gd_f9a237e6ccf11fe4de9924ad"
+    ],
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 148
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "author_account"
+  },
+  {
+    "question_id": "q_vp_sales_tension",
+    "mode": "dense",
+    "backend": "pilot_dense",
+    "designated_in_hits": [
+      "gd_5b654905b75669045fd65816",
+      "gd_92ee1e366384a6e50b449f25"
+    ],
+    "designated_count": 2,
+    "designated_possible": 2,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 2.096,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {},
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "author_account"
+  },
+  {
+    "question_id": "q_vp_sales_tension",
+    "mode": "naive",
+    "backend": "lightrag",
+    "designated_in_hits": [
+      "gd_5b654905b75669045fd65816",
+      "gd_92ee1e366384a6e50b449f25"
+    ],
+    "designated_count": 2,
+    "designated_possible": 2,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 2.689,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {},
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "author_account"
+  },
+  {
+    "question_id": "q_vp_sales_tension",
+    "mode": "local",
+    "backend": "lightrag",
+    "designated_in_hits": [
+      "gd_5b654905b75669045fd65816"
+    ],
+    "designated_count": 1,
+    "designated_possible": 2,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 3.535,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 63
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "author_account"
+  },
+  {
+    "question_id": "q_vp_sales_tension",
+    "mode": "global",
+    "backend": "lightrag",
+    "designated_in_hits": [
+      "gd_5b654905b75669045fd65816",
+      "gd_92ee1e366384a6e50b449f25"
+    ],
+    "designated_count": 2,
+    "designated_possible": 2,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 6.54,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {
+      "source_diversity_cap": 1,
+      "generated_summary_not_a_source_span": 44
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "author_account"
+  },
+  {
+    "question_id": "q_vp_sales_tension",
+    "mode": "hybrid",
+    "backend": "lightrag",
+    "designated_in_hits": [
+      "gd_5b654905b75669045fd65816",
+      "gd_92ee1e366384a6e50b449f25"
+    ],
+    "designated_count": 2,
+    "designated_possible": 2,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 3.695,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {
+      "source_diversity_cap": 1,
+      "generated_summary_not_a_source_span": 105
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "author_account"
+  },
+  {
+    "question_id": "q_vp_sales_tension",
+    "mode": "mix",
+    "backend": "lightrag",
+    "designated_in_hits": [
+      "gd_5b654905b75669045fd65816",
+      "gd_92ee1e366384a6e50b449f25"
+    ],
+    "designated_count": 2,
+    "designated_possible": 2,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 3.737,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 105
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "author_account"
+  },
+  {
+    "question_id": "q_personalized_saas_speaker",
+    "mode": "dense",
+    "backend": "pilot_dense",
+    "designated_in_hits": [
+      "gd_007b705bb266a53acf5888b9"
+    ],
+    "designated_count": 1,
+    "designated_possible": 1,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 2.038,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {},
+    "train_attributed": true,
+    "speaker_on_first_hit": [
+      "Anneka Gupta"
+    ],
+    "attribution_on_first_hit": "third_party_quotation"
+  },
+  {
+    "question_id": "q_personalized_saas_speaker",
+    "mode": "naive",
+    "backend": "lightrag",
+    "designated_in_hits": [
+      "gd_007b705bb266a53acf5888b9"
+    ],
+    "designated_count": 1,
+    "designated_possible": 1,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 2.78,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {},
+    "train_attributed": true,
+    "speaker_on_first_hit": [
+      "Anneka Gupta"
+    ],
+    "attribution_on_first_hit": "third_party_quotation"
+  },
+  {
+    "question_id": "q_personalized_saas_speaker",
+    "mode": "local",
+    "backend": "lightrag",
+    "designated_in_hits": [
+      "gd_007b705bb266a53acf5888b9"
+    ],
+    "designated_count": 1,
+    "designated_possible": 1,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 3.551,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 202
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [
+      "Anneka Gupta"
+    ],
+    "attribution_on_first_hit": "third_party_quotation"
+  },
+  {
+    "question_id": "q_personalized_saas_speaker",
+    "mode": "global",
+    "backend": "lightrag",
+    "designated_in_hits": [
+      "gd_007b705bb266a53acf5888b9"
+    ],
+    "designated_count": 1,
+    "designated_possible": 1,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 3.49,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 51
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [
+      "Anneka Gupta"
+    ],
+    "attribution_on_first_hit": "third_party_quotation"
+  },
+  {
+    "question_id": "q_personalized_saas_speaker",
+    "mode": "hybrid",
+    "backend": "lightrag",
+    "designated_in_hits": [
+      "gd_007b705bb266a53acf5888b9"
+    ],
+    "designated_count": 1,
+    "designated_possible": 1,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 3.57,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 238
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [
+      "Anneka Gupta"
+    ],
+    "attribution_on_first_hit": "third_party_quotation"
+  },
+  {
+    "question_id": "q_personalized_saas_speaker",
+    "mode": "mix",
+    "backend": "lightrag",
+    "designated_in_hits": [
+      "gd_007b705bb266a53acf5888b9"
+    ],
+    "designated_count": 1,
+    "designated_possible": 1,
+    "rank1_is_designated": true,
+    "empty": false,
+    "seconds": 3.578,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 238
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [
+      "Anneka Gupta"
+    ],
+    "attribution_on_first_hit": "third_party_quotation"
+  },
+  {
+    "question_id": "q_olympics_ceremony",
+    "mode": "dense",
+    "backend": "pilot_dense",
+    "designated_in_hits": [],
+    "designated_count": 0,
+    "designated_possible": 0,
+    "rank1_is_designated": false,
+    "empty": false,
+    "seconds": 2.086,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {},
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "author_account"
+  },
+  {
+    "question_id": "q_olympics_ceremony",
+    "mode": "naive",
+    "backend": "lightrag",
+    "designated_in_hits": [],
+    "designated_count": 0,
+    "designated_possible": 0,
+    "rank1_is_designated": false,
+    "empty": false,
+    "seconds": 2.768,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {},
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "author_account"
+  },
+  {
+    "question_id": "q_olympics_ceremony",
+    "mode": "local",
+    "backend": "lightrag",
+    "designated_in_hits": [],
+    "designated_count": 0,
+    "designated_possible": 0,
+    "rank1_is_designated": false,
+    "empty": false,
+    "seconds": 3.494,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 97
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "author_account"
+  },
+  {
+    "question_id": "q_olympics_ceremony",
+    "mode": "global",
+    "backend": "lightrag",
+    "designated_in_hits": [],
+    "designated_count": 0,
+    "designated_possible": 0,
+    "rank1_is_designated": false,
+    "empty": false,
+    "seconds": 3.535,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 49
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "author_account"
+  },
+  {
+    "question_id": "q_olympics_ceremony",
+    "mode": "hybrid",
+    "backend": "lightrag",
+    "designated_in_hits": [],
+    "designated_count": 0,
+    "designated_possible": 0,
+    "rank1_is_designated": false,
+    "empty": false,
+    "seconds": 3.564,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 132
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "author_account"
+  },
+  {
+    "question_id": "q_olympics_ceremony",
+    "mode": "mix",
+    "backend": "lightrag",
+    "designated_in_hits": [],
+    "designated_count": 0,
+    "designated_possible": 0,
+    "rank1_is_designated": false,
+    "empty": false,
+    "seconds": 3.53,
+    "failed_extraction_ids_in_hits": [],
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 132
+    },
+    "train_attributed": true,
+    "speaker_on_first_hit": [],
+    "attribution_on_first_hit": "author_account"
+  }
+]

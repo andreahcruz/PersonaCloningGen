@@ -1,0 +1,3708 @@
+[
+  {
+    "question_id": "q_brex_price",
+    "kind": "simple_fact",
+    "query": "What price did Capital One announce for acquiring Brex?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_22550cc95a46ded2d9a37c99"
+    ],
+    "designated_sources_retrieved": [
+      "gd_22550cc95a46ded2d9a37c99"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "pilot_dense",
+    "mode": "dense",
+    "hit_source_ids": [
+      "gd_22550cc95a46ded2d9a37c99",
+      "gd_cf6e85f33092fd34ff0dcbaf",
+      "gd_de0b05c2882793b64fd76389",
+      "gd_71583a2af08ae7611c4317c7"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {},
+    "seconds": 2.056,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_22550cc95a46ded2d9a37c99",
+        "graph_document_id": "gd_22550cc95a46ded2d9a37c99",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Capital One just announced it\u2019s acquiring Brex for $5.15 billion. \u00a0An incredible, top 0.1% \u201cexit\u201d in less than 10 years from a category creator that created massive wealth and opportunities. \u00a0A huge win.\nBut also \u2026 less than half of Brex\u2019s $12.3 billion valuation from October 2022.\nShould anyone care? \u00a0Many are seeing is a failure vs Ramp, a measured success at best. \u00a0But \u2026 why?\nI don\u2019t think most",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_cf6e85f33092fd34ff0dcbaf",
+        "graph_document_id": "gd_cf6e85f33092fd34ff0dcbaf",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Wrike never went public, but instead was acquired by Citrix for\n$2.2B\n.\u00a0 But since Citrix is public, we can still learn a bit about how Wrike looked right at the time of the acquisition from Citrix\u2019s public filings.\n5 Interesting Learnings:\n\n#1. Wrike at ~$140m ARR now, $180-$190m est 2021, and break-even (ish)\n.\nSo Citrix paid 12x forward rev for Wrike, a healthy multiple for a company growing 30",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_de0b05c2882793b64fd76389",
+        "graph_document_id": "gd_de0b05c2882793b64fd76389",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "The Nasdaq hit another all-time high this week. Nvidia\u2019s market cap sailed past $5 trillion. AI companies are scaling revenues at least like nothing we\u2019ve ever seen (if not profits, other than Nvidia). The champagne and fees are flowing for VCs. But two deals that closed THIS WEEK should give every B2B SaaS founder\u2014and their investors\u2014serious pause about what valuations actually mean in 2025. The ",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_71583a2af08ae7611c4317c7",
+        "graph_document_id": "gd_71583a2af08ae7611c4317c7",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": ".\n@tolson\n \n@pendoio\n \n\n\"Now may be the time to learn how to more cost-effectively acquire customers.\n\nMailchimp launched its free edition in the last downturn.\"\n\nJoin NOW -> \nhttps://zoom.us/j/228182857",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_brex_price",
+    "kind": "simple_fact",
+    "query": "What price did Capital One announce for acquiring Brex?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_22550cc95a46ded2d9a37c99"
+    ],
+    "designated_sources_retrieved": [
+      "gd_22550cc95a46ded2d9a37c99"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "chroma_v2",
+    "mode": "dense",
+    "hit_source_ids": [
+      "train_882",
+      "gd_22550cc95a46ded2d9a37c99",
+      "train_18459",
+      "train_7389"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {},
+    "seconds": 7.331,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "train_882",
+        "graph_document_id": null,
+        "attribution_status": null,
+        "quoted_speakers": [],
+        "text_preview": "2. What the Brex Exit Means for Ramp (Not Ideal For Valuations, At Least)\nThree things happened for Ramp investors on the same day:\nThe good news:\nBrex essentially acknowledged Ramp won, even if they aren\u2019t 100% direct competitors in every segment and with every product today. Started later, doing $1 billion to Brex\u2019s $700 million.\nThe uncomfortable news:\nWhen real money\u2014not a secondary buyer purc",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_22550cc95a46ded2d9a37c99",
+        "graph_document_id": "gd_22550cc95a46ded2d9a37c99",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Capital One just announced it\u2019s acquiring Brex for $5.15 billion. An incredible, top 0.1% \u201cexit\u201d in less than 10 years from a category creator that created massive wealth and opportunities. A huge win. But also \u2026 less than half of Brex\u2019s $12.3 billion valuation from October 2022. Should anyone care? Many are seeing is a failure vs Ramp, a measured success at best. But \u2026 why? I don\u2019t think most peo",
+        "rank": 2
+      },
+      {
+        "source_id": "train_18459",
+        "graph_document_id": null,
+        "attribution_status": null,
+        "quoted_speakers": [],
+        "text_preview": "How did \n@brexHQ\n go from $0 to $1b valuation in 24 months?\n\nLearn here -> \nhttps://instagram.com/p/BwpOWTuhHuZ/?utm_source=ig_web_copy_link\n\u2026",
+        "rank": 3
+      },
+      {
+        "source_id": "train_7389",
+        "graph_document_id": null,
+        "attribution_status": null,
+        "quoted_speakers": [],
+        "text_preview": "#4. Brex\u2019s Co-CEO Henrique Dubugras: \u201cLessons From a Second-Time Founder: How Brex Went From 0 \u2013 $1B in Under 2 Years\u201d\nBrex has been part of SaaStr since it\u2019s earliest days and this was perhaps one of the most interesting sessions, as it\u2019s a look back at the early-ish days, as growth was just starting to take off, but before the category became more mature.",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_brex_price",
+    "kind": "simple_fact",
+    "query": "What price did Capital One announce for acquiring Brex?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_22550cc95a46ded2d9a37c99"
+    ],
+    "designated_sources_retrieved": [
+      "gd_22550cc95a46ded2d9a37c99"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "naive",
+    "hit_source_ids": [
+      "gd_22550cc95a46ded2d9a37c99",
+      "gd_12e6c661ea0f1383ee2b47ab",
+      "gd_22f503d26e4d8faf8274b928"
+    ],
+    "unique_sources": 3,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "source_diversity_cap": 9
+    },
+    "seconds": 3.78,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_22550cc95a46ded2d9a37c99",
+        "graph_document_id": "gd_22550cc95a46ded2d9a37c99",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Capital One just announced it\u2019s acquiring Brex for $5.15 billion. \u00a0An incredible, top 0.1% \u201cexit\u201d in less than 10 years from a category creator that created massive wealth and opportunities. \u00a0A huge win.\nBut also \u2026 less than half of Brex\u2019s $12.3 billion valuation from October 2022.\nShould anyone care? \u00a0Many are seeing is a failure vs Ramp, a measured success at best. \u00a0But \u2026 why?\nI don\u2019t think most",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_12e6c661ea0f1383ee2b47ab",
+        "graph_document_id": "gd_70d11aab5ebbbe36a7cd1b54",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "building sustainable competitive moats. Revenue Velocity\nCanva, which is now valued at $40 billion, added $157 million in value daily since its prior funding in April 2021. These aren\u2019t incremental growth stories\u2014they\u2019re companies experiencing parabolic expansion in massive markets. Market Timing and Category Creation\nThe current decacorn landscape is dominated by companies that didn\u2019t just enter ",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_22f503d26e4d8faf8274b928",
+        "graph_document_id": "gd_22f503d26e4d8faf8274b928",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "last forever was clear to them.\u00a0 So they tried to aggressively expand its platform by buying contact center leader Five9 for $14.7 Billion.\u00a0 But at the time, the price didn\u2019t clear, and Five9 shareholders turned it down.\u00a0 Zoom\u2019s phone product has been a material contributor for some time with 3 millions users, but it\u2019s now pushing its own enterprise contact center and conversational intelligence p",
+        "rank": 3
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_brex_price",
+    "kind": "simple_fact",
+    "query": "What price did Capital One announce for acquiring Brex?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_22550cc95a46ded2d9a37c99"
+    ],
+    "designated_sources_retrieved": [
+      "gd_22550cc95a46ded2d9a37c99"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "local",
+    "hit_source_ids": [
+      "gd_22550cc95a46ded2d9a37c99",
+      "gd_96519591dababcfdc35855a8"
+    ],
+    "unique_sources": 2,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "source_diversity_cap": 10,
+      "generated_summary_not_a_source_span": 70
+    },
+    "seconds": 2.876,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_22550cc95a46ded2d9a37c99",
+        "graph_document_id": "gd_22550cc95a46ded2d9a37c99",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Capital One just announced it\u2019s acquiring Brex for $5.15 billion. \u00a0An incredible, top 0.1% \u201cexit\u201d in less than 10 years from a category creator that created massive wealth and opportunities. \u00a0A huge win.\nBut also \u2026 less than half of Brex\u2019s $12.3 billion valuation from October 2022.\nShould anyone care? \u00a0Many are seeing is a failure vs Ramp, a measured success at best. \u00a0But \u2026 why?\nI don\u2019t think most",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_96519591dababcfdc35855a8",
+        "graph_document_id": "gd_6bdde8bd37b55a83f475e364",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "capitalists and investment firms already signed up for 2023 \u2026\n24vc\nABSeed Ventures\nActivant Capital\nAdvance Venture Partners\nAlkeon Capital\nAlumni Ventures\nAndreessen Horowitz\nArcherman Capital\nAscentium Capital\nAstella Partners\nAsymmetric Capital Partners\nApax Partners\nB Capital\nBank of America Merrill Lynch\nBase10\nBattery Ventures\nBay Lead Partners\nBDev Ventures\nBeacon VC\nBerkshire Partners\nBess",
+        "rank": 2
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_brex_price",
+    "kind": "simple_fact",
+    "query": "What price did Capital One announce for acquiring Brex?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_22550cc95a46ded2d9a37c99"
+    ],
+    "designated_sources_retrieved": [
+      "gd_22550cc95a46ded2d9a37c99"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "global",
+    "hit_source_ids": [
+      "gd_22550cc95a46ded2d9a37c99",
+      "gd_22f503d26e4d8faf8274b928",
+      "gd_694112e8e0040f5ff958f035"
+    ],
+    "unique_sources": 3,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "source_diversity_cap": 9,
+      "generated_summary_not_a_source_span": 44
+    },
+    "seconds": 2.729,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_22550cc95a46ded2d9a37c99",
+        "graph_document_id": "gd_22550cc95a46ded2d9a37c99",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Capital One just announced it\u2019s acquiring Brex for $5.15 billion. \u00a0An incredible, top 0.1% \u201cexit\u201d in less than 10 years from a category creator that created massive wealth and opportunities. \u00a0A huge win.\nBut also \u2026 less than half of Brex\u2019s $12.3 billion valuation from October 2022.\nShould anyone care? \u00a0Many are seeing is a failure vs Ramp, a measured success at best. \u00a0But \u2026 why?\nI don\u2019t think most",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_22f503d26e4d8faf8274b928",
+        "graph_document_id": "gd_22f503d26e4d8faf8274b928",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "last forever was clear to them.\u00a0 So they tried to aggressively expand its platform by buying contact center leader Five9 for $14.7 Billion.\u00a0 But at the time, the price didn\u2019t clear, and Five9 shareholders turned it down.\u00a0 Zoom\u2019s phone product has been a material contributor for some time with 3 millions users, but it\u2019s now pushing its own enterprise contact center and conversational intelligence p",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_694112e8e0040f5ff958f035",
+        "graph_document_id": "gd_fa7363b1de00027943a9fe94",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "players\n: DeepSeek\u2019s emergence has challenged cost assumptions\nEnterprise Adoption Patterns:\nWhen moving to a new LLM, organizations most commonly cite security and safety considerations (46%), price (44%), performance (42%), and expanded capabilities (41%) as motivations. Valuation Journey: From Startup to $500B Behemoth\nOpenAI\u2019s valuation trajectory tells the story of AI\u2019s explosive market poten",
+        "rank": 3
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_brex_price",
+    "kind": "simple_fact",
+    "query": "What price did Capital One announce for acquiring Brex?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_22550cc95a46ded2d9a37c99"
+    ],
+    "designated_sources_retrieved": [
+      "gd_22550cc95a46ded2d9a37c99"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "hybrid",
+    "hit_source_ids": [
+      "gd_22550cc95a46ded2d9a37c99",
+      "gd_22f503d26e4d8faf8274b928",
+      "gd_694112e8e0040f5ff958f035"
+    ],
+    "unique_sources": 3,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "source_diversity_cap": 9,
+      "generated_summary_not_a_source_span": 92
+    },
+    "seconds": 2.771,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_22550cc95a46ded2d9a37c99",
+        "graph_document_id": "gd_22550cc95a46ded2d9a37c99",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Capital One just announced it\u2019s acquiring Brex for $5.15 billion. \u00a0An incredible, top 0.1% \u201cexit\u201d in less than 10 years from a category creator that created massive wealth and opportunities. \u00a0A huge win.\nBut also \u2026 less than half of Brex\u2019s $12.3 billion valuation from October 2022.\nShould anyone care? \u00a0Many are seeing is a failure vs Ramp, a measured success at best. \u00a0But \u2026 why?\nI don\u2019t think most",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_22f503d26e4d8faf8274b928",
+        "graph_document_id": "gd_22f503d26e4d8faf8274b928",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "last forever was clear to them.\u00a0 So they tried to aggressively expand its platform by buying contact center leader Five9 for $14.7 Billion.\u00a0 But at the time, the price didn\u2019t clear, and Five9 shareholders turned it down.\u00a0 Zoom\u2019s phone product has been a material contributor for some time with 3 millions users, but it\u2019s now pushing its own enterprise contact center and conversational intelligence p",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_694112e8e0040f5ff958f035",
+        "graph_document_id": "gd_fa7363b1de00027943a9fe94",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "players\n: DeepSeek\u2019s emergence has challenged cost assumptions\nEnterprise Adoption Patterns:\nWhen moving to a new LLM, organizations most commonly cite security and safety considerations (46%), price (44%), performance (42%), and expanded capabilities (41%) as motivations. Valuation Journey: From Startup to $500B Behemoth\nOpenAI\u2019s valuation trajectory tells the story of AI\u2019s explosive market poten",
+        "rank": 3
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_brex_price",
+    "kind": "simple_fact",
+    "query": "What price did Capital One announce for acquiring Brex?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_22550cc95a46ded2d9a37c99"
+    ],
+    "designated_sources_retrieved": [
+      "gd_22550cc95a46ded2d9a37c99"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "mix",
+    "hit_source_ids": [
+      "gd_22550cc95a46ded2d9a37c99",
+      "gd_12e6c661ea0f1383ee2b47ab",
+      "gd_22f503d26e4d8faf8274b928"
+    ],
+    "unique_sources": 3,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "source_diversity_cap": 9,
+      "generated_summary_not_a_source_span": 92
+    },
+    "seconds": 2.79,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_22550cc95a46ded2d9a37c99",
+        "graph_document_id": "gd_22550cc95a46ded2d9a37c99",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Capital One just announced it\u2019s acquiring Brex for $5.15 billion. \u00a0An incredible, top 0.1% \u201cexit\u201d in less than 10 years from a category creator that created massive wealth and opportunities. \u00a0A huge win.\nBut also \u2026 less than half of Brex\u2019s $12.3 billion valuation from October 2022.\nShould anyone care? \u00a0Many are seeing is a failure vs Ramp, a measured success at best. \u00a0But \u2026 why?\nI don\u2019t think most",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_12e6c661ea0f1383ee2b47ab",
+        "graph_document_id": "gd_70d11aab5ebbbe36a7cd1b54",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "building sustainable competitive moats. Revenue Velocity\nCanva, which is now valued at $40 billion, added $157 million in value daily since its prior funding in April 2021. These aren\u2019t incremental growth stories\u2014they\u2019re companies experiencing parabolic expansion in massive markets. Market Timing and Category Creation\nThe current decacorn landscape is dominated by companies that didn\u2019t just enter ",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_22f503d26e4d8faf8274b928",
+        "graph_document_id": "gd_22f503d26e4d8faf8274b928",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "last forever was clear to them.\u00a0 So they tried to aggressively expand its platform by buying contact center leader Five9 for $14.7 Billion.\u00a0 But at the time, the price didn\u2019t clear, and Five9 shareholders turned it down.\u00a0 Zoom\u2019s phone product has been a material contributor for some time with 3 millions users, but it\u2019s now pushing its own enterprise contact center and conversational intelligence p",
+        "rank": 3
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_cvc_second_check",
+    "kind": "author_position",
+    "query": "What does Jason Lemkin say about whether corporate venture capital firms write a second check?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_00c32ea8f146eb99c16e0974"
+    ],
+    "designated_sources_retrieved": [
+      "gd_00c32ea8f146eb99c16e0974"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "pilot_dense",
+    "mode": "dense",
+    "hit_source_ids": [
+      "gd_00c32ea8f146eb99c16e0974",
+      "gd_6f8b12882c7b797fccc8c072",
+      "gd_02225f53cdd000bae8795914",
+      "gd_d66007a66f6a0e8950fc77fc"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {},
+    "seconds": 2.067,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_00c32ea8f146eb99c16e0974",
+        "graph_document_id": "gd_00c32ea8f146eb99c16e0974",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Dear SaaStr: How Do Corporate Venture Capital Firms Differ from Conventional Ones? They aren\u2019t as dependable. This doesn\u2019t mean they are \u201cworse\u201d. It does mean be careful how you use them. This is issue #1. A few like Salesforce Ventures and GV are an exception, but let me explain:\nCorporate VCs often do not write a \u201csecond check\u201d. But most institutional VCs save reserves for another check, if you ",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_6f8b12882c7b797fccc8c072",
+        "graph_document_id": "gd_6f8b12882c7b797fccc8c072",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "What does Jason M. Lemkin think about European SaaS Startups? At what company stage is it possible to become intere\u2026 \nhttps://quora.com/What-does-Jason-M-Lemkin-think-about-European-SaaS-Startups-At-what-company-stage-is-it-possible-to-become-interesting-for-an-American-investor/answer/Jason-M.-Lemkin?share=4dfe7002\n\u2026",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_02225f53cdd000bae8795914",
+        "graph_document_id": "gd_02225f53cdd000bae8795914",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Dear SaaStr: How Do You Respond to a VC Who Says They Don\u2019t Invest in Your Space?\nYou move on.\nThey almost certainly don\u2019t invest in your space, at least not as your stage, with your risk profile, etc.\n-> At a higher level, you basically can\u2019t convince a VC to invest in a space, an idea, a startup they genuinely aren\u2019t interested in\n. Save your energy.\nWay too many founders send 2, 5, 10 emails af",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_d66007a66f6a0e8950fc77fc",
+        "graph_document_id": "gd_d66007a66f6a0e8950fc77fc",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "If they have options, folks tend to pick their investors/VCs based on the best case scenario for the company\n\nBut in that case, it doesn't really matter who your investors are",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_cvc_second_check",
+    "kind": "author_position",
+    "query": "What does Jason Lemkin say about whether corporate venture capital firms write a second check?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_00c32ea8f146eb99c16e0974"
+    ],
+    "designated_sources_retrieved": [
+      "gd_00c32ea8f146eb99c16e0974"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "chroma_v2",
+    "mode": "dense",
+    "hit_source_ids": [
+      "train_14293",
+      "train_14701",
+      "train_14745",
+      "gd_00c32ea8f146eb99c16e0974"
+    ],
+    "unique_sources": 3,
+    "duplicate_source": true,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {},
+    "seconds": 2.075,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "train_14293",
+        "graph_document_id": null,
+        "attribution_status": null,
+        "quoted_speakers": [],
+        "text_preview": "\"If a VC doesn't write second and third checks into their investments ... that VC just isn't as valuable as one that does.\n\nAsk.  Just ask.\n\nAsk how often they write second checks.\"",
+        "rank": 1
+      },
+      {
+        "source_id": "train_14701",
+        "graph_document_id": null,
+        "attribution_status": null,
+        "quoted_speakers": [],
+        "text_preview": "#2.\u00a0Ask how many investments they write second and third checks into. VCs that don\u2019t write second checks are less valuable.\n\nTheir financial contributions will be mostly over after the initial check.\u00a0All things being equal, it\u2019s better to take money from a VC that often writes second checks.\u00a0You probably will need one.",
+        "rank": 2
+      },
+      {
+        "source_id": "train_14745",
+        "graph_document_id": null,
+        "attribution_status": null,
+        "quoted_speakers": [],
+        "text_preview": "#2.  Ask how many investments they write second and third checks into. VCs that don\u2019t write second checks are less valuable.\n\nTheir financial contributions will be mostly over after the initial check.  At least know the answer here.  All things being equal, it\u2019s better to take money from a VC that often writes second and third checks.  You probably will need one.",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_00c32ea8f146eb99c16e0974",
+        "graph_document_id": "gd_00c32ea8f146eb99c16e0974",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Dear SaaStr: How Do Corporate Venture Capital Firms Differ from Conventional Ones? They aren\u2019t as dependable. This doesn\u2019t mean they are \u201cworse\u201d. It does mean be careful how you use them. This is issue #1. A few like Salesforce Ventures and GV are an exception, but let me explain:\nCorporate VCs often do not write a \u201csecond check\u201d. But most institutional VCs save reserves for another check, if you ",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_cvc_second_check",
+    "kind": "author_position",
+    "query": "What does Jason Lemkin say about whether corporate venture capital firms write a second check?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_00c32ea8f146eb99c16e0974"
+    ],
+    "designated_sources_retrieved": [
+      "gd_00c32ea8f146eb99c16e0974"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "naive",
+    "hit_source_ids": [
+      "gd_00c32ea8f146eb99c16e0974",
+      "gd_6f8b12882c7b797fccc8c072",
+      "gd_12e6c661ea0f1383ee2b47ab",
+      "gd_96519591dababcfdc35855a8"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {},
+    "seconds": 2.75,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_00c32ea8f146eb99c16e0974",
+        "graph_document_id": "gd_00c32ea8f146eb99c16e0974",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Dear SaaStr: How Do Corporate Venture Capital Firms Differ from Conventional Ones? They aren\u2019t as dependable. This doesn\u2019t mean they are \u201cworse\u201d. It does mean be careful how you use them. This is issue #1. A few like Salesforce Ventures and GV are an exception, but let me explain:\nCorporate VCs often do not write a \u201csecond check\u201d. But most institutional VCs save reserves for another check, if you ",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_6f8b12882c7b797fccc8c072",
+        "graph_document_id": "gd_6f8b12882c7b797fccc8c072",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "What does Jason M. Lemkin think about European SaaS Startups? At what company stage is it possible to become intere\u2026 \nhttps://quora.com/What-does-Jason-M-Lemkin-think-about-European-SaaS-Startups-At-what-company-stage-is-it-possible-to-become-interesting-for-an-American-investor/answer/Jason-M.-Lemkin?share=4dfe7002\n\u2026",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_12e6c661ea0f1383ee2b47ab",
+        "graph_document_id": "gd_70d11aab5ebbbe36a7cd1b54",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "building sustainable competitive moats. Revenue Velocity\nCanva, which is now valued at $40 billion, added $157 million in value daily since its prior funding in April 2021. These aren\u2019t incremental growth stories\u2014they\u2019re companies experiencing parabolic expansion in massive markets. Market Timing and Category Creation\nThe current decacorn landscape is dominated by companies that didn\u2019t just enter ",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_96519591dababcfdc35855a8",
+        "graph_document_id": "gd_6bdde8bd37b55a83f475e364",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "capitalists and investment firms already signed up for 2023 \u2026\n24vc\nABSeed Ventures\nActivant Capital\nAdvance Venture Partners\nAlkeon Capital\nAlumni Ventures\nAndreessen Horowitz\nArcherman Capital\nAscentium Capital\nAstella Partners\nAsymmetric Capital Partners\nApax Partners\nB Capital\nBank of America Merrill Lynch\nBase10\nBattery Ventures\nBay Lead Partners\nBDev Ventures\nBeacon VC\nBerkshire Partners\nBess",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_cvc_second_check",
+    "kind": "author_position",
+    "query": "What does Jason Lemkin say about whether corporate venture capital firms write a second check?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_00c32ea8f146eb99c16e0974"
+    ],
+    "designated_sources_retrieved": [
+      "gd_00c32ea8f146eb99c16e0974"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "local",
+    "hit_source_ids": [
+      "gd_00c32ea8f146eb99c16e0974",
+      "gd_96519591dababcfdc35855a8",
+      "gd_86885aeea8cb170e94247e31",
+      "gd_02225f53cdd000bae8795914"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 81
+    },
+    "seconds": 2.681,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_00c32ea8f146eb99c16e0974",
+        "graph_document_id": "gd_00c32ea8f146eb99c16e0974",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Dear SaaStr: How Do Corporate Venture Capital Firms Differ from Conventional Ones? They aren\u2019t as dependable. This doesn\u2019t mean they are \u201cworse\u201d. It does mean be careful how you use them. This is issue #1. A few like Salesforce Ventures and GV are an exception, but let me explain:\nCorporate VCs often do not write a \u201csecond check\u201d. But most institutional VCs save reserves for another check, if you ",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_96519591dababcfdc35855a8",
+        "graph_document_id": "gd_6bdde8bd37b55a83f475e364",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "capitalists and investment firms already signed up for 2023 \u2026\n24vc\nABSeed Ventures\nActivant Capital\nAdvance Venture Partners\nAlkeon Capital\nAlumni Ventures\nAndreessen Horowitz\nArcherman Capital\nAscentium Capital\nAstella Partners\nAsymmetric Capital Partners\nApax Partners\nB Capital\nBank of America Merrill Lynch\nBase10\nBattery Ventures\nBay Lead Partners\nBDev Ventures\nBeacon VC\nBerkshire Partners\nBess",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_86885aeea8cb170e94247e31",
+        "graph_document_id": "gd_86885aeea8cb170e94247e31",
+        "attribution_status": "named_author",
+        "quoted_speakers": [],
+        "text_preview": "One tough question as a VC\u2014 tougher that you\u2019d think \u2014 is how hard and honest to be with founders. You might think the answer is to be 100% honest and 100% transparent. And perhaps it\u2019s that simple. But \u2026 on the one hand, when things get harder, many founders don\u2019t quite face reality: - They think they\u2019ll be able to raise another round \u2026 but the metrics aren\u2019t there - They think growth is fine \u2026 w",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_02225f53cdd000bae8795914",
+        "graph_document_id": "gd_02225f53cdd000bae8795914",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Dear SaaStr: How Do You Respond to a VC Who Says They Don\u2019t Invest in Your Space?\nYou move on.\nThey almost certainly don\u2019t invest in your space, at least not as your stage, with your risk profile, etc.\n-> At a higher level, you basically can\u2019t convince a VC to invest in a space, an idea, a startup they genuinely aren\u2019t interested in\n. Save your energy.\nWay too many founders send 2, 5, 10 emails af",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_cvc_second_check",
+    "kind": "author_position",
+    "query": "What does Jason Lemkin say about whether corporate venture capital firms write a second check?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_00c32ea8f146eb99c16e0974"
+    ],
+    "designated_sources_retrieved": [
+      "gd_00c32ea8f146eb99c16e0974"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "global",
+    "hit_source_ids": [
+      "gd_00c32ea8f146eb99c16e0974",
+      "gd_6f8b12882c7b797fccc8c072",
+      "gd_96519591dababcfdc35855a8",
+      "gd_56ce429513ba63d601778b83"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 47
+    },
+    "seconds": 2.79,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_00c32ea8f146eb99c16e0974",
+        "graph_document_id": "gd_00c32ea8f146eb99c16e0974",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Dear SaaStr: How Do Corporate Venture Capital Firms Differ from Conventional Ones? They aren\u2019t as dependable. This doesn\u2019t mean they are \u201cworse\u201d. It does mean be careful how you use them. This is issue #1. A few like Salesforce Ventures and GV are an exception, but let me explain:\nCorporate VCs often do not write a \u201csecond check\u201d. But most institutional VCs save reserves for another check, if you ",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_6f8b12882c7b797fccc8c072",
+        "graph_document_id": "gd_6f8b12882c7b797fccc8c072",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "What does Jason M. Lemkin think about European SaaS Startups? At what company stage is it possible to become intere\u2026 \nhttps://quora.com/What-does-Jason-M-Lemkin-think-about-European-SaaS-Startups-At-what-company-stage-is-it-possible-to-become-interesting-for-an-American-investor/answer/Jason-M.-Lemkin?share=4dfe7002\n\u2026",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_96519591dababcfdc35855a8",
+        "graph_document_id": "gd_6bdde8bd37b55a83f475e364",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "capitalists and investment firms already signed up for 2023 \u2026\n24vc\nABSeed Ventures\nActivant Capital\nAdvance Venture Partners\nAlkeon Capital\nAlumni Ventures\nAndreessen Horowitz\nArcherman Capital\nAscentium Capital\nAstella Partners\nAsymmetric Capital Partners\nApax Partners\nB Capital\nBank of America Merrill Lynch\nBase10\nBattery Ventures\nBay Lead Partners\nBDev Ventures\nBeacon VC\nBerkshire Partners\nBess",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_56ce429513ba63d601778b83",
+        "graph_document_id": "gd_56ce429513ba63d601778b83",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "$40 billion, 10% growth is adding $4 billion, which is an entire Palantir every year.\u201d\nRory on venture dynamics\n:\n\u201cVenture is a game played by 6,000 people, and in the end, Sequoia wins.\u201d\nRory on foundation model math\n: \u201cYou actually need these things to take vast chunks out of the labor budget and be worth 20, 30, $40,000 almost a head to the enterprise for the math to work.\u201d\nMarc + Jason on work",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_cvc_second_check",
+    "kind": "author_position",
+    "query": "What does Jason Lemkin say about whether corporate venture capital firms write a second check?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_00c32ea8f146eb99c16e0974"
+    ],
+    "designated_sources_retrieved": [
+      "gd_00c32ea8f146eb99c16e0974"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "hybrid",
+    "hit_source_ids": [
+      "gd_00c32ea8f146eb99c16e0974",
+      "gd_6f8b12882c7b797fccc8c072",
+      "gd_96519591dababcfdc35855a8",
+      "gd_86885aeea8cb170e94247e31"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 118
+    },
+    "seconds": 2.78,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_00c32ea8f146eb99c16e0974",
+        "graph_document_id": "gd_00c32ea8f146eb99c16e0974",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Dear SaaStr: How Do Corporate Venture Capital Firms Differ from Conventional Ones? They aren\u2019t as dependable. This doesn\u2019t mean they are \u201cworse\u201d. It does mean be careful how you use them. This is issue #1. A few like Salesforce Ventures and GV are an exception, but let me explain:\nCorporate VCs often do not write a \u201csecond check\u201d. But most institutional VCs save reserves for another check, if you ",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_6f8b12882c7b797fccc8c072",
+        "graph_document_id": "gd_6f8b12882c7b797fccc8c072",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "What does Jason M. Lemkin think about European SaaS Startups? At what company stage is it possible to become intere\u2026 \nhttps://quora.com/What-does-Jason-M-Lemkin-think-about-European-SaaS-Startups-At-what-company-stage-is-it-possible-to-become-interesting-for-an-American-investor/answer/Jason-M.-Lemkin?share=4dfe7002\n\u2026",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_96519591dababcfdc35855a8",
+        "graph_document_id": "gd_6bdde8bd37b55a83f475e364",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "capitalists and investment firms already signed up for 2023 \u2026\n24vc\nABSeed Ventures\nActivant Capital\nAdvance Venture Partners\nAlkeon Capital\nAlumni Ventures\nAndreessen Horowitz\nArcherman Capital\nAscentium Capital\nAstella Partners\nAsymmetric Capital Partners\nApax Partners\nB Capital\nBank of America Merrill Lynch\nBase10\nBattery Ventures\nBay Lead Partners\nBDev Ventures\nBeacon VC\nBerkshire Partners\nBess",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_86885aeea8cb170e94247e31",
+        "graph_document_id": "gd_86885aeea8cb170e94247e31",
+        "attribution_status": "named_author",
+        "quoted_speakers": [],
+        "text_preview": "One tough question as a VC\u2014 tougher that you\u2019d think \u2014 is how hard and honest to be with founders. You might think the answer is to be 100% honest and 100% transparent. And perhaps it\u2019s that simple. But \u2026 on the one hand, when things get harder, many founders don\u2019t quite face reality: - They think they\u2019ll be able to raise another round \u2026 but the metrics aren\u2019t there - They think growth is fine \u2026 w",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_cvc_second_check",
+    "kind": "author_position",
+    "query": "What does Jason Lemkin say about whether corporate venture capital firms write a second check?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_00c32ea8f146eb99c16e0974"
+    ],
+    "designated_sources_retrieved": [
+      "gd_00c32ea8f146eb99c16e0974"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "mix",
+    "hit_source_ids": [
+      "gd_00c32ea8f146eb99c16e0974",
+      "gd_6f8b12882c7b797fccc8c072",
+      "gd_12e6c661ea0f1383ee2b47ab",
+      "gd_96519591dababcfdc35855a8"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 118
+    },
+    "seconds": 2.766,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_00c32ea8f146eb99c16e0974",
+        "graph_document_id": "gd_00c32ea8f146eb99c16e0974",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Dear SaaStr: How Do Corporate Venture Capital Firms Differ from Conventional Ones? They aren\u2019t as dependable. This doesn\u2019t mean they are \u201cworse\u201d. It does mean be careful how you use them. This is issue #1. A few like Salesforce Ventures and GV are an exception, but let me explain:\nCorporate VCs often do not write a \u201csecond check\u201d. But most institutional VCs save reserves for another check, if you ",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_6f8b12882c7b797fccc8c072",
+        "graph_document_id": "gd_6f8b12882c7b797fccc8c072",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "What does Jason M. Lemkin think about European SaaS Startups? At what company stage is it possible to become intere\u2026 \nhttps://quora.com/What-does-Jason-M-Lemkin-think-about-European-SaaS-Startups-At-what-company-stage-is-it-possible-to-become-interesting-for-an-American-investor/answer/Jason-M.-Lemkin?share=4dfe7002\n\u2026",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_12e6c661ea0f1383ee2b47ab",
+        "graph_document_id": "gd_70d11aab5ebbbe36a7cd1b54",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "building sustainable competitive moats. Revenue Velocity\nCanva, which is now valued at $40 billion, added $157 million in value daily since its prior funding in April 2021. These aren\u2019t incremental growth stories\u2014they\u2019re companies experiencing parabolic expansion in massive markets. Market Timing and Category Creation\nThe current decacorn landscape is dominated by companies that didn\u2019t just enter ",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_96519591dababcfdc35855a8",
+        "graph_document_id": "gd_6bdde8bd37b55a83f475e364",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "capitalists and investment firms already signed up for 2023 \u2026\n24vc\nABSeed Ventures\nActivant Capital\nAdvance Venture Partners\nAlkeon Capital\nAlumni Ventures\nAndreessen Horowitz\nArcherman Capital\nAscentium Capital\nAstella Partners\nAsymmetric Capital Partners\nApax Partners\nB Capital\nBank of America Merrill Lynch\nBase10\nBattery Ventures\nBay Lead Partners\nBDev Ventures\nBeacon VC\nBerkshire Partners\nBess",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_worst_mishire",
+    "kind": "author_position",
+    "query": "Which leadership hire does Jason Lemkin call the worst mis-hire?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_8276b7d28a0837fa1e71181a"
+    ],
+    "designated_sources_retrieved": [
+      "gd_8276b7d28a0837fa1e71181a"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "pilot_dense",
+    "mode": "dense",
+    "hit_source_ids": [
+      "gd_8276b7d28a0837fa1e71181a",
+      "gd_b959264fe82d939f4455b523",
+      "gd_b17253e0832c9eda0a49b551",
+      "gd_c7f27bbff31064a25315406a"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {},
+    "seconds": 2.063,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_8276b7d28a0837fa1e71181a",
+        "graph_document_id": "gd_8276b7d28a0837fa1e71181a",
+        "attribution_status": "named_author",
+        "quoted_speakers": [],
+        "text_preview": "Now that time has gone by, I'm 100% sure that the worst mis-hire is CTO / VP Engineering. Because it becomes the death of innovation. I've seen this fact pattern or some variant thereof so many times: * Founder CEO + CTO * CTO gets start-up to $5m, $10m, $20m but just \"can't scale\" * VP of Engineering or CTO from Big Tech Company hired * Everyone chooses the Nice Candidate * The Nice Candidate nev",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_b959264fe82d939f4455b523",
+        "graph_document_id": "gd_b959264fe82d939f4455b523",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "The Hidden Tax of Wrong-Fit VPs\nA VP-level hire gone wrong doesn\u2019t just cost you their salary. Here\u2019s what it actually costs:\n6-12 months of lost momentum\nwhile they ramp (or fail to ramp)\n20-40% team productivity drag\nas their direct reports lose confidence\n$500K-$2M in opportunity cost\ndepending on their function\nCascading hiring mistakes\nas they build out their team with the wrong people\nCultur",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_b17253e0832c9eda0a49b551",
+        "graph_document_id": "gd_b17253e0832c9eda0a49b551",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "I\u2019ve seen it again and again across 30+ investments, 10+ unicorns, and hundreds of portfolio company board meetings.\nThere\u2019s one pattern that predicts VP failure better than anything else I\u2019ve seen. Not their resume. Not their pedigree. Not even their interview performance.\nIt\u2019s whether they still do the actual work themselves.\nLet me break this down by function, because the pattern holds true acr",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_c7f27bbff31064a25315406a",
+        "graph_document_id": "gd_c7f27bbff31064a25315406a",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "Always worry when they promote the best people in acquisition to a role outside of the acquiree. Good for company, bad for product acquired",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_worst_mishire",
+    "kind": "author_position",
+    "query": "Which leadership hire does Jason Lemkin call the worst mis-hire?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_8276b7d28a0837fa1e71181a"
+    ],
+    "designated_sources_retrieved": [],
+    "designated_source_covered": false,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "chroma_v2",
+    "mode": "dense",
+    "hit_source_ids": [
+      "train_15306",
+      "train_13974",
+      "train_9622",
+      "train_14447"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {},
+    "seconds": 2.063,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "train_15306",
+        "graph_document_id": null,
+        "attribution_status": null,
+        "quoted_speakers": [],
+        "text_preview": "\"When you make a bad VP hire, it's always your fault as CEO, not theirs.\n\nThe candidate can never do enough research to understand if it's really the right fit.\" \n@kippbodnar\n \n@searchbrat\n \n@jasonlk",
+        "rank": 1
+      },
+      {
+        "source_id": "train_13974",
+        "graph_document_id": null,
+        "attribution_status": null,
+        "quoted_speakers": [],
+        "text_preview": "New!!  \"The #1 Worst Hire of All When You Are Just Starting To Scale: The Mediocre VP of Engineering\"",
+        "rank": 2
+      },
+      {
+        "source_id": "train_9622",
+        "graph_document_id": null,
+        "attribution_status": null,
+        "quoted_speakers": [],
+        "text_preview": "They hire at the wrong stage, the wrong type of person. Maybe the real reason we do it is because we got to get it done. We\u2019re getting to traction, we\u2019ve got a million\u2011and\u2011a\u2011half, two million in revenue. It\u2019s just like me after I raise that series B, series A, whatever it was. I got to get it done. I just raised that venture capital. I got this obligation. I got no VP of sales. I haven\u2019t even met ",
+        "rank": 3
+      },
+      {
+        "source_id": "train_14447",
+        "graph_document_id": null,
+        "attribution_status": null,
+        "quoted_speakers": [],
+        "text_preview": "\"Move on from a mis-hire as fast as you can.  And it doesn't do the VP any favors to keep them on if they can't do the job.\n\nAnd remember -- any mishire is your fault, not theirs.\" with \n@kylecnorton",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_worst_mishire",
+    "kind": "author_position",
+    "query": "Which leadership hire does Jason Lemkin call the worst mis-hire?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_8276b7d28a0837fa1e71181a"
+    ],
+    "designated_sources_retrieved": [
+      "gd_8276b7d28a0837fa1e71181a"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "naive",
+    "hit_source_ids": [
+      "gd_8276b7d28a0837fa1e71181a",
+      "gd_b959264fe82d939f4455b523",
+      "gd_fe95631776e59f9c3324005d",
+      "gd_f76cf95212bfc67508398f63"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {},
+    "seconds": 2.674,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_8276b7d28a0837fa1e71181a",
+        "graph_document_id": "gd_8276b7d28a0837fa1e71181a",
+        "attribution_status": "named_author",
+        "quoted_speakers": [],
+        "text_preview": "Now that time has gone by, I'm 100% sure that the worst mis-hire is CTO / VP Engineering. Because it becomes the death of innovation. I've seen this fact pattern or some variant thereof so many times: * Founder CEO + CTO * CTO gets start-up to $5m, $10m, $20m but just \"can't scale\" * VP of Engineering or CTO from Big Tech Company hired * Everyone chooses the Nice Candidate * The Nice Candidate nev",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_b959264fe82d939f4455b523",
+        "graph_document_id": "gd_b959264fe82d939f4455b523",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "The Hidden Tax of Wrong-Fit VPs\nA VP-level hire gone wrong doesn\u2019t just cost you their salary. Here\u2019s what it actually costs:\n6-12 months of lost momentum\nwhile they ramp (or fail to ramp)\n20-40% team productivity drag\nas their direct reports lose confidence\n$500K-$2M in opportunity cost\ndepending on their function\nCascading hiring mistakes\nas they build out their team with the wrong people\nCultur",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_fe95631776e59f9c3324005d",
+        "graph_document_id": "gd_e17729e5eca8acb5235bb5b2",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [
+          "Alex Rosenblatt"
+        ],
+        "text_preview": "[Attribution note: quoted text below is not Jason Lemkin's own claim.]\n[Quoted speaker: Alex Rosenblatt.]\n[End attribution note.]\nAlex Rosenblatt was the first marketing hire and Chief Marketing Officer at Datadog, all the way through IPO and beyond. He spent over eight years scaling their marketing from zero to supporting a multi-billion dollar public company. Prior to Datadog, Alex held leadersh",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_f76cf95212bfc67508398f63",
+        "graph_document_id": "gd_f76cf95212bfc67508398f63",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "per year as a segment, and/or at least 5% of your revenues \u2026\nthen\ndon\u2019t\nfire those customers. Instead, (z) hire them a psychiatrist\n. You don\u2019t have to give them any more story points, or sales attention. Just the attention of this one brand new hire. I mean this almost literally. Hire a new person to your team, brand new, without baggage. That\u2019s key \u2014 a new hire that wants the job, and wants to m",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_worst_mishire",
+    "kind": "author_position",
+    "query": "Which leadership hire does Jason Lemkin call the worst mis-hire?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_8276b7d28a0837fa1e71181a"
+    ],
+    "designated_sources_retrieved": [],
+    "designated_source_covered": false,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "local",
+    "hit_source_ids": [
+      "gd_fe95631776e59f9c3324005d",
+      "gd_12e6c661ea0f1383ee2b47ab",
+      "gd_852262bf58fd28520b57ec62",
+      "gd_694112e8e0040f5ff958f035"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 103
+    },
+    "seconds": 2.831,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_fe95631776e59f9c3324005d",
+        "graph_document_id": "gd_e17729e5eca8acb5235bb5b2",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [
+          "Alex Rosenblatt"
+        ],
+        "text_preview": "[Attribution note: quoted text below is not Jason Lemkin's own claim.]\n[Quoted speaker: Alex Rosenblatt.]\n[End attribution note.]\nAlex Rosenblatt was the first marketing hire and Chief Marketing Officer at Datadog, all the way through IPO and beyond. He spent over eight years scaling their marketing from zero to supporting a multi-billion dollar public company. Prior to Datadog, Alex held leadersh",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_12e6c661ea0f1383ee2b47ab",
+        "graph_document_id": "gd_70d11aab5ebbbe36a7cd1b54",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "220 billion valuation, the world\u2019s most valuable unicorn\nOpenAI\n: $300 billion valuation after record-breaking funding\nAnthropic\n: Multi-billion valuation with $3.5 billion funding round led by Lightspeed\nStripe\n(AI-enhanced payments): $65 billion valuation\nDatabricks\n(AI/ML platform): $43 billion valuation\nPotential Decacorn Exits: The IPO Pipeline\nBased on current valuations, revenue metrics, an",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_852262bf58fd28520b57ec62",
+        "graph_document_id": "gd_75f02b10d879e707c721d8e6",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "growth patterns. Technical Sales Teams Are Everything\n: All three companies prioritize hiring technically sophisticated sales teams that can use their own products and understand complex technical buyers.\n\nProduct-Led Growth Dominates\n: With massive inbound demand, these companies focus on fulfilling demand rather than generating it, requiring fundamentally different sales motions. Shorter Plannin",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_694112e8e0040f5ff958f035",
+        "graph_document_id": "gd_fa7363b1de00027943a9fe94",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "year, a $1 billion increase from earlier projections\nProfitability target\n: OpenAI hopes to turn cash flow positive in 2029, generating approximately $2 billion in cash that year\nRevenue vs.\n\n[Omitted same-source text between these sections: 231 words.]\n\nof signing nine enterprises per week International Expansion : Global data residency and regulatory compliance Market Implications OpenAI\u2019s succe",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_worst_mishire",
+    "kind": "author_position",
+    "query": "Which leadership hire does Jason Lemkin call the worst mis-hire?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_8276b7d28a0837fa1e71181a"
+    ],
+    "designated_sources_retrieved": [],
+    "designated_source_covered": false,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "global",
+    "hit_source_ids": [
+      "gd_b959264fe82d939f4455b523",
+      "gd_fe95631776e59f9c3324005d",
+      "gd_8d4d38e0c3572b351003a51c",
+      "gd_b17253e0832c9eda0a49b551"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "source_diversity_cap": 1,
+      "generated_summary_not_a_source_span": 53
+    },
+    "seconds": 2.757,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_b959264fe82d939f4455b523",
+        "graph_document_id": "gd_b959264fe82d939f4455b523",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "The Hidden Tax of Wrong-Fit VPs\nA VP-level hire gone wrong doesn\u2019t just cost you their salary. Here\u2019s what it actually costs:\n6-12 months of lost momentum\nwhile they ramp (or fail to ramp)\n20-40% team productivity drag\nas their direct reports lose confidence\n$500K-$2M in opportunity cost\ndepending on their function\nCascading hiring mistakes\nas they build out their team with the wrong people\nCultur",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_fe95631776e59f9c3324005d",
+        "graph_document_id": "gd_e17729e5eca8acb5235bb5b2",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [
+          "Alex Rosenblatt"
+        ],
+        "text_preview": "[Attribution note: quoted text below is not Jason Lemkin's own claim.]\n[Quoted speaker: Alex Rosenblatt.]\n[End attribution note.]\nAlex Rosenblatt was the first marketing hire and Chief Marketing Officer at Datadog, all the way through IPO and beyond. He spent over eight years scaling their marketing from zero to supporting a multi-billion dollar public company. Prior to Datadog, Alex held leadersh",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_8d4d38e0c3572b351003a51c",
+        "graph_document_id": "gd_8d4d38e0c3572b351003a51c",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": ". 1 or 2 reps from the competition are fine, but in general, the problem with hiring from the competition is we assume they are better than they are. We can\u2019t help it. We over-index on the seeming inside information, on getting access to the playbook, and on how quickly we assume they could scale up.\n\nAnd because of that, we let their other weaknesses slide \u2026 and hire candidates we otherwise would",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_b17253e0832c9eda0a49b551",
+        "graph_document_id": "gd_b17253e0832c9eda0a49b551",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "can produce more high-quality content than an entire team could before. A CMO who doesn\u2019t write can\u2019t evaluate what good looks like anymore.\nThe tools have changed the game. Executives who stay hands-on have superpowers. Executives who don\u2019t are becoming obsolete faster than ever.\nWhat This Means for Hiring\nWhen I\u2019m helping portfolio companies hire VPs and C-level executives, I always look for thi",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_worst_mishire",
+    "kind": "author_position",
+    "query": "Which leadership hire does Jason Lemkin call the worst mis-hire?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_8276b7d28a0837fa1e71181a"
+    ],
+    "designated_sources_retrieved": [],
+    "designated_source_covered": false,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "hybrid",
+    "hit_source_ids": [
+      "gd_b959264fe82d939f4455b523",
+      "gd_12e6c661ea0f1383ee2b47ab",
+      "gd_fe95631776e59f9c3324005d",
+      "gd_22550cc95a46ded2d9a37c99"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 153
+    },
+    "seconds": 2.809,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_b959264fe82d939f4455b523",
+        "graph_document_id": "gd_b959264fe82d939f4455b523",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "The Hidden Tax of Wrong-Fit VPs\nA VP-level hire gone wrong doesn\u2019t just cost you their salary. Here\u2019s what it actually costs:\n6-12 months of lost momentum\nwhile they ramp (or fail to ramp)\n20-40% team productivity drag\nas their direct reports lose confidence\n$500K-$2M in opportunity cost\ndepending on their function\nCascading hiring mistakes\nas they build out their team with the wrong people\nCultur",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_12e6c661ea0f1383ee2b47ab",
+        "graph_document_id": "gd_70d11aab5ebbbe36a7cd1b54",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "appear capable of jumping directly to super-decacorn status ($50B+) or even hectocorn territory ($100B+). AI Unicorn Creation Acceleration\nThe data reveals AI\u2019s disproportionate impact on unicorn creation:\n48% of new 2025 unicorns are AI companies\n(11 out of 23 in Q1 2025) \u2013 showing acceleration from 44% in 2024\nAI now represents 25% of all global unicorns, and going way up\n\u2013 meaning 1 in 4 unicor",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_fe95631776e59f9c3324005d",
+        "graph_document_id": "gd_e17729e5eca8acb5235bb5b2",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [
+          "Alex Rosenblatt"
+        ],
+        "text_preview": "[Attribution note: quoted text below is not Jason Lemkin's own claim.]\n[Quoted speaker: Alex Rosenblatt.]\n[End attribution note.]\nAlex Rosenblatt was the first marketing hire and Chief Marketing Officer at Datadog, all the way through IPO and beyond. He spent over eight years scaling their marketing from zero to supporting a multi-billion dollar public company. Prior to Datadog, Alex held leadersh",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_22550cc95a46ded2d9a37c99",
+        "graph_document_id": "gd_22550cc95a46ded2d9a37c99",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Capital One just announced it\u2019s acquiring Brex for $5.15 billion. \u00a0An incredible, top 0.1% \u201cexit\u201d in less than 10 years from a category creator that created massive wealth and opportunities. \u00a0A huge win.\nBut also \u2026 less than half of Brex\u2019s $12.3 billion valuation from October 2022.\nShould anyone care? \u00a0Many are seeing is a failure vs Ramp, a measured success at best. \u00a0But \u2026 why?\nI don\u2019t think most",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_worst_mishire",
+    "kind": "author_position",
+    "query": "Which leadership hire does Jason Lemkin call the worst mis-hire?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_8276b7d28a0837fa1e71181a"
+    ],
+    "designated_sources_retrieved": [
+      "gd_8276b7d28a0837fa1e71181a"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "mix",
+    "hit_source_ids": [
+      "gd_8276b7d28a0837fa1e71181a",
+      "gd_b959264fe82d939f4455b523",
+      "gd_12e6c661ea0f1383ee2b47ab",
+      "gd_fe95631776e59f9c3324005d"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 153
+    },
+    "seconds": 2.716,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_8276b7d28a0837fa1e71181a",
+        "graph_document_id": "gd_8276b7d28a0837fa1e71181a",
+        "attribution_status": "named_author",
+        "quoted_speakers": [],
+        "text_preview": "Now that time has gone by, I'm 100% sure that the worst mis-hire is CTO / VP Engineering. Because it becomes the death of innovation. I've seen this fact pattern or some variant thereof so many times: * Founder CEO + CTO * CTO gets start-up to $5m, $10m, $20m but just \"can't scale\" * VP of Engineering or CTO from Big Tech Company hired * Everyone chooses the Nice Candidate * The Nice Candidate nev",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_b959264fe82d939f4455b523",
+        "graph_document_id": "gd_b959264fe82d939f4455b523",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "The Hidden Tax of Wrong-Fit VPs\nA VP-level hire gone wrong doesn\u2019t just cost you their salary. Here\u2019s what it actually costs:\n6-12 months of lost momentum\nwhile they ramp (or fail to ramp)\n20-40% team productivity drag\nas their direct reports lose confidence\n$500K-$2M in opportunity cost\ndepending on their function\nCascading hiring mistakes\nas they build out their team with the wrong people\nCultur",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_12e6c661ea0f1383ee2b47ab",
+        "graph_document_id": "gd_70d11aab5ebbbe36a7cd1b54",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "appear capable of jumping directly to super-decacorn status ($50B+) or even hectocorn territory ($100B+). AI Unicorn Creation Acceleration\nThe data reveals AI\u2019s disproportionate impact on unicorn creation:\n48% of new 2025 unicorns are AI companies\n(11 out of 23 in Q1 2025) \u2013 showing acceleration from 44% in 2024\nAI now represents 25% of all global unicorns, and going way up\n\u2013 meaning 1 in 4 unicor",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_fe95631776e59f9c3324005d",
+        "graph_document_id": "gd_e17729e5eca8acb5235bb5b2",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [
+          "Alex Rosenblatt"
+        ],
+        "text_preview": "[Attribution note: quoted text below is not Jason Lemkin's own claim.]\n[Quoted speaker: Alex Rosenblatt.]\n[End attribution note.]\nAlex Rosenblatt was the first marketing hire and Chief Marketing Officer at Datadog, all the way through IPO and beyond. He spent over eight years scaling their marketing from zero to supporting a multi-billion dollar public company. Prior to Datadog, Alex held leadersh",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_first_vp_sales",
+    "kind": "multi_document",
+    "query": "What does Jason Lemkin say about hiring and managing a first VP of Sales?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_8d4d38e0c3572b351003a51c",
+      "gd_5b654905b75669045fd65816"
+    ],
+    "designated_sources_retrieved": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_8d4d38e0c3572b351003a51c",
+      "gd_5b654905b75669045fd65816"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "pilot_dense",
+    "mode": "dense",
+    "hit_source_ids": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_6f8b12882c7b797fccc8c072",
+      "gd_8d4d38e0c3572b351003a51c",
+      "gd_5b654905b75669045fd65816"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {},
+    "seconds": 2.078,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_92ee1e366384a6e50b449f25",
+        "graph_document_id": "gd_92ee1e366384a6e50b449f25",
+        "attribution_status": "named_author",
+        "quoted_speakers": [],
+        "text_preview": "Great VP of Sales, first week: - brings 2-4 great sales execs in ASAP. often week 1 - identifies top existing talent, does what it takes to keep them - begins to move out underperformers - jumps into all critical deals Mediocre VP of Sales, first month: - has no one to bring with them - top talent begins to leave - tries hard to keep everyone, including low performers - works mainly on process",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_6f8b12882c7b797fccc8c072",
+        "graph_document_id": "gd_6f8b12882c7b797fccc8c072",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "What does Jason M. Lemkin think about European SaaS Startups? At what company stage is it possible to become intere\u2026 \nhttps://quora.com/What-does-Jason-M-Lemkin-think-about-European-SaaS-Startups-At-what-company-stage-is-it-possible-to-become-interesting-for-an-American-investor/answer/Jason-M.-Lemkin?share=4dfe7002\n\u2026",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_8d4d38e0c3572b351003a51c",
+        "graph_document_id": "gd_8d4d38e0c3572b351003a51c",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Building your first sales team will be an endless series of mistakes. It\u2019s OK. Plan for it. But there are a few\navoidable\n, key mistakes I see start-ups making > 50% of the time. Just make fewer of these mistakes, and you\u2019ll scale faster, and just as importantly, with less turnover and more stress:\nHiring Early Reps (#1 \u2013 #3) That You Personally Wouldn\u2019t Buy From\n. Don\u2019t hire someone with the righ",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_5b654905b75669045fd65816",
+        "graph_document_id": "gd_5b654905b75669045fd65816",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "Criticizing a VP of Sales that can't do better is SOP, but likely, counterproductive",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_first_vp_sales",
+    "kind": "multi_document",
+    "query": "What does Jason Lemkin say about hiring and managing a first VP of Sales?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_8d4d38e0c3572b351003a51c",
+      "gd_5b654905b75669045fd65816"
+    ],
+    "designated_sources_retrieved": [],
+    "designated_source_covered": false,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "chroma_v2",
+    "mode": "dense",
+    "hit_source_ids": [
+      "train_21239",
+      "train_14509",
+      "train_25799",
+      "train_14513"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {},
+    "seconds": 2.066,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "train_21239",
+        "graph_document_id": null,
+        "attribution_status": null,
+        "quoted_speakers": [],
+        "text_preview": "Jason Lemkin stresses out the importance of hiring great VP of Sales (when the time is right). What is the path to \u2026 \nhttps://quora.com/Jason-Lemkin-stresses-out-the-importance-of-hiring-great-VP-of-Sales-when-the-time-is-right-What-is-the-path-to-become-a-great-VP-of-Sales/answer/Jason-M.-Lemkin?share=131cf371\n\u2026",
+        "rank": 1
+      },
+      {
+        "source_id": "train_14509",
+        "graph_document_id": null,
+        "attribution_status": null,
+        "quoted_speakers": [],
+        "text_preview": "New!!  Hiring a Great VP of Sales: The New, Latest Edition with Jason Lemkin (Video + Pod)",
+        "rank": 2
+      },
+      {
+        "source_id": "train_25799",
+        "graph_document_id": null,
+        "attribution_status": null,
+        "quoted_speakers": [],
+        "text_preview": "July 2014 NY Enterprise Technology Meetup - Jason Lemkin keynote on Hiring and Firing Your VP of Sales \nhttp://youtu.be/lY6Fy570J_8 via \n@YouTube",
+        "rank": 3
+      },
+      {
+        "source_id": "train_14513",
+        "graph_document_id": null,
+        "attribution_status": null,
+        "quoted_speakers": [],
+        "text_preview": "New!! \"How to Hire a Great VP of Sales Today with SaaStr CEO Jason Lemkin\"",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_first_vp_sales",
+    "kind": "multi_document",
+    "query": "What does Jason Lemkin say about hiring and managing a first VP of Sales?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_8d4d38e0c3572b351003a51c",
+      "gd_5b654905b75669045fd65816"
+    ],
+    "designated_sources_retrieved": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_8d4d38e0c3572b351003a51c"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "naive",
+    "hit_source_ids": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_8d4d38e0c3572b351003a51c",
+      "gd_e2460700e46c2ab29ea93e02",
+      "gd_fe95631776e59f9c3324005d"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {},
+    "seconds": 2.736,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_92ee1e366384a6e50b449f25",
+        "graph_document_id": "gd_92ee1e366384a6e50b449f25",
+        "attribution_status": "named_author",
+        "quoted_speakers": [],
+        "text_preview": "Great VP of Sales, first week: - brings 2-4 great sales execs in ASAP. often week 1 - identifies top existing talent, does what it takes to keep them - begins to move out underperformers - jumps into all critical deals Mediocre VP of Sales, first month: - has no one to bring with them - top talent begins to leave - tries hard to keep everyone, including low performers - works mainly on process",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_8d4d38e0c3572b351003a51c",
+        "graph_document_id": "gd_8d4d38e0c3572b351003a51c",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Building your first sales team will be an endless series of mistakes. It\u2019s OK. Plan for it. But there are a few\navoidable\n, key mistakes I see start-ups making > 50% of the time. Just make fewer of these mistakes, and you\u2019ll scale faster, and just as importantly, with less turnover and more stress:\nHiring Early Reps (#1 \u2013 #3) That You Personally Wouldn\u2019t Buy From\n. Don\u2019t hire someone with the righ",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_e2460700e46c2ab29ea93e02",
+        "graph_document_id": "gd_e2460700e46c2ab29ea93e02",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": ". In the beginning, you have to think differently. Think about whether you would buy your product from this person. And keep in mind that, while you may wish for someone who crushed it at Twilio or SendGrid, this person is probably not the best for your startup.\nFor your first sales \u201cmagician\u201d, you want someone who knows your product really really well \u2013 way more than salesperson #100. \u201cI often fi",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_fe95631776e59f9c3324005d",
+        "graph_document_id": "gd_e17729e5eca8acb5235bb5b2",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [
+          "Alex Rosenblatt"
+        ],
+        "text_preview": "[Attribution note: quoted text below is not Jason Lemkin's own claim.]\n[Quoted speaker: Alex Rosenblatt.]\n[End attribution note.]\nAlex Rosenblatt was the first marketing hire and Chief Marketing Officer at Datadog, all the way through IPO and beyond. He spent over eight years scaling their marketing from zero to supporting a multi-billion dollar public company. Prior to Datadog, Alex held leadersh",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_first_vp_sales",
+    "kind": "multi_document",
+    "query": "What does Jason Lemkin say about hiring and managing a first VP of Sales?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_8d4d38e0c3572b351003a51c",
+      "gd_5b654905b75669045fd65816"
+    ],
+    "designated_sources_retrieved": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_8d4d38e0c3572b351003a51c"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "local",
+    "hit_source_ids": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_22550cc95a46ded2d9a37c99",
+      "gd_8d4d38e0c3572b351003a51c",
+      "gd_694112e8e0040f5ff958f035"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 96
+    },
+    "seconds": 2.767,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_92ee1e366384a6e50b449f25",
+        "graph_document_id": "gd_92ee1e366384a6e50b449f25",
+        "attribution_status": "named_author",
+        "quoted_speakers": [],
+        "text_preview": "Great VP of Sales, first week: - brings 2-4 great sales execs in ASAP. often week 1 - identifies top existing talent, does what it takes to keep them - begins to move out underperformers - jumps into all critical deals Mediocre VP of Sales, first month: - has no one to bring with them - top talent begins to leave - tries hard to keep everyone, including low performers - works mainly on process",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_22550cc95a46ded2d9a37c99",
+        "graph_document_id": "gd_22550cc95a46ded2d9a37c99",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "everyone.\nIs that a failure?\nWe\u2019re already seeing this play out in real-time in AI. Look at Windsurf.\nWindsurf (formerly Codeium) was one of the hottest AI coding startups. They had $82 million in ARR with enterprise revenue\ndoubling quarterly\n. OpenAI offered $3 billion to acquire them. When that deal fell apart, Google paid $2.4 billion in a reverse acqui-hire for the CEO, co-founder, and 40 sen",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_8d4d38e0c3572b351003a51c",
+        "graph_document_id": "gd_8d4d38e0c3572b351003a51c",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Building your first sales team will be an endless series of mistakes. It\u2019s OK. Plan for it. But there are a few\navoidable\n, key mistakes I see start-ups making > 50% of the time. Just make fewer of these mistakes, and you\u2019ll scale faster, and just as importantly, with less turnover and more stress:\nHiring Early Reps (#1 \u2013 #3) That You Personally Wouldn\u2019t Buy From\n. Don\u2019t hire someone with the righ",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_694112e8e0040f5ff958f035",
+        "graph_document_id": "gd_fa7363b1de00027943a9fe94",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "year, a $1 billion increase from earlier projections\nProfitability target\n: OpenAI hopes to turn cash flow positive in 2029, generating approximately $2 billion in cash that year\nRevenue vs.\n\n[Omitted same-source text between these sections: 231 words.]\n\nof signing nine enterprises per week International Expansion : Global data residency and regulatory compliance Market Implications OpenAI\u2019s succe",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_first_vp_sales",
+    "kind": "multi_document",
+    "query": "What does Jason Lemkin say about hiring and managing a first VP of Sales?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_8d4d38e0c3572b351003a51c",
+      "gd_5b654905b75669045fd65816"
+    ],
+    "designated_sources_retrieved": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_8d4d38e0c3572b351003a51c"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "global",
+    "hit_source_ids": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_8d4d38e0c3572b351003a51c",
+      "gd_e2460700e46c2ab29ea93e02",
+      "gd_fe95631776e59f9c3324005d"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 45
+    },
+    "seconds": 2.757,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_92ee1e366384a6e50b449f25",
+        "graph_document_id": "gd_92ee1e366384a6e50b449f25",
+        "attribution_status": "named_author",
+        "quoted_speakers": [],
+        "text_preview": "Great VP of Sales, first week: - brings 2-4 great sales execs in ASAP. often week 1 - identifies top existing talent, does what it takes to keep them - begins to move out underperformers - jumps into all critical deals Mediocre VP of Sales, first month: - has no one to bring with them - top talent begins to leave - tries hard to keep everyone, including low performers - works mainly on process",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_8d4d38e0c3572b351003a51c",
+        "graph_document_id": "gd_8d4d38e0c3572b351003a51c",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Building your first sales team will be an endless series of mistakes. It\u2019s OK. Plan for it. But there are a few\navoidable\n, key mistakes I see start-ups making > 50% of the time. Just make fewer of these mistakes, and you\u2019ll scale faster, and just as importantly, with less turnover and more stress:\nHiring Early Reps (#1 \u2013 #3) That You Personally Wouldn\u2019t Buy From\n. Don\u2019t hire someone with the righ",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_e2460700e46c2ab29ea93e02",
+        "graph_document_id": "gd_e2460700e46c2ab29ea93e02",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": ". In the beginning, you have to think differently. Think about whether you would buy your product from this person. And keep in mind that, while you may wish for someone who crushed it at Twilio or SendGrid, this person is probably not the best for your startup.\nFor your first sales \u201cmagician\u201d, you want someone who knows your product really really well \u2013 way more than salesperson #100. \u201cI often fi",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_fe95631776e59f9c3324005d",
+        "graph_document_id": "gd_e17729e5eca8acb5235bb5b2",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [
+          "Alex Rosenblatt"
+        ],
+        "text_preview": "[Attribution note: quoted text below is not Jason Lemkin's own claim.]\n[Quoted speaker: Alex Rosenblatt.]\n[End attribution note.]\nAlex Rosenblatt was the first marketing hire and Chief Marketing Officer at Datadog, all the way through IPO and beyond. He spent over eight years scaling their marketing from zero to supporting a multi-billion dollar public company. Prior to Datadog, Alex held leadersh",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_first_vp_sales",
+    "kind": "multi_document",
+    "query": "What does Jason Lemkin say about hiring and managing a first VP of Sales?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_8d4d38e0c3572b351003a51c",
+      "gd_5b654905b75669045fd65816"
+    ],
+    "designated_sources_retrieved": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_8d4d38e0c3572b351003a51c"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "hybrid",
+    "hit_source_ids": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_8d4d38e0c3572b351003a51c",
+      "gd_e2460700e46c2ab29ea93e02",
+      "gd_fe95631776e59f9c3324005d"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 146
+    },
+    "seconds": 2.712,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_92ee1e366384a6e50b449f25",
+        "graph_document_id": "gd_92ee1e366384a6e50b449f25",
+        "attribution_status": "named_author",
+        "quoted_speakers": [],
+        "text_preview": "Great VP of Sales, first week: - brings 2-4 great sales execs in ASAP. often week 1 - identifies top existing talent, does what it takes to keep them - begins to move out underperformers - jumps into all critical deals Mediocre VP of Sales, first month: - has no one to bring with them - top talent begins to leave - tries hard to keep everyone, including low performers - works mainly on process",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_8d4d38e0c3572b351003a51c",
+        "graph_document_id": "gd_8d4d38e0c3572b351003a51c",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Building your first sales team will be an endless series of mistakes. It\u2019s OK. Plan for it. But there are a few\navoidable\n, key mistakes I see start-ups making > 50% of the time. Just make fewer of these mistakes, and you\u2019ll scale faster, and just as importantly, with less turnover and more stress:\nHiring Early Reps (#1 \u2013 #3) That You Personally Wouldn\u2019t Buy From\n. Don\u2019t hire someone with the righ",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_e2460700e46c2ab29ea93e02",
+        "graph_document_id": "gd_e2460700e46c2ab29ea93e02",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": ". In the beginning, you have to think differently. Think about whether you would buy your product from this person. And keep in mind that, while you may wish for someone who crushed it at Twilio or SendGrid, this person is probably not the best for your startup.\nFor your first sales \u201cmagician\u201d, you want someone who knows your product really really well \u2013 way more than salesperson #100. \u201cI often fi",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_fe95631776e59f9c3324005d",
+        "graph_document_id": "gd_e17729e5eca8acb5235bb5b2",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [
+          "Alex Rosenblatt"
+        ],
+        "text_preview": "[Attribution note: quoted text below is not Jason Lemkin's own claim.]\n[Quoted speaker: Alex Rosenblatt.]\n[End attribution note.]\nAlex Rosenblatt was the first marketing hire and Chief Marketing Officer at Datadog, all the way through IPO and beyond. He spent over eight years scaling their marketing from zero to supporting a multi-billion dollar public company. Prior to Datadog, Alex held leadersh",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_first_vp_sales",
+    "kind": "multi_document",
+    "query": "What does Jason Lemkin say about hiring and managing a first VP of Sales?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_8d4d38e0c3572b351003a51c",
+      "gd_5b654905b75669045fd65816"
+    ],
+    "designated_sources_retrieved": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_8d4d38e0c3572b351003a51c"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "mix",
+    "hit_source_ids": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_8d4d38e0c3572b351003a51c",
+      "gd_e2460700e46c2ab29ea93e02",
+      "gd_fe95631776e59f9c3324005d"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 146
+    },
+    "seconds": 2.772,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_92ee1e366384a6e50b449f25",
+        "graph_document_id": "gd_92ee1e366384a6e50b449f25",
+        "attribution_status": "named_author",
+        "quoted_speakers": [],
+        "text_preview": "Great VP of Sales, first week: - brings 2-4 great sales execs in ASAP. often week 1 - identifies top existing talent, does what it takes to keep them - begins to move out underperformers - jumps into all critical deals Mediocre VP of Sales, first month: - has no one to bring with them - top talent begins to leave - tries hard to keep everyone, including low performers - works mainly on process",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_8d4d38e0c3572b351003a51c",
+        "graph_document_id": "gd_8d4d38e0c3572b351003a51c",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Building your first sales team will be an endless series of mistakes. It\u2019s OK. Plan for it. But there are a few\navoidable\n, key mistakes I see start-ups making > 50% of the time. Just make fewer of these mistakes, and you\u2019ll scale faster, and just as importantly, with less turnover and more stress:\nHiring Early Reps (#1 \u2013 #3) That You Personally Wouldn\u2019t Buy From\n. Don\u2019t hire someone with the righ",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_e2460700e46c2ab29ea93e02",
+        "graph_document_id": "gd_e2460700e46c2ab29ea93e02",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": ". In the beginning, you have to think differently. Think about whether you would buy your product from this person. And keep in mind that, while you may wish for someone who crushed it at Twilio or SendGrid, this person is probably not the best for your startup.\nFor your first sales \u201cmagician\u201d, you want someone who knows your product really really well \u2013 way more than salesperson #100. \u201cI often fi",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_fe95631776e59f9c3324005d",
+        "graph_document_id": "gd_e17729e5eca8acb5235bb5b2",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [
+          "Alex Rosenblatt"
+        ],
+        "text_preview": "[Attribution note: quoted text below is not Jason Lemkin's own claim.]\n[Quoted speaker: Alex Rosenblatt.]\n[End attribution note.]\nAlex Rosenblatt was the first marketing hire and Chief Marketing Officer at Datadog, all the way through IPO and beyond. He spent over eight years scaling their marketing from zero to supporting a multi-billion dollar public company. Prior to Datadog, Alex held leadersh",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_five_percent_share",
+    "kind": "conditional_advice",
+    "query": "What does Jason Lemkin say a company should do once it has about 5 percent market share in a niche?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_27f183b437e4f038d31cb0f6"
+    ],
+    "designated_sources_retrieved": [
+      "gd_27f183b437e4f038d31cb0f6"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "pilot_dense",
+    "mode": "dense",
+    "hit_source_ids": [
+      "gd_27f183b437e4f038d31cb0f6",
+      "gd_6f8b12882c7b797fccc8c072",
+      "gd_fe95631776e59f9c3324005d",
+      "gd_ba301a19918cb0344dba52c6"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {},
+    "seconds": 2.078,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_27f183b437e4f038d31cb0f6",
+        "graph_document_id": "gd_27f183b437e4f038d31cb0f6",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "Once you have 5% market share, even in a niche, and it's growing ... you can run the tables\n\nYou have a mini-brand\n\nNow just:\n\n- continue to innovate\n- be present.  be everywhere\n- get your customers together\n- lean in everywhere\n\n5% -> 10% -> 25% -> .... 80%?",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_6f8b12882c7b797fccc8c072",
+        "graph_document_id": "gd_6f8b12882c7b797fccc8c072",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "What does Jason M. Lemkin think about European SaaS Startups? At what company stage is it possible to become intere\u2026 \nhttps://quora.com/What-does-Jason-M-Lemkin-think-about-European-SaaS-Startups-At-what-company-stage-is-it-possible-to-become-interesting-for-an-American-investor/answer/Jason-M.-Lemkin?share=4dfe7002\n\u2026",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_fe95631776e59f9c3324005d",
+        "graph_document_id": "gd_fe95631776e59f9c3324005d",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [
+          "Alex Rosenblatt"
+        ],
+        "text_preview": "Alex Rosenblatt was the first marketing hire and Chief Marketing Officer at Datadog, all the way through IPO and beyond. He spent over eight years scaling their marketing from zero to supporting a multi-billion dollar public company. Prior to Datadog, Alex held leadership positions at several high-growth SaaS companies and has a proven track record of building marketing engines that deliver consis",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_ba301a19918cb0344dba52c6",
+        "graph_document_id": "gd_ba301a19918cb0344dba52c6",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "All that matters is investing in great companies at a fair, stage-appropriate price, right?\n \nhttp://buff.ly/1LXJfeX",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_five_percent_share",
+    "kind": "conditional_advice",
+    "query": "What does Jason Lemkin say a company should do once it has about 5 percent market share in a niche?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_27f183b437e4f038d31cb0f6"
+    ],
+    "designated_sources_retrieved": [
+      "gd_27f183b437e4f038d31cb0f6"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "chroma_v2",
+    "mode": "dense",
+    "hit_source_ids": [
+      "gd_27f183b437e4f038d31cb0f6",
+      "train_7300",
+      "train_22608",
+      "train_22583"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {},
+    "seconds": 2.075,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_27f183b437e4f038d31cb0f6",
+        "graph_document_id": "gd_27f183b437e4f038d31cb0f6",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "Once you have 5% market share, even in a niche, and it's growing ... you can run the tables\n\nYou have a mini-brand\n\nNow just:\n\n- continue to innovate\n- be present.  be everywhere\n- get your customers together\n- lean in everywhere\n\n5% -> 10% -> 25% -> .... 80%?",
+        "rank": 1
+      },
+      {
+        "source_id": "train_7300",
+        "graph_document_id": null,
+        "attribution_status": null,
+        "quoted_speakers": [],
+        "text_preview": "Lemkin cautions against investing in startups that compete with established players without the potential for exponential growth and innovation. The timing of investments and founder departures can significantly impact a company\u2019s success, with founder departures leading to decreased agility and innovation. Lemkin expresses skepticism about private equity firms\u2019 ability to make money on certain in",
+        "rank": 2
+      },
+      {
+        "source_id": "train_22608",
+        "graph_document_id": null,
+        "attribution_status": null,
+        "quoted_speakers": [],
+        "text_preview": "What does Jason Lemkin think is the best way for an early stage SaaS company to get its first 1-3 pilot Fortune 500\u2026 \nhttps://quora.com/What-does-Jason-Lemkin-think-is-the-best-way-for-an-early-stage-SaaS-company-to-get-its-first-1-3-pilot-Fortune-500-paying-customers/answer/Jason-M.-Lemkin?share=af37cb4b\n\u2026",
+        "rank": 3
+      },
+      {
+        "source_id": "train_22583",
+        "graph_document_id": null,
+        "attribution_status": null,
+        "quoted_speakers": [],
+        "text_preview": "What does Jason Lemkin think is the best way for an early stage SaaS company to get its first 1-3 pilot Fortune... - \nhttp://saastr.com/what-does-jason-lemkin-think-is-the-best-way-for-an-early-stage-saas-company-to-get-its-first-1-3-pilot-fortune-500-paying-customers/\n\u2026",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_five_percent_share",
+    "kind": "conditional_advice",
+    "query": "What does Jason Lemkin say a company should do once it has about 5 percent market share in a niche?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_27f183b437e4f038d31cb0f6"
+    ],
+    "designated_sources_retrieved": [
+      "gd_27f183b437e4f038d31cb0f6"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "naive",
+    "hit_source_ids": [
+      "gd_27f183b437e4f038d31cb0f6",
+      "gd_f9a237e6ccf11fe4de9924ad",
+      "gd_6f8b12882c7b797fccc8c072",
+      "gd_e2460700e46c2ab29ea93e02"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "source_diversity_cap": 1
+    },
+    "seconds": 2.714,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_27f183b437e4f038d31cb0f6",
+        "graph_document_id": "gd_27f183b437e4f038d31cb0f6",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "Once you have 5% market share, even in a niche, and it's growing ... you can run the tables\n\nYou have a mini-brand\n\nNow just:\n\n- continue to innovate\n- be present.  be everywhere\n- get your customers together\n- lean in everywhere\n\n5% -> 10% -> 25% -> .... 80%?",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_f9a237e6ccf11fe4de9924ad",
+        "graph_document_id": "gd_f9a237e6ccf11fe4de9924ad",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "is slower than expected. They may start to simply believe the market will always be too small. Keep them inspired. Celebrate every new customer win. Show them how things are compounding, even from a small state. Compound any growing metric out for them, and show them how it will build into something pretty big in 5-10 years. Lean into relevant partner ecosystems\n. Even if your market is tiny today",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_6f8b12882c7b797fccc8c072",
+        "graph_document_id": "gd_6f8b12882c7b797fccc8c072",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "What does Jason M. Lemkin think about European SaaS Startups? At what company stage is it possible to become intere\u2026 \nhttps://quora.com/What-does-Jason-M-Lemkin-think-about-European-SaaS-Startups-At-what-company-stage-is-it-possible-to-become-interesting-for-an-American-investor/answer/Jason-M.-Lemkin?share=4dfe7002\n\u2026",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_e2460700e46c2ab29ea93e02",
+        "graph_document_id": "gd_e2460700e46c2ab29ea93e02",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "The CMO and team at Algolia did a session with me a while back on the top mistakes founders make in the early days.\u00a0 While some of it was familiar territory, I thought it was a pretty fun discussion with a different perspective in many cases than we\u2019ve touched on before.\nCheck out the session here:\nAlgolia also summarized their Top 5 take-aways\nhere\n, and below:\nMost SaaS founders start out the sa",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_five_percent_share",
+    "kind": "conditional_advice",
+    "query": "What does Jason Lemkin say a company should do once it has about 5 percent market share in a niche?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_27f183b437e4f038d31cb0f6"
+    ],
+    "designated_sources_retrieved": [],
+    "designated_source_covered": false,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "local",
+    "hit_source_ids": [
+      "gd_6f8b12882c7b797fccc8c072",
+      "gd_22550cc95a46ded2d9a37c99",
+      "gd_e2460700e46c2ab29ea93e02",
+      "gd_694112e8e0040f5ff958f035"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 103
+    },
+    "seconds": 2.73,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_6f8b12882c7b797fccc8c072",
+        "graph_document_id": "gd_6f8b12882c7b797fccc8c072",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "What does Jason M. Lemkin think about European SaaS Startups? At what company stage is it possible to become intere\u2026 \nhttps://quora.com/What-does-Jason-M-Lemkin-think-about-European-SaaS-Startups-At-what-company-stage-is-it-possible-to-become-interesting-for-an-American-investor/answer/Jason-M.-Lemkin?share=4dfe7002\n\u2026",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_22550cc95a46ded2d9a37c99",
+        "graph_document_id": "gd_22550cc95a46ded2d9a37c99",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "everyone.\nIs that a failure?\nWe\u2019re already seeing this play out in real-time in AI. Look at Windsurf.\nWindsurf (formerly Codeium) was one of the hottest AI coding startups. They had $82 million in ARR with enterprise revenue\ndoubling quarterly\n. OpenAI offered $3 billion to acquire them. When that deal fell apart, Google paid $2.4 billion in a reverse acqui-hire for the CEO, co-founder, and 40 sen",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_e2460700e46c2ab29ea93e02",
+        "graph_document_id": "gd_e2460700e46c2ab29ea93e02",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "The CMO and team at Algolia did a session with me a while back on the top mistakes founders make in the early days.\u00a0 While some of it was familiar territory, I thought it was a pretty fun discussion with a different perspective in many cases than we\u2019ve touched on before.\nCheck out the session here:\nAlgolia also summarized their Top 5 take-aways\nhere\n, and below:\nMost SaaS founders start out the sa",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_694112e8e0040f5ff958f035",
+        "graph_document_id": "gd_fa7363b1de00027943a9fe94",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "year, a $1 billion increase from earlier projections\nProfitability target\n: OpenAI hopes to turn cash flow positive in 2029, generating approximately $2 billion in cash that year\nRevenue vs.\n\n[Omitted same-source text between these sections: 231 words.]\n\nof signing nine enterprises per week International Expansion : Global data residency and regulatory compliance Market Implications OpenAI\u2019s succe",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_five_percent_share",
+    "kind": "conditional_advice",
+    "query": "What does Jason Lemkin say a company should do once it has about 5 percent market share in a niche?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_27f183b437e4f038d31cb0f6"
+    ],
+    "designated_sources_retrieved": [
+      "gd_27f183b437e4f038d31cb0f6"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "global",
+    "hit_source_ids": [
+      "gd_27f183b437e4f038d31cb0f6",
+      "gd_12e6c661ea0f1383ee2b47ab",
+      "gd_e2460700e46c2ab29ea93e02",
+      "gd_694112e8e0040f5ff958f035"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 49
+    },
+    "seconds": 2.744,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_27f183b437e4f038d31cb0f6",
+        "graph_document_id": "gd_27f183b437e4f038d31cb0f6",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "Once you have 5% market share, even in a niche, and it's growing ... you can run the tables\n\nYou have a mini-brand\n\nNow just:\n\n- continue to innovate\n- be present.  be everywhere\n- get your customers together\n- lean in everywhere\n\n5% -> 10% -> 25% -> .... 80%?",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_12e6c661ea0f1383ee2b47ab",
+        "graph_document_id": "gd_70d11aab5ebbbe36a7cd1b54",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Per new Stanford research, of all US-based VC-backed unicorns that have exited, only 33 achieved decacorn status at exit. Not at paper, but on exit. With 1,200+ unicorns still waiting for an exit, will there be enough $10B+ exits? Figma is about to IPO, we had Wiz, and Zuck is on a tear buying Scale.ai and more. But we need a lot of decacorns and bigger to make the unicorn bets pay off. Stanford P",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_e2460700e46c2ab29ea93e02",
+        "graph_document_id": "gd_e2460700e46c2ab29ea93e02",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "The CMO and team at Algolia did a session with me a while back on the top mistakes founders make in the early days.\u00a0 While some of it was familiar territory, I thought it was a pretty fun discussion with a different perspective in many cases than we\u2019ve touched on before.\nCheck out the session here:\nAlgolia also summarized their Top 5 take-aways\nhere\n, and below:\nMost SaaS founders start out the sa",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_694112e8e0040f5ff958f035",
+        "graph_document_id": "gd_fa7363b1de00027943a9fe94",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "OpenAI\njust announced it hit its first $1 billion revenue month in July 2025\n, representing a staggering acceleration from $500 million monthly at the start of the year\u2014a stunning 100% increase in just seven months. We\u2019ve never seen anything like this. And \u2026 it\u2019s accelerating. (As is Anthropic at $5B ARR). How OpenAI\u2019s Revenue Sprint Compares to Tech Giants\nHere\u2019s how OpenAI\u2019s timeline compares to",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_five_percent_share",
+    "kind": "conditional_advice",
+    "query": "What does Jason Lemkin say a company should do once it has about 5 percent market share in a niche?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_27f183b437e4f038d31cb0f6"
+    ],
+    "designated_sources_retrieved": [
+      "gd_27f183b437e4f038d31cb0f6"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "hybrid",
+    "hit_source_ids": [
+      "gd_27f183b437e4f038d31cb0f6",
+      "gd_e73f73a002132fd061dd4a7e",
+      "gd_6f8b12882c7b797fccc8c072",
+      "gd_e2460700e46c2ab29ea93e02"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 148
+    },
+    "seconds": 2.77,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_27f183b437e4f038d31cb0f6",
+        "graph_document_id": "gd_27f183b437e4f038d31cb0f6",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "Once you have 5% market share, even in a niche, and it's growing ... you can run the tables\n\nYou have a mini-brand\n\nNow just:\n\n- continue to innovate\n- be present.  be everywhere\n- get your customers together\n- lean in everywhere\n\n5% -> 10% -> 25% -> .... 80%?",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_e73f73a002132fd061dd4a7e",
+        "graph_document_id": "gd_e73f73a002132fd061dd4a7e",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "My \n@Quora\n answer to Apple has enough cash to buy Disney. Should they? \nhttp://qr.ae/Rr0NCr",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_6f8b12882c7b797fccc8c072",
+        "graph_document_id": "gd_6f8b12882c7b797fccc8c072",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "What does Jason M. Lemkin think about European SaaS Startups? At what company stage is it possible to become intere\u2026 \nhttps://quora.com/What-does-Jason-M-Lemkin-think-about-European-SaaS-Startups-At-what-company-stage-is-it-possible-to-become-interesting-for-an-American-investor/answer/Jason-M.-Lemkin?share=4dfe7002\n\u2026",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_e2460700e46c2ab29ea93e02",
+        "graph_document_id": "gd_e2460700e46c2ab29ea93e02",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "The CMO and team at Algolia did a session with me a while back on the top mistakes founders make in the early days.\u00a0 While some of it was familiar territory, I thought it was a pretty fun discussion with a different perspective in many cases than we\u2019ve touched on before.\nCheck out the session here:\nAlgolia also summarized their Top 5 take-aways\nhere\n, and below:\nMost SaaS founders start out the sa",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_five_percent_share",
+    "kind": "conditional_advice",
+    "query": "What does Jason Lemkin say a company should do once it has about 5 percent market share in a niche?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_27f183b437e4f038d31cb0f6"
+    ],
+    "designated_sources_retrieved": [
+      "gd_27f183b437e4f038d31cb0f6"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "mix",
+    "hit_source_ids": [
+      "gd_27f183b437e4f038d31cb0f6",
+      "gd_e73f73a002132fd061dd4a7e",
+      "gd_f9a237e6ccf11fe4de9924ad",
+      "gd_6f8b12882c7b797fccc8c072"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 148
+    },
+    "seconds": 2.72,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_27f183b437e4f038d31cb0f6",
+        "graph_document_id": "gd_27f183b437e4f038d31cb0f6",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "Once you have 5% market share, even in a niche, and it's growing ... you can run the tables\n\nYou have a mini-brand\n\nNow just:\n\n- continue to innovate\n- be present.  be everywhere\n- get your customers together\n- lean in everywhere\n\n5% -> 10% -> 25% -> .... 80%?",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_e73f73a002132fd061dd4a7e",
+        "graph_document_id": "gd_e73f73a002132fd061dd4a7e",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "My \n@Quora\n answer to Apple has enough cash to buy Disney. Should they? \nhttp://qr.ae/Rr0NCr",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_f9a237e6ccf11fe4de9924ad",
+        "graph_document_id": "gd_f9a237e6ccf11fe4de9924ad",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "is slower than expected. They may start to simply believe the market will always be too small. Keep them inspired. Celebrate every new customer win. Show them how things are compounding, even from a small state. Compound any growing metric out for them, and show them how it will build into something pretty big in 5-10 years. Lean into relevant partner ecosystems\n. Even if your market is tiny today",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_6f8b12882c7b797fccc8c072",
+        "graph_document_id": "gd_6f8b12882c7b797fccc8c072",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "What does Jason M. Lemkin think about European SaaS Startups? At what company stage is it possible to become intere\u2026 \nhttps://quora.com/What-does-Jason-M-Lemkin-think-about-European-SaaS-Startups-At-what-company-stage-is-it-possible-to-become-interesting-for-an-American-investor/answer/Jason-M.-Lemkin?share=4dfe7002\n\u2026",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_vp_sales_tension",
+    "kind": "conflicting_statements",
+    "query": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_5b654905b75669045fd65816"
+    ],
+    "designated_sources_retrieved": [
+      "gd_5b654905b75669045fd65816",
+      "gd_92ee1e366384a6e50b449f25"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "pilot_dense",
+    "mode": "dense",
+    "hit_source_ids": [
+      "gd_5b654905b75669045fd65816",
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_b959264fe82d939f4455b523",
+      "gd_8d4d38e0c3572b351003a51c"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {},
+    "seconds": 2.052,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_5b654905b75669045fd65816",
+        "graph_document_id": "gd_5b654905b75669045fd65816",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "Criticizing a VP of Sales that can't do better is SOP, but likely, counterproductive",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_92ee1e366384a6e50b449f25",
+        "graph_document_id": "gd_92ee1e366384a6e50b449f25",
+        "attribution_status": "named_author",
+        "quoted_speakers": [],
+        "text_preview": "Great VP of Sales, first week: - brings 2-4 great sales execs in ASAP. often week 1 - identifies top existing talent, does what it takes to keep them - begins to move out underperformers - jumps into all critical deals Mediocre VP of Sales, first month: - has no one to bring with them - top talent begins to leave - tries hard to keep everyone, including low performers - works mainly on process",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_b959264fe82d939f4455b523",
+        "graph_document_id": "gd_b959264fe82d939f4455b523",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "The Hidden Tax of Wrong-Fit VPs\nA VP-level hire gone wrong doesn\u2019t just cost you their salary. Here\u2019s what it actually costs:\n6-12 months of lost momentum\nwhile they ramp (or fail to ramp)\n20-40% team productivity drag\nas their direct reports lose confidence\n$500K-$2M in opportunity cost\ndepending on their function\nCascading hiring mistakes\nas they build out their team with the wrong people\nCultur",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_8d4d38e0c3572b351003a51c",
+        "graph_document_id": "gd_8d4d38e0c3572b351003a51c",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Building your first sales team will be an endless series of mistakes. It\u2019s OK. Plan for it. But there are a few\navoidable\n, key mistakes I see start-ups making > 50% of the time. Just make fewer of these mistakes, and you\u2019ll scale faster, and just as importantly, with less turnover and more stress:\nHiring Early Reps (#1 \u2013 #3) That You Personally Wouldn\u2019t Buy From\n. Don\u2019t hire someone with the righ",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_vp_sales_tension",
+    "kind": "conflicting_statements",
+    "query": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_5b654905b75669045fd65816"
+    ],
+    "designated_sources_retrieved": [
+      "gd_5b654905b75669045fd65816"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "chroma_v2",
+    "mode": "dense",
+    "hit_source_ids": [
+      "gd_5b654905b75669045fd65816",
+      "train_21239",
+      "train_8431",
+      "train_10680"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {},
+    "seconds": 2.065,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_5b654905b75669045fd65816",
+        "graph_document_id": "gd_5b654905b75669045fd65816",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "Criticizing a VP of Sales that can't do better is SOP, but likely, counterproductive",
+        "rank": 1
+      },
+      {
+        "source_id": "train_21239",
+        "graph_document_id": null,
+        "attribution_status": null,
+        "quoted_speakers": [],
+        "text_preview": "Jason Lemkin stresses out the importance of hiring great VP of Sales (when the time is right). What is the path to \u2026 \nhttps://quora.com/Jason-Lemkin-stresses-out-the-importance-of-hiring-great-VP-of-Sales-when-the-time-is-right-What-is-the-path-to-become-a-great-VP-of-Sales/answer/Jason-M.-Lemkin?share=131cf371\n\u2026",
+        "rank": 2
+      },
+      {
+        "source_id": "train_8431",
+        "graph_document_id": null,
+        "attribution_status": null,
+        "quoted_speakers": [],
+        "text_preview": "The VP of Sales needs to be at least as good as your VP of Marketing. \u201cWhen you have to question if they\u2019re working out.\u201d \u2014 Team EPECC\nYup. This is so true. Even if you are no sales expert yourself, you should see enough improvements in sales in the first 30 days of a VP of Sales that you know it\u2019s working. If you don\u2019t think it is \u2026 it isn\u2019t. More time does not solve this. A tough lesson so many ",
+        "rank": 3
+      },
+      {
+        "source_id": "train_10680",
+        "graph_document_id": null,
+        "attribution_status": null,
+        "quoted_speakers": [],
+        "text_preview": "Too many VPs of Sales don\u2019t help out on webinars, on lead scoring, on following up on marketing\u2019s work. Then \u2026 marketing starts to focus more narrowly on its own specific KPIs and goals.\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014-\nWhat 3 factors/skills must every VP of sales possess? Why? Jason:\nThere are different types of VP of Sales for different phases of B2B companies. But if we\u2019re talking, say, broadly from $1m-$50 in ARR, ",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_vp_sales_tension",
+    "kind": "conflicting_statements",
+    "query": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_5b654905b75669045fd65816"
+    ],
+    "designated_sources_retrieved": [
+      "gd_5b654905b75669045fd65816",
+      "gd_92ee1e366384a6e50b449f25"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "naive",
+    "hit_source_ids": [
+      "gd_5b654905b75669045fd65816",
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_b959264fe82d939f4455b523",
+      "gd_8d4d38e0c3572b351003a51c"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {},
+    "seconds": 2.748,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_5b654905b75669045fd65816",
+        "graph_document_id": "gd_5b654905b75669045fd65816",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "Criticizing a VP of Sales that can't do better is SOP, but likely, counterproductive",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_92ee1e366384a6e50b449f25",
+        "graph_document_id": "gd_92ee1e366384a6e50b449f25",
+        "attribution_status": "named_author",
+        "quoted_speakers": [],
+        "text_preview": "Great VP of Sales, first week: - brings 2-4 great sales execs in ASAP. often week 1 - identifies top existing talent, does what it takes to keep them - begins to move out underperformers - jumps into all critical deals Mediocre VP of Sales, first month: - has no one to bring with them - top talent begins to leave - tries hard to keep everyone, including low performers - works mainly on process",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_b959264fe82d939f4455b523",
+        "graph_document_id": "gd_b959264fe82d939f4455b523",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "public, undermines other leaders, or treats junior employees poorly. Skills aren\u2019t the issue \u2013 judgment and values are. Move on after a few weeks. Blame yourself, not them. But move on.\n#3. T\nhe Plateau Playe\nr\nThey\u2019re not bad. They\u2019re not great. They\u2019re just\u2026 fine.\n\nThey hit their numbers, manage their team adequately, and never cause drama. But they also never drive breakthrough results or inspi",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_8d4d38e0c3572b351003a51c",
+        "graph_document_id": "gd_8d4d38e0c3572b351003a51c",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Building your first sales team will be an endless series of mistakes. It\u2019s OK. Plan for it. But there are a few\navoidable\n, key mistakes I see start-ups making > 50% of the time. Just make fewer of these mistakes, and you\u2019ll scale faster, and just as importantly, with less turnover and more stress:\nHiring Early Reps (#1 \u2013 #3) That You Personally Wouldn\u2019t Buy From\n. Don\u2019t hire someone with the righ",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_vp_sales_tension",
+    "kind": "conflicting_statements",
+    "query": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_5b654905b75669045fd65816"
+    ],
+    "designated_sources_retrieved": [
+      "gd_5b654905b75669045fd65816"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "local",
+    "hit_source_ids": [
+      "gd_5b654905b75669045fd65816",
+      "gd_8d4d38e0c3572b351003a51c",
+      "gd_b17253e0832c9eda0a49b551",
+      "gd_e2460700e46c2ab29ea93e02"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 63
+    },
+    "seconds": 2.686,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_5b654905b75669045fd65816",
+        "graph_document_id": "gd_5b654905b75669045fd65816",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "Criticizing a VP of Sales that can't do better is SOP, but likely, counterproductive",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_8d4d38e0c3572b351003a51c",
+        "graph_document_id": "gd_8d4d38e0c3572b351003a51c",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Building your first sales team will be an endless series of mistakes. It\u2019s OK. Plan for it. But there are a few\navoidable\n, key mistakes I see start-ups making > 50% of the time. Just make fewer of these mistakes, and you\u2019ll scale faster, and just as importantly, with less turnover and more stress:\nHiring Early Reps (#1 \u2013 #3) That You Personally Wouldn\u2019t Buy From\n. Don\u2019t hire someone with the righ",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_b17253e0832c9eda0a49b551",
+        "graph_document_id": "gd_b17253e0832c9eda0a49b551",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "I\u2019ve seen it again and again across 30+ investments, 10+ unicorns, and hundreds of portfolio company board meetings.\nThere\u2019s one pattern that predicts VP failure better than anything else I\u2019ve seen. Not their resume. Not their pedigree. Not even their interview performance.\nIt\u2019s whether they still do the actual work themselves.\nLet me break this down by function, because the pattern holds true acr",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_e2460700e46c2ab29ea93e02",
+        "graph_document_id": "gd_e2460700e46c2ab29ea93e02",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": ". In the beginning, you have to think differently. Think about whether you would buy your product from this person. And keep in mind that, while you may wish for someone who crushed it at Twilio or SendGrid, this person is probably not the best for your startup.\nFor your first sales \u201cmagician\u201d, you want someone who knows your product really really well \u2013 way more than salesperson #100. \u201cI often fi",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_vp_sales_tension",
+    "kind": "conflicting_statements",
+    "query": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_5b654905b75669045fd65816"
+    ],
+    "designated_sources_retrieved": [
+      "gd_5b654905b75669045fd65816",
+      "gd_92ee1e366384a6e50b449f25"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "global",
+    "hit_source_ids": [
+      "gd_5b654905b75669045fd65816",
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_8d4d38e0c3572b351003a51c",
+      "gd_e2460700e46c2ab29ea93e02"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "source_diversity_cap": 1,
+      "generated_summary_not_a_source_span": 44
+    },
+    "seconds": 2.758,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_5b654905b75669045fd65816",
+        "graph_document_id": "gd_5b654905b75669045fd65816",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "Criticizing a VP of Sales that can't do better is SOP, but likely, counterproductive",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_92ee1e366384a6e50b449f25",
+        "graph_document_id": "gd_92ee1e366384a6e50b449f25",
+        "attribution_status": "named_author",
+        "quoted_speakers": [],
+        "text_preview": "Great VP of Sales, first week: - brings 2-4 great sales execs in ASAP. often week 1 - identifies top existing talent, does what it takes to keep them - begins to move out underperformers - jumps into all critical deals Mediocre VP of Sales, first month: - has no one to bring with them - top talent begins to leave - tries hard to keep everyone, including low performers - works mainly on process",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_8d4d38e0c3572b351003a51c",
+        "graph_document_id": "gd_8d4d38e0c3572b351003a51c",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Building your first sales team will be an endless series of mistakes. It\u2019s OK. Plan for it. But there are a few\navoidable\n, key mistakes I see start-ups making > 50% of the time. Just make fewer of these mistakes, and you\u2019ll scale faster, and just as importantly, with less turnover and more stress:\nHiring Early Reps (#1 \u2013 #3) That You Personally Wouldn\u2019t Buy From\n. Don\u2019t hire someone with the righ",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_e2460700e46c2ab29ea93e02",
+        "graph_document_id": "gd_e2460700e46c2ab29ea93e02",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": ". In the beginning, you have to think differently. Think about whether you would buy your product from this person. And keep in mind that, while you may wish for someone who crushed it at Twilio or SendGrid, this person is probably not the best for your startup.\nFor your first sales \u201cmagician\u201d, you want someone who knows your product really really well \u2013 way more than salesperson #100. \u201cI often fi",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_vp_sales_tension",
+    "kind": "conflicting_statements",
+    "query": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_5b654905b75669045fd65816"
+    ],
+    "designated_sources_retrieved": [
+      "gd_5b654905b75669045fd65816",
+      "gd_92ee1e366384a6e50b449f25"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "hybrid",
+    "hit_source_ids": [
+      "gd_5b654905b75669045fd65816",
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_8d4d38e0c3572b351003a51c",
+      "gd_b17253e0832c9eda0a49b551"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "source_diversity_cap": 1,
+      "generated_summary_not_a_source_span": 105
+    },
+    "seconds": 7.462,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_5b654905b75669045fd65816",
+        "graph_document_id": "gd_5b654905b75669045fd65816",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "Criticizing a VP of Sales that can't do better is SOP, but likely, counterproductive",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_92ee1e366384a6e50b449f25",
+        "graph_document_id": "gd_92ee1e366384a6e50b449f25",
+        "attribution_status": "named_author",
+        "quoted_speakers": [],
+        "text_preview": "Great VP of Sales, first week: - brings 2-4 great sales execs in ASAP. often week 1 - identifies top existing talent, does what it takes to keep them - begins to move out underperformers - jumps into all critical deals Mediocre VP of Sales, first month: - has no one to bring with them - top talent begins to leave - tries hard to keep everyone, including low performers - works mainly on process",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_8d4d38e0c3572b351003a51c",
+        "graph_document_id": "gd_8d4d38e0c3572b351003a51c",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Building your first sales team will be an endless series of mistakes. It\u2019s OK. Plan for it. But there are a few\navoidable\n, key mistakes I see start-ups making > 50% of the time. Just make fewer of these mistakes, and you\u2019ll scale faster, and just as importantly, with less turnover and more stress:\nHiring Early Reps (#1 \u2013 #3) That You Personally Wouldn\u2019t Buy From\n. Don\u2019t hire someone with the righ",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_b17253e0832c9eda0a49b551",
+        "graph_document_id": "gd_b17253e0832c9eda0a49b551",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "I\u2019ve seen it again and again across 30+ investments, 10+ unicorns, and hundreds of portfolio company board meetings.\nThere\u2019s one pattern that predicts VP failure better than anything else I\u2019ve seen. Not their resume. Not their pedigree. Not even their interview performance.\nIt\u2019s whether they still do the actual work themselves.\nLet me break this down by function, because the pattern holds true acr",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_vp_sales_tension",
+    "kind": "conflicting_statements",
+    "query": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_5b654905b75669045fd65816"
+    ],
+    "designated_sources_retrieved": [
+      "gd_5b654905b75669045fd65816",
+      "gd_92ee1e366384a6e50b449f25"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "mix",
+    "hit_source_ids": [
+      "gd_5b654905b75669045fd65816",
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_b959264fe82d939f4455b523",
+      "gd_8d4d38e0c3572b351003a51c"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 105
+    },
+    "seconds": 3.583,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_5b654905b75669045fd65816",
+        "graph_document_id": "gd_5b654905b75669045fd65816",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "Criticizing a VP of Sales that can't do better is SOP, but likely, counterproductive",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_92ee1e366384a6e50b449f25",
+        "graph_document_id": "gd_92ee1e366384a6e50b449f25",
+        "attribution_status": "named_author",
+        "quoted_speakers": [],
+        "text_preview": "Great VP of Sales, first week: - brings 2-4 great sales execs in ASAP. often week 1 - identifies top existing talent, does what it takes to keep them - begins to move out underperformers - jumps into all critical deals Mediocre VP of Sales, first month: - has no one to bring with them - top talent begins to leave - tries hard to keep everyone, including low performers - works mainly on process",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_b959264fe82d939f4455b523",
+        "graph_document_id": "gd_b959264fe82d939f4455b523",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "public, undermines other leaders, or treats junior employees poorly. Skills aren\u2019t the issue \u2013 judgment and values are. Move on after a few weeks. Blame yourself, not them. But move on.\n#3. T\nhe Plateau Playe\nr\nThey\u2019re not bad. They\u2019re not great. They\u2019re just\u2026 fine.\n\nThey hit their numbers, manage their team adequately, and never cause drama. But they also never drive breakthrough results or inspi",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_8d4d38e0c3572b351003a51c",
+        "graph_document_id": "gd_8d4d38e0c3572b351003a51c",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Building your first sales team will be an endless series of mistakes. It\u2019s OK. Plan for it. But there are a few\navoidable\n, key mistakes I see start-ups making > 50% of the time. Just make fewer of these mistakes, and you\u2019ll scale faster, and just as importantly, with less turnover and more stress:\nHiring Early Reps (#1 \u2013 #3) That You Personally Wouldn\u2019t Buy From\n. Don\u2019t hire someone with the righ",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_personalized_saas_speaker",
+    "kind": "attribution",
+    "query": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_007b705bb266a53acf5888b9"
+    ],
+    "designated_sources_retrieved": [
+      "gd_007b705bb266a53acf5888b9"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "pilot_dense",
+    "mode": "dense",
+    "hit_source_ids": [
+      "gd_007b705bb266a53acf5888b9",
+      "gd_a6016d6c72ddea604b995fd3",
+      "gd_4f6908ae4b2f4c4e20daccaa",
+      "gd_90c43e103fb0d354964ffb63"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {},
+    "seconds": 2.082,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_007b705bb266a53acf5888b9",
+        "graph_document_id": "gd_007b705bb266a53acf5888b9",
+        "attribution_status": "third_party_quotation",
+        "quoted_speakers": [
+          "Anneka Gupta"
+        ],
+        "text_preview": "\"AI means eveything in SaaS needs to be a personalized experience. A workflow that surfaces the job that needs to get done -- and just does it. That's the Future of Enterprise SaaS\" Rubrik CPO Anneka Gupta New -> \"Going Multi-Product in the Age of AI with CPOs of Webflow, Rubrik, Zoom, and Productboard\" https://lnkd.in/gQFeDYeT",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_a6016d6c72ddea604b995fd3",
+        "graph_document_id": "gd_a6016d6c72ddea604b995fd3",
+        "attribution_status": "named_author",
+        "quoted_speakers": [],
+        "text_preview": "The SaaS Era of 2013-2022 is Over. Welcome to The World of Hyperfunctional SaaS. So is AI taking over everything? Will $1B SaaS companies be run by 1 person teams? I mean \u2026 maybe. Across the SaaStr Fund portfolio, I\u2019ve seen multiple portfolio companies lose $1m customers to new, in-house AI initiatives. But I\u2019ve also seen others grow even faster as AI rebooted and enhanced their products. What I d",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_4f6908ae4b2f4c4e20daccaa",
+        "graph_document_id": "gd_4f6908ae4b2f4c4e20daccaa",
+        "attribution_status": "named_author",
+        "quoted_speakers": [],
+        "text_preview": "Human-in-the-loop and AI orchestration are the most misunderstood concepts in B2B SaaS. 1\ufe0f\u20e3 Most think \"human-in-the-loop\" means AI makes their work easier. Wrong. \ud83d\udc4b It means humans handle the cases AI can't solve. All day long. In real time, or as close as possible. The 30% of support tickets that are too complex. The sales conversations that need real judgment. The edge cases that break automate",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_90c43e103fb0d354964ffb63",
+        "graph_document_id": "gd_90c43e103fb0d354964ffb63",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Dear SaaStr: How will Ai Change Sales in The Next 12 Months?\nWithin a year, an AI sales rep will join every human sales rep on every Zoom and call\n\ud83e\udd16 95% of \u201cI don\u2019t knows\u201d and \u201cUh I\u2019ll get back to you\u201d will be gone\nWithin a year, an AI BDR will answer all inbound sales questions\n\ud83e\udd1698% of humans setting up appointments with AEs will be\u2026\n\nAI is going to fundamentally reshape sales over the next 12 mo",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_personalized_saas_speaker",
+    "kind": "attribution",
+    "query": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_007b705bb266a53acf5888b9"
+    ],
+    "designated_sources_retrieved": [
+      "gd_007b705bb266a53acf5888b9"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "chroma_v2",
+    "mode": "dense",
+    "hit_source_ids": [
+      "gd_007b705bb266a53acf5888b9",
+      "train_15258",
+      "train_3456",
+      "train_15434"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {},
+    "seconds": 2.074,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_007b705bb266a53acf5888b9",
+        "graph_document_id": "gd_043b769dd0d2fd156767e0ba",
+        "attribution_status": "third_party_quotation",
+        "quoted_speakers": [
+          "Anneka Gupta"
+        ],
+        "text_preview": "\"AI means eveything in SaaS needs to be a personalized experience. A workflow that surfaces the job that needs to get done -- and just does it. That's the Future of Enterprise SaaS\" Rubrik CPO Anneka Gupta New -> \"Going Multi-Product in the Age of AI with CPOs of Webflow, Rubrik, Zoom, and Productboard\" https://lnkd.in/gQFeDYeT",
+        "rank": 1
+      },
+      {
+        "source_id": "train_15258",
+        "graph_document_id": null,
+        "attribution_status": null,
+        "quoted_speakers": [],
+        "text_preview": "\"The Future of SaaS: How AI is Shaping Marketing and Sales.\n\nWe need AI to do the nitty gritty work.  Because we don't want to do it ourselves anymore.\"",
+        "rank": 2
+      },
+      {
+        "source_id": "train_3456",
+        "graph_document_id": null,
+        "attribution_status": null,
+        "quoted_speakers": [],
+        "text_preview": "They\u2019re identifying the specific workflows where AI can take over the grinding work and free humans for strategy, relationship building, and complex problem-solving. AI Does What We Need, But No One Wants To Do\nThe future of SaaS isn\u2019t about AI replacing humans. It\u2019s about AI doing the essential work that humans will do poorly or not at all because it\u2019s repetitive, unrewarding, or doesn\u2019t scale. C",
+        "rank": 3
+      },
+      {
+        "source_id": "train_15434",
+        "graph_document_id": null,
+        "attribution_status": null,
+        "quoted_speakers": [],
+        "text_preview": "One tough thing about AI in SaaS:\n\nYes, in theory, maybe you can do more with less with \"AI\".\n\nIn theory.\n\nHowever, customer expectations here are HUGE.  They are expecting your AI offering to do truly incredible things in B2B.\n\nRadical improvements.\n\nThat takes people.",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_personalized_saas_speaker",
+    "kind": "attribution",
+    "query": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_007b705bb266a53acf5888b9"
+    ],
+    "designated_sources_retrieved": [
+      "gd_007b705bb266a53acf5888b9"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "naive",
+    "hit_source_ids": [
+      "gd_007b705bb266a53acf5888b9",
+      "gd_a6016d6c72ddea604b995fd3",
+      "gd_4f6908ae4b2f4c4e20daccaa",
+      "gd_852262bf58fd28520b57ec62"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {},
+    "seconds": 2.661,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_007b705bb266a53acf5888b9",
+        "graph_document_id": "gd_043b769dd0d2fd156767e0ba",
+        "attribution_status": "third_party_quotation",
+        "quoted_speakers": [
+          "Anneka Gupta"
+        ],
+        "text_preview": "[Attribution note: quoted text below is not Jason Lemkin's own claim.]\n[Quoted speaker: Anneka Gupta, Rubrik CPO.]\n[End attribution note.]\n\"AI means eveything in SaaS needs to be a personalized experience. A workflow that surfaces the job that needs to get done -- and just does it. That's the Future of Enterprise SaaS\" Rubrik CPO Anneka Gupta New -> \"Going Multi-Product in the Age of AI with CPOs ",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_a6016d6c72ddea604b995fd3",
+        "graph_document_id": "gd_a6016d6c72ddea604b995fd3",
+        "attribution_status": "named_author",
+        "quoted_speakers": [],
+        "text_preview": "The SaaS Era of 2013-2022 is Over. Welcome to The World of Hyperfunctional SaaS. So is AI taking over everything? Will $1B SaaS companies be run by 1 person teams? I mean \u2026 maybe. Across the SaaStr Fund portfolio, I\u2019ve seen multiple portfolio companies lose $1m customers to new, in-house AI initiatives. But I\u2019ve also seen others grow even faster as AI rebooted and enhanced their products. What I d",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_4f6908ae4b2f4c4e20daccaa",
+        "graph_document_id": "gd_4f6908ae4b2f4c4e20daccaa",
+        "attribution_status": "named_author",
+        "quoted_speakers": [],
+        "text_preview": "Human-in-the-loop and AI orchestration are the most misunderstood concepts in B2B SaaS. 1\ufe0f\u20e3 Most think \"human-in-the-loop\" means AI makes their work easier. Wrong. \ud83d\udc4b It means humans handle the cases AI can't solve. All day long. In real time, or as close as possible. The 30% of support tickets that are too complex. The sales conversations that need real judgment. The edge cases that break automate",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_852262bf58fd28520b57ec62",
+        "graph_document_id": "gd_75f02b10d879e707c721d8e6",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "from these three companies extend far beyond AI:\nQuestion Annual Planning\n: In rapidly evolving markets, shorter planning cycles may be more effective than traditional annual quotas and targets. Hire Technical Sales Talent\n: As products become more sophisticated, sales teams need deeper technical understanding to be effective. Embrace Product-Led Growth\n: When possible, focus on fulfilling demand ",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_personalized_saas_speaker",
+    "kind": "attribution",
+    "query": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_007b705bb266a53acf5888b9"
+    ],
+    "designated_sources_retrieved": [
+      "gd_007b705bb266a53acf5888b9"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "local",
+    "hit_source_ids": [
+      "gd_007b705bb266a53acf5888b9",
+      "gd_56ce429513ba63d601778b83",
+      "gd_a6016d6c72ddea604b995fd3",
+      "gd_12e6c661ea0f1383ee2b47ab"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 202
+    },
+    "seconds": 3.537,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_007b705bb266a53acf5888b9",
+        "graph_document_id": "gd_043b769dd0d2fd156767e0ba",
+        "attribution_status": "third_party_quotation",
+        "quoted_speakers": [
+          "Anneka Gupta"
+        ],
+        "text_preview": "[Attribution note: quoted text below is not Jason Lemkin's own claim.]\n[Quoted speaker: Anneka Gupta, Rubrik CPO.]\n[End attribution note.]\n\"AI means eveything in SaaS needs to be a personalized experience. A workflow that surfaces the job that needs to get done -- and just does it. That's the Future of Enterprise SaaS\" Rubrik CPO Anneka Gupta New -> \"Going Multi-Product in the Age of AI with CPOs ",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_56ce429513ba63d601778b83",
+        "graph_document_id": "gd_56ce429513ba63d601778b83",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "$40 billion, 10% growth is adding $4 billion, which is an entire Palantir every year.\u201d\nRory on venture dynamics\n:\n\u201cVenture is a game played by 6,000 people, and in the end, Sequoia wins.\u201d\nRory on foundation model math\n: \u201cYou actually need these things to take vast chunks out of the labor budget and be worth 20, 30, $40,000 almost a head to the enterprise for the math to work.\u201d\nMarc + Jason on work",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_a6016d6c72ddea604b995fd3",
+        "graph_document_id": "gd_a6016d6c72ddea604b995fd3",
+        "attribution_status": "named_author",
+        "quoted_speakers": [],
+        "text_preview": "The SaaS Era of 2013-2022 is Over. Welcome to The World of Hyperfunctional SaaS. So is AI taking over everything? Will $1B SaaS companies be run by 1 person teams? I mean \u2026 maybe. Across the SaaStr Fund portfolio, I\u2019ve seen multiple portfolio companies lose $1m customers to new, in-house AI initiatives. But I\u2019ve also seen others grow even faster as AI rebooted and enhanced their products. What I d",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_12e6c661ea0f1383ee2b47ab",
+        "graph_document_id": "gd_70d11aab5ebbbe36a7cd1b54",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "that Stanford\u2019s historical data couldn\u2019t have predicted. Early 2025 marked the highest VC investment in AI on record, with global AI-related deals totaling $73.1 billion, accounting for 57.9% of all VC-backed funding. This isn\u2019t just a trend\u2014it\u2019s a seismic shift that may rewrite the rules of startup valuations. The AI Unicorn Speed Run\nTraditional startups take an average of 7 years to reach unico",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_personalized_saas_speaker",
+    "kind": "attribution",
+    "query": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_007b705bb266a53acf5888b9"
+    ],
+    "designated_sources_retrieved": [
+      "gd_007b705bb266a53acf5888b9"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "global",
+    "hit_source_ids": [
+      "gd_007b705bb266a53acf5888b9",
+      "gd_e424b816b7ffc8ed454f8d82",
+      "gd_a6016d6c72ddea604b995fd3",
+      "gd_4f6908ae4b2f4c4e20daccaa"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 51
+    },
+    "seconds": 3.502,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_007b705bb266a53acf5888b9",
+        "graph_document_id": "gd_043b769dd0d2fd156767e0ba",
+        "attribution_status": "third_party_quotation",
+        "quoted_speakers": [
+          "Anneka Gupta"
+        ],
+        "text_preview": "[Attribution note: quoted text below is not Jason Lemkin's own claim.]\n[Quoted speaker: Anneka Gupta, Rubrik CPO.]\n[End attribution note.]\n\"AI means eveything in SaaS needs to be a personalized experience. A workflow that surfaces the job that needs to get done -- and just does it. That's the Future of Enterprise SaaS\" Rubrik CPO Anneka Gupta New -> \"Going Multi-Product in the Age of AI with CPOs ",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_e424b816b7ffc8ed454f8d82",
+        "graph_document_id": "gd_e424b816b7ffc8ed454f8d82",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": ". Salesforce bought Slack for 27x ARR. Today? I doubt it would pay even 10x. And third, many folks just don\u2019t want to sell when prices are down. It\u2019s easy to buy mediocre assets in a down market. They all become available. But top assets often become even less willing to sell at half or less the price of just a few months back. The bottom line is a short period without much liquidity in venture do",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_a6016d6c72ddea604b995fd3",
+        "graph_document_id": "gd_a6016d6c72ddea604b995fd3",
+        "attribution_status": "named_author",
+        "quoted_speakers": [],
+        "text_preview": "The SaaS Era of 2013-2022 is Over. Welcome to The World of Hyperfunctional SaaS. So is AI taking over everything? Will $1B SaaS companies be run by 1 person teams? I mean \u2026 maybe. Across the SaaStr Fund portfolio, I\u2019ve seen multiple portfolio companies lose $1m customers to new, in-house AI initiatives. But I\u2019ve also seen others grow even faster as AI rebooted and enhanced their products. What I d",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_4f6908ae4b2f4c4e20daccaa",
+        "graph_document_id": "gd_4f6908ae4b2f4c4e20daccaa",
+        "attribution_status": "named_author",
+        "quoted_speakers": [],
+        "text_preview": "Human-in-the-loop and AI orchestration are the most misunderstood concepts in B2B SaaS. 1\ufe0f\u20e3 Most think \"human-in-the-loop\" means AI makes their work easier. Wrong. \ud83d\udc4b It means humans handle the cases AI can't solve. All day long. In real time, or as close as possible. The 30% of support tickets that are too complex. The sales conversations that need real judgment. The edge cases that break automate",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_personalized_saas_speaker",
+    "kind": "attribution",
+    "query": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_007b705bb266a53acf5888b9"
+    ],
+    "designated_sources_retrieved": [
+      "gd_007b705bb266a53acf5888b9"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "hybrid",
+    "hit_source_ids": [
+      "gd_007b705bb266a53acf5888b9",
+      "gd_1282420851c57a65c41b3c9b",
+      "gd_a6016d6c72ddea604b995fd3",
+      "gd_40d926c839abc68c68bb1a76"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 238
+    },
+    "seconds": 3.56,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_007b705bb266a53acf5888b9",
+        "graph_document_id": "gd_043b769dd0d2fd156767e0ba",
+        "attribution_status": "third_party_quotation",
+        "quoted_speakers": [
+          "Anneka Gupta"
+        ],
+        "text_preview": "[Attribution note: quoted text below is not Jason Lemkin's own claim.]\n[Quoted speaker: Anneka Gupta, Rubrik CPO.]\n[End attribution note.]\n\"AI means eveything in SaaS needs to be a personalized experience. A workflow that surfaces the job that needs to get done -- and just does it. That's the Future of Enterprise SaaS\" Rubrik CPO Anneka Gupta New -> \"Going Multi-Product in the Age of AI with CPOs ",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_1282420851c57a65c41b3c9b",
+        "graph_document_id": "gd_1282420851c57a65c41b3c9b",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "40% of tickets today, but often a much smaller percent of the tough ones.\u00a0 Those are often escalated to humans.\nSome customers are pushing this well above 40% today, but the quality of resolution does decline.\u00a0 80% for most is impractical to resolve all customer support issues with a high CSAT today with AI.\u00a0 At least for most customers.\nBut 80% by 2029?\u00a0 Sounds pretty plausible given that many ar",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_a6016d6c72ddea604b995fd3",
+        "graph_document_id": "gd_a6016d6c72ddea604b995fd3",
+        "attribution_status": "named_author",
+        "quoted_speakers": [],
+        "text_preview": "The SaaS Era of 2013-2022 is Over. Welcome to The World of Hyperfunctional SaaS. So is AI taking over everything? Will $1B SaaS companies be run by 1 person teams? I mean \u2026 maybe. Across the SaaStr Fund portfolio, I\u2019ve seen multiple portfolio companies lose $1m customers to new, in-house AI initiatives. But I\u2019ve also seen others grow even faster as AI rebooted and enhanced their products. What I d",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_40d926c839abc68c68bb1a76",
+        "graph_document_id": "gd_40d926c839abc68c68bb1a76",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Ok 5 Interesting Learnings on how they accelerated growth at scale:\n\n1. NRR up, from 115% to 120%.\u00a0 And 145% for $50k+ ACV deals.\nA good reminder that NRR doesn\u2019t need to come down as you scale.\u00a0 Somehow, we find a way not to saturate our markets, our customers, and our total potential deal sizes.\u00a0 Asana\u2019s ARR has gone up in all categories, from 140% to 145% for its $50k+ customers, 130% for $5k+ ",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_personalized_saas_speaker",
+    "kind": "attribution",
+    "query": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+    "abstain_expected": false,
+    "review_source_ids": [
+      "gd_007b705bb266a53acf5888b9"
+    ],
+    "designated_sources_retrieved": [
+      "gd_007b705bb266a53acf5888b9"
+    ],
+    "designated_source_covered": true,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "mix",
+    "hit_source_ids": [
+      "gd_007b705bb266a53acf5888b9",
+      "gd_1282420851c57a65c41b3c9b",
+      "gd_a6016d6c72ddea604b995fd3",
+      "gd_40d926c839abc68c68bb1a76"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 238
+    },
+    "seconds": 3.512,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_007b705bb266a53acf5888b9",
+        "graph_document_id": "gd_043b769dd0d2fd156767e0ba",
+        "attribution_status": "third_party_quotation",
+        "quoted_speakers": [
+          "Anneka Gupta"
+        ],
+        "text_preview": "[Attribution note: quoted text below is not Jason Lemkin's own claim.]\n[Quoted speaker: Anneka Gupta, Rubrik CPO.]\n[End attribution note.]\n\"AI means eveything in SaaS needs to be a personalized experience. A workflow that surfaces the job that needs to get done -- and just does it. That's the Future of Enterprise SaaS\" Rubrik CPO Anneka Gupta New -> \"Going Multi-Product in the Age of AI with CPOs ",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_1282420851c57a65c41b3c9b",
+        "graph_document_id": "gd_1282420851c57a65c41b3c9b",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "40% of tickets today, but often a much smaller percent of the tough ones.\u00a0 Those are often escalated to humans.\nSome customers are pushing this well above 40% today, but the quality of resolution does decline.\u00a0 80% for most is impractical to resolve all customer support issues with a high CSAT today with AI.\u00a0 At least for most customers.\nBut 80% by 2029?\u00a0 Sounds pretty plausible given that many ar",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_a6016d6c72ddea604b995fd3",
+        "graph_document_id": "gd_a6016d6c72ddea604b995fd3",
+        "attribution_status": "named_author",
+        "quoted_speakers": [],
+        "text_preview": "The SaaS Era of 2013-2022 is Over. Welcome to The World of Hyperfunctional SaaS. So is AI taking over everything? Will $1B SaaS companies be run by 1 person teams? I mean \u2026 maybe. Across the SaaStr Fund portfolio, I\u2019ve seen multiple portfolio companies lose $1m customers to new, in-house AI initiatives. But I\u2019ve also seen others grow even faster as AI rebooted and enhanced their products. What I d",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_40d926c839abc68c68bb1a76",
+        "graph_document_id": "gd_40d926c839abc68c68bb1a76",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Ok 5 Interesting Learnings on how they accelerated growth at scale:\n\n1. NRR up, from 115% to 120%.\u00a0 And 145% for $50k+ ACV deals.\nA good reminder that NRR doesn\u2019t need to come down as you scale.\u00a0 Somehow, we find a way not to saturate our markets, our customers, and our total potential deal sizes.\u00a0 Asana\u2019s ARR has gone up in all categories, from 140% to 145% for its $50k+ customers, 130% for $5k+ ",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_olympics_ceremony",
+    "kind": "unsupported",
+    "query": "What did Jason Lemkin say about the choreography of the 2024 Olympic opening ceremony?",
+    "abstain_expected": true,
+    "review_source_ids": [],
+    "designated_sources_retrieved": [],
+    "designated_source_covered": null,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "pilot_dense",
+    "mode": "dense",
+    "hit_source_ids": [
+      "gd_6f8b12882c7b797fccc8c072",
+      "gd_79ef312e7983b8ea4ed0764c",
+      "gd_af5a48e4670dd486df2c5977",
+      "gd_c10b54302f60c0220dbc0533"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {},
+    "seconds": 2.06,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_6f8b12882c7b797fccc8c072",
+        "graph_document_id": "gd_6f8b12882c7b797fccc8c072",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "What does Jason M. Lemkin think about European SaaS Startups? At what company stage is it possible to become intere\u2026 \nhttps://quora.com/What-does-Jason-M-Lemkin-think-about-European-SaaS-Startups-At-what-company-stage-is-it-possible-to-become-interesting-for-an-American-investor/answer/Jason-M.-Lemkin?share=4dfe7002\n\u2026",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_79ef312e7983b8ea4ed0764c",
+        "graph_document_id": "gd_79ef312e7983b8ea4ed0764c",
+        "attribution_status": "named_author",
+        "quoted_speakers": [],
+        "text_preview": "2024: Wake up Check email Check slack Team meeting Team lunch Team convos Review + product content 1-2 founder meetings 2025: Wake up Check SaaStr AI chats Check deals AI SDR has brought in Check deals AI BDR has qualified Check content SaaStr AI has reviewed Check deal status from AI Deal review Check tickets sold by AI SDR on its own Collaborate with Claude on content Team meeting, 20 minutes 1-",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_af5a48e4670dd486df2c5977",
+        "graph_document_id": "gd_af5a48e4670dd486df2c5977",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "LIVE SaaStr Workshop Wednesday: What to Expect in SaaS in 2025 with Dave Kellogg & Jason Lemkin \nhttps://x.com/i/broadcasts/1dRKZdANXVwJB\n\u2026",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_c10b54302f60c0220dbc0533",
+        "graph_document_id": "gd_c10b54302f60c0220dbc0533",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "Building the Foundation for Growth in SaaS \u2013 Matt Straz, CEO of Namely + David Skok, GP at Matrix (Video) \nhttp://saastr.com/building-the-foundation-for-growth-in-saas-matt-straz-ceo-of-namely-david-skok-gp-at-matrix-video/\n\u2026",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_olympics_ceremony",
+    "kind": "unsupported",
+    "query": "What did Jason Lemkin say about the choreography of the 2024 Olympic opening ceremony?",
+    "abstain_expected": true,
+    "review_source_ids": [],
+    "designated_sources_retrieved": [],
+    "designated_source_covered": null,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "chroma_v2",
+    "mode": "dense",
+    "hit_source_ids": [
+      "train_19369",
+      "train_13621",
+      "train_19709",
+      "train_25563"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {},
+    "seconds": 2.073,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "train_19369",
+        "graph_document_id": null,
+        "attribution_status": null,
+        "quoted_speakers": [],
+        "text_preview": "My answer to What is Jason M. Lemkin's daily routine? \nhttps://quora.com/What-is-Jason-\nM-Lemkins-daily-routine/answer/Jason-M.-Lemkin?share=a499ecfe\n\u2026",
+        "rank": 1
+      },
+      {
+        "source_id": "train_13621",
+        "graph_document_id": null,
+        "attribution_status": null,
+        "quoted_speakers": [],
+        "text_preview": "New!!  Sam Blond + Jason Lemkin \u201cGTM in 2025: How It\u2019s Changed, How It\u2019s Changing, and What Hasn\u2019t Changed (Yet)\u201d",
+        "rank": 2
+      },
+      {
+        "source_id": "train_19709",
+        "graph_document_id": null,
+        "attribution_status": null,
+        "quoted_speakers": [],
+        "text_preview": "Intercom CEO \n@Eoghan\n McCabe & Jason Lemkin at SaaStr\u2019s 2018 Spring Soiree (Video) \nhttps://saastr.com/intercom-ceo-eoghan-mccabe-jason-lemkin-spring-soiree/\n\u2026",
+        "rank": 3
+      },
+      {
+        "source_id": "train_25563",
+        "graph_document_id": null,
+        "attribution_status": null,
+        "quoted_speakers": [],
+        "text_preview": "Answer by \n@jasonlk\n to What is Jason Lemkin wrong about and why? \nhttp://qr.ae/Dxbzw",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_olympics_ceremony",
+    "kind": "unsupported",
+    "query": "What did Jason Lemkin say about the choreography of the 2024 Olympic opening ceremony?",
+    "abstain_expected": true,
+    "review_source_ids": [],
+    "designated_sources_retrieved": [],
+    "designated_source_covered": null,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "naive",
+    "hit_source_ids": [
+      "gd_6f8b12882c7b797fccc8c072",
+      "gd_fe95631776e59f9c3324005d",
+      "gd_af5a48e4670dd486df2c5977",
+      "gd_007b705bb266a53acf5888b9"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {},
+    "seconds": 2.74,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_6f8b12882c7b797fccc8c072",
+        "graph_document_id": "gd_6f8b12882c7b797fccc8c072",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "What does Jason M. Lemkin think about European SaaS Startups? At what company stage is it possible to become intere\u2026 \nhttps://quora.com/What-does-Jason-M-Lemkin-think-about-European-SaaS-Startups-At-what-company-stage-is-it-possible-to-become-interesting-for-an-American-investor/answer/Jason-M.-Lemkin?share=4dfe7002\n\u2026",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_fe95631776e59f9c3324005d",
+        "graph_document_id": "gd_e17729e5eca8acb5235bb5b2",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [
+          "Alex Rosenblatt"
+        ],
+        "text_preview": "[Attribution note: quoted text below is not Jason Lemkin's own claim.]\n[Quoted speaker: Alex Rosenblatt.]\n[End attribution note.]\nAlex Rosenblatt was the first marketing hire and Chief Marketing Officer at Datadog, all the way through IPO and beyond. He spent over eight years scaling their marketing from zero to supporting a multi-billion dollar public company. Prior to Datadog, Alex held leadersh",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_af5a48e4670dd486df2c5977",
+        "graph_document_id": "gd_af5a48e4670dd486df2c5977",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "LIVE SaaStr Workshop Wednesday: What to Expect in SaaS in 2025 with Dave Kellogg & Jason Lemkin \nhttps://x.com/i/broadcasts/1dRKZdANXVwJB\n\u2026",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_007b705bb266a53acf5888b9",
+        "graph_document_id": "gd_043b769dd0d2fd156767e0ba",
+        "attribution_status": "third_party_quotation",
+        "quoted_speakers": [
+          "Anneka Gupta"
+        ],
+        "text_preview": "[Attribution note: quoted text below is not Jason Lemkin's own claim.]\n[Quoted speaker: Anneka Gupta, Rubrik CPO.]\n[End attribution note.]\n\"AI means eveything in SaaS needs to be a personalized experience. A workflow that surfaces the job that needs to get done -- and just does it. That's the Future of Enterprise SaaS\" Rubrik CPO Anneka Gupta New -> \"Going Multi-Product in the Age of AI with CPOs ",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_olympics_ceremony",
+    "kind": "unsupported",
+    "query": "What did Jason Lemkin say about the choreography of the 2024 Olympic opening ceremony?",
+    "abstain_expected": true,
+    "review_source_ids": [],
+    "designated_sources_retrieved": [],
+    "designated_source_covered": null,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "local",
+    "hit_source_ids": [
+      "gd_6f8b12882c7b797fccc8c072",
+      "gd_12e6c661ea0f1383ee2b47ab",
+      "gd_fe95631776e59f9c3324005d",
+      "gd_4e7fd53d3d57eeb978245741"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 97
+    },
+    "seconds": 3.551,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_6f8b12882c7b797fccc8c072",
+        "graph_document_id": "gd_6f8b12882c7b797fccc8c072",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "What does Jason M. Lemkin think about European SaaS Startups? At what company stage is it possible to become intere\u2026 \nhttps://quora.com/What-does-Jason-M-Lemkin-think-about-European-SaaS-Startups-At-what-company-stage-is-it-possible-to-become-interesting-for-an-American-investor/answer/Jason-M.-Lemkin?share=4dfe7002\n\u2026",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_12e6c661ea0f1383ee2b47ab",
+        "graph_document_id": "gd_70d11aab5ebbbe36a7cd1b54",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "Per new Stanford research, of all US-based VC-backed unicorns that have exited, only 33 achieved decacorn status at exit. Not at paper, but on exit. With 1,200+ unicorns still waiting for an exit, will there be enough $10B+ exits? Figma is about to IPO, we had Wiz, and Zuck is on a tear buying Scale.ai and more. But we need a lot of decacorns and bigger to make the unicorn bets pay off. Stanford P",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_fe95631776e59f9c3324005d",
+        "graph_document_id": "gd_e17729e5eca8acb5235bb5b2",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [
+          "Alex Rosenblatt"
+        ],
+        "text_preview": "[Attribution note: quoted text below is not Jason Lemkin's own claim.]\n[Quoted speaker: Alex Rosenblatt.]\n[End attribution note.]\nAlex Rosenblatt was the first marketing hire and Chief Marketing Officer at Datadog, all the way through IPO and beyond. He spent over eight years scaling their marketing from zero to supporting a multi-billion dollar public company. Prior to Datadog, Alex held leadersh",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_4e7fd53d3d57eeb978245741",
+        "graph_document_id": "gd_4e7fd53d3d57eeb978245741",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [],
+        "text_preview": "One of the biggest frictions that comes up as you scale is \u2026 hiding things. Sales comes under pressure to hit the quarter, and wants to overdiscount (and hide the overdiscounts). Ops and engineering can feel like it\u2019s easier to hide downtime and other issues from customers that weren\u2019t online during the incidents. Marketing can be tempted to hide certain editions that generate less revenue. Etc. e",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_olympics_ceremony",
+    "kind": "unsupported",
+    "query": "What did Jason Lemkin say about the choreography of the 2024 Olympic opening ceremony?",
+    "abstain_expected": true,
+    "review_source_ids": [],
+    "designated_sources_retrieved": [],
+    "designated_source_covered": null,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "global",
+    "hit_source_ids": [
+      "gd_6f8b12882c7b797fccc8c072",
+      "gd_fe95631776e59f9c3324005d",
+      "gd_af5a48e4670dd486df2c5977",
+      "gd_007b705bb266a53acf5888b9"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 49
+    },
+    "seconds": 3.537,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_6f8b12882c7b797fccc8c072",
+        "graph_document_id": "gd_6f8b12882c7b797fccc8c072",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "What does Jason M. Lemkin think about European SaaS Startups? At what company stage is it possible to become intere\u2026 \nhttps://quora.com/What-does-Jason-M-Lemkin-think-about-European-SaaS-Startups-At-what-company-stage-is-it-possible-to-become-interesting-for-an-American-investor/answer/Jason-M.-Lemkin?share=4dfe7002\n\u2026",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_fe95631776e59f9c3324005d",
+        "graph_document_id": "gd_e17729e5eca8acb5235bb5b2",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [
+          "Alex Rosenblatt"
+        ],
+        "text_preview": "[Attribution note: quoted text below is not Jason Lemkin's own claim.]\n[Quoted speaker: Alex Rosenblatt.]\n[End attribution note.]\nAlex Rosenblatt was the first marketing hire and Chief Marketing Officer at Datadog, all the way through IPO and beyond. He spent over eight years scaling their marketing from zero to supporting a multi-billion dollar public company. Prior to Datadog, Alex held leadersh",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_af5a48e4670dd486df2c5977",
+        "graph_document_id": "gd_af5a48e4670dd486df2c5977",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "LIVE SaaStr Workshop Wednesday: What to Expect in SaaS in 2025 with Dave Kellogg & Jason Lemkin \nhttps://x.com/i/broadcasts/1dRKZdANXVwJB\n\u2026",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_007b705bb266a53acf5888b9",
+        "graph_document_id": "gd_043b769dd0d2fd156767e0ba",
+        "attribution_status": "third_party_quotation",
+        "quoted_speakers": [
+          "Anneka Gupta"
+        ],
+        "text_preview": "[Attribution note: quoted text below is not Jason Lemkin's own claim.]\n[Quoted speaker: Anneka Gupta, Rubrik CPO.]\n[End attribution note.]\n\"AI means eveything in SaaS needs to be a personalized experience. A workflow that surfaces the job that needs to get done -- and just does it. That's the Future of Enterprise SaaS\" Rubrik CPO Anneka Gupta New -> \"Going Multi-Product in the Age of AI with CPOs ",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_olympics_ceremony",
+    "kind": "unsupported",
+    "query": "What did Jason Lemkin say about the choreography of the 2024 Olympic opening ceremony?",
+    "abstain_expected": true,
+    "review_source_ids": [],
+    "designated_sources_retrieved": [],
+    "designated_source_covered": null,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "hybrid",
+    "hit_source_ids": [
+      "gd_6f8b12882c7b797fccc8c072",
+      "gd_fe95631776e59f9c3324005d",
+      "gd_af5a48e4670dd486df2c5977",
+      "gd_007b705bb266a53acf5888b9"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 132
+    },
+    "seconds": 3.498,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_6f8b12882c7b797fccc8c072",
+        "graph_document_id": "gd_6f8b12882c7b797fccc8c072",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "What does Jason M. Lemkin think about European SaaS Startups? At what company stage is it possible to become intere\u2026 \nhttps://quora.com/What-does-Jason-M-Lemkin-think-about-European-SaaS-Startups-At-what-company-stage-is-it-possible-to-become-interesting-for-an-American-investor/answer/Jason-M.-Lemkin?share=4dfe7002\n\u2026",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_fe95631776e59f9c3324005d",
+        "graph_document_id": "gd_e17729e5eca8acb5235bb5b2",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [
+          "Alex Rosenblatt"
+        ],
+        "text_preview": "[Attribution note: quoted text below is not Jason Lemkin's own claim.]\n[Quoted speaker: Alex Rosenblatt.]\n[End attribution note.]\nAlex Rosenblatt was the first marketing hire and Chief Marketing Officer at Datadog, all the way through IPO and beyond. He spent over eight years scaling their marketing from zero to supporting a multi-billion dollar public company. Prior to Datadog, Alex held leadersh",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_af5a48e4670dd486df2c5977",
+        "graph_document_id": "gd_af5a48e4670dd486df2c5977",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "LIVE SaaStr Workshop Wednesday: What to Expect in SaaS in 2025 with Dave Kellogg & Jason Lemkin \nhttps://x.com/i/broadcasts/1dRKZdANXVwJB\n\u2026",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_007b705bb266a53acf5888b9",
+        "graph_document_id": "gd_043b769dd0d2fd156767e0ba",
+        "attribution_status": "third_party_quotation",
+        "quoted_speakers": [
+          "Anneka Gupta"
+        ],
+        "text_preview": "[Attribution note: quoted text below is not Jason Lemkin's own claim.]\n[Quoted speaker: Anneka Gupta, Rubrik CPO.]\n[End attribution note.]\n\"AI means eveything in SaaS needs to be a personalized experience. A workflow that surfaces the job that needs to get done -- and just does it. That's the Future of Enterprise SaaS\" Rubrik CPO Anneka Gupta New -> \"Going Multi-Product in the Age of AI with CPOs ",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  },
+  {
+    "question_id": "q_olympics_ceremony",
+    "kind": "unsupported",
+    "query": "What did Jason Lemkin say about the choreography of the 2024 Olympic opening ceremony?",
+    "abstain_expected": true,
+    "review_source_ids": [],
+    "designated_sources_retrieved": [],
+    "designated_source_covered": null,
+    "designated_source_note": "Overlap with the preselected review ids. Not precision or recall.",
+    "backend": "lightrag",
+    "mode": "mix",
+    "hit_source_ids": [
+      "gd_6f8b12882c7b797fccc8c072",
+      "gd_fe95631776e59f9c3324005d",
+      "gd_af5a48e4670dd486df2c5977",
+      "gd_007b705bb266a53acf5888b9"
+    ],
+    "unique_sources": 4,
+    "duplicate_source": false,
+    "empty": false,
+    "train_attributed": true,
+    "excluded_reasons": {
+      "generated_summary_not_a_source_span": 132
+    },
+    "seconds": 3.525,
+    "token_usage": null,
+    "hits": [
+      {
+        "source_id": "gd_6f8b12882c7b797fccc8c072",
+        "graph_document_id": "gd_6f8b12882c7b797fccc8c072",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "What does Jason M. Lemkin think about European SaaS Startups? At what company stage is it possible to become intere\u2026 \nhttps://quora.com/What-does-Jason-M-Lemkin-think-about-European-SaaS-Startups-At-what-company-stage-is-it-possible-to-become-interesting-for-an-American-investor/answer/Jason-M.-Lemkin?share=4dfe7002\n\u2026",
+        "rank": 1
+      },
+      {
+        "source_id": "gd_fe95631776e59f9c3324005d",
+        "graph_document_id": "gd_e17729e5eca8acb5235bb5b2",
+        "attribution_status": "publication_page",
+        "quoted_speakers": [
+          "Alex Rosenblatt"
+        ],
+        "text_preview": "[Attribution note: quoted text below is not Jason Lemkin's own claim.]\n[Quoted speaker: Alex Rosenblatt.]\n[End attribution note.]\nAlex Rosenblatt was the first marketing hire and Chief Marketing Officer at Datadog, all the way through IPO and beyond. He spent over eight years scaling their marketing from zero to supporting a multi-billion dollar public company. Prior to Datadog, Alex held leadersh",
+        "rank": 2
+      },
+      {
+        "source_id": "gd_af5a48e4670dd486df2c5977",
+        "graph_document_id": "gd_af5a48e4670dd486df2c5977",
+        "attribution_status": "author_account",
+        "quoted_speakers": [],
+        "text_preview": "LIVE SaaStr Workshop Wednesday: What to Expect in SaaS in 2025 with Dave Kellogg & Jason Lemkin \nhttps://x.com/i/broadcasts/1dRKZdANXVwJB\n\u2026",
+        "rank": 3
+      },
+      {
+        "source_id": "gd_007b705bb266a53acf5888b9",
+        "graph_document_id": "gd_043b769dd0d2fd156767e0ba",
+        "attribution_status": "third_party_quotation",
+        "quoted_speakers": [
+          "Anneka Gupta"
+        ],
+        "text_preview": "[Attribution note: quoted text below is not Jason Lemkin's own claim.]\n[Quoted speaker: Anneka Gupta, Rubrik CPO.]\n[End attribution note.]\n\"AI means eveything in SaaS needs to be a personalized experience. A workflow that surfaces the job that needs to get done -- and just does it. That's the Future of Enterprise SaaS\" Rubrik CPO Anneka Gupta New -> \"Going Multi-Product in the Age of AI with CPOs ",
+        "rank": 4
+      }
+    ],
+    "relevance": null,
+    "precision_recall": "not measured; no human relevance judgments"
+  }
+]

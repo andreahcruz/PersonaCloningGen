@@ -1,0 +1,36 @@
+experiment_id: EXP-20261027-002-lightrag-smoke
+timestamp: 2026-10-27T08:53:19Z
+execution_commands:
+  - host_finetune\.venv\Scripts\python.exe -X utf8 -m host_finetune.lightrag_index --index --sample 160 --limit 3 --spread --query "What does Jason Lemkin say about hiring a VP of Sales?"
+git:
+  commit: 0fac41485ec3655ea1439d6d2484115f243fdab1
+  dirty: true
+data:
+  source_manifest: experiments/EXP-20261003-004-relabel-continuations/raw/split_assignments.jsonl
+  source_hashes:
+    graph_ready_documents: 93d85bd3011f30af15d66179a6c963540bc02273083f9e3921536d9a21220b36
+  processed_dataset_hash: 1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b
+  split_manifest_hash: 6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb
+  gold_eval_hash: d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e
+rag:
+  persona_profile_hash: n/a
+  chroma_collection: not opened
+  index_version_or_snapshot: artifacts/lightrag/model_f/storage three-document LightRAG 1.5.7 graph, 29 nodes, 29 edges
+  embedding_model: nomic-embed-text
+model:
+  model_name: llama3.1:latest
+  model_or_adapter_hash: ollama id 46e0c10c039e
+  config: extraction and keyword calls only; Relabel adapter not loaded; temperature 0; num_ctx 32768
+  random_seed: 298
+evaluation:
+  evaluator_commit: 0fac41485ec3655ea1439d6d2484115f243fdab1
+  judge_model: n/a
+  judge_config: no relevance judge and no generation score
+environment:
+  python_version: 3.11.9
+  package_snapshot: config/package_snapshot.txt
+  hardware: NVIDIA GeForce RTX 5070 Ti, 16303 MiB; Ollama 0.40.2
+outputs:
+  raw: raw/index_report.json and raw/query_report.json
+  metrics: metrics/summary.json
+  warnings_and_failures: per-query seconds were not recorded; the five evidence lists match because only three documents were indexed; graph storage was not committed

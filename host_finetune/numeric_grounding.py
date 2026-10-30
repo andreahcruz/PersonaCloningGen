@@ -91,6 +91,8 @@ def _add(found: list[dict], spans: list[tuple[int, int]], text: str, match: re.M
             "value": match.group(0),
             "canonical": canonical,
             "sentence": _sentence(text, match.start(), match.end()),
+            "start": match.start(),
+            "end": match.end(),
         }
     )
 

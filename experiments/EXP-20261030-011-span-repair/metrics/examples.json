@@ -1,0 +1,107 @@
+[
+  {
+    "arm": "chroma_v2",
+    "id": "q_brex_price",
+    "medium": "blog",
+    "applied": false,
+    "warning": [
+      "no_accepted_factual_evidence"
+    ],
+    "rejection": "no_span_edit",
+    "draft": "Capital One announced what price for acquiring Brex?"
+  },
+  {
+    "arm": "chroma_v2",
+    "id": "q_brex_price",
+    "medium": "linkedin",
+    "applied": false,
+    "warning": [
+      "no_accepted_factual_evidence",
+      "unsupported_numeric"
+    ],
+    "rejection": [
+      "substantive_loss"
+    ],
+    "draft": "Capital One announced that it will acquire Brex for $5 billion and that Brex has 6,000+ customers who spend over $1 million annually on their cards. The deal includes Brex\u2019s corporate credit card business and Brex Cash, its virtual account management platform."
+  },
+  {
+    "arm": "chroma_v2",
+    "id": "q_brex_price",
+    "medium": "x",
+    "applied": false,
+    "warning": [
+      "no_accepted_factual_evidence",
+      "unsupported_numeric"
+    ],
+    "rejection": [
+      "substantive_loss"
+    ],
+    "draft": "What price did Capital One announce for acquiring Brex?\n$5.5 billion \nhttps://www.bloomberg.com/news/articles/2025-01-29/capital-one-to-acquire-brex-for-5-5-billion-sources-say\n\u2026"
+  },
+  {
+    "arm": "chroma_v2",
+    "id": "q_vp_sales_tension",
+    "medium": "blog",
+    "applied": true,
+    "before": "So I was asked recently what\u2019s worse \u2014 when you hire an amazing VP of Sales that can\u2019t really get going with your product \u2026 or one that does well for a while then just starts to fall off?\nMy take:\nI think they are both tough, but probably the latter is tougher. Here\u2019s why:\nFirst, everyone knows a new VP of Sales has some time to figure things out after she joins. They know there will be a dip, even if they don\u2019t expect it. And so you sort of hope the next month or two gets a little better, and then later you see improvement in the next quarter or two. So folks aren\u2019t expecting perfection right away. At least most people aren\u2019t.\nSecond, once a VP of Sales truly \u201cgets\u201d your product, they almos",
+    "after": "So I was asked recently what\u2019s worse \u2014 when you hire an amazing VP of Sales that can\u2019t really get going with your product \u2026 or one that does well for a while then just starts to fall off?\nMy take:\nI think they are both tough, but probably the latter is tougher. Here\u2019s why:\nFirst, everyone knows a new VP of Sales has some time to figure things out after she joins. They know there will be a dip, even if they don\u2019t expect it. And so you sort of hope the next month or two gets a little better, and then later you see improvement in the next quarter or two. So folks aren\u2019t expecting perfection right away. At least most people aren\u2019t.\nSecond, once a VP of Sales truly \u201cgets\u201d your product, they almos",
+    "edits": [
+      {
+        "start": 869,
+        "end": 872,
+        "replacement": "",
+        "reason": "unsupported_quantity"
+      },
+      {
+        "start": 896,
+        "end": 899,
+        "replacement": "",
+        "reason": "unsupported_quantity"
+      }
+    ],
+    "writing_before": 4.0,
+    "writing_after": 4.0
+  },
+  {
+    "arm": "chroma_v2",
+    "id": "q_vp_sales_tension",
+    "medium": "linkedin",
+    "applied": true,
+    "before": "There are many issues with the VP of Sales hires we all make -- and I'm guilty here myself. We hire folks too quickly sometimes (e.g., a month) when we need someone now. And we often hire VPs of Sales without checking if they can really sell themselves. But one thing you'll hear me talk about again and again is how important it is for your VP of Sales to start closing deals on Day 1. That's what matters most. If nothing else changes after they join. So maybe don't worry so much about the fact that no new reps were hired under this VP of Sales before Month 3. Or even Month 6. Instead, just watch what happens to closed-won revenue under her / him. Is it higher? Yes? Well then, there will be pl",
+    "after": "There are many issues with the VP of Sales hires we all make -- and I'm guilty here myself. We hire folks too quickly sometimes (e.g., a month) when we need someone now. And we often hire VPs of Sales without checking if they can really sell themselves. But one thing you'll hear me talk about again and again is how important it is for your VP of Sales to start closing deals on Day 1. That's what matters most. If nothing else changes after they join. So maybe don't worry so much about the fact that no new reps were hired under this VP of Sales before Month 3. Or even Month 6. Instead, just watch what happens to closed-won revenue under her / him. Is it higher? Yes? Well then, there will be pl",
+    "edits": [
+      {
+        "start": 804,
+        "end": 808,
+        "replacement": "",
+        "reason": "unsupported_quantity"
+      },
+      {
+        "start": 809,
+        "end": 813,
+        "replacement": "",
+        "reason": "unsupported_quantity"
+      }
+    ],
+    "writing_before": 4.1667,
+    "writing_after": 4.0
+  },
+  {
+    "arm": "chroma_v2",
+    "id": "q_personalized_saas_speaker",
+    "medium": "blog",
+    "applied": true,
+    "before": "So I\u2019ve talked to so many great CMOs, CROs, CEOs and more now using AI Agents well \u2014 what they\u2019re doing with them, how much time, etc. So many are saying the same thing:\n\u201cAI agents aren\u2019t making our product better for customers.\u201d\nYes, it\u2019s true. That\u2019s probably OK. A lot of folks just want their AI Agent to do some gruntwork, like sending emails, updating a database, or reviewing marketing materials. And that\u2019s fine. But \u2026 it turns out it might also lead to another big change in B2B software:\nthe death of every single use case where no one really wants to do the work anymore. Every day, we see customers tell us \u201cI tried to get someone to do this task, but nobody wanted to.\u201d This has been hap",
+    "after": "So I\u2019ve talked to so many great CMOs, CROs, CEOs and more now using AI Agents well \u2014 what they\u2019re doing with them, how much time, etc. So many are saying the same thing:\n\u201cAI agents aren\u2019t making our product better for customers.\u201d\nYes, it\u2019s true. That\u2019s probably OK. A lot of folks just want their AI Agent to do some gruntwork, like sending emails, updating a database, or reviewing marketing materials. And that\u2019s fine. But \u2026 it turns out it might also lead to another big change in B2B software:\nthe death of every single use case where no one really wants to do the work anymore. Every day, we see customers tell us \u201cI tried to get someone to do this task, but nobody wanted to.\u201d This has been hap",
+    "edits": [
+      {
+        "start": 732,
+        "end": 736,
+        "replacement": "",
+        "reason": "unsupported_quantity"
+      }
+    ],
+    "writing_before": 3.3333,
+    "writing_after": 2.5
+  }
+]

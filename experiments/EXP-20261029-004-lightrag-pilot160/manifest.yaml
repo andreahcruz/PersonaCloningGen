@@ -1,0 +1,39 @@
+experiment_id: EXP-20261029-004-lightrag-pilot160
+timestamp: 2026-10-29T11:36:37Z
+execution_commands:
+  - host_finetune\.venv\Scripts\python.exe -X utf8 -m host_finetune.lightrag_index --index --id-file experiments\EXP-20261027-001-graph-ready-audit\config\sample_160_ids.json --entity-guidance project --num-ctx 16384 --graph-ready artifacts\lightrag\model_f\graph_ready_v2 --workdir artifacts\lightrag\model_f\storage_pilot160
+git:
+  commit: 0fac41485ec3655ea1439d6d2484115f243fdab1
+  dirty: true
+data:
+  source_manifest: experiments/EXP-20261003-004-relabel-continuations/raw/split_assignments.jsonl
+  source_hashes:
+    graph_ready_v2_documents: d7bd01a01f288dda3582eddcfd2fc1539574f97b6e168b1124a0b43b76d9a118
+    sample_ids: experiments/EXP-20261027-001-graph-ready-audit/config/sample_160_ids.json
+    catalog_sha256: 088a6edd3315875db3afede5172c9313cea21ad54c8fd1680f04a6b39dbc10d6
+    graphml_sha256: 302638b52a036064f9998cdf031b7281b82dcc73f99db43caff89219a6c5f599
+  processed_dataset_hash: 1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b
+  split_manifest_hash: 6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb
+  gold_eval_hash: d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e
+rag:
+  persona_profile_hash: n/a
+  chroma_collection: not opened
+  index_version_or_snapshot: artifacts/lightrag/model_f/storage_pilot160
+  embedding_model: nomic-embed-text
+model:
+  model_name: llama3.1:latest
+  model_or_adapter_hash: ollama id 46e0c10c039e
+  config: LightRAG 1.5.7; project entity guidance; temperature 0; num_ctx 16384 on this resume; chunk token size 400; Relabel adapter not loaded
+  random_seed: 298
+evaluation:
+  evaluator_commit: 0fac41485ec3655ea1439d6d2484115f243fdab1
+  judge_model: n/a
+  judge_config: document reconciliation and entity-name rules; not a human relevance grade
+environment:
+  python_version: 3.11.9
+  package_snapshot: config/package_snapshot.txt
+  hardware: NVIDIA GeForce RTX 5070 Ti, 16303 MiB; Ollama 0.40.2
+outputs:
+  raw: raw/last_index_report.json
+  metrics: metrics/reconciliation.json
+  warnings_and_failures: eight sample documents were not extracted; one extra failed status row is a duplicate-id remnant of the skipped blog; the 26 skipped documents came from earlier attempts, including a 32768-context run

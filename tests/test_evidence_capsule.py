@@ -8,6 +8,8 @@ from host_finetune.compare_adapters import MEDIUMS, prompt_for
 from host_finetune.evidence_capsule import (
     DISTILL_BACKEND,
     apply_verdicts,
+    corrective_retry_improves,
+    draft_retry_reason,
     evidence_provenance,
     extraction_user_prompt,
     final_evidence_instruction,
@@ -15,6 +17,7 @@ from host_finetune.evidence_capsule import (
     media_jobs,
     parse_atomic_evidence,
     partition_evidence,
+    repeats_topic,
     require_adapter_toggle,
     verification_user_prompt,
 )
@@ -314,3 +317,59 @@ def test_retrieval_configuration_stays_frozen_when_atomic_evidence_is_recorded(t
     assert distill["lora_scale"] == 1.0
     assert distill["closer"] == "minimal"
     assert "qwen" not in distill["backend"]
+
+
+def test_quoted_speaker_reaches_the_prompt_only_when_the_source_names_them():
+    text = 'Anneka Gupta said "AI means everything in SaaS needs to be a personalized experience."'
+    hits = [{
+        "id": "gd_parent",
+        "text": text,
+        "graph_document_id": "gd_child",
+        "chunk_id": "chunk-000",
+        "attribution_status": "third_party_quotation",
+        "quoted_speakers": ["Anneka Gupta", "Someone Else"],
+    }]
+    span = "AI means everything in SaaS needs to be a personalized experience."
+    claim = "AI means everything in SaaS needs to be a personalized experience."
+    accepted, rejected = partition_evidence(
+        [_item("gd_child:chunk-000", claim, span)],
+        hits,
+    )
+    assert rejected == []
+    assert accepted[0]["source_id"] == "gd_parent"
+    assert accepted[0]["quoted_speakers"] == ["Anneka Gupta"]
+    instruction = final_evidence_instruction(MEDIUMS[1], "Who said it?", accepted)
+    assert "Speaker: Anneka Gupta" in instruction
+    assert "Someone Else" not in instruction
+    assert "Attribute this statement" not in instruction
+    assert "Do not copy speaker labels or evidence tags into the draft." in instruction
+    assert "Do not present it as Jason Lemkin's own words" in instruction
+
+
+def test_extraction_failure_is_not_described_as_irrelevant_sources():
+    failed = final_evidence_instruction(MEDIUMS[0], "Brex", [], "extraction_failed")
+    empty = final_evidence_instruction(MEDIUMS[0], "Brex", [], "no_accepted_claims")
+    assert "extraction failure" in failed
+    assert "not a finding that the sources were irrelevant" in failed
+    assert "No claim passed source-span validation" in empty
+    assert "irrelevant" not in empty
+    assert "Do not repeat the user's question" in failed
+
+
+def test_topic_echo_and_unsupported_number_request_one_retry():
+    question = "What price did Capital One announce for acquiring Brex?"
+    assert repeats_topic(question, question)
+    assert repeats_topic(question + "\n\n$5.15 billion.", question)
+    assert draft_retry_reason(question, question, "linkedin", {"applicable": True, "pass": True}) == "topic_echo"
+    short = "Capital One announced a price."
+    assert draft_retry_reason(short, "pricing", "blog", {"applicable": True, "pass": True}) == "below_length_band"
+    numeric = {"applicable": True, "pass": False, "unsupported": [{"value": "$2 billion"}]}
+    long = (
+        "Capital One announced an acquisition and the rest of this paragraph explains why the "
+        "number matters to founders who are watching late-stage exits, retention, and the "
+        "hiring plan that follows a large outcome in enterprise software this year for buyers."
+    )
+    assert len(long.split()) >= 40
+    assert draft_retry_reason(long, "pricing", "blog", numeric) == "unsupported_number"
+    assert corrective_retry_improves("topic_echo", question, long, question, None, None)
+    assert not corrective_retry_improves("topic_echo", question, question, question, None, None)

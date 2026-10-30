@@ -1,0 +1,38 @@
+experiment_id: EXP-20261030-011-span-repair
+timestamp: 2026-10-30T07:40:00Z
+execution_commands:
+  - host_finetune\.venv\Scripts\python.exe -X utf8 experiments\EXP-20261030-011-span-repair\config\repair_exp009.py
+  - host_finetune\.venv\Scripts\python.exe -X utf8 experiments\EXP-20261030-011-span-repair\config\score_repair.py --judge
+git:
+  commit: 0fac41485ec3655ea1439d6d2484115f243fdab1
+  dirty: true
+data:
+  source_manifest: experiments/EXP-20261003-004-relabel-continuations/raw/split_assignments.jsonl
+  source_hashes:
+    exp009_raw: experiments/EXP-20261029-009-hardened-generation/raw read only
+    exp010_raw: experiments/EXP-20261030-010-factual-reliability/raw read only
+  processed_dataset_hash: 1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b
+  split_manifest_hash: 6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb
+  gold_eval_hash: d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e
+rag:
+  persona_profile_hash: n/a
+  chroma_collection: not reopened
+  index_version_or_snapshot: frozen EXP-009 retrieval hits carried on the traces
+  embedding_model: nomic-embed-text
+model:
+  model_name: unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit
+  model_or_adapter_hash: host_finetune/output/lemkin_lora_relabel
+  config: span-repair-v1 on saved EXP-009 drafts; adapter and sampling were not rerun
+  random_seed: 42
+evaluation:
+  evaluator_commit: 0fac41485ec3655ea1439d6d2484115f243fdab1
+  judge_model: qwen2.5:14b
+  judge_config: temperature 0; blinded writing prompt; unchanged drafts reuse EXP-009 scores
+environment:
+  python_version: 3.11.9
+  package_snapshot: ../EXP-20261029-004-lightrag-pilot160/config/package_snapshot.txt
+  hardware: NVIDIA GeForce RTX 5070 Ti for the writing judge only
+outputs:
+  raw: raw/generation_chroma_v2.json, raw/generation_pilot_dense.json, raw/generation_naive.json, raw/generation_mix.json
+  metrics: metrics/audit.json, metrics/comparison.json, metrics/examples.json
+  warnings_and_failures: edits that would drop more than 15 percent of the words were rejected and the original draft was kept

@@ -1,0 +1,1104 @@
+{
+  "manifest_ids": 160,
+  "catalog_documents": 160,
+  "catalog_parents": 160,
+  "missing_from_catalog": [],
+  "extra_catalog_parents": [],
+  "doc_status_rows": 160,
+  "doc_status_counts": {
+    "processed": 152,
+    "failed": 8
+  },
+  "other_status_ids": {},
+  "successfully_extracted_documents": 152,
+  "successfully_extracted_parents": 152,
+  "manifest_parents_without_processed_status": [
+    "gd_5ffdc3a083492246413be6f2",
+    "gd_8276b7d28a0837fa1e71181a",
+    "gd_8a579b23707dd4f77e169619",
+    "gd_a4ad0243c9bcfec4c527a703",
+    "gd_aa82ba1eab089122de370f68",
+    "gd_de0b05c2882793b64fd76389",
+    "gd_f76cf95212bfc67508398f63",
+    "gd_f9a237e6ccf11fe4de9924ad"
+  ],
+  "failed_or_skipped_detail": [
+    {
+      "graph_document_id": "dup-44a87e93c933a4e23929caa47da2ff13",
+      "parent_graph_document_id": "dup-44a87e93c933a4e23929caa47da2ff13",
+      "status": "failed",
+      "error_msg": "File name already exists. Original doc_id: gd_1d361440c168ddd12ff26855, Status: failed",
+      "chunks_count": 0,
+      "in_skip_list": false,
+      "split": null,
+      "medium": null,
+      "words": 0
+    },
+    {
+      "graph_document_id": "gd_1d361440c168ddd12ff26855",
+      "parent_graph_document_id": "gd_de0b05c2882793b64fd76389",
+      "status": "",
+      "error_msg": null,
+      "chunks_count": null,
+      "in_skip_list": true,
+      "split": "train",
+      "medium": "blog",
+      "words": 2168
+    },
+    {
+      "graph_document_id": "gd_5ffdc3a083492246413be6f2",
+      "parent_graph_document_id": "gd_5ffdc3a083492246413be6f2",
+      "status": "failed",
+      "error_msg": "C[1/2]: gd_5ffdc3a083492246413be6f2-chunk-000: extract LLM func: Worker execution timeout after 1200s",
+      "chunks_count": 2,
+      "in_skip_list": false,
+      "split": "train",
+      "medium": "blog",
+      "words": 297
+    },
+    {
+      "graph_document_id": "gd_8276b7d28a0837fa1e71181a",
+      "parent_graph_document_id": "gd_8276b7d28a0837fa1e71181a",
+      "status": "failed",
+      "error_msg": "C[1/2]: gd_8276b7d28a0837fa1e71181a-chunk-000: extract LLM func: Worker execution timeout after 1200s",
+      "chunks_count": 2,
+      "in_skip_list": false,
+      "split": "train",
+      "medium": "linkedin",
+      "words": 413
+    },
+    {
+      "graph_document_id": "gd_8a579b23707dd4f77e169619",
+      "parent_graph_document_id": "gd_8a579b23707dd4f77e169619",
+      "status": "failed",
+      "error_msg": "C[2/3]: gd_8a579b23707dd4f77e169619-chunk-001: extract LLM func: Worker execution timeout after 1200s",
+      "chunks_count": 3,
+      "in_skip_list": false,
+      "split": "train",
+      "medium": "blog",
+      "words": 577
+    },
+    {
+      "graph_document_id": "gd_a4ad0243c9bcfec4c527a703",
+      "parent_graph_document_id": "gd_a4ad0243c9bcfec4c527a703",
+      "status": "failed",
+      "error_msg": "C[1/1]: gd_a4ad0243c9bcfec4c527a703-chunk-000: extract LLM func: Worker execution timeout after 1200s",
+      "chunks_count": 1,
+      "in_skip_list": false,
+      "split": "train",
+      "medium": "linkedin",
+      "words": 131
+    },
+    {
+      "graph_document_id": "gd_aa82ba1eab089122de370f68",
+      "parent_graph_document_id": "gd_aa82ba1eab089122de370f68",
+      "status": "failed",
+      "error_msg": "C[2/4]: gd_aa82ba1eab089122de370f68-chunk-001: extract LLM func: Worker execution timeout after 1200s",
+      "chunks_count": 4,
+      "in_skip_list": false,
+      "split": "train",
+      "medium": "blog",
+      "words": 767
+    },
+    {
+      "graph_document_id": "gd_f76cf95212bfc67508398f63",
+      "parent_graph_document_id": "gd_f76cf95212bfc67508398f63",
+      "status": "failed",
+      "error_msg": "C[2/5]: gd_f76cf95212bfc67508398f63-chunk-001: extract LLM func: Worker execution timeout after 1200s",
+      "chunks_count": 5,
+      "in_skip_list": false,
+      "split": "train",
+      "medium": "blog",
+      "words": 1116
+    },
+    {
+      "graph_document_id": "gd_f9a237e6ccf11fe4de9924ad",
+      "parent_graph_document_id": "gd_f9a237e6ccf11fe4de9924ad",
+      "status": "failed",
+      "error_msg": "C[2/5]: gd_f9a237e6ccf11fe4de9924ad-chunk-001: extract LLM func: Worker execution timeout after 1200s",
+      "chunks_count": 5,
+      "in_skip_list": false,
+      "split": "train",
+      "medium": "blog",
+      "words": 1045
+    }
+  ],
+  "index_manifest_processed": 152,
+  "index_manifest_documents": 152,
+  "splits": {
+    "train": 160
+  },
+  "non_train_catalog_ids": [],
+  "graph_nodes": 1791,
+  "graph_edges": 2000,
+  "graph_key_names": [
+    "created_at",
+    "description",
+    "entity_id",
+    "entity_type",
+    "file_path",
+    "keywords",
+    "source_id",
+    "truncate",
+    "weight"
+  ],
+  "weak_entity_count": 244,
+  "weak_flag_counts": {
+    "generic_noun": 17,
+    "numeric_name": 219,
+    "month": 5,
+    "weekday": 3
+  },
+  "weekday_entity_names": [
+    "Friday",
+    "Monday",
+    "Tuesday"
+  ],
+  "weak_entities": [
+    {
+      "name": "Partner",
+      "flags": [
+        "generic_noun"
+      ],
+      "source_id": "gd_00c32ea8f146eb99c16e0974-chunk-001<SEP>gd_b4831f8b7f01e211e2b13ce2-chunk-001"
+    },
+    {
+      "name": "Company",
+      "flags": [
+        "generic_noun"
+      ],
+      "source_id": "gd_00c32ea8f146eb99c16e0974-chunk-001<SEP>gd_062fdba1eb0375bef6607116-chunk-000<SEP>gd_161feb1049aeda043b9cd759-chunk-000<SEP>gd_1aa53d7d7a1dceedf7154728-chunk-002<SEP>gd_27f183b43"
+    },
+    {
+      "name": "Investment",
+      "flags": [
+        "generic_noun"
+      ],
+      "source_id": "gd_00c32ea8f146eb99c16e0974-chunk-001"
+    },
+    {
+      "name": "Round",
+      "flags": [
+        "generic_noun"
+      ],
+      "source_id": "gd_00c32ea8f146eb99c16e0974-chunk-001<SEP>gd_2bdc70b1eb71efaba4e2fe3b-chunk-001"
+    },
+    {
+      "name": "Startups",
+      "flags": [
+        "generic_noun"
+      ],
+      "source_id": "gd_00c32ea8f146eb99c16e0974-chunk-000<SEP>gd_b4831f8b7f01e211e2b13ce2-chunk-001"
+    },
+    {
+      "name": "B2B founders",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_00f0fd1277363a92e5cb2ada-chunk-000"
+    },
+    {
+      "name": "B2B",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_00f0fd1277363a92e5cb2ada-chunk-001<SEP>gd_062fdba1eb0375bef6607116-chunk-004<SEP>gd_070a59055548e31a4e2d028a-chunk-000<SEP>gd_070a59055548e31a4e2d028a-chunk-001<SEP>gd_0b67639eb"
+    },
+    {
+      "name": "B2B+AI Companies",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_00f0fd1277363a92e5cb2ada-chunk-002"
+    },
+    {
+      "name": "23%",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_00f0fd1277363a92e5cb2ada-chunk-001"
+    },
+    {
+      "name": "B2B+AI",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_00f0fd1277363a92e5cb2ada-chunk-001"
+    },
+    {
+      "name": "Investor",
+      "flags": [
+        "generic_noun"
+      ],
+      "source_id": "gd_015bf2a742f155c17e453f7a-chunk-000<SEP>gd_062fdba1eb0375bef6607116-chunk-000<SEP>gd_1aa53d7d7a1dceedf7154728-chunk-000<SEP>gd_2bdc70b1eb71efaba4e2fe3b-chunk-004<SEP>gd_86885aeea"
+    },
+    {
+      "name": "December",
+      "flags": [
+        "month"
+      ],
+      "source_id": "gd_015bf2a742f155c17e453f7a-chunk-000"
+    },
+    {
+      "name": "2018",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_015bf2a742f155c17e453f7a-chunk-000<SEP>gd_fa7363b1de00027943a9fe94-chunk-000"
+    },
+    {
+      "name": "Tuesday",
+      "flags": [
+        "weekday"
+      ],
+      "source_id": "gd_015bf2a742f155c17e453f7a-chunk-000"
+    },
+    {
+      "name": "2017",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_015bf2a742f155c17e453f7a-chunk-000"
+    },
+    {
+      "name": "startup",
+      "flags": [
+        "generic_noun"
+      ],
+      "source_id": "gd_02225f53cdd000bae8795914-chunk-000"
+    },
+    {
+      "name": "investor",
+      "flags": [
+        "generic_noun"
+      ],
+      "source_id": "gd_02225f53cdd000bae8795914-chunk-000"
+    },
+    {
+      "name": "Q3",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_062fdba1eb0375bef6607116-chunk-003<SEP>gd_062fdba1eb0375bef6607116-chunk-004"
+    },
+    {
+      "name": "L4M Model",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_062fdba1eb0375bef6607116-chunk-004<SEP>gd_062fdba1eb0375bef6607116-chunk-005"
+    },
+    {
+      "name": "May",
+      "flags": [
+        "month"
+      ],
+      "source_id": "gd_09243f702954e6506f56c80e-chunk-000"
+    },
+    {
+      "name": "13-15",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_09243f702954e6506f56c80e-chunk-000"
+    },
+    {
+      "name": "Monday",
+      "flags": [
+        "weekday"
+      ],
+      "source_id": "gd_070a59055548e31a4e2d028a-chunk-000<SEP>gd_4490a7d0a51a56a2b81cc489-chunk-000"
+    },
+    {
+      "name": "24x7 support",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_0b67639eb1fa724c952557b1-chunk-000"
+    },
+    {
+      "name": "4 hour ticket turn around",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_0b67639eb1fa724c952557b1-chunk-000"
+    },
+    {
+      "name": "10-100 Unaffiliated, Happy Paying Customers",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_0ebe200504c2767b18fadc12-chunk-000"
+    },
+    {
+      "name": "$2m in ARR",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_0ebe200504c2767b18fadc12-chunk-001"
+    },
+    {
+      "name": "50% YoY",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_0ebe200504c2767b18fadc12-chunk-001"
+    },
+    {
+      "name": "http://buff.ly/1UEdjPC",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_0f9a4540b6b5827a7a98302b-chunk-000"
+    },
+    {
+      "name": "2024",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_1109c0dfd778ea6c2174f6a1-chunk-000<SEP>gd_4f6a07df802023de3d63ca4f-chunk-000<SEP>gd_73df91a3d3076d3a9388eb48-chunk-001<SEP>gd_73df91a3d3076d3a9388eb48-chunk-002<SEP>gd_79ef312e7"
+    },
+    {
+      "name": "2025",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_1109c0dfd778ea6c2174f6a1-chunk-000<SEP>gd_22550cc95a46ded2d9a37c99-chunk-000<SEP>gd_41fab062bf5c10e06bdc771f-chunk-003<SEP>gd_5487b59a91d25df6759963f2-chunk-000<SEP>gd_6d674ffb1"
+    },
+    {
+      "name": "2029",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_1282420851c57a65c41b3c9b-chunk-000<SEP>gd_1282420851c57a65c41b3c9b-chunk-001"
+    },
+    {
+      "name": "40%",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_1282420851c57a65c41b3c9b-chunk-000"
+    },
+    {
+      "name": "30%-40%",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_1282420851c57a65c41b3c9b-chunk-000"
+    },
+    {
+      "name": "Product #1",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_161feb1049aeda043b9cd759-chunk-000"
+    },
+    {
+      "name": "Product #2",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_161feb1049aeda043b9cd759-chunk-000<SEP>gd_161feb1049aeda043b9cd759-chunk-001"
+    },
+    {
+      "name": "Enterprise/B2B",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_1aca0ac060f03ed4ae7bf872-chunk-000"
+    },
+    {
+      "name": "Investor Update",
+      "flags": [
+        "generic_noun"
+      ],
+      "source_id": "gd_1aa53d7d7a1dceedf7154728-chunk-001<SEP>gd_1aa53d7d7a1dceedf7154728-chunk-000<SEP>gd_2736eded0180a2afc9505cb5-chunk-000"
+    },
+    {
+      "name": "2022",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_22550cc95a46ded2d9a37c99-chunk-000<SEP>gd_22550cc95a46ded2d9a37c99-chunk-002<SEP>gd_4490a7d0a51a56a2b81cc489-chunk-000<SEP>gd_fa7363b1de00027943a9fe94-chunk-001"
+    },
+    {
+      "name": "2026",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_22550cc95a46ded2d9a37c99-chunk-000<SEP>gd_500ff2f7a5996e8bcc0fea93-chunk-001<SEP>gd_62a829e305fe9e72ab35544a-chunk-001<SEP>gd_acd538a58481d77ef5876a63-chunk-000<SEP>gd_d0fa7487e"
+    },
+    {
+      "name": "Top 0.1%",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_22550cc95a46ded2d9a37c99-chunk-000"
+    },
+    {
+      "name": "2021",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_22550cc95a46ded2d9a37c99-chunk-002<SEP>gd_256a41d38f56ea0d66e64b45-chunk-000<SEP>gd_73df91a3d3076d3a9388eb48-chunk-001<SEP>gd_73df91a3d3076d3a9388eb48-chunk-002<SEP>gd_e424b816b"
+    },
+    {
+      "name": "Q4 2023",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_22550cc95a46ded2d9a37c99-chunk-006"
+    },
+    {
+      "name": "AI B2B",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_22550cc95a46ded2d9a37c99-chunk-013"
+    },
+    {
+      "name": "Five9",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_22f503d26e4d8faf8274b928-chunk-001<SEP>gd_22f503d26e4d8faf8274b928-chunk-002"
+    },
+    {
+      "name": "$14.7 Billion",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_22f503d26e4d8faf8274b928-chunk-002"
+    },
+    {
+      "name": "$1B ARR",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_22f503d26e4d8faf8274b928-chunk-002<SEP>gd_87686b74d96b804688e485b4-chunk-000<SEP>gd_b17253e0832c9eda0a49b551-chunk-006"
+    },
+    {
+      "name": "$4B ARR",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_22f503d26e4d8faf8274b928-chunk-002"
+    },
+    {
+      "name": "5%",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_27f183b437e4f038d31cb0f6-chunk-000"
+    },
+    {
+      "name": "10%",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_27f183b437e4f038d31cb0f6-chunk-000"
+    },
+    {
+      "name": "25%",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_27f183b437e4f038d31cb0f6-chunk-000"
+    },
+    {
+      "name": "80%",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_27f183b437e4f038d31cb0f6-chunk-000"
+    },
+    {
+      "name": "Rounds of Funding",
+      "flags": [
+        "generic_noun"
+      ],
+      "source_id": "gd_2bdc70b1eb71efaba4e2fe3b-chunk-000"
+    },
+    {
+      "name": "startups",
+      "flags": [
+        "generic_noun"
+      ],
+      "source_id": "gd_30999a94314ebe189b4cfdfa-chunk-000"
+    },
+    {
+      "name": "Days 1-3: The honeymoon",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_313079c954fde3274fc691f8-chunk-001"
+    },
+    {
+      "name": "Days 4-7: The reckoning",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_313079c954fde3274fc691f8-chunk-001"
+    },
+    {
+      "name": "Days 8-12: The grind",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_313079c954fde3274fc691f8-chunk-001"
+    },
+    {
+      "name": "Days 13-16: The polish",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_313079c954fde3274fc691f8-chunk-001"
+    },
+    {
+      "name": "40-55 hours",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_313079c954fde3274fc691f8-chunk-003"
+    },
+    {
+      "name": "47,000 lines of code",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_313079c954fde3274fc691f8-chunk-003"
+    },
+    {
+      "name": "6,122 lines",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_313079c954fde3274fc691f8-chunk-003"
+    },
+    {
+      "name": "3,158 commits",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_313079c954fde3274fc691f8-chunk-003"
+    },
+    {
+      "name": "15 years",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_313079c954fde3274fc691f8-chunk-003"
+    },
+    {
+      "name": "Point9",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_31740aa10f589ed549b4324e-chunk-002"
+    },
+    {
+      "name": "6 Sense",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_31740aa10f589ed549b4324e-chunk-002<SEP>gd_31740aa10f589ed549b4324e-chunk-003"
+    },
+    {
+      "name": "G2",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_31740aa10f589ed549b4324e-chunk-003<SEP>gd_c5553f609a98fd5ceb200638-chunk-003<SEP>gd_c5553f609a98fd5ceb200638-chunk-004<SEP>gd_fb798d3019afee06b2636d46-chunk-000"
+    },
+    {
+      "name": "Great Boom of 2021",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_3e57636142fb1e9e171c6629-chunk-000"
+    },
+    {
+      "name": "$240m",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_40d926c839abc68c68bb1a76-chunk-000"
+    },
+    {
+      "name": "$50k+",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_40d926c839abc68c68bb1a76-chunk-000"
+    },
+    {
+      "name": "$5k+",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_40d926c839abc68c68bb1a76-chunk-000"
+    },
+    {
+      "name": "Problem 2: Design Bottlenecks Blocking Discovery",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_41fab062bf5c10e06bdc771f-chunk-002"
+    },
+    {
+      "name": "Problem 3: Prototypes That Embarrass You in Customer Meetings",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_41fab062bf5c10e06bdc771f-chunk-002"
+    },
+    {
+      "name": "10,000+",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_41fab062bf5c10e06bdc771f-chunk-003"
+    },
+    {
+      "name": "1 million+",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_41fab062bf5c10e06bdc771f-chunk-003"
+    },
+    {
+      "name": "2022 SaaStr Annual",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_4490a7d0a51a56a2b81cc489-chunk-001"
+    },
+    {
+      "name": "philf1217",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_4d3f9e64dfba369d5fbfed7c-chunk-000"
+    },
+    {
+      "name": "http://buff.ly/1TjVibD",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_4d3f9e64dfba369d5fbfed7c-chunk-000"
+    },
+    {
+      "name": "B2B SaaS",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_4f6908ae4b2f4c4e20daccaa-chunk-000"
+    },
+    {
+      "name": "SaaStr AI Summit 2025",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_4f6908ae4b2f4c4e20daccaa-chunk-000"
+    },
+    {
+      "name": "April",
+      "flags": [
+        "month"
+      ],
+      "source_id": "gd_4f6a07df802023de3d63ca4f-chunk-000<SEP>gd_73df91a3d3076d3a9388eb48-chunk-002"
+    },
+    {
+      "name": "pic.twitter.com/MZzYIT4IbF",
+      "flags": [
+        "numeric_name"
+      ],
+      "source_id": "gd_4f6a07df802023de3d63ca4f-chunk-000"
+    }
+  ],
+  "malformed_entity_names": [],
+  "nodes_missing_source_id": [],
+  "nodes_missing_source_id_count": 0,
+  "dangling_edges": [],
+  "dangling_edge_count": 0,
+  "edges_missing_source_id": 0,
+  "unknown_edge_source_ids": [],
+  "failed_or_skipped_ids_still_cited_by_graph": [],
+  "non_catalog_or_non_train_graph_sources": [],
+  "marked_pilot_documents": [
+    {
+      "parent": "gd_de0b05c2882793b64fd76389",
+      "graph_document_id": "gd_1d361440c168ddd12ff26855",
+      "words": 2168,
+      "gaps": [
+        124,
+        250
+      ],
+      "extracted": false,
+      "attribution_status": "publication_page"
+    },
+    {
+      "parent": "gd_ccf4c5892661b0e3da9c53dc",
+      "graph_document_id": "gd_ce166794fa8fabf637951842",
+      "words": 426,
+      "gaps": [
+        120,
+        46
+      ],
+      "extracted": true,
+      "attribution_status": "publication_page"
+    },
+    {
+      "parent": "gd_852262bf58fd28520b57ec62",
+      "graph_document_id": "gd_75f02b10d879e707c721d8e6",
+      "words": 1694,
+      "gaps": [
+        60
+      ],
+      "extracted": true,
+      "attribution_status": "publication_page"
+    },
+    {
+      "parent": "gd_fe33901c61721e4d6a2fa0b3",
+      "graph_document_id": "gd_2bdc70b1eb71efaba4e2fe3b",
+      "words": 958,
+      "gaps": [
+        62
+      ],
+      "extracted": true,
+      "attribution_status": "publication_page"
+    },
+    {
+      "parent": "gd_694112e8e0040f5ff958f035",
+      "graph_document_id": "gd_fa7363b1de00027943a9fe94",
+      "words": 1828,
+      "gaps": [
+        231
+      ],
+      "extracted": true,
+      "attribution_status": "publication_page"
+    },
+    {
+      "parent": "gd_244ab85eab815a87690d2112",
+      "graph_document_id": "gd_d0fa7487e0b39fe68571cad6",
+      "words": 1307,
+      "gaps": [
+        126,
+        151
+      ],
+      "extracted": true,
+      "attribution_status": "publication_page"
+    },
+    {
+      "parent": "gd_12e6c661ea0f1383ee2b47ab",
+      "graph_document_id": "gd_70d11aab5ebbbe36a7cd1b54",
+      "words": 1616,
+      "gaps": [
+        251
+      ],
+      "extracted": true,
+      "attribution_status": "publication_page"
+    },
+    {
+      "parent": "gd_90c43e103fb0d354964ffb63",
+      "graph_document_id": "gd_ba8cfcf37a4829e6738e3817",
+      "words": 628,
+      "gaps": [
+        84
+      ],
+      "extracted": true,
+      "attribution_status": "publication_page"
+    },
+    {
+      "parent": "gd_fe95631776e59f9c3324005d",
+      "graph_document_id": "gd_e17729e5eca8acb5235bb5b2",
+      "words": 1029,
+      "gaps": [
+        36
+      ],
+      "extracted": true,
+      "attribution_status": "publication_page"
+    },
+    {
+      "parent": "gd_96519591dababcfdc35855a8",
+      "graph_document_id": "gd_6bdde8bd37b55a83f475e364",
+      "words": 469,
+      "gaps": [
+        208
+      ],
+      "extracted": true,
+      "attribution_status": "publication_page"
+    },
+    {
+      "parent": "gd_414cde32de0cf12c7d952668",
+      "graph_document_id": "gd_e23054549f6afebbe65a7649",
+      "words": 652,
+      "gaps": [
+        110
+      ],
+      "extracted": true,
+      "attribution_status": "publication_page"
+    },
+    {
+      "parent": "gd_2a58e5bb4db6e2ed500cc504",
+      "graph_document_id": "gd_1aa53d7d7a1dceedf7154728",
+      "words": 490,
+      "gaps": [
+        228
+      ],
+      "extracted": true,
+      "attribution_status": "publication_page"
+    },
+    {
+      "parent": "gd_72172e0a6a1db9a0de65f31f",
+      "graph_document_id": "gd_b4831f8b7f01e211e2b13ce2",
+      "words": 892,
+      "gaps": [
+        261
+      ],
+      "extracted": true,
+      "attribution_status": "publication_page"
+    },
+    {
+      "parent": "gd_6ed7657160d99aae9e8b4e9f",
+      "graph_document_id": "gd_ed512c555a8a13c112af96c9",
+      "words": 199,
+      "gaps": [
+        262
+      ],
+      "extracted": true,
+      "attribution_status": "named_author"
+    }
+  ],
+  "chunks_containing_omission_marker": [
+    {
+      "chunk_id": "gd_1aa53d7d7a1dceedf7154728-chunk-000",
+      "full_doc_id": "gd_1aa53d7d7a1dceedf7154728",
+      "chars": 1573,
+      "gaps": [
+        228
+      ]
+    },
+    {
+      "chunk_id": "gd_2bdc70b1eb71efaba4e2fe3b-chunk-000",
+      "full_doc_id": "gd_2bdc70b1eb71efaba4e2fe3b",
+      "chars": 1891,
+      "gaps": [
+        62
+      ]
+    },
+    {
+      "chunk_id": "gd_6bdde8bd37b55a83f475e364-chunk-001",
+      "full_doc_id": "gd_6bdde8bd37b55a83f475e364",
+      "chars": 1697,
+      "gaps": [
+        208
+      ]
+    },
+    {
+      "chunk_id": "gd_6bdde8bd37b55a83f475e364-chunk-002",
+      "full_doc_id": "gd_6bdde8bd37b55a83f475e364",
+      "chars": 518,
+      "gaps": [
+        208
+      ]
+    },
+    {
+      "chunk_id": "gd_70d11aab5ebbbe36a7cd1b54-chunk-003",
+      "full_doc_id": "gd_70d11aab5ebbbe36a7cd1b54",
+      "chars": 1858,
+      "gaps": [
+        251
+      ]
+    },
+    {
+      "chunk_id": "gd_75f02b10d879e707c721d8e6-chunk-001",
+      "full_doc_id": "gd_75f02b10d879e707c721d8e6",
+      "chars": 2106,
+      "gaps": [
+        60
+      ]
+    },
+    {
+      "chunk_id": "gd_b4831f8b7f01e211e2b13ce2-chunk-002",
+      "full_doc_id": "gd_b4831f8b7f01e211e2b13ce2",
+      "chars": 1644,
+      "gaps": [
+        261
+      ]
+    },
+    {
+      "chunk_id": "gd_ba8cfcf37a4829e6738e3817-chunk-000",
+      "full_doc_id": "gd_ba8cfcf37a4829e6738e3817",
+      "chars": 1729,
+      "gaps": [
+        84
+      ]
+    },
+    {
+      "chunk_id": "gd_ba8cfcf37a4829e6738e3817-chunk-001",
+      "full_doc_id": "gd_ba8cfcf37a4829e6738e3817",
+      "chars": 1761,
+      "gaps": [
+        84
+      ]
+    },
+    {
+      "chunk_id": "gd_ce166794fa8fabf637951842-chunk-000",
+      "full_doc_id": "gd_ce166794fa8fabf637951842",
+      "chars": 1888,
+      "gaps": [
+        120
+      ]
+    },
+    {
+      "chunk_id": "gd_ce166794fa8fabf637951842-chunk-001",
+      "full_doc_id": "gd_ce166794fa8fabf637951842",
+      "chars": 1185,
+      "gaps": [
+        120,
+        46
+      ]
+    },
+    {
+      "chunk_id": "gd_d0fa7487e0b39fe68571cad6-chunk-003",
+      "full_doc_id": "gd_d0fa7487e0b39fe68571cad6",
+      "chars": 1947,
+      "gaps": [
+        126
+      ]
+    },
+    {
+      "chunk_id": "gd_d0fa7487e0b39fe68571cad6-chunk-004",
+      "full_doc_id": "gd_d0fa7487e0b39fe68571cad6",
+      "chars": 1948,
+      "gaps": [
+        151
+      ]
+    },
+    {
+      "chunk_id": "gd_e17729e5eca8acb5235bb5b2-chunk-001",
+      "full_doc_id": "gd_e17729e5eca8acb5235bb5b2",
+      "chars": 2047,
+      "gaps": [
+        36
+      ]
+    },
+    {
+      "chunk_id": "gd_e17729e5eca8acb5235bb5b2-chunk-002",
+      "full_doc_id": "gd_e17729e5eca8acb5235bb5b2",
+      "chars": 1959,
+      "gaps": [
+        36
+      ]
+    },
+    {
+      "chunk_id": "gd_e23054549f6afebbe65a7649-chunk-000",
+      "full_doc_id": "gd_e23054549f6afebbe65a7649",
+      "chars": 1460,
+      "gaps": [
+        110
+      ]
+    },
+    {
+      "chunk_id": "gd_ed512c555a8a13c112af96c9-chunk-000",
+      "full_doc_id": "gd_ed512c555a8a13c112af96c9",
+      "chars": 1250,
+      "gaps": [
+        262
+      ]
+    },
+    {
+      "chunk_id": "gd_fa7363b1de00027943a9fe94-chunk-007",
+      "full_doc_id": "gd_fa7363b1de00027943a9fe94",
+      "chars": 1954,
+      "gaps": [
+        231
+      ]
+    },
+    {
+      "chunk_id": "gd_fa7363b1de00027943a9fe94-chunk-008",
+      "full_doc_id": "gd_fa7363b1de00027943a9fe94",
+      "chars": 1367,
+      "gaps": [
+        231
+      ]
+    }
+  ],
+  "omission_marker_chunk_count": 19,
+  "omission_marker_document_count": 13,
+  "edges_citing_an_omission_marker_chunk": 238,
+  "quoted_catalog_rows": [
+    {
+      "graph_document_id": "gd_043b769dd0d2fd156767e0ba",
+      "parent": "gd_007b705bb266a53acf5888b9",
+      "attribution_status": "third_party_quotation",
+      "author_position": "quoted_third_party",
+      "quoted_speakers": [
+        "Anneka Gupta"
+      ],
+      "extracted": true
+    },
+    {
+      "graph_document_id": "gd_e17729e5eca8acb5235bb5b2",
+      "parent": "gd_fe95631776e59f9c3324005d",
+      "attribution_status": "publication_page",
+      "author_position": "not_verified",
+      "quoted_speakers": [
+        "Alex Rosenblatt"
+      ],
+      "extracted": true
+    }
+  ],
+  "this_resume_log": {
+    "chunk_extractions_logged": 287,
+    "entity_mentions_sum": 2504,
+    "relation_mentions_sum": 2019,
+    "zero_relation_chunks": 38,
+    "documents_with_a_logged_chunk": 130,
+    "timeout_events": 35,
+    "timeout_seconds_seen": [
+      "1200"
+    ],
+    "failed_extract_documents_in_log": [
+      "gd_5ffdc3a083492246413be6f2",
+      "gd_8276b7d28a0837fa1e71181a",
+      "gd_8a579b23707dd4f77e169619",
+      "gd_a4ad0243c9bcfec4c527a703",
+      "gd_aa82ba1eab089122de370f68",
+      "gd_f76cf95212bfc67508398f63",
+      "gd_f9a237e6ccf11fe4de9924ad"
+    ],
+    "token_fields_in_log": false,
+    "retry_lines": 0,
+    "chunk_size_overlap_logged": true,
+    "footer": {
+      "exit_code": "0",
+      "elapsed_ms": "10768045",
+      "ended_at": "2026-10-29T11:36:37.926Z"
+    }
+  },
+  "smoke_graph_nodes": 29,
+  "smoke_graph_edges": 29,
+  "sample_node_attr_keys": [
+    "created_at",
+    "description",
+    "entity_id",
+    "entity_type",
+    "file_path",
+    "id",
+    "source_id",
+    "truncate"
+  ],
+  "sample_edge_attr_keys": [
+    "created_at",
+    "description",
+    "file_path",
+    "keywords",
+    "source",
+    "source_id",
+    "target",
+    "truncate",
+    "weight"
+  ]
+}

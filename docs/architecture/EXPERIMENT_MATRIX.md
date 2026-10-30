@@ -10,7 +10,7 @@
 - **PERSONA-RETRIEVAL:** same corpus/model with persona-aware query/rerank vs ordinary vector retrieval. Existing separate implementation is a candidate, not evidence of benefit.
 - **QLORA:** complete-target adapter vs its unadapted generator under identical prompts. EXP-20261003-005 is a narrower cell: the same rank-16 setup as the repaired adapter, with only the 512-token labels changed. It is running and is not this complete-target comparison.
 - **QLORA+VECTOR:** adapter plus factual retrieval; style examples as a separate toggle.
-- **ONTOLOGY:** typed, provenance-backed factual retrieval vs vector retrieval with generator/style held fixed.
+- **ONTOLOGY:** typed, provenance-backed factual retrieval vs vector retrieval with generator/style held fixed. The 2026-10-27 LightRAG backend is a graph-retrieval implementation of cells E0 and F1–F5. It is not this ontology cell. See [Model F](LIGHTRAG_MODEL_F.md).
 - **QLORA+ONTOLOGY:** final hybrid if simpler comparisons justify it. RAFT/CharLoRA remain optional extensions.
 
 Freeze task IDs, source ownership, gold set, model/tokenizer revision, prompts, output/context budgets, seed list, backend/quantization and evaluator. Vary one factor or preregister a factorial design. Report paired task-level differences and uncertainty by medium. Rank-32 history also changes learning rate; it is not a clean rank ablation.

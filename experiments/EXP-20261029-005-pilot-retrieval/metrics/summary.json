@@ -1,0 +1,33 @@
+{
+  "queries": 56,
+  "questions": 8,
+  "modes": ["dense", "chroma", "naive", "local", "global", "hybrid", "mix"],
+  "wall_clock_seconds": 177.053,
+  "empty_results": 0,
+  "unsupported_query_abstained": false,
+  "precision_recall": "not measured; review ids are preselected checks, not a graded qrel",
+  "designated_source_covered_of_7": {
+    "dense": 7,
+    "chroma": 5,
+    "naive": 7,
+    "local": 5,
+    "global": 6,
+    "hybrid": 6,
+    "mix": 7
+  },
+  "latency_seconds_mean": {
+    "dense": 2.067,
+    "chroma": 2.728,
+    "naive": 2.85,
+    "local": 2.957,
+    "global": 2.947,
+    "hybrid": 3.545,
+    "mix": 3.048
+  },
+  "notes": [
+    "dense is cosine search over the 160 pilot source texts, not the frozen Chroma index.",
+    "chroma is the frozen v2 index of 21,193 train rows.",
+    "Failed extraction documents can still have chunks. Naive and mix retrieved gd_8276b7d28a0837fa1e71181a even though its doc status is failed and it is absent from graph node file paths.",
+    "No mode returned an empty hit list for the Olympic ceremony question."
+  ]
+}

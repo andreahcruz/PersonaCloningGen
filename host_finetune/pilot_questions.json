@@ -1,0 +1,70 @@
+[
+  {
+    "id": "q_brex_price",
+    "kind": "simple_fact",
+    "query": "What price did Capital One announce for acquiring Brex?",
+    "review_source_ids": ["gd_22550cc95a46ded2d9a37c99"],
+    "abstain": false,
+    "review_note": "The pilot blog states an announced price of $5.15 billion. The id is a review key, not a retrieval input."
+  },
+  {
+    "id": "q_cvc_second_check",
+    "kind": "author_position",
+    "query": "What does Jason Lemkin say about whether corporate venture capital firms write a second check?",
+    "review_source_ids": ["gd_00c32ea8f146eb99c16e0974"],
+    "abstain": false,
+    "review_note": "The Dear SaaStr post says corporate VCs often do not write a second check, with named exceptions."
+  },
+  {
+    "id": "q_worst_mishire",
+    "kind": "author_position",
+    "query": "Which leadership hire does Jason Lemkin call the worst mis-hire?",
+    "review_source_ids": ["gd_8276b7d28a0837fa1e71181a"],
+    "abstain": false,
+    "review_note": "The LinkedIn post says the worst mis-hire is CTO / VP Engineering."
+  },
+  {
+    "id": "q_first_vp_sales",
+    "kind": "multi_document",
+    "query": "What does Jason Lemkin say about hiring and managing a first VP of Sales?",
+    "review_source_ids": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_8d4d38e0c3572b351003a51c",
+      "gd_5b654905b75669045fd65816"
+    ],
+    "abstain": false,
+    "review_note": "Three pilot posts discuss a first sales leader. One source is enough to be relevant. Two or more is the multi-document case."
+  },
+  {
+    "id": "q_five_percent_share",
+    "kind": "conditional_advice",
+    "query": "What does Jason Lemkin say a company should do once it has about 5 percent market share in a niche?",
+    "review_source_ids": ["gd_27f183b437e4f038d31cb0f6"],
+    "abstain": false,
+    "review_note": "The condition is about 5 percent share and the advice is to keep innovating, stay present, and gather customers."
+  },
+  {
+    "id": "q_vp_sales_tension",
+    "kind": "conflicting_statements",
+    "query": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive?",
+    "review_source_ids": ["gd_92ee1e366384a6e50b449f25", "gd_5b654905b75669045fd65816"],
+    "abstain": false,
+    "review_note": "Both statements are in the pilot. A useful result retrieves both rather than only one."
+  },
+  {
+    "id": "q_personalized_saas_speaker",
+    "kind": "attribution",
+    "query": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+    "review_source_ids": ["gd_007b705bb266a53acf5888b9"],
+    "abstain": false,
+    "review_note": "The words are quoted from Anneka Gupta. A hit that presents them as Jason Lemkin's own sentence fails attribution even if the source id is right."
+  },
+  {
+    "id": "q_olympics_ceremony",
+    "kind": "unsupported",
+    "query": "What did Jason Lemkin say about the choreography of the 2024 Olympic opening ceremony?",
+    "review_source_ids": [],
+    "abstain": true,
+    "review_note": "No pilot document discusses that ceremony. Any returned source is irrelevant. Abstention means an empty hit list."
+  }
+]

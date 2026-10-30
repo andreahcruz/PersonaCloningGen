@@ -1,0 +1,65 @@
+{
+  "sample_documents": 160,
+  "unmatched_sample_ids": [],
+  "inserted_this_resume": 126,
+  "skipped_already_processed": 26,
+  "extraction_failed": 8,
+  "pending": 0,
+  "processed_total": 152,
+  "processed_by_medium": {"blog": 58, "linkedin": 30, "x": 64},
+  "failed_by_medium": {"blog": 6, "linkedin": 2, "x": 0},
+  "all_catalog_splits_train": true,
+  "graph": {
+    "nodes": 1791,
+    "edges": 2000,
+    "chunk_vectors": 348,
+    "entity_vectors": 1791,
+    "relationship_vectors": 2000,
+    "embedding_dim": 768,
+    "processed_documents_missing_from_node_file_path": 0,
+    "failed_document_ids_present_on_nodes": []
+  },
+  "entity_type_counts": {
+    "concept": 689,
+    "organization": 365,
+    "product": 217,
+    "person": 184,
+    "UNKNOWN": 147,
+    "event": 82,
+    "other": 73,
+    "place": 7,
+    "year": 6,
+    "geopoliticalentity": 3,
+    "location": 3,
+    "group": 3,
+    "team": 2,
+    "number": 2,
+    "timeperiod": 2,
+    "month": 1,
+    "region": 1,
+    "market": 1,
+    "company": 1,
+    "role": 1,
+    "period": 1
+  },
+  "weak_entity_rule": {
+    "names_flagged": 244,
+    "flag_counts": {"generic_noun": 17, "numeric_name": 219, "month": 5, "weekday": 3},
+    "numeric_rule_limit": "The project numeric rule matches any digit, so names such as B2B are flagged. That count is not a count of bare numbers."
+  },
+  "extra_status_row": {
+    "id": "dup-44a87e93c933a4e23929caa47da2ff13",
+    "status": "failed",
+    "error": "File name already exists. Original doc_id: gd_1d361440c168ddd12ff26855, Status: failed",
+    "in_sample": false
+  },
+  "hashes": {
+    "graphml_sha256": "302638b52a036064f9998cdf031b7281b82dcc73f99db43caff89219a6c5f599",
+    "catalog_sha256": "088a6edd3315875db3afede5172c9313cea21ad54c8fd1680f04a6b39dbc10d6",
+    "last_index_report_sha256": "164ca5536be41aaaa53c9cf2aaa7838ae8e41cc711ff82ec5e42c98a2191770b"
+  },
+  "resume_runtime_seconds": 10768.045,
+  "resume_started_at": "2026-10-29T08:37:09.881Z",
+  "resume_ended_at": "2026-10-29T11:36:37.926Z",
+  "exit_code": 0
+}

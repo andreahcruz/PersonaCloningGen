@@ -1,0 +1,44 @@
+{
+  "graph_ready_v1_unchanged": true,
+  "v2_policy": "graph-ready-v2",
+  "v2_documents_sha256": "d7bd01a01f288dda3582eddcfd2fc1539574f97b6e168b1124a0b43b76d9a118",
+  "documents": 13140,
+  "text_changed": 461,
+  "attribution_changed": 9,
+  "third_party_quotation": 9,
+  "documents_with_any_detected_quote": 137,
+  "ordered_joins": 948,
+  "joins_with_positive_lead": 312,
+  "joins_with_positive_interior_gap": 355,
+  "section_markers_applied": 355,
+  "max_interior_gap_words": 1038,
+  "rubrik_blog_line_1462": {
+    "lead_words_omitted": 174,
+    "interior_gap_words": [0, 0, 0, 0],
+    "marker_applied": false,
+    "finding": "The numbered sections are adjacent. The omitted lead mixes the author's introduction with an embedded Bipul Sinha tweet, so it was not spliced in."
+  },
+  "pilot_sample": {
+    "documents": 160,
+    "mediums": {"blog": 64, "linkedin": 32, "x": 64},
+    "section_markers": 14,
+    "quoted_documents": 2,
+    "third_party_quotation": 1,
+    "all_train": true
+  },
+  "extraction_comparison": {
+    "documents": 3,
+    "llama3.1_library_weak_entities": 11,
+    "llama3.1_project_guidance_weak_entities": 10,
+    "llama3.1_library_anneka_webflow": "Anneka Gupta is associated with Webflow as a CPO.",
+    "llama3.1_project_anneka_webflow": "Anneka Gupta, as the CPO of Rubrik, also mentions Webflow in the context of AI and SaaS.",
+    "named_organizations_kept": ["Salesforce Ventures", "GV"],
+    "tuesday_removed": false,
+    "qwen2.5_7b": {
+      "num_ctx": 4096,
+      "nodes": ["<source_entity>", "<target_entity>"],
+      "usable": false
+    }
+  },
+  "evidence_capsule_collection_test": "passed after recording the collection from a known Chroma path when the caller omits it"
+}

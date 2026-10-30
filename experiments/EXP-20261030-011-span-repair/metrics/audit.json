@@ -1,0 +1,787 @@
+[
+  {
+    "arm": "chroma_v2",
+    "id": "q_brex_price",
+    "medium": "blog",
+    "words_009": 8,
+    "words_010_first": 125,
+    "words_010": 8,
+    "attempt_009": 2,
+    "attempt_010": 2,
+    "claims_009": 0,
+    "claims_010": 0,
+    "evidence_status": "extraction_failed",
+    "labels": [
+      "extraction_failed",
+      "retry_selected_shorter_draft"
+    ]
+  },
+  {
+    "arm": "chroma_v2",
+    "id": "q_brex_price",
+    "medium": "linkedin",
+    "words_009": 42,
+    "words_010_first": 9,
+    "words_010": 9,
+    "attempt_009": 2,
+    "attempt_010": 1,
+    "claims_009": 0,
+    "claims_010": 0,
+    "evidence_status": "extraction_failed",
+    "labels": [
+      "extraction_failed",
+      "prompt_echo_or_instruction_leak",
+      "restrictive_prompt_short_first_draft"
+    ]
+  },
+  {
+    "arm": "chroma_v2",
+    "id": "q_brex_price",
+    "medium": "x",
+    "words_009": 13,
+    "words_010_first": 12,
+    "words_010": 12,
+    "attempt_009": 1,
+    "attempt_010": 1,
+    "claims_009": 0,
+    "claims_010": 0,
+    "evidence_status": "extraction_failed",
+    "labels": [
+      "extraction_failed",
+      "prompt_echo_or_instruction_leak"
+    ]
+  },
+  {
+    "arm": "chroma_v2",
+    "id": "q_brex_price",
+    "medium": "talk",
+    "words_009": 182,
+    "words_010_first": 283,
+    "words_010": 8,
+    "attempt_009": 2,
+    "attempt_010": 2,
+    "claims_009": 0,
+    "claims_010": 0,
+    "evidence_status": "extraction_failed",
+    "labels": [
+      "extraction_failed",
+      "retry_selected_shorter_draft"
+    ]
+  },
+  {
+    "arm": "chroma_v2",
+    "id": "q_vp_sales_tension",
+    "medium": "blog",
+    "words_009": 315,
+    "words_010_first": 80,
+    "words_010": 307,
+    "attempt_009": 2,
+    "attempt_010": 2,
+    "claims_009": 8,
+    "claims_010": 8,
+    "evidence_status": "verified",
+    "labels": [
+      "no_large_regression_marker"
+    ]
+  },
+  {
+    "arm": "chroma_v2",
+    "id": "q_vp_sales_tension",
+    "medium": "linkedin",
+    "words_009": 206,
+    "words_010_first": 211,
+    "words_010": 211,
+    "attempt_009": 2,
+    "attempt_010": 1,
+    "claims_009": 8,
+    "claims_010": 8,
+    "evidence_status": "verified",
+    "labels": [
+      "no_large_regression_marker"
+    ]
+  },
+  {
+    "arm": "chroma_v2",
+    "id": "q_vp_sales_tension",
+    "medium": "x",
+    "words_009": 36,
+    "words_010_first": 81,
+    "words_010": 81,
+    "attempt_009": 1,
+    "attempt_010": 1,
+    "claims_009": 8,
+    "claims_010": 8,
+    "evidence_status": "verified",
+    "labels": [
+      "prompt_echo_or_instruction_leak"
+    ]
+  },
+  {
+    "arm": "chroma_v2",
+    "id": "q_vp_sales_tension",
+    "medium": "talk",
+    "words_009": 312,
+    "words_010_first": 327,
+    "words_010": 135,
+    "attempt_009": 2,
+    "attempt_010": 2,
+    "claims_009": 8,
+    "claims_010": 8,
+    "evidence_status": "verified",
+    "labels": [
+      "retry_selected_shorter_draft"
+    ]
+  },
+  {
+    "arm": "chroma_v2",
+    "id": "q_personalized_saas_speaker",
+    "medium": "blog",
+    "words_009": 257,
+    "words_010_first": 128,
+    "words_010": 245,
+    "attempt_009": 2,
+    "attempt_010": 2,
+    "claims_009": 16,
+    "claims_010": 16,
+    "evidence_status": "verified",
+    "labels": [
+      "no_large_regression_marker"
+    ]
+  },
+  {
+    "arm": "chroma_v2",
+    "id": "q_personalized_saas_speaker",
+    "medium": "linkedin",
+    "words_009": 264,
+    "words_010_first": 173,
+    "words_010": 53,
+    "attempt_009": 2,
+    "attempt_010": 2,
+    "claims_009": 16,
+    "claims_010": 16,
+    "evidence_status": "verified",
+    "labels": [
+      "retry_selected_shorter_draft"
+    ]
+  },
+  {
+    "arm": "chroma_v2",
+    "id": "q_personalized_saas_speaker",
+    "medium": "x",
+    "words_009": 115,
+    "words_010_first": 14,
+    "words_010": 14,
+    "attempt_009": 2,
+    "attempt_010": 1,
+    "claims_009": 16,
+    "claims_010": 16,
+    "evidence_status": "verified",
+    "labels": [
+      "prompt_echo_or_instruction_leak",
+      "restrictive_prompt_short_first_draft"
+    ]
+  },
+  {
+    "arm": "chroma_v2",
+    "id": "q_personalized_saas_speaker",
+    "medium": "talk",
+    "words_009": 329,
+    "words_010_first": 141,
+    "words_010": 141,
+    "attempt_009": 1,
+    "attempt_010": 1,
+    "claims_009": 16,
+    "claims_010": 16,
+    "evidence_status": "verified",
+    "labels": [
+      "prompt_echo_or_instruction_leak",
+      "restrictive_prompt_short_first_draft"
+    ]
+  },
+  {
+    "arm": "pilot_dense",
+    "id": "q_brex_price",
+    "medium": "blog",
+    "words_009": 19,
+    "words_010_first": 208,
+    "words_010": 17,
+    "attempt_009": 2,
+    "attempt_010": 2,
+    "claims_009": 4,
+    "claims_010": 4,
+    "evidence_status": "verified",
+    "labels": [
+      "prompt_echo_or_instruction_leak",
+      "retry_selected_shorter_draft"
+    ]
+  },
+  {
+    "arm": "pilot_dense",
+    "id": "q_brex_price",
+    "medium": "linkedin",
+    "words_009": 52,
+    "words_010_first": 9,
+    "words_010": 9,
+    "attempt_009": 2,
+    "attempt_010": 1,
+    "claims_009": 4,
+    "claims_010": 4,
+    "evidence_status": "verified",
+    "labels": [
+      "prompt_echo_or_instruction_leak",
+      "restrictive_prompt_short_first_draft"
+    ]
+  },
+  {
+    "arm": "pilot_dense",
+    "id": "q_brex_price",
+    "medium": "x",
+    "words_009": 19,
+    "words_010_first": 124,
+    "words_010": 124,
+    "attempt_009": 1,
+    "attempt_010": 1,
+    "claims_009": 4,
+    "claims_010": 4,
+    "evidence_status": "verified",
+    "labels": [
+      "prompt_echo_or_instruction_leak"
+    ]
+  },
+  {
+    "arm": "pilot_dense",
+    "id": "q_brex_price",
+    "medium": "talk",
+    "words_009": 175,
+    "words_010_first": 250,
+    "words_010": 250,
+    "attempt_009": 2,
+    "attempt_010": 1,
+    "claims_009": 4,
+    "claims_010": 4,
+    "evidence_status": "verified",
+    "labels": [
+      "no_large_regression_marker"
+    ]
+  },
+  {
+    "arm": "pilot_dense",
+    "id": "q_vp_sales_tension",
+    "medium": "blog",
+    "words_009": 35,
+    "words_010_first": 35,
+    "words_010": 277,
+    "attempt_009": 1,
+    "attempt_010": 2,
+    "claims_009": 7,
+    "claims_010": 7,
+    "evidence_status": "verified",
+    "labels": [
+      "no_large_regression_marker"
+    ]
+  },
+  {
+    "arm": "pilot_dense",
+    "id": "q_vp_sales_tension",
+    "medium": "linkedin",
+    "words_009": 266,
+    "words_010_first": 76,
+    "words_010": 76,
+    "attempt_009": 2,
+    "attempt_010": 1,
+    "claims_009": 7,
+    "claims_010": 7,
+    "evidence_status": "verified",
+    "labels": [
+      "restrictive_prompt_short_first_draft"
+    ]
+  },
+  {
+    "arm": "pilot_dense",
+    "id": "q_vp_sales_tension",
+    "medium": "x",
+    "words_009": 40,
+    "words_010_first": 120,
+    "words_010": 120,
+    "attempt_009": 1,
+    "attempt_010": 1,
+    "claims_009": 7,
+    "claims_010": 7,
+    "evidence_status": "verified",
+    "labels": [
+      "prompt_echo_or_instruction_leak"
+    ]
+  },
+  {
+    "arm": "pilot_dense",
+    "id": "q_vp_sales_tension",
+    "medium": "talk",
+    "words_009": 282,
+    "words_010_first": 309,
+    "words_010": 309,
+    "attempt_009": 2,
+    "attempt_010": 1,
+    "claims_009": 7,
+    "claims_010": 7,
+    "evidence_status": "verified",
+    "labels": [
+      "no_large_regression_marker"
+    ]
+  },
+  {
+    "arm": "pilot_dense",
+    "id": "q_personalized_saas_speaker",
+    "medium": "blog",
+    "words_009": 99,
+    "words_010_first": 50,
+    "words_010": 50,
+    "attempt_009": 2,
+    "attempt_010": 1,
+    "claims_009": 3,
+    "claims_010": 3,
+    "evidence_status": "verified",
+    "labels": [
+      "prompt_echo_or_instruction_leak",
+      "restrictive_prompt_short_first_draft"
+    ]
+  },
+  {
+    "arm": "pilot_dense",
+    "id": "q_personalized_saas_speaker",
+    "medium": "linkedin",
+    "words_009": 248,
+    "words_010_first": 173,
+    "words_010": 268,
+    "attempt_009": 2,
+    "attempt_010": 2,
+    "claims_009": 3,
+    "claims_010": 3,
+    "evidence_status": "verified",
+    "labels": [
+      "prompt_echo_or_instruction_leak"
+    ]
+  },
+  {
+    "arm": "pilot_dense",
+    "id": "q_personalized_saas_speaker",
+    "medium": "x",
+    "words_009": 143,
+    "words_010_first": 14,
+    "words_010": 14,
+    "attempt_009": 2,
+    "attempt_010": 1,
+    "claims_009": 3,
+    "claims_010": 3,
+    "evidence_status": "verified",
+    "labels": [
+      "prompt_echo_or_instruction_leak",
+      "restrictive_prompt_short_first_draft"
+    ]
+  },
+  {
+    "arm": "pilot_dense",
+    "id": "q_personalized_saas_speaker",
+    "medium": "talk",
+    "words_009": 330,
+    "words_010_first": 308,
+    "words_010": 292,
+    "attempt_009": 1,
+    "attempt_010": 2,
+    "claims_009": 3,
+    "claims_010": 3,
+    "evidence_status": "verified",
+    "labels": [
+      "no_large_regression_marker"
+    ]
+  },
+  {
+    "arm": "naive",
+    "id": "q_brex_price",
+    "medium": "blog",
+    "words_009": 102,
+    "words_010_first": 322,
+    "words_010": 8,
+    "attempt_009": 1,
+    "attempt_010": 2,
+    "claims_009": 11,
+    "claims_010": 11,
+    "evidence_status": "verified",
+    "labels": [
+      "retry_selected_shorter_draft"
+    ]
+  },
+  {
+    "arm": "naive",
+    "id": "q_brex_price",
+    "medium": "linkedin",
+    "words_009": 228,
+    "words_010_first": 9,
+    "words_010": 9,
+    "attempt_009": 2,
+    "attempt_010": 1,
+    "claims_009": 11,
+    "claims_010": 11,
+    "evidence_status": "verified",
+    "labels": [
+      "prompt_echo_or_instruction_leak",
+      "restrictive_prompt_short_first_draft"
+    ]
+  },
+  {
+    "arm": "naive",
+    "id": "q_brex_price",
+    "medium": "x",
+    "words_009": 13,
+    "words_010_first": 124,
+    "words_010": 124,
+    "attempt_009": 1,
+    "attempt_010": 1,
+    "claims_009": 11,
+    "claims_010": 11,
+    "evidence_status": "verified",
+    "labels": [
+      "prompt_echo_or_instruction_leak"
+    ]
+  },
+  {
+    "arm": "naive",
+    "id": "q_brex_price",
+    "medium": "talk",
+    "words_009": 295,
+    "words_010_first": 283,
+    "words_010": 283,
+    "attempt_009": 1,
+    "attempt_010": 1,
+    "claims_009": 11,
+    "claims_010": 11,
+    "evidence_status": "verified",
+    "labels": [
+      "no_large_regression_marker"
+    ]
+  },
+  {
+    "arm": "naive",
+    "id": "q_vp_sales_tension",
+    "medium": "blog",
+    "words_009": 37,
+    "words_010_first": 144,
+    "words_010": 144,
+    "attempt_009": 1,
+    "attempt_010": 1,
+    "claims_009": 5,
+    "claims_010": 5,
+    "evidence_status": "verified",
+    "labels": [
+      "prompt_echo_or_instruction_leak"
+    ]
+  },
+  {
+    "arm": "naive",
+    "id": "q_vp_sales_tension",
+    "medium": "linkedin",
+    "words_009": 93,
+    "words_010_first": 29,
+    "words_010": 135,
+    "attempt_009": 2,
+    "attempt_010": 2,
+    "claims_009": 5,
+    "claims_010": 5,
+    "evidence_status": "verified",
+    "labels": [
+      "no_large_regression_marker"
+    ]
+  },
+  {
+    "arm": "naive",
+    "id": "q_vp_sales_tension",
+    "medium": "x",
+    "words_009": 104,
+    "words_010_first": 84,
+    "words_010": 51,
+    "attempt_009": 1,
+    "attempt_010": 2,
+    "claims_009": 5,
+    "claims_010": 5,
+    "evidence_status": "verified",
+    "labels": [
+      "prompt_echo_or_instruction_leak"
+    ]
+  },
+  {
+    "arm": "naive",
+    "id": "q_vp_sales_tension",
+    "medium": "talk",
+    "words_009": 319,
+    "words_010_first": 334,
+    "words_010": 334,
+    "attempt_009": 1,
+    "attempt_010": 1,
+    "claims_009": 5,
+    "claims_010": 5,
+    "evidence_status": "verified",
+    "labels": [
+      "no_large_regression_marker"
+    ]
+  },
+  {
+    "arm": "naive",
+    "id": "q_personalized_saas_speaker",
+    "medium": "blog",
+    "words_009": 181,
+    "words_010_first": 27,
+    "words_010": 27,
+    "attempt_009": 2,
+    "attempt_010": 1,
+    "claims_009": 10,
+    "claims_010": 10,
+    "evidence_status": "verified",
+    "labels": [
+      "prompt_echo_or_instruction_leak",
+      "restrictive_prompt_short_first_draft"
+    ]
+  },
+  {
+    "arm": "naive",
+    "id": "q_personalized_saas_speaker",
+    "medium": "linkedin",
+    "words_009": 261,
+    "words_010_first": 173,
+    "words_010": 217,
+    "attempt_009": 2,
+    "attempt_010": 2,
+    "claims_009": 10,
+    "claims_010": 10,
+    "evidence_status": "verified",
+    "labels": [
+      "no_large_regression_marker"
+    ]
+  },
+  {
+    "arm": "naive",
+    "id": "q_personalized_saas_speaker",
+    "medium": "x",
+    "words_009": 90,
+    "words_010_first": 14,
+    "words_010": 14,
+    "attempt_009": 2,
+    "attempt_010": 1,
+    "claims_009": 10,
+    "claims_010": 10,
+    "evidence_status": "verified",
+    "labels": [
+      "prompt_echo_or_instruction_leak",
+      "restrictive_prompt_short_first_draft"
+    ]
+  },
+  {
+    "arm": "naive",
+    "id": "q_personalized_saas_speaker",
+    "medium": "talk",
+    "words_009": 81,
+    "words_010_first": 37,
+    "words_010": 37,
+    "attempt_009": 1,
+    "attempt_010": 1,
+    "claims_009": 10,
+    "claims_010": 10,
+    "evidence_status": "verified",
+    "labels": [
+      "prompt_echo_or_instruction_leak",
+      "restrictive_prompt_short_first_draft"
+    ]
+  },
+  {
+    "arm": "mix",
+    "id": "q_brex_price",
+    "medium": "blog",
+    "words_009": 102,
+    "words_010_first": 322,
+    "words_010": 8,
+    "attempt_009": 1,
+    "attempt_010": 2,
+    "claims_009": 11,
+    "claims_010": 11,
+    "evidence_status": "verified",
+    "labels": [
+      "retry_selected_shorter_draft"
+    ]
+  },
+  {
+    "arm": "mix",
+    "id": "q_brex_price",
+    "medium": "linkedin",
+    "words_009": 228,
+    "words_010_first": 9,
+    "words_010": 9,
+    "attempt_009": 2,
+    "attempt_010": 1,
+    "claims_009": 11,
+    "claims_010": 11,
+    "evidence_status": "verified",
+    "labels": [
+      "prompt_echo_or_instruction_leak",
+      "restrictive_prompt_short_first_draft"
+    ]
+  },
+  {
+    "arm": "mix",
+    "id": "q_brex_price",
+    "medium": "x",
+    "words_009": 13,
+    "words_010_first": 124,
+    "words_010": 124,
+    "attempt_009": 1,
+    "attempt_010": 1,
+    "claims_009": 11,
+    "claims_010": 11,
+    "evidence_status": "verified",
+    "labels": [
+      "prompt_echo_or_instruction_leak"
+    ]
+  },
+  {
+    "arm": "mix",
+    "id": "q_brex_price",
+    "medium": "talk",
+    "words_009": 295,
+    "words_010_first": 283,
+    "words_010": 283,
+    "attempt_009": 1,
+    "attempt_010": 1,
+    "claims_009": 11,
+    "claims_010": 11,
+    "evidence_status": "verified",
+    "labels": [
+      "no_large_regression_marker"
+    ]
+  },
+  {
+    "arm": "mix",
+    "id": "q_vp_sales_tension",
+    "medium": "blog",
+    "words_009": 37,
+    "words_010_first": 144,
+    "words_010": 144,
+    "attempt_009": 1,
+    "attempt_010": 1,
+    "claims_009": 5,
+    "claims_010": 5,
+    "evidence_status": "verified",
+    "labels": [
+      "prompt_echo_or_instruction_leak"
+    ]
+  },
+  {
+    "arm": "mix",
+    "id": "q_vp_sales_tension",
+    "medium": "linkedin",
+    "words_009": 93,
+    "words_010_first": 29,
+    "words_010": 135,
+    "attempt_009": 2,
+    "attempt_010": 2,
+    "claims_009": 5,
+    "claims_010": 5,
+    "evidence_status": "verified",
+    "labels": [
+      "no_large_regression_marker"
+    ]
+  },
+  {
+    "arm": "mix",
+    "id": "q_vp_sales_tension",
+    "medium": "x",
+    "words_009": 104,
+    "words_010_first": 84,
+    "words_010": 51,
+    "attempt_009": 1,
+    "attempt_010": 2,
+    "claims_009": 5,
+    "claims_010": 5,
+    "evidence_status": "verified",
+    "labels": [
+      "prompt_echo_or_instruction_leak"
+    ]
+  },
+  {
+    "arm": "mix",
+    "id": "q_vp_sales_tension",
+    "medium": "talk",
+    "words_009": 319,
+    "words_010_first": 334,
+    "words_010": 334,
+    "attempt_009": 1,
+    "attempt_010": 1,
+    "claims_009": 5,
+    "claims_010": 5,
+    "evidence_status": "verified",
+    "labels": [
+      "no_large_regression_marker"
+    ]
+  },
+  {
+    "arm": "mix",
+    "id": "q_personalized_saas_speaker",
+    "medium": "blog",
+    "words_009": 305,
+    "words_010_first": 270,
+    "words_010": 270,
+    "attempt_009": 2,
+    "attempt_010": 1,
+    "claims_009": 8,
+    "claims_010": 8,
+    "evidence_status": "verified",
+    "labels": [
+      "prompt_echo_or_instruction_leak"
+    ]
+  },
+  {
+    "arm": "mix",
+    "id": "q_personalized_saas_speaker",
+    "medium": "linkedin",
+    "words_009": 60,
+    "words_010_first": 173,
+    "words_010": 261,
+    "attempt_009": 2,
+    "attempt_010": 2,
+    "claims_009": 8,
+    "claims_010": 8,
+    "evidence_status": "verified",
+    "labels": [
+      "no_large_regression_marker"
+    ]
+  },
+  {
+    "arm": "mix",
+    "id": "q_personalized_saas_speaker",
+    "medium": "x",
+    "words_009": 49,
+    "words_010_first": 14,
+    "words_010": 14,
+    "attempt_009": 2,
+    "attempt_010": 1,
+    "claims_009": 8,
+    "claims_010": 8,
+    "evidence_status": "verified",
+    "labels": [
+      "prompt_echo_or_instruction_leak",
+      "restrictive_prompt_short_first_draft"
+    ]
+  },
+  {
+    "arm": "mix",
+    "id": "q_personalized_saas_speaker",
+    "medium": "talk",
+    "words_009": 307,
+    "words_010_first": 290,
+    "words_010": 301,
+    "attempt_009": 1,
+    "attempt_010": 2,
+    "claims_009": 8,
+    "claims_010": 8,
+    "evidence_status": "verified",
+    "labels": [
+      "no_large_regression_marker"
+    ]
+  }
+]

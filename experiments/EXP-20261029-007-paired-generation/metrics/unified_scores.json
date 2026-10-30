@@ -1,0 +1,3426 @@
+{
+  "arms": {
+    "matched_dense": {
+      "source": "experiments\\EXP-20261029-006-pilot160-eval\\raw\\generation_dense.json",
+      "n": 12,
+      "load_report": {
+        "requested": "4bit",
+        "load_in_4bit": true,
+        "load_in_8bit": false,
+        "is_loaded_in_4bit": true,
+        "is_loaded_in_8bit": true,
+        "name_or_path": "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit"
+      },
+      "unified": {
+        "schema": "unified_eval.v1",
+        "model_id": "pending",
+        "source_experiment": "this_run",
+        "n": 12,
+        "n_eligible": 5,
+        "eligible_rate": 0.4167,
+        "gates": {
+          "completion_pass_rate": 0.9167,
+          "copying_pass_rate": 1.0,
+          "format_pass_rate": 0.8333,
+          "grounding_applicable_rows": 12,
+          "grounding_pass_rate": 0.5833
+        },
+        "persona_style": {
+          "role": "selector",
+          "mediums_in_mean": [
+            "blog",
+            "linkedin"
+          ],
+          "mean_distance_eligible": 1.5451,
+          "limits": "Closer surface counts are not authorship accuracy. This is a style-distance diagnostic, not proof of authorship identity."
+        },
+        "perspective_fidelity": {
+          "role": "selector",
+          "mediums_in_mean": [
+            "blog"
+          ],
+          "mean_distance_eligible": 1.2658,
+          "mean_stance_consistency": null,
+          "method": "framing_rate_distance_vs_held_out",
+          "framing_role": "diagnostic_only",
+          "limits": "Stance consistency is the perspective score. Framing distance is diagnostic."
+        },
+        "writing_quality": {
+          "available": false,
+          "role": "diagnostic_only",
+          "calibrated": false,
+          "reason": "judge_not_run",
+          "mean_eligible": null
+        },
+        "task_adherence": {
+          "mean_eligible": 0.9571,
+          "role": "quality_dimension"
+        },
+        "grounding": {
+          "applicable": true,
+          "mean_claim_support_rate": null,
+          "mean_contradiction_rate": null,
+          "method": "claim_vs_saved_retrieval_hits",
+          "rag_grounding": "scored"
+        },
+        "lemkin_evidence_support": {
+          "mean_claim_support_rate": null,
+          "not_rag_grounding": true
+        },
+        "persona_utility": null,
+        "utility_weights": {
+          "persona_style": 0.45,
+          "perspective_fidelity": 0.2,
+          "writing_quality": 0.25,
+          "task_adherence": 0.1
+        },
+        "diagnostics": {
+          "reference_similarity": {
+            "bertscore": null,
+            "bleu": null,
+            "rouge_l": null,
+            "role": "diagnostic_not_persona_fidelity"
+          },
+          "brief_overlap": {
+            "gold_rubric_overall": 0.2198,
+            "role": "brief_task_agreement_not_persona_quality"
+          },
+          "latency_seconds": null
+        }
+      },
+      "stopping": {
+        "n": 12,
+        "stop_metadata_available": 12,
+        "early_eos_rate": 0.9166666666666666,
+        "length_limit_rate": 0.0,
+        "interpretation": "Early EOS and absent final punctuation are not semantic incompleteness."
+      },
+      "decision": {
+        "n": 12,
+        "early_eot_rate": 0.9166666666666666,
+        "early_eot_observed": 12,
+        "mid_sentence_stop_rate": 0.08333333333333333,
+        "use_for_selection": [],
+        "gate_not_selector": [
+          "early_eot_rate",
+          "mid_sentence_stop_rate"
+        ],
+        "logged_not_for_selection": [
+          "paired_bleu",
+          "paired_rouge_l",
+          "gold_rubric.overall"
+        ],
+        "selector": "host_finetune.unified_eval.rank_models"
+      },
+      "rows": [
+        {
+          "id": "q_brex_price",
+          "medium": "blog",
+          "words": 50,
+          "stop_reason": "eos",
+          "verified_claims": 4,
+          "rejected_reasons": {
+            "support_not_in_source": 1
+          },
+          "numeric_pass": false,
+          "unsupported_numbers": [
+            {
+              "value": "$2 Billion",
+              "canonical": "usd:2000000000",
+              "sentence": "Capital One announced today it\u2019s acquiring Brex for $5.15 Billion \u2014 up from their original deal last year of just $2 Billion"
+            }
+          ],
+          "source_copy_pass": true,
+          "source_copy_words": 8,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": true,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false
+          },
+          "answer_preview": "So what happened to Brex?\nWell,\nCapital One announced today it\u2019s acquiring Brex for $5.15 Billion \u2014 up from their original deal last year of just $2 Billion\nBrex raised almost no dilutive venture capital at all since its founding, so this i",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": true,
+            "lexical_overlap": 0.5,
+            "copying": true,
+            "eligible": true,
+            "style_distance": 1.406
+          }
+        },
+        {
+          "id": "q_brex_price",
+          "medium": "linkedin",
+          "words": 9,
+          "stop_reason": "eos",
+          "verified_claims": 4,
+          "rejected_reasons": {
+            "support_not_in_source": 1
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 2,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": true
+          },
+          "answer_preview": "What price did Capital One announce for acquiring Brex?",
+          "gates": {
+            "completion": true,
+            "format": false,
+            "grounding": false,
+            "lexical_overlap": 0.0,
+            "copying": true,
+            "eligible": false,
+            "style_distance": 2.1728
+          }
+        },
+        {
+          "id": "q_brex_price",
+          "medium": "x",
+          "words": 17,
+          "stop_reason": "eos",
+          "verified_claims": 4,
+          "rejected_reasons": {
+            "support_not_in_source": 1
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 5,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": true,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false
+          },
+          "answer_preview": "What price did Capital One announce for acquiring Brex?\n\n[E1] Capital One acquired Brex for $5.15 billion.",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": true,
+            "lexical_overlap": 0.5,
+            "copying": true,
+            "eligible": true,
+            "style_distance": 1.0151
+          }
+        },
+        {
+          "id": "q_brex_price",
+          "medium": "talk",
+          "words": 274,
+          "stop_reason": "eos",
+          "verified_claims": 4,
+          "rejected_reasons": {
+            "support_not_in_source": 1
+          },
+          "numeric_pass": false,
+          "unsupported_numbers": [
+            {
+              "value": "$12 billion",
+              "canonical": "usd:12000000000",
+              "sentence": "In fact, Brex itself was valued at over $12 billion"
+            },
+            {
+              "value": "$13 billion",
+              "canonical": "usd:13000000000",
+              "sentence": "Even though it raised less than half that in total capital, it was valued at more than twice its last round valuation at almost $13 billion"
+            },
+            {
+              "value": "$50 million",
+              "canonical": "usd:50000000",
+              "sentence": "But if you raise, let's say, $50 million in venture capital, and you sell your company for $500 million, well, isn't that great"
+            },
+            {
+              "value": "$500 million",
+              "canonical": "usd:500000000",
+              "sentence": "But if you raise, let's say, $50 million in venture capital, and you sell your company for $500 million, well, isn't that great"
+            }
+          ],
+          "source_copy_pass": true,
+          "source_copy_words": 4,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": true,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false
+          },
+          "answer_preview": "So we've all heard of these big SaaS acquisitions. You know, you hear about them in the press when they happen, right?\nAnd I think there are three things that make an acquisition interesting to me as a founder, first, if it's a crazy amount",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": false,
+            "lexical_overlap": 0.1667,
+            "copying": true,
+            "eligible": false,
+            "style_distance": null
+          }
+        },
+        {
+          "id": "q_vp_sales_tension",
+          "medium": "blog",
+          "words": 309,
+          "stop_reason": "eos",
+          "verified_claims": 7,
+          "rejected_reasons": {
+            "support_not_in_source": 6
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 4,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false,
+            "mentions_bring_in": true,
+            "mentions_critic": false
+          },
+          "answer_preview": "So I was asked recently what\u2019s worse \u2014 hiring a terrible VP of Sales, or keeping an underperforming / mediocre VP of Sales.\u00a0 And my answer surprised me:\nI think you are worse off after 30 days of keeping someone awful than if you\u2019d kept a m",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": false,
+            "lexical_overlap": 0.0,
+            "copying": true,
+            "eligible": false,
+            "style_distance": 0.7113
+          }
+        },
+        {
+          "id": "q_vp_sales_tension",
+          "medium": "linkedin",
+          "words": 29,
+          "stop_reason": "eos",
+          "verified_claims": 7,
+          "rejected_reasons": {
+            "support_not_in_source": 6
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 5,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": true,
+            "mentions_bring_in": true,
+            "mentions_critic": true
+          },
+          "answer_preview": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive?",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": true,
+            "lexical_overlap": 1.0,
+            "copying": true,
+            "eligible": true,
+            "style_distance": 1.3889
+          }
+        },
+        {
+          "id": "q_vp_sales_tension",
+          "medium": "x",
+          "words": 41,
+          "stop_reason": "eos",
+          "verified_claims": 7,
+          "rejected_reasons": {
+            "support_not_in_source": 6
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 5,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false,
+            "mentions_bring_in": true,
+            "mentions_critic": true
+          },
+          "answer_preview": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive? \n[E1]\n\nCriticizing a VP of Sales who cannot do better is counterproduc",
+          "gates": {
+            "completion": false,
+            "format": true,
+            "grounding": true,
+            "lexical_overlap": 1.0,
+            "copying": true,
+            "eligible": false,
+            "style_distance": 0.9282
+          }
+        },
+        {
+          "id": "q_vp_sales_tension",
+          "medium": "talk",
+          "words": 327,
+          "stop_reason": "eos",
+          "verified_claims": 7,
+          "rejected_reasons": {
+            "support_not_in_source": 6
+          },
+          "numeric_pass": false,
+          "unsupported_numbers": [
+            {
+              "value": "$50m",
+              "canonical": "usd:50000000",
+              "sentence": "In SaaS, especially in the earlier days, maybe even until $50m ARR, it's tough to make sure directors can recruit their full quota of folks"
+            }
+          ],
+          "source_copy_pass": true,
+          "source_copy_words": 4,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false,
+            "mentions_bring_in": true,
+            "mentions_critic": true
+          },
+          "answer_preview": "So I've worked on this stuff for years. And there's so many questions. So let me answer some of 'em. It's time again. So first, does a great VP of sales have to bring in reps right away?\nWell, the truth is, most of us we're going to hire at",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": false,
+            "lexical_overlap": 0.0385,
+            "copying": true,
+            "eligible": false,
+            "style_distance": null
+          }
+        },
+        {
+          "id": "q_personalized_saas_speaker",
+          "medium": "blog",
+          "words": 49,
+          "stop_reason": "eos",
+          "verified_claims": 3,
+          "rejected_reasons": {
+            "interrogative_assertion": 1
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 8,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": true,
+            "mentions_abernethy": false,
+            "repeats_topic": false
+          },
+          "answer_preview": "Who said that AI means everything in SaaS needs to be a personalized experience?\nSalesforce CEO Marc Benioff did. He was speaking at the company\u2019s Dreamforce conference. His comment reflects broader trends in enterprise software where compa",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": true,
+            "lexical_overlap": 0.25,
+            "copying": true,
+            "eligible": true,
+            "style_distance": 1.8404
+          }
+        },
+        {
+          "id": "q_personalized_saas_speaker",
+          "medium": "linkedin",
+          "words": 14,
+          "stop_reason": "eos",
+          "verified_claims": 3,
+          "rejected_reasons": {
+            "interrogative_assertion": 1
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 8,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": true
+          },
+          "answer_preview": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+          "gates": {
+            "completion": true,
+            "format": false,
+            "grounding": true,
+            "lexical_overlap": 1.0,
+            "copying": true,
+            "eligible": false,
+            "style_distance": 2.257
+          }
+        },
+        {
+          "id": "q_personalized_saas_speaker",
+          "medium": "x",
+          "words": 14,
+          "stop_reason": "eos",
+          "verified_claims": 3,
+          "rejected_reasons": {
+            "interrogative_assertion": 1
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 8,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": true
+          },
+          "answer_preview": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": true,
+            "lexical_overlap": 1.0,
+            "copying": true,
+            "eligible": true,
+            "style_distance": 1.2508
+          }
+        },
+        {
+          "id": "q_personalized_saas_speaker",
+          "medium": "talk",
+          "words": 202,
+          "stop_reason": "eos",
+          "verified_claims": 3,
+          "rejected_reasons": {
+            "interrogative_assertion": 1
+          },
+          "numeric_pass": false,
+          "unsupported_numbers": [
+            {
+              "value": "200 million",
+              "canonical": "usd:200000000",
+              "sentence": "They have 200 million users"
+            },
+            {
+              "value": "300",
+              "canonical": "n:300",
+              "sentence": "It's like 300 plus now"
+            }
+          ],
+          "source_copy_pass": true,
+          "source_copy_words": 8,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": true,
+            "repeats_topic": false
+          },
+          "answer_preview": "So we've got some interesting questions here. Let's do this one first. We'll take them all out. But who said that AI means everything in SaaS needs to be a personalized experience?\nThis was asked by our good friend and CMO at ServiceTitan, ",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": false,
+            "lexical_overlap": 0.1111,
+            "copying": true,
+            "eligible": false,
+            "style_distance": null
+          }
+        }
+      ]
+    },
+    "naive_chunk_ids": {
+      "source": "experiments\\EXP-20261029-006-pilot160-eval\\raw\\generation_naive_chunk_ids.json",
+      "n": 12,
+      "load_report": {
+        "requested": "4bit",
+        "load_in_4bit": true,
+        "load_in_8bit": false,
+        "is_loaded_in_4bit": true,
+        "is_loaded_in_8bit": true,
+        "name_or_path": "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit"
+      },
+      "unified": {
+        "schema": "unified_eval.v1",
+        "model_id": "pending",
+        "source_experiment": "this_run",
+        "n": 12,
+        "n_eligible": 5,
+        "eligible_rate": 0.4167,
+        "gates": {
+          "completion_pass_rate": 0.9167,
+          "copying_pass_rate": 1.0,
+          "format_pass_rate": 0.8333,
+          "grounding_applicable_rows": 12,
+          "grounding_pass_rate": 0.5
+        },
+        "persona_style": {
+          "role": "selector",
+          "mediums_in_mean": [
+            "blog",
+            "linkedin"
+          ],
+          "mean_distance_eligible": 1.2529,
+          "limits": "Closer surface counts are not authorship accuracy. This is a style-distance diagnostic, not proof of authorship identity."
+        },
+        "perspective_fidelity": {
+          "role": "selector",
+          "mediums_in_mean": [
+            "blog"
+          ],
+          "mean_distance_eligible": 1.3492,
+          "mean_stance_consistency": null,
+          "method": "framing_rate_distance_vs_held_out",
+          "framing_role": "diagnostic_only",
+          "limits": "Stance consistency is the perspective score. Framing distance is diagnostic."
+        },
+        "writing_quality": {
+          "available": false,
+          "role": "diagnostic_only",
+          "calibrated": false,
+          "reason": "judge_not_run",
+          "mean_eligible": null
+        },
+        "task_adherence": {
+          "mean_eligible": 1.0,
+          "role": "quality_dimension"
+        },
+        "grounding": {
+          "applicable": true,
+          "mean_claim_support_rate": null,
+          "mean_contradiction_rate": null,
+          "method": "claim_vs_saved_retrieval_hits",
+          "rag_grounding": "scored"
+        },
+        "lemkin_evidence_support": {
+          "mean_claim_support_rate": null,
+          "not_rag_grounding": true
+        },
+        "persona_utility": null,
+        "utility_weights": {
+          "persona_style": 0.45,
+          "perspective_fidelity": 0.2,
+          "writing_quality": 0.25,
+          "task_adherence": 0.1
+        },
+        "diagnostics": {
+          "reference_similarity": {
+            "bertscore": null,
+            "bleu": null,
+            "rouge_l": null,
+            "role": "diagnostic_not_persona_fidelity"
+          },
+          "brief_overlap": {
+            "gold_rubric_overall": 0.227,
+            "role": "brief_task_agreement_not_persona_quality"
+          },
+          "latency_seconds": null
+        }
+      },
+      "stopping": {
+        "n": 12,
+        "stop_metadata_available": 12,
+        "early_eos_rate": 0.75,
+        "length_limit_rate": 0.0,
+        "interpretation": "Early EOS and absent final punctuation are not semantic incompleteness."
+      },
+      "decision": {
+        "n": 12,
+        "early_eot_rate": 0.75,
+        "early_eot_observed": 12,
+        "mid_sentence_stop_rate": 0.08333333333333333,
+        "use_for_selection": [],
+        "gate_not_selector": [
+          "early_eot_rate",
+          "mid_sentence_stop_rate"
+        ],
+        "logged_not_for_selection": [
+          "paired_bleu",
+          "paired_rouge_l",
+          "gold_rubric.overall"
+        ],
+        "selector": "host_finetune.unified_eval.rank_models"
+      },
+      "rows": [
+        {
+          "id": "q_brex_price",
+          "medium": "blog",
+          "words": 110,
+          "stop_reason": "eos",
+          "verified_claims": 0,
+          "rejected_reasons": {
+            "unknown_source_id": 11
+          },
+          "numeric_pass": false,
+          "unsupported_numbers": [
+            {
+              "value": "$2 Billion",
+              "canonical": "usd:2000000000",
+              "sentence": "So we had no idea what to expect on an acquisition of Brex.\u00a0 It was a great company that raised $2 Billion at a peak valuation of $12B+, and then scaled back significantly with layoffs and more after Covid hit."
+            },
+            {
+              "value": "$12B+",
+              "canonical": "usd:12000000000",
+              "sentence": "So we had no idea what to expect on an acquisition of Brex.\u00a0 It was a great company that raised $2 Billion at a peak valuation of $12B+, and then scaled back significantly with layoffs and more after Covid hit."
+            },
+            {
+              "value": "$5.3 billion",
+              "canonical": "usd:5300000000",
+              "sentence": "Capital One has just announced they\u2019ll be buying them for $5.3 billion"
+            },
+            {
+              "value": "2019",
+              "canonical": "year:2019",
+              "sentence": "What happened to those crazy valuations of 2019-2020?"
+            },
+            {
+              "value": "2020",
+              "canonical": "year:2020",
+              "sentence": "What happened to those crazy valuations of 2019-2020?"
+            }
+          ],
+          "source_copy_pass": true,
+          "source_copy_words": 3,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false
+          },
+          "answer_preview": "So we had no idea what to expect on an acquisition of Brex.\u00a0 It was a great company that raised $2 Billion at a peak valuation of $12B+, and then scaled back significantly with layoffs and more after Covid hit.\nBut it\u2019s been quietly scaling",
+          "gates": {
+            "completion": false,
+            "format": true,
+            "grounding": false,
+            "lexical_overlap": 0.0,
+            "copying": true,
+            "eligible": false,
+            "style_distance": 1.0445
+          }
+        },
+        {
+          "id": "q_brex_price",
+          "medium": "linkedin",
+          "words": 9,
+          "stop_reason": "eos",
+          "verified_claims": 0,
+          "rejected_reasons": {
+            "unknown_source_id": 11
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 2,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": true
+          },
+          "answer_preview": "What price did Capital One announce for acquiring Brex?",
+          "gates": {
+            "completion": true,
+            "format": false,
+            "grounding": false,
+            "lexical_overlap": 0.0,
+            "copying": true,
+            "eligible": false,
+            "style_distance": 2.1728
+          }
+        },
+        {
+          "id": "q_brex_price",
+          "medium": "x",
+          "words": 9,
+          "stop_reason": "eos",
+          "verified_claims": 0,
+          "rejected_reasons": {
+            "unknown_source_id": 11
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 2,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": true
+          },
+          "answer_preview": "What price did Capital One announce for acquiring Brex?",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": false,
+            "lexical_overlap": 0.0,
+            "copying": true,
+            "eligible": false,
+            "style_distance": 1.2672
+          }
+        },
+        {
+          "id": "q_brex_price",
+          "medium": "talk",
+          "words": 266,
+          "stop_reason": "eos",
+          "verified_claims": 0,
+          "rejected_reasons": {
+            "unknown_source_id": 11
+          },
+          "numeric_pass": false,
+          "unsupported_numbers": [
+            {
+              "value": "$5 billion",
+              "canonical": "usd:5000000000",
+              "sentence": "It has grown into a $5 billion business with over 400 employees"
+            },
+            {
+              "value": "$5.6 billion",
+              "canonical": "usd:5600000000",
+              "sentence": "And in fact, in July, Capital One announced it would acquire Brex for approximately $5.6 billion"
+            },
+            {
+              "value": "$2.8 billion",
+              "canonical": "usd:2800000000",
+              "sentence": "That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million"
+            },
+            {
+              "value": "$900 million",
+              "canonical": "usd:900000000",
+              "sentence": "That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million"
+            },
+            {
+              "value": "$5.6 billion",
+              "canonical": "usd:5600000000",
+              "sentence": "But overall, $5.6 billion"
+            },
+            {
+              "value": "40 million",
+              "canonical": "usd:40000000",
+              "sentence": "That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million"
+            },
+            {
+              "value": "12 million",
+              "canonical": "usd:12000000",
+              "sentence": "That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million"
+            },
+            {
+              "value": "12 million",
+              "canonical": "usd:12000000",
+              "sentence": "We'll have to wait and see how much of those 12 million are exercisable"
+            },
+            {
+              "value": "2017",
+              "canonical": "year:2017",
+              "sentence": "So Brex was founded back in 2017 by Pedro Franceschi and Henrique Dubugras, who sold their first company to PayPal when they were just teenagers"
+            },
+            {
+              "value": "400",
+              "canonical": "n:400",
+              "sentence": "It has grown into a $5 billion business with over 400 employees"
+            }
+          ],
+          "source_copy_pass": true,
+          "source_copy_words": 3,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false
+          },
+          "answer_preview": "So we're all watching as these big deals go through. And one I think that's interesting is the acquisition of Brex by Capital One. So Brex was founded back in 2017 by Pedro Franceschi and Henrique Dubugras, who sold their first company to P",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": false,
+            "lexical_overlap": 0.0,
+            "copying": true,
+            "eligible": false,
+            "style_distance": null
+          }
+        },
+        {
+          "id": "q_vp_sales_tension",
+          "medium": "blog",
+          "words": 58,
+          "stop_reason": "eos",
+          "verified_claims": 0,
+          "rejected_reasons": {
+            "unknown_source_id": 8
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 5,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false,
+            "mentions_bring_in": true,
+            "mentions_critic": true
+          },
+          "answer_preview": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive?\nNo. A great VP of Sales will get results quickly with their existing t",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": true,
+            "lexical_overlap": 0.3333,
+            "copying": true,
+            "eligible": true,
+            "style_distance": 1.3757
+          }
+        },
+        {
+          "id": "q_vp_sales_tension",
+          "medium": "linkedin",
+          "words": 29,
+          "stop_reason": "eos",
+          "verified_claims": 0,
+          "rejected_reasons": {
+            "unknown_source_id": 8
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 5,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": true,
+            "mentions_bring_in": true,
+            "mentions_critic": true
+          },
+          "answer_preview": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive?",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": true,
+            "lexical_overlap": 1.0,
+            "copying": true,
+            "eligible": true,
+            "style_distance": 1.3889
+          }
+        },
+        {
+          "id": "q_vp_sales_tension",
+          "medium": "x",
+          "words": 31,
+          "stop_reason": "eos",
+          "verified_claims": 0,
+          "rejected_reasons": {
+            "unknown_source_id": 8
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 5,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false,
+            "mentions_bring_in": true,
+            "mentions_critic": true
+          },
+          "answer_preview": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive? \nhttps://quora.com/Does-Jason-Lemkin-say-a-great-VP-of-Sales-should-im",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": true,
+            "lexical_overlap": 1.0,
+            "copying": true,
+            "eligible": true,
+            "style_distance": 1.1631
+          }
+        },
+        {
+          "id": "q_vp_sales_tension",
+          "medium": "talk",
+          "words": 361,
+          "stop_reason": "eos",
+          "verified_claims": 0,
+          "rejected_reasons": {
+            "unknown_source_id": 8
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 4,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false,
+            "mentions_bring_in": true,
+            "mentions_critic": false
+          },
+          "answer_preview": "So I've worked with so many VPs of Sales over the years. And there are a few things I know. One thing you learn as a founder at an earlier stage company is how much time you have to make your hire right. The CEO has to be right on her hires",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": false,
+            "lexical_overlap": 0.0,
+            "copying": true,
+            "eligible": false,
+            "style_distance": null
+          }
+        },
+        {
+          "id": "q_personalized_saas_speaker",
+          "medium": "blog",
+          "words": 113,
+          "stop_reason": "eos",
+          "verified_claims": 0,
+          "rejected_reasons": {
+            "unknown_source_id": 29
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 8,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": true,
+            "mentions_abernethy": false,
+            "repeats_topic": false
+          },
+          "answer_preview": "Who said that AI means everything in SaaS needs to be a personalized experience?\nCEO Marc Benioff on Salesforce\u2019s Q1 FY25 earnings call.\u00a0 He didn\u2019t mention Agentforce specifically at all \u2014 he just said everything has to become more personal",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": true,
+            "lexical_overlap": 0.2,
+            "copying": true,
+            "eligible": true,
+            "style_distance": 0.9941
+          }
+        },
+        {
+          "id": "q_personalized_saas_speaker",
+          "medium": "linkedin",
+          "words": 14,
+          "stop_reason": "eos",
+          "verified_claims": 0,
+          "rejected_reasons": {
+            "unknown_source_id": 29
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 8,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": true
+          },
+          "answer_preview": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+          "gates": {
+            "completion": true,
+            "format": false,
+            "grounding": true,
+            "lexical_overlap": 1.0,
+            "copying": true,
+            "eligible": false,
+            "style_distance": 2.257
+          }
+        },
+        {
+          "id": "q_personalized_saas_speaker",
+          "medium": "x",
+          "words": 14,
+          "stop_reason": "eos",
+          "verified_claims": 0,
+          "rejected_reasons": {
+            "unknown_source_id": 29
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 8,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": true
+          },
+          "answer_preview": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": true,
+            "lexical_overlap": 1.0,
+            "copying": true,
+            "eligible": true,
+            "style_distance": 1.2508
+          }
+        },
+        {
+          "id": "q_personalized_saas_speaker",
+          "medium": "talk",
+          "words": 343,
+          "stop_reason": "eos",
+          "verified_claims": 0,
+          "rejected_reasons": {
+            "unknown_source_id": 29
+          },
+          "numeric_pass": false,
+          "unsupported_numbers": [
+            {
+              "value": "$1 billion",
+              "canonical": "usd:1000000000",
+              "sentence": "It's been true since I started as an investor in '08 when I saw Salesforce, I think it was $1 billion in revenue"
+            }
+          ],
+          "source_copy_pass": true,
+          "source_copy_words": 8,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false
+          },
+          "answer_preview": "So we've talked for years on this podcast and at our events, you've heard me say one thing again and again. It's been true since I started as an investor in '08 when I saw Salesforce, I think it was $1 billion in revenue. But then it went i",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": false,
+            "lexical_overlap": 0.0417,
+            "copying": true,
+            "eligible": false,
+            "style_distance": null
+          }
+        }
+      ]
+    },
+    "mix_chunk_ids": {
+      "source": "experiments\\EXP-20261029-006-pilot160-eval\\raw\\generation_mix_chunk_ids.json",
+      "n": 12,
+      "load_report": {
+        "requested": "4bit",
+        "load_in_4bit": true,
+        "load_in_8bit": false,
+        "is_loaded_in_4bit": true,
+        "is_loaded_in_8bit": true,
+        "name_or_path": "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit"
+      },
+      "unified": {
+        "schema": "unified_eval.v1",
+        "model_id": "pending",
+        "source_experiment": "this_run",
+        "n": 12,
+        "n_eligible": 5,
+        "eligible_rate": 0.4167,
+        "gates": {
+          "completion_pass_rate": 0.9167,
+          "copying_pass_rate": 1.0,
+          "format_pass_rate": 0.8333,
+          "grounding_applicable_rows": 12,
+          "grounding_pass_rate": 0.5
+        },
+        "persona_style": {
+          "role": "selector",
+          "mediums_in_mean": [
+            "blog",
+            "linkedin"
+          ],
+          "mean_distance_eligible": 1.2529,
+          "limits": "Closer surface counts are not authorship accuracy. This is a style-distance diagnostic, not proof of authorship identity."
+        },
+        "perspective_fidelity": {
+          "role": "selector",
+          "mediums_in_mean": [
+            "blog"
+          ],
+          "mean_distance_eligible": 1.3492,
+          "mean_stance_consistency": null,
+          "method": "framing_rate_distance_vs_held_out",
+          "framing_role": "diagnostic_only",
+          "limits": "Stance consistency is the perspective score. Framing distance is diagnostic."
+        },
+        "writing_quality": {
+          "available": false,
+          "role": "diagnostic_only",
+          "calibrated": false,
+          "reason": "judge_not_run",
+          "mean_eligible": null
+        },
+        "task_adherence": {
+          "mean_eligible": 1.0,
+          "role": "quality_dimension"
+        },
+        "grounding": {
+          "applicable": true,
+          "mean_claim_support_rate": null,
+          "mean_contradiction_rate": null,
+          "method": "claim_vs_saved_retrieval_hits",
+          "rag_grounding": "scored"
+        },
+        "lemkin_evidence_support": {
+          "mean_claim_support_rate": null,
+          "not_rag_grounding": true
+        },
+        "persona_utility": null,
+        "utility_weights": {
+          "persona_style": 0.45,
+          "perspective_fidelity": 0.2,
+          "writing_quality": 0.25,
+          "task_adherence": 0.1
+        },
+        "diagnostics": {
+          "reference_similarity": {
+            "bertscore": null,
+            "bleu": null,
+            "rouge_l": null,
+            "role": "diagnostic_not_persona_fidelity"
+          },
+          "brief_overlap": {
+            "gold_rubric_overall": 0.227,
+            "role": "brief_task_agreement_not_persona_quality"
+          },
+          "latency_seconds": null
+        }
+      },
+      "stopping": {
+        "n": 12,
+        "stop_metadata_available": 12,
+        "early_eos_rate": 0.75,
+        "length_limit_rate": 0.0,
+        "interpretation": "Early EOS and absent final punctuation are not semantic incompleteness."
+      },
+      "decision": {
+        "n": 12,
+        "early_eot_rate": 0.75,
+        "early_eot_observed": 12,
+        "mid_sentence_stop_rate": 0.08333333333333333,
+        "use_for_selection": [],
+        "gate_not_selector": [
+          "early_eot_rate",
+          "mid_sentence_stop_rate"
+        ],
+        "logged_not_for_selection": [
+          "paired_bleu",
+          "paired_rouge_l",
+          "gold_rubric.overall"
+        ],
+        "selector": "host_finetune.unified_eval.rank_models"
+      },
+      "rows": [
+        {
+          "id": "q_brex_price",
+          "medium": "blog",
+          "words": 110,
+          "stop_reason": "eos",
+          "verified_claims": 0,
+          "rejected_reasons": {
+            "unknown_source_id": 11
+          },
+          "numeric_pass": false,
+          "unsupported_numbers": [
+            {
+              "value": "$2 Billion",
+              "canonical": "usd:2000000000",
+              "sentence": "So we had no idea what to expect on an acquisition of Brex.\u00a0 It was a great company that raised $2 Billion at a peak valuation of $12B+, and then scaled back significantly with layoffs and more after Covid hit."
+            },
+            {
+              "value": "$12B+",
+              "canonical": "usd:12000000000",
+              "sentence": "So we had no idea what to expect on an acquisition of Brex.\u00a0 It was a great company that raised $2 Billion at a peak valuation of $12B+, and then scaled back significantly with layoffs and more after Covid hit."
+            },
+            {
+              "value": "$5.3 billion",
+              "canonical": "usd:5300000000",
+              "sentence": "Capital One has just announced they\u2019ll be buying them for $5.3 billion"
+            },
+            {
+              "value": "2019",
+              "canonical": "year:2019",
+              "sentence": "What happened to those crazy valuations of 2019-2020?"
+            },
+            {
+              "value": "2020",
+              "canonical": "year:2020",
+              "sentence": "What happened to those crazy valuations of 2019-2020?"
+            }
+          ],
+          "source_copy_pass": true,
+          "source_copy_words": 3,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false
+          },
+          "answer_preview": "So we had no idea what to expect on an acquisition of Brex.\u00a0 It was a great company that raised $2 Billion at a peak valuation of $12B+, and then scaled back significantly with layoffs and more after Covid hit.\nBut it\u2019s been quietly scaling",
+          "gates": {
+            "completion": false,
+            "format": true,
+            "grounding": false,
+            "lexical_overlap": 0.0,
+            "copying": true,
+            "eligible": false,
+            "style_distance": 1.0445
+          }
+        },
+        {
+          "id": "q_brex_price",
+          "medium": "linkedin",
+          "words": 9,
+          "stop_reason": "eos",
+          "verified_claims": 0,
+          "rejected_reasons": {
+            "unknown_source_id": 11
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 2,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": true
+          },
+          "answer_preview": "What price did Capital One announce for acquiring Brex?",
+          "gates": {
+            "completion": true,
+            "format": false,
+            "grounding": false,
+            "lexical_overlap": 0.0,
+            "copying": true,
+            "eligible": false,
+            "style_distance": 2.1728
+          }
+        },
+        {
+          "id": "q_brex_price",
+          "medium": "x",
+          "words": 9,
+          "stop_reason": "eos",
+          "verified_claims": 0,
+          "rejected_reasons": {
+            "unknown_source_id": 11
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 2,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": true
+          },
+          "answer_preview": "What price did Capital One announce for acquiring Brex?",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": false,
+            "lexical_overlap": 0.0,
+            "copying": true,
+            "eligible": false,
+            "style_distance": 1.2672
+          }
+        },
+        {
+          "id": "q_brex_price",
+          "medium": "talk",
+          "words": 266,
+          "stop_reason": "eos",
+          "verified_claims": 0,
+          "rejected_reasons": {
+            "unknown_source_id": 11
+          },
+          "numeric_pass": false,
+          "unsupported_numbers": [
+            {
+              "value": "$5 billion",
+              "canonical": "usd:5000000000",
+              "sentence": "It has grown into a $5 billion business with over 400 employees"
+            },
+            {
+              "value": "$5.6 billion",
+              "canonical": "usd:5600000000",
+              "sentence": "And in fact, in July, Capital One announced it would acquire Brex for approximately $5.6 billion"
+            },
+            {
+              "value": "$2.8 billion",
+              "canonical": "usd:2800000000",
+              "sentence": "That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million"
+            },
+            {
+              "value": "$900 million",
+              "canonical": "usd:900000000",
+              "sentence": "That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million"
+            },
+            {
+              "value": "$5.6 billion",
+              "canonical": "usd:5600000000",
+              "sentence": "But overall, $5.6 billion"
+            },
+            {
+              "value": "40 million",
+              "canonical": "usd:40000000",
+              "sentence": "That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million"
+            },
+            {
+              "value": "12 million",
+              "canonical": "usd:12000000",
+              "sentence": "That includes roughly 40 million shares of stock valued around $2.8 billion and nearly 12 million options worth another $900 million"
+            },
+            {
+              "value": "12 million",
+              "canonical": "usd:12000000",
+              "sentence": "We'll have to wait and see how much of those 12 million are exercisable"
+            },
+            {
+              "value": "2017",
+              "canonical": "year:2017",
+              "sentence": "So Brex was founded back in 2017 by Pedro Franceschi and Henrique Dubugras, who sold their first company to PayPal when they were just teenagers"
+            },
+            {
+              "value": "400",
+              "canonical": "n:400",
+              "sentence": "It has grown into a $5 billion business with over 400 employees"
+            }
+          ],
+          "source_copy_pass": true,
+          "source_copy_words": 3,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false
+          },
+          "answer_preview": "So we're all watching as these big deals go through. And one I think that's interesting is the acquisition of Brex by Capital One. So Brex was founded back in 2017 by Pedro Franceschi and Henrique Dubugras, who sold their first company to P",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": false,
+            "lexical_overlap": 0.0,
+            "copying": true,
+            "eligible": false,
+            "style_distance": null
+          }
+        },
+        {
+          "id": "q_vp_sales_tension",
+          "medium": "blog",
+          "words": 58,
+          "stop_reason": "eos",
+          "verified_claims": 0,
+          "rejected_reasons": {
+            "unknown_source_id": 8
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 5,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false,
+            "mentions_bring_in": true,
+            "mentions_critic": true
+          },
+          "answer_preview": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive?\nNo. A great VP of Sales will get results quickly with their existing t",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": true,
+            "lexical_overlap": 0.3333,
+            "copying": true,
+            "eligible": true,
+            "style_distance": 1.3757
+          }
+        },
+        {
+          "id": "q_vp_sales_tension",
+          "medium": "linkedin",
+          "words": 29,
+          "stop_reason": "eos",
+          "verified_claims": 0,
+          "rejected_reasons": {
+            "unknown_source_id": 8
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 5,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": true,
+            "mentions_bring_in": true,
+            "mentions_critic": true
+          },
+          "answer_preview": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive?",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": true,
+            "lexical_overlap": 1.0,
+            "copying": true,
+            "eligible": true,
+            "style_distance": 1.3889
+          }
+        },
+        {
+          "id": "q_vp_sales_tension",
+          "medium": "x",
+          "words": 31,
+          "stop_reason": "eos",
+          "verified_claims": 0,
+          "rejected_reasons": {
+            "unknown_source_id": 8
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 5,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false,
+            "mentions_bring_in": true,
+            "mentions_critic": true
+          },
+          "answer_preview": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive? \nhttps://quora.com/Does-Jason-Lemkin-say-a-great-VP-of-Sales-should-im",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": true,
+            "lexical_overlap": 1.0,
+            "copying": true,
+            "eligible": true,
+            "style_distance": 1.1631
+          }
+        },
+        {
+          "id": "q_vp_sales_tension",
+          "medium": "talk",
+          "words": 361,
+          "stop_reason": "eos",
+          "verified_claims": 0,
+          "rejected_reasons": {
+            "unknown_source_id": 8
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 4,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false,
+            "mentions_bring_in": true,
+            "mentions_critic": false
+          },
+          "answer_preview": "So I've worked with so many VPs of Sales over the years. And there are a few things I know. One thing you learn as a founder at an earlier stage company is how much time you have to make your hire right. The CEO has to be right on her hires",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": false,
+            "lexical_overlap": 0.0,
+            "copying": true,
+            "eligible": false,
+            "style_distance": null
+          }
+        },
+        {
+          "id": "q_personalized_saas_speaker",
+          "medium": "blog",
+          "words": 113,
+          "stop_reason": "eos",
+          "verified_claims": 0,
+          "rejected_reasons": {
+            "unknown_source_id": 1
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 8,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": true,
+            "mentions_abernethy": false,
+            "repeats_topic": false
+          },
+          "answer_preview": "Who said that AI means everything in SaaS needs to be a personalized experience?\nCEO Marc Benioff on Salesforce\u2019s Q1 FY25 earnings call.\u00a0 He didn\u2019t mention Agentforce specifically at all \u2014 he just said everything has to become more personal",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": true,
+            "lexical_overlap": 0.2,
+            "copying": true,
+            "eligible": true,
+            "style_distance": 0.9941
+          }
+        },
+        {
+          "id": "q_personalized_saas_speaker",
+          "medium": "linkedin",
+          "words": 14,
+          "stop_reason": "eos",
+          "verified_claims": 0,
+          "rejected_reasons": {
+            "unknown_source_id": 1
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 8,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": true
+          },
+          "answer_preview": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+          "gates": {
+            "completion": true,
+            "format": false,
+            "grounding": true,
+            "lexical_overlap": 1.0,
+            "copying": true,
+            "eligible": false,
+            "style_distance": 2.257
+          }
+        },
+        {
+          "id": "q_personalized_saas_speaker",
+          "medium": "x",
+          "words": 14,
+          "stop_reason": "eos",
+          "verified_claims": 0,
+          "rejected_reasons": {
+            "unknown_source_id": 1
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 8,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": true
+          },
+          "answer_preview": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": true,
+            "lexical_overlap": 1.0,
+            "copying": true,
+            "eligible": true,
+            "style_distance": 1.2508
+          }
+        },
+        {
+          "id": "q_personalized_saas_speaker",
+          "medium": "talk",
+          "words": 343,
+          "stop_reason": "eos",
+          "verified_claims": 0,
+          "rejected_reasons": {
+            "unknown_source_id": 1
+          },
+          "numeric_pass": false,
+          "unsupported_numbers": [
+            {
+              "value": "$1 billion",
+              "canonical": "usd:1000000000",
+              "sentence": "It's been true since I started as an investor in '08 when I saw Salesforce, I think it was $1 billion in revenue"
+            }
+          ],
+          "source_copy_pass": true,
+          "source_copy_words": 8,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false
+          },
+          "answer_preview": "So we've talked for years on this podcast and at our events, you've heard me say one thing again and again. It's been true since I started as an investor in '08 when I saw Salesforce, I think it was $1 billion in revenue. But then it went i",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": false,
+            "lexical_overlap": 0.0417,
+            "copying": true,
+            "eligible": false,
+            "style_distance": null
+          }
+        }
+      ]
+    },
+    "naive_parent_ids": {
+      "source": "experiments\\EXP-20261029-006-pilot160-eval\\raw\\generation_naive_parent_ids.json",
+      "n": 12,
+      "load_report": {
+        "requested": "4bit",
+        "load_in_4bit": true,
+        "load_in_8bit": false,
+        "is_loaded_in_4bit": true,
+        "is_loaded_in_8bit": true,
+        "name_or_path": "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit"
+      },
+      "unified": {
+        "schema": "unified_eval.v1",
+        "model_id": "pending",
+        "source_experiment": "this_run",
+        "n": 12,
+        "n_eligible": 3,
+        "eligible_rate": 0.25,
+        "gates": {
+          "completion_pass_rate": 0.9167,
+          "copying_pass_rate": 1.0,
+          "format_pass_rate": 0.8333,
+          "grounding_applicable_rows": 12,
+          "grounding_pass_rate": 0.4167
+        },
+        "persona_style": {
+          "role": "selector",
+          "mediums_in_mean": [
+            "blog",
+            "linkedin"
+          ],
+          "mean_distance_eligible": 1.7132,
+          "limits": "Closer surface counts are not authorship accuracy. This is a style-distance diagnostic, not proof of authorship identity."
+        },
+        "perspective_fidelity": {
+          "role": "selector",
+          "mediums_in_mean": [
+            "blog"
+          ],
+          "mean_distance_eligible": 1.1974,
+          "mean_stance_consistency": null,
+          "method": "framing_rate_distance_vs_held_out",
+          "framing_role": "diagnostic_only",
+          "limits": "Stance consistency is the perspective score. Framing distance is diagnostic."
+        },
+        "writing_quality": {
+          "available": false,
+          "role": "diagnostic_only",
+          "calibrated": false,
+          "reason": "judge_not_run",
+          "mean_eligible": null
+        },
+        "task_adherence": {
+          "mean_eligible": 1.0,
+          "role": "quality_dimension"
+        },
+        "grounding": {
+          "applicable": true,
+          "mean_claim_support_rate": null,
+          "mean_contradiction_rate": null,
+          "method": "claim_vs_saved_retrieval_hits",
+          "rag_grounding": "scored"
+        },
+        "lemkin_evidence_support": {
+          "mean_claim_support_rate": null,
+          "not_rag_grounding": true
+        },
+        "persona_utility": null,
+        "utility_weights": {
+          "persona_style": 0.45,
+          "perspective_fidelity": 0.2,
+          "writing_quality": 0.25,
+          "task_adherence": 0.1
+        },
+        "diagnostics": {
+          "reference_similarity": {
+            "bertscore": null,
+            "bleu": null,
+            "rouge_l": null,
+            "role": "diagnostic_not_persona_fidelity"
+          },
+          "brief_overlap": {
+            "gold_rubric_overall": 0.2062,
+            "role": "brief_task_agreement_not_persona_quality"
+          },
+          "latency_seconds": null
+        }
+      },
+      "stopping": {
+        "n": 12,
+        "stop_metadata_available": 12,
+        "early_eos_rate": 0.6666666666666666,
+        "length_limit_rate": 0.0,
+        "interpretation": "Early EOS and absent final punctuation are not semantic incompleteness."
+      },
+      "decision": {
+        "n": 12,
+        "early_eot_rate": 0.6666666666666666,
+        "early_eot_observed": 12,
+        "mid_sentence_stop_rate": 0.08333333333333333,
+        "use_for_selection": [],
+        "gate_not_selector": [
+          "early_eot_rate",
+          "mid_sentence_stop_rate"
+        ],
+        "logged_not_for_selection": [
+          "paired_bleu",
+          "paired_rouge_l",
+          "gold_rubric.overall"
+        ],
+        "selector": "host_finetune.unified_eval.rank_models"
+      },
+      "rows": [
+        {
+          "id": "q_brex_price",
+          "medium": "blog",
+          "words": 307,
+          "stop_reason": "eos",
+          "verified_claims": 11,
+          "rejected_reasons": {
+            "support_not_in_source": 2,
+            "numeric_not_in_span": 1
+          },
+          "numeric_pass": false,
+          "unsupported_numbers": [
+            {
+              "value": "$65 Billion",
+              "canonical": "usd:65000000000",
+              "sentence": "Canva raised another huge round at a stunning $65 Billion (!)"
+            },
+            {
+              "value": "$1B+",
+              "canonical": "usd:1000000000",
+              "sentence": "ServiceTitan bought $1B+ ARR competitor Workwave for $1B cash + stock, paying almost twice as much as the last round ($600m) \u2014 but likely getting very little real business back.\u00a0 ServiceTitan already has a strong presence in plumbing, HVAC, etc"
+            },
+            {
+              "value": "$1B",
+              "canonical": "usd:1000000000",
+              "sentence": "ServiceTitan bought $1B+ ARR competitor Workwave for $1B cash + stock, paying almost twice as much as the last round ($600m) \u2014 but likely getting very little real business back.\u00a0 ServiceTitan already has a strong presence in plumbing, HVAC, etc"
+            },
+            {
+              "value": "$600m",
+              "canonical": "usd:600000000",
+              "sentence": "ServiceTitan bought $1B+ ARR competitor Workwave for $1B cash + stock, paying almost twice as much as the last round ($600m) \u2014 but likely getting very little real business back.\u00a0 ServiceTitan already has a strong presence in plumbing, HVAC, etc"
+            },
+            {
+              "value": "$13B",
+              "canonical": "usd:13000000000",
+              "sentence": "Thoma Bravo bought SaaS leader Qualtrics for ~$13B, then spun it off again a year later"
+            },
+            {
+              "value": "$3.35 billion",
+              "canonical": "usd:3350000000",
+              "sentence": "Veeva bought Vanta, a security startup, for a reported $3.35 billion"
+            },
+            {
+              "value": "$800M",
+              "canonical": "usd:800000000",
+              "sentence": "Samsara paid $800M to acquire Fleetmatics\u2019 UK operations, and then shut them down"
+            },
+            {
+              "value": "$27 billion",
+              "canonical": "usd:27000000000",
+              "sentence": "Salesforce spent $27 billion on Slack"
+            },
+            {
+              "value": "$2.85 billion",
+              "canonical": "usd:2850000000",
+              "sentence": "Monday.com sold Salesloft for $2.85 billion"
+            },
+            {
+              "value": "$45 million",
+              "canonical": "usd:45000000",
+              "sentence": "for $45 million."
+            },
+            {
+              "value": "57%",
+              "canonical": "pct:57",
+              "sentence": "The latest example is Capital One buying Brex for $5.15 billion \u2014 which represents a roughly 57% premium to their last private market valuation of $12.3 Billion in October 2022 (see [E1])"
+            }
+          ],
+          "source_copy_pass": true,
+          "source_copy_words": 5,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": true,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false
+          },
+          "answer_preview": "So we had a bunch of interesting news in venture this week:\nCanva raised another huge round at a stunning $65 Billion (!)\nAtlassian co-founders were forced out by the board,\nAnd Stripe announced no more late-stage VC rounds\n.\nBut there\u2019s al",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": false,
+            "lexical_overlap": 0.0476,
+            "copying": true,
+            "eligible": false,
+            "style_distance": 0.7223
+          }
+        },
+        {
+          "id": "q_brex_price",
+          "medium": "linkedin",
+          "words": 9,
+          "stop_reason": "eos",
+          "verified_claims": 11,
+          "rejected_reasons": {
+            "support_not_in_source": 2,
+            "numeric_not_in_span": 1
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 2,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": true
+          },
+          "answer_preview": "What price did Capital One announce for acquiring Brex?",
+          "gates": {
+            "completion": true,
+            "format": false,
+            "grounding": false,
+            "lexical_overlap": 0.0,
+            "copying": true,
+            "eligible": false,
+            "style_distance": 2.1728
+          }
+        },
+        {
+          "id": "q_brex_price",
+          "medium": "x",
+          "words": 13,
+          "stop_reason": "eos",
+          "verified_claims": 11,
+          "rejected_reasons": {
+            "support_not_in_source": 2,
+            "numeric_not_in_span": 1
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 3,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": true,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false
+          },
+          "answer_preview": "What price did Capital One announce for acquiring Brex?\n\n$5.15 Billion \nhttps://en.wikipedia.org/wiki/Brex_(company)\n\u2026",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": false,
+            "lexical_overlap": 0.0,
+            "copying": true,
+            "eligible": false,
+            "style_distance": 0.8363
+          }
+        },
+        {
+          "id": "q_brex_price",
+          "medium": "talk",
+          "words": 275,
+          "stop_reason": "eos",
+          "verified_claims": 11,
+          "rejected_reasons": {
+            "support_not_in_source": 2,
+            "numeric_not_in_span": 1
+          },
+          "numeric_pass": false,
+          "unsupported_numbers": [
+            {
+              "value": "$12 billion",
+              "canonical": "usd:12000000000",
+              "sentence": "Now, many folks will say well, why would anyone buy a startup at $12 billion unless they're going to IPO"
+            },
+            {
+              "value": "$30 billion",
+              "canonical": "usd:30000000000",
+              "sentence": "If you can get to a $30 billion valuation after five or six years, then you could return 300% plus on your money if you invest at 12"
+            },
+            {
+              "value": "300%",
+              "canonical": "pct:300",
+              "sentence": "If you can get to a $30 billion valuation after five or six years, then you could return 300% plus on your money if you invest at 12"
+            }
+          ],
+          "source_copy_pass": true,
+          "source_copy_words": 5,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false
+          },
+          "answer_preview": "So we've talked a lot over the years about how valuations in venture go up, down, everywhere and all around -- and I think there has never been as much hubris in venture capital as today. And one way to see this is looking back at who bough",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": false,
+            "lexical_overlap": 0.0,
+            "copying": true,
+            "eligible": false,
+            "style_distance": null
+          }
+        },
+        {
+          "id": "q_vp_sales_tension",
+          "medium": "blog",
+          "words": 295,
+          "stop_reason": "eos",
+          "verified_claims": 5,
+          "rejected_reasons": {
+            "support_not_in_source": 1
+          },
+          "numeric_pass": false,
+          "unsupported_numbers": [
+            {
+              "value": "$10m",
+              "canonical": "usd:10000000",
+              "sentence": "So we\u2019ve done so many SaaStr Annuals now (11!), and talked with so many VPs of Sales.\u00a0 And I\u2019m fairly confident this is the first time someone asked me directly if hiring enough VPs of Sales was my top advice for how to scale past $10m-$20m ARR.\u00a0 It wasn\u2019t.\u00a0 My #1 advice at that stage for scaling sales is:"
+            },
+            {
+              "value": "$20m",
+              "canonical": "usd:20000000",
+              "sentence": "So we\u2019ve done so many SaaStr Annuals now (11!), and talked with so many VPs of Sales.\u00a0 And I\u2019m fairly confident this is the first time someone asked me directly if hiring enough VPs of Sales was my top advice for how to scale past $10m-$20m ARR.\u00a0 It wasn\u2019t.\u00a0 My #1 advice at that stage for scaling sales is:"
+            },
+            {
+              "value": "$15m+",
+              "canonical": "usd:15000000",
+              "sentence": "And usually, no matter what they tell you, they haven\u2019t actually been a true individual contributor since $15m+ ARR.\u00a0 A related post"
+            }
+          ],
+          "source_copy_pass": true,
+          "source_copy_words": 10,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false,
+            "mentions_bring_in": true,
+            "mentions_critic": false
+          },
+          "answer_preview": "So we\u2019ve done so many SaaStr Annuals now (11!), and talked with so many VPs of Sales.\u00a0 And I\u2019m fairly confident this is the first time someone asked me directly if hiring enough VPs of Sales was my top advice for how to scale past $10m-$20m",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": false,
+            "lexical_overlap": 0.1429,
+            "copying": true,
+            "eligible": false,
+            "style_distance": 0.6279
+          }
+        },
+        {
+          "id": "q_vp_sales_tension",
+          "medium": "linkedin",
+          "words": 29,
+          "stop_reason": "eos",
+          "verified_claims": 5,
+          "rejected_reasons": {
+            "support_not_in_source": 1
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 5,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": true,
+            "mentions_bring_in": true,
+            "mentions_critic": true
+          },
+          "answer_preview": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive?",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": true,
+            "lexical_overlap": 1.0,
+            "copying": true,
+            "eligible": true,
+            "style_distance": 1.3889
+          }
+        },
+        {
+          "id": "q_vp_sales_tension",
+          "medium": "x",
+          "words": 60,
+          "stop_reason": "eos",
+          "verified_claims": 5,
+          "rejected_reasons": {
+            "support_not_in_source": 1
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 5,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false,
+            "mentions_bring_in": true,
+            "mentions_critic": true
+          },
+          "answer_preview": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive? \n[E1]\n\nDoes Jason Lemkin say a great VP of Sales should immediately br",
+          "gates": {
+            "completion": false,
+            "format": true,
+            "grounding": true,
+            "lexical_overlap": 1.0,
+            "copying": true,
+            "eligible": false,
+            "style_distance": 1.02
+          }
+        },
+        {
+          "id": "q_vp_sales_tension",
+          "medium": "talk",
+          "words": 338,
+          "stop_reason": "eos",
+          "verified_claims": 5,
+          "rejected_reasons": {
+            "support_not_in_source": 1
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 4,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false,
+            "mentions_bring_in": true,
+            "mentions_critic": true
+          },
+          "answer_preview": "So I've talked on SaaStr for years now about hiring a great VP of Sales. How to hire one. What mistakes you make when you don't hire a good one. But there are two issues that sort of pop up all the time. And so let me just address them toda",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": false,
+            "lexical_overlap": 0.0,
+            "copying": true,
+            "eligible": false,
+            "style_distance": null
+          }
+        },
+        {
+          "id": "q_personalized_saas_speaker",
+          "medium": "blog",
+          "words": 42,
+          "stop_reason": "eos",
+          "verified_claims": 10,
+          "rejected_reasons": {
+            "interrogative_assertion": 1,
+            "support_not_in_source": 1
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 8,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false
+          },
+          "answer_preview": "Who said that AI means everything in SaaS needs to be a personalized experience?\nI did.\u00a0 This was one of my top takeaways at our recent SaaStr Annual + AI Summit with Sam Blond (ex-CRO Stripe) and Rory O\u2019Driscoll (Scale Venture Partners).",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": true,
+            "lexical_overlap": 0.5,
+            "copying": true,
+            "eligible": true,
+            "style_distance": 2.0376
+          }
+        },
+        {
+          "id": "q_personalized_saas_speaker",
+          "medium": "linkedin",
+          "words": 14,
+          "stop_reason": "eos",
+          "verified_claims": 10,
+          "rejected_reasons": {
+            "interrogative_assertion": 1,
+            "support_not_in_source": 1
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 8,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": true
+          },
+          "answer_preview": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+          "gates": {
+            "completion": true,
+            "format": false,
+            "grounding": true,
+            "lexical_overlap": 1.0,
+            "copying": true,
+            "eligible": false,
+            "style_distance": 2.257
+          }
+        },
+        {
+          "id": "q_personalized_saas_speaker",
+          "medium": "x",
+          "words": 14,
+          "stop_reason": "eos",
+          "verified_claims": 10,
+          "rejected_reasons": {
+            "interrogative_assertion": 1,
+            "support_not_in_source": 1
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 8,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": true
+          },
+          "answer_preview": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": true,
+            "lexical_overlap": 1.0,
+            "copying": true,
+            "eligible": true,
+            "style_distance": 1.2508
+          }
+        },
+        {
+          "id": "q_personalized_saas_speaker",
+          "medium": "talk",
+          "words": 372,
+          "stop_reason": "eos",
+          "verified_claims": 10,
+          "rejected_reasons": {
+            "interrogative_assertion": 1,
+            "support_not_in_source": 1
+          },
+          "numeric_pass": false,
+          "unsupported_numbers": [
+            {
+              "value": "$100 million",
+              "canonical": "usd:100000000",
+              "sentence": "They were founded by a great founder who sold his last company for $100 million cash."
+            },
+            {
+              "value": "$25 million",
+              "canonical": "usd:25000000",
+              "sentence": "This guy built it, launched it, got to $25 million ARR, hired a COO, and then stepped aside because he didn't know how to scale past that point."
+            },
+            {
+              "value": "200",
+              "canonical": "n:200",
+              "sentence": "There were 200 competitors in the space."
+            },
+            {
+              "value": "200",
+              "canonical": "n:200",
+              "sentence": "Not 10 or 15, but 200."
+            }
+          ],
+          "source_copy_pass": true,
+          "source_copy_words": 4,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false
+          },
+          "answer_preview": "So as we start off here at SaaStr Annual this week,\nwe're gonna have over 20 sessions on AI\nand many of them will say that's one thing you need to do with your app.\nThat's one big promise around AI.\nThat you don't need to sell to every sing",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": false,
+            "lexical_overlap": 0.0,
+            "copying": true,
+            "eligible": false,
+            "style_distance": null
+          }
+        }
+      ]
+    },
+    "mix_parent_ids": {
+      "source": "experiments\\EXP-20261029-006-pilot160-eval\\raw\\generation_mix_parent_ids.json",
+      "n": 12,
+      "load_report": {
+        "requested": "4bit",
+        "load_in_4bit": true,
+        "load_in_8bit": false,
+        "is_loaded_in_4bit": true,
+        "is_loaded_in_8bit": true,
+        "name_or_path": "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit"
+      },
+      "unified": {
+        "schema": "unified_eval.v1",
+        "model_id": "pending",
+        "source_experiment": "this_run",
+        "n": 12,
+        "n_eligible": 2,
+        "eligible_rate": 0.1667,
+        "gates": {
+          "completion_pass_rate": 0.9167,
+          "copying_pass_rate": 1.0,
+          "format_pass_rate": 0.8333,
+          "grounding_applicable_rows": 12,
+          "grounding_pass_rate": 0.3333
+        },
+        "persona_style": {
+          "role": "selector",
+          "mediums_in_mean": [
+            "linkedin"
+          ],
+          "mean_distance_eligible": 1.3889,
+          "limits": "Closer surface counts are not authorship accuracy. This is a style-distance diagnostic, not proof of authorship identity."
+        },
+        "perspective_fidelity": {
+          "role": "diagnostic_only",
+          "mediums_in_mean": [],
+          "mean_distance_eligible": 1.1409,
+          "mean_stance_consistency": null,
+          "method": "framing_rate_distance_vs_held_out",
+          "framing_role": "diagnostic_only",
+          "limits": "Stance consistency is the perspective score. Framing distance is diagnostic."
+        },
+        "writing_quality": {
+          "available": false,
+          "role": "diagnostic_only",
+          "calibrated": false,
+          "reason": "judge_not_run",
+          "mean_eligible": null
+        },
+        "task_adherence": {
+          "mean_eligible": 1.0,
+          "role": "quality_dimension"
+        },
+        "grounding": {
+          "applicable": true,
+          "mean_claim_support_rate": null,
+          "mean_contradiction_rate": null,
+          "method": "claim_vs_saved_retrieval_hits",
+          "rag_grounding": "scored"
+        },
+        "lemkin_evidence_support": {
+          "mean_claim_support_rate": null,
+          "not_rag_grounding": true
+        },
+        "persona_utility": null,
+        "utility_weights": {
+          "persona_style": 0.45,
+          "perspective_fidelity": 0.2,
+          "writing_quality": 0.25,
+          "task_adherence": 0.1
+        },
+        "diagnostics": {
+          "reference_similarity": {
+            "bertscore": null,
+            "bleu": null,
+            "rouge_l": null,
+            "role": "diagnostic_not_persona_fidelity"
+          },
+          "brief_overlap": {
+            "gold_rubric_overall": 0.211,
+            "role": "brief_task_agreement_not_persona_quality"
+          },
+          "latency_seconds": null
+        }
+      },
+      "stopping": {
+        "n": 12,
+        "stop_metadata_available": 12,
+        "early_eos_rate": 0.75,
+        "length_limit_rate": 0.0,
+        "interpretation": "Early EOS and absent final punctuation are not semantic incompleteness."
+      },
+      "decision": {
+        "n": 12,
+        "early_eot_rate": 0.75,
+        "early_eot_observed": 12,
+        "mid_sentence_stop_rate": 0.08333333333333333,
+        "use_for_selection": [],
+        "gate_not_selector": [
+          "early_eot_rate",
+          "mid_sentence_stop_rate"
+        ],
+        "logged_not_for_selection": [
+          "paired_bleu",
+          "paired_rouge_l",
+          "gold_rubric.overall"
+        ],
+        "selector": "host_finetune.unified_eval.rank_models"
+      },
+      "rows": [
+        {
+          "id": "q_brex_price",
+          "medium": "blog",
+          "words": 307,
+          "stop_reason": "eos",
+          "verified_claims": 11,
+          "rejected_reasons": {
+            "support_not_in_source": 2,
+            "numeric_not_in_span": 1
+          },
+          "numeric_pass": false,
+          "unsupported_numbers": [
+            {
+              "value": "$65 Billion",
+              "canonical": "usd:65000000000",
+              "sentence": "Canva raised another huge round at a stunning $65 Billion (!)"
+            },
+            {
+              "value": "$1B+",
+              "canonical": "usd:1000000000",
+              "sentence": "ServiceTitan bought $1B+ ARR competitor Workwave for $1B cash + stock, paying almost twice as much as the last round ($600m) \u2014 but likely getting very little real business back.\u00a0 ServiceTitan already has a strong presence in plumbing, HVAC, etc"
+            },
+            {
+              "value": "$1B",
+              "canonical": "usd:1000000000",
+              "sentence": "ServiceTitan bought $1B+ ARR competitor Workwave for $1B cash + stock, paying almost twice as much as the last round ($600m) \u2014 but likely getting very little real business back.\u00a0 ServiceTitan already has a strong presence in plumbing, HVAC, etc"
+            },
+            {
+              "value": "$600m",
+              "canonical": "usd:600000000",
+              "sentence": "ServiceTitan bought $1B+ ARR competitor Workwave for $1B cash + stock, paying almost twice as much as the last round ($600m) \u2014 but likely getting very little real business back.\u00a0 ServiceTitan already has a strong presence in plumbing, HVAC, etc"
+            },
+            {
+              "value": "$13B",
+              "canonical": "usd:13000000000",
+              "sentence": "Thoma Bravo bought SaaS leader Qualtrics for ~$13B, then spun it off again a year later"
+            },
+            {
+              "value": "$3.35 billion",
+              "canonical": "usd:3350000000",
+              "sentence": "Veeva bought Vanta, a security startup, for a reported $3.35 billion"
+            },
+            {
+              "value": "$800M",
+              "canonical": "usd:800000000",
+              "sentence": "Samsara paid $800M to acquire Fleetmatics\u2019 UK operations, and then shut them down"
+            },
+            {
+              "value": "$27 billion",
+              "canonical": "usd:27000000000",
+              "sentence": "Salesforce spent $27 billion on Slack"
+            },
+            {
+              "value": "$2.85 billion",
+              "canonical": "usd:2850000000",
+              "sentence": "Monday.com sold Salesloft for $2.85 billion"
+            },
+            {
+              "value": "$45 million",
+              "canonical": "usd:45000000",
+              "sentence": "for $45 million."
+            },
+            {
+              "value": "57%",
+              "canonical": "pct:57",
+              "sentence": "The latest example is Capital One buying Brex for $5.15 billion \u2014 which represents a roughly 57% premium to their last private market valuation of $12.3 Billion in October 2022 (see [E1])"
+            }
+          ],
+          "source_copy_pass": true,
+          "source_copy_words": 5,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": true,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false
+          },
+          "answer_preview": "So we had a bunch of interesting news in venture this week:\nCanva raised another huge round at a stunning $65 Billion (!)\nAtlassian co-founders were forced out by the board,\nAnd Stripe announced no more late-stage VC rounds\n.\nBut there\u2019s al",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": false,
+            "lexical_overlap": 0.0476,
+            "copying": true,
+            "eligible": false,
+            "style_distance": 0.7223
+          }
+        },
+        {
+          "id": "q_brex_price",
+          "medium": "linkedin",
+          "words": 9,
+          "stop_reason": "eos",
+          "verified_claims": 11,
+          "rejected_reasons": {
+            "support_not_in_source": 2,
+            "numeric_not_in_span": 1
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 2,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": true
+          },
+          "answer_preview": "What price did Capital One announce for acquiring Brex?",
+          "gates": {
+            "completion": true,
+            "format": false,
+            "grounding": false,
+            "lexical_overlap": 0.0,
+            "copying": true,
+            "eligible": false,
+            "style_distance": 2.1728
+          }
+        },
+        {
+          "id": "q_brex_price",
+          "medium": "x",
+          "words": 13,
+          "stop_reason": "eos",
+          "verified_claims": 11,
+          "rejected_reasons": {
+            "support_not_in_source": 2,
+            "numeric_not_in_span": 1
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 3,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": true,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false
+          },
+          "answer_preview": "What price did Capital One announce for acquiring Brex?\n\n$5.15 Billion \nhttps://en.wikipedia.org/wiki/Brex_(company)\n\u2026",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": false,
+            "lexical_overlap": 0.0,
+            "copying": true,
+            "eligible": false,
+            "style_distance": 0.8363
+          }
+        },
+        {
+          "id": "q_brex_price",
+          "medium": "talk",
+          "words": 275,
+          "stop_reason": "eos",
+          "verified_claims": 11,
+          "rejected_reasons": {
+            "support_not_in_source": 2,
+            "numeric_not_in_span": 1
+          },
+          "numeric_pass": false,
+          "unsupported_numbers": [
+            {
+              "value": "$12 billion",
+              "canonical": "usd:12000000000",
+              "sentence": "Now, many folks will say well, why would anyone buy a startup at $12 billion unless they're going to IPO"
+            },
+            {
+              "value": "$30 billion",
+              "canonical": "usd:30000000000",
+              "sentence": "If you can get to a $30 billion valuation after five or six years, then you could return 300% plus on your money if you invest at 12"
+            },
+            {
+              "value": "300%",
+              "canonical": "pct:300",
+              "sentence": "If you can get to a $30 billion valuation after five or six years, then you could return 300% plus on your money if you invest at 12"
+            }
+          ],
+          "source_copy_pass": true,
+          "source_copy_words": 5,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false
+          },
+          "answer_preview": "So we've talked a lot over the years about how valuations in venture go up, down, everywhere and all around -- and I think there has never been as much hubris in venture capital as today. And one way to see this is looking back at who bough",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": false,
+            "lexical_overlap": 0.0,
+            "copying": true,
+            "eligible": false,
+            "style_distance": null
+          }
+        },
+        {
+          "id": "q_vp_sales_tension",
+          "medium": "blog",
+          "words": 295,
+          "stop_reason": "eos",
+          "verified_claims": 5,
+          "rejected_reasons": {
+            "support_not_in_source": 1
+          },
+          "numeric_pass": false,
+          "unsupported_numbers": [
+            {
+              "value": "$10m",
+              "canonical": "usd:10000000",
+              "sentence": "So we\u2019ve done so many SaaStr Annuals now (11!), and talked with so many VPs of Sales.\u00a0 And I\u2019m fairly confident this is the first time someone asked me directly if hiring enough VPs of Sales was my top advice for how to scale past $10m-$20m ARR.\u00a0 It wasn\u2019t.\u00a0 My #1 advice at that stage for scaling sales is:"
+            },
+            {
+              "value": "$20m",
+              "canonical": "usd:20000000",
+              "sentence": "So we\u2019ve done so many SaaStr Annuals now (11!), and talked with so many VPs of Sales.\u00a0 And I\u2019m fairly confident this is the first time someone asked me directly if hiring enough VPs of Sales was my top advice for how to scale past $10m-$20m ARR.\u00a0 It wasn\u2019t.\u00a0 My #1 advice at that stage for scaling sales is:"
+            },
+            {
+              "value": "$15m+",
+              "canonical": "usd:15000000",
+              "sentence": "And usually, no matter what they tell you, they haven\u2019t actually been a true individual contributor since $15m+ ARR.\u00a0 A related post"
+            }
+          ],
+          "source_copy_pass": true,
+          "source_copy_words": 10,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false,
+            "mentions_bring_in": true,
+            "mentions_critic": false
+          },
+          "answer_preview": "So we\u2019ve done so many SaaStr Annuals now (11!), and talked with so many VPs of Sales.\u00a0 And I\u2019m fairly confident this is the first time someone asked me directly if hiring enough VPs of Sales was my top advice for how to scale past $10m-$20m",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": false,
+            "lexical_overlap": 0.1429,
+            "copying": true,
+            "eligible": false,
+            "style_distance": 0.6279
+          }
+        },
+        {
+          "id": "q_vp_sales_tension",
+          "medium": "linkedin",
+          "words": 29,
+          "stop_reason": "eos",
+          "verified_claims": 5,
+          "rejected_reasons": {
+            "support_not_in_source": 1
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 5,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": true,
+            "mentions_bring_in": true,
+            "mentions_critic": true
+          },
+          "answer_preview": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive?",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": true,
+            "lexical_overlap": 1.0,
+            "copying": true,
+            "eligible": true,
+            "style_distance": 1.3889
+          }
+        },
+        {
+          "id": "q_vp_sales_tension",
+          "medium": "x",
+          "words": 60,
+          "stop_reason": "eos",
+          "verified_claims": 5,
+          "rejected_reasons": {
+            "support_not_in_source": 1
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 5,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false,
+            "mentions_bring_in": true,
+            "mentions_critic": true
+          },
+          "answer_preview": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive? \n[E1]\n\nDoes Jason Lemkin say a great VP of Sales should immediately br",
+          "gates": {
+            "completion": false,
+            "format": true,
+            "grounding": true,
+            "lexical_overlap": 1.0,
+            "copying": true,
+            "eligible": false,
+            "style_distance": 1.02
+          }
+        },
+        {
+          "id": "q_vp_sales_tension",
+          "medium": "talk",
+          "words": 338,
+          "stop_reason": "eos",
+          "verified_claims": 5,
+          "rejected_reasons": {
+            "support_not_in_source": 1
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 4,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false,
+            "mentions_bring_in": true,
+            "mentions_critic": true
+          },
+          "answer_preview": "So I've talked on SaaStr for years now about hiring a great VP of Sales. How to hire one. What mistakes you make when you don't hire a good one. But there are two issues that sort of pop up all the time. And so let me just address them toda",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": false,
+            "lexical_overlap": 0.0,
+            "copying": true,
+            "eligible": false,
+            "style_distance": null
+          }
+        },
+        {
+          "id": "q_personalized_saas_speaker",
+          "medium": "blog",
+          "words": 263,
+          "stop_reason": "eos",
+          "verified_claims": 8,
+          "rejected_reasons": {
+            "interrogative_assertion": 2
+          },
+          "numeric_pass": false,
+          "unsupported_numbers": [
+            {
+              "value": "December 20, 2025",
+              "canonical": "date:dec:20:2025",
+              "sentence": "December 20, 2025"
+            }
+          ],
+          "source_copy_pass": true,
+          "source_copy_words": 8,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false
+          },
+          "answer_preview": "Who said that AI means everything in SaaS needs to be a personalized experience?\nCEO @Asana\npic.twitter.com/bmLqFjE9uB\n\u2014 Harry Stebbings (@HarryStebbings)\nDecember 20, 2025\nSo this one is interesting because we\u2019re all going to see different",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": false,
+            "lexical_overlap": 0.0588,
+            "copying": true,
+            "eligible": false,
+            "style_distance": 1.2327
+          }
+        },
+        {
+          "id": "q_personalized_saas_speaker",
+          "medium": "linkedin",
+          "words": 14,
+          "stop_reason": "eos",
+          "verified_claims": 8,
+          "rejected_reasons": {
+            "interrogative_assertion": 2
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 8,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": true
+          },
+          "answer_preview": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+          "gates": {
+            "completion": true,
+            "format": false,
+            "grounding": true,
+            "lexical_overlap": 1.0,
+            "copying": true,
+            "eligible": false,
+            "style_distance": 2.257
+          }
+        },
+        {
+          "id": "q_personalized_saas_speaker",
+          "medium": "x",
+          "words": 14,
+          "stop_reason": "eos",
+          "verified_claims": 8,
+          "rejected_reasons": {
+            "interrogative_assertion": 2
+          },
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 8,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": true
+          },
+          "answer_preview": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": true,
+            "lexical_overlap": 1.0,
+            "copying": true,
+            "eligible": true,
+            "style_distance": 1.2508
+          }
+        },
+        {
+          "id": "q_personalized_saas_speaker",
+          "medium": "talk",
+          "words": 254,
+          "stop_reason": "eos",
+          "verified_claims": 8,
+          "rejected_reasons": {
+            "interrogative_assertion": 2
+          },
+          "numeric_pass": false,
+          "unsupported_numbers": [
+            {
+              "value": "20%",
+              "canonical": "pct:20",
+              "sentence": "Only 20%"
+            }
+          ],
+          "source_copy_pass": true,
+          "source_copy_words": 3,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false
+          },
+          "answer_preview": "So we've had some interesting discussions on LinkedIn and X about who's right here. That folks like me have been saying since early last year that everyone has to personalize your app now with AI to really take advantage of AI. Or whether t",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": false,
+            "lexical_overlap": 0.0,
+            "copying": true,
+            "eligible": false,
+            "style_distance": null
+          }
+        }
+      ]
+    },
+    "chroma_v2": {
+      "source": "experiments\\EXP-20261029-007-paired-generation\\raw\\generation_chroma_v2.json",
+      "n": 9,
+      "load_report": {
+        "requested": "4bit",
+        "load_in_4bit": true,
+        "load_in_8bit": false,
+        "is_loaded_in_4bit": true,
+        "is_loaded_in_8bit": true,
+        "name_or_path": "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit"
+      },
+      "unified": {
+        "schema": "unified_eval.v1",
+        "model_id": "pending",
+        "source_experiment": "this_run",
+        "n": 9,
+        "n_eligible": 2,
+        "eligible_rate": 0.2222,
+        "gates": {
+          "completion_pass_rate": 0.7778,
+          "copying_pass_rate": 1.0,
+          "format_pass_rate": 0.7778,
+          "grounding_applicable_rows": 9,
+          "grounding_pass_rate": 0.4444
+        },
+        "persona_style": {
+          "role": "selector",
+          "mediums_in_mean": [
+            "linkedin"
+          ],
+          "mean_distance_eligible": 1.3889,
+          "limits": "Closer surface counts are not authorship accuracy. This is a style-distance diagnostic, not proof of authorship identity."
+        },
+        "perspective_fidelity": {
+          "role": "diagnostic_only",
+          "mediums_in_mean": [],
+          "mean_distance_eligible": 1.5192,
+          "mean_stance_consistency": null,
+          "method": "framing_rate_distance_vs_held_out",
+          "framing_role": "diagnostic_only",
+          "limits": "Stance consistency is the perspective score. Framing distance is diagnostic."
+        },
+        "writing_quality": {
+          "available": false,
+          "role": "diagnostic_only",
+          "calibrated": false,
+          "reason": "judge_not_run",
+          "mean_eligible": null
+        },
+        "task_adherence": {
+          "mean_eligible": 1.0,
+          "role": "quality_dimension"
+        },
+        "grounding": {
+          "applicable": true,
+          "mean_claim_support_rate": null,
+          "mean_contradiction_rate": null,
+          "method": "claim_vs_saved_retrieval_hits",
+          "rag_grounding": "scored"
+        },
+        "lemkin_evidence_support": {
+          "mean_claim_support_rate": null,
+          "not_rag_grounding": true
+        },
+        "persona_utility": null,
+        "utility_weights": {
+          "persona_style": 0.45,
+          "perspective_fidelity": 0.2,
+          "writing_quality": 0.25,
+          "task_adherence": 0.1
+        },
+        "diagnostics": {
+          "reference_similarity": {
+            "bertscore": null,
+            "bleu": null,
+            "rouge_l": null,
+            "role": "diagnostic_not_persona_fidelity"
+          },
+          "brief_overlap": {
+            "gold_rubric_overall": 0.2471,
+            "role": "brief_task_agreement_not_persona_quality"
+          },
+          "latency_seconds": null
+        }
+      },
+      "stopping": {
+        "n": 9,
+        "stop_metadata_available": 8,
+        "early_eos_rate": 0.75,
+        "length_limit_rate": 0.0,
+        "interpretation": "Early EOS and absent final punctuation are not semantic incompleteness."
+      },
+      "decision": {
+        "n": 9,
+        "early_eot_rate": 0.75,
+        "early_eot_observed": 8,
+        "mid_sentence_stop_rate": 0.2222222222222222,
+        "use_for_selection": [],
+        "gate_not_selector": [
+          "early_eot_rate",
+          "mid_sentence_stop_rate"
+        ],
+        "logged_not_for_selection": [
+          "paired_bleu",
+          "paired_rouge_l",
+          "gold_rubric.overall"
+        ],
+        "selector": "host_finetune.unified_eval.rank_models"
+      },
+      "rows": [
+        {
+          "id": "q_brex_price",
+          "medium": null,
+          "words": 0,
+          "stop_reason": null,
+          "verified_claims": 0,
+          "rejected_reasons": {},
+          "numeric_pass": null,
+          "unsupported_numbers": [],
+          "source_copy_pass": null,
+          "source_copy_words": null,
+          "evidence_rejected": true,
+          "evidence_stage_reason": "unparseable",
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false
+          },
+          "answer_preview": "",
+          "gates": {
+            "completion": false,
+            "format": false,
+            "grounding": false,
+            "lexical_overlap": 0.0,
+            "copying": true,
+            "eligible": false,
+            "style_distance": null
+          }
+        },
+        {
+          "id": "q_vp_sales_tension",
+          "medium": "blog",
+          "words": 171,
+          "stop_reason": "eos",
+          "verified_claims": 8,
+          "rejected_reasons": {},
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 5,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false,
+            "mentions_bring_in": true,
+            "mentions_critic": true
+          },
+          "answer_preview": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive?\nA great VP of Sales will generally bring in at least one or two top pe",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": false,
+            "lexical_overlap": 0.0909,
+            "copying": true,
+            "eligible": false,
+            "style_distance": 0.6339
+          }
+        },
+        {
+          "id": "q_vp_sales_tension",
+          "medium": "linkedin",
+          "words": 29,
+          "stop_reason": "eos",
+          "verified_claims": 8,
+          "rejected_reasons": {},
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 5,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": true,
+            "mentions_bring_in": true,
+            "mentions_critic": true
+          },
+          "answer_preview": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive?",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": true,
+            "lexical_overlap": 1.0,
+            "copying": true,
+            "eligible": true,
+            "style_distance": 1.3889
+          }
+        },
+        {
+          "id": "q_vp_sales_tension",
+          "medium": "x",
+          "words": 45,
+          "stop_reason": "eos",
+          "verified_claims": 8,
+          "rejected_reasons": {},
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 5,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false,
+            "mentions_bring_in": true,
+            "mentions_critic": true
+          },
+          "answer_preview": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive? \n[E3]\n\nE3.  A great VP of Sales should be able to bring in more sales ",
+          "gates": {
+            "completion": false,
+            "format": true,
+            "grounding": true,
+            "lexical_overlap": 0.5,
+            "copying": true,
+            "eligible": false,
+            "style_distance": 0.8555
+          }
+        },
+        {
+          "id": "q_vp_sales_tension",
+          "medium": "talk",
+          "words": 315,
+          "stop_reason": "eos",
+          "verified_claims": 8,
+          "rejected_reasons": {},
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 5,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false,
+            "mentions_bring_in": true,
+            "mentions_critic": true
+          },
+          "answer_preview": "So I've talked on SaaStr for years now about how important it is to hire a great VP of Sales. And what are some characteristics of those VPs of Sales? Well one key characteristic you'll hear me discuss again and again is they're able to get",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": false,
+            "lexical_overlap": 0.0476,
+            "copying": true,
+            "eligible": false,
+            "style_distance": null
+          }
+        },
+        {
+          "id": "q_personalized_saas_speaker",
+          "medium": "blog",
+          "words": 266,
+          "stop_reason": "eos",
+          "verified_claims": 16,
+          "rejected_reasons": {},
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 8,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false
+          },
+          "answer_preview": "Who said that AI means everything in SaaS needs to be a personalized experience?\nI did. And I was wrong \u2014 sort of. It\u2019s more nuanced than that. Let me explain what I mean, and why this matters if you\u2019re running an SaaS company today.\nThe Pe",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": false,
+            "lexical_overlap": 0.1111,
+            "copying": true,
+            "eligible": false,
+            "style_distance": 0.674
+          }
+        },
+        {
+          "id": "q_personalized_saas_speaker",
+          "medium": "linkedin",
+          "words": 14,
+          "stop_reason": "eos",
+          "verified_claims": 16,
+          "rejected_reasons": {},
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 8,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": true
+          },
+          "answer_preview": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+          "gates": {
+            "completion": true,
+            "format": false,
+            "grounding": true,
+            "lexical_overlap": 1.0,
+            "copying": true,
+            "eligible": false,
+            "style_distance": 2.257
+          }
+        },
+        {
+          "id": "q_personalized_saas_speaker",
+          "medium": "x",
+          "words": 14,
+          "stop_reason": "eos",
+          "verified_claims": 16,
+          "rejected_reasons": {},
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 8,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": true
+          },
+          "answer_preview": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": true,
+            "lexical_overlap": 1.0,
+            "copying": true,
+            "eligible": true,
+            "style_distance": 1.2508
+          }
+        },
+        {
+          "id": "q_personalized_saas_speaker",
+          "medium": "talk",
+          "words": 329,
+          "stop_reason": "eos",
+          "verified_claims": 16,
+          "rejected_reasons": {},
+          "numeric_pass": true,
+          "unsupported_numbers": [],
+          "source_copy_pass": true,
+          "source_copy_words": 8,
+          "evidence_rejected": false,
+          "evidence_stage_reason": null,
+          "checks": {
+            "mentions_5_15": false,
+            "mentions_anneka": false,
+            "mentions_benioff": false,
+            "mentions_abernethy": false,
+            "repeats_topic": false
+          },
+          "answer_preview": "So who said that AI means everything in SaaS needs to be a personalized experience?\nThere\u2019s one guy. That I know that did say this. He's right. But he\u2019s also wrong. It was me.\nI think we need two different types of experiences today in B2B ",
+          "gates": {
+            "completion": true,
+            "format": true,
+            "grounding": false,
+            "lexical_overlap": 0.0909,
+            "copying": true,
+            "eligible": false,
+            "style_distance": null
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "index_reference": "EXP-20261029-004-lightrag-pilot160",
+  "manifest_documents": 160,
+  "processed_extraction": 152,
+  "not_extracted": 8,
+  "pending": 0,
+  "graph_nodes": 1791,
+  "graph_edges": 2000,
+  "omission_marker_chunks": 19,
+  "omission_marker_documents": 13,
+  "edges_citing_omission_marker_chunks": 238,
+  "precision_recall": "not measured",
+  "retrieval_sheet": "raw/retrieval_sheet.json",
+  "comparable_dense": "pilot source texts, not the frozen Chroma collection",
+  "generation_topics": ["q_brex_price", "q_vp_sales_tension", "q_personalized_saas_speaker"],
+  "generation_modes": ["pilot_dense", "naive", "mix"],
+  "chunk_id_run": "every LightRAG claim rejected as unknown_source_id",
+  "parent_id_run": "claims accepted; quoted speaker Anneka Gupta absent from the generated answers"
+}

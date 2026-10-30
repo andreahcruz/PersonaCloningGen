@@ -1,0 +1,39 @@
+experiment_id: EXP-20261027-001-graph-ready-audit
+timestamp: 2026-10-27T08:52:29Z
+execution_commands:
+  - host_finetune\.venv\Scripts\python.exe -X utf8 -m host_finetune.graph_ready --out artifacts\lightrag\model_f\graph_ready
+git:
+  commit: 0fac41485ec3655ea1439d6d2484115f243fdab1
+  dirty: true
+data:
+  source_manifest: experiments/EXP-20261003-004-relabel-continuations/raw/split_assignments.jsonl
+  source_hashes:
+    dataset: 1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b
+    assignments: 6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb
+    dispositions: e91d17a948d3dd77cf95922560a4943830f68795094bdcee160336c9487097ec
+    gold_eval: d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e
+  processed_dataset_hash: 1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b
+  split_manifest_hash: 6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb
+  gold_eval_hash: d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e
+rag:
+  persona_profile_hash: n/a
+  chroma_collection: not opened
+  index_version_or_snapshot: graph-ready-v1 documents.jsonl sha256 93d85bd3011f30af15d66179a6c963540bc02273083f9e3921536d9a21220b36
+  embedding_model: n/a
+model:
+  model_name: n/a
+  model_or_adapter_hash: n/a
+  config: derived corpus only; no generator and no LightRAG index
+  random_seed: 298
+evaluation:
+  evaluator_commit: 0fac41485ec3655ea1439d6d2484115f243fdab1
+  judge_model: n/a
+  judge_config: no relevance judge; the review sample is an agent reading, not a grade
+environment:
+  python_version: 3.11.9
+  package_snapshot: config/package_snapshot.txt
+  hardware: CPU for this audit. GPU present and unused, NVIDIA GeForce RTX 5070 Ti 16303 MiB
+outputs:
+  raw: raw/review_sample.jsonl
+  metrics: metrics/audit.json
+  warnings_and_failures: worktree dirty; full documents.jsonl and quarantine.jsonl stay under artifacts/lightrag and are not committed

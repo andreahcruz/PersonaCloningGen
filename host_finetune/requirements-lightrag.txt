@@ -1,0 +1,7 @@
+lightrag-hku==1.5.7
+ollama>=0.5.4,<1.0.0
+
+# chromadb 1.5.5 in the host fine-tune environment imports opentelemetry SDK 1.41.1.
+# lightrag-hku pulls google-api-core, which prefers a newer API. Keep this pin
+# after installing LightRAG. The project does not call Google or OpenAI APIs.
+opentelemetry-api==1.41.1

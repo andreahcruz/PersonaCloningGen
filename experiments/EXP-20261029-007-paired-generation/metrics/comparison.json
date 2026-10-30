@@ -1,0 +1,70 @@
+{
+  "writing_judge": "judge_not_run",
+  "precision_recall": "not measured",
+  "copying_gate": "8-word training-span index; pass means no shared span of 12 or more words outside the prompt",
+  "style_distance_note": "Means use eligible rows only. Eligible mediums differ by arm, so the distances are not a ranking and are not an authorship score.",
+  "topic_echo_note": "A topic echo repeats the user question. The format gate treats that as a prompt echo only when the answer equals the full instruction.",
+  "arms": {
+    "matched_dense": {
+      "corpus": "160 pilot source texts",
+      "n": 12,
+      "n_eligible": 5,
+      "completion_pass_rate": 0.9167,
+      "copying_pass_rate": 1.0,
+      "format_pass_rate": 0.8333,
+      "grounding_pass_rate": 0.5833,
+      "style_distance_eligible": 1.5451,
+      "style_mediums": ["blog", "linkedin"],
+      "topic_echoes": 4,
+      "answers_naming_anneka": 0,
+      "answers_naming_benioff": 1,
+      "answers_containing_5_15": 3
+    },
+    "naive_parent_ids": {
+      "corpus": "pilot LightRAG naive, parent document ids",
+      "n": 12,
+      "n_eligible": 3,
+      "completion_pass_rate": 0.9167,
+      "copying_pass_rate": 1.0,
+      "format_pass_rate": 0.8333,
+      "grounding_pass_rate": 0.4167,
+      "style_distance_eligible": 1.7132,
+      "style_mediums": ["blog", "linkedin"],
+      "topic_echoes": 4,
+      "answers_naming_anneka": 0,
+      "answers_naming_benioff": 0,
+      "answers_containing_5_15": 2
+    },
+    "mix_parent_ids": {
+      "corpus": "pilot LightRAG mix, parent document ids",
+      "n": 12,
+      "n_eligible": 2,
+      "completion_pass_rate": 0.9167,
+      "copying_pass_rate": 1.0,
+      "format_pass_rate": 0.8333,
+      "grounding_pass_rate": 0.3333,
+      "style_distance_eligible": 1.3889,
+      "style_mediums": ["linkedin"],
+      "topic_echoes": 4,
+      "answers_naming_anneka": 0,
+      "answers_naming_benioff": 0,
+      "answers_containing_5_15": 2
+    },
+    "chroma_v2": {
+      "corpus": "frozen Chroma v2, 21193 train rows",
+      "n": 9,
+      "n_eligible": 2,
+      "completion_pass_rate": 0.7778,
+      "copying_pass_rate": 1.0,
+      "format_pass_rate": 0.7778,
+      "grounding_pass_rate": 0.4444,
+      "style_distance_eligible": 1.3889,
+      "style_mediums": ["linkedin"],
+      "topic_echoes": 3,
+      "answers_naming_anneka": 0,
+      "answers_naming_benioff": 0,
+      "answers_containing_5_15": 0,
+      "brex_topic": "evidence JSON unparseable; four media were not generated"
+    }
+  }
+}

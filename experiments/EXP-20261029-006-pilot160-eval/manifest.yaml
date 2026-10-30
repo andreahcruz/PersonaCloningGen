@@ -1,0 +1,38 @@
+experiment_id: EXP-20261029-006-pilot160-eval
+timestamp: 2026-10-29T12:02:02Z
+execution_commands:
+  - host_finetune\.venv\Scripts\python.exe -X utf8 -m host_finetune.pilot_retrieval --workdir artifacts\lightrag\model_f\storage_pilot160 --out experiments\EXP-20261029-006-pilot160-eval\raw\retrieval_sheet.json --num-ctx 16384
+  - host_finetune\.venv\Scripts\python.exe -X utf8 experiments\EXP-20261029-006-pilot160-eval\config\paired_generation.py
+git:
+  commit: 0fac41485ec3655ea1439d6d2484115f243fdab1
+  dirty: true
+data:
+  source_manifest: experiments/EXP-20261003-004-relabel-continuations/raw/split_assignments.jsonl
+  source_hashes:
+    graph_ready_v2_documents: d7bd01a01f288dda3582eddcfd2fc1539574f97b6e168b1124a0b43b76d9a118
+    sample_ids: experiments/EXP-20261027-001-graph-ready-audit/config/sample_160_ids.json
+  processed_dataset_hash: 1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b
+  split_manifest_hash: 6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb
+  gold_eval_hash: d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e
+rag:
+  persona_profile_hash: n/a
+  chroma_collection: not opened by this run; EXP-20261029-005 read frozen Chroma v2 separately
+  index_version_or_snapshot: artifacts/lightrag/model_f/storage_pilot160 at the EXP-20261029-004 exit, 1791 nodes and 2000 edges
+  embedding_model: nomic-embed-text
+model:
+  model_name: llama3.1:latest for LightRAG keywords; unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit plus lemkin_lora_relabel for generation
+  model_or_adapter_hash: ollama id 46e0c10c039e; adapter host_finetune/output/lemkin_lora_relabel
+  config: retrieval num_ctx 16384; evidence budget 4; max 1 chunk per source; generation seed 42; 4-bit load requested
+  random_seed: 42
+evaluation:
+  evaluator_commit: 0fac41485ec3655ea1439d6d2484115f243fdab1
+  judge_model: n/a
+  judge_config: designated-source overlap only; not precision or recall; numeric grounding is diagnostic and does not block output
+environment:
+  python_version: 3.11.9
+  package_snapshot: ../EXP-20261029-004-lightrag-pilot160/config/package_snapshot.txt
+  hardware: NVIDIA GeForce RTX 5070 Ti, 16303 MiB; Ollama 0.40.2
+outputs:
+  raw: raw/retrieval_sheet.json and raw/generation_*.json
+  metrics: metrics/summary.json and metrics/retrieval_coverage.json
+  warnings_and_failures: LightRAG claims were rejected until hit ids were aliased to parent document ids; accepted claims dropped the quoted speaker; generated answers attributed the Anneka Gupta sentence to other people

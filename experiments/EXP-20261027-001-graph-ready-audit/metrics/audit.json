@@ -1,0 +1,103 @@
+{
+  "policy_version": "graph-ready-v1",
+  "eligibility": {
+    "family_excluded_gold": 183,
+    "final_excluded_gold": 184,
+    "headline_additional": 1,
+    "eligible": 21193,
+    "held_out_train_26148_present": false,
+    "family_indexed_before_headline": 21194
+  },
+  "included_documents": 13140,
+  "quarantined_documents": 573,
+  "eligible_rows_represented": 20572,
+  "unique_included_rows": 20572,
+  "unique_quarantined_rows": 621,
+  "rows_in_both_included_and_quarantine": 0,
+  "multi_member_documents": 1734,
+  "exact_duplicates_removed": 540,
+  "reconstruction_pre_counts": {
+    "order_conflict": 2,
+    "missing_provenance": 0,
+    "unknown_split": 0,
+    "unknown_split_rows": 0,
+    "cross_split_source": 0,
+    "ineligible_sibling": 0
+  },
+  "length_by_medium": {
+    "blog": {
+      "documents": 2042,
+      "median_words": 576,
+      "p10_words": 232,
+      "p90_words": 1649,
+      "under_20_words": 1,
+      "under_40_words": 7
+    },
+    "linkedin": {
+      "documents": 538,
+      "median_words": 125,
+      "p10_words": 53,
+      "p90_words": 394,
+      "under_20_words": 0,
+      "under_40_words": 1
+    },
+    "x": {
+      "documents": 10560,
+      "median_words": 20,
+      "p10_words": 13,
+      "p90_words": 42,
+      "under_20_words": 4807,
+      "under_40_words": 9266
+    }
+  },
+  "included_by_medium": {
+    "blog": 2042,
+    "linkedin": 538,
+    "x": 10560
+  },
+  "quarantine_by_medium": {
+    "linkedin": 28,
+    "youtube_jason": 8,
+    "blog": 1,
+    "x": 536
+  },
+  "exclusion_reasons": {
+    "other_author": 25,
+    "unattributed_transcript": 8,
+    "exact_duplicate_source": 540
+  },
+  "reconstruction_methods": {
+    "cleaned_document": 11917,
+    "ordered_eligible_chunks": 948,
+    "single_chunk": 275
+  },
+  "attribution_status": {
+    "possible_guest_or_interview": 35,
+    "publication_page": 2007,
+    "named_author": 538,
+    "author_account": 10560
+  },
+  "author_position": {
+    "not_verified": 2042,
+    "account_or_name_attributed": 11098
+  },
+  "flags": {
+    "possible_guest_or_interview": 196,
+    "mentions_event": 1043,
+    "cleaned_residual_exceeds_limit": 1218,
+    "continuation_fragment": 90,
+    "short_under_40_words": 9274,
+    "no_terminal_punctuation": 35,
+    "order_conflict": 5,
+    "relative_date_unresolved": 538
+  },
+  "documents_with_numeric_surfaces": 5844,
+  "inputs": {
+    "dataset_sha256": "1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b",
+    "assignments_sha256": "6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb",
+    "dispositions_sha256": "e91d17a948d3dd77cf95922560a4943830f68795094bdcee160336c9487097ec",
+    "gold_eval_sha256": "d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e",
+    "dataset_rows": 26545,
+    "assignment_rows": 26545
+  }
+}
