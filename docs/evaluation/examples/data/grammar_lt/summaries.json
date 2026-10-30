@@ -1,0 +1,617 @@
+{
+ "reference": {
+  "blog": {
+   "rate": 0.1088,
+   "n_texts": 400,
+   "words": 308004
+  },
+  "linkedin": {
+   "rate": 0.1303,
+   "n_texts": 400,
+   "words": 54483
+  },
+  "x": {
+   "rate": 0.4323,
+   "n_texts": 400,
+   "words": 11336
+  }
+ },
+ "summaries": {
+  "relabel_rag_off_seed42": {
+   "reference": {
+    "blog": {
+     "rate": 0.1088,
+     "n_texts": 400,
+     "words": 308004
+    },
+    "linkedin": {
+     "rate": 0.1303,
+     "n_texts": 400,
+     "words": 54483
+    },
+    "x": {
+     "rate": 0.4323,
+     "n_texts": 400,
+     "words": 11336
+    }
+   },
+   "drafts": {
+    "blog": {
+     "n_drafts": 30,
+     "drafts_with_an_error": 4,
+     "words": 8553,
+     "errors": 4,
+     "rate_per_100_words": 0.0468,
+     "reference_rate_per_100_words": 0.1088,
+     "excess_over_reference": -0.062,
+     "top_rules": {
+      "MORFOLOGIK_RULE_EN_US": 1,
+      "HAD_TOO": 1,
+      "IN_1990s": 1,
+      "YOUR_YOU_2": 1
+     }
+    },
+    "linkedin": {
+     "n_drafts": 30,
+     "drafts_with_an_error": 2,
+     "words": 5237,
+     "errors": 2,
+     "rate_per_100_words": 0.0382,
+     "reference_rate_per_100_words": 0.1303,
+     "excess_over_reference": -0.0921,
+     "top_rules": {
+      "ALL_MOST_SOME_OF_NOUN": 1,
+      "MORFOLOGIK_RULE_EN_US": 1
+     }
+    },
+    "talk": {
+     "n_drafts": 30,
+     "drafts_with_an_error": 4,
+     "words": 8395,
+     "errors": 4,
+     "rate_per_100_words": 0.0476,
+     "reference_rate_per_100_words": null,
+     "excess_over_reference": null,
+     "top_rules": {
+      "IT_ITS": 1,
+      "FEWER_LESS": 1,
+      "ENGLISH_WORD_REPEAT_RULE": 1,
+      "MORFOLOGIK_RULE_EN_US": 1
+     }
+    },
+    "x": {
+     "n_drafts": 30,
+     "drafts_with_an_error": 0,
+     "words": 1020,
+     "errors": 0,
+     "rate_per_100_words": 0.0,
+     "reference_rate_per_100_words": 0.4323,
+     "excess_over_reference": -0.4323,
+     "top_rules": {}
+    }
+   }
+  },
+  "relabel_rag_off_seed43": {
+   "reference": {
+    "blog": {
+     "rate": 0.1088,
+     "n_texts": 400,
+     "words": 308004
+    },
+    "linkedin": {
+     "rate": 0.1303,
+     "n_texts": 400,
+     "words": 54483
+    },
+    "x": {
+     "rate": 0.4323,
+     "n_texts": 400,
+     "words": 11336
+    }
+   },
+   "drafts": {
+    "blog": {
+     "n_drafts": 30,
+     "drafts_with_an_error": 7,
+     "words": 8840,
+     "errors": 7,
+     "rate_per_100_words": 0.0792,
+     "reference_rate_per_100_words": 0.1088,
+     "excess_over_reference": -0.0296,
+     "top_rules": {
+      "MORFOLOGIK_RULE_EN_US": 2,
+      "AFFECT_EFFECT": 1,
+      "TOO_DETERMINER": 1,
+      "ARE_WE_HAVE": 1,
+      "RELATIVE_CLAUSE_AGREEMENT": 1
+     }
+    },
+    "linkedin": {
+     "n_drafts": 30,
+     "drafts_with_an_error": 3,
+     "words": 5283,
+     "errors": 4,
+     "rate_per_100_words": 0.0757,
+     "reference_rate_per_100_words": 0.1303,
+     "excess_over_reference": -0.0546,
+     "top_rules": {
+      "MORFOLOGIK_RULE_EN_US": 2,
+      "AFFORD_VBG": 1,
+      "ENGLISH_WORD_REPEAT_RULE": 1
+     }
+    },
+    "talk": {
+     "n_drafts": 30,
+     "drafts_with_an_error": 5,
+     "words": 7741,
+     "errors": 5,
+     "rate_per_100_words": 0.0646,
+     "reference_rate_per_100_words": null,
+     "excess_over_reference": null,
+     "top_rules": {
+      "MORFOLOGIK_RULE_EN_US": 2,
+      "IT_ITS": 1,
+      "ALL_MOST_SOME_OF_NOUN": 1,
+      "THERE_IS_A_LOT_OF": 1
+     }
+    },
+    "x": {
+     "n_drafts": 30,
+     "drafts_with_an_error": 0,
+     "words": 974,
+     "errors": 0,
+     "rate_per_100_words": 0.0,
+     "reference_rate_per_100_words": 0.4323,
+     "excess_over_reference": -0.4323,
+     "top_rules": {}
+    }
+   }
+  },
+  "relabel_rag_off_seed44": {
+   "reference": {
+    "blog": {
+     "rate": 0.1088,
+     "n_texts": 400,
+     "words": 308004
+    },
+    "linkedin": {
+     "rate": 0.1303,
+     "n_texts": 400,
+     "words": 54483
+    },
+    "x": {
+     "rate": 0.4323,
+     "n_texts": 400,
+     "words": 11336
+    }
+   },
+   "drafts": {
+    "blog": {
+     "n_drafts": 30,
+     "drafts_with_an_error": 5,
+     "words": 8513,
+     "errors": 6,
+     "rate_per_100_words": 0.0705,
+     "reference_rate_per_100_words": 0.1088,
+     "excess_over_reference": -0.0383,
+     "top_rules": {
+      "AFFORD_VBG": 2,
+      "ONE_ONCE": 1,
+      "MORFOLOGIK_RULE_EN_US": 1,
+      "ENGLISH_WORD_REPEAT_RULE": 1,
+      "FEWER_LESS": 1
+     }
+    },
+    "linkedin": {
+     "n_drafts": 30,
+     "drafts_with_an_error": 4,
+     "words": 5101,
+     "errors": 4,
+     "rate_per_100_words": 0.0784,
+     "reference_rate_per_100_words": 0.1303,
+     "excess_over_reference": -0.0519,
+     "top_rules": {
+      "MORFOLOGIK_RULE_EN_US": 2,
+      "ENGLISH_WORD_REPEAT_RULE": 2
+     }
+    },
+    "talk": {
+     "n_drafts": 30,
+     "drafts_with_an_error": 7,
+     "words": 7743,
+     "errors": 7,
+     "rate_per_100_words": 0.0904,
+     "reference_rate_per_100_words": null,
+     "excess_over_reference": null,
+     "top_rules": {
+      "MORFOLOGIK_RULE_EN_US": 2,
+      "YOUR_NN": 1,
+      "PLURAL_THAT_AGREEMENT": 1,
+      "HAPPEN_TO": 1,
+      "PLURAL_VERB_AFTER_THIS": 1
+     }
+    },
+    "x": {
+     "n_drafts": 30,
+     "drafts_with_an_error": 1,
+     "words": 1082,
+     "errors": 1,
+     "rate_per_100_words": 0.0924,
+     "reference_rate_per_100_words": 0.4323,
+     "excess_over_reference": -0.3399,
+     "top_rules": {
+      "ADVISE_VBG": 1
+     }
+    }
+   }
+  },
+  "relabel_rag_on_seed42": {
+   "reference": {
+    "blog": {
+     "rate": 0.1088,
+     "n_texts": 400,
+     "words": 308004
+    },
+    "linkedin": {
+     "rate": 0.1303,
+     "n_texts": 400,
+     "words": 54483
+    },
+    "x": {
+     "rate": 0.4323,
+     "n_texts": 400,
+     "words": 11336
+    }
+   },
+   "drafts": {
+    "blog": {
+     "n_drafts": 30,
+     "drafts_with_an_error": 4,
+     "words": 7826,
+     "errors": 4,
+     "rate_per_100_words": 0.0511,
+     "reference_rate_per_100_words": 0.1088,
+     "excess_over_reference": -0.0577,
+     "top_rules": {
+      "NEEDNT_TO_DO_AND_DONT_NEED_DO": 1,
+      "DEPEND_ON": 1,
+      "ENGLISH_WORD_REPEAT_RULE": 1,
+      "IF_OF": 1
+     }
+    },
+    "linkedin": {
+     "n_drafts": 30,
+     "drafts_with_an_error": 2,
+     "words": 4558,
+     "errors": 2,
+     "rate_per_100_words": 0.0439,
+     "reference_rate_per_100_words": 0.1303,
+     "excess_over_reference": -0.0864,
+     "top_rules": {
+      "ENGLISH_WORD_REPEAT_RULE": 1,
+      "DOUBLE_NEGATIVE": 1
+     }
+    },
+    "talk": {
+     "n_drafts": 30,
+     "drafts_with_an_error": 7,
+     "words": 8515,
+     "errors": 10,
+     "rate_per_100_words": 0.1174,
+     "reference_rate_per_100_words": null,
+     "excess_over_reference": null,
+     "top_rules": {
+      "THERE_S_MANY": 2,
+      "MORFOLOGIK_RULE_EN_US": 1,
+      "THIS_NNS": 1,
+      "AFFORD_VBG": 1,
+      "FEWER_LESS": 1
+     }
+    },
+    "x": {
+     "n_drafts": 30,
+     "drafts_with_an_error": 0,
+     "words": 1185,
+     "errors": 0,
+     "rate_per_100_words": 0.0,
+     "reference_rate_per_100_words": 0.4323,
+     "excess_over_reference": -0.4323,
+     "top_rules": {}
+    }
+   }
+  },
+  "relabel_rag_on_seed43": {
+   "reference": {
+    "blog": {
+     "rate": 0.1088,
+     "n_texts": 400,
+     "words": 308004
+    },
+    "linkedin": {
+     "rate": 0.1303,
+     "n_texts": 400,
+     "words": 54483
+    },
+    "x": {
+     "rate": 0.4323,
+     "n_texts": 400,
+     "words": 11336
+    }
+   },
+   "drafts": {
+    "blog": {
+     "n_drafts": 30,
+     "drafts_with_an_error": 2,
+     "words": 7312,
+     "errors": 2,
+     "rate_per_100_words": 0.0274,
+     "reference_rate_per_100_words": 0.1088,
+     "excess_over_reference": -0.0814,
+     "top_rules": {
+      "STEP_BY_STEP_HYPHEN": 1,
+      "AUXILIARY_DO_WITH_INCORRECT_VERB_FORM": 1
+     }
+    },
+    "linkedin": {
+     "n_drafts": 30,
+     "drafts_with_an_error": 0,
+     "words": 5860,
+     "errors": 0,
+     "rate_per_100_words": 0.0,
+     "reference_rate_per_100_words": 0.1303,
+     "excess_over_reference": -0.1303,
+     "top_rules": {}
+    },
+    "talk": {
+     "n_drafts": 30,
+     "drafts_with_an_error": 5,
+     "words": 8443,
+     "errors": 6,
+     "rate_per_100_words": 0.0711,
+     "reference_rate_per_100_words": null,
+     "excess_over_reference": null,
+     "top_rules": {
+      "THERE_S_MANY": 2,
+      "MORFOLOGIK_RULE_EN_US": 1,
+      "EN_A_VS_AN": 1,
+      "NOT_US1": 1,
+      "NO_NOT": 1
+     }
+    },
+    "x": {
+     "n_drafts": 30,
+     "drafts_with_an_error": 0,
+     "words": 1297,
+     "errors": 0,
+     "rate_per_100_words": 0.0,
+     "reference_rate_per_100_words": 0.4323,
+     "excess_over_reference": -0.4323,
+     "top_rules": {}
+    }
+   }
+  },
+  "relabel_rag_on_seed44": {
+   "reference": {
+    "blog": {
+     "rate": 0.1088,
+     "n_texts": 400,
+     "words": 308004
+    },
+    "linkedin": {
+     "rate": 0.1303,
+     "n_texts": 400,
+     "words": 54483
+    },
+    "x": {
+     "rate": 0.4323,
+     "n_texts": 400,
+     "words": 11336
+    }
+   },
+   "drafts": {
+    "blog": {
+     "n_drafts": 30,
+     "drafts_with_an_error": 3,
+     "words": 7267,
+     "errors": 3,
+     "rate_per_100_words": 0.0413,
+     "reference_rate_per_100_words": 0.1088,
+     "excess_over_reference": -0.0675,
+     "top_rules": {
+      "OVER_TIME": 2,
+      "THERE_S_MANY": 1
+     }
+    },
+    "linkedin": {
+     "n_drafts": 30,
+     "drafts_with_an_error": 3,
+     "words": 5330,
+     "errors": 3,
+     "rate_per_100_words": 0.0563,
+     "reference_rate_per_100_words": 0.1303,
+     "excess_over_reference": -0.074,
+     "top_rules": {
+      "IT_ITS": 1,
+      "MORFOLOGIK_RULE_EN_US": 1,
+      "PER_USER_BASIS_HYPHEN": 1
+     }
+    },
+    "talk": {
+     "n_drafts": 30,
+     "drafts_with_an_error": 7,
+     "words": 8623,
+     "errors": 9,
+     "rate_per_100_words": 0.1044,
+     "reference_rate_per_100_words": null,
+     "excess_over_reference": null,
+     "top_rules": {
+      "A_NNS": 3,
+      "THERE_IS_A_LOT_OF": 2,
+      "MORFOLOGIK_RULE_EN_US": 1,
+      "IT_ITS": 1,
+      "VBG_THEYRE": 1
+     }
+    },
+    "x": {
+     "n_drafts": 30,
+     "drafts_with_an_error": 0,
+     "words": 1053,
+     "errors": 0,
+     "rate_per_100_words": 0.0,
+     "reference_rate_per_100_words": 0.4323,
+     "excess_over_reference": -0.4323,
+     "top_rules": {}
+    }
+   }
+  },
+  "personarag_seed42": {
+   "reference": {
+    "blog": {
+     "rate": 0.1088,
+     "n_texts": 400,
+     "words": 308004
+    },
+    "linkedin": {
+     "rate": 0.1303,
+     "n_texts": 400,
+     "words": 54483
+    },
+    "x": {
+     "rate": 0.4323,
+     "n_texts": 400,
+     "words": 11336
+    }
+   },
+   "drafts": {
+    "blog": {
+     "n_drafts": 30,
+     "drafts_with_an_error": 1,
+     "words": 11792,
+     "errors": 1,
+     "rate_per_100_words": 0.0085,
+     "reference_rate_per_100_words": 0.1088,
+     "excess_over_reference": -0.1003,
+     "top_rules": {
+      "BEGINNING_TO_ADDING_BROAD": 1
+     }
+    },
+    "linkedin": {
+     "n_drafts": 30,
+     "drafts_with_an_error": 1,
+     "words": 7303,
+     "errors": 1,
+     "rate_per_100_words": 0.0137,
+     "reference_rate_per_100_words": 0.1303,
+     "excess_over_reference": -0.1166,
+     "top_rules": {
+      "STEP_BY_STEP_HYPHEN": 1
+     }
+    },
+    "talk": {
+     "n_drafts": 30,
+     "drafts_with_an_error": 3,
+     "words": 12894,
+     "errors": 3,
+     "rate_per_100_words": 0.0233,
+     "reference_rate_per_100_words": null,
+     "excess_over_reference": null,
+     "top_rules": {
+      "STEP_BY_STEP_HYPHEN": 1,
+      "PRONOUN_NOUN": 1,
+      "MORFOLOGIK_RULE_EN_US": 1
+     }
+    },
+    "x": {
+     "n_drafts": 30,
+     "drafts_with_an_error": 1,
+     "words": 3768,
+     "errors": 1,
+     "rate_per_100_words": 0.0265,
+     "reference_rate_per_100_words": 0.4323,
+     "excess_over_reference": -0.4058,
+     "top_rules": {
+      "EN_A_VS_AN": 1
+     }
+    }
+   }
+  },
+  "base_llama31": {
+   "reference": {
+    "blog": {
+     "rate": 0.1088,
+     "n_texts": 400,
+     "words": 308004
+    },
+    "linkedin": {
+     "rate": 0.1303,
+     "n_texts": 400,
+     "words": 54483
+    },
+    "x": {
+     "rate": 0.4323,
+     "n_texts": 400,
+     "words": 11336
+    }
+   },
+   "drafts": {
+    "blog": {
+     "n_drafts": 30,
+     "drafts_with_an_error": 4,
+     "words": 15409,
+     "errors": 6,
+     "rate_per_100_words": 0.0389,
+     "reference_rate_per_100_words": 0.1088,
+     "excess_over_reference": -0.0699,
+     "top_rules": {
+      "MORFOLOGIK_RULE_EN_US": 2,
+      "EN_A_VS_AN": 1,
+      "DIFFUSE_TENSIONS": 1,
+      "AM_I": 1,
+      "CONDITIONAL_CLAUSE": 1
+     }
+    },
+    "linkedin": {
+     "n_drafts": 30,
+     "drafts_with_an_error": 4,
+     "words": 7195,
+     "errors": 4,
+     "rate_per_100_words": 0.0556,
+     "reference_rate_per_100_words": 0.1303,
+     "excess_over_reference": -0.0747,
+     "top_rules": {
+      "EN_A_VS_AN": 1,
+      "BE_TO_VBG": 1,
+      "EN_DIACRITICS_REPLACE_ORTHOGRAPHY_VOILA": 1,
+      "MANY_FEW_UNCOUNTABLE": 1
+     }
+    },
+    "talk": {
+     "n_drafts": 30,
+     "drafts_with_an_error": 2,
+     "words": 16070,
+     "errors": 3,
+     "rate_per_100_words": 0.0187,
+     "reference_rate_per_100_words": null,
+     "excess_over_reference": null,
+     "top_rules": {
+      "RELATIVE_CLAUSE_AGREEMENT": 1,
+      "IT_IS_JJ_TO_VBG": 1,
+      "MORFOLOGIK_RULE_EN_US": 1
+     }
+    },
+    "x": {
+     "n_drafts": 30,
+     "drafts_with_an_error": 1,
+     "words": 3513,
+     "errors": 1,
+     "rate_per_100_words": 0.0285,
+     "reference_rate_per_100_words": 0.4323,
+     "excess_over_reference": -0.4038,
+     "top_rules": {
+      "MORFOLOGIK_RULE_EN_US": 1
+     }
+    }
+   }
+  }
+ }
+}

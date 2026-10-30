@@ -1,0 +1,288 @@
+{
+ "rule_based": {
+  "broad_total": 40,
+  "broad_caught": 0,
+  "broad_share": 0.0,
+  "categories": {
+   "subject_verb_agreement": {
+    "n": 4,
+    "caught": 0,
+    "missed": [
+     "The team of engineers are building the new pricing page.",
+     "Each of the founders have a different view on equity.",
+     "The number of customers who churn are rising every quarter.",
+     "Neither the CEO nor the investors was happy with the board deck."
+    ]
+   },
+   "verb_tense": {
+    "n": 4,
+    "caught": 0,
+    "missed": [
+     "Yesterday we close three enterprise deals and hire two reps.",
+     "Last year our revenue grow fast and then it stop.",
+     "When I was a founder I will never accept that offer.",
+     "She has went to every board meeting this year."
+    ]
+   },
+   "confused_words": {
+    "n": 4,
+    "caught": 0,
+    "missed": [
+     "Their going to raise a Series B next month.",
+     "Your right that the churn number is too high.",
+     "Its important to know when the company lost it's best rep.",
+     "Hiring a VP early costs more then waiting."
+    ]
+   },
+   "missing_words": {
+    "n": 4,
+    "caught": 0,
+    "missed": [
+     "We need to hire engineer before we launch product.",
+     "She wrote report for board last week.",
+     "It is important have clear quota for every rep.",
+     "He asked me to join call tomorrow morning."
+    ]
+   },
+   "preposition": {
+    "n": 4,
+    "caught": 0,
+    "missed": [
+     "This depends of how fast the team can ship.",
+     "We are focused in growing the enterprise segment.",
+     "She is good in sales but weak on hiring.",
+     "He agreed to the plan despite of the risks."
+    ]
+   },
+   "comma_splice_run_on": {
+    "n": 4,
+    "caught": 0,
+    "missed": [
+     "We shipped the feature on Monday, it broke on Tuesday.",
+     "Revenue is flat the team is tired and the board wants answers.",
+     "The deal closed we celebrated and then the customer left.",
+     "I love this product it solves a real problem for founders."
+    ]
+   },
+   "pronoun_case": {
+    "n": 4,
+    "caught": 0,
+    "missed": [
+     "Me and him closed the deal last night.",
+     "The investors gave the founders and I a hard time.",
+     "Between you and I, the plan will not work.",
+     "Her and the CEO disagreed about the budget."
+    ]
+   },
+   "plural_countability": {
+    "n": 4,
+    "caught": 0,
+    "missed": [
+     "We hired three engineer and two designer this quarter.",
+     "The company has many customer but few advocate.",
+     "He gave me a lot of advices about pricing.",
+     "Several news about the funding round surprised us."
+    ]
+   },
+   "double_negative": {
+    "n": 4,
+    "caught": 0,
+    "missed": [
+     "We don't have no budget for a new sales hire.",
+     "Nobody never told me the quota was changing.",
+     "She can't hardly wait for the launch.",
+     "I didn't see nothing wrong with the contract."
+    ]
+   },
+   "awkward_word_choice": {
+    "n": 4,
+    "caught": 0,
+    "missed": [
+     "The meeting was very much boring and long exhausting.",
+     "He made a big loss on that investment since the market going down.",
+     "We must to decide until Friday which vendor to choose.",
+     "The software is enough easy for new users to learn."
+    ]
+   }
+  },
+  "rule_targeted_total": 4,
+  "rule_targeted_caught": 4
+ },
+ "languagetool_default": {
+  "broad_total": 40,
+  "broad_caught": 20,
+  "broad_share": 0.5,
+  "categories": {
+   "subject_verb_agreement": {
+    "n": 4,
+    "caught": 1,
+    "missed": [
+     "Each of the founders have a different view on equity.",
+     "The number of customers who churn are rising every quarter.",
+     "Neither the CEO nor the investors was happy with the board deck."
+    ]
+   },
+   "verb_tense": {
+    "n": 4,
+    "caught": 2,
+    "missed": [
+     "Yesterday we close three enterprise deals and hire two reps.",
+     "When I was a founder I will never accept that offer."
+    ]
+   },
+   "confused_words": {
+    "n": 4,
+    "caught": 2,
+    "missed": [
+     "Their going to raise a Series B next month.",
+     "Your right that the churn number is too high."
+    ]
+   },
+   "missing_words": {
+    "n": 4,
+    "caught": 1,
+    "missed": [
+     "We need to hire engineer before we launch product.",
+     "She wrote report for board last week.",
+     "He asked me to join call tomorrow morning."
+    ]
+   },
+   "preposition": {
+    "n": 4,
+    "caught": 2,
+    "missed": [
+     "We are focused in growing the enterprise segment.",
+     "She is good in sales but weak on hiring."
+    ]
+   },
+   "comma_splice_run_on": {
+    "n": 4,
+    "caught": 1,
+    "missed": [
+     "We shipped the feature on Monday, it broke on Tuesday.",
+     "The deal closed we celebrated and then the customer left.",
+     "I love this product it solves a real problem for founders."
+    ]
+   },
+   "pronoun_case": {
+    "n": 4,
+    "caught": 4,
+    "missed": []
+   },
+   "plural_countability": {
+    "n": 4,
+    "caught": 3,
+    "missed": [
+     "He gave me a lot of advices about pricing."
+    ]
+   },
+   "double_negative": {
+    "n": 4,
+    "caught": 3,
+    "missed": [
+     "Nobody never told me the quota was changing."
+    ]
+   },
+   "awkward_word_choice": {
+    "n": 4,
+    "caught": 1,
+    "missed": [
+     "The meeting was very much boring and long exhausting.",
+     "He made a big loss on that investment since the market going down.",
+     "The software is enough easy for new users to learn."
+    ]
+   }
+  },
+  "rule_targeted_total": 4,
+  "rule_targeted_caught": 4
+ },
+ "languagetool_profile": {
+  "broad_total": 40,
+  "broad_caught": 19,
+  "broad_share": 0.475,
+  "categories": {
+   "subject_verb_agreement": {
+    "n": 4,
+    "caught": 1,
+    "missed": [
+     "Each of the founders have a different view on equity.",
+     "The number of customers who churn are rising every quarter.",
+     "Neither the CEO nor the investors was happy with the board deck."
+    ]
+   },
+   "verb_tense": {
+    "n": 4,
+    "caught": 2,
+    "missed": [
+     "Yesterday we close three enterprise deals and hire two reps.",
+     "When I was a founder I will never accept that offer."
+    ]
+   },
+   "confused_words": {
+    "n": 4,
+    "caught": 2,
+    "missed": [
+     "Their going to raise a Series B next month.",
+     "Your right that the churn number is too high."
+    ]
+   },
+   "missing_words": {
+    "n": 4,
+    "caught": 1,
+    "missed": [
+     "We need to hire engineer before we launch product.",
+     "She wrote report for board last week.",
+     "He asked me to join call tomorrow morning."
+    ]
+   },
+   "preposition": {
+    "n": 4,
+    "caught": 2,
+    "missed": [
+     "We are focused in growing the enterprise segment.",
+     "She is good in sales but weak on hiring."
+    ]
+   },
+   "comma_splice_run_on": {
+    "n": 4,
+    "caught": 0,
+    "missed": [
+     "We shipped the feature on Monday, it broke on Tuesday.",
+     "Revenue is flat the team is tired and the board wants answers.",
+     "The deal closed we celebrated and then the customer left.",
+     "I love this product it solves a real problem for founders."
+    ]
+   },
+   "pronoun_case": {
+    "n": 4,
+    "caught": 4,
+    "missed": []
+   },
+   "plural_countability": {
+    "n": 4,
+    "caught": 3,
+    "missed": [
+     "He gave me a lot of advices about pricing."
+    ]
+   },
+   "double_negative": {
+    "n": 4,
+    "caught": 3,
+    "missed": [
+     "Nobody never told me the quota was changing."
+    ]
+   },
+   "awkward_word_choice": {
+    "n": 4,
+    "caught": 1,
+    "missed": [
+     "The meeting was very much boring and long exhausting.",
+     "He made a big loss on that investment since the market going down.",
+     "The software is enough easy for new users to learn."
+    ]
+   }
+  },
+  "rule_targeted_total": 4,
+  "rule_targeted_caught": 4
+ }
+}
