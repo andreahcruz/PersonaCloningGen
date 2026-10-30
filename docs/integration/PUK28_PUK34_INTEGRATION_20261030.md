@@ -14,8 +14,9 @@ Branch: `kevin/lightrag-model-f`
 | Model F record | `2031704cf604c1699acb440c1cc7320c95f48513` | 121 files, +119,422 / −39 |
 | PUK-28 merge (`--no-ff`) | `b06560b9965a833f8d3a39dcf94afaab8149c0b6` | `2031704` + `eb790118e7f4bcb58881289e169da865f079600f` |
 | PUK-34 merge (`--no-ff`) | `94282a1eceb18cc90b4d74967e7243cf64fbf731` | `b06560b` + `97444828725c50e479ea2c81e0dfe98316e9c928` |
+| This record and the audit | committed directly on `94282a1` | no code or experiment files |
 
-Current HEAD is `94282a1eceb18cc90b4d74967e7243cf64fbf731`.
+The code merges end at `94282a1eceb18cc90b4d74967e7243cf64fbf731`. This file does not name its own commit.
 
 The Model F commit keeps the LightRAG retrieval path, its tests, and the registered experiment records through EXP-20261030-011. Graph storage, model weights, GGUF files, Chroma copies, and the multi-gigabyte `deployment_handoff/` tree stayed untracked. That handoff directory is still untracked after these merges.
 
