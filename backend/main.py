@@ -5,6 +5,7 @@ Run: uvicorn main:app --reload --port 8000
 """
 from __future__ import annotations
 
+import json
 import os
 from pathlib import Path
 
@@ -56,9 +57,34 @@ class GenerateResponse(BaseModel):
     draft: str
 
 
+class PersonaResponse(BaseModel):
+    """The persona contract consumed by clients before generating content."""
+
+    name: str
+    source: str
+    summary: str
+
+
 @app.get("/health")
 def health() -> dict:
     return {"status": "ok"}
+
+
+@app.get("/persona", response_model=PersonaResponse)
+def persona() -> PersonaResponse:
+    """Expose the active persona so a frontend can plug into the same profile."""
+    if not PERSONA_PATH.exists():
+        raise HTTPException(500, f"Persona profile not found: {PERSONA_PATH}")
+
+    try:
+        profile = load_persona(PERSONA_PATH)
+    except (OSError, json.JSONDecodeError) as e:
+        raise HTTPException(500, f"Could not load persona profile: {e}") from e
+
+    meta = profile.get("meta", {})
+    source = str(meta.get("source", "Jason Lemkin — operator voice"))
+    name = source.split(" — ", 1)[0].strip() or "Jason Lemkin"
+    return PersonaResponse(name=name, source=source, summary=summarize_persona(profile))
 
 
 @app.get("/formats")
