@@ -3,6 +3,7 @@ import {
   EVALUATION,
   MOCK_HEALTH,
   MOCK_MODELS,
+  MOCK_PERSONA,
   MOCK_STATS,
   mockGenerate,
   mockSearch,
@@ -14,6 +15,7 @@ import type {
   GenerateResult,
   GenerationMethod,
   ModelInfo,
+  PersonaProfile,
   ServiceStatus,
   Source,
   SourceType,
@@ -86,6 +88,13 @@ export async function getFormats(): Promise<FormatId[]> {
   const ids = await request<string[]>("/formats");
   const known = new Set<string>(FORMATS.map((f) => f.id));
   return ids.filter((i): i is FormatId => known.has(i));
+}
+
+// ---- Persona (GET /persona -> { name, source, summary }) ----
+export async function getPersona(): Promise<PersonaProfile> {
+  if (IS_MOCK) return MOCK_PERSONA;
+  const body = await request<Omit<PersonaProfile, "mock">>("/persona");
+  return { ...body, mock: false };
 }
 
 // ---- Models (proposed: GET /models) ----

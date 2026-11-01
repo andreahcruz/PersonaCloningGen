@@ -138,6 +138,32 @@ describe("live mode", () => {
     expect(await api.getFormats()).toEqual(["linkedin_post", "blog_draft"]);
   });
 
+  it("loads the active persona profile", async () => {
+    const api = await loadApi("live");
+    fetchMock.mockResolvedValueOnce(
+      jsonResponse({
+        name: "Jason Lemkin",
+        source: "Jason Lemkin — operator voice",
+        summary: "Direct operator advice.",
+      }),
+    );
+
+    await expect(api.getPersona()).resolves.toEqual({
+      name: "Jason Lemkin",
+      source: "Jason Lemkin — operator voice",
+      summary: "Direct operator advice.",
+      mock: false,
+    });
+    expect(fetchMock).toHaveBeenCalledWith("http://backend.test/persona", expect.any(Object));
+  });
+
+  it("surfaces a missing persona endpoint without blocking other API calls", async () => {
+    const api = await loadApi("live");
+    fetchMock.mockResolvedValueOnce(new Response("not found", { status: 404 }));
+
+    await expect(api.getPersona()).rejects.toBeInstanceOf(api.NotAvailableError);
+  });
+
   it("offers default models when /models does not exist", async () => {
     const api = await loadApi("live");
     fetchMock.mockResolvedValueOnce(new Response("nope", { status: 404 }));
@@ -176,6 +202,15 @@ describe("mock mode", () => {
     expect(res.mock).toBe(true);
     expect(res.content).toContain("Demo draft");
     expect(res.sources.length).toBeLessThanOrEqual(REQ.k);
+  });
+
+  it("returns a clearly labelled sample persona in mock mode", async () => {
+    const api = await loadApi("mock");
+
+    const persona = await api.getPersona();
+
+    expect(persona.mock).toBe(true);
+    expect(persona.source).toContain("Sample profile");
   });
 
   it("filters sample sources by type and query", async () => {

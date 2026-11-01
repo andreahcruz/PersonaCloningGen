@@ -1,13 +1,14 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import { ApiError, generate } from "@/lib/api";
+import { useEffect, useMemo, useState } from "react";
+import { ApiError, generate, getPersona } from "@/lib/api";
 import { addHistory } from "@/lib/history";
 import {
   FORMATS,
   type FormatId,
   type GenerationMethod,
   type GenerateResult,
+  type PersonaProfile,
 } from "@/lib/types";
 import {
   Button,
@@ -27,6 +28,12 @@ const METHODS: Array<{
   model: string;
   detail: string;
 }> = [
+  {
+    id: "baseline",
+    label: "Base Llama",
+    model: "Base Llama 3.1",
+    detail: "Uses your brief directly, without a Jason Lemkin profile or retrieved sources.",
+  },
   {
     id: "personarag",
     label: "PersonaRAG",
@@ -95,11 +102,27 @@ export default function GeneratorPage() {
   const [error, setError] = useState<ApiError | null>(null);
   const [result, setResult] = useState<GenerateResult | null>(null);
   const [copied, setCopied] = useState(false);
+  const [persona, setPersona] = useState<PersonaProfile | null>(null);
+  const [personaError, setPersonaError] = useState<string | null>(null);
+
+  useEffect(() => {
+    let active = true;
+    getPersona()
+      .then((profile) => {
+        if (active) setPersona(profile);
+      })
+      .catch(() => {
+        if (active) setPersonaError("Persona profile is unavailable. Generation is unaffected.");
+      });
+    return () => {
+      active = false;
+    };
+  }, []);
 
   const missing = useMemo(() => {
     const out: string[] = [];
     if (!topic.trim()) out.push("topic");
-    if (method === "personarag") {
+    if (method !== "qlora") {
       if (!audience.trim()) out.push("audience");
       if (!goal.trim()) out.push("goal");
     }
@@ -285,12 +308,12 @@ export default function GeneratorPage() {
                   {qloraPrompt(format, qloraTopicOnly(topic).trim())}
                 </p>
                 <p className="mt-2">
-                  Audience, goal, call to action, and retrieved-chunk settings are PersonaRAG-only and are not
-                  sent to QLoRA.
+                  Audience, goal, and call to action are for Base Llama and PersonaRAG. Retrieved-chunk settings
+                  are PersonaRAG-only and are not sent to QLoRA.
                 </p>
               </div>
             ) : null}
-            {method === "personarag" ? (
+            {method !== "qlora" ? (
               <>
                 <div className="grid gap-4 sm:grid-cols-2">
                   <Field label="Audience">
@@ -350,7 +373,9 @@ export default function GeneratorPage() {
               <p className="animate-pulse text-sm text-mute" role="status">
                 {method === "personarag"
                   ? "Embedding your brief, retrieving sources and generating."
-                  : "Generating with direct QLoRA."} This can take a minute on a local model.
+                  : method === "qlora"
+                    ? "Generating with direct QLoRA."
+                    : "Generating with Base Llama."} This can take a minute on a local model.
               </p>
             ) : result ? (
               <>
@@ -365,7 +390,7 @@ export default function GeneratorPage() {
                   {result.content}
                 </div>
                 <p className="mt-3 text-xs text-mute">
-                  {words} words - {result.method === "personarag" ? "PersonaRAG" : "direct QLoRA"} - {result.model}
+                  {words} words - {result.method === "personarag" ? "PersonaRAG" : result.method === "qlora" ? "direct QLoRA" : "Base Llama"} - {result.model}
                   {result.latencyMs !== null ? ` - ${(result.latencyMs / 1000).toFixed(1)} s` : ""}
                 </p>
               </>
@@ -377,9 +402,28 @@ export default function GeneratorPage() {
           </Card>
         </div>
 
-        {/* Right: sources */}
-        <Card className="h-fit">
-          <h2 className="mb-3 font-semibold">Retrieved sources</h2>
+        {/* Right: active profile and sources */}
+        <div className="space-y-5">
+          <Card className="h-fit">
+            <h2 className="mb-3 font-semibold">Active persona</h2>
+            {persona ? (
+              <div className="space-y-2">
+                <div>
+                  <p className="text-sm font-medium">{persona.name}</p>
+                  <p className="text-xs text-mute">{persona.source}</p>
+                </div>
+                <p className="whitespace-pre-line text-xs leading-relaxed text-mute">{persona.summary}</p>
+                {persona.mock ? <p className="text-xs text-warn">Sample persona profile (mock mode).</p> : null}
+              </div>
+            ) : personaError ? (
+              <p className="text-sm text-mute">{personaError}</p>
+            ) : (
+              <p className="text-sm text-mute">Loading active persona profile…</p>
+            )}
+          </Card>
+
+          <Card className="h-fit">
+            <h2 className="mb-3 font-semibold">Retrieved sources</h2>
           {result && result.sources.length > 0 ? (
             <ul className="space-y-3">
               {result.sources.map((s) => (
@@ -399,6 +443,10 @@ export default function GeneratorPage() {
             <p className="text-sm text-mute">
               direct QLoRA writes from the merged model. It does not retrieve Chroma sources.
             </p>
+          ) : result?.method === "baseline" ? (
+            <p className="text-sm text-mute">
+              Base Llama writes from the user brief only. It does not use a persona profile or retrieve Chroma sources.
+            </p>
           ) : result ? (
             <p className="text-sm text-mute">
               The backend did not return sources for this draft. The API needs to include them; see
@@ -407,7 +455,8 @@ export default function GeneratorPage() {
           ) : (
             <p className="text-sm text-mute">Sources appear after you generate a draft.</p>
           )}
-        </Card>
+          </Card>
+        </div>
       </div>
     </>
   );

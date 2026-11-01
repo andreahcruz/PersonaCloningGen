@@ -9,6 +9,33 @@ from fastapi.testclient import TestClient
 from backend import main
 
 
+def test_persona_exposes_active_profile(monkeypatch, tmp_path):
+    persona = tmp_path / "persona_profile.json"
+    persona.write_text('{"meta": {"source": "Jason Lemkin — operator voice"}}', encoding="utf-8")
+    monkeypatch.setattr(main, "PERSONA_PATH", persona)
+    monkeypatch.setattr(main, "summarize_persona", lambda *_: "Direct, concrete founder advice.")
+
+    response = TestClient(main.app).get("/persona")
+
+    assert response.status_code == 200
+    assert response.json() == {
+        "name": "Jason Lemkin",
+        "source": "Jason Lemkin — operator voice",
+        "summary": "Direct, concrete founder advice.",
+    }
+
+
+def test_persona_reports_invalid_profile(monkeypatch, tmp_path):
+    persona = tmp_path / "persona_profile.json"
+    persona.write_text("not-json", encoding="utf-8")
+    monkeypatch.setattr(main, "PERSONA_PATH", persona)
+
+    response = TestClient(main.app).get("/persona")
+
+    assert response.status_code == 500
+    assert "Could not load persona profile" in response.json()["detail"]
+
+
 def test_generate_returns_real_source_metadata(monkeypatch, tmp_path):
     persona = tmp_path / "persona_profile.json"
     persona.write_text("{}", encoding="utf-8")
@@ -168,6 +195,47 @@ def test_qlora_generation_bypasses_retrieval(monkeypatch):
             },
         )
     ]
+
+
+def test_baseline_generation_bypasses_persona_and_retrieval(monkeypatch):
+    calls = []
+
+    def fake_generate(prompt, _base, model, **kwargs):
+        calls.append((prompt, model, kwargs))
+        return f"{model}: {prompt}"
+
+    monkeypatch.setattr(main, "load_format_spec", lambda *_: {"output_type": "markdown"})
+    monkeypatch.setattr(main, "load_persona", lambda *_: pytest.fail("baseline must not load a persona profile"))
+    monkeypatch.setattr(main, "retrieve", lambda *_: pytest.fail("baseline must not retrieve Chroma chunks"))
+    monkeypatch.setattr(main, "ollama_embed", lambda *_: pytest.fail("baseline must not embed a content brief"))
+    monkeypatch.setattr(main, "ollama_generate", fake_generate)
+
+    response = TestClient(main.app).post(
+        "/generate",
+        json={
+            "format": "linkedin_post",
+            "topic": "Hiring your first salesperson",
+            "audience": "B2B SaaS founders",
+            "goal": "Share one takeaway",
+            "cta": "none",
+            "k": 4,
+            "method": "baseline",
+        },
+    )
+
+    assert response.status_code == 200
+    prompt = "\n".join(
+        [
+            "Write a LinkedIn post about: Hiring your first salesperson",
+            "Audience: B2B SaaS founders",
+            "Goal: Share one takeaway",
+            "Call to action: none",
+        ]
+    )
+    assert response.json()["method"] == "baseline"
+    assert response.json()["model"] == "llama3.1"
+    assert response.json()["sources"] == []
+    assert calls == [(prompt, "llama3.1", {"max_tokens": 280})]
 
 
 @pytest.mark.parametrize(

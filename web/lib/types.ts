@@ -19,7 +19,15 @@ export const FORMATS: FormatOption[] = [
 ];
 
 export type SourceType = "blog" | "linkedin" | "x" | "youtube" | "unknown";
-export type GenerationMethod = "personarag" | "qlora";
+export type GenerationMethod = "baseline" | "personarag" | "qlora";
+
+export interface PersonaProfile {
+  name: string;
+  source: string;
+  summary: string;
+  /** True only for the clearly labelled sample profile used in mock mode. */
+  mock: boolean;
+}
 
 export interface Source {
   id: string;

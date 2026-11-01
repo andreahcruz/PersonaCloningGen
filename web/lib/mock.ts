@@ -4,6 +4,7 @@ import type {
   GenerateRequest,
   GenerateResult,
   ModelInfo,
+  PersonaProfile,
   ServiceStatus,
   Source,
   Statistics,
@@ -24,6 +25,13 @@ export const MOCK_MODELS: ModelInfo[] = [
   { name: "llama3.2:3b", kind: "base", available: true },
   { name: "nomic-embed-text", kind: "embedding", available: true },
 ];
+
+export const MOCK_PERSONA: PersonaProfile = {
+  name: "Jason Lemkin",
+  source: "Sample profile — Jason Lemkin operator voice",
+  summary: "Sample persona profile for mock mode. Direct B2B SaaS operator tone with concrete examples and practical founder advice.",
+  mock: true,
+};
 
 const SAMPLE: Source[] = [
   {
@@ -92,8 +100,8 @@ const DRAFTS: Record<FormatId, (r: GenerateRequest) => string> = {
 export function mockGenerate(req: GenerateRequest): GenerateResult {
   return {
     content: DRAFTS[req.format](req),
-    sources: mockSources(req.k),
-    model: req.model ?? "lemkin-clone",
+    sources: req.method === "personarag" ? mockSources(req.k) : [],
+    model: req.model ?? (req.method === "qlora" ? "lemkin-qlora" : "llama3.1"),
     latencyMs: 1200,
     requestId: "demo",
     method: req.method,

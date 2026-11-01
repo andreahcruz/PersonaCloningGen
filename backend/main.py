@@ -18,6 +18,7 @@ from pydantic import BaseModel, Field
 
 from generate import (
     CONTEXT_MAX_CHARS,
+    ConfigError,
     DEFAULT_EMBED_MODEL,
     DEFAULT_GEN_MODEL,
     OLLAMA_BASE_DEFAULT,
@@ -49,7 +50,7 @@ class GenerateRequest(BaseModel):
     goal: str
     cta: str = "none"
     k: int = Field(default=8, ge=1, le=20)
-    method: Literal["personarag", "qlora"] = "personarag"
+    method: Literal["baseline", "personarag", "qlora"] = "personarag"
 
 
 class GenerateResponse(BaseModel):
@@ -58,7 +59,15 @@ class GenerateResponse(BaseModel):
     model: str
     latency_ms: int
     request_id: str
-    method: Literal["personarag", "qlora"]
+    method: Literal["baseline", "personarag", "qlora"]
+
+
+class PersonaResponse(BaseModel):
+    """The active persona profile, exposed for read-only frontend display."""
+
+    name: str
+    source: str
+    summary: str
 
 
 def _settings() -> tuple[str, str, str, str]:
@@ -118,6 +127,14 @@ DIRECT_QLORA_OPTIONS = {
 DIRECT_QLORA_KEEP_ALIVE = 0
 
 
+BASELINE_FORMATS = {
+    "linkedin_post": "LinkedIn post",
+    "blog_draft": "blog post",
+    "x_thread": "X post",
+    "youtube_script": "spoken talk",
+}
+
+
 def direct_qlora_prompt(format_name: str, topic: str) -> str:
     """Build Kevin's evaluated direct-QLoRA user message for one medium."""
     template = DIRECT_QLORA_PROMPTS.get(format_name)
@@ -134,6 +151,23 @@ def direct_qlora_options(format_name: str) -> dict[str, object]:
     except KeyError as e:
         raise HTTPException(400, f"Unknown format for direct QLoRA: {format_name}") from e
     return {**DIRECT_QLORA_OPTIONS, "repeat_penalty": repeat_penalty, "num_predict": DIRECT_QLORA_MAX_TOKENS[format_name]}
+
+
+def baseline_prompt(format_name: str, topic: str, audience: str, goal: str, cta: str) -> str:
+    """Build the plain base-model control prompt without persona or RAG context."""
+    try:
+        medium = BASELINE_FORMATS[format_name]
+    except KeyError as e:
+        known = ", ".join(BASELINE_FORMATS)
+        raise HTTPException(400, f"Unknown format for baseline: {format_name}. Expected: {known}") from e
+    return "\n".join(
+        [
+            f"Write a {medium} about: {topic}",
+            f"Audience: {audience}",
+            f"Goal: {goal}",
+            f"Call to action: {cta}",
+        ]
+    )
 
 
 def _source_type(value: object) -> str:
@@ -195,6 +229,22 @@ def healthz() -> dict:
     return {"status": "ok"}
 
 
+@app.get("/persona", response_model=PersonaResponse)
+def persona() -> PersonaResponse:
+    """Expose the profile PersonaRAG uses without changing generation behavior."""
+    if not PERSONA_PATH.exists():
+        raise HTTPException(500, f"Persona profile not found: {PERSONA_PATH}")
+    try:
+        profile = load_persona(PERSONA_PATH)
+    except ConfigError as e:
+        raise HTTPException(500, f"Could not load persona profile: {e}") from e
+
+    meta = profile.get("meta", {})
+    source = str(meta.get("source", "Jason Lemkin — operator voice"))
+    name = source.split(" — ", 1)[0].strip() or "Jason Lemkin"
+    return PersonaResponse(name=name, source=source, summary=summarize_persona(profile))
+
+
 @app.get("/health/dependencies")
 def health_dependencies() -> dict:
     return health()
@@ -237,9 +287,12 @@ def generate(req: GenerateRequest) -> GenerateResponse:
             format_spec, persona_summary, req.topic, req.audience, req.goal, req.cta, context_block
         )
         model = gen_model
-    else:
+    elif req.method == "qlora":
         prompt = direct_qlora_prompt(req.format, req.topic)
         model = qlora_model
+    else:
+        prompt = baseline_prompt(req.format, req.topic, req.audience, req.goal, req.cta)
+        model = gen_model
 
     try:
         if req.method == "qlora":
