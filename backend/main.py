@@ -45,7 +45,7 @@ EVALUATION_RESULTS_PATH = Path(
     os.environ.get("EVALUATION_RESULTS_PATH", BASE / "data" / "evaluation" / "batch_results.json")
 )
 LANGUAGETOOL_BASE = os.environ.get("LANGUAGETOOL_BASE", "http://languagetool:8081")
-LANGUAGETOOL_TIMEOUT = float(os.environ.get("LANGUAGETOOL_TIMEOUT", "15"))
+LANGUAGETOOL_TIMEOUT = float(os.environ.get("LANGUAGETOOL_TIMEOUT", "30"))
 
 app = FastAPI(title="Lemkin Content Generator API")
 
