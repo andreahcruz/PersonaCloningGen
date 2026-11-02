@@ -18,6 +18,7 @@ import type {
   GenerationMethod,
   GrammarCheckResult,
   ModelInfo,
+  ModelFStatus,
   PersonaProfile,
   ServiceStatus,
   Source,
@@ -118,6 +119,34 @@ export async function getModels(): Promise<{ models: ModelInfo[]; fromBackend: b
       };
     }
     throw e;
+  }
+}
+
+// ---- Model F status (GET /model-f/status) ----
+// A missing route means this is an older deployment, not an app-wide failure.
+export async function getModelFStatus(): Promise<ModelFStatus> {
+  if (IS_MOCK) {
+    return {
+      enabled: false,
+      available: false,
+      detail: "Model F is unavailable in mock mode.",
+    };
+  }
+  try {
+    return await request<ModelFStatus>("/model-f/status");
+  } catch (error) {
+    if (error instanceof NotAvailableError) {
+      return {
+        enabled: false,
+        available: false,
+        detail: "This deployment does not include Model F.",
+      };
+    }
+    return {
+      enabled: false,
+      available: false,
+      detail: "Model F status is unavailable.",
+    };
   }
 }
 

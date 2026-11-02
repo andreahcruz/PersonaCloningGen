@@ -203,6 +203,31 @@ describe("live mode", () => {
     expect(res.models.map((m) => m.name)).toContain("lemkin-clone");
   });
 
+  it("loads Model F availability without treating an old backend as an error", async () => {
+    const api = await loadApi("live");
+    fetchMock.mockResolvedValueOnce(jsonResponse({
+      enabled: true,
+      available: true,
+      detail: "2713 catalogued snapshot documents, 768-dimension embeddings",
+      snapshot_documents: 2713,
+      embedding_dimension: 768,
+    }));
+
+    await expect(api.getModelFStatus()).resolves.toMatchObject({
+      available: true,
+      snapshot_documents: 2713,
+      embedding_dimension: 768,
+    });
+    expect(fetchMock).toHaveBeenCalledWith("http://backend.test/model-f/status", expect.any(Object));
+  });
+
+  it("hides Model F safely when an older backend has no status endpoint", async () => {
+    const api = await loadApi("live");
+    fetchMock.mockResolvedValueOnce(new Response("not found", { status: 404 }));
+
+    await expect(api.getModelFStatus()).resolves.toMatchObject({ available: false, enabled: false });
+  });
+
   it("loads the versioned evaluation manifest", async () => {
     const api = await loadApi("live");
     fetchMock.mockResolvedValueOnce(jsonResponse({

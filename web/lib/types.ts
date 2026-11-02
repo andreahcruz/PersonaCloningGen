@@ -19,7 +19,16 @@ export const FORMATS: FormatOption[] = [
 ];
 
 export type SourceType = "blog" | "linkedin" | "x" | "youtube" | "unknown";
-export type GenerationMethod = "baseline" | "personarag" | "qlora";
+export type GenerationMethod = "baseline" | "personarag" | "qlora" | "model_f";
+
+/** Readiness of the optional LightRAG + Relabel deployment path. */
+export interface ModelFStatus {
+  enabled: boolean;
+  available: boolean;
+  detail: string;
+  snapshot_documents?: number;
+  embedding_dimension?: number;
+}
 
 export interface PersonaProfile {
   name: string;

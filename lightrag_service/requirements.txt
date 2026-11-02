@@ -1,0 +1,8 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+pydantic==2.9.2
+requests==2.31.0
+numpy>=1.26,<3
+lightrag-hku==1.5.7
+# Keep the LightRAG dependency set compatible with the deployed Chroma stack.
+opentelemetry-api==1.41.1

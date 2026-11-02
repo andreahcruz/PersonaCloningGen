@@ -286,6 +286,63 @@ def test_qlora_generation_bypasses_retrieval(monkeypatch):
     ]
 
 
+def test_model_f_generation_uses_lightrag_sources_and_existing_qlora(monkeypatch):
+    calls = []
+
+    monkeypatch.setattr(main, "load_format_spec", lambda *_: {"output_type": "markdown"})
+    monkeypatch.setattr(
+        main,
+        "retrieve_model_f",
+        lambda *_: [
+            {
+                "id": "graph_1",
+                "chunk_text": "A first sales hire should solve a repeatable problem.",
+                "source": "linkedin",
+                "title": "First sales hire",
+            }
+        ],
+    )
+
+    def fake_chat(prompt, _base, model, **kwargs):
+        calls.append((prompt, model, kwargs))
+        return "Hire only after the motion repeats."
+
+    monkeypatch.setattr(main, "ollama_chat", fake_chat)
+    response = TestClient(main.app).post(
+        "/generate",
+        json={
+            "format": "linkedin_post",
+            "topic": "Hiring your first salesperson",
+            "audience": "ignored by Model F",
+            "goal": "ignored by Model F",
+            "cta": "none",
+            "k": 4,
+            "method": "model_f",
+        },
+    )
+
+    assert response.status_code == 200
+    body = response.json()
+    assert body["method"] == "model_f"
+    assert body["model"] == "lemkin-qlora"
+    assert body["sources"][0]["id"] == "graph_1"
+    assert body["sources"][0]["source_type"] == "linkedin"
+    assert "[Source 1] A first sales hire" in calls[0][0]
+    assert calls[0][0].endswith(
+        "Write a LinkedIn post in the style of Jason Lemkin about Hiring your first salesperson."
+    )
+    assert calls[0][1] == "lemkin-qlora"
+    assert calls[0][2]["options"] == main.direct_qlora_options("linkedin_post")
+
+
+def test_model_f_status_is_disabled_by_default(monkeypatch):
+    monkeypatch.setattr(main, "MODEL_F_ENABLED", False)
+    response = TestClient(main.app).get("/model-f/status")
+    assert response.status_code == 200
+    assert response.json()["available"] is False
+    assert response.json()["enabled"] is False
+
+
 def test_baseline_generation_bypasses_persona_and_retrieval(monkeypatch):
     calls = []
 

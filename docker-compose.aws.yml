@@ -91,6 +91,38 @@ services:
         max-file: "2"
     restart: unless-stopped
 
+  # Private Model F retrieval sidecar. It reads only a staged runtime copy of
+  # Kevin's verified LightRAG snapshot; no port is exposed to the host or web.
+  # MODEL_F_ENABLED remains false until the snapshot is verified on EC2.
+  lightrag-retriever:
+    build:
+      context: .
+      dockerfile: lightrag_service/Dockerfile
+    environment:
+      LIGHTRAG_WORKDIR: /runtime
+      LIGHTRAG_OLLAMA_BASE: http://ollama:11434
+      LIGHTRAG_EXTRACTION_MODEL: llama3.1
+      LIGHTRAG_EMBED_MODEL: nomic-embed-text
+      LIGHTRAG_NUM_CTX: "16384"
+    volumes:
+      - ${LIGHTRAG_RUNTIME_DIR:-/opt/model-f/runtime/storage_expand_v1_snapshot}:/runtime
+    depends_on:
+      ollama:
+        condition: service_healthy
+    mem_limit: 1536m
+    cpus: "1.00"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8010/healthz')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    restart: unless-stopped
+
   airflow-scheduler:
     environment: *pipeline-env
     depends_on:
@@ -120,6 +152,11 @@ services:
       OLLAMA_GENERATE_TIMEOUT: ${OLLAMA_GENERATE_TIMEOUT:-600}
       LANGUAGETOOL_BASE: http://languagetool:8081
       LANGUAGETOOL_TIMEOUT: ${LANGUAGETOOL_TIMEOUT:-30}
+      MODEL_F_ENABLED: ${MODEL_F_ENABLED:-false}
+      LIGHTRAG_BASE: http://lightrag-retriever:8010
+      # Retrieval can be slow on the CPU candidate; remain below the web
+      # relay's ten-minute ceiling so the client gets a controlled response.
+      LIGHTRAG_TIMEOUT: ${LIGHTRAG_TIMEOUT:-480}
       EVALUATION_RESULTS_PATH: /app/data/evaluation/batch_results.json
       CHROMA_USE_HTTP: "true"
       CHROMA_HOST: chroma
@@ -136,6 +173,8 @@ services:
       chroma:
         condition: service_started
       languagetool:
+        condition: service_started
+      lightrag-retriever:
         condition: service_started
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/healthz')"]

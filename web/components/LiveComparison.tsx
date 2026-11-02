@@ -14,6 +14,7 @@ const METHOD_LABEL: Record<GenerationMethod, string> = {
   baseline: "Base Llama",
   personarag: "PersonaRAG",
   qlora: "direct QLoRA",
+  model_f: "LightRAG + Relabel",
 };
 
 function metric(value: string | number, label: string) {

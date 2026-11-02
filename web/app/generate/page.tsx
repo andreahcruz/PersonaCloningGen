@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { ApiError, checkGrammar, generate, getPersona } from "@/lib/api";
+import { ApiError, checkGrammar, generate, getModelFStatus, getPersona } from "@/lib/api";
 import { type ComparisonEntry, LiveComparison } from "@/components/LiveComparison";
 import { addHistory } from "@/lib/history";
 import {
@@ -10,6 +10,7 @@ import {
   type GenerationMethod,
   type GenerateResult,
   type GrammarCheckResult,
+  type ModelFStatus,
   type PersonaProfile,
 } from "@/lib/types";
 import {
@@ -47,6 +48,12 @@ const METHODS: Array<{
     label: "direct QLoRA",
     model: "Relabel GGUF",
     detail: "Writes from the merged Relabel model. It does not retrieve sources.",
+  },
+  {
+    id: "model_f",
+    label: "LightRAG + Relabel",
+    model: "Relabel GGUF + hybrid retrieval",
+    detail: "Retrieves source-grounded passages from the verified LightRAG snapshot, then writes with the same Relabel GGUF.",
   },
 ];
 
@@ -110,6 +117,7 @@ export default function GeneratorPage() {
   const [copied, setCopied] = useState(false);
   const [persona, setPersona] = useState<PersonaProfile | null>(null);
   const [personaError, setPersonaError] = useState<string | null>(null);
+  const [modelFStatus, setModelFStatus] = useState<ModelFStatus | null>(null);
   const [grammarResult, setGrammarResult] = useState<GrammarCheckResult | null>(null);
   const [grammarError, setGrammarError] = useState<string | null>(null);
   const [grammarBusy, setGrammarBusy] = useState(false);
@@ -128,10 +136,20 @@ export default function GeneratorPage() {
     };
   }, []);
 
+  useEffect(() => {
+    let active = true;
+    getModelFStatus().then((status) => {
+      if (active) setModelFStatus(status);
+    });
+    return () => {
+      active = false;
+    };
+  }, []);
+
   const missing = useMemo(() => {
     const out: string[] = [];
     if (!topic.trim()) out.push("topic");
-    if (compareMode || method !== "qlora") {
+    if (compareMode || (method !== "qlora" && method !== "model_f")) {
       if (!audience.trim()) out.push("audience");
       if (!goal.trim()) out.push("goal");
     }
@@ -142,7 +160,7 @@ export default function GeneratorPage() {
     // QLoRA remains training-aligned. The shared brief is the topic; the
     // baseline and RAG paths additionally receive audience/goal/CTA because
     // those are part of their deployed prompt contracts.
-    return targetMethod === "qlora"
+    return targetMethod === "qlora" || targetMethod === "model_f"
       ? {
           format,
           topic: qloraTopicOnly(topic).trim(),
@@ -268,7 +286,8 @@ export default function GeneratorPage() {
     URL.revokeObjectURL(url);
   }
 
-  const activeMethod = METHODS.find((item) => item.id === method) ?? METHODS[0];
+  const visibleMethods = METHODS.filter((item) => item.id !== "model_f" || modelFStatus?.available);
+  const activeMethod = visibleMethods.find((item) => item.id === method) ?? METHODS[0];
   const displayedSourceResult = compareMode ? comparison.find((entry) => entry.method === "personarag")?.result : result;
 
   return (
@@ -318,7 +337,7 @@ export default function GeneratorPage() {
                 Writing method
               </legend>
               <div className="space-y-2">
-                {METHODS.map((item) => (
+                {visibleMethods.map((item) => (
                   <label
                     key={item.id}
                     className={`block cursor-pointer rounded-xl border p-3 transition ${
@@ -365,6 +384,11 @@ export default function GeneratorPage() {
                 ? "The shared brief is held constant. Each method keeps its own production prompt contract; direct QLoRA receives only its training-aligned topic instruction."
                 : activeMethod.detail}
             </p>
+            {modelFStatus && !modelFStatus.available ? (
+              <p className="text-xs leading-relaxed text-mute">
+                LightRAG + Relabel is staged but unavailable: {modelFStatus.detail}
+              </p>
+            ) : null}
             {(method === "personarag" || compareMode) ? (
               <Field label={`Retrieved chunks: ${k}`}>
                 <input
@@ -403,7 +427,7 @@ export default function GeneratorPage() {
                 </p>
               </div>
             ) : null}
-            {(method !== "qlora" || compareMode) ? (
+            {(method !== "qlora" && method !== "model_f") || compareMode ? (
               <>
                 <div className="grid gap-4 sm:grid-cols-2">
                   <Field label="Audience">
