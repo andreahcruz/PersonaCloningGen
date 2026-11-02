@@ -6,7 +6,7 @@ The partial LightRAG index is not in this handoff. Indexing was still running wh
 
 - Branch: `kevin/lightrag-model-f`
 - Remote: `origin` `https://github.com/andreahcruz/298P.git`
-- Implementation commit: `IMPLEMENTATION_COMMIT_PENDING`
+- Implementation commit: `dbeb21c5b0fa7e6bdd1fae6613963c5c90eb7b84`
 - Parent before this handoff: `95db4f54a518cb273ea9118b10b9175eeb9668be`
 - This file records the implementation commit above. `git rev-parse HEAD` is the pushed tip if a later commit only fills this hash or adds the pull-request link.
 
