@@ -64,8 +64,43 @@ def test_model_f_generation_returns_controlled_unavailable_response(monkeypatch)
             "audience": "B2B SaaS founders",
             "goal": "Share one takeaway",
             "method": "model_f",
+            "retrieval_backend": "lightrag",
+            "model_f_context": "source",
         },
     )
 
     assert response.status_code == 503
     assert "Model F unavailable" in response.json()["detail"]
+
+
+def test_model_f_requires_lightrag_backend():
+    response = TestClient(main.app).post(
+        "/generate",
+        json={
+            "format": "linkedin_post",
+            "topic": "Hiring your first salesperson",
+            "audience": "B2B SaaS founders",
+            "goal": "Share one takeaway",
+            "method": "model_f",
+        },
+    )
+
+    assert response.status_code == 400
+    assert "requires retrieval_backend" in response.json()["detail"]
+
+
+def test_existing_methods_cannot_accidentally_request_lightrag():
+    response = TestClient(main.app).post(
+        "/generate",
+        json={
+            "format": "linkedin_post",
+            "topic": "Hiring your first salesperson",
+            "audience": "B2B SaaS founders",
+            "goal": "Share one takeaway",
+            "method": "personarag",
+            "retrieval_backend": "lightrag",
+        },
+    )
+
+    assert response.status_code == 400
+    assert "only through the Model F" in response.json()["detail"]

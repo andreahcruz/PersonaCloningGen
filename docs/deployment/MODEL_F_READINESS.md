@@ -11,6 +11,9 @@ is not enabled in the deployed generator yet.
 - `MODEL_F_ENABLED=false` is the production default.
 - The API's `model_f` method returns a controlled 503 until a verified index
   and query adapter are available.
+- The reserved request contract is `retrieval_backend="lightrag"` plus one of
+  `model_f_context=off|source|relationships|descriptions|multihop`. Existing
+  methods retain `retrieval_backend="dense"` and `model_f_context="off"`.
 - No LightRAG package is installed in the web/backend image yet, and no index
   is mounted or queried during this phase.
 

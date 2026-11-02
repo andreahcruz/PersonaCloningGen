@@ -62,6 +62,10 @@ class GenerateRequest(BaseModel):
     cta: str = "none"
     k: int = Field(default=8, ge=1, le=20)
     method: Literal["baseline", "personarag", "qlora", "model_f"] = "personarag"
+    # The visible application continues to use dense retrieval. These fields
+    # reserve the Model F contract without changing existing browser requests.
+    retrieval_backend: Literal["dense", "lightrag"] = "dense"
+    model_f_context: Literal["off", "source", "relationships", "descriptions", "multihop"] = "off"
 
 
 class GenerateResponse(BaseModel):
@@ -423,8 +427,12 @@ def list_formats() -> list[str]:
 @app.post("/generate", response_model=GenerateResponse)
 def generate(req: GenerateRequest) -> GenerateResponse:
     if req.method == "model_f":
+        if req.retrieval_backend != "lightrag":
+            raise HTTPException(400, "Model F requires retrieval_backend='lightrag'.")
         status = model_f_status()
         raise HTTPException(503, f"Model F unavailable: {status.detail}")
+    if req.retrieval_backend != "dense" or req.model_f_context != "off":
+        raise HTTPException(400, "LightRAG context is available only through the Model F method.")
     if req.method == "personarag" and not PERSONA_PATH.exists():
         raise HTTPException(500, f"Persona profile not found: {PERSONA_PATH}")
 
