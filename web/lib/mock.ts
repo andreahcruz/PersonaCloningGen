@@ -99,13 +99,23 @@ const DRAFTS: Record<FormatId, (r: GenerateRequest) => string> = {
 };
 
 export function mockGenerate(req: GenerateRequest): GenerateResult {
+  const content = DRAFTS[req.format](req);
+  const sources = req.method === "personarag" ? mockSources(req.k) : [];
   return {
-    content: DRAFTS[req.format](req),
-    sources: req.method === "personarag" ? mockSources(req.k) : [],
+    content,
+    sources,
     model: req.model ?? (req.method === "qlora" ? "lemkin-qlora" : "llama3.1"),
     latencyMs: 1200,
     requestId: "demo",
     method: req.method,
+    metrics: {
+      wordCount: content.trim().split(/\s+/).filter(Boolean).length,
+      characterCount: content.length,
+      sentenceCount: Math.max(1, (content.match(/[.!?]+(?:\s|$)/g) ?? []).length),
+      sourceCount: sources.length,
+      sourceTypes: [...new Set(sources.map((source) => source.sourceType))],
+      scope: "operational",
+    },
     mock: true,
   };
 }

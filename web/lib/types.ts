@@ -52,6 +52,19 @@ export interface GenerateRequest {
   temperature?: number;
 }
 
+/**
+ * Measurements returned for one finished request. They are operational
+ * signals, not a score of factuality, writing quality, or persona voice.
+ */
+export interface DraftMetrics {
+  wordCount: number;
+  characterCount: number;
+  sentenceCount: number;
+  sourceCount: number;
+  sourceTypes: SourceType[];
+  scope: "operational";
+}
+
 export interface GenerateResult {
   content: string;
   sources: Source[];
@@ -60,6 +73,7 @@ export interface GenerateResult {
   latencyMs: number | null;
   requestId?: string;
   method: GenerationMethod;
+  metrics: DraftMetrics;
   /** True when the data is sample data, not real model output. */
   mock: boolean;
 }

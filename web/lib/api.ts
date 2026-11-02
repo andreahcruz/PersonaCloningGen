@@ -11,6 +11,7 @@ import {
 } from "./mock";
 import type {
   EvaluationData,
+  DraftMetrics,
   FormatId,
   GenerateRequest,
   GenerateResult,
@@ -139,6 +140,14 @@ interface RawGenerate {
   latency_ms?: number;
   request_id?: string;
   method?: GenerationMethod;
+  metrics?: {
+    word_count?: number;
+    character_count?: number;
+    sentence_count?: number;
+    source_count?: number;
+    source_types?: string[];
+    scope?: "operational";
+  };
 }
 
 const SOURCE_TYPES: SourceType[] = ["blog", "linkedin", "x", "youtube"];
@@ -170,13 +179,26 @@ export async function generate(req: GenerateRequest): Promise<GenerateResult> {
   if (!content.trim()) {
     throw new ApiError("The model returned an empty draft.", 502, "Try again or pick another model.");
   }
+  const sources = (raw.sources ?? []).map(mapSource);
+  const fallbackWords = content.trim().split(/\s+/).filter(Boolean).length;
+  const rawTypes = raw.metrics?.source_types ?? sources.map((source) => source.sourceType);
+  const sourceTypes = rawTypes.filter((type): type is SourceType => (SOURCE_TYPES as string[]).includes(type));
+  const metrics: DraftMetrics = {
+    wordCount: raw.metrics?.word_count ?? fallbackWords,
+    characterCount: raw.metrics?.character_count ?? content.length,
+    sentenceCount: raw.metrics?.sentence_count ?? (content.trim() ? 1 : 0),
+    sourceCount: raw.metrics?.source_count ?? sources.length,
+    sourceTypes,
+    scope: raw.metrics?.scope ?? "operational",
+  };
   return {
     content,
-    sources: (raw.sources ?? []).map(mapSource),
+    sources,
     model: raw.model ?? req.model ?? "default",
     latencyMs: raw.latency_ms ?? Math.round(performance.now() - started),
     requestId: raw.request_id,
     method: raw.method ?? req.method,
+    metrics,
     mock: false,
   };
 }

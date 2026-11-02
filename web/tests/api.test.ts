@@ -83,6 +83,35 @@ describe("live mode", () => {
     expect(res.requestId).toBe("abc");
     expect(res.sources[0]).toMatchObject({ sourceType: "blog", score: 0.87 });
     expect(res.sources[1]).toMatchObject({ sourceType: "unknown", score: null });
+    expect(res.metrics).toMatchObject({ wordCount: 1, sourceCount: 2, scope: "operational" });
+  });
+
+  it("preserves server-side operational metrics for a live comparison", async () => {
+    const api = await loadApi("live");
+    fetchMock.mockResolvedValueOnce(jsonResponse({
+      draft: "One sentence.",
+      method: "personarag",
+      metrics: {
+        word_count: 2,
+        character_count: 13,
+        sentence_count: 1,
+        source_count: 1,
+        source_types: ["blog"],
+        scope: "operational",
+      },
+      sources: [{ id: "source-1", text: "Evidence", source_type: "blog" }],
+    }));
+
+    const res = await api.generate(REQ);
+
+    expect(res.metrics).toEqual({
+      wordCount: 2,
+      characterCount: 13,
+      sentenceCount: 1,
+      sourceCount: 1,
+      sourceTypes: ["blog"],
+      scope: "operational",
+    });
   });
 
   it("rejects an empty draft with a hint", async () => {

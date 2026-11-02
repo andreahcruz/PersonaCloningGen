@@ -134,7 +134,7 @@ def test_generate_returns_real_source_metadata(monkeypatch, tmp_path):
     )
     monkeypatch.setattr(main, "format_context", lambda *_, **__: "context")
     monkeypatch.setattr(main, "build_prompt", lambda *_: "prompt")
-    monkeypatch.setattr(main, "ollama_generate", lambda *_: "A grounded draft.")
+    monkeypatch.setattr(main, "ollama_generate", lambda *_, **__: "A grounded draft.")
 
     response = TestClient(main.app).post(
         "/generate",
@@ -154,6 +154,14 @@ def test_generate_returns_real_source_metadata(monkeypatch, tmp_path):
     assert body["method"] == "personarag"
     assert body["latency_ms"] >= 0
     assert body["request_id"]
+    assert body["metrics"] == {
+        "word_count": 3,
+        "character_count": 17,
+        "sentence_count": 1,
+        "source_count": 2,
+        "source_types": ["blog", "youtube"],
+        "scope": "operational",
+    }
     assert body["sources"] == [
         {
             "id": "blog_42",
@@ -249,6 +257,14 @@ def test_qlora_generation_bypasses_retrieval(monkeypatch):
     assert body["method"] == "qlora"
     assert body["model"] == "lemkin-qlora"
     assert body["sources"] == []
+    assert body["metrics"] == {
+        "word_count": main._word_count(body["draft"]),
+        "character_count": len(body["draft"]),
+        "sentence_count": 4,
+        "source_count": 0,
+        "source_types": [],
+        "scope": "operational",
+    }
     assert body["draft"] == f"lemkin-qlora: {sentence}"
     assert calls == [
         (

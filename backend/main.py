@@ -60,6 +60,22 @@ class GenerateRequest(BaseModel):
     method: Literal["baseline", "personarag", "qlora"] = "personarag"
 
 
+class DraftMetrics(BaseModel):
+    """Deterministic, per-draft operational measurements.
+
+    These deliberately do not claim factuality, writing quality, or persona
+    similarity.  They are safe to compare across the three deployed paths
+    without calling a judge model or rebuilding the retrieval corpus.
+    """
+
+    word_count: int
+    character_count: int
+    sentence_count: int
+    source_count: int
+    source_types: list[str]
+    scope: Literal["operational"] = "operational"
+
+
 class GenerateResponse(BaseModel):
     draft: str
     sources: list[dict[str, Any]]
@@ -67,6 +83,7 @@ class GenerateResponse(BaseModel):
     latency_ms: int
     request_id: str
     method: Literal["baseline", "personarag", "qlora"]
+    metrics: DraftMetrics
 
 
 class PersonaResponse(BaseModel):
@@ -161,6 +178,22 @@ def _keep_grammar_match(match: dict[str, Any], text: str) -> bool:
 
 def _word_count(text: str) -> int:
     return len(re.findall(r"\b[\w]+(?:['\u2019][\w]+)?\b", text))
+
+
+def _draft_metrics(draft: str, sources: list[dict[str, Any]]) -> DraftMetrics:
+    """Return transparent measurements for one completed generation."""
+    stripped = draft.strip()
+    sentence_count = len(re.findall(r"[^.!?]+[.!?]+(?:\s|$)", stripped))
+    if stripped and not sentence_count:
+        sentence_count = 1
+    source_types = sorted({_source_type(chunk.get("source")) for chunk in sources})
+    return DraftMetrics(
+        word_count=_word_count(draft),
+        character_count=len(draft),
+        sentence_count=sentence_count,
+        source_count=len(sources),
+        source_types=source_types,
+    )
 
 
 # The QLoRA path matches Kevin's medium-grid evaluation: one user sentence,
@@ -454,4 +487,5 @@ def generate(req: GenerateRequest) -> GenerateResponse:
         latency_ms=round((time.perf_counter() - started) * 1000),
         request_id=request_id,
         method=req.method,
+        metrics=_draft_metrics(draft, chunks),
     )

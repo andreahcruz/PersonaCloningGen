@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { ApiError, checkGrammar, generate, getPersona } from "@/lib/api";
+import { type ComparisonEntry, LiveComparison } from "@/components/LiveComparison";
 import { addHistory } from "@/lib/history";
 import {
   FORMATS,
@@ -70,6 +71,8 @@ const LEGACY_QLORA_PREFIXES = [
   "Write a talk in the style of Jason Lemkin about:",
 ];
 
+const COMPARISON_METHODS: GenerationMethod[] = ["baseline", "personarag", "qlora"];
+
 function qloraTopicOnly(value: string): string {
   const prefixes = LEGACY_QLORA_PREFIXES
     .map((prefix) => prefix.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
@@ -99,6 +102,8 @@ export default function GeneratorPage() {
   const [cta, setCta] = useState("none");
   const [k, setK] = useState(4);
   const [method, setMethod] = useState<GenerationMethod>("personarag");
+  const [compareMode, setCompareMode] = useState(false);
+  const [comparison, setComparison] = useState<ComparisonEntry[]>([]);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<ApiError | null>(null);
   const [result, setResult] = useState<GenerateResult | null>(null);
@@ -126,12 +131,37 @@ export default function GeneratorPage() {
   const missing = useMemo(() => {
     const out: string[] = [];
     if (!topic.trim()) out.push("topic");
-    if (method !== "qlora") {
+    if (compareMode || method !== "qlora") {
       if (!audience.trim()) out.push("audience");
       if (!goal.trim()) out.push("goal");
     }
     return out;
-  }, [topic, audience, goal, method]);
+  }, [topic, audience, goal, method, compareMode]);
+
+  function requestFor(targetMethod: GenerationMethod) {
+    // QLoRA remains training-aligned. The shared brief is the topic; the
+    // baseline and RAG paths additionally receive audience/goal/CTA because
+    // those are part of their deployed prompt contracts.
+    return targetMethod === "qlora"
+      ? {
+          format,
+          topic: qloraTopicOnly(topic).trim(),
+          audience: "",
+          goal: "",
+          cta: "none",
+          k: 4,
+          method: targetMethod,
+        }
+      : {
+          format,
+          topic: topic.trim(),
+          audience: audience.trim(),
+          goal: goal.trim(),
+          cta: cta.trim() || "none",
+          k,
+          method: targetMethod,
+        };
+  }
 
   async function run() {
     if (missing.length || busy) return;
@@ -141,31 +171,48 @@ export default function GeneratorPage() {
     setGrammarResult(null);
     setGrammarError(null);
     try {
+      if (compareMode) {
+        setComparison(COMPARISON_METHODS.map((item, index) => ({
+          method: item,
+          state: index === 0 ? "running" : "queued",
+        })));
+        for (let index = 0; index < COMPARISON_METHODS.length; index += 1) {
+          const targetMethod = COMPARISON_METHODS[index];
+          try {
+            const res = await generate(requestFor(targetMethod));
+            setComparison((previous) => previous.map((entry) => {
+              if (entry.method === targetMethod) return { ...entry, state: "complete", result: res };
+              if (entry.method === COMPARISON_METHODS[index + 1] && entry.state === "queued") {
+                return { ...entry, state: "running" };
+              }
+              return entry;
+            }));
+            addHistory({
+              id: `${Date.now()}-${targetMethod}`,
+              at: new Date().toISOString(),
+              format,
+              topic: topic.trim(),
+              model: res.model,
+              latencyMs: res.latencyMs,
+              mock: res.mock,
+            });
+          } catch (itemError) {
+            const message = itemError instanceof ApiError ? itemError.message : "This method could not generate a draft.";
+            setComparison((previous) => previous.map((entry) => {
+              if (entry.method === targetMethod) return { ...entry, state: "failed", error: message };
+              if (entry.method === COMPARISON_METHODS[index + 1] && entry.state === "queued") {
+                return { ...entry, state: "running" };
+              }
+              return entry;
+            }));
+          }
+        }
+        return;
+      }
       // PersonaRAG uses the full creative brief. Direct QLoRA was not trained
       // on audience/goal/CTA instructions, so do not send stale form values
       // when the user selects that method.
-      const request = method === "qlora"
-        ? {
-            format,
-            topic: qloraTopicOnly(topic).trim(),
-            audience: "",
-            goal: "",
-            cta: "none",
-            k: 4,
-            method,
-          }
-        : {
-            format,
-            topic: topic.trim(),
-            audience: audience.trim(),
-            goal: goal.trim(),
-            cta: cta.trim() || "none",
-            k,
-            method,
-          };
-      const res = await generate({
-        ...request,
-      });
+      const res = await generate(requestFor(method));
       setResult(res);
       addHistory({
         id: `${Date.now()}`,
@@ -223,12 +270,13 @@ export default function GeneratorPage() {
 
   const words = result ? result.content.trim().split(/\s+/).filter(Boolean).length : 0;
   const activeMethod = METHODS.find((item) => item.id === method) ?? METHODS[0];
+  const displayedSourceResult = compareMode ? comparison.find((entry) => entry.method === "personarag")?.result : result;
 
   return (
     <>
       <PageHeader
         title="Content generator"
-        subtitle="Compare source-grounded PersonaRAG with direct QLoRA."
+        subtitle="Generate one draft or compare the deployed architectures from one shared brief."
       />
 
       <div className="grid gap-5 xl:grid-cols-[260px_minmax(0,1fr)_320px]">
@@ -286,6 +334,7 @@ export default function GeneratorPage() {
                       value={item.id}
                       checked={method === item.id}
                       onChange={() => setMethod(item.id)}
+                      disabled={compareMode}
                       className="sr-only"
                     />
                     <span className="block text-sm font-medium">{item.label}</span>
@@ -294,8 +343,30 @@ export default function GeneratorPage() {
                 ))}
               </div>
             </fieldset>
-            <p className="text-xs leading-relaxed text-mute">{activeMethod.detail}</p>
-            {method === "personarag" ? (
+            <label className={`block rounded-xl border p-3 transition ${
+              compareMode ? "border-violet bg-violet/10" : "border-line hover:border-primary/50"
+            }`}>
+              <input
+                type="checkbox"
+                checked={compareMode}
+                onChange={(event) => {
+                  setCompareMode(event.target.checked);
+                  setComparison([]);
+                  setError(null);
+                }}
+                className="mr-2 accent-primary"
+              />
+              <span className="text-sm font-medium">Compare all deployed methods</span>
+              <span className="mt-1 block text-xs leading-relaxed text-mute">
+                Runs Base Llama, PersonaRAG, and direct QLoRA one at a time. This can take several minutes.
+              </span>
+            </label>
+            <p className="text-xs leading-relaxed text-mute">
+              {compareMode
+                ? "The shared brief is held constant. Each method keeps its own production prompt contract; direct QLoRA receives only its training-aligned topic instruction."
+                : activeMethod.detail}
+            </p>
+            {(method === "personarag" || compareMode) ? (
               <Field label={`Retrieved chunks: ${k}`}>
                 <input
                   type="range"
@@ -317,11 +388,11 @@ export default function GeneratorPage() {
               <input
                 className={inputClass}
                 value={topic}
-                onChange={(e) => setTopic(method === "qlora" ? qloraTopicOnly(e.target.value) : e.target.value)}
-                placeholder={method === "qlora" ? "e.g. Hiring your first salesperson" : "e.g. Hiring your first salesperson"}
+                onChange={(e) => setTopic(method === "qlora" && !compareMode ? qloraTopicOnly(e.target.value) : e.target.value)}
+                placeholder="e.g. Hiring your first salesperson"
               />
             </Field>
-            {method === "qlora" ? (
+            {method === "qlora" && !compareMode ? (
               <div className="rounded-xl border border-line bg-bg p-3 text-xs leading-relaxed text-mute">
                 <p className="font-medium text-text">QLoRA receives this tested format-specific request:</p>
                 <p className="mt-1 break-words font-mono text-[11px] text-mute">
@@ -333,7 +404,7 @@ export default function GeneratorPage() {
                 </p>
               </div>
             ) : null}
-            {method !== "qlora" ? (
+            {(method !== "qlora" || compareMode) ? (
               <>
                 <div className="grid gap-4 sm:grid-cols-2">
                   <Field label="Audience">
@@ -360,7 +431,7 @@ export default function GeneratorPage() {
             ) : null}
             <div className="flex flex-wrap items-center gap-3">
               <Button onClick={run} disabled={busy || missing.length > 0}>
-                {busy ? "Generating..." : result ? "Regenerate" : "Generate"}
+                {busy ? (compareMode ? "Comparing..." : "Generating...") : compareMode ? "Compare methods" : result ? "Regenerate" : "Generate"}
               </Button>
               {missing.length > 0 ? (
                 <span className="text-xs text-mute">Add {missing.join(", ")} to continue.</span>
@@ -376,8 +447,8 @@ export default function GeneratorPage() {
 
           <Card>
             <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
-              <h2 className="font-semibold">Draft</h2>
-              {result ? (
+              <h2 className="font-semibold">{compareMode ? "Comparison results" : "Draft"}</h2>
+              {result && !compareMode ? (
                 <div className="flex gap-2">
                   <Button variant="ghost" onClick={copy}>
                     {copied ? "Copied" : "Copy"}
@@ -389,9 +460,13 @@ export default function GeneratorPage() {
               ) : null}
             </div>
 
-            {busy ? (
+            {compareMode && comparison.length ? (
+              <LiveComparison entries={comparison} />
+            ) : busy ? (
               <p className="animate-pulse text-sm text-mute" role="status">
-                {method === "personarag"
+                {compareMode
+                  ? "Running each deployed method sequentially. The next method starts after the current one completes or fails."
+                  : method === "personarag"
                   ? "Embedding your brief, retrieving sources and generating."
                   : method === "qlora"
                     ? "Generating with direct QLoRA."
@@ -445,8 +520,8 @@ export default function GeneratorPage() {
                 </div>
               </>
             ) : (
-              <EmptyState title="Your draft will appear here">
-                Fill in the brief and press Generate.
+              <EmptyState title={compareMode ? "Your comparison will appear here" : "Your draft will appear here"}>
+                Fill in the brief and press {compareMode ? "Compare methods" : "Generate"}.
               </EmptyState>
             )}
           </Card>
@@ -474,9 +549,9 @@ export default function GeneratorPage() {
 
           <Card className="h-fit">
             <h2 className="mb-3 font-semibold">Retrieved sources</h2>
-          {result && result.sources.length > 0 ? (
+          {displayedSourceResult && displayedSourceResult.sources.length > 0 ? (
             <ul className="space-y-3">
-              {result.sources.map((s) => (
+              {displayedSourceResult.sources.map((s) => (
                 <li key={s.id} className="rounded-xl border border-line bg-bg p-3">
                   <div className="mb-2 flex items-center justify-between gap-2">
                     <SourceTag type={s.sourceType} />
@@ -489,6 +564,10 @@ export default function GeneratorPage() {
                 </li>
               ))}
             </ul>
+          ) : compareMode ? (
+            <p className="text-sm text-mute">
+              PersonaRAG sources for the shared brief appear in its comparison card after that method completes.
+            </p>
           ) : result?.method === "qlora" ? (
             <p className="text-sm text-mute">
               direct QLoRA writes from the merged model. It does not retrieve Chroma sources.
