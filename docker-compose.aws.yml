@@ -109,7 +109,10 @@ services:
     depends_on:
       ollama:
         condition: service_healthy
-    mem_limit: 1536m
+    # Hybrid queries load the verified graph plus all three vector stores.
+    # 1.5 GiB OOM-kills the process on t3.xlarge; keep it private but give it
+    # enough RAM to complete a request without affecting the public interface.
+    mem_limit: 4g
     cpus: "1.00"
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8010/healthz')"]
