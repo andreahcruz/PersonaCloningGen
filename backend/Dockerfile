@@ -10,6 +10,7 @@ COPY spark_jobs/corpus_footer_scrub.py ./spark_jobs/corpus_footer_scrub.py
 COPY spark_jobs/output_checks.py ./spark_jobs/output_checks.py
 COPY formats/ ./formats/
 COPY scripts/capture_personarag_smoke.py ./scripts/capture_personarag_smoke.py
+COPY backend/model_f.py ./model_f.py
 COPY backend/main.py ./main.py
 
 ENV CHROMA_USE_HTTP=true

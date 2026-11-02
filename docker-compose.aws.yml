@@ -121,6 +121,12 @@ services:
       LANGUAGETOOL_BASE: http://languagetool:8081
       LANGUAGETOOL_TIMEOUT: ${LANGUAGETOOL_TIMEOUT:-30}
       EVALUATION_RESULTS_PATH: /app/data/evaluation/batch_results.json
+      # Model F remains inert until Kevin supplies a completed, verified graph
+      # snapshot. Do not point this at the live indexing directory.
+      MODEL_F_ENABLED: ${MODEL_F_ENABLED:-false}
+      LIGHTRAG_WORKDIR: ${LIGHTRAG_WORKDIR:-}
+      LIGHTRAG_MODE: ${LIGHTRAG_MODE:-hybrid}
+      MODEL_F_CONTEXT: ${MODEL_F_CONTEXT:-off}
       CHROMA_USE_HTTP: "true"
       CHROMA_HOST: chroma
       CHROMA_PORT: "8000"

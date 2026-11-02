@@ -35,6 +35,10 @@ from generate import (
     retrieve,
     summarize_persona,
 )
+try:  # Package import in tests; top-level import in the slim backend container.
+    from backend.model_f import ModelFStatus, model_f_status
+except ModuleNotFoundError:  # pragma: no cover - exercised by the container build
+    from model_f import ModelFStatus, model_f_status
 
 BASE = Path(__file__).resolve().parent.parent
 FORMAT_SPECS_PATH = Path(os.environ.get("FORMAT_SPECS_PATH", BASE / "formats" / "format_specs.yaml"))
@@ -57,7 +61,7 @@ class GenerateRequest(BaseModel):
     goal: str
     cta: str = "none"
     k: int = Field(default=8, ge=1, le=20)
-    method: Literal["baseline", "personarag", "qlora"] = "personarag"
+    method: Literal["baseline", "personarag", "qlora", "model_f"] = "personarag"
 
 
 class GenerateResponse(BaseModel):
@@ -66,7 +70,7 @@ class GenerateResponse(BaseModel):
     model: str
     latency_ms: int
     request_id: str
-    method: Literal["baseline", "personarag", "qlora"]
+    method: Literal["baseline", "personarag", "qlora", "model_f"]
 
 
 class PersonaResponse(BaseModel):
@@ -99,6 +103,14 @@ class GrammarCheckResponse(BaseModel):
     issues: list[GrammarIssue]
 
 
+class ModelFStatusResponse(BaseModel):
+    enabled: bool
+    ready: bool
+    mode: str
+    context_profile: str
+    detail: str
+
+
 # These are the conservative, published filters from the PUK-28 LanguageTool
 # check.  They deliberately avoid treating stylistic repetition and informal
 # Lemkin phrasing as grammar mistakes.  We do not surface spell-check-only
@@ -123,6 +135,16 @@ def _settings() -> tuple[str, str, str, str]:
         os.environ.get("EMBED_MODEL", DEFAULT_EMBED_MODEL),
         os.environ.get("GEN_MODEL", DEFAULT_GEN_MODEL),
         os.environ.get("QLORA_MODEL", "lemkin-qlora"),
+    )
+
+
+def _model_f_response(status: ModelFStatus) -> ModelFStatusResponse:
+    return ModelFStatusResponse(
+        enabled=status.enabled,
+        ready=status.ready,
+        mode=status.mode,
+        context_profile=status.context_profile,
+        detail=status.detail,
     )
 
 
@@ -339,6 +361,12 @@ def evaluation() -> dict[str, Any]:
     return _load_evaluation_manifest()
 
 
+@app.get("/model-f/status", response_model=ModelFStatusResponse)
+def model_f_state() -> ModelFStatusResponse:
+    """Report Model F readiness without opening LightRAG storage."""
+    return _model_f_response(model_f_status())
+
+
 @app.post("/quality/grammar", response_model=GrammarCheckResponse)
 def grammar_check(req: GrammarCheckRequest) -> GrammarCheckResponse:
     """Run a user-requested LanguageTool screen through the private network."""
@@ -394,6 +422,9 @@ def list_formats() -> list[str]:
 
 @app.post("/generate", response_model=GenerateResponse)
 def generate(req: GenerateRequest) -> GenerateResponse:
+    if req.method == "model_f":
+        status = model_f_status()
+        raise HTTPException(503, f"Model F unavailable: {status.detail}")
     if req.method == "personarag" and not PERSONA_PATH.exists():
         raise HTTPException(500, f"Persona profile not found: {PERSONA_PATH}")
 
