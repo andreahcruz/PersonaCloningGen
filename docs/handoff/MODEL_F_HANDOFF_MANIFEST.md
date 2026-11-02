@@ -15,7 +15,7 @@ Status words follow `AGENTS.md`: IMPLEMENTED, TESTED, MEASURED, VALIDATED.
 | HEAD before the handoff commit | `95db4f54a518cb273ea9118b10b9175eeb9668be` |
 | Remote | `origin` `https://github.com/andreahcruz/298P.git` |
 | Deployment branch | `origin/andreah/deploy-with-react` (EC2/React demo line). `origin/andreah/deploy-test` is an older ancestor. `docs/deployment/DEPLOYMENT_HANDOFF.md` describes the earlier Relabel + Chroma handoff on `kevin/298b-integration`, which is already an ancestor of this branch. |
-| Divergence from `andreah/deploy-with-react` | merge-base `ea1d58b30cafcb4cf18a03ded39963f64ce6aee7`; 35 commits on this branch and 34 on the deploy branch that the other does not have. An October 30 audit recorded content conflicts in `.dockerignore`, `.gitignore`, `README.md`, and `docker-compose.yml`. |
+| Divergence from `andreah/deploy-with-react` | merge-base `ea1d58b30cafcb4cf18a03ded39963f64ce6aee7`. The deploy branch has later commits this branch does not, including the React demo. An October 30 audit recorded content conflicts in `.dockerignore`, `.gitignore`, `README.md`, and `docker-compose.yml`. |
 | Ready to hand off code | Yes. Live-index validation is still blocked until indexing exits. |
 
 The branch was not switched, rebased, reset, or cleaned. The deployment branch was not checked out or modified.

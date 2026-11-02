@@ -5,16 +5,27 @@ The partial LightRAG index is not in this handoff. Indexing was still running wh
 ## 1. Branch and commit
 
 - Branch: `kevin/lightrag-model-f`
-- Remote: `origin` `https://github.com/andreahcruz/298P.git`
+- Remote: `origin` `https://github.com/andreahcruz/298P.git` (GitHub redirects this repository to `andreahcruz/PersonaCloningGen`)
 - Implementation commit: `dbeb21c5b0fa7e6bdd1fae6613963c5c90eb7b84`
+- Hash-recording commit: `de23109a7568cca071860072d49874957a9d16ee`
 - Parent before this handoff: `95db4f54a518cb273ea9118b10b9175eeb9668be`
-- This file records the implementation commit above. `git rev-parse HEAD` is the pushed tip if a later commit only fills this hash or adds the pull-request link.
+- Pushed tip: the commit that adds this pull-request note. Confirm with `git rev-parse HEAD`.
 
 ## 2. Pull request
 
-PR_LINK_PENDING
+No pull request was opened. `gh` is installed but not logged in, so it cannot create the request. The branch itself is on the remote.
 
-Target, if the pull request exists: `andreah/deploy-with-react`. That is the EC2/React deployment branch. This handoff does not merge it. The histories diverged at `ea1d58b30cafcb4cf18a03ded39963f64ce6aee7` (35 commits on this branch, 34 on the deploy branch). An October 30 audit recorded conflicts in `.dockerignore`, `.gitignore`, `README.md`, and `docker-compose.yml`. Resolve those on the deploy branch when merging. Do not merge `kevin/direct-qlora` as well. Its direct-QLoRA patch is already on the deploy line.
+Open a pull request into `andreah/deploy-with-react` from this page:
+
+https://github.com/andreahcruz/PersonaCloningGen/compare/andreah/deploy-with-react...kevin/lightrag-model-f?expand=1
+
+Or, after `gh auth login`:
+
+```text
+gh pr create --repo andreahcruz/PersonaCloningGen --base andreah/deploy-with-react --head kevin/lightrag-model-f --title "Hand off Model F graph context for deployment" --body "Model F graph context, the four-arm runner, and the CPU evaluation harness. The partial LightRAG index is not included. Do not merge until the deploy-branch conflicts are resolved."
+```
+
+Do not merge it from this handoff. The histories diverged at `ea1d58b30cafcb4cf18a03ded39963f64ce6aee7`. The deploy branch has its own later commits, including the React demo. An October 30 audit recorded conflicts in `.dockerignore`, `.gitignore`, `README.md`, and `docker-compose.yml`. Resolve those on the deploy branch when merging. Do not merge `kevin/direct-qlora` as well. Its direct-QLoRA patch is already on the deploy line.
 
 `andreah/deploy-test` is an ancestor of that line, not a second target. `docs/deployment/DEPLOYMENT_HANDOFF.md` is the older Relabel + Chroma note. Its branch, `kevin/298b-integration`, is already contained in `kevin/lightrag-model-f`.
 
