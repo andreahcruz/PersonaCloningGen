@@ -1,10 +1,8 @@
 """Keep raw entity descriptions available to F-DESC.
 
-``lightrag_backend.query_documents`` still drops description text before it
-returns. That file is imported by the running indexer, so this module does
-not edit it. The experiment freezes the raw query payload instead. After the
-indexer exits, ``query_documents`` should return ``raw_entities`` from
-``entity_rows`` without adding those rows to ``hits``.
+``query_documents`` now returns those rows on ``entity_descriptions`` and
+still leaves them out of ``hits``. This module remains the reader for a raw
+``aquery_data`` payload, which the experiment freezes before normalization.
 """
 
 from __future__ import annotations

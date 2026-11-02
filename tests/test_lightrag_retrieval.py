@@ -86,6 +86,27 @@ def test_normalization_keeps_verbatim_chunks_and_drops_graph_summaries():
     assert "generated_summary_not_a_source_span" in reasons
 
 
+def test_entity_descriptions_are_retained_outside_hits():
+    result = normalize_lightrag_data(
+        _payload(),
+        CATALOG,
+        mode="hybrid",
+        evidence_budget=4,
+        max_per_source=1,
+    )
+    assert result["entity_descriptions"] == [{
+        "entity_name": "Net retention",
+        "entity_type": None,
+        "description": "A generated summary.",
+        "source_id": None,
+        "file_path": "gd_a",
+    }]
+    assert all("description" not in item for item in result["excluded"])
+    assert all(hit.get("provenance") == "source_chunk" for hit in result["hits"])
+    assert "generated summary" not in json.dumps(result["hits"]).lower()
+    assert "generated summary" not in json.dumps(result["excluded"]).lower()
+
+
 def test_evidence_id_uses_the_parent_document_when_present():
     catalog = {
         "gd_child": {

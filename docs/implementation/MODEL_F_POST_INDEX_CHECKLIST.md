@@ -42,3 +42,7 @@ Pair on question id and medium. Ranked retrieval metrics stay null until a perso
 Faithfulness matches `assess_factual` and does not include the separate instruction-leak flag. Report `citation_marker_leak` beside it. A leaked prompt can still have `factual_pass` true, as it did on the pilot LinkedIn drafts.
 
 Register the run under `experiments/` with the manifest fields in `experiments/README.md`. Record that the workdir was the snapshot, not a live indexing directory.
+
+## 5. Compare the selected profile on the 120-prompt panel
+
+The four-arm run selects the profile. It does not replace the architecture comparison. After that selection is recorded, run the same profile on the 30 gold topics and four media. The protocol, the overlap audit, and the commands are in `docs/evaluation/UNIFIED_120_COMPARISON.md`. Do not choose the profile from those 120 cells, and do not write the results into an older experiment directory.

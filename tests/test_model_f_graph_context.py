@@ -431,6 +431,89 @@ def test_prompt_separates_channels_and_blocks_marker_and_number_leaks():
     assert jobs[0]["model_f_context"]["passages_retained"]
 
 
+def test_passthrough_descriptions_reach_f_desc_and_absent_rows_stay_counted():
+    from host_finetune.compare_adapters import MEDIUMS
+    from host_finetune.model_f_experiment.derive import derive_arm
+
+    source = "Capital One announced it would acquire Brex."
+    query = "What price did Capital One announce for acquiring Brex?"
+    description = "Brex is described as a finance company valued at $12.3 billion."
+    raw = {
+        "status": "success",
+        "query": query,
+        "metadata": {"query_mode": "hybrid"},
+        "data": {
+            "chunks": [{"content": source, "file_path": "gd_a", "chunk_id": "c1"}],
+            "entities": [{
+                "entity_name": "Brex",
+                "entity_type": "Organization",
+                "description": description,
+                "source_id": "chunk-c1",
+                "file_path": "gd_a",
+            }],
+            "relationships": [],
+        },
+    }
+    catalog = {"gd_a": {**_catalog()["gd_a"], "text": source}}
+    normalized = normalize_lightrag_data(raw, catalog, mode="hybrid", evidence_budget=4, max_per_source=1)
+    project = {
+        "query": query,
+        "mode": "hybrid",
+        "metadata": {"query_mode": "hybrid"},
+        "hits": normalized["hits"],
+        "excluded": normalized["excluded"],
+        "relationship_candidates": normalized["relationship_candidates"],
+        "relationships": {
+            "contract": "source-verified-relationship-v1",
+            "accepted": [],
+            "quarantined": [],
+            "rejected": [],
+        },
+        "entity_descriptions": normalized["entity_descriptions"],
+    }
+    assert "data" not in project
+    prepared = prepare_context(project, profile="descriptions", query=query, catalog=catalog)
+    assert prepared["bundle"]["diagnostics"]["entity_descriptions_not_retained"] == 0
+    entity_descriptions = [
+        item for item in prepared["bundle"]["descriptions"] if item["kind"] == "entity"
+    ]
+    assert entity_descriptions[0]["description"] == description
+    assert entity_descriptions[0]["classification"] == "derived_context"
+    assert entity_descriptions[0]["entity_type"] == "Organization"
+    claims = [{"claim": source, "source_id": "gd_a", "support_span": source}]
+    plans = {
+        arm: derive_arm(project, query, arm, claims, MEDIUMS[3], catalog=catalog)
+        for arm in ("F-SOURCE", "F-REL", "F-DESC", "F-HOP")
+    }
+    assert "SUPPLEMENTARY GRAPH-DERIVED DESCRIPTIONS" not in plans["F-SOURCE"]["instruction"]
+    assert description not in plans["F-SOURCE"]["instruction"]
+    assert description not in plans["F-REL"]["instruction"]
+    assert "VERIFIED RELATIONSHIPS" not in plans["F-REL"]["instruction"]
+    assert description in plans["F-DESC"]["instruction"]
+    assert plans["F-DESC"]["instruction"].index(description) > plans["F-DESC"]["instruction"].index(
+        "SUPPLEMENTARY GRAPH-DERIVED DESCRIPTIONS"
+    )
+    assert "Graph context contract: model-f-graph-context-v1" in plans["F-DESC"]["instruction"]
+    assert "ALLOWED FACTUAL EVIDENCE" not in plans["F-DESC"]["instruction"]
+    assert description not in " ".join(plans["F-DESC"]["grounding_texts"])
+    assert "VERIFIED RELATIONSHIPS" not in plans["F-DESC"]["instruction"]
+    assert "MULTI-HOP EVIDENCE PATHS" not in plans["F-DESC"]["instruction"]
+    assert description not in plans["F-HOP"]["instruction"]
+    grounded = evaluate_numeric_grounding(
+        "The announcement valued Brex at $12.3 billion.",
+        query,
+        claims,
+        enabled=True,
+        extra_texts=plans["F-DESC"]["grounding_texts"],
+    )
+    assert grounded["pass"] is False
+    stripped = {key: value for key, value in project.items() if key != "entity_descriptions"}
+    missing = prepare_context(stripped, profile="descriptions", query=query, catalog=catalog)
+    assert missing["bundle"]["diagnostics"]["entity_descriptions_not_retained"] == 1
+    assert all(item.get("description") != description for item in missing["bundle"]["descriptions"])
+    assert "entity_descriptions_were_removed_before_this_payload_and_were_not_invented" in missing["bundle"]["diagnostics"]["notes"]
+
+
 def test_saved_hybrid_payload_does_not_promote_stripped_entity_descriptions():
     payload = json.loads(FROZEN_HYBRID.open(encoding="utf-8").readline())
     prepared = prepare_context(payload, profile="relationships", query=payload["query"])

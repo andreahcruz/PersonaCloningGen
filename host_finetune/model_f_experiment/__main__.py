@@ -16,6 +16,11 @@ import json
 from pathlib import Path
 
 from host_finetune.model_f_experiment.evaluate import evaluate_directory
+from host_finetune.model_f_experiment.unified import (
+    execute_selected_profile,
+    score_saved_panel,
+    write_plan,
+)
 from host_finetune.model_f_experiment.graph_audit import audit_directory, audit_records, export_audit_records
 from host_finetune.model_f_experiment.runner import execute_four_arms, load_questions, pending, write_manifest
 from host_finetune.model_f_experiment.snapshot import copy_snapshot, verify_snapshot
@@ -42,6 +47,17 @@ def _parser() -> argparse.ArgumentParser:
     run.add_argument("--questions", type=Path, required=True)
     run.add_argument("--out", type=Path, required=True)
     run.add_argument("--snapshot", type=Path, required=True)
+    unified = sub.add_parser("unified-plan")
+    unified.add_argument("--profile", required=True)
+    unified.add_argument("--snapshot", type=Path, required=True)
+    unified.add_argument("--out", type=Path, required=True)
+    unified_run = sub.add_parser("unified-run")
+    unified_run.add_argument("--profile", required=True)
+    unified_run.add_argument("--snapshot", type=Path, required=True)
+    unified_run.add_argument("--out", type=Path, required=True)
+    unified_score = sub.add_parser("unified-score")
+    unified_score.add_argument("--profile", required=True)
+    unified_score.add_argument("--out", type=Path, required=True)
     return parser
 
 
@@ -83,6 +99,21 @@ def main(argv: list[str] | None = None) -> None:
         write_manifest(args.out, questions, snapshot=str(args.snapshot))
         report = execute_four_arms(args.out, questions, args.snapshot)
         print(json.dumps(report, sort_keys=True), flush=True)
+        return
+    if args.command == "unified-plan":
+        plan = write_plan(args.out, args.profile, args.snapshot)
+        print(
+            f"protocol {plan['protocol']} profile {plan['profile']} cells {plan['cells']} status {plan['status']}",
+            flush=True,
+        )
+        return
+    if args.command == "unified-run":
+        report = execute_selected_profile(args.out, args.profile, args.snapshot)
+        print(json.dumps(report, sort_keys=True), flush=True)
+        return
+    if args.command == "unified-score":
+        coverage = score_saved_panel(args.out, args.profile)
+        print(json.dumps(coverage, sort_keys=True), flush=True)
         return
     if args.command == "snapshot":
         report = copy_snapshot(

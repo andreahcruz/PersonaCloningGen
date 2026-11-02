@@ -425,6 +425,23 @@ def _validated_rows(bundle: dict) -> list[dict]:
     return rows
 
 
+def _entity_source_rows(payload: dict, raw: dict) -> tuple[list[dict], str]:
+    """Prefer raw entity rows. Otherwise use a description pass-through list.
+
+    ``query_documents`` keeps descriptions on ``entity_descriptions`` and does
+    not copy ``data.entities``. The experiment payload may carry the same rows
+    as ``raw_entities``. Neither list is invented when both are absent.
+    """
+    raw_entities = [row for row in (raw.get("entities") or []) if isinstance(row, dict)]
+    if raw_entities:
+        return raw_entities, "raw_entities"
+    for key in ("entity_descriptions", "raw_entities"):
+        rows = [row for row in (payload.get(key) or []) if isinstance(row, dict)]
+        if rows:
+            return rows, key
+    return [], "absent"
+
+
 def normalize_graph_context(
     payload: dict | None,
     catalog: dict[str, dict] | None = None,
@@ -532,13 +549,15 @@ def normalize_graph_context(
     audit.extend(relationship_dupes)
 
     descriptions: list[DerivedDescription] = []
-    entity_rows = [row for row in (raw.get("entities") or []) if isinstance(row, dict)]
+    entity_rows, entity_origin = _entity_source_rows(payload, raw)
     if entity_rows:
+        if entity_origin != "raw_entities":
+            diagnostics["notes"].append("entity_descriptions_read_from_query_payload")
         for row in entity_rows:
             item = _description_from_entity(row, catalog)
             if item is None:
                 diagnostics["malformed_records"] += 1
-                name = str((row or {}).get("entity_name") or "missing")
+                name = str((row or {}).get("entity_name") or (row or {}).get("name") or "missing")
                 audit.append(AuditRecord(description_identity("entity", name), "derived_description", "excluded", ["malformed_entity"]))
                 continue
             descriptions.append(item)

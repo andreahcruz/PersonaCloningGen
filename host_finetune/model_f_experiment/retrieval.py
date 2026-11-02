@@ -1,8 +1,8 @@
 """One raw LightRAG query per question. Not used while indexing is running.
 
-The returned payload is the ``aquery_data`` body, before description text is
-dropped. ``generation_payload`` then adds verbatim hits without removing
-those entity rows.
+The returned payload is the ``aquery_data`` body, including entity rows.
+``generation_payload`` adds verbatim hits and keeps those rows for F-DESC.
+``query_documents`` exposes the same text on ``entity_descriptions``.
 """
 
 from __future__ import annotations

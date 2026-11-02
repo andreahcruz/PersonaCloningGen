@@ -201,10 +201,13 @@ def normalize_lightrag_data(
 ) -> dict:
     """Turn a ``query_data`` payload into Model E hits plus excluded graph rows.
 
-    Hits contain verbatim source chunks only. Entity and relationship
-    descriptions are recorded and are not passed to claim validation.
-    Relationship rows are copied to ``relationship_candidates`` for a later
-    source-span check. Their text is still not a hit.
+    Hits contain verbatim source chunks only. Relationship rows are copied
+    to ``relationship_candidates`` for a later source-span check. Their text
+    is still not a hit. Entity rows stay out of hits and out of the excluded
+    record's text. ``entity_descriptions`` keeps ``entity_name``,
+    ``entity_type``, ``description``, ``source_id``, and ``file_path`` so a
+    generated summary can be shown as derived context without becoming a
+    citable passage or an allowed quantity.
     """
     mode = require_lightrag_mode(mode)
     if evidence_budget < 1:
@@ -284,12 +287,23 @@ def normalize_lightrag_data(
         if len(hits) >= evidence_budget:
             break
     relationship_candidates = []
+    entity_descriptions = []
     for kind in ("entities", "relationships"):
         for row in data.get(kind) or []:
             if not isinstance(row, dict):
                 continue
             if kind == "relationships":
                 relationship_candidates.append(dict(row))
+            else:
+                # Name is required for the description channel. The other four
+                # fields are the ones this function used to drop.
+                entity_descriptions.append({
+                    "entity_name": row.get("entity_name"),
+                    "entity_type": row.get("entity_type"),
+                    "description": row.get("description"),
+                    "source_id": row.get("source_id"),
+                    "file_path": row.get("file_path"),
+                })
             excluded.append(
                 {
                     "reason": "generated_summary_not_a_source_span",
@@ -304,6 +318,7 @@ def normalize_lightrag_data(
         "hits": hits,
         "excluded": excluded,
         "relationship_candidates": relationship_candidates,
+        "entity_descriptions": entity_descriptions,
         "status": status,
         "metadata": (payload or {}).get("metadata") or {},
         "message": (payload or {}).get("message"),
@@ -635,6 +650,7 @@ async def query_documents(
         "hits": normalized["hits"],
         "excluded": normalized["excluded"],
         "relationship_candidates": normalized.get("relationship_candidates") or [],
+        "entity_descriptions": normalized.get("entity_descriptions") or [],
         "relationships": relationships,
         "status": normalized["status"],
         "metadata": normalized["metadata"],
