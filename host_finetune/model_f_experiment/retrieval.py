@@ -14,8 +14,17 @@ from host_finetune.model_f_experiment.entity_descriptions import attach_raw_enti
 from host_finetune.model_f_experiment.snapshot import SnapshotError, assert_snapshot_path
 
 
-def generation_payload(raw: dict, catalog: dict) -> dict:
-    """Hits for the evidence capsule, plus the raw entity and relationship rows."""
+def generation_payload(
+    raw: dict,
+    catalog: dict,
+    *,
+    failed_document_ids: set[str] | None = None,
+) -> dict:
+    """Hits for the evidence capsule, plus the raw entity and relationship rows.
+
+    Failed graph documents stay in the raw payload and are left out of hits,
+    matching ``query_documents``.
+    """
     from host_finetune.lightrag_backend import normalize_lightrag_data
 
     normalized = normalize_lightrag_data(
@@ -23,6 +32,7 @@ def generation_payload(raw: dict, catalog: dict) -> dict:
         catalog,
         mode=RETRIEVAL["mode"],
         evidence_budget=RETRIEVAL["evidence_budget"],
+        failed_document_ids=failed_document_ids,
     )
     combined = attach_raw_entities(normalized, raw)
     combined["data"] = (raw or {}).get("data") or {}

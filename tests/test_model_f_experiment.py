@@ -125,6 +125,27 @@ def test_generation_payload_keeps_descriptions_after_hit_normalization():
     assert "SaaS company" in combined["data"]["entities"][0]["description"]
 
 
+def test_generation_payload_omits_failed_documents_from_hits():
+    from host_finetune.model_f_experiment.retrieval import generation_payload
+
+    raw = _payload()
+    catalog = _catalog()
+    catalog["gd_failed"] = {
+        **catalog["gd_a"],
+        "graph_document_id": "gd_failed",
+        "parent_graph_document_id": "gd_failed",
+        "text": "A failed extraction document should not be shown.",
+    }
+    raw["data"]["chunks"].insert(0, {
+        "content": "A failed extraction document should not be shown.",
+        "file_path": "gd_failed",
+        "chunk_id": "gd_failed-chunk-0",
+    })
+    combined = generation_payload(raw, catalog, failed_document_ids={"gd_failed"})
+    assert [hit["graph_document_id"] for hit in combined["hits"]] == ["gd_a", "gd_b"]
+    assert "failed extraction" not in " ".join(hit["text"] for hit in combined["hits"]).lower()
+
+
 def test_descriptions_are_not_source_hits():
     raw = _payload()
     normalized = {"hits": [{"id": "gd_a", "text": SOURCE_A, "provenance": "source_chunk"}]}

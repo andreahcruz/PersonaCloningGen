@@ -42,6 +42,7 @@ def derive_arm(
     medium: dict,
     *,
     catalog: dict | None = None,
+    failed_document_ids: set[str] | None = None,
     count_tokens=None,
     evidence_status: str = "verified",
 ) -> dict:
@@ -50,6 +51,7 @@ def derive_arm(
         profile=PREPARE_PROFILE[arm],
         query=query,
         catalog=catalog,
+        failed_document_ids=failed_document_ids,
     )
     prepared = restrict_channels(prepared, RENDERED_CHANNELS[arm])
     prepared["experiment_budget"] = experiment_budget(medium["medium"])
@@ -85,7 +87,13 @@ def derive_arm(
     }
 
 
-def arm_callback(arm: str, *, catalog: dict | None = None, count_tokens=None):
+def arm_callback(
+    arm: str,
+    *,
+    catalog: dict | None = None,
+    failed_document_ids: set[str] | None = None,
+    count_tokens=None,
+):
     """Hook for compare_adapters.generate. It does not retrieve."""
 
     def _callback(topic_row, payload):
@@ -99,6 +107,7 @@ def arm_callback(arm: str, *, catalog: dict | None = None, count_tokens=None):
             profile=PREPARE_PROFILE[arm],
             query=query,
             catalog=catalog,
+            failed_document_ids=failed_document_ids,
         )
         prepared = restrict_channels(prepared, RENDERED_CHANNELS[arm])
         prepared["count_tokens"] = count_tokens

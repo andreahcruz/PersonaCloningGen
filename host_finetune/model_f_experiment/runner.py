@@ -240,11 +240,12 @@ def execute_four_arms(directory: Path, questions: list[dict], snapshot: Path) ->
     import asyncio
 
     from host_finetune.compare_adapters import generate, load_generator
-    from host_finetune.lightrag_backend import read_catalog
+    from host_finetune.lightrag_backend import read_catalog, read_failed_document_ids
     from host_finetune.model_f_experiment.derive import arm_callback
     from host_finetune.model_f_experiment.retrieval import generation_payload, retrieve_raw
 
     catalog = read_catalog(snapshot / "catalog.jsonl")
+    failed_ids = read_failed_document_ids(snapshot)
     if not catalog:
         raise SnapshotError(f"snapshot catalog is empty: {snapshot}")
     from host_finetune.model_f_experiment.context_window import assert_preflight
@@ -273,7 +274,7 @@ def execute_four_arms(directory: Path, questions: list[dict], snapshot: Path) ->
                 freeze_retrieval(directory, question, raw)
             else:
                 raw = json.loads(stored.read_text(encoding="utf-8"))["payload"]
-            payload = generation_payload(raw, catalog)
+            payload = generation_payload(raw, catalog, failed_document_ids=failed_ids)
 
             def retriever(topic: str, comparison_medium: str, payload=payload) -> dict:
                 return payload
@@ -307,7 +308,12 @@ def execute_four_arms(directory: Path, questions: list[dict], snapshot: Path) ->
                         unload=False,
                         evidence_cache=evidence_cache,
                         media_allow=set(missing),
-                        graph_context_for=arm_callback(arm, catalog=catalog, count_tokens=count_tokens),
+                        graph_context_for=arm_callback(
+                            arm,
+                            catalog=catalog,
+                            failed_document_ids=failed_ids,
+                            count_tokens=count_tokens,
+                        ),
                         on_trace=on_trace,
                     )
                 except Exception as exc:

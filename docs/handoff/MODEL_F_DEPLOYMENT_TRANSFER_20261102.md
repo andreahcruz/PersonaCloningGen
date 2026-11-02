@@ -2,7 +2,7 @@
 
 This is the handoff for integrating Model F into the React deployment. It does not deploy the service and it does not merge branches.
 
-Check out `kevin/lightrag-model-f` and pull. The implementation commit is `c04e77cf438e7d845c640d2727250ce642243204`. This guide is the commit immediately after that implementation commit. After pulling, `git rev-parse HEAD` on this branch is the commit that contains this file.
+Check out the tip of `kevin/lightrag-model-f` and pull. The implementation commit is `c04e77cf438e7d845c640d2727250ce642243204`. This guide was added in `e97c602dc9b76fa52ebdd7823591795cee4110e9`. The tip after that guide excludes failed graph documents from experiment hits. `git rev-parse HEAD` on this branch is the commit to use.
 
 Previous pushed commit named in the last handoff: `817e159b99b904a3171a0495e7a1c9433fe98137`. `54ceb5dc4d929c3c1234803ea75308a0153b4d7c` (Workbook 2 catch-up note) was already on the remote before this push. `c04e77cf438e7d845c640d2727250ce642243204` is the new code commit.
 
