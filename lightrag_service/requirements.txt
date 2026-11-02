@@ -4,5 +4,9 @@ pydantic==2.9.2
 requests==2.31.0
 numpy>=1.26,<3
 lightrag-hku==1.5.7
+# LightRAG imports this Ollama client lazily.  Install Kevin's tested range in
+# the image so its package helper never mutates or restarts the service at
+# request time.
+ollama>=0.5.4,<1.0.0
 # Keep the LightRAG dependency set compatible with the deployed Chroma stack.
 opentelemetry-api==1.41.1
