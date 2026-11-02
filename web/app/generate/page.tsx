@@ -1,13 +1,14 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { ApiError, generate, getPersona } from "@/lib/api";
+import { ApiError, checkGrammar, generate, getPersona } from "@/lib/api";
 import { addHistory } from "@/lib/history";
 import {
   FORMATS,
   type FormatId,
   type GenerationMethod,
   type GenerateResult,
+  type GrammarCheckResult,
   type PersonaProfile,
 } from "@/lib/types";
 import {
@@ -104,6 +105,9 @@ export default function GeneratorPage() {
   const [copied, setCopied] = useState(false);
   const [persona, setPersona] = useState<PersonaProfile | null>(null);
   const [personaError, setPersonaError] = useState<string | null>(null);
+  const [grammarResult, setGrammarResult] = useState<GrammarCheckResult | null>(null);
+  const [grammarError, setGrammarError] = useState<string | null>(null);
+  const [grammarBusy, setGrammarBusy] = useState(false);
 
   useEffect(() => {
     let active = true;
@@ -134,6 +138,8 @@ export default function GeneratorPage() {
     setBusy(true);
     setError(null);
     setCopied(false);
+    setGrammarResult(null);
+    setGrammarError(null);
     try {
       // PersonaRAG uses the full creative brief. Direct QLoRA was not trained
       // on audience/goal/CTA instructions, so do not send stale form values
@@ -185,6 +191,20 @@ export default function GeneratorPage() {
       setTimeout(() => setCopied(false), 1500);
     } catch {
       setError(new ApiError("Could not copy to the clipboard.", 0, "Select the text and copy it manually."));
+    }
+  }
+
+  async function runGrammarCheck() {
+    if (!result || grammarBusy) return;
+    setGrammarBusy(true);
+    setGrammarError(null);
+    try {
+      setGrammarResult(await checkGrammar(result.content));
+    } catch (e) {
+      setGrammarResult(null);
+      setGrammarError(e instanceof ApiError ? e.message : "Grammar service unavailable. Try again shortly.");
+    } finally {
+      setGrammarBusy(false);
     }
   }
 
@@ -393,6 +413,36 @@ export default function GeneratorPage() {
                   {words} words - {result.method === "personarag" ? "PersonaRAG" : result.method === "qlora" ? "direct QLoRA" : "Base Llama"} - {result.model}
                   {result.latencyMs !== null ? ` - ${(result.latencyMs / 1000).toFixed(1)} s` : ""}
                 </p>
+                <div className="mt-4 rounded-xl border border-line bg-bg p-3">
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <div>
+                      <p className="text-sm font-medium">Optional grammar screen</p>
+                      <p className="mt-1 text-xs text-mute">Screening result, not a grade. Informal Lemkin-style wording can produce false alarms.</p>
+                    </div>
+                    <Button variant="ghost" onClick={runGrammarCheck} disabled={grammarBusy}>
+                      {grammarBusy ? "Checking…" : "Run grammar check"}
+                    </Button>
+                  </div>
+                  {grammarError ? <p className="mt-3 text-xs text-warn">{grammarError}</p> : null}
+                  {grammarResult ? (
+                    <div className="mt-3 border-t border-line pt-3">
+                      <p className="text-sm">
+                        {grammarResult.issue_count} screened issue{grammarResult.issue_count === 1 ? "" : "s"} in {grammarResult.word_count} words
+                        <span className="text-mute"> ({grammarResult.issues_per_100_words} per 100 words)</span>
+                      </p>
+                      {grammarResult.issues.length ? (
+                        <ul className="mt-2 space-y-2 text-xs text-mute">
+                          {grammarResult.issues.slice(0, 8).map((issue, index) => (
+                            <li key={`${issue.rule_id}-${issue.offset}-${index}`} className="rounded-lg border border-line p-2">
+                              <span className="font-medium text-text">“{issue.matched_text}”</span>: {issue.message}
+                              {issue.replacements.length ? <span> Suggested: {issue.replacements.join(", ")}</span> : null}
+                            </li>
+                          ))}
+                        </ul>
+                      ) : <p className="mt-2 text-xs text-mute">No screened issues. This is not a guarantee that the draft is error-free.</p>}
+                    </div>
+                  ) : null}
+                </div>
               </>
             ) : (
               <EmptyState title="Your draft will appear here">

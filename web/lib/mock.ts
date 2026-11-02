@@ -5,6 +5,7 @@ import type {
   GenerateResult,
   ModelInfo,
   PersonaProfile,
+  GrammarCheckResult,
   ServiceStatus,
   Source,
   Statistics,
@@ -119,30 +120,26 @@ export const MOCK_HEALTH: ServiceStatus[] = [
   { name: "MinIO", status: "down", detail: "Sample: unreachable" },
 ];
 
-// Real numbers from host_finetune/output/eval/gold_rag_summary_with_gold.json on the
-// `metricsft` branch (10 prompts). That file does not record which model produced them.
+// Clearly labelled, compact sample of the versioned research manifest for mock mode.
 export const EVALUATION: EvaluationData = {
-  runs: [
+  version: "sample-evidence-v1",
+  title: "Sample evaluation evidence",
+  description: "Mock-mode sample. It is not a regenerated evaluation run.",
+  groups: [
     {
-      id: "gold-summary-10",
-      label: "Reported gold-rubric run",
-      note: "From gold_rag_summary_with_gold.json (branch metricsft). The file does not say which model or setup produced it.",
-      prompts: 10,
-      metrics: [
-        { key: "overall", label: "Overall rubric", value: 0.482 },
-        { key: "format_score", label: "Format", value: 0.5215 },
-        { key: "brief_alignment", label: "Brief alignment", value: 0.4721 },
-        { key: "expected_fact_coverage", label: "Fact coverage", value: 0.8333 },
-        { key: "answer_relevance", label: "Answer relevance", value: 0.4488 },
-        { key: "faithfulness", label: "Faithfulness", value: 0.1305 },
-        { key: "context_recall", label: "Context recall", value: 1.0 },
-      ],
+      id: "grammar",
+      title: "Grammar screening (sample)",
+      scope: "Research benchmark — not a model ranking",
+      summary: "Sample summary of the published LanguageTool evaluation.",
+      sample_size: "Sample data only",
+      source: { branch: "sample", commit: "sample", report_url: "#" },
+      metrics: [{ label: "Seeded mistakes detected", value: "19 / 40", detail: "Sample evidence." }],
+      limitations: ["Mock mode does not load a live manifest."],
     },
   ],
-  matrix: [
-    { system: "Base Llama", available: false },
-    { system: "Base + RAG", available: false },
-    { system: "Fine-tuned", available: false },
-    { system: "Fine-tuned + RAG", available: false },
-  ],
 };
+
+export function mockGrammarCheck(text: string): GrammarCheckResult {
+  const wordCount = text.trim().split(/\s+/).filter(Boolean).length;
+  return { word_count: wordCount, issue_count: 0, issues_per_100_words: 0, issues: [] };
+}

@@ -1,15 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import {
-  Bar,
-  BarChart,
-  CartesianGrid,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from "recharts";
 import { ApiError, getEvaluation } from "@/lib/api";
 import type { EvaluationData } from "@/lib/types";
 import { Card, Notice, PageHeader } from "@/components/ui";
@@ -27,99 +18,74 @@ export default function EvaluationPage() {
   return (
     <>
       <PageHeader
-        title="Evaluation"
-        subtitle="How the generator scores against the gold rubric. Numbers come from the evaluation harness. Systems without results are marked pending."
+        title="Evaluation evidence"
+        subtitle="Versioned research results, displayed without scoring your draft or calling an LLM judge."
       />
 
-      {error ? (
-        <Notice tone="error" title={error.message}>
-          {error.hint}
-        </Notice>
-      ) : null}
+      {error ? <Notice tone="error" title={error.message}>{error.hint}</Notice> : null}
 
       {data ? (
         <div className="space-y-5">
           <Card>
-            <h2 className="mb-3 font-semibold">System comparison</h2>
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-              {data.matrix.map((c) => (
-                <div key={c.system} className="rounded-xl border border-line bg-bg p-4">
-                  <p className="text-sm font-medium">{c.system}</p>
-                  <p className={`mt-1 text-xs ${c.available ? "text-ok" : "text-mute"}`}>
-                    {c.available ? "Results available" : "Pending: no results recorded yet"}
-                  </p>
-                </div>
-              ))}
-            </div>
-            <p className="mt-3 text-xs text-mute">
-              The four-way comparison is planned in PUK-13. It fills in here once each system has
-              been scored on the same prompts.
-            </p>
+            <h2 className="font-semibold">{data.title}</h2>
+            <p className="mt-1 text-sm text-mute">{data.description}</p>
+            <p className="mt-3 font-mono text-xs text-mute">Manifest version: {data.version}</p>
           </Card>
 
-          {data.runs.map((run) => {
-            const rows = run.metrics
-              .filter((m) => m.value !== null)
-              .map((m) => ({ name: m.label, value: m.value as number }));
-            return (
-              <Card key={run.id}>
-                <h2 className="font-semibold">{run.label}</h2>
-                <p className="mt-1 text-xs text-mute">
-                  {run.prompts} prompts. {run.note}
-                </p>
-                <div className="mt-4 h-72" role="img" aria-label={`Bar chart of ${run.label} metrics`}>
-                  <ResponsiveContainer width="100%" height="100%">
-                    <BarChart data={rows} margin={{ top: 8, right: 8, left: -12, bottom: 8 }}>
-                      <CartesianGrid stroke="#1f2a44" vertical={false} />
-                      <XAxis dataKey="name" stroke="#94a3b8" tick={{ fontSize: 11 }} interval={0} />
-                      <YAxis domain={[0, 1]} stroke="#94a3b8" tick={{ fontSize: 11 }} />
-                      <Tooltip
-                        contentStyle={{
-                          background: "#121a2b",
-                          border: "1px solid #1f2a44",
-                          borderRadius: 12,
-                          color: "#f8fafc",
-                        }}
-                        formatter={(v) => (typeof v === "number" ? v.toFixed(3) : String(v))}
-                      />
-                      <Bar
-                        dataKey="value"
-                        fill="#4f8cff"
-                        radius={[6, 6, 0, 0]}
-                        isAnimationActive={false}
-                      />
-                    </BarChart>
-                  </ResponsiveContainer>
+          {data.groups.map((group) => (
+            <Card key={group.id}>
+              <div className="flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <h2 className="font-semibold">{group.title}</h2>
+                  <p className="mt-1 text-xs font-medium text-warn">{group.scope}</p>
                 </div>
-                <div className="mt-4 overflow-x-auto">
+                <a className="text-xs text-primary underline underline-offset-2" href={group.source.report_url} target="_blank" rel="noreferrer">
+                  Open source report
+                </a>
+              </div>
+              <p className="mt-3 text-sm leading-relaxed text-mute">{group.summary}</p>
+              <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                {group.metrics.map((metric) => (
+                  <div key={metric.label} className="rounded-xl border border-line bg-bg p-3">
+                    <p className="text-xs text-mute">{metric.label}</p>
+                    <p className="mt-1 text-lg font-semibold tabular-nums">{metric.value}</p>
+                    <p className="mt-1 text-xs leading-relaxed text-mute">{metric.detail}</p>
+                  </div>
+                ))}
+              </div>
+
+              {group.comparison ? (
+                <div className="mt-5 overflow-x-auto">
+                  <p className="mb-2 text-sm font-medium">{group.comparison.label}</p>
                   <table className="w-full text-left text-sm">
                     <thead className="text-xs uppercase tracking-wide text-mute">
-                      <tr>
-                        <th className="py-2 pr-4 font-medium">Metric</th>
-                        <th className="py-2 font-medium">Score</th>
-                      </tr>
+                      <tr>{group.comparison.columns.map((column) => <th key={column} className="px-2 py-2 font-medium">{column}</th>)}</tr>
                     </thead>
                     <tbody>
-                      {run.metrics.map((m) => (
-                        <tr key={m.key} className="border-t border-line">
-                          <td className="py-2 pr-4">{m.label}</td>
-                          <td className="py-2 tabular-nums">
-                            {m.value === null ? "pending" : m.value.toFixed(3)}
-                          </td>
+                      {group.comparison.rows.map((row) => (
+                        <tr key={row[0]} className="border-t border-line">
+                          {row.map((value, index) => <td key={`${row[0]}-${index}`} className="px-2 py-2 tabular-nums">{value}</td>)}
                         </tr>
                       ))}
                     </tbody>
                   </table>
                 </div>
-              </Card>
-            );
-          })}
+              ) : null}
+
+              <div className="mt-5 grid gap-4 border-t border-line pt-4 md:grid-cols-[1fr_2fr]">
+                <p className="text-xs leading-relaxed text-mute"><span className="font-medium text-text">Sample:</span> {group.sample_size}</p>
+                <div>
+                  <p className="text-xs font-medium text-text">Limitations</p>
+                  <ul className="mt-1 list-disc space-y-1 pl-4 text-xs leading-relaxed text-mute">
+                    {group.limitations.map((limitation) => <li key={limitation}>{limitation}</li>)}
+                  </ul>
+                </div>
+              </div>
+              <p className="mt-3 text-xs text-mute">Source: {group.source.branch} @ {group.source.commit.slice(0, 12)}</p>
+            </Card>
+          ))}
         </div>
-      ) : !error ? (
-        <p className="text-sm text-mute" role="status">
-          Loading...
-        </p>
-      ) : null}
+      ) : !error ? <p className="text-sm text-mute" role="status">Loading evidence…</p> : null}
     </>
   );
 }

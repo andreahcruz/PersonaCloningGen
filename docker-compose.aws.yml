@@ -73,6 +73,24 @@ services:
         max-file: "5"
     restart: always
 
+  # Private, on-demand grammar screening. There is deliberately no `ports:`
+  # stanza: only the FastAPI container can call this service on the Compose
+  # network. It does not participate in generation, retrieval, or Airflow.
+  languagetool:
+    image: minimages/languagetool:6.8
+    environment:
+      PORT: "8081"
+      Java_Xms: 128m
+      Java_Xmx: 384m
+    mem_limit: 512m
+    cpus: "0.50"
+    logging:
+      driver: json-file
+      options:
+        max-size: "5m"
+        max-file: "2"
+    restart: unless-stopped
+
   airflow-scheduler:
     environment: *pipeline-env
     depends_on:
@@ -100,6 +118,8 @@ services:
       # this aligned with the ten-minute relay window used by the React app.
       OLLAMA_EMBED_TIMEOUT: ${OLLAMA_EMBED_TIMEOUT:-180}
       OLLAMA_GENERATE_TIMEOUT: ${OLLAMA_GENERATE_TIMEOUT:-600}
+      LANGUAGETOOL_BASE: http://languagetool:8081
+      LANGUAGETOOL_TIMEOUT: ${LANGUAGETOOL_TIMEOUT:-15}
       CHROMA_USE_HTTP: "true"
       CHROMA_HOST: chroma
       CHROMA_PORT: "8000"
@@ -113,6 +133,8 @@ services:
       ollama:
         condition: service_healthy
       chroma:
+        condition: service_started
+      languagetool:
         condition: service_started
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/healthz')"]

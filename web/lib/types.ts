@@ -85,29 +85,61 @@ export interface Statistics {
   bySource?: Partial<Record<SourceType, number>>;
 }
 
-export interface EvalMetric {
-  key: string;
+export interface EvaluationMetric {
   label: string;
-  /** 0..1, or null for "pending". */
-  value: number | null;
+  value: string;
+  detail: string;
 }
 
-export interface EvalRun {
+export interface EvaluationSource {
+  branch: string;
+  commit: string;
+  report_url: string;
+}
+
+export interface EvaluationComparison {
+  label: string;
+  columns: string[];
+  rows: string[][];
+}
+
+export interface EvaluationGroup {
   id: string;
-  label: string;
-  note: string;
-  prompts: number;
-  metrics: EvalMetric[];
-}
-
-export interface EvalMatrixCell {
-  system: "Base Llama" | "Base + RAG" | "Fine-tuned" | "Fine-tuned + RAG";
-  available: boolean;
+  title: string;
+  scope: string;
+  summary: string;
+  sample_size: string;
+  source: EvaluationSource;
+  metrics: EvaluationMetric[];
+  limitations: string[];
+  comparison?: EvaluationComparison;
 }
 
 export interface EvaluationData {
-  runs: EvalRun[];
-  matrix: EvalMatrixCell[];
+  version: string;
+  title: string;
+  description: string;
+  groups: EvaluationGroup[];
+}
+
+export interface GrammarCheckRequest {
+  text: string;
+}
+
+export interface GrammarIssue {
+  message: string;
+  matched_text: string;
+  offset: number;
+  length: number;
+  rule_id: string;
+  replacements: string[];
+}
+
+export interface GrammarCheckResult {
+  word_count: number;
+  issue_count: number;
+  issues_per_100_words: number;
+  issues: GrammarIssue[];
 }
 
 export interface HistoryItem {

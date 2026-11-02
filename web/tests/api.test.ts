@@ -174,14 +174,52 @@ describe("live mode", () => {
     expect(res.models.map((m) => m.name)).toContain("lemkin-clone");
   });
 
-  it("still shows the reported evaluation run when /evaluation does not exist", async () => {
+  it("loads the versioned evaluation manifest", async () => {
     const api = await loadApi("live");
-    fetchMock.mockResolvedValueOnce(new Response("nope", { status: 404 }));
+    fetchMock.mockResolvedValueOnce(jsonResponse({
+      version: "evidence-v1",
+      title: "Evaluation evidence",
+      description: "Precomputed.",
+      groups: [{
+        id: "rag-v2",
+        title: "RAG-v2",
+        scope: "research-only",
+        summary: "Separate index.",
+        sample_size: "21,193 chunks",
+        source: { branch: "vb-puk-34", commit: "abc", report_url: "https://example.test/report" },
+        metrics: [],
+        limitations: ["Not live candidate data."],
+      }],
+    }));
 
     const res = await api.getEvaluation();
 
-    expect(res.runs.length).toBeGreaterThan(0);
-    expect(res.matrix.every((c) => !c.available)).toBe(true);
+    expect(res.version).toBe("evidence-v1");
+    expect(res.groups[0].scope).toBe("research-only");
+  });
+
+  it("runs grammar only when the caller explicitly requests it", async () => {
+    const api = await loadApi("live");
+    fetchMock.mockResolvedValueOnce(jsonResponse({
+      word_count: 4,
+      issue_count: 1,
+      issues_per_100_words: 25,
+      issues: [{ message: "Possible agreement error", matched_text: "is", offset: 0, length: 2, rule_id: "AGREEMENT", replacements: ["are"] }],
+    }));
+
+    await expect(api.checkGrammar("is founders ready")).resolves.toMatchObject({ issue_count: 1 });
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+    expect(fetchMock).toHaveBeenCalledWith(
+      "http://backend.test/quality/grammar",
+      expect.objectContaining({ method: "POST" }),
+    );
+  });
+
+  it("surfaces an unavailable grammar service", async () => {
+    const api = await loadApi("live");
+    fetchMock.mockResolvedValueOnce(jsonResponse({ detail: "Grammar service unavailable. Try again shortly." }, 503));
+
+    await expect(api.checkGrammar("Draft")).rejects.toMatchObject({ status: 503 });
   });
 });
 

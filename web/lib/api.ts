@@ -5,6 +5,7 @@ import {
   MOCK_MODELS,
   MOCK_PERSONA,
   MOCK_STATS,
+  mockGrammarCheck,
   mockGenerate,
   mockSearch,
 } from "./mock";
@@ -14,6 +15,7 @@ import type {
   GenerateRequest,
   GenerateResult,
   GenerationMethod,
+  GrammarCheckResult,
   ModelInfo,
   PersonaProfile,
   ServiceStatus,
@@ -222,11 +224,14 @@ export async function getHealth(): Promise<{ services: ServiceStatus[]; detailed
 // ---- Evaluation (proposed: GET /evaluation) ----
 export async function getEvaluation(): Promise<EvaluationData> {
   if (IS_MOCK) return EVALUATION;
-  try {
-    return await request<EvaluationData>("/evaluation");
-  } catch (e) {
-    // The reported numbers live in the repo, so show them even before the endpoint exists.
-    if (e instanceof NotAvailableError) return EVALUATION;
-    throw e;
-  }
+  return request<EvaluationData>("/evaluation");
+}
+
+// ---- Optional grammar screening (POST /quality/grammar) ----
+export async function checkGrammar(text: string): Promise<GrammarCheckResult> {
+  if (IS_MOCK) return mockGrammarCheck(text);
+  return request<GrammarCheckResult>("/quality/grammar", {
+    method: "POST",
+    body: JSON.stringify({ text }),
+  });
 }

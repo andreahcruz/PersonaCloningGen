@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import json
+
 import pytest
 
 fastapi = pytest.importorskip("fastapi")
@@ -34,6 +36,77 @@ def test_persona_reports_invalid_profile(monkeypatch, tmp_path):
 
     assert response.status_code == 500
     assert "Could not load persona profile" in response.json()["detail"]
+
+
+def test_evaluation_returns_versioned_manifest(monkeypatch, tmp_path):
+    manifest = tmp_path / "batch_results.json"
+    manifest.write_text(json.dumps({"version": "test-v1", "groups": [{"id": "rag-v2", "scope": "research-only"}]}), encoding="utf-8")
+    monkeypatch.setattr(main, "EVALUATION_RESULTS_PATH", manifest)
+
+    response = TestClient(main.app).get("/evaluation")
+
+    assert response.status_code == 200
+    assert response.json()["version"] == "test-v1"
+    assert response.json()["groups"][0]["scope"] == "research-only"
+
+
+def test_evaluation_reports_invalid_manifest(monkeypatch, tmp_path):
+    manifest = tmp_path / "batch_results.json"
+    manifest.write_text("not-json", encoding="utf-8")
+    monkeypatch.setattr(main, "EVALUATION_RESULTS_PATH", manifest)
+
+    response = TestClient(main.app).get("/evaluation")
+
+    assert response.status_code == 500
+    assert "invalid or unreadable" in response.json()["detail"]
+
+
+def test_grammar_filter_keeps_grammar_and_suppresses_style(monkeypatch):
+    class FakeResponse:
+        def raise_for_status(self):
+            return None
+
+        def json(self):
+            return {
+                "matches": [
+                    {
+                        "message": "Possible agreement error",
+                        "offset": 0,
+                        "length": 3,
+                        "replacements": [{"value": "are"}],
+                        "rule": {"id": "AGREEMENT", "category": {"id": "GRAMMAR"}},
+                    },
+                    {
+                        "message": "Style repetition",
+                        "offset": 4,
+                        "length": 4,
+                        "replacements": [],
+                        "rule": {"id": "PHRASE_REPETITION", "category": {"id": "STYLE"}},
+                    },
+                ]
+            }
+
+    monkeypatch.setattr(main.requests, "post", lambda *_args, **_kwargs: FakeResponse())
+    response = TestClient(main.app).post("/quality/grammar", json={"text": "are sales sales"})
+
+    assert response.status_code == 200
+    assert response.json()["issue_count"] == 1
+    assert response.json()["issues"][0]["rule_id"] == "AGREEMENT"
+
+
+def test_grammar_reports_unavailable_service(monkeypatch):
+    monkeypatch.setattr(main.requests, "post", lambda *_args, **_kwargs: (_ for _ in ()).throw(main.requests.Timeout()))
+
+    response = TestClient(main.app).post("/quality/grammar", json={"text": "A complete draft."})
+
+    assert response.status_code == 503
+    assert "Grammar service unavailable" in response.json()["detail"]
+
+
+def test_grammar_rejects_oversized_text():
+    response = TestClient(main.app).post("/quality/grammar", json={"text": "a" * 12_001})
+
+    assert response.status_code == 422
 
 
 def test_generate_returns_real_source_metadata(monkeypatch, tmp_path):

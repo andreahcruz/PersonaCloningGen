@@ -5,7 +5,9 @@ Run: uvicorn main:app --reload --port 8000
 """
 from __future__ import annotations
 
+import json
 import os
+import re
 import time
 import uuid
 from pathlib import Path
@@ -39,6 +41,11 @@ FORMAT_SPECS_PATH = Path(os.environ.get("FORMAT_SPECS_PATH", BASE / "formats" / 
 # Airflow writes this generated copy during a deploy. The tracked profile remains untouched.
 PERSONA_PATH = Path(os.environ.get("PERSONA_PATH", BASE / "data" / "persona_profile.json"))
 INDEX_PATH = Path(os.environ.get("INDEX_PATH", BASE / "data" / "index"))
+EVALUATION_RESULTS_PATH = Path(
+    os.environ.get("EVALUATION_RESULTS_PATH", BASE / "data" / "evaluation" / "batch_results.json")
+)
+LANGUAGETOOL_BASE = os.environ.get("LANGUAGETOOL_BASE", "http://languagetool:8081")
+LANGUAGETOOL_TIMEOUT = float(os.environ.get("LANGUAGETOOL_TIMEOUT", "15"))
 
 app = FastAPI(title="Lemkin Content Generator API")
 
@@ -70,6 +77,46 @@ class PersonaResponse(BaseModel):
     summary: str
 
 
+class GrammarCheckRequest(BaseModel):
+    """Completed draft text submitted only when a user requests screening."""
+
+    text: str = Field(min_length=1, max_length=12_000)
+
+
+class GrammarIssue(BaseModel):
+    message: str
+    matched_text: str
+    offset: int
+    length: int
+    rule_id: str
+    replacements: list[str]
+
+
+class GrammarCheckResponse(BaseModel):
+    word_count: int
+    issue_count: int
+    issues_per_100_words: float
+    issues: list[GrammarIssue]
+
+
+# These are the conservative, published filters from the PUK-28 LanguageTool
+# check.  They deliberately avoid treating stylistic repetition and informal
+# Lemkin phrasing as grammar mistakes.  We do not surface spell-check-only
+# flags because company names and SaaS terminology produced too many false
+# positives in the batch audit.
+GRAMMAR_CATEGORIES = {"GRAMMAR", "TYPOS", "CONFUSED_WORDS"}
+GRAMMAR_RULES = {"ENGLISH_WORD_REPEAT_RULE", "EN_A_VS_AN"}
+IGNORED_GRAMMAR_RULES = {
+    "PHRASE_REPETITION",
+    "THE_SUPERLATIVE",
+    "CA_BRAND_NEW",
+    "ANYMORE_ADVERB",
+    "THESE_ONES",
+    "A_INFINITIVE",
+    "BEEN_PART_AGREEMENT",
+}
+
+
 def _settings() -> tuple[str, str, str, str]:
     return (
         os.environ.get("OLLAMA_BASE", OLLAMA_BASE_DEFAULT),
@@ -77,6 +124,43 @@ def _settings() -> tuple[str, str, str, str]:
         os.environ.get("GEN_MODEL", DEFAULT_GEN_MODEL),
         os.environ.get("QLORA_MODEL", "lemkin-qlora"),
     )
+
+
+def _load_evaluation_manifest() -> dict[str, Any]:
+    """Load published batch evidence; never calculate it on a draft request."""
+    if not EVALUATION_RESULTS_PATH.exists():
+        raise HTTPException(500, f"Evaluation manifest not found: {EVALUATION_RESULTS_PATH}")
+    try:
+        with EVALUATION_RESULTS_PATH.open(encoding="utf-8") as file:
+            manifest = json.load(file)
+    except (OSError, json.JSONDecodeError) as error:
+        raise HTTPException(500, "Evaluation manifest is invalid or unreadable.") from error
+    if not isinstance(manifest, dict) or not isinstance(manifest.get("groups"), list):
+        raise HTTPException(500, "Evaluation manifest has an invalid format.")
+    return manifest
+
+
+def _language_category(match: dict[str, Any]) -> str:
+    category = (match.get("rule") or {}).get("category", {})
+    if isinstance(category, dict):
+        return str(category.get("id", "")).upper()
+    return str(category).upper()
+
+
+def _keep_grammar_match(match: dict[str, Any], text: str) -> bool:
+    """Suppress known style false positives without claiming an overall grade."""
+    rule = match.get("rule") or {}
+    rule_id = str(rule.get("id", ""))
+    offset = int(match.get("offset", 0))
+    length = int(match.get("length", 0))
+    matched = text[offset : offset + length]
+    if "\ufffd" in matched or rule_id in IGNORED_GRAMMAR_RULES:
+        return False
+    return _language_category(match) in GRAMMAR_CATEGORIES or rule_id in GRAMMAR_RULES
+
+
+def _word_count(text: str) -> int:
+    return len(re.findall(r"\b[\w]+(?:['\u2019][\w]+)?\b", text))
 
 
 # The QLoRA path matches Kevin's medium-grid evaluation: one user sentence,
@@ -243,6 +327,56 @@ def persona() -> PersonaResponse:
     source = str(meta.get("source", "Jason Lemkin — operator voice"))
     name = source.split(" — ", 1)[0].strip() or "Jason Lemkin"
     return PersonaResponse(name=name, source=source, summary=summarize_persona(profile))
+
+
+@app.get("/evaluation")
+def evaluation() -> dict[str, Any]:
+    """Serve versioned, precomputed evaluation evidence for the UI.
+
+    This endpoint intentionally reads a committed manifest instead of invoking
+    a judge, embedding model, or retrieval pipeline on EC2.
+    """
+    return _load_evaluation_manifest()
+
+
+@app.post("/quality/grammar", response_model=GrammarCheckResponse)
+def grammar_check(req: GrammarCheckRequest) -> GrammarCheckResponse:
+    """Run a user-requested LanguageTool screen through the private network."""
+    try:
+        response = requests.post(
+            f"{LANGUAGETOOL_BASE.rstrip('/')}/v2/check",
+            data={"language": "en-US", "text": req.text},
+            timeout=LANGUAGETOOL_TIMEOUT,
+        )
+        response.raise_for_status()
+        matches = response.json().get("matches", [])
+    except (requests.RequestException, ValueError) as error:
+        raise HTTPException(503, "Grammar service unavailable. Try again shortly.") from error
+
+    issues: list[GrammarIssue] = []
+    for match in matches:
+        if not isinstance(match, dict) or not _keep_grammar_match(match, req.text):
+            continue
+        rule = match.get("rule") or {}
+        replacements = [str(item.get("value", "")) for item in match.get("replacements", []) if item.get("value")]
+        issues.append(
+            GrammarIssue(
+                message=str(match.get("message", "LanguageTool issue")),
+                matched_text=req.text[int(match.get("offset", 0)) : int(match.get("offset", 0)) + int(match.get("length", 0))],
+                offset=int(match.get("offset", 0)),
+                length=int(match.get("length", 0)),
+                rule_id=str(rule.get("id", "unknown")),
+                replacements=replacements[:5],
+            )
+        )
+
+    word_count = _word_count(req.text)
+    return GrammarCheckResponse(
+        word_count=word_count,
+        issue_count=len(issues),
+        issues_per_100_words=round((len(issues) * 100 / word_count) if word_count else 0, 2),
+        issues=issues,
+    )
 
 
 @app.get("/health/dependencies")
