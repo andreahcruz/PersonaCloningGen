@@ -1,0 +1,11 @@
+{
+  "source": "session logs for the 2026-10-31 continuation, not the ledger counter",
+  "limitation": "The ledger counter was attached to the root logger. LightRAG sets propagate to false, so stored malformed_relation_warnings_measured values from these sessions are not a measured zero.",
+  "documents": [
+    {"document_id": "gd_00f0fd1277363a92e5cb2ada", "relation_format_warnings": 30, "chunk_entities": 29, "chunk_relations": 19},
+    {"document_id": "gd_14530da4ea39350d8431fea6", "relation_format_warnings": 11, "chunk_entities": 19, "chunk_relations": 8},
+    {"document_id": "gd_087a4675a11cf57ae08ea7cf", "relation_format_warnings": 10, "chunk_entities": 10, "chunk_relations": 0},
+    {"document_id": "gd_0019c5e0dad1cf6315645b67", "relation_format_warnings": 9, "chunk_entities": 7, "chunk_relations": 0},
+    {"document_id": "gd_003275b6850776457e113392", "relation_format_warnings": 8, "chunk_entities": 6, "chunk_relations": 0}
+  ]
+}

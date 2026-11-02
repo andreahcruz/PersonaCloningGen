@@ -1,0 +1,72 @@
+{
+  "reader": "single analyst read of the retrieval sheet and a sample of drafts",
+  "not_ground_truth": "These notes are not precision, recall, or an independent human grade.",
+  "retrieval": [
+    {
+      "question_id": "q_boom_promotions",
+      "finding": "Matched dense did not return the 2021-boom post. Naive, hybrid, and mix did. The post supports promoting a director to VP and moving on from mediocre customer-success people.",
+      "incremental": "correct supporting passage absent from matched dense"
+    },
+    {
+      "question_id": "q_investor_update",
+      "finding": "Matched dense returned a different investor-update post about a December financial note. Naive, hybrid, and mix also returned gd_2a58e5bb4db6e2ed500cc504, which states that a later investor update indicates a worse month.",
+      "incremental": "correct supporting passage absent from matched dense"
+    },
+    {
+      "question_id": "q_first_vp_sales",
+      "finding": "Matched dense returned all three preselected first-VP posts. Naive, hybrid, and mix returned two of the three and missed gd_5b654905b75669045fd65816.",
+      "incremental": "graph retrieval dropped a relevant passage that dense recovered"
+    },
+    {
+      "question_id": "q_vp_sales_tension",
+      "finding": "Dense, naive, hybrid, and mix all returned both tension sources. The in-passage relationships describe a mediocre VP of Sales. They do not state both sides of the asked contrast.",
+      "incremental": "no reliable novel relationship beyond the passages"
+    },
+    {
+      "question_id": "q_exec_craft",
+      "finding": "Dense and the LightRAG modes returned the craft-versus-manager post. The accepted relationships restate sentences in that post.",
+      "incremental": "relationship text restates the retrieved passage"
+    },
+    {
+      "question_id": "q_cap_table",
+      "finding": "Dense and the LightRAG modes returned the cap-table post. The accepted verbatim relationship is the sentence that a messy cap table can scare off investors and slow fundraising.",
+      "incremental": "relationship text restates the retrieved passage"
+    },
+    {
+      "question_id": "q_personalized_saas_speaker",
+      "finding": "All four retrievers returned the Anneka Gupta post. The four relationships admitted to generation were about Levie and a resolution percentage, not about Anneka Gupta.",
+      "incremental": "off-topic relationship text from the same retrieved passages"
+    },
+    {
+      "question_id": "q_olympics_ceremony",
+      "finding": "Every retriever returned four train passages. None discusses the 2024 opening ceremony. Hybrid and mix still marked four in-passage relationships for generation, including AI and organizational structure, Algolia and product-market fit, Google and revenue sharing, and a SaaStr Annual closing AMA. Those edges are supported by the retrieved passages and are unrelated to the question. This question was not sent to the generator.",
+      "incremental": "unsupported-for-the-question relationships admitted from irrelevant passages"
+    }
+  ],
+  "generation_examples": [
+    {
+      "question_id": "q_exec_craft",
+      "medium": "blog",
+      "what_changed": "Arm A already said executives who stay close to the craft win and pure managers lose, then added an unsupported $250M aside. Arm B stated the same contrast in fewer words and still opened by repeating the question. Arm C did not answer the contrast. The relationship block restated the passage.",
+      "supported_improvement": false
+    },
+    {
+      "question_id": "q_cap_table",
+      "medium": "blog",
+      "what_changed": "Arm B had the verbatim scare-off sentence in its evidence. The draft instead said a messy cap table shows that the company does not value itself highly. That mechanism is not the admitted relationship.",
+      "supported_improvement": false
+    },
+    {
+      "question_id": "q_vp_sales_tension",
+      "medium": "blog",
+      "what_changed": "Arms A and B both answered 'No answer found in the evidence.' The admitted relationships were about a mediocre VP of Sales, not the asked contrast. The blog texts match.",
+      "supported_improvement": false
+    },
+    {
+      "question_id": "q_personalized_saas_speaker",
+      "medium": "blog",
+      "what_changed": "Arms A and B both name Anneka Gupta. Arm B then continues into an Asana intents discussion aligned with the off-topic relationship block, not with a new supported attribution.",
+      "supported_improvement": false
+    }
+  ]
+}

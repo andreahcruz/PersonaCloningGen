@@ -1,0 +1,199 @@
+{
+  "composite_score": null,
+  "controls": {
+    "context_budget": "Model E passes four source passages. Model F profiles use the per-medium budgets in model_f_context.budget. Utilization is reported and is not a quality metric.",
+    "decoding": "temperature 0.7, top_p 0.9, repetition penalty 1.15, seed base 42, as compare_adapters records them.",
+    "generator": "Frozen Relabel adapter. Do not change the adapter between arms.",
+    "held_out": "Do not read the corpus validation or test split to choose a profile, a prompt, or a budget.",
+    "pairing": "Compare arms on the same question_id and medium. Report a paired difference and a bootstrap interval. Do not average those differences into one rank.",
+    "questions": "Same question ids on every arm. Development questions are the pilot and graph-relationship review files. The 30-topic gold file is a generation development set, not the corpus test split.",
+    "retrieval_difference": "Dense k counts passages. LightRAG top_k counts entities or relationships, and chunk_top_k counts chunks. Both arms then keep an evidence budget of four passages. Those ranks are not the same score."
+  },
+  "coverage": [
+    {
+      "covered_by": "relational review questions name entities, but there is no entity-linking label",
+      "gap": "No graded entity-identification set",
+      "phenomenon": "entity_identification"
+    },
+    {
+      "covered_by": "graph_relationship_questions.json relational rows",
+      "gap": "Review notes are not qrels. Overlap with a preselected id is not recall",
+      "phenomenon": "entity_relationships"
+    },
+    {
+      "covered_by": "multi_document questions retrieve more than one post about one topic",
+      "gap": "No labeled two-hop chain where the endpoint claim is unsupported",
+      "phenomenon": "multi_hop"
+    },
+    {
+      "covered_by": "q_boom_promotions mentions 2021 inside one document",
+      "gap": "No comparison of two dated claims across documents",
+      "phenomenon": "temporal_reasoning"
+    },
+    {
+      "covered_by": "q_brex_price and q_five_percent_share",
+      "gap": "Too few graded numeric items to estimate a rate",
+      "phenomenon": "numerical_claims"
+    },
+    {
+      "covered_by": "q_personalized_saas_speaker",
+      "gap": "One speaker control",
+      "phenomenon": "attribution"
+    },
+    {
+      "covered_by": "q_first_vp_sales and q_vp_sales_tension",
+      "gap": "Preselected ids, not a complete relevant set",
+      "phenomenon": "multiple_sources"
+    },
+    {
+      "covered_by": "unsupported questions in both review files",
+      "gap": "The generation length gates treat a short abstention as a failure. This harness does not.",
+      "phenomenon": "abstention"
+    }
+  ],
+  "experiment_id": "EXP-20261101-008-eval-bench-historical-replay",
+  "git": {
+    "commit": "95db4f54a518cb273ea9118b10b9175eeb9668be",
+    "dirty": true
+  },
+  "gold_dev_set": {
+    "fields": [
+      "audience",
+      "cta",
+      "expected_facts",
+      "format",
+      "goal",
+      "gold_reference",
+      "id",
+      "k",
+      "rubric_must_haves",
+      "topic"
+    ],
+    "format": "blog_draft",
+    "path": "data/openai_ft/lemkin_gold_eval.jsonl",
+    "role": "Generation development set already used for prompt work. Not the corpus test split. Not a graded retrieval qrel.",
+    "rows": 30
+  },
+  "gpu_inference": false,
+  "live_index_queried": false,
+  "matrix": [
+    {
+      "architecture": "model_e",
+      "arm": "A",
+      "context_profile": "off",
+      "decoding": {
+        "repetition_penalty": 1.15,
+        "seed_base": 42,
+        "temperature": 0.7,
+        "top_p": 0.9
+      },
+      "evidence_budget": 4,
+      "generator": "relabel_qlora",
+      "live_retrieval_now": "dense index only; do not retune on the corpus test split",
+      "retrieval_backend": "dense",
+      "score_saved_traces_now": "A trace with this profile can be scored. EXP-20261031-001 arm C is a 400-character pilot preview, not this arm.",
+      "uses_graph": false,
+      "waits_for_blog_snapshot": false
+    },
+    {
+      "architecture": "model_f_source",
+      "arm": "B",
+      "context_profile": "source",
+      "decoding": {
+        "repetition_penalty": 1.15,
+        "seed_base": 42,
+        "temperature": 0.7,
+        "top_p": 0.9
+      },
+      "evidence_budget": 4,
+      "generator": "relabel_qlora",
+      "lightrag_mode": "hybrid",
+      "live_retrieval_now": "pilot and frozen payloads only",
+      "retrieval_backend": "lightrag",
+      "score_saved_traces_now": "A trace with the source profile can be scored. EXP-20261031-001 arm A used factual-reliability-v1 and is not this profile.",
+      "uses_graph": false,
+      "waits_for_blog_snapshot": true
+    },
+    {
+      "architecture": "model_f_relationships",
+      "arm": "C",
+      "context_profile": "relationships",
+      "decoding": {
+        "repetition_penalty": 1.15,
+        "seed_base": 42,
+        "temperature": 0.7,
+        "top_p": 0.9
+      },
+      "evidence_budget": 4,
+      "generator": "relabel_qlora",
+      "lightrag_mode": "hybrid",
+      "live_retrieval_now": "saved relationship bundles only",
+      "retrieval_backend": "lightrag",
+      "score_saved_traces_now": "A trace with the relationships profile can be scored. EXP-20261031-001 arm B used generation_relationships and is not this profile.",
+      "uses_graph": true,
+      "waits_for_blog_snapshot": true
+    },
+    {
+      "architecture": "model_f_descriptions",
+      "arm": "D",
+      "context_profile": "descriptions",
+      "decoding": {
+        "repetition_penalty": 1.15,
+        "seed_base": 42,
+        "temperature": 0.7,
+        "top_p": 0.9
+      },
+      "evidence_budget": 4,
+      "generator": "relabel_qlora",
+      "lightrag_mode": "hybrid",
+      "live_retrieval_now": "blocked until query_documents keeps entity descriptions",
+      "retrieval_backend": "lightrag",
+      "score_saved_traces_now": "partial: current normalized payloads omit entity description text",
+      "uses_graph": true,
+      "waits_for_blog_snapshot": true
+    },
+    {
+      "architecture": "model_f_multihop",
+      "arm": "E",
+      "context_profile": "multihop",
+      "decoding": {
+        "repetition_penalty": 1.15,
+        "seed_base": 42,
+        "temperature": 0.7,
+        "top_p": 0.9
+      },
+      "evidence_budget": 4,
+      "generator": "relabel_qlora",
+      "lightrag_mode": "hybrid",
+      "live_retrieval_now": "selector is ready; the expansion graph is still being written",
+      "retrieval_backend": "lightrag",
+      "score_saved_traces_now": "A trace with the multihop profile can be scored. No saved generation used this profile.",
+      "uses_graph": true,
+      "waits_for_blog_snapshot": true
+    }
+  ],
+  "n_failures": 0,
+  "n_results": 65,
+  "review_kinds": {
+    "host_finetune/graph_relationship_questions.json": [
+      "simple_fact",
+      "relational",
+      "multi_document",
+      "conflicting_statements",
+      "conditional_advice",
+      "attribution",
+      "unsupported"
+    ],
+    "host_finetune/pilot_questions.json": [
+      "simple_fact",
+      "author_position",
+      "multi_document",
+      "conditional_advice",
+      "conflicting_statements",
+      "attribution",
+      "unsupported"
+    ]
+  },
+  "schema_version": "eval-bench-v1",
+  "scorer": "host_finetune.eval_bench"
+}

@@ -1,0 +1,40 @@
+experiment_id: EXP-20261031-004-lightrag-adaptive-timeout
+timestamp: 2026-10-31T22:54:00Z
+execution_commands:
+  - host_finetune\.venv\Scripts\python.exe -X utf8 -m pytest tests\test_indexing_timeout.py tests\test_indexing_checkpoint.py tests\test_indexing_quality.py -q --tb=line
+  - host_finetune\.venv\Scripts\python.exe -X utf8 -m host_finetune.indexing_session --workdir %TEMP%\lightrag-timeout-bench-20261031 --prepare
+  - host_finetune\.venv\Scripts\python.exe -X utf8 -m host_finetune.indexing_session --workdir %TEMP%\lightrag-timeout-bench-20261031 --resume --validation-batch --max-documents 4 --max-runtime-minutes 8 --timeout-policy adaptive
+  - host_finetune\.venv\Scripts\python.exe -X utf8 -m host_finetune.indexing_session --workdir %TEMP%\lightrag-timeout-bench-20261031 --resume --max-documents 1 --max-runtime-minutes 6 --timeout-policy adaptive
+git:
+  commit: 95db4f54a518cb273ea9118b10b9175eeb9668be
+  dirty: true
+data:
+  source_manifest: experiments/EXP-20261003-004-relabel-continuations/raw/split_assignments.jsonl
+  source_hashes:
+    graph_ready_v2_documents: d7bd01a01f288dda3582eddcfd2fc1539574f97b6e168b1124a0b43b76d9a118
+    expansion_ledger_completed_at_audit: 73
+  processed_dataset_hash: 1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b
+  split_manifest_hash: 6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb
+  gold_eval_hash: d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e
+rag:
+  persona_profile_hash: n/a
+  chroma_collection: not opened
+  index_version_or_snapshot: artifacts/lightrag/model_f/storage_expand_v1 was read only; the benchmark used a temporary workdir
+  embedding_model: nomic-embed-text
+model:
+  model_name: llama3.1:latest
+  model_or_adapter_hash: ollama id 46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e
+  config: LightRAG 1.5.7; graph fingerprint remains 771baa30dd8f79c30c4c51f296385b2ec2c652b33ff1031a099a7e16f139260b; timeout policy adaptive-v1 is not part of that fingerprint
+  random_seed: n/a
+evaluation:
+  evaluator_commit: 95db4f54a518cb273ea9118b10b9175eeb9668be
+  judge_model: n/a
+  judge_config: ledger distribution plus an isolated four-document benchmark; not a retrieval grade
+environment:
+  python_version: 3.11.9
+  package_snapshot: config/package_snapshot.txt
+  hardware: NVIDIA GeForce RTX 5070 Ti, 16303 MiB
+outputs:
+  raw: raw/runtime_analysis.json
+  metrics: metrics/benchmark_summary.json
+  warnings_and_failures: the isolated rerun of gd_756878d4d219336489c49168 was cut at 181 seconds and marked failed_permanent after two cancelled attempts; the expansion store was not modified

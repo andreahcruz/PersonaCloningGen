@@ -1,0 +1,114 @@
+[
+  {
+    "id": "q_brex_price",
+    "kind": "simple_fact",
+    "generation": true,
+    "query": "What price did Capital One announce for acquiring Brex?",
+    "review_source_ids": ["gd_22550cc95a46ded2d9a37c99"],
+    "required_relationships": ["Capital One acquisition connected to the announced Brex price"],
+    "review_note": "Simple numeric control. The pilot blog states an announced price of $5.15 billion."
+  },
+  {
+    "id": "q_cvc_second_check",
+    "kind": "relational",
+    "generation": false,
+    "query": "What does Jason Lemkin say about whether corporate venture capital firms write a second check?",
+    "review_source_ids": ["gd_00c32ea8f146eb99c16e0974"],
+    "required_relationships": ["Corporate venture firms often do not write a second check, with named exceptions"],
+    "review_note": "Relational control already in the pilot question set. A dense retriever can recover the same post."
+  },
+  {
+    "id": "q_first_vp_sales",
+    "kind": "multi_document",
+    "generation": false,
+    "query": "What does Jason Lemkin say about hiring and managing a first VP of Sales?",
+    "review_source_ids": [
+      "gd_92ee1e366384a6e50b449f25",
+      "gd_8d4d38e0c3572b351003a51c",
+      "gd_5b654905b75669045fd65816"
+    ],
+    "required_relationships": ["Hiring or managing a first sales leader depends on stage, process, or the leader's own limits"],
+    "review_note": "Three pilot posts. One relevant source is enough. Two or more is the multi-document case."
+  },
+  {
+    "id": "q_vp_sales_tension",
+    "kind": "conflicting_statements",
+    "generation": true,
+    "query": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive?",
+    "review_source_ids": ["gd_92ee1e366384a6e50b449f25", "gd_5b654905b75669045fd65816"],
+    "required_relationships": ["A great VP of Sales brings in executives", "Criticizing a VP of Sales who cannot do better is counterproductive"],
+    "review_note": "Both statements are in the pilot. A useful result retrieves both rather than only one."
+  },
+  {
+    "id": "q_five_percent_share",
+    "kind": "conditional_advice",
+    "generation": false,
+    "query": "What does Jason Lemkin say a company should do once it has about 5 percent market share in a niche?",
+    "review_source_ids": ["gd_27f183b437e4f038d31cb0f6"],
+    "required_relationships": ["About 5 percent niche share is the condition for staying present and gathering customers"],
+    "review_note": "Conditional advice control from the existing pilot questions."
+  },
+  {
+    "id": "q_personalized_saas_speaker",
+    "kind": "attribution",
+    "generation": true,
+    "query": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+    "review_source_ids": ["gd_007b705bb266a53acf5888b9"],
+    "required_relationships": ["The personalized-experience sentence is Anneka Gupta's, not Jason Lemkin's own claim"],
+    "review_note": "Attribution control. A hit that presents the sentence as Lemkin's own words fails even if the source id is right."
+  },
+  {
+    "id": "q_boom_promotions",
+    "kind": "relational",
+    "generation": false,
+    "query": "During the 2021 boom, what does the pilot source say a company should do about promoting a director and about mediocre customer success people?",
+    "review_source_ids": ["gd_414cde32de0cf12c7d952668"],
+    "required_relationships": ["Promote a director to VP", "Move on from mediocre customer success people"],
+    "review_note": "Two connections in one pilot document. Not constructed to be answerable only by graph traversal."
+  },
+  {
+    "id": "q_exec_craft",
+    "kind": "relational",
+    "generation": true,
+    "query": "What does the pilot source say happens to executives who stay close to the craft, compared with executives who become pure managers and strategists?",
+    "review_source_ids": ["gd_b17253e0832c9eda0a49b551"],
+    "required_relationships": ["Executives who stay close to the craft win", "Executives who become pure managers and strategists lose"],
+    "review_note": "A contrast between two executive behaviors in one pilot source."
+  },
+  {
+    "id": "q_cap_table",
+    "kind": "relational",
+    "generation": true,
+    "query": "How does a messy cap table affect future investors and fundraising?",
+    "review_source_ids": ["gd_fe33901c61721e4d6a2fa0b3"],
+    "required_relationships": ["A messy cap table can scare off future investors and slow fundraising"],
+    "review_note": "Connects cap-table quality to investor and fundraising consequences."
+  },
+  {
+    "id": "q_b2c_playbook",
+    "kind": "relational",
+    "generation": false,
+    "query": "Does the B2C playbook work as well in B2B, and when does a consumer-style approach still matter?",
+    "review_source_ids": ["gd_fb798d3019afee06b2636d46"],
+    "required_relationships": ["The B2C playbook does not work as well in B2B", "A consumer-like buyer is the exception"],
+    "review_note": "Cross-concept comparison present in one pilot source."
+  },
+  {
+    "id": "q_investor_update",
+    "kind": "relational",
+    "generation": false,
+    "query": "What does a late investor update indicate about the month?",
+    "review_source_ids": ["gd_2a58e5bb4db6e2ed500cc504"],
+    "required_relationships": ["A later investor update indicates a worse month"],
+    "review_note": "A short conditional relationship in the pilot."
+  },
+  {
+    "id": "q_olympics_ceremony",
+    "kind": "unsupported",
+    "generation": false,
+    "query": "What did Jason Lemkin say about the choreography of the 2024 Olympic opening ceremony?",
+    "review_source_ids": [],
+    "required_relationships": [],
+    "review_note": "No pilot document discusses that ceremony. Any returned source is irrelevant. This is not a precision score."
+  }
+]

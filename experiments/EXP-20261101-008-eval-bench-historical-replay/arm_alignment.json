@@ -1,0 +1,52 @@
+{
+  "descriptions_is_its_own_arm": true,
+  "every_profile_has_one_arm": true,
+  "historical_october_31_cells_are_these_profiles": false,
+  "leakage_configuration_ids": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "leakage_configuration_profiles": [
+    "off",
+    "source",
+    "relationships",
+    "multihop"
+  ],
+  "leakage_has_separate_descriptions_arm": false,
+  "matrix_arms": [
+    {
+      "architecture": "model_e",
+      "arm": "A",
+      "context_profile": "off"
+    },
+    {
+      "architecture": "model_f_source",
+      "arm": "B",
+      "context_profile": "source"
+    },
+    {
+      "architecture": "model_f_relationships",
+      "arm": "C",
+      "context_profile": "relationships"
+    },
+    {
+      "architecture": "model_f_descriptions",
+      "arm": "D",
+      "context_profile": "descriptions"
+    },
+    {
+      "architecture": "model_f_multihop",
+      "arm": "E",
+      "context_profile": "multihop"
+    }
+  ],
+  "model_f_profiles": [
+    "off",
+    "source",
+    "relationships",
+    "descriptions",
+    "multihop"
+  ]
+}

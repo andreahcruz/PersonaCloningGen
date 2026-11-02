@@ -1,0 +1,84 @@
+{
+  "eligible_documents": 13140,
+  "selected_documents": 13132,
+  "completed_graph_indexed": 5,
+  "vector_only_documents": 0,
+  "pending_documents": 13134,
+  "retryable_failures": 0,
+  "permanent_failures": 1,
+  "quarantined_documents": 0,
+  "interrupted_documents": 0,
+  "skipped_documents": 0,
+  "deferred_documents": 9,
+  "successful_chunks": 10,
+  "graph_nodes": 61,
+  "graph_edges": 41,
+  "graph_count_source": "measured_after_shutdown_flush",
+  "elapsed_processing_seconds": 493.691,
+  "rolling_throughput_docs_per_hour": 36.46,
+  "remaining_compute": {
+    "label": "approximate",
+    "queued_documents": 13126,
+    "completed_sample": 5,
+    "mean_seconds": 11.5,
+    "median_seconds": 8.3,
+    "min_seconds": 3.6,
+    "max_seconds": 25.2,
+    "seconds": 151266.6,
+    "note": "Approximate. It multiplies the mean completed runtime by the queued count. Deferred documents and the wall time of attempts that did not become the completed runtime are excluded. Length and failure rate vary, so this is not a schedule."
+  },
+  "corpus_summary": {
+    "by_attribution": {
+      "author_account": 10556,
+      "named_author": 531,
+      "possible_guest_or_interview": 35,
+      "publication_page": 2001,
+      "third_party_quotation": 9
+    },
+    "by_medium": {
+      "blog": 2036,
+      "linkedin": 536,
+      "x": 10560
+    },
+    "deferred_pilot": 8,
+    "documents_seen": 13140,
+    "eligible": 13140,
+    "quarantined": 0,
+    "selected": 13132,
+    "skipped_duplicate_text": 0
+  },
+  "configuration": {
+    "lightrag_version": "1.5.7",
+    "extraction_model": "llama3.1:latest",
+    "embed_model": "nomic-embed-text",
+    "embedding_dim": 768,
+    "embedding_prefixes": [
+      "search_query: ",
+      "search_document: "
+    ],
+    "chunk_token_size": 400,
+    "chunk_overlap_token_size": "library_default_not_overridden",
+    "entity_guidance_sha256": "00cfc34109dd3fc18d077bd3104adc290745ee20a7687465be7b6dad08e75804",
+    "entity_guidance": "project",
+    "num_ctx": 16384,
+    "temperature": 0.0,
+    "entity_extract_max_gleaning": 1,
+    "llm_timeout_seconds": 600,
+    "worker_timeout_seconds": 1200,
+    "llm_model_max_async": 1,
+    "embedding_func_max_async": 1,
+    "store_role": "graph",
+    "vector_only_option": "not used"
+  },
+  "pilot_incorporation": "The 160-document pilot at artifacts/lightrag/model_f/storage_pilot160 was not copied. EXP-20261029-004 records that 26 of its documents were extracted under num_ctx 32768 and the finishing pass used 16384, and the store contains a duplicate status remnant. This expansion starts empty with one recorded configuration: project entity guidance, num_ctx 16384, chunk token size 400, gleaning 1, llm timeout 600 (worker timeout 1200), nomic-embed-text at 768 dimensions.",
+  "by_status": {
+    "completed": 5,
+    "failed_permanent": 1,
+    "pending": 13134,
+    "processing": 0,
+    "failed_retryable": 0,
+    "quarantined": 0,
+    "skipped": 0,
+    "interrupted": 0
+  }
+}

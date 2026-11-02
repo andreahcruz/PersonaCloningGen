@@ -20,3 +20,42 @@ host_finetune/output/
 artifacts/
 _sanity_check_tmp.py
 data/cleaned (2).zip
+
+# LightRAG working stores, snapshots, locks, and caches.
+# `artifacts/` is already ignored. These names also catch copies placed elsewhere.
+storage_expand_v1/
+storage_expand_v1_snapshot/
+storage_pilot160/
+indexing.lock
+kv_store_llm_response_cache.json
+kv_store_*.json
+vdb_*.json
+graph_chunk_entity_relation.graphml
+extraction_skip.json
+
+# Weights and checkpoints. Patterns do not untrack files already in history.
+*.safetensors
+*.gguf
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Local corpora. Already-tracked historical files stay tracked.
+data/raw/
+data/cleaned/
+data/*.zip
+
+# Embedding dumps and local vector-database files.
+*.npy
+*.sqlite
+*.sqlite3
+
+# Local bundles that carry adapters or Chroma copies.
+deployment_handoff/
+
+# Additional environment files. `.env.example` stays available.
+.env.*
+!.env.example
+*.pem
+credentials.json

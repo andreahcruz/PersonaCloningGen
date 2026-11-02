@@ -1,0 +1,18 @@
+{
+  "first_command": {
+    "max_documents": 20,
+    "outcome": "stopped after LightRAG processed the timed-out document together with the next document",
+    "completed_in_that_process": ["gd_087a4675a11cf57ae08ea7cf", "gd_00808ccaeb7073dfcf899559"],
+    "deferred": "gd_4c65a0a559794e0816949bf4"
+  },
+  "second_command": {
+    "max_documents": 18,
+    "max_runtime_minutes": 40,
+    "stop_reason": "max_documents",
+    "documents_handled": 18,
+    "completed_graph_indexed": 25,
+    "graph_nodes": 266,
+    "graph_edges": 217,
+    "exit_code": 0
+  }
+}

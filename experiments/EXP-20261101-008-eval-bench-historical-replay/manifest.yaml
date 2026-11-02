@@ -1,0 +1,31 @@
+experiment_id: EXP-20261101-008-eval-bench-historical-replay
+timestamp: 2026-11-01T23:40:00Z
+execution_commands:
+  - host_finetune\.venv\Scripts\python.exe -X utf8 -c "from host_finetune.eval_bench.historical import replay"
+git:
+  commit: 95db4f54a518cb273ea9118b10b9175eeb9668be
+  dirty: true
+data:
+  source_experiment: EXP-20261031-001-graph-relationship-conditioning
+  questions: host_finetune/graph_relationship_questions.json
+  split_accessed: false
+  gold_eval_accessed: false
+  corpus: pilot160, 152 processed documents recorded by the source experiment
+rag:
+  index_queried: false
+  live_store: artifacts/lightrag/model_f/storage_expand_v1 was not opened
+  embedding_model: not called
+model:
+  model_name: not loaded
+  adapter: host_finetune/output/lemkin_lora_relabel, recorded from the source manifest, not reloaded
+  random_seed: source traces store seeds 42 through 61
+evaluation:
+  evaluator: host_finetune.eval_bench
+  schema: eval-bench-v1
+  judge_model: not called
+environment:
+  hardware: CPU rescore only
+outputs:
+  raw: generation/results.jsonl and retrieval/results.jsonl are rescored copies of saved traces
+  metrics: reconciliation.json, pairing.json, annotation_template.json, arm_alignment.json
+  warnings_and_failures: worktree dirty at 95db4f5; saved cells are not the five context profiles; ranked metrics null; faithfulness omits instruction leak by the existing assess_factual definition

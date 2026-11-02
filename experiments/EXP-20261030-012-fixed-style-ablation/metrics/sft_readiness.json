@@ -1,0 +1,43 @@
+{
+  "dataset": "experiments\\EXP-20261003-004-relabel-continuations\\raw\\dataset.jsonl",
+  "dataset_sha256": "1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b",
+  "assignment_sha256": "6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb",
+  "assignment_meta_sha256": "1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b",
+  "rows": 26545,
+  "split_role": {
+    "test:continuation": 469,
+    "test:opening": 389,
+    "test:unchanged": 1722,
+    "train:continuation": 8050,
+    "train:opening": 1711,
+    "train:unchanged": 11616,
+    "validation:continuation": 474,
+    "validation:opening": 390,
+    "validation:unchanged": 1724
+  },
+  "medium_split": {
+    "blog:test": 1053,
+    "blog:train": 9434,
+    "blog:validation": 1064,
+    "linkedin:test": 123,
+    "linkedin:train": 713,
+    "linkedin:validation": 121,
+    "x:test": 1403,
+    "x:train": 11190,
+    "x:validation": 1400,
+    "youtube_jason:test": 1,
+    "youtube_jason:train": 40,
+    "youtube_jason:validation": 3
+  },
+  "exact_duplicate_extra_rows": 451,
+  "exact_duplicate_target_groups": 333,
+  "targets_under_20_words": 6392,
+  "promo_or_boilerplate_regex_hits": 1186,
+  "opens_with_a_long_quotation": 988,
+  "continuation_missing_prior_marker": 15,
+  "opening_contains_prior_marker": 0,
+  "unchanged_rows": 15062,
+  "groups_in_more_than_one_split": 0,
+  "decision": "do_not_retrain",
+  "decision_reason": "The frozen adapter was trained on this Relabel file. No newer versioned SFT derivative is the training source for a replacement adapter. Exact duplicate targets, short rows, promotional lines, and quotation openings are quality risks, but they are not a prepared replacement dataset with a held-out evaluation plan."
+}

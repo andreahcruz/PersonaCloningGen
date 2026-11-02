@@ -1,0 +1,75 @@
+{
+  "summary": {
+    "responses": 7839,
+    "stages": {
+      "initial": 3921,
+      "gleaning": 3918
+    },
+    "relation_rows_by_field_count": {
+      "5": 37170,
+      "4": 3599,
+      "7": 843,
+      "6": 959,
+      "9": 2,
+      "8": 21,
+      "16": 1,
+      "17": 1,
+      "3": 4
+    },
+    "relation_rows_by_kind": {
+      "accepted_five": 36612,
+      "comma_between_keywords_and_description": 1337,
+      "schema_labels": 1406,
+      "delimiter_inside_description": 397,
+      "omitted_description": 1229,
+      "self_relation_dropped": 558,
+      "omitted_keywords": 923,
+      "extra_fields_ambiguous": 24,
+      "four_fields_ambiguous": 110,
+      "too_few_fields": 4
+    },
+    "accepted_five_rows": 36612,
+    "unique_malformed_records": 3949,
+    "unique_syntactic_repairs": 2564,
+    "repeated_rows_inside_one_response": 5333,
+    "gleaning_repeats_of_initial_malformed": 1419,
+    "chunks_with_a_malformed_relation": 700,
+    "chunks_whose_relation_rows_were_all_rejected": 403,
+    "repairs_checked_against_chunk_text": 3594,
+    "repairs_with_both_endpoints_in_chunk": 3195,
+    "repairs_with_endpoint_and_description_overlap": 3055,
+    "malformed_pairs_already_accepted_in_the_same_chunk": 32
+  },
+  "named": {
+    "gd_a48dad30cf3032e3f22fcde5": {
+      "4:omitted_description:initial": 12,
+      "4:omitted_keywords:initial": 1,
+      "4:four_fields_ambiguous:initial": 1,
+      "4:omitted_keywords:gleaning": 1,
+      "4:omitted_description:gleaning": 5
+    },
+    "gd_b5598f901756b268dfaf7770": {
+      "4:omitted_description:initial": 10,
+      "4:omitted_description:gleaning": 9
+    },
+    "gd_a753d199b9c468b7c9b06a64": {
+      "6:schema_labels:initial": 8,
+      "6:schema_labels:gleaning": 9
+    },
+    "gd_bd97c14fa0476835df73618f": {
+      "8:delimiter_inside_description:initial": 1
+    },
+    "gd_c19cd54fed6d5f7cfae5bbc2": {
+      "7:schema_labels:initial": 6,
+      "7:schema_labels:gleaning": 4
+    },
+    "gd_c761713807815a161628791f": {
+      "7:schema_labels:initial": 6,
+      "7:schema_labels:gleaning": 3
+    },
+    "gd_cbce5e6622c8c301403e5d87": {
+      "4:comma_between_keywords_and_description:initial": 48,
+      "4:comma_between_keywords_and_description:gleaning": 36
+    }
+  }
+}

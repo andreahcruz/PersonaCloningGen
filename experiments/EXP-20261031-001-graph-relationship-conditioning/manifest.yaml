@@ -1,0 +1,42 @@
+experiment_id: EXP-20261031-001-graph-relationship-conditioning
+timestamp: 2026-10-31T09:58:44Z
+execution_commands:
+  - host_finetune\.venv\Scripts\python.exe -X utf8 -m pytest tests/test_graph_relationships.py tests/test_lightrag_retrieval.py tests/test_evidence_capsule.py tests/test_numeric_grounding.py -q
+  - host_finetune\.venv\Scripts\python.exe -X utf8 experiments\EXP-20261031-001-graph-relationship-conditioning\config\run_retrieval.py
+  - host_finetune\.venv\Scripts\python.exe -X utf8 experiments\EXP-20261031-001-graph-relationship-conditioning\config\run_generation.py
+  - host_finetune\.venv\Scripts\python.exe -X utf8 experiments\EXP-20261031-001-graph-relationship-conditioning\config\score_generation.py --judge
+git:
+  commit: 95db4f54a518cb273ea9118b10b9175eeb9668be
+  dirty: true
+data:
+  source_manifest: experiments/EXP-20261003-004-relabel-continuations/raw/split_assignments.jsonl
+  source_hashes:
+    graph_ready_v2_documents: d7bd01a01f288dda3582eddcfd2fc1539574f97b6e168b1124a0b43b76d9a118
+    pilot_catalog: 088a6edd3315875db3afede5172c9313cea21ad54c8fd1680f04a6b39dbc10d6
+    pilot_graphml: 302638b52a036064f9998cdf031b7281b82dcc73f99db43caff89219a6c5f599
+    questions: a7cc2d05fb0cd07cb244fb227bc3af3007f1cdd9ce68a84af3d440d95e82316f
+  processed_dataset_hash: 1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b
+  split_manifest_hash: 6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb
+  gold_eval_hash: d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e
+rag:
+  persona_profile_hash: n/a
+  chroma_collection: not opened; matched dense search embedded the pilot graph-ready texts
+  index_version_or_snapshot: artifacts/lightrag/model_f/storage_pilot160 read only; 152 processed documents, 8 failures, 1791 nodes, 2000 edges
+  embedding_model: nomic-embed-text
+model:
+  model_name: unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit
+  model_or_adapter_hash: host_finetune/output/lemkin_lora_relabel
+  config: seed 42; evidence budget 4; one chunk per LightRAG source; num_ctx 16384; relationship contract source-verified-relationship-v1; prompt budget 4 in-passage relationships; fixed-style off
+  random_seed: 42
+evaluation:
+  evaluator_commit: 95db4f54a518cb273ea9118b10b9175eeb9668be
+  judge_model: qwen2.5:14b
+  judge_config: temperature 0; writing dimensions only; designated-source overlap is not precision or recall
+environment:
+  python_version: 3.11.9
+  package_snapshot: lightrag 1.5.7; torch 2.10.0+cu128; transformers 5.5.0; chromadb 1.5.5
+  hardware: NVIDIA GeForce RTX 5070 Ti, 15.92 GB
+outputs:
+  raw: raw/retrieval_sheet.json, raw/frozen_*.jsonl, raw/generations/
+  metrics: metrics/retrieval_summary.json, metrics/generation.json, metrics/graph_audit.json, metrics/review_judgments.json
+  warnings_and_failures: worktree dirty at 95db4f5 including prior EXP-20261030-012 edits; generation resumed after a prompt-leak check and a cache-key error; fixed-length blog voice not scored because the Kevin reference worktree is absent; Qwen means are diagnostic

@@ -1,0 +1,41 @@
+experiment_id: EXP-20261030-012-fixed-style-ablation
+timestamp: 2026-10-30T10:24:50Z
+execution_commands:
+  - host_finetune\.venv\Scripts\python.exe -X utf8 experiments\EXP-20261030-012-fixed-style-ablation\config\run_paired.py --budget-seconds 18000
+  - host_finetune\.venv\Scripts\python.exe -X utf8 experiments\EXP-20261030-012-fixed-style-ablation\config\score_paired.py
+  - host_finetune\.venv\Scripts\python.exe -X utf8 experiments\EXP-20261030-012-fixed-style-ablation\config\score_paired.py --judge
+  - host_finetune\.venv\Scripts\python.exe -X utf8 experiments\EXP-20261030-012-fixed-style-ablation\config\audit_sft.py
+git:
+  commit: 95db4f54a518cb273ea9118b10b9175eeb9668be
+  dirty: true
+data:
+  source_manifest: experiments/EXP-20261003-004-relabel-continuations/raw/split_assignments.jsonl
+  source_hashes:
+    relabel_dataset: 1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b
+    split_assignments: 6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb
+    style_candidates: 003eea0b496d8002e7e499faf11add4c91268f0f1a5a1f832e9dccce37e2a1a4
+  processed_dataset_hash: 1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b
+  split_manifest_hash: 6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb
+  gold_eval_hash: d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e
+rag:
+  persona_profile_hash: n/a
+  chroma_collection: lemkin_train_only_v2_shadow
+  index_version_or_snapshot: host_finetune/output/chroma_lemkin_train_only_v2 read only; 21193 documents
+  embedding_model: nomic-embed-text
+model:
+  model_name: unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit
+  model_or_adapter_hash: host_finetune/output/lemkin_lora_relabel
+  config: seed 42; k=4; temperature 0.7; top_p 0.9; repetition_penalty 1.15; prompt contract factual-reliability-v1; fixed style off versus on
+  random_seed: 42
+evaluation:
+  evaluator_commit: 95db4f54a518cb273ea9118b10b9175eeb9668be
+  judge_model: qwen2.5:14b
+  judge_config: temperature 0; writing dimensions only; arm labels not shown to the judge; Llama-family judge not used
+environment:
+  python_version: 3.11.9
+  package_snapshot: torch 2.10.0+cu128; transformers 5.5.0; peft 0.19.1; unsloth 2026.5.2
+  hardware: NVIDIA GeForce RTX 5070 Ti, 15.92 GB; generation peak allocated 7025 MB
+outputs:
+  raw: raw/cells, raw/frozen_chroma_v2.jsonl, raw/evidence, raw/smoke.json, raw/run_status.json
+  metrics: metrics/comparison.json, metrics/paired_decision.json, metrics/sft_readiness.json, metrics/judge_cache.jsonl
+  warnings_and_failures: Talk style-on is unsupported. LanguageTool was not installed. One LinkedIn draft copied a style exemplar. Blog writing-quality mean fell. See notes.md.

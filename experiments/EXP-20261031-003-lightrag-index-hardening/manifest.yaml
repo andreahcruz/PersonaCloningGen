@@ -1,0 +1,46 @@
+experiment_id: EXP-20261031-003-lightrag-index-hardening
+timestamp: 2026-10-31T22:00:44Z
+execution_commands:
+  - host_finetune\.venv\Scripts\python.exe -X utf8 -m pytest tests\test_indexing_quality.py tests\test_indexing_checkpoint.py -q --tb=short
+  - host_finetune\.venv\Scripts\python.exe -X utf8 -m host_finetune.indexing_session --audit
+  - host_finetune\.venv\Scripts\python.exe -X utf8 -m host_finetune.indexing_segments --source artifacts\lightrag\model_f\graph_ready_v2\documents.jsonl --destination artifacts\lightrag\model_f\graph_ready_v2_segments
+  - host_finetune\.venv\Scripts\python.exe -X utf8 -m host_finetune.indexing_session --resume --max-documents 20 --max-runtime-minutes 45 --max-document-seconds 420
+  - host_finetune\.venv\Scripts\python.exe -X utf8 -m host_finetune.indexing_session --resume --max-documents 18 --max-runtime-minutes 40 --max-document-seconds 420
+  - host_finetune\.venv\Scripts\python.exe -X utf8 -m host_finetune.indexing_session --audit
+git:
+  commit: 95db4f54a518cb273ea9118b10b9175eeb9668be
+  dirty: true
+data:
+  source_manifest: experiments/EXP-20261003-004-relabel-continuations/raw/split_assignments.jsonl
+  source_hashes:
+    graph_ready_v2_documents: d7bd01a01f288dda3582eddcfd2fc1539574f97b6e168b1124a0b43b76d9a118
+    selection_manifest_sha256: 8a17845713d0dc79bf9cde22c310d313ebb4054f8dd346fe8679b1246e183b49
+    graph_ready_v2_segments_documents: bc7bfe61a8bf468e9cfb68ee41e155c45917197a779214329f847d1e61d6cdbc
+    graph_ready_v2_segments_policy: bd9ae827b2037d936cd5d9f9a363f09dbbc3827a428525931253987515b54cef
+    graphml_sha256: d3291f7d655486f311cceb01ab70f82efd1eb4f0cbc272451d9d3356df584cfc
+    indexing_summary_sha256: 248c1ec0aec3d41d88593e401321dcee771d88fb82bbcc21b9bfc476bccc4377
+  processed_dataset_hash: 1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b
+  split_manifest_hash: 6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb
+  gold_eval_hash: d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e
+rag:
+  persona_profile_hash: n/a
+  chroma_collection: not opened
+  index_version_or_snapshot: artifacts/lightrag/model_f/storage_expand_v1
+  embedding_model: nomic-embed-text
+model:
+  model_name: llama3.1:latest
+  model_or_adapter_hash: ollama id 46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e
+  config: LightRAG 1.5.7; same configuration fingerprint as EXP-20261031-002, 771baa30dd8f79c30c4c51f296385b2ec2c652b33ff1031a099a7e16f139260b; omission_segments was not enabled; Relabel adapter not loaded
+  random_seed: n/a
+evaluation:
+  evaluator_commit: 95db4f54a518cb273ea9118b10b9175eeb9668be
+  judge_model: n/a
+  judge_config: read-only reconciliation and existing query-filter tests; not a human relevance grade
+environment:
+  python_version: 3.11.9
+  package_snapshot: config/package_snapshot.txt
+  hardware: NVIDIA GeForce RTX 5070 Ti, 16303 MiB
+outputs:
+  raw: raw/relation_format_warnings_from_logs.json
+  metrics: metrics/indexing_summary.json
+  warnings_and_failures: two orphan chunk vectors remain for gd_002be28d89a6ca9924e73be2; gd_4c65a0a559794e0816949bf4 is deferred after one 420-second cancel; the first 20-document command was stopped after it reprocessed that document, and the corrected session then indexed 18 documents

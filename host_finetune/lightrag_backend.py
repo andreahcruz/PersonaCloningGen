@@ -2,8 +2,9 @@
 
 Indexing and querying stay out of the frozen Chroma directories. Retrieval
 uses ``query_data`` so LightRAG does not write the final article. Generated
-entity and relationship summaries are kept as provenance and are not returned
-as citable evidence unless their text is a verbatim span of a source chunk.
+entity and relationship summaries are not citable passages. Relationship rows
+are returned separately and stay out of claim validation until
+``graph_relationships`` accepts a source span.
 """
 
 from __future__ import annotations
@@ -202,6 +203,8 @@ def normalize_lightrag_data(
 
     Hits contain verbatim source chunks only. Entity and relationship
     descriptions are recorded and are not passed to claim validation.
+    Relationship rows are copied to ``relationship_candidates`` for a later
+    source-span check. Their text is still not a hit.
     """
     mode = require_lightrag_mode(mode)
     if evidence_budget < 1:
@@ -280,10 +283,13 @@ def normalize_lightrag_data(
         )
         if len(hits) >= evidence_budget:
             break
+    relationship_candidates = []
     for kind in ("entities", "relationships"):
         for row in data.get(kind) or []:
             if not isinstance(row, dict):
                 continue
+            if kind == "relationships":
+                relationship_candidates.append(dict(row))
             excluded.append(
                 {
                     "reason": "generated_summary_not_a_source_span",
@@ -297,6 +303,7 @@ def normalize_lightrag_data(
     return {
         "hits": hits,
         "excluded": excluded,
+        "relationship_candidates": relationship_candidates,
         "status": status,
         "metadata": (payload or {}).get("metadata") or {},
         "message": (payload or {}).get("message"),
@@ -603,13 +610,21 @@ async def query_documents(
         )
     finally:
         await rag.finalize_storages()
+    failed_ids = read_failed_document_ids(workdir)
     normalized = normalize_lightrag_data(
         payload,
         catalog,
         mode=mode,
         evidence_budget=evidence_budget,
         max_per_source=max_per_source,
-        failed_document_ids=read_failed_document_ids(workdir),
+        failed_document_ids=failed_ids,
+    )
+    from host_finetune.graph_relationships import validate_relationships
+
+    relationships = validate_relationships(
+        normalized.get("relationship_candidates") or [],
+        catalog,
+        failed_document_ids=failed_ids,
     )
     return {
         "query": query,
@@ -619,6 +634,8 @@ async def query_documents(
         "mode": mode,
         "hits": normalized["hits"],
         "excluded": normalized["excluded"],
+        "relationship_candidates": normalized.get("relationship_candidates") or [],
+        "relationships": relationships,
         "status": normalized["status"],
         "metadata": normalized["metadata"],
         "message": normalized["message"],

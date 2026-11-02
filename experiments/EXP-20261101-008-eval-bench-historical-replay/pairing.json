@@ -1,0 +1,804 @@
+{
+  "ablation_faithfulness": {
+    "ci95": [
+      -0.2,
+      0.2
+    ],
+    "direction": "left_minus_right",
+    "draws": 1000,
+    "interpretable_as_profile_comparison": false,
+    "label": "historical A minus B on matching question and medium",
+    "left": "historical_hybrid_passages",
+    "mean_difference": 0.0,
+    "n": 20,
+    "paired_on": "question_id_and_medium",
+    "right": "historical_hybrid_plus_relationships",
+    "seed": 298,
+    "status": "scored"
+  },
+  "ablation_faithfulness_blog": {
+    "ci95": [
+      0.0,
+      0.8
+    ],
+    "direction": "left_minus_right",
+    "draws": 1000,
+    "interpretable_as_profile_comparison": false,
+    "label": "historical A minus B on blog only",
+    "left": "historical_hybrid_passages",
+    "mean_difference": 0.4,
+    "n": 5,
+    "note": "The all-media mean can cancel a blog change with a change in another medium. Instruction-leak flags stay outside this faithfulness bit, matching the saved factual_pass field.",
+    "paired_on": "question_id_and_medium",
+    "right": "historical_hybrid_plus_relationships",
+    "seed": 298,
+    "status": "scored"
+  },
+  "decisions": [
+    {
+      "comparable": true,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "blog",
+      "question_id": "q_brex_price",
+      "reasons": [
+        "prompt_body_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "B",
+      "status": "historical_ablation"
+    },
+    {
+      "comparable": false,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "blog",
+      "question_id": "q_brex_price",
+      "reasons": [
+        "prompt_body_differs",
+        "passages_not_held_fixed",
+        "retrieval_backend_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "C",
+      "status": "flagged"
+    },
+    {
+      "comparable": false,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "B",
+      "medium": "blog",
+      "question_id": "q_brex_price",
+      "reasons": [
+        "prompt_body_differs",
+        "corpus_is_pilot_not_blog_expansion",
+        "token_pad_is_a_length_control"
+      ],
+      "right_cell": "D_blog",
+      "status": "flagged"
+    },
+    {
+      "comparable": true,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "linkedin",
+      "question_id": "q_brex_price",
+      "reasons": [
+        "prompt_body_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "B",
+      "status": "historical_ablation"
+    },
+    {
+      "comparable": false,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "linkedin",
+      "question_id": "q_brex_price",
+      "reasons": [
+        "prompt_body_differs",
+        "passages_not_held_fixed",
+        "retrieval_backend_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "C",
+      "status": "flagged"
+    },
+    {
+      "comparable": false,
+      "left_cell": "B",
+      "medium": "linkedin",
+      "question_id": "q_brex_price",
+      "reason": "missing_cell",
+      "right_cell": "D_blog",
+      "status": "rejected"
+    },
+    {
+      "comparable": true,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "talk",
+      "question_id": "q_brex_price",
+      "reasons": [
+        "prompt_body_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "B",
+      "status": "historical_ablation"
+    },
+    {
+      "comparable": false,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "talk",
+      "question_id": "q_brex_price",
+      "reasons": [
+        "prompt_body_differs",
+        "passages_not_held_fixed",
+        "retrieval_backend_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "C",
+      "status": "flagged"
+    },
+    {
+      "comparable": false,
+      "left_cell": "B",
+      "medium": "talk",
+      "question_id": "q_brex_price",
+      "reason": "missing_cell",
+      "right_cell": "D_blog",
+      "status": "rejected"
+    },
+    {
+      "comparable": true,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "x",
+      "question_id": "q_brex_price",
+      "reasons": [
+        "prompt_body_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "B",
+      "status": "historical_ablation"
+    },
+    {
+      "comparable": false,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "x",
+      "question_id": "q_brex_price",
+      "reasons": [
+        "prompt_body_differs",
+        "passages_not_held_fixed",
+        "retrieval_backend_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "C",
+      "status": "flagged"
+    },
+    {
+      "comparable": false,
+      "left_cell": "B",
+      "medium": "x",
+      "question_id": "q_brex_price",
+      "reason": "missing_cell",
+      "right_cell": "D_blog",
+      "status": "rejected"
+    },
+    {
+      "comparable": true,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "blog",
+      "question_id": "q_cap_table",
+      "reasons": [
+        "prompt_body_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "B",
+      "status": "historical_ablation"
+    },
+    {
+      "comparable": false,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "blog",
+      "question_id": "q_cap_table",
+      "reasons": [
+        "prompt_body_differs",
+        "passages_not_held_fixed",
+        "retrieval_backend_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "C",
+      "status": "flagged"
+    },
+    {
+      "comparable": false,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "B",
+      "medium": "blog",
+      "question_id": "q_cap_table",
+      "reasons": [
+        "prompt_body_differs",
+        "corpus_is_pilot_not_blog_expansion",
+        "token_pad_is_a_length_control"
+      ],
+      "right_cell": "D_blog",
+      "status": "flagged"
+    },
+    {
+      "comparable": true,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "linkedin",
+      "question_id": "q_cap_table",
+      "reasons": [
+        "prompt_body_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "B",
+      "status": "historical_ablation"
+    },
+    {
+      "comparable": false,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "linkedin",
+      "question_id": "q_cap_table",
+      "reasons": [
+        "prompt_body_differs",
+        "passages_not_held_fixed",
+        "retrieval_backend_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "C",
+      "status": "flagged"
+    },
+    {
+      "comparable": false,
+      "left_cell": "B",
+      "medium": "linkedin",
+      "question_id": "q_cap_table",
+      "reason": "missing_cell",
+      "right_cell": "D_blog",
+      "status": "rejected"
+    },
+    {
+      "comparable": true,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "talk",
+      "question_id": "q_cap_table",
+      "reasons": [
+        "prompt_body_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "B",
+      "status": "historical_ablation"
+    },
+    {
+      "comparable": false,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "talk",
+      "question_id": "q_cap_table",
+      "reasons": [
+        "prompt_body_differs",
+        "passages_not_held_fixed",
+        "retrieval_backend_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "C",
+      "status": "flagged"
+    },
+    {
+      "comparable": false,
+      "left_cell": "B",
+      "medium": "talk",
+      "question_id": "q_cap_table",
+      "reason": "missing_cell",
+      "right_cell": "D_blog",
+      "status": "rejected"
+    },
+    {
+      "comparable": true,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "x",
+      "question_id": "q_cap_table",
+      "reasons": [
+        "prompt_body_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "B",
+      "status": "historical_ablation"
+    },
+    {
+      "comparable": false,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "x",
+      "question_id": "q_cap_table",
+      "reasons": [
+        "prompt_body_differs",
+        "passages_not_held_fixed",
+        "retrieval_backend_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "C",
+      "status": "flagged"
+    },
+    {
+      "comparable": false,
+      "left_cell": "B",
+      "medium": "x",
+      "question_id": "q_cap_table",
+      "reason": "missing_cell",
+      "right_cell": "D_blog",
+      "status": "rejected"
+    },
+    {
+      "comparable": true,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "blog",
+      "question_id": "q_exec_craft",
+      "reasons": [
+        "prompt_body_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "B",
+      "status": "historical_ablation"
+    },
+    {
+      "comparable": false,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "blog",
+      "question_id": "q_exec_craft",
+      "reasons": [
+        "prompt_body_differs",
+        "passages_not_held_fixed",
+        "retrieval_backend_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "C",
+      "status": "flagged"
+    },
+    {
+      "comparable": false,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "B",
+      "medium": "blog",
+      "question_id": "q_exec_craft",
+      "reasons": [
+        "prompt_body_differs",
+        "corpus_is_pilot_not_blog_expansion",
+        "token_pad_is_a_length_control"
+      ],
+      "right_cell": "D_blog",
+      "status": "flagged"
+    },
+    {
+      "comparable": true,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "linkedin",
+      "question_id": "q_exec_craft",
+      "reasons": [
+        "prompt_body_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "B",
+      "status": "historical_ablation"
+    },
+    {
+      "comparable": false,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "linkedin",
+      "question_id": "q_exec_craft",
+      "reasons": [
+        "prompt_body_differs",
+        "passages_not_held_fixed",
+        "retrieval_backend_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "C",
+      "status": "flagged"
+    },
+    {
+      "comparable": false,
+      "left_cell": "B",
+      "medium": "linkedin",
+      "question_id": "q_exec_craft",
+      "reason": "missing_cell",
+      "right_cell": "D_blog",
+      "status": "rejected"
+    },
+    {
+      "comparable": true,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "talk",
+      "question_id": "q_exec_craft",
+      "reasons": [
+        "prompt_body_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "B",
+      "status": "historical_ablation"
+    },
+    {
+      "comparable": false,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "talk",
+      "question_id": "q_exec_craft",
+      "reasons": [
+        "prompt_body_differs",
+        "passages_not_held_fixed",
+        "retrieval_backend_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "C",
+      "status": "flagged"
+    },
+    {
+      "comparable": false,
+      "left_cell": "B",
+      "medium": "talk",
+      "question_id": "q_exec_craft",
+      "reason": "missing_cell",
+      "right_cell": "D_blog",
+      "status": "rejected"
+    },
+    {
+      "comparable": true,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "x",
+      "question_id": "q_exec_craft",
+      "reasons": [
+        "prompt_body_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "B",
+      "status": "historical_ablation"
+    },
+    {
+      "comparable": false,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "x",
+      "question_id": "q_exec_craft",
+      "reasons": [
+        "prompt_body_differs",
+        "passages_not_held_fixed",
+        "retrieval_backend_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "C",
+      "status": "flagged"
+    },
+    {
+      "comparable": false,
+      "left_cell": "B",
+      "medium": "x",
+      "question_id": "q_exec_craft",
+      "reason": "missing_cell",
+      "right_cell": "D_blog",
+      "status": "rejected"
+    },
+    {
+      "comparable": true,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "blog",
+      "question_id": "q_personalized_saas_speaker",
+      "reasons": [
+        "prompt_body_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "B",
+      "status": "historical_ablation"
+    },
+    {
+      "comparable": false,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "blog",
+      "question_id": "q_personalized_saas_speaker",
+      "reasons": [
+        "prompt_body_differs",
+        "passages_not_held_fixed",
+        "retrieval_backend_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "C",
+      "status": "flagged"
+    },
+    {
+      "comparable": false,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "B",
+      "medium": "blog",
+      "question_id": "q_personalized_saas_speaker",
+      "reasons": [
+        "prompt_body_differs",
+        "corpus_is_pilot_not_blog_expansion",
+        "token_pad_is_a_length_control"
+      ],
+      "right_cell": "D_blog",
+      "status": "flagged"
+    },
+    {
+      "comparable": true,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "linkedin",
+      "question_id": "q_personalized_saas_speaker",
+      "reasons": [
+        "prompt_body_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "B",
+      "status": "historical_ablation"
+    },
+    {
+      "comparable": false,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "linkedin",
+      "question_id": "q_personalized_saas_speaker",
+      "reasons": [
+        "prompt_body_differs",
+        "passages_not_held_fixed",
+        "retrieval_backend_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "C",
+      "status": "flagged"
+    },
+    {
+      "comparable": false,
+      "left_cell": "B",
+      "medium": "linkedin",
+      "question_id": "q_personalized_saas_speaker",
+      "reason": "missing_cell",
+      "right_cell": "D_blog",
+      "status": "rejected"
+    },
+    {
+      "comparable": true,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "talk",
+      "question_id": "q_personalized_saas_speaker",
+      "reasons": [
+        "prompt_body_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "B",
+      "status": "historical_ablation"
+    },
+    {
+      "comparable": false,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "talk",
+      "question_id": "q_personalized_saas_speaker",
+      "reasons": [
+        "prompt_body_differs",
+        "passages_not_held_fixed",
+        "retrieval_backend_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "C",
+      "status": "flagged"
+    },
+    {
+      "comparable": false,
+      "left_cell": "B",
+      "medium": "talk",
+      "question_id": "q_personalized_saas_speaker",
+      "reason": "missing_cell",
+      "right_cell": "D_blog",
+      "status": "rejected"
+    },
+    {
+      "comparable": true,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "x",
+      "question_id": "q_personalized_saas_speaker",
+      "reasons": [
+        "prompt_body_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "B",
+      "status": "historical_ablation"
+    },
+    {
+      "comparable": false,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "x",
+      "question_id": "q_personalized_saas_speaker",
+      "reasons": [
+        "prompt_body_differs",
+        "passages_not_held_fixed",
+        "retrieval_backend_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "C",
+      "status": "flagged"
+    },
+    {
+      "comparable": false,
+      "left_cell": "B",
+      "medium": "x",
+      "question_id": "q_personalized_saas_speaker",
+      "reason": "missing_cell",
+      "right_cell": "D_blog",
+      "status": "rejected"
+    },
+    {
+      "comparable": true,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "blog",
+      "question_id": "q_vp_sales_tension",
+      "reasons": [
+        "prompt_body_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "B",
+      "status": "historical_ablation"
+    },
+    {
+      "comparable": false,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "blog",
+      "question_id": "q_vp_sales_tension",
+      "reasons": [
+        "prompt_body_differs",
+        "passages_not_held_fixed",
+        "retrieval_backend_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "C",
+      "status": "flagged"
+    },
+    {
+      "comparable": false,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "B",
+      "medium": "blog",
+      "question_id": "q_vp_sales_tension",
+      "reasons": [
+        "prompt_body_differs",
+        "corpus_is_pilot_not_blog_expansion",
+        "token_pad_is_a_length_control"
+      ],
+      "right_cell": "D_blog",
+      "status": "flagged"
+    },
+    {
+      "comparable": true,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "linkedin",
+      "question_id": "q_vp_sales_tension",
+      "reasons": [
+        "prompt_body_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "B",
+      "status": "historical_ablation"
+    },
+    {
+      "comparable": false,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "linkedin",
+      "question_id": "q_vp_sales_tension",
+      "reasons": [
+        "prompt_body_differs",
+        "passages_not_held_fixed",
+        "retrieval_backend_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "C",
+      "status": "flagged"
+    },
+    {
+      "comparable": false,
+      "left_cell": "B",
+      "medium": "linkedin",
+      "question_id": "q_vp_sales_tension",
+      "reason": "missing_cell",
+      "right_cell": "D_blog",
+      "status": "rejected"
+    },
+    {
+      "comparable": true,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "talk",
+      "question_id": "q_vp_sales_tension",
+      "reasons": [
+        "prompt_body_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "B",
+      "status": "historical_ablation"
+    },
+    {
+      "comparable": false,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "talk",
+      "question_id": "q_vp_sales_tension",
+      "reasons": [
+        "prompt_body_differs",
+        "passages_not_held_fixed",
+        "retrieval_backend_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "C",
+      "status": "flagged"
+    },
+    {
+      "comparable": false,
+      "left_cell": "B",
+      "medium": "talk",
+      "question_id": "q_vp_sales_tension",
+      "reason": "missing_cell",
+      "right_cell": "D_blog",
+      "status": "rejected"
+    },
+    {
+      "comparable": true,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "x",
+      "question_id": "q_vp_sales_tension",
+      "reasons": [
+        "prompt_body_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "B",
+      "status": "historical_ablation"
+    },
+    {
+      "comparable": false,
+      "interpretable_as_profile_comparison": false,
+      "left_cell": "A",
+      "medium": "x",
+      "question_id": "q_vp_sales_tension",
+      "reasons": [
+        "prompt_body_differs",
+        "passages_not_held_fixed",
+        "retrieval_backend_differs",
+        "corpus_is_pilot_not_blog_expansion"
+      ],
+      "right_cell": "C",
+      "status": "flagged"
+    },
+    {
+      "comparable": false,
+      "left_cell": "B",
+      "medium": "x",
+      "question_id": "q_vp_sales_tension",
+      "reason": "missing_cell",
+      "right_cell": "D_blog",
+      "status": "rejected"
+    }
+  ]
+}

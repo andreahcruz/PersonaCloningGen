@@ -1,0 +1,1124 @@
+{
+  "topic_id": "q_personalized_saas_speaker",
+  "wall_seconds": 71.786,
+  "traces": [
+    {
+      "id": "q_personalized_saas_speaker",
+      "topic": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+      "format": "blog_draft",
+      "medium": "blog",
+      "prompt": "Write a blog post in the style of Jason Lemkin about: Who said that AI means everything in SaaS needs to be a personalized experience?\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] AI means everything in SaaS needs to be a personalized experience.\nSpeaker: Anneka Gupta\n[E2] Human-in-the-loop means humans handle the cases AI can't solve.\n[E3] AI will join every human sales rep on every Zoom and call within a year.\n\nNow write the requested blog post about: Who said that AI means everything in SaaS needs to be a personalized experience?",
+      "rendered_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nWrite a blog post in the style of Jason Lemkin about: Who said that AI means everything in SaaS needs to be a personalized experience?\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] AI means everything in SaaS needs to be a personalized experience.\nSpeaker: Anneka Gupta\n[E2] Human-in-the-loop means humans handle the cases AI can't solve.\n[E3] AI will join every human sales rep on every Zoom and call within a year.\n\nNow write the requested blog post about: Who said that AI means everything in SaaS needs to be a personalized experience?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+      "answer": "Who said that AI means everything in SaaS needs to be a personalized experience?\nAnneka Gupta\nCEO @ Owner.com (ex-CTO @ Salesforce)\nAI VP of Marketing\n@ Owner.com\n\"Everyone wants to have their brand represented across all of these touchpoints so you're able to actually create something for your customers.\"",
+      "raw_model_output": "Who said that AI means everything in SaaS needs to be a personalized experience?\nAnneka Gupta\nCEO @ Owner.com (ex-CTO @ Salesforce)\nAI VP of Marketing\n@ Owner.com\n\"Everyone wants to have their brand represented across all of these touchpoints so you're able to actually create something for your customers.\"",
+      "deployment_output": "Who said that AI means everything in SaaS needs to be a personalized experience?\nAnneka Gupta\nCEO @ Owner.com (ex-CTO @ Salesforce)\nAI VP of Marketing\n@ Owner.com\n\"Everyone wants to have their brand represented across all of these touchpoints so you're able to actually create something for your customers.\"",
+      "first_attempt_answer": "Who said that AI means everything in SaaS needs to be a personalized experience?\nAnneka Gupta\nCEO @ Owner.com (ex-CTO @ Salesforce)\nAI VP of Marketing\n@ Owner.com\n\"Everyone wants to have their brand represented across all of these touchpoints so you're able to actually create something for your customers.\"",
+      "retry_answer": null,
+      "query": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+      "max_new_tokens": 768,
+      "seed": 50,
+      "retry_seed": null,
+      "deployment_accepted": true,
+      "repair_occurred": false,
+      "generation_attempt": {
+        "seed": 50,
+        "answer": "Who said that AI means everything in SaaS needs to be a personalized experience?\nAnneka Gupta\nCEO @ Owner.com (ex-CTO @ Salesforce)\nAI VP of Marketing\n@ Owner.com\n\"Everyone wants to have their brand represented across all of these touchpoints so you're able to actually create something for your customers.\"",
+        "numeric_grounding": {
+          "applicable": true,
+          "pass": true,
+          "failure": null,
+          "allowed": [],
+          "values": [],
+          "unsupported": []
+        },
+        "rag_source_copying": {
+          "applicable": true,
+          "pass": true,
+          "threshold": 12,
+          "max_contiguous_words": 8,
+          "document_id": "gd_007b705bb266a53acf5888b9",
+          "matched_generated_span": "in saas needs to be a personalized experience",
+          "matched_retrieved_span": "in saas needs to be a personalized experience"
+        },
+        "stop_reason": "eos"
+      },
+      "repair_attempt": null,
+      "accepted_attempt": 1,
+      "rag_source_copying": {
+        "applicable": true,
+        "threshold": 12,
+        "pass": true,
+        "flagged": false,
+        "max_contiguous_words": 8,
+        "document_id": "gd_007b705bb266a53acf5888b9",
+        "matched_generated_span": "in saas needs to be a personalized experience",
+        "first_attempt": {
+          "applicable": true,
+          "pass": true,
+          "threshold": 12,
+          "max_contiguous_words": 8,
+          "document_id": "gd_007b705bb266a53acf5888b9",
+          "matched_generated_span": "in saas needs to be a personalized experience",
+          "matched_retrieved_span": "in saas needs to be a personalized experience"
+        },
+        "retry": null,
+        "retry_occurred": false,
+        "repair_occurred": false
+      },
+      "numeric_grounding": {
+        "role": "diagnostic_only",
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "unsupported": [],
+        "blocks_output": false,
+        "first_attempt": {
+          "applicable": true,
+          "pass": true,
+          "failure": null,
+          "allowed": [],
+          "values": [],
+          "unsupported": []
+        },
+        "retry": null
+      },
+      "prompt_tokens": 360,
+      "backend": "unsloth",
+      "retrieval": true,
+      "retrieval_query": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+      "retrieval_filter": null,
+      "retrieval_k": null,
+      "retrieval_hits": [
+        {
+          "id": "gd_007b705bb266a53acf5888b9",
+          "text": "\"AI means eveything in SaaS needs to be a personalized experience. A workflow that surfaces the job that needs to get done -- and just does it. That's the Future of Enterprise SaaS\" Rubrik CPO Anneka Gupta New -> \"Going Multi-Product in the Age of AI with CPOs of Webflow, Rubrik, Zoom, and Productboard\" https://lnkd.in/gQFeDYeT",
+          "medium": "linkedin",
+          "group_id": null,
+          "row_id": null,
+          "split": "train",
+          "distance": 0.14347171783447266,
+          "rank": 1,
+          "score_type": "cosine_distance",
+          "attribution_status": "third_party_quotation",
+          "author_position": "quoted_third_party",
+          "graph_document_id": "gd_007b705bb266a53acf5888b9",
+          "quoted_speakers": [
+            "Anneka Gupta"
+          ]
+        },
+        {
+          "id": "gd_a6016d6c72ddea604b995fd3",
+          "text": "The SaaS Era of 2013-2022 is Over. Welcome to The World of Hyperfunctional SaaS. So is AI taking over everything? Will $1B SaaS companies be run by 1 person teams? I mean … maybe. Across the SaaStr Fund portfolio, I’ve seen multiple portfolio companies lose $1m customers to new, in-house AI initiatives. But I’ve also seen others grow even faster as AI rebooted and enhanced their products. What I d",
+          "medium": "linkedin",
+          "group_id": null,
+          "row_id": null,
+          "split": "train",
+          "distance": 0.2392122745513916,
+          "rank": 2,
+          "score_type": "cosine_distance",
+          "attribution_status": "named_author",
+          "author_position": "account_or_name_attributed",
+          "graph_document_id": "gd_a6016d6c72ddea604b995fd3",
+          "quoted_speakers": []
+        },
+        {
+          "id": "gd_4f6908ae4b2f4c4e20daccaa",
+          "text": "Human-in-the-loop and AI orchestration are the most misunderstood concepts in B2B SaaS. 1️⃣ Most think \"human-in-the-loop\" means AI makes their work easier. Wrong. 👋 It means humans handle the cases AI can't solve. All day long. In real time, or as close as possible. The 30% of support tickets that are too complex. The sales conversations that need real judgment. The edge cases that break automate",
+          "medium": "linkedin",
+          "group_id": null,
+          "row_id": null,
+          "split": "train",
+          "distance": 0.24562907218933105,
+          "rank": 3,
+          "score_type": "cosine_distance",
+          "attribution_status": "named_author",
+          "author_position": "account_or_name_attributed",
+          "graph_document_id": "gd_4f6908ae4b2f4c4e20daccaa",
+          "quoted_speakers": []
+        },
+        {
+          "id": "gd_90c43e103fb0d354964ffb63",
+          "text": "Dear SaaStr: How will Ai Change Sales in The Next 12 Months?\nWithin a year, an AI sales rep will join every human sales rep on every Zoom and call\n🤖 95% of “I don’t knows” and “Uh I’ll get back to you” will be gone\nWithin a year, an AI BDR will answer all inbound sales questions\n🤖98% of humans setting up appointments with AEs will be…\n\nAI is going to fundamentally reshape sales over the next 12 mo",
+          "medium": "blog",
+          "group_id": null,
+          "row_id": null,
+          "split": "train",
+          "distance": 0.26602041721343994,
+          "rank": 4,
+          "score_type": "cosine_distance",
+          "attribution_status": "publication_page",
+          "author_position": "not_verified",
+          "graph_document_id": "gd_90c43e103fb0d354964ffb63",
+          "quoted_speakers": []
+        }
+      ],
+      "copying": [
+        {
+          "id": "gd_007b705bb266a53acf5888b9",
+          "shared_word_span": 7
+        },
+        {
+          "id": "gd_a6016d6c72ddea604b995fd3",
+          "shared_word_span": 1
+        },
+        {
+          "id": "gd_4f6908ae4b2f4c4e20daccaa",
+          "shared_word_span": 1
+        },
+        {
+          "id": "gd_90c43e103fb0d354964ffb63",
+          "shared_word_span": 1
+        }
+      ],
+      "retrieval_backend": "pilot_dense",
+      "retrieval_mode": "dense",
+      "retrieval_excluded_reasons": {},
+      "proposed_atomic_claims": [
+        {
+          "source_id": "gd_007b705bb266a53acf5888b9",
+          "claim": "AI means everything in SaaS needs to be a personalized experience.",
+          "support_span": "AI means eveything in SaaS needs to be a personalized experience.",
+          "claim_type": "fact"
+        },
+        {
+          "source_id": "gd_a6016d6c72ddea604b995fd3",
+          "claim": "AI is taking over everything in SaaS.",
+          "support_span": "So is AI taking over everything?",
+          "claim_type": "fact"
+        },
+        {
+          "source_id": "gd_4f6908ae4b2f4c4e20daccaa",
+          "claim": "Human-in-the-loop means humans handle the cases AI can't solve.",
+          "support_span": "It means humans handle the cases AI can't solve.",
+          "claim_type": "fact"
+        },
+        {
+          "source_id": "gd_90c43e103fb0d354964ffb63",
+          "claim": "AI will join every human sales rep on every Zoom and call within a year.",
+          "support_span": "Within a year, an AI sales rep will join every human sales rep on every Zoom and call",
+          "claim_type": "fact"
+        }
+      ],
+      "validation_rejected": [
+        {
+          "source_id": "gd_a6016d6c72ddea604b995fd3",
+          "claim": "AI is taking over everything in SaaS.",
+          "support_span": "So is AI taking over everything?",
+          "claim_type": "fact",
+          "reason": "interrogative_assertion"
+        }
+      ],
+      "verifier_rejected": [],
+      "verified_claims": [
+        {
+          "source_id": "gd_007b705bb266a53acf5888b9",
+          "claim": "AI means everything in SaaS needs to be a personalized experience.",
+          "support_span": "AI means eveything in SaaS needs to be a personalized experience.",
+          "claim_type": "fact",
+          "attribution_status": "third_party_quotation",
+          "quoted_speakers": [
+            "Anneka Gupta"
+          ]
+        },
+        {
+          "source_id": "gd_4f6908ae4b2f4c4e20daccaa",
+          "claim": "Human-in-the-loop means humans handle the cases AI can't solve.",
+          "support_span": "It means humans handle the cases AI can't solve.",
+          "claim_type": "fact",
+          "attribution_status": "named_author"
+        },
+        {
+          "source_id": "gd_90c43e103fb0d354964ffb63",
+          "claim": "AI will join every human sales rep on every Zoom and call within a year.",
+          "support_span": "Within a year, an AI sales rep will join every human sales rep on every Zoom and call",
+          "claim_type": "fact",
+          "attribution_status": "publication_page"
+        }
+      ],
+      "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] AI means everything in SaaS needs to be a personalized experience.\nSpeaker: Anneka Gupta\n[E2] Human-in-the-loop means humans handle the cases AI can't solve.\n[E3] AI will join every human sales rep on every Zoom and call within a year.",
+      "raw_extraction": "[\n  {\n    \"source_id\": \"gd_007b705bb266a53acf5888b9\",\n    \"claim\": \"AI means everything in SaaS needs to be a personalized experience.\",\n    \"support_span\": \"AI means eveything in SaaS needs to be a personalized experience.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"gd_a6016d6c72ddea604b995fd3\",\n    \"claim\": \"AI is taking over everything in SaaS.\",\n    \"support_span\": \"So is AI taking over everything?\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"gd_4f6908ae4b2f4c4e20daccaa\",\n    \"claim\": \"Human-in-the-loop means humans handle the cases AI can't solve.\",\n    \"support_span\": \"It means humans handle the cases AI can't solve.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"gd_90c43e103fb0d354964ffb63\",\n    \"claim\": \"AI will join every human sales rep on every Zoom and call within a year.\",\n    \"support_span\": \"Within a year, an AI sales rep will join every human sales rep on every Zoom and call\",\n    \"claim_type\": \"fact\"\n  }\n]",
+      "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Who said that AI means everything in SaaS needs to be a personalized experience?\n\nSource passages:\n[gd_007b705bb266a53acf5888b9]\nAttribution status: third_party_quotation. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nQuoted speakers: Anneka Gupta. Text inside quotation marks is their statement, not Jason Lemkin's, unless the passage says he agrees.\n\"AI means eveything in SaaS needs to be a personalized experience. A workflow that surfaces the job that needs to get done -- and just does it. That's the Future of Enterprise SaaS\" Rubrik CPO Anneka Gupta New -> \"Going Multi-Product in the Age of AI with CPOs of Webflow, Rubrik, Zoom, and Productboard\" https://lnkd.in/gQFeDYeT\n\n[gd_a6016d6c72ddea604b995fd3]\nAttribution status: named_author. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nThe SaaS Era of 2013-2022 is Over. Welcome to The World of Hyperfunctional SaaS. So is AI taking over everything? Will $1B SaaS companies be run by 1 person teams? I mean … maybe. Across the SaaStr Fund portfolio, I’ve seen multiple portfolio companies lose $1m customers to new, in-house AI initiatives. But I’ve also seen others grow even faster as AI rebooted and enhanced their products. What I d\n\n[gd_4f6908ae4b2f4c4e20daccaa]\nAttribution status: named_author. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nHuman-in-the-loop and AI orchestration are the most misunderstood concepts in B2B SaaS. 1️⃣ Most think \"human-in-the-loop\" means AI makes their work easier. Wrong. 👋 It means humans handle the cases AI can't solve. All day long. In real time, or as close as possible. The 30% of support tickets that are too complex. The sales conversations that need real judgment. The edge cases that break automate\n\n[gd_90c43e103fb0d354964ffb63]\nAttribution status: publication_page. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nDear SaaStr: How will Ai Change Sales in The Next 12 Months?\nWithin a year, an AI sales rep will join every human sales rep on every Zoom and call\n🤖 95% of “I don’t knows” and “Uh I’ll get back to you” will be gone\nWithin a year, an AI BDR will answer all inbound sales questions\n🤖98% of humans setting up appointments with AEs will be…\n\nAI is going to fundamentally reshape sales over the next 12 mo",
+      "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Who said that AI means everything in SaaS needs to be a personalized experience?\n\nSource passages:\n[gd_007b705bb266a53acf5888b9]\nAttribution status: third_party_quotation. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nQuoted speakers: Anneka Gupta. Text inside quotation marks is their statement, not Jason Lemkin's, unless the passage says he agrees.\n\"AI means eveything in SaaS needs to be a personalized experience. A workflow that surfaces the job that needs to get done -- and just does it. That's the Future of Enterprise SaaS\" Rubrik CPO Anneka Gupta New -> \"Going Multi-Product in the Age of AI with CPOs of Webflow, Rubrik, Zoom, and Productboard\" https://lnkd.in/gQFeDYeT\n\n[gd_a6016d6c72ddea604b995fd3]\nAttribution status: named_author. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nThe SaaS Era of 2013-2022 is Over. Welcome to The World of Hyperfunctional SaaS. So is AI taking over everything? Will $1B SaaS companies be run by 1 person teams? I mean … maybe. Across the SaaStr Fund portfolio, I’ve seen multiple portfolio companies lose $1m customers to new, in-house AI initiatives. But I’ve also seen others grow even faster as AI rebooted and enhanced their products. What I d\n\n[gd_4f6908ae4b2f4c4e20daccaa]\nAttribution status: named_author. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nHuman-in-the-loop and AI orchestration are the most misunderstood concepts in B2B SaaS. 1️⃣ Most think \"human-in-the-loop\" means AI makes their work easier. Wrong. 👋 It means humans handle the cases AI can't solve. All day long. In real time, or as close as possible. The 30% of support tickets that are too complex. The sales conversations that need real judgment. The edge cases that break automate\n\n[gd_90c43e103fb0d354964ffb63]\nAttribution status: publication_page. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nDear SaaStr: How will Ai Change Sales in The Next 12 Months?\nWithin a year, an AI sales rep will join every human sales rep on every Zoom and call\n🤖 95% of “I don’t knows” and “Uh I’ll get back to you” will be gone\nWithin a year, an AI BDR will answer all inbound sales questions\n🤖98% of humans setting up appointments with AEs will be…\n\nAI is going to fundamentally reshape sales over the next 12 mo<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+      "extraction_seconds": 8.193,
+      "verification_seconds": 0.0,
+      "verification_records": [],
+      "llm_verifier_on_critical_path": false,
+      "allowed_numeric_values": [],
+      "distillation_adapter_enabled": false,
+      "verification_adapter_enabled": false,
+      "distillation_backend": "same_loaded_4bit_base_adapter_off",
+      "distillation_do_sample": false,
+      "extraction_max_new_tokens": 2560,
+      "verification_max_new_tokens": 24,
+      "distillation_seed": 0,
+      "support_spans_in_generator_prompt": false,
+      "evidence_stage_reason": null,
+      "evidence_status": "verified",
+      "extraction_attempts": 1,
+      "extraction_stop_reason": "eos",
+      "prompt_contract": "factual-reliability-v1",
+      "fixed_style_enabled": false,
+      "style_applied": false,
+      "style_exemplar_count": 0,
+      "latency_seconds": 16.314,
+      "generated_tokens_including_stop": 68,
+      "last_token_id": 128009,
+      "effective_eos_token_ids": [
+        128001,
+        128008,
+        128009
+      ],
+      "stop_reason": "eos",
+      "budget_fraction": 0.08854166666666667,
+      "early_eos": true,
+      "first_attempt_stop_reason": "eos",
+      "retry_stop_reason": null
+    },
+    {
+      "id": "q_personalized_saas_speaker",
+      "topic": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+      "format": "linkedin_post",
+      "medium": "linkedin",
+      "prompt": "Write a LinkedIn post in the style of Jason Lemkin about: Who said that AI means everything in SaaS needs to be a personalized experience?\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] AI means everything in SaaS needs to be a personalized experience.\nSpeaker: Anneka Gupta\n[E2] Human-in-the-loop means humans handle the cases AI can't solve.\n[E3] AI will join every human sales rep on every Zoom and call within a year.\n\nNow write the requested LinkedIn post about: Who said that AI means everything in SaaS needs to be a personalized experience?\n\nThe draft repeated the question. Write the requested piece itself. Do not repeat the question.",
+      "rendered_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nWrite a LinkedIn post in the style of Jason Lemkin about: Who said that AI means everything in SaaS needs to be a personalized experience?\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] AI means everything in SaaS needs to be a personalized experience.\nSpeaker: Anneka Gupta\n[E2] Human-in-the-loop means humans handle the cases AI can't solve.\n[E3] AI will join every human sales rep on every Zoom and call within a year.\n\nNow write the requested LinkedIn post about: Who said that AI means everything in SaaS needs to be a personalized experience?\n\nThe draft repeated the question. Write the requested piece itself. Do not repeat the question.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+      "answer": "AI means everything in SaaS needs to be a personalized experience. Speaker: Anneka Gupta AI will join every human sales rep on every Zoom and call within a year. Speaker: Jason M. Lemkin Humans want to know why an AI told them something. They don’t just want answers. Speaker: Mark Roberge The best thing you could do for your company today is put someone in charge of making sure that AI works well. Speaker: Ryan Smith If we’re going to build this amazing future with AI, we need to make sure it’s safe. We have to design safety into these products. Speaker: Alex Wang The number one thing I would focus on if you're building a new agent is what I call \"reality checking.\" Reality checking is understanding where does my agent go wrong? Where does it hallucinate things that aren't true? How can I check its work? And how do I train it so it gets better over time? Speaker: Sam Blond It used to take me like 10 minutes to get ready for a pitch meeting because I had to pull up all my data. Now it takes 30 seconds because AI pulled it together. So now I’ve got 9 extra minutes to prepare. What am I going to use those nine minutes for? I’m going to learn more about the prospect. Because there’s no reason not to. You should always try to learn more about who you’re selling to. It’s the easiest way to increase revenue per lead by being relevant. Speaker: Patrick Moran When we started doing outbound at HubSpot, we did not qualify",
+      "raw_model_output": "Who said that AI means everything in SaaS needs to be a personalized experience? Use only the factual specifics provided in ALLOWED FACTUAL EVIDENCE. Do not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory. If a factual detail is not in the evidence, omit it. Prompt contract: factual-reliability-v1. When a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees. Do not give a person a title, employer, or role unless that title and organization are both written in the evidence. Do not copy speaker labels or evidence tags into the draft. Do not repeat the user's question as the draft or as its opening line. Finish the last sentence. A LinkedIn post must be at least 40 words. An X post must be at least 20 words. You may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.",
+      "deployment_output": "AI means everything in SaaS needs to be a personalized experience. Speaker: Anneka Gupta AI will join every human sales rep on every Zoom and call within a year. Speaker: Jason M. Lemkin Humans want to know why an AI told them something. They don’t just want answers. Speaker: Mark Roberge The best thing you could do for your company today is put someone in charge of making sure that AI works well. Speaker: Ryan Smith If we’re going to build this amazing future with AI, we need to make sure it’s safe. We have to design safety into these products. Speaker: Alex Wang The number one thing I would focus on if you're building a new agent is what I call \"reality checking.\" Reality checking is understanding where does my agent go wrong? Where does it hallucinate things that aren't true? How can I check its work? And how do I train it so it gets better over time? Speaker: Sam Blond It used to take me like 10 minutes to get ready for a pitch meeting because I had to pull up all my data. Now it takes 30 seconds because AI pulled it together. So now I’ve got 9 extra minutes to prepare. What am I going to use those nine minutes for? I’m going to learn more about the prospect. Because there’s no reason not to. You should always try to learn more about who you’re selling to. It’s the easiest way to increase revenue per lead by being relevant. Speaker: Patrick Moran When we started doing outbound at HubSpot, we did not qualify",
+      "first_attempt_answer": "Who said that AI means everything in SaaS needs to be a personalized experience? Use only the factual specifics provided in ALLOWED FACTUAL EVIDENCE. Do not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory. If a factual detail is not in the evidence, omit it. Prompt contract: factual-reliability-v1. When a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees. Do not give a person a title, employer, or role unless that title and organization are both written in the evidence. Do not copy speaker labels or evidence tags into the draft. Do not repeat the user's question as the draft or as its opening line. Finish the last sentence. A LinkedIn post must be at least 40 words. An X post must be at least 20 words. You may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.",
+      "retry_answer": "AI means everything in SaaS needs to be a personalized experience. Speaker: Anneka Gupta AI will join every human sales rep on every Zoom and call within a year. Speaker: Jason M. Lemkin Humans want to know why an AI told them something. They don’t just want answers. Speaker: Mark Roberge The best thing you could do for your company today is put someone in charge of making sure that AI works well. Speaker: Ryan Smith If we’re going to build this amazing future with AI, we need to make sure it’s safe. We have to design safety into these products. Speaker: Alex Wang The number one thing I would focus on if you're building a new agent is what I call \"reality checking.\" Reality checking is understanding where does my agent go wrong? Where does it hallucinate things that aren't true? How can I check its work? And how do I train it so it gets better over time? Speaker: Sam Blond It used to take me like 10 minutes to get ready for a pitch meeting because I had to pull up all my data. Now it takes 30 seconds because AI pulled it together. So now I’ve got 9 extra minutes to prepare. What am I going to use those nine minutes for? I’m going to learn more about the prospect. Because there’s no reason not to. You should always try to learn more about who you’re selling to. It’s the easiest way to increase revenue per lead by being relevant. Speaker: Patrick Moran When we started doing outbound at HubSpot, we did not qualify",
+      "query": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+      "max_new_tokens": 320,
+      "seed": 51,
+      "retry_seed": 10051,
+      "deployment_accepted": true,
+      "repair_occurred": false,
+      "generation_attempt": {
+        "seed": 51,
+        "answer": "Who said that AI means everything in SaaS needs to be a personalized experience? Use only the factual specifics provided in ALLOWED FACTUAL EVIDENCE. Do not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory. If a factual detail is not in the evidence, omit it. Prompt contract: factual-reliability-v1. When a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees. Do not give a person a title, employer, or role unless that title and organization are both written in the evidence. Do not copy speaker labels or evidence tags into the draft. Do not repeat the user's question as the draft or as its opening line. Finish the last sentence. A LinkedIn post must be at least 40 words. An X post must be at least 20 words. You may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.",
+        "numeric_grounding": {
+          "applicable": true,
+          "pass": true,
+          "failure": null,
+          "allowed": [],
+          "values": [],
+          "unsupported": []
+        },
+        "rag_source_copying": {
+          "applicable": true,
+          "pass": true,
+          "threshold": 12,
+          "max_contiguous_words": 8,
+          "document_id": "gd_007b705bb266a53acf5888b9",
+          "matched_generated_span": "in saas needs to be a personalized experience",
+          "matched_retrieved_span": "in saas needs to be a personalized experience"
+        },
+        "stop_reason": "eos"
+      },
+      "repair_attempt": null,
+      "accepted_attempt": 2,
+      "rag_source_copying": {
+        "applicable": true,
+        "threshold": 12,
+        "pass": true,
+        "flagged": false,
+        "max_contiguous_words": 11,
+        "document_id": "gd_90c43e103fb0d354964ffb63",
+        "matched_generated_span": "will join every human sales rep on every zoom and call",
+        "first_attempt": {
+          "applicable": true,
+          "pass": true,
+          "threshold": 12,
+          "max_contiguous_words": 8,
+          "document_id": "gd_007b705bb266a53acf5888b9",
+          "matched_generated_span": "in saas needs to be a personalized experience",
+          "matched_retrieved_span": "in saas needs to be a personalized experience"
+        },
+        "retry": {
+          "applicable": true,
+          "pass": true,
+          "threshold": 12,
+          "max_contiguous_words": 11,
+          "document_id": "gd_90c43e103fb0d354964ffb63",
+          "matched_generated_span": "will join every human sales rep on every zoom and call",
+          "matched_retrieved_span": "will join every human sales rep on every zoom and call"
+        },
+        "retry_occurred": true,
+        "repair_occurred": false
+      },
+      "numeric_grounding": {
+        "role": "diagnostic_only",
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "unsupported": [],
+        "blocks_output": false,
+        "first_attempt": {
+          "applicable": true,
+          "pass": true,
+          "failure": null,
+          "allowed": [],
+          "values": [],
+          "unsupported": []
+        },
+        "retry": {
+          "applicable": true,
+          "pass": true,
+          "failure": null,
+          "allowed": [],
+          "values": [],
+          "unsupported": []
+        }
+      },
+      "prompt_tokens": 378,
+      "backend": "unsloth",
+      "retrieval": true,
+      "retrieval_query": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+      "retrieval_filter": null,
+      "retrieval_k": null,
+      "retrieval_hits": [
+        {
+          "id": "gd_007b705bb266a53acf5888b9",
+          "text": "\"AI means eveything in SaaS needs to be a personalized experience. A workflow that surfaces the job that needs to get done -- and just does it. That's the Future of Enterprise SaaS\" Rubrik CPO Anneka Gupta New -> \"Going Multi-Product in the Age of AI with CPOs of Webflow, Rubrik, Zoom, and Productboard\" https://lnkd.in/gQFeDYeT",
+          "medium": "linkedin",
+          "group_id": null,
+          "row_id": null,
+          "split": "train",
+          "distance": 0.14347171783447266,
+          "rank": 1,
+          "score_type": "cosine_distance",
+          "attribution_status": "third_party_quotation",
+          "author_position": "quoted_third_party",
+          "graph_document_id": "gd_007b705bb266a53acf5888b9",
+          "quoted_speakers": [
+            "Anneka Gupta"
+          ]
+        },
+        {
+          "id": "gd_a6016d6c72ddea604b995fd3",
+          "text": "The SaaS Era of 2013-2022 is Over. Welcome to The World of Hyperfunctional SaaS. So is AI taking over everything? Will $1B SaaS companies be run by 1 person teams? I mean … maybe. Across the SaaStr Fund portfolio, I’ve seen multiple portfolio companies lose $1m customers to new, in-house AI initiatives. But I’ve also seen others grow even faster as AI rebooted and enhanced their products. What I d",
+          "medium": "linkedin",
+          "group_id": null,
+          "row_id": null,
+          "split": "train",
+          "distance": 0.2392122745513916,
+          "rank": 2,
+          "score_type": "cosine_distance",
+          "attribution_status": "named_author",
+          "author_position": "account_or_name_attributed",
+          "graph_document_id": "gd_a6016d6c72ddea604b995fd3",
+          "quoted_speakers": []
+        },
+        {
+          "id": "gd_4f6908ae4b2f4c4e20daccaa",
+          "text": "Human-in-the-loop and AI orchestration are the most misunderstood concepts in B2B SaaS. 1️⃣ Most think \"human-in-the-loop\" means AI makes their work easier. Wrong. 👋 It means humans handle the cases AI can't solve. All day long. In real time, or as close as possible. The 30% of support tickets that are too complex. The sales conversations that need real judgment. The edge cases that break automate",
+          "medium": "linkedin",
+          "group_id": null,
+          "row_id": null,
+          "split": "train",
+          "distance": 0.24562907218933105,
+          "rank": 3,
+          "score_type": "cosine_distance",
+          "attribution_status": "named_author",
+          "author_position": "account_or_name_attributed",
+          "graph_document_id": "gd_4f6908ae4b2f4c4e20daccaa",
+          "quoted_speakers": []
+        },
+        {
+          "id": "gd_90c43e103fb0d354964ffb63",
+          "text": "Dear SaaStr: How will Ai Change Sales in The Next 12 Months?\nWithin a year, an AI sales rep will join every human sales rep on every Zoom and call\n🤖 95% of “I don’t knows” and “Uh I’ll get back to you” will be gone\nWithin a year, an AI BDR will answer all inbound sales questions\n🤖98% of humans setting up appointments with AEs will be…\n\nAI is going to fundamentally reshape sales over the next 12 mo",
+          "medium": "blog",
+          "group_id": null,
+          "row_id": null,
+          "split": "train",
+          "distance": 0.26602041721343994,
+          "rank": 4,
+          "score_type": "cosine_distance",
+          "attribution_status": "publication_page",
+          "author_position": "not_verified",
+          "graph_document_id": "gd_90c43e103fb0d354964ffb63",
+          "quoted_speakers": []
+        }
+      ],
+      "copying": [
+        {
+          "id": "gd_007b705bb266a53acf5888b9",
+          "shared_word_span": 8
+        },
+        {
+          "id": "gd_a6016d6c72ddea604b995fd3",
+          "shared_word_span": 2
+        },
+        {
+          "id": "gd_4f6908ae4b2f4c4e20daccaa",
+          "shared_word_span": 1
+        },
+        {
+          "id": "gd_90c43e103fb0d354964ffb63",
+          "shared_word_span": 11
+        }
+      ],
+      "retrieval_backend": "pilot_dense",
+      "retrieval_mode": "dense",
+      "retrieval_excluded_reasons": {},
+      "proposed_atomic_claims": [
+        {
+          "source_id": "gd_007b705bb266a53acf5888b9",
+          "claim": "AI means everything in SaaS needs to be a personalized experience.",
+          "support_span": "AI means eveything in SaaS needs to be a personalized experience.",
+          "claim_type": "fact"
+        },
+        {
+          "source_id": "gd_a6016d6c72ddea604b995fd3",
+          "claim": "AI is taking over everything in SaaS.",
+          "support_span": "So is AI taking over everything?",
+          "claim_type": "fact"
+        },
+        {
+          "source_id": "gd_4f6908ae4b2f4c4e20daccaa",
+          "claim": "Human-in-the-loop means humans handle the cases AI can't solve.",
+          "support_span": "It means humans handle the cases AI can't solve.",
+          "claim_type": "fact"
+        },
+        {
+          "source_id": "gd_90c43e103fb0d354964ffb63",
+          "claim": "AI will join every human sales rep on every Zoom and call within a year.",
+          "support_span": "Within a year, an AI sales rep will join every human sales rep on every Zoom and call",
+          "claim_type": "fact"
+        }
+      ],
+      "validation_rejected": [
+        {
+          "source_id": "gd_a6016d6c72ddea604b995fd3",
+          "claim": "AI is taking over everything in SaaS.",
+          "support_span": "So is AI taking over everything?",
+          "claim_type": "fact",
+          "reason": "interrogative_assertion"
+        }
+      ],
+      "verifier_rejected": [],
+      "verified_claims": [
+        {
+          "source_id": "gd_007b705bb266a53acf5888b9",
+          "claim": "AI means everything in SaaS needs to be a personalized experience.",
+          "support_span": "AI means eveything in SaaS needs to be a personalized experience.",
+          "claim_type": "fact",
+          "attribution_status": "third_party_quotation",
+          "quoted_speakers": [
+            "Anneka Gupta"
+          ]
+        },
+        {
+          "source_id": "gd_4f6908ae4b2f4c4e20daccaa",
+          "claim": "Human-in-the-loop means humans handle the cases AI can't solve.",
+          "support_span": "It means humans handle the cases AI can't solve.",
+          "claim_type": "fact",
+          "attribution_status": "named_author"
+        },
+        {
+          "source_id": "gd_90c43e103fb0d354964ffb63",
+          "claim": "AI will join every human sales rep on every Zoom and call within a year.",
+          "support_span": "Within a year, an AI sales rep will join every human sales rep on every Zoom and call",
+          "claim_type": "fact",
+          "attribution_status": "publication_page"
+        }
+      ],
+      "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] AI means everything in SaaS needs to be a personalized experience.\nSpeaker: Anneka Gupta\n[E2] Human-in-the-loop means humans handle the cases AI can't solve.\n[E3] AI will join every human sales rep on every Zoom and call within a year.",
+      "raw_extraction": "[\n  {\n    \"source_id\": \"gd_007b705bb266a53acf5888b9\",\n    \"claim\": \"AI means everything in SaaS needs to be a personalized experience.\",\n    \"support_span\": \"AI means eveything in SaaS needs to be a personalized experience.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"gd_a6016d6c72ddea604b995fd3\",\n    \"claim\": \"AI is taking over everything in SaaS.\",\n    \"support_span\": \"So is AI taking over everything?\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"gd_4f6908ae4b2f4c4e20daccaa\",\n    \"claim\": \"Human-in-the-loop means humans handle the cases AI can't solve.\",\n    \"support_span\": \"It means humans handle the cases AI can't solve.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"gd_90c43e103fb0d354964ffb63\",\n    \"claim\": \"AI will join every human sales rep on every Zoom and call within a year.\",\n    \"support_span\": \"Within a year, an AI sales rep will join every human sales rep on every Zoom and call\",\n    \"claim_type\": \"fact\"\n  }\n]",
+      "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Who said that AI means everything in SaaS needs to be a personalized experience?\n\nSource passages:\n[gd_007b705bb266a53acf5888b9]\nAttribution status: third_party_quotation. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nQuoted speakers: Anneka Gupta. Text inside quotation marks is their statement, not Jason Lemkin's, unless the passage says he agrees.\n\"AI means eveything in SaaS needs to be a personalized experience. A workflow that surfaces the job that needs to get done -- and just does it. That's the Future of Enterprise SaaS\" Rubrik CPO Anneka Gupta New -> \"Going Multi-Product in the Age of AI with CPOs of Webflow, Rubrik, Zoom, and Productboard\" https://lnkd.in/gQFeDYeT\n\n[gd_a6016d6c72ddea604b995fd3]\nAttribution status: named_author. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nThe SaaS Era of 2013-2022 is Over. Welcome to The World of Hyperfunctional SaaS. So is AI taking over everything? Will $1B SaaS companies be run by 1 person teams? I mean … maybe. Across the SaaStr Fund portfolio, I’ve seen multiple portfolio companies lose $1m customers to new, in-house AI initiatives. But I’ve also seen others grow even faster as AI rebooted and enhanced their products. What I d\n\n[gd_4f6908ae4b2f4c4e20daccaa]\nAttribution status: named_author. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nHuman-in-the-loop and AI orchestration are the most misunderstood concepts in B2B SaaS. 1️⃣ Most think \"human-in-the-loop\" means AI makes their work easier. Wrong. 👋 It means humans handle the cases AI can't solve. All day long. In real time, or as close as possible. The 30% of support tickets that are too complex. The sales conversations that need real judgment. The edge cases that break automate\n\n[gd_90c43e103fb0d354964ffb63]\nAttribution status: publication_page. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nDear SaaStr: How will Ai Change Sales in The Next 12 Months?\nWithin a year, an AI sales rep will join every human sales rep on every Zoom and call\n🤖 95% of “I don’t knows” and “Uh I’ll get back to you” will be gone\nWithin a year, an AI BDR will answer all inbound sales questions\n🤖98% of humans setting up appointments with AEs will be…\n\nAI is going to fundamentally reshape sales over the next 12 mo",
+      "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Who said that AI means everything in SaaS needs to be a personalized experience?\n\nSource passages:\n[gd_007b705bb266a53acf5888b9]\nAttribution status: third_party_quotation. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nQuoted speakers: Anneka Gupta. Text inside quotation marks is their statement, not Jason Lemkin's, unless the passage says he agrees.\n\"AI means eveything in SaaS needs to be a personalized experience. A workflow that surfaces the job that needs to get done -- and just does it. That's the Future of Enterprise SaaS\" Rubrik CPO Anneka Gupta New -> \"Going Multi-Product in the Age of AI with CPOs of Webflow, Rubrik, Zoom, and Productboard\" https://lnkd.in/gQFeDYeT\n\n[gd_a6016d6c72ddea604b995fd3]\nAttribution status: named_author. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nThe SaaS Era of 2013-2022 is Over. Welcome to The World of Hyperfunctional SaaS. So is AI taking over everything? Will $1B SaaS companies be run by 1 person teams? I mean … maybe. Across the SaaStr Fund portfolio, I’ve seen multiple portfolio companies lose $1m customers to new, in-house AI initiatives. But I’ve also seen others grow even faster as AI rebooted and enhanced their products. What I d\n\n[gd_4f6908ae4b2f4c4e20daccaa]\nAttribution status: named_author. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nHuman-in-the-loop and AI orchestration are the most misunderstood concepts in B2B SaaS. 1️⃣ Most think \"human-in-the-loop\" means AI makes their work easier. Wrong. 👋 It means humans handle the cases AI can't solve. All day long. In real time, or as close as possible. The 30% of support tickets that are too complex. The sales conversations that need real judgment. The edge cases that break automate\n\n[gd_90c43e103fb0d354964ffb63]\nAttribution status: publication_page. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nDear SaaStr: How will Ai Change Sales in The Next 12 Months?\nWithin a year, an AI sales rep will join every human sales rep on every Zoom and call\n🤖 95% of “I don’t knows” and “Uh I’ll get back to you” will be gone\nWithin a year, an AI BDR will answer all inbound sales questions\n🤖98% of humans setting up appointments with AEs will be…\n\nAI is going to fundamentally reshape sales over the next 12 mo<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+      "extraction_seconds": 8.193,
+      "verification_seconds": 0.0,
+      "verification_records": [],
+      "llm_verifier_on_critical_path": false,
+      "allowed_numeric_values": [],
+      "distillation_adapter_enabled": false,
+      "verification_adapter_enabled": false,
+      "distillation_backend": "same_loaded_4bit_base_adapter_off",
+      "distillation_do_sample": false,
+      "extraction_max_new_tokens": 2560,
+      "verification_max_new_tokens": 24,
+      "distillation_seed": 0,
+      "support_spans_in_generator_prompt": false,
+      "evidence_stage_reason": null,
+      "evidence_status": "verified",
+      "extraction_attempts": 1,
+      "extraction_stop_reason": "eos",
+      "prompt_contract": "factual-reliability-v1",
+      "fixed_style_enabled": false,
+      "style_applied": false,
+      "style_exemplar_count": 0,
+      "latency_seconds": 19.459,
+      "generated_tokens_including_stop": 320,
+      "last_token_id": 26456,
+      "effective_eos_token_ids": [
+        128001,
+        128008,
+        128009
+      ],
+      "stop_reason": "length",
+      "budget_fraction": 1.0,
+      "early_eos": false,
+      "first_attempt_stop_reason": "eos",
+      "retry_stop_reason": "length"
+    },
+    {
+      "id": "q_personalized_saas_speaker",
+      "topic": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+      "format": "x_thread",
+      "medium": "x",
+      "prompt": "Write an X post in the style of Jason Lemkin about: Who said that AI means everything in SaaS needs to be a personalized experience?\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] AI means everything in SaaS needs to be a personalized experience.\nSpeaker: Anneka Gupta\n[E2] Human-in-the-loop means humans handle the cases AI can't solve.\n[E3] AI will join every human sales rep on every Zoom and call within a year.\n\nNow write the requested X post about: Who said that AI means everything in SaaS needs to be a personalized experience?",
+      "rendered_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nWrite an X post in the style of Jason Lemkin about: Who said that AI means everything in SaaS needs to be a personalized experience?\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] AI means everything in SaaS needs to be a personalized experience.\nSpeaker: Anneka Gupta\n[E2] Human-in-the-loop means humans handle the cases AI can't solve.\n[E3] AI will join every human sales rep on every Zoom and call within a year.\n\nNow write the requested X post about: Who said that AI means everything in SaaS needs to be a personalized experience?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+      "answer": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+      "raw_model_output": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+      "deployment_output": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+      "first_attempt_answer": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+      "retry_answer": null,
+      "query": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+      "max_new_tokens": 160,
+      "seed": 52,
+      "retry_seed": null,
+      "deployment_accepted": true,
+      "repair_occurred": false,
+      "generation_attempt": {
+        "seed": 52,
+        "answer": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+        "numeric_grounding": {
+          "applicable": true,
+          "pass": true,
+          "failure": null,
+          "allowed": [],
+          "values": [],
+          "unsupported": []
+        },
+        "rag_source_copying": {
+          "applicable": true,
+          "pass": true,
+          "threshold": 12,
+          "max_contiguous_words": 8,
+          "document_id": "gd_007b705bb266a53acf5888b9",
+          "matched_generated_span": "in saas needs to be a personalized experience",
+          "matched_retrieved_span": "in saas needs to be a personalized experience"
+        },
+        "stop_reason": "eos"
+      },
+      "repair_attempt": null,
+      "accepted_attempt": 1,
+      "rag_source_copying": {
+        "applicable": true,
+        "threshold": 12,
+        "pass": true,
+        "flagged": false,
+        "max_contiguous_words": 8,
+        "document_id": "gd_007b705bb266a53acf5888b9",
+        "matched_generated_span": "in saas needs to be a personalized experience",
+        "first_attempt": {
+          "applicable": true,
+          "pass": true,
+          "threshold": 12,
+          "max_contiguous_words": 8,
+          "document_id": "gd_007b705bb266a53acf5888b9",
+          "matched_generated_span": "in saas needs to be a personalized experience",
+          "matched_retrieved_span": "in saas needs to be a personalized experience"
+        },
+        "retry": null,
+        "retry_occurred": false,
+        "repair_occurred": false
+      },
+      "numeric_grounding": {
+        "role": "diagnostic_only",
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "unsupported": [],
+        "blocks_output": false,
+        "first_attempt": {
+          "applicable": true,
+          "pass": true,
+          "failure": null,
+          "allowed": [],
+          "values": [],
+          "unsupported": []
+        },
+        "retry": null
+      },
+      "prompt_tokens": 360,
+      "backend": "unsloth",
+      "retrieval": true,
+      "retrieval_query": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+      "retrieval_filter": null,
+      "retrieval_k": null,
+      "retrieval_hits": [
+        {
+          "id": "gd_007b705bb266a53acf5888b9",
+          "text": "\"AI means eveything in SaaS needs to be a personalized experience. A workflow that surfaces the job that needs to get done -- and just does it. That's the Future of Enterprise SaaS\" Rubrik CPO Anneka Gupta New -> \"Going Multi-Product in the Age of AI with CPOs of Webflow, Rubrik, Zoom, and Productboard\" https://lnkd.in/gQFeDYeT",
+          "medium": "linkedin",
+          "group_id": null,
+          "row_id": null,
+          "split": "train",
+          "distance": 0.14347171783447266,
+          "rank": 1,
+          "score_type": "cosine_distance",
+          "attribution_status": "third_party_quotation",
+          "author_position": "quoted_third_party",
+          "graph_document_id": "gd_007b705bb266a53acf5888b9",
+          "quoted_speakers": [
+            "Anneka Gupta"
+          ]
+        },
+        {
+          "id": "gd_a6016d6c72ddea604b995fd3",
+          "text": "The SaaS Era of 2013-2022 is Over. Welcome to The World of Hyperfunctional SaaS. So is AI taking over everything? Will $1B SaaS companies be run by 1 person teams? I mean … maybe. Across the SaaStr Fund portfolio, I’ve seen multiple portfolio companies lose $1m customers to new, in-house AI initiatives. But I’ve also seen others grow even faster as AI rebooted and enhanced their products. What I d",
+          "medium": "linkedin",
+          "group_id": null,
+          "row_id": null,
+          "split": "train",
+          "distance": 0.2392122745513916,
+          "rank": 2,
+          "score_type": "cosine_distance",
+          "attribution_status": "named_author",
+          "author_position": "account_or_name_attributed",
+          "graph_document_id": "gd_a6016d6c72ddea604b995fd3",
+          "quoted_speakers": []
+        },
+        {
+          "id": "gd_4f6908ae4b2f4c4e20daccaa",
+          "text": "Human-in-the-loop and AI orchestration are the most misunderstood concepts in B2B SaaS. 1️⃣ Most think \"human-in-the-loop\" means AI makes their work easier. Wrong. 👋 It means humans handle the cases AI can't solve. All day long. In real time, or as close as possible. The 30% of support tickets that are too complex. The sales conversations that need real judgment. The edge cases that break automate",
+          "medium": "linkedin",
+          "group_id": null,
+          "row_id": null,
+          "split": "train",
+          "distance": 0.24562907218933105,
+          "rank": 3,
+          "score_type": "cosine_distance",
+          "attribution_status": "named_author",
+          "author_position": "account_or_name_attributed",
+          "graph_document_id": "gd_4f6908ae4b2f4c4e20daccaa",
+          "quoted_speakers": []
+        },
+        {
+          "id": "gd_90c43e103fb0d354964ffb63",
+          "text": "Dear SaaStr: How will Ai Change Sales in The Next 12 Months?\nWithin a year, an AI sales rep will join every human sales rep on every Zoom and call\n🤖 95% of “I don’t knows” and “Uh I’ll get back to you” will be gone\nWithin a year, an AI BDR will answer all inbound sales questions\n🤖98% of humans setting up appointments with AEs will be…\n\nAI is going to fundamentally reshape sales over the next 12 mo",
+          "medium": "blog",
+          "group_id": null,
+          "row_id": null,
+          "split": "train",
+          "distance": 0.26602041721343994,
+          "rank": 4,
+          "score_type": "cosine_distance",
+          "attribution_status": "publication_page",
+          "author_position": "not_verified",
+          "graph_document_id": "gd_90c43e103fb0d354964ffb63",
+          "quoted_speakers": []
+        }
+      ],
+      "copying": [
+        {
+          "id": "gd_007b705bb266a53acf5888b9",
+          "shared_word_span": 7
+        },
+        {
+          "id": "gd_a6016d6c72ddea604b995fd3",
+          "shared_word_span": 1
+        },
+        {
+          "id": "gd_4f6908ae4b2f4c4e20daccaa",
+          "shared_word_span": 1
+        },
+        {
+          "id": "gd_90c43e103fb0d354964ffb63",
+          "shared_word_span": 1
+        }
+      ],
+      "retrieval_backend": "pilot_dense",
+      "retrieval_mode": "dense",
+      "retrieval_excluded_reasons": {},
+      "proposed_atomic_claims": [
+        {
+          "source_id": "gd_007b705bb266a53acf5888b9",
+          "claim": "AI means everything in SaaS needs to be a personalized experience.",
+          "support_span": "AI means eveything in SaaS needs to be a personalized experience.",
+          "claim_type": "fact"
+        },
+        {
+          "source_id": "gd_a6016d6c72ddea604b995fd3",
+          "claim": "AI is taking over everything in SaaS.",
+          "support_span": "So is AI taking over everything?",
+          "claim_type": "fact"
+        },
+        {
+          "source_id": "gd_4f6908ae4b2f4c4e20daccaa",
+          "claim": "Human-in-the-loop means humans handle the cases AI can't solve.",
+          "support_span": "It means humans handle the cases AI can't solve.",
+          "claim_type": "fact"
+        },
+        {
+          "source_id": "gd_90c43e103fb0d354964ffb63",
+          "claim": "AI will join every human sales rep on every Zoom and call within a year.",
+          "support_span": "Within a year, an AI sales rep will join every human sales rep on every Zoom and call",
+          "claim_type": "fact"
+        }
+      ],
+      "validation_rejected": [
+        {
+          "source_id": "gd_a6016d6c72ddea604b995fd3",
+          "claim": "AI is taking over everything in SaaS.",
+          "support_span": "So is AI taking over everything?",
+          "claim_type": "fact",
+          "reason": "interrogative_assertion"
+        }
+      ],
+      "verifier_rejected": [],
+      "verified_claims": [
+        {
+          "source_id": "gd_007b705bb266a53acf5888b9",
+          "claim": "AI means everything in SaaS needs to be a personalized experience.",
+          "support_span": "AI means eveything in SaaS needs to be a personalized experience.",
+          "claim_type": "fact",
+          "attribution_status": "third_party_quotation",
+          "quoted_speakers": [
+            "Anneka Gupta"
+          ]
+        },
+        {
+          "source_id": "gd_4f6908ae4b2f4c4e20daccaa",
+          "claim": "Human-in-the-loop means humans handle the cases AI can't solve.",
+          "support_span": "It means humans handle the cases AI can't solve.",
+          "claim_type": "fact",
+          "attribution_status": "named_author"
+        },
+        {
+          "source_id": "gd_90c43e103fb0d354964ffb63",
+          "claim": "AI will join every human sales rep on every Zoom and call within a year.",
+          "support_span": "Within a year, an AI sales rep will join every human sales rep on every Zoom and call",
+          "claim_type": "fact",
+          "attribution_status": "publication_page"
+        }
+      ],
+      "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] AI means everything in SaaS needs to be a personalized experience.\nSpeaker: Anneka Gupta\n[E2] Human-in-the-loop means humans handle the cases AI can't solve.\n[E3] AI will join every human sales rep on every Zoom and call within a year.",
+      "raw_extraction": "[\n  {\n    \"source_id\": \"gd_007b705bb266a53acf5888b9\",\n    \"claim\": \"AI means everything in SaaS needs to be a personalized experience.\",\n    \"support_span\": \"AI means eveything in SaaS needs to be a personalized experience.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"gd_a6016d6c72ddea604b995fd3\",\n    \"claim\": \"AI is taking over everything in SaaS.\",\n    \"support_span\": \"So is AI taking over everything?\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"gd_4f6908ae4b2f4c4e20daccaa\",\n    \"claim\": \"Human-in-the-loop means humans handle the cases AI can't solve.\",\n    \"support_span\": \"It means humans handle the cases AI can't solve.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"gd_90c43e103fb0d354964ffb63\",\n    \"claim\": \"AI will join every human sales rep on every Zoom and call within a year.\",\n    \"support_span\": \"Within a year, an AI sales rep will join every human sales rep on every Zoom and call\",\n    \"claim_type\": \"fact\"\n  }\n]",
+      "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Who said that AI means everything in SaaS needs to be a personalized experience?\n\nSource passages:\n[gd_007b705bb266a53acf5888b9]\nAttribution status: third_party_quotation. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nQuoted speakers: Anneka Gupta. Text inside quotation marks is their statement, not Jason Lemkin's, unless the passage says he agrees.\n\"AI means eveything in SaaS needs to be a personalized experience. A workflow that surfaces the job that needs to get done -- and just does it. That's the Future of Enterprise SaaS\" Rubrik CPO Anneka Gupta New -> \"Going Multi-Product in the Age of AI with CPOs of Webflow, Rubrik, Zoom, and Productboard\" https://lnkd.in/gQFeDYeT\n\n[gd_a6016d6c72ddea604b995fd3]\nAttribution status: named_author. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nThe SaaS Era of 2013-2022 is Over. Welcome to The World of Hyperfunctional SaaS. So is AI taking over everything? Will $1B SaaS companies be run by 1 person teams? I mean … maybe. Across the SaaStr Fund portfolio, I’ve seen multiple portfolio companies lose $1m customers to new, in-house AI initiatives. But I’ve also seen others grow even faster as AI rebooted and enhanced their products. What I d\n\n[gd_4f6908ae4b2f4c4e20daccaa]\nAttribution status: named_author. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nHuman-in-the-loop and AI orchestration are the most misunderstood concepts in B2B SaaS. 1️⃣ Most think \"human-in-the-loop\" means AI makes their work easier. Wrong. 👋 It means humans handle the cases AI can't solve. All day long. In real time, or as close as possible. The 30% of support tickets that are too complex. The sales conversations that need real judgment. The edge cases that break automate\n\n[gd_90c43e103fb0d354964ffb63]\nAttribution status: publication_page. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nDear SaaStr: How will Ai Change Sales in The Next 12 Months?\nWithin a year, an AI sales rep will join every human sales rep on every Zoom and call\n🤖 95% of “I don’t knows” and “Uh I’ll get back to you” will be gone\nWithin a year, an AI BDR will answer all inbound sales questions\n🤖98% of humans setting up appointments with AEs will be…\n\nAI is going to fundamentally reshape sales over the next 12 mo",
+      "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Who said that AI means everything in SaaS needs to be a personalized experience?\n\nSource passages:\n[gd_007b705bb266a53acf5888b9]\nAttribution status: third_party_quotation. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nQuoted speakers: Anneka Gupta. Text inside quotation marks is their statement, not Jason Lemkin's, unless the passage says he agrees.\n\"AI means eveything in SaaS needs to be a personalized experience. A workflow that surfaces the job that needs to get done -- and just does it. That's the Future of Enterprise SaaS\" Rubrik CPO Anneka Gupta New -> \"Going Multi-Product in the Age of AI with CPOs of Webflow, Rubrik, Zoom, and Productboard\" https://lnkd.in/gQFeDYeT\n\n[gd_a6016d6c72ddea604b995fd3]\nAttribution status: named_author. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nThe SaaS Era of 2013-2022 is Over. Welcome to The World of Hyperfunctional SaaS. So is AI taking over everything? Will $1B SaaS companies be run by 1 person teams? I mean … maybe. Across the SaaStr Fund portfolio, I’ve seen multiple portfolio companies lose $1m customers to new, in-house AI initiatives. But I’ve also seen others grow even faster as AI rebooted and enhanced their products. What I d\n\n[gd_4f6908ae4b2f4c4e20daccaa]\nAttribution status: named_author. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nHuman-in-the-loop and AI orchestration are the most misunderstood concepts in B2B SaaS. 1️⃣ Most think \"human-in-the-loop\" means AI makes their work easier. Wrong. 👋 It means humans handle the cases AI can't solve. All day long. In real time, or as close as possible. The 30% of support tickets that are too complex. The sales conversations that need real judgment. The edge cases that break automate\n\n[gd_90c43e103fb0d354964ffb63]\nAttribution status: publication_page. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nDear SaaStr: How will Ai Change Sales in The Next 12 Months?\nWithin a year, an AI sales rep will join every human sales rep on every Zoom and call\n🤖 95% of “I don’t knows” and “Uh I’ll get back to you” will be gone\nWithin a year, an AI BDR will answer all inbound sales questions\n🤖98% of humans setting up appointments with AEs will be…\n\nAI is going to fundamentally reshape sales over the next 12 mo<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+      "extraction_seconds": 8.193,
+      "verification_seconds": 0.0,
+      "verification_records": [],
+      "llm_verifier_on_critical_path": false,
+      "allowed_numeric_values": [],
+      "distillation_adapter_enabled": false,
+      "verification_adapter_enabled": false,
+      "distillation_backend": "same_loaded_4bit_base_adapter_off",
+      "distillation_do_sample": false,
+      "extraction_max_new_tokens": 2560,
+      "verification_max_new_tokens": 24,
+      "distillation_seed": 0,
+      "support_spans_in_generator_prompt": false,
+      "evidence_stage_reason": null,
+      "evidence_status": "verified",
+      "extraction_attempts": 1,
+      "extraction_stop_reason": "eos",
+      "prompt_contract": "factual-reliability-v1",
+      "fixed_style_enabled": false,
+      "style_applied": false,
+      "style_exemplar_count": 0,
+      "latency_seconds": 1.42,
+      "generated_tokens_including_stop": 17,
+      "last_token_id": 128009,
+      "effective_eos_token_ids": [
+        128001,
+        128008,
+        128009
+      ],
+      "stop_reason": "eos",
+      "budget_fraction": 0.10625,
+      "early_eos": true,
+      "first_attempt_stop_reason": "eos",
+      "retry_stop_reason": null
+    },
+    {
+      "id": "q_personalized_saas_speaker",
+      "topic": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+      "format": "youtube_script",
+      "medium": "talk",
+      "prompt": "Write a talk in the style of Jason Lemkin about: Who said that AI means everything in SaaS needs to be a personalized experience?\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] AI means everything in SaaS needs to be a personalized experience.\nSpeaker: Anneka Gupta\n[E2] Human-in-the-loop means humans handle the cases AI can't solve.\n[E3] AI will join every human sales rep on every Zoom and call within a year.\n\nNow write the requested talk about: Who said that AI means everything in SaaS needs to be a personalized experience?\n\nThe draft repeated the question. Write the requested piece itself. Do not repeat the question.",
+      "rendered_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nWrite a talk in the style of Jason Lemkin about: Who said that AI means everything in SaaS needs to be a personalized experience?\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] AI means everything in SaaS needs to be a personalized experience.\nSpeaker: Anneka Gupta\n[E2] Human-in-the-loop means humans handle the cases AI can't solve.\n[E3] AI will join every human sales rep on every Zoom and call within a year.\n\nNow write the requested talk about: Who said that AI means everything in SaaS needs to be a personalized experience?\n\nThe draft repeated the question. Write the requested piece itself. Do not repeat the question.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+      "answer": "So I was just scrolling through my Twitter feed and saw this amazing tweet by SaaStr CEO, Jason Lemkin, and I thought, \"I gotta go dig up who wrote this tweet.\"\nAnd so I looked it up. It turns out there are actually two tweets with this exact same quote, one from April of this year and another from November of last year. So here we have our speakers.\nAnneka Gupta, head of product for Gorgias, and Jason Lemkin, founder of Saastr. And I'm going to summarize these two different versions of this tweet because they're pretty great. But first let me ask you what do you think? Am I wrong? Is this something that everyone's talking about in B2B right now? Because if you look around, I don't really see people saying like, \"We need to make everything super personal.\"\nMaybe I just haven't seen enough stuff yet. Maybe I've been too focused on my tiny little world of AI agents. But maybe it's all coming soon.\nSo let me tell you why this matters, which is the AI revolution is changing how we build software faster than almost any time in history. We're building new products in weeks instead of quarters. The pace of change is unprecedented. But with all the excitement, there's also confusion. What does this mean for your business? How should you approach this rapidly evolving landscape?\nLet's break down these key points that Jason brought up. First, AI doesn't have to be expensive. You don't need a large team of engineers. There are many tools available today that enable rapid deployment without breaking the bank. Many startups started off open source and then built commercial solutions. You could use ChatGPT and Claude to figure things out.",
+      "raw_model_output": "So we've got some interesting questions here today. The first one was \"Who said that AI means everything in SaaS needs to be a personalized experience?\"\nWell I don't know if you're going to get an answer because there's so many great answers from this session. But I think it kind of ties together with another question which is \"Will AI make our apps more personal or less personal?\" And then also a related question of whether AI will let us do things without humans anymore and when.\nI'll just take a stab at all three. So who actually said this? It doesn't really matter. What matters is what they said. This is how Claude thinks. That AI should personalize your experience for everyone. Well, maybe that sounds good, right? We want it to sound like Snowflake. Everything's cool. You want it to sound like HubSpot. Great, I love my CRM. Maybe even Salesforce. My Salesforce is amazing. Whatever it might be. But does it have to be personalized?\nAnd then someone else had asked if AI would change our products and make them more personal or less personal. I personally think AI is making our B2B software more impersonal. Not less personal. Here's why. Think back to when we used to use Slack. We loved Slack. Why did we love Slack? Because everyone was there. It wasn't perfect. Sometimes it was too noisy. Sometimes you didn't hear things. But at least you knew that everybody was there. Now imagine you're on a team. You log in to your app. There's no one there. There's no way to ask a question. You go to Q&A. No one responds. There's no way to chat. There's nothing. Just a bunch of bots answering questions. And these bots aren't even that good yet. They don't work well enough for anything complex.",
+      "deployment_output": "So I was just scrolling through my Twitter feed and saw this amazing tweet by SaaStr CEO, Jason Lemkin, and I thought, \"I gotta go dig up who wrote this tweet.\"\nAnd so I looked it up. It turns out there are actually two tweets with this exact same quote, one from April of this year and another from November of last year. So here we have our speakers.\nAnneka Gupta, head of product for Gorgias, and Jason Lemkin, founder of Saastr. And I'm going to summarize these two different versions of this tweet because they're pretty great. But first let me ask you what do you think? Am I wrong? Is this something that everyone's talking about in B2B right now? Because if you look around, I don't really see people saying like, \"We need to make everything super personal.\"\nMaybe I just haven't seen enough stuff yet. Maybe I've been too focused on my tiny little world of AI agents. But maybe it's all coming soon.\nSo let me tell you why this matters, which is the AI revolution is changing how we build software faster than almost any time in history. We're building new products in weeks instead of quarters. The pace of change is unprecedented. But with all the excitement, there's also confusion. What does this mean for your business? How should you approach this rapidly evolving landscape?\nLet's break down these key points that Jason brought up. First, AI doesn't have to be expensive. You don't need a large team of engineers. There are many tools available today that enable rapid deployment without breaking the bank. Many startups started off open source and then built commercial solutions. You could use ChatGPT and Claude to figure things out.",
+      "first_attempt_answer": "So we've got some interesting questions here today. The first one was \"Who said that AI means everything in SaaS needs to be a personalized experience?\"\nWell I don't know if you're going to get an answer because there's so many great answers from this session. But I think it kind of ties together with another question which is \"Will AI make our apps more personal or less personal?\" And then also a related question of whether AI will let us do things without humans anymore and when.\nI'll just take a stab at all three. So who actually said this? It doesn't really matter. What matters is what they said. This is how Claude thinks. That AI should personalize your experience for everyone. Well, maybe that sounds good, right? We want it to sound like Snowflake. Everything's cool. You want it to sound like HubSpot. Great, I love my CRM. Maybe even Salesforce. My Salesforce is amazing. Whatever it might be. But does it have to be personalized?\nAnd then someone else had asked if AI would change our products and make them more personal or less personal. I personally think AI is making our B2B software more impersonal. Not less personal. Here's why. Think back to when we used to use Slack. We loved Slack. Why did we love Slack? Because everyone was there. It wasn't perfect. Sometimes it was too noisy. Sometimes you didn't hear things. But at least you knew that everybody was there. Now imagine you're on a team. You log in to your app. There's no one there. There's no way to ask a question. You go to Q&A. No one responds. There's no way to chat. There's nothing. Just a bunch of bots answering questions. And these bots aren't even that good yet. They don't work well enough for anything complex.",
+      "retry_answer": "So I was just scrolling through my Twitter feed and saw this amazing tweet by SaaStr CEO, Jason Lemkin, and I thought, \"I gotta go dig up who wrote this tweet.\"\nAnd so I looked it up. It turns out there are actually two tweets with this exact same quote, one from April of this year and another from November of last year. So here we have our speakers.\nAnneka Gupta, head of product for Gorgias, and Jason Lemkin, founder of Saastr. And I'm going to summarize these two different versions of this tweet because they're pretty great. But first let me ask you what do you think? Am I wrong? Is this something that everyone's talking about in B2B right now? Because if you look around, I don't really see people saying like, \"We need to make everything super personal.\"\nMaybe I just haven't seen enough stuff yet. Maybe I've been too focused on my tiny little world of AI agents. But maybe it's all coming soon.\nSo let me tell you why this matters, which is the AI revolution is changing how we build software faster than almost any time in history. We're building new products in weeks instead of quarters. The pace of change is unprecedented. But with all the excitement, there's also confusion. What does this mean for your business? How should you approach this rapidly evolving landscape?\nLet's break down these key points that Jason brought up. First, AI doesn't have to be expensive. You don't need a large team of engineers. There are many tools available today that enable rapid deployment without breaking the bank. Many startups started off open source and then built commercial solutions. You could use ChatGPT and Claude to figure things out.",
+      "query": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+      "max_new_tokens": 768,
+      "seed": 53,
+      "retry_seed": 10053,
+      "deployment_accepted": true,
+      "repair_occurred": false,
+      "generation_attempt": {
+        "seed": 53,
+        "answer": "So we've got some interesting questions here today. The first one was \"Who said that AI means everything in SaaS needs to be a personalized experience?\"\nWell I don't know if you're going to get an answer because there's so many great answers from this session. But I think it kind of ties together with another question which is \"Will AI make our apps more personal or less personal?\" And then also a related question of whether AI will let us do things without humans anymore and when.\nI'll just take a stab at all three. So who actually said this? It doesn't really matter. What matters is what they said. This is how Claude thinks. That AI should personalize your experience for everyone. Well, maybe that sounds good, right? We want it to sound like Snowflake. Everything's cool. You want it to sound like HubSpot. Great, I love my CRM. Maybe even Salesforce. My Salesforce is amazing. Whatever it might be. But does it have to be personalized?\nAnd then someone else had asked if AI would change our products and make them more personal or less personal. I personally think AI is making our B2B software more impersonal. Not less personal. Here's why. Think back to when we used to use Slack. We loved Slack. Why did we love Slack? Because everyone was there. It wasn't perfect. Sometimes it was too noisy. Sometimes you didn't hear things. But at least you knew that everybody was there. Now imagine you're on a team. You log in to your app. There's no one there. There's no way to ask a question. You go to Q&A. No one responds. There's no way to chat. There's nothing. Just a bunch of bots answering questions. And these bots aren't even that good yet. They don't work well enough for anything complex.",
+        "numeric_grounding": {
+          "applicable": true,
+          "pass": true,
+          "failure": null,
+          "allowed": [],
+          "values": [],
+          "unsupported": []
+        },
+        "rag_source_copying": {
+          "applicable": true,
+          "pass": true,
+          "threshold": 12,
+          "max_contiguous_words": 8,
+          "document_id": "gd_007b705bb266a53acf5888b9",
+          "matched_generated_span": "in saas needs to be a personalized experience",
+          "matched_retrieved_span": "in saas needs to be a personalized experience"
+        },
+        "stop_reason": "eos"
+      },
+      "repair_attempt": null,
+      "accepted_attempt": 2,
+      "rag_source_copying": {
+        "applicable": true,
+        "threshold": 12,
+        "pass": true,
+        "flagged": false,
+        "max_contiguous_words": 3,
+        "document_id": "gd_90c43e103fb0d354964ffb63",
+        "matched_generated_span": "i don t",
+        "first_attempt": {
+          "applicable": true,
+          "pass": true,
+          "threshold": 12,
+          "max_contiguous_words": 8,
+          "document_id": "gd_007b705bb266a53acf5888b9",
+          "matched_generated_span": "in saas needs to be a personalized experience",
+          "matched_retrieved_span": "in saas needs to be a personalized experience"
+        },
+        "retry": {
+          "applicable": true,
+          "pass": true,
+          "threshold": 12,
+          "max_contiguous_words": 3,
+          "document_id": "gd_90c43e103fb0d354964ffb63",
+          "matched_generated_span": "i don t",
+          "matched_retrieved_span": "i don t"
+        },
+        "retry_occurred": true,
+        "repair_occurred": false
+      },
+      "numeric_grounding": {
+        "role": "diagnostic_only",
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "unsupported": [],
+        "blocks_output": false,
+        "first_attempt": {
+          "applicable": true,
+          "pass": true,
+          "failure": null,
+          "allowed": [],
+          "values": [],
+          "unsupported": []
+        },
+        "retry": {
+          "applicable": true,
+          "pass": true,
+          "failure": null,
+          "allowed": [],
+          "values": [],
+          "unsupported": []
+        }
+      },
+      "prompt_tokens": 376,
+      "backend": "unsloth",
+      "retrieval": true,
+      "retrieval_query": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+      "retrieval_filter": null,
+      "retrieval_k": null,
+      "retrieval_hits": [
+        {
+          "id": "gd_007b705bb266a53acf5888b9",
+          "text": "\"AI means eveything in SaaS needs to be a personalized experience. A workflow that surfaces the job that needs to get done -- and just does it. That's the Future of Enterprise SaaS\" Rubrik CPO Anneka Gupta New -> \"Going Multi-Product in the Age of AI with CPOs of Webflow, Rubrik, Zoom, and Productboard\" https://lnkd.in/gQFeDYeT",
+          "medium": "linkedin",
+          "group_id": null,
+          "row_id": null,
+          "split": "train",
+          "distance": 0.14347171783447266,
+          "rank": 1,
+          "score_type": "cosine_distance",
+          "attribution_status": "third_party_quotation",
+          "author_position": "quoted_third_party",
+          "graph_document_id": "gd_007b705bb266a53acf5888b9",
+          "quoted_speakers": [
+            "Anneka Gupta"
+          ]
+        },
+        {
+          "id": "gd_a6016d6c72ddea604b995fd3",
+          "text": "The SaaS Era of 2013-2022 is Over. Welcome to The World of Hyperfunctional SaaS. So is AI taking over everything? Will $1B SaaS companies be run by 1 person teams? I mean … maybe. Across the SaaStr Fund portfolio, I’ve seen multiple portfolio companies lose $1m customers to new, in-house AI initiatives. But I’ve also seen others grow even faster as AI rebooted and enhanced their products. What I d",
+          "medium": "linkedin",
+          "group_id": null,
+          "row_id": null,
+          "split": "train",
+          "distance": 0.2392122745513916,
+          "rank": 2,
+          "score_type": "cosine_distance",
+          "attribution_status": "named_author",
+          "author_position": "account_or_name_attributed",
+          "graph_document_id": "gd_a6016d6c72ddea604b995fd3",
+          "quoted_speakers": []
+        },
+        {
+          "id": "gd_4f6908ae4b2f4c4e20daccaa",
+          "text": "Human-in-the-loop and AI orchestration are the most misunderstood concepts in B2B SaaS. 1️⃣ Most think \"human-in-the-loop\" means AI makes their work easier. Wrong. 👋 It means humans handle the cases AI can't solve. All day long. In real time, or as close as possible. The 30% of support tickets that are too complex. The sales conversations that need real judgment. The edge cases that break automate",
+          "medium": "linkedin",
+          "group_id": null,
+          "row_id": null,
+          "split": "train",
+          "distance": 0.24562907218933105,
+          "rank": 3,
+          "score_type": "cosine_distance",
+          "attribution_status": "named_author",
+          "author_position": "account_or_name_attributed",
+          "graph_document_id": "gd_4f6908ae4b2f4c4e20daccaa",
+          "quoted_speakers": []
+        },
+        {
+          "id": "gd_90c43e103fb0d354964ffb63",
+          "text": "Dear SaaStr: How will Ai Change Sales in The Next 12 Months?\nWithin a year, an AI sales rep will join every human sales rep on every Zoom and call\n🤖 95% of “I don’t knows” and “Uh I’ll get back to you” will be gone\nWithin a year, an AI BDR will answer all inbound sales questions\n🤖98% of humans setting up appointments with AEs will be…\n\nAI is going to fundamentally reshape sales over the next 12 mo",
+          "medium": "blog",
+          "group_id": null,
+          "row_id": null,
+          "split": "train",
+          "distance": 0.26602041721343994,
+          "rank": 4,
+          "score_type": "cosine_distance",
+          "attribution_status": "publication_page",
+          "author_position": "not_verified",
+          "graph_document_id": "gd_90c43e103fb0d354964ffb63",
+          "quoted_speakers": []
+        }
+      ],
+      "copying": [
+        {
+          "id": "gd_007b705bb266a53acf5888b9",
+          "shared_word_span": 2
+        },
+        {
+          "id": "gd_a6016d6c72ddea604b995fd3",
+          "shared_word_span": 2
+        },
+        {
+          "id": "gd_4f6908ae4b2f4c4e20daccaa",
+          "shared_word_span": 2
+        },
+        {
+          "id": "gd_90c43e103fb0d354964ffb63",
+          "shared_word_span": 2
+        }
+      ],
+      "retrieval_backend": "pilot_dense",
+      "retrieval_mode": "dense",
+      "retrieval_excluded_reasons": {},
+      "proposed_atomic_claims": [
+        {
+          "source_id": "gd_007b705bb266a53acf5888b9",
+          "claim": "AI means everything in SaaS needs to be a personalized experience.",
+          "support_span": "AI means eveything in SaaS needs to be a personalized experience.",
+          "claim_type": "fact"
+        },
+        {
+          "source_id": "gd_a6016d6c72ddea604b995fd3",
+          "claim": "AI is taking over everything in SaaS.",
+          "support_span": "So is AI taking over everything?",
+          "claim_type": "fact"
+        },
+        {
+          "source_id": "gd_4f6908ae4b2f4c4e20daccaa",
+          "claim": "Human-in-the-loop means humans handle the cases AI can't solve.",
+          "support_span": "It means humans handle the cases AI can't solve.",
+          "claim_type": "fact"
+        },
+        {
+          "source_id": "gd_90c43e103fb0d354964ffb63",
+          "claim": "AI will join every human sales rep on every Zoom and call within a year.",
+          "support_span": "Within a year, an AI sales rep will join every human sales rep on every Zoom and call",
+          "claim_type": "fact"
+        }
+      ],
+      "validation_rejected": [
+        {
+          "source_id": "gd_a6016d6c72ddea604b995fd3",
+          "claim": "AI is taking over everything in SaaS.",
+          "support_span": "So is AI taking over everything?",
+          "claim_type": "fact",
+          "reason": "interrogative_assertion"
+        }
+      ],
+      "verifier_rejected": [],
+      "verified_claims": [
+        {
+          "source_id": "gd_007b705bb266a53acf5888b9",
+          "claim": "AI means everything in SaaS needs to be a personalized experience.",
+          "support_span": "AI means eveything in SaaS needs to be a personalized experience.",
+          "claim_type": "fact",
+          "attribution_status": "third_party_quotation",
+          "quoted_speakers": [
+            "Anneka Gupta"
+          ]
+        },
+        {
+          "source_id": "gd_4f6908ae4b2f4c4e20daccaa",
+          "claim": "Human-in-the-loop means humans handle the cases AI can't solve.",
+          "support_span": "It means humans handle the cases AI can't solve.",
+          "claim_type": "fact",
+          "attribution_status": "named_author"
+        },
+        {
+          "source_id": "gd_90c43e103fb0d354964ffb63",
+          "claim": "AI will join every human sales rep on every Zoom and call within a year.",
+          "support_span": "Within a year, an AI sales rep will join every human sales rep on every Zoom and call",
+          "claim_type": "fact",
+          "attribution_status": "publication_page"
+        }
+      ],
+      "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] AI means everything in SaaS needs to be a personalized experience.\nSpeaker: Anneka Gupta\n[E2] Human-in-the-loop means humans handle the cases AI can't solve.\n[E3] AI will join every human sales rep on every Zoom and call within a year.",
+      "raw_extraction": "[\n  {\n    \"source_id\": \"gd_007b705bb266a53acf5888b9\",\n    \"claim\": \"AI means everything in SaaS needs to be a personalized experience.\",\n    \"support_span\": \"AI means eveything in SaaS needs to be a personalized experience.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"gd_a6016d6c72ddea604b995fd3\",\n    \"claim\": \"AI is taking over everything in SaaS.\",\n    \"support_span\": \"So is AI taking over everything?\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"gd_4f6908ae4b2f4c4e20daccaa\",\n    \"claim\": \"Human-in-the-loop means humans handle the cases AI can't solve.\",\n    \"support_span\": \"It means humans handle the cases AI can't solve.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"gd_90c43e103fb0d354964ffb63\",\n    \"claim\": \"AI will join every human sales rep on every Zoom and call within a year.\",\n    \"support_span\": \"Within a year, an AI sales rep will join every human sales rep on every Zoom and call\",\n    \"claim_type\": \"fact\"\n  }\n]",
+      "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Who said that AI means everything in SaaS needs to be a personalized experience?\n\nSource passages:\n[gd_007b705bb266a53acf5888b9]\nAttribution status: third_party_quotation. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nQuoted speakers: Anneka Gupta. Text inside quotation marks is their statement, not Jason Lemkin's, unless the passage says he agrees.\n\"AI means eveything in SaaS needs to be a personalized experience. A workflow that surfaces the job that needs to get done -- and just does it. That's the Future of Enterprise SaaS\" Rubrik CPO Anneka Gupta New -> \"Going Multi-Product in the Age of AI with CPOs of Webflow, Rubrik, Zoom, and Productboard\" https://lnkd.in/gQFeDYeT\n\n[gd_a6016d6c72ddea604b995fd3]\nAttribution status: named_author. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nThe SaaS Era of 2013-2022 is Over. Welcome to The World of Hyperfunctional SaaS. So is AI taking over everything? Will $1B SaaS companies be run by 1 person teams? I mean … maybe. Across the SaaStr Fund portfolio, I’ve seen multiple portfolio companies lose $1m customers to new, in-house AI initiatives. But I’ve also seen others grow even faster as AI rebooted and enhanced their products. What I d\n\n[gd_4f6908ae4b2f4c4e20daccaa]\nAttribution status: named_author. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nHuman-in-the-loop and AI orchestration are the most misunderstood concepts in B2B SaaS. 1️⃣ Most think \"human-in-the-loop\" means AI makes their work easier. Wrong. 👋 It means humans handle the cases AI can't solve. All day long. In real time, or as close as possible. The 30% of support tickets that are too complex. The sales conversations that need real judgment. The edge cases that break automate\n\n[gd_90c43e103fb0d354964ffb63]\nAttribution status: publication_page. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nDear SaaStr: How will Ai Change Sales in The Next 12 Months?\nWithin a year, an AI sales rep will join every human sales rep on every Zoom and call\n🤖 95% of “I don’t knows” and “Uh I’ll get back to you” will be gone\nWithin a year, an AI BDR will answer all inbound sales questions\n🤖98% of humans setting up appointments with AEs will be…\n\nAI is going to fundamentally reshape sales over the next 12 mo",
+      "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Who said that AI means everything in SaaS needs to be a personalized experience?\n\nSource passages:\n[gd_007b705bb266a53acf5888b9]\nAttribution status: third_party_quotation. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nQuoted speakers: Anneka Gupta. Text inside quotation marks is their statement, not Jason Lemkin's, unless the passage says he agrees.\n\"AI means eveything in SaaS needs to be a personalized experience. A workflow that surfaces the job that needs to get done -- and just does it. That's the Future of Enterprise SaaS\" Rubrik CPO Anneka Gupta New -> \"Going Multi-Product in the Age of AI with CPOs of Webflow, Rubrik, Zoom, and Productboard\" https://lnkd.in/gQFeDYeT\n\n[gd_a6016d6c72ddea604b995fd3]\nAttribution status: named_author. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nThe SaaS Era of 2013-2022 is Over. Welcome to The World of Hyperfunctional SaaS. So is AI taking over everything? Will $1B SaaS companies be run by 1 person teams? I mean … maybe. Across the SaaStr Fund portfolio, I’ve seen multiple portfolio companies lose $1m customers to new, in-house AI initiatives. But I’ve also seen others grow even faster as AI rebooted and enhanced their products. What I d\n\n[gd_4f6908ae4b2f4c4e20daccaa]\nAttribution status: named_author. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nHuman-in-the-loop and AI orchestration are the most misunderstood concepts in B2B SaaS. 1️⃣ Most think \"human-in-the-loop\" means AI makes their work easier. Wrong. 👋 It means humans handle the cases AI can't solve. All day long. In real time, or as close as possible. The 30% of support tickets that are too complex. The sales conversations that need real judgment. The edge cases that break automate\n\n[gd_90c43e103fb0d354964ffb63]\nAttribution status: publication_page. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nDear SaaStr: How will Ai Change Sales in The Next 12 Months?\nWithin a year, an AI sales rep will join every human sales rep on every Zoom and call\n🤖 95% of “I don’t knows” and “Uh I’ll get back to you” will be gone\nWithin a year, an AI BDR will answer all inbound sales questions\n🤖98% of humans setting up appointments with AEs will be…\n\nAI is going to fundamentally reshape sales over the next 12 mo<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+      "extraction_seconds": 8.193,
+      "verification_seconds": 0.0,
+      "verification_records": [],
+      "llm_verifier_on_critical_path": false,
+      "allowed_numeric_values": [],
+      "distillation_adapter_enabled": false,
+      "verification_adapter_enabled": false,
+      "distillation_backend": "same_loaded_4bit_base_adapter_off",
+      "distillation_do_sample": false,
+      "extraction_max_new_tokens": 2560,
+      "verification_max_new_tokens": 24,
+      "distillation_seed": 0,
+      "support_spans_in_generator_prompt": false,
+      "evidence_stage_reason": null,
+      "evidence_status": "verified",
+      "extraction_attempts": 1,
+      "extraction_stop_reason": "eos",
+      "prompt_contract": "factual-reliability-v1",
+      "fixed_style_enabled": false,
+      "style_applied": false,
+      "style_exemplar_count": 0,
+      "latency_seconds": 26.372,
+      "generated_tokens_including_stop": 357,
+      "last_token_id": 128009,
+      "effective_eos_token_ids": [
+        128001,
+        128008,
+        128009
+      ],
+      "stop_reason": "eos",
+      "budget_fraction": 0.46484375,
+      "early_eos": true,
+      "first_attempt_stop_reason": "eos",
+      "retry_stop_reason": "eos"
+    }
+  ]
+}

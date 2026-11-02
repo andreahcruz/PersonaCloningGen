@@ -1,0 +1,20 @@
+{
+  "store": "temporary workdir lightrag-timeout-bench-20261031",
+  "expansion_store_modified": false,
+  "policy": "adaptive-v1",
+  "completed": [
+    {"document_id": "gd_09e160ccf7663729c581d1e2", "seconds": 28.292},
+    {"document_id": "gd_0270bf4a3abebc35861d117f", "seconds": 6.011},
+    {"document_id": "gd_014b45cb99cfee97ee337556", "seconds": 4.042}
+  ],
+  "cut_at_budget": {
+    "document_id": "gd_756878d4d219336489c49168",
+    "seconds": 181.217,
+    "status": "failed_permanent",
+    "reason": "second cancelled attempt at the 180-second medium budget; the same document has completed in about 15 seconds on an earlier expansion attempt"
+  },
+  "graph_nodes": 31,
+  "graph_edges": 27,
+  "exit_code": 0,
+  "worker_timeout_1200_observed": false
+}

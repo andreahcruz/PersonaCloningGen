@@ -21,7 +21,24 @@ _ROLE_TRIPLE = re.compile(
     rf"(?P<person>{_PERSON}),?\s+(?P<role>{_ROLE})\s+(?:of|at)\s+(?P<org>{_ORG})"
 )
 _ROLE_NO_ORG = re.compile(rf"(?P<person>{_PERSON}),?\s+(?:is\s+)?(?:the\s+)?(?P<role>{_ROLE})\b")
-_LEAK_MARKERS = ("[E1]", "[E2]", "Speaker:", "ALLOWED FACTUAL", "Prompt contract:")
+_LEAK_MARKERS = (
+    "[E1]",
+    "[E2]",
+    "[R1]",
+    "Speaker:",
+    "ALLOWED FACTUAL",
+    "Prompt contract:",
+    "SOURCE-SUPPORTED RELATIONSHIPS",
+    "NON-FACTUAL CONTEXT BUDGET",
+    "PRIMARY SOURCE-GROUNDED CLAIMS",
+    "VERIFIED RELATIONSHIPS",
+    "MULTI-HOP EVIDENCE PATHS",
+    "SUPPLEMENTARY GRAPH-DERIVED DESCRIPTIONS",
+    "FACTUALITY AND ATTRIBUTION",
+    "FINAL WRITING INSTRUCTION",
+    "Graph context contract:",
+)
+_GRAPH_TAG = re.compile(r"\[(?:P|D)\d+\]")
 _GRAM = 6
 
 
@@ -39,7 +56,7 @@ def embeds_topic(answer: str, topic: str) -> bool:
 def instruction_leak(answer: str) -> bool:
     """True when evidence labels or the prompt contract appear in the draft."""
     text = answer or ""
-    return any(marker in text for marker in _LEAK_MARKERS)
+    return any(marker in text for marker in _LEAK_MARKERS) or bool(_GRAPH_TAG.search(text))
 
 
 def _claim_text(claims: list[dict] | None) -> str:
@@ -53,9 +70,9 @@ def _grams(text: str, width: int = _GRAM) -> set[str]:
     return {" ".join(tokens[index:index + width]) for index in range(len(tokens) - width + 1)}
 
 
-def role_assertions(answer: str, claims: list[dict] | None) -> list[dict]:
+def role_assertions(answer: str, claims: list[dict] | None, extra_text: str = "") -> list[dict]:
     """Person-role-organization lines. A missing organization is not verifiable."""
-    evidence = _fold(_claim_text(claims))
+    evidence = _fold(_claim_text(claims) + "\n" + (extra_text or ""))
     found = []
     covered: list[tuple[int, int]] = []
     source = answer or ""
@@ -145,11 +162,13 @@ def assess_factual(
     evidence_status: str = "verified",
     hits: list[dict] | None = None,
     retrieval_on: bool = True,
+    extra_texts: list[str] | None = None,
 ) -> dict:
     """Score one draft. Lexical overlap is not an input and is not a result."""
     claims = claims or []
-    numeric = evaluate_numeric_grounding(answer, topic, claims, enabled=True)
-    roles = role_assertions(answer, claims)
+    extra = [text for text in (extra_texts or []) if text]
+    numeric = evaluate_numeric_grounding(answer, topic, claims, enabled=True, extra_texts=extra)
+    roles = role_assertions(answer, claims, extra_text="\n".join(extra))
     speaker = speaker_attribution(answer, claims)
     copying = evaluate_rag_source_copying(answer, hits, enabled=retrieval_on)
     accepted = evidence_status == "verified" and bool(claims)

@@ -1,0 +1,22 @@
+{
+  "edges": 2000,
+  "catalog_documents": 160,
+  "failed_ids": 8,
+  "accepted": 520,
+  "quarantined": 1,
+  "rejected": 1479,
+  "predicate_kinds": {
+    "overlap": 370,
+    "verbatim": 53,
+    "keyword_phrase": 97
+  },
+  "status_reasons": {
+    "generated_summary_not_supported_by_source": 1039,
+    "weak_entity_name": 293,
+    "endpoints_not_in_source": 126,
+    "unsupported_role_association": 7,
+    "misattributed_quotation": 6,
+    "omission_marker_span": 8,
+    "unresolved_conflict": 1
+  }
+}

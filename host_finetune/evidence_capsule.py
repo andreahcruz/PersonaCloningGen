@@ -429,9 +429,21 @@ def final_evidence_instruction(
     topic: str,
     claims: list[dict],
     evidence_status: str = "verified",
+    style_exemplars: list[str] | None = None,
+    relationships: list[dict] | None = None,
+    context_pad: str | None = None,
 ) -> str:
-    """Relabel prompt. The closer is only the writing request."""
+    """Relabel prompt. The closer is only the writing request.
+
+    Style exemplars are optional voice text. An empty list leaves the prompt
+    unchanged. They are not added to the factual evidence block.
+
+    ``relationships`` adds a separate source-supported block. ``None`` or an
+    empty list leaves the prompt unchanged. A context pad is a length control
+    and cannot be combined with relationship evidence.
+    """
     from host_finetune.compare_adapters import prompt_for
+    from host_finetune.train_only_index import format_voice_exemplars
 
     name = {
         "blog": "blog post",
@@ -439,7 +451,23 @@ def final_evidence_instruction(
         "x": "X post",
         "talk": "talk",
     }[medium["medium"]]
+    from host_finetune.graph_relationships import context_pad_block, relationship_prompt_block
+
     block = verified_claim_block(claims)
+    if relationships and context_pad:
+        raise ValueError("relationship evidence and a context pad cannot be combined")
+    supplement = ""
+    relation_block = relationship_prompt_block(relationships)
+    if relation_block:
+        supplement = "\n\n" + relation_block
+    elif context_pad:
+        pad_block = context_pad_block(context_pad)
+        if pad_block:
+            supplement = "\n\n" + pad_block
+    voice = format_voice_exemplars(style_exemplars)
+    opening = prompt_for(medium, topic)
+    if voice:
+        opening = f"{opening}\n\n{voice}"
     status_note = ""
     if evidence_status == "extraction_failed":
         status_note = (
@@ -453,7 +481,7 @@ def final_evidence_instruction(
             "Do not invent specific facts, numbers, names, or quotations.\n\n"
         )
     return (
-        f"{prompt_for(medium, topic)}\n\n"
+        f"{opening}\n\n"
         "Use only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\n"
         "Do not add factual numbers, percentages, dollar amounts, dates, customer "
         "counts, ARR, NRR, growth rates, or other specific metrics from memory.\n"
@@ -470,7 +498,8 @@ def final_evidence_instruction(
         "You may provide analysis, opinion, transitions, and stylistic commentary, "
         "but specific factual claims must come from the evidence.\n\n"
         f"{status_note}"
-        f"{block}\n\n"
+        f"{block}"
+        f"{supplement}\n\n"
         f"Now write the requested {name} about: {topic}"
     )
 
@@ -668,32 +697,89 @@ def corrective_retry_improves(
     return False
 
 
+def _without_voice_block(instruction: str, voice: str) -> str:
+    """Drop the voice slot before leak checks. Style text is not factual evidence."""
+    if not voice:
+        return instruction
+    if voice not in instruction:
+        raise ValueError("style block missing from the final prompt")
+    return instruction.replace(voice, "", 1)
+
+
 def media_jobs(
     topic: str,
     hits: list[dict],
     claims: list[dict],
     evidence_status: str = "verified",
+    style_for=None,
+    relationships: list[dict] | None = None,
+    context_pad: str | None = None,
 ) -> list[dict]:
-    """One verified set, four media. The copy gate is not applied to claims."""
+    """One verified set, four media. The copy gate is not applied to claims.
+
+    ``style_for`` is optional. When it is absent, prompts match the retrieval
+    path that does not load voice exemplars. Retrieved passages are still
+    refused outside the voice slot.
+    """
     from host_finetune.compare_adapters import MEDIUMS
+    from host_finetune.graph_relationships import relationship_prompt_block
+    from host_finetune.train_only_index import format_voice_exemplars
+
+    relation_block = relationship_prompt_block(relationships)
 
     raw = freeze_hits(hits)
     jobs = []
     for medium in MEDIUMS:
-        instruction = final_evidence_instruction(medium, topic, claims, evidence_status)
+        exemplars = style_for(medium["medium"]) if style_for is not None else None
+        voice = format_voice_exemplars(exemplars)
+        instruction = final_evidence_instruction(
+            medium,
+            topic,
+            claims,
+            evidence_status,
+            style_exemplars=exemplars,
+            relationships=relationships,
+            context_pad=context_pad,
+        )
+        checked = _without_voice_block(instruction, voice)
+        allowed_relation_text = set()
+        for relation in relationships or []:
+            for key in ("subject", "predicate", "object", "prompt_fact"):
+                value = relation.get(key)
+                if value:
+                    allowed_relation_text.add(str(value))
+            for qualifier in relation.get("qualifiers") or []:
+                allowed_relation_text.add(str(qualifier))
+            description = str(relation.get("graph_description") or "")
+            relation_zone = ""
+            if "SOURCE-SUPPORTED RELATIONSHIPS" in checked:
+                relation_zone = checked.split("SOURCE-SUPPORTED RELATIONSHIPS", 1)[1]
+            if (
+                description
+                and description not in str(relation.get("predicate") or "")
+                and description in relation_zone
+            ):
+                raise ValueError("graph summary leaked into the final prompt")
+            span = str(relation.get("support_span") or "")
+            if span and span not in allowed_relation_text and span in checked:
+                raise ValueError("relationship support span leaked into the final prompt")
+            for source_id in relation.get("source_document_ids") or []:
+                if source_id and source_id not in allowed_relation_text and source_id in checked:
+                    raise ValueError("relationship source id leaked into the final prompt")
         for hit in raw:
             text = (hit.get("text") or "").strip()
-            if text and text in instruction:
+            if text and text in checked:
                 raise ValueError("raw retrieved prose leaked into the final prompt")
         for claim in claims:
             if claim["claim"] not in instruction:
                 raise ValueError("verified claim missing from the final prompt")
             span = claim.get("support_span") or ""
-            if span and span not in claim["claim"] and span in instruction:
+            if span and span not in claim["claim"] and span in checked:
                 raise ValueError("support span leaked into the final prompt")
             source_id = claim.get("source_id") or ""
-            if source_id and source_id not in claim["claim"] and source_id in instruction:
+            if source_id and source_id not in claim["claim"] and source_id in checked:
                 raise ValueError("source id leaked into the final prompt")
+        cleaned = [text.strip() for text in (exemplars or []) if text and text.strip()]
         jobs.append(
             {
                 "medium": medium,
@@ -703,6 +789,11 @@ def media_jobs(
                 "evidence_block": verified_claim_block(claims),
                 "evidence_status": evidence_status,
                 "prompt_contract": PROMPT_CONTRACT,
+                "style_applied": bool(voice),
+                "style_exemplar_count": len(cleaned),
+                "relationships": list(relationships or []),
+                "relationship_block": relation_block if relationships else "",
+                "context_pad": bool(context_pad),
             }
         )
     return jobs

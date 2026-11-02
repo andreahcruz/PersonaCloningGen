@@ -1,0 +1,48 @@
+experiment_id: EXP-20261031-002-lightrag-resumable-index
+timestamp: 2026-10-31T21:00:00Z
+execution_commands:
+  - host_finetune\.venv\Scripts\python.exe -X utf8 -m pytest tests\test_indexing_checkpoint.py -q --tb=line
+  - host_finetune\.venv\Scripts\python.exe -X utf8 -m host_finetune.indexing_session --prepare
+  - host_finetune\.venv\Scripts\python.exe -X utf8 -m host_finetune.indexing_session --resume --validation-batch --max-documents 1 --max-document-seconds 300 --max-runtime-minutes 8
+  - host_finetune\.venv\Scripts\python.exe -X utf8 -m host_finetune.indexing_session --resume --validation-batch --max-documents 1 --max-document-seconds 300 --max-runtime-minutes 8
+  - host_finetune\.venv\Scripts\python.exe -X utf8 -m host_finetune.indexing_session --resume --validation-batch --max-documents 2 --max-document-seconds 420 --max-runtime-minutes 15
+  - host_finetune\.venv\Scripts\python.exe -X utf8 -m host_finetune.indexing_session --resume --validation-batch --max-documents 1 --max-document-seconds 900 --max-runtime-minutes 16
+  - host_finetune\.venv\Scripts\python.exe -X utf8 experiments\EXP-20261031-002-lightrag-resumable-index\raw\retrieval_smoke.py
+  - host_finetune\.venv\Scripts\python.exe -X utf8 -m host_finetune.indexing_session --resume --max-documents 5 --max-runtime-minutes 12 --max-document-seconds 420
+  - host_finetune\.venv\Scripts\python.exe -X utf8 experiments\EXP-20261031-002-lightrag-resumable-index\raw\seal_exhausted_timeout.py
+  - host_finetune\.venv\Scripts\python.exe -X utf8 experiments\EXP-20261031-002-lightrag-resumable-index\raw\mark_lightrag_failed.py
+git:
+  commit: 95db4f54a518cb273ea9118b10b9175eeb9668be
+  dirty: true
+data:
+  source_manifest: experiments/EXP-20261003-004-relabel-continuations/raw/split_assignments.jsonl
+  source_hashes:
+    graph_ready_v2_documents: d7bd01a01f288dda3582eddcfd2fc1539574f97b6e168b1124a0b43b76d9a118
+    selection_manifest_sha256: 8a17845713d0dc79bf9cde22c310d313ebb4054f8dd346fe8679b1246e183b49
+    graphml_sha256: 2ed56491d24ea4b5741f1d5ca55780eb6866caf8da24ad13045310c8fb40cd80
+    indexing_summary_sha256: 76915204d059a0d4d9bb6b44a5ee05478ce988f7f49b4c2afed0e246d960769a
+  processed_dataset_hash: 1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b
+  split_manifest_hash: 6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb
+  gold_eval_hash: d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e
+rag:
+  persona_profile_hash: n/a
+  chroma_collection: not opened
+  index_version_or_snapshot: artifacts/lightrag/model_f/storage_expand_v1
+  embedding_model: nomic-embed-text
+model:
+  model_name: llama3.1:latest
+  model_or_adapter_hash: ollama id 46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e
+  config: LightRAG 1.5.7; project entity guidance sha256 00cfc34109dd3fc18d077bd3104adc290745ee20a7687465be7b6dad08e75804; temperature 0; num_ctx 16384; chunk token size 400; library overlap default; gleaning 1; llm timeout 600; worker timeout 1200; configuration fingerprint 771baa30dd8f79c30c4c51f296385b2ec2c652b33ff1031a099a7e16f139260b; Relabel adapter not loaded
+  random_seed: n/a
+evaluation:
+  evaluator_commit: 95db4f54a518cb273ea9118b10b9175eeb9668be
+  judge_model: n/a
+  judge_config: persistence checks and one mix-mode context query; not a human relevance grade
+environment:
+  python_version: 3.11.9
+  package_snapshot: config/package_snapshot.txt
+  hardware: NVIDIA GeForce RTX 5070 Ti, 16303 MiB
+outputs:
+  raw: raw/retrieval_smoke.json
+  metrics: metrics/indexing_summary.json
+  warnings_and_failures: gd_002be28d89a6ca9924e73be2 was cancelled twice by the 420-second document limit during extraction and then sealed failed; chunk-vector residue remains; the pilot store was not copied

@@ -1,0 +1,31 @@
+{
+  "query": "What changed at SaaStr Annual between last year and this year?",
+  "mode": "mix",
+  "num_ctx": 16384,
+  "status": "success",
+  "message": "Query processed successfully",
+  "hit_count": 3,
+  "hits": [
+    {
+      "graph_document_id": "gd_09e160ccf7663729c581d1e2",
+      "medium": "blog",
+      "source_path": "jasonlemkin_blog.jsonl"
+    },
+    {
+      "graph_document_id": "gd_014b45cb99cfee97ee337556",
+      "medium": "x",
+      "source_path": "jasonlk_originals.jsonl"
+    },
+    {
+      "graph_document_id": "gd_756878d4d219336489c49168",
+      "medium": "blog",
+      "source_path": "jasonlemkin_blog.jsonl"
+    }
+  ],
+  "relationships": {
+    "accepted": 6,
+    "quarantined": 0,
+    "rejected": 11
+  },
+  "excluded_count": 36
+}

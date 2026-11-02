@@ -1,0 +1,82 @@
+{
+  "experiment_id": "EXP-20261030-012-fixed-style-ablation",
+  "status": "MEASURED",
+  "recommendation": "keep_fixed_style_off",
+  "reason": "On 90 matched topic-medium cells, style exemplars did not improve fixed-length voice. Blog writing quality was lower. Topic echoes rose. One LinkedIn draft pasted a style exemplar and the style instructions.",
+  "matched_pairs": {
+    "blog": 30,
+    "linkedin": 30,
+    "x": 30,
+    "talk": 0,
+    "same_evidence": 90,
+    "same_hit_ids": 90,
+    "same_seed": 90
+  },
+  "talk_style_on": "unsupported_no_exemplars",
+  "counts_of_30": {
+    "blog": {
+      "factual_pass": [15, 15],
+      "topic_echo": [4, 5],
+      "unsupported_number": [14, 13],
+      "completion": [29, 29],
+      "format": [30, 27],
+      "grounding": [3, 6],
+      "eligible": [3, 4],
+      "style_span_at_least_8": [0, 1]
+    },
+    "linkedin": {
+      "factual_pass": [14, 12],
+      "topic_echo": [16, 21],
+      "unsupported_number": [15, 18],
+      "completion": [16, 14],
+      "format": [29, 29],
+      "grounding": [5, 5],
+      "eligible": [2, 3],
+      "style_span_at_least_8": [0, 1]
+    },
+    "x": {
+      "factual_pass": [22, 23],
+      "topic_echo": [22, 25],
+      "unsupported_number": [7, 6],
+      "completion": [16, 17],
+      "format": [30, 30],
+      "grounding": [11, 7],
+      "eligible": [5, 3],
+      "style_span_at_least_8": [0, 0]
+    }
+  },
+  "count_order": ["style_off", "style_on"],
+  "writing_mean": {
+    "all_matched_on_minus_off": {"n": 90, "mean_diff": -0.12407, "ci_low": -0.29814, "ci_high": 0.059312, "p_value": 0.178411},
+    "blog_on_minus_off": {"n": 30, "mean_diff": -0.29999, "ci_low": -0.549983, "ci_high": -0.07222, "p_value": 0.018491},
+    "linkedin_on_minus_off": {"n": 30, "mean_diff": -0.005557, "ci_low": -0.355702, "ci_high": 0.416809, "p_value": 0.985007},
+    "x_on_minus_off": {"n": 30, "mean_diff": -0.066663, "ci_low": -0.27777, "ci_high": 0.172234, "p_value": 0.583208},
+    "means": {"blog": [3.667, 3.367], "linkedin": [3.617, 3.611], "x": [2.567, 2.5], "talk_off_only": 3.589}
+  },
+  "voice_fixed_blog_100": {
+    "real_posts_mean": 1.1096,
+    "mean_off_scored": 1.1296,
+    "mean_on_scored": 1.0967,
+    "scored_off": 27,
+    "scored_on": 23,
+    "paired_n": 22,
+    "paired_on_minus_off": -0.000355,
+    "ci_low": -0.109267,
+    "ci_high": 0.098803,
+    "p_value": 0.998501
+  },
+  "voice_fixed_blog_150": {
+    "real_posts_mean": 0.8626,
+    "paired_n": 18,
+    "paired_on_minus_off": 0.03131,
+    "ci_low": -0.051476,
+    "ci_high": 0.127206,
+    "p_value": 0.515242,
+    "scored_off": 26,
+    "scored_on": 20
+  },
+  "mean_added_prompt_tokens": {"blog": 522.67, "linkedin": 279.93, "x": 173.17, "all_matched": 325.26},
+  "mean_words": {"blog": [241.1, 195.73], "linkedin": [187.37, 186.8], "x": [73.77, 67.57]},
+  "mean_latency_seconds": {"blog": [21.62, 16.78], "linkedin": [16.93, 18.09], "x": [8.2, 6.96]},
+  "sft_retrain": "not_justified"
+}

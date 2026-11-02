@@ -108,6 +108,15 @@ MEDIUMS = (
     },
 )
 MAX_SEQ_LENGTH = 2048
+
+
+def require_context_room(prompt_tokens: int, max_new_tokens: int) -> None:
+    """Refuse a sample that would pass the configured window. Do not truncate."""
+    if prompt_tokens + max_new_tokens > MAX_SEQ_LENGTH:
+        raise RuntimeError(
+            f"refusing to generate: prompt tokens {prompt_tokens} + max_new_tokens "
+            f"{max_new_tokens} exceed {MAX_SEQ_LENGTH}. Evidence was not truncated."
+        )
 TEMPERATURE = 0.7
 TOP_P = 0.9
 REPETITION_PENALTY = 1.15
@@ -284,6 +293,7 @@ def _complete_once(model, tokenizer, instruction: str, seed: int, max_new_tokens
         add_generation_prompt=True,
     )
     encoded = tokenizer(prompt, return_tensors="pt")
+    require_context_room(int(encoded["input_ids"].shape[1]), max_new_tokens)
     input_ids = encoded["input_ids"].to(model.device)
     attention = encoded.get("attention_mask")
     if attention is not None:
@@ -465,9 +475,15 @@ def _base_diagnostic(model, tokenizer, instruction: str, seed: int, max_new_toke
     }
 
 
-def _attach_numeric(completion: dict, topic: str, claims: list[dict], enabled: bool) -> dict:
+def _attach_numeric(
+    completion: dict,
+    topic: str,
+    claims: list[dict],
+    enabled: bool,
+    extra_texts: list[str] | None = None,
+) -> dict:
     completion["numeric"] = evaluate_numeric_grounding(
-        completion["answer"], topic, claims, enabled=enabled
+        completion["answer"], topic, claims, enabled=enabled, extra_texts=extra_texts
     )
     return completion
 
@@ -588,16 +604,8 @@ def _bnb_flag(model, name: str) -> bool:
     return any(getattr(item, name, False) for item in candidates if item is not None)
 
 
-def generate(
-    adapter: Path,
-    gold: list[dict],
-    retriever=None,
-    style_for=None,
-    seed_base: int = GENERATION_SEED,
-    topic_rows: list[tuple[int, dict]] | None = None,
-    quantization: str = "4bit",
-) -> tuple[list[dict], dict]:
-    import torch
+def load_generator(adapter: Path, quantization: str = "4bit"):
+    """Load the frozen adapter for inference. The caller unloads it."""
     from unsloth import FastLanguageModel
 
     if quantization == "8bit":
@@ -627,113 +635,182 @@ def generate(
     print(f"quantization load {json.dumps(load_report)}", flush=True)
     if quantization == "8bit" and not load_report["is_loaded_in_8bit"]:
         raise RuntimeError("8-bit load was requested but the model is not loaded in 8-bit")
+    if quantization == "4bit" and not load_report["is_loaded_in_4bit"]:
+        raise RuntimeError("4-bit load was requested but the model is not loaded in 4-bit")
+    return model, tokenizer, load_report
+
+
+def generate(
+    adapter: Path,
+    gold: list[dict],
+    retriever=None,
+    style_for=None,
+    seed_base: int = GENERATION_SEED,
+    topic_rows: list[tuple[int, dict]] | None = None,
+    quantization: str = "4bit",
+    loaded: tuple | None = None,
+    unload: bool = True,
+    evidence_cache: dict | None = None,
+    on_trace=None,
+    should_stop=None,
+    media_allow: set[str] | None = None,
+    relationship_for=None,
+    context_pad_for=None,
+    graph_context_for=None,
+) -> tuple[list[dict], dict]:
+    import time
+
+    import torch
+
+    if relationship_for is not None and context_pad_for is not None:
+        raise ValueError("relationship evidence and a context pad cannot be combined")
+    if graph_context_for is not None and (relationship_for is not None or context_pad_for is not None):
+        raise ValueError("model f graph context cannot be combined with relationship evidence or a context pad")
+    own_model = loaded is None
+    if own_model:
+        model, tokenizer, load_report = load_generator(adapter, quantization)
+    else:
+        model, tokenizer, load_report = loaded
     if retriever is not None:
         require_adapter_toggle(model)
     traces = []
     retrieval_enabled = retriever is not None
     indexed = list(enumerate(gold)) if topic_rows is None else topic_rows
-    for topic_index, row in indexed:
-        if not retrieval_enabled:
-            for medium_index, medium in enumerate(MEDIUMS):
-                seed = seed_base + topic_index * len(MEDIUMS) + medium_index
-                instruction, payload = instruction_for_request(
-                    medium, row["topic"], None, style_for
-                )
-                first = _attach_numeric(
-                    _complete_once(
-                        model, tokenizer, instruction, seed, medium["max_new_tokens"], [], False
-                    ),
-                    row["topic"],
-                    [],
-                    False,
-                )
-                _append_generation(
-                    traces, row, medium, instruction, payload, first, None, False
-                )
-            continue
-        payload = retriever(row["topic"], MEDIUMS[0]["medium"])
-        hits = [
-            hit for hit in (payload or {}).get("hits") or []
-            if (hit.get("text") or "").strip()
-        ]
-        frozen = freeze_hits(hits)
-        payload = {**payload, "hits": frozen}
-        print(f"  extract {row['id']} hits={[hit.get('id') for hit in frozen]}", flush=True)
-        try:
-            evidence_record = _prepare_evidence(model, tokenizer, row["topic"], frozen)
-        except EvidenceStageError as exc:
+    stopped = False
+    try:
+        for topic_index, row in indexed:
+            if should_stop is not None and should_stop():
+                stopped = True
+                break
+            if not retrieval_enabled:
+                for medium_index, medium in enumerate(MEDIUMS):
+                    if media_allow is not None and medium["medium"] not in media_allow:
+                        continue
+                    if should_stop is not None and should_stop():
+                        stopped = True
+                        break
+                    seed = seed_base + topic_index * len(MEDIUMS) + medium_index
+                    instruction, payload = instruction_for_request(
+                        medium, row["topic"], None, style_for
+                    )
+                    medium_started = time.perf_counter()
+                    first = _attach_numeric(
+                        _complete_once(
+                            model, tokenizer, instruction, seed, medium["max_new_tokens"], [], False
+                        ),
+                        row["topic"],
+                        [],
+                        False,
+                    )
+                    _append_generation(
+                        traces, row, medium, instruction, payload, first, None, False,
+                        {"latency_seconds": round(time.perf_counter() - medium_started, 3)},
+                    )
+                    if on_trace is not None:
+                        on_trace(traces[-1])
+                if stopped:
+                    break
+                continue
+            payload = retriever(row["topic"], MEDIUMS[0]["medium"])
+            hits = [
+                hit for hit in (payload or {}).get("hits") or []
+                if (hit.get("text") or "").strip()
+            ]
+            frozen = freeze_hits(hits)
+            payload = {**payload, "hits": frozen}
+            cache_key = row.get("id") or row["topic"]
+            if evidence_cache is not None and cache_key in evidence_cache:
+                evidence_record = evidence_cache[cache_key]
+                print(f"  reuse evidence {row['id']}", flush=True)
+            else:
+                print(f"  extract {row['id']} hits={[hit.get('id') for hit in frozen]}", flush=True)
+                try:
+                    evidence_record = _prepare_evidence(model, tokenizer, row["topic"], frozen)
+                except EvidenceStageError as exc:
+                    print(
+                        f"evidence stage failed for {row['id']}: {exc.reason}; "
+                        "skipping generation for this topic",
+                        flush=True,
+                    )
+                    traces.append({
+                        **row,
+                        "medium": None,
+                        "format": None,
+                        "prompt": "",
+                        "answer": "",
+                        "query": row["topic"],
+                        "evidence_rejected": True,
+                        "backend": "unsloth",
+                        **retrieval_trace_fields(payload, "", True),
+                        **evidence_provenance(frozen, exc.record),
+                    })
+                    if on_trace is not None:
+                        on_trace(traces[-1])
+                    continue
+                if evidence_cache is not None:
+                    evidence_cache[cache_key] = evidence_record
             print(
-                f"evidence stage failed for {row['id']}: {exc.reason}; "
-                "skipping generation for this topic",
+                f"  evidence {row['id']} accepted={len(evidence_record['verified'])} "
+                f"rejected={len(evidence_record['validation_rejected'])} "
+                f"extract_s={evidence_record['extraction_seconds']}",
                 flush=True,
             )
-            traces.append({
-                **row,
-                "medium": None,
-                "format": None,
-                "prompt": "",
-                "answer": "",
-                "query": row["topic"],
-                "evidence_rejected": True,
-                "backend": "unsloth",
-                **retrieval_trace_fields(payload, "", True),
-                **evidence_provenance(frozen, exc.record),
-            })
-            continue
-        print(
-            f"  evidence {row['id']} accepted={len(evidence_record['verified'])} "
-            f"rejected={len(evidence_record['validation_rejected'])} "
-            f"extract_s={evidence_record['extraction_seconds']}",
-            flush=True,
-        )
-        jobs = media_jobs(
-            row["topic"],
-            frozen,
-            evidence_record["verified"],
-            evidence_record.get("evidence_status") or "verified",
-        )
-        if len({job["evidence_block"] for job in jobs}) != 1:
-            raise RuntimeError("media reused more than one evidence set")
-        provenance = evidence_provenance(frozen, evidence_record)
-        provenance["prompt_contract"] = jobs[0]["prompt_contract"] if jobs else None
-        for medium_index, job in enumerate(jobs):
-            seed = seed_base + topic_index * len(MEDIUMS) + medium_index
-            instruction = job["instruction"]
-            first = _attach_numeric(
-                _complete_once(
-                    model,
-                    tokenizer,
-                    instruction,
-                    seed,
-                    job["medium"]["max_new_tokens"],
-                    job["hits"],
-                    True,
-                ),
-                row["topic"],
-                job["claims"],
-                True,
-            )
-            second = None
-            stored_instruction = instruction
-            status = job.get("evidence_status") or "verified"
+            relation_rows = relationship_for(row, payload) if relationship_for is not None else None
+            context_pad = context_pad_for(row, payload) if context_pad_for is not None else None
+            graph_plan = graph_context_for(row, payload) if graph_context_for is not None else None
+            if graph_plan is not None:
+                from host_finetune.model_f_context.pipeline import context_media_jobs
 
-            def _facts(answer: str) -> dict:
-                return assess_factual(
-                    answer,
+                jobs = context_media_jobs(
                     row["topic"],
-                    job["claims"],
-                    evidence_status=status,
-                    hits=job["hits"],
+                    frozen,
+                    evidence_record["verified"],
+                    evidence_record.get("evidence_status") or "verified",
+                    graph_plan,
+                    style_for=style_for,
+                    count_tokens=graph_plan.get("count_tokens"),
+                    budget=graph_plan.get("experiment_budget"),
                 )
-
-            if final_response(first["report"]) == "copy_retry":
-                print(f"  copy retry {row['id']} {job['medium']['medium']}", flush=True)
-                candidate = _attach_numeric(
+                relation_texts = []
+            else:
+                jobs = media_jobs(
+                    row["topic"],
+                    frozen,
+                    evidence_record["verified"],
+                    evidence_record.get("evidence_status") or "verified",
+                    style_for=style_for,
+                    relationships=relation_rows,
+                    context_pad=context_pad,
+                )
+                relation_texts = []
+                for item in relation_rows or []:
+                    if item.get("use_in_generation") and item.get("prompt_fact"):
+                        relation_texts.append(str(item["prompt_fact"]))
+                    relation_texts.extend(str(qualifier) for qualifier in (item.get("qualifiers") or []))
+            base_relation_texts = list(relation_texts)
+            if len({job["evidence_block"] for job in jobs}) != 1:
+                raise RuntimeError("media reused more than one evidence set")
+            provenance = evidence_provenance(frozen, evidence_record)
+            provenance["prompt_contract"] = jobs[0]["prompt_contract"] if jobs else None
+            for medium_index, job in enumerate(jobs):
+                if "grounding_texts" in job:
+                    relation_texts = list(job["grounding_texts"])
+                else:
+                    relation_texts = list(base_relation_texts)
+                if media_allow is not None and job["medium"]["medium"] not in media_allow:
+                    continue
+                if should_stop is not None and should_stop():
+                    stopped = True
+                    break
+                seed = seed_base + topic_index * len(MEDIUMS) + medium_index
+                instruction = job["instruction"]
+                medium_started = time.perf_counter()
+                first = _attach_numeric(
                     _complete_once(
                         model,
                         tokenizer,
                         instruction,
-                        retry_seed(seed),
+                        seed,
                         job["medium"]["max_new_tokens"],
                         job["hits"],
                         True,
@@ -741,28 +818,29 @@ def generate(
                     row["topic"],
                     job["claims"],
                     True,
+                    relation_texts,
                 )
-                if candidate["report"].get("pass") and not grounding_regression(
-                    _facts(first["answer"]), _facts(candidate["answer"])
-                ):
-                    second = candidate
-            else:
-                reason = draft_retry_reason(
-                    first["answer"],
-                    row["topic"],
-                    job["medium"]["medium"],
-                    first["numeric"],
-                    job["claims"],
-                    status,
-                )
-                if reason:
-                    print(f"  {reason} retry {row['id']} {job['medium']['medium']}", flush=True)
-                    augmented = instruction + "\n\n" + corrective_addendum(reason, first["numeric"])
+                second = None
+                stored_instruction = instruction
+                status = job.get("evidence_status") or "verified"
+
+                def _facts(answer: str) -> dict:
+                    return assess_factual(
+                        answer,
+                        row["topic"],
+                        job["claims"],
+                        evidence_status=status,
+                        hits=job["hits"],
+                        extra_texts=relation_texts,
+                    )
+
+                if final_response(first["report"]) == "copy_retry":
+                    print(f"  copy retry {row['id']} {job['medium']['medium']}", flush=True)
                     candidate = _attach_numeric(
                         _complete_once(
                             model,
                             tokenizer,
-                            augmented,
+                            instruction,
                             retry_seed(seed),
                             job["medium"]["max_new_tokens"],
                             job["hits"],
@@ -771,27 +849,81 @@ def generate(
                         row["topic"],
                         job["claims"],
                         True,
+                        relation_texts,
                     )
-                    improves = corrective_retry_improves(
-                        reason,
-                        first["answer"],
-                        candidate["answer"],
-                        row["topic"],
-                        first["numeric"],
-                        candidate["numeric"],
-                        job["claims"],
-                    )
-                    if candidate["report"].get("pass") and improves and not grounding_regression(
+                    if candidate["report"].get("pass") and not grounding_regression(
                         _facts(first["answer"]), _facts(candidate["answer"])
                     ):
                         second = candidate
-                        stored_instruction = augmented
-            _append_generation(
-                traces, row, job["medium"], stored_instruction, payload, first, second, True, dict(provenance)
-            )
-    del model
-    torch.cuda.empty_cache()
-    return traces, load_report
+                else:
+                    reason = draft_retry_reason(
+                        first["answer"],
+                        row["topic"],
+                        job["medium"]["medium"],
+                        first["numeric"],
+                        job["claims"],
+                        status,
+                    )
+                    if reason:
+                        print(f"  {reason} retry {row['id']} {job['medium']['medium']}", flush=True)
+                        augmented = instruction + "\n\n" + corrective_addendum(reason, first["numeric"])
+                        candidate = _attach_numeric(
+                            _complete_once(
+                                model,
+                                tokenizer,
+                                augmented,
+                                retry_seed(seed),
+                                job["medium"]["max_new_tokens"],
+                                job["hits"],
+                                True,
+                            ),
+                            row["topic"],
+                            job["claims"],
+                            True,
+                            relation_texts,
+                        )
+                        improves = corrective_retry_improves(
+                            reason,
+                            first["answer"],
+                            candidate["answer"],
+                            row["topic"],
+                            first["numeric"],
+                            candidate["numeric"],
+                            job["claims"],
+                        )
+                        if candidate["report"].get("pass") and improves and not grounding_regression(
+                            _facts(first["answer"]), _facts(candidate["answer"])
+                        ):
+                            second = candidate
+                            stored_instruction = augmented
+                extra = dict(provenance)
+                extra["fixed_style_enabled"] = style_for is not None
+                extra["style_applied"] = bool(job.get("style_applied"))
+                extra["style_exemplar_count"] = int(job.get("style_exemplar_count") or 0)
+                if relationship_for is not None:
+                    extra["graph_relationship_count"] = len(relation_texts)
+                    extra["graph_relationships"] = list(relation_rows or [])
+                    extra["graph_relationship_block"] = job.get("relationship_block") or ""
+                if context_pad_for is not None:
+                    extra["context_pad"] = True
+                    extra["context_pad_text"] = context_pad or ""
+                if graph_plan is not None:
+                    extra["model_f_context"] = job.get("model_f_context")
+                    extra["graph_context_contract"] = job.get("graph_context_contract")
+                    extra["graph_relationship_count"] = len(relation_texts)
+                extra["latency_seconds"] = round(time.perf_counter() - medium_started, 3)
+                _append_generation(
+                    traces, row, job["medium"], stored_instruction, payload, first, second, True, extra
+                )
+                if on_trace is not None:
+                    on_trace(traces[-1])
+            if stopped:
+                break
+        return traces, load_report
+    finally:
+        if own_model and unload:
+            del model
+            torch.cuda.empty_cache()
 
 
 def _paired(traces: list[dict]) -> dict:
@@ -961,6 +1093,24 @@ def parse_args() -> argparse.Namespace:
         help="Cap LightRAG chunks from one graph document. Dense retrieval is unchanged.",
     )
     parser.add_argument("--lightrag-model", default="llama3.1:latest")
+    parser.add_argument(
+        "--graph-relationships",
+        action="store_true",
+        help=(
+            "Add source-verified LightRAG relationships as optional evidence. "
+            "Off by default. Dense Model E is unchanged. The frozen Relabel adapter is unchanged."
+        ),
+    )
+    parser.add_argument(
+        "--model-f-context",
+        choices=("off", "source", "relationships", "descriptions", "multihop"),
+        default="off",
+        help=(
+            "Model F graph-context profile. Off keeps the current prompt. "
+            "source, relationships, descriptions, and multihop are evaluation "
+            "configurations of this same Model F path. Requires LightRAG retrieval."
+        ),
+    )
     parser.add_argument(
         "--lightrag-fallback",
         choices=("error", "dense"),
@@ -1147,6 +1297,7 @@ def write_parameters(
     evidence_budget: int | None = None,
     lightrag_fallback: str = "error",
     frozen_retrieval: str | None = None,
+    model_f_context: str = "off",
 ) -> None:
     payload = {
         "experiment_id": out.name,
@@ -1223,6 +1374,7 @@ def write_parameters(
             ) if retrieval else None,
             "lightrag_fallback": lightrag_fallback if retrieval and retrieval_backend == "lightrag" else None,
             "frozen_retrieval": frozen_retrieval if retrieval else None,
+            "model_f_context": model_f_context if retrieval else "off",
             "note": "Factual retrieval searches all train-owned media. Output medium still selects the generation instruction.",
         },
         "fixed_style": {
@@ -1420,6 +1572,7 @@ def main() -> None:
         evidence_budget=args.evidence_budget,
         lightrag_fallback=args.lightrag_fallback,
         frozen_retrieval=str(args.frozen_retrieval) if args.frozen_retrieval else None,
+        model_f_context=args.model_f_context,
     )
     if args.freeze_retrieval_out and args.frozen_retrieval:
         raise SystemExit("choose either --freeze-retrieval-out or --frozen-retrieval")
@@ -1452,6 +1605,25 @@ def main() -> None:
     }
     for name, adapter in adapter_list(args.adapters):
         print(f"=== {name} {adapter}", flush=True)
+        from host_finetune.graph_relationships import generation_relationships
+        from host_finetune.model_f_context import graph_context_callback
+
+        context_for = graph_context_callback(args.model_f_context)
+        if context_for is not None and args.graph_relationships:
+            raise SystemExit(
+                "Use either --graph-relationships or --model-f-context. "
+                "The graph-context profiles already include source-verified relationships."
+            )
+        if context_for is not None and (not args.retrieval or args.retrieval_backend != "lightrag"):
+            raise SystemExit(
+                "--model-f-context is a Model F option. "
+                "Pass --retrieval --retrieval-backend lightrag. Dense Model E is unchanged."
+            )
+
+        def _relationship_for(topic_row, retrieval_payload):
+            del topic_row
+            return generation_relationships(retrieval_payload)
+
         traces, load_report = generate(
             adapter,
             gold,
@@ -1460,6 +1632,8 @@ def main() -> None:
             seed_base=args.seed_base,
             topic_rows=plan,
             quantization=args.quantization,
+            relationship_for=_relationship_for if args.graph_relationships else None,
+            graph_context_for=context_for,
         )
         load_reports[name] = load_report
         (out / "config" / "quantization_load.json").write_text(

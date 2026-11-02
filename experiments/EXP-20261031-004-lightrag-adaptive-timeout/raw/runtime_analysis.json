@@ -1,0 +1,23 @@
+{
+  "completed_documents": 73,
+  "completed_seconds": 1173.2,
+  "completed_median_seconds": 7.2,
+  "completed_p75_seconds": 14.4,
+  "completed_p90_seconds": 26.7,
+  "completed_p95_seconds": 33.4,
+  "completed_p99_seconds": 128.1,
+  "completed_max_seconds": 356.4,
+  "unsuccessful_attempts": 6,
+  "unsuccessful_seconds": 2616.7,
+  "unsuccessful_share_of_attempt_time": 0.69,
+  "timeout_shape": "all six unsuccessful attempts are process_interruption at about 436 seconds",
+  "completed_after_an_earlier_noncomplete_attempt": 2,
+  "slow_success": {
+    "document_id": "gd_0cf4677ed9c64844dce49e18",
+    "words": 262,
+    "estimated_chunks": 1,
+    "indexed_chunks": 2,
+    "runtime_seconds": 356.4,
+    "embed_seconds": 2.422
+  }
+}

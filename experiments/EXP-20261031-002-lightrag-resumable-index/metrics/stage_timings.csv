@@ -1,0 +1,11 @@
+document_id,attempt_number,status,wall_seconds_measured,llm_seconds_measured,embed_seconds_measured,llm_kind_seconds_estimated,entity_anchor_count,relation_anchor_count,embed_texts_measured,vector_dim,error_category
+gd_09e160ccf7663729c581d1e2,1,completed,25.215,21.59,3.5,"{""extraction_estimated"": 12.323, ""extraction_gleaning_estimated"": 9.267}",24,19,45,768,
+gd_0270bf4a3abebc35861d117f,1,completed,5.223,3.78,1.331,"{""extraction_gleaning_estimated"": 1.755, ""merge_summary_estimated"": 2.025}",4,6,11,768,
+gd_014b45cb99cfee97ee337556,1,completed,3.552,2.131,1.313,"{""extraction_estimated"": 1.159, ""extraction_gleaning_estimated"": 0.972}",3,2,6,768,
+gd_756878d4d219336489c49168,1,interrupted,436.127,11.794,1.03,"{""extraction_estimated"": 6.524, ""extraction_gleaning_estimated"": 5.27}",0,0,1,768,process_interruption
+gd_756878d4d219336489c49168,1,reconciled,,,,{},,,,,process_interruption
+gd_756878d4d219336489c49168,2,completed,15.291,11.786,3.355,"{""extraction_estimated"": 8.867, ""extraction_gleaning_estimated"": 2.919}",21,14,38,768,
+gd_0e1afddaca819c17829b209e,1,completed,8.34,6.844,1.363,"{""extraction_estimated"": 4.051, ""extraction_gleaning_estimated"": 2.793}",11,0,12,768,
+gd_002be28d89a6ca9924e73be2,1,interrupted,436.12,0.0,1.035,{},0,0,1,768,process_interruption
+gd_002be28d89a6ca9924e73be2,2,interrupted,436.07,0.0,1.491,{},0,0,2,768,process_interruption
+gd_002be28d89a6ca9924e73be2,2,reconciled,,,,{},,,,,process_interruption

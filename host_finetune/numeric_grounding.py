@@ -139,11 +139,17 @@ def numbers_in(text: str) -> set[str]:
     return {item["canonical"] for item in extract_quantities(text)}
 
 
-def allowed_numbers(topic: str, claims: list[dict]) -> set[str]:
-    """Topic text plus accepted claim text. Support spans are not included."""
+def allowed_numbers(topic: str, claims: list[dict], extra_texts: list[str] | None = None) -> set[str]:
+    """Topic text plus accepted claim text. Support spans are not included.
+
+    ``extra_texts`` is optional generator evidence, such as a source-supported
+    relationship line. Omitting it leaves the allowed set unchanged.
+    """
     allowed = numbers_in(topic)
     for claim in claims:
         allowed |= numbers_in(claim.get("claim") or "")
+    for text in extra_texts or []:
+        allowed |= numbers_in(text)
     return allowed
 
 
@@ -153,6 +159,7 @@ def evaluate_numeric_grounding(
     claims: list[dict] | None,
     *,
     enabled: bool,
+    extra_texts: list[str] | None = None,
 ) -> dict:
     """Fail when the answer introduces a quantity the evidence does not allow."""
     if not enabled:
@@ -164,7 +171,7 @@ def evaluate_numeric_grounding(
             "values": [],
             "unsupported": [],
         }
-    allowed = allowed_numbers(topic, claims or [])
+    allowed = allowed_numbers(topic, claims or [], extra_texts)
     values = extract_quantities(answer)
     unsupported = [item for item in values if item["canonical"] not in allowed]
     return {

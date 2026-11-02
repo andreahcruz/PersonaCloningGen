@@ -1,0 +1,78 @@
+{
+  "arms": {
+    "historical_blog_token_pad": {
+      "citation_leak_rate": 0.0,
+      "faithfulness_ci95": [
+        0.3755282641185388,
+        0.9637768390302125
+      ],
+      "faithfulness_rate": 0.8,
+      "known_matrix_arm": false,
+      "mean_word_count": 149.0,
+      "mrr_mean": null,
+      "n": 5,
+      "ndcg_at_4_mean": null,
+      "numeric_pass_rate": 0.0,
+      "precision_at_4_mean": null,
+      "provenance_completeness_mean": 1.0,
+      "recall_at_4_mean": null,
+      "source_diversity_mean": 1.0
+    },
+    "historical_hybrid_passages": {
+      "citation_leak_rate": 0.05,
+      "faithfulness_ci95": [
+        0.43285051021946463,
+        0.8188104521320554
+      ],
+      "faithfulness_rate": 0.65,
+      "known_matrix_arm": false,
+      "mean_word_count": 151.55,
+      "mrr_mean": null,
+      "n": 20,
+      "ndcg_at_4_mean": null,
+      "numeric_pass_rate": 0.25,
+      "precision_at_4_mean": null,
+      "provenance_completeness_mean": 1.0,
+      "recall_at_4_mean": null,
+      "source_diversity_mean": 1.0
+    },
+    "historical_hybrid_plus_relationships": {
+      "citation_leak_rate": 0.3,
+      "faithfulness_ci95": [
+        0.43285051021946463,
+        0.8188104521320554
+      ],
+      "faithfulness_rate": 0.65,
+      "known_matrix_arm": false,
+      "mean_word_count": 169.2,
+      "mrr_mean": null,
+      "n": 20,
+      "ndcg_at_4_mean": null,
+      "numeric_pass_rate": 0.42857142857142855,
+      "precision_at_4_mean": null,
+      "provenance_completeness_mean": 1.0,
+      "recall_at_4_mean": null,
+      "source_diversity_mean": 1.0
+    },
+    "historical_matched_dense_preview": {
+      "citation_leak_rate": 0.1,
+      "faithfulness_ci95": [
+        0.4810232237710206,
+        0.854524726031006
+      ],
+      "faithfulness_rate": 0.7,
+      "known_matrix_arm": false,
+      "mean_word_count": 138.95,
+      "mrr_mean": null,
+      "n": 20,
+      "ndcg_at_4_mean": null,
+      "numeric_pass_rate": 0.25,
+      "precision_at_4_mean": null,
+      "provenance_completeness_mean": 1.0,
+      "recall_at_4_mean": null,
+      "source_diversity_mean": 1.0
+    }
+  },
+  "composite_score": null,
+  "reason": "Retrieval, faithfulness, numeric checks, and latency stay separate."
+}

@@ -373,3 +373,36 @@ def test_topic_echo_and_unsupported_number_request_one_retry():
     assert draft_retry_reason(long, "pricing", "blog", numeric) == "unsupported_number"
     assert corrective_retry_improves("topic_echo", question, long, question, None, None)
     assert not corrective_retry_improves("topic_echo", question, question, question, None, None)
+
+
+def test_style_exemplars_are_voice_and_do_not_change_the_evidence_block():
+    hits = [{"id": "train_10049", "text": RAW}]
+    claims = [_item("train_10049", CLAIM, SPAN)]
+    plain = media_jobs("Monday.com ARR", hits, claims)
+    styled = media_jobs(
+        "Monday.com ARR",
+        hits,
+        claims,
+        style_for=lambda medium: ["Short voice line."] if medium == "blog" else [],
+    )
+    assert plain[0]["instruction"] == final_evidence_instruction(MEDIUMS[0], "Monday.com ARR", claims)
+    assert styled[0]["instruction"] != plain[0]["instruction"]
+    assert "Style examples from train-owned source text." in styled[0]["instruction"]
+    assert "They are not evidence for claims." in styled[0]["instruction"]
+    assert "[Style 1]\nShort voice line." in styled[0]["instruction"]
+    assert styled[0]["evidence_block"] == plain[0]["evidence_block"]
+    assert styled[0]["style_applied"] is True
+    assert styled[1]["style_applied"] is False
+    assert styled[1]["instruction"] == plain[1]["instruction"]
+    factual_side = styled[0]["instruction"].split("[Style 1]")[0] + styled[0]["instruction"].split("Short voice line.")[1]
+    assert RAW not in factual_side
+    assert SPAN not in factual_side
+    voice_that_contains_passage = media_jobs(
+        "Monday.com ARR",
+        hits,
+        claims,
+        style_for=lambda _medium: [RAW],
+    )
+    assert RAW in voice_that_contains_passage[0]["instruction"]
+    assert voice_that_contains_passage[0]["evidence_block"] == plain[0]["evidence_block"]
+    assert "[E1]" in voice_that_contains_passage[0]["instruction"]

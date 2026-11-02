@@ -1,0 +1,66 @@
+{
+  "arms": {
+    "historical_dense_retrieval": {
+      "citation_leak_rate": null,
+      "faithfulness_ci95": null,
+      "faithfulness_rate": null,
+      "known_matrix_arm": false,
+      "mean_word_count": null,
+      "mrr_mean": null,
+      "n": 12,
+      "ndcg_at_4_mean": null,
+      "numeric_pass_rate": null,
+      "precision_at_4_mean": null,
+      "provenance_completeness_mean": 1.0,
+      "recall_at_4_mean": null,
+      "source_diversity_mean": 1.0
+    },
+    "historical_lightrag_hybrid": {
+      "citation_leak_rate": null,
+      "faithfulness_ci95": null,
+      "faithfulness_rate": null,
+      "known_matrix_arm": false,
+      "mean_word_count": null,
+      "mrr_mean": null,
+      "n": 12,
+      "ndcg_at_4_mean": null,
+      "numeric_pass_rate": null,
+      "precision_at_4_mean": null,
+      "provenance_completeness_mean": 1.0,
+      "recall_at_4_mean": null,
+      "source_diversity_mean": 1.0
+    },
+    "historical_lightrag_mix": {
+      "citation_leak_rate": null,
+      "faithfulness_ci95": null,
+      "faithfulness_rate": null,
+      "known_matrix_arm": false,
+      "mean_word_count": null,
+      "mrr_mean": null,
+      "n": 12,
+      "ndcg_at_4_mean": null,
+      "numeric_pass_rate": null,
+      "precision_at_4_mean": null,
+      "provenance_completeness_mean": 1.0,
+      "recall_at_4_mean": null,
+      "source_diversity_mean": 1.0
+    },
+    "historical_lightrag_naive": {
+      "citation_leak_rate": null,
+      "faithfulness_ci95": null,
+      "faithfulness_rate": null,
+      "known_matrix_arm": false,
+      "mean_word_count": null,
+      "mrr_mean": null,
+      "n": 12,
+      "ndcg_at_4_mean": null,
+      "numeric_pass_rate": null,
+      "precision_at_4_mean": null,
+      "provenance_completeness_mean": 1.0,
+      "recall_at_4_mean": null,
+      "source_diversity_mean": 1.0
+    }
+  },
+  "composite_score": null,
+  "reason": "Retrieval, faithfulness, numeric checks, and latency stay separate."
+}

@@ -1,0 +1,53 @@
+{
+  "generation": {
+    "agreements": {
+      "factual_pass": 65,
+      "numeric_pass": 65,
+      "word_count": 65
+    },
+    "definition": "factual_pass reruns assess_factual on the saved answer, claims, hits, and relationship prompt facts. numeric_pass is recomputed by that same call. The saved numeric_pass is the value stored at generation time.",
+    "discrepancies": [],
+    "missing_historical_rows": [],
+    "ranked_retrieval_metrics": "null because this experiment published no graded qrels"
+  },
+  "profile_crosswalk": [
+    {
+      "comparable": false,
+      "historical_cell": "A",
+      "nearest_profile": "source",
+      "reason": "Hybrid passages under prompt contract factual-reliability-v1. The source profile was not used.",
+      "requested_profile": "source",
+      "status": "rejected"
+    },
+    {
+      "comparable": false,
+      "historical_cell": "B",
+      "nearest_profile": "relationships",
+      "reason": "In-passage relationship block from generation_relationships. Not the relationships profile.",
+      "requested_profile": "relationships",
+      "status": "rejected"
+    },
+    {
+      "comparable": false,
+      "historical_cell": "C",
+      "nearest_profile": "off",
+      "reason": "Matched dense search over pilot texts, truncated to a 400-character preview. Not the active Chroma index.",
+      "requested_profile": "off",
+      "status": "rejected"
+    },
+    {
+      "comparable": false,
+      "historical_cell": "D_blog",
+      "nearest_profile": null,
+      "reason": "Blog-only token pad. It is not the descriptions profile and it is not multi-hop.",
+      "requested_profile": "none",
+      "status": "rejected"
+    }
+  ],
+  "retrieval": {
+    "agreements": 48,
+    "definition": "Overlap with a preselected id list. The historical notes say this is not precision or recall. Replay precision, recall, MRR, and nDCG stay null.",
+    "discrepancies": [],
+    "rows": 48
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "export": {
+    "path": "artifacts/lightrag/model_f/storage_expand_v1/selection_blog_only_v1.jsonl",
+    "documents": 2042,
+    "sha256": "1d2ea6f34649af40f42d5be078c924605b699f2dfd131c90cb8841a63b1e8f79",
+    "identity_sha256": "05761a81aebefc9fd68c7544aafb5d22aae5cd4d5e6409278cadc5e2b5bff064",
+    "scheduled_in_normal_queue_at_export": 1677,
+    "status_at_export": {
+      "pending": 1683,
+      "completed": 337,
+      "interrupted": 20,
+      "failed_permanent": 1,
+      "processing": 1
+    },
+    "omission_markers_in_eligible_blogs": 340,
+    "defer_at_export": {
+      "none": 2015,
+      "expensive_timeout": 21,
+      "pilot160_not_retried": 6
+    }
+  },
+  "blocker": "pids 19396 and 23320 were running indexing_session --resume --max-documents 13000 --max-runtime-minutes 480 --timeout-policy adaptive"
+}
