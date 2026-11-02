@@ -59,7 +59,7 @@ On the deviation from real posts, every run is below zero (cleaner than real pos
 
 ## What this does not tell you
 
-- **The precision labels are mine, not independent.** I (Claude) labeled the flags by reading them. The CSV is ready for a teammate to re-label. The 14% figure could move by a few points.
+- **The precision labels are mine, not independent.** I labeled the flags by reading them. The CSV is ready for a teammate to re-label. The 14% figure could move by a few points.
 - **The settings were tuned on real posts, then checked on our drafts.** That is the right order, but the profile can miss a kind of error that real posts do not happen to contain.
 - **It misses about half of ordinary mistakes**, and the audit sentences are our own small set (40), so 48% could be roughly 33% to 63%.
 - **Talk drafts are spoken-style on purpose** ("there's two types", "less people"), which accounts for most of the colloquial flags. Talk has no real-post reference.
