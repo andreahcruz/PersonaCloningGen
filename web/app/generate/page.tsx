@@ -268,7 +268,6 @@ export default function GeneratorPage() {
     URL.revokeObjectURL(url);
   }
 
-  const words = result ? result.content.trim().split(/\s+/).filter(Boolean).length : 0;
   const activeMethod = METHODS.find((item) => item.id === method) ?? METHODS[0];
   const displayedSourceResult = compareMode ? comparison.find((entry) => entry.method === "personarag")?.result : result;
 
@@ -485,9 +484,21 @@ export default function GeneratorPage() {
                   {result.content}
                 </div>
                 <p className="mt-3 text-xs text-mute">
-                  {words} words - {result.method === "personarag" ? "PersonaRAG" : result.method === "qlora" ? "direct QLoRA" : "Base Llama"} - {result.model}
+                  {result.metrics.wordCount} words - {result.method === "personarag" ? "PersonaRAG" : result.method === "qlora" ? "direct QLoRA" : "Base Llama"} - {result.model}
                   {result.latencyMs !== null ? ` - ${(result.latencyMs / 1000).toFixed(1)} s` : ""}
                 </p>
+                <div className="mt-4 rounded-xl border border-line bg-bg p-3">
+                  <p className="text-sm font-medium">Live operational measurement</p>
+                  <div className="mt-2 grid grid-cols-2 gap-2 text-xs text-mute sm:grid-cols-4">
+                    <span>{result.metrics.wordCount} words</span>
+                    <span>{result.metrics.sentenceCount} sentences</span>
+                    <span>{result.metrics.characterCount} characters</span>
+                    <span>{result.metrics.sourceCount} returned sources</span>
+                  </div>
+                  <p className="mt-2 text-xs text-mute">
+                    These are comparable runtime/output measurements, not a score of factuality, writing quality, or persona voice.
+                  </p>
+                </div>
                 <div className="mt-4 rounded-xl border border-line bg-bg p-3">
                   <div className="flex flex-wrap items-center justify-between gap-2">
                     <div>
