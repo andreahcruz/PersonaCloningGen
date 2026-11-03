@@ -1,0 +1,25 @@
+{
+  "included": [
+    {
+      "accepted_attempt": 1,
+      "answer_characters": 1818,
+      "arm": "F-REL",
+      "local_path": "experiments/EXP-20261102-001-model-f-unified-panel/raw/generations/gold_027__F-REL__blog.json",
+      "max_new_tokens": 768,
+      "medium": "blog",
+      "query": "We Have 30 AI Agents in Production. Here Are the Top 5 Issues No One Talks About",
+      "question_id": "gold_027",
+      "role": "pointer to a local generation, without the draft text",
+      "seed": 146,
+      "sharing": "The GitHub repository is public. This package does not copy draft text, prompts, accepted claims, or retrieved passages. Read the local file for the draft.",
+      "why_this_cell": "Pre-judge audit: near the blog median, attempt 1, completion passed, and no deterministic failure on that cell. Accepted-claim strings were largely unused."
+    }
+  ],
+  "withheld": [
+    "Draft text, including cells the audit called representative",
+    "Full prompts and source-grounded claim text",
+    "Retrieved passages and LightRAG vector stores",
+    "Cells flagged for a 12-word source copy",
+    "Tracking URLs that appear in off-topic drafts"
+  ]
+}

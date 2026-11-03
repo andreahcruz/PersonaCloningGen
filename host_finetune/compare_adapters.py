@@ -31,6 +31,7 @@ from host_finetune.evidence_capsule import (
     draft_retry_reason,
     evidence_provenance,
     extraction_user_prompt,
+    fit_extraction_hits,
     freeze_hits,
     media_jobs,
     parse_atomic_evidence,
@@ -117,6 +118,27 @@ def require_context_room(prompt_tokens: int, max_new_tokens: int) -> None:
             f"refusing to generate: prompt tokens {prompt_tokens} + max_new_tokens "
             f"{max_new_tokens} exceed {MAX_SEQ_LENGTH}. Evidence was not truncated."
         )
+
+
+def assert_generation_input_fits(prompt_tokens: int, max_new_tokens: int) -> None:
+    """Refuse an over-long chat prompt before the backend can truncate it.
+
+    Final generation and repair reserve their full output budget inside 2048.
+    Claim extraction asks for more new tokens than that window, so only its
+    input is required to fit. The extraction budget itself is not reduced.
+    """
+    if prompt_tokens > MAX_SEQ_LENGTH:
+        raise RuntimeError(
+            f"refusing to generate: prompt tokens {prompt_tokens} exceed {MAX_SEQ_LENGTH}. "
+            "The prompt was not truncated."
+        )
+    if max_new_tokens <= MAX_SEQ_LENGTH:
+        require_context_room(prompt_tokens, max_new_tokens)
+
+
+def context_refusal(exc: BaseException) -> bool:
+    """The configured window refused this sample. The draft was not truncated."""
+    return isinstance(exc, RuntimeError) and str(exc).startswith("refusing to generate")
 TEMPERATURE = 0.7
 TOP_P = 0.9
 REPETITION_PENALTY = 1.15
@@ -254,6 +276,8 @@ def retrieval_trace_fields(payload: dict | None, answer: str, enabled: bool) -> 
         fields["retrieval_backend"] = payload["backend"]
     if payload.get("mode"):
         fields["retrieval_mode"] = payload["mode"]
+    if payload.get("mode_source"):
+        fields["retrieval_mode_source"] = payload["mode_source"]
     excluded = payload.get("excluded")
     if excluded is not None:
         reasons: dict[str, int] = {}
@@ -293,7 +317,7 @@ def _complete_once(model, tokenizer, instruction: str, seed: int, max_new_tokens
         add_generation_prompt=True,
     )
     encoded = tokenizer(prompt, return_tensors="pt")
-    require_context_room(int(encoded["input_ids"].shape[1]), max_new_tokens)
+    assert_generation_input_fits(int(encoded["input_ids"].shape[1]), max_new_tokens)
     input_ids = encoded["input_ids"].to(model.device)
     attention = encoded.get("attention_mask")
     if attention is not None:
@@ -339,6 +363,8 @@ def _greedy_user(model, tokenizer, user: str, max_new_tokens: int) -> dict:
         add_generation_prompt=True,
     )
     encoded = tokenizer(rendered, return_tensors="pt")
+    prompt_tokens = int(encoded["input_ids"].shape[1])
+    assert_generation_input_fits(prompt_tokens, max_new_tokens)
     input_ids = encoded["input_ids"].to(model.device)
     attention = encoded.get("attention_mask")
     if attention is not None:
@@ -364,7 +390,7 @@ def _greedy_user(model, tokenizer, user: str, max_new_tokens: int) -> dict:
         "seconds": seconds,
         "prompt": user,
         "rendered": rendered,
-        "prompt_tokens": int(input_ids.shape[1]),
+        "prompt_tokens": prompt_tokens,
         "generated_tokens": len(generated_ids),
         "stop_reason": stopping["stop_reason"],
     }
@@ -374,7 +400,17 @@ def _prepare_evidence(model, tokenizer, topic: str, hits: list[dict]) -> dict:
     """Extract claims with the adapter off, then accept them deterministically."""
     require_adapter_toggle(model)
     frozen = freeze_hits(hits)
-    user = extraction_user_prompt(topic, frozen)
+
+    def _chat_tokens(user_text: str) -> int:
+        rendered = tokenizer.apply_chat_template(
+            [{"role": "user", "content": user_text}],
+            tokenize=False,
+            add_generation_prompt=True,
+        )
+        return int(tokenizer(rendered, return_tensors="pt").input_ids.shape[1])
+
+    kept, omitted = fit_extraction_hits(topic, frozen, _chat_tokens)
+    user = extraction_user_prompt(topic, kept)
     record = {
         "proposed": [],
         "raw_extraction": "",
@@ -384,6 +420,11 @@ def _prepare_evidence(model, tokenizer, topic: str, hits: list[dict]) -> dict:
         "evidence_block": "",
         "extraction_prompt": user,
         "rendered_extraction_prompt": "",
+        "extraction_hits_used": [hit.get("id") for hit in kept],
+        "extraction_hits_omitted": [hit.get("id") for hit in omitted],
+        "extraction_prompt_tokens": None,
+        "extraction_context_limit": MAX_SEQ_LENGTH,
+        "extraction_input_truncated": False,
         "extraction_seconds": None,
         "verification_seconds": 0.0,
         "verification_records": [],
@@ -408,6 +449,7 @@ def _prepare_evidence(model, tokenizer, topic: str, hits: list[dict]) -> dict:
             proposed = None
     record["raw_extraction"] = extracted["text"]
     record["rendered_extraction_prompt"] = extracted["rendered"]
+    record["extraction_prompt_tokens"] = extracted["prompt_tokens"]
     record["extraction_seconds"] = extracted["seconds"]
     record["extraction_stop_reason"] = extracted["stop_reason"]
     record["extraction_attempts"] = attempts
@@ -420,7 +462,7 @@ def _prepare_evidence(model, tokenizer, topic: str, hits: list[dict]) -> dict:
         record["evidence_block"] = verified_claim_block([])
         return record
     record["proposed"] = proposed
-    accepted, rejected = partition_evidence(proposed, frozen, topic)
+    accepted, rejected = partition_evidence(proposed, kept, topic)
     record["validation_rejected"] = rejected
     record["verified"] = accepted
     record["allowed_numeric_values"] = sorted(allowed_numbers(topic, accepted))
@@ -834,24 +876,36 @@ def generate(
                         extra_texts=relation_texts,
                     )
 
+                def _retry_sample(prompt: str, sample_seed: int):
+                    try:
+                        return _attach_numeric(
+                            _complete_once(
+                                model,
+                                tokenizer,
+                                prompt,
+                                sample_seed,
+                                job["medium"]["max_new_tokens"],
+                                job["hits"],
+                                True,
+                            ),
+                            row["topic"],
+                            job["claims"],
+                            True,
+                            relation_texts,
+                        )
+                    except RuntimeError as exc:
+                        if not context_refusal(exc):
+                            raise
+                        print(
+                            f"  retry skipped {row['id']} {job['medium']['medium']}: {exc}",
+                            flush=True,
+                        )
+                        return None
+
                 if final_response(first["report"]) == "copy_retry":
                     print(f"  copy retry {row['id']} {job['medium']['medium']}", flush=True)
-                    candidate = _attach_numeric(
-                        _complete_once(
-                            model,
-                            tokenizer,
-                            instruction,
-                            retry_seed(seed),
-                            job["medium"]["max_new_tokens"],
-                            job["hits"],
-                            True,
-                        ),
-                        row["topic"],
-                        job["claims"],
-                        True,
-                        relation_texts,
-                    )
-                    if candidate["report"].get("pass") and not grounding_regression(
+                    candidate = _retry_sample(instruction, retry_seed(seed))
+                    if candidate is not None and candidate["report"].get("pass") and not grounding_regression(
                         _facts(first["answer"]), _facts(candidate["answer"])
                     ):
                         second = candidate
@@ -867,22 +921,8 @@ def generate(
                     if reason:
                         print(f"  {reason} retry {row['id']} {job['medium']['medium']}", flush=True)
                         augmented = instruction + "\n\n" + corrective_addendum(reason, first["numeric"])
-                        candidate = _attach_numeric(
-                            _complete_once(
-                                model,
-                                tokenizer,
-                                augmented,
-                                retry_seed(seed),
-                                job["medium"]["max_new_tokens"],
-                                job["hits"],
-                                True,
-                            ),
-                            row["topic"],
-                            job["claims"],
-                            True,
-                            relation_texts,
-                        )
-                        improves = corrective_retry_improves(
+                        candidate = _retry_sample(augmented, retry_seed(seed))
+                        improves = candidate is not None and corrective_retry_improves(
                             reason,
                             first["answer"],
                             candidate["answer"],
@@ -891,7 +931,7 @@ def generate(
                             candidate["numeric"],
                             job["claims"],
                         )
-                        if candidate["report"].get("pass") and improves and not grounding_regression(
+                        if candidate is not None and candidate["report"].get("pass") and improves and not grounding_regression(
                             _facts(first["answer"]), _facts(candidate["answer"])
                         ):
                             second = candidate

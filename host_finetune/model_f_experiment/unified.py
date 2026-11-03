@@ -297,12 +297,36 @@ def record_overlap(
     return report
 
 
-def write_plan(directory: Path, profile: str, snapshot: Path) -> dict:
+def load_frozen_arm(path: Path) -> dict:
+    """Read the pilot freeze. Scoring the 120-prompt panel does not rewrite it."""
+    payload = json.loads(Path(path).read_text(encoding="utf-8"))
+    if payload.get("frozen") is not True:
+        raise ValueError(f"arm selection is not frozen: {path}")
+    if payload.get("do_not_revise_after_unified_eval") is not True:
+        raise ValueError(f"arm selection is not locked against the 120-prompt scores: {path}")
+    arm = payload.get("selected_arm")
+    if arm not in ARMS:
+        raise ValueError(f"frozen arm {arm!r} is not a Model F profile")
+    return payload
+
+
+def assert_frozen_selection(profile: str, selection: Path | None) -> None:
+    if selection is None:
+        return
+    frozen = load_frozen_arm(selection)
+    if frozen["selected_arm"] != profile:
+        raise ValueError(
+            f"profile {profile!r} does not match the frozen pilot arm {frozen['selected_arm']!r}"
+        )
+
+
+def write_plan(directory: Path, profile: str, snapshot: Path, selection: Path | None = None) -> dict:
     """Record the panel. This does not retrieve, generate, or score."""
     profile = require_profile(profile)
     snapshot = Path(snapshot)
     directory = Path(directory)
     assert_writable_panel(directory)
+    assert_frozen_selection(profile, selection)
     assert_unified_snapshot(snapshot)
     topics = load_gold_topics()
     cells = panel_cells(topics)
@@ -346,9 +370,19 @@ def write_plan(directory: Path, profile: str, snapshot: Path) -> dict:
         "judge_overlay": "not_applied",
         "four_arm_experiment": "EXP-20261101-009-model-f-four-arm",
         "four_arm_unchanged": True,
+        "frozen_selection": None if selection is None else str(selection),
+        "outputs": {
+            "raw": "raw/",
+            "unified_eval": "unified_eval/",
+            "diagnostics": "diagnostics/",
+        },
     }
     directory.mkdir(parents=True, exist_ok=True)
     (directory / "unified_plan.json").write_text(
+        json.dumps(plan, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+    (directory / "generation_manifest.json").write_text(
         json.dumps(plan, indent=2, sort_keys=True) + "\n",
         encoding="utf-8",
     )
@@ -393,6 +427,19 @@ def score_panel(directory: Path, profile: str, pack: dict, copy_index, specs: di
         json.dumps(coverage, indent=2, sort_keys=True) + "\n",
         encoding="utf-8",
     )
+    official = directory / "unified_eval"
+    official.mkdir(parents=True, exist_ok=True)
+    (official / "rows.jsonl").write_text(
+        "".join(json.dumps(row, ensure_ascii=False) + "\n" for row in rows),
+        encoding="utf-8",
+    )
+    (official / "coverage.json").write_text(
+        json.dumps(coverage, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+    from host_finetune.model_f_experiment.diagnostics import write_model_f_reports
+
+    write_model_f_reports(directory, directory / "diagnostics", UNIFIED_EXPERIMENT_ID)
     return coverage
 
 
@@ -442,7 +489,116 @@ def score_saved_panel(directory: Path, profile: str) -> dict:
     )
 
 
-def execute_selected_profile(directory: Path, profile: str, snapshot: Path) -> dict:
+def record_posthoc_arm(directory: Path, profile: str) -> dict:
+    """Record an engineering choice without revising the frozen pilot or stage 2.
+
+    The 120-prompt panel is not an input to this choice. The frozen pilot file
+    and the stage-2 recommendation are not opened or rewritten.
+    """
+    profile = require_profile(profile)
+    directory = Path(directory)
+    assert_writable_panel(directory)
+    payload = {
+        "artifact": "posthoc_engineering_selection",
+        "selected_arm": profile,
+        "frozen": False,
+        "uses_120_prompt_panel_for_selection": False,
+        "does_not_replace": "experiments/EXP-model-f-quick-pilot/arm_selection.json",
+        "does_not_modify": "experiments/EXP-model-f-desc-vs-rel-32/desc_vs_rel_recommendation.json",
+        "frozen_pilot_arm": "F-SOURCE",
+        "frozen_pilot_unchanged": True,
+        "stage2_recommendation_unchanged": True,
+        "reason": (
+            f"{profile} is the engineering profile for this panel. "
+            "The frozen pilot remains F-SOURCE. The stage-2 recommendation file is unchanged. "
+            "This panel was not used to make the choice."
+        ),
+    }
+    directory.mkdir(parents=True, exist_ok=True)
+    (directory / "posthoc_arm_selection.json").write_text(
+        json.dumps(payload, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+    return payload
+
+
+def panel_status(directory: Path, profile: str) -> dict:
+    """Count saved cells. This does not score or judge."""
+    from host_finetune.model_f_experiment.runner import MEDIA, cell_path, is_complete
+
+    profile = require_profile(profile)
+    directory = Path(directory)
+    topics = load_gold_topics()
+    completed = []
+    open_cells = []
+    for topic in topics:
+        for medium in MEDIA:
+            item = {"id": topic["id"], "medium": medium}
+            if is_complete(cell_path(directory, topic["id"], profile, medium)):
+                completed.append(item)
+            else:
+                open_cells.append(item)
+    reasons: dict[tuple[str, str], str] = {}
+    failure_path = directory / "raw" / "failures.jsonl"
+    if failure_path.is_file():
+        for line in failure_path.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            row = json.loads(line)
+            if row.get("arm") not in (None, profile):
+                continue
+            reason = str(row.get("reason") or row.get("error") or "unspecified")
+            for medium in row.get("media") or []:
+                reasons[(str(row.get("question_id")), str(medium))] = reason
+    failed = [
+        {**item, "reason": reasons[(item["id"], item["medium"])]}
+        for item in open_cells
+        if (item["id"], item["medium"]) in reasons
+    ]
+    progress = {}
+    progress_path = directory / "progress.json"
+    if progress_path.is_file():
+        progress = json.loads(progress_path.read_text(encoding="utf-8"))
+    return {
+        "profile": profile,
+        "cells": len(topics) * len(MEDIA),
+        "completed": len(completed),
+        "failed": len(failed),
+        "remaining": len(open_cells),
+        "not_started": len(open_cells) - len(failed),
+        "current_question": progress.get("current_question"),
+        "failed_cells": failed,
+        "judge_overlay": "not_applied",
+    }
+
+
+def write_progress(directory: Path, profile: str, question_id: str | None, index: int, total: int) -> dict:
+    status = panel_status(directory, profile)
+    payload = {
+        "profile": profile,
+        "current_question": question_id,
+        "question_index": index,
+        "questions": total,
+        "completed": status["completed"],
+        "failed": status["failed"],
+        "remaining": status["remaining"],
+        "not_started": status["not_started"],
+        "judge_overlay": "not_applied",
+    }
+    Path(directory).mkdir(parents=True, exist_ok=True)
+    (Path(directory) / "progress.json").write_text(
+        json.dumps(payload, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+    return payload
+
+
+def execute_selected_profile(
+    directory: Path,
+    profile: str,
+    snapshot: Path,
+    selection: Path | None = None,
+) -> dict:
     """Generate the 120 cells for one profile already chosen on the 36-question set.
 
     Tests do not call this. It refuses the live store before it loads a model.
@@ -450,7 +606,8 @@ def execute_selected_profile(directory: Path, profile: str, snapshot: Path) -> d
     profile = require_profile(profile)
     snapshot = Path(snapshot)
     directory = Path(directory)
-    write_plan(directory, profile, snapshot)
+    write_plan(directory, profile, snapshot, selection)
+    record_posthoc_arm(directory, profile)
     from host_finetune.model_f_experiment.snapshot import assert_snapshot_path, verify_snapshot
 
     assert_snapshot_path(snapshot)
@@ -461,13 +618,20 @@ def execute_selected_profile(directory: Path, profile: str, snapshot: Path) -> d
         for topic in topics
     ]
     import asyncio
+    import time
 
     from host_finetune.compare_adapters import generate, load_generator
     from host_finetune.lightrag_backend import read_catalog, read_failed_document_ids
     from host_finetune.model_f_experiment.arms import ADAPTER, DECODING
     from host_finetune.model_f_experiment.context_window import assert_preflight
     from host_finetune.model_f_experiment.derive import arm_callback
-    from host_finetune.model_f_experiment.retrieval import generation_payload, retrieve_raw
+    from host_finetune.model_f_experiment.diagnostics import summarize_graph
+    from host_finetune.model_f_experiment.guards import require_lightrag_trace
+    from host_finetune.model_f_experiment.retrieval import (
+        generation_payload,
+        prepare_query_workdir,
+        retrieve_raw,
+    )
     from host_finetune.model_f_experiment.runner import (
         MEDIA,
         cell_path,
@@ -476,13 +640,15 @@ def execute_selected_profile(directory: Path, profile: str, snapshot: Path) -> d
         freeze_retrieval,
         is_complete,
         load_evidence,
+        note_unsaved,
         retrieval_path,
     )
     from host_finetune.model_f_experiment.snapshot import SnapshotError as Refused
 
     assert_preflight(questions)
-    catalog = read_catalog(snapshot / "catalog.jsonl")
-    failed_ids = read_failed_document_ids(snapshot)
+    workdir = prepare_query_workdir(snapshot, directory / "raw" / "lightrag_query")
+    catalog = read_catalog(workdir / "catalog.jsonl")
+    failed_ids = read_failed_document_ids(workdir)
     if not catalog:
         raise Refused(f"snapshot catalog is empty: {snapshot}")
     model, tokenizer, load_report = load_generator(Path(ADAPTER), "4bit")
@@ -490,18 +656,48 @@ def execute_selected_profile(directory: Path, profile: str, snapshot: Path) -> d
     def count_tokens(text: str) -> int:
         return len(tokenizer.encode(text, add_special_tokens=False))
 
+    def window_tokens(instruction: str) -> int:
+        from host_finetune.model_f_experiment.context_window import prompt_tokens
+
+        return prompt_tokens(tokenizer, instruction)
+
     evidence_cache: dict = {}
     generated = 0
+    unsaved: list[dict] = []
     try:
         for index, topic in enumerate(topics):
             question = questions[index]
+            progress = write_progress(directory, profile, question["question_id"], index + 1, len(topics))
+            print(
+                f"question {index + 1}/{len(topics)} {question['question_id']} "
+                f"completed {progress['completed']} failed {progress['failed']} "
+                f"remaining {progress['remaining']}",
+                flush=True,
+            )
             stored = retrieval_path(directory, question["question_id"])
             if not is_complete(stored):
-                raw = asyncio.run(retrieve_raw(question["query"], snapshot))
-                freeze_retrieval(directory, question, raw)
+                started = time.perf_counter()
+                raw = asyncio.run(retrieve_raw(question["query"], workdir))
+                retrieval_seconds = round(time.perf_counter() - started, 3)
+                payload = generation_payload(raw, catalog, failed_document_ids=failed_ids)
+                try:
+                    summary = summarize_graph(raw, payload, catalog, failed_ids, question["query"])
+                except Exception as exc:
+                    summary = {"status": "not_recorded", "reason": f"{type(exc).__name__}: {exc}"}
+                freeze_retrieval(
+                    directory,
+                    question,
+                    raw,
+                    retrieval_seconds=retrieval_seconds,
+                    graph_summary=summary,
+                )
             else:
-                raw = json.loads(stored.read_text(encoding="utf-8"))["payload"]
-            payload = generation_payload(raw, catalog, failed_document_ids=failed_ids)
+                stored_body = json.loads(stored.read_text(encoding="utf-8"))
+                raw = stored_body["payload"]
+                retrieval_seconds = stored_body.get("retrieval_seconds")
+                payload = generation_payload(raw, catalog, failed_document_ids=failed_ids)
+            question = dict(question)
+            question["retrieval_seconds"] = retrieval_seconds
 
             def retriever(topic_text: str, comparison_medium: str, payload=payload) -> dict:
                 return payload
@@ -519,37 +715,309 @@ def execute_selected_profile(directory: Path, profile: str, snapshot: Path) -> d
                 continue
 
             def on_trace(trace: dict, question=question) -> None:
+                require_lightrag_trace(trace, profile)
                 freeze_evidence(directory, question["question_id"], trace)
                 write_record = cell_record(question, profile, trace)
                 from host_finetune.model_f_experiment.runner import write_generation
 
                 write_generation(directory, write_record)
 
-            generate(
-                Path(ADAPTER),
-                gold,
-                retriever=retriever,
-                seed_base=DECODING["seed_base"],
-                topic_rows=[(index, gold[0])],
-                loaded=(model, tokenizer, load_report),
-                unload=False,
-                evidence_cache=evidence_cache,
-                media_allow=set(missing),
-                graph_context_for=arm_callback(
+            try:
+                generate(
+                    Path(ADAPTER),
+                    gold,
+                    retriever=retriever,
+                    seed_base=DECODING["seed_base"],
+                    topic_rows=[(index, gold[0])],
+                    loaded=(model, tokenizer, load_report),
+                    unload=False,
+                    evidence_cache=evidence_cache,
+                    media_allow=set(missing),
+                    graph_context_for=arm_callback(
+                        profile,
+                        catalog=catalog,
+                        failed_document_ids=failed_ids,
+                        count_tokens=count_tokens,
+                        window_tokens=window_tokens,
+                    ),
+                    on_trace=on_trace,
+                )
+            except Exception as exc:
+                still_missing = [
+                    medium
+                    for medium in missing
+                    if not is_complete(cell_path(directory, question["question_id"], profile, medium))
+                ]
+                unsaved.append(note_unsaved(
+                    directory,
+                    question["question_id"],
                     profile,
-                    catalog=catalog,
-                    failed_document_ids=failed_ids,
-                    count_tokens=count_tokens,
-                ),
-                on_trace=on_trace,
-            )
-            generated += len(missing)
+                    still_missing or list(missing),
+                    f"{type(exc).__name__}: {exc}",
+                ))
+                continue
+            for medium in missing:
+                if is_complete(cell_path(directory, question["question_id"], profile, medium)):
+                    generated += 1
+                    continue
+                unsaved.append(note_unsaved(
+                    directory,
+                    question["question_id"],
+                    profile,
+                    [medium],
+                    "generation finished without a complete cell",
+                ))
     finally:
         del model
         del tokenizer
+    write_progress(directory, profile, None, len(topics), len(topics))
     plan_path = directory / "unified_plan.json"
     plan = json.loads(plan_path.read_text(encoding="utf-8"))
     plan["status"] = "generated_not_judged"
     plan["generated_cells"] = generated
-    plan_path.write_text(json.dumps(plan, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    return {"generated": generated, "judge_overlay": "not_applied"}
+    plan["model_load"] = load_report
+    plan["posthoc_engineering_selection"] = "posthoc_arm_selection.json"
+    plan["graph_window_policy"] = (
+        "whole graph items are omitted until the chat prompt fits the 2048 window; "
+        "omitted ids are stored on window_omitted"
+    )
+    plan["extraction_input_policy"] = (
+        "whole trailing passages are omitted until the extraction prompt fits 2048; "
+        "a prompt that still does not fit is refused. Passage text is not truncated. "
+        "Stage-2 development prompts were allowed to exceed 2048, so those cells are not mixed into this panel."
+    )
+    encoded = json.dumps(plan, indent=2, sort_keys=True) + "\n"
+    plan_path.write_text(encoded, encoding="utf-8")
+    (directory / "generation_manifest.json").write_text(encoded, encoding="utf-8")
+    status = panel_status(directory, profile)
+    return {
+        "generated": generated,
+        "completed": status["completed"],
+        "failed": status["failed"],
+        "remaining": status["remaining"],
+        "unsaved": unsaved,
+        "judge_overlay": "not_applied",
+    }
+
+
+def collect_judge_traces(directory: Path, profile: str) -> tuple[list[dict], list[dict]]:
+    """Saved drafts in the shape ``evaluate_row`` already accepts."""
+    from host_finetune.model_f_experiment.runner import MEDIA, cell_path, is_complete
+
+    profile = require_profile(profile)
+    topics = load_gold_topics()
+    traces = []
+    missing = []
+    for topic in topics:
+        for medium in MEDIA:
+            path = cell_path(directory, topic["id"], profile, medium)
+            if not is_complete(path):
+                missing.append({"id": topic["id"], "medium": medium})
+                continue
+            cell = json.loads(path.read_text(encoding="utf-8"))
+            cell["medium"] = medium
+            cell["profile"] = profile
+            traces.append(trace_input(cell, topic))
+    return traces, missing
+
+
+def judge_saved_panel(directory: Path, profile: str) -> dict:
+    """Run the original Qwen overlay on 120 saved cells. Historical files stay put.
+
+    This does not call ``score_saved_experiment``. That command is pinned to the
+    October 5 Relabel generation hash and must keep refusing every other file.
+    """
+    import os
+    import platform
+    import subprocess
+    import sys
+    from datetime import datetime, timezone
+
+    profile = require_profile(profile)
+    directory = Path(directory)
+    assert_writable_panel(directory)
+    traces, missing = collect_judge_traces(directory, profile)
+    if missing or len(traces) != PANEL_SIZE:
+        raise RuntimeError(
+            f"refusing to judge: {len(traces)} complete cells and {len(missing)} missing; "
+            "unified_eval.v1 scores 120 cells"
+        )
+    from host_finetune.claim_judge import (
+        EvidenceIndex,
+        claim_prompt,
+        evidence_documents,
+        evidence_report,
+        parse_claims,
+        rag_grounding_report,
+        stance_report,
+    )
+    from host_finetune.eval_gold_rag import load_format_specs
+    from host_finetune.judge_client import DEFAULT_JUDGE_MODEL, judge_family
+    from host_finetune.rescore_evidence import (
+        calibration_samples,
+        judge_json,
+        load_cache,
+        passages_for,
+        stance_control,
+        writing_record,
+    )
+    from host_finetune.rescore_unified import base_controls, sha256
+    from host_finetune.score_saved_experiment import SPECS
+    from host_finetune.train_only_index import (
+        DEFAULT_ASSIGNMENTS,
+        DEFAULT_DATASET,
+        DEFAULT_GOLD_DISPOSITIONS,
+        load_jsonl,
+    )
+    from host_finetune.unified_eval import (
+        SCHEMA,
+        UTILITY_WEIGHTS,
+        CopyIndex,
+        apply_judge_overlay,
+        build_reference_pack,
+        evaluate_row,
+        summarize_model,
+    )
+    from host_finetune.voice_distance import iter_train_texts
+    from host_finetune.writing_quality import writing_prompt, writing_quality_gate
+
+    official = directory / "unified_eval"
+    official.mkdir(parents=True, exist_ok=True)
+    trace_path = directory / "raw" / "judge_inputs.jsonl"
+    trace_path.parent.mkdir(parents=True, exist_ok=True)
+    trace_path.write_text(
+        "".join(json.dumps(row, ensure_ascii=False) + "\n" for row in traces),
+        encoding="utf-8",
+    )
+    generation_sha = sha256(trace_path)
+    model = DEFAULT_JUDGE_MODEL
+    family = judge_family(model)
+    base_url = os.environ.get("OLLAMA_BASE", "http://127.0.0.1:11434")
+    cache_path = official / "judge_cache.jsonl"
+    cache = load_cache(cache_path)
+    dataset = load_jsonl(DEFAULT_DATASET)
+    assignments = load_jsonl(DEFAULT_ASSIGNMENTS)
+    dispositions = load_jsonl(DEFAULT_GOLD_DISPOSITIONS)
+    documents = evidence_documents(dataset, assignments, dispositions)
+    index = EvidenceIndex(documents)
+    samples = calibration_samples(documents, model, base_url, cache, cache_path)
+    writing_gate = writing_quality_gate(samples)
+    writing_gate["judge_model"] = model
+    writing_gate["judge_family"] = family
+    writing_gate["candidate_family"] = "llama"
+    stance_gate = stance_control(index, model, base_url, cache, cache_path)
+    pack = build_reference_pack(dataset, assignments, dispositions, base_controls())
+    pack["writing_quality_calibration"] = {
+        "calibrated": writing_gate["calibrated"],
+        "role": writing_gate["role"],
+    }
+    copy_index = CopyIndex(iter_train_texts(dataset, assignments))
+    specs = load_format_specs(SPECS)
+    rows_path = official / "rows.jsonl"
+    finished = {}
+    if rows_path.is_file():
+        kept = []
+        for line in rows_path.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            previous = json.loads(line)
+            if previous.get("judge_overlay") == "not_applied":
+                continue
+            finished[(previous.get("id"), previous.get("medium"))] = previous
+            kept.append(line)
+        rows_path.write_text("\n".join(kept) + ("\n" if kept else ""), encoding="utf-8")
+    scored_rows = []
+    with rows_path.open("a", encoding="utf-8") as handle:
+        for trace in traces:
+            key = (trace.get("id"), trace.get("medium"))
+            prior = finished.get(key)
+            if prior is not None:
+                scored_rows.append(prior)
+                continue
+            base = evaluate_row(trace, pack, copy_index, specs)
+            draft = (trace.get("answer") or "")[:1800]
+            topic = trace.get("topic") or ""
+            medium = trace.get("medium") or ""
+            writing_parsed = judge_json(
+                writing_prompt(draft, topic, medium),
+                model, base_url, 220, cache, cache_path, "writing",
+            )
+            retrieved = passages_for(trace)
+            evidence_hits = index.search(f"{topic}\n{draft[:900]}", medium, k=4)
+            evidence_text = [hit["text"][:650] for hit in evidence_hits]
+            claim_parsed = judge_json(
+                claim_prompt(draft, topic, retrieved, evidence_text),
+                model, base_url, 520, cache, cache_path, "claims",
+            )
+            claims = parse_claims(claim_parsed, retrieved is not None)
+            writing = writing_record(writing_parsed, writing_gate["role"], writing_gate["calibrated"], model)
+            row = apply_judge_overlay(
+                base,
+                writing,
+                rag_grounding_report(claims, retrieved is not None),
+                evidence_report(claims, len(evidence_text)),
+                stance_report(claims),
+                writing_role=writing_gate["role"],
+                writing_calibrated=writing_gate["calibrated"],
+                stance_role=stance_gate["role"],
+            )
+            row["model"] = profile
+            row["source_experiment"] = UNIFIED_EXPERIMENT_ID
+            row["generation_sha256"] = generation_sha
+            row["schema"] = SCHEMA
+            scored_rows.append(row)
+            handle.write(json.dumps(row, ensure_ascii=False) + "\n")
+            handle.flush()
+    (directory / "metrics").mkdir(parents=True, exist_ok=True)
+    (directory / "metrics" / "rows.jsonl").write_text(rows_path.read_text(encoding="utf-8"), encoding="utf-8")
+    summary = summarize_model(scored_rows, f"{UNIFIED_EXPERIMENT_ID}/{profile}", UNIFIED_EXPERIMENT_ID)
+    payload = {
+        "schema": SCHEMA,
+        "utility_weights": UTILITY_WEIGHTS,
+        "judge_model": model,
+        "judge_family": family,
+        "candidate_family": "llama",
+        "temperature": 0,
+        "blinded": True,
+        "generation_sha256": generation_sha,
+        "n_traces": len(traces),
+        "writing_quality_calibration": {
+            "calibrated": writing_gate["calibrated"],
+            "role": writing_gate["role"],
+            "reason": writing_gate["reason"],
+        },
+        "stance_calibration": stance_gate,
+        "model": summary,
+    }
+    (official / "summary.json").write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    commit = subprocess.run(["git", "rev-parse", "HEAD"], cwd=Path.cwd(), capture_output=True, text=True, check=False)
+    dirty = subprocess.run(["git", "status", "--porcelain"], cwd=Path.cwd(), capture_output=True, text=True, check=False)
+    record = {
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "command": " ".join(sys.argv),
+        "git": {"commit": commit.stdout.strip(), "dirty": bool(dirty.stdout.strip())},
+        "judge_model": model,
+        "judge_config": {"family": family, "temperature": 0, "blinded": True, "candidate_family": "llama"},
+        "generation_sha256": generation_sha,
+        "python": platform.python_version(),
+        "schema": SCHEMA,
+        "utility_weights": UTILITY_WEIGHTS,
+    }
+    (official / "evaluation_run.json").write_text(json.dumps(record, indent=2) + "\n", encoding="utf-8")
+    from eval_tools.rows import load_rows
+
+    arms = {}
+    for name, path in SAVED_ROWS.items():
+        if path.is_file():
+            arms[name] = load_rows(path)
+    arms["Model F"] = scored_rows
+    matrix = comparison_matrix(arms)
+    matrix["schema"] = SCHEMA
+    matrix["judge_model"] = model
+    matrix["rows_excluded"] = []
+    matrix["reweighted"] = False
+    (official / "comparison.json").write_text(
+        json.dumps(matrix, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    return {"schema": SCHEMA, "scored": len(scored_rows), "judge_model": model, "comparison_rows": len(matrix["rows"])}

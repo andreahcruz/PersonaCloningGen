@@ -1,0 +1,25 @@
+{
+  "note": "Example only. model_f_experiment does not load this file. Pass --snapshot and --out on the command line. Paths are project-relative.",
+  "profile": "F-REL",
+  "snapshot": "artifacts/lightrag/model_f/storage_expand_v1_snapshot",
+  "adapter": "host_finetune/output/lemkin_lora_relabel",
+  "base_model": "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit",
+  "gold_eval": "data/openai_ft/lemkin_gold_eval.jsonl",
+  "official_out": "experiments/EXP-20261102-001-model-f-unified-panel",
+  "ollama": {
+    "base_url_env": "OLLAMA_BASE",
+    "base_url_default": "http://127.0.0.1:11434",
+    "embed_model": "nomic-embed-text",
+    "graph_extraction_model": "llama3.1:latest",
+    "judge_model": "qwen2.5:14b"
+  },
+  "generator": {
+    "quantization": "4bit",
+    "max_seq_length": 2048,
+    "graph_query_num_ctx": 16384,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "repetition_penalty": 1.15,
+    "seed_base": 42
+  }
+}

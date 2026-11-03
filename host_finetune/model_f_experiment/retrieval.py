@@ -7,6 +7,7 @@ The returned payload is the ``aquery_data`` body, including entity rows.
 
 from __future__ import annotations
 
+import shutil
 from pathlib import Path
 
 from host_finetune.model_f_experiment.arms import RETRIEVAL
@@ -39,11 +40,34 @@ def generation_payload(
     combined["metadata"] = (raw or {}).get("metadata") or {}
     combined["status"] = (raw or {}).get("status")
     combined["query"] = (raw or {}).get("query")
+    observed = ((raw or {}).get("metadata") or {}).get("query_mode") or (raw or {}).get("mode")
+    combined["backend"] = RETRIEVAL["backend"]
+    if observed:
+        combined["mode"] = observed
+        combined["mode_source"] = "payload"
+    else:
+        combined["mode"] = RETRIEVAL["mode"]
+        combined["mode_source"] = "experiment_query"
     return combined
 
 
+def prepare_query_workdir(snapshot: Path, workdir: Path) -> Path:
+    """Copy the verified snapshot once. Queries write LightRAG cache into the copy."""
+    snapshot = Path(snapshot).resolve()
+    workdir = Path(workdir).resolve()
+    assert_snapshot_path(snapshot)
+    if workdir == snapshot or snapshot in workdir.parents or workdir in snapshot.parents:
+        raise SnapshotError("the LightRAG query copy must stay outside the verified snapshot")
+    if not snapshot.is_dir():
+        raise SnapshotError(f"snapshot is not a directory: {snapshot}")
+    if not workdir.exists():
+        workdir.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copytree(snapshot, workdir)
+    return workdir
+
+
 async def retrieve_raw(query: str, snapshot: Path) -> dict:
-    """Query a snapshot copy. Raises before any call if the path is the live store."""
+    """Query a working copy. Raises before any call if the path is the live store."""
     assert_snapshot_path(snapshot)
     from host_finetune.lightrag_backend import (
         DEFAULT_EMBED_MODEL,

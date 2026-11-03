@@ -5,6 +5,8 @@ import json
 import sys
 from pathlib import Path
 
+import pytest
+
 from host_finetune.compare_adapters import MEDIUMS, generate, parse_args
 from host_finetune.evidence_capsule import final_evidence_instruction
 from host_finetune.factual_reliability import instruction_leak
@@ -647,3 +649,70 @@ def test_existing_model_e_and_model_f_defaults_stay_unchanged():
     rendered = render_prepared(source_only, MEDIUMS[0], "Keep the price", claims)
     assert "VERIFIED RELATIONSHIPS" not in rendered["instruction"]
     assert "A generated summary" not in rendered["instruction"]
+
+
+def test_support_span_inside_the_topic_or_another_claim_is_kept():
+    topic = "What price did Capital One announce for acquiring Brex?"
+    claims = [
+        {
+            "claim": "The announced price was $5.15 billion.",
+            "source_id": "gd_a",
+            "support_span": "Capital One",
+        },
+        {
+            "claim": "Capital One agreed to acquire Brex.",
+            "source_id": "gd_a",
+            "support_span": "The announced price was $5.15 billion.",
+        },
+    ]
+    prepared = prepare_context(_raw_payload(), profile="source", query=topic, catalog=_catalog())
+    jobs = context_media_jobs(topic, [], claims, "verified", prepared)
+    assert "The announced price was $5.15 billion." in jobs[0]["instruction"]
+    assert "Capital One agreed to acquire Brex." in jobs[0]["instruction"]
+
+
+def test_support_span_outside_the_claims_and_topic_still_raises():
+    topic = "What is the generated gloss for Company X?"
+    claims = [{
+        "claim": "The announced price was $5.15 billion.",
+        "source_id": "gd_a",
+        "support_span": "A generated gloss that is not a source sentence.",
+    }]
+    prepared = prepare_context(_raw_payload(), profile="descriptions", query=topic, catalog=_catalog())
+    with pytest.raises(ValueError, match="support span leaked into the final prompt"):
+        context_media_jobs(topic, [], claims, "verified", prepared)
+
+
+def test_graph_items_past_the_context_window_are_omitted_whole():
+    from host_finetune.model_f_experiment.arms import experiment_budget
+
+    topic = "What is the generated gloss for Company X?"
+    claims = [{
+        "claim": "The sources do not describe that halftime show.",
+        "source_id": "gd_a",
+        "support_span": "The sources do not describe that halftime show.",
+    }]
+    prepared = prepare_context(_raw_payload(), profile="descriptions", query=topic, catalog=_catalog())
+
+    def window_tokens(instruction: str) -> int:
+        if "SUPPLEMENTARY GRAPH-DERIVED DESCRIPTIONS" in instruction:
+            return 1300
+        return 1209
+
+    prepared["window_tokens"] = window_tokens
+    before = experiment_budget("talk")
+    jobs = context_media_jobs(topic, [], claims, "verified", prepared)
+    talk = next(job for job in jobs if job["medium"]["medium"] == "talk")
+    assert "SUPPLEMENTARY GRAPH-DERIVED DESCRIPTIONS" not in talk["instruction"]
+    assert claims[0]["claim"] in talk["instruction"]
+    assert talk["model_f_context"]["window_omitted"]
+    assert talk["model_f_context"]["tokens_by_channel"]["primary_source"] > 0
+    assert talk["model_f_context"]["tokens_by_channel"]["derived_description"] == 0
+    after = experiment_budget("talk")
+    assert (after.primary, after.descriptions, after.relationships, after.paths) == (
+        before.primary,
+        before.descriptions,
+        before.relationships,
+        before.paths,
+    )
+    assert (after.primary, after.descriptions) == (557, 83)

@@ -115,6 +115,36 @@ def extraction_user_prompt(topic: str, hits: list[dict]) -> str:
     )
 
 
+def fit_extraction_hits(
+    topic: str,
+    hits: list[dict],
+    count_tokens,
+    limit: int | None = None,
+) -> tuple[list[dict], list[dict]]:
+    """Drop whole trailing passages until the chat prompt fits.
+
+    ``count_tokens`` counts the chat-templated extraction prompt, the same
+    quantity checked before sampling. A passage is kept or omitted whole.
+    Nothing inside a passage is cut. When the instruction with no passages
+    still exceeds ``limit``, every hit is omitted and the caller refuses
+    the sample instead of truncating it.
+    """
+    if limit is None:
+        from host_finetune.compare_adapters import MAX_SEQ_LENGTH
+
+        limit = MAX_SEQ_LENGTH
+    kept = list(hits)
+    omitted: list[dict] = []
+    while True:
+        size = int(count_tokens(extraction_user_prompt(topic, kept)))
+        if size <= limit:
+            return kept, omitted
+        if not kept:
+            return kept, omitted
+        omitted.append(kept[-1])
+        kept = kept[:-1]
+
+
 def verification_user_prompt(claim: str, support_span: str) -> str:
     """Claim and span only. No rank, distance, medium, or style instruction."""
     return (
@@ -421,6 +451,75 @@ def verified_claim_block(claims: list[dict]) -> str:
 
 
 PROMPT_CONTRACT = "factual-reliability-v1"
+_CLAIM_REGIONS = (
+    (
+        "PRIMARY SOURCE-GROUNDED CLAIMS",
+        (
+            "VERIFIED RELATIONSHIPS",
+            "MULTI-HOP EVIDENCE PATHS",
+            "SUPPLEMENTARY GRAPH-DERIVED DESCRIPTIONS",
+            "FINAL WRITING INSTRUCTION",
+        ),
+    ),
+    (
+        "ALLOWED FACTUAL EVIDENCE",
+        (
+            "SOURCE-SUPPORTED RELATIONSHIPS",
+            "Now write the requested",
+        ),
+    ),
+)
+
+
+def _without_authorized_claim_text(checked: str) -> str:
+    """Remove verified-claim sections. A raw passage may appear only there."""
+    redacted = checked
+    for heading, followers in _CLAIM_REGIONS:
+        start = redacted.find(heading)
+        if start < 0:
+            continue
+        tail_start = start + len(heading)
+        end = len(redacted)
+        for follower in followers:
+            index = redacted.find(follower, tail_start)
+            if index >= 0:
+                end = min(end, index)
+        redacted = redacted[:start] + redacted[end:]
+    return redacted
+
+
+def _claim_contains_passage(claim: str, passage: str) -> bool:
+    if passage and passage in (claim or ""):
+        return True
+    collapsed_claim = re.sub(r"\s+", " ", claim or "").strip()
+    collapsed_passage = re.sub(r"\s+", " ", passage or "").strip()
+    return bool(collapsed_passage) and collapsed_passage in collapsed_claim
+
+
+def unauthorized_raw_passage(checked: str, hits: list[dict], claims: list[dict]) -> str | None:
+    """Reject a full retrieved passage outside a verified claim.
+
+    The same passage is allowed when every occurrence sits in the verified-claim
+    section and at least one accepted claim contains it. A copy in a relationship,
+    description, instruction, or style block is still rejected.
+    """
+    outside = _without_authorized_claim_text(checked)
+    for hit in hits:
+        text = (hit.get("text") or "").strip()
+        if not text or text not in checked:
+            continue
+        hit_id = hit.get("id") or hit.get("source_id") or "unknown"
+        if text in outside:
+            return (
+                "raw retrieved prose leaked into the final prompt: "
+                f"hit={hit_id} section=outside_verified_claims"
+            )
+        if not any(_claim_contains_passage(str(claim.get("claim") or ""), text) for claim in claims):
+            return (
+                "raw retrieved prose leaked into the final prompt: "
+                f"hit={hit_id} section=verified_claims_without_matching_claim"
+            )
+    return None
 OPERATIONAL_X_MIN_WORDS = 20
 
 
@@ -766,10 +865,9 @@ def media_jobs(
             for source_id in relation.get("source_document_ids") or []:
                 if source_id and source_id not in allowed_relation_text and source_id in checked:
                     raise ValueError("relationship source id leaked into the final prompt")
-        for hit in raw:
-            text = (hit.get("text") or "").strip()
-            if text and text in checked:
-                raise ValueError("raw retrieved prose leaked into the final prompt")
+        leaked = unauthorized_raw_passage(checked, raw, claims)
+        if leaked:
+            raise ValueError(leaked)
         for claim in claims:
             if claim["claim"] not in instruction:
                 raise ValueError("verified claim missing from the final prompt")
@@ -828,4 +926,9 @@ def evidence_provenance(hits: list[dict], record: dict) -> dict:
         "evidence_status": record.get("evidence_status"),
         "extraction_attempts": record.get("extraction_attempts"),
         "extraction_stop_reason": record.get("extraction_stop_reason"),
+        "extraction_hits_used": list(record.get("extraction_hits_used") or []),
+        "extraction_hits_omitted": list(record.get("extraction_hits_omitted") or []),
+        "extraction_prompt_tokens": record.get("extraction_prompt_tokens"),
+        "extraction_context_limit": record.get("extraction_context_limit"),
+        "extraction_input_truncated": record.get("extraction_input_truncated"),
     }

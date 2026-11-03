@@ -357,7 +357,12 @@ def test_frozen_claims_come_from_evidence_and_are_not_replaced(tmp_path: Path):
 
 def test_context_preflight_fits_every_planned_cell():
     from host_finetune.compare_adapters import require_context_room
-    from host_finetune.model_f_experiment.context_window import cell_requirement, load_tokenizer, preflight
+    from host_finetune.model_f_experiment.context_window import (
+        cell_requirement,
+        load_tokenizer,
+        preflight,
+        prompt_tokens,
+    )
 
     questions = load_questions(Path("host_finetune/benchmarks/dev_retrieval_benchmark.jsonl"))
     tokenizer = load_tokenizer()
@@ -372,6 +377,30 @@ def test_context_preflight_fits_every_planned_cell():
     assert previous > 2048
     with pytest.raises(RuntimeError, match="Evidence was not truncated"):
         require_context_room(1500, 768)
+    from host_finetune.compare_adapters import assert_generation_input_fits
+    from host_finetune.evidence_capsule import EXTRACT_MAX_NEW_TOKENS, extraction_user_prompt, fit_extraction_hits
+
+    assert_generation_input_fits(1149, EXTRACT_MAX_NEW_TOKENS)
+    with pytest.raises(RuntimeError, match="The prompt was not truncated"):
+        assert_generation_input_fits(2210, EXTRACT_MAX_NEW_TOKENS)
+    with pytest.raises(RuntimeError, match="Evidence was not truncated"):
+        assert_generation_input_fits(1500, 768)
+
+    topic = "What does a late investor update indicate about the month it describes?"
+    passage = "Investor updates sent this late describe a month that already closed. " * 40
+    hits = [{"id": f"gd_{index}", "text": f"{passage} marker {index}."} for index in range(6)]
+    assert prompt_tokens(tokenizer, extraction_user_prompt(topic, hits)) > 2048
+    kept, omitted = fit_extraction_hits(
+        topic,
+        hits,
+        lambda user: prompt_tokens(tokenizer, user),
+        limit=2048,
+    )
+    fitted_prompt = prompt_tokens(tokenizer, extraction_user_prompt(topic, kept))
+    assert fitted_prompt <= 2048
+    assert omitted
+    assert [hit["text"] for hit in kept] == [hit["text"] for hit in hits[: len(kept)]]
+    assert all(hit["text"] in {item["text"] for item in hits} for hit in omitted)
 
 
 def test_evaluation_does_not_score_shared_retrieval(tmp_path: Path):

@@ -12,6 +12,7 @@ from host_finetune.evidence_capsule import (
     draft_retry_reason,
     evidence_provenance,
     extraction_user_prompt,
+    fit_extraction_hits,
     final_evidence_instruction,
     interpret_verification,
     media_jobs,
@@ -406,3 +407,55 @@ def test_style_exemplars_are_voice_and_do_not_change_the_evidence_block():
     assert RAW in voice_that_contains_passage[0]["instruction"]
     assert voice_that_contains_passage[0]["evidence_block"] == plain[0]["evidence_block"]
     assert "[E1]" in voice_that_contains_passage[0]["instruction"]
+
+
+LATE_UPDATE = "April 12 is really, really late for an investor update in the post-Covid 19 world"
+
+
+def test_a_verified_claim_may_repeat_its_short_source_passage():
+    hits = [{"id": "gd_4eba33d02cb019ab6f7191ce", "text": LATE_UPDATE}]
+    claims = [_item("gd_4eba33d02cb019ab6f7191ce", LATE_UPDATE, LATE_UPDATE, "fact")]
+    accepted, rejected = partition_evidence(
+        claims,
+        hits,
+        topic="What does a late investor update indicate about the month it describes?",
+    )
+    assert rejected == []
+    jobs = media_jobs(
+        "What does a late investor update indicate about the month it describes?",
+        hits,
+        accepted,
+    )
+    assert LATE_UPDATE in jobs[0]["instruction"]
+    with pytest.raises(ValueError, match="outside_verified_claims"):
+        media_jobs(
+            "What does a late investor update indicate about the month it describes?",
+            hits,
+            accepted,
+            relationships=[{
+                "use_in_generation": True,
+                "prompt_fact": LATE_UPDATE,
+                "subject": "April",
+                "predicate": "sent",
+                "object": "update",
+                "qualifiers": [],
+            }],
+        )
+
+
+def test_extraction_fitting_drops_whole_trailing_hits_only():
+    hits = [
+        {"id": "gd_a", "text": "alpha WHOLE stays"},
+        {"id": "gd_b", "text": "beta WHOLE stays"},
+        {"id": "gd_c", "text": "gamma WHOLE stays"},
+    ]
+
+    def count_tokens(user: str) -> int:
+        return 100 + 40 * user.count("WHOLE")
+
+    kept, omitted = fit_extraction_hits("Topic", hits, count_tokens, limit=180)
+    assert [hit["id"] for hit in kept] == ["gd_a", "gd_b"]
+    assert [hit["id"] for hit in omitted] == ["gd_c"]
+    assert kept[0]["text"] == hits[0]["text"]
+    assert "alpha WHOLE" in extraction_user_prompt("Topic", kept)
+    assert "gamma WHOLE" not in extraction_user_prompt("Topic", kept)

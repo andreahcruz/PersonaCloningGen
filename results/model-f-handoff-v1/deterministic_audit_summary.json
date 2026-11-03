@@ -1,0 +1,236 @@
+{
+  "audit_id": "AUDIT-20261102-001-model-f-frel-prejudge",
+  "manifest_status_at_audit": "generated_not_judged",
+  "overall": {
+    "at_max_tokens": {
+      "count": 36,
+      "denominator": 120,
+      "rate": 0.3
+    },
+    "cells": 120,
+    "citation_marker_leak": {
+      "count": 2,
+      "denominator": 120,
+      "rate": 0.0167
+    },
+    "claim_presence": {
+      "cells": 116,
+      "definition": "Audit diagnostic: 4-token contiguous overlap, or the full sequence when the claim has fewer than 4 tokens. Not an existing scorer.",
+      "measured_claims": 1284,
+      "present_claims": 48,
+      "rate": 0.0374
+    },
+    "completion_pass": {
+      "count": 84,
+      "denominator": 120,
+      "rate": 0.7
+    },
+    "context_tokens": {
+      "max": 559.0,
+      "mean": 232.3667,
+      "median": 201.0,
+      "min": 36.0,
+      "n": 120,
+      "p95": 477.0
+    },
+    "copy_span": {
+      "max": 19.0,
+      "mean": 4.2333,
+      "median": 3.0,
+      "min": 1.0,
+      "n": 120,
+      "p95": 12.0
+    },
+    "embeds_topic": {
+      "count": 56,
+      "denominator": 120,
+      "rate": 0.4667
+    },
+    "empty": {
+      "count": 0,
+      "denominator": 120,
+      "rate": 0.0
+    },
+    "extraction_truncated": {
+      "count": 0,
+      "denominator": 120,
+      "rate": 0.0
+    },
+    "faithfulness_fail": {
+      "count": 61,
+      "denominator": 120,
+      "rate": 0.5083
+    },
+    "format_pass": {
+      "count": 116,
+      "denominator": 120,
+      "rate": 0.9667
+    },
+    "fourgram_repeat_rate": {
+      "max": 0.1333,
+      "mean": 0.0048,
+      "median": 0.0,
+      "min": 0.0,
+      "n": 120,
+      "p95": 0.0216
+    },
+    "generation_seconds": {
+      "max": 51.184,
+      "mean": 20.069,
+      "median": 23.7315,
+      "min": 1.453,
+      "n": 120,
+      "p95": 32.311
+    },
+    "graph_items_omitted": {
+      "count": 2,
+      "denominator": 120,
+      "rate": 0.0167
+    },
+    "instruction_or_marker_leak": {
+      "count": 2,
+      "denominator": 120,
+      "rate": 0.0167
+    },
+    "label": "all",
+    "lexical_grounding_pass": {
+      "count": 8,
+      "denominator": 120,
+      "rate": 0.0667
+    },
+    "lexical_overlap": {
+      "max": 1.0,
+      "mean": 0.0553,
+      "median": 0.0,
+      "min": 0.0,
+      "n": 120,
+      "p95": 0.25
+    },
+    "mid_sentence": {
+      "count": 36,
+      "denominator": 120,
+      "rate": 0.3
+    },
+    "missing_any_required_field": {
+      "count": 0,
+      "denominator": 120,
+      "rate": 0.0
+    },
+    "output_tokens": {
+      "max": 548.0,
+      "mean": 260.975,
+      "median": 320.0,
+      "min": 11.0,
+      "n": 120,
+      "p95": 402.0
+    },
+    "passage_omitted": {
+      "count": 20,
+      "denominator": 120,
+      "rate": 0.1667
+    },
+    "prompt_contract_short": {
+      "count": 12,
+      "denominator": 120,
+      "rate": 0.1
+    },
+    "prompt_tokens": {
+      "max": 1385.0,
+      "mean": 832.775,
+      "median": 801.0,
+      "min": 537.0,
+      "n": 120,
+      "p95": 1159.0
+    },
+    "rag_copy_fail": {
+      "count": 7,
+      "denominator": 120,
+      "rate": 0.0583
+    },
+    "rag_copy_span_ge_8": {
+      "count": 10,
+      "denominator": 120,
+      "rate": 0.0833
+    },
+    "relationship_endpoint_mention": {
+      "definition": "Audit diagnostic: both endpoint names from a [R] line occur in the answer. Not proof the relationship was used correctly.",
+      "measurable_lines": 475,
+      "mentioned": 40,
+      "rate": 0.0842
+    },
+    "repeated_sentence_cells": {
+      "count": 0,
+      "denominator": 120,
+      "rate": 0.0
+    },
+    "repeats_topic": {
+      "count": 55,
+      "denominator": 120,
+      "rate": 0.4583
+    },
+    "retry_attempt_gt_1": {
+      "count": 20,
+      "denominator": 120,
+      "rate": 0.1667
+    },
+    "retry_seed_set": {
+      "count": 20,
+      "denominator": 120,
+      "rate": 0.1667
+    },
+    "role_unsupported_cells": {
+      "count": 1,
+      "denominator": 120,
+      "rate": 0.0083
+    },
+    "status_not_complete": {
+      "count": 0,
+      "denominator": 120,
+      "rate": 0.0
+    },
+    "stop_reason_recorded": {
+      "count": 0,
+      "denominator": 120,
+      "rate": 0.0
+    },
+    "tokens_per_second": {
+      "max": 26.4611,
+      "mean": 13.4374,
+      "median": 12.9587,
+      "min": 1.2995,
+      "n": 120,
+      "p95": 25.583
+    },
+    "training_copy_fail": {
+      "count": 0,
+      "denominator": 104,
+      "rate": 0.0
+    },
+    "unsupported_numeric_cells": {
+      "count": 52,
+      "denominator": 120,
+      "rate": 0.4333
+    },
+    "unsupported_numeric_items": {
+      "cells_with_any": 52,
+      "count": 185,
+      "denominator_cells": 120
+    },
+    "words": {
+      "max": 465.0,
+      "mean": 203.1083,
+      "median": 243.5,
+      "min": 8.0,
+      "n": 120,
+      "p95": 323.0
+    },
+    "zero_accepted_claims": {
+      "count": 4,
+      "denominator": 120,
+      "rate": 0.0333
+    }
+  },
+  "saved_generation_files": 120,
+  "source": "audits/AUDIT-20261102-001-model-f-frel-prejudge/summary.json",
+  "training_copy_note": "summary.json records training_copy_fail count 0 with denominator 104. The audit report, after re-reading unified_eval/rows.jsonl, states 0 of 120. Both are recorded. This export does not recompute the gate."
+}

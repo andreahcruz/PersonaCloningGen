@@ -93,6 +93,7 @@ def arm_callback(
     catalog: dict | None = None,
     failed_document_ids: set[str] | None = None,
     count_tokens=None,
+    window_tokens=None,
 ):
     """Hook for compare_adapters.generate. It does not retrieve."""
 
@@ -112,6 +113,8 @@ def arm_callback(
         prepared = restrict_channels(prepared, RENDERED_CHANNELS[arm])
         prepared["count_tokens"] = count_tokens
         prepared["experiment_budget"] = experiment_budget
+        if window_tokens is not None:
+            prepared["window_tokens"] = window_tokens
         return prepared
 
     return _callback

@@ -1,0 +1,137 @@
+{
+  "decoding": {
+    "repetition_penalty": 1.15,
+    "seed": "42 + gold_index * 4 + medium_index",
+    "seed_base": 42,
+    "temperature": 0.7,
+    "top_p": 0.9
+  },
+  "experiment_id": "EXP-20261102-001-model-f-unified-panel",
+  "generation_manifest_status": "generated_not_judged",
+  "generation_sha256": "6ed2af4f47c3f592aa833c643dc6354956b0ea7f96b7634b98a902b2a746724c",
+  "gold_sha256": "d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e",
+  "graph": {
+    "completed_graph_indexed": 2713,
+    "edges": 47897,
+    "embed_model": "nomic-embed-text",
+    "embedding_dim": 768,
+    "extraction_model": "llama3.1:latest",
+    "graph_count_source": "measured_after_shutdown_flush",
+    "lightrag_version": "1.5.7",
+    "nodes": 27797,
+    "num_ctx": 16384,
+    "successful_chunks": 9269
+  },
+  "hardware_gpu_name_in_generation_manifest": false,
+  "judge": {
+    "config": {
+      "blinded": true,
+      "candidate_family": "llama",
+      "family": "qwen",
+      "temperature": 0
+    },
+    "git_commit": "31b27c03eb04faf88f00a7c7930c3e9f5a32e7ed",
+    "git_dirty": true,
+    "model": "qwen2.5:14b",
+    "python": "3.11.9",
+    "recorded_command_contained_a_local_absolute_path": true,
+    "sanitized_command": "python -m host_finetune.model_f_experiment unified-judge --profile F-REL --out experiments/EXP-20261102-001-model-f-unified-panel",
+    "timestamp": "2026-11-03T00:43:46.431318+00:00"
+  },
+  "judge_overlay_on_generation_manifest": "not_applied",
+  "model": {
+    "adapter": "host_finetune/output/lemkin_lora_relabel",
+    "base_model": "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit",
+    "max_seq_length": 2048,
+    "model_load_as_recorded": {
+      "is_loaded_in_4bit": true,
+      "is_loaded_in_8bit": true,
+      "load_in_4bit": true,
+      "load_in_8bit": false,
+      "name_or_path": "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit",
+      "requested": "4bit"
+    },
+    "quantization_requested": "4bit"
+  },
+  "note": "generation_manifest.json still says generated_not_judged. unified_eval/summary.json and evaluation_run.json are the judge record.",
+  "pilot": {
+    "arms": {
+      "F-DESC": {
+        "copy_or_leak_failure_rate": 0.0,
+        "factual_pass_rate": 0.5,
+        "n": 8
+      },
+      "F-HOP": {
+        "copy_or_leak_failure_rate": 0.125,
+        "factual_pass_rate": 0.5,
+        "n": 8
+      },
+      "F-REL": {
+        "copy_or_leak_failure_rate": 0.125,
+        "factual_pass_rate": 0.375,
+        "n": 8
+      },
+      "F-SOURCE": {
+        "copy_or_leak_failure_rate": 0.0,
+        "factual_pass_rate": 0.5,
+        "n": 8
+      }
+    },
+    "experiment_id": "EXP-20261102-002-model-f-quick-pilot",
+    "frozen": true,
+    "n_complete_questions": 8,
+    "selected_arm": "F-SOURCE",
+    "status": "fallback"
+  },
+  "plan_status": "generated_not_judged",
+  "posthoc_selection": {
+    "artifact": "posthoc_engineering_selection",
+    "does_not_modify": "experiments/EXP-model-f-desc-vs-rel-32/desc_vs_rel_recommendation.json",
+    "does_not_replace": "experiments/EXP-model-f-quick-pilot/arm_selection.json",
+    "frozen": false,
+    "frozen_pilot_arm": "F-SOURCE",
+    "frozen_pilot_unchanged": true,
+    "reason": "F-REL is the engineering profile for this panel. The frozen pilot remains F-SOURCE. The stage-2 recommendation file is unchanged. This panel was not used to make the choice.",
+    "selected_arm": "F-REL",
+    "stage2_recommendation_unchanged": true,
+    "uses_120_prompt_panel_for_selection": false
+  },
+  "profile": "F-REL",
+  "protocol": "unified_eval.v1",
+  "retrieval": {
+    "backend": "lightrag",
+    "evidence_budget": 4,
+    "live_store_queried": false,
+    "mode": "hybrid",
+    "num_ctx": 16384,
+    "snapshot": "artifacts/lightrag/model_f/storage_expand_v1_snapshot",
+    "top_k": 20
+  },
+  "stage2": {
+    "arms": {
+      "F-DESC": {
+        "copy_or_leak_failure_rate": 0.038461538461538464,
+        "echo_adjusted_pass_rate": 0.3076923076923077,
+        "n": 26,
+        "numeric_failure_rate": 0.23076923076923078,
+        "scorer_faithfulness_pass_rate": 0.5384615384615384
+      },
+      "F-REL": {
+        "copy_or_leak_failure_rate": 0.038461538461538464,
+        "echo_adjusted_pass_rate": 0.34615384615384615,
+        "n": 26,
+        "numeric_failure_rate": 0.15384615384615385,
+        "scorer_faithfulness_pass_rate": 0.5384615384615384
+      }
+    },
+    "compared_questions": 26,
+    "experiment_id": "EXP-20261102-003-model-f-desc-vs-rel",
+    "question_ties": 18,
+    "question_wins": {
+      "F-DESC": 4,
+      "F-REL": 4
+    },
+    "selected_arm": "F-REL",
+    "status": "selected"
+  }
+}

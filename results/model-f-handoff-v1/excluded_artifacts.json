@@ -1,0 +1,73 @@
+{
+  "directories": [
+    {
+      "bytes": 1000875636,
+      "files": 224,
+      "path": "experiments/EXP-20261102-001-model-f-unified-panel",
+      "present": true
+    },
+    {
+      "bytes": 999608500,
+      "files": 213,
+      "path": "experiments/EXP-20261102-001-model-f-unified-panel/raw",
+      "present": true
+    },
+    {
+      "bytes": 845220,
+      "files": 5,
+      "path": "experiments/EXP-20261102-001-model-f-unified-panel/unified_eval",
+      "present": true
+    },
+    {
+      "bytes": 992272666,
+      "files": 87,
+      "path": "experiments/EXP-model-f-quick-pilot",
+      "present": true
+    },
+    {
+      "bytes": 996437960,
+      "files": 146,
+      "path": "experiments/EXP-model-f-desc-vs-rel-32",
+      "present": true
+    },
+    {
+      "bytes": 990004284,
+      "files": 35,
+      "path": "experiments/EXP-20261102-004-model-f-frel-smoke",
+      "present": true
+    },
+    {
+      "bytes": 989760345,
+      "files": 32,
+      "path": "artifacts/lightrag/model_f/storage_expand_v1_snapshot",
+      "present": true
+    },
+    {
+      "bytes": 997815445,
+      "files": 39,
+      "path": "host_finetune/output/lemkin_lora_relabel",
+      "present": true
+    }
+  ],
+  "file_hashes": {
+    "audits/AUDIT-20261102-001-model-f-frel-prejudge/REPORT.md": "c710c5aa8a76ecc0180492c71c0e49b093bca4194e8c1286c92b931b77997355",
+    "audits/AUDIT-20261102-001-model-f-frel-prejudge/summary.json": "e6f7a5198c59b1581e383a9fa2e09febef832401c682bddf21b87bfc687418d7",
+    "experiments/EXP-20261102-001-model-f-unified-panel/generation_manifest.json": "9981c74be3cf9753977a3a5470925827452348e6d2fd3f01432c1b9190a5cd46",
+    "experiments/EXP-20261102-001-model-f-unified-panel/posthoc_arm_selection.json": "76d761074f16ea05f5d723429b7df2444d395b1484a59da3ac0d30412fa72dcc",
+    "experiments/EXP-20261102-001-model-f-unified-panel/raw/lightrag_query/reports/indexing_summary.json": "e67e4c216efddc62e7eeb6e3170ee1696741e4fb1f0c60b0358298622b252338",
+    "experiments/EXP-20261102-001-model-f-unified-panel/raw/lightrag_query/snapshot_hashes.json": "753070dad6f5b17c89417fa3e1f784618476945cd7f29e813abfe200724cefe9",
+    "experiments/EXP-20261102-001-model-f-unified-panel/unified_eval/comparison.json": "35e119cf93ed8c3f4fd4300c9bb2e3c6453ca085b0258dde5e08d51c6ed6f10d",
+    "experiments/EXP-20261102-001-model-f-unified-panel/unified_eval/evaluation_run.json": "a5274de225715faf1fd82379ff3cbd6e35f060b11936b979b97f003a513fe796",
+    "experiments/EXP-20261102-001-model-f-unified-panel/unified_eval/summary.json": "260ddadc56cf583ba2b12ea3580934639b8d1b0b7893b51301245fdcad2c05d8"
+  },
+  "policy": "Raw experimental files were not edited. These paths are omitted from Git.",
+  "recorded_transfer_hashes": {
+    "adapter_weights_sha256": "850e9aa88d04fa4e7c9490d5d974715c8a1018c47c7ada340d642b4b2afea530",
+    "adapter_zip_sha256": "644041cbe47e0a1ce69997e790be799b5ed42862be2854b792e94a24dd93777f",
+    "graph_audit_sha256": "2672aee28b5564876f6f8d547745acdc3eda7780e6b5df5d4812f5def2e0b4dd",
+    "rehashed_in_this_export": false,
+    "snapshot_zip_bytes": 481019443,
+    "snapshot_zip_sha256": "4e7a00a977efe0c4ab121b0356704ecd4472cb17d0a96533f8c80a5ad500b9ea",
+    "source": "docs/handoff/MODEL_F_DEPLOYMENT_TRANSFER_20261102.md"
+  }
+}

@@ -17,7 +17,7 @@ NOT_ANNOTATED = {
 }
 
 
-def traces_to_records(directory: Path) -> list[dict]:
+def traces_to_records(directory: Path, experiment_id: str = EXPERIMENT_ID) -> list[dict]:
     records = []
     folder = directory / "raw" / "generations"
     if not folder.is_dir():
@@ -26,30 +26,40 @@ def traces_to_records(directory: Path) -> list[dict]:
         payload = json.loads(path.read_text(encoding="utf-8"))
         if payload.get("status") != "complete":
             continue
+        backend = payload.get("retrieval_backend")
+        mode = payload.get("retrieval_mode")
         records.append({
-            "experiment_id": EXPERIMENT_ID,
+            "experiment_id": experiment_id,
             "architecture": payload["arm"],
             "question_id": payload["question_id"],
             "question": payload.get("query") or "",
             "medium": payload.get("medium"),
             "uses_graph": payload["arm"] != "F-SOURCE",
             "retrieval_config": {
-                "backend": "lightrag",
-                "mode": "hybrid",
+                "backend": backend,
+                "mode": mode,
+                "backend_status": "recorded" if backend else "not_recorded",
+                "mode_status": "recorded" if mode else "not_recorded",
                 "shared_frozen_payload": True,
                 "arm": payload["arm"],
             },
+            "review_source_ids": list(payload.get("designated_source_ids") or []),
+            "latency": payload.get("latency") or {},
+            "tokens": payload.get("tokens") or {},
+            "gpu_memory_bytes": payload.get("gpu_memory_bytes"),
             "generation_config": payload.get("generation_config") or {"arm": payload["arm"]},
             "retrieved_source_ids": list(payload.get("retrieved_source_ids") or []),
             "evidence": list(payload.get("evidence") or []),
             "provenance": list(payload.get("provenance") or []),
             "answer": payload.get("answer") or "",
             "reference_answer": None,
-            "claims": list(payload.get("claims") or []),
+            "claims": [
+                {"claim": item} if isinstance(item, str) else item
+                for item in (payload.get("claims") or [])
+                if isinstance(item, (str, dict))
+            ],
             "grounding_texts": list(payload.get("grounding_texts") or []),
             "abstention_expected": bool(payload.get("abstention_expected")),
-            "latency": payload.get("latency") or {},
-            "tokens": payload.get("tokens") or {},
             "context_budget_tokens": (payload.get("tokens") or {}).get("budget_total"),
         })
     return records

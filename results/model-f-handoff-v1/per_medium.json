@@ -1,0 +1,375 @@
+{
+  "architecture": "Model F",
+  "rows": [
+    {
+      "architecture": "Model F",
+      "drafts": 120,
+      "eligible": 67,
+      "gates": {
+        "completion": {
+          "failures": 36,
+          "missing": 0,
+          "n": 120,
+          "pass_rate": 0.7
+        },
+        "copying_memorization": {
+          "failures": 0,
+          "missing": 0,
+          "n": 120,
+          "pass_rate": 1.0
+        },
+        "format": {
+          "failures": 4,
+          "missing": 0,
+          "n": 120,
+          "pass_rate": 0.966667
+        },
+        "grounding": {
+          "failures": 22,
+          "missing": 0,
+          "n": 120,
+          "pass_rate": 0.816667
+        }
+      },
+      "medium": "all",
+      "metrics": {
+        "claim_support": {
+          "mean": 1.0,
+          "missing": 22,
+          "n": 98
+        },
+        "latency_seconds": {
+          "mean": 20.068958,
+          "missing": 0,
+          "n": 120
+        },
+        "persona_utility": {
+          "mean": null,
+          "missing": 120,
+          "n": 0
+        },
+        "stance_consistency": {
+          "mean": 1.0,
+          "missing": 19,
+          "n": 101
+        },
+        "style_distance": {
+          "mean": 0.739002,
+          "missing": 30,
+          "n": 90
+        },
+        "task_adherence": {
+          "mean": 0.695375,
+          "missing": 0,
+          "n": 120
+        },
+        "word_count": {
+          "mean": 203.108333,
+          "missing": 0,
+          "n": 120
+        },
+        "writing_quality": {
+          "mean": 3.165278,
+          "missing": 0,
+          "n": 120
+        }
+      }
+    },
+    {
+      "architecture": "Model F",
+      "drafts": 30,
+      "eligible": 22,
+      "gates": {
+        "completion": {
+          "failures": 0,
+          "missing": 0,
+          "n": 30,
+          "pass_rate": 1.0
+        },
+        "copying_memorization": {
+          "failures": 0,
+          "missing": 0,
+          "n": 30,
+          "pass_rate": 1.0
+        },
+        "format": {
+          "failures": 1,
+          "missing": 0,
+          "n": 30,
+          "pass_rate": 0.966667
+        },
+        "grounding": {
+          "failures": 7,
+          "missing": 0,
+          "n": 30,
+          "pass_rate": 0.766667
+        }
+      },
+      "medium": "blog",
+      "metrics": {
+        "claim_support": {
+          "mean": 1.0,
+          "missing": 7,
+          "n": 23
+        },
+        "latency_seconds": {
+          "mean": 24.040733,
+          "missing": 0,
+          "n": 30
+        },
+        "persona_utility": {
+          "mean": null,
+          "missing": 30,
+          "n": 0
+        },
+        "stance_consistency": {
+          "mean": 1.0,
+          "missing": 6,
+          "n": 24
+        },
+        "style_distance": {
+          "mean": 0.819967,
+          "missing": 0,
+          "n": 30
+        },
+        "task_adherence": {
+          "mean": 0.700267,
+          "missing": 0,
+          "n": 30
+        },
+        "word_count": {
+          "mean": 246.4,
+          "missing": 0,
+          "n": 30
+        },
+        "writing_quality": {
+          "mean": 3.57777,
+          "missing": 0,
+          "n": 30
+        }
+      }
+    },
+    {
+      "architecture": "Model F",
+      "drafts": 30,
+      "eligible": 11,
+      "gates": {
+        "completion": {
+          "failures": 17,
+          "missing": 0,
+          "n": 30,
+          "pass_rate": 0.433333
+        },
+        "copying_memorization": {
+          "failures": 0,
+          "missing": 0,
+          "n": 30,
+          "pass_rate": 1.0
+        },
+        "format": {
+          "failures": 2,
+          "missing": 0,
+          "n": 30,
+          "pass_rate": 0.933333
+        },
+        "grounding": {
+          "failures": 4,
+          "missing": 0,
+          "n": 30,
+          "pass_rate": 0.866667
+        }
+      },
+      "medium": "linkedin",
+      "metrics": {
+        "claim_support": {
+          "mean": 1.0,
+          "missing": 4,
+          "n": 26
+        },
+        "latency_seconds": {
+          "mean": 19.652633,
+          "missing": 0,
+          "n": 30
+        },
+        "persona_utility": {
+          "mean": null,
+          "missing": 30,
+          "n": 0
+        },
+        "stance_consistency": {
+          "mean": 1.0,
+          "missing": 6,
+          "n": 24
+        },
+        "style_distance": {
+          "mean": 0.794733,
+          "missing": 0,
+          "n": 30
+        },
+        "task_adherence": {
+          "mean": 0.68538,
+          "missing": 0,
+          "n": 30
+        },
+        "word_count": {
+          "mean": 186.033333,
+          "missing": 0,
+          "n": 30
+        },
+        "writing_quality": {
+          "mean": 3.072223,
+          "missing": 0,
+          "n": 30
+        }
+      }
+    },
+    {
+      "architecture": "Model F",
+      "drafts": 30,
+      "eligible": 11,
+      "gates": {
+        "completion": {
+          "failures": 18,
+          "missing": 0,
+          "n": 30,
+          "pass_rate": 0.4
+        },
+        "copying_memorization": {
+          "failures": 0,
+          "missing": 0,
+          "n": 30,
+          "pass_rate": 1.0
+        },
+        "format": {
+          "failures": 0,
+          "missing": 0,
+          "n": 30,
+          "pass_rate": 1.0
+        },
+        "grounding": {
+          "failures": 6,
+          "missing": 0,
+          "n": 30,
+          "pass_rate": 0.8
+        }
+      },
+      "medium": "x",
+      "metrics": {
+        "claim_support": {
+          "mean": 1.0,
+          "missing": 6,
+          "n": 24
+        },
+        "latency_seconds": {
+          "mean": 9.621667,
+          "missing": 0,
+          "n": 30
+        },
+        "persona_utility": {
+          "mean": null,
+          "missing": 30,
+          "n": 0
+        },
+        "stance_consistency": {
+          "mean": 1.0,
+          "missing": 5,
+          "n": 25
+        },
+        "style_distance": {
+          "mean": 0.602307,
+          "missing": 0,
+          "n": 30
+        },
+        "task_adherence": {
+          "mean": 0.725217,
+          "missing": 0,
+          "n": 30
+        },
+        "word_count": {
+          "mean": 90.033333,
+          "missing": 0,
+          "n": 30
+        },
+        "writing_quality": {
+          "mean": 2.661113,
+          "missing": 0,
+          "n": 30
+        }
+      }
+    },
+    {
+      "architecture": "Model F",
+      "drafts": 30,
+      "eligible": 23,
+      "gates": {
+        "completion": {
+          "failures": 1,
+          "missing": 0,
+          "n": 30,
+          "pass_rate": 0.966667
+        },
+        "copying_memorization": {
+          "failures": 0,
+          "missing": 0,
+          "n": 30,
+          "pass_rate": 1.0
+        },
+        "format": {
+          "failures": 1,
+          "missing": 0,
+          "n": 30,
+          "pass_rate": 0.966667
+        },
+        "grounding": {
+          "failures": 5,
+          "missing": 0,
+          "n": 30,
+          "pass_rate": 0.833333
+        }
+      },
+      "medium": "talk",
+      "metrics": {
+        "claim_support": {
+          "mean": 1.0,
+          "missing": 5,
+          "n": 25
+        },
+        "latency_seconds": {
+          "mean": 26.9608,
+          "missing": 0,
+          "n": 30
+        },
+        "persona_utility": {
+          "mean": null,
+          "missing": 30,
+          "n": 0
+        },
+        "stance_consistency": {
+          "mean": 1.0,
+          "missing": 2,
+          "n": 28
+        },
+        "style_distance": {
+          "mean": null,
+          "missing": 30,
+          "n": 0
+        },
+        "task_adherence": {
+          "mean": 0.670637,
+          "missing": 0,
+          "n": 30
+        },
+        "word_count": {
+          "mean": 289.966667,
+          "missing": 0,
+          "n": 30
+        },
+        "writing_quality": {
+          "mean": 3.350007,
+          "missing": 0,
+          "n": 30
+        }
+      }
+    }
+  ]
+}

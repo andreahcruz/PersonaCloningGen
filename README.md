@@ -2,6 +2,89 @@
 
 This repository generates Jason Lemkin / SaaStr writing in four media: blog, LinkedIn, X, and talk.
 
+## Model F
+
+Model F is LightRAG retrieval plus the same Relabel QLoRA generator used by the earlier dense-RAG candidate. The official scored profile is **F-REL**: source-supported relationship lines added to source-grounded claims. A frozen 8-question pilot selected **F-SOURCE** and was not revised. A later 26-question development comparison recommended F-REL. The 120-prompt panel did not choose the arm.
+
+```mermaid
+flowchart LR
+    topic[Topic] --> lightrag[LightRAG 1.5.7 hybrid query]
+    lightrag --> claims[Accepted claims]
+    lightrag --> rel[F-REL relationship lines]
+    claims --> llama[Relabel QLoRA Llama 3.1 8B]
+    rel --> llama
+    llama --> draft[Blog LinkedIn X or talk]
+```
+
+The frozen snapshot records 27,797 nodes and 47,897 edges, from 2,713 completed documents out of 13,140 eligible. Embeddings and graph extraction use local Ollama (`nomic-embed-text`, `llama3.1:latest`). The generator context window is 2048 tokens. Graph queries use `num_ctx` 16384. Requested quantization is 4-bit. Development requirements target an RTX 5070 Ti, 16 GB. The official generation manifest does not store a GPU name.
+
+F-SOURCE renders claims only. F-DESC adds derived entity descriptions. F-REL adds relationship lines whose endpoints and predicate words occur in a retrieved passage. Descriptions are not treated as source spans.
+
+### Install
+
+Python 3.11. The judge process recorded 3.11.9.
+
+```powershell
+py -3.11 -m venv host_finetune\.venv
+host_finetune\.venv\Scripts\activate
+python -m pip install --upgrade pip
+pip install "torch>=2.10.0,<2.11.0" "torchvision>=0.25.0,<0.26.0" --index-url https://download.pytorch.org/whl/cu128
+pip install -r host_finetune\requirements.txt
+pip install -r host_finetune\requirements-lightrag.txt
+ollama pull nomic-embed-text
+ollama pull llama3.1
+ollama pull qwen2.5:14b
+```
+
+`config/model_f.example.json` lists project-relative paths. The runners do not load that file. Set `OLLAMA_BASE` only when Ollama is not on `http://127.0.0.1:11434`.
+
+### Data and model dependencies
+
+Not in Git, and required to regenerate:
+
+| Dependency | Identity |
+|---|---|
+| Graph snapshot | `artifacts/lightrag/model_f/storage_expand_v1_snapshot` |
+| Adapter | `host_finetune/output/lemkin_lora_relabel` |
+| Base model | `unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit` |
+| Gold topics | `data/openai_ft/lemkin_gold_eval.jsonl` (this file is tracked) |
+
+Zip hashes and the verify command are in [the teammate handoff](docs/teammate_handoff.md). Re-indexing does not reproduce the snapshot.
+
+### Inference
+
+Needs the snapshot, the adapter, a CUDA machine, and Ollama. Writes a new experiment directory. Do not point `--out` at the official directory.
+
+```powershell
+python -m host_finetune.model_f_experiment unified-plan --profile F-REL --snapshot artifacts/lightrag/model_f/storage_expand_v1_snapshot --out experiments/EXP-YYYYMMDD-NNN-model-f-rerun
+python -m host_finetune.model_f_experiment unified-run --profile F-REL --snapshot artifacts/lightrag/model_f/storage_expand_v1_snapshot --out experiments/EXP-YYYYMMDD-NNN-model-f-rerun
+```
+
+### Evaluation
+
+Scores drafts already on disk. Needs `qwen2.5:14b`. Does not regenerate.
+
+```powershell
+python -m host_finetune.model_f_experiment unified-judge --profile F-REL --out experiments/EXP-20261102-001-model-f-unified-panel
+```
+
+The saved judge run is already complete. Run that command only to rescore. Generation SHA-256 `6ed2af4f47c3f592aa833c643dc6354956b0ea7f96b7634b98a902b2a746724c`. Eligible drafts 67/120. Eligible writing quality 3.2662. Persona utility is null. 52/120 drafts failed the deterministic unsupported-number check. Judge scores are not factual reliability. Tables: [results](docs/model_f_results.md).
+
+### Reproducibility constraints
+
+- Official experiment: `experiments/EXP-20261102-001-model-f-unified-panel`.
+- Seed base 42. Per cell: `42 + gold_index * 4 + medium_index`.
+- Gold SHA-256 `d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e`.
+- Judge git commit `31b27c03eb04faf88f00a7c7930c3e9f5a32e7ed`, dirty worktree, Python 3.11.9.
+- The raw experiment directory, graph, and adapter stay off Git. Shareable JSON is `results/model-f-handoff-v1/`.
+- Do not describe historical workbook numbers as this panel.
+
+Longer notes: [architecture](docs/model_f_architecture.md), [experiments](docs/model_f_experiments.md), [handoff](docs/teammate_handoff.md).
+
+## Prior candidate: Relabel plus dense RAG
+
+The section below is the earlier deployment candidate. It is not Model F. Model F does not read the Chroma collection described here.
+
 The deployment candidate is **Relabel QLoRA + Factual Dense RAG v1 + atomic evidence extraction**. RAG is deployed because it grounds verifiable claims. It does not improve Blog Voice or Writing Quality, and it slightly lowers Persona Utility. Those limits are part of the decision. See [deployment handoff](docs/deployment/DEPLOYMENT_HANDOFF.md) and [artifact locations](docs/deployment/ARTIFACTS.md).
 
 `docs/project_state.md` is a 2026-10-04 audit. It is not the deployment description.

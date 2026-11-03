@@ -1,0 +1,99 @@
+{
+  "blinded": true,
+  "generation_sha256": "6ed2af4f47c3f592aa833c643dc6354956b0ea7f96b7634b98a902b2a746724c",
+  "judge_model": "qwen2.5:14b",
+  "model": {
+    "diagnostics": {
+      "brief_overlap": {
+        "gold_rubric_overall": 0.2736,
+        "role": "brief_task_agreement_not_persona_quality"
+      },
+      "latency_seconds": 20.069,
+      "reference_similarity": {
+        "bertscore": null,
+        "bleu": 0.0112,
+        "role": "diagnostic_not_persona_fidelity",
+        "rouge_l": 0.0769
+      }
+    },
+    "eligible_rate": 0.5583,
+    "gates": {
+      "completion_pass_rate": 0.7,
+      "copying_pass_rate": 1.0,
+      "format_pass_rate": 0.9667,
+      "grounding_applicable_rows": 120,
+      "grounding_pass_rate": 0.8167
+    },
+    "grounding": {
+      "applicable": true,
+      "mean_claim_support_rate": 1.0,
+      "mean_contradiction_rate": 0.0,
+      "method": "claim_vs_saved_retrieval_hits",
+      "rag_grounding": "scored"
+    },
+    "lemkin_evidence_support": {
+      "mean_claim_support_rate": 0.9941,
+      "not_rag_grounding": true
+    },
+    "model_id": "EXP-20261102-001-model-f-unified-panel/F-REL",
+    "n": 120,
+    "n_eligible": 67,
+    "persona_style": {
+      "limits": "Closer surface counts are not authorship accuracy. This is a style-distance diagnostic, not proof of authorship identity.",
+      "mean_distance_eligible": 0.7724,
+      "mediums_in_mean": [
+        "blog"
+      ],
+      "role": "selector"
+    },
+    "persona_utility": null,
+    "perspective_fidelity": {
+      "framing_role": "diagnostic_only",
+      "limits": "Stance consistency is the perspective score. Framing distance is diagnostic.",
+      "mean_distance_eligible": 0.832,
+      "mean_stance_consistency": 1.0,
+      "mediums_in_mean": [],
+      "method": "framing_rate_distance_vs_held_out",
+      "role": "diagnostic_only"
+    },
+    "schema": "unified_eval.v1",
+    "source_experiment": "EXP-20261102-001-model-f-unified-panel",
+    "task_adherence": {
+      "mean_eligible": 0.7033,
+      "role": "quality_dimension"
+    },
+    "utility_weights": {
+      "persona_style": 0.45,
+      "perspective_fidelity": 0.2,
+      "task_adherence": 0.1,
+      "writing_quality": 0.25
+    },
+    "writing_quality": {
+      "available": true,
+      "calibrated": true,
+      "mean_eligible": 3.2662,
+      "reason": "writing_order_holds",
+      "role": "selector"
+    }
+  },
+  "n_traces": 120,
+  "schema": "unified_eval.v1",
+  "stance_calibration": {
+    "calibrated": false,
+    "judge_model": "qwen2.5:14b",
+    "reason": "stance_controls_missing",
+    "role": "diagnostic_only"
+  },
+  "temperature": 0,
+  "utility_weights": {
+    "persona_style": 0.45,
+    "perspective_fidelity": 0.2,
+    "task_adherence": 0.1,
+    "writing_quality": 0.25
+  },
+  "writing_quality_calibration": {
+    "calibrated": true,
+    "reason": "writing_order_holds",
+    "role": "selector"
+  }
+}

@@ -54,6 +54,17 @@ data/*.zip
 # Local bundles that carry adapters or Chroma copies.
 deployment_handoff/
 
+# Model F local graph copies, query caches, and full generation dumps.
+# Share results/model-f-handoff-v1 instead of these directories.
+experiments/EXP-20261102-001-model-f-unified-panel/raw/
+experiments/EXP-20261102-004-model-f-frel-smoke/
+experiments/EXP-20261102-model-f-repair/
+experiments/EXP-model-f-desc-vs-rel-32/raw/
+experiments/EXP-model-f-quick-pilot/raw/
+audits/**/sample_answers.json
+audits/**/cells.jsonl
+audits/**/questions.json
+
 # Additional environment files. `.env.example` stays available.
 .env.*
 !.env.example

@@ -10,7 +10,7 @@ from __future__ import annotations
 
 import re
 
-from host_finetune.evidence_capsule import PROMPT_CONTRACT
+from host_finetune.evidence_capsule import PROMPT_CONTRACT, unauthorized_raw_passage
 from host_finetune.model_f_context.budget import allocate_context
 from host_finetune.model_f_context.multihop import select_paths
 from host_finetune.model_f_context.normalize import normalize_graph_context
@@ -195,6 +195,158 @@ def render_prepared(
     }
 
 
+def _ranges(haystack: str, needle: str) -> list[tuple[int, int]]:
+    if not needle:
+        return []
+    found = []
+    start = 0
+    while True:
+        index = haystack.find(needle, start)
+        if index < 0:
+            return found
+        found.append((index, index + len(needle)))
+        start = index + 1
+
+
+def _span_outside(haystack: str, span: str, allowed: list[tuple[int, int]]) -> bool:
+    """True when a support span occurs outside the topic and the rendered claims."""
+    if not span:
+        return False
+    start = 0
+    while True:
+        index = haystack.find(span, start)
+        if index < 0:
+            return False
+        end = index + len(span)
+        if not any(left <= index and end <= right for left, right in allowed):
+            return True
+        start = index + 1
+
+
+def _unit_key(channel: str, unit: dict) -> str:
+    return f"{channel}:{unit.get('evidence_id')}"
+
+
+def _graph_tail_key(rendered: dict) -> str | None:
+    selected = rendered["allocation"]["selected"]
+    for channel in ("derived_description", "multi_hop_path", "source_supported_relationship"):
+        units = selected.get(channel) or []
+        if units:
+            return _unit_key(channel, units[-1])
+    return None
+
+
+def _without_ids(prepared: dict, omit: set[str]) -> dict:
+    if not omit:
+        return prepared
+    grouped = {}
+    for channel, units in prepared["ranked"]["grouped"].items():
+        copied = []
+        for unit in units:
+            item = dict(unit)
+            if _unit_key(channel, unit) in omit:
+                reasons = list(item.get("exclude_reasons") or [])
+                if "window_item_does_not_fit" not in reasons:
+                    reasons.append("window_item_does_not_fit")
+                item["exclude_reasons"] = reasons
+            copied.append(item)
+        grouped[channel] = copied
+    restricted = dict(prepared)
+    restricted["ranked"] = {**prepared["ranked"], "grouped": grouped}
+    return restricted
+
+
+def _window_room(medium: dict) -> int:
+    """Chat tokens left for the prompt after the requested output.
+
+    The configured channel caps and ``max_new_tokens`` stay as they are. A
+    graph item that does not fit this room is omitted whole.
+    """
+    from host_finetune.compare_adapters import MAX_SEQ_LENGTH
+
+    return MAX_SEQ_LENGTH - int(medium["max_new_tokens"])
+
+
+def _render_within_window(prepared, medium, topic, claims, evidence_status, exemplars, count_tokens, medium_budget):
+    """Drop trailing graph items until the chat prompt fits. Claims stay."""
+    measurer = prepared.get("window_tokens")
+    omit: list[str] = []
+    rendered = None
+    while True:
+        rendered = render_prepared(
+            _without_ids(prepared, set(omit)),
+            medium,
+            topic,
+            claims,
+            evidence_status,
+            exemplars,
+            count_tokens=count_tokens,
+            budget=medium_budget,
+        )
+        if measurer is None:
+            return rendered, omit
+        size = int(measurer(rendered["instruction"]))
+        if size <= _window_room(medium):
+            return rendered, omit
+        tail = _graph_tail_key(rendered)
+        if tail is None or tail in omit or len(omit) >= 64:
+            return rendered, omit
+        omit.append(tail)
+
+
+def _assert_rendered_prompt(rendered: dict, hits: list[dict], topic: str) -> None:
+    checked = rendered["instruction"]
+    voice = rendered["voice"]
+    if voice:
+        if voice not in checked:
+            raise ValueError("style block missing from the graph-context prompt")
+        checked = checked.replace(voice, "", 1)
+    leaked = unauthorized_raw_passage(checked, hits, rendered["selected_claims"])
+    if leaked:
+        raise ValueError(leaked)
+    allowed = _ranges(checked, topic)
+    for claim in rendered["selected_claims"]:
+        text = str(claim.get("claim") or "")
+        allowed.extend(_ranges(checked, text))
+        allowed.extend(_ranges(checked, re.sub(r"\s+", " ", text).strip()))
+    for claim in rendered["selected_claims"]:
+        if claim.get("claim") and claim["claim"] not in rendered["instruction"]:
+            raise ValueError("verified claim missing from the final prompt")
+        span = claim.get("support_span") or ""
+        if span and span not in (claim.get("claim") or "") and _span_outside(checked, span, allowed):
+            raise ValueError("support span leaked into the final prompt")
+        source_id = str(claim.get("source_id") or "")
+        if source_id and source_id not in (claim.get("claim") or "") and source_id in checked:
+            raise ValueError("source id leaked into the final prompt")
+    for unit in rendered["allocation"]["selected"]["source_supported_relationship"]:
+        record = unit["record"]
+        span = record.verbatim_evidence or ""
+        if span and span not in (record.predicate or "") and span in checked:
+            raise ValueError("relationship support span leaked into the final prompt")
+        for source_id in record.supporting_document_ids:
+            if source_id and source_id not in checked:
+                continue
+            if source_id and source_id in checked:
+                raise ValueError("relationship source id leaked into the final prompt")
+    supplementary = ""
+    if "SUPPLEMENTARY GRAPH-DERIVED DESCRIPTIONS" in checked:
+        supplementary = checked.split("SUPPLEMENTARY GRAPH-DERIVED DESCRIPTIONS", 1)[1]
+    for description in rendered["description_texts"]:
+        if not description:
+            continue
+        outside = checked.split("SUPPLEMENTARY GRAPH-DERIVED DESCRIPTIONS", 1)[0]
+        if description in outside and description not in " ".join(rendered["grounding_texts"]):
+            raise ValueError("derived description leaked above its section")
+        if description in rendered["grounding_texts"]:
+            raise ValueError("derived description was treated as a verified fact")
+        if supplementary and description not in supplementary:
+            raise ValueError("selected description missing from its section")
+    if "gd_" in checked and any(token.startswith("gd_") for token in checked.split()):
+        for token in checked.replace("\n", " ").split():
+            if token.startswith("gd_") or "-chunk-" in token:
+                raise ValueError("internal document id leaked into the final prompt")
+
+
 def context_media_jobs(
     topic: str,
     hits: list[dict],
@@ -212,62 +364,18 @@ def context_media_jobs(
     for medium in MEDIUMS:
         exemplars = style_for(medium["medium"]) if style_for is not None else None
         medium_budget = budget(medium["medium"]) if callable(budget) else budget
-        rendered = render_prepared(
+        rendered, omitted = _render_within_window(
             prepared,
             medium,
             topic,
             claims,
             evidence_status,
             exemplars,
-            count_tokens=count_tokens,
-            budget=medium_budget,
+            count_tokens,
+            medium_budget,
         )
-        checked = rendered["instruction"]
+        _assert_rendered_prompt(rendered, hits, topic)
         voice = rendered["voice"]
-        if voice:
-            if voice not in checked:
-                raise ValueError("style block missing from the graph-context prompt")
-            checked = checked.replace(voice, "", 1)
-        for hit in hits:
-            text = (hit.get("text") or "").strip()
-            if text and text in checked:
-                raise ValueError("raw retrieved prose leaked into the final prompt")
-        for claim in rendered["selected_claims"]:
-            if claim.get("claim") and claim["claim"] not in rendered["instruction"]:
-                raise ValueError("verified claim missing from the final prompt")
-            span = claim.get("support_span") or ""
-            if span and span not in (claim.get("claim") or "") and span in checked:
-                raise ValueError("support span leaked into the final prompt")
-            source_id = str(claim.get("source_id") or "")
-            if source_id and source_id not in (claim.get("claim") or "") and source_id in checked:
-                raise ValueError("source id leaked into the final prompt")
-        for unit in rendered["allocation"]["selected"]["source_supported_relationship"]:
-            record = unit["record"]
-            span = record.verbatim_evidence or ""
-            if span and span not in (record.predicate or "") and span in checked:
-                raise ValueError("relationship support span leaked into the final prompt")
-            for source_id in record.supporting_document_ids:
-                if source_id and source_id not in checked:
-                    continue
-                if source_id and source_id in checked:
-                    raise ValueError("relationship source id leaked into the final prompt")
-        supplementary = ""
-        if "SUPPLEMENTARY GRAPH-DERIVED DESCRIPTIONS" in checked:
-            supplementary = checked.split("SUPPLEMENTARY GRAPH-DERIVED DESCRIPTIONS", 1)[1]
-        for description in rendered["description_texts"]:
-            if not description:
-                continue
-            outside = checked.split("SUPPLEMENTARY GRAPH-DERIVED DESCRIPTIONS", 1)[0]
-            if description in outside and description not in " ".join(rendered["grounding_texts"]):
-                raise ValueError("derived description leaked above its section")
-            if description in rendered["grounding_texts"]:
-                raise ValueError("derived description was treated as a verified fact")
-            if supplementary and description not in supplementary:
-                raise ValueError("selected description missing from its section")
-        if "gd_" in checked and any(token.startswith("gd_") for token in checked.split()):
-            for token in checked.replace("\n", " ").split():
-                if token.startswith("gd_") or "-chunk-" in token:
-                    raise ValueError("internal document id leaked into the final prompt")
         selected_ids = [
             unit["evidence_id"]
             for rows in rendered["allocation"]["selected"].values()
@@ -305,6 +413,7 @@ def context_media_jobs(
                 "grounding_texts": list(rendered["grounding_texts"]),
                 "passages_retained": list(rendered["passages_retained"]),
                 "dropped_claims": list(rendered["dropped_claims"]),
+                "window_omitted": list(omitted),
             },
         })
     return jobs
