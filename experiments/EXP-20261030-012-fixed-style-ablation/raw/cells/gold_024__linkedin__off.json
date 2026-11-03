@@ -1,0 +1,666 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "topic_id": "gold_024",
+  "medium": "linkedin",
+  "arm": "off",
+  "seed": 135,
+  "attempts": 1,
+  "evidence_sha256": "2bbb839acbf305cd10ea37a914ea9e21b0834d80a76123cfb642b38860d139de",
+  "retrieval_hit_ids": [
+    "train_9436",
+    "train_12125",
+    "train_7696",
+    "train_6515"
+  ],
+  "retrieval_query": "While Most B2B Companies Are Decelerating, Cloudflare Just Had Its Best Quarter Since 2021. 10 Numbers That Explain Why",
+  "retrieval_filter": null,
+  "style_applied": false,
+  "style_in_prompt": false,
+  "prompt_tokens": 497,
+  "generated_tokens_including_stop": 320,
+  "latency_seconds": 23.23,
+  "exemplar_ids": [],
+  "saved_at": "2026-10-30T10:04:24.967293+00:00",
+  "trace": {
+    "id": "gold_024",
+    "format": "linkedin_post",
+    "topic": "While Most B2B Companies Are Decelerating, Cloudflare Just Had Its Best Quarter Since 2021. 10 Numbers That Explain Why",
+    "audience": "B2B SaaS founders and operators",
+    "goal": "Turn a standout quarter into concrete growth lessons for founders.",
+    "cta": "none",
+    "k": 8,
+    "expected_facts": [
+      "The answer should explain why Cloudflare is an outlier rather than merely praising the quarter.",
+      "It should use numbers to support growth, product, or GTM lessons.",
+      "It should translate public-company data into founder takeaways."
+    ],
+    "rubric_must_haves": [
+      "Uses a numbers-driven structure.",
+      "Extracts lessons rather than just repeating metrics.",
+      "Links performance to underlying operating choices.",
+      "Maintains an analytical operator tone."
+    ],
+    "gold_reference": "A strong answer should use Cloudflare's quarter to show what differentiated execution looks like in a decelerating market. The numbers should support lessons about product breadth, enterprise motion, platform strategy, or category positioning. The founder takeaway is to understand what creates acceleration when the default state of the market is slowing down.",
+    "medium": "linkedin",
+    "prompt": "Write a LinkedIn post in the style of Jason Lemkin about: While Most B2B Companies Are Decelerating, Cloudflare Just Had Its Best Quarter Since 2021. 10 Numbers That Explain Why\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] Cloudflare is at $1B in ARR and growing 54% year-over-year.\n[E2] Cloudflare's stock has increased by 27% after its last earnings release.\n[E3] Cloudflare has 221,000 total paying customers.\n[E4] 65% of Cloudflare's revenue comes from 3,200 large customers.\n[E5] Cloudflare's revenue per employee is $400,000.\n[E6] 50% of Cloudflare's revenue is outside the U.S.\n[E7] Cloudflare is growing 32% at $1.5B in ARR.\n[E8] Cloudflare has 2,750 $100k+ customers and 100 $1m+ customers.\n[E9] Cloudflare has $1.7B+ ARR and 28% growth.\n\nNow write the requested LinkedIn post about: While Most B2B Companies Are Decelerating, Cloudflare Just Had Its Best Quarter Since 2021. 10 Numbers That Explain Why",
+    "rendered_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nWrite a LinkedIn post in the style of Jason Lemkin about: While Most B2B Companies Are Decelerating, Cloudflare Just Had Its Best Quarter Since 2021. 10 Numbers That Explain Why\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] Cloudflare is at $1B in ARR and growing 54% year-over-year.\n[E2] Cloudflare's stock has increased by 27% after its last earnings release.\n[E3] Cloudflare has 221,000 total paying customers.\n[E4] 65% of Cloudflare's revenue comes from 3,200 large customers.\n[E5] Cloudflare's revenue per employee is $400,000.\n[E6] 50% of Cloudflare's revenue is outside the U.S.\n[E7] Cloudflare is growing 32% at $1.5B in ARR.\n[E8] Cloudflare has 2,750 $100k+ customers and 100 $1m+ customers.\n[E9] Cloudflare has $1.7B+ ARR and 28% growth.\n\nNow write the requested LinkedIn post about: While Most B2B Companies Are Decelerating, Cloudflare Just Had Its Best Quarter Since 2021. 10 Numbers That Explain Why<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "answer": "While Most B2B Companies Are Decelerating, Cloudflare Just Had Its Best Quarter Since 2021. 10 Numbers That Explain Why 🚀 The B2B Crash Is Real — But Some AI-Native Leaders Keep Breaking Through Here’s what happened when I dug through Cloudflare’s latest earnings. It turns out this isn’t just another cloud company riding the infrastructure wave. This is a masterclass in building a business model that works across every stage of adoption. And most importantly—Cloudflare proves you can build a real SaaS business while being developer-first. What We’re Actually Talking About: 10 Metrics That Tell the Story 💸 #1. $1B ARR, Growing 54%. For Context: The Average Public SaaS Company at Similar Scale Grows Around 23%\nThis one tells you everything. Cloudflare crossed $1 billion in ARR with 54% YoY growth. Compare that to your average public SaaS company at similar scale? They might be growing around 23%. At $1B+ ARR, Cloudflare is still accelerating. When most companies decelerate significantly after hitting seven figures in revenue, Cloudflare keeps going strong. 📈 #2. Stock Up 27% After Last Earnings Release (vs. Nasdaq Down -22%)\nHere’s what smart money thinks about their trajectory. Their shares popped 27% following Q3 earnings—that’s 44 percentage points above the Nasdaq Composite. Market sentiment on their future performance is extremely positive. 🔥 #3. 221K Total Paying Customers. Not Pro",
+    "raw_model_output": "While Most B2B Companies Are Decelerating, Cloudflare Just Had Its Best Quarter Since 2021. 10 Numbers That Explain Why 🚀 The B2B Crash Is Real — But Some AI-Native Leaders Keep Breaking Through Here’s what happened when I dug through Cloudflare’s latest earnings. It turns out this isn’t just another cloud company riding the infrastructure wave. This is a masterclass in building a business model that works across every stage of adoption. And most importantly—Cloudflare proves you can build a real SaaS business while being developer-first. What We’re Actually Talking About: 10 Metrics That Tell the Story 💸 #1. $1B ARR, Growing 54%. For Context: The Average Public SaaS Company at Similar Scale Grows Around 23%\nThis one tells you everything. Cloudflare crossed $1 billion in ARR with 54% YoY growth. Compare that to your average public SaaS company at similar scale? They might be growing around 23%. At $1B+ ARR, Cloudflare is still accelerating. When most companies decelerate significantly after hitting seven figures in revenue, Cloudflare keeps going strong. 📈 #2. Stock Up 27% After Last Earnings Release (vs. Nasdaq Down -22%)\nHere’s what smart money thinks about their trajectory. Their shares popped 27% following Q3 earnings—that’s 44 percentage points above the Nasdaq Composite. Market sentiment on their future performance is extremely positive. 🔥 #3. 221K Total Paying Customers. Not Pro",
+    "deployment_output": "While Most B2B Companies Are Decelerating, Cloudflare Just Had Its Best Quarter Since 2021. 10 Numbers That Explain Why 🚀 The B2B Crash Is Real — But Some AI-Native Leaders Keep Breaking Through Here’s what happened when I dug through Cloudflare’s latest earnings. It turns out this isn’t just another cloud company riding the infrastructure wave. This is a masterclass in building a business model that works across every stage of adoption. And most importantly—Cloudflare proves you can build a real SaaS business while being developer-first. What We’re Actually Talking About: 10 Metrics That Tell the Story 💸 #1. $1B ARR, Growing 54%. For Context: The Average Public SaaS Company at Similar Scale Grows Around 23%\nThis one tells you everything. Cloudflare crossed $1 billion in ARR with 54% YoY growth. Compare that to your average public SaaS company at similar scale? They might be growing around 23%. At $1B+ ARR, Cloudflare is still accelerating. When most companies decelerate significantly after hitting seven figures in revenue, Cloudflare keeps going strong. 📈 #2. Stock Up 27% After Last Earnings Release (vs. Nasdaq Down -22%)\nHere’s what smart money thinks about their trajectory. Their shares popped 27% following Q3 earnings—that’s 44 percentage points above the Nasdaq Composite. Market sentiment on their future performance is extremely positive. 🔥 #3. 221K Total Paying Customers. Not Pro",
+    "first_attempt_answer": "While Most B2B Companies Are Decelerating, Cloudflare Just Had Its Best Quarter Since 2021. 10 Numbers That Explain Why 🚀 The B2B Crash Is Real — But Some AI-Native Leaders Keep Breaking Through Here’s what happened when I dug through Cloudflare’s latest earnings. It turns out this isn’t just another cloud company riding the infrastructure wave. This is a masterclass in building a business model that works across every stage of adoption. And most importantly—Cloudflare proves you can build a real SaaS business while being developer-first. What We’re Actually Talking About: 10 Metrics That Tell the Story 💸 #1. $1B ARR, Growing 54%. For Context: The Average Public SaaS Company at Similar Scale Grows Around 23%\nThis one tells you everything. Cloudflare crossed $1 billion in ARR with 54% YoY growth. Compare that to your average public SaaS company at similar scale? They might be growing around 23%. At $1B+ ARR, Cloudflare is still accelerating. When most companies decelerate significantly after hitting seven figures in revenue, Cloudflare keeps going strong. 📈 #2. Stock Up 27% After Last Earnings Release (vs. Nasdaq Down -22%)\nHere’s what smart money thinks about their trajectory. Their shares popped 27% following Q3 earnings—that’s 44 percentage points above the Nasdaq Composite. Market sentiment on their future performance is extremely positive. 🔥 #3. 221K Total Paying Customers. Not Pro",
+    "retry_answer": null,
+    "query": "While Most B2B Companies Are Decelerating, Cloudflare Just Had Its Best Quarter Since 2021. 10 Numbers That Explain Why",
+    "max_new_tokens": 320,
+    "seed": 135,
+    "retry_seed": null,
+    "deployment_accepted": true,
+    "repair_occurred": false,
+    "generation_attempt": {
+      "seed": 135,
+      "answer": "While Most B2B Companies Are Decelerating, Cloudflare Just Had Its Best Quarter Since 2021. 10 Numbers That Explain Why 🚀 The B2B Crash Is Real — But Some AI-Native Leaders Keep Breaking Through Here’s what happened when I dug through Cloudflare’s latest earnings. It turns out this isn’t just another cloud company riding the infrastructure wave. This is a masterclass in building a business model that works across every stage of adoption. And most importantly—Cloudflare proves you can build a real SaaS business while being developer-first. What We’re Actually Talking About: 10 Metrics That Tell the Story 💸 #1. $1B ARR, Growing 54%. For Context: The Average Public SaaS Company at Similar Scale Grows Around 23%\nThis one tells you everything. Cloudflare crossed $1 billion in ARR with 54% YoY growth. Compare that to your average public SaaS company at similar scale? They might be growing around 23%. At $1B+ ARR, Cloudflare is still accelerating. When most companies decelerate significantly after hitting seven figures in revenue, Cloudflare keeps going strong. 📈 #2. Stock Up 27% After Last Earnings Release (vs. Nasdaq Down -22%)\nHere’s what smart money thinks about their trajectory. Their shares popped 27% following Q3 earnings—that’s 44 percentage points above the Nasdaq Composite. Market sentiment on their future performance is extremely positive. 🔥 #3. 221K Total Paying Customers. Not Pro",
+      "numeric_grounding": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [
+          "n:100",
+          "n:221000",
+          "n:2750",
+          "n:3200",
+          "pct:27",
+          "pct:28",
+          "pct:32",
+          "pct:50",
+          "pct:54",
+          "pct:65",
+          "usd:100000",
+          "usd:1000000",
+          "usd:1000000000",
+          "usd:1500000000",
+          "usd:1700000000",
+          "usd:400000",
+          "year:2021"
+        ],
+        "values": [
+          {
+            "value": "$1B",
+            "canonical": "usd:1000000000",
+            "sentence": "$1B ARR, Growing 54%",
+            "start": 617,
+            "end": 620
+          },
+          {
+            "value": "$1 billion",
+            "canonical": "usd:1000000000",
+            "sentence": "Cloudflare crossed $1 billion in ARR with 54% YoY growth",
+            "start": 768,
+            "end": 778
+          },
+          {
+            "value": "$1B+",
+            "canonical": "usd:1000000000",
+            "sentence": "At $1B+ ARR, Cloudflare is still accelerating",
+            "start": 911,
+            "end": 915
+          },
+          {
+            "value": "54%",
+            "canonical": "pct:54",
+            "sentence": "$1B ARR, Growing 54%",
+            "start": 634,
+            "end": 637
+          },
+          {
+            "value": "23%",
+            "canonical": "pct:23",
+            "sentence": "For Context: The Average Public SaaS Company at Similar Scale Grows Around 23%",
+            "start": 714,
+            "end": 717
+          },
+          {
+            "value": "54%",
+            "canonical": "pct:54",
+            "sentence": "Cloudflare crossed $1 billion in ARR with 54% YoY growth",
+            "start": 791,
+            "end": 794
+          },
+          {
+            "value": "23%",
+            "canonical": "pct:23",
+            "sentence": "They might be growing around 23%",
+            "start": 903,
+            "end": 906
+          },
+          {
+            "value": "27%",
+            "canonical": "pct:27",
+            "sentence": "Stock Up 27% After Last Earnings Release (vs",
+            "start": 1086,
+            "end": 1089
+          },
+          {
+            "value": "22%",
+            "canonical": "pct:22",
+            "sentence": "Nasdaq Down -22%)",
+            "start": 1136,
+            "end": 1139
+          },
+          {
+            "value": "27%",
+            "canonical": "pct:27",
+            "sentence": "Their shares popped 27% following Q3 earnings—that’s 44 percentage points above the Nasdaq Composite",
+            "start": 1216,
+            "end": 1219
+          },
+          {
+            "value": "2021",
+            "canonical": "year:2021",
+            "sentence": "While Most B2B Companies Are Decelerating, Cloudflare Just Had Its Best Quarter Since 2021",
+            "start": 86,
+            "end": 90
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "23%",
+            "canonical": "pct:23",
+            "sentence": "For Context: The Average Public SaaS Company at Similar Scale Grows Around 23%",
+            "start": 714,
+            "end": 717
+          },
+          {
+            "value": "23%",
+            "canonical": "pct:23",
+            "sentence": "They might be growing around 23%",
+            "start": 903,
+            "end": 906
+          },
+          {
+            "value": "22%",
+            "canonical": "pct:22",
+            "sentence": "Nasdaq Down -22%)",
+            "start": 1136,
+            "end": 1139
+          }
+        ]
+      },
+      "rag_source_copying": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 3,
+        "document_id": "train_9436",
+        "matched_generated_span": "up 27% after",
+        "matched_retrieved_span": "up 27% after"
+      },
+      "stop_reason": "length"
+    },
+    "repair_attempt": null,
+    "accepted_attempt": 1,
+    "rag_source_copying": {
+      "applicable": true,
+      "threshold": 12,
+      "pass": true,
+      "flagged": false,
+      "max_contiguous_words": 3,
+      "document_id": "train_9436",
+      "matched_generated_span": "up 27% after",
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 3,
+        "document_id": "train_9436",
+        "matched_generated_span": "up 27% after",
+        "matched_retrieved_span": "up 27% after"
+      },
+      "retry": null,
+      "retry_occurred": false,
+      "repair_occurred": false
+    },
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": false,
+      "failure": "unsupported_numeric_grounding",
+      "unsupported": [
+        {
+          "value": "23%",
+          "canonical": "pct:23",
+          "sentence": "For Context: The Average Public SaaS Company at Similar Scale Grows Around 23%",
+          "start": 714,
+          "end": 717
+        },
+        {
+          "value": "23%",
+          "canonical": "pct:23",
+          "sentence": "They might be growing around 23%",
+          "start": 903,
+          "end": 906
+        },
+        {
+          "value": "22%",
+          "canonical": "pct:22",
+          "sentence": "Nasdaq Down -22%)",
+          "start": 1136,
+          "end": 1139
+        }
+      ],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [
+          "n:100",
+          "n:221000",
+          "n:2750",
+          "n:3200",
+          "pct:27",
+          "pct:28",
+          "pct:32",
+          "pct:50",
+          "pct:54",
+          "pct:65",
+          "usd:100000",
+          "usd:1000000",
+          "usd:1000000000",
+          "usd:1500000000",
+          "usd:1700000000",
+          "usd:400000",
+          "year:2021"
+        ],
+        "values": [
+          {
+            "value": "$1B",
+            "canonical": "usd:1000000000",
+            "sentence": "$1B ARR, Growing 54%",
+            "start": 617,
+            "end": 620
+          },
+          {
+            "value": "$1 billion",
+            "canonical": "usd:1000000000",
+            "sentence": "Cloudflare crossed $1 billion in ARR with 54% YoY growth",
+            "start": 768,
+            "end": 778
+          },
+          {
+            "value": "$1B+",
+            "canonical": "usd:1000000000",
+            "sentence": "At $1B+ ARR, Cloudflare is still accelerating",
+            "start": 911,
+            "end": 915
+          },
+          {
+            "value": "54%",
+            "canonical": "pct:54",
+            "sentence": "$1B ARR, Growing 54%",
+            "start": 634,
+            "end": 637
+          },
+          {
+            "value": "23%",
+            "canonical": "pct:23",
+            "sentence": "For Context: The Average Public SaaS Company at Similar Scale Grows Around 23%",
+            "start": 714,
+            "end": 717
+          },
+          {
+            "value": "54%",
+            "canonical": "pct:54",
+            "sentence": "Cloudflare crossed $1 billion in ARR with 54% YoY growth",
+            "start": 791,
+            "end": 794
+          },
+          {
+            "value": "23%",
+            "canonical": "pct:23",
+            "sentence": "They might be growing around 23%",
+            "start": 903,
+            "end": 906
+          },
+          {
+            "value": "27%",
+            "canonical": "pct:27",
+            "sentence": "Stock Up 27% After Last Earnings Release (vs",
+            "start": 1086,
+            "end": 1089
+          },
+          {
+            "value": "22%",
+            "canonical": "pct:22",
+            "sentence": "Nasdaq Down -22%)",
+            "start": 1136,
+            "end": 1139
+          },
+          {
+            "value": "27%",
+            "canonical": "pct:27",
+            "sentence": "Their shares popped 27% following Q3 earnings—that’s 44 percentage points above the Nasdaq Composite",
+            "start": 1216,
+            "end": 1219
+          },
+          {
+            "value": "2021",
+            "canonical": "year:2021",
+            "sentence": "While Most B2B Companies Are Decelerating, Cloudflare Just Had Its Best Quarter Since 2021",
+            "start": 86,
+            "end": 90
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "23%",
+            "canonical": "pct:23",
+            "sentence": "For Context: The Average Public SaaS Company at Similar Scale Grows Around 23%",
+            "start": 714,
+            "end": 717
+          },
+          {
+            "value": "23%",
+            "canonical": "pct:23",
+            "sentence": "They might be growing around 23%",
+            "start": 903,
+            "end": 906
+          },
+          {
+            "value": "22%",
+            "canonical": "pct:22",
+            "sentence": "Nasdaq Down -22%)",
+            "start": 1136,
+            "end": 1139
+          }
+        ]
+      },
+      "retry": null
+    },
+    "prompt_tokens": 497,
+    "backend": "unsloth",
+    "retrieval": true,
+    "retrieval_query": "While Most B2B Companies Are Decelerating, Cloudflare Just Had Its Best Quarter Since 2021. 10 Numbers That Explain Why",
+    "retrieval_filter": null,
+    "retrieval_k": 4,
+    "retrieval_hits": [
+      {
+        "id": "train_9436",
+        "text": "So Cloudflare is that quiet Cloud leader that just keeps … killing it.  We last checked in on them\nat $500m in ARR, growing 50%\n.\nToday, they are at just about $1B in ARR … and growing even faster at 54% year-over-year than they were at $500m in ARR!  Wow.\nAnd while everyone has taken a hit in public market valuations, Cloudflare has outperformed.  Its stock roared up 27% after its last earnings release.\nToday is the Best of Times for Cloudflare.  No downturn, no slow down.  Even with some sales cycles indeed getting a bit more challenging, especially for deals in the $500k-$1m range.\n5 Interesting Learnings:\n#1.  $100k+ Customers are Now 50% of Revenue — At $1B in ARR\n.  Cloudflare has marched upmarket, but slowly for a product still with a free base.  Its $100k+ customers are now the fastest growing segment, and more than half its revenue is from these bigger customers.  Still, its big customers are barely 1% of its customer base of 151,000.",
+        "medium": "blog",
+        "group_id": "48e0330b8cc716923d43186423aadc38721fe9ddb2cc9518ea953d4493faf537",
+        "row_id": 9436,
+        "split": "train",
+        "distance": 0.1568400263786316
+      },
+      {
+        "id": "train_12125",
+        "text": "So B2B SaaS has been up and down but security hasn’t missed a beat. Cloudflare has been one of biggest beneficiaries: •$1.7B+ ARR •28% growth (!) •15% non-GAAP profit •39 Billion market cap 👉 Cloudflare is what 20x ARR looks like at scale. 5 Interesting Learnings: #1. 221,000 Total Paying Customers, But 65% of Revenue From 3,200 Large Customers This is what you should see when a “long tail” engine is really working at scale. 100k+ paying customers, but in the end, at scale your largest customers are likely making up 50%+ of your revenue. Don’t neglect the small ones. They grow up into big ones! #2. $400,000 in Revenue Per Employee Cloudflare grew from $300k in revenue per employee at $1B ARR to $400k at $1.5B ARR or so and that seems to be its target to balance growth and efficiency. #3. 50% of Revenue Outside the U.S. Our weekly reminder to Go Global as early as you can! #4. Self-Serve for Customers Of All Sizes — Not Just Small Ones Cloudflare is committed to building a self-serve product that enterprises can try and buy on their own if they choose. It can be done! 🙂 #5. NRR Has Come Down a Bit, But Still Strong at 110%. Clouldflare’s growth remains top tier, but it has come down a bit, and a dip in NRR is one of the reasons. 110% is still world-class. But it’s down from 115% a year ago. That makes net new ARR growth just that much harder than before.",
+        "medium": "linkedin",
+        "group_id": "14b0dab731858af0e4ad616b5d2ba0e0c423e48d91ada5e5ff3a0a1090895c83",
+        "row_id": 12125,
+        "split": "train",
+        "distance": 0.17142093181610107
+      },
+      {
+        "id": "train_7696",
+        "text": "So times are tougher for some, but for the most part, not in leaders in Cloud security.  Cloudflare is a great example.\nWhile it saw some slowdown last year, it’s now accelerating again with 2 record quarters of new bookings in a row.\nAt ~ $1.5 Billion in ARR, it’s still growing 32% and it’s gotten pretty darn efficient, with 14% free cash flow margins now.\nAnd the markets really like Cloudflare.  Really, really like it.  It’s trading at a stunning $36 Billion market cap, or 24x ARR!\nThe key?  They are seeing no slowdown at all in revenue growth from $100k+ customers.\n5 Interesting Learnings:\n#1.  $100k+ Customers Are Key To Growth at Scale.  Revenue There Growing a Stunning 64% (!).\nCloudflare is getting more and more enterprise, but bear in mind that’s at $1.5 Billion in ARR.  It hasn’t left its free and smaller customers behind.  But the big ones are growing fast faster by revenue at scale.  They’ve also now crossed 2,750 $100k+ customers and 100 $1m+ customers.\n#2.   3,063 Employees — So About $400,000 in Revenue Per Employee\nThis is the age of New Efficiency.  Public SaaS and Cloud companies now average $300,000 in revenue per employee, and many of the most efficient leaders are at $400,000 or higher.  Add Cloudflare to that club.",
+        "medium": "blog",
+        "group_id": "24c6faad4e0c0d8c42e101fb11253603bdd26d727b82867663528dbefc9320e4",
+        "row_id": 7696,
+        "split": "train",
+        "distance": 0.17469406127929688
+      },
+      {
+        "id": "train_6515",
+        "text": "So Cloud and SaaS have had a bit of a rollercoaster the past 4 years, from the boom times of 2020-2021, to the tougher times overall of 2023, to the AI boom of 2024+.  But one thing has done well through all of it: security.  We always need it, and the threats keep coming.\nAnd Cloudflare has been one of the biggest beneficiaries.  It just keeps on going:\n$1.7B+ ARR\n28% growth (!)\n15% non-GAAP operating profit, and 11% free-cash flow margins … and ..\na $39 Billion market cap (!!), up 45% in past 12 months (!!!)\nCloudflare is what 20x ARR looks like at scale, post-IPO.  Top-tier growth, cash-flow positive, and very durable revenue.  The last point is key.  Wall Street wants revenue that is durable.\n5 Interesting Learnings:\n#1.  221,000 Total Paying Customers, But 65% of Revenue From 3,200 Large Customers\nThis is what you should see when a “long tail” engine is just working at scale.  100k+ paying customers, maybe even 1m+ free, but in the end, at scale your largest customers are likely making up 50%+ of your revenue.  Just don’t neglect the small ones.  They grow up into big ones!\n#2.  $400,000 in Revenue Per Employee\nCloudflare grew from $300k in revenue per employee at $1B ARR to $400k at $1.5B ARR or so and that seems to be its target to balance growth and efficiency.\n#3.  50% of Revenue Outside the U.S.\nOur reminder to Go Global as early as you can.",
+        "medium": "blog",
+        "group_id": "6d57833dc23f68c7e4326d9c5b37fee6e1821a8309b9ad361da77a7c13b8e3e8",
+        "row_id": 6515,
+        "split": "train",
+        "distance": 0.1765507459640503
+      }
+    ],
+    "copying": [
+      {
+        "id": "train_9436",
+        "shared_word_span": 3
+      },
+      {
+        "id": "train_12125",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_7696",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_6515",
+        "shared_word_span": 2
+      }
+    ],
+    "retrieval_backend": "dense",
+    "proposed_atomic_claims": [
+      {
+        "source_id": "train_9436",
+        "claim": "Cloudflare is at $1B in ARR and growing 54% year-over-year.",
+        "support_span": "Today, they are at just about $1B in ARR … and growing even faster at 54% year-over-year than they were at $500m in ARR!",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_9436",
+        "claim": "Cloudflare's stock has increased by 27% after its last earnings release.",
+        "support_span": "Its stock roared up 27% after its last earnings release.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12125",
+        "claim": "Cloudflare has 221,000 total paying customers.",
+        "support_span": "221,000 Total Paying Customers, But 65% of Revenue From 3,200 Large Customers",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_12125",
+        "claim": "65% of Cloudflare's revenue comes from 3,200 large customers.",
+        "support_span": "65% of Revenue From 3,200 Large Customers",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12125",
+        "claim": "Cloudflare's revenue per employee is $400,000.",
+        "support_span": "$400,000 in Revenue Per Employee",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_12125",
+        "claim": "50% of Cloudflare's revenue is outside the U.S.",
+        "support_span": "50% of Revenue Outside the U.S.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7696",
+        "claim": "Cloudflare is growing 32% at $1.5B in ARR.",
+        "support_span": "At ~ $1.5 Billion in ARR, it’s still growing 32% and it’s gotten pretty darn efficient, with 14% free cash flow margins now.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7696",
+        "claim": "Cloudflare has 2,750 $100k+ customers and 100 $1m+ customers.",
+        "support_span": "Cloudflare is getting more and more enterprise, but bear in mind that’s at $1.5 Billion in ARR. It hasn’t left its free and smaller customers behind. But the big ones are growing fast faster by revenue at scale. They’ve also now crossed 2,750 $100k+ customers and 100 $1m+ customers.",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_7696",
+        "claim": "Cloudflare's revenue from $100k+ customers is growing 64%.",
+        "support_span": "Revenue There Growing a Stunning 64% (!).",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7696",
+        "claim": "Cloudflare has 3,063 employees.",
+        "support_span": "This is the age of New Efficiency. Public SaaS and Cloud companies now average $300,000 in revenue per employee, and many of the most efficient leaders are at $400,000 or higher. Add Cloudflare to that club.",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_6515",
+        "claim": "Cloudflare has $1.7B+ ARR and 28% growth.",
+        "support_span": "$1.7B+ ARR\n28% growth (!)",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_6515",
+        "claim": "Cloudflare has 15% non-GAAP operating profit and 11% free-cash flow margins.",
+        "support_span": "15% non-GAAP operating profit, and 11% free-cash flow margins … and..",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_6515",
+        "claim": "Cloudflare has a $39B market cap.",
+        "support_span": "a $39 Billion market cap (!!!)",
+        "claim_type": "fact"
+      }
+    ],
+    "validation_rejected": [
+      {
+        "source_id": "train_7696",
+        "claim": "Cloudflare's revenue from $100k+ customers is growing 64%.",
+        "support_span": "Revenue There Growing a Stunning 64% (!).",
+        "claim_type": "fact",
+        "reason": "numeric_not_in_span"
+      },
+      {
+        "source_id": "train_7696",
+        "claim": "Cloudflare has 3,063 employees.",
+        "support_span": "This is the age of New Efficiency. Public SaaS and Cloud companies now average $300,000 in revenue per employee, and many of the most efficient leaders are at $400,000 or higher. Add Cloudflare to that club.",
+        "claim_type": "number",
+        "reason": "numeric_not_in_span"
+      },
+      {
+        "source_id": "train_6515",
+        "claim": "Cloudflare has 15% non-GAAP operating profit and 11% free-cash flow margins.",
+        "support_span": "15% non-GAAP operating profit, and 11% free-cash flow margins … and..",
+        "claim_type": "fact",
+        "reason": "support_not_in_source"
+      },
+      {
+        "source_id": "train_6515",
+        "claim": "Cloudflare has a $39B market cap.",
+        "support_span": "a $39 Billion market cap (!!!)",
+        "claim_type": "fact",
+        "reason": "support_not_in_source"
+      }
+    ],
+    "verifier_rejected": [],
+    "verified_claims": [
+      {
+        "source_id": "train_9436",
+        "claim": "Cloudflare is at $1B in ARR and growing 54% year-over-year.",
+        "support_span": "Today, they are at just about $1B in ARR … and growing even faster at 54% year-over-year than they were at $500m in ARR!",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_9436",
+        "claim": "Cloudflare's stock has increased by 27% after its last earnings release.",
+        "support_span": "Its stock roared up 27% after its last earnings release.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12125",
+        "claim": "Cloudflare has 221,000 total paying customers.",
+        "support_span": "221,000 Total Paying Customers, But 65% of Revenue From 3,200 Large Customers",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_12125",
+        "claim": "65% of Cloudflare's revenue comes from 3,200 large customers.",
+        "support_span": "65% of Revenue From 3,200 Large Customers",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12125",
+        "claim": "Cloudflare's revenue per employee is $400,000.",
+        "support_span": "$400,000 in Revenue Per Employee",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_12125",
+        "claim": "50% of Cloudflare's revenue is outside the U.S.",
+        "support_span": "50% of Revenue Outside the U.S.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7696",
+        "claim": "Cloudflare is growing 32% at $1.5B in ARR.",
+        "support_span": "At ~ $1.5 Billion in ARR, it’s still growing 32% and it’s gotten pretty darn efficient, with 14% free cash flow margins now.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7696",
+        "claim": "Cloudflare has 2,750 $100k+ customers and 100 $1m+ customers.",
+        "support_span": "Cloudflare is getting more and more enterprise, but bear in mind that’s at $1.5 Billion in ARR. It hasn’t left its free and smaller customers behind. But the big ones are growing fast faster by revenue at scale. They’ve also now crossed 2,750 $100k+ customers and 100 $1m+ customers.",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_6515",
+        "claim": "Cloudflare has $1.7B+ ARR and 28% growth.",
+        "support_span": "$1.7B+ ARR\n28% growth (!)",
+        "claim_type": "fact"
+      }
+    ],
+    "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] Cloudflare is at $1B in ARR and growing 54% year-over-year.\n[E2] Cloudflare's stock has increased by 27% after its last earnings release.\n[E3] Cloudflare has 221,000 total paying customers.\n[E4] 65% of Cloudflare's revenue comes from 3,200 large customers.\n[E5] Cloudflare's revenue per employee is $400,000.\n[E6] 50% of Cloudflare's revenue is outside the U.S.\n[E7] Cloudflare is growing 32% at $1.5B in ARR.\n[E8] Cloudflare has 2,750 $100k+ customers and 100 $1m+ customers.\n[E9] Cloudflare has $1.7B+ ARR and 28% growth.",
+    "raw_extraction": "[\n  {\n    \"source_id\": \"train_9436\",\n    \"claim\": \"Cloudflare is at $1B in ARR and growing 54% year-over-year.\",\n    \"support_span\": \"Today, they are at just about $1B in ARR … and growing even faster at 54% year-over-year than they were at $500m in ARR!\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_9436\",\n    \"claim\": \"Cloudflare's stock has increased by 27% after its last earnings release.\",\n    \"support_span\": \"Its stock roared up 27% after its last earnings release.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_12125\",\n    \"claim\": \"Cloudflare has 221,000 total paying customers.\",\n    \"support_span\": \"221,000 Total Paying Customers, But 65% of Revenue From 3,200 Large Customers\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_12125\",\n    \"claim\": \"65% of Cloudflare's revenue comes from 3,200 large customers.\",\n    \"support_span\": \"65% of Revenue From 3,200 Large Customers\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_12125\",\n    \"claim\": \"Cloudflare's revenue per employee is $400,000.\",\n    \"support_span\": \"$400,000 in Revenue Per Employee\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_12125\",\n    \"claim\": \"50% of Cloudflare's revenue is outside the U.S.\",\n    \"support_span\": \"50% of Revenue Outside the U.S.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7696\",\n    \"claim\": \"Cloudflare is growing 32% at $1.5B in ARR.\",\n    \"support_span\": \"At ~ $1.5 Billion in ARR, it’s still growing 32% and it’s gotten pretty darn efficient, with 14% free cash flow margins now.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7696\",\n    \"claim\": \"Cloudflare has 2,750 $100k+ customers and 100 $1m+ customers.\",\n    \"support_span\": \"Cloudflare is getting more and more enterprise, but bear in mind that’s at $1.5 Billion in ARR. It hasn’t left its free and smaller customers behind. But the big ones are growing fast faster by revenue at scale. They’ve also now crossed 2,750 $100k+ customers and 100 $1m+ customers.\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_7696\",\n    \"claim\": \"Cloudflare's revenue from $100k+ customers is growing 64%.\",\n    \"support_span\": \"Revenue There Growing a Stunning 64% (!).\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7696\",\n    \"claim\": \"Cloudflare has 3,063 employees.\",\n    \"support_span\": \"This is the age of New Efficiency. Public SaaS and Cloud companies now average $300,000 in revenue per employee, and many of the most efficient leaders are at $400,000 or higher. Add Cloudflare to that club.\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_6515\",\n    \"claim\": \"Cloudflare has $1.7B+ ARR and 28% growth.\",\n    \"support_span\": \"$1.7B+ ARR\\n28% growth (!)\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_6515\",\n    \"claim\": \"Cloudflare has 15% non-GAAP operating profit and 11% free-cash flow margins.\",\n    \"support_span\": \"15% non-GAAP operating profit, and 11% free-cash flow margins … and..\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_6515\",\n    \"claim\": \"Cloudflare has a $39B market cap.\",\n    \"support_span\": \"a $39 Billion market cap (!!!)\",\n    \"claim_type\": \"fact\"\n  }\n]",
+    "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: While Most B2B Companies Are Decelerating, Cloudflare Just Had Its Best Quarter Since 2021. 10 Numbers That Explain Why\n\nSource passages:\n[train_9436]\nSo Cloudflare is that quiet Cloud leader that just keeps … killing it.  We last checked in on them\nat $500m in ARR, growing 50%\n.\nToday, they are at just about $1B in ARR … and growing even faster at 54% year-over-year than they were at $500m in ARR!  Wow.\nAnd while everyone has taken a hit in public market valuations, Cloudflare has outperformed.  Its stock roared up 27% after its last earnings release.\nToday is the Best of Times for Cloudflare.  No downturn, no slow down.  Even with some sales cycles indeed getting a bit more challenging, especially for deals in the $500k-$1m range.\n5 Interesting Learnings:\n#1.  $100k+ Customers are Now 50% of Revenue — At $1B in ARR\n.  Cloudflare has marched upmarket, but slowly for a product still with a free base.  Its $100k+ customers are now the fastest growing segment, and more than half its revenue is from these bigger customers.  Still, its big customers are barely 1% of its customer base of 151,000.\n\n[train_12125]\nSo B2B SaaS has been up and down but security hasn’t missed a beat. Cloudflare has been one of biggest beneficiaries: •$1.7B+ ARR •28% growth (!) •15% non-GAAP profit •39 Billion market cap 👉 Cloudflare is what 20x ARR looks like at scale. 5 Interesting Learnings: #1. 221,000 Total Paying Customers, But 65% of Revenue From 3,200 Large Customers This is what you should see when a “long tail” engine is really working at scale. 100k+ paying customers, but in the end, at scale your largest customers are likely making up 50%+ of your revenue. Don’t neglect the small ones. They grow up into big ones! #2. $400,000 in Revenue Per Employee Cloudflare grew from $300k in revenue per employee at $1B ARR to $400k at $1.5B ARR or so and that seems to be its target to balance growth and efficiency. #3. 50% of Revenue Outside the U.S. Our weekly reminder to Go Global as early as you can! #4. Self-Serve for Customers Of All Sizes — Not Just Small Ones Cloudflare is committed to building a self-serve product that enterprises can try and buy on their own if they choose. It can be done! 🙂 #5. NRR Has Come Down a Bit, But Still Strong at 110%. Clouldflare’s growth remains top tier, but it has come down a bit, and a dip in NRR is one of the reasons. 110% is still world-class. But it’s down from 115% a year ago. That makes net new ARR growth just that much harder than before.\n\n[train_7696]\nSo times are tougher for some, but for the most part, not in leaders in Cloud security.  Cloudflare is a great example.\nWhile it saw some slowdown last year, it’s now accelerating again with 2 record quarters of new bookings in a row.\nAt ~ $1.5 Billion in ARR, it’s still growing 32% and it’s gotten pretty darn efficient, with 14% free cash flow margins now.\nAnd the markets really like Cloudflare.  Really, really like it.  It’s trading at a stunning $36 Billion market cap, or 24x ARR!\nThe key?  They are seeing no slowdown at all in revenue growth from $100k+ customers.\n5 Interesting Learnings:\n#1.  $100k+ Customers Are Key To Growth at Scale.  Revenue There Growing a Stunning 64% (!).\nCloudflare is getting more and more enterprise, but bear in mind that’s at $1.5 Billion in ARR.  It hasn’t left its free and smaller customers behind.  But the big ones are growing fast faster by revenue at scale.  They’ve also now crossed 2,750 $100k+ customers and 100 $1m+ customers.\n#2.   3,063 Employees — So About $400,000 in Revenue Per Employee\nThis is the age of New Efficiency.  Public SaaS and Cloud companies now average $300,000 in revenue per employee, and many of the most efficient leaders are at $400,000 or higher.  Add Cloudflare to that club.\n\n[train_6515]\nSo Cloud and SaaS have had a bit of a rollercoaster the past 4 years, from the boom times of 2020-2021, to the tougher times overall of 2023, to the AI boom of 2024+.  But one thing has done well through all of it: security.  We always need it, and the threats keep coming.\nAnd Cloudflare has been one of the biggest beneficiaries.  It just keeps on going:\n$1.7B+ ARR\n28% growth (!)\n15% non-GAAP operating profit, and 11% free-cash flow margins … and ..\na $39 Billion market cap (!!), up 45% in past 12 months (!!!)\nCloudflare is what 20x ARR looks like at scale, post-IPO.  Top-tier growth, cash-flow positive, and very durable revenue.  The last point is key.  Wall Street wants revenue that is durable.\n5 Interesting Learnings:\n#1.  221,000 Total Paying Customers, But 65% of Revenue From 3,200 Large Customers\nThis is what you should see when a “long tail” engine is just working at scale.  100k+ paying customers, maybe even 1m+ free, but in the end, at scale your largest customers are likely making up 50%+ of your revenue.  Just don’t neglect the small ones.  They grow up into big ones!\n#2.  $400,000 in Revenue Per Employee\nCloudflare grew from $300k in revenue per employee at $1B ARR to $400k at $1.5B ARR or so and that seems to be its target to balance growth and efficiency.\n#3.  50% of Revenue Outside the U.S.\nOur reminder to Go Global as early as you can.",
+    "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: While Most B2B Companies Are Decelerating, Cloudflare Just Had Its Best Quarter Since 2021. 10 Numbers That Explain Why\n\nSource passages:\n[train_9436]\nSo Cloudflare is that quiet Cloud leader that just keeps … killing it.  We last checked in on them\nat $500m in ARR, growing 50%\n.\nToday, they are at just about $1B in ARR … and growing even faster at 54% year-over-year than they were at $500m in ARR!  Wow.\nAnd while everyone has taken a hit in public market valuations, Cloudflare has outperformed.  Its stock roared up 27% after its last earnings release.\nToday is the Best of Times for Cloudflare.  No downturn, no slow down.  Even with some sales cycles indeed getting a bit more challenging, especially for deals in the $500k-$1m range.\n5 Interesting Learnings:\n#1.  $100k+ Customers are Now 50% of Revenue — At $1B in ARR\n.  Cloudflare has marched upmarket, but slowly for a product still with a free base.  Its $100k+ customers are now the fastest growing segment, and more than half its revenue is from these bigger customers.  Still, its big customers are barely 1% of its customer base of 151,000.\n\n[train_12125]\nSo B2B SaaS has been up and down but security hasn’t missed a beat. Cloudflare has been one of biggest beneficiaries: •$1.7B+ ARR •28% growth (!) •15% non-GAAP profit •39 Billion market cap 👉 Cloudflare is what 20x ARR looks like at scale. 5 Interesting Learnings: #1. 221,000 Total Paying Customers, But 65% of Revenue From 3,200 Large Customers This is what you should see when a “long tail” engine is really working at scale. 100k+ paying customers, but in the end, at scale your largest customers are likely making up 50%+ of your revenue. Don’t neglect the small ones. They grow up into big ones! #2. $400,000 in Revenue Per Employee Cloudflare grew from $300k in revenue per employee at $1B ARR to $400k at $1.5B ARR or so and that seems to be its target to balance growth and efficiency. #3. 50% of Revenue Outside the U.S. Our weekly reminder to Go Global as early as you can! #4. Self-Serve for Customers Of All Sizes — Not Just Small Ones Cloudflare is committed to building a self-serve product that enterprises can try and buy on their own if they choose. It can be done! 🙂 #5. NRR Has Come Down a Bit, But Still Strong at 110%. Clouldflare’s growth remains top tier, but it has come down a bit, and a dip in NRR is one of the reasons. 110% is still world-class. But it’s down from 115% a year ago. That makes net new ARR growth just that much harder than before.\n\n[train_7696]\nSo times are tougher for some, but for the most part, not in leaders in Cloud security.  Cloudflare is a great example.\nWhile it saw some slowdown last year, it’s now accelerating again with 2 record quarters of new bookings in a row.\nAt ~ $1.5 Billion in ARR, it’s still growing 32% and it’s gotten pretty darn efficient, with 14% free cash flow margins now.\nAnd the markets really like Cloudflare.  Really, really like it.  It’s trading at a stunning $36 Billion market cap, or 24x ARR!\nThe key?  They are seeing no slowdown at all in revenue growth from $100k+ customers.\n5 Interesting Learnings:\n#1.  $100k+ Customers Are Key To Growth at Scale.  Revenue There Growing a Stunning 64% (!).\nCloudflare is getting more and more enterprise, but bear in mind that’s at $1.5 Billion in ARR.  It hasn’t left its free and smaller customers behind.  But the big ones are growing fast faster by revenue at scale.  They’ve also now crossed 2,750 $100k+ customers and 100 $1m+ customers.\n#2.   3,063 Employees — So About $400,000 in Revenue Per Employee\nThis is the age of New Efficiency.  Public SaaS and Cloud companies now average $300,000 in revenue per employee, and many of the most efficient leaders are at $400,000 or higher.  Add Cloudflare to that club.\n\n[train_6515]\nSo Cloud and SaaS have had a bit of a rollercoaster the past 4 years, from the boom times of 2020-2021, to the tougher times overall of 2023, to the AI boom of 2024+.  But one thing has done well through all of it: security.  We always need it, and the threats keep coming.\nAnd Cloudflare has been one of the biggest beneficiaries.  It just keeps on going:\n$1.7B+ ARR\n28% growth (!)\n15% non-GAAP operating profit, and 11% free-cash flow margins … and ..\na $39 Billion market cap (!!), up 45% in past 12 months (!!!)\nCloudflare is what 20x ARR looks like at scale, post-IPO.  Top-tier growth, cash-flow positive, and very durable revenue.  The last point is key.  Wall Street wants revenue that is durable.\n5 Interesting Learnings:\n#1.  221,000 Total Paying Customers, But 65% of Revenue From 3,200 Large Customers\nThis is what you should see when a “long tail” engine is just working at scale.  100k+ paying customers, maybe even 1m+ free, but in the end, at scale your largest customers are likely making up 50%+ of your revenue.  Just don’t neglect the small ones.  They grow up into big ones!\n#2.  $400,000 in Revenue Per Employee\nCloudflare grew from $300k in revenue per employee at $1B ARR to $400k at $1.5B ARR or so and that seems to be its target to balance growth and efficiency.\n#3.  50% of Revenue Outside the U.S.\nOur reminder to Go Global as early as you can.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "extraction_seconds": 25.062,
+    "verification_seconds": 0.0,
+    "verification_records": [],
+    "llm_verifier_on_critical_path": false,
+    "allowed_numeric_values": [
+      "n:100",
+      "n:221000",
+      "n:2750",
+      "n:3200",
+      "pct:27",
+      "pct:28",
+      "pct:32",
+      "pct:50",
+      "pct:54",
+      "pct:65",
+      "usd:100000",
+      "usd:1000000",
+      "usd:1000000000",
+      "usd:1500000000",
+      "usd:1700000000",
+      "usd:400000",
+      "year:2021"
+    ],
+    "distillation_adapter_enabled": false,
+    "verification_adapter_enabled": false,
+    "distillation_backend": "same_loaded_4bit_base_adapter_off",
+    "distillation_do_sample": false,
+    "extraction_max_new_tokens": 2560,
+    "verification_max_new_tokens": 24,
+    "distillation_seed": 0,
+    "support_spans_in_generator_prompt": false,
+    "evidence_stage_reason": null,
+    "evidence_status": "verified",
+    "extraction_attempts": 1,
+    "extraction_stop_reason": "eos",
+    "prompt_contract": "factual-reliability-v1",
+    "fixed_style_enabled": false,
+    "style_applied": false,
+    "style_exemplar_count": 0,
+    "latency_seconds": 23.23,
+    "generated_tokens_including_stop": 320,
+    "last_token_id": 1322,
+    "effective_eos_token_ids": [
+      128001,
+      128008,
+      128009
+    ],
+    "stop_reason": "length",
+    "budget_fraction": 1.0,
+    "early_eos": false,
+    "first_attempt_stop_reason": "length",
+    "retry_stop_reason": null
+  }
+}

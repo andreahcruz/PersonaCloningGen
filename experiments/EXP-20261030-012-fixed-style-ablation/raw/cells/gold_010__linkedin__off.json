@@ -1,0 +1,385 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "topic_id": "gold_010",
+  "medium": "linkedin",
+  "arm": "off",
+  "seed": 79,
+  "attempts": 1,
+  "evidence_sha256": "11e586825c27662ed9e9215b4809f7e50e83d0266f63b310af757d26a7960ae7",
+  "retrieval_hit_ids": [
+    "train_1835",
+    "train_6611",
+    "train_9114",
+    "train_1542"
+  ],
+  "retrieval_query": "What to Do If You’re An NRR Zombie",
+  "retrieval_filter": null,
+  "style_applied": false,
+  "style_in_prompt": false,
+  "prompt_tokens": 466,
+  "generated_tokens_including_stop": 320,
+  "latency_seconds": 12.925,
+  "exemplar_ids": [],
+  "saved_at": "2026-10-30T09:33:24.478458+00:00",
+  "trace": {
+    "id": "gold_010",
+    "format": "linkedin_post",
+    "topic": "What to Do If You’re An NRR Zombie",
+    "audience": "B2B SaaS founders and operators",
+    "goal": "Teach one concrete operator lesson with specific examples and conviction.",
+    "cta": "none",
+    "k": 8,
+    "expected_facts": [
+      "The answer should define the NRR problem clearly: a company with weak expansion or unhealthy retention despite still appearing alive.",
+      "It should recommend concrete responses such as fixing product value, segmentation, onboarding, pricing, or customer success.",
+      "It should stress that weak NRR becomes a structural drag on growth."
+    ],
+    "rubric_must_haves": [
+      "Defines the term in plain language.",
+      "Explains why the condition is dangerous.",
+      "Offers specific operational fixes rather than abstract encouragement.",
+      "Sounds direct and urgent without being melodramatic."
+    ],
+    "gold_reference": "A strong answer should explain that an 'NRR zombie' is a company that can still grow on the surface but lacks the expansion and retention engine needed for healthy compounding. The founder takeaway is to diagnose the root cause quickly and fix the product, segmentation, pricing, or customer outcomes before the weakness hardens into a permanent ceiling.",
+    "medium": "linkedin",
+    "prompt": "Write a LinkedIn post in the style of Jason Lemkin about: What to Do If You’re An NRR Zombie\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] Don't settle for less growth than Your NRR + 20%\n[E2] Don't settle for less growth than Your NRR + 20%\n[E3] NRR is the canary in the coal mine.\n[E4] Below 100%, you're in serious trouble.\n[E5] Snowflake's decline from 158% to 125% foreshadowed everything else.\n[E6] Don't hide in renewals.\n[E7] Don't force your base to pay more than they want to.\n[E8] E.g., if your NRR is 120%, even if times are tougher, don't settle for growing at least +40% next year.\n[E9] E.g., if your NRR is 120%, even if times are tougher, don't settle for growing at least +40% next year.\n\nNow write the requested LinkedIn post about: What to Do If You’re An NRR Zombie",
+    "rendered_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nWrite a LinkedIn post in the style of Jason Lemkin about: What to Do If You’re An NRR Zombie\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] Don't settle for less growth than Your NRR + 20%\n[E2] Don't settle for less growth than Your NRR + 20%\n[E3] NRR is the canary in the coal mine.\n[E4] Below 100%, you're in serious trouble.\n[E5] Snowflake's decline from 158% to 125% foreshadowed everything else.\n[E6] Don't hide in renewals.\n[E7] Don't force your base to pay more than they want to.\n[E8] E.g., if your NRR is 120%, even if times are tougher, don't settle for growing at least +40% next year.\n[E9] E.g., if your NRR is 120%, even if times are tougher, don't settle for growing at least +40% next year.\n\nNow write the requested LinkedIn post about: What to Do If You’re An NRR Zombie<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "answer": "What to Do If You’re An NRR Zombie When I see an SMB SaaS company with high NRR that’s struggling today — and I do see quite a few of them — my first reaction is … why? Why have things slowed down so much when new logo acquisition remains strong, and net retention is still healthy? This “NRR zombie” scenario is common enough these days we should all know how to handle it better. First off, let me define what I mean by NRR zombies. These aren’t the companies where churn is way up. No, those ones need to get help ASAP, because their problems will only grow worse over time. But instead, NRR zombies have seen some customers leave (not as many as before), but also haven’t grown net new revenue fast enough to make up for it. They’ve fallen behind plan on NRR+Growth. And now, they just aren’t sure how to close this gap without taking actions that might harm future growth. The problem with NRR Zombies is two-fold: On one hand, they are running out of runway. At some point, you’ll run out of room here, and growth simply becomes impossible. And secondly, NRR Zombies often stop investing in the long term. You spend too much time talking about short-term goals, and maybe even hiding from the reality of missing those goals. Now, most founders think they know exactly what to do. Raise prices! Increase usage! Make the product stickier! More upsells! That’s probably right. But there’s another important step you can take.",
+    "raw_model_output": "What to Do If You’re An NRR Zombie When I see an SMB SaaS company with high NRR that’s struggling today — and I do see quite a few of them — my first reaction is … why? Why have things slowed down so much when new logo acquisition remains strong, and net retention is still healthy? This “NRR zombie” scenario is common enough these days we should all know how to handle it better. First off, let me define what I mean by NRR zombies. These aren’t the companies where churn is way up. No, those ones need to get help ASAP, because their problems will only grow worse over time. But instead, NRR zombies have seen some customers leave (not as many as before), but also haven’t grown net new revenue fast enough to make up for it. They’ve fallen behind plan on NRR+Growth. And now, they just aren’t sure how to close this gap without taking actions that might harm future growth. The problem with NRR Zombies is two-fold: On one hand, they are running out of runway. At some point, you’ll run out of room here, and growth simply becomes impossible. And secondly, NRR Zombies often stop investing in the long term. You spend too much time talking about short-term goals, and maybe even hiding from the reality of missing those goals. Now, most founders think they know exactly what to do. Raise prices! Increase usage! Make the product stickier! More upsells! That’s probably right. But there’s another important step you can take.",
+    "deployment_output": "What to Do If You’re An NRR Zombie When I see an SMB SaaS company with high NRR that’s struggling today — and I do see quite a few of them — my first reaction is … why? Why have things slowed down so much when new logo acquisition remains strong, and net retention is still healthy? This “NRR zombie” scenario is common enough these days we should all know how to handle it better. First off, let me define what I mean by NRR zombies. These aren’t the companies where churn is way up. No, those ones need to get help ASAP, because their problems will only grow worse over time. But instead, NRR zombies have seen some customers leave (not as many as before), but also haven’t grown net new revenue fast enough to make up for it. They’ve fallen behind plan on NRR+Growth. And now, they just aren’t sure how to close this gap without taking actions that might harm future growth. The problem with NRR Zombies is two-fold: On one hand, they are running out of runway. At some point, you’ll run out of room here, and growth simply becomes impossible. And secondly, NRR Zombies often stop investing in the long term. You spend too much time talking about short-term goals, and maybe even hiding from the reality of missing those goals. Now, most founders think they know exactly what to do. Raise prices! Increase usage! Make the product stickier! More upsells! That’s probably right. But there’s another important step you can take.",
+    "first_attempt_answer": "What to Do If You’re An NRR Zombie When I see an SMB SaaS company with high NRR that’s struggling today — and I do see quite a few of them — my first reaction is … why? Why have things slowed down so much when new logo acquisition remains strong, and net retention is still healthy? This “NRR zombie” scenario is common enough these days we should all know how to handle it better. First off, let me define what I mean by NRR zombies. These aren’t the companies where churn is way up. No, those ones need to get help ASAP, because their problems will only grow worse over time. But instead, NRR zombies have seen some customers leave (not as many as before), but also haven’t grown net new revenue fast enough to make up for it. They’ve fallen behind plan on NRR+Growth. And now, they just aren’t sure how to close this gap without taking actions that might harm future growth. The problem with NRR Zombies is two-fold: On one hand, they are running out of runway. At some point, you’ll run out of room here, and growth simply becomes impossible. And secondly, NRR Zombies often stop investing in the long term. You spend too much time talking about short-term goals, and maybe even hiding from the reality of missing those goals. Now, most founders think they know exactly what to do. Raise prices! Increase usage! Make the product stickier! More upsells! That’s probably right. But there’s another important step you can take.",
+    "retry_answer": null,
+    "query": "What to Do If You’re An NRR Zombie",
+    "max_new_tokens": 320,
+    "seed": 79,
+    "retry_seed": null,
+    "deployment_accepted": true,
+    "repair_occurred": false,
+    "generation_attempt": {
+      "seed": 79,
+      "answer": "What to Do If You’re An NRR Zombie When I see an SMB SaaS company with high NRR that’s struggling today — and I do see quite a few of them — my first reaction is … why? Why have things slowed down so much when new logo acquisition remains strong, and net retention is still healthy? This “NRR zombie” scenario is common enough these days we should all know how to handle it better. First off, let me define what I mean by NRR zombies. These aren’t the companies where churn is way up. No, those ones need to get help ASAP, because their problems will only grow worse over time. But instead, NRR zombies have seen some customers leave (not as many as before), but also haven’t grown net new revenue fast enough to make up for it. They’ve fallen behind plan on NRR+Growth. And now, they just aren’t sure how to close this gap without taking actions that might harm future growth. The problem with NRR Zombies is two-fold: On one hand, they are running out of runway. At some point, you’ll run out of room here, and growth simply becomes impossible. And secondly, NRR Zombies often stop investing in the long term. You spend too much time talking about short-term goals, and maybe even hiding from the reality of missing those goals. Now, most founders think they know exactly what to do. Raise prices! Increase usage! Make the product stickier! More upsells! That’s probably right. But there’s another important step you can take.",
+      "numeric_grounding": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [
+          "pct:100",
+          "pct:120",
+          "pct:125",
+          "pct:158",
+          "pct:20",
+          "pct:40"
+        ],
+        "values": [],
+        "unsupported": []
+      },
+      "rag_source_copying": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 2,
+        "document_id": "train_1835",
+        "matched_generated_span": "you re",
+        "matched_retrieved_span": "you re"
+      },
+      "stop_reason": "length"
+    },
+    "repair_attempt": null,
+    "accepted_attempt": 1,
+    "rag_source_copying": {
+      "applicable": true,
+      "threshold": 12,
+      "pass": true,
+      "flagged": false,
+      "max_contiguous_words": 2,
+      "document_id": "train_1835",
+      "matched_generated_span": "you re",
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 2,
+        "document_id": "train_1835",
+        "matched_generated_span": "you re",
+        "matched_retrieved_span": "you re"
+      },
+      "retry": null,
+      "retry_occurred": false,
+      "repair_occurred": false
+    },
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [
+          "pct:100",
+          "pct:120",
+          "pct:125",
+          "pct:158",
+          "pct:20",
+          "pct:40"
+        ],
+        "values": [],
+        "unsupported": []
+      },
+      "retry": null
+    },
+    "prompt_tokens": 466,
+    "backend": "unsloth",
+    "retrieval": true,
+    "retrieval_query": "What to Do If You’re An NRR Zombie",
+    "retrieval_filter": null,
+    "retrieval_k": 4,
+    "retrieval_hits": [
+      {
+        "id": "train_1835",
+        "text": "1. NRR is destiny.\nWhen NRR drops below 110%, alarm bells should go off. Below 100%, you’re in serious trouble. Monitor this metric religiously.",
+        "medium": "blog",
+        "group_id": "61945e884a94ef255d1607baf2626d898bdf670d837e86f9aabb99525ad4e054",
+        "row_id": 1835,
+        "split": "train",
+        "distance": 0.3033035397529602
+      },
+      {
+        "id": "train_6611",
+        "text": "#4.  Don’t settle for less growth than Your NRR + 20%\n.\nE.g., if your NRR is 120%, even if times are tougher, don’t settle for growing at least +40% next year. Don’t hide in excuses and a high NRR.  Don’t hide in renewals and in your CRO forcing the base to pay more.  Force yourself to at least grow +20% more than your NRR.",
+        "medium": "blog",
+        "group_id": "ce0fc732cc8fd7716d82af58b441db5d9f3dc831806b1657d7662a222716ba91",
+        "row_id": 6611,
+        "split": "train",
+        "distance": 0.36270081996917725
+      },
+      {
+        "id": "train_9114",
+        "text": "#4.  Don’t settle for less growth than Your NRR + 20%\n.  E.g., if your NRR is 120%, even if times are tougher, don’t settle for growing at least +40% next year.  Not all your customer base has evaporated.  Don’t hide in excuses and a high NRR.  Don’t hide in renewals.  Don’t force your base to pay more than they want to.  Force yourself to at least grow +20% more than your NRR.",
+        "medium": "blog",
+        "group_id": "ce0fc732cc8fd7716d82af58b441db5d9f3dc831806b1657d7662a222716ba91",
+        "row_id": 9114,
+        "split": "train",
+        "distance": 0.3680976629257202
+      },
+      {
+        "id": "train_1542",
+        "text": "2. NRR is the canary in the coal mine.\nSnowflake’s decline from 158% to 125% foreshadowed everything else. If your best customers aren’t expanding, you have a problem.",
+        "medium": "blog",
+        "group_id": "d6427da3481c52ff7fe8f01ca218851577720aacb251d7219d5e33d53e938e54",
+        "row_id": 1542,
+        "split": "train",
+        "distance": 0.36957114934921265
+      }
+    ],
+    "copying": [
+      {
+        "id": "train_1835",
+        "shared_word_span": 1
+      },
+      {
+        "id": "train_6611",
+        "shared_word_span": 1
+      },
+      {
+        "id": "train_9114",
+        "shared_word_span": 1
+      },
+      {
+        "id": "train_1542",
+        "shared_word_span": 2
+      }
+    ],
+    "retrieval_backend": "dense",
+    "proposed_atomic_claims": [
+      {
+        "source_id": "train_1835",
+        "claim": "When NRR drops below 110%, alarm bells should go off.",
+        "support_span": "When NRR drops below 110%, alarm bells should go off.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_6611",
+        "claim": "Don't settle for less growth than Your NRR + 20%",
+        "support_span": "Don't settle for less growth than Your NRR + 20%",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_9114",
+        "claim": "Don't settle for less growth than Your NRR + 20%",
+        "support_span": "Don't settle for less growth than Your NRR + 20%",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_1542",
+        "claim": "NRR is the canary in the coal mine.",
+        "support_span": "NRR is the canary in the coal mine.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_1835",
+        "claim": "Below 100%, you're in serious trouble.",
+        "support_span": "Below 100%, you're in serious trouble.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_1542",
+        "claim": "Snowflake's decline from 158% to 125% foreshadowed everything else.",
+        "support_span": "Snowflake's decline from 158% to 125% foreshadowed everything else.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_9114",
+        "claim": "Don't hide in renewals.",
+        "support_span": "Don't hide in renewals.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_9114",
+        "claim": "Don't force your base to pay more than they want to.",
+        "support_span": "Don't force your base to pay more than they want to.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_1542",
+        "claim": "If your best customers aren't expanding, you have a problem.",
+        "support_span": "If your best customers aren't expanding, you have a problem.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_6611",
+        "claim": "E.g., if your NRR is 120%, even if times are tougher, don't settle for growing at least +40% next year.",
+        "support_span": "E.g., if your NRR is 120%, even if times are tougher, don't settle for growing at least +40% next year.",
+        "claim_type": "example"
+      },
+      {
+        "source_id": "train_9114",
+        "claim": "E.g., if your NRR is 120%, even if times are tougher, don't settle for growing at least +40% next year.",
+        "support_span": "E.g., if your NRR is 120%, even if times are tougher, don't settle for growing at least +40% next year.",
+        "claim_type": "example"
+      }
+    ],
+    "validation_rejected": [
+      {
+        "source_id": "train_1835",
+        "claim": "When NRR drops below 110%, alarm bells should go off.",
+        "support_span": "When NRR drops below 110%, alarm bells should go off.",
+        "claim_type": "fact",
+        "reason": "interrogative_assertion"
+      },
+      {
+        "source_id": "train_1542",
+        "claim": "If your best customers aren't expanding, you have a problem.",
+        "support_span": "If your best customers aren't expanding, you have a problem.",
+        "claim_type": "fact",
+        "reason": "interrogative_assertion"
+      }
+    ],
+    "verifier_rejected": [],
+    "verified_claims": [
+      {
+        "source_id": "train_6611",
+        "claim": "Don't settle for less growth than Your NRR + 20%",
+        "support_span": "Don't settle for less growth than Your NRR + 20%",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_9114",
+        "claim": "Don't settle for less growth than Your NRR + 20%",
+        "support_span": "Don't settle for less growth than Your NRR + 20%",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_1542",
+        "claim": "NRR is the canary in the coal mine.",
+        "support_span": "NRR is the canary in the coal mine.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_1835",
+        "claim": "Below 100%, you're in serious trouble.",
+        "support_span": "Below 100%, you're in serious trouble.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_1542",
+        "claim": "Snowflake's decline from 158% to 125% foreshadowed everything else.",
+        "support_span": "Snowflake's decline from 158% to 125% foreshadowed everything else.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_9114",
+        "claim": "Don't hide in renewals.",
+        "support_span": "Don't hide in renewals.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_9114",
+        "claim": "Don't force your base to pay more than they want to.",
+        "support_span": "Don't force your base to pay more than they want to.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_6611",
+        "claim": "E.g., if your NRR is 120%, even if times are tougher, don't settle for growing at least +40% next year.",
+        "support_span": "E.g., if your NRR is 120%, even if times are tougher, don't settle for growing at least +40% next year.",
+        "claim_type": "example"
+      },
+      {
+        "source_id": "train_9114",
+        "claim": "E.g., if your NRR is 120%, even if times are tougher, don't settle for growing at least +40% next year.",
+        "support_span": "E.g., if your NRR is 120%, even if times are tougher, don't settle for growing at least +40% next year.",
+        "claim_type": "example"
+      }
+    ],
+    "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] Don't settle for less growth than Your NRR + 20%\n[E2] Don't settle for less growth than Your NRR + 20%\n[E3] NRR is the canary in the coal mine.\n[E4] Below 100%, you're in serious trouble.\n[E5] Snowflake's decline from 158% to 125% foreshadowed everything else.\n[E6] Don't hide in renewals.\n[E7] Don't force your base to pay more than they want to.\n[E8] E.g., if your NRR is 120%, even if times are tougher, don't settle for growing at least +40% next year.\n[E9] E.g., if your NRR is 120%, even if times are tougher, don't settle for growing at least +40% next year.",
+    "raw_extraction": "[\n  {\n    \"source_id\": \"train_1835\",\n    \"claim\": \"When NRR drops below 110%, alarm bells should go off.\",\n    \"support_span\": \"When NRR drops below 110%, alarm bells should go off.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_6611\",\n    \"claim\": \"Don't settle for less growth than Your NRR + 20%\",\n    \"support_span\": \"Don't settle for less growth than Your NRR + 20%\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_9114\",\n    \"claim\": \"Don't settle for less growth than Your NRR + 20%\",\n    \"support_span\": \"Don't settle for less growth than Your NRR + 20%\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_1542\",\n    \"claim\": \"NRR is the canary in the coal mine.\",\n    \"support_span\": \"NRR is the canary in the coal mine.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_1835\",\n    \"claim\": \"Below 100%, you're in serious trouble.\",\n    \"support_span\": \"Below 100%, you're in serious trouble.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_1542\",\n    \"claim\": \"Snowflake's decline from 158% to 125% foreshadowed everything else.\",\n    \"support_span\": \"Snowflake's decline from 158% to 125% foreshadowed everything else.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_9114\",\n    \"claim\": \"Don't hide in renewals.\",\n    \"support_span\": \"Don't hide in renewals.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_9114\",\n    \"claim\": \"Don't force your base to pay more than they want to.\",\n    \"support_span\": \"Don't force your base to pay more than they want to.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_1542\",\n    \"claim\": \"If your best customers aren't expanding, you have a problem.\",\n    \"support_span\": \"If your best customers aren't expanding, you have a problem.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_6611\",\n    \"claim\": \"E.g., if your NRR is 120%, even if times are tougher, don't settle for growing at least +40% next year.\",\n    \"support_span\": \"E.g., if your NRR is 120%, even if times are tougher, don't settle for growing at least +40% next year.\",\n    \"claim_type\": \"example\"\n  },\n  {\n    \"source_id\": \"train_9114\",\n    \"claim\": \"E.g., if your NRR is 120%, even if times are tougher, don't settle for growing at least +40% next year.\",\n    \"support_span\": \"E.g., if your NRR is 120%, even if times are tougher, don't settle for growing at least +40% next year.\",\n    \"claim_type\": \"example\"\n  }\n]",
+    "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: What to Do If You’re An NRR Zombie\n\nSource passages:\n[train_1835]\n1. NRR is destiny.\nWhen NRR drops below 110%, alarm bells should go off. Below 100%, you’re in serious trouble. Monitor this metric religiously.\n\n[train_6611]\n#4.  Don’t settle for less growth than Your NRR + 20%\n.\nE.g., if your NRR is 120%, even if times are tougher, don’t settle for growing at least +40% next year. Don’t hide in excuses and a high NRR.  Don’t hide in renewals and in your CRO forcing the base to pay more.  Force yourself to at least grow +20% more than your NRR.\n\n[train_9114]\n#4.  Don’t settle for less growth than Your NRR + 20%\n.  E.g., if your NRR is 120%, even if times are tougher, don’t settle for growing at least +40% next year.  Not all your customer base has evaporated.  Don’t hide in excuses and a high NRR.  Don’t hide in renewals.  Don’t force your base to pay more than they want to.  Force yourself to at least grow +20% more than your NRR.\n\n[train_1542]\n2. NRR is the canary in the coal mine.\nSnowflake’s decline from 158% to 125% foreshadowed everything else. If your best customers aren’t expanding, you have a problem.",
+    "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: What to Do If You’re An NRR Zombie\n\nSource passages:\n[train_1835]\n1. NRR is destiny.\nWhen NRR drops below 110%, alarm bells should go off. Below 100%, you’re in serious trouble. Monitor this metric religiously.\n\n[train_6611]\n#4.  Don’t settle for less growth than Your NRR + 20%\n.\nE.g., if your NRR is 120%, even if times are tougher, don’t settle for growing at least +40% next year. Don’t hide in excuses and a high NRR.  Don’t hide in renewals and in your CRO forcing the base to pay more.  Force yourself to at least grow +20% more than your NRR.\n\n[train_9114]\n#4.  Don’t settle for less growth than Your NRR + 20%\n.  E.g., if your NRR is 120%, even if times are tougher, don’t settle for growing at least +40% next year.  Not all your customer base has evaporated.  Don’t hide in excuses and a high NRR.  Don’t hide in renewals.  Don’t force your base to pay more than they want to.  Force yourself to at least grow +20% more than your NRR.\n\n[train_1542]\n2. NRR is the canary in the coal mine.\nSnowflake’s decline from 158% to 125% foreshadowed everything else. If your best customers aren’t expanding, you have a problem.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "extraction_seconds": 18.992,
+    "verification_seconds": 0.0,
+    "verification_records": [],
+    "llm_verifier_on_critical_path": false,
+    "allowed_numeric_values": [
+      "pct:100",
+      "pct:120",
+      "pct:125",
+      "pct:158",
+      "pct:20",
+      "pct:40"
+    ],
+    "distillation_adapter_enabled": false,
+    "verification_adapter_enabled": false,
+    "distillation_backend": "same_loaded_4bit_base_adapter_off",
+    "distillation_do_sample": false,
+    "extraction_max_new_tokens": 2560,
+    "verification_max_new_tokens": 24,
+    "distillation_seed": 0,
+    "support_spans_in_generator_prompt": false,
+    "evidence_stage_reason": null,
+    "evidence_status": "verified",
+    "extraction_attempts": 1,
+    "extraction_stop_reason": "eos",
+    "prompt_contract": "factual-reliability-v1",
+    "fixed_style_enabled": false,
+    "style_applied": false,
+    "style_exemplar_count": 0,
+    "latency_seconds": 12.925,
+    "generated_tokens_including_stop": 320,
+    "last_token_id": 13,
+    "effective_eos_token_ids": [
+      128001,
+      128008,
+      128009
+    ],
+    "stop_reason": "length",
+    "budget_fraction": 1.0,
+    "early_eos": false,
+    "first_attempt_stop_reason": "length",
+    "retry_stop_reason": null
+  }
+}

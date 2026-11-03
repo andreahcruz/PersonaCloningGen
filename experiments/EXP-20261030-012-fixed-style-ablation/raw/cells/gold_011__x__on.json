@@ -1,0 +1,524 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "topic_id": "gold_011",
+  "medium": "x",
+  "arm": "on",
+  "seed": 84,
+  "attempts": 1,
+  "evidence_sha256": "93e28f281de4e4bc3c0fbf6ecf92c40207fb05b4e1cb42114dfe6c6af6fe39a2",
+  "retrieval_hit_ids": [
+    "train_12272",
+    "train_9058",
+    "train_1822",
+    "train_4667"
+  ],
+  "retrieval_query": "Dear SaaStr: Our CFO Sounds Very Polished but We are Missing the Burn Rate Plan Almost Every Month. What Should I Do?",
+  "retrieval_filter": null,
+  "style_applied": true,
+  "style_in_prompt": true,
+  "prompt_tokens": 760,
+  "generated_tokens_including_stop": 160,
+  "latency_seconds": 8.969,
+  "exemplar_ids": [
+    12508,
+    12509
+  ],
+  "saved_at": "2026-10-30T09:37:08.467489+00:00",
+  "trace": {
+    "id": "gold_011",
+    "format": "x_thread",
+    "topic": "Dear SaaStr: Our CFO Sounds Very Polished but We are Missing the Burn Rate Plan Almost Every Month. What Should I Do?",
+    "audience": "B2B SaaS founders and operators",
+    "goal": "Give direct founder advice on diagnosing and handling a finance execution gap.",
+    "cta": "none",
+    "k": 8,
+    "expected_facts": [
+      "The answer should separate polish from operational competence.",
+      "It should explain that missing burn planning repeatedly is a serious execution issue, not a communication issue.",
+      "It should recommend concrete corrective actions such as tighter forecasting, direct review, or leadership change if the gap persists."
+    ],
+    "rubric_must_haves": [
+      "States clearly that recurring miss on burn planning is a real risk.",
+      "Offers practical next steps for the founder.",
+      "Uses a direct operator tone rather than HR-speak.",
+      "Explains when coaching is enough and when replacement may be necessary."
+    ],
+    "gold_reference": "A strong answer should say that sounding polished does not matter if the finance leader keeps missing the burn plan. Founders need accurate forecasting, tight cash discipline, and fast escalation when trust in the numbers breaks. The right move is to inspect the process directly, tighten controls, and decide quickly whether this is a fixable systems problem or a leadership problem.",
+    "medium": "x",
+    "prompt": "Write an X post in the style of Jason Lemkin about: Dear SaaStr: Our CFO Sounds Very Polished but We are Missing the Burn Rate Plan Almost Every Month. What Should I Do?\n\nStyle examples from train-owned source text.\nUse them for voice only. They are not evidence for claims.\nDo not copy long passages verbatim.\n[Style 1]\nEveryone has an AI strategy. Almost nobody has agents in production.\n\nThat's the gap.\n\nGet ahead of the pack. Take 1 day our and join \nhttp://SaaStrDeploy.com '26 — our first-ever AI GTM Agent Summit inside of SaaStr AI 2026. May 12, SF.\n\nOne day. One mission. Deploy your AI agents.  No more excuses.\n[Style 2]\n\"The public markets just don't believe public leaders' revenue is durable anymore.\n\nSo the markets are going to panic every time we see any evidence their revenue might be even ... less durable.\" with \n@HarryStebbings\n \n@rodriscoll\n + me\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] You should let go of your bottom 10%-15% of sales reps.\n[E2] Having a firm, management-team wide burn rate budget is beneficial.\n[E3] You should spend more time with existing customers.\n[E4] You should build an L4M Model, and update it every month.\n[E5] Setting a burn-rate budget for each month will focus your team and de-stress your life.\n[E6] Setting a burn-rate budget for each month will improve the efficiency of your limited budgets.\n[E7] Setting a burn-rate budget for each month will improve teamwork.\n[E8] Setting a burn-rate budget for each month will help you make better decisions on where to deploy your limited resources.\n[E9] The burn rate and runway are important metrics to track.\n[E10] The burn rate and runway can be visualized on a graph.\n[E11] Setting a burn-rate budget for each month will focus your team and de-stress your life.\n[E12] Setting a burn-rate budget for each month will improve the efficiency of your limited budgets.\n[E13] Setting a burn-rate budget for each month will improve teamwork.\n[E14] Setting a burn-rate budget for each month will help you make better decisions on where to deploy your limited resources.\n\nNow write the requested X post about: Dear SaaStr: Our CFO Sounds Very Polished but We are Missing the Burn Rate Plan Almost Every Month. What Should I Do?",
+    "rendered_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nWrite an X post in the style of Jason Lemkin about: Dear SaaStr: Our CFO Sounds Very Polished but We are Missing the Burn Rate Plan Almost Every Month. What Should I Do?\n\nStyle examples from train-owned source text.\nUse them for voice only. They are not evidence for claims.\nDo not copy long passages verbatim.\n[Style 1]\nEveryone has an AI strategy. Almost nobody has agents in production.\n\nThat's the gap.\n\nGet ahead of the pack. Take 1 day our and join \nhttp://SaaStrDeploy.com '26 — our first-ever AI GTM Agent Summit inside of SaaStr AI 2026. May 12, SF.\n\nOne day. One mission. Deploy your AI agents.  No more excuses.\n[Style 2]\n\"The public markets just don't believe public leaders' revenue is durable anymore.\n\nSo the markets are going to panic every time we see any evidence their revenue might be even ... less durable.\" with \n@HarryStebbings\n \n@rodriscoll\n + me\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] You should let go of your bottom 10%-15% of sales reps.\n[E2] Having a firm, management-team wide burn rate budget is beneficial.\n[E3] You should spend more time with existing customers.\n[E4] You should build an L4M Model, and update it every month.\n[E5] Setting a burn-rate budget for each month will focus your team and de-stress your life.\n[E6] Setting a burn-rate budget for each month will improve the efficiency of your limited budgets.\n[E7] Setting a burn-rate budget for each month will improve teamwork.\n[E8] Setting a burn-rate budget for each month will help you make better decisions on where to deploy your limited resources.\n[E9] The burn rate and runway are important metrics to track.\n[E10] The burn rate and runway can be visualized on a graph.\n[E11] Setting a burn-rate budget for each month will focus your team and de-stress your life.\n[E12] Setting a burn-rate budget for each month will improve the efficiency of your limited budgets.\n[E13] Setting a burn-rate budget for each month will improve teamwork.\n[E14] Setting a burn-rate budget for each month will help you make better decisions on where to deploy your limited resources.\n\nNow write the requested X post about: Dear SaaStr: Our CFO Sounds Very Polished but We are Missing the Burn Rate Plan Almost Every Month. What Should I Do?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "answer": "Dear SaaStr: Our CFO Sounds Very Polished but We are Missing the Burn Rate Plan Almost Every Month. What Should I Do?\n\nBurn rate planning isn’t rocket science, but too many founders overcomplicate it. Here’s what you need to know:\n\nYour monthly burn rate = Your total expenses / Number of months in the current period (e.g., January-June)\n\nTo simplify it further, you can also think of it like this:\n\nMonthly burn rate = Your average monthly recurring revenue x 0.25-0.33 (this factor depends on your business model—SaaS typically uses 0.30)\n\nThe goal? Keep your burn rate below your projected MRR growth rate. If you’re growing 100% YoY, your burn shouldn’t exceed 80%",
+    "raw_model_output": "Dear SaaStr: Our CFO Sounds Very Polished but We are Missing the Burn Rate Plan Almost Every Month. What Should I Do?\n\nBurn rate planning isn’t rocket science, but too many founders overcomplicate it. Here’s what you need to know:\n\nYour monthly burn rate = Your total expenses / Number of months in the current period (e.g., January-June)\n\nTo simplify it further, you can also think of it like this:\n\nMonthly burn rate = Your average monthly recurring revenue x 0.25-0.33 (this factor depends on your business model—SaaS typically uses 0.30)\n\nThe goal? Keep your burn rate below your projected MRR growth rate. If you’re growing 100% YoY, your burn shouldn’t exceed 80%",
+    "deployment_output": "Dear SaaStr: Our CFO Sounds Very Polished but We are Missing the Burn Rate Plan Almost Every Month. What Should I Do?\n\nBurn rate planning isn’t rocket science, but too many founders overcomplicate it. Here’s what you need to know:\n\nYour monthly burn rate = Your total expenses / Number of months in the current period (e.g., January-June)\n\nTo simplify it further, you can also think of it like this:\n\nMonthly burn rate = Your average monthly recurring revenue x 0.25-0.33 (this factor depends on your business model—SaaS typically uses 0.30)\n\nThe goal? Keep your burn rate below your projected MRR growth rate. If you’re growing 100% YoY, your burn shouldn’t exceed 80%",
+    "first_attempt_answer": "Dear SaaStr: Our CFO Sounds Very Polished but We are Missing the Burn Rate Plan Almost Every Month. What Should I Do?\n\nBurn rate planning isn’t rocket science, but too many founders overcomplicate it. Here’s what you need to know:\n\nYour monthly burn rate = Your total expenses / Number of months in the current period (e.g., January-June)\n\nTo simplify it further, you can also think of it like this:\n\nMonthly burn rate = Your average monthly recurring revenue x 0.25-0.33 (this factor depends on your business model—SaaS typically uses 0.30)\n\nThe goal? Keep your burn rate below your projected MRR growth rate. If you’re growing 100% YoY, your burn shouldn’t exceed 80%",
+    "retry_answer": null,
+    "query": "Dear SaaStr: Our CFO Sounds Very Polished but We are Missing the Burn Rate Plan Almost Every Month. What Should I Do?",
+    "max_new_tokens": 160,
+    "seed": 84,
+    "retry_seed": null,
+    "deployment_accepted": true,
+    "repair_occurred": false,
+    "generation_attempt": {
+      "seed": 84,
+      "answer": "Dear SaaStr: Our CFO Sounds Very Polished but We are Missing the Burn Rate Plan Almost Every Month. What Should I Do?\n\nBurn rate planning isn’t rocket science, but too many founders overcomplicate it. Here’s what you need to know:\n\nYour monthly burn rate = Your total expenses / Number of months in the current period (e.g., January-June)\n\nTo simplify it further, you can also think of it like this:\n\nMonthly burn rate = Your average monthly recurring revenue x 0.25-0.33 (this factor depends on your business model—SaaS typically uses 0.30)\n\nThe goal? Keep your burn rate below your projected MRR growth rate. If you’re growing 100% YoY, your burn shouldn’t exceed 80%",
+      "numeric_grounding": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [
+          "pct:10",
+          "pct:15"
+        ],
+        "values": [
+          {
+            "value": "100%",
+            "canonical": "pct:100",
+            "sentence": "If you’re growing 100% YoY, your burn shouldn’t exceed 80%",
+            "start": 629,
+            "end": 633
+          },
+          {
+            "value": "80%",
+            "canonical": "pct:80",
+            "sentence": "If you’re growing 100% YoY, your burn shouldn’t exceed 80%",
+            "start": 666,
+            "end": 669
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "100%",
+            "canonical": "pct:100",
+            "sentence": "If you’re growing 100% YoY, your burn shouldn’t exceed 80%",
+            "start": 629,
+            "end": 633
+          },
+          {
+            "value": "80%",
+            "canonical": "pct:80",
+            "sentence": "If you’re growing 100% YoY, your burn shouldn’t exceed 80%",
+            "start": 666,
+            "end": 669
+          }
+        ]
+      },
+      "rag_source_copying": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 3,
+        "document_id": "train_9058",
+        "matched_generated_span": "your burn rate",
+        "matched_retrieved_span": "your burn rate"
+      },
+      "stop_reason": "length"
+    },
+    "repair_attempt": null,
+    "accepted_attempt": 1,
+    "rag_source_copying": {
+      "applicable": true,
+      "threshold": 12,
+      "pass": true,
+      "flagged": false,
+      "max_contiguous_words": 3,
+      "document_id": "train_9058",
+      "matched_generated_span": "your burn rate",
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 3,
+        "document_id": "train_9058",
+        "matched_generated_span": "your burn rate",
+        "matched_retrieved_span": "your burn rate"
+      },
+      "retry": null,
+      "retry_occurred": false,
+      "repair_occurred": false
+    },
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": false,
+      "failure": "unsupported_numeric_grounding",
+      "unsupported": [
+        {
+          "value": "100%",
+          "canonical": "pct:100",
+          "sentence": "If you’re growing 100% YoY, your burn shouldn’t exceed 80%",
+          "start": 629,
+          "end": 633
+        },
+        {
+          "value": "80%",
+          "canonical": "pct:80",
+          "sentence": "If you’re growing 100% YoY, your burn shouldn’t exceed 80%",
+          "start": 666,
+          "end": 669
+        }
+      ],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [
+          "pct:10",
+          "pct:15"
+        ],
+        "values": [
+          {
+            "value": "100%",
+            "canonical": "pct:100",
+            "sentence": "If you’re growing 100% YoY, your burn shouldn’t exceed 80%",
+            "start": 629,
+            "end": 633
+          },
+          {
+            "value": "80%",
+            "canonical": "pct:80",
+            "sentence": "If you’re growing 100% YoY, your burn shouldn’t exceed 80%",
+            "start": 666,
+            "end": 669
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "100%",
+            "canonical": "pct:100",
+            "sentence": "If you’re growing 100% YoY, your burn shouldn’t exceed 80%",
+            "start": 629,
+            "end": 633
+          },
+          {
+            "value": "80%",
+            "canonical": "pct:80",
+            "sentence": "If you’re growing 100% YoY, your burn shouldn’t exceed 80%",
+            "start": 666,
+            "end": 669
+          }
+        ]
+      },
+      "retry": null
+    },
+    "prompt_tokens": 760,
+    "backend": "unsloth",
+    "retrieval": true,
+    "retrieval_query": "Dear SaaStr: Our CFO Sounds Very Polished but We are Missing the Burn Rate Plan Almost Every Month. What Should I Do?",
+    "retrieval_filter": null,
+    "retrieval_k": 4,
+    "retrieval_hits": [
+      {
+        "id": "train_12272",
+        "text": "10 Simple Ideas to Help Manage the Burn So, for many of us in SaaS, these are still some of the better of times. The Cloud is bigger than ever, CIOs are buying more than ever, and SaaS is still on a roll, no matter how it may feel at times. But public stock prices are still way down, and venture capital is much tighter than it was outside of AI Mania. So many of you will want to manage the burn more carefully. But you can’t cut your way to growth. So what should a CEO do? A few simple thoughts: #1. Let go of your bottom 10%-15% of sales reps, concentrate leads in the best reps. This always gives you both a top-line boost (the top reps close more per lead), and gives you room to hire more reps at the same budget. #2. Have a firm, management-team wide burn rate budget. And stick to it. Pick a fixed amount of cash you can burn each month, period. And make all your VPs accountable to it. They can negotiate themselves on where to spend incremental revenue and dollars. #3. Just move on from any VP that isn’t getting it done They almost always overspend compared to the VPs that overperform. They hire mediocre folks on their team. And they overspend to try to make their plan. #4. Spend more time with existing customers. And go save the ones on the fence I know this is a broken record on SaaStr, but it works. Relatively speaking, the easiest sales are from your existing customers. So go spend more time with them. And go save the ones on the fence. #5. Build an L4M Model, and update it every month. Religiously.",
+        "medium": "linkedin",
+        "group_id": "0c37d0550cf11856281f9a664f8aa3e8f7b8b90af56fc77e20daa0371a1f05ca",
+        "row_id": 12272,
+        "split": "train",
+        "distance": 0.2699738144874573
+      },
+      {
+        "id": "train_9058",
+        "text": "4. Set a burn-rate budget for each and every month\n.\nThis will focus your team and de-stress your life.  Most of us come up with a rough budget for the year, but not a\nburn-rate budget\nfor\neach month\n.  This will force everyone on the team, starting Monday, to collaborate on hiring and other trade-offs.  If you go over the budget, now everyone will know.  In close to real time.  This will almost immediately improve the efficiency of your limited budgets, and improve teamwork.  And you will make better decisions on where to deploy your limited resources.  Which will not just manage your burn rate — but increase your revenues.  Starting Monday.  More\nhere\n.",
+        "medium": "blog",
+        "group_id": "33d373c26c3944659510032e9ca809e9a3d9310c4cc2133cd6f015a45269f4b5",
+        "row_id": 9058,
+        "split": "train",
+        "distance": 0.27926456928253174
+      },
+      {
+        "id": "train_1822",
+        "text": "Burn Rate & Runway\n: This is the scary one, but the most important. The green line is your cash balance. The red line is your cumulative burn. Where they intersect? That’s your Zero Cash Date. In this example, the company has burned $27.4M cumulatively and is trending toward a crossover point around September 2026. That’s about 10 months of runway. Not great. Needs immediate attention. The 3 Financial Plans You Need for The Year:  C-90, C-60 and C-10 (Updated)\nWhy This Changes Everything\nOnce you have your C60 plan — your actual, realistic base case — you can do three critical things:\n\n1. Build your hiring plan.\nYou know exactly how much revenue you’ll likely generate, so you can model out how many reps, engineers, or support staff you can actually afford to hire. No more “let’s hire 5 people and hope it works out.”",
+        "medium": "blog",
+        "group_id": "2a5f3270c60f22ae2137308b801aef6d14572f9b1a1a1a8177816446dc66fc95",
+        "row_id": 1822,
+        "split": "train",
+        "distance": 0.28181952238082886
+      },
+      {
+        "id": "train_4667",
+        "text": "4. Set a burn-rate budget for each and every month.\nThis will focus your team and de-stress your life.  Most of us come up with a rough budget for the year, but not a burn-rate budget for\neach month\n.  This will force everyone on the team, starting Monday, to collaborate on hiring and other trade-offs.  If you go over the budget, now everyone will know. In close to real-time.  This will almost immediately improve the efficiency of your limited budgets, and improve teamwork.  And you will make better decisions on where to deploy your limited resources.  Which will not just manage your burn rate — but increase your revenues.  Starting Monday.\nZoom Had a Burn Rate Budget.  So Should You.",
+        "medium": "blog",
+        "group_id": "33d373c26c3944659510032e9ca809e9a3d9310c4cc2133cd6f015a45269f4b5",
+        "row_id": 4667,
+        "split": "train",
+        "distance": 0.2864062786102295
+      }
+    ],
+    "copying": [
+      {
+        "id": "train_12272",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_9058",
+        "shared_word_span": 3
+      },
+      {
+        "id": "train_1822",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_4667",
+        "shared_word_span": 3
+      }
+    ],
+    "retrieval_backend": "dense",
+    "proposed_atomic_claims": [
+      {
+        "source_id": "train_12272",
+        "claim": "You should let go of your bottom 10%-15% of sales reps.",
+        "support_span": "#1. Let go of your bottom 10%-15% of sales reps, concentrate leads in the best reps.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12272",
+        "claim": "Having a firm, management-team wide burn rate budget is beneficial.",
+        "support_span": "Have a firm, management-team wide burn rate budget. And stick to it.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12272",
+        "claim": "You should spend more time with existing customers.",
+        "support_span": "Spend more time with existing customers. And go save the ones on the fence",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12272",
+        "claim": "You should build an L4M Model, and update it every month.",
+        "support_span": "Build an L4M Model, and update it every month.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_9058",
+        "claim": "Setting a burn-rate budget for each month will focus your team and de-stress your life.",
+        "support_span": "This will focus your team and de-stress your life.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_9058",
+        "claim": "Setting a burn-rate budget for each month will improve the efficiency of your limited budgets.",
+        "support_span": "This will almost immediately improve the efficiency of your limited budgets",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_9058",
+        "claim": "Setting a burn-rate budget for each month will improve teamwork.",
+        "support_span": "This will force everyone on the team, starting Monday, to collaborate on hiring and other trade-offs.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_9058",
+        "claim": "Setting a burn-rate budget for each month will help you make better decisions on where to deploy your limited resources.",
+        "support_span": "And you will make better decisions on where to deploy your limited resources.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_9058",
+        "claim": "Setting a burn-rate budget for each month will increase your revenues.",
+        "support_span": "Which will not just manage your burn rate — but increase your revenues.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_1822",
+        "claim": "The burn rate and runway are important metrics to track.",
+        "support_span": "Burn Rate & Runway : This is the scary one, but the most important.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_1822",
+        "claim": "The burn rate and runway can be visualized on a graph.",
+        "support_span": "The green line is your cash balance. The red line is your cumulative burn.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_1822",
+        "claim": "The burn rate and runway can be used to determine the zero cash date.",
+        "support_span": "Where they intersect? That’s your Zero Cash Date.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_4667",
+        "claim": "Setting a burn-rate budget for each month will focus your team and de-stress your life.",
+        "support_span": "This will focus your team and de-stress your life.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_4667",
+        "claim": "Setting a burn-rate budget for each month will improve the efficiency of your limited budgets.",
+        "support_span": "This will almost immediately improve the efficiency of your limited budgets",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_4667",
+        "claim": "Setting a burn-rate budget for each month will improve teamwork.",
+        "support_span": "This will force everyone on the team, starting Monday, to collaborate on hiring and other trade-offs.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_4667",
+        "claim": "Setting a burn-rate budget for each month will help you make better decisions on where to deploy your limited resources.",
+        "support_span": "And you will make better decisions on where to deploy your limited resources.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_4667",
+        "claim": "Setting a burn-rate budget for each month will increase your revenues.",
+        "support_span": "Which will not just manage your burn rate — but increase your revenues.",
+        "claim_type": "fact"
+      }
+    ],
+    "validation_rejected": [
+      {
+        "source_id": "train_9058",
+        "claim": "Setting a burn-rate budget for each month will increase your revenues.",
+        "support_span": "Which will not just manage your burn rate — but increase your revenues.",
+        "claim_type": "fact",
+        "reason": "interrogative_assertion"
+      },
+      {
+        "source_id": "train_1822",
+        "claim": "The burn rate and runway can be used to determine the zero cash date.",
+        "support_span": "Where they intersect? That’s your Zero Cash Date.",
+        "claim_type": "fact",
+        "reason": "interrogative_assertion"
+      },
+      {
+        "source_id": "train_4667",
+        "claim": "Setting a burn-rate budget for each month will increase your revenues.",
+        "support_span": "Which will not just manage your burn rate — but increase your revenues.",
+        "claim_type": "fact",
+        "reason": "interrogative_assertion"
+      }
+    ],
+    "verifier_rejected": [],
+    "verified_claims": [
+      {
+        "source_id": "train_12272",
+        "claim": "You should let go of your bottom 10%-15% of sales reps.",
+        "support_span": "#1. Let go of your bottom 10%-15% of sales reps, concentrate leads in the best reps.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12272",
+        "claim": "Having a firm, management-team wide burn rate budget is beneficial.",
+        "support_span": "Have a firm, management-team wide burn rate budget. And stick to it.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12272",
+        "claim": "You should spend more time with existing customers.",
+        "support_span": "Spend more time with existing customers. And go save the ones on the fence",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12272",
+        "claim": "You should build an L4M Model, and update it every month.",
+        "support_span": "Build an L4M Model, and update it every month.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_9058",
+        "claim": "Setting a burn-rate budget for each month will focus your team and de-stress your life.",
+        "support_span": "This will focus your team and de-stress your life.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_9058",
+        "claim": "Setting a burn-rate budget for each month will improve the efficiency of your limited budgets.",
+        "support_span": "This will almost immediately improve the efficiency of your limited budgets",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_9058",
+        "claim": "Setting a burn-rate budget for each month will improve teamwork.",
+        "support_span": "This will force everyone on the team, starting Monday, to collaborate on hiring and other trade-offs.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_9058",
+        "claim": "Setting a burn-rate budget for each month will help you make better decisions on where to deploy your limited resources.",
+        "support_span": "And you will make better decisions on where to deploy your limited resources.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_1822",
+        "claim": "The burn rate and runway are important metrics to track.",
+        "support_span": "Burn Rate & Runway : This is the scary one, but the most important.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_1822",
+        "claim": "The burn rate and runway can be visualized on a graph.",
+        "support_span": "The green line is your cash balance. The red line is your cumulative burn.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_4667",
+        "claim": "Setting a burn-rate budget for each month will focus your team and de-stress your life.",
+        "support_span": "This will focus your team and de-stress your life.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_4667",
+        "claim": "Setting a burn-rate budget for each month will improve the efficiency of your limited budgets.",
+        "support_span": "This will almost immediately improve the efficiency of your limited budgets",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_4667",
+        "claim": "Setting a burn-rate budget for each month will improve teamwork.",
+        "support_span": "This will force everyone on the team, starting Monday, to collaborate on hiring and other trade-offs.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_4667",
+        "claim": "Setting a burn-rate budget for each month will help you make better decisions on where to deploy your limited resources.",
+        "support_span": "And you will make better decisions on where to deploy your limited resources.",
+        "claim_type": "fact"
+      }
+    ],
+    "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] You should let go of your bottom 10%-15% of sales reps.\n[E2] Having a firm, management-team wide burn rate budget is beneficial.\n[E3] You should spend more time with existing customers.\n[E4] You should build an L4M Model, and update it every month.\n[E5] Setting a burn-rate budget for each month will focus your team and de-stress your life.\n[E6] Setting a burn-rate budget for each month will improve the efficiency of your limited budgets.\n[E7] Setting a burn-rate budget for each month will improve teamwork.\n[E8] Setting a burn-rate budget for each month will help you make better decisions on where to deploy your limited resources.\n[E9] The burn rate and runway are important metrics to track.\n[E10] The burn rate and runway can be visualized on a graph.\n[E11] Setting a burn-rate budget for each month will focus your team and de-stress your life.\n[E12] Setting a burn-rate budget for each month will improve the efficiency of your limited budgets.\n[E13] Setting a burn-rate budget for each month will improve teamwork.\n[E14] Setting a burn-rate budget for each month will help you make better decisions on where to deploy your limited resources.",
+    "raw_extraction": "[\n  {\n    \"source_id\": \"train_12272\",\n    \"claim\": \"You should let go of your bottom 10%-15% of sales reps.\",\n    \"support_span\": \"#1. Let go of your bottom 10%-15% of sales reps, concentrate leads in the best reps.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_12272\",\n    \"claim\": \"Having a firm, management-team wide burn rate budget is beneficial.\",\n    \"support_span\": \"Have a firm, management-team wide burn rate budget. And stick to it.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_12272\",\n    \"claim\": \"You should spend more time with existing customers.\",\n    \"support_span\": \"Spend more time with existing customers. And go save the ones on the fence\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_12272\",\n    \"claim\": \"You should build an L4M Model, and update it every month.\",\n    \"support_span\": \"Build an L4M Model, and update it every month.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_9058\",\n    \"claim\": \"Setting a burn-rate budget for each month will focus your team and de-stress your life.\",\n    \"support_span\": \"This will focus your team and de-stress your life.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_9058\",\n    \"claim\": \"Setting a burn-rate budget for each month will improve the efficiency of your limited budgets.\",\n    \"support_span\": \"This will almost immediately improve the efficiency of your limited budgets\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_9058\",\n    \"claim\": \"Setting a burn-rate budget for each month will improve teamwork.\",\n    \"support_span\": \"This will force everyone on the team, starting Monday, to collaborate on hiring and other trade-offs.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_9058\",\n    \"claim\": \"Setting a burn-rate budget for each month will help you make better decisions on where to deploy your limited resources.\",\n    \"support_span\": \"And you will make better decisions on where to deploy your limited resources.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_9058\",\n    \"claim\": \"Setting a burn-rate budget for each month will increase your revenues.\",\n    \"support_span\": \"Which will not just manage your burn rate — but increase your revenues.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_1822\",\n    \"claim\": \"The burn rate and runway are important metrics to track.\",\n    \"support_span\": \"Burn Rate & Runway : This is the scary one, but the most important.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_1822\",\n    \"claim\": \"The burn rate and runway can be visualized on a graph.\",\n    \"support_span\": \"The green line is your cash balance. The red line is your cumulative burn.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_1822\",\n    \"claim\": \"The burn rate and runway can be used to determine the zero cash date.\",\n    \"support_span\": \"Where they intersect? That’s your Zero Cash Date.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_4667\",\n    \"claim\": \"Setting a burn-rate budget for each month will focus your team and de-stress your life.\",\n    \"support_span\": \"This will focus your team and de-stress your life.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_4667\",\n    \"claim\": \"Setting a burn-rate budget for each month will improve the efficiency of your limited budgets.\",\n    \"support_span\": \"This will almost immediately improve the efficiency of your limited budgets\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_4667\",\n    \"claim\": \"Setting a burn-rate budget for each month will improve teamwork.\",\n    \"support_span\": \"This will force everyone on the team, starting Monday, to collaborate on hiring and other trade-offs.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_4667\",\n    \"claim\": \"Setting a burn-rate budget for each month will help you make better decisions on where to deploy your limited resources.\",\n    \"support_span\": \"And you will make better decisions on where to deploy your limited resources.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_4667\",\n    \"claim\": \"Setting a burn-rate budget for each month will increase your revenues.\",\n    \"support_span\": \"Which will not just manage your burn rate — but increase your revenues.\",\n    \"claim_type\": \"fact\"\n  }\n]",
+    "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Dear SaaStr: Our CFO Sounds Very Polished but We are Missing the Burn Rate Plan Almost Every Month. What Should I Do?\n\nSource passages:\n[train_12272]\n10 Simple Ideas to Help Manage the Burn So, for many of us in SaaS, these are still some of the better of times. The Cloud is bigger than ever, CIOs are buying more than ever, and SaaS is still on a roll, no matter how it may feel at times. But public stock prices are still way down, and venture capital is much tighter than it was outside of AI Mania. So many of you will want to manage the burn more carefully. But you can’t cut your way to growth. So what should a CEO do? A few simple thoughts: #1. Let go of your bottom 10%-15% of sales reps, concentrate leads in the best reps. This always gives you both a top-line boost (the top reps close more per lead), and gives you room to hire more reps at the same budget. #2. Have a firm, management-team wide burn rate budget. And stick to it. Pick a fixed amount of cash you can burn each month, period. And make all your VPs accountable to it. They can negotiate themselves on where to spend incremental revenue and dollars. #3. Just move on from any VP that isn’t getting it done They almost always overspend compared to the VPs that overperform. They hire mediocre folks on their team. And they overspend to try to make their plan. #4. Spend more time with existing customers. And go save the ones on the fence I know this is a broken record on SaaStr, but it works. Relatively speaking, the easiest sales are from your existing customers. So go spend more time with them. And go save the ones on the fence. #5. Build an L4M Model, and update it every month. Religiously.\n\n[train_9058]\n4. Set a burn-rate budget for each and every month\n.\nThis will focus your team and de-stress your life.  Most of us come up with a rough budget for the year, but not a\nburn-rate budget\nfor\neach month\n.  This will force everyone on the team, starting Monday, to collaborate on hiring and other trade-offs.  If you go over the budget, now everyone will know.  In close to real time.  This will almost immediately improve the efficiency of your limited budgets, and improve teamwork.  And you will make better decisions on where to deploy your limited resources.  Which will not just manage your burn rate — but increase your revenues.  Starting Monday.  More\nhere\n.\n\n[train_1822]\nBurn Rate & Runway\n: This is the scary one, but the most important. The green line is your cash balance. The red line is your cumulative burn. Where they intersect? That’s your Zero Cash Date. In this example, the company has burned $27.4M cumulatively and is trending toward a crossover point around September 2026. That’s about 10 months of runway. Not great. Needs immediate attention. The 3 Financial Plans You Need for The Year:  C-90, C-60 and C-10 (Updated)\nWhy This Changes Everything\nOnce you have your C60 plan — your actual, realistic base case — you can do three critical things:\n\n1. Build your hiring plan.\nYou know exactly how much revenue you’ll likely generate, so you can model out how many reps, engineers, or support staff you can actually afford to hire. No more “let’s hire 5 people and hope it works out.”\n\n[train_4667]\n4. Set a burn-rate budget for each and every month.\nThis will focus your team and de-stress your life.  Most of us come up with a rough budget for the year, but not a burn-rate budget for\neach month\n.  This will force everyone on the team, starting Monday, to collaborate on hiring and other trade-offs.  If you go over the budget, now everyone will know. In close to real-time.  This will almost immediately improve the efficiency of your limited budgets, and improve teamwork.  And you will make better decisions on where to deploy your limited resources.  Which will not just manage your burn rate — but increase your revenues.  Starting Monday.\nZoom Had a Burn Rate Budget.  So Should You.",
+    "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Dear SaaStr: Our CFO Sounds Very Polished but We are Missing the Burn Rate Plan Almost Every Month. What Should I Do?\n\nSource passages:\n[train_12272]\n10 Simple Ideas to Help Manage the Burn So, for many of us in SaaS, these are still some of the better of times. The Cloud is bigger than ever, CIOs are buying more than ever, and SaaS is still on a roll, no matter how it may feel at times. But public stock prices are still way down, and venture capital is much tighter than it was outside of AI Mania. So many of you will want to manage the burn more carefully. But you can’t cut your way to growth. So what should a CEO do? A few simple thoughts: #1. Let go of your bottom 10%-15% of sales reps, concentrate leads in the best reps. This always gives you both a top-line boost (the top reps close more per lead), and gives you room to hire more reps at the same budget. #2. Have a firm, management-team wide burn rate budget. And stick to it. Pick a fixed amount of cash you can burn each month, period. And make all your VPs accountable to it. They can negotiate themselves on where to spend incremental revenue and dollars. #3. Just move on from any VP that isn’t getting it done They almost always overspend compared to the VPs that overperform. They hire mediocre folks on their team. And they overspend to try to make their plan. #4. Spend more time with existing customers. And go save the ones on the fence I know this is a broken record on SaaStr, but it works. Relatively speaking, the easiest sales are from your existing customers. So go spend more time with them. And go save the ones on the fence. #5. Build an L4M Model, and update it every month. Religiously.\n\n[train_9058]\n4. Set a burn-rate budget for each and every month\n.\nThis will focus your team and de-stress your life.  Most of us come up with a rough budget for the year, but not a\nburn-rate budget\nfor\neach month\n.  This will force everyone on the team, starting Monday, to collaborate on hiring and other trade-offs.  If you go over the budget, now everyone will know.  In close to real time.  This will almost immediately improve the efficiency of your limited budgets, and improve teamwork.  And you will make better decisions on where to deploy your limited resources.  Which will not just manage your burn rate — but increase your revenues.  Starting Monday.  More\nhere\n.\n\n[train_1822]\nBurn Rate & Runway\n: This is the scary one, but the most important. The green line is your cash balance. The red line is your cumulative burn. Where they intersect? That’s your Zero Cash Date. In this example, the company has burned $27.4M cumulatively and is trending toward a crossover point around September 2026. That’s about 10 months of runway. Not great. Needs immediate attention. The 3 Financial Plans You Need for The Year:  C-90, C-60 and C-10 (Updated)\nWhy This Changes Everything\nOnce you have your C60 plan — your actual, realistic base case — you can do three critical things:\n\n1. Build your hiring plan.\nYou know exactly how much revenue you’ll likely generate, so you can model out how many reps, engineers, or support staff you can actually afford to hire. No more “let’s hire 5 people and hope it works out.”\n\n[train_4667]\n4. Set a burn-rate budget for each and every month.\nThis will focus your team and de-stress your life.  Most of us come up with a rough budget for the year, but not a burn-rate budget for\neach month\n.  This will force everyone on the team, starting Monday, to collaborate on hiring and other trade-offs.  If you go over the budget, now everyone will know. In close to real-time.  This will almost immediately improve the efficiency of your limited budgets, and improve teamwork.  And you will make better decisions on where to deploy your limited resources.  Which will not just manage your burn rate — but increase your revenues.  Starting Monday.\nZoom Had a Burn Rate Budget.  So Should You.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "extraction_seconds": 28.654,
+    "verification_seconds": 0.0,
+    "verification_records": [],
+    "llm_verifier_on_critical_path": false,
+    "allowed_numeric_values": [
+      "pct:10",
+      "pct:15"
+    ],
+    "distillation_adapter_enabled": false,
+    "verification_adapter_enabled": false,
+    "distillation_backend": "same_loaded_4bit_base_adapter_off",
+    "distillation_do_sample": false,
+    "extraction_max_new_tokens": 2560,
+    "verification_max_new_tokens": 24,
+    "distillation_seed": 0,
+    "support_spans_in_generator_prompt": false,
+    "evidence_stage_reason": null,
+    "evidence_status": "verified",
+    "extraction_attempts": 1,
+    "extraction_stop_reason": "eos",
+    "prompt_contract": "factual-reliability-v1",
+    "fixed_style_enabled": true,
+    "style_applied": true,
+    "style_exemplar_count": 2,
+    "latency_seconds": 8.969,
+    "generated_tokens_including_stop": 160,
+    "last_token_id": 4,
+    "effective_eos_token_ids": [
+      128001,
+      128008,
+      128009
+    ],
+    "stop_reason": "length",
+    "budget_fraction": 1.0,
+    "early_eos": false,
+    "first_attempt_stop_reason": "length",
+    "retry_stop_reason": null
+  }
+}

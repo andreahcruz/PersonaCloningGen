@@ -1,0 +1,894 @@
+{
+  "cells": [
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "graph_context_tokens": 72,
+      "medium": "blog",
+      "nonempty_graph_context": true,
+      "question_id": "q_brex_price",
+      "selected_graph_sections": [
+        "derived_description"
+      ],
+      "tokens_by_channel": {
+        "derived_description": 72,
+        "multi_hop_path": 0,
+        "primary_source": 232,
+        "source_supported_relationship": 0
+      }
+    },
+    {
+      "arm": "F-HOP",
+      "context_profile": "multihop",
+      "graph_context_tokens": 0,
+      "medium": "blog",
+      "nonempty_graph_context": false,
+      "question_id": "q_brex_price",
+      "selected_graph_sections": [],
+      "tokens_by_channel": {
+        "derived_description": 0,
+        "multi_hop_path": 0,
+        "primary_source": 232,
+        "source_supported_relationship": 0
+      }
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "graph_context_tokens": 74,
+      "medium": "blog",
+      "nonempty_graph_context": true,
+      "question_id": "q_brex_price",
+      "selected_graph_sections": [
+        "source_supported_relationship"
+      ],
+      "tokens_by_channel": {
+        "derived_description": 0,
+        "multi_hop_path": 0,
+        "primary_source": 232,
+        "source_supported_relationship": 74
+      }
+    },
+    {
+      "arm": "F-SOURCE",
+      "context_profile": "source",
+      "graph_context_tokens": 0,
+      "medium": "blog",
+      "nonempty_graph_context": false,
+      "question_id": "q_brex_price",
+      "selected_graph_sections": [],
+      "tokens_by_channel": {
+        "derived_description": 0,
+        "multi_hop_path": 0,
+        "primary_source": 232,
+        "source_supported_relationship": 0
+      }
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "graph_context_tokens": 26,
+      "medium": "x",
+      "nonempty_graph_context": true,
+      "question_id": "q_cvc_second_check",
+      "selected_graph_sections": [
+        "derived_description"
+      ],
+      "tokens_by_channel": {
+        "derived_description": 26,
+        "multi_hop_path": 0,
+        "primary_source": 0,
+        "source_supported_relationship": 0
+      }
+    },
+    {
+      "arm": "F-HOP",
+      "context_profile": "multihop",
+      "graph_context_tokens": 0,
+      "medium": "x",
+      "nonempty_graph_context": false,
+      "question_id": "q_cvc_second_check",
+      "selected_graph_sections": [],
+      "tokens_by_channel": {
+        "derived_description": 0,
+        "multi_hop_path": 0,
+        "primary_source": 0,
+        "source_supported_relationship": 0
+      }
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "graph_context_tokens": 26,
+      "medium": "x",
+      "nonempty_graph_context": true,
+      "question_id": "q_cvc_second_check",
+      "selected_graph_sections": [
+        "source_supported_relationship"
+      ],
+      "tokens_by_channel": {
+        "derived_description": 0,
+        "multi_hop_path": 0,
+        "primary_source": 0,
+        "source_supported_relationship": 26
+      }
+    },
+    {
+      "arm": "F-SOURCE",
+      "context_profile": "source",
+      "graph_context_tokens": 0,
+      "medium": "x",
+      "nonempty_graph_context": false,
+      "question_id": "q_cvc_second_check",
+      "selected_graph_sections": [],
+      "tokens_by_channel": {
+        "derived_description": 0,
+        "multi_hop_path": 0,
+        "primary_source": 0,
+        "source_supported_relationship": 0
+      }
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "graph_context_tokens": 68,
+      "medium": "linkedin",
+      "nonempty_graph_context": true,
+      "question_id": "q_dev_hop_valuation_and_price",
+      "selected_graph_sections": [
+        "derived_description"
+      ],
+      "tokens_by_channel": {
+        "derived_description": 68,
+        "multi_hop_path": 0,
+        "primary_source": 411,
+        "source_supported_relationship": 0
+      }
+    },
+    {
+      "arm": "F-HOP",
+      "context_profile": "multihop",
+      "graph_context_tokens": 0,
+      "medium": "linkedin",
+      "nonempty_graph_context": false,
+      "question_id": "q_dev_hop_valuation_and_price",
+      "selected_graph_sections": [],
+      "tokens_by_channel": {
+        "derived_description": 0,
+        "multi_hop_path": 0,
+        "primary_source": 411,
+        "source_supported_relationship": 0
+      }
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "graph_context_tokens": 72,
+      "medium": "linkedin",
+      "nonempty_graph_context": true,
+      "question_id": "q_dev_hop_valuation_and_price",
+      "selected_graph_sections": [
+        "source_supported_relationship"
+      ],
+      "tokens_by_channel": {
+        "derived_description": 0,
+        "multi_hop_path": 0,
+        "primary_source": 411,
+        "source_supported_relationship": 72
+      }
+    },
+    {
+      "arm": "F-SOURCE",
+      "context_profile": "source",
+      "graph_context_tokens": 0,
+      "medium": "linkedin",
+      "nonempty_graph_context": false,
+      "question_id": "q_dev_hop_valuation_and_price",
+      "selected_graph_sections": [],
+      "tokens_by_channel": {
+        "derived_description": 0,
+        "multi_hop_path": 0,
+        "primary_source": 411,
+        "source_supported_relationship": 0
+      }
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "graph_context_tokens": 41,
+      "medium": "talk",
+      "nonempty_graph_context": true,
+      "question_id": "q_dev_unans_halftime",
+      "selected_graph_sections": [
+        "derived_description"
+      ],
+      "tokens_by_channel": {
+        "derived_description": 41,
+        "multi_hop_path": 0,
+        "primary_source": 396,
+        "source_supported_relationship": 0
+      }
+    },
+    {
+      "arm": "F-HOP",
+      "context_profile": "multihop",
+      "graph_context_tokens": 0,
+      "medium": "talk",
+      "nonempty_graph_context": false,
+      "question_id": "q_dev_unans_halftime",
+      "selected_graph_sections": [],
+      "tokens_by_channel": {
+        "derived_description": 0,
+        "multi_hop_path": 0,
+        "primary_source": 396,
+        "source_supported_relationship": 0
+      }
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "graph_context_tokens": 15,
+      "medium": "talk",
+      "nonempty_graph_context": true,
+      "question_id": "q_dev_unans_halftime",
+      "selected_graph_sections": [
+        "source_supported_relationship"
+      ],
+      "tokens_by_channel": {
+        "derived_description": 0,
+        "multi_hop_path": 0,
+        "primary_source": 396,
+        "source_supported_relationship": 15
+      }
+    },
+    {
+      "arm": "F-SOURCE",
+      "context_profile": "source",
+      "graph_context_tokens": 0,
+      "medium": "talk",
+      "nonempty_graph_context": false,
+      "question_id": "q_dev_unans_halftime",
+      "selected_graph_sections": [],
+      "tokens_by_channel": {
+        "derived_description": 0,
+        "multi_hop_path": 0,
+        "primary_source": 396,
+        "source_supported_relationship": 0
+      }
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "graph_context_tokens": 66,
+      "medium": "talk",
+      "nonempty_graph_context": true,
+      "question_id": "q_exec_craft",
+      "selected_graph_sections": [
+        "derived_description"
+      ],
+      "tokens_by_channel": {
+        "derived_description": 66,
+        "multi_hop_path": 0,
+        "primary_source": 85,
+        "source_supported_relationship": 0
+      }
+    },
+    {
+      "arm": "F-HOP",
+      "context_profile": "multihop",
+      "graph_context_tokens": 0,
+      "medium": "talk",
+      "nonempty_graph_context": false,
+      "question_id": "q_exec_craft",
+      "selected_graph_sections": [],
+      "tokens_by_channel": {
+        "derived_description": 0,
+        "multi_hop_path": 0,
+        "primary_source": 85,
+        "source_supported_relationship": 0
+      }
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "graph_context_tokens": 72,
+      "medium": "talk",
+      "nonempty_graph_context": true,
+      "question_id": "q_exec_craft",
+      "selected_graph_sections": [
+        "source_supported_relationship"
+      ],
+      "tokens_by_channel": {
+        "derived_description": 0,
+        "multi_hop_path": 0,
+        "primary_source": 85,
+        "source_supported_relationship": 72
+      }
+    },
+    {
+      "arm": "F-SOURCE",
+      "context_profile": "source",
+      "graph_context_tokens": 0,
+      "medium": "talk",
+      "nonempty_graph_context": false,
+      "question_id": "q_exec_craft",
+      "selected_graph_sections": [],
+      "tokens_by_channel": {
+        "derived_description": 0,
+        "multi_hop_path": 0,
+        "primary_source": 85,
+        "source_supported_relationship": 0
+      }
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "graph_context_tokens": 51,
+      "medium": "blog",
+      "nonempty_graph_context": true,
+      "question_id": "q_first_vp_sales",
+      "selected_graph_sections": [
+        "derived_description"
+      ],
+      "tokens_by_channel": {
+        "derived_description": 51,
+        "multi_hop_path": 0,
+        "primary_source": 114,
+        "source_supported_relationship": 0
+      }
+    },
+    {
+      "arm": "F-HOP",
+      "context_profile": "multihop",
+      "graph_context_tokens": 73,
+      "medium": "blog",
+      "nonempty_graph_context": true,
+      "question_id": "q_first_vp_sales",
+      "selected_graph_sections": [
+        "multi_hop_path"
+      ],
+      "tokens_by_channel": {
+        "derived_description": 0,
+        "multi_hop_path": 73,
+        "primary_source": 114,
+        "source_supported_relationship": 0
+      }
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "graph_context_tokens": 67,
+      "medium": "blog",
+      "nonempty_graph_context": true,
+      "question_id": "q_first_vp_sales",
+      "selected_graph_sections": [
+        "source_supported_relationship"
+      ],
+      "tokens_by_channel": {
+        "derived_description": 0,
+        "multi_hop_path": 0,
+        "primary_source": 114,
+        "source_supported_relationship": 67
+      }
+    },
+    {
+      "arm": "F-SOURCE",
+      "context_profile": "source",
+      "graph_context_tokens": 0,
+      "medium": "blog",
+      "nonempty_graph_context": false,
+      "question_id": "q_first_vp_sales",
+      "selected_graph_sections": [],
+      "tokens_by_channel": {
+        "derived_description": 0,
+        "multi_hop_path": 0,
+        "primary_source": 114,
+        "source_supported_relationship": 0
+      }
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "graph_context_tokens": 68,
+      "medium": "linkedin",
+      "nonempty_graph_context": true,
+      "question_id": "q_five_percent_share",
+      "selected_graph_sections": [
+        "derived_description"
+      ],
+      "tokens_by_channel": {
+        "derived_description": 68,
+        "multi_hop_path": 0,
+        "primary_source": 339,
+        "source_supported_relationship": 0
+      }
+    },
+    {
+      "arm": "F-HOP",
+      "context_profile": "multihop",
+      "graph_context_tokens": 0,
+      "medium": "linkedin",
+      "nonempty_graph_context": false,
+      "question_id": "q_five_percent_share",
+      "selected_graph_sections": [],
+      "tokens_by_channel": {
+        "derived_description": 0,
+        "multi_hop_path": 0,
+        "primary_source": 339,
+        "source_supported_relationship": 0
+      }
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "graph_context_tokens": 69,
+      "medium": "linkedin",
+      "nonempty_graph_context": true,
+      "question_id": "q_five_percent_share",
+      "selected_graph_sections": [
+        "source_supported_relationship"
+      ],
+      "tokens_by_channel": {
+        "derived_description": 0,
+        "multi_hop_path": 0,
+        "primary_source": 339,
+        "source_supported_relationship": 69
+      }
+    },
+    {
+      "arm": "F-SOURCE",
+      "context_profile": "source",
+      "graph_context_tokens": 0,
+      "medium": "linkedin",
+      "nonempty_graph_context": false,
+      "question_id": "q_five_percent_share",
+      "selected_graph_sections": [],
+      "tokens_by_channel": {
+        "derived_description": 0,
+        "multi_hop_path": 0,
+        "primary_source": 339,
+        "source_supported_relationship": 0
+      }
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "graph_context_tokens": 27,
+      "medium": "x",
+      "nonempty_graph_context": true,
+      "question_id": "q_olympics_ceremony",
+      "selected_graph_sections": [
+        "derived_description"
+      ],
+      "tokens_by_channel": {
+        "derived_description": 27,
+        "multi_hop_path": 0,
+        "primary_source": 0,
+        "source_supported_relationship": 0
+      }
+    },
+    {
+      "arm": "F-HOP",
+      "context_profile": "multihop",
+      "graph_context_tokens": 0,
+      "medium": "x",
+      "nonempty_graph_context": false,
+      "question_id": "q_olympics_ceremony",
+      "selected_graph_sections": [],
+      "tokens_by_channel": {
+        "derived_description": 0,
+        "multi_hop_path": 0,
+        "primary_source": 0,
+        "source_supported_relationship": 0
+      }
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "graph_context_tokens": 17,
+      "medium": "x",
+      "nonempty_graph_context": true,
+      "question_id": "q_olympics_ceremony",
+      "selected_graph_sections": [
+        "source_supported_relationship"
+      ],
+      "tokens_by_channel": {
+        "derived_description": 0,
+        "multi_hop_path": 0,
+        "primary_source": 0,
+        "source_supported_relationship": 17
+      }
+    },
+    {
+      "arm": "F-SOURCE",
+      "context_profile": "source",
+      "graph_context_tokens": 0,
+      "medium": "x",
+      "nonempty_graph_context": false,
+      "question_id": "q_olympics_ceremony",
+      "selected_graph_sections": [],
+      "tokens_by_channel": {
+        "derived_description": 0,
+        "multi_hop_path": 0,
+        "primary_source": 0,
+        "source_supported_relationship": 0
+      }
+    }
+  ],
+  "experiment_id": "EXP-20261102-002-model-f-quick-pilot",
+  "fraction_with_usable_graph_evidence": 1.0,
+  "join": {
+    "diagnostic_keys": [
+      "question_id",
+      "medium",
+      "arm"
+    ],
+    "note": "Join official id to diagnostic question_id, and join medium. Graph fields stay in this file. They are not written into unified_eval.v1 rows.",
+    "official_rows": "unified_eval/rows.jsonl",
+    "official_unified_keys": [
+      "id",
+      "medium"
+    ]
+  },
+  "questions": {
+    "q_brex_price": {
+      "accepted_relationships": 40,
+      "direct_edge_count": 40,
+      "entity_description_available": true,
+      "entity_description_count": 41,
+      "entity_descriptions_nonempty": 41,
+      "excluded_reason_counts": {
+        "generated_summary_not_a_source_span": 174
+      },
+      "missing_source_or_provenance_exclusions": 0,
+      "normalization": {
+        "direct_edges": 40,
+        "entity_descriptions_not_retained": 0,
+        "malformed_records": 0,
+        "mode": "hybrid",
+        "notes": [
+          "hits_already_budgeted_raw_chunks_not_added",
+          "validated_against_supplied_catalog"
+        ],
+        "paths": 24,
+        "payload_shape": "aquery_data",
+        "profile": "multihop",
+        "separator": "<SEP>",
+        "validation_contract": "source-verified-relationship-v1",
+        "withheld_edges": 93
+      },
+      "path_status": "recorded",
+      "quarantined_relationships": 1,
+      "raw_chunk_count": 12,
+      "raw_entity_count": 41,
+      "raw_relationship_count": 133,
+      "rejected_relationships": 92,
+      "relationship_reason_counts": {
+        "endpoints_not_in_source": 9,
+        "generated_summary_not_supported_by_source": 76,
+        "unresolved_conflict": 1,
+        "unsupported_role_association": 1,
+        "weak_entity_name": 6
+      },
+      "relationship_validation_status": "recorded",
+      "status": "recorded",
+      "two_hop_path_available": false,
+      "two_hop_path_count": 0
+    },
+    "q_cvc_second_check": {
+      "accepted_relationships": 22,
+      "direct_edge_count": 22,
+      "entity_description_available": true,
+      "entity_description_count": 19,
+      "entity_descriptions_nonempty": 19,
+      "excluded_reason_counts": {
+        "generated_summary_not_a_source_span": 79,
+        "omission_marker_span": 1
+      },
+      "missing_source_or_provenance_exclusions": 0,
+      "normalization": {
+        "direct_edges": 22,
+        "entity_descriptions_not_retained": 0,
+        "malformed_records": 0,
+        "mode": "hybrid",
+        "notes": [
+          "hits_already_budgeted_raw_chunks_not_added",
+          "validated_against_supplied_catalog"
+        ],
+        "paths": 24,
+        "payload_shape": "aquery_data",
+        "profile": "multihop",
+        "separator": "<SEP>",
+        "validation_contract": "source-verified-relationship-v1",
+        "withheld_edges": 38
+      },
+      "path_status": "recorded",
+      "quarantined_relationships": 1,
+      "raw_chunk_count": 12,
+      "raw_entity_count": 19,
+      "raw_relationship_count": 60,
+      "rejected_relationships": 37,
+      "relationship_reason_counts": {
+        "endpoints_not_in_source": 3,
+        "generated_summary_not_supported_by_source": 24,
+        "inferred_multi_source": 1,
+        "weak_entity_name": 10
+      },
+      "relationship_validation_status": "recorded",
+      "status": "recorded",
+      "two_hop_path_available": true,
+      "two_hop_path_count": 2
+    },
+    "q_dev_hop_valuation_and_price": {
+      "accepted_relationships": 35,
+      "direct_edge_count": 35,
+      "entity_description_available": true,
+      "entity_description_count": 17,
+      "entity_descriptions_nonempty": 17,
+      "excluded_reason_counts": {
+        "generated_summary_not_a_source_span": 160,
+        "omission_marker_span": 1
+      },
+      "missing_source_or_provenance_exclusions": 0,
+      "normalization": {
+        "direct_edges": 35,
+        "entity_descriptions_not_retained": 0,
+        "malformed_records": 0,
+        "mode": "hybrid",
+        "notes": [
+          "hits_already_budgeted_raw_chunks_not_added",
+          "validated_against_supplied_catalog"
+        ],
+        "paths": 24,
+        "payload_shape": "aquery_data",
+        "profile": "multihop",
+        "separator": "<SEP>",
+        "validation_contract": "source-verified-relationship-v1",
+        "withheld_edges": 108
+      },
+      "path_status": "recorded",
+      "quarantined_relationships": 2,
+      "raw_chunk_count": 12,
+      "raw_entity_count": 17,
+      "raw_relationship_count": 143,
+      "rejected_relationships": 106,
+      "relationship_reason_counts": {
+        "endpoints_not_in_source": 5,
+        "generated_summary_not_supported_by_source": 42,
+        "omission_marker_span": 1,
+        "unresolved_conflict": 2,
+        "unsupported_role_association": 2,
+        "weak_entity_name": 56
+      },
+      "relationship_validation_status": "recorded",
+      "status": "recorded",
+      "two_hop_path_available": false,
+      "two_hop_path_count": 0
+    },
+    "q_dev_unans_halftime": {
+      "accepted_relationships": 28,
+      "direct_edge_count": 28,
+      "entity_description_available": true,
+      "entity_description_count": 31,
+      "entity_descriptions_nonempty": 31,
+      "excluded_reason_counts": {
+        "generated_summary_not_a_source_span": 138
+      },
+      "missing_source_or_provenance_exclusions": 0,
+      "normalization": {
+        "direct_edges": 28,
+        "entity_descriptions_not_retained": 0,
+        "malformed_records": 0,
+        "mode": "hybrid",
+        "notes": [
+          "hits_already_budgeted_raw_chunks_not_added",
+          "validated_against_supplied_catalog"
+        ],
+        "paths": 24,
+        "payload_shape": "aquery_data",
+        "profile": "multihop",
+        "separator": "<SEP>",
+        "validation_contract": "source-verified-relationship-v1",
+        "withheld_edges": 79
+      },
+      "path_status": "recorded",
+      "quarantined_relationships": 0,
+      "raw_chunk_count": 12,
+      "raw_entity_count": 31,
+      "raw_relationship_count": 107,
+      "rejected_relationships": 79,
+      "relationship_reason_counts": {
+        "endpoints_not_in_source": 6,
+        "generated_summary_not_supported_by_source": 62,
+        "weak_entity_name": 11
+      },
+      "relationship_validation_status": "recorded",
+      "status": "recorded",
+      "two_hop_path_available": false,
+      "two_hop_path_count": 0
+    },
+    "q_exec_craft": {
+      "accepted_relationships": 34,
+      "direct_edge_count": 34,
+      "entity_description_available": true,
+      "entity_description_count": 18,
+      "entity_descriptions_nonempty": 18,
+      "excluded_reason_counts": {
+        "generated_summary_not_a_source_span": 138,
+        "omission_marker_span": 1,
+        "source_diversity_cap": 1
+      },
+      "missing_source_or_provenance_exclusions": 0,
+      "normalization": {
+        "direct_edges": 34,
+        "entity_descriptions_not_retained": 0,
+        "malformed_records": 0,
+        "mode": "hybrid",
+        "notes": [
+          "hits_already_budgeted_raw_chunks_not_added",
+          "validated_against_supplied_catalog"
+        ],
+        "paths": 24,
+        "payload_shape": "aquery_data",
+        "profile": "multihop",
+        "separator": "<SEP>",
+        "validation_contract": "source-verified-relationship-v1",
+        "withheld_edges": 86
+      },
+      "path_status": "recorded",
+      "quarantined_relationships": 4,
+      "raw_chunk_count": 12,
+      "raw_entity_count": 18,
+      "raw_relationship_count": 120,
+      "rejected_relationships": 82,
+      "relationship_reason_counts": {
+        "endpoints_not_in_source": 7,
+        "generated_summary_not_supported_by_source": 45,
+        "unresolved_conflict": 4,
+        "weak_entity_name": 30
+      },
+      "relationship_validation_status": "recorded",
+      "status": "recorded",
+      "two_hop_path_available": false,
+      "two_hop_path_count": 0
+    },
+    "q_first_vp_sales": {
+      "accepted_relationships": 16,
+      "direct_edge_count": 16,
+      "entity_description_available": true,
+      "entity_description_count": 15,
+      "entity_descriptions_nonempty": 15,
+      "excluded_reason_counts": {
+        "generated_summary_not_a_source_span": 67,
+        "omission_marker_span": 1
+      },
+      "missing_source_or_provenance_exclusions": 0,
+      "normalization": {
+        "direct_edges": 16,
+        "entity_descriptions_not_retained": 0,
+        "malformed_records": 0,
+        "mode": "hybrid",
+        "notes": [
+          "hits_already_budgeted_raw_chunks_not_added",
+          "validated_against_supplied_catalog"
+        ],
+        "paths": 24,
+        "payload_shape": "aquery_data",
+        "profile": "multihop",
+        "separator": "<SEP>",
+        "validation_contract": "source-verified-relationship-v1",
+        "withheld_edges": 36
+      },
+      "path_status": "recorded",
+      "quarantined_relationships": 4,
+      "raw_chunk_count": 12,
+      "raw_entity_count": 15,
+      "raw_relationship_count": 52,
+      "rejected_relationships": 32,
+      "relationship_reason_counts": {
+        "endpoints_not_in_source": 7,
+        "generated_summary_not_supported_by_source": 15,
+        "unresolved_conflict": 4,
+        "unsupported_role_association": 3,
+        "weak_entity_name": 7
+      },
+      "relationship_validation_status": "recorded",
+      "status": "recorded",
+      "two_hop_path_available": true,
+      "two_hop_path_count": 8
+    },
+    "q_five_percent_share": {
+      "accepted_relationships": 40,
+      "direct_edge_count": 40,
+      "entity_description_available": true,
+      "entity_description_count": 19,
+      "entity_descriptions_nonempty": 19,
+      "excluded_reason_counts": {
+        "generated_summary_not_a_source_span": 126
+      },
+      "missing_source_or_provenance_exclusions": 0,
+      "normalization": {
+        "direct_edges": 40,
+        "entity_descriptions_not_retained": 0,
+        "malformed_records": 0,
+        "mode": "hybrid",
+        "notes": [
+          "hits_already_budgeted_raw_chunks_not_added",
+          "validated_against_supplied_catalog"
+        ],
+        "paths": 24,
+        "payload_shape": "aquery_data",
+        "profile": "multihop",
+        "separator": "<SEP>",
+        "validation_contract": "source-verified-relationship-v1",
+        "withheld_edges": 67
+      },
+      "path_status": "recorded",
+      "quarantined_relationships": 1,
+      "raw_chunk_count": 12,
+      "raw_entity_count": 19,
+      "raw_relationship_count": 107,
+      "rejected_relationships": 66,
+      "relationship_reason_counts": {
+        "endpoints_not_in_source": 7,
+        "generated_summary_not_supported_by_source": 45,
+        "unresolved_conflict": 1,
+        "unsupported_role_association": 3,
+        "weak_entity_name": 11
+      },
+      "relationship_validation_status": "recorded",
+      "status": "recorded",
+      "two_hop_path_available": false,
+      "two_hop_path_count": 0
+    },
+    "q_olympics_ceremony": {
+      "accepted_relationships": 37,
+      "direct_edge_count": 37,
+      "entity_description_available": true,
+      "entity_description_count": 31,
+      "entity_descriptions_nonempty": 31,
+      "excluded_reason_counts": {
+        "generated_summary_not_a_source_span": 139
+      },
+      "missing_source_or_provenance_exclusions": 0,
+      "normalization": {
+        "direct_edges": 37,
+        "entity_descriptions_not_retained": 0,
+        "malformed_records": 0,
+        "mode": "hybrid",
+        "notes": [
+          "hits_already_budgeted_raw_chunks_not_added",
+          "validated_against_supplied_catalog"
+        ],
+        "paths": 24,
+        "payload_shape": "aquery_data",
+        "profile": "multihop",
+        "separator": "<SEP>",
+        "validation_contract": "source-verified-relationship-v1",
+        "withheld_edges": 71
+      },
+      "path_status": "recorded",
+      "quarantined_relationships": 1,
+      "raw_chunk_count": 12,
+      "raw_entity_count": 31,
+      "raw_relationship_count": 108,
+      "rejected_relationships": 70,
+      "relationship_reason_counts": {
+        "endpoints_not_in_source": 11,
+        "generated_summary_not_supported_by_source": 46,
+        "unresolved_conflict": 1,
+        "unsupported_role_association": 3,
+        "weak_entity_name": 10
+      },
+      "relationship_validation_status": "recorded",
+      "status": "recorded",
+      "two_hop_path_available": false,
+      "two_hop_path_count": 0
+    }
+  },
+  "questions_with_summary": 8,
+  "questions_with_usable_graph_evidence": 8,
+  "role": "diagnostic_not_a_quality_score",
+  "schema": "model-f-graph-diagnostics-v1",
+  "usable_graph_definition": "A question has usable graph evidence when the frozen summary records an accepted relationship, a nonempty entity description, or a two-hop path. This fraction is not added to the arm score."
+}

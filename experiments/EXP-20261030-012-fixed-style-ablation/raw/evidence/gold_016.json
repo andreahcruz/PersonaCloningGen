@@ -1,0 +1,145 @@
+{
+  "proposed": [
+    {
+      "source_id": "train_12523",
+      "claim": "You can't just stop training and monitoring an AI agent.",
+      "support_span": "We stopped training and monitoring one of our original AI Agents.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_44",
+      "claim": "Training is a real step that many teams skip.",
+      "support_span": "The only genuinely non-intuitive part is training — which is a real step that many teams skip",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_44",
+      "claim": "The UI, UX, and configuration logic of AI tools work like software.",
+      "support_span": "The UI, the UX, the configuration logic — it’s just software. It works like software has always worked.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_44",
+      "claim": "Using AI tools requires staying ahead of others through continuous use.",
+      "support_span": "They tried the tools early. They trained them for a month. They stayed a year ahead of everyone else through one simple mechanism: they actually used the things.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_44",
+      "claim": "A well-run team can grow fast and cross $100M without using AI tools.",
+      "support_span": "a well-run team, growing fast, crossing toward $100M",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_44",
+      "claim": "A $6 billion AI company had a badly trained AI agent.",
+      "support_span": "A $6 billion AI company — I won’t name it — whose agent was quoting our team incorrect pricing",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_44",
+      "claim": "A badly trained AI agent can make bad calls for a year.",
+      "support_span": "A year of a badly trained agent making bad calls",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_11564",
+      "claim": "You can't just stop training and monitoring an AI agent.",
+      "support_span": "We made a mistake that we tell everyone not to make with AI agents. We stopped training and monitoring one of our original AI Agents.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_11564",
+      "claim": "Stale data can cause an AI agent to function incorrectly.",
+      "support_span": "one hadn't been sync'ing with new data... in over 4 months",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_11714",
+      "claim": "AI agents can handle a large volume of conversations and messages.",
+      "support_span": "Our general AI Agent (“Digital Jason”) handled 77 conversations and 203 messages yesterday",
+      "claim_type": "fact"
+    }
+  ],
+  "raw_extraction": "[\n  {\n    \"source_id\": \"train_12523\",\n    \"claim\": \"You can't just stop training and monitoring an AI agent.\",\n    \"support_span\": \"We stopped training and monitoring one of our original AI Agents.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_44\",\n    \"claim\": \"Training is a real step that many teams skip.\",\n    \"support_span\": \"The only genuinely non-intuitive part is training — which is a real step that many teams skip\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_44\",\n    \"claim\": \"The UI, UX, and configuration logic of AI tools work like software.\",\n    \"support_span\": \"The UI, the UX, the configuration logic — it’s just software. It works like software has always worked.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_44\",\n    \"claim\": \"Using AI tools requires staying ahead of others through continuous use.\",\n    \"support_span\": \"They tried the tools early. They trained them for a month. They stayed a year ahead of everyone else through one simple mechanism: they actually used the things.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_44\",\n    \"claim\": \"A well-run team can grow fast and cross $100M without using AI tools.\",\n    \"support_span\": \"a well-run team, growing fast, crossing toward $100M\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_44\",\n    \"claim\": \"A $6 billion AI company had a badly trained AI agent.\",\n    \"support_span\": \"A $6 billion AI company — I won’t name it — whose agent was quoting our team incorrect pricing\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_44\",\n    \"claim\": \"A badly trained AI agent can make bad calls for a year.\",\n    \"support_span\": \"A year of a badly trained agent making bad calls\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_11564\",\n    \"claim\": \"You can't just stop training and monitoring an AI agent.\",\n    \"support_span\": \"We made a mistake that we tell everyone not to make with AI agents. We stopped training and monitoring one of our original AI Agents.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_11564\",\n    \"claim\": \"Stale data can cause an AI agent to function incorrectly.\",\n    \"support_span\": \"one hadn't been sync'ing with new data... in over 4 months\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_11714\",\n    \"claim\": \"AI agents can handle a large volume of conversations and messages.\",\n    \"support_span\": \"Our general AI Agent (“Digital Jason”) handled 77 conversations and 203 messages yesterday\",\n    \"claim_type\": \"fact\"\n  }\n]",
+  "validation_rejected": [
+    {
+      "source_id": "train_11564",
+      "claim": "Stale data can cause an AI agent to function incorrectly.",
+      "support_span": "one hadn't been sync'ing with new data... in over 4 months",
+      "claim_type": "fact",
+      "reason": "support_not_in_source"
+    }
+  ],
+  "verifier_rejected": [],
+  "verified": [
+    {
+      "source_id": "train_12523",
+      "claim": "You can't just stop training and monitoring an AI agent.",
+      "support_span": "We stopped training and monitoring one of our original AI Agents.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_44",
+      "claim": "Training is a real step that many teams skip.",
+      "support_span": "The only genuinely non-intuitive part is training — which is a real step that many teams skip",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_44",
+      "claim": "The UI, UX, and configuration logic of AI tools work like software.",
+      "support_span": "The UI, the UX, the configuration logic — it’s just software. It works like software has always worked.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_44",
+      "claim": "Using AI tools requires staying ahead of others through continuous use.",
+      "support_span": "They tried the tools early. They trained them for a month. They stayed a year ahead of everyone else through one simple mechanism: they actually used the things.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_44",
+      "claim": "A well-run team can grow fast and cross $100M without using AI tools.",
+      "support_span": "a well-run team, growing fast, crossing toward $100M",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_44",
+      "claim": "A $6 billion AI company had a badly trained AI agent.",
+      "support_span": "A $6 billion AI company — I won’t name it — whose agent was quoting our team incorrect pricing",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_44",
+      "claim": "A badly trained AI agent can make bad calls for a year.",
+      "support_span": "A year of a badly trained agent making bad calls",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_11564",
+      "claim": "You can't just stop training and monitoring an AI agent.",
+      "support_span": "We made a mistake that we tell everyone not to make with AI agents. We stopped training and monitoring one of our original AI Agents.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_11714",
+      "claim": "AI agents can handle a large volume of conversations and messages.",
+      "support_span": "Our general AI Agent (“Digital Jason”) handled 77 conversations and 203 messages yesterday",
+      "claim_type": "fact"
+    }
+  ],
+  "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] You can't just stop training and monitoring an AI agent.\n[E2] Training is a real step that many teams skip.\n[E3] The UI, UX, and configuration logic of AI tools work like software.\n[E4] Using AI tools requires staying ahead of others through continuous use.\n[E5] A well-run team can grow fast and cross $100M without using AI tools.\n[E6] A $6 billion AI company had a badly trained AI agent.\n[E7] A badly trained AI agent can make bad calls for a year.\n[E8] You can't just stop training and monitoring an AI agent.\n[E9] AI agents can handle a large volume of conversations and messages.",
+  "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: You Can’t Train an AI Agent and Then Just … Go Away. We Did, It Fell Off The Rails. And We Didn’t Even Know.\n\nSource passages:\n[train_12523]\nWe made a mistake that we tell everyone not to make with AI agents.\n\nWe stopped training and monitoring one of our original AI Agents.  We now have almost 30 AI Agents.  There's so much to do every day now, to keep up with them.\n\nSo we stopped checking in with a few of them,\n\n[train_44]\nThe only genuinely non-intuitive part is training — which is a real step that many teams skip and then wonder why the agent isn’t working. But the UI, the UX, the configuration logic — it’s just software. It works like software has always worked. The people who are winning with AI right now in non-technical roles aren’t doing anything magical. They tried the tools early. They trained them for a month. They stayed a year ahead of everyone else through one simple mechanism: they actually used the things. What Happens If You Don’t\nI was reviewing a company recently — a well-run team, growing fast, crossing toward $100M. Their new CRO hadn’t brought in a single AI tool. Not one. Wasn’t scared of AI philosophically, just hadn’t done it. Adding hundreds of sales reps this year without asking what they could do with a fraction of that headcount and a deployed AI BDR instead. I wanted to cry. Years of their life being left on the table. I also saw the inverse this week, and it’s a useful cautionary tale for the AI-native side. A $6 billion AI company — I won’t name it — whose agent was quoting our team incorrect pricing. Telling us we’d need to quadruple our spend. Why? No one had properly trained the agent on pricing. When we asked how long the product had been in beta: a year. A year of a badly trained agent making bad calls, at a company whose entire product is AI. That is what it looks like when smart people don’t treat deployment as seriously as they treat building. The Companies That Feel Like Summer vs.\n\n[train_11564]\nWe made a mistake that we tell everyone not to make with AI agents. We stopped training and monitoring one of our original AI Agents. We now have almost 30 AI Agents. There's so much to do every day now, to keep up with them. y So we stopped checking in with all of them, every day. The less mission critical ones, we stopped doing ... 1-on-1's with, in essence. And then we found out yesterday, one hadn't been sync'ing with new data ... in over 4 months. Yes, it still functioned, but on increasing stale data. And it never threw an error, despite being a very well funded startup with a top dev team behind it. AI Agents are many things. But they aren't set-and-forget. Not yet.\n\n[train_11714]\nOur general AI Agent (“Digital Jason”) handled 77 conversations and 203 messages yesterday. Most were pretty good, I am sure. But the real point is I couldn’t have done it. Nor could our tiny team. This is some of the biggest leverage in AI. Getting an AI “good enough” to do things … you have no human to do.",
+  "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: You Can’t Train an AI Agent and Then Just … Go Away. We Did, It Fell Off The Rails. And We Didn’t Even Know.\n\nSource passages:\n[train_12523]\nWe made a mistake that we tell everyone not to make with AI agents.\n\nWe stopped training and monitoring one of our original AI Agents.  We now have almost 30 AI Agents.  There's so much to do every day now, to keep up with them.\n\nSo we stopped checking in with a few of them,\n\n[train_44]\nThe only genuinely non-intuitive part is training — which is a real step that many teams skip and then wonder why the agent isn’t working. But the UI, the UX, the configuration logic — it’s just software. It works like software has always worked. The people who are winning with AI right now in non-technical roles aren’t doing anything magical. They tried the tools early. They trained them for a month. They stayed a year ahead of everyone else through one simple mechanism: they actually used the things. What Happens If You Don’t\nI was reviewing a company recently — a well-run team, growing fast, crossing toward $100M. Their new CRO hadn’t brought in a single AI tool. Not one. Wasn’t scared of AI philosophically, just hadn’t done it. Adding hundreds of sales reps this year without asking what they could do with a fraction of that headcount and a deployed AI BDR instead. I wanted to cry. Years of their life being left on the table. I also saw the inverse this week, and it’s a useful cautionary tale for the AI-native side. A $6 billion AI company — I won’t name it — whose agent was quoting our team incorrect pricing. Telling us we’d need to quadruple our spend. Why? No one had properly trained the agent on pricing. When we asked how long the product had been in beta: a year. A year of a badly trained agent making bad calls, at a company whose entire product is AI. That is what it looks like when smart people don’t treat deployment as seriously as they treat building. The Companies That Feel Like Summer vs.\n\n[train_11564]\nWe made a mistake that we tell everyone not to make with AI agents. We stopped training and monitoring one of our original AI Agents. We now have almost 30 AI Agents. There's so much to do every day now, to keep up with them. y So we stopped checking in with all of them, every day. The less mission critical ones, we stopped doing ... 1-on-1's with, in essence. And then we found out yesterday, one hadn't been sync'ing with new data ... in over 4 months. Yes, it still functioned, but on increasing stale data. And it never threw an error, despite being a very well funded startup with a top dev team behind it. AI Agents are many things. But they aren't set-and-forget. Not yet.\n\n[train_11714]\nOur general AI Agent (“Digital Jason”) handled 77 conversations and 203 messages yesterday. Most were pretty good, I am sure. But the real point is I couldn’t have done it. Nor could our tiny team. This is some of the biggest leverage in AI. Getting an AI “good enough” to do things … you have no human to do.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+  "extraction_seconds": 18.004,
+  "verification_seconds": 0.0,
+  "verification_records": [],
+  "allowed_numeric_values": [
+    "usd:100000000",
+    "usd:6000000000"
+  ],
+  "reason": null,
+  "extraction_stop_reason": "eos",
+  "extraction_attempts": 1,
+  "evidence_status": "verified"
+}

@@ -1,0 +1,393 @@
+{
+  "arms": {
+    "F-DESC": {
+      "copy_or_leak_failure_rate": 0.0,
+      "factual_pass_rate": 0.5,
+      "mean_generation_seconds": 17.106875000000002,
+      "n": 8,
+      "retry_rate": 0.125
+    },
+    "F-HOP": {
+      "copy_or_leak_failure_rate": 0.125,
+      "factual_pass_rate": 0.5,
+      "mean_generation_seconds": 19.00275,
+      "n": 8,
+      "retry_rate": 0.125
+    },
+    "F-REL": {
+      "copy_or_leak_failure_rate": 0.125,
+      "factual_pass_rate": 0.375,
+      "mean_generation_seconds": 18.231874999999995,
+      "n": 8,
+      "retry_rate": 0.125
+    },
+    "F-SOURCE": {
+      "copy_or_leak_failure_rate": 0.0,
+      "factual_pass_rate": 0.5,
+      "mean_generation_seconds": 17.41825,
+      "n": 8,
+      "retry_rate": 0.125
+    }
+  },
+  "complete_question_ids": [
+    "q_brex_price",
+    "q_dev_hop_valuation_and_price",
+    "q_cvc_second_check",
+    "q_dev_unans_halftime",
+    "q_five_percent_share",
+    "q_exec_craft",
+    "q_first_vp_sales",
+    "q_olympics_ceremony"
+  ],
+  "excluded_incomplete_question_ids": [],
+  "graph_evidence_fraction": 1.0,
+  "graph_evidence_is_a_score": false,
+  "limitation": "The pilot does not measure persona, stance, or writing quality.",
+  "per_question": [
+    {
+      "F-DESC": {
+        "copy_or_leak_failure": false,
+        "factual_pass": false,
+        "generation_seconds": 28.408,
+        "numeric_pass": false,
+        "retried": false,
+        "role_unsupported_count": 0,
+        "unsupported_numeric_count": 6,
+        "word_count": 280
+      },
+      "F-HOP": {
+        "copy_or_leak_failure": false,
+        "factual_pass": false,
+        "generation_seconds": 25.781,
+        "numeric_pass": false,
+        "retried": false,
+        "role_unsupported_count": 0,
+        "unsupported_numeric_count": 5,
+        "word_count": 302
+      },
+      "F-REL": {
+        "copy_or_leak_failure": false,
+        "factual_pass": false,
+        "generation_seconds": 23.795,
+        "numeric_pass": false,
+        "retried": false,
+        "role_unsupported_count": 0,
+        "unsupported_numeric_count": 6,
+        "word_count": 231
+      },
+      "F-SOURCE": {
+        "copy_or_leak_failure": false,
+        "factual_pass": false,
+        "generation_seconds": 26.017,
+        "numeric_pass": false,
+        "retried": false,
+        "role_unsupported_count": 0,
+        "unsupported_numeric_count": 5,
+        "word_count": 302
+      },
+      "question_id": "q_brex_price"
+    },
+    {
+      "F-DESC": {
+        "copy_or_leak_failure": false,
+        "factual_pass": false,
+        "generation_seconds": 24.322,
+        "numeric_pass": false,
+        "retried": false,
+        "role_unsupported_count": 0,
+        "unsupported_numeric_count": 11,
+        "word_count": 236
+      },
+      "F-HOP": {
+        "copy_or_leak_failure": false,
+        "factual_pass": false,
+        "generation_seconds": 24.093,
+        "numeric_pass": false,
+        "retried": false,
+        "role_unsupported_count": 0,
+        "unsupported_numeric_count": 9,
+        "word_count": 202
+      },
+      "F-REL": {
+        "copy_or_leak_failure": true,
+        "factual_pass": false,
+        "generation_seconds": 23.116,
+        "numeric_pass": true,
+        "retried": false,
+        "role_unsupported_count": 0,
+        "unsupported_numeric_count": 0,
+        "word_count": 234
+      },
+      "F-SOURCE": {
+        "copy_or_leak_failure": false,
+        "factual_pass": false,
+        "generation_seconds": 24.109,
+        "numeric_pass": false,
+        "retried": false,
+        "role_unsupported_count": 0,
+        "unsupported_numeric_count": 9,
+        "word_count": 202
+      },
+      "question_id": "q_dev_hop_valuation_and_price"
+    },
+    {
+      "F-DESC": {
+        "copy_or_leak_failure": false,
+        "factual_pass": false,
+        "generation_seconds": 6.208,
+        "numeric_pass": true,
+        "retried": false,
+        "role_unsupported_count": 0,
+        "unsupported_numeric_count": 0,
+        "word_count": 15
+      },
+      "F-HOP": {
+        "copy_or_leak_failure": false,
+        "factual_pass": false,
+        "generation_seconds": 6.651,
+        "numeric_pass": true,
+        "retried": false,
+        "role_unsupported_count": 0,
+        "unsupported_numeric_count": 0,
+        "word_count": 15
+      },
+      "F-REL": {
+        "copy_or_leak_failure": false,
+        "factual_pass": false,
+        "generation_seconds": 5.909,
+        "numeric_pass": true,
+        "retried": false,
+        "role_unsupported_count": 0,
+        "unsupported_numeric_count": 0,
+        "word_count": 15
+      },
+      "F-SOURCE": {
+        "copy_or_leak_failure": false,
+        "factual_pass": false,
+        "generation_seconds": 7.152,
+        "numeric_pass": true,
+        "retried": false,
+        "role_unsupported_count": 0,
+        "unsupported_numeric_count": 0,
+        "word_count": 15
+      },
+      "question_id": "q_cvc_second_check"
+    },
+    {
+      "F-DESC": {
+        "copy_or_leak_failure": false,
+        "factual_pass": true,
+        "generation_seconds": 11.605,
+        "numeric_pass": true,
+        "retried": false,
+        "role_unsupported_count": 0,
+        "unsupported_numeric_count": 0,
+        "word_count": 251
+      },
+      "F-HOP": {
+        "copy_or_leak_failure": false,
+        "factual_pass": true,
+        "generation_seconds": 21.892,
+        "numeric_pass": true,
+        "retried": false,
+        "role_unsupported_count": 0,
+        "unsupported_numeric_count": 0,
+        "word_count": 267
+      },
+      "F-REL": {
+        "copy_or_leak_failure": false,
+        "factual_pass": true,
+        "generation_seconds": 21.724,
+        "numeric_pass": true,
+        "retried": true,
+        "role_unsupported_count": 0,
+        "unsupported_numeric_count": 0,
+        "word_count": 294
+      },
+      "F-SOURCE": {
+        "copy_or_leak_failure": false,
+        "factual_pass": true,
+        "generation_seconds": 23.002,
+        "numeric_pass": true,
+        "retried": false,
+        "role_unsupported_count": 0,
+        "unsupported_numeric_count": 0,
+        "word_count": 267
+      },
+      "question_id": "q_dev_unans_halftime"
+    },
+    {
+      "F-DESC": {
+        "copy_or_leak_failure": false,
+        "factual_pass": true,
+        "generation_seconds": 7.322,
+        "numeric_pass": true,
+        "retried": false,
+        "role_unsupported_count": 0,
+        "unsupported_numeric_count": 0,
+        "word_count": 20
+      },
+      "F-HOP": {
+        "copy_or_leak_failure": false,
+        "factual_pass": true,
+        "generation_seconds": 5.526,
+        "numeric_pass": true,
+        "retried": false,
+        "role_unsupported_count": 0,
+        "unsupported_numeric_count": 0,
+        "word_count": 20
+      },
+      "F-REL": {
+        "copy_or_leak_failure": false,
+        "factual_pass": true,
+        "generation_seconds": 4.214,
+        "numeric_pass": true,
+        "retried": false,
+        "role_unsupported_count": 0,
+        "unsupported_numeric_count": 0,
+        "word_count": 20
+      },
+      "F-SOURCE": {
+        "copy_or_leak_failure": false,
+        "factual_pass": true,
+        "generation_seconds": 5.192,
+        "numeric_pass": true,
+        "retried": false,
+        "role_unsupported_count": 0,
+        "unsupported_numeric_count": 0,
+        "word_count": 20
+      },
+      "question_id": "q_five_percent_share"
+    },
+    {
+      "F-DESC": {
+        "copy_or_leak_failure": false,
+        "factual_pass": true,
+        "generation_seconds": 30.962,
+        "numeric_pass": true,
+        "retried": true,
+        "role_unsupported_count": 0,
+        "unsupported_numeric_count": 0,
+        "word_count": 345
+      },
+      "F-HOP": {
+        "copy_or_leak_failure": false,
+        "factual_pass": true,
+        "generation_seconds": 28.125,
+        "numeric_pass": true,
+        "retried": true,
+        "role_unsupported_count": 0,
+        "unsupported_numeric_count": 0,
+        "word_count": 282
+      },
+      "F-REL": {
+        "copy_or_leak_failure": false,
+        "factual_pass": false,
+        "generation_seconds": 32.608,
+        "numeric_pass": false,
+        "retried": false,
+        "role_unsupported_count": 0,
+        "unsupported_numeric_count": 1,
+        "word_count": 354
+      },
+      "F-SOURCE": {
+        "copy_or_leak_failure": false,
+        "factual_pass": true,
+        "generation_seconds": 25.444,
+        "numeric_pass": true,
+        "retried": true,
+        "role_unsupported_count": 0,
+        "unsupported_numeric_count": 0,
+        "word_count": 282
+      },
+      "question_id": "q_exec_craft"
+    },
+    {
+      "F-DESC": {
+        "copy_or_leak_failure": false,
+        "factual_pass": false,
+        "generation_seconds": 25.306,
+        "numeric_pass": false,
+        "retried": false,
+        "role_unsupported_count": 0,
+        "unsupported_numeric_count": 2,
+        "word_count": 246
+      },
+      "F-HOP": {
+        "copy_or_leak_failure": true,
+        "factual_pass": false,
+        "generation_seconds": 37.288,
+        "numeric_pass": false,
+        "retried": false,
+        "role_unsupported_count": 0,
+        "unsupported_numeric_count": 4,
+        "word_count": 289
+      },
+      "F-REL": {
+        "copy_or_leak_failure": false,
+        "factual_pass": false,
+        "generation_seconds": 28.979,
+        "numeric_pass": true,
+        "retried": false,
+        "role_unsupported_count": 0,
+        "unsupported_numeric_count": 0,
+        "word_count": 229
+      },
+      "F-SOURCE": {
+        "copy_or_leak_failure": false,
+        "factual_pass": false,
+        "generation_seconds": 25.531,
+        "numeric_pass": false,
+        "retried": false,
+        "role_unsupported_count": 0,
+        "unsupported_numeric_count": 2,
+        "word_count": 219
+      },
+      "question_id": "q_first_vp_sales"
+    },
+    {
+      "F-DESC": {
+        "copy_or_leak_failure": false,
+        "factual_pass": true,
+        "generation_seconds": 2.722,
+        "numeric_pass": true,
+        "retried": false,
+        "role_unsupported_count": 0,
+        "unsupported_numeric_count": 0,
+        "word_count": 14
+      },
+      "F-HOP": {
+        "copy_or_leak_failure": false,
+        "factual_pass": true,
+        "generation_seconds": 2.666,
+        "numeric_pass": true,
+        "retried": false,
+        "role_unsupported_count": 0,
+        "unsupported_numeric_count": 0,
+        "word_count": 14
+      },
+      "F-REL": {
+        "copy_or_leak_failure": false,
+        "factual_pass": true,
+        "generation_seconds": 5.51,
+        "numeric_pass": true,
+        "retried": false,
+        "role_unsupported_count": 0,
+        "unsupported_numeric_count": 0,
+        "word_count": 14
+      },
+      "F-SOURCE": {
+        "copy_or_leak_failure": false,
+        "factual_pass": true,
+        "generation_seconds": 2.899,
+        "numeric_pass": true,
+        "retried": false,
+        "role_unsupported_count": 0,
+        "unsupported_numeric_count": 0,
+        "word_count": 14
+      },
+      "question_id": "q_olympics_ceremony"
+    }
+  ],
+  "rule": "Compare only questions where F-SOURCE, F-REL, F-DESC, and F-HOP are all complete. Primary key: faithfulness pass rate from the existing deterministic factual check. Secondary key: source-copy or prompt-leak failure rate. A graph arm is chosen only when it strictly beats F-SOURCE on the primary key, or ties that key and strictly beats F-SOURCE on the secondary key. Usable graph context is reported and is not a score. Retry rate and generation latency break ties only between graph arms that already beat F-SOURCE. A tie, an incomplete pilot, or no such benefit freezes F-SOURCE."
+}

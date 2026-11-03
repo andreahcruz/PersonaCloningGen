@@ -1,0 +1,68 @@
+{
+  "proposed": [
+    {
+      "source_id": "train_7976",
+      "claim": "There is a new series called 'Doubling Down'",
+      "support_span": "“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_7930",
+      "claim": "Jay Levy is Managing Partner at Zelkova Ventures",
+      "support_span": "Jay Levy, Managing Partner at Zelkova Ventures.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_7590",
+      "claim": "There is a new series called 'Doubling Down'",
+      "support_span": "“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_7888",
+      "claim": "Mary D'Onofrio is Partner at Bessemer Venture Partners",
+      "support_span": "Mary D’Onofrio, Partner at Bessemer Venture Partners.",
+      "claim_type": "fact"
+    }
+  ],
+  "raw_extraction": "[\n  {\n    \"source_id\": \"train_7976\",\n    \"claim\": \"There is a new series called 'Doubling Down'\",\n    \"support_span\": \"“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7930\",\n    \"claim\": \"Jay Levy is Managing Partner at Zelkova Ventures\",\n    \"support_span\": \"Jay Levy, Managing Partner at Zelkova Ventures.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7590\",\n    \"claim\": \"There is a new series called 'Doubling Down'\",\n    \"support_span\": \"“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7888\",\n    \"claim\": \"Mary D'Onofrio is Partner at Bessemer Venture Partners\",\n    \"support_span\": \"Mary D’Onofrio, Partner at Bessemer Venture Partners.\",\n    \"claim_type\": \"fact\"\n  }\n]",
+  "validation_rejected": [],
+  "verifier_rejected": [],
+  "verified": [
+    {
+      "source_id": "train_7976",
+      "claim": "There is a new series called 'Doubling Down'",
+      "support_span": "“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_7930",
+      "claim": "Jay Levy is Managing Partner at Zelkova Ventures",
+      "support_span": "Jay Levy, Managing Partner at Zelkova Ventures.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_7590",
+      "claim": "There is a new series called 'Doubling Down'",
+      "support_span": "“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_7888",
+      "claim": "Mary D'Onofrio is Partner at Bessemer Venture Partners",
+      "support_span": "Mary D’Onofrio, Partner at Bessemer Venture Partners.",
+      "claim_type": "fact"
+    }
+  ],
+  "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] There is a new series called 'Doubling Down'\n[E2] Jay Levy is Managing Partner at Zelkova Ventures\n[E3] There is a new series called 'Doubling Down'\n[E4] Mary D'Onofrio is Partner at Bessemer Venture Partners",
+  "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Doubling Down: Mark Roberge, Co-Founder and Managing Director at Stage 2 Capital\n\nSource passages:\n[train_7976]\n“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market. Kicking us off is Jay Levy, Managing Partner at Zelkova Ventures.\n\n[train_7930]\n“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market. We had a great one last week with Jay Levy, Managing Partner at Zelkova Ventures. Check that out\nhere\n.\nThis week we’re focusing on Mary D’Onofrio, Partner at Bessemer Venture Partners!\n\n[train_7590]\n“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market. We had a great one last time with Peter Specht, Partner at Creandum. Check that out\nhere\n.\nThis week we’re focusing on Lucy Deland, Co-founder & General Partner at Inspired Capital!\n\n[train_7888]\n“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market. We had a great one last week with Mary D’Onofrio, Partner at Bessemer Venture Partners. Check that out\nhere\n.\nThis week we’re focusing on Rebecca Lynn, Co-Founder & General Partner at Canvas Ventures!",
+  "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Doubling Down: Mark Roberge, Co-Founder and Managing Director at Stage 2 Capital\n\nSource passages:\n[train_7976]\n“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market. Kicking us off is Jay Levy, Managing Partner at Zelkova Ventures.\n\n[train_7930]\n“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market. We had a great one last week with Jay Levy, Managing Partner at Zelkova Ventures. Check that out\nhere\n.\nThis week we’re focusing on Mary D’Onofrio, Partner at Bessemer Venture Partners!\n\n[train_7590]\n“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market. We had a great one last time with Peter Specht, Partner at Creandum. Check that out\nhere\n.\nThis week we’re focusing on Lucy Deland, Co-founder & General Partner at Inspired Capital!\n\n[train_7888]\n“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market. We had a great one last week with Mary D’Onofrio, Partner at Bessemer Venture Partners. Check that out\nhere\n.\nThis week we’re focusing on Rebecca Lynn, Co-Founder & General Partner at Canvas Ventures!<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+  "extraction_seconds": 7.112,
+  "verification_seconds": 0.0,
+  "verification_records": [],
+  "allowed_numeric_values": [],
+  "reason": null,
+  "extraction_stop_reason": "eos",
+  "extraction_attempts": 1,
+  "evidence_status": "verified"
+}

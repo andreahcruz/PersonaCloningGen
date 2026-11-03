@@ -1,0 +1,48 @@
+{
+  "completed": 52,
+  "decoding_unchanged": true,
+  "elapsed_seconds": 1400.726,
+  "evidence_budget_unchanged": true,
+  "failed": 4,
+  "frozen_pilot_unchanged": true,
+  "generated": 28,
+  "max_runtime_minutes": 180.0,
+  "not_started": 0,
+  "planned": 56,
+  "skipped_complete": 24,
+  "stopped_for_runtime": false,
+  "unsaved": [
+    {
+      "arm": "F-REL",
+      "media": [
+        "talk"
+      ],
+      "question_id": "q_investor_update",
+      "reason": "ValueError: raw retrieved prose leaked into the final prompt"
+    },
+    {
+      "arm": "F-DESC",
+      "media": [
+        "talk"
+      ],
+      "question_id": "q_investor_update",
+      "reason": "ValueError: raw retrieved prose leaked into the final prompt"
+    },
+    {
+      "arm": "F-REL",
+      "media": [
+        "x"
+      ],
+      "question_id": "q_dev_hop_update_and_cap_table",
+      "reason": "ValueError: raw retrieved prose leaked into the final prompt"
+    },
+    {
+      "arm": "F-DESC",
+      "media": [
+        "x"
+      ],
+      "question_id": "q_dev_hop_update_and_cap_table",
+      "reason": "ValueError: raw retrieved prose leaked into the final prompt"
+    }
+  ]
+}

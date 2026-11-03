@@ -1,0 +1,1014 @@
+{
+  "adapter": "host_finetune/output/lemkin_lora_relabel",
+  "arms": [
+    "F-REL",
+    "F-DESC"
+  ],
+  "benchmark_modified": false,
+  "benchmark_path": "host_finetune\\benchmarks\\dev_retrieval_benchmark.jsonl",
+  "benchmark_sha256": "bf61751aedda95b9b32ddae45276642bfaa4725fb84f99b5324c0b6d1439f6c1",
+  "cells": 56,
+  "comparison": "F-DESC versus F-REL",
+  "comparison_rule": "Compare only questions where F-REL and F-DESC are both complete. Primary key: echo-adjusted faithfulness. A cell counts as a pass only when the existing deterministic faithfulness check passes and the saved answer is not a question echo. Echoes use repeats_topic and embeds_topic and are not a factual success. Secondary key: source-copy or citation-leak failure rate from the existing scorer. An arm wins only when its primary rate is strictly higher, or the primary rates tie and its secondary failure rate is strictly lower. Equal primary and secondary rates are inconclusive. Numeric failures, prompt length, latency, graph-context tokens, and omission counts are reported and are not used to choose an arm. A higher context-token count is not higher factual quality.",
+  "decoding": {
+    "repetition_penalty": 1.15,
+    "seed_base": 42,
+    "temperature": 0.7,
+    "top_p": 0.9
+  },
+  "evidence_once_per_question": true,
+  "exclude_manifest": "experiments\\EXP-model-f-quick-pilot\\pilot_manifest.json",
+  "execution_order": [
+    "q_dev_fact_acquirer",
+    "q_dev_fact_acquirer_target",
+    "q_worst_mishire",
+    "q_dev_entity_acquisition_parties",
+    "q_dev_entity_speaker",
+    "q_dev_entity_sales_role",
+    "q_cap_table",
+    "q_investor_update",
+    "q_dev_rel_director_promotion",
+    "q_dev_hop_share_and_playbook",
+    "q_dev_hop_update_and_cap_table",
+    "q_dev_hop_vp_and_craft",
+    "q_boom_promotions",
+    "q_dev_time_valuation_vs_price",
+    "q_dev_time_boom_vs_later",
+    "q_dev_time_two_updates",
+    "q_vp_sales_tension",
+    "q_b2c_playbook",
+    "q_dev_conflict_second_check",
+    "q_dev_conflict_craft",
+    "q_personalized_saas_speaker",
+    "q_dev_attr_speaker_role",
+    "q_dev_attr_lemkin_or_speaker",
+    "q_dev_attr_second_check_speaker",
+    "q_dev_unans_private_board",
+    "q_dev_unans_headcount",
+    "q_dev_unans_dinner_chart",
+    "q_dev_fact_niche_boundary"
+  ],
+  "experiment_id": "EXP-20261102-003-model-f-desc-vs-rel",
+  "feasibility": {
+    "available_after_exclusion": 28,
+    "design_status": "reduced_to_largest_balanced_alternative",
+    "duplicated_questions": 0,
+    "excluded_question_ids": [
+      "q_brex_price",
+      "q_dev_hop_valuation_and_price",
+      "q_cvc_second_check",
+      "q_dev_unans_halftime",
+      "q_five_percent_share",
+      "q_exec_craft",
+      "q_first_vp_sales",
+      "q_olympics_ceremony"
+    ],
+    "gold_questions_used": 0,
+    "media_counts": {
+      "blog": 7,
+      "linkedin": 7,
+      "talk": 7,
+      "x": 7
+    },
+    "per_medium": 7,
+    "phenomenon_counts": {
+      "attribution": 4,
+      "conflicting_evidence": 4,
+      "direct_relationship": 3,
+      "entity_identification": 4,
+      "factual": 3,
+      "multi_hop": 3,
+      "temporal_comparison": 4,
+      "unanswerable": 3
+    },
+    "reason": "The development pool has 28 questions after exclusions. 32 questions at 8 per medium do not fit. The largest balanced alternative is 7 per medium, 28 questions, 56 generations. No question was duplicated and no gold-eval question was added.",
+    "requested_per_medium": 8,
+    "requested_questions": 32,
+    "selected_questions": 28,
+    "shortfall_questions": 4
+  },
+  "frozen_pilot_experiment_id": "EXP-20261102-002-model-f-quick-pilot",
+  "frozen_pilot_unchanged": true,
+  "judge": null,
+  "limitation": "This comparison does not measure persona, stance, or writing quality. Question echoes are reported separately and are not a win.",
+  "max_new_tokens_by_medium": {
+    "blog": 768,
+    "linkedin": 320,
+    "talk": 768,
+    "x": 160
+  },
+  "one_medium_per_question": true,
+  "plan": [
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "max_new_tokens": 768,
+      "medium": "blog",
+      "question_id": "q_dev_fact_acquirer",
+      "retrieval_key": "q_dev_fact_acquirer",
+      "seed": 42,
+      "topic_index": 0
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "max_new_tokens": 768,
+      "medium": "blog",
+      "question_id": "q_dev_fact_acquirer",
+      "retrieval_key": "q_dev_fact_acquirer",
+      "seed": 42,
+      "topic_index": 0
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "max_new_tokens": 320,
+      "medium": "linkedin",
+      "question_id": "q_dev_fact_acquirer_target",
+      "retrieval_key": "q_dev_fact_acquirer_target",
+      "seed": 47,
+      "topic_index": 1
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "max_new_tokens": 320,
+      "medium": "linkedin",
+      "question_id": "q_dev_fact_acquirer_target",
+      "retrieval_key": "q_dev_fact_acquirer_target",
+      "seed": 47,
+      "topic_index": 1
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "max_new_tokens": 160,
+      "medium": "x",
+      "question_id": "q_worst_mishire",
+      "retrieval_key": "q_worst_mishire",
+      "seed": 52,
+      "topic_index": 2
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "max_new_tokens": 160,
+      "medium": "x",
+      "question_id": "q_worst_mishire",
+      "retrieval_key": "q_worst_mishire",
+      "seed": 52,
+      "topic_index": 2
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "max_new_tokens": 768,
+      "medium": "talk",
+      "question_id": "q_dev_entity_acquisition_parties",
+      "retrieval_key": "q_dev_entity_acquisition_parties",
+      "seed": 57,
+      "topic_index": 3
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "max_new_tokens": 768,
+      "medium": "talk",
+      "question_id": "q_dev_entity_acquisition_parties",
+      "retrieval_key": "q_dev_entity_acquisition_parties",
+      "seed": 57,
+      "topic_index": 3
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "max_new_tokens": 768,
+      "medium": "blog",
+      "question_id": "q_dev_entity_speaker",
+      "retrieval_key": "q_dev_entity_speaker",
+      "seed": 58,
+      "topic_index": 4
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "max_new_tokens": 768,
+      "medium": "blog",
+      "question_id": "q_dev_entity_speaker",
+      "retrieval_key": "q_dev_entity_speaker",
+      "seed": 58,
+      "topic_index": 4
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "max_new_tokens": 320,
+      "medium": "linkedin",
+      "question_id": "q_dev_entity_sales_role",
+      "retrieval_key": "q_dev_entity_sales_role",
+      "seed": 63,
+      "topic_index": 5
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "max_new_tokens": 320,
+      "medium": "linkedin",
+      "question_id": "q_dev_entity_sales_role",
+      "retrieval_key": "q_dev_entity_sales_role",
+      "seed": 63,
+      "topic_index": 5
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "max_new_tokens": 160,
+      "medium": "x",
+      "question_id": "q_cap_table",
+      "retrieval_key": "q_cap_table",
+      "seed": 68,
+      "topic_index": 6
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "max_new_tokens": 160,
+      "medium": "x",
+      "question_id": "q_cap_table",
+      "retrieval_key": "q_cap_table",
+      "seed": 68,
+      "topic_index": 6
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "max_new_tokens": 768,
+      "medium": "talk",
+      "question_id": "q_investor_update",
+      "retrieval_key": "q_investor_update",
+      "seed": 73,
+      "topic_index": 7
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "max_new_tokens": 768,
+      "medium": "talk",
+      "question_id": "q_investor_update",
+      "retrieval_key": "q_investor_update",
+      "seed": 73,
+      "topic_index": 7
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "max_new_tokens": 768,
+      "medium": "blog",
+      "question_id": "q_dev_rel_director_promotion",
+      "retrieval_key": "q_dev_rel_director_promotion",
+      "seed": 74,
+      "topic_index": 8
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "max_new_tokens": 768,
+      "medium": "blog",
+      "question_id": "q_dev_rel_director_promotion",
+      "retrieval_key": "q_dev_rel_director_promotion",
+      "seed": 74,
+      "topic_index": 8
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "max_new_tokens": 320,
+      "medium": "linkedin",
+      "question_id": "q_dev_hop_share_and_playbook",
+      "retrieval_key": "q_dev_hop_share_and_playbook",
+      "seed": 79,
+      "topic_index": 9
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "max_new_tokens": 320,
+      "medium": "linkedin",
+      "question_id": "q_dev_hop_share_and_playbook",
+      "retrieval_key": "q_dev_hop_share_and_playbook",
+      "seed": 79,
+      "topic_index": 9
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "max_new_tokens": 160,
+      "medium": "x",
+      "question_id": "q_dev_hop_update_and_cap_table",
+      "retrieval_key": "q_dev_hop_update_and_cap_table",
+      "seed": 84,
+      "topic_index": 10
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "max_new_tokens": 160,
+      "medium": "x",
+      "question_id": "q_dev_hop_update_and_cap_table",
+      "retrieval_key": "q_dev_hop_update_and_cap_table",
+      "seed": 84,
+      "topic_index": 10
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "max_new_tokens": 768,
+      "medium": "talk",
+      "question_id": "q_dev_hop_vp_and_craft",
+      "retrieval_key": "q_dev_hop_vp_and_craft",
+      "seed": 89,
+      "topic_index": 11
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "max_new_tokens": 768,
+      "medium": "talk",
+      "question_id": "q_dev_hop_vp_and_craft",
+      "retrieval_key": "q_dev_hop_vp_and_craft",
+      "seed": 89,
+      "topic_index": 11
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "max_new_tokens": 768,
+      "medium": "blog",
+      "question_id": "q_boom_promotions",
+      "retrieval_key": "q_boom_promotions",
+      "seed": 90,
+      "topic_index": 12
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "max_new_tokens": 768,
+      "medium": "blog",
+      "question_id": "q_boom_promotions",
+      "retrieval_key": "q_boom_promotions",
+      "seed": 90,
+      "topic_index": 12
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "max_new_tokens": 320,
+      "medium": "linkedin",
+      "question_id": "q_dev_time_valuation_vs_price",
+      "retrieval_key": "q_dev_time_valuation_vs_price",
+      "seed": 95,
+      "topic_index": 13
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "max_new_tokens": 320,
+      "medium": "linkedin",
+      "question_id": "q_dev_time_valuation_vs_price",
+      "retrieval_key": "q_dev_time_valuation_vs_price",
+      "seed": 95,
+      "topic_index": 13
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "max_new_tokens": 160,
+      "medium": "x",
+      "question_id": "q_dev_time_boom_vs_later",
+      "retrieval_key": "q_dev_time_boom_vs_later",
+      "seed": 100,
+      "topic_index": 14
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "max_new_tokens": 160,
+      "medium": "x",
+      "question_id": "q_dev_time_boom_vs_later",
+      "retrieval_key": "q_dev_time_boom_vs_later",
+      "seed": 100,
+      "topic_index": 14
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "max_new_tokens": 768,
+      "medium": "talk",
+      "question_id": "q_dev_time_two_updates",
+      "retrieval_key": "q_dev_time_two_updates",
+      "seed": 105,
+      "topic_index": 15
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "max_new_tokens": 768,
+      "medium": "talk",
+      "question_id": "q_dev_time_two_updates",
+      "retrieval_key": "q_dev_time_two_updates",
+      "seed": 105,
+      "topic_index": 15
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "max_new_tokens": 768,
+      "medium": "blog",
+      "question_id": "q_vp_sales_tension",
+      "retrieval_key": "q_vp_sales_tension",
+      "seed": 106,
+      "topic_index": 16
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "max_new_tokens": 768,
+      "medium": "blog",
+      "question_id": "q_vp_sales_tension",
+      "retrieval_key": "q_vp_sales_tension",
+      "seed": 106,
+      "topic_index": 16
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "max_new_tokens": 320,
+      "medium": "linkedin",
+      "question_id": "q_b2c_playbook",
+      "retrieval_key": "q_b2c_playbook",
+      "seed": 111,
+      "topic_index": 17
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "max_new_tokens": 320,
+      "medium": "linkedin",
+      "question_id": "q_b2c_playbook",
+      "retrieval_key": "q_b2c_playbook",
+      "seed": 111,
+      "topic_index": 17
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "max_new_tokens": 160,
+      "medium": "x",
+      "question_id": "q_dev_conflict_second_check",
+      "retrieval_key": "q_dev_conflict_second_check",
+      "seed": 116,
+      "topic_index": 18
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "max_new_tokens": 160,
+      "medium": "x",
+      "question_id": "q_dev_conflict_second_check",
+      "retrieval_key": "q_dev_conflict_second_check",
+      "seed": 116,
+      "topic_index": 18
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "max_new_tokens": 768,
+      "medium": "talk",
+      "question_id": "q_dev_conflict_craft",
+      "retrieval_key": "q_dev_conflict_craft",
+      "seed": 121,
+      "topic_index": 19
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "max_new_tokens": 768,
+      "medium": "talk",
+      "question_id": "q_dev_conflict_craft",
+      "retrieval_key": "q_dev_conflict_craft",
+      "seed": 121,
+      "topic_index": 19
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "max_new_tokens": 768,
+      "medium": "blog",
+      "question_id": "q_personalized_saas_speaker",
+      "retrieval_key": "q_personalized_saas_speaker",
+      "seed": 122,
+      "topic_index": 20
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "max_new_tokens": 768,
+      "medium": "blog",
+      "question_id": "q_personalized_saas_speaker",
+      "retrieval_key": "q_personalized_saas_speaker",
+      "seed": 122,
+      "topic_index": 20
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "max_new_tokens": 320,
+      "medium": "linkedin",
+      "question_id": "q_dev_attr_speaker_role",
+      "retrieval_key": "q_dev_attr_speaker_role",
+      "seed": 127,
+      "topic_index": 21
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "max_new_tokens": 320,
+      "medium": "linkedin",
+      "question_id": "q_dev_attr_speaker_role",
+      "retrieval_key": "q_dev_attr_speaker_role",
+      "seed": 127,
+      "topic_index": 21
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "max_new_tokens": 160,
+      "medium": "x",
+      "question_id": "q_dev_attr_lemkin_or_speaker",
+      "retrieval_key": "q_dev_attr_lemkin_or_speaker",
+      "seed": 132,
+      "topic_index": 22
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "max_new_tokens": 160,
+      "medium": "x",
+      "question_id": "q_dev_attr_lemkin_or_speaker",
+      "retrieval_key": "q_dev_attr_lemkin_or_speaker",
+      "seed": 132,
+      "topic_index": 22
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "max_new_tokens": 768,
+      "medium": "talk",
+      "question_id": "q_dev_attr_second_check_speaker",
+      "retrieval_key": "q_dev_attr_second_check_speaker",
+      "seed": 137,
+      "topic_index": 23
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "max_new_tokens": 768,
+      "medium": "talk",
+      "question_id": "q_dev_attr_second_check_speaker",
+      "retrieval_key": "q_dev_attr_second_check_speaker",
+      "seed": 137,
+      "topic_index": 23
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "max_new_tokens": 768,
+      "medium": "blog",
+      "question_id": "q_dev_unans_private_board",
+      "retrieval_key": "q_dev_unans_private_board",
+      "seed": 138,
+      "topic_index": 24
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "max_new_tokens": 768,
+      "medium": "blog",
+      "question_id": "q_dev_unans_private_board",
+      "retrieval_key": "q_dev_unans_private_board",
+      "seed": 138,
+      "topic_index": 24
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "max_new_tokens": 320,
+      "medium": "linkedin",
+      "question_id": "q_dev_unans_headcount",
+      "retrieval_key": "q_dev_unans_headcount",
+      "seed": 143,
+      "topic_index": 25
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "max_new_tokens": 320,
+      "medium": "linkedin",
+      "question_id": "q_dev_unans_headcount",
+      "retrieval_key": "q_dev_unans_headcount",
+      "seed": 143,
+      "topic_index": 25
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "max_new_tokens": 160,
+      "medium": "x",
+      "question_id": "q_dev_unans_dinner_chart",
+      "retrieval_key": "q_dev_unans_dinner_chart",
+      "seed": 148,
+      "topic_index": 26
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "max_new_tokens": 160,
+      "medium": "x",
+      "question_id": "q_dev_unans_dinner_chart",
+      "retrieval_key": "q_dev_unans_dinner_chart",
+      "seed": 148,
+      "topic_index": 26
+    },
+    {
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "max_new_tokens": 768,
+      "medium": "talk",
+      "question_id": "q_dev_fact_niche_boundary",
+      "retrieval_key": "q_dev_fact_niche_boundary",
+      "seed": 153,
+      "topic_index": 27
+    },
+    {
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "max_new_tokens": 768,
+      "medium": "talk",
+      "question_id": "q_dev_fact_niche_boundary",
+      "retrieval_key": "q_dev_fact_niche_boundary",
+      "seed": 153,
+      "topic_index": 27
+    }
+  ],
+  "profiles": {
+    "F-DESC": "descriptions",
+    "F-REL": "relationships"
+  },
+  "prompt_family": "model-f-graph-context-v1",
+  "quantization": "4bit",
+  "questions": [
+    {
+      "abstention_expected": false,
+      "designated_source_ids": [],
+      "phenomenon": "factual",
+      "pilot_medium": "blog",
+      "query": "Which company announced an acquisition of Brex?",
+      "question_id": "q_dev_fact_acquirer",
+      "seed": 42,
+      "topic_index": 0
+    },
+    {
+      "abstention_expected": false,
+      "designated_source_ids": [],
+      "phenomenon": "factual",
+      "pilot_medium": "linkedin",
+      "query": "Which company is named as the company Capital One announced it would acquire?",
+      "question_id": "q_dev_fact_acquirer_target",
+      "seed": 47,
+      "topic_index": 1
+    },
+    {
+      "abstention_expected": false,
+      "designated_source_ids": [
+        "gd_8276b7d28a0837fa1e71181a"
+      ],
+      "phenomenon": "entity_identification",
+      "pilot_medium": "x",
+      "query": "Which leadership hire does Jason Lemkin call the worst mis-hire?",
+      "question_id": "q_worst_mishire",
+      "seed": 52,
+      "topic_index": 2
+    },
+    {
+      "abstention_expected": false,
+      "designated_source_ids": [],
+      "phenomenon": "entity_identification",
+      "pilot_medium": "talk",
+      "query": "Which companies are named as parties to the Brex acquisition?",
+      "question_id": "q_dev_entity_acquisition_parties",
+      "seed": 57,
+      "topic_index": 3
+    },
+    {
+      "abstention_expected": false,
+      "designated_source_ids": [],
+      "phenomenon": "entity_identification",
+      "pilot_medium": "blog",
+      "query": "Which person is quoted on personalized experiences in SaaS?",
+      "question_id": "q_dev_entity_speaker",
+      "seed": 58,
+      "topic_index": 4
+    },
+    {
+      "abstention_expected": false,
+      "designated_source_ids": [],
+      "phenomenon": "entity_identification",
+      "pilot_medium": "linkedin",
+      "query": "Which leadership role is discussed as a first sales hire?",
+      "question_id": "q_dev_entity_sales_role",
+      "seed": 63,
+      "topic_index": 5
+    },
+    {
+      "abstention_expected": false,
+      "designated_source_ids": [
+        "gd_fe33901c61721e4d6a2fa0b3",
+        "gd_72172e0a6a1db9a0de65f31f",
+        "gd_22550cc95a46ded2d9a37c99",
+        "gd_3e57636142fb1e9e171c6629",
+        "gd_062fdba1eb0375bef6607116"
+      ],
+      "phenomenon": "direct_relationship",
+      "pilot_medium": "x",
+      "query": "How does a messy cap table affect future investors and fundraising?",
+      "question_id": "q_cap_table",
+      "seed": 68,
+      "topic_index": 6
+    },
+    {
+      "abstention_expected": false,
+      "designated_source_ids": [
+        "gd_2a58e5bb4db6e2ed500cc504",
+        "gd_015bf2a742f155c17e453f7a",
+        "gd_02225f53cdd000bae8795914",
+        "gd_1dd938eba796b858ba8f8b0e",
+        "gd_79ef312e7983b8ea4ed0764c",
+        "gd_6f6de8e6b1fc00d69b6ca286",
+        "gd_062fdba1eb0375bef6607116"
+      ],
+      "phenomenon": "direct_relationship",
+      "pilot_medium": "talk",
+      "query": "What does a late investor update indicate about the month it describes?",
+      "question_id": "q_investor_update",
+      "seed": 73,
+      "topic_index": 7
+    },
+    {
+      "abstention_expected": false,
+      "designated_source_ids": [],
+      "phenomenon": "direct_relationship",
+      "pilot_medium": "blog",
+      "query": "What promotion does the 2021-boom source recommend for a director?",
+      "question_id": "q_dev_rel_director_promotion",
+      "seed": 74,
+      "topic_index": 8
+    },
+    {
+      "abstention_expected": false,
+      "designated_source_ids": [],
+      "phenomenon": "multi_hop",
+      "pilot_medium": "linkedin",
+      "query": "Does advice about reaching about 5 percent niche share connect to advice about whether the B2C playbook works in B2B?",
+      "question_id": "q_dev_hop_share_and_playbook",
+      "seed": 79,
+      "topic_index": 9
+    },
+    {
+      "abstention_expected": false,
+      "designated_source_ids": [],
+      "phenomenon": "multi_hop",
+      "pilot_medium": "x",
+      "query": "Does a late investor update connect to the effect of a messy cap table, or are those separate sources?",
+      "question_id": "q_dev_hop_update_and_cap_table",
+      "seed": 84,
+      "topic_index": 10
+    },
+    {
+      "abstention_expected": false,
+      "designated_source_ids": [],
+      "phenomenon": "multi_hop",
+      "pilot_medium": "talk",
+      "query": "Is advice about a first VP of Sales connected by a source to advice about executives who leave the craft?",
+      "question_id": "q_dev_hop_vp_and_craft",
+      "seed": 89,
+      "topic_index": 11
+    },
+    {
+      "abstention_expected": false,
+      "designated_source_ids": [
+        "gd_414cde32de0cf12c7d952668",
+        "gd_fe95631776e59f9c3324005d",
+        "gd_2736eded0180a2afc9505cb5",
+        "gd_c7f27bbff31064a25315406a",
+        "gd_f70b08b50e252ea315d757da",
+        "gd_e2460700e46c2ab29ea93e02",
+        "gd_5725912896d753f08e70e274"
+      ],
+      "phenomenon": "temporal_comparison",
+      "pilot_medium": "blog",
+      "query": "During the 2021 boom, what does the pilot source say a company should do about promoting a director and about mediocre customer success people?",
+      "question_id": "q_boom_promotions",
+      "seed": 90,
+      "topic_index": 12
+    },
+    {
+      "abstention_expected": false,
+      "designated_source_ids": [],
+      "phenomenon": "temporal_comparison",
+      "pilot_medium": "linkedin",
+      "query": "How does the Brex valuation associated with 2022 compare with the later announced acquisition price?",
+      "question_id": "q_dev_time_valuation_vs_price",
+      "seed": 95,
+      "topic_index": 13
+    },
+    {
+      "abstention_expected": false,
+      "designated_source_ids": [],
+      "phenomenon": "temporal_comparison",
+      "pilot_medium": "x",
+      "query": "Which hiring advice is tied to the 2021 boom, and which hiring advice is not given a 2021 date?",
+      "question_id": "q_dev_time_boom_vs_later",
+      "seed": 100,
+      "topic_index": 14
+    },
+    {
+      "abstention_expected": false,
+      "designated_source_ids": [],
+      "phenomenon": "temporal_comparison",
+      "pilot_medium": "talk",
+      "query": "If one investor update comes later than another, what difference does the source draw between them?",
+      "question_id": "q_dev_time_two_updates",
+      "seed": 105,
+      "topic_index": 15
+    },
+    {
+      "abstention_expected": false,
+      "designated_source_ids": [
+        "gd_92ee1e366384a6e50b449f25",
+        "gd_5b654905b75669045fd65816",
+        "gd_b959264fe82d939f4455b523",
+        "gd_8d4d38e0c3572b351003a51c",
+        "gd_b17253e0832c9eda0a49b551"
+      ],
+      "phenomenon": "conflicting_evidence",
+      "pilot_medium": "blog",
+      "query": "Does Jason Lemkin say a great VP of Sales should immediately bring in more sales executives, or that criticizing a VP of Sales who cannot do better is counterproductive?",
+      "question_id": "q_vp_sales_tension",
+      "seed": 106,
+      "topic_index": 16
+    },
+    {
+      "abstention_expected": false,
+      "designated_source_ids": [
+        "gd_fb798d3019afee06b2636d46",
+        "gd_8a4f9c58e660688568ab05c4",
+        "gd_ccf4c5892661b0e3da9c53dc",
+        "gd_5487b59a91d25df6759963f2",
+        "gd_00f0fd1277363a92e5cb2ada",
+        "gd_9eb439882c36aee6170b8119"
+      ],
+      "phenomenon": "conflicting_evidence",
+      "pilot_medium": "linkedin",
+      "query": "Does the B2C playbook work as well in B2B, and when does a consumer-style approach still matter?",
+      "question_id": "q_b2c_playbook",
+      "seed": 111,
+      "topic_index": 17
+    },
+    {
+      "abstention_expected": false,
+      "designated_source_ids": [],
+      "phenomenon": "conflicting_evidence",
+      "pilot_medium": "x",
+      "query": "Where the source says corporate venture firms often do not write a second check, what exceptions does it also state?",
+      "question_id": "q_dev_conflict_second_check",
+      "seed": 116,
+      "topic_index": 18
+    },
+    {
+      "abstention_expected": false,
+      "designated_source_ids": [],
+      "phenomenon": "conflicting_evidence",
+      "pilot_medium": "talk",
+      "query": "Do the sources agree on whether executives should stay close to the craft or become pure managers?",
+      "question_id": "q_dev_conflict_craft",
+      "seed": 121,
+      "topic_index": 19
+    },
+    {
+      "abstention_expected": false,
+      "designated_source_ids": [
+        "gd_007b705bb266a53acf5888b9",
+        "gd_a6016d6c72ddea604b995fd3",
+        "gd_4f6908ae4b2f4c4e20daccaa",
+        "gd_90c43e103fb0d354964ffb63",
+        "gd_852262bf58fd28520b57ec62",
+        "gd_1282420851c57a65c41b3c9b",
+        "gd_40d926c839abc68c68bb1a76"
+      ],
+      "phenomenon": "attribution",
+      "pilot_medium": "blog",
+      "query": "Who said that AI means everything in SaaS needs to be a personalized experience?",
+      "question_id": "q_personalized_saas_speaker",
+      "seed": 122,
+      "topic_index": 20
+    },
+    {
+      "abstention_expected": false,
+      "designated_source_ids": [],
+      "phenomenon": "attribution",
+      "pilot_medium": "linkedin",
+      "query": "What role or employer, if any, does the source give the person quoted on personalized SaaS experiences?",
+      "question_id": "q_dev_attr_speaker_role",
+      "seed": 127,
+      "topic_index": 21
+    },
+    {
+      "abstention_expected": false,
+      "designated_source_ids": [],
+      "phenomenon": "attribution",
+      "pilot_medium": "x",
+      "query": "Which sentences in the personalized-SaaS discussion are the quoted person's, and which are Jason Lemkin's?",
+      "question_id": "q_dev_attr_lemkin_or_speaker",
+      "seed": 132,
+      "topic_index": 22
+    },
+    {
+      "abstention_expected": false,
+      "designated_source_ids": [],
+      "phenomenon": "attribution",
+      "pilot_medium": "talk",
+      "query": "Who is presented as the author of the claim about corporate venture firms and a second check?",
+      "question_id": "q_dev_attr_second_check_speaker",
+      "seed": 137,
+      "topic_index": 23
+    },
+    {
+      "abstention_expected": true,
+      "designated_source_ids": [],
+      "phenomenon": "unanswerable",
+      "pilot_medium": "blog",
+      "query": "What was said in a private board meeting that is not described in a published post?",
+      "question_id": "q_dev_unans_private_board",
+      "seed": 138,
+      "topic_index": 24
+    },
+    {
+      "abstention_expected": true,
+      "designated_source_ids": [],
+      "phenomenon": "unanswerable",
+      "pilot_medium": "linkedin",
+      "query": "What exact employee headcount did the Brex acquisition announcement post state for the day of the announcement?",
+      "question_id": "q_dev_unans_headcount",
+      "seed": 143,
+      "topic_index": 25
+    },
+    {
+      "abstention_expected": true,
+      "designated_source_ids": [],
+      "phenomenon": "unanswerable",
+      "pilot_medium": "x",
+      "query": "What did Jason Lemkin publish about the seating chart of a private dinner that no post describes?",
+      "question_id": "q_dev_unans_dinner_chart",
+      "seed": 148,
+      "topic_index": 26
+    },
+    {
+      "abstention_expected": false,
+      "designated_source_ids": [],
+      "phenomenon": "factual",
+      "pilot_medium": "talk",
+      "query": "What market-share condition does the source attach to staying present and gathering customers?",
+      "question_id": "q_dev_fact_niche_boundary",
+      "seed": 153,
+      "topic_index": 27
+    }
+  ],
+  "questions_selected": 28,
+  "retrieval": {
+    "backend": "lightrag",
+    "evidence_budget": 4,
+    "mode": "hybrid",
+    "top_k": 20
+  },
+  "retrieval_once_per_question": true,
+  "snapshot": {
+    "algorithm": "sha256",
+    "files": 31,
+    "hash_of_hashes": "1f50c096a001218c19db11f3d74d657111d490c8b0467cb25144b785037d9e6d",
+    "path": "artifacts\\lightrag\\model_f\\storage_expand_v1_snapshot",
+    "snapshot_modified": false,
+    "status": "recorded_from_snapshot_hashes"
+  },
+  "status": "prepared_not_run",
+  "unified_eval": "unchanged"
+}

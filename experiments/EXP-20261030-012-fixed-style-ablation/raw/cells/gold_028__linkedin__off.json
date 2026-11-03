@@ -1,0 +1,729 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "topic_id": "gold_028",
+  "medium": "linkedin",
+  "arm": "off",
+  "seed": 151,
+  "attempts": 1,
+  "evidence_sha256": "352749e3c23b9a999b2d1b0ede966a28d9473aa883afcab33d95a35b58aac40b",
+  "retrieval_hit_ids": [
+    "train_12540",
+    "train_10085",
+    "train_623",
+    "train_11597"
+  ],
+  "retrieval_query": "DigitalOcean? It’s Up 12% in 2026. While The Rest of Software Is Down 24%. Here’s Why.",
+  "retrieval_filter": null,
+  "style_applied": false,
+  "style_in_prompt": false,
+  "prompt_tokens": 420,
+  "generated_tokens_including_stop": 320,
+  "latency_seconds": 12.994,
+  "exemplar_ids": [],
+  "saved_at": "2026-10-30T10:13:31.388036+00:00",
+  "trace": {
+    "id": "gold_028",
+    "format": "linkedin_post",
+    "topic": "DigitalOcean? It’s Up 12% in 2026. While The Rest of Software Is Down 24%. Here’s Why.",
+    "audience": "B2B SaaS founders and operators",
+    "goal": "Explain why a company can outperform a weak software market and what founders can learn.",
+    "cta": "none",
+    "k": 8,
+    "expected_facts": [
+      "The answer should explain why DigitalOcean may be bucking the market trend.",
+      "It should connect market performance to product, customer, or positioning dynamics.",
+      "It should turn the observation into a founder lesson rather than market trivia."
+    ],
+    "rubric_must_haves": [
+      "Frames the contrast clearly.",
+      "Explains why the outperformance matters.",
+      "Uses analytical rather than hype-driven reasoning.",
+      "Extracts a practical lesson for B2B founders."
+    ],
+    "gold_reference": "A strong answer should say that when one software company materially outperforms the sector, there is usually a positioning, customer, or execution reason behind it. The founder takeaway is to study what creates resilience when the market is weak: clear value, focused customer fit, and a model that still works under tighter budgets.",
+    "medium": "linkedin",
+    "prompt": "Write a LinkedIn post in the style of Jason Lemkin about: DigitalOcean? It’s Up 12% in 2026. While The Rest of Software Is Down 24%. Here’s Why.\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] DigitalOcean is up 12.9% year-to-date.\n[E2] DigitalOcean's revenue is 30% in Europe and 22% in Asia.\n[E3] The software market is growing at 14.7% in 2026.\n[E4] The software market is $1.4 trillion.\n[E5] Data center systems are growing at 31.7%.\n[E6] Devices are growing at 6.1%.\n\nNow write the requested LinkedIn post about: DigitalOcean? It’s Up 12% in 2026. While The Rest of Software Is Down 24%. Here’s Why.",
+    "rendered_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nWrite a LinkedIn post in the style of Jason Lemkin about: DigitalOcean? It’s Up 12% in 2026. While The Rest of Software Is Down 24%. Here’s Why.\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] DigitalOcean is up 12.9% year-to-date.\n[E2] DigitalOcean's revenue is 30% in Europe and 22% in Asia.\n[E3] The software market is growing at 14.7% in 2026.\n[E4] The software market is $1.4 trillion.\n[E5] Data center systems are growing at 31.7%.\n[E6] Devices are growing at 6.1%.\n\nNow write the requested LinkedIn post about: DigitalOcean? It’s Up 12% in 2026. While The Rest of Software Is Down 24%. Here’s Why.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "answer": "DigitalOcean? It’s Up 12% in 2026. While The Rest of Software Is Down 24%. Here’s Why. This week, SaaStr.ai analyzed every public B2B company with >$50M ARR—over 400 companies generating nearly $500 billion in combined annualized revenue—and found something remarkable hiding in plain sight. After analyzing all the public B2B / Cloud leaders and their performance this year through April, one stock stands out dramatically from the pack: DigitalOcean. Despite being down over -25% for the overall industry so far in 2026, DigitalOcean isn’t just beating the market—it’s actually UP 12.9% on the year! 🤯 That’s right—while most enterprise software stocks have been cut in half, DigitalOcean has delivered positive returns in what should otherwise be an extremely challenging environment. What makes this even more fascinating is how they’re doing it: by targeting the exact areas where traditional enterprise software is struggling. And here’s the kicker—their success isn’t coming from hype or promises. Their Q4 FY25 results tell the real story: cloud usage surged +45%, while their core compute business grew +13% YoY (to $225 million). But here’s what really matters for founders building infrastructure products: DigitalOcean didn’t just survive the downturn—they thrived because they positioned themselves perfectly for the AI era. They’re laser-focused on developers and startups who need infrastructure solutions that scale with them—not on selling expensive enterprise contracts to slow-moving Fortune 1000 customers. Most importantly, they’ve",
+    "raw_model_output": "DigitalOcean? It’s Up 12% in 2026. While The Rest of Software Is Down 24%. Here’s Why. This week, SaaStr.ai analyzed every public B2B company with >$50M ARR—over 400 companies generating nearly $500 billion in combined annualized revenue—and found something remarkable hiding in plain sight. After analyzing all the public B2B / Cloud leaders and their performance this year through April, one stock stands out dramatically from the pack: DigitalOcean. Despite being down over -25% for the overall industry so far in 2026, DigitalOcean isn’t just beating the market—it’s actually UP 12.9% on the year! 🤯 That’s right—while most enterprise software stocks have been cut in half, DigitalOcean has delivered positive returns in what should otherwise be an extremely challenging environment. What makes this even more fascinating is how they’re doing it: by targeting the exact areas where traditional enterprise software is struggling. And here’s the kicker—their success isn’t coming from hype or promises. Their Q4 FY25 results tell the real story: cloud usage surged +45%, while their core compute business grew +13% YoY (to $225 million). But here’s what really matters for founders building infrastructure products: DigitalOcean didn’t just survive the downturn—they thrived because they positioned themselves perfectly for the AI era. They’re laser-focused on developers and startups who need infrastructure solutions that scale with them—not on selling expensive enterprise contracts to slow-moving Fortune 1000 customers. Most importantly, they’ve",
+    "deployment_output": "DigitalOcean? It’s Up 12% in 2026. While The Rest of Software Is Down 24%. Here’s Why. This week, SaaStr.ai analyzed every public B2B company with >$50M ARR—over 400 companies generating nearly $500 billion in combined annualized revenue—and found something remarkable hiding in plain sight. After analyzing all the public B2B / Cloud leaders and their performance this year through April, one stock stands out dramatically from the pack: DigitalOcean. Despite being down over -25% for the overall industry so far in 2026, DigitalOcean isn’t just beating the market—it’s actually UP 12.9% on the year! 🤯 That’s right—while most enterprise software stocks have been cut in half, DigitalOcean has delivered positive returns in what should otherwise be an extremely challenging environment. What makes this even more fascinating is how they’re doing it: by targeting the exact areas where traditional enterprise software is struggling. And here’s the kicker—their success isn’t coming from hype or promises. Their Q4 FY25 results tell the real story: cloud usage surged +45%, while their core compute business grew +13% YoY (to $225 million). But here’s what really matters for founders building infrastructure products: DigitalOcean didn’t just survive the downturn—they thrived because they positioned themselves perfectly for the AI era. They’re laser-focused on developers and startups who need infrastructure solutions that scale with them—not on selling expensive enterprise contracts to slow-moving Fortune 1000 customers. Most importantly, they’ve",
+    "first_attempt_answer": "DigitalOcean? It’s Up 12% in 2026. While The Rest of Software Is Down 24%. Here’s Why. This week, SaaStr.ai analyzed every public B2B company with >$50M ARR—over 400 companies generating nearly $500 billion in combined annualized revenue—and found something remarkable hiding in plain sight. After analyzing all the public B2B / Cloud leaders and their performance this year through April, one stock stands out dramatically from the pack: DigitalOcean. Despite being down over -25% for the overall industry so far in 2026, DigitalOcean isn’t just beating the market—it’s actually UP 12.9% on the year! 🤯 That’s right—while most enterprise software stocks have been cut in half, DigitalOcean has delivered positive returns in what should otherwise be an extremely challenging environment. What makes this even more fascinating is how they’re doing it: by targeting the exact areas where traditional enterprise software is struggling. And here’s the kicker—their success isn’t coming from hype or promises. Their Q4 FY25 results tell the real story: cloud usage surged +45%, while their core compute business grew +13% YoY (to $225 million). But here’s what really matters for founders building infrastructure products: DigitalOcean didn’t just survive the downturn—they thrived because they positioned themselves perfectly for the AI era. They’re laser-focused on developers and startups who need infrastructure solutions that scale with them—not on selling expensive enterprise contracts to slow-moving Fortune 1000 customers. Most importantly, they’ve",
+    "retry_answer": null,
+    "query": "DigitalOcean? It’s Up 12% in 2026. While The Rest of Software Is Down 24%. Here’s Why.",
+    "max_new_tokens": 320,
+    "seed": 151,
+    "retry_seed": null,
+    "deployment_accepted": true,
+    "repair_occurred": false,
+    "generation_attempt": {
+      "seed": 151,
+      "answer": "DigitalOcean? It’s Up 12% in 2026. While The Rest of Software Is Down 24%. Here’s Why. This week, SaaStr.ai analyzed every public B2B company with >$50M ARR—over 400 companies generating nearly $500 billion in combined annualized revenue—and found something remarkable hiding in plain sight. After analyzing all the public B2B / Cloud leaders and their performance this year through April, one stock stands out dramatically from the pack: DigitalOcean. Despite being down over -25% for the overall industry so far in 2026, DigitalOcean isn’t just beating the market—it’s actually UP 12.9% on the year! 🤯 That’s right—while most enterprise software stocks have been cut in half, DigitalOcean has delivered positive returns in what should otherwise be an extremely challenging environment. What makes this even more fascinating is how they’re doing it: by targeting the exact areas where traditional enterprise software is struggling. And here’s the kicker—their success isn’t coming from hype or promises. Their Q4 FY25 results tell the real story: cloud usage surged +45%, while their core compute business grew +13% YoY (to $225 million). But here’s what really matters for founders building infrastructure products: DigitalOcean didn’t just survive the downturn—they thrived because they positioned themselves perfectly for the AI era. They’re laser-focused on developers and startups who need infrastructure solutions that scale with them—not on selling expensive enterprise contracts to slow-moving Fortune 1000 customers. Most importantly, they’ve",
+      "numeric_grounding": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [
+          "pct:12",
+          "pct:12.9",
+          "pct:14.7",
+          "pct:22",
+          "pct:24",
+          "pct:30",
+          "pct:31.7",
+          "pct:6.1",
+          "usd:1",
+          "year:2026"
+        ],
+        "values": [
+          {
+            "value": "$50M",
+            "canonical": "usd:50000000",
+            "sentence": "This week, SaaStr.ai analyzed every public B2B company with >$50M ARR—over 400 companies generating nearly $500 billion in combined annualized revenue—and found something remarkable hiding in plain sight",
+            "start": 148,
+            "end": 152
+          },
+          {
+            "value": "$500 billion",
+            "canonical": "usd:500000000000",
+            "sentence": "This week, SaaStr.ai analyzed every public B2B company with >$50M ARR—over 400 companies generating nearly $500 billion in combined annualized revenue—and found something remarkable hiding in plain sight",
+            "start": 194,
+            "end": 206
+          },
+          {
+            "value": "$225 million",
+            "canonical": "usd:225000000",
+            "sentence": "Their Q4 FY25 results tell the real story: cloud usage surged +45%, while their core compute business grew +13% YoY (to $225 million)",
+            "start": 1125,
+            "end": 1137
+          },
+          {
+            "value": "12%",
+            "canonical": "pct:12",
+            "sentence": "It’s Up 12% in 2026",
+            "start": 22,
+            "end": 25
+          },
+          {
+            "value": "24%",
+            "canonical": "pct:24",
+            "sentence": "While The Rest of Software Is Down 24%",
+            "start": 70,
+            "end": 73
+          },
+          {
+            "value": "25%",
+            "canonical": "pct:25",
+            "sentence": "Despite being down over -25% for the overall industry so far in 2026, DigitalOcean isn’t just beating the market—it’s actually UP 12.9% on the year",
+            "start": 478,
+            "end": 481
+          },
+          {
+            "value": "12.9%",
+            "canonical": "pct:12.9",
+            "sentence": "Despite being down over -25% for the overall industry so far in 2026, DigitalOcean isn’t just beating the market—it’s actually UP 12.9% on the year",
+            "start": 583,
+            "end": 588
+          },
+          {
+            "value": "45%",
+            "canonical": "pct:45",
+            "sentence": "Their Q4 FY25 results tell the real story: cloud usage surged +45%, while their core compute business grew +13% YoY (to $225 million)",
+            "start": 1068,
+            "end": 1071
+          },
+          {
+            "value": "13%",
+            "canonical": "pct:13",
+            "sentence": "Their Q4 FY25 results tell the real story: cloud usage surged +45%, while their core compute business grew +13% YoY (to $225 million)",
+            "start": 1113,
+            "end": 1116
+          },
+          {
+            "value": "2026",
+            "canonical": "year:2026",
+            "sentence": "It’s Up 12% in 2026",
+            "start": 29,
+            "end": 33
+          },
+          {
+            "value": "2026",
+            "canonical": "year:2026",
+            "sentence": "Despite being down over -25% for the overall industry so far in 2026, DigitalOcean isn’t just beating the market—it’s actually UP 12.9% on the year",
+            "start": 517,
+            "end": 521
+          },
+          {
+            "value": "400",
+            "canonical": "n:400",
+            "sentence": "This week, SaaStr.ai analyzed every public B2B company with >$50M ARR—over 400 companies generating nearly $500 billion in combined annualized revenue—and found something remarkable hiding in plain sight",
+            "start": 162,
+            "end": 165
+          },
+          {
+            "value": "1000",
+            "canonical": "n:1000",
+            "sentence": "They’re laser-focused on developers and startups who need infrastructure solutions that scale with them—not on selling expensive enterprise contracts to slow-moving Fortune 1000 customers",
+            "start": 1511,
+            "end": 1515
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "$50M",
+            "canonical": "usd:50000000",
+            "sentence": "This week, SaaStr.ai analyzed every public B2B company with >$50M ARR—over 400 companies generating nearly $500 billion in combined annualized revenue—and found something remarkable hiding in plain sight",
+            "start": 148,
+            "end": 152
+          },
+          {
+            "value": "$500 billion",
+            "canonical": "usd:500000000000",
+            "sentence": "This week, SaaStr.ai analyzed every public B2B company with >$50M ARR—over 400 companies generating nearly $500 billion in combined annualized revenue—and found something remarkable hiding in plain sight",
+            "start": 194,
+            "end": 206
+          },
+          {
+            "value": "$225 million",
+            "canonical": "usd:225000000",
+            "sentence": "Their Q4 FY25 results tell the real story: cloud usage surged +45%, while their core compute business grew +13% YoY (to $225 million)",
+            "start": 1125,
+            "end": 1137
+          },
+          {
+            "value": "25%",
+            "canonical": "pct:25",
+            "sentence": "Despite being down over -25% for the overall industry so far in 2026, DigitalOcean isn’t just beating the market—it’s actually UP 12.9% on the year",
+            "start": 478,
+            "end": 481
+          },
+          {
+            "value": "45%",
+            "canonical": "pct:45",
+            "sentence": "Their Q4 FY25 results tell the real story: cloud usage surged +45%, while their core compute business grew +13% YoY (to $225 million)",
+            "start": 1068,
+            "end": 1071
+          },
+          {
+            "value": "13%",
+            "canonical": "pct:13",
+            "sentence": "Their Q4 FY25 results tell the real story: cloud usage surged +45%, while their core compute business grew +13% YoY (to $225 million)",
+            "start": 1113,
+            "end": 1116
+          },
+          {
+            "value": "400",
+            "canonical": "n:400",
+            "sentence": "This week, SaaStr.ai analyzed every public B2B company with >$50M ARR—over 400 companies generating nearly $500 billion in combined annualized revenue—and found something remarkable hiding in plain sight",
+            "start": 162,
+            "end": 165
+          },
+          {
+            "value": "1000",
+            "canonical": "n:1000",
+            "sentence": "They’re laser-focused on developers and startups who need infrastructure solutions that scale with them—not on selling expensive enterprise contracts to slow-moving Fortune 1000 customers",
+            "start": 1511,
+            "end": 1515
+          }
+        ]
+      },
+      "rag_source_copying": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 3,
+        "document_id": "train_12540",
+        "matched_generated_span": "up 12 9%",
+        "matched_retrieved_span": "up 12 9%"
+      },
+      "stop_reason": "length"
+    },
+    "repair_attempt": null,
+    "accepted_attempt": 1,
+    "rag_source_copying": {
+      "applicable": true,
+      "threshold": 12,
+      "pass": true,
+      "flagged": false,
+      "max_contiguous_words": 3,
+      "document_id": "train_12540",
+      "matched_generated_span": "up 12 9%",
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 3,
+        "document_id": "train_12540",
+        "matched_generated_span": "up 12 9%",
+        "matched_retrieved_span": "up 12 9%"
+      },
+      "retry": null,
+      "retry_occurred": false,
+      "repair_occurred": false
+    },
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": false,
+      "failure": "unsupported_numeric_grounding",
+      "unsupported": [
+        {
+          "value": "$50M",
+          "canonical": "usd:50000000",
+          "sentence": "This week, SaaStr.ai analyzed every public B2B company with >$50M ARR—over 400 companies generating nearly $500 billion in combined annualized revenue—and found something remarkable hiding in plain sight",
+          "start": 148,
+          "end": 152
+        },
+        {
+          "value": "$500 billion",
+          "canonical": "usd:500000000000",
+          "sentence": "This week, SaaStr.ai analyzed every public B2B company with >$50M ARR—over 400 companies generating nearly $500 billion in combined annualized revenue—and found something remarkable hiding in plain sight",
+          "start": 194,
+          "end": 206
+        },
+        {
+          "value": "$225 million",
+          "canonical": "usd:225000000",
+          "sentence": "Their Q4 FY25 results tell the real story: cloud usage surged +45%, while their core compute business grew +13% YoY (to $225 million)",
+          "start": 1125,
+          "end": 1137
+        },
+        {
+          "value": "25%",
+          "canonical": "pct:25",
+          "sentence": "Despite being down over -25% for the overall industry so far in 2026, DigitalOcean isn’t just beating the market—it’s actually UP 12.9% on the year",
+          "start": 478,
+          "end": 481
+        },
+        {
+          "value": "45%",
+          "canonical": "pct:45",
+          "sentence": "Their Q4 FY25 results tell the real story: cloud usage surged +45%, while their core compute business grew +13% YoY (to $225 million)",
+          "start": 1068,
+          "end": 1071
+        },
+        {
+          "value": "13%",
+          "canonical": "pct:13",
+          "sentence": "Their Q4 FY25 results tell the real story: cloud usage surged +45%, while their core compute business grew +13% YoY (to $225 million)",
+          "start": 1113,
+          "end": 1116
+        },
+        {
+          "value": "400",
+          "canonical": "n:400",
+          "sentence": "This week, SaaStr.ai analyzed every public B2B company with >$50M ARR—over 400 companies generating nearly $500 billion in combined annualized revenue—and found something remarkable hiding in plain sight",
+          "start": 162,
+          "end": 165
+        },
+        {
+          "value": "1000",
+          "canonical": "n:1000",
+          "sentence": "They’re laser-focused on developers and startups who need infrastructure solutions that scale with them—not on selling expensive enterprise contracts to slow-moving Fortune 1000 customers",
+          "start": 1511,
+          "end": 1515
+        }
+      ],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [
+          "pct:12",
+          "pct:12.9",
+          "pct:14.7",
+          "pct:22",
+          "pct:24",
+          "pct:30",
+          "pct:31.7",
+          "pct:6.1",
+          "usd:1",
+          "year:2026"
+        ],
+        "values": [
+          {
+            "value": "$50M",
+            "canonical": "usd:50000000",
+            "sentence": "This week, SaaStr.ai analyzed every public B2B company with >$50M ARR—over 400 companies generating nearly $500 billion in combined annualized revenue—and found something remarkable hiding in plain sight",
+            "start": 148,
+            "end": 152
+          },
+          {
+            "value": "$500 billion",
+            "canonical": "usd:500000000000",
+            "sentence": "This week, SaaStr.ai analyzed every public B2B company with >$50M ARR—over 400 companies generating nearly $500 billion in combined annualized revenue—and found something remarkable hiding in plain sight",
+            "start": 194,
+            "end": 206
+          },
+          {
+            "value": "$225 million",
+            "canonical": "usd:225000000",
+            "sentence": "Their Q4 FY25 results tell the real story: cloud usage surged +45%, while their core compute business grew +13% YoY (to $225 million)",
+            "start": 1125,
+            "end": 1137
+          },
+          {
+            "value": "12%",
+            "canonical": "pct:12",
+            "sentence": "It’s Up 12% in 2026",
+            "start": 22,
+            "end": 25
+          },
+          {
+            "value": "24%",
+            "canonical": "pct:24",
+            "sentence": "While The Rest of Software Is Down 24%",
+            "start": 70,
+            "end": 73
+          },
+          {
+            "value": "25%",
+            "canonical": "pct:25",
+            "sentence": "Despite being down over -25% for the overall industry so far in 2026, DigitalOcean isn’t just beating the market—it’s actually UP 12.9% on the year",
+            "start": 478,
+            "end": 481
+          },
+          {
+            "value": "12.9%",
+            "canonical": "pct:12.9",
+            "sentence": "Despite being down over -25% for the overall industry so far in 2026, DigitalOcean isn’t just beating the market—it’s actually UP 12.9% on the year",
+            "start": 583,
+            "end": 588
+          },
+          {
+            "value": "45%",
+            "canonical": "pct:45",
+            "sentence": "Their Q4 FY25 results tell the real story: cloud usage surged +45%, while their core compute business grew +13% YoY (to $225 million)",
+            "start": 1068,
+            "end": 1071
+          },
+          {
+            "value": "13%",
+            "canonical": "pct:13",
+            "sentence": "Their Q4 FY25 results tell the real story: cloud usage surged +45%, while their core compute business grew +13% YoY (to $225 million)",
+            "start": 1113,
+            "end": 1116
+          },
+          {
+            "value": "2026",
+            "canonical": "year:2026",
+            "sentence": "It’s Up 12% in 2026",
+            "start": 29,
+            "end": 33
+          },
+          {
+            "value": "2026",
+            "canonical": "year:2026",
+            "sentence": "Despite being down over -25% for the overall industry so far in 2026, DigitalOcean isn’t just beating the market—it’s actually UP 12.9% on the year",
+            "start": 517,
+            "end": 521
+          },
+          {
+            "value": "400",
+            "canonical": "n:400",
+            "sentence": "This week, SaaStr.ai analyzed every public B2B company with >$50M ARR—over 400 companies generating nearly $500 billion in combined annualized revenue—and found something remarkable hiding in plain sight",
+            "start": 162,
+            "end": 165
+          },
+          {
+            "value": "1000",
+            "canonical": "n:1000",
+            "sentence": "They’re laser-focused on developers and startups who need infrastructure solutions that scale with them—not on selling expensive enterprise contracts to slow-moving Fortune 1000 customers",
+            "start": 1511,
+            "end": 1515
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "$50M",
+            "canonical": "usd:50000000",
+            "sentence": "This week, SaaStr.ai analyzed every public B2B company with >$50M ARR—over 400 companies generating nearly $500 billion in combined annualized revenue—and found something remarkable hiding in plain sight",
+            "start": 148,
+            "end": 152
+          },
+          {
+            "value": "$500 billion",
+            "canonical": "usd:500000000000",
+            "sentence": "This week, SaaStr.ai analyzed every public B2B company with >$50M ARR—over 400 companies generating nearly $500 billion in combined annualized revenue—and found something remarkable hiding in plain sight",
+            "start": 194,
+            "end": 206
+          },
+          {
+            "value": "$225 million",
+            "canonical": "usd:225000000",
+            "sentence": "Their Q4 FY25 results tell the real story: cloud usage surged +45%, while their core compute business grew +13% YoY (to $225 million)",
+            "start": 1125,
+            "end": 1137
+          },
+          {
+            "value": "25%",
+            "canonical": "pct:25",
+            "sentence": "Despite being down over -25% for the overall industry so far in 2026, DigitalOcean isn’t just beating the market—it’s actually UP 12.9% on the year",
+            "start": 478,
+            "end": 481
+          },
+          {
+            "value": "45%",
+            "canonical": "pct:45",
+            "sentence": "Their Q4 FY25 results tell the real story: cloud usage surged +45%, while their core compute business grew +13% YoY (to $225 million)",
+            "start": 1068,
+            "end": 1071
+          },
+          {
+            "value": "13%",
+            "canonical": "pct:13",
+            "sentence": "Their Q4 FY25 results tell the real story: cloud usage surged +45%, while their core compute business grew +13% YoY (to $225 million)",
+            "start": 1113,
+            "end": 1116
+          },
+          {
+            "value": "400",
+            "canonical": "n:400",
+            "sentence": "This week, SaaStr.ai analyzed every public B2B company with >$50M ARR—over 400 companies generating nearly $500 billion in combined annualized revenue—and found something remarkable hiding in plain sight",
+            "start": 162,
+            "end": 165
+          },
+          {
+            "value": "1000",
+            "canonical": "n:1000",
+            "sentence": "They’re laser-focused on developers and startups who need infrastructure solutions that scale with them—not on selling expensive enterprise contracts to slow-moving Fortune 1000 customers",
+            "start": 1511,
+            "end": 1515
+          }
+        ]
+      },
+      "retry": null
+    },
+    "prompt_tokens": 420,
+    "backend": "unsloth",
+    "retrieval": true,
+    "retrieval_query": "DigitalOcean? It’s Up 12% in 2026. While The Rest of Software Is Down 24%. Here’s Why.",
+    "retrieval_filter": null,
+    "retrieval_k": 4,
+    "retrieval_hits": [
+      {
+        "id": "train_12540",
+        "text": "“And in the middle of all of this carnage\n\nDigitalOcean (DOCN) is sitting at $54.62. Up 12.9% year-to-date. Up 29% over the past year.”",
+        "medium": "x",
+        "group_id": "84d40973512338fe03f830fb169d25a26e455d87d1188778cb68999a06f4175a",
+        "row_id": 12540,
+        "split": "train",
+        "distance": 0.1906660795211792
+      },
+      {
+        "id": "train_10085",
+        "text": "#7.  Only 38% of revenue in North America.\nThe Cloud is global, and DigitalOcean has followed it.  With 30% in Europe, and 22% in Asia, DigitalOcean’s revenue is truly global.\nWow, what a story!!  A niche of a free and super-cheap Cloud for individual and small developers that just grew and grew into a $500m ARR engine.  Even as the Big Guys went more and more enterprise.",
+        "medium": "blog",
+        "group_id": "78ffb38854e634ab4aee24a0c3073b809d07fab137efd55c6c332826d0440766",
+        "row_id": 10085,
+        "split": "train",
+        "distance": 0.2260766625404358
+      },
+      {
+        "id": "train_623",
+        "text": "The revised 14.7% reflects a more sustainable growth trajectory, not a softening market. And $1.4 trillion in software spend growing at 14.7% still means roughly\n$180 billion in net new software spending\nin 2026 alone\n. That’s nearly the entire software market from 15 years ago showing up as incremental spend in a single year. If your B2B company isn’t growing at least 14.7% this year, you’re losing share to someone who is. Where the Money Is Actually Going\nLet’s break down the IT spending categories so you can see where the dollars flow:\nData Center Systems: $650B+ (up 31.7%\n)\n— This is the AI infrastructure build-out. Servers, networking, storage. Hyperscalers are driving most of it, but enterprise on-prem AI infrastructure is growing too. Software: $1.4T+ (up 14.7%)\n— The biggest single category in IT spending and still accelerating. Application software plus infrastructure software. This is where B2B companies live. IT Services: growing steadily\n— Consulting, implementation, managed services. Growth is solid but slower than software and data center. Devices: $836B (up 6.1%)\n— Phones, PCs, tablets. Growth is decelerating from 2025 due to rising memory prices and pulled-forward demand. Telecom: modest growth\n— The slowest-growing category, as usual. The story here is straightforward: infrastructure and software are eating everything. If you sell B2B software, the total addressable market just got bigger. Again. The Uncertainty Pause Is Over. But the Reallocation Continues. Remember the “uncertainty pause” from Q2-Q3 2025?",
+        "medium": "blog",
+        "group_id": "432ac57c62e4ddb431c0d286fd10015012dc83cb7a11e3a41e67e8c210b41297",
+        "row_id": 623,
+        "split": "train",
+        "distance": 0.23177045583724976
+      },
+      {
+        "id": "train_11597",
+        "text": "Call it a lot of things -- but don't call it a downturn. And don't call it a slowdown. Gartner now predicts global software spend will >accelerate< and growing a stunning 14.7% to $1.4 Trillion in 2026. That's net new $180B+ of software spend this year. Go get your share.",
+        "medium": "linkedin",
+        "group_id": "01d5174a5f65613bd6e97455bcc5fd90f343aac91f2f4e6cf96a88eec9969ee4",
+        "row_id": 11597,
+        "split": "train",
+        "distance": 0.23219990730285645
+      }
+    ],
+    "copying": [
+      {
+        "id": "train_12540",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_10085",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_623",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_11597",
+        "shared_word_span": 2
+      }
+    ],
+    "retrieval_backend": "dense",
+    "proposed_atomic_claims": [
+      {
+        "source_id": "train_12540",
+        "claim": "DigitalOcean is up 12.9% year-to-date.",
+        "support_span": "Up 12.9% year-to-date.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_10085",
+        "claim": "DigitalOcean's revenue is 30% in Europe and 22% in Asia.",
+        "support_span": "30% in Europe, and 22% in Asia",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_623",
+        "claim": "The software market is growing at 14.7% in 2026.",
+        "support_span": "The revised 14.7% reflects a more sustainable growth trajectory, not a softening market.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_623",
+        "claim": "The software market is growing at 14.7% in 2026.",
+        "support_span": "$1.4 trillion in software spend growing at 14.7%",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_623",
+        "claim": "The software market is growing at 14.7% in 2026.",
+        "support_span": "$180 billion in net new software spending in 2026 alone",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11597",
+        "claim": "The software market is growing at 14.7% in 2026.",
+        "support_span": "Gartner now predicts global software spend will >accelerate< and growing a stunning 14.7% to $1.4 Trillion in 2026",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_623",
+        "claim": "The software market is $1.4 trillion.",
+        "support_span": "$1.4T+",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_623",
+        "claim": "Data center systems are growing at 31.7%.",
+        "support_span": "up 31.7%",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_623",
+        "claim": "Devices are growing at 6.1%.",
+        "support_span": "up 6.1%",
+        "claim_type": "fact"
+      }
+    ],
+    "validation_rejected": [
+      {
+        "source_id": "train_623",
+        "claim": "The software market is growing at 14.7% in 2026.",
+        "support_span": "The revised 14.7% reflects a more sustainable growth trajectory, not a softening market.",
+        "claim_type": "fact",
+        "reason": "numeric_not_in_span"
+      },
+      {
+        "source_id": "train_623",
+        "claim": "The software market is growing at 14.7% in 2026.",
+        "support_span": "$1.4 trillion in software spend growing at 14.7%",
+        "claim_type": "fact",
+        "reason": "numeric_not_in_span"
+      },
+      {
+        "source_id": "train_623",
+        "claim": "The software market is growing at 14.7% in 2026.",
+        "support_span": "$180 billion in net new software spending in 2026 alone",
+        "claim_type": "fact",
+        "reason": "numeric_not_in_span"
+      }
+    ],
+    "verifier_rejected": [],
+    "verified_claims": [
+      {
+        "source_id": "train_12540",
+        "claim": "DigitalOcean is up 12.9% year-to-date.",
+        "support_span": "Up 12.9% year-to-date.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_10085",
+        "claim": "DigitalOcean's revenue is 30% in Europe and 22% in Asia.",
+        "support_span": "30% in Europe, and 22% in Asia",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11597",
+        "claim": "The software market is growing at 14.7% in 2026.",
+        "support_span": "Gartner now predicts global software spend will >accelerate< and growing a stunning 14.7% to $1.4 Trillion in 2026",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_623",
+        "claim": "The software market is $1.4 trillion.",
+        "support_span": "$1.4T+",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_623",
+        "claim": "Data center systems are growing at 31.7%.",
+        "support_span": "up 31.7%",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_623",
+        "claim": "Devices are growing at 6.1%.",
+        "support_span": "up 6.1%",
+        "claim_type": "fact"
+      }
+    ],
+    "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] DigitalOcean is up 12.9% year-to-date.\n[E2] DigitalOcean's revenue is 30% in Europe and 22% in Asia.\n[E3] The software market is growing at 14.7% in 2026.\n[E4] The software market is $1.4 trillion.\n[E5] Data center systems are growing at 31.7%.\n[E6] Devices are growing at 6.1%.",
+    "raw_extraction": "[\n  {\n    \"source_id\": \"train_12540\",\n    \"claim\": \"DigitalOcean is up 12.9% year-to-date.\",\n    \"support_span\": \"Up 12.9% year-to-date.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_10085\",\n    \"claim\": \"DigitalOcean's revenue is 30% in Europe and 22% in Asia.\",\n    \"support_span\": \"30% in Europe, and 22% in Asia\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_623\",\n    \"claim\": \"The software market is growing at 14.7% in 2026.\",\n    \"support_span\": \"The revised 14.7% reflects a more sustainable growth trajectory, not a softening market.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_623\",\n    \"claim\": \"The software market is growing at 14.7% in 2026.\",\n    \"support_span\": \"$1.4 trillion in software spend growing at 14.7%\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_623\",\n    \"claim\": \"The software market is growing at 14.7% in 2026.\",\n    \"support_span\": \"$180 billion in net new software spending in 2026 alone\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_11597\",\n    \"claim\": \"The software market is growing at 14.7% in 2026.\",\n    \"support_span\": \"Gartner now predicts global software spend will >accelerate< and growing a stunning 14.7% to $1.4 Trillion in 2026\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_623\",\n    \"claim\": \"The software market is $1.4 trillion.\",\n    \"support_span\": \"$1.4T+\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_623\",\n    \"claim\": \"Data center systems are growing at 31.7%.\",\n    \"support_span\": \"up 31.7%\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_623\",\n    \"claim\": \"Devices are growing at 6.1%.\",\n    \"support_span\": \"up 6.1%\",\n    \"claim_type\": \"fact\"\n  }\n]",
+    "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: DigitalOcean? It’s Up 12% in 2026. While The Rest of Software Is Down 24%. Here’s Why.\n\nSource passages:\n[train_12540]\n“And in the middle of all of this carnage\n\nDigitalOcean (DOCN) is sitting at $54.62. Up 12.9% year-to-date. Up 29% over the past year.”\n\n[train_10085]\n#7.  Only 38% of revenue in North America.\nThe Cloud is global, and DigitalOcean has followed it.  With 30% in Europe, and 22% in Asia, DigitalOcean’s revenue is truly global.\nWow, what a story!!  A niche of a free and super-cheap Cloud for individual and small developers that just grew and grew into a $500m ARR engine.  Even as the Big Guys went more and more enterprise.\n\n[train_623]\nThe revised 14.7% reflects a more sustainable growth trajectory, not a softening market. And $1.4 trillion in software spend growing at 14.7% still means roughly\n$180 billion in net new software spending\nin 2026 alone\n. That’s nearly the entire software market from 15 years ago showing up as incremental spend in a single year. If your B2B company isn’t growing at least 14.7% this year, you’re losing share to someone who is. Where the Money Is Actually Going\nLet’s break down the IT spending categories so you can see where the dollars flow:\nData Center Systems: $650B+ (up 31.7%\n)\n— This is the AI infrastructure build-out. Servers, networking, storage. Hyperscalers are driving most of it, but enterprise on-prem AI infrastructure is growing too. Software: $1.4T+ (up 14.7%)\n— The biggest single category in IT spending and still accelerating. Application software plus infrastructure software. This is where B2B companies live. IT Services: growing steadily\n— Consulting, implementation, managed services. Growth is solid but slower than software and data center. Devices: $836B (up 6.1%)\n— Phones, PCs, tablets. Growth is decelerating from 2025 due to rising memory prices and pulled-forward demand. Telecom: modest growth\n— The slowest-growing category, as usual. The story here is straightforward: infrastructure and software are eating everything. If you sell B2B software, the total addressable market just got bigger. Again. The Uncertainty Pause Is Over. But the Reallocation Continues. Remember the “uncertainty pause” from Q2-Q3 2025?\n\n[train_11597]\nCall it a lot of things -- but don't call it a downturn. And don't call it a slowdown. Gartner now predicts global software spend will >accelerate< and growing a stunning 14.7% to $1.4 Trillion in 2026. That's net new $180B+ of software spend this year. Go get your share.",
+    "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: DigitalOcean? It’s Up 12% in 2026. While The Rest of Software Is Down 24%. Here’s Why.\n\nSource passages:\n[train_12540]\n“And in the middle of all of this carnage\n\nDigitalOcean (DOCN) is sitting at $54.62. Up 12.9% year-to-date. Up 29% over the past year.”\n\n[train_10085]\n#7.  Only 38% of revenue in North America.\nThe Cloud is global, and DigitalOcean has followed it.  With 30% in Europe, and 22% in Asia, DigitalOcean’s revenue is truly global.\nWow, what a story!!  A niche of a free and super-cheap Cloud for individual and small developers that just grew and grew into a $500m ARR engine.  Even as the Big Guys went more and more enterprise.\n\n[train_623]\nThe revised 14.7% reflects a more sustainable growth trajectory, not a softening market. And $1.4 trillion in software spend growing at 14.7% still means roughly\n$180 billion in net new software spending\nin 2026 alone\n. That’s nearly the entire software market from 15 years ago showing up as incremental spend in a single year. If your B2B company isn’t growing at least 14.7% this year, you’re losing share to someone who is. Where the Money Is Actually Going\nLet’s break down the IT spending categories so you can see where the dollars flow:\nData Center Systems: $650B+ (up 31.7%\n)\n— This is the AI infrastructure build-out. Servers, networking, storage. Hyperscalers are driving most of it, but enterprise on-prem AI infrastructure is growing too. Software: $1.4T+ (up 14.7%)\n— The biggest single category in IT spending and still accelerating. Application software plus infrastructure software. This is where B2B companies live. IT Services: growing steadily\n— Consulting, implementation, managed services. Growth is solid but slower than software and data center. Devices: $836B (up 6.1%)\n— Phones, PCs, tablets. Growth is decelerating from 2025 due to rising memory prices and pulled-forward demand. Telecom: modest growth\n— The slowest-growing category, as usual. The story here is straightforward: infrastructure and software are eating everything. If you sell B2B software, the total addressable market just got bigger. Again. The Uncertainty Pause Is Over. But the Reallocation Continues. Remember the “uncertainty pause” from Q2-Q3 2025?\n\n[train_11597]\nCall it a lot of things -- but don't call it a downturn. And don't call it a slowdown. Gartner now predicts global software spend will >accelerate< and growing a stunning 14.7% to $1.4 Trillion in 2026. That's net new $180B+ of software spend this year. Go get your share.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "extraction_seconds": 14.933,
+    "verification_seconds": 0.0,
+    "verification_records": [],
+    "llm_verifier_on_critical_path": false,
+    "allowed_numeric_values": [
+      "pct:12",
+      "pct:12.9",
+      "pct:14.7",
+      "pct:22",
+      "pct:24",
+      "pct:30",
+      "pct:31.7",
+      "pct:6.1",
+      "usd:1",
+      "year:2026"
+    ],
+    "distillation_adapter_enabled": false,
+    "verification_adapter_enabled": false,
+    "distillation_backend": "same_loaded_4bit_base_adapter_off",
+    "distillation_do_sample": false,
+    "extraction_max_new_tokens": 2560,
+    "verification_max_new_tokens": 24,
+    "distillation_seed": 0,
+    "support_spans_in_generator_prompt": false,
+    "evidence_stage_reason": null,
+    "evidence_status": "verified",
+    "extraction_attempts": 1,
+    "extraction_stop_reason": "eos",
+    "prompt_contract": "factual-reliability-v1",
+    "fixed_style_enabled": false,
+    "style_applied": false,
+    "style_exemplar_count": 0,
+    "latency_seconds": 12.994,
+    "generated_tokens_including_stop": 320,
+    "last_token_id": 4070,
+    "effective_eos_token_ids": [
+      128001,
+      128008,
+      128009
+    ],
+    "stop_reason": "length",
+    "budget_fraction": 1.0,
+    "early_eos": false,
+    "first_attempt_stop_reason": "length",
+    "retry_stop_reason": null
+  }
+}

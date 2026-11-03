@@ -1,0 +1,107 @@
+{
+  "verified": [
+    {
+      "source_id": "gd_3a1abe6cc8ce1e3e0b241ddc",
+      "claim": "The SaaS of 2021 isn't dead",
+      "support_span": "The SaaS of 2021 isn't dead",
+      "claim_type": "fact",
+      "attribution_status": "named_author"
+    },
+    {
+      "source_id": "gd_78a8331869cec9a0326358f9",
+      "claim": "The growth rate of B2B SaaS companies dropped from 30% in 2023 to 25% in 2024",
+      "support_span": "Overall median growth dropped from 30% in 2023 to 25% in 2024",
+      "claim_type": "number",
+      "attribution_status": "publication_page"
+    },
+    {
+      "source_id": "gd_78a8331869cec9a0326358f9",
+      "claim": "The 6.9% of companies reporting flat or negative growth is still well below the 13% peak we saw in 2020",
+      "support_span": "The 6.9% of companies reporting flat or negative growth is still well below the 13% peak we saw in 2020",
+      "claim_type": "number",
+      "attribution_status": "publication_page"
+    },
+    {
+      "source_id": "gd_8b5d26f7b5da7709193fcdb6",
+      "claim": "The $10M to $100M path is no longer inevitable",
+      "support_span": "The $10M to $100M path is no longer inevitable",
+      "claim_type": "fact",
+      "attribution_status": "publication_page"
+    }
+  ],
+  "evidence_status": "verified",
+  "proposed": [
+    {
+      "source_id": "gd_3a1abe6cc8ce1e3e0b241ddc",
+      "claim": "The SaaS of 2021 isn't dead",
+      "claim_type": "fact",
+      "support_span": "The SaaS of 2021 isn't dead"
+    },
+    {
+      "source_id": "gd_78a8331869cec9a0326358f9",
+      "claim": "The growth rate of B2B SaaS companies dropped from 30% in 2023 to 25% in 2024",
+      "claim_type": "number",
+      "support_span": "Overall median growth dropped from 30% in 2023 to 25% in 2024"
+    },
+    {
+      "source_id": "gd_78a8331869cec9a0326358f9",
+      "claim": "The 6.9% of companies reporting flat or negative growth is still well below the 13% peak we saw in 2020",
+      "claim_type": "number",
+      "support_span": "The 6.9% of companies reporting flat or negative growth is still well below the 13% peak we saw in 2020"
+    },
+    {
+      "source_id": "gd_d6df94b37fa8cbecc13b60e9",
+      "claim": "Many top SaaS and Cloud stocks are up +40%-60% or more in the back half of the year",
+      "claim_type": "fact",
+      "support_span": "Many top SaaS and Cloud stocks are up +40%-60% or more in the back half of the year"
+    },
+    {
+      "source_id": "gd_8b5d26f7b5da7709193fcdb6",
+      "claim": "The $10M to $100M path is no longer inevitable",
+      "claim_type": "fact",
+      "support_span": "The $10M to $100M path is no longer inevitable"
+    }
+  ],
+  "validation_rejected": [
+    {
+      "source_id": "gd_d6df94b37fa8cbecc13b60e9",
+      "claim": "Many top SaaS and Cloud stocks are up +40%-60% or more in the back half of the year",
+      "support_span": "Many top SaaS and Cloud stocks are up +40%-60% or more in the back half of the year",
+      "claim_type": "fact",
+      "reason": "support_not_in_source"
+    }
+  ],
+  "verifier_rejected": [],
+  "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] The SaaS of 2021 isn't dead\n[E2] The growth rate of B2B SaaS companies dropped from 30% in 2023 to 25% in 2024\n[E3] The 6.9% of companies reporting flat or negative growth is still well below the 13% peak we saw in 2020\n[E4] The $10M to $100M path is no longer inevitable",
+  "raw_extraction": "[\n  {\n    \"source_id\": \"gd_3a1abe6cc8ce1e3e0b241ddc\",\n    \"claim\": \"The SaaS of 2021 isn't dead\",\n    \"claim_type\": \"fact\",\n    \"support_span\": \"The SaaS of 2021 isn't dead\"\n  },\n  {\n    \"source_id\": \"gd_78a8331869cec9a0326358f9\",\n    \"claim\": \"The growth rate of B2B SaaS companies dropped from 30% in 2023 to 25% in 2024\",\n    \"claim_type\": \"number\",\n    \"support_span\": \"Overall median growth dropped from 30% in 2023 to 25% in 2024\"\n  },\n  {\n    \"source_id\": \"gd_78a8331869cec9a0326358f9\",\n    \"claim\": \"The 6.9% of companies reporting flat or negative growth is still well below the 13% peak we saw in 2020\",\n    \"claim_type\": \"number\",\n    \"support_span\": \"The 6.9% of companies reporting flat or negative growth is still well below the 13% peak we saw in 2020\"\n  },\n  {\n    \"source_id\": \"gd_d6df94b37fa8cbecc13b60e9\",\n    \"claim\": \"Many top SaaS and Cloud stocks are up +40%-60% or more in the back half of the year\",\n    \"claim_type\": \"fact\",\n    \"support_span\": \"Many top SaaS and Cloud stocks are up +40%-60% or more in the back half of the year\"\n  },\n  {\n    \"source_id\": \"gd_8b5d26f7b5da7709193fcdb6\",\n    \"claim\": \"The $10M to $100M path is no longer inevitable\",\n    \"claim_type\": \"fact\",\n    \"support_span\": \"The $10M to $100M path is no longer inevitable\"\n  }\n]",
+  "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: SaaS Isn’t Dead. But the Way You Used to Win in B2B? That’s Gone.\n\nSource passages:\n[gd_3a1abe6cc8ce1e3e0b241ddc]\nAttribution status: named_author. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\n\"The SaaS of 2021 isn't dead ... but it's dying. It's geriatric. But B2B software is on fire. It's growing faster than ever. There is huge budget for AI efficiency, for replacing humans in roles. They are conflicting currents. It can seem to some like the worst time in B2B, and to others, the best of times -- by far.\"\n\n[gd_78a8331869cec9a0326358f9]\nAttribution status: publication_page. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nSaaS Capital just dropped their 14th annual survey\nanalyzing growth rates across 1,000+ private B2B SaaS companies. This isn’t your typical “here’s what public companies are doing” report – this is real data from real private companies dealing with real challenges in 2025.\nAlso, importantly, it’s not just a survey of venture-backed start-ups.  They go broader, and it encompasses many slower growing start-ups.    A\nnd it excludes many AI high-fliers.\nIt’s a good look at\nall\nB2B start-ups, not just the higher fliers.\nAfter diving deep into their findings, here are the 5 game-changing insights every B2B founder and executive needs to understand right now.\nLearning #1: The Growth Reality Check – We’re Back to Pre-March 2020 Levels of Growth For Most (And That’s Actually OK)\nThe brutal truth\n:\nOverall median growth dropped from 30% in 2023 to 25% in 2024. Yes, you read that right – a 5 percentage point decline year-over-year.\nBut here’s what most people are missing:\nThis isn’t necessarily bad news.\nThe survey reveals we’re returning to “pre-pandemic levels”, we’re normalizing after the artificial highs of 2021-2022. Remember when everyone was throwing money at anything with “SaaS” in the name? Those days are over, and frankly, that’s healthy.\nWhat this means for you:\nIf you’re hitting 25% growth, you’re literally at the median – don’t panic\n.  That’s not enough to raise a big VC round, but it does put you at the median.\nThe 6.9% of companies reporting flat or negative growth is still well below the 13% peak we saw in 2020\n.  No excuses, folks 😉\nFocus on sustainable growth over vanity metrics\nif\n\n[gd_d6df94b37fa8cbecc13b60e9]\nAttribution status: publication_page. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nSo it was just 8 months ago\nwe wrote “Is SaaS Dead?\n” and the post not only took off, it summarized a zeitgeist, a malaise, a feeling across much of B2B at the start of 2024. That SaaS was Dead. A combination of AI and buyer retrenchment had killed it. What a difference 8 months makes. It’s not 2021 again, but so much has changed for the better as the year ends:\nMany top SaaS and Cloud stocks are up +40%-60% or more in the back half of the yea\nr. Not all of them, but so many. This makes everyone feel … richer. They are richer. Many top SaaS and Cloud leaders have seen growth re-accelerate\n. This is a bigger deal. Shopify is growing far faster today at $9B ARR (a stunning 26%) than it was just a year before (21%). Even folks that were struggling to rebound from pandemic-fueled growth like Twilio have bounced back, to an extent at least. Twilio is now above 10% growth again. This isn’t 2020 levels of growth, but acceleration is acceleration. Many SaaS leaders are now benefitting from selling AI\n. Salesforce has seen a boost. Dialpad has seen\nstunning re-acceleration, from $200m ARR last year to $300m+ this year\n. Not everyone has benefitted from selling AI to their base. But a number have. IPOs are restarting — and really good ones are coming\n. There have only been 4 SaaS IPOs since 2021, but they’ve done well, and ServiceTitan had a big pop in its recent IPO. The pipeline looks strong for the back half of 2025 and into 2026, from Canva to Databricks to Stripe to Wiz to Snyk and on and on. More liquidity makes everyone feel better\n\n[gd_8b5d26f7b5da7709193fcdb6]\nAttribution status: publication_page. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nAI Just Changed the Rules of SaaS: What Every Founder Needs to Know\nThe SaaS Operators do deep dives on eCommerce B2B issues, and reached out to see if we’d to their podcast. We did and it ended up being a great deep dive on just how AI is changing the entire B2B software industry. Profoundly. And what you need to be doing about it. The brutal truth about how AI is reshaping B2B software—and why the playbook you used to scale to $10M won’t get you to $100M anymore\nTop 5 Takeaways\n•\nThe $10M to $100M path is no longer inevitable\n— High NRR + good team used to guarantee growth, but AI disruption means every customer is back in market shopping for vendors\n•\nAI native advantages are real but temporary\n— Startups can exploit the “installed base debt” of established players who are too busy servicing existing customers to go all-in on AI transformation\n•\nDeploy, don’t just buy AI tools\n— Every founder should personally deploy one new AI tool monthly; managing AI requires daily iteration and is as much work as managing humans\n•\nPlatform attachment is now existential\n— In e-commerce, Shopify is the entire game at $12B ARR; VCs won’t fund pure ecosystem plays anymore unless they’re Stripe-level disruptive\n•\nFire the resisters immediately. Kindly, but immediately\n— Most management teams don’t want to adapt to the new reality; you’re better off with half the company that embraces change than keeping people who resist\nThe Old Rules Are Dead. Period. If you’re still building your SaaS company like it’s 2021, you’re going to fail. Not struggling—failing.\n\nThe amount of disruption happening in B2B software right now is unprecedented, and it’s accelerating faster than most founders realize. Here’s the uncomfortable truth: The pre-AI products and lifestyle business model that worked beautifully",
+  "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: SaaS Isn’t Dead. But the Way You Used to Win in B2B? That’s Gone.\n\nSource passages:\n[gd_3a1abe6cc8ce1e3e0b241ddc]\nAttribution status: named_author. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\n\"The SaaS of 2021 isn't dead ... but it's dying. It's geriatric. But B2B software is on fire. It's growing faster than ever. There is huge budget for AI efficiency, for replacing humans in roles. They are conflicting currents. It can seem to some like the worst time in B2B, and to others, the best of times -- by far.\"\n\n[gd_78a8331869cec9a0326358f9]\nAttribution status: publication_page. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nSaaS Capital just dropped their 14th annual survey\nanalyzing growth rates across 1,000+ private B2B SaaS companies. This isn’t your typical “here’s what public companies are doing” report – this is real data from real private companies dealing with real challenges in 2025.\nAlso, importantly, it’s not just a survey of venture-backed start-ups.  They go broader, and it encompasses many slower growing start-ups.    A\nnd it excludes many AI high-fliers.\nIt’s a good look at\nall\nB2B start-ups, not just the higher fliers.\nAfter diving deep into their findings, here are the 5 game-changing insights every B2B founder and executive needs to understand right now.\nLearning #1: The Growth Reality Check – We’re Back to Pre-March 2020 Levels of Growth For Most (And That’s Actually OK)\nThe brutal truth\n:\nOverall median growth dropped from 30% in 2023 to 25% in 2024. Yes, you read that right – a 5 percentage point decline year-over-year.\nBut here’s what most people are missing:\nThis isn’t necessarily bad news.\nThe survey reveals we’re returning to “pre-pandemic levels”, we’re normalizing after the artificial highs of 2021-2022. Remember when everyone was throwing money at anything with “SaaS” in the name? Those days are over, and frankly, that’s healthy.\nWhat this means for you:\nIf you’re hitting 25% growth, you’re literally at the median – don’t panic\n.  That’s not enough to raise a big VC round, but it does put you at the median.\nThe 6.9% of companies reporting flat or negative growth is still well below the 13% peak we saw in 2020\n.  No excuses, folks 😉\nFocus on sustainable growth over vanity metrics\nif\n\n[gd_d6df94b37fa8cbecc13b60e9]\nAttribution status: publication_page. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nSo it was just 8 months ago\nwe wrote “Is SaaS Dead?\n” and the post not only took off, it summarized a zeitgeist, a malaise, a feeling across much of B2B at the start of 2024. That SaaS was Dead. A combination of AI and buyer retrenchment had killed it. What a difference 8 months makes. It’s not 2021 again, but so much has changed for the better as the year ends:\nMany top SaaS and Cloud stocks are up +40%-60% or more in the back half of the yea\nr. Not all of them, but so many. This makes everyone feel … richer. They are richer. Many top SaaS and Cloud leaders have seen growth re-accelerate\n. This is a bigger deal. Shopify is growing far faster today at $9B ARR (a stunning 26%) than it was just a year before (21%). Even folks that were struggling to rebound from pandemic-fueled growth like Twilio have bounced back, to an extent at least. Twilio is now above 10% growth again. This isn’t 2020 levels of growth, but acceleration is acceleration. Many SaaS leaders are now benefitting from selling AI\n. Salesforce has seen a boost. Dialpad has seen\nstunning re-acceleration, from $200m ARR last year to $300m+ this year\n. Not everyone has benefitted from selling AI to their base. But a number have. IPOs are restarting — and really good ones are coming\n. There have only been 4 SaaS IPOs since 2021, but they’ve done well, and ServiceTitan had a big pop in its recent IPO. The pipeline looks strong for the back half of 2025 and into 2026, from Canva to Databricks to Stripe to Wiz to Snyk and on and on. More liquidity makes everyone feel better\n\n[gd_8b5d26f7b5da7709193fcdb6]\nAttribution status: publication_page. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nAI Just Changed the Rules of SaaS: What Every Founder Needs to Know\nThe SaaS Operators do deep dives on eCommerce B2B issues, and reached out to see if we’d to their podcast. We did and it ended up being a great deep dive on just how AI is changing the entire B2B software industry. Profoundly. And what you need to be doing about it. The brutal truth about how AI is reshaping B2B software—and why the playbook you used to scale to $10M won’t get you to $100M anymore\nTop 5 Takeaways\n•\nThe $10M to $100M path is no longer inevitable\n— High NRR + good team used to guarantee growth, but AI disruption means every customer is back in market shopping for vendors\n•\nAI native advantages are real but temporary\n— Startups can exploit the “installed base debt” of established players who are too busy servicing existing customers to go all-in on AI transformation\n•\nDeploy, don’t just buy AI tools\n— Every founder should personally deploy one new AI tool monthly; managing AI requires daily iteration and is as much work as managing humans\n•\nPlatform attachment is now existential\n— In e-commerce, Shopify is the entire game at $12B ARR; VCs won’t fund pure ecosystem plays anymore unless they’re Stripe-level disruptive\n•\nFire the resisters immediately. Kindly, but immediately\n— Most management teams don’t want to adapt to the new reality; you’re better off with half the company that embraces change than keeping people who resist\nThe Old Rules Are Dead. Period. If you’re still building your SaaS company like it’s 2021, you’re going to fail. Not struggling—failing.\n\nThe amount of disruption happening in B2B software right now is unprecedented, and it’s accelerating faster than most founders realize. Here’s the uncomfortable truth: The pre-AI products and lifestyle business model that worked beautifully<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+  "extraction_seconds": 12.852,
+  "verification_seconds": 0.0,
+  "verification_records": [],
+  "allowed_numeric_values": [
+    "pct:13",
+    "pct:25",
+    "pct:30",
+    "pct:6.9",
+    "usd:10000000",
+    "usd:100000000",
+    "year:2020",
+    "year:2021",
+    "year:2023",
+    "year:2024"
+  ],
+  "reason": null,
+  "extraction_attempts": 1,
+  "extraction_stop_reason": "eos",
+  "extraction_hits_used": [
+    "gd_3a1abe6cc8ce1e3e0b241ddc",
+    "gd_78a8331869cec9a0326358f9",
+    "gd_d6df94b37fa8cbecc13b60e9",
+    "gd_8b5d26f7b5da7709193fcdb6"
+  ],
+  "extraction_hits_omitted": [],
+  "extraction_prompt_tokens": 1731,
+  "extraction_context_limit": 2048,
+  "extraction_input_truncated": false
+}

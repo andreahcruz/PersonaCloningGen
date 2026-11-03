@@ -1,0 +1,208 @@
+{
+  "proposed": [
+    {
+      "source_id": "train_12965",
+      "claim": "Figma's business has delivered",
+      "claim_type": "fact",
+      "support_span": "It's now crossed $1B in ARR growing a stunning 41%"
+    },
+    {
+      "source_id": "train_13283",
+      "claim": "Figma's LTM revenue is $821M",
+      "claim_type": "number",
+      "support_span": "$821M LTM revenue"
+    },
+    {
+      "source_id": "train_13283",
+      "claim": "Figma's YoY growth is 46%",
+      "claim_type": "number",
+      "support_span": "46% YoY growth"
+    },
+    {
+      "source_id": "train_13283",
+      "claim": "Figma's non-GAAP operating margin is 18%",
+      "claim_type": "number",
+      "support_span": "18% non-GAAP operating margin"
+    },
+    {
+      "source_id": "train_13283",
+      "claim": "Figma has $1.5B+ cash and zero debt",
+      "claim_type": "fact",
+      "support_span": "$1.5B+ cash, ZERO debt"
+    },
+    {
+      "source_id": "train_13283",
+      "claim": "Figma's gross margins are 91%",
+      "claim_type": "number",
+      "support_span": "91% gross margins"
+    },
+    {
+      "source_id": "train_13283",
+      "claim": "Figma's net dollar retention is 132%",
+      "claim_type": "number",
+      "support_span": "132% net dollar retention"
+    },
+    {
+      "source_id": "train_13283",
+      "claim": "78% of Forbes 2000 use Figma",
+      "claim_type": "number",
+      "support_span": "78% of Forbes 2000 use Figma"
+    },
+    {
+      "source_id": "train_13283",
+      "claim": "76% of Figma's customers use 2+ products",
+      "claim_type": "number",
+      "support_span": "76% use 2+ products"
+    },
+    {
+      "source_id": "train_3026",
+      "claim": "Figma crossed $1B ARR",
+      "claim_type": "fact",
+      "support_span": "Figma crossed $1B ARR"
+    },
+    {
+      "source_id": "train_3026",
+      "claim": "Figma's ARR growth is 41%",
+      "claim_type": "number",
+      "support_span": "growing a stunning 41%"
+    },
+    {
+      "source_id": "train_3026",
+      "claim": "Figma has $100m+ of net income",
+      "claim_type": "number",
+      "support_span": "With $100m+ of net income"
+    },
+    {
+      "source_id": "train_3026",
+      "claim": "Figma's free cash flow margins are 24%",
+      "claim_type": "number",
+      "support_span": "And 24% free cash flow margins"
+    },
+    {
+      "source_id": "train_3026",
+      "claim": "1,119 customers paying $100K+ ARR, up from 963 last quarter (+16% QoQ growth)",
+      "claim_type": "fact",
+      "support_span": "1,119 customers paying $100K+ ARR, up from 963 last quarter (+16% QoQ growth)"
+    }
+  ],
+  "raw_extraction": "[\n  {\n    \"source_id\": \"train_12965\",\n    \"claim\": \"Figma's business has delivered\",\n    \"claim_type\": \"fact\",\n    \"support_span\": \"It's now crossed $1B in ARR growing a stunning 41%\"\n  },\n  {\n    \"source_id\": \"train_13283\",\n    \"claim\": \"Figma's LTM revenue is $821M\",\n    \"claim_type\": \"number\",\n    \"support_span\": \"$821M LTM revenue\"\n  },\n  {\n    \"source_id\": \"train_13283\",\n    \"claim\": \"Figma's YoY growth is 46%\",\n    \"claim_type\": \"number\",\n    \"support_span\": \"46% YoY growth\"\n  },\n  {\n    \"source_id\": \"train_13283\",\n    \"claim\": \"Figma's non-GAAP operating margin is 18%\",\n    \"claim_type\": \"number\",\n    \"support_span\": \"18% non-GAAP operating margin\"\n  },\n  {\n    \"source_id\": \"train_13283\",\n    \"claim\": \"Figma has $1.5B+ cash and zero debt\",\n    \"claim_type\": \"fact\",\n    \"support_span\": \"$1.5B+ cash, ZERO debt\"\n  },\n  {\n    \"source_id\": \"train_13283\",\n    \"claim\": \"Figma's gross margins are 91%\",\n    \"claim_type\": \"number\",\n    \"support_span\": \"91% gross margins\"\n  },\n  {\n    \"source_id\": \"train_13283\",\n    \"claim\": \"Figma's net dollar retention is 132%\",\n    \"claim_type\": \"number\",\n    \"support_span\": \"132% net dollar retention\"\n  },\n  {\n    \"source_id\": \"train_13283\",\n    \"claim\": \"78% of Forbes 2000 use Figma\",\n    \"claim_type\": \"number\",\n    \"support_span\": \"78% of Forbes 2000 use Figma\"\n  },\n  {\n    \"source_id\": \"train_13283\",\n    \"claim\": \"76% of Figma's customers use 2+ products\",\n    \"claim_type\": \"number\",\n    \"support_span\": \"76% use 2+ products\"\n  },\n  {\n    \"source_id\": \"train_3026\",\n    \"claim\": \"Figma crossed $1B ARR\",\n    \"claim_type\": \"fact\",\n    \"support_span\": \"Figma crossed $1B ARR\"\n  },\n  {\n    \"source_id\": \"train_3026\",\n    \"claim\": \"Figma's ARR growth is 41%\",\n    \"claim_type\": \"number\",\n    \"support_span\": \"growing a stunning 41%\"\n  },\n  {\n    \"source_id\": \"train_3026\",\n    \"claim\": \"Figma has $100m+ of net income\",\n    \"claim_type\": \"number\",\n    \"support_span\": \"With $100m+ of net income\"\n  },\n  {\n    \"source_id\": \"train_3026\",\n    \"claim\": \"Figma's free cash flow margins are 24%\",\n    \"claim_type\": \"number\",\n    \"support_span\": \"And 24% free cash flow margins\"\n  },\n  {\n    \"source_id\": \"train_3026\",\n    \"claim\": \"1,119 customers paying $100K+ ARR, up from 963 last quarter (+16% QoQ growth)\",\n    \"claim_type\": \"fact\",\n    \"support_span\": \"1,119 customers paying $100K+ ARR, up from 963 last quarter (+16% QoQ growth)\"\n  }\n]",
+  "validation_rejected": [],
+  "verifier_rejected": [],
+  "verified": [
+    {
+      "source_id": "train_12965",
+      "claim": "Figma's business has delivered",
+      "support_span": "It's now crossed $1B in ARR growing a stunning 41%",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_13283",
+      "claim": "Figma's LTM revenue is $821M",
+      "support_span": "$821M LTM revenue",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_13283",
+      "claim": "Figma's YoY growth is 46%",
+      "support_span": "46% YoY growth",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_13283",
+      "claim": "Figma's non-GAAP operating margin is 18%",
+      "support_span": "18% non-GAAP operating margin",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_13283",
+      "claim": "Figma has $1.5B+ cash and zero debt",
+      "support_span": "$1.5B+ cash, ZERO debt",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_13283",
+      "claim": "Figma's gross margins are 91%",
+      "support_span": "91% gross margins",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_13283",
+      "claim": "Figma's net dollar retention is 132%",
+      "support_span": "132% net dollar retention",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_13283",
+      "claim": "78% of Forbes 2000 use Figma",
+      "support_span": "78% of Forbes 2000 use Figma",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_13283",
+      "claim": "76% of Figma's customers use 2+ products",
+      "support_span": "76% use 2+ products",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_3026",
+      "claim": "Figma crossed $1B ARR",
+      "support_span": "Figma crossed $1B ARR",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_3026",
+      "claim": "Figma's ARR growth is 41%",
+      "support_span": "growing a stunning 41%",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_3026",
+      "claim": "Figma has $100m+ of net income",
+      "support_span": "With $100m+ of net income",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_3026",
+      "claim": "Figma's free cash flow margins are 24%",
+      "support_span": "And 24% free cash flow margins",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_3026",
+      "claim": "1,119 customers paying $100K+ ARR, up from 963 last quarter (+16% QoQ growth)",
+      "support_span": "1,119 customers paying $100K+ ARR, up from 963 last quarter (+16% QoQ growth)",
+      "claim_type": "fact"
+    }
+  ],
+  "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] Figma's business has delivered\n[E2] Figma's LTM revenue is $821M\n[E3] Figma's YoY growth is 46%\n[E4] Figma's non-GAAP operating margin is 18%\n[E5] Figma has $1.5B+ cash and zero debt\n[E6] Figma's gross margins are 91%\n[E7] Figma's net dollar retention is 132%\n[E8] 78% of Forbes 2000 use Figma\n[E9] 76% of Figma's customers use 2+ products\n[E10] Figma crossed $1B ARR\n[E11] Figma's ARR growth is 41%\n[E12] Figma has $100m+ of net income\n[E13] Figma's free cash flow margins are 24%\n[E14] 1,119 customers paying $100K+ ARR, up from 963 last quarter (+16% QoQ growth)",
+  "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Figma Just Hit $304M in a Single Quarter. Growing 40%. And Just Like That — SaaS is Back.\n\nSource passages:\n[train_12965]\nSo Figma stock has had a wild ride since its IPO.  But the business itself?\n\nMan, it's delivered.\n\nIt's now crossed $1B in ARR growing a stunning 41% (!)\n\n[train_13283]\nFIGMA S-1 DROPPED\n\nThe numbers are … strong:\n\n$821M LTM revenue (46% YoY growth) \n 18% non-GAAP operating margin (turned profitable!) \n $1.5B+ cash, ZERO debt \n 91% gross margins (best-in-class SaaS) \n 132% net dollar retention (sticky AF) \n 78% of Forbes 2000 use Figma \n 76% use 2+ products (platform expansion)\n\nFrom massive losses to 18% operating margins.\n\nThis is how you prep for an IPO.\n\nTrading under $FIG on NYSE soon\n\n[train_12474]\n🚨 FIGMA S-1 DROPPED 🚨 The numbers are … strong: 📈 $821M LTM revenue (46% YoY growth) 💰 18% non-GAAP operating margin (turned profitable!) 🏦 $1.5B+ cash, ZERO debt 📊 91% gross margins (best-in-class SaaS) 🔄 132% net dollar retention (sticky AF) 🏢 78% of Forbes 2000 use Figma 📦 76% use 2+ products (platform expansion) From massive losses to 18% operating margins. This is how you prep for an IPO. Trading under $FIG on NYSE soon 👑\n\n[train_3026]\nSo Figma recently closed its first full quarter as a public company and man it was a good one:\nFigma crossed $1B ARR\ngrowing a stunning 41%\nWith $100m+ of net income\nAnd 24% free cash flow margins\nJust … wow.  Many of the public B2B and SaaS leaders may be struggling, in low growth mode.  But the best of it?  On fire.\n5 Interesting Learnings:\n\n#1. Enterprise Customers Continue to Accelerate at Scale\nThe Numbers\n:\n1,119 customers paying $100K+ ARR, up from 963 last quarter (+16% QoQ growth). This segment now represents the fastest-growing customer cohort.\nWhy This Matters\n:\nAt $1B+ ARR run rate, growth increasingly comes from land-and-expand with large enterprises rather than new logo acquisition. The $100K+ cohort represents less than 10% of total paid customers but likely drives 40-60% of revenue.\nTakeaway\n:\nTrack your $100K+ ACV customers as a separate cohort early. At scale, this becomes your primary growth engine.",
+  "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Figma Just Hit $304M in a Single Quarter. Growing 40%. And Just Like That — SaaS is Back.\n\nSource passages:\n[train_12965]\nSo Figma stock has had a wild ride since its IPO.  But the business itself?\n\nMan, it's delivered.\n\nIt's now crossed $1B in ARR growing a stunning 41% (!)\n\n[train_13283]\nFIGMA S-1 DROPPED\n\nThe numbers are … strong:\n\n$821M LTM revenue (46% YoY growth) \n 18% non-GAAP operating margin (turned profitable!) \n $1.5B+ cash, ZERO debt \n 91% gross margins (best-in-class SaaS) \n 132% net dollar retention (sticky AF) \n 78% of Forbes 2000 use Figma \n 76% use 2+ products (platform expansion)\n\nFrom massive losses to 18% operating margins.\n\nThis is how you prep for an IPO.\n\nTrading under $FIG on NYSE soon\n\n[train_12474]\n🚨 FIGMA S-1 DROPPED 🚨 The numbers are … strong: 📈 $821M LTM revenue (46% YoY growth) 💰 18% non-GAAP operating margin (turned profitable!) 🏦 $1.5B+ cash, ZERO debt 📊 91% gross margins (best-in-class SaaS) 🔄 132% net dollar retention (sticky AF) 🏢 78% of Forbes 2000 use Figma 📦 76% use 2+ products (platform expansion) From massive losses to 18% operating margins. This is how you prep for an IPO. Trading under $FIG on NYSE soon 👑\n\n[train_3026]\nSo Figma recently closed its first full quarter as a public company and man it was a good one:\nFigma crossed $1B ARR\ngrowing a stunning 41%\nWith $100m+ of net income\nAnd 24% free cash flow margins\nJust … wow.  Many of the public B2B and SaaS leaders may be struggling, in low growth mode.  But the best of it?  On fire.\n5 Interesting Learnings:\n\n#1. Enterprise Customers Continue to Accelerate at Scale\nThe Numbers\n:\n1,119 customers paying $100K+ ARR, up from 963 last quarter (+16% QoQ growth). This segment now represents the fastest-growing customer cohort.\nWhy This Matters\n:\nAt $1B+ ARR run rate, growth increasingly comes from land-and-expand with large enterprises rather than new logo acquisition. The $100K+ cohort represents less than 10% of total paid customers but likely drives 40-60% of revenue.\nTakeaway\n:\nTrack your $100K+ ACV customers as a separate cohort early. At scale, this becomes your primary growth engine.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+  "extraction_seconds": 20.391,
+  "verification_seconds": 0.0,
+  "verification_records": [],
+  "allowed_numeric_values": [
+    "n:1119",
+    "n:963",
+    "pct:132",
+    "pct:16",
+    "pct:18",
+    "pct:24",
+    "pct:40",
+    "pct:41",
+    "pct:46",
+    "pct:76",
+    "pct:78",
+    "pct:91",
+    "usd:100000",
+    "usd:100000000",
+    "usd:1000000000",
+    "usd:1500000000",
+    "usd:304000000",
+    "usd:821000000",
+    "year:2000"
+  ],
+  "reason": null,
+  "extraction_stop_reason": "eos",
+  "extraction_attempts": 1,
+  "evidence_status": "verified"
+}

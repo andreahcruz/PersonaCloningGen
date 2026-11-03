@@ -1,0 +1,366 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "topic_id": "gold_022",
+  "medium": "x",
+  "arm": "on",
+  "seed": 128,
+  "attempts": 1,
+  "evidence_sha256": "1e0b5e5dc08d3f58886befe990183caa34d06f34efe53d85ad48e9ef34fa6dcc",
+  "retrieval_hit_ids": [
+    "train_5658",
+    "train_12534",
+    "train_12764",
+    "train_3359"
+  ],
+  "retrieval_query": "The Cowan Paradox: Why AI Agents Won’t Let You Do Less Work. They’ll Make You Do More.",
+  "retrieval_filter": null,
+  "style_applied": true,
+  "style_in_prompt": true,
+  "prompt_tokens": 621,
+  "generated_tokens_including_stop": 61,
+  "latency_seconds": 3.353,
+  "exemplar_ids": [
+    12508,
+    12509
+  ],
+  "saved_at": "2026-10-30T10:01:21.545310+00:00",
+  "trace": {
+    "id": "gold_022",
+    "format": "x_thread",
+    "topic": "The Cowan Paradox: Why AI Agents Won’t Let You Do Less Work. They’ll Make You Do More.",
+    "audience": "B2B SaaS founders and operators",
+    "goal": "Explain the paradox that AI agents increase managerial and operational work.",
+    "cta": "none",
+    "k": 8,
+    "expected_facts": [
+      "The answer should explain that AI agents expand what teams can attempt, which often increases work.",
+      "It should argue that management, supervision, and orchestration become more important, not less.",
+      "It should connect the paradox to founder expectations about leverage."
+    ],
+    "rubric_must_haves": [
+      "Names and explains the paradox clearly.",
+      "Connects the idea to day-to-day operating reality.",
+      "Avoids simplistic automation optimism.",
+      "Includes a concrete implication for founders or managers."
+    ],
+    "gold_reference": "A strong answer should explain that AI agents create leverage, but leverage usually expands the amount of work teams attempt rather than shrinking the need for judgment and management. As a result, founders often find themselves supervising more workflows, more experiments, and more exceptions. The lesson is to expect amplified operations, not effortless simplification.",
+    "medium": "x",
+    "prompt": "Write an X post in the style of Jason Lemkin about: The Cowan Paradox: Why AI Agents Won’t Let You Do Less Work. They’ll Make You Do More.\n\nStyle examples from train-owned source text.\nUse them for voice only. They are not evidence for claims.\nDo not copy long passages verbatim.\n[Style 1]\nEveryone has an AI strategy. Almost nobody has agents in production.\n\nThat's the gap.\n\nGet ahead of the pack. Take 1 day our and join \nhttp://SaaStrDeploy.com '26 — our first-ever AI GTM Agent Summit inside of SaaStr AI 2026. May 12, SF.\n\nOne day. One mission. Deploy your AI agents.  No more excuses.\n[Style 2]\n\"The public markets just don't believe public leaders' revenue is durable anymore.\n\nSo the markets are going to panic every time we see any evidence their revenue might be even ... less durable.\" with \n@HarryStebbings\n \n@rodriscoll\n + me\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] AI enables you to do more things at scale than were ever possible before.\n[E2] 20 AI Agents aren't less work than the humans they replaced.\n[E3] AI don't quit, they don't stop, they don't need promotions or even career growth.\n[E4] AI can do a better job than humans.\n[E5] Humans naturally create boundaries.\n[E6] AI agents don’t create boundaries.\n[E7] AI agents don’t sleep.\n[E8] AI agents don’t disconnect.\n[E9] This creates an insidious pressure to match their pace.\n[E10] It's not sustainable.\n\nNow write the requested X post about: The Cowan Paradox: Why AI Agents Won’t Let You Do Less Work. They’ll Make You Do More.",
+    "rendered_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nWrite an X post in the style of Jason Lemkin about: The Cowan Paradox: Why AI Agents Won’t Let You Do Less Work. They’ll Make You Do More.\n\nStyle examples from train-owned source text.\nUse them for voice only. They are not evidence for claims.\nDo not copy long passages verbatim.\n[Style 1]\nEveryone has an AI strategy. Almost nobody has agents in production.\n\nThat's the gap.\n\nGet ahead of the pack. Take 1 day our and join \nhttp://SaaStrDeploy.com '26 — our first-ever AI GTM Agent Summit inside of SaaStr AI 2026. May 12, SF.\n\nOne day. One mission. Deploy your AI agents.  No more excuses.\n[Style 2]\n\"The public markets just don't believe public leaders' revenue is durable anymore.\n\nSo the markets are going to panic every time we see any evidence their revenue might be even ... less durable.\" with \n@HarryStebbings\n \n@rodriscoll\n + me\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] AI enables you to do more things at scale than were ever possible before.\n[E2] 20 AI Agents aren't less work than the humans they replaced.\n[E3] AI don't quit, they don't stop, they don't need promotions or even career growth.\n[E4] AI can do a better job than humans.\n[E5] Humans naturally create boundaries.\n[E6] AI agents don’t create boundaries.\n[E7] AI agents don’t sleep.\n[E8] AI agents don’t disconnect.\n[E9] This creates an insidious pressure to match their pace.\n[E10] It's not sustainable.\n\nNow write the requested X post about: The Cowan Paradox: Why AI Agents Won’t Let You Do Less Work. They’ll Make You Do More.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "answer": "The Cowan Paradox: Why AI Agents Won’t Let You Do Less Work. They’ll Make You Do More.\n\nThis isn’t a bug—it’s the fundamental design of how intelligent systems actually operate.\n\nWe’re witnessing something unprecedented:\n\nAI agents don’t just augment what existing teams could already accomplish.",
+    "raw_model_output": "The Cowan Paradox: Why AI Agents Won’t Let You Do Less Work. They’ll Make You Do More.\n\nThis isn’t a bug—it’s the fundamental design of how intelligent systems actually operate.\n\nWe’re witnessing something unprecedented:\n\nAI agents don’t just augment what existing teams could already accomplish.",
+    "deployment_output": "The Cowan Paradox: Why AI Agents Won’t Let You Do Less Work. They’ll Make You Do More.\n\nThis isn’t a bug—it’s the fundamental design of how intelligent systems actually operate.\n\nWe’re witnessing something unprecedented:\n\nAI agents don’t just augment what existing teams could already accomplish.",
+    "first_attempt_answer": "The Cowan Paradox: Why AI Agents Won’t Let You Do Less Work. They’ll Make You Do More.\n\nThis isn’t a bug—it’s the fundamental design of how intelligent systems actually operate.\n\nWe’re witnessing something unprecedented:\n\nAI agents don’t just augment what existing teams could already accomplish.",
+    "retry_answer": null,
+    "query": "The Cowan Paradox: Why AI Agents Won’t Let You Do Less Work. They’ll Make You Do More.",
+    "max_new_tokens": 160,
+    "seed": 128,
+    "retry_seed": null,
+    "deployment_accepted": true,
+    "repair_occurred": false,
+    "generation_attempt": {
+      "seed": 128,
+      "answer": "The Cowan Paradox: Why AI Agents Won’t Let You Do Less Work. They’ll Make You Do More.\n\nThis isn’t a bug—it’s the fundamental design of how intelligent systems actually operate.\n\nWe’re witnessing something unprecedented:\n\nAI agents don’t just augment what existing teams could already accomplish.",
+      "numeric_grounding": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [],
+        "values": [],
+        "unsupported": []
+      },
+      "rag_source_copying": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 4,
+        "document_id": "train_3359",
+        "matched_generated_span": "ai agents don t",
+        "matched_retrieved_span": "ai agents don t"
+      },
+      "stop_reason": "eos"
+    },
+    "repair_attempt": null,
+    "accepted_attempt": 1,
+    "rag_source_copying": {
+      "applicable": true,
+      "threshold": 12,
+      "pass": true,
+      "flagged": false,
+      "max_contiguous_words": 4,
+      "document_id": "train_3359",
+      "matched_generated_span": "ai agents don t",
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 4,
+        "document_id": "train_3359",
+        "matched_generated_span": "ai agents don t",
+        "matched_retrieved_span": "ai agents don t"
+      },
+      "retry": null,
+      "retry_occurred": false,
+      "repair_occurred": false
+    },
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [],
+        "values": [],
+        "unsupported": []
+      },
+      "retry": null
+    },
+    "prompt_tokens": 621,
+    "backend": "unsloth",
+    "retrieval": true,
+    "retrieval_query": "The Cowan Paradox: Why AI Agents Won’t Let You Do Less Work. They’ll Make You Do More.",
+    "retrieval_filter": null,
+    "retrieval_k": 4,
+    "retrieval_hits": [
+      {
+        "id": "train_5658",
+        "text": "Because AI, used right, enables you to do more things at scale than were ever possible before.",
+        "medium": "blog",
+        "group_id": "3ef9a59bb0a55314d8a76f0358b4c2ebf3d828b7b276d160b2ca77dbe8760fc2",
+        "row_id": 5658,
+        "split": "train",
+        "distance": 0.24826842546463013
+      },
+      {
+        "id": "train_12534",
+        "text": "\"20 AI Agents aren't less work than the humans they replaced.\n\nBut it's just ... easier.  They don't quit, they don't stop, they don't need promotions or even career growth.\n\nIt's easier to work with well-trained AI Agents than ... mid-pack and below humans.\"  More below",
+        "medium": "x",
+        "group_id": "55c1aa72a28e03771b749b486e5ee6cd6a2b4661d1bd2707a3dff14c910f16ba",
+        "row_id": 12534,
+        "split": "train",
+        "distance": 0.2559003233909607
+      },
+      {
+        "id": "train_12764",
+        "text": "This is why AI will soon take 50%+ of sales jobs\n\nNot because we don’t need sales.  But because AI can do a better job than this.",
+        "medium": "x",
+        "group_id": "dc5926fa4dfe5b1cdaeb46c4f221c04723956b4e558a0ab54e179e52e73a6450",
+        "row_id": 12764,
+        "split": "train",
+        "distance": 0.2759242653846741
+      },
+      {
+        "id": "train_3359",
+        "text": "2. The Always-On Pressure\nHumans naturally create boundaries. We go home, we sleep, we disconnect. AI agents don’t. This creates an insidious pressure to match their pace.\nI caught myself checking AI-generated reports at 11 PM because “the agents found something important.” This isn’t sustainable, and it’s not what AI was supposed to solve.",
+        "medium": "blog",
+        "group_id": "3d5ec7f3270c5fa292ac5116668c571f3065e3a0886f1437ae837061a1e1602a",
+        "row_id": 3359,
+        "split": "train",
+        "distance": 0.27679723501205444
+      }
+    ],
+    "copying": [
+      {
+        "id": "train_5658",
+        "shared_word_span": 1
+      },
+      {
+        "id": "train_12534",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_12764",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_3359",
+        "shared_word_span": 2
+      }
+    ],
+    "retrieval_backend": "dense",
+    "proposed_atomic_claims": [
+      {
+        "source_id": "train_5658",
+        "claim": "AI enables you to do more things at scale than were ever possible before.",
+        "support_span": "Because AI, used right, enables you to do more things at scale than were ever possible before.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12534",
+        "claim": "20 AI Agents aren't less work than the humans they replaced.",
+        "support_span": "20 AI Agents aren't less work than the humans they replaced.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12534",
+        "claim": "AI don't quit, they don't stop, they don't need promotions or even career growth.",
+        "support_span": "They don't quit, they don't stop, they don't need promotions or even career growth.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12534",
+        "claim": "It's easier to work with well-trained AI Agents than mid-pack and below humans.",
+        "support_span": "It's easier to work with well-trained AI Agents than... mid-pack and below humans.",
+        "claim_type": "comparison"
+      },
+      {
+        "source_id": "train_12764",
+        "claim": "AI can do a better job than humans.",
+        "support_span": "But because AI can do a better job than this.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_3359",
+        "claim": "Humans naturally create boundaries.",
+        "support_span": "Humans naturally create boundaries.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_3359",
+        "claim": "AI agents don’t create boundaries.",
+        "support_span": "AI agents don’t.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_3359",
+        "claim": "AI agents don’t sleep.",
+        "support_span": "AI agents don’t.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_3359",
+        "claim": "AI agents don’t disconnect.",
+        "support_span": "AI agents don’t.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_3359",
+        "claim": "This creates an insidious pressure to match their pace.",
+        "support_span": "This creates an insidious pressure to match their pace.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_3359",
+        "claim": "It's not sustainable.",
+        "support_span": "This isn’t sustainable, and it’s not what AI was supposed to solve.",
+        "claim_type": "fact"
+      }
+    ],
+    "validation_rejected": [
+      {
+        "source_id": "train_12534",
+        "claim": "It's easier to work with well-trained AI Agents than mid-pack and below humans.",
+        "support_span": "It's easier to work with well-trained AI Agents than... mid-pack and below humans.",
+        "claim_type": "comparison",
+        "reason": "support_not_in_source"
+      }
+    ],
+    "verifier_rejected": [],
+    "verified_claims": [
+      {
+        "source_id": "train_5658",
+        "claim": "AI enables you to do more things at scale than were ever possible before.",
+        "support_span": "Because AI, used right, enables you to do more things at scale than were ever possible before.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12534",
+        "claim": "20 AI Agents aren't less work than the humans they replaced.",
+        "support_span": "20 AI Agents aren't less work than the humans they replaced.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12534",
+        "claim": "AI don't quit, they don't stop, they don't need promotions or even career growth.",
+        "support_span": "They don't quit, they don't stop, they don't need promotions or even career growth.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12764",
+        "claim": "AI can do a better job than humans.",
+        "support_span": "But because AI can do a better job than this.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_3359",
+        "claim": "Humans naturally create boundaries.",
+        "support_span": "Humans naturally create boundaries.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_3359",
+        "claim": "AI agents don’t create boundaries.",
+        "support_span": "AI agents don’t.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_3359",
+        "claim": "AI agents don’t sleep.",
+        "support_span": "AI agents don’t.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_3359",
+        "claim": "AI agents don’t disconnect.",
+        "support_span": "AI agents don’t.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_3359",
+        "claim": "This creates an insidious pressure to match their pace.",
+        "support_span": "This creates an insidious pressure to match their pace.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_3359",
+        "claim": "It's not sustainable.",
+        "support_span": "This isn’t sustainable, and it’s not what AI was supposed to solve.",
+        "claim_type": "fact"
+      }
+    ],
+    "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] AI enables you to do more things at scale than were ever possible before.\n[E2] 20 AI Agents aren't less work than the humans they replaced.\n[E3] AI don't quit, they don't stop, they don't need promotions or even career growth.\n[E4] AI can do a better job than humans.\n[E5] Humans naturally create boundaries.\n[E6] AI agents don’t create boundaries.\n[E7] AI agents don’t sleep.\n[E8] AI agents don’t disconnect.\n[E9] This creates an insidious pressure to match their pace.\n[E10] It's not sustainable.",
+    "raw_extraction": "[\n  {\n    \"source_id\": \"train_5658\",\n    \"claim\": \"AI enables you to do more things at scale than were ever possible before.\",\n    \"support_span\": \"Because AI, used right, enables you to do more things at scale than were ever possible before.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_12534\",\n    \"claim\": \"20 AI Agents aren't less work than the humans they replaced.\",\n    \"support_span\": \"20 AI Agents aren't less work than the humans they replaced.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_12534\",\n    \"claim\": \"AI don't quit, they don't stop, they don't need promotions or even career growth.\",\n    \"support_span\": \"They don't quit, they don't stop, they don't need promotions or even career growth.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_12534\",\n    \"claim\": \"It's easier to work with well-trained AI Agents than mid-pack and below humans.\",\n    \"support_span\": \"It's easier to work with well-trained AI Agents than... mid-pack and below humans.\",\n    \"claim_type\": \"comparison\"\n  },\n  {\n    \"source_id\": \"train_12764\",\n    \"claim\": \"AI can do a better job than humans.\",\n    \"support_span\": \"But because AI can do a better job than this.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_3359\",\n    \"claim\": \"Humans naturally create boundaries.\",\n    \"support_span\": \"Humans naturally create boundaries.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_3359\",\n    \"claim\": \"AI agents don’t create boundaries.\",\n    \"support_span\": \"AI agents don’t.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_3359\",\n    \"claim\": \"AI agents don’t sleep.\",\n    \"support_span\": \"AI agents don’t.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_3359\",\n    \"claim\": \"AI agents don’t disconnect.\",\n    \"support_span\": \"AI agents don’t.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_3359\",\n    \"claim\": \"This creates an insidious pressure to match their pace.\",\n    \"support_span\": \"This creates an insidious pressure to match their pace.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_3359\",\n    \"claim\": \"It's not sustainable.\",\n    \"support_span\": \"This isn’t sustainable, and it’s not what AI was supposed to solve.\",\n    \"claim_type\": \"fact\"\n  }\n]",
+    "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: The Cowan Paradox: Why AI Agents Won’t Let You Do Less Work. They’ll Make You Do More.\n\nSource passages:\n[train_5658]\nBecause AI, used right, enables you to do more things at scale than were ever possible before.\n\n[train_12534]\n\"20 AI Agents aren't less work than the humans they replaced.\n\nBut it's just ... easier.  They don't quit, they don't stop, they don't need promotions or even career growth.\n\nIt's easier to work with well-trained AI Agents than ... mid-pack and below humans.\"  More below\n\n[train_12764]\nThis is why AI will soon take 50%+ of sales jobs\n\nNot because we don’t need sales.  But because AI can do a better job than this.\n\n[train_3359]\n2. The Always-On Pressure\nHumans naturally create boundaries. We go home, we sleep, we disconnect. AI agents don’t. This creates an insidious pressure to match their pace.\nI caught myself checking AI-generated reports at 11 PM because “the agents found something important.” This isn’t sustainable, and it’s not what AI was supposed to solve.",
+    "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: The Cowan Paradox: Why AI Agents Won’t Let You Do Less Work. They’ll Make You Do More.\n\nSource passages:\n[train_5658]\nBecause AI, used right, enables you to do more things at scale than were ever possible before.\n\n[train_12534]\n\"20 AI Agents aren't less work than the humans they replaced.\n\nBut it's just ... easier.  They don't quit, they don't stop, they don't need promotions or even career growth.\n\nIt's easier to work with well-trained AI Agents than ... mid-pack and below humans.\"  More below\n\n[train_12764]\nThis is why AI will soon take 50%+ of sales jobs\n\nNot because we don’t need sales.  But because AI can do a better job than this.\n\n[train_3359]\n2. The Always-On Pressure\nHumans naturally create boundaries. We go home, we sleep, we disconnect. AI agents don’t. This creates an insidious pressure to match their pace.\nI caught myself checking AI-generated reports at 11 PM because “the agents found something important.” This isn’t sustainable, and it’s not what AI was supposed to solve.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "extraction_seconds": 16.36,
+    "verification_seconds": 0.0,
+    "verification_records": [],
+    "llm_verifier_on_critical_path": false,
+    "allowed_numeric_values": [],
+    "distillation_adapter_enabled": false,
+    "verification_adapter_enabled": false,
+    "distillation_backend": "same_loaded_4bit_base_adapter_off",
+    "distillation_do_sample": false,
+    "extraction_max_new_tokens": 2560,
+    "verification_max_new_tokens": 24,
+    "distillation_seed": 0,
+    "support_spans_in_generator_prompt": false,
+    "evidence_stage_reason": null,
+    "evidence_status": "verified",
+    "extraction_attempts": 1,
+    "extraction_stop_reason": "eos",
+    "prompt_contract": "factual-reliability-v1",
+    "fixed_style_enabled": true,
+    "style_applied": true,
+    "style_exemplar_count": 2,
+    "latency_seconds": 3.353,
+    "generated_tokens_including_stop": 61,
+    "last_token_id": 128009,
+    "effective_eos_token_ids": [
+      128001,
+      128008,
+      128009
+    ],
+    "stop_reason": "eos",
+    "budget_fraction": 0.38125,
+    "early_eos": true,
+    "first_attempt_stop_reason": "eos",
+    "retry_stop_reason": null
+  }
+}

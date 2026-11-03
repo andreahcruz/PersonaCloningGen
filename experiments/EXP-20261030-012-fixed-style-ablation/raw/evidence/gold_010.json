@@ -1,0 +1,162 @@
+{
+  "proposed": [
+    {
+      "source_id": "train_1835",
+      "claim": "When NRR drops below 110%, alarm bells should go off.",
+      "support_span": "When NRR drops below 110%, alarm bells should go off.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_6611",
+      "claim": "Don't settle for less growth than Your NRR + 20%",
+      "support_span": "Don't settle for less growth than Your NRR + 20%",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_9114",
+      "claim": "Don't settle for less growth than Your NRR + 20%",
+      "support_span": "Don't settle for less growth than Your NRR + 20%",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_1542",
+      "claim": "NRR is the canary in the coal mine.",
+      "support_span": "NRR is the canary in the coal mine.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_1835",
+      "claim": "Below 100%, you're in serious trouble.",
+      "support_span": "Below 100%, you're in serious trouble.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_1542",
+      "claim": "Snowflake's decline from 158% to 125% foreshadowed everything else.",
+      "support_span": "Snowflake's decline from 158% to 125% foreshadowed everything else.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_9114",
+      "claim": "Don't hide in renewals.",
+      "support_span": "Don't hide in renewals.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_9114",
+      "claim": "Don't force your base to pay more than they want to.",
+      "support_span": "Don't force your base to pay more than they want to.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_1542",
+      "claim": "If your best customers aren't expanding, you have a problem.",
+      "support_span": "If your best customers aren't expanding, you have a problem.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_6611",
+      "claim": "E.g., if your NRR is 120%, even if times are tougher, don't settle for growing at least +40% next year.",
+      "support_span": "E.g., if your NRR is 120%, even if times are tougher, don't settle for growing at least +40% next year.",
+      "claim_type": "example"
+    },
+    {
+      "source_id": "train_9114",
+      "claim": "E.g., if your NRR is 120%, even if times are tougher, don't settle for growing at least +40% next year.",
+      "support_span": "E.g., if your NRR is 120%, even if times are tougher, don't settle for growing at least +40% next year.",
+      "claim_type": "example"
+    }
+  ],
+  "raw_extraction": "[\n  {\n    \"source_id\": \"train_1835\",\n    \"claim\": \"When NRR drops below 110%, alarm bells should go off.\",\n    \"support_span\": \"When NRR drops below 110%, alarm bells should go off.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_6611\",\n    \"claim\": \"Don't settle for less growth than Your NRR + 20%\",\n    \"support_span\": \"Don't settle for less growth than Your NRR + 20%\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_9114\",\n    \"claim\": \"Don't settle for less growth than Your NRR + 20%\",\n    \"support_span\": \"Don't settle for less growth than Your NRR + 20%\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_1542\",\n    \"claim\": \"NRR is the canary in the coal mine.\",\n    \"support_span\": \"NRR is the canary in the coal mine.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_1835\",\n    \"claim\": \"Below 100%, you're in serious trouble.\",\n    \"support_span\": \"Below 100%, you're in serious trouble.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_1542\",\n    \"claim\": \"Snowflake's decline from 158% to 125% foreshadowed everything else.\",\n    \"support_span\": \"Snowflake's decline from 158% to 125% foreshadowed everything else.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_9114\",\n    \"claim\": \"Don't hide in renewals.\",\n    \"support_span\": \"Don't hide in renewals.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_9114\",\n    \"claim\": \"Don't force your base to pay more than they want to.\",\n    \"support_span\": \"Don't force your base to pay more than they want to.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_1542\",\n    \"claim\": \"If your best customers aren't expanding, you have a problem.\",\n    \"support_span\": \"If your best customers aren't expanding, you have a problem.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_6611\",\n    \"claim\": \"E.g., if your NRR is 120%, even if times are tougher, don't settle for growing at least +40% next year.\",\n    \"support_span\": \"E.g., if your NRR is 120%, even if times are tougher, don't settle for growing at least +40% next year.\",\n    \"claim_type\": \"example\"\n  },\n  {\n    \"source_id\": \"train_9114\",\n    \"claim\": \"E.g., if your NRR is 120%, even if times are tougher, don't settle for growing at least +40% next year.\",\n    \"support_span\": \"E.g., if your NRR is 120%, even if times are tougher, don't settle for growing at least +40% next year.\",\n    \"claim_type\": \"example\"\n  }\n]",
+  "validation_rejected": [
+    {
+      "source_id": "train_1835",
+      "claim": "When NRR drops below 110%, alarm bells should go off.",
+      "support_span": "When NRR drops below 110%, alarm bells should go off.",
+      "claim_type": "fact",
+      "reason": "interrogative_assertion"
+    },
+    {
+      "source_id": "train_1542",
+      "claim": "If your best customers aren't expanding, you have a problem.",
+      "support_span": "If your best customers aren't expanding, you have a problem.",
+      "claim_type": "fact",
+      "reason": "interrogative_assertion"
+    }
+  ],
+  "verifier_rejected": [],
+  "verified": [
+    {
+      "source_id": "train_6611",
+      "claim": "Don't settle for less growth than Your NRR + 20%",
+      "support_span": "Don't settle for less growth than Your NRR + 20%",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_9114",
+      "claim": "Don't settle for less growth than Your NRR + 20%",
+      "support_span": "Don't settle for less growth than Your NRR + 20%",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_1542",
+      "claim": "NRR is the canary in the coal mine.",
+      "support_span": "NRR is the canary in the coal mine.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_1835",
+      "claim": "Below 100%, you're in serious trouble.",
+      "support_span": "Below 100%, you're in serious trouble.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_1542",
+      "claim": "Snowflake's decline from 158% to 125% foreshadowed everything else.",
+      "support_span": "Snowflake's decline from 158% to 125% foreshadowed everything else.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_9114",
+      "claim": "Don't hide in renewals.",
+      "support_span": "Don't hide in renewals.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_9114",
+      "claim": "Don't force your base to pay more than they want to.",
+      "support_span": "Don't force your base to pay more than they want to.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_6611",
+      "claim": "E.g., if your NRR is 120%, even if times are tougher, don't settle for growing at least +40% next year.",
+      "support_span": "E.g., if your NRR is 120%, even if times are tougher, don't settle for growing at least +40% next year.",
+      "claim_type": "example"
+    },
+    {
+      "source_id": "train_9114",
+      "claim": "E.g., if your NRR is 120%, even if times are tougher, don't settle for growing at least +40% next year.",
+      "support_span": "E.g., if your NRR is 120%, even if times are tougher, don't settle for growing at least +40% next year.",
+      "claim_type": "example"
+    }
+  ],
+  "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] Don't settle for less growth than Your NRR + 20%\n[E2] Don't settle for less growth than Your NRR + 20%\n[E3] NRR is the canary in the coal mine.\n[E4] Below 100%, you're in serious trouble.\n[E5] Snowflake's decline from 158% to 125% foreshadowed everything else.\n[E6] Don't hide in renewals.\n[E7] Don't force your base to pay more than they want to.\n[E8] E.g., if your NRR is 120%, even if times are tougher, don't settle for growing at least +40% next year.\n[E9] E.g., if your NRR is 120%, even if times are tougher, don't settle for growing at least +40% next year.",
+  "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: What to Do If You’re An NRR Zombie\n\nSource passages:\n[train_1835]\n1. NRR is destiny.\nWhen NRR drops below 110%, alarm bells should go off. Below 100%, you’re in serious trouble. Monitor this metric religiously.\n\n[train_6611]\n#4.  Don’t settle for less growth than Your NRR + 20%\n.\nE.g., if your NRR is 120%, even if times are tougher, don’t settle for growing at least +40% next year. Don’t hide in excuses and a high NRR.  Don’t hide in renewals and in your CRO forcing the base to pay more.  Force yourself to at least grow +20% more than your NRR.\n\n[train_9114]\n#4.  Don’t settle for less growth than Your NRR + 20%\n.  E.g., if your NRR is 120%, even if times are tougher, don’t settle for growing at least +40% next year.  Not all your customer base has evaporated.  Don’t hide in excuses and a high NRR.  Don’t hide in renewals.  Don’t force your base to pay more than they want to.  Force yourself to at least grow +20% more than your NRR.\n\n[train_1542]\n2. NRR is the canary in the coal mine.\nSnowflake’s decline from 158% to 125% foreshadowed everything else. If your best customers aren’t expanding, you have a problem.",
+  "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: What to Do If You’re An NRR Zombie\n\nSource passages:\n[train_1835]\n1. NRR is destiny.\nWhen NRR drops below 110%, alarm bells should go off. Below 100%, you’re in serious trouble. Monitor this metric religiously.\n\n[train_6611]\n#4.  Don’t settle for less growth than Your NRR + 20%\n.\nE.g., if your NRR is 120%, even if times are tougher, don’t settle for growing at least +40% next year. Don’t hide in excuses and a high NRR.  Don’t hide in renewals and in your CRO forcing the base to pay more.  Force yourself to at least grow +20% more than your NRR.\n\n[train_9114]\n#4.  Don’t settle for less growth than Your NRR + 20%\n.  E.g., if your NRR is 120%, even if times are tougher, don’t settle for growing at least +40% next year.  Not all your customer base has evaporated.  Don’t hide in excuses and a high NRR.  Don’t hide in renewals.  Don’t force your base to pay more than they want to.  Force yourself to at least grow +20% more than your NRR.\n\n[train_1542]\n2. NRR is the canary in the coal mine.\nSnowflake’s decline from 158% to 125% foreshadowed everything else. If your best customers aren’t expanding, you have a problem.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+  "extraction_seconds": 18.992,
+  "verification_seconds": 0.0,
+  "verification_records": [],
+  "allowed_numeric_values": [
+    "pct:100",
+    "pct:120",
+    "pct:125",
+    "pct:158",
+    "pct:20",
+    "pct:40"
+  ],
+  "reason": null,
+  "extraction_stop_reason": "eos",
+  "extraction_attempts": 1,
+  "evidence_status": "verified"
+}

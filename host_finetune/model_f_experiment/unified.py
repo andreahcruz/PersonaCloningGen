@@ -228,6 +228,20 @@ def assert_unified_snapshot(path: Path) -> None:
 
 
 UNIFIED_EXPERIMENT_ID = "EXP-20261102-001-model-f-unified-panel"
+
+
+def panel_experiment_id(directory: Path) -> str:
+    """Use a versioned output directory name when this panel is a separate run.
+
+    The original F-REL directory keeps its existing id. A later directory such
+    as the F-SOURCE panel records its own name and does not rewrite that run.
+    """
+    name = Path(directory).name
+    if name.startswith("EXP-"):
+        return name
+    return UNIFIED_EXPERIMENT_ID
+
+
 GOLD_SHA256 = "d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e"
 JUDGE = {
     "model": "qwen2.5:14b",
@@ -334,7 +348,7 @@ def write_plan(directory: Path, profile: str, snapshot: Path, selection: Path | 
     if gold_sha != GOLD_SHA256:
         raise ValueError("the gold file hash does not match the frozen 120-prompt panel")
     plan = {
-        "experiment_id": UNIFIED_EXPERIMENT_ID,
+        "experiment_id": panel_experiment_id(directory),
         "protocol": "unified_eval.v1",
         "status": "prepared_not_run",
         "profile": profile,
@@ -507,11 +521,15 @@ def record_posthoc_arm(directory: Path, profile: str) -> dict:
         "does_not_modify": "experiments/EXP-model-f-desc-vs-rel-32/desc_vs_rel_recommendation.json",
         "frozen_pilot_arm": "F-SOURCE",
         "frozen_pilot_unchanged": True,
+        "later_engineering_selection": "F-REL",
+        "later_engineering_selection_directory": "experiments/EXP-20261102-001-model-f-unified-panel",
+        "this_run_profile": profile,
         "stage2_recommendation_unchanged": True,
         "reason": (
-            f"{profile} is the engineering profile for this panel. "
-            "The frozen pilot remains F-SOURCE. The stage-2 recommendation file is unchanged. "
-            "This panel was not used to make the choice."
+            f"This directory runs {profile}. "
+            "The frozen pilot selection remains F-SOURCE. "
+            "The later engineering selection remains F-REL. "
+            "This panel does not revise either decision."
         ),
     }
     directory.mkdir(parents=True, exist_ok=True)
@@ -836,6 +854,12 @@ def judge_saved_panel(directory: Path, profile: str) -> dict:
     profile = require_profile(profile)
     directory = Path(directory)
     assert_writable_panel(directory)
+    experiment_id = panel_experiment_id(directory)
+    plan_path = directory / "unified_plan.json"
+    if plan_path.is_file():
+        recorded = json.loads(plan_path.read_text(encoding="utf-8")).get("experiment_id")
+        if recorded:
+            experiment_id = str(recorded)
     traces, missing = collect_judge_traces(directory, profile)
     if missing or len(traces) != PANEL_SIZE:
         raise RuntimeError(
@@ -962,7 +986,7 @@ def judge_saved_panel(directory: Path, profile: str) -> dict:
                 stance_role=stance_gate["role"],
             )
             row["model"] = profile
-            row["source_experiment"] = UNIFIED_EXPERIMENT_ID
+            row["source_experiment"] = experiment_id
             row["generation_sha256"] = generation_sha
             row["schema"] = SCHEMA
             scored_rows.append(row)
@@ -970,7 +994,7 @@ def judge_saved_panel(directory: Path, profile: str) -> dict:
             handle.flush()
     (directory / "metrics").mkdir(parents=True, exist_ok=True)
     (directory / "metrics" / "rows.jsonl").write_text(rows_path.read_text(encoding="utf-8"), encoding="utf-8")
-    summary = summarize_model(scored_rows, f"{UNIFIED_EXPERIMENT_ID}/{profile}", UNIFIED_EXPERIMENT_ID)
+    summary = summarize_model(scored_rows, f"{experiment_id}/{profile}", experiment_id)
     payload = {
         "schema": SCHEMA,
         "utility_weights": UTILITY_WEIGHTS,

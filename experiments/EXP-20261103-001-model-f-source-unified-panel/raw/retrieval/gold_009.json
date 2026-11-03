@@ -1,0 +1,1550 @@
+{
+  "status": "complete",
+  "question_id": "gold_009",
+  "query": "5 Interesting Learnings from Atlassian at Almost $3 Billion in ARR",
+  "retrieval": {
+    "backend": "lightrag",
+    "mode": "hybrid",
+    "evidence_budget": 4,
+    "top_k": 20
+  },
+  "payload": {
+    "status": "success",
+    "message": "Query processed successfully",
+    "data": {
+      "entities": [
+        {
+          "entity_name": "$5 Billion",
+          "entity_type": "other",
+          "description": "$5 Billion is a significant amount of money.",
+          "source_id": "gd_5526629b3d33ecf02b9b6951-chunk-001",
+          "file_path": "gd_5526629b3d33ecf02b9b6951",
+          "created_at": 1793494581
+        },
+        {
+          "entity_name": "$6.4B+ ARR",
+          "entity_type": "concept",
+          "description": "$6.4B+ ARR is Atlassian's annual recurring revenue.",
+          "source_id": "gd_5452a21f583d7a1ce5646101-chunk-000",
+          "file_path": "gd_5452a21f583d7a1ce5646101",
+          "created_at": 1793609174
+        },
+        {
+          "entity_name": "5 Interesting Learning series",
+          "entity_type": "concept",
+          "description": "The 5 Interesting Learning series is a collection of articles analyzing SaaS companies.<SEP>A series of learnings and insights shared by the author.",
+          "source_id": "gd_35e2a72ebda9a867d1609c05-chunk-000<SEP>gd_085568b71c36eb109160b42e-chunk-000",
+          "file_path": "gd_35e2a72ebda9a867d1609c05<SEP>gd_085568b71c36eb109160b42e",
+          "created_at": 1793595177
+        },
+        {
+          "entity_name": "Atlassian",
+          "entity_type": "product",
+          "description": "Atlassian is a software company that provides collaboration and productivity tools for teams. Founded by Mike Cannon-Brookes and Scott Farquhar, Atlassian has a unique approach to business, focusing on building a strong brand and avoiding dilution. The company's primary focus is on creating innovative tools that cater to the needs of businesses and developers, with a product suite that includes Jira, Confluence, and Trello.\n\nAtlassian has seen significant growth in its subscription revenue, with a 33% increase in the past year, and has a large customer base, with 500 customers generating over $1 million in revenue each year. The company has a global presence, with 51% of its revenue generated from outside North America, highlighting its reach and appeal to international businesses. Atlassian has also pursued a mostly \"no discounts\" policy, which has contributed to its growth and success.\n\nHowever, Atlassian has also struggled with growth due to high customer concentration in the tech industry. Despite this, the company has achieved significant growth and profitability, and is planning to hit $10B ARR in 5 years. Atlassian's unique approach to business has disrupted traditional enterprise software approaches, and the company has successfully scaled its business by breaking conventional enterprise software playbooks and creating new kinds of value.\n\nIn addition to its core products, Atlassian has also added Freemium editions to several of its core products, resulting in a tripling of sign-ups. The company has also invested heavily in AI research and development, and has a market cap of over $50B and revenue of over $5B. Atlassian's cloud revenue is growing 26%, and its RPO is up 44%. The company has a strong focus on innovation and customer satisfaction, and has developed Jira, a project management tool, and owns Jira, a software company that provides collaboration and productivity tools for teams.\n\nAtlassian is also a leading provider of developer tools, and its collaboration software includes tools for project management, development, and issue tracking, making it a comprehensive solution for teams. The company has implemented a cloud-first pricing strategy, and has announced future price increases across its Standard, Premium, and Enterprise tiers. Atlassian is a cloud-based development and collaboration platform, and a software development platform that provides collaboration and development tools.\n\nIn summary, Atlassian is a B2B software company that provides collaboration and productivity tools for teams, with a unique approach to business and a strong focus on innovation and customer satisfaction. The company has achieved significant growth and profitability, and is planning to hit $10B ARR in 5 years.",
+          "source_id": "gd_1cc7db10c34d802d7c089d9f-chunk-000<SEP>gd_1cc7db10c34d802d7c089d9f-chunk-001<SEP>gd_7865bc0261d26a8a8da9a626-chunk-000<SEP>gd_7865bc0261d26a8a8da9a626-chunk-001<SEP>gd_d1423816ab12475e55e09a39-chunk-000<SEP>gd_070a59055548e31a4e2d028a-chunk-000<SEP>gd_19e03611f1ed50347b81fb3e-chunk-001<SEP>gd_6fb60835ce398d0db2fac037-chunk-002<SEP>gd_6fb60835ce398d0db2fac037-chunk-003<SEP>gd_5526629b3d33ecf02b9b6951-chunk-000<SEP>gd_9e5c348350596b05e4000d2b-chunk-000<SEP>gd_876a5093c19836d00564b7a3-chunk-000<SEP>gd_8c81486cc1789c7975082f46-chunk-000<SEP>gd_1995ecc726794340d2c1c523-chunk-000<SEP>gd_b75f4cd65a5597ce3fa78d3b-chunk-001<SEP>gd_bf3576e52949d3600bf1e778-chunk-000<SEP>gd_bf3576e52949d3600bf1e778-chunk-001<SEP>gd_c1e9d1572caf7b2632adf129-chunk-000<SEP>gd_c1e9d1572caf7b2632adf129-chunk-001<SEP>gd_d032b97ad647886e0e116542-chunk-000<SEP>gd_dc77af0a29d1d9a6022d6301-chunk-000<SEP>gd_3eb0d6dd205274318ede670c-chunk-003<SEP>gd_409c0da0777cbb41bc6655ae-chunk-001<SEP>gd_409c0da0777cbb41bc6655ae-chunk-002<SEP>gd_0f847996a1ab3ec008a393c3-chunk-000<SEP>gd_0f847996a1ab3ec008a393c3-chunk-001<SEP>gd_c83bf75262a7beba5a5178ce-chunk-000<SEP>gd_4d3bc1fda477bad7aa02e5b6-chunk-001<SEP>gd_562428ed0fbfd2c7c9e7e139-chunk-000<SEP>gd_562428ed0fbfd2c7c9e7e139-chunk-001<SEP>gd_562428ed0fbfd2c7c9e7e139-chunk-002<SEP>gd_b473ac30ca1f132ce5440bba-chunk-000<SEP>gd_7fb7e01a7be820d17b0fd2ff-chunk-000<SEP>gd_5a74e007239d6fa585aa9d42-chunk-000<SEP>gd_5a74e007239d6fa585aa9d42-chunk-001<SEP>gd_027f1f4d4a5f1427dc9cf748-chunk-000<SEP>gd_c4d88074f382c56078d251bf-chunk-002<SEP>gd_c4d88074f382c56078d251bf-chunk-003<SEP>gd_5ebe9ad0324f615be28ce5a6-chunk-000<SEP>gd_64f2b6036a15f010be7f3a1d-chunk-000<SEP>gd_fc560134d5cd034812dc8b69-chunk-000<SEP>gd_0aa2c1232edf29ef850211c5-chunk-000<SEP>gd_830b1b91c9594b6c5f83a431-chunk-001<SEP>gd_1ec6e750a5915487f6b0f4fa-chunk-000<SEP>gd_a61bd5a262b3206434038339-chunk-000<SEP>gd_aafe6164084bc84cbf056a39-chunk-000<SEP>gd_aafe6164084bc84cbf056a39-chunk-001<SEP>gd_ad4399ea29a32c2b3537e550-chunk-000<SEP>gd_b6e4509693f55652d6720194-chunk-001<SEP>gd_5f88a04a8254899f62e5dece-chunk-000<SEP>gd_606606c10d0a838faa49fd61-chunk-000<SEP>gd_ec3d26e97aaf29783bf1cc74-chunk-001<SEP>gd_efbaa09ea2525e90e20556df-chunk-000<SEP>gd_efbaa09ea2525e90e20556df-chunk-001<SEP>gd_efbaa09ea2525e90e20556df-chunk-002<SEP>gd_f08cd0499462cb9f7ebd5219-chunk-000<SEP>gd_efafcab53b7bc6909e6d8baf-chunk-001<SEP>gd_f3d3bc7a33373a6c6b138428-chunk-001<SEP>gd_21ad29dbc91188b19766598c-chunk-000<SEP>gd_21ad29dbc91188b19766598c-chunk-001<SEP>gd_4490a7d0a51a56a2b81cc489-chunk-000<SEP>gd_1db8851ad56bec3e841dbf86-chunk-001<SEP>gd_1db8851ad56bec3e841dbf86-chunk-002<SEP>gd_59b91b90c7bca58b13cca2ba-chunk-002<SEP>gd_5cee12338f5781cf3fc86de2-chunk-000<SEP>gd_79d299de1756fd2933a7673f-chunk-000<SEP>gd_70a4342562c701cb49469cde-chunk-000<SEP>gd_70a4342562c701cb49469cde-chunk-001<SEP>gd_70a4342562c701cb49469cde-chunk-002<SEP>gd_86ca0d59379f4d8de28dab1d-chunk-000<SEP>gd_86ca0d59379f4d8de28dab1d-chunk-001<SEP>gd_e06985c74890b6d620bb7c73-chunk-000<SEP>gd_a48dad30cf3032e3f22fcde5-chunk-000<SEP>gd_b84bb863a93fe024d576b691-chunk-000<SEP>gd_b84bb863a93fe024d576b691-chunk-001<SEP>gd_b9da22c04e0fa0f306cd64d9-chunk-000<SEP>gd_b9da22c04e0fa0f306cd64d9-chunk-001<SEP>gd_d2ae8fcc4620bb77f501c1ce-chunk-000<SEP>gd_ee1953fb4d4e788a8fcd0076-chunk-002<SEP>gd_ee1953fb4d4e788a8fcd0076-chunk-003<SEP>gd_f3b3bce3d73ac3fe2355d580-chunk-000<SEP>gd_fd2a720d5ccdbfd8e0349e77-chunk-000<SEP>gd_fd2a720d5ccdbfd8e0349e77-chunk-001<SEP>gd_1111076e178e7284eab11cf6-chunk-001<SEP>gd_4a79123a6f0bcc01c3ae5cee-chunk-000<SEP>gd_5ea880eb3548d655f51b5285-chunk-000<SEP>gd_c85d08b0a614790a6e60f5d3-chunk-008<SEP>gd_9aaaf87c9b9d043595bc5848-chunk-001<SEP>gd_9aaaf87c9b9d043595bc5848-chunk-003<SEP>gd_51f61376ab02cc151f9c2e33-chunk-000<SEP>gd_51f61376ab02cc151f9c2e33-chunk-001<SEP>gd_51f61376ab02cc151f9c2e33-chunk-002<SEP>gd_51f61376ab02cc151f9c2e33-chunk-003<SEP>gd_51f61376ab02cc151f9c2e33-chunk-005<SEP>gd_51f61376ab02cc151f9c2e33-chunk-006<SEP>gd_4305ca7b896da20cc09c6c3b-chunk-000<SEP>gd_ac4b8b9ed091ab54b1aba8f9-chunk-005<SEP>gd_a4194312fb5370f0de4ff5e4-chunk-004<SEP>gd_a4194312fb5370f0de4ff5e4-chunk-005<SEP>gd_ad079debb3a22f38cb6c1f3e-chunk-000<SEP>gd_bec03cccc4792714332d3b24-chunk-000<SEP>gd_c64ce5c65f3866446eb8edac-chunk-001<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-003<SEP>gd_080ffd5535b5743e593659d5-chunk-007<SEP>gd_080ffd5535b5743e593659d5-chunk-008<SEP>gd_c35411b4a1fb79ed39713a95-chunk-000<SEP>gd_1ea75faaa1a24bb0a1573ab5-chunk-008<SEP>gd_fc1aa6c9d79f8c0df65f23b8-chunk-000<SEP>gd_fc1aa6c9d79f8c0df65f23b8-chunk-001<SEP>gd_264f36d1cab20f425e0992cf-chunk-000<SEP>gd_41fab062bf5c10e06bdc771f-chunk-004<SEP>gd_5452a21f583d7a1ce5646101-chunk-000<SEP>gd_5452a21f583d7a1ce5646101-chunk-001<SEP>gd_5452a21f583d7a1ce5646101-chunk-002<SEP>gd_5452a21f583d7a1ce5646101-chunk-003<SEP>gd_5452a21f583d7a1ce5646101-chunk-004<SEP>gd_5452a21f583d7a1ce5646101-chunk-005<SEP>gd_8a750106d4513616691b5198-chunk-008<SEP>gd_b7769ae41d22fc197ddc2e8c-chunk-009<SEP>gd_59707322e6a2495f8caca90a-chunk-000<SEP>gd_59707322e6a2495f8caca90a-chunk-001<SEP>gd_59707322e6a2495f8caca90a-chunk-002<SEP>gd_8fe15d1e1f4d6d874c6ce1bb-chunk-000<SEP>gd_8fe15d1e1f4d6d874c6ce1bb-chunk-001<SEP>gd_9f64b63b5ae698d29604d98b-chunk-010<SEP>gd_0664caf8d2f71a2878bb38c9-chunk-000<SEP>gd_87e883631b8660ea245be6c6-chunk-000<SEP>gd_87e883631b8660ea245be6c6-chunk-001<SEP>gd_87e883631b8660ea245be6c6-chunk-002<SEP>gd_87e883631b8660ea245be6c6-chunk-003<SEP>gd_87e883631b8660ea245be6c6-chunk-004<SEP>gd_87e883631b8660ea245be6c6-chunk-006<SEP>gd_87e883631b8660ea245be6c6-chunk-007<SEP>gd_87e883631b8660ea245be6c6-chunk-008<SEP>gd_87e883631b8660ea245be6c6-chunk-010<SEP>gd_3165936d963d60a6dbcd9e79-chunk-002<SEP>gd_45895bb382839086f6554318-chunk-006<SEP>gd_45895bb382839086f6554318-chunk-007<SEP>gd_6d36e9d789605a02741458e1-chunk-003<SEP>gd_6d36e9d789605a02741458e1-chunk-004<SEP>gd_8fb6aa290d8ac667817c8b57-chunk-005<SEP>gd_8fb6aa290d8ac667817c8b57-chunk-007<SEP>gd_8fb6aa290d8ac667817c8b57-chunk-008<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-002<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-006<SEP>gd_815d204b1d3505892f9cc05a-chunk-001<SEP>gd_815d204b1d3505892f9cc05a-chunk-002<SEP>gd_14b875b7fc4c7d4068c628c6-chunk-002<SEP>gd_14b875b7fc4c7d4068c628c6-chunk-003<SEP>gd_14b875b7fc4c7d4068c628c6-chunk-007<SEP>gd_14b875b7fc4c7d4068c628c6-chunk-008<SEP>gd_14b875b7fc4c7d4068c628c6-chunk-011<SEP>gd_a351b7a8812fb540220d3381-chunk-002<SEP>gd_a351b7a8812fb540220d3381-chunk-010<SEP>gd_59c785375f34b0507b64485d-chunk-001<SEP>gd_59c785375f34b0507b64485d-chunk-010<SEP>gd_845dd3bb8fb4f09de1b94124-chunk-016<SEP>gd_9809d37cd527c2958295b062-chunk-015<SEP>gd_9809d37cd527c2958295b062-chunk-016",
+          "file_path": "gd_1cc7db10c34d802d7c089d9f<SEP>gd_7865bc0261d26a8a8da9a626<SEP>gd_d1423816ab12475e55e09a39<SEP>gd_070a59055548e31a4e2d028a<SEP>gd_19e03611f1ed50347b81fb3e<SEP>gd_6fb60835ce398d0db2fac037<SEP>gd_5526629b3d33ecf02b9b6951<SEP>gd_9e5c348350596b05e4000d2b<SEP>gd_876a5093c19836d00564b7a3<SEP>gd_8c81486cc1789c7975082f46<SEP>gd_1995ecc726794340d2c1c523<SEP>gd_b75f4cd65a5597ce3fa78d3b<SEP>gd_bf3576e52949d3600bf1e778<SEP>gd_c1e9d1572caf7b2632adf129<SEP>gd_d032b97ad647886e0e116542<SEP>gd_dc77af0a29d1d9a6022d6301<SEP>gd_3eb0d6dd205274318ede670c<SEP>gd_409c0da0777cbb41bc6655ae<SEP>gd_0f847996a1ab3ec008a393c3<SEP>gd_c83bf75262a7beba5a5178ce<SEP>gd_4d3bc1fda477bad7aa02e5b6<SEP>gd_562428ed0fbfd2c7c9e7e139<SEP>gd_b473ac30ca1f132ce5440bba<SEP>gd_7fb7e01a7be820d17b0fd2ff<SEP>gd_5a74e007239d6fa585aa9d42<SEP>gd_027f1f4d4a5f1427dc9cf748<SEP>gd_c4d88074f382c56078d251bf<SEP>gd_5ebe9ad0324f615be28ce5a6<SEP>gd_64f2b6036a15f010be7f3a1d<SEP>gd_fc560134d5cd034812dc8b69<SEP>gd_0aa2c1232edf29ef850211c5<SEP>gd_830b1b91c9594b6c5f83a431<SEP>gd_1ec6e750a5915487f6b0f4fa<SEP>gd_a61bd5a262b3206434038339<SEP>gd_aafe6164084bc84cbf056a39<SEP>gd_ad4399ea29a32c2b3537e550<SEP>gd_b6e4509693f55652d6720194<SEP>gd_5f88a04a8254899f62e5dece<SEP>gd_606606c10d0a838faa49fd61<SEP>gd_ec3d26e97aaf29783bf1cc74<SEP>gd_efbaa09ea2525e90e20556df<SEP>gd_f08cd0499462cb9f7ebd5219<SEP>gd_efafcab53b7bc6909e6d8baf<SEP>gd_f3d3bc7a33373a6c6b138428<SEP>gd_21ad29dbc91188b19766598c<SEP>gd_4490a7d0a51a56a2b81cc489<SEP>gd_1db8851ad56bec3e841dbf86<SEP>gd_59b91b90c7bca58b13cca2ba<SEP>gd_5cee12338f5781cf3fc86de2<SEP>gd_79d299de1756fd2933a7673f<SEP>gd_70a4342562c701cb49469cde<SEP>gd_86ca0d59379f4d8de28dab1d<SEP>gd_e06985c74890b6d620bb7c73<SEP>gd_a48dad30cf3032e3f22fcde5<SEP>gd_b84bb863a93fe024d576b691<SEP>gd_b9da22c04e0fa0f306cd64d9<SEP>gd_d2ae8fcc4620bb77f501c1ce<SEP>gd_ee1953fb4d4e788a8fcd0076<SEP>gd_f3b3bce3d73ac3fe2355d580<SEP>gd_fd2a720d5ccdbfd8e0349e77<SEP>gd_1111076e178e7284eab11cf6<SEP>gd_4a79123a6f0bcc01c3ae5cee<SEP>gd_5ea880eb3548d655f51b5285<SEP>gd_c85d08b0a614790a6e60f5d3<SEP>gd_9aaaf87c9b9d043595bc5848<SEP>gd_51f61376ab02cc151f9c2e33<SEP>gd_4305ca7b896da20cc09c6c3b<SEP>gd_ac4b8b9ed091ab54b1aba8f9<SEP>gd_a4194312fb5370f0de4ff5e4<SEP>gd_ad079debb3a22f38cb6c1f3e<SEP>gd_bec03cccc4792714332d3b24<SEP>gd_2a4d7b8a58e1c3110dd4d692<SEP>gd_080ffd5535b5743e593659d5<SEP>gd_c35411b4a1fb79ed39713a95<SEP>gd_1ea75faaa1a24bb0a1573ab5<SEP>...truncated...(KEEP Old)",
+          "created_at": 1793645915
+        },
+        {
+          "entity_name": "$5B",
+          "entity_type": "concept",
+          "description": "A $5 billion investment or valuation.<SEP>A valuation of $5 billion<SEP>A valuation of $5B.<SEP>$5B is Atlassian's ARR.",
+          "source_id": "gd_1ad10391f7c7d8033e146f8c-chunk-000<SEP>gd_1ad10391f7c7d8033e146f8c-chunk-001<SEP>gd_759dc39d9c3a8fbaa3fb5dc2-chunk-000<SEP>gd_b9da22c04e0fa0f306cd64d9-chunk-000",
+          "file_path": "gd_1ad10391f7c7d8033e146f8c<SEP>gd_759dc39d9c3a8fbaa3fb5dc2<SEP>gd_b9da22c04e0fa0f306cd64d9",
+          "created_at": 1793535284
+        },
+        {
+          "entity_name": "5 Interesting Learnings",
+          "entity_type": "concept",
+          "description": "A list of key takeaways from an article about Crowdstrike's performance.<SEP>5 Interesting Learnings is a series of articles that highlight important learnings from various companies.",
+          "source_id": "gd_13e89e60c3f8b41c3f077c76-chunk-000<SEP>gd_2c6f9645343251c1f939e00a-chunk-000<SEP>gd_c481ad6a3095befd2e0989e4-chunk-001",
+          "file_path": "gd_13e89e60c3f8b41c3f077c76<SEP>gd_2c6f9645343251c1f939e00a",
+          "created_at": 1793508147
+        },
+        {
+          "entity_name": "World Wide Web",
+          "entity_type": "concept",
+          "description": "The World Wide Web is a global system of interlinked hypertext documents.",
+          "source_id": "gd_b84bb863a93fe024d576b691-chunk-001",
+          "file_path": "gd_b84bb863a93fe024d576b691",
+          "created_at": 1793535033
+        },
+        {
+          "entity_name": "5 Interesting Learnings from Palantir at $3.5 Billion in ARR",
+          "entity_type": "UNKNOWN",
+          "description": "Palantir is winning by adapting to the new reality of the SaaS market, as highlighted in the article \"5 Interesting Learnings from Palantir at $3.5 Billion in ARR\".",
+          "source_id": "gd_753a13ceccfb779879f29786-chunk-004",
+          "file_path": "gd_753a13ceccfb779879f29786",
+          "created_at": 1793570345
+        },
+        {
+          "entity_name": "Rovo",
+          "entity_type": "product",
+          "description": "Atlassian's AI platform that is included at no additional cost for most users.<SEP>Rovo is an AI platform that is now included at no additional cost for all but the biggest power users.<SEP>Rovo is a product developed by Atlassian, likely a collaboration or project management tool.<SEP>Rovo is an AI product developed by Atlassian, used for code-generation and task management.<SEP>Rovo is a code-generation tool that is being used by Atlassian to improve its development process.",
+          "source_id": "gd_070a59055548e31a4e2d028a-chunk-000<SEP>gd_070a59055548e31a4e2d028a-chunk-001<SEP>gd_5452a21f583d7a1ce5646101-chunk-003<SEP>gd_5452a21f583d7a1ce5646101-chunk-004<SEP>gd_5452a21f583d7a1ce5646101-chunk-005",
+          "file_path": "gd_070a59055548e31a4e2d028a<SEP>gd_5452a21f583d7a1ce5646101",
+          "created_at": 1793609180
+        },
+        {
+          "entity_name": "$14.7 Billion",
+          "entity_type": "concept",
+          "description": "$14.7 Billion is the price at which Zoom attempted to acquire Five9.",
+          "source_id": "gd_22f503d26e4d8faf8274b928-chunk-002",
+          "file_path": "gd_22f503d26e4d8faf8274b928",
+          "created_at": 1793494986
+        },
+        {
+          "entity_name": "ARR",
+          "entity_type": "concept",
+          "description": "**Annual Recurring Revenue (ARR)**\n\nAnnual Recurring Revenue (ARR) is a key financial metric used to measure a company's revenue growth over a specific period of time. It represents the annual recurring revenue of a company, which is a crucial indicator of its financial health and stability. ARR is a measure of a company's revenue over a year, and it is widely used in the Software as a Service (SaaS) industry to evaluate business growth.\n\nThe concept of ARR is straightforward: it is the total revenue that a company can expect to generate from its existing customer base over a 12-month period. This metric is essential for investors, analysts, and business leaders to assess a company's financial performance and make informed decisions. ARR is often used in conjunction with other metrics, such as customer acquisition cost and customer lifetime value, to gain a comprehensive understanding of a company's revenue growth potential.\n\nIn essence, ARR is a measure of a company's ability to generate recurring revenue from its existing customer base, which is a critical factor in determining its long-term financial sustainability. By tracking ARR, companies can identify areas for improvement, optimize their revenue streams, and make data-driven decisions to drive growth and profitability.\n\nNotably, ARR has been achieved by several companies, including a milestone of $7m, which is a significant milestone. Crowdstrike's ARR has been growing at a rate of 37% at almost $3B, highlighting the importance of this metric in measuring business growth. ARR is also a key metric for SaaS companies, providing valuable insights into their revenue streams and growth potential.\n\nIt's worth noting that ARR is a key metric for sales efficiency, with a decline in efficiency expected after $8-$10m in ARR. This highlights the importance of monitoring ARR to ensure that sales efforts are optimized and revenue growth is sustained.\n\nIn recent years, the definition of ARR has evolved to include any software-related revenue with 100%+ Net Revenue Retention. This shift in definition reflects the changing landscape of the SaaS industry and the growing importance of recurring revenue streams.\n\nFreshworks, for instance, has achieved significant growth in its ARR, reaching $350m and expected to reach $400m. This demonstrates the importance of tracking ARR in measuring a company's revenue growth and making informed decisions to drive business success.\n\nOverall, ARR is a critical metric for companies to track their revenue growth and make informed decisions to drive business success.<SEP>ARR stands for Annual Recurring Revenue, a metric used to measure a company's revenue growth.<SEP>Annual Recurring Revenue is a financial metric used to measure the revenue generated by a company's subscription-based business model.<SEP>Annual Recurring Revenue, a key metric for SaaS companies.<SEP>ARR stands for Annual Recurring Revenue.",
+          "source_id": "gd_087a4675a11cf57ae08ea7cf-chunk-000<SEP>gd_0327fd5c4fc1590df1481cc3-chunk-000<SEP>gd_03e15c39b23c76a73a12a032-chunk-000<SEP>gd_07f2aff54dd7489cb3053484-chunk-000<SEP>gd_17c3b096c9e3f1e1c46be346-chunk-004<SEP>gd_158776503ae4c718d7c4a6c6-chunk-000<SEP>gd_0461f8f47c14300f7a278cef-chunk-000<SEP>gd_15cebc29d9f85feb474c70c8-chunk-001<SEP>gd_17f44165842fee018cbbd653-chunk-000<SEP>gd_0469dfa7d7642dd1811fc886-chunk-000<SEP>gd_3d7ffaecb9f0e7708246cfcd-chunk-000<SEP>gd_05d0d2bed2dadbf7007f9ef2-chunk-000<SEP>gd_1ba5b6429d4f7d40a66b28cc-chunk-000<SEP>gd_2071687707b6854abd28f69a-chunk-000<SEP>gd_13aa38370d7255559def2519-chunk-001<SEP>gd_22462fc0c151ee5a1d880b8f-chunk-000<SEP>gd_1f6dc332a7e2fcdbc169d98a-chunk-000<SEP>gd_07a0467e91997eb1227209b3-chunk-000<SEP>gd_13e89e60c3f8b41c3f077c76-chunk-000<SEP>gd_087d1d57d2263adb70e18521-chunk-000<SEP>gd_2870c7b96cfd8e9db7bee62f-chunk-000<SEP>gd_08a182bf31e33d7ffdb32016-chunk-000<SEP>gd_319670abac439d85128abe9e-chunk-002<SEP>gd_18771289802258996e9afe7d-chunk-000<SEP>gd_33520150e254f44e44dd6979-chunk-000<SEP>gd_09d735b098e3b67a26d13fd5-chunk-000<SEP>gd_325cd64471734ab31072948f-chunk-000<SEP>gd_3349a07f9553ff1936d258ae-chunk-000<SEP>gd_3d0d6d44b2000b775e587514-chunk-000<SEP>gd_0ad8c121612141fd51e8dfdd-chunk-000<SEP>gd_19e4fce6eb43b72382d2042c-chunk-001<SEP>gd_46b909ad65ed633dbea1ba63-chunk-000<SEP>gd_0d5e7a2bb6724c2fbd8eedf5-chunk-000<SEP>gd_1bb89f0881d846204f69d052-chunk-001<SEP>gd_1bb89f0881d846204f69d052-chunk-002<SEP>gd_119edf801b4d0b93bff506d4-chunk-000<SEP>gd_53fc2d9afb27be1532ef1ccb-chunk-000<SEP>gd_524c287c9d24eb09b58604a0-chunk-001<SEP>gd_5526629b3d33ecf02b9b6951-chunk-000<SEP>gd_5526629b3d33ecf02b9b6951-chunk-001<SEP>gd_1416a0037964f56deb2cb027-chunk-000<SEP>gd_22e2af05587860f4e41f0ece-chunk-000<SEP>gd_22e2af05587860f4e41f0ece-chunk-001<SEP>gd_149d34c40951e05bcfd6ff3c-chunk-000<SEP>gd_59786235ec03f6fe9fcba771-chunk-001<SEP>gd_59786235ec03f6fe9fcba771-chunk-002<SEP>gd_25ceb76e34b0404af1e8edec-chunk-000<SEP>gd_166caf910842878d5953dcfd-chunk-000<SEP>gd_d1840e931c8712170e3a9122-chunk-000<SEP>gd_60de4000b7fcfd0de9e07c8e-chunk-001<SEP>gd_17505400cb1c2ff630646d67-chunk-000<SEP>gd_29e1dd86d0ac04d5850953cd-chunk-000<SEP>gd_64ee673f1818fe8a43d10d08-chunk-001<SEP>gd_7212707c2707213a0b5b7a4b-chunk-000<SEP>gd_7212707c2707213a0b5b7a4b-chunk-001<SEP>gd_194f64a1f64b18a69ad9ca08-chunk-000<SEP>gd_2c6f9645343251c1f939e00a-chunk-001<SEP>gd_8bcd55008ece70b021b2c6b1-chunk-000<SEP>gd_1bf7fe347a0c9dc13f54563a-chunk-000<SEP>gd_846cdccc2686a930e28302ae-chunk-000<SEP>gd_8eafdb05531ee643b616bc41-chunk-000<SEP>gd_9393f5107171bfdba2765a73-chunk-000<SEP>gd_72e9e76a2cf7a8ea84a21acb-chunk-001<SEP>gd_9c3e28f19f1d094b0061a9c0-chunk-000<SEP>gd_207acc44ec371cd502bfa5dc-chunk-000<SEP>gd_218350c7dbc6d35bcf1726f7-chunk-000<SEP>gd_2191fd60a5995f96a9ed59d8-chunk-000<SEP>gd_74fa8567086173e6d517e67c-chunk-003<SEP>gd_3d4100e6126fba5cc27eaf91-chunk-000<SEP>gd_22d5c05d08d7a97c95048cbe-chunk-000<SEP>gd_a8ad9518fe2741e2ed944b31-chunk-000<SEP>gd_112ea69bb6a3ea5e091e34f2-chunk-000<SEP>gd_ae2fbdf9b2241fe42aaffadf-chunk-000<SEP>gd_2483263853e6d497ce4282df-chunk-000<SEP>gd_b47ed9cc588fce82b05c28e0-chunk-000<SEP>gd_252e57f3faedb1a974310daf-chunk-000<SEP>gd_b73b97865652097b570441e9-chunk-000<SEP>gd_408cdcbe6729fea2abaab084-chunk-001<SEP>gd_409c0da0777cbb41bc6655ae-chunk-000<SEP>gd_3dfdb4bf306dae374788f006-chunk-000<SEP>gd_bb32e1c07e86dae286d8bcd3-chunk-000<SEP>gd_2a61634862ecc037805585cb-chunk-000<SEP>gd_447ac742e3a9ad53298cf2d6-chunk-000<SEP>gd_447ac742e3a9ad53298cf2d6-chunk-003<SEP>gd_44f8e082ac34ddf53ddb2b27-chunk-000<SEP>gd_be1386341dd4367eb93a0474-chunk-000<SEP>gd_4539e662ea7b31c661ff01a2-chunk-001<SEP>gd_4539e662ea7b31c661ff01a2-chunk-000<SEP>gd_cdefe846b947b98de2b169d4-chunk-000<SEP>gd_9bef8d767947839d50a36423-chunk-000<SEP>gd_9bef8d767947839d50a36423-chunk-001<SEP>gd_2ecc3785d60dab4bff563f4c-chunk-000<SEP>gd_9c328b8c5305e596c95c958f-chunk-002<SEP>gd_2f3e6a0ac4b20122171e3896-chunk-000<SEP>gd_303dd3e2c7fc3438092c5462-chunk-000<SEP>gd_4d1077b8bd608022a2166c3f-chunk-001<SEP>gd_cbaa6c66435557483e83346d-chunk-000<SEP>gd_a2ec45a7c4351b7e34245f87-chunk-000<SEP>gd_322b65748513e786ae1453d1-chunk-000<SEP>gd_aa01fc06c899106c220037a7-chunk-000<SEP>gd_aa01fc06c899106c220037a7-chunk-001<SEP>gd_328e4c418c6a8a049f0d2b8b-chunk-000<SEP>gd_acdaede66f21479bf7fc8842-chunk-000<SEP>gd_5492d4d586da10f9d01192dd-chunk-002<SEP>gd_5492d4d586da10f9d01192dd-chunk-001<SEP>gd_54bd4156ae896dbaad104bd8-chunk-000<SEP>gd_372bb9fead5c91e7d4c8e30b-chunk-000<SEP>gd_55bc540b610064fdcfa76b04-chunk-000<SEP>gd_dfc74c8d651a325a8a2ea5fb-chunk-000<SEP>gd_2568bb11c77922603ee35b63-chunk-001<SEP>gd_3b76b9c47b22c900d003738c-chunk-000<SEP>gd_582bd5132dbb8e609d1e18c9-chunk-002<SEP>gd_3e1a01be91ac3ea01f208dc6-chunk-000<SEP>gd_c481ad6a3095befd2e0989e4-chunk-004<SEP>gd_5cec6448ee1a1a69c556f58a-chunk-000<SEP>gd_5cec6448ee1a1a69c556f58a-chunk-001<SEP>gd_db2a00ddbaae4ba4dae9d6b7-chunk-001<SEP>gd_6a8515d06bc3b3b1aae863ab-chunk-000<SEP>gd_6b21382225ac4404e1815a51-chunk-000<SEP>gd_e60a17124a0934759eb051ec-chunk-000<SEP>gd_e60a17124a0934759eb051ec-chunk-001<SEP>gd_6d549413d37ff7b55fa873f0-chunk-001<SEP>gd_704a724ff302ab18043fedf2-chunk-000<SEP>gd_744aedf69774b9787271020d-chunk-001<SEP>gd_7681722f354a46bf769c0671-chunk-000<SEP>gd_7681722f354a46bf769c0671-chunk-001<SEP>gd_0b60e94ececf3cb73976c5df-chunk-000<SEP>gd_0b60e94ececf3cb73976c5df-chunk-002<SEP>gd_0b8f922e50984dc168e44b3d-chunk-003<SEP>gd_7bba9b537a604be37c33394e-chunk-000<SEP>gd_7bba9b537a604be37c33394e-chunk-001<SEP>gd_0ebe200504c2767b18fadc12-chunk-001<SEP>gd_0ebe200504c2767b18fadc12-chunk-002<SEP>gd_7e501541a37d9738987d633b-chunk-001<SEP>gd_12fe030017ff3b7201e562ae-chunk-000<SEP>gd_12fe030017ff3b7201e562ae-chunk-001<SEP>gd_12fe030017ff3b7201e562ae-chunk-002<SEP>gd_17761a0ae750203bc01fd5f9-chunk-002<SEP>gd_2551431949d1ccdc36a75aef-chunk-001<SEP>gd_950767c5c3a3596311dbbda5-chunk-000<SEP>gd_95b3a94a3095519b7c98c7d4-chunk-002<SEP>gd_2ab1e3a03f3d50096c7ab6ed-chunk-000<SEP>gd_2c957f14a38fcd59365f4dce-chunk-000<SEP>gd_2c957f14a38fcd59365f4dce-chunk-002<SEP>gd_97498438a84724d394645274-chunk-002<SEP>gd_97498438a84724d394645274-chunk-003<SEP>gd_9838e8220d789e78b7f4418d-chunk-000<SEP>gd_2f154a1abb9146e370cabb36-chunk-000<SEP>gd_2f154a1abb9146e370cabb36-chunk-001<SEP>gd_9c6a7c574379d69104b95c98-chunk-000<SEP>gd_a0a7fac44cacd59c4debc742-chunk-000<SEP>gd_a0a7fac44cacd59c4debc742-chunk-001<SEP>gd_a0a7fac44cacd59c4debc742-chunk-002<SEP>gd_3420b0d75274e09a6649b966-chunk-000<SEP>gd_398d2e70e82899806f0a81c2-chunk-001<SEP>gd_3e259415f45afa9ddd480b31-chunk-001<SEP>gd_3e259415f45afa9ddd480b31-chunk-002<SEP>gd_a317deb61e243cd08d76cca3-chunk-000<SEP>gd_a54f5bf886b30a7e8324893d-chunk-000<SEP>gd_a54f5bf886b30a7e8324893d-chunk-001<SEP>gd_48e090cf4fc87c6b04e673b9-chunk-000<SEP>gd_aafe6164084bc84cbf056a39-chunk-001<SEP>gd_ab75f2e3473b4cebe15356bc-chunk-001<SEP>gd_53166d6f3672941cb6ee80e6-chunk-000<SEP>gd_53d1d4d7cbdb83f9dd2abc9c-chunk-002<SEP>gd_545a33a881beeb183329d2d6-chunk-002<SEP>gd_5c912fefa31e5fba2a3e6a7f-chunk-002<SEP>gd_5dfaf70730c3fda27c1e436f-chunk-001<SEP>gd_b6e4509693f55652d6720194-chunk-000<SEP>gd_676ceb1d508acba0f3613cd1-chunk-000<SEP>gd_676ceb1d508acba0f3613cd1-chunk-001<SEP>gd_676ceb1d508acba0f3613cd1-chunk-002<SEP>gd_676ceb1d508acba0f3613cd1-chunk-003<SEP>gd_b740a4f2a516a3f3a59a462d-chunk-001<SEP>gd_68c4bad7befcf56510eda4bc-chunk-000<SEP>gd_68c4bad7befcf56510eda4bc-chunk-001<SEP>gd_68c4bad7befcf56510eda4bc-chunk-002<SEP>gd_b7dfbf6bccee4997ad659362-chunk-002<SEP>gd_c46a4714d0edfa9fffe154cc-chunk-000<SEP>gd_748726369fa6b46ca8f2c0c7-chunk-001<SEP>gd_7a13301eee783b0ef105cc0a-chunk-003<SEP>gd_d0a5b775db90809dc7e03872-chunk-001<SEP>gd_7f230db59f735351cd7f94f6-chunk-000<SEP>gd_d4924986b972e4ef59ad0d68-chunk-000<SEP>gd_d57e7f67ccbcce42d68e491a-chunk-000<SEP>gd_d798b5f87bc9f54fcb6dd69a-chunk-001<SEP>gd_8d4d38e0c3572b351003a51c-chunk-003<SEP>gd_d9290ed0e1780f3bb8b02f05-chunk-000<SEP>gd_dbd1ff1a0fadf0dcb04b5f45-chunk-000<SEP>gd_dd13d18c16228c212a2cf778-chunk-000<SEP>gd_9681438bb1fb03d4d598c7ec-chunk-000<SEP>gd_9681438bb1fb03d4d598c7ec-chunk-001<SEP>gd_ddc7dc8f7ea37c8335c55003-chunk-002<SEP>gd_de4f1cbf6a8bd8e3c5b1cd8f-chunk-001<SEP>gd_de4f1cbf6a8bd8e3c5b1cd8f-chunk-002<SEP>gd_de63970852a4e885149cd5f3-chunk-000<SEP>gd_de63970852a4e885149cd5f3-chunk-001<SEP>gd_de63970852a4e885149cd5f3-chunk-002<SEP>gd_df2480bda3a01a10db6c97b1-chunk-001<SEP>gd_df2480bda3a01a10db6c97b1-chunk-002",
+          "file_path": "gd_087a4675a11cf57ae08ea7cf<SEP>gd_0327fd5c4fc1590df1481cc3<SEP>gd_03e15c39b23c76a73a12a032<SEP>gd_07f2aff54dd7489cb3053484<SEP>gd_17c3b096c9e3f1e1c46be346<SEP>gd_158776503ae4c718d7c4a6c6<SEP>gd_0461f8f47c14300f7a278cef<SEP>gd_15cebc29d9f85feb474c70c8<SEP>gd_17f44165842fee018cbbd653<SEP>gd_0469dfa7d7642dd1811fc886<SEP>gd_3d7ffaecb9f0e7708246cfcd<SEP>gd_05d0d2bed2dadbf7007f9ef2<SEP>gd_1ba5b6429d4f7d40a66b28cc<SEP>gd_2071687707b6854abd28f69a<SEP>gd_13aa38370d7255559def2519<SEP>gd_22462fc0c151ee5a1d880b8f<SEP>gd_1f6dc332a7e2fcdbc169d98a<SEP>gd_07a0467e91997eb1227209b3<SEP>gd_13e89e60c3f8b41c3f077c76<SEP>gd_087d1d57d2263adb70e18521<SEP>gd_2870c7b96cfd8e9db7bee62f<SEP>gd_08a182bf31e33d7ffdb32016<SEP>gd_319670abac439d85128abe9e<SEP>gd_18771289802258996e9afe7d<SEP>gd_33520150e254f44e44dd6979<SEP>gd_09d735b098e3b67a26d13fd5<SEP>gd_325cd64471734ab31072948f<SEP>gd_3349a07f9553ff1936d258ae<SEP>gd_3d0d6d44b2000b775e587514<SEP>gd_0ad8c121612141fd51e8dfdd<SEP>gd_19e4fce6eb43b72382d2042c<SEP>gd_46b909ad65ed633dbea1ba63<SEP>gd_0d5e7a2bb6724c2fbd8eedf5<SEP>gd_1bb89f0881d846204f69d052<SEP>gd_119edf801b4d0b93bff506d4<SEP>gd_53fc2d9afb27be1532ef1ccb<SEP>gd_524c287c9d24eb09b58604a0<SEP>gd_5526629b3d33ecf02b9b6951<SEP>gd_1416a0037964f56deb2cb027<SEP>gd_22e2af05587860f4e41f0ece<SEP>gd_149d34c40951e05bcfd6ff3c<SEP>gd_59786235ec03f6fe9fcba771<SEP>gd_25ceb76e34b0404af1e8edec<SEP>gd_d1840e931c8712170e3a9122<SEP>gd_60de4000b7fcfd0de9e07c8e<SEP>gd_17505400cb1c2ff630646d67<SEP>gd_29e1dd86d0ac04d5850953cd<SEP>gd_64ee673f1818fe8a43d10d08<SEP>gd_7212707c2707213a0b5b7a4b<SEP>gd_194f64a1f64b18a69ad9ca08<SEP>gd_8bcd55008ece70b021b2c6b1<SEP>gd_1bf7fe347a0c9dc13f54563a<SEP>gd_846cdccc2686a930e28302ae<SEP>gd_8eafdb05531ee643b616bc41<SEP>gd_9393f5107171bfdba2765a73<SEP>gd_72e9e76a2cf7a8ea84a21acb<SEP>gd_9c3e28f19f1d094b0061a9c0<SEP>gd_207acc44ec371cd502bfa5dc<SEP>gd_218350c7dbc6d35bcf1726f7<SEP>gd_2191fd60a5995f96a9ed59d8<SEP>gd_74fa8567086173e6d517e67c<SEP>gd_3d4100e6126fba5cc27eaf91<SEP>gd_22d5c05d08d7a97c95048cbe<SEP>gd_a8ad9518fe2741e2ed944b31<SEP>gd_112ea69bb6a3ea5e091e34f2<SEP>gd_ae2fbdf9b2241fe42aaffadf<SEP>gd_2483263853e6d497ce4282df<SEP>gd_b47ed9cc588fce82b05c28e0<SEP>gd_252e57f3faedb1a974310daf<SEP>gd_b73b97865652097b570441e9<SEP>gd_408cdcbe6729fea2abaab084<SEP>gd_409c0da0777cbb41bc6655ae<SEP>gd_3dfdb4bf306dae374788f006<SEP>gd_bb32e1c07e86dae286d8bcd3<SEP>gd_2a61634862ecc037805585cb<SEP>...truncated...(KEEP Old)",
+          "created_at": 1793522198
+        },
+        {
+          "entity_name": "$3.3B",
+          "entity_type": "concept",
+          "description": "$3.3B is a concept referring to the amount of capital raised by Cursor.",
+          "source_id": "gd_88b45eaf937a5ab5039dba4e-chunk-004",
+          "file_path": "gd_88b45eaf937a5ab5039dba4e",
+          "created_at": 1793586530
+        },
+        {
+          "entity_name": "RingCentral",
+          "entity_type": "organization",
+          "description": "RingCentral is a cloud-based unified communications as a service (UCaaS) platform that provides a suite of communication and collaboration tools for businesses. It offers a range of communication and collaboration tools, including unified communication as a service (UCaaS) and contact center as a service (CCaaS) solutions. As a SaaS leader, RingCentral has been around for a long time, providing enterprise contact center solutions and has achieved significant growth, crossing $2 Billion in Annual Recurring Revenue (ARR) with a 16% growth rate.\n\nThe platform enables businesses to communicate and collaborate more effectively, providing a range of features and tools to support their needs. It is designed to be flexible and scalable, allowing businesses to adapt to changing needs and grow their operations. With its cloud-based architecture, RingCentral's platform provides a secure and reliable solution for businesses, with minimal maintenance and support requirements.\n\nRingCentral's cloud-based business phone system provides voice, video, and messaging services, making it a comprehensive solution for businesses. The company has a long history of innovation and customer satisfaction, with a story of 5 Interesting Learnings as it Approaches $1B in ARR. Its cloud-based unified communications and collaboration platform approaches $1B in ARR, demonstrating its commitment to growth and customer satisfaction.\n\nRingCentral's growth and success can be attributed to its ability to adapt to changing market conditions, particularly during the Covid pandemic, when it boomed as a cloud-based unified communications provider. The company's cloud-based architecture and flexibility have made it a reliable solution for businesses, with minimal maintenance and support requirements.\n\nAs a leading provider of cloud-based unified communications and collaboration solutions, RingCentral offers a comprehensive suite of tools and features to support the needs of businesses. Its large customer base and commitment to growth and customer satisfaction have established it as a trusted partner for businesses seeking to improve their communication and collaboration capabilities.<SEP>A cloud-based communication and collaboration platform.<SEP>A cloud-based unified communications platform.<SEP>RingCentral is a SaaS company that is approaching $1B in ARR.<SEP>A unified communications platform.",
+          "source_id": "gd_13aa38370d7255559def2519-chunk-000<SEP>gd_13aa38370d7255559def2519-chunk-001<SEP>gd_16319806a8bc21c0b84682c3-chunk-001<SEP>gd_1c4574bfd38001677b67039b-chunk-001<SEP>gd_55bc540b610064fdcfa76b04-chunk-000<SEP>gd_55bc540b610064fdcfa76b04-chunk-001<SEP>gd_55bc540b610064fdcfa76b04-chunk-002<SEP>gd_5a74e007239d6fa585aa9d42-chunk-001<SEP>gd_87e4169fe38c1cc0f4c4cb5f-chunk-000<SEP>gd_950767c5c3a3596311dbbda5-chunk-000<SEP>gd_950767c5c3a3596311dbbda5-chunk-001<SEP>gd_2da2607f440be8eb7f834419-chunk-002<SEP>gd_43c58eec07c53d9d42856441-chunk-000<SEP>gd_535dfe10c25ba8a8c83581c2-chunk-002<SEP>gd_59b91b90c7bca58b13cca2ba-chunk-001<SEP>gd_8c21892693a7f5fa4fc4e1f0-chunk-000<SEP>gd_b84bb863a93fe024d576b691-chunk-001<SEP>gd_bb8500ff7693b3f67f77f68c-chunk-002<SEP>gd_bb8500ff7693b3f67f77f68c-chunk-003<SEP>gd_6ac1674e0d5b3192f49acc1c-chunk-002<SEP>gd_6ac1674e0d5b3192f49acc1c-chunk-001<SEP>gd_f335200b1b152ebd57131e72-chunk-000<SEP>gd_f335200b1b152ebd57131e72-chunk-003<SEP>gd_989099458fed4b50438939c7-chunk-000<SEP>gd_989099458fed4b50438939c7-chunk-001<SEP>gd_c6f21bde42fb4a0c42f82a9e-chunk-003<SEP>gd_8734da9435007d5a50c6c5b0-chunk-000",
+          "file_path": "gd_13aa38370d7255559def2519<SEP>gd_16319806a8bc21c0b84682c3<SEP>gd_1c4574bfd38001677b67039b<SEP>gd_55bc540b610064fdcfa76b04<SEP>gd_5a74e007239d6fa585aa9d42<SEP>gd_87e4169fe38c1cc0f4c4cb5f<SEP>gd_950767c5c3a3596311dbbda5<SEP>gd_2da2607f440be8eb7f834419<SEP>gd_43c58eec07c53d9d42856441<SEP>gd_535dfe10c25ba8a8c83581c2<SEP>gd_59b91b90c7bca58b13cca2ba<SEP>gd_8c21892693a7f5fa4fc4e1f0<SEP>gd_b84bb863a93fe024d576b691<SEP>gd_bb8500ff7693b3f67f77f68c<SEP>gd_6ac1674e0d5b3192f49acc1c<SEP>gd_f335200b1b152ebd57131e72<SEP>gd_989099458fed4b50438939c7<SEP>gd_c6f21bde42fb4a0c42f82a9e<SEP>gd_8734da9435007d5a50c6c5b0",
+          "created_at": 1793638625
+        },
+        {
+          "entity_name": "$5M",
+          "entity_type": "concept",
+          "description": "A financial milestone indicating a company's revenue has reached $5 million.<SEP>A revenue milestone for a company.<SEP>A large amount of money that is venture debt.",
+          "source_id": "gd_aaaf5c7f6c3f79dc6e2ca9b9-chunk-002<SEP>gd_501e19ef7ea986873b8de38e-chunk-003<SEP>gd_f7e90496738393725cca736e-chunk-001",
+          "file_path": "gd_aaaf5c7f6c3f79dc6e2ca9b9<SEP>gd_501e19ef7ea986873b8de38e<SEP>gd_f7e90496738393725cca736e",
+          "created_at": 1793604013
+        },
+        {
+          "entity_name": "$4.3B+ Cloud ARR",
+          "entity_type": "UNKNOWN",
+          "description": "Atlassian has achieved a cloud annualized revenue of $4.3 billion+.",
+          "source_id": "gd_5452a21f583d7a1ce5646101-chunk-002",
+          "file_path": "gd_5452a21f583d7a1ce5646101",
+          "created_at": 1793609184
+        },
+        {
+          "entity_name": "$5B ARR",
+          "entity_type": "concept",
+          "description": "$5B ARR refers to Atlassian's annual recurring revenue of $5 billion.",
+          "source_id": "gd_b9da22c04e0fa0f306cd64d9-chunk-001",
+          "file_path": "gd_b9da22c04e0fa0f306cd64d9",
+          "created_at": 1793535285
+        },
+        {
+          "entity_name": "Asana",
+          "entity_type": "product",
+          "description": "**Asana: A Comprehensive Work Management and Collaboration Platform**\n\nAsana is a cloud-based work management and collaboration platform that has established a significant global presence, generating 39% of its revenue from outside the United States. This indicates its widespread reach and adoption across various regions. As a product company, Asana has a Chief Operating Officer (COO) in place, indicating its organizational structure and leadership.\n\nAsana's primary function is to assist teams in tracking and managing their work, making it an essential tool for work management and productivity. The platform provides a range of features and tools to help teams stay organized and on track, including task and project management capabilities. Asana's involvement in the industry is evident through its partnership with SaaStr, a prominent conference for software as a service (SaaS) companies, where it has participated in various sessions.\n\nAsana's growth characteristics are similar to those of Monday.com, with a high average customer value (ACV) of around $2k. This suggests that Asana's product is highly valued by its customers, contributing to its success in the market. Notably, Asana has reached its first $250m in ARR, indicating its significant growth and success in the market. Additionally, Asana is one of Monday's biggest customers, highlighting its importance in the industry.\n\nAsana can also be described as a work management and collaboration platform, a work management platform with 38% of its revenue coming from international sources, a work management and productivity platform, and a cloud-based work management platform for teams. It is also a software company that provides cloud-based work management and project management software, with a story of 5 Interesting Learnings at $250,000,000 in ARR. Furthermore, Asana is a work management and collaboration tool, with a COO of a $24B+ company.\n\nAsana has a long tail of small customers, with 27% of its revenue coming from customers that pay less than $5k. However, the company has a strong focus on the \"less tiny\" customers, with $5k ACV being their line for a material customer. Asana's Net Revenue Retention (NRR) rate is high, with 135% for larger customers and 120% for $5k+ customers. The company's growth engine is strong, with 80% of its growth coming from customers with $100k+ in revenue. Additionally, Asana has a significant presence in the global market, with 39% of its revenue coming from outside the U.S.\n\nIt's worth noting that Asana has struggled with growth due to high customer concentration in the tech industry, but its comprehensive suite of tools and features, combined with its significant growth and success in the market, have solidified its position as a leading work management and productivity platform.<SEP>A work management platform.<SEP>A work management platform that offers a range of tools for task management and team collaboration.<SEP>Asana is a work management company.",
+          "source_id": "gd_d1423816ab12475e55e09a39-chunk-000<SEP>gd_249fb073b7c26bcc5a12b822-chunk-000<SEP>gd_2d1a5ed459bfc1a023a1db6d-chunk-000<SEP>gd_16319806a8bc21c0b84682c3-chunk-001<SEP>gd_7472af22e2cfe0889f69b031-chunk-000<SEP>gd_179963266b84ebecb1409519-chunk-000<SEP>gd_8c81486cc1789c7975082f46-chunk-000<SEP>gd_25ceb76e34b0404af1e8edec-chunk-000<SEP>gd_e93488dc685e6f329218fa9e-chunk-000<SEP>gd_76a682c6cb97a5d19a642ab0-chunk-001<SEP>gd_76a682c6cb97a5d19a642ab0-chunk-000<SEP>gd_896b59f47a2fe051ace06a99-chunk-000<SEP>gd_896b59f47a2fe051ace06a99-chunk-001<SEP>gd_111b6b23b20d3f5268f61598-chunk-000<SEP>gd_111b6b23b20d3f5268f61598-chunk-001<SEP>gd_dd8f0f160c812180403f7b6f-chunk-000<SEP>gd_9f9c3f5ffa8b3edb4964b83b-chunk-000<SEP>gd_8df3907fc74f64d310f763fd-chunk-000<SEP>gd_dfcdb3714e2bfa2686b5fb16-chunk-000<SEP>gd_e89b9c2b09f0adc100e313d0-chunk-000<SEP>gd_6cc9536a8c08885ebea1a265-chunk-000<SEP>gd_fc560134d5cd034812dc8b69-chunk-000<SEP>gd_744aedf69774b9787271020d-chunk-000<SEP>gd_1b9124f2109ba18c8a2b0ba1-chunk-002<SEP>gd_928c6555503d6e90d241cf1e-chunk-000<SEP>gd_3e259415f45afa9ddd480b31-chunk-000<SEP>gd_3e9fc891239ffd34f4cf91b1-chunk-001<SEP>gd_a8aaca4c490d0892dd6978f0-chunk-000<SEP>gd_aafe6164084bc84cbf056a39-chunk-000<SEP>gd_aafe6164084bc84cbf056a39-chunk-001<SEP>gd_aafe6164084bc84cbf056a39-chunk-002<SEP>gd_aafe6164084bc84cbf056a39-chunk-003<SEP>gd_b6e4509693f55652d6720194-chunk-000<SEP>gd_b6e4509693f55652d6720194-chunk-001<SEP>gd_6eb39dfa97bc0c5b2a621007-chunk-001<SEP>gd_6eb39dfa97bc0c5b2a621007-chunk-002<SEP>gd_5f88a04a8254899f62e5dece-chunk-000<SEP>gd_606606c10d0a838faa49fd61-chunk-000<SEP>gd_d173993d51cda6e3d54c157a-chunk-000<SEP>gd_f1918e1772488f6f58adb5dc-chunk-000<SEP>gd_9c2e5ea13cd633d8cc823ba7-chunk-000<SEP>gd_ec3d26e97aaf29783bf1cc74-chunk-001<SEP>gd_fe58fac9ba9141f8ea6ccb99-chunk-000<SEP>gd_2da2607f440be8eb7f834419-chunk-002<SEP>gd_4f6a07df802023de3d63ca4f-chunk-000<SEP>gd_4f6a07df802023de3d63ca4f-chunk-001<SEP>gd_527cf19c180b81c183c674a4-chunk-001<SEP>gd_535dfe10c25ba8a8c83581c2-chunk-002<SEP>gd_43e212d0edcb1c2810230fe2-chunk-001<SEP>gd_5cee12338f5781cf3fc86de2-chunk-000<SEP>gd_70a4342562c701cb49469cde-chunk-000<SEP>gd_70a4342562c701cb49469cde-chunk-001<SEP>gd_70a4342562c701cb49469cde-chunk-002<SEP>gd_7abf2d5bddb3539f3b30b683-chunk-001<SEP>gd_cf0c652a02ee251792d5f7af-chunk-001<SEP>gd_cf0c652a02ee251792d5f7af-chunk-002<SEP>gd_b7a9c3d6a7a69a54d821cd14-chunk-000<SEP>gd_b7a9c3d6a7a69a54d821cd14-chunk-001<SEP>gd_bb8500ff7693b3f67f77f68c-chunk-003<SEP>gd_bd97c14fa0476835df73618f-chunk-000<SEP>gd_c55cf116da67b97c972bcbbc-chunk-000<SEP>gd_cf6e85f33092fd34ff0dcbaf-chunk-000<SEP>gd_cf6e85f33092fd34ff0dcbaf-chunk-001<SEP>gd_d2ae8fcc4620bb77f501c1ce-chunk-000<SEP>gd_d2ae8fcc4620bb77f501c1ce-chunk-001<SEP>gd_d2ae8fcc4620bb77f501c1ce-chunk-002<SEP>gd_d003453b3956b242efc0eccf-chunk-003<SEP>gd_d003453b3956b242efc0eccf-chunk-004<SEP>gd_de4b319e76c4f0d48550e144-chunk-001<SEP>gd_f3b3bce3d73ac3fe2355d580-chunk-000<SEP>gd_0519f1abfcc0fb0a1e118638-chunk-001<SEP>gd_4f19c3ee254c8d45cc729019-chunk-000<SEP>gd_e4735d696b4fc29d7ad881a1-chunk-000<SEP>gd_e4735d696b4fc29d7ad881a1-chunk-001<SEP>gd_6883af2ee760af258eff9978-chunk-000<SEP>gd_a557aed74a9f2d2938e996df-chunk-001<SEP>gd_127b7c531bf91ae60817b680-chunk-000<SEP>gd_3b3de8f2e09471d34298f323-chunk-003<SEP>gd_40d926c839abc68c68bb1a76-chunk-000<SEP>gd_8e21e4824de46ec5db236abe-chunk-000<SEP>gd_ad079debb3a22f38cb6c1f3e-chunk-000<SEP>gd_c6f21bde42fb4a0c42f82a9e-chunk-003<SEP>gd_c6f21bde42fb4a0c42f82a9e-chunk-004<SEP>gd_3e0efa5053a2e02acbe0b66b-chunk-000<SEP>gd_3e0efa5053a2e02acbe0b66b-chunk-001<SEP>gd_33d36b342cf957ce7eac20c6-chunk-000<SEP>gd_33d36b342cf957ce7eac20c6-chunk-001<SEP>gd_33d36b342cf957ce7eac20c6-chunk-002<SEP>gd_33d36b342cf957ce7eac20c6-chunk-003<SEP>gd_33d36b342cf957ce7eac20c6-chunk-004<SEP>gd_33d36b342cf957ce7eac20c6-chunk-005<SEP>gd_33d36b342cf957ce7eac20c6-chunk-006<SEP>gd_42f6d2d927faad3c3e55bf29-chunk-000<SEP>gd_c4134d3194f34616f1c338ba-chunk-001<SEP>gd_e0e8f051a95a2e0ce0fb9f89-chunk-000<SEP>gd_0f4e4ef1433fcac288d5851d-chunk-002<SEP>gd_0f4e4ef1433fcac288d5851d-chunk-003<SEP>gd_0f4e4ef1433fcac288d5851d-chunk-005<SEP>gd_0f4e4ef1433fcac288d5851d-chunk-006<SEP>gd_31e53199562273779b464f4d-chunk-001<SEP>gd_b7769ae41d22fc197ddc2e8c-chunk-009<SEP>gd_b7769ae41d22fc197ddc2e8c-chunk-010<SEP>gd_b7769ae41d22fc197ddc2e8c-chunk-011<SEP>gd_b7769ae41d22fc197ddc2e8c-chunk-012<SEP>gd_b7769ae41d22fc197ddc2e8c-chunk-013<SEP>gd_869bec1b88bfc735253c3fc5-chunk-009<SEP>gd_7bf916ab9e234b1482e89f26-chunk-004<SEP>gd_7bf916ab9e234b1482e89f26-chunk-005<SEP>gd_bb4a4bb3b7f29f638a1cfd7c-chunk-003<SEP>gd_d7608d7e6dac4d722fb90de0-chunk-002<SEP>gd_d7608d7e6dac4d722fb90de0-chunk-003<SEP>gd_052d1f93241a006b57a413f9-chunk-002<SEP>gd_052d1f93241a006b57a413f9-chunk-003<SEP>gd_9df8d7ed77b488b1b9daa14f-chunk-000<SEP>gd_8a7f9d97ab81a0e9545f71eb-chunk-000<SEP>gd_9892f4cb159a2427a2e6b59b-chunk-000<SEP>gd_9892f4cb159a2427a2e6b59b-chunk-002<SEP>gd_9892f4cb159a2427a2e6b59b-chunk-003<SEP>gd_bda9c1fa138e2431571e7b57-chunk-000<SEP>gd_ca7726ae17d0a464cd88538c-chunk-000<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-006<SEP>gd_32699799b72ddf59645a1ff1-chunk-000<SEP>gd_32699799b72ddf59645a1ff1-chunk-001<SEP>gd_815d204b1d3505892f9cc05a-chunk-002<SEP>gd_815d204b1d3505892f9cc05a-chunk-003<SEP>gd_9809d37cd527c2958295b062-chunk-000<SEP>gd_9809d37cd527c2958295b062-chunk-003<SEP>gd_9809d37cd527c2958295b062-chunk-004",
+          "file_path": "gd_d1423816ab12475e55e09a39<SEP>gd_249fb073b7c26bcc5a12b822<SEP>gd_2d1a5ed459bfc1a023a1db6d<SEP>gd_16319806a8bc21c0b84682c3<SEP>gd_7472af22e2cfe0889f69b031<SEP>gd_179963266b84ebecb1409519<SEP>gd_8c81486cc1789c7975082f46<SEP>gd_25ceb76e34b0404af1e8edec<SEP>gd_e93488dc685e6f329218fa9e<SEP>gd_76a682c6cb97a5d19a642ab0<SEP>gd_896b59f47a2fe051ace06a99<SEP>gd_111b6b23b20d3f5268f61598<SEP>gd_dd8f0f160c812180403f7b6f<SEP>gd_9f9c3f5ffa8b3edb4964b83b<SEP>gd_8df3907fc74f64d310f763fd<SEP>gd_dfcdb3714e2bfa2686b5fb16<SEP>gd_e89b9c2b09f0adc100e313d0<SEP>gd_6cc9536a8c08885ebea1a265<SEP>gd_fc560134d5cd034812dc8b69<SEP>gd_744aedf69774b9787271020d<SEP>gd_1b9124f2109ba18c8a2b0ba1<SEP>gd_928c6555503d6e90d241cf1e<SEP>gd_3e259415f45afa9ddd480b31<SEP>gd_3e9fc891239ffd34f4cf91b1<SEP>gd_a8aaca4c490d0892dd6978f0<SEP>gd_aafe6164084bc84cbf056a39<SEP>gd_b6e4509693f55652d6720194<SEP>gd_6eb39dfa97bc0c5b2a621007<SEP>gd_5f88a04a8254899f62e5dece<SEP>gd_606606c10d0a838faa49fd61<SEP>gd_d173993d51cda6e3d54c157a<SEP>gd_f1918e1772488f6f58adb5dc<SEP>gd_9c2e5ea13cd633d8cc823ba7<SEP>gd_ec3d26e97aaf29783bf1cc74<SEP>gd_fe58fac9ba9141f8ea6ccb99<SEP>gd_2da2607f440be8eb7f834419<SEP>gd_4f6a07df802023de3d63ca4f<SEP>gd_527cf19c180b81c183c674a4<SEP>gd_535dfe10c25ba8a8c83581c2<SEP>gd_43e212d0edcb1c2810230fe2<SEP>gd_5cee12338f5781cf3fc86de2<SEP>gd_70a4342562c701cb49469cde<SEP>gd_7abf2d5bddb3539f3b30b683<SEP>gd_cf0c652a02ee251792d5f7af<SEP>gd_b7a9c3d6a7a69a54d821cd14<SEP>gd_bb8500ff7693b3f67f77f68c<SEP>gd_bd97c14fa0476835df73618f<SEP>gd_c55cf116da67b97c972bcbbc<SEP>gd_cf6e85f33092fd34ff0dcbaf<SEP>gd_d2ae8fcc4620bb77f501c1ce<SEP>gd_d003453b3956b242efc0eccf<SEP>gd_de4b319e76c4f0d48550e144<SEP>gd_f3b3bce3d73ac3fe2355d580<SEP>gd_0519f1abfcc0fb0a1e118638<SEP>gd_4f19c3ee254c8d45cc729019<SEP>gd_e4735d696b4fc29d7ad881a1<SEP>gd_6883af2ee760af258eff9978<SEP>gd_a557aed74a9f2d2938e996df<SEP>gd_127b7c531bf91ae60817b680<SEP>gd_40d926c839abc68c68bb1a76<SEP>gd_8e21e4824de46ec5db236abe<SEP>gd_ad079debb3a22f38cb6c1f3e<SEP>gd_c6f21bde42fb4a0c42f82a9e<SEP>gd_3e0efa5053a2e02acbe0b66b<SEP>gd_33d36b342cf957ce7eac20c6<SEP>gd_42f6d2d927faad3c3e55bf29<SEP>gd_c4134d3194f34616f1c338ba<SEP>gd_e0e8f051a95a2e0ce0fb9f89<SEP>gd_0f4e4ef1433fcac288d5851d<SEP>gd_b7769ae41d22fc197ddc2e8c<SEP>gd_869bec1b88bfc735253c3fc5<SEP>gd_7bf916ab9e234b1482e89f26<SEP>gd_bb4a4bb3b7f29f638a1cfd7c<SEP>gd_d7608d7e6dac4d722fb90de0<SEP>gd_052d1f93241a006b57a413f9<SEP>...truncated...(KEEP Old)",
+          "created_at": 1793645866
+        },
+        {
+          "entity_name": "3-5 Companies",
+          "entity_type": "concept",
+          "description": "3-5 companies are expected to go from unknown to $10B+ valuations based purely on government AI contracts.",
+          "source_id": "gd_9892f4cb159a2427a2e6b59b-chunk-005",
+          "file_path": "gd_9892f4cb159a2427a2e6b59b",
+          "created_at": 1793634748
+        },
+        {
+          "entity_name": "SaaStr",
+          "entity_type": "organization",
+          "description": "**SaaStr: A Comprehensive Overview**\n\nSaaStr is a multifaceted platform that serves as a hub for SaaS founders and leaders, a popular SaaS industry publication and community, and a company focused on providing resources and tools for startups. At its core, SaaStr is a community for SaaS founders and executives to learn from each other's experiences and best practices, fostering a collaborative environment for growth and innovation.\n\nThe platform offers a wealth of information and resources, including articles, webinars, and conference events, which cater to the diverse needs of SaaS professionals. SaaStr's community is comprised of SaaS founders and investors, who come together to share knowledge, network, and stay updated on industry trends. This collective expertise and experience enable SaaS professionals to navigate the challenges of building and scaling successful SaaS businesses.\n\nSaaStr hosts various events, including conferences and AI-related events, which provide a unique opportunity for SaaS professionals to engage with industry leaders, learn from their experiences, and gain insights into the latest industry trends. The company's commitment to providing resources and tools for startups has made it a go-to destination for SaaS founders and entrepreneurs seeking guidance and support.\n\nThrough its online community, SaaStr offers a platform for SaaS professionals to connect, share knowledge, and stay informed about industry developments. The platform's popularity stems from its ability to bring together SaaS founders, leaders, and investors, creating a vibrant ecosystem that drives innovation and growth in the SaaS industry.\n\nIn addition to its online presence, SaaStr also hosts meet-ups in various locations, including Miami, providing a physical space for SaaS professionals to network and connect with one another. The company's annual conference is a premier event for startup founders and executives, offering a unique opportunity to learn from industry leaders and gain insights into the latest industry trends.\n\nSaaStr's founder, Jason Lemkin, has successfully transitioned the product into a lasting venture, expanding its scope and impact within the SaaS industry. The company's commitment to providing resources and tools for startups has made it a valuable resource for SaaS founders and entrepreneurs, helping them navigate the challenges of building and scaling successful SaaS businesses.\n\nIt's worth noting that SaaStr also utilizes Salesforce's Agentforce, a tool that enables companies to manage their sales teams and customer relationships more effectively. This integration highlights SaaStr's focus on providing practical solutions and resources for SaaS professionals to succeed in the industry.\n\nSaaStr's annual conference is a leading event in the SaaS industry, attracting B2B founders and executives from around the world. The conference features various sessions, speakers, and networking opportunities, providing a unique platform for SaaS professionals to learn from industry experts and connect with like-minded individuals.\n\nAdditionally, SaaStr has distributed teams today, and its sponsors have reported a 10% higher logo retention and 40% higher revenue per sponsor when they participate in in-person visits. SaaStr also emphasizes the importance of meeting in-person today and uses its sponsors as a lab to keep learnings on sales and marketing fresh. With over 150+ sponsors, SaaStr continues to be a leading platform for SaaS professionals to learn and share knowledge.\n\nIt's also worth mentioning that SaaStr has hosted the SaaStr AI Summit 2025, where the reality check on AI was revealed, and has been a leading SaaS industry publication and community, a conference for SaaS companies and their sponsors, featuring a Product Roadmap Review session, a community for startup founders and entrepreneurs, and a leading conference and community for SaaS professionals, focusing on sales, marketing, and customer success.<SEP>SaaStr is an organization hosting events on the campus.<SEP>SaaStr is a platform that provides insights and resources for startups, founded by Andrew Chen.<SEP>A community for SaaS founders and professionals.",
+          "source_id": "gd_0e1afddaca819c17829b209e-chunk-000<SEP>gd_087a4675a11cf57ae08ea7cf-chunk-000<SEP>gd_00808ccaeb7073dfcf899559-chunk-000<SEP>gd_0e243f9c16a81abe061b3496-chunk-000<SEP>gd_0e243f9c16a81abe061b3496-chunk-001<SEP>gd_028b8a676781e0db7a6b323d-chunk-000<SEP>gd_14530da4ea39350d8431fea6-chunk-000<SEP>gd_03e15c39b23c76a73a12a032-chunk-000<SEP>gd_021ab9a9824bd98a6d45fe72-chunk-000<SEP>gd_0543e28be565211f29c7e3d4-chunk-000<SEP>gd_1586430bce2fffea00a8cd83-chunk-000<SEP>gd_01c4f3dd39890d28a5dfedd6-chunk-000<SEP>gd_01c4f3dd39890d28a5dfedd6-chunk-001<SEP>gd_11eb12a906f6fd665fab2d11-chunk-000<SEP>gd_06b8eb6625a9fb6e2a62b0bc-chunk-000<SEP>gd_84a451c83e9831b81f0767db-chunk-000<SEP>gd_1354204b842e11ae5bc077c9-chunk-000<SEP>gd_0a63f84731a3ae990120db4a-chunk-000<SEP>gd_0f493e0cf0ff9dfd725aba4f-chunk-000<SEP>gd_04f20313cc3831bfa62af1c8-chunk-000<SEP>gd_0b6743ce6338d33e96dc8605-chunk-000<SEP>gd_1bd11726aa0e0351aefe21ce-chunk-000<SEP>gd_0633915a8565a63d11f310ba-chunk-000<SEP>gd_1dad17108c5e8ae8202bc982-chunk-000<SEP>gd_1c79d03ae7c72eea56093c66-chunk-000<SEP>gd_072a958576c3d08d325dd01b-chunk-000<SEP>gd_072a958576c3d08d325dd01b-chunk-001<SEP>gd_e202a1afd3c9d493a094de48-chunk-000<SEP>gd_e202a1afd3c9d493a094de48-chunk-001<SEP>gd_e202a1afd3c9d493a094de48-chunk-002<SEP>gd_163c0c0b28dde995c92e72f4-chunk-000<SEP>gd_5b470ee5398fb5a9ffde5b9f-chunk-000<SEP>gd_0f84eb0397d3f9ebe9982fe6-chunk-000<SEP>gd_ad5ace08d7fa6c197773d33b-chunk-000<SEP>gd_1cc7db10c34d802d7c089d9f-chunk-000<SEP>gd_6c75dd2c2258e8a1cbdbd024-chunk-000<SEP>gd_120a3c3451bb99437cbaa161-chunk-000<SEP>gd_120a3c3451bb99437cbaa161-chunk-001<SEP>gd_00ac0cdc41bdf0deae43ef5b-chunk-000<SEP>gd_1e26981a9dc01e979a564ff0-chunk-000<SEP>gd_09267d6dfab254529a946b18-chunk-001<SEP>gd_09267d6dfab254529a946b18-chunk-003<SEP>gd_00be868863058a8e9a4cb603-chunk-000<SEP>gd_15d187637520cc4b1b5726e1-chunk-002<SEP>gd_1e2d1944a05912b229a6616f-chunk-000<SEP>gd_09fb9e5d797e0828baa6a4e3-chunk-000<SEP>gd_1c7b97735560846975c87037-chunk-001<SEP>gd_23aa8cd4020f1d2df5102cfc-chunk-000<SEP>gd_35c0de66f11cd0f9ff35bd4f-chunk-000<SEP>gd_9e7b7d19767447153ac587a9-chunk-000<SEP>gd_4fe03de948798e408f8e23aa-chunk-000<SEP>gd_5339ef95acf5382961a2350a-chunk-000<SEP>gd_35709eb4ce9c8ee27e006220-chunk-000<SEP>gd_5b4dcd8b8dcce699f8e93c2f-chunk-000<SEP>gd_3c421a313a0af4daa71cf30f-chunk-000<SEP>gd_3a88f1d2afd6a79f4002151e-chunk-000<SEP>gd_20cd75017412215cbb8739e8-chunk-000<SEP>gd_26d25c49eba38c34a181fe17-chunk-000<SEP>gd_7865bc0261d26a8a8da9a626-chunk-000<SEP>gd_7865bc0261d26a8a8da9a626-chunk-001<SEP>gd_3e57636142fb1e9e171c6629-chunk-000<SEP>gd_3e5e1c326bac97e2282285bd-chunk-000<SEP>gd_3e5e1c326bac97e2282285bd-chunk-001<SEP>gd_21919aca3c400d60f87d44a8-chunk-000<SEP>gd_41f4f21aee44fd832fdd25ba-chunk-000<SEP>gd_47d3e3437acc5698cf178a84-chunk-000<SEP>gd_249fb073b7c26bcc5a12b822-chunk-000<SEP>gd_243034475e44ac6592eb8cf0-chunk-000<SEP>gd_299bf0f9224b09fba3a17c32-chunk-000<SEP>gd_4b77249b336ac427b9990749-chunk-000<SEP>gd_08c8df651b0c304cd548004a-chunk-000<SEP>gd_4f2e478678037e796a58bacd-chunk-000<SEP>gd_2cc56f4022d63af2f1308876-chunk-000<SEP>gd_4a569da30d92a593b20a7b59-chunk-000<SEP>gd_809b156788083b552503a587-chunk-000<SEP>gd_2e6b49d50566bba6c1b35f04-chunk-000<SEP>gd_17ec0a740f815b471f557b82-chunk-000<SEP>gd_5448911bf1d9e8cb3ec3f5e9-chunk-000<SEP>gd_5221c2ca672f7ffa4d2109b4-chunk-000<SEP>gd_319670abac439d85128abe9e-chunk-000<SEP>gd_319670abac439d85128abe9e-chunk-002<SEP>gd_34c141c6933eafc6a555342b-chunk-000<SEP>gd_3ebf3023f70e6b3f8139191f-chunk-000<SEP>gd_591cd71ca6604931510aece8-chunk-000<SEP>gd_1936bf908fd5ac0ef21ae0f6-chunk-002<SEP>gd_373d523ec5ab7e990eef1ec7-chunk-000<SEP>gd_596adaa8220c87fb248341d2-chunk-000<SEP>gd_60d4047adb3d13428a00a49c-chunk-000<SEP>gd_0aa6b0568926344f0ed17487-chunk-000<SEP>gd_5067e7d465b1c8e7c23adc37-chunk-003<SEP>gd_685189794087858c0dba6918-chunk-000<SEP>gd_19e03611f1ed50347b81fb3e-chunk-000<SEP>gd_38df17cff9eb3cf9451f1893-chunk-000<SEP>gd_36834ee214bcfc2b751a3463-chunk-000<SEP>gd_6b0443a195bddf2b5a84a40a-chunk-000<SEP>gd_3fb7986c4e1e23f2010f1d95-chunk-000<SEP>gd_6bbd9f87d5f3da64cd6e9e0a-chunk-000<SEP>gd_3ac038553a6efee0e6c187a0-chunk-000<SEP>gd_9048ed4b6c5a9f3e40238ec5-chunk-000<SEP>gd_40efae5878ea2fd115c6d9d8-chunk-000<SEP>gd_60a6d4c0ee8dfca941117d3e-chunk-000<SEP>gd_60a6d4c0ee8dfca941117d3e-chunk-001<SEP>gd_1bb89f0881d846204f69d052-chunk-000<SEP>gd_1bb89f0881d846204f69d052-chunk-001<SEP>gd_63b752186f04b5c7b94740de-chunk-000<SEP>gd_6fb60835ce398d0db2fac037-chunk-000<SEP>gd_6fb60835ce398d0db2fac037-chunk-001<SEP>gd_6fb60835ce398d0db2fac037-chunk-003<SEP>gd_664cf6e9be1f1d56a814b26c-chunk-000<SEP>gd_4e8e411a20b69ff98e60d556-chunk-002<SEP>gd_a6016d6c72ddea604b995fd3-chunk-000<SEP>gd_99c95b8be92d3bd3aa1be287-chunk-000<SEP>gd_02c919f5dc7714ddf44c6d9f-chunk-000<SEP>gd_54067867888814c1f99f5d38-chunk-000<SEP>gd_49072335923e70b6d8913de1-chunk-000<SEP>gd_48e33c739374b10eb5af5570-chunk-000<SEP>gd_49680c3435cac4dcd7706c17-chunk-000<SEP>gd_179963266b84ebecb1409519-chunk-000<SEP>gd_179963266b84ebecb1409519-chunk-001<SEP>gd_74f885fb4d40a7d23380e616-chunk-000<SEP>gd_74f885fb4d40a7d23380e616-chunk-001<SEP>gd_74f885fb4d40a7d23380e616-chunk-002<SEP>gd_1e07c5d8a5539b7e896c47b5-chunk-000<SEP>gd_a3e275f3acee0bd0245068a0-chunk-000<SEP>gd_500ff2f7a5996e8bcc0fea93-chunk-000<SEP>gd_2bf0ddaf4dd05006ad24493b-chunk-000<SEP>gd_7932b0cb72425a0f799285e1-chunk-000<SEP>gd_20969cb9a1054f9bfe90e5a1-chunk-000<SEP>gd_52580e80aacd01c8a80e48c2-chunk-000<SEP>gd_52580e80aacd01c8a80e48c2-chunk-001<SEP>gd_21063d148764ad3581efebd5-chunk-000<SEP>gd_4f6908ae4b2f4c4e20daccaa-chunk-000<SEP>gd_75ccaa0f63ea46308ec419cc-chunk-000<SEP>gd_816304ae833fa148e165ce04-chunk-000<SEP>gd_5426676fd0b6371f544f6fde-chunk-000<SEP>gd_b4c53fb8fd83195a32e12cb7-chunk-000<SEP>gd_ba8cfcf37a4829e6738e3817-chunk-000<SEP>gd_58ec534d2346ec246ab80c43-chunk-000<SEP>gd_51082f5f33da67daee39dc90-chunk-000<SEP>gd_51082f5f33da67daee39dc90-chunk-001<SEP>gd_4f4f02fc0ba8d92486f98586-chunk-000<SEP>gd_59786235ec03f6fe9fcba771-chunk-000<SEP>gd_28e630372aae90eb9315f28e-chunk-000<SEP>gd_28e630372aae90eb9315f28e-chunk-001<SEP>gd_28e630372aae90eb9315f28e-chunk-002<SEP>gd_7fbefa9a8ed2d27e45cbea65-chunk-001<SEP>gd_679de09e1d49afa5e1d56e41-chunk-000<SEP>gd_5c7333ad23ae9c2e22a18390-chunk-000<SEP>gd_55a2ca607db6bde28a3561e5-chunk-000<SEP>gd_03ad86f78a3f911e6e7f4493-chunk-000<SEP>gd_2e55186f0f79af43e6118167-chunk-000<SEP>gd_8dd87bbf61a18138ea19d0ee-chunk-000<SEP>gd_8dd87bbf61a18138ea19d0ee-chunk-001<SEP>gd_60de4000b7fcfd0de9e07c8e-chunk-000<SEP>gd_d8fe4e83f86b82e6fd92f383-chunk-000<SEP>gd_79858ea6162573644fe3e173-chunk-000<SEP>gd_8d92d5d37545d321e820c655-chunk-000<SEP>gd_29f68dd5d21caeef086b7329-chunk-000<SEP>gd_03e29f4054ae6baa669b4ad3-chunk-000<SEP>gd_90814726a2ea956e4f678d03-chunk-000<SEP>gd_90dfdba2d42ce3be7435fa31-chunk-000<SEP>gd_605db38f375511061b99e6ee-chunk-000<SEP>gd_71e628f86d3b2233b7cb22b0-chunk-000<SEP>gd_71e628f86d3b2233b7cb22b0-chunk-005<SEP>gd_71e628f86d3b2233b7cb22b0-chunk-007<SEP>gd_93db829a67b16eaaacdf2d76-chunk-000<SEP>gd_664fe6dcbe5aa6b58b62db31-chunk-000<SEP>gd_2d0b6bec781ad89f23b8f957-chunk-000<SEP>gd_e6e70dc6bd3b3665dbbe64de-chunk-000<SEP>gd_642a90a31d8746170449bebe-chunk-000<SEP>gd_9418ca008522c1893ccfe898-chunk-000<SEP>gd_9b5dc2c121e06663621065c9-chunk-000<SEP>gd_66aca202cec270b3060603e0-chunk-000<SEP>gd_68cb736bea20f2941b1d42fb-chunk-000<SEP>gd_0450ead0159ae6da78b4356e-chunk-000<SEP>gd_b536cc0ad4219b960caa5daf-chunk-000<SEP>gd_6a4eb140bd13343c8b8962ce-chunk-000<SEP>gd_ac679e1af09ddfb0d195761c-chunk-000<SEP>gd_31ba1c8d581ac1985f549c14-chunk-000<SEP>gd_7214c699e42a2318dd33d09f-chunk-000<SEP>gd_b2c6d9a62156309c209d1d0e-chunk-000<SEP>gd_826943ff016f1c9f4e16a02f-chunk-000<SEP>gd_ffd5f004817ff0cfde057945-chunk-000<SEP>gd_c387616945e788682c23c05d-chunk-000<SEP>gd_72031c12a77cdfbb371e1f07-chunk-000<SEP>gd_1c930366074ea339319c9cad-chunk-000<SEP>gd_7259ae8fb5c14b7e4a7171d6-chunk-000<SEP>gd_7259ae8fb5c14b7e4a7171d6-chunk-001<SEP>gd_3700a72c04912b7acab40b91-chunk-000<SEP>gd_3700a72c04912b7acab40b91-chunk-001<SEP>gd_cbc65b3eb8efa09f32370cb3-chunk-000<SEP>gd_72e9e76a2cf7a8ea84a21acb-chunk-000<SEP>gd_9c1de7a2ab341b06e7031b53-chunk-000<SEP>gd_d7b8041c0c9c2339807b7bd0-chunk-000<SEP>gd_3a9e187b9b599b728aa6cbb5-chunk-000<SEP>gd_3a9e187b9b599b728aa6cbb5-chunk-001<SEP>gd_3a9e187b9b599b728aa6cbb5-chunk-003<SEP>gd_e8ade92cb8044ab9740caa7f-chunk-001<SEP>gd_d8634952bd688ae7ed11f624-chunk-000<SEP>gd_8726db00060d66cc7ae76734-chunk-000",
+          "file_path": "gd_0e1afddaca819c17829b209e<SEP>gd_087a4675a11cf57ae08ea7cf<SEP>gd_00808ccaeb7073dfcf899559<SEP>gd_0e243f9c16a81abe061b3496<SEP>gd_028b8a676781e0db7a6b323d<SEP>gd_14530da4ea39350d8431fea6<SEP>gd_03e15c39b23c76a73a12a032<SEP>gd_021ab9a9824bd98a6d45fe72<SEP>gd_0543e28be565211f29c7e3d4<SEP>gd_1586430bce2fffea00a8cd83<SEP>gd_01c4f3dd39890d28a5dfedd6<SEP>gd_11eb12a906f6fd665fab2d11<SEP>gd_06b8eb6625a9fb6e2a62b0bc<SEP>gd_84a451c83e9831b81f0767db<SEP>gd_1354204b842e11ae5bc077c9<SEP>gd_0a63f84731a3ae990120db4a<SEP>gd_0f493e0cf0ff9dfd725aba4f<SEP>gd_04f20313cc3831bfa62af1c8<SEP>gd_0b6743ce6338d33e96dc8605<SEP>gd_1bd11726aa0e0351aefe21ce<SEP>gd_0633915a8565a63d11f310ba<SEP>gd_1dad17108c5e8ae8202bc982<SEP>gd_1c79d03ae7c72eea56093c66<SEP>gd_072a958576c3d08d325dd01b<SEP>gd_e202a1afd3c9d493a094de48<SEP>gd_163c0c0b28dde995c92e72f4<SEP>gd_5b470ee5398fb5a9ffde5b9f<SEP>gd_0f84eb0397d3f9ebe9982fe6<SEP>gd_ad5ace08d7fa6c197773d33b<SEP>gd_1cc7db10c34d802d7c089d9f<SEP>gd_6c75dd2c2258e8a1cbdbd024<SEP>gd_120a3c3451bb99437cbaa161<SEP>gd_00ac0cdc41bdf0deae43ef5b<SEP>gd_1e26981a9dc01e979a564ff0<SEP>gd_09267d6dfab254529a946b18<SEP>gd_00be868863058a8e9a4cb603<SEP>gd_15d187637520cc4b1b5726e1<SEP>gd_1e2d1944a05912b229a6616f<SEP>gd_09fb9e5d797e0828baa6a4e3<SEP>gd_1c7b97735560846975c87037<SEP>gd_23aa8cd4020f1d2df5102cfc<SEP>gd_35c0de66f11cd0f9ff35bd4f<SEP>gd_9e7b7d19767447153ac587a9<SEP>gd_4fe03de948798e408f8e23aa<SEP>gd_5339ef95acf5382961a2350a<SEP>gd_35709eb4ce9c8ee27e006220<SEP>gd_5b4dcd8b8dcce699f8e93c2f<SEP>gd_3c421a313a0af4daa71cf30f<SEP>gd_3a88f1d2afd6a79f4002151e<SEP>gd_20cd75017412215cbb8739e8<SEP>gd_26d25c49eba38c34a181fe17<SEP>gd_7865bc0261d26a8a8da9a626<SEP>gd_3e57636142fb1e9e171c6629<SEP>gd_3e5e1c326bac97e2282285bd<SEP>gd_21919aca3c400d60f87d44a8<SEP>gd_41f4f21aee44fd832fdd25ba<SEP>gd_47d3e3437acc5698cf178a84<SEP>gd_249fb073b7c26bcc5a12b822<SEP>gd_243034475e44ac6592eb8cf0<SEP>gd_299bf0f9224b09fba3a17c32<SEP>gd_4b77249b336ac427b9990749<SEP>gd_08c8df651b0c304cd548004a<SEP>gd_4f2e478678037e796a58bacd<SEP>gd_2cc56f4022d63af2f1308876<SEP>gd_4a569da30d92a593b20a7b59<SEP>gd_809b156788083b552503a587<SEP>gd_2e6b49d50566bba6c1b35f04<SEP>gd_17ec0a740f815b471f557b82<SEP>gd_5448911bf1d9e8cb3ec3f5e9<SEP>gd_5221c2ca672f7ffa4d2109b4<SEP>gd_319670abac439d85128abe9e<SEP>gd_34c141c6933eafc6a555342b<SEP>gd_3ebf3023f70e6b3f8139191f<SEP>gd_591cd71ca6604931510aece8<SEP>gd_1936bf908fd5ac0ef21ae0f6<SEP>...truncated...(KEEP Old)",
+          "created_at": 1793499999
+        },
+        {
+          "entity_name": "$5m ARR",
+          "entity_type": "concept",
+          "description": "Five million dollars in annual recurring revenue.",
+          "source_id": "gd_4b4bf04e76ce09618e708a2a-chunk-000",
+          "file_path": "gd_4b4bf04e76ce09618e708a2a",
+          "created_at": 1793558777
+        },
+        {
+          "entity_name": "Public SaaS companies",
+          "entity_type": "concept",
+          "description": "Software as a Service companies listed on the public market.<SEP>Public SaaS companies have an average ARR multiple of 6x.<SEP>A group of successful software companies that have achieved public market success through durable growth, strong unit economics, and predictability.",
+          "source_id": "gd_99d17e0b73db2cd5429d2a76-chunk-000<SEP>gd_fd2a720d5ccdbfd8e0349e77-chunk-000<SEP>gd_2f45e5c21df8cafc73c920bb-chunk-002",
+          "file_path": "gd_99d17e0b73db2cd5429d2a76<SEP>gd_fd2a720d5ccdbfd8e0349e77<SEP>gd_2f45e5c21df8cafc73c920bb",
+          "created_at": 1793625151
+        },
+        {
+          "entity_name": "Nasdaq",
+          "entity_type": "organization",
+          "description": "The Nasdaq is a significant stock exchange that plays a crucial role in the financial markets, particularly for technology companies and venture capital funds. It serves as a platform for companies to raise capital and list their shares, with a particular focus on technology companies, providing a venue for them to list and raise funds. The Nasdaq is also often used as a benchmark for venture capital fund performance, tracking the performance of the top 100 non-financial stocks in the US.\n\nNotably, the Nasdaq has experienced growth and has not been experiencing a downturn, unlike some other stock exchanges. It is home to various companies, including Pegasystems, which is listed on the exchange. The Nasdaq has also made strategic investments in partnerships, such as a $50 million investment in a crypto exchange model, validating its commitment to innovation and growth.\n\nIn terms of its financial performance, the Nasdaq has a 25% price CAGR, indicating a strong and consistent growth rate. Additionally, the Nasdaq represents approximately $5.5 trillion in aggregate value, making it a major player in the global financial markets. As a stock exchange, the Nasdaq provides a range of financial services, including a platform for companies to raise capital and list their shares.\n\nThe Nasdaq has also expanded its reach through strategic acquisitions, including the acquisition of Adenza. Furthermore, the exchange is home to various notable companies, including WalkMe, which is listed on the Nasdaq. Overall, the Nasdaq is a vital component of the financial markets, providing a platform for companies to grow and thrive, and serving as a benchmark for venture capital fund performance.<SEP>Stock exchange where Thoma Bravo placed a $2.7B block in 2024.<SEP>Stock exchange that listed Adenza in a $10.5 billion deal.<SEP>Stock exchange where companies list their shares.<SEP>Stock exchange that lists and trades publicly traded companies.",
+          "source_id": "gd_5400908b98bff11a26e9e0e5-chunk-000<SEP>gd_f8a39eae7bdcd71631e99b2c-chunk-000<SEP>gd_67cd644673f040a0a29fbdfa-chunk-000<SEP>gd_ebcd17af708339fd3f438382-chunk-004<SEP>gd_bd97c14fa0476835df73618f-chunk-001<SEP>gd_bd97c14fa0476835df73618f-chunk-002<SEP>gd_bea119fa63714fe4d9176aa5-chunk-000<SEP>gd_4765cbd3559619036cfba977-chunk-000<SEP>gd_6a94dfb13f66f6c9a9ef3fe6-chunk-002<SEP>gd_e3956c930503ba2d846589bd-chunk-007<SEP>gd_c6f21bde42fb4a0c42f82a9e-chunk-003<SEP>gd_5965fa9fb21505d682caeb90-chunk-000<SEP>gd_d6cd6b3b0f0de4f44f6d4e46-chunk-000<SEP>gd_4bffee088c217385e9ed7cf0-chunk-001<SEP>gd_4bffee088c217385e9ed7cf0-chunk-002<SEP>gd_701934762b825d9306a15274-chunk-000<SEP>gd_701934762b825d9306a15274-chunk-003<SEP>gd_701934762b825d9306a15274-chunk-004<SEP>gd_777f67b89add5480a198adf7-chunk-002",
+          "file_path": "gd_5400908b98bff11a26e9e0e5<SEP>gd_f8a39eae7bdcd71631e99b2c<SEP>gd_67cd644673f040a0a29fbdfa<SEP>gd_ebcd17af708339fd3f438382<SEP>gd_bd97c14fa0476835df73618f<SEP>gd_bea119fa63714fe4d9176aa5<SEP>gd_4765cbd3559619036cfba977<SEP>gd_6a94dfb13f66f6c9a9ef3fe6<SEP>gd_e3956c930503ba2d846589bd<SEP>gd_c6f21bde42fb4a0c42f82a9e<SEP>gd_5965fa9fb21505d682caeb90<SEP>gd_d6cd6b3b0f0de4f44f6d4e46<SEP>gd_4bffee088c217385e9ed7cf0<SEP>gd_701934762b825d9306a15274<SEP>gd_777f67b89add5480a198adf7",
+          "created_at": 1793627116
+        },
+        {
+          "entity_name": "SaaStr University",
+          "entity_type": "organization",
+          "description": "SaaStr University is a free online university offering courses and discussions on SaaS-related topics to its over 12,000 users. The platform provides educational content to founders and SaaS executives, covering a wide range of SaaS industry topics. With thousands of registered members and high engagement rates, SaaStr University has established itself as a valuable resource for the SaaS community.\n\nThe platform is structured to cater to the needs of founders and executives, offering courses and resources to help them improve their skills and knowledge in the SaaS industry. SaaStr University is a product offered by SaaStr, a well-known platform for SaaS professionals. As an educational resource, it aims to bridge the gap between theoretical knowledge and practical application, providing a comprehensive learning experience for its users.\n\nSaaStr University's offerings include free courses and learnings, making it an accessible resource for anyone interested in SaaS-related topics. The platform's high engagement rates and large user base demonstrate its effectiveness in providing valuable content to its members. By leveraging the expertise of SaaStr, the platform has become a go-to destination for SaaS founders and professionals seeking to improve their skills and stay up-to-date with industry trends.<SEP>An educational platform for SaaS companies.<SEP>An online platform for SaaS founders.",
+          "source_id": "gd_6fb60835ce398d0db2fac037-chunk-000<SEP>gd_6fb60835ce398d0db2fac037-chunk-003<SEP>gd_b2c6d9a62156309c209d1d0e-chunk-000<SEP>gd_d032b97ad647886e0e116542-chunk-000<SEP>gd_d032b97ad647886e0e116542-chunk-001<SEP>gd_d032b97ad647886e0e116542-chunk-002<SEP>gd_6cc9536a8c08885ebea1a265-chunk-001<SEP>gd_0f97215950834bc620494a43-chunk-002<SEP>gd_a387884f047f923cf1f1232e-chunk-005<SEP>gd_a387884f047f923cf1f1232e-chunk-006<SEP>gd_a678b9c53d6c304ce6752527-chunk-000<SEP>gd_8223a31e412ad6da256d3a2a-chunk-000",
+          "file_path": "gd_6fb60835ce398d0db2fac037<SEP>gd_b2c6d9a62156309c209d1d0e<SEP>gd_d032b97ad647886e0e116542<SEP>gd_6cc9536a8c08885ebea1a265<SEP>gd_0f97215950834bc620494a43<SEP>gd_a387884f047f923cf1f1232e<SEP>gd_a678b9c53d6c304ce6752527<SEP>gd_8223a31e412ad6da256d3a2a",
+          "created_at": 1793603591
+        },
+        {
+          "entity_name": "$3.5M",
+          "entity_type": "concept",
+          "description": "A specific business idea of more than one word, representing the revenue generated by OpenAI in 2020.",
+          "source_id": "gd_fa7363b1de00027943a9fe94-chunk-002",
+          "file_path": "gd_fa7363b1de00027943a9fe94",
+          "created_at": 1793636978
+        },
+        {
+          "entity_name": "incremental customer",
+          "entity_type": "concept",
+          "description": "An incremental customer is a customer that a company acquires through a semi-exclusive relationship with a top partner in the industry.<SEP>The customer acquired at a higher cost than the average customer",
+          "source_id": "gd_4d3bc1fda477bad7aa02e5b6-chunk-001<SEP>gd_b59420b8a4157ccee2549a6f-chunk-003",
+          "file_path": "gd_4d3bc1fda477bad7aa02e5b6<SEP>gd_b59420b8a4157ccee2549a6f",
+          "created_at": 1793569635
+        },
+        {
+          "entity_name": "$3M",
+          "entity_type": "concept",
+          "description": "Annual Recurring Revenue of $3 million",
+          "source_id": "gd_1330305cc3f41f63189528f0-chunk-000",
+          "file_path": "gd_1330305cc3f41f63189528f0",
+          "created_at": 1793638066
+        },
+        {
+          "entity_name": "Gitlab",
+          "entity_type": "organization",
+          "description": "Gitlab is a web-based platform for version control and collaboration, providing tools for software development, collaboration, and version control. It is a DevOps platform that enables teams to manage their code, collaborate on projects, and track changes. As a software development company, Gitlab offers a web-based platform for version control and collaboration, allowing developers to work together efficiently.\n\nGitlab is a named company, with a valuation of over $15 billion. The company is led by its CEO, who oversees the development and growth of the platform. As an organization, Gitlab provides a range of services and tools to support software development, including version control, collaboration, and continuous integration and deployment. The platform is designed to facilitate DevOps practices, enabling teams to automate their workflows and improve their overall efficiency.\n\nNote: I have removed the duplicate descriptions and merged the information into a single summary, while maintaining the key points and details from each description. The summary is written in an objective, third-person perspective and explicitly mentions the name of the entity, Gitlab, throughout the text.<SEP>Gitlab is one of the CEOs attending 2025 SaaStr Annual.<SEP>Web-based DevOps platform.",
+          "source_id": "gd_2d1a5ed459bfc1a023a1db6d-chunk-000<SEP>gd_1c4574bfd38001677b67039b-chunk-001<SEP>gd_dfcdb3714e2bfa2686b5fb16-chunk-000<SEP>gd_6ac1c91f4cda2d936c6e05c7-chunk-000<SEP>gd_744aedf69774b9787271020d-chunk-000<SEP>gd_2639750269d5ed1288adaeb1-chunk-000<SEP>gd_fe58fac9ba9141f8ea6ccb99-chunk-000<SEP>gd_45895bb382839086f6554318-chunk-006<SEP>gd_45895bb382839086f6554318-chunk-007<SEP>gd_8569097982e6e44111eec925-chunk-001<SEP>gd_8569097982e6e44111eec925-chunk-002",
+          "file_path": "gd_2d1a5ed459bfc1a023a1db6d<SEP>gd_1c4574bfd38001677b67039b<SEP>gd_dfcdb3714e2bfa2686b5fb16<SEP>gd_6ac1c91f4cda2d936c6e05c7<SEP>gd_744aedf69774b9787271020d<SEP>gd_2639750269d5ed1288adaeb1<SEP>gd_fe58fac9ba9141f8ea6ccb99<SEP>gd_45895bb382839086f6554318<SEP>gd_8569097982e6e44111eec925",
+          "created_at": 1793638581
+        },
+        {
+          "entity_name": "Three",
+          "entity_type": "concept",
+          "description": "Three is a product with a value of $200m+.<SEP>Three critical questions emerge from this analysis.",
+          "source_id": "gd_094300d1720fe9e365c28947-chunk-000<SEP>gd_18882942a86ac5a7c53bf0cb-chunk-007",
+          "file_path": "gd_094300d1720fe9e365c28947<SEP>gd_18882942a86ac5a7c53bf0cb",
+          "created_at": 1793639773
+        },
+        {
+          "entity_name": "Teamwork Collection",
+          "entity_type": "product",
+          "description": "Teamwork Collection is a bundled offering from Atlassian that includes Jira, Confluence, Loom, and Rovo.<SEP>Teamwork Collection is a system of work built on a common data platform, used by Insurity.",
+          "source_id": "gd_5452a21f583d7a1ce5646101-chunk-003<SEP>gd_5452a21f583d7a1ce5646101-chunk-004<SEP>gd_5452a21f583d7a1ce5646101-chunk-002",
+          "file_path": "gd_5452a21f583d7a1ce5646101",
+          "created_at": 1793609174
+        },
+        {
+          "entity_name": "$3m",
+          "entity_type": "concept",
+          "description": "A specific amount of money<SEP>A financial metric representing the annual recurring revenue of a company.<SEP>A revenue milestone that indicates a startup has reached a certain level of growth and can sustain itself without external funding.",
+          "source_id": "gd_9c3e28f19f1d094b0061a9c0-chunk-000<SEP>gd_3e259415f45afa9ddd480b31-chunk-001<SEP>gd_4b4bf04e76ce09618e708a2a-chunk-001",
+          "file_path": "gd_9c3e28f19f1d094b0061a9c0<SEP>gd_3e259415f45afa9ddd480b31<SEP>gd_4b4bf04e76ce09618e708a2a",
+          "created_at": 1793558777
+        },
+        {
+          "entity_name": "Cloud NRR",
+          "entity_type": "concept",
+          "description": "Cloud NRR is a measure of a company's ability to retain customers and generate revenue from existing customers.",
+          "source_id": "gd_5452a21f583d7a1ce5646101-chunk-002",
+          "file_path": "gd_5452a21f583d7a1ce5646101",
+          "created_at": 1793609174
+        },
+        {
+          "entity_name": "Fortune 500",
+          "entity_type": "concept",
+          "description": "The Fortune 500 is a list of the largest and most successful companies in the United States and the world, ranked by revenue. It includes companies from various sectors, and its ranking is based on the companies' annual revenues. The list is a benchmark for industry leaders, providing a comprehensive overview of the top-performing companies in the country.\n\nWhile the Fortune 500 is often associated with the United States, it is also a list of the largest and most successful companies in the world, ranked by revenue. This broader scope acknowledges the global presence and influence of these companies, which operate across international borders and have a significant impact on the global economy.\n\nInterestingly, a significant portion of the Fortune 500 companies are customers of CrowdStrike, a cybersecurity firm, indicating the importance of robust security measures for these large and complex organizations. Furthermore, the Fortune 500 is characterized by its complex procurement cycles, which can be challenging to navigate for suppliers and vendors.\n\nNotably, 41% of Fortune 500 companies use the platform of ElevenLabs, highlighting the significant presence of these companies in the digital landscape. Additionally, the Fortune 500 is characterized by its large corporate structure, with some companies having a corporate VP with a $20m budget to solve real business problems.\n\nThe Fortune 500 companies are a group of large, well-established companies that operate globally, with a significant presence in the United States. They are ranked by revenue, and their inclusion in the list is based on their annual revenues. The list is a benchmark for industry leaders, providing a comprehensive overview of the top-performing companies in the country.\n\nIt is worth noting that the Fortune 500 list is not limited to American companies, as some descriptions suggest that it includes companies from around the world. However, the primary focus remains on the largest and most successful companies in the United States, with a global perspective also being acknowledged.<SEP>A group of large companies that Rubrik targets with its products and services.<SEP>Fortune 500 is a list of the largest and most successful companies in the world, as ranked by Fortune magazine.<SEP>Fortune 500 is a list of the largest and most successful companies in the world.<SEP>Fortune 500 is an organization that consists of the 500 largest and most successful companies in the United States.<SEP>Fortune 500 is a list of the top 500 American companies as ranked by Fortune magazine.<SEP>Fortune 500 refers to the list of the largest and most successful companies in the United States, with 85% of these companies using Canva.",
+          "source_id": "gd_5221c2ca672f7ffa4d2109b4-chunk-000<SEP>gd_5221c2ca672f7ffa4d2109b4-chunk-001<SEP>gd_03659fa17ea4f3e3a9dc9298-chunk-000<SEP>gd_6b007f03167b87bbac2e346b-chunk-000<SEP>gd_2da2607f440be8eb7f834419-chunk-001<SEP>gd_2da2607f440be8eb7f834419-chunk-002<SEP>gd_35e2a72ebda9a867d1609c05-chunk-000<SEP>gd_3431ce388885d39d6d44c6b6-chunk-001<SEP>gd_3431ce388885d39d6d44c6b6-chunk-002<SEP>gd_5cee12338f5781cf3fc86de2-chunk-001<SEP>gd_5cee12338f5781cf3fc86de2-chunk-000<SEP>gd_79e602fce498ee721fb0af46-chunk-000<SEP>gd_79e602fce498ee721fb0af46-chunk-001<SEP>gd_737423395e5334f2472de593-chunk-000<SEP>gd_737423395e5334f2472de593-chunk-001<SEP>gd_103fb24d89f795fb02fdd13d-chunk-001<SEP>gd_70fbe3aeece3874aa5c26594-chunk-001<SEP>gd_87686b74d96b804688e485b4-chunk-002<SEP>gd_93d5f2f3734060bea2c7b669-chunk-002<SEP>gd_e82e6511ade6122ac0c71b46-chunk-000<SEP>gd_a7c61a59e40262414bfd8f20-chunk-001<SEP>gd_0bc1abfa4e6084d46e2595c5-chunk-001<SEP>gd_51f61376ab02cc151f9c2e33-chunk-003<SEP>gd_8e0c4eb5068da67dbb8ad247-chunk-002<SEP>gd_45d625247214f2e5d3dc11aa-chunk-000<SEP>gd_45d625247214f2e5d3dc11aa-chunk-001<SEP>gd_45d625247214f2e5d3dc11aa-chunk-002<SEP>gd_de31354bc29d919e01e7cce0-chunk-001<SEP>gd_88b45eaf937a5ab5039dba4e-chunk-003<SEP>gd_d19ef462293cbfaf17f910e6-chunk-000<SEP>gd_d19ef462293cbfaf17f910e6-chunk-002<SEP>gd_5b445ae4452b1cd5ee770467-chunk-005<SEP>gd_5b445ae4452b1cd5ee770467-chunk-006<SEP>gd_25029ba6a8314662d07258c4-chunk-001<SEP>gd_06c71448bbf36be9dff422f6-chunk-001<SEP>gd_3e8732484211557041408d86-chunk-000<SEP>gd_3c8d2efa348e102a23b24a6b-chunk-004<SEP>gd_26bfbd2898d0a0f84f3cc393-chunk-006<SEP>gd_87e883631b8660ea245be6c6-chunk-000<SEP>gd_6e149b2e82d3a0e956732c2e-chunk-001<SEP>gd_6d36e9d789605a02741458e1-chunk-000<SEP>gd_72ac9b025f3c016b061227fb-chunk-005<SEP>gd_d0fa7487e0b39fe68571cad6-chunk-001<SEP>gd_d0fa7487e0b39fe68571cad6-chunk-002<SEP>gd_d0fa7487e0b39fe68571cad6-chunk-003<SEP>gd_f9269f1be6752e43ae909a14-chunk-000",
+          "file_path": "gd_5221c2ca672f7ffa4d2109b4<SEP>gd_03659fa17ea4f3e3a9dc9298<SEP>gd_6b007f03167b87bbac2e346b<SEP>gd_2da2607f440be8eb7f834419<SEP>gd_35e2a72ebda9a867d1609c05<SEP>gd_3431ce388885d39d6d44c6b6<SEP>gd_5cee12338f5781cf3fc86de2<SEP>gd_79e602fce498ee721fb0af46<SEP>gd_737423395e5334f2472de593<SEP>gd_103fb24d89f795fb02fdd13d<SEP>gd_70fbe3aeece3874aa5c26594<SEP>gd_87686b74d96b804688e485b4<SEP>gd_93d5f2f3734060bea2c7b669<SEP>gd_e82e6511ade6122ac0c71b46<SEP>gd_a7c61a59e40262414bfd8f20<SEP>gd_0bc1abfa4e6084d46e2595c5<SEP>gd_51f61376ab02cc151f9c2e33<SEP>gd_8e0c4eb5068da67dbb8ad247<SEP>gd_45d625247214f2e5d3dc11aa<SEP>gd_de31354bc29d919e01e7cce0<SEP>gd_88b45eaf937a5ab5039dba4e<SEP>gd_d19ef462293cbfaf17f910e6<SEP>gd_5b445ae4452b1cd5ee770467<SEP>gd_25029ba6a8314662d07258c4<SEP>gd_06c71448bbf36be9dff422f6<SEP>gd_3e8732484211557041408d86<SEP>gd_3c8d2efa348e102a23b24a6b<SEP>gd_26bfbd2898d0a0f84f3cc393<SEP>gd_6e149b2e82d3a0e956732c2e<SEP>gd_6d36e9d789605a02741458e1<SEP>gd_72ac9b025f3c016b061227fb<SEP>gd_d0fa7487e0b39fe68571cad6<SEP>gd_f9269f1be6752e43ae909a14",
+          "created_at": 1793636886
+        }
+      ],
+      "relationships": [
+        {
+          "src_id": "Fortune 500",
+          "tgt_id": "SaaS",
+          "description": "SaaS companies often target large enterprises, which are often listed in the Fortune 500.",
+          "keywords": "target",
+          "weight": 1.0,
+          "source_id": "gd_45d625247214f2e5d3dc11aa-chunk-001",
+          "file_path": "gd_45d625247214f2e5d3dc11aa",
+          "created_at": 1793583256
+        },
+        {
+          "src_id": "$6.4B+ ARR",
+          "tgt_id": "Atlassian",
+          "description": "Atlassian has $6.4B+ ARR.",
+          "keywords": "ARR,has",
+          "weight": 1.0,
+          "source_id": "gd_5452a21f583d7a1ce5646101-chunk-000",
+          "file_path": "gd_5452a21f583d7a1ce5646101",
+          "created_at": 1793609184
+        },
+        {
+          "src_id": "Nasdaq",
+          "tgt_id": "SaaS",
+          "description": "SaaS companies are now underperforming Nasdaq, whereas they previously outperformed it.",
+          "keywords": "Overperforms,Underperforms",
+          "weight": 1.0,
+          "source_id": "gd_bd97c14fa0476835df73618f-chunk-001",
+          "file_path": "gd_bd97c14fa0476835df73618f",
+          "created_at": 1793535831
+        },
+        {
+          "src_id": "$5B",
+          "tgt_id": "Atlassian",
+          "description": "Atlassian's ARR has increased to $5B.",
+          "keywords": "Increase",
+          "weight": 1.0,
+          "source_id": "gd_b9da22c04e0fa0f306cd64d9-chunk-000",
+          "file_path": "gd_b9da22c04e0fa0f306cd64d9",
+          "created_at": 1793535287
+        },
+        {
+          "src_id": "$3.5M",
+          "tgt_id": "OpenAI",
+          "description": "OpenAI generated $3.5 million in revenue in 2020.",
+          "keywords": "Revenue Generation",
+          "weight": 1.0,
+          "source_id": "gd_fa7363b1de00027943a9fe94-chunk-002",
+          "file_path": "gd_fa7363b1de00027943a9fe94",
+          "created_at": 1793637001
+        },
+        {
+          "src_id": "Atlassian",
+          "tgt_id": "World Wide Web",
+          "description": "Atlassian is a software company that offers project management and collaboration tools on the World Wide Web.",
+          "keywords": "Association",
+          "weight": 1.0,
+          "source_id": "gd_b84bb863a93fe024d576b691-chunk-001",
+          "file_path": "gd_b84bb863a93fe024d576b691",
+          "created_at": 1793535033
+        },
+        {
+          "src_id": "Fortune 500",
+          "tgt_id": "Salesforce",
+          "description": "The Fortune 500 company uses the Salesforce product.",
+          "keywords": "uses_product",
+          "weight": 1.0,
+          "source_id": "gd_45d625247214f2e5d3dc11aa-chunk-002",
+          "file_path": "gd_45d625247214f2e5d3dc11aa",
+          "created_at": 1793583256
+        },
+        {
+          "src_id": "Atlassian",
+          "tgt_id": "Rovo",
+          "description": "relationship_description: Atlassian includes its AI platform Rovo at no additional cost for most users.<SEP>Atlassian is using Rovo to improve Net Revenue Retention.",
+          "keywords": "improving NRR,included,relationship_keywords: AI platform",
+          "weight": 2.0,
+          "source_id": "gd_070a59055548e31a4e2d028a-chunk-000<SEP>gd_5452a21f583d7a1ce5646101-chunk-005",
+          "file_path": "gd_070a59055548e31a4e2d028a<SEP>gd_5452a21f583d7a1ce5646101",
+          "created_at": 1793609184
+        },
+        {
+          "src_id": "Company",
+          "tgt_id": "Fortune 500",
+          "description": "Sales is Seen as a Cost-Center, Large companies view sales as a cost-center, but this can be a dismal failure for smaller companies.",
+          "keywords": "In General",
+          "weight": 1.0,
+          "source_id": "gd_de31354bc29d919e01e7cce0-chunk-001",
+          "file_path": "gd_de31354bc29d919e01e7cce0",
+          "created_at": 1793585942
+        },
+        {
+          "src_id": "ARR",
+          "tgt_id": "Atlassian",
+          "description": "Atlassian has a strong cash engine, generating $1.4 Billion in free cash from $4.4 Billion in ARR.<SEP>Atlassian's ARR is a key metric for measuring the revenue growth of the company.<SEP>Atlassian's ARR has increased significantly, indicating strong revenue growth.<SEP>Atlassian's growth is competing with ARR's high growth rate.<SEP>Atlassian's ARR is $3B, which is a significant metric for the company's growth.<SEP>relationship_description: Atlassian operates at an efficiency of ARR.",
+          "keywords": "Increase,Key Metric,Metric,Relationship_keywords: efficiency,Strong Cash Engine,growth_competition",
+          "weight": 6.0,
+          "source_id": "gd_efbaa09ea2525e90e20556df-chunk-001<SEP>gd_70a4342562c701cb49469cde-chunk-001<SEP>gd_b9da22c04e0fa0f306cd64d9-chunk-000<SEP>gd_ee1953fb4d4e788a8fcd0076-chunk-002<SEP>gd_4305ca7b896da20cc09c6c3b-chunk-000<SEP>gd_45895bb382839086f6554318-chunk-007",
+          "file_path": "gd_efbaa09ea2525e90e20556df<SEP>gd_70a4342562c701cb49469cde<SEP>gd_b9da22c04e0fa0f306cd64d9<SEP>gd_ee1953fb4d4e788a8fcd0076<SEP>gd_4305ca7b896da20cc09c6c3b<SEP>gd_45895bb382839086f6554318",
+          "created_at": 1793632665
+        },
+        {
+          "src_id": "Nasdaq",
+          "tgt_id": "VCs",
+          "description": "VCs have historically underperformed Nasdaq, but now Nasdaq is outperforming them.<SEP>VCs can invest in Nasdaq as an alternative to traditional venture capital investments.",
+          "keywords": "Alternative to,Overperforms,Underperforms",
+          "weight": 2.0,
+          "source_id": "gd_bd97c14fa0476835df73618f-chunk-001<SEP>gd_bd97c14fa0476835df73618f-chunk-002",
+          "file_path": "gd_bd97c14fa0476835df73618f",
+          "created_at": 1793535831
+        },
+        {
+          "src_id": "Atlassian",
+          "tgt_id": "RingCentral",
+          "description": "Atlassian is a software company that offers project management and collaboration tools, while RingCentral is a cloud-based unified communications and collaboration company.",
+          "keywords": "Contrast",
+          "weight": 1.0,
+          "source_id": "gd_b84bb863a93fe024d576b691-chunk-001",
+          "file_path": "gd_b84bb863a93fe024d576b691",
+          "created_at": 1793535033
+        },
+        {
+          "src_id": "Investments",
+          "tgt_id": "VCs",
+          "description": "VCs have specific criteria and expectations for their investments.",
+          "keywords": "criteria,expectations",
+          "weight": 1.0,
+          "source_id": "gd_2fb5017109e363590b9c33a4-chunk-000",
+          "file_path": "gd_2fb5017109e363590b9c33a4",
+          "created_at": 1793491594
+        },
+        {
+          "src_id": "$4.3B+ Cloud ARR",
+          "tgt_id": "Atlassian",
+          "description": "Atlassian has achieved a cloud annualized revenue of $4.3 billion+.",
+          "keywords": "Achievement",
+          "weight": 1.0,
+          "source_id": "gd_5452a21f583d7a1ce5646101-chunk-002",
+          "file_path": "gd_5452a21f583d7a1ce5646101",
+          "created_at": 1793609184
+        },
+        {
+          "src_id": "5 Interesting Learnings from Palantir at $3.5 Billion in ARR",
+          "tgt_id": "Palantir",
+          "description": "Palantir is winning by adapting to the new reality of the SaaS market, as highlighted in the article \"5 Interesting Learnings from Palantir at $3.5 Billion in ARR\".",
+          "keywords": "Keywords: winning,adapting",
+          "weight": 1.0,
+          "source_id": "gd_753a13ceccfb779879f29786-chunk-004",
+          "file_path": "gd_753a13ceccfb779879f29786",
+          "created_at": 1793570345
+        },
+        {
+          "src_id": "Asana",
+          "tgt_id": "Atlassian",
+          "description": "Atlassian and Asana are two prominent companies in the collaboration software market. Both companies had a tough year in 2023, but they have also experienced significant growth in revenue and user adoption. In fact, Asana has grown to over $600 million in annual recurring revenue (ARR), while Atlassian is still growing but has not yet reached this milestone.\n\nAtlassian and Asana are competitors in the collaboration software market, offering similar products that cater to the needs of various customers, including large enterprises and small to medium-sized businesses (SMBs). Asana has a diverse range of customers, which is a testament to its ability to adapt to different business needs.\n\nInterestingly, both companies transitioned to enterprise-focused business models after going public, which has contributed to their growth and success. However, there was a point in time when Asana could have been acquired by Atlassian, but this did not materialize.\n\nOverall, Atlassian and Asana are two distinct companies that operate in the same market, offering similar products and services to their customers. While they share some similarities, they also have their own unique strengths and growth trajectories.<SEP>Atlassian and Asana are implementing selective price increases, indicating a trend in the industry.<SEP>Asana and Atlassian are implementing selective price increases, indicating a trend in the industry.",
+          "keywords": "ARR,Competitor,Customer Segmentation,Growth,Industry performance,Leadership,Similar Growth,could have been acquired,price increases,price_increases,selective price increases,similar to,went enterprise",
+          "weight": 11.0,
+          "source_id": "gd_d1423816ab12475e55e09a39-chunk-000<SEP>gd_fc560134d5cd034812dc8b69-chunk-000<SEP>gd_70a4342562c701cb49469cde-chunk-000<SEP>gd_70a4342562c701cb49469cde-chunk-001<SEP>gd_70a4342562c701cb49469cde-chunk-002<SEP>gd_d2ae8fcc4620bb77f501c1ce-chunk-000<SEP>gd_ad079debb3a22f38cb6c1f3e-chunk-000<SEP>gd_815d204b1d3505892f9cc05a-chunk-002",
+          "file_path": "gd_d1423816ab12475e55e09a39<SEP>gd_fc560134d5cd034812dc8b69<SEP>gd_70a4342562c701cb49469cde<SEP>gd_d2ae8fcc4620bb77f501c1ce<SEP>gd_ad079debb3a22f38cb6c1f3e<SEP>gd_815d204b1d3505892f9cc05a",
+          "created_at": 1793641508
+        },
+        {
+          "src_id": "Fortune 500",
+          "tgt_id": "Replit",
+          "description": "relationship_description=Replit has 500,000 businesses using its platform.<SEP>Replit targets Fortune 500 companies for adoption.",
+          "keywords": "Targets,adoption,relationship_keywords=partnership",
+          "weight": 2.0,
+          "source_id": "gd_e82e6511ade6122ac0c71b46-chunk-000<SEP>gd_72ac9b025f3c016b061227fb-chunk-005",
+          "file_path": "gd_e82e6511ade6122ac0c71b46<SEP>gd_72ac9b025f3c016b061227fb",
+          "created_at": 1793633610
+        },
+        {
+          "src_id": "Atlassian",
+          "tgt_id": "SaaStr",
+          "description": "Atlassian, a software company that practices a unique approach to business, has been recognized by SaaStr as a successful SaaS company. SaaStr, a platform that provides information and resources for SaaS start-ups, has invested in Atlassian and partnered with the company to provide resources and insights to SaaS companies. This collaboration is a testament to Atlassian's innovative approach and commitment to the SaaS industry.\n\nAtlassian, which provides software solutions for teams, has been featured in a video by SaaStr, highlighting the company's success and expertise in the field. Additionally, SaaStr has recognized Atlassian's use of small, predictable price increases, a strategy employed by other successful SaaS companies. The speaker at SaaStr has also shared their experience working at Atlassian, further emphasizing the company's reputation and influence in the industry.\n\nSaaStr, as a community and research organization, focuses on software as a service (SaaS) industry trends and best practices. Through its platform and resources, SaaStr provides valuable insights and information to SaaS start-ups, including those like Atlassian that are leading the way in the industry. By investing in and partnering with Atlassian, SaaStr demonstrates its commitment to supporting and promoting successful SaaS companies.<SEP>Atlassian is a partner of SaaStr (already extracted, but re-outputting for completeness).<SEP>Atlassian is a partner of SaaStr.",
+          "keywords": "Collaboration,Industry Research,Investment,Partner,Partnered,Recognition,Related,Relationship_keywords: confirms,experience,partner,predictable,provides information",
+          "weight": 10.0,
+          "source_id": "gd_1cc7db10c34d802d7c089d9f-chunk-000<SEP>gd_6fb60835ce398d0db2fac037-chunk-003<SEP>gd_4d3bc1fda477bad7aa02e5b6-chunk-001<SEP>gd_c4d88074f382c56078d251bf-chunk-003<SEP>gd_b9da22c04e0fa0f306cd64d9-chunk-000<SEP>gd_b9da22c04e0fa0f306cd64d9-chunk-001<SEP>gd_51f61376ab02cc151f9c2e33-chunk-003<SEP>gd_fc1aa6c9d79f8c0df65f23b8-chunk-000<SEP>gd_87e883631b8660ea245be6c6-chunk-008<SEP>gd_87e883631b8660ea245be6c6-chunk-010",
+          "file_path": "gd_1cc7db10c34d802d7c089d9f<SEP>gd_6fb60835ce398d0db2fac037<SEP>gd_4d3bc1fda477bad7aa02e5b6<SEP>gd_c4d88074f382c56078d251bf<SEP>gd_b9da22c04e0fa0f306cd64d9<SEP>gd_51f61376ab02cc151f9c2e33<SEP>gd_fc1aa6c9d79f8c0df65f23b8<SEP>gd_87e883631b8660ea245be6c6",
+          "created_at": 1793624019
+        },
+        {
+          "src_id": "Figma",
+          "tgt_id": "Fortune 500",
+          "description": "95%, of Fortune 500 companies use Figma<SEP>Figma is used by 95% of Fortune 500 companies.<SEP>Figma has a market penetration of 95% among Fortune 500 companies, but this is not explicitly stated in the input text. The correct relationship is that Figma has a market penetration of 95% among Fortune 500 companies, and Canva also has a market penetration of 95% among Fortune 500 companies.",
+          "keywords": "High adoption rate,Market Penetration,adoption,market_leadership",
+          "weight": 3.0,
+          "source_id": "gd_87686b74d96b804688e485b4-chunk-002<SEP>gd_3c8d2efa348e102a23b24a6b-chunk-004<SEP>gd_d0fa7487e0b39fe68571cad6-chunk-001",
+          "file_path": "gd_87686b74d96b804688e485b4<SEP>gd_3c8d2efa348e102a23b24a6b<SEP>gd_d0fa7487e0b39fe68571cad6",
+          "created_at": 1793635853
+        },
+        {
+          "src_id": "Atlassian",
+          "tgt_id": "Public SaaS companies",
+          "description": "Atlassian is trading at a market capitalization of $55 Billion, which is twice the average ARR multiple of public SaaS companies.",
+          "keywords": "Comparison",
+          "weight": 1.0,
+          "source_id": "gd_fd2a720d5ccdbfd8e0349e77-chunk-000",
+          "file_path": "gd_fd2a720d5ccdbfd8e0349e77",
+          "created_at": 1793558159
+        },
+        {
+          "src_id": "Cursor",
+          "tgt_id": "Fortune 500",
+          "description": "relationship_description=Half of the Fortune 500 companies use Cursor.<SEP>Cursor is used by the majority of Fortune 500 companies.",
+          "keywords": "adoption,business partnership,market dominance,relationship_keywords=partnership",
+          "weight": 3.0,
+          "source_id": "gd_e82e6511ade6122ac0c71b46-chunk-000<SEP>gd_88b45eaf937a5ab5039dba4e-chunk-003",
+          "file_path": "gd_e82e6511ade6122ac0c71b46<SEP>gd_88b45eaf937a5ab5039dba4e",
+          "created_at": 1793586539
+        },
+        {
+          "src_id": "Atlassian",
+          "tgt_id": "SaaStr University",
+          "description": "SaaStr University uses Atlassian's collaboration tools in its courses.",
+          "keywords": "Software Provider",
+          "weight": 1.0,
+          "source_id": "gd_d032b97ad647886e0e116542-chunk-000",
+          "file_path": "gd_d032b97ad647886e0e116542",
+          "created_at": 1793500436
+        },
+        {
+          "src_id": "Microsoft",
+          "tgt_id": "Nasdaq",
+          "description": "Microsoft is currently outperforming Nasdaq.<SEP>Nasdaq is being driven by companies like Microsoft.",
+          "keywords": "Driven by,Overperforms,Underperforms",
+          "weight": 2.0,
+          "source_id": "gd_bd97c14fa0476835df73618f-chunk-001<SEP>gd_bd97c14fa0476835df73618f-chunk-002",
+          "file_path": "gd_bd97c14fa0476835df73618f",
+          "created_at": 1793535831
+        },
+        {
+          "src_id": "Atlassian",
+          "tgt_id": "incremental customer",
+          "description": "Atlassian is a software company that practices a unique approach to business, focusing on building a strong brand and acquiring incremental customers through semi-exclusive relationships with top partners in the industry.",
+          "keywords": "builds through",
+          "weight": 1.0,
+          "source_id": "gd_4d3bc1fda477bad7aa02e5b6-chunk-001",
+          "file_path": "gd_4d3bc1fda477bad7aa02e5b6",
+          "created_at": 1793504173
+        },
+        {
+          "src_id": "Atlassian",
+          "tgt_id": "Gitlab",
+          "description": "Atlassian has a higher ARR/FTE ratio than Gitlab.",
+          "keywords": "Comparison",
+          "weight": 1.0,
+          "source_id": "gd_45895bb382839086f6554318-chunk-006",
+          "file_path": "gd_45895bb382839086f6554318",
+          "created_at": 1793632665
+        },
+        {
+          "src_id": "$3.3B",
+          "tgt_id": "Cursor",
+          "description": "Cursor has raised $3.3B in capital, indicating significant funding.",
+          "keywords": "funding,related_to",
+          "weight": 1.0,
+          "source_id": "gd_88b45eaf937a5ab5039dba4e-chunk-004",
+          "file_path": "gd_88b45eaf937a5ab5039dba4e",
+          "created_at": 1793586539
+        },
+        {
+          "src_id": "Atlassian",
+          "tgt_id": "Teamwork Collection",
+          "description": "Atlassian's Teamwork Collection is a suite of collaboration tools that includes Jira, Confluence, and Loom.<SEP>Atlassian's Teamwork Collection has exceeded 1 million seats and 1,000 customers, with customers buying 10%+ more seats than standalone products.",
+          "keywords": "Product,and retention,cross-sell,expansion",
+          "weight": 2.0,
+          "source_id": "gd_5452a21f583d7a1ce5646101-chunk-002<SEP>gd_5452a21f583d7a1ce5646101-chunk-003",
+          "file_path": "gd_5452a21f583d7a1ce5646101",
+          "created_at": 1793609184
+        },
+        {
+          "src_id": "Fortune 500",
+          "tgt_id": "VP",
+          "description": "The Fortune 500 company has real business problems that need to be solved by the VP.",
+          "keywords": "has_problem",
+          "weight": 1.0,
+          "source_id": "gd_45d625247214f2e5d3dc11aa-chunk-002",
+          "file_path": "gd_45d625247214f2e5d3dc11aa",
+          "created_at": 1793583256
+        },
+        {
+          "src_id": "Atlassian",
+          "tgt_id": "Cloud NRR",
+          "description": "Atlassian has achieved a cloud net revenue retention rate of 120%+ for three consecutive quarters.",
+          "keywords": "Achievement",
+          "weight": 1.0,
+          "source_id": "gd_5452a21f583d7a1ce5646101-chunk-002",
+          "file_path": "gd_5452a21f583d7a1ce5646101",
+          "created_at": 1793609184
+        },
+        {
+          "src_id": "Canva",
+          "tgt_id": "Fortune 500",
+          "description": "Canva has a market penetration of 95% among Fortune 500 companies.<SEP>95% of Fortune 500 companies use Canva.<SEP>85% of Fortune 500 companies use Canva.<SEP>A free user helping their kid with homework might be the CCO of a Fortune 500 company.",
+          "keywords": "Adoption Keywords,Market Penetration,Relationship Keywords: connection,value",
+          "weight": 5.0,
+          "source_id": "gd_d0fa7487e0b39fe68571cad6-chunk-001<SEP>gd_d0fa7487e0b39fe68571cad6-chunk-002<SEP>gd_d0fa7487e0b39fe68571cad6-chunk-003<SEP>gd_f9269f1be6752e43ae909a14-chunk-000",
+          "file_path": "gd_d0fa7487e0b39fe68571cad6<SEP>gd_f9269f1be6752e43ae909a14",
+          "created_at": 1793636893
+        },
+        {
+          "src_id": "AI",
+          "tgt_id": "Atlassian",
+          "description": "AI is disrupting Atlassian.<SEP>Make sure your inference costs are going down, not up<SEP>Atlassian's AI-powered tools are driving 5% more usage across Jira customers, not replacing seats.",
+          "keywords": "Disruptor,execution,impact,investment",
+          "weight": 4.0,
+          "source_id": "gd_1db8851ad56bec3e841dbf86-chunk-001<SEP>gd_51f61376ab02cc151f9c2e33-chunk-006<SEP>gd_5452a21f583d7a1ce5646101-chunk-003",
+          "file_path": "gd_1db8851ad56bec3e841dbf86<SEP>gd_51f61376ab02cc151f9c2e33<SEP>gd_5452a21f583d7a1ce5646101",
+          "created_at": 1793609184
+        },
+        {
+          "src_id": "Fortune 500",
+          "tgt_id": "Rippling",
+          "description": "AI can't navigate internal politics at a Fortune 500 company.",
+          "keywords": "Navigate Internal Politics",
+          "weight": 1.0,
+          "source_id": "gd_5b445ae4452b1cd5ee770467-chunk-005",
+          "file_path": "gd_5b445ae4452b1cd5ee770467",
+          "created_at": 1793594147
+        },
+        {
+          "src_id": "Anthropic",
+          "tgt_id": "Atlassian",
+          "description": "Atlassian competes with Anthropic for CIO budgets and uses Claude Code internally.<SEP>Atlassian spends money on Anthropic, which is then paid by AWS.<SEP>Atlassian spends money on Anthropic, which pays AWS.<SEP>Atlassian's customer base is where the most AI agents are being deployed.<SEP>Anthropic ships software ahead of schedule compared to Atlassian.",
+          "keywords": "AI agents,Ahead of Schedule,Competes,Relationship Keywords: spends money on,Revenue,Uses,pays",
+          "weight": 5.0,
+          "source_id": "gd_51f61376ab02cc151f9c2e33-chunk-001<SEP>gd_51f61376ab02cc151f9c2e33-chunk-002<SEP>gd_87e883631b8660ea245be6c6-chunk-000<SEP>gd_87e883631b8660ea245be6c6-chunk-004<SEP>gd_59c785375f34b0507b64485d-chunk-001",
+          "file_path": "gd_51f61376ab02cc151f9c2e33<SEP>gd_87e883631b8660ea245be6c6<SEP>gd_59c785375f34b0507b64485d",
+          "created_at": 1793644273
+        },
+        {
+          "src_id": "Box",
+          "tgt_id": "Fortune 500",
+          "description": "Both are large and successful companies listed in the Fortune 500.",
+          "keywords": "similar",
+          "weight": 1.0,
+          "source_id": "gd_45d625247214f2e5d3dc11aa-chunk-001",
+          "file_path": "gd_45d625247214f2e5d3dc11aa",
+          "created_at": 1793583256
+        },
+        {
+          "src_id": "Age of AI",
+          "tgt_id": "Atlassian",
+          "description": "Atlassian is relevant to the Age of AI",
+          "keywords": "impacted,relevant",
+          "weight": 1.0,
+          "source_id": "gd_51f61376ab02cc151f9c2e33-chunk-000",
+          "file_path": "gd_51f61376ab02cc151f9c2e33",
+          "created_at": 1793578855
+        },
+        {
+          "src_id": "Fortune 500",
+          "tgt_id": "Rubrik",
+          "description": "Rubrik targets Fortune 500 companies with its products and services.",
+          "keywords": "Organization,Target Market",
+          "weight": 1.0,
+          "source_id": "gd_6e149b2e82d3a0e956732c2e-chunk-001",
+          "file_path": "gd_6e149b2e82d3a0e956732c2e",
+          "created_at": 1793626466
+        },
+        {
+          "src_id": "120%+ Cloud NRR",
+          "tgt_id": "Atlassian",
+          "description": "Atlassian has achieved a cloud net revenue retention rate of 120%+ for three consecutive quarters.",
+          "keywords": "Achievement",
+          "weight": 1.0,
+          "source_id": "gd_5452a21f583d7a1ce5646101-chunk-002",
+          "file_path": "gd_5452a21f583d7a1ce5646101",
+          "created_at": 1793609184
+        },
+        {
+          "src_id": "Fortune 500",
+          "tgt_id": "Ramp",
+          "description": "Fortune 500 companies are adopting AI at a larger scale than early adopters.",
+          "keywords": "Increased adoption",
+          "weight": 1.0,
+          "source_id": "gd_3431ce388885d39d6d44c6b6-chunk-002",
+          "file_path": "gd_3431ce388885d39d6d44c6b6",
+          "created_at": 1793529984
+        },
+        {
+          "src_id": "Atlassian",
+          "tgt_id": "Zendesk",
+          "description": "Atlassian is a software company that offers project management and collaboration tools, while Zendesk is a customer service and support software company.<SEP>Both are cloud-based customer service software companies",
+          "keywords": "Competition,Contrast",
+          "weight": 2.0,
+          "source_id": "gd_b84bb863a93fe024d576b691-chunk-001<SEP>gd_87e883631b8660ea245be6c6-chunk-003",
+          "file_path": "gd_b84bb863a93fe024d576b691<SEP>gd_87e883631b8660ea245be6c6",
+          "created_at": 1793624016
+        },
+        {
+          "src_id": "Fortune 500",
+          "tgt_id": "PagerDuty",
+          "description": "PagerDuty has one-third of the Fortune 500 as customers.<SEP>relationship_description: PagerDuty's customers include a significant number of companies on the Fortune 500 list.",
+          "keywords": "customer_of,ranking,relationship_keywords: customer",
+          "weight": 2.0,
+          "source_id": "gd_0bc1abfa4e6084d46e2595c5-chunk-001<SEP>gd_6d36e9d789605a02741458e1-chunk-000",
+          "file_path": "gd_0bc1abfa4e6084d46e2595c5<SEP>gd_6d36e9d789605a02741458e1",
+          "created_at": 1793633304
+        },
+        {
+          "src_id": "$5M",
+          "tgt_id": "founders",
+          "description": "Founders often wait until their company reaches $5 million in revenue before making certain decisions or hires.",
+          "keywords": "wait until",
+          "weight": 1.0,
+          "source_id": "gd_aaaf5c7f6c3f79dc6e2ca9b9-chunk-002",
+          "file_path": "gd_aaaf5c7f6c3f79dc6e2ca9b9",
+          "created_at": 1793522939
+        },
+        {
+          "src_id": "Fortune 500",
+          "tgt_id": "Qualified",
+          "description": "Qualified's AI identified and qualified a Fortune 500 sponsor prospect browsing SaaStr's partnership pages.",
+          "keywords": "identified,qualified",
+          "weight": 1.0,
+          "source_id": "gd_103fb24d89f795fb02fdd13d-chunk-001",
+          "file_path": "gd_103fb24d89f795fb02fdd13d",
+          "created_at": 1793564181
+        },
+        {
+          "src_id": "CrowdStrike",
+          "tgt_id": "Fortune 500",
+          "description": "Half of the Fortune 500 companies are customers of CrowdStrike, contributing to its growth.",
+          "keywords": "growth,relationship_keywords: customer,success",
+          "weight": 1.0,
+          "source_id": "gd_35e2a72ebda9a867d1609c05-chunk-000",
+          "file_path": "gd_35e2a72ebda9a867d1609c05",
+          "created_at": 1793527845
+        },
+        {
+          "src_id": "Nasdaq",
+          "tgt_id": "Thoma Bravo",
+          "description": "Thoma Bravo acquired Adenza from Nasdaq.<SEP>Thoma Bravo invested $2.7 billion in Nasdaq in 2024.<SEP>Thoma Bravo has a partnership with Nasdaq, with Adena Friedman, CEO of Nasdaq, celebrating with the team.",
+          "keywords": "Acquisition,Investment,Partner",
+          "weight": 3.0,
+          "source_id": "gd_6a94dfb13f66f6c9a9ef3fe6-chunk-002<SEP>gd_701934762b825d9306a15274-chunk-000<SEP>gd_701934762b825d9306a15274-chunk-004",
+          "file_path": "gd_6a94dfb13f66f6c9a9ef3fe6<SEP>gd_701934762b825d9306a15274",
+          "created_at": 1793611747
+        },
+        {
+          "src_id": "Fortune 500",
+          "tgt_id": "Workday",
+          "description": "Workday serves over 50% of the Fortune 500 companies, making it a leading enterprise SaaS company.<SEP>Workday is seeing headwinds on hiring due to Fortune 500 companies.<SEP>Fortune 500 companies are not hiring, causing seat headwinds for Workday.",
+          "keywords": "Hiring,Relationship_keywords: hiring,headwinds,serves",
+          "weight": 3.0,
+          "source_id": "gd_6b007f03167b87bbac2e346b-chunk-000<SEP>gd_51f61376ab02cc151f9c2e33-chunk-003<SEP>gd_87e883631b8660ea245be6c6-chunk-000",
+          "file_path": "gd_6b007f03167b87bbac2e346b<SEP>gd_51f61376ab02cc151f9c2e33<SEP>gd_87e883631b8660ea245be6c6",
+          "created_at": 1793624016
+        },
+        {
+          "src_id": "Nasdaq",
+          "tgt_id": "Nvidia",
+          "description": "Nvidia is currently outperforming Nasdaq.<SEP>Nasdaq is being driven by companies like Nvidia.",
+          "keywords": "Driven by,Overperforms,Underperforms",
+          "weight": 2.0,
+          "source_id": "gd_bd97c14fa0476835df73618f-chunk-001<SEP>gd_bd97c14fa0476835df73618f-chunk-002",
+          "file_path": "gd_bd97c14fa0476835df73618f",
+          "created_at": 1793535831
+        },
+        {
+          "src_id": "Fortune 500",
+          "tgt_id": "Monday.com",
+          "description": "Has 1,000+ enterprise customers paying $50k+ annually",
+          "keywords": "Customer",
+          "weight": 1.0,
+          "source_id": "gd_5cee12338f5781cf3fc86de2-chunk-000",
+          "file_path": "gd_5cee12338f5781cf3fc86de2",
+          "created_at": 1793530412
+        },
+        {
+          "src_id": "Fortune 500",
+          "tgt_id": "Veeva",
+          "description": "Veeva has a large number of enterprise customers in common with companies listed in the Fortune 500.",
+          "keywords": "customers,partners",
+          "weight": 1.0,
+          "source_id": "gd_2da2607f440be8eb7f834419-chunk-002",
+          "file_path": "gd_2da2607f440be8eb7f834419",
+          "created_at": 1793527289
+        },
+        {
+          "src_id": "Cloud",
+          "tgt_id": "Nasdaq",
+          "description": "Cloud companies are now underperforming Nasdaq, whereas they previously outperformed it.",
+          "keywords": "Overperforms,Underperforms",
+          "weight": 1.0,
+          "source_id": "gd_bd97c14fa0476835df73618f-chunk-001",
+          "file_path": "gd_bd97c14fa0476835df73618f",
+          "created_at": 1793535831
+        },
+        {
+          "src_id": "ElevenLabs",
+          "tgt_id": "Fortune 500",
+          "description": "Forty-one percent of Fortune 500 companies use the platform of ElevenLabs, which has achieved hypergrowth.<SEP>ElevenLabs has a partnership with Fortune 500 companies, with 60% of them using ElevenLabs' tools.",
+          "keywords": "Partnership,hypergrowth,usage",
+          "weight": 2.0,
+          "source_id": "gd_d19ef462293cbfaf17f910e6-chunk-000<SEP>gd_d19ef462293cbfaf17f910e6-chunk-002",
+          "file_path": "gd_d19ef462293cbfaf17f910e6",
+          "created_at": 1793589502
+        },
+        {
+          "src_id": "5 Interesting Learning series",
+          "tgt_id": "CrowdStrike",
+          "description": "CrowdStrike is featured in the 5 Interesting Learning series, highlighting its growth and success.",
+          "keywords": "growth,relationship_keywords: comparison,success",
+          "weight": 1.0,
+          "source_id": "gd_35e2a72ebda9a867d1609c05-chunk-000",
+          "file_path": "gd_35e2a72ebda9a867d1609c05",
+          "created_at": 1793527845
+        },
+        {
+          "src_id": "ClickUp",
+          "tgt_id": "Fortune 500",
+          "description": "ClickUp uses high-touch channels to sell to Fortune 500 companies.",
+          "keywords": "Whale Hunting,high-touch channels",
+          "weight": 1.0,
+          "source_id": "gd_70fbe3aeece3874aa5c26594-chunk-001",
+          "file_path": "gd_70fbe3aeece3874aa5c26594",
+          "created_at": 1793568256
+        },
+        {
+          "src_id": "Fortune 500",
+          "tgt_id": "Mailchimp",
+          "description": "Both are large and successful companies listed in the Fortune 500.",
+          "keywords": "similar",
+          "weight": 1.0,
+          "source_id": "gd_45d625247214f2e5d3dc11aa-chunk-001",
+          "file_path": "gd_45d625247214f2e5d3dc11aa",
+          "created_at": 1793583256
+        },
+        {
+          "src_id": "Fortune 500",
+          "tgt_id": "SaaS company",
+          "description": "The SaaS company has a large customer that is a Fortune 500 company.",
+          "keywords": "Has a large customer",
+          "weight": 1.0,
+          "source_id": "gd_45d625247214f2e5d3dc11aa-chunk-000",
+          "file_path": "gd_45d625247214f2e5d3dc11aa",
+          "created_at": 1793583256
+        },
+        {
+          "src_id": "Fortune 500",
+          "tgt_id": "Quora",
+          "description": "pertains to",
+          "keywords": "related to",
+          "weight": 1.0,
+          "source_id": "gd_03659fa17ea4f3e3a9dc9298-chunk-000",
+          "file_path": "gd_03659fa17ea4f3e3a9dc9298",
+          "created_at": 1793494875
+        },
+        {
+          "src_id": "Fortune 500",
+          "tgt_id": "Marketo",
+          "description": "Both are large and successful companies listed in the Fortune 500.",
+          "keywords": "similar",
+          "weight": 1.0,
+          "source_id": "gd_45d625247214f2e5d3dc11aa-chunk-001",
+          "file_path": "gd_45d625247214f2e5d3dc11aa",
+          "created_at": 1793583256
+        },
+        {
+          "src_id": "Fortune 500",
+          "tgt_id": "Hubspot",
+          "description": "Both are large and successful companies listed in the Fortune 500.",
+          "keywords": "similar",
+          "weight": 1.0,
+          "source_id": "gd_45d625247214f2e5d3dc11aa-chunk-001",
+          "file_path": "gd_45d625247214f2e5d3dc11aa",
+          "created_at": 1793583256
+        },
+        {
+          "src_id": "LPs",
+          "tgt_id": "Nasdaq",
+          "description": "LPs' investment in the VC fund is compared to investing directly in Nasdaq.",
+          "keywords": "Comparison",
+          "weight": 1.0,
+          "source_id": "gd_5400908b98bff11a26e9e0e5-chunk-000",
+          "file_path": "gd_5400908b98bff11a26e9e0e5",
+          "created_at": 1793500367
+        },
+        {
+          "src_id": "$4 Billion",
+          "tgt_id": "Veeva",
+          "description": "Veeva is looking to do M&A with its $4 Billion in cash.",
+          "keywords": "Keywords: looking to,do M&A",
+          "weight": 1.0,
+          "source_id": "gd_a7187d0b5d8f043ea80eae4a-chunk-001",
+          "file_path": "gd_a7187d0b5d8f043ea80eae4a",
+          "created_at": 1793534606
+        },
+        {
+          "src_id": "Klarna",
+          "tgt_id": "Nasdaq",
+          "description": "Nasdaq's strategic investment in Klarna",
+          "keywords": "Partnership",
+          "weight": 1.0,
+          "source_id": "gd_4bffee088c217385e9ed7cf0-chunk-001",
+          "file_path": "gd_4bffee088c217385e9ed7cf0",
+          "created_at": 1793608977
+        },
+        {
+          "src_id": "DropBox",
+          "tgt_id": "Fortune 500",
+          "description": "Both are large and successful companies listed in the Fortune 500.",
+          "keywords": "similar",
+          "weight": 1.0,
+          "source_id": "gd_45d625247214f2e5d3dc11aa-chunk-001",
+          "file_path": "gd_45d625247214f2e5d3dc11aa",
+          "created_at": 1793583256
+        },
+        {
+          "src_id": "GitLab",
+          "tgt_id": "Nasdaq",
+          "description": "GitLab is listed on the Nasdaq stock exchange.",
+          "keywords": "Listed-On",
+          "weight": 1.0,
+          "source_id": "gd_bea119fa63714fe4d9176aa5-chunk-000",
+          "file_path": "gd_bea119fa63714fe4d9176aa5",
+          "created_at": 1793535888
+        },
+        {
+          "src_id": "Fortune 500",
+          "tgt_id": "start-up",
+          "description": "The author's first startup was focused on acquiring large Fortune 500 customers.",
+          "keywords": "Relationship_keywords: customer,experience,large",
+          "weight": 1.0,
+          "source_id": "gd_5221c2ca672f7ffa4d2109b4-chunk-000",
+          "file_path": "gd_5221c2ca672f7ffa4d2109b4",
+          "created_at": 1793491832
+        },
+        {
+          "src_id": "Enterprise Customers",
+          "tgt_id": "Fortune 500",
+          "description": "Enterprise customers often aspire to be included in the Fortune 500 list, as it represents a high level of success and prestige in their industry.",
+          "keywords": "Prestige,Representation",
+          "weight": 1.0,
+          "source_id": "gd_5221c2ca672f7ffa4d2109b4-chunk-001",
+          "file_path": "gd_5221c2ca672f7ffa4d2109b4",
+          "created_at": 1793491832
+        },
+        {
+          "src_id": "$5B",
+          "tgt_id": "Private Equity",
+          "description": "Private equity firms have enough capital to buy startups valued at $5B",
+          "keywords": "can afford",
+          "weight": 1.0,
+          "source_id": "gd_1ad10391f7c7d8033e146f8c-chunk-001",
+          "file_path": "gd_1ad10391f7c7d8033e146f8c",
+          "created_at": 1793493080
+        },
+        {
+          "src_id": "Fortune 500",
+          "tgt_id": "Outbound Sales",
+          "description": "Outbound Sales targets Fortune 500 companies.",
+          "keywords": "sells to,targets",
+          "weight": 1.0,
+          "source_id": "gd_737423395e5334f2472de593-chunk-000",
+          "file_path": "gd_737423395e5334f2472de593",
+          "created_at": 1793561707
+        },
+        {
+          "src_id": "Fortune 500",
+          "tgt_id": "Workiva",
+          "description": "Workiva has a partnership with the Fortune 500 companies.",
+          "keywords": "Customer,Partnership",
+          "weight": 1.0,
+          "source_id": "gd_25029ba6a8314662d07258c4-chunk-001",
+          "file_path": "gd_25029ba6a8314662d07258c4",
+          "created_at": 1793602582
+        },
+        {
+          "src_id": "5 Interesting Learnings",
+          "tgt_id": "Marc Benioff",
+          "description": "Marc Benioff shared 5 interesting learnings.",
+          "keywords": "Content",
+          "weight": 1.0,
+          "source_id": "gd_c481ad6a3095befd2e0989e4-chunk-001",
+          "file_path": "gd_c481ad6a3095befd2e0989e4",
+          "created_at": 1793508147
+        },
+        {
+          "src_id": "Nasdaq",
+          "tgt_id": "a16z",
+          "description": "Private tech companies valued above $1B now represent ~$5.5T in aggregate value.",
+          "keywords": "$5.5 Trillion in Private Unicorns - 10x Growth in 10 Years",
+          "weight": 1.0,
+          "source_id": "gd_5965fa9fb21505d682caeb90-chunk-000",
+          "file_path": "gd_5965fa9fb21505d682caeb90",
+          "created_at": 1793598822
+        },
+        {
+          "src_id": "Gemini",
+          "tgt_id": "Nasdaq",
+          "description": "Nasdaq's partnership with Gemini",
+          "keywords": "Partnership",
+          "weight": 1.0,
+          "source_id": "gd_4bffee088c217385e9ed7cf0-chunk-001",
+          "file_path": "gd_4bffee088c217385e9ed7cf0",
+          "created_at": 1793608977
+        },
+        {
+          "src_id": "Enterprise Customer",
+          "tgt_id": "Fortune 500",
+          "description": "The Fortune 500 company has real business problems that need to be solved.",
+          "keywords": "has_problem",
+          "weight": 1.0,
+          "source_id": "gd_45d625247214f2e5d3dc11aa-chunk-002",
+          "file_path": "gd_45d625247214f2e5d3dc11aa",
+          "created_at": 1793583256
+        },
+        {
+          "src_id": "Glean",
+          "tgt_id": "Rocketed to a $3B valuation",
+          "description": "Glean has achieved a $3B valuation.",
+          "keywords": "Financial",
+          "weight": 1.0,
+          "source_id": "gd_3379ac6f5a6b256be3e535c1-chunk-001",
+          "file_path": "gd_3379ac6f5a6b256be3e535c1",
+          "created_at": 1793492658
+        },
+        {
+          "src_id": "Nasdaq",
+          "tgt_id": "WalkMe",
+          "description": "WalkMe is listed on the Nasdaq stock exchange.",
+          "keywords": "listed on",
+          "weight": 1.0,
+          "source_id": "gd_c6f21bde42fb4a0c42f82a9e-chunk-003",
+          "file_path": "gd_c6f21bde42fb4a0c42f82a9e",
+          "created_at": 1793588866
+        },
+        {
+          "src_id": "Fortune 500",
+          "tgt_id": "WebEx",
+          "description": "Both are large and successful companies listed in the Fortune 500.",
+          "keywords": "similar",
+          "weight": 1.0,
+          "source_id": "gd_45d625247214f2e5d3dc11aa-chunk-001",
+          "file_path": "gd_45d625247214f2e5d3dc11aa",
+          "created_at": 1793583256
+        },
+        {
+          "src_id": "Fortune 500",
+          "tgt_id": "monday.com",
+          "description": "monday.com targets large enterprises, including those on the Fortune 500 list.",
+          "keywords": "Target Market",
+          "weight": 1.0,
+          "source_id": "gd_5cee12338f5781cf3fc86de2-chunk-001",
+          "file_path": "gd_5cee12338f5781cf3fc86de2",
+          "created_at": 1793530412
+        },
+        {
+          "src_id": "Fortune 500",
+          "tgt_id": "me",
+          "description": "The speaker's budget is included in the Fortune 500 list.",
+          "keywords": "Sell High",
+          "weight": 1.0,
+          "source_id": "gd_737423395e5334f2472de593-chunk-001",
+          "file_path": "gd_737423395e5334f2472de593",
+          "created_at": 1793561707
+        },
+        {
+          "src_id": "Enterprise Companies",
+          "tgt_id": "Fortune 500",
+          "description": "Fortune 500 companies and enterprise companies have similar access to sophisticated sales intelligence.",
+          "keywords": "Comparison,Contrast",
+          "weight": 1.0,
+          "source_id": "gd_93d5f2f3734060bea2c7b669-chunk-002",
+          "file_path": "gd_93d5f2f3734060bea2c7b669",
+          "created_at": 1793572560
+        },
+        {
+          "src_id": "Fortune 500",
+          "tgt_id": "Solopreneur",
+          "description": "Solopreneur businesses often churn at a much higher rate than Fortune 500 companies.<SEP>Solopreneur businesses are more likely to fail than Fortune 500 companies.",
+          "keywords": "Comparison,High Churn",
+          "weight": 2.0,
+          "source_id": "gd_79e602fce498ee721fb0af46-chunk-000<SEP>gd_79e602fce498ee721fb0af46-chunk-001",
+          "file_path": "gd_79e602fce498ee721fb0af46",
+          "created_at": 1793531858
+        },
+        {
+          "src_id": "CISO",
+          "tgt_id": "Fortune 500",
+          "description": "CISOs work for Fortune 500 companies.<SEP>Fortune 500 companies employ CISOs.",
+          "keywords": "Employee,Employer",
+          "weight": 3.0,
+          "source_id": "gd_3e8732484211557041408d86-chunk-000",
+          "file_path": "gd_3e8732484211557041408d86",
+          "created_at": 1793607079
+        },
+        {
+          "src_id": "Fortune 500",
+          "tgt_id": "Pave",
+          "description": "Pave provides data and insights for Fortune 500 companies.",
+          "keywords": "Relationship_keywords: data,insights",
+          "weight": 1.0,
+          "source_id": "gd_51f61376ab02cc151f9c2e33-chunk-003",
+          "file_path": "gd_51f61376ab02cc151f9c2e33",
+          "created_at": 1793578856
+        },
+        {
+          "src_id": "Andrew Ng",
+          "tgt_id": "Fortune 500",
+          "description": "Andrew Ng works with Fortune 500 companies.<SEP>Fortune 500 companies work with Andrew Ng.",
+          "keywords": "Works with",
+          "weight": 2.0,
+          "source_id": "gd_3e8732484211557041408d86-chunk-000",
+          "file_path": "gd_3e8732484211557041408d86",
+          "created_at": 1793607079
+        },
+        {
+          "src_id": "Fortune 500",
+          "tgt_id": "Schuck",
+          "description": "The founder of ZoomInfo targeted Fortune 500 companies with his business strategy.",
+          "keywords": "Targeted",
+          "weight": 1.0,
+          "source_id": "gd_06c71448bbf36be9dff422f6-chunk-001",
+          "file_path": "gd_06c71448bbf36be9dff422f6",
+          "created_at": 1793604373
+        },
+        {
+          "src_id": "Fortune 500",
+          "tgt_id": "Solution Sale",
+          "description": "The solution sale can get a six-figure contract from the Fortune 500 company.",
+          "keywords": "can_get_contract",
+          "weight": 1.0,
+          "source_id": "gd_45d625247214f2e5d3dc11aa-chunk-002",
+          "file_path": "gd_45d625247214f2e5d3dc11aa",
+          "created_at": 1793583256
+        },
+        {
+          "src_id": "$3m",
+          "tgt_id": "Burn Rate",
+          "description": "The specific amount of money is related to the burn rate",
+          "keywords": "related to",
+          "weight": 1.0,
+          "source_id": "gd_9c3e28f19f1d094b0061a9c0-chunk-000",
+          "file_path": "gd_9c3e28f19f1d094b0061a9c0",
+          "created_at": 1793499443
+        },
+        {
+          "src_id": "Nasdaq",
+          "tgt_id": "Via Transportation",
+          "description": "Nasdaq's partnership with Via Transportation<SEP>Nasdaq made a $50 million strategic investment in Via Transportation, validating the crypto exchange model.",
+          "keywords": "Investment,Partnership",
+          "weight": 2.0,
+          "source_id": "gd_4bffee088c217385e9ed7cf0-chunk-001<SEP>gd_4bffee088c217385e9ed7cf0-chunk-002",
+          "file_path": "gd_4bffee088c217385e9ed7cf0",
+          "created_at": 1793608977
+        },
+        {
+          "src_id": "Nasdaq",
+          "tgt_id": "VC fund",
+          "description": "The VC fund is compared to Nasdaq.",
+          "keywords": "Comparison",
+          "weight": 1.0,
+          "source_id": "gd_5400908b98bff11a26e9e0e5-chunk-000",
+          "file_path": "gd_5400908b98bff11a26e9e0e5",
+          "created_at": 1793500367
+        },
+        {
+          "src_id": "Nasdaq",
+          "tgt_id": "Venture Capital Fund Manager",
+          "description": "The Venture Capital Fund Manager aims to beat Nasdaq by at least 20%.",
+          "keywords": "beat",
+          "weight": 1.0,
+          "source_id": "gd_f8a39eae7bdcd71631e99b2c-chunk-000",
+          "file_path": "gd_f8a39eae7bdcd71631e99b2c",
+          "created_at": 1793501415
+        },
+        {
+          "src_id": "Executives",
+          "tgt_id": "Investments",
+          "description": "Executives who stop doing the work themselves will fail.<SEP>Executives are involved in the speaker's investments.",
+          "keywords": "Failed,Involved",
+          "weight": 2.0,
+          "source_id": "gd_b17253e0832c9eda0a49b551-chunk-006",
+          "file_path": "gd_b17253e0832c9eda0a49b551",
+          "created_at": 1793569461
+        },
+        {
+          "src_id": "Nasdaq",
+          "tgt_id": "SEC",
+          "description": "Regulatory body responsible for approving S-1 filings and overseeing public companies lists and trades publicly traded companies.",
+          "keywords": "IPO Window",
+          "weight": 1.0,
+          "source_id": "gd_777f67b89add5480a198adf7-chunk-002",
+          "file_path": "gd_777f67b89add5480a198adf7",
+          "created_at": 1793627133
+        },
+        {
+          "src_id": "B2B Tech",
+          "tgt_id": "Nasdaq",
+          "description": "The slowdown in growth in B2B tech is not reflected in the Nasdaq stock exchange.",
+          "keywords": "Keywords: growth,industry,stock exchange",
+          "weight": 1.0,
+          "source_id": "gd_67cd644673f040a0a29fbdfa-chunk-000",
+          "file_path": "gd_67cd644673f040a0a29fbdfa",
+          "created_at": 1793505045
+        },
+        {
+          "src_id": "Nasdaq",
+          "tgt_id": "S multiples",
+          "description": "Nasdaq is currently outperforming S multiples.",
+          "keywords": "Overperforms,Underperforms",
+          "weight": 1.0,
+          "source_id": "gd_bd97c14fa0476835df73618f-chunk-001",
+          "file_path": "gd_bd97c14fa0476835df73618f",
+          "created_at": 1793535831
+        },
+        {
+          "src_id": "Entrepreneurs",
+          "tgt_id": "Investments",
+          "description": "VCs invest in startups with growth potential and a clear path to $100m+ in revenue.",
+          "keywords": "growth,potential",
+          "weight": 1.0,
+          "source_id": "gd_2fb5017109e363590b9c33a4-chunk-000",
+          "file_path": "gd_2fb5017109e363590b9c33a4",
+          "created_at": 1793491594
+        },
+        {
+          "src_id": "Email",
+          "tgt_id": "Investments",
+          "description": "Email is used to communicate with investors and reach out to them for investments.",
+          "keywords": "Communication,Outreach",
+          "weight": 1.0,
+          "source_id": "gd_35db7b4ad7a78a616a0baa36-chunk-001",
+          "file_path": "gd_35db7b4ad7a78a616a0baa36",
+          "created_at": 1793527798
+        },
+        {
+          "src_id": "Investments",
+          "tgt_id": "Venture",
+          "description": "Investments are made by the venture.",
+          "keywords": "Has",
+          "weight": 1.0,
+          "source_id": "gd_42ac25f1bf1df819955caae2-chunk-000",
+          "file_path": "gd_42ac25f1bf1df819955caae2",
+          "created_at": 1793497377
+        },
+        {
+          "src_id": "Investments",
+          "tgt_id": "Legal",
+          "description": "Investments in legal and HR spaces can have high NPS scores.",
+          "keywords": "investments,legal",
+          "weight": 1.0,
+          "source_id": "gd_e570bc885c853fe839d0ee57-chunk-004",
+          "file_path": "gd_e570bc885c853fe839d0ee57",
+          "created_at": 1793593428
+        },
+        {
+          "src_id": "Adena Friedman",
+          "tgt_id": "Nasdaq",
+          "description": "Adena Friedman is the CEO of Nasdaq.",
+          "keywords": "Leadership",
+          "weight": 2.0,
+          "source_id": "gd_d6cd6b3b0f0de4f44f6d4e46-chunk-000",
+          "file_path": "gd_d6cd6b3b0f0de4f44f6d4e46",
+          "created_at": 1793603381
+        },
+        {
+          "src_id": "Cloud companies",
+          "tgt_id": "Nasdaq",
+          "description": "Cloud companies are underperforming Nasdaq overall.",
+          "keywords": "Outperformed by",
+          "weight": 1.0,
+          "source_id": "gd_bd97c14fa0476835df73618f-chunk-002",
+          "file_path": "gd_bd97c14fa0476835df73618f",
+          "created_at": 1793535831
+        },
+        {
+          "src_id": "Nasdaq",
+          "tgt_id": "Pegasystems",
+          "description": "Pegasystems is listed on Nasdaq.",
+          "keywords": "Listing",
+          "weight": 1.0,
+          "source_id": "gd_4765cbd3559619036cfba977-chunk-000",
+          "file_path": "gd_4765cbd3559619036cfba977",
+          "created_at": 1793565718
+        },
+        {
+          "src_id": "Investments",
+          "tgt_id": "Revenue Leaders",
+          "description": "Revenue leaders often have a track record of success with various investments.",
+          "keywords": "Success",
+          "weight": 1.0,
+          "source_id": "gd_cfb82227ec6a0500abe45c2d-chunk-000",
+          "file_path": "gd_cfb82227ec6a0500abe45c2d",
+          "created_at": 1793495483
+        },
+        {
+          "src_id": "GP",
+          "tgt_id": "Investments",
+          "description": "relationship_description=Managing investments can be a significant time commitment for a GP.",
+          "keywords": "relationship_keywords=management,time-consuming",
+          "weight": 1.0,
+          "source_id": "gd_b7da9a11534c7e7d7a4d1b50-chunk-001",
+          "file_path": "gd_b7da9a11534c7e7d7a4d1b50",
+          "created_at": 1793528506
+        },
+        {
+          "src_id": "$1B",
+          "tgt_id": "$5B",
+          "description": "$5B is the new $1B valuation threshold",
+          "keywords": "new threshold",
+          "weight": 1.0,
+          "source_id": "gd_1ad10391f7c7d8033e146f8c-chunk-001",
+          "file_path": "gd_1ad10391f7c7d8033e146f8c",
+          "created_at": 1793493080
+        },
+        {
+          "src_id": "Dumb Deals",
+          "tgt_id": "Investments",
+          "description": "Dumb Deals include investments made in 2021.",
+          "keywords": "Involved in",
+          "weight": 1.0,
+          "source_id": "gd_f77cb7763d991ac1c38d2e1d-chunk-000",
+          "file_path": "gd_f77cb7763d991ac1c38d2e1d",
+          "created_at": 1793491721
+        },
+        {
+          "src_id": "Good Deals",
+          "tgt_id": "Investments",
+          "description": "Good Deals are a type of investment.",
+          "keywords": "Involved in",
+          "weight": 1.0,
+          "source_id": "gd_f77cb7763d991ac1c38d2e1d-chunk-000",
+          "file_path": "gd_f77cb7763d991ac1c38d2e1d",
+          "created_at": 1793491721
+        },
+        {
+          "src_id": "$3M",
+          "tgt_id": "Shalin Jain",
+          "description": "Reached $3M ARR",
+          "keywords": "Achieved",
+          "weight": 1.0,
+          "source_id": "gd_1330305cc3f41f63189528f0-chunk-000",
+          "file_path": "gd_1330305cc3f41f63189528f0",
+          "created_at": 1793638081
+        },
+        {
+          "src_id": "$5m ARR",
+          "tgt_id": "The SaaS Company",
+          "description": "The SaaS company has $5m in ARR.",
+          "keywords": "has_ARR",
+          "weight": 1.0,
+          "source_id": "gd_4b4bf04e76ce09618e708a2a-chunk-000",
+          "file_path": "gd_4b4bf04e76ce09618e708a2a",
+          "created_at": 1793558786
+        },
+        {
+          "src_id": "Storm V",
+          "tgt_id": "Three",
+          "description": "Three is required for Storm V.",
+          "keywords": "Relationship:Required",
+          "weight": 1.0,
+          "source_id": "gd_094300d1720fe9e365c28947-chunk-000",
+          "file_path": "gd_094300d1720fe9e365c28947",
+          "created_at": 1793507176
+        },
+        {
+          "src_id": "$5 Billion",
+          "tgt_id": "keeps",
+          "description": "$5 Billion correlates with keeps.<SEP>keeps is related to $5 Billion.<SEP>$5 Billion influences keeps.<SEP>$5 Billion describes keeps.<SEP>$5 Billion measures keeps.<SEP>$5 Billion affects keeps.",
+          "keywords": "affects,correlates,describes,influences,measures,related_to",
+          "weight": 6.0,
+          "source_id": "gd_5526629b3d33ecf02b9b6951-chunk-001",
+          "file_path": "gd_5526629b3d33ecf02b9b6951",
+          "created_at": 1793494581
+        },
+        {
+          "src_id": "3-5 Companies",
+          "tgt_id": "Government AI Contracts",
+          "description": "3-5 companies are expected to go from unknown to $10B+ valuations based purely on government AI contracts in the Government B2B space.",
+          "keywords": "Government B2B",
+          "weight": 1.0,
+          "source_id": "gd_9892f4cb159a2427a2e6b59b-chunk-005",
+          "file_path": "gd_9892f4cb159a2427a2e6b59b",
+          "created_at": 1793634761
+        }
+      ],
+      "chunks": [
+        {
+          "reference_id": "1",
+          "content": "So Atlassian has cruised past $4 Billion in ARR, still growing a steady 21% in a very efficient fashion.  It’s raining cash, with 27% free-cash flow margins.\nThe markets like this combination.  Even with a few bumps, Atlassian is still trading at a $55 Billion market cap, so over 12x ARR.  That’s twice the average of 6x ARR for public SaaS companies.\nEfficient, steady, profitable growth at scale.  The markets say Yes to Atlassian.\n5 Interesting Learnings:\n#1.  300,000 Total Paying Customers, With 43,000 Paying $10k or More\nThe vast majority of Atlassian’s customers pay less than $10k a year, but the $10k+ ones make up the bulk of the revenue.  A reminder that the long tail really does work in collaboration.  And also how important it is to go a smidge upmarket if you sell to SMBs and smaller customers.\n\n#2.  Loom Added Just 326 $10,000+ a Year Customers, But 33,000 Total Customers\nSo how much revenue did Loom add?  They increased $10k+ customers by less than 1%.  But they increased total customer count by 10%.  Measured by that, Atlassian got a good deal!  The big question will be how do Loom look in 3-4 years.  If they can grow ACV like they have for their other products, it will be a steal.  If not, it will likely be a minor addition in the end.\n\n#3.  Getting Even More Efficient, Like Almost Everyone Else\nAtlassian has always been wildly efficient, and was bootstrapped all the way to IPO (it only sold secondary shares).  But it got even more efficient the past year, growing operating margins from 20.0% to",
+          "file_path": "gd_fd2a720d5ccdbfd8e0349e77",
+          "chunk_id": "gd_fd2a720d5ccdbfd8e0349e77-chunk-000"
+        },
+        {
+          "reference_id": "2",
+          "content": "2B ARR (100% YoY)\nNovember 2027: $4B ARR (100% YoY)\nAt 20x ARR (conservative for a company growing this fast), that’s an $80B valuation. At 30x ARR (closer to current multiple), that’s $120B. And if they keep 100%+ growth going? We’re talking about a $150-200B outcome. What You Can Learn From This\nOkay, so Cursor is a rocket ship. What does that mean for you? Three takeaways:\n\n1. Product-Market Fit Looks Different in the AI Era\nTraditional SaaS PMF was: “Can we get 5-10% of our ICP to pay us?”\nAI-native PMF is: “Do users literally can’t work without us anymore?”\nCursor hit 36% conversion because developers who try it can’t go back to regular VS Code. That’s the bar now.\n\n2. The PLG Playbook Still Works (When You Have 10x Product)\nCursor spent $0 on marketing to get to $100M ARR. But that only works if your product is genuinely 10x better than alternatives.\nMost companies try PLG with a 20% better product. That doesn’t work. You need to be undeniably, obviously, radically better.\nIf you can’t get to 25%+ conversion rates in your free trial, your product isn’t good enough yet. Full stop.\n\n3. Capital Efficiency + Hyper-Growth = Maximum Valuation\nCursor raised $3.3B but only because they were already proving insane efficiency. They hit $100M ARR with basically seed capital ($11M total through 2023).\nInvestors will give you infinite capital once you prove you can deploy it efficiently. But you have to prove it first.\nThe Bottom Line\nCursor went from $0 to $29.3B in 43 months.\nThat’s the fastest value creation in Saa",
+          "file_path": "gd_88b45eaf937a5ab5039dba4e",
+          "chunk_id": "gd_88b45eaf937a5ab5039dba4e-chunk-004"
+        },
+        {
+          "reference_id": "3",
+          "content": "So Atlassian is bucking the trend. At almost $5B ARR, subscription growth is up a stunning 33%, and revenue overall up 21% The markets loved it, driving the stock up +29% the past month Is SaaS Back? 5 Interesting Learnings: #1. Raising Guidance and Growth Rate for Cloud Revenue That’s pretty darn impressive growth at almost $5B in ARR, and just as importantly, they’re raising their prediction here. Atlassian is bullish on maintain and accelerating Cloud growth over the next year. #2. 500 $1M+ Customers Atlassian is going more and more enterprise, which has become key to maintaining growth. It now has 500 $1M+ customers. #3. 51% of Revenue From Outside North America A reminder to go global as early as practical. #4. 50% of Users on \"Business Side”, 50% Technical An interesting breakdown across their core products. Yes, Atlassian’s roots are selling to developers. But as you go more upmarket, and more enterprise, the business users become critical stakeholders and users, too. It’s split 50/50 at Atlassian. #5. Seat Expansion Driving Growth, Along with Cross-Sell of New Products Long live per-seat models and pricing! Atlassian, HubSpot, GitLab and more are seeing growth fueled by classic account expansion of more seats. _______ The Atlassian engine just keeps on running!! Even at almost $5 Billion in ARR. Pretty impressive. Pretty, pretty impressive.",
+          "file_path": "gd_5526629b3d33ecf02b9b6951",
+          "chunk_id": "gd_5526629b3d33ecf02b9b6951-chunk-000"
+        },
+        {
+          "reference_id": "4",
+          "content": "a16z released their inaugural\n“State of Markets” deck this week\n. Here are the 10 top takeaways for B2B founders and execs:\n#1. $5.5 Trillion in Private Unicorns — 10x Growth in 10 Years\nPrivate tech companies valued above $1B now represent ~$5.5T in aggregate value. That’s:\n15% of the entire Nasdaq market cap\n~40% of Nasdaq excluding the Mag 7\n10x growth\nfrom where it was a decade ago\nThere are now\n6x more private unicorns (~1,300) than public companies with a $1B+ market cap\n. The growth story has moved behind the private market curtain.\n\n#2. Fewer Than 5 Public Software Companies Will Grow 30%+ in 2026\nAcross all of public software, internet, and fintech combined, a16z counts\nfewer than 5 companies\nexpected to grow over 30% next year.\nThat’s why the IPO window is effectively closed for most companies. The public markets only want outliers now.\n\n[Omitted same-source text between these sections: 158 words.]\n\n#5. Token Prices Down 3x, Consumption Up 5x\nFrom a16z’s OpenRouter analysis:\n$/million tokens dropped to ~1/3\nof February 2025 levels\nTokens consumed quintupled\nover the same period\nEvery price drop correlated with a consumption spike\nJevons Paradox is real. Cheaper tokens = more usage, not less spend.  Almost anyone in B2B planning for AI to get net cheaper in the short run … is planing wrong.\n#6. 7-8 Year Old TPUs Still at 100% Utilization\nAt a16z Runtime, Google shared that\nTPUs from 2017-2018 are still running at 100% utilization\n.\nThat’s not speculative demand",
+          "file_path": "gd_5965fa9fb21505d682caeb90",
+          "chunk_id": "gd_5965fa9fb21505d682caeb90-chunk-000"
+        },
+        {
+          "reference_id": "5",
+          "content": "So Atlassian is on a bit of a tear.\nRevenue growth is up 21% overall, and subscription growth is up 33% — at almost $5 Billion in ARR.  Wall Street is happy.  It’s driven Atlassian stock up +28% after the results:\nIs SaaS back?\nLet’s dig in.\n5 Interesting Learnings:\n\n#1.  Raising Guidance and Growth Rate for Cloud Revenue To +24% a Year\nThat’s pretty darn impressive growth at almost $5B in ARR, and just as importantly, they’re raising their prediction here.\n#2.  500 $1M+ Customers\nAtlassian is going more and more enterprise, which has become key to maintaining growth.  It now has 500 $1M+ customers.\n#3. 51% of Revenue From Outside North America\nA reminder to go global as early as practical.\n#4.  50% of Users on Business “Side”, 50% Technical\nAn interesting breakdown across their core products.   Yes, Atlassian’s roots are selling to developers.  But as you go more upmarket, and more enterprise, the business users become critical stakeholders and users, too.  It’s split 50/50 at Atlassian.\n\n#5.  Seat Expansion Driving Growth, Along with Cross-Sell of New Products\nLong live per-seat models and pricing!  Atlassian, HubSpot, GitLab and more are seeing growth fueled by classic account expansion of more seats.\nAnd a few other interesting leanings:\n#6.  $10k+ Customers Still Growing +17% a Year\nJust below the +20% a year in new customer growth SaaStr defines as being in true high growth mode, but still very impressive at almost $5B ARR.  Combine this with triple digit NRR, and Atlassian has a strong 5+ year run ahead of it.  At",
+          "file_path": "gd_b9da22c04e0fa0f306cd64d9",
+          "chunk_id": "gd_b9da22c04e0fa0f306cd64d9-chunk-000"
+        },
+        {
+          "reference_id": "6",
+          "content": "$2m ACV on average. And added 59 new customers last quarter\n. Another reminder that the enterprise is far bigger than the Fortune 500 and Global 2000. Veeva already has 1,000 enterprise customers alone — that pay $2m each a year on average! And it’s adding 59 a quarter, so that’s another 250 new enterprise customers a year or so. A reminder there are 1000s of enterprise buyers for every leading product. ServiceNow\nalso has well over 1,000 customers paying $1m+ a year (that story\nhere\n). And a few other great ones in this series:\n5 Interesting Learnings from Zendesk. As It Crosses $1B in ARR\n5 Interesting Learnings from HubSpot as It Approaches $1 Billion in ARR\n5 Interesting Learnings from RingCentral. As it Approaches $1B in ARR.\n5 Interesting Learnings from Palantir at $1 Billion in ARR.\n5 Interesting Learnings from Slack at $1B in ARR\n5 Interesting Learnings from PagerDuty, as It IPOs\n5 Interesting Learnings from Zoom at IPO\n5 Interesting Learnings from Bill.com at IPO\n5 Interesting Learnings from Asana at $250,000,000 in ARR\n5 Interesting Learnings from Qualtrics at $800m+ in ARR\n5 Interesting Learnings from Xero.",
+          "file_path": "gd_2da2607f440be8eb7f834419",
+          "chunk_id": "gd_2da2607f440be8eb7f834419-chunk-002"
+        },
+        {
+          "reference_id": "7",
+          "content": "Atlassian just reported its Q2 FY26 results, and they’re fascinating on multiple levels:\n$6.4B+ ARR, $1.6 billion in quarterly revenue, up 23%.\nAtlassian is\naccelerating\n(albeit modestly) — up from 20% growth\nTheir first-ever $1 billion cloud quarter.\nAnd yet the market “hates it”.  The stock is sitting near its 52-week low at ~$98, down about 70% from $326.\nIt’s trading at just 4x forward revenues\nThe entire B2B software sector is getting hammered on fears that AI will eat everyone’s lunch — HubSpot down 39% YTD, Figma down 40%, Salesforce and ServiceNow both crashing.\nBut Atlassian’s actual numbers tell a very different story from the “software is dead” narrative. There’s no massive AI lift at Atlassian — yet.  But there’s no downturn, either.  It’s the engine that keeps going at $6B+ ARR.\nHere are 5 interesting learnings:\n1. RPO Grew 44% to $3.8B — Accelerating, Not Decelerating\nThis is the single most important number in the quarter and one almost everyone is overlooking. Remaining performance obligations — essentially contracted future revenue — hit $3.8 billion, up 44% year-over-year. Current RPO (the portion to be recognized within 12 months) grew 30% to $2.7 billion.\nHere’s what matters: RPO growth is\naccelerating\n. Not flattening, not declining. Customers are signing longer, larger deals. The record number of $1M+ ACV deals — nearly 2x year-over-year — is flowing into this number. When RPO growth outpaces revenue growth by this much (44% vs. 23%), it tells you the business is building a larger and larger backlog.",
+          "file_path": "gd_5452a21f583d7a1ce5646101",
+          "chunk_id": "gd_5452a21f583d7a1ce5646101-chunk-000"
+        },
+        {
+          "reference_id": "8",
+          "content": "Shalin Jain built HappyFox to $20M+ ARR, bootstrapped, with about 100 employees. He went from 5 support reps at $1M ARR to 6 support reps at $20M ARR. Same story on sales: 6 sellers at $3M, still 6 sellers at $20M. He recently shared how his team did it by treating support data as their primary GTM engine. Here are the 5 most actionable takeaways.\n1. Your Support Queue Already Has the Expansion Signals. You Just Need Something Reading Them.\nMost B2B companies treat expansion as a sales-led or CS-led motion. Shalin found the highest-ROI signals were already sitting in support tickets.\nCustomers mention needing more seats. They ask about features on a higher plan. They reference products they don’t have yet. Support reps see this every day, but they’re not incentivized (or trained) to route it to sales. And sales doesn’t have access to the ticket queue.\nHappyFox built an AI agent that scans every incoming ticket for expansion language. Out of 5,000 tickets a month, it might flag 13 active opportunities. But those 13 are high-context, high-intent, and came from the person actually using the product. Not from a lead score. Not from a product-qualified signal that may or may not mean anything. From a customer who basically said “I want more.”\nThe cost to run that agent: about $8 to $10 total.\nDo this now:\nEven without AI, create a Slack channel where support can flag any ticket that mentions adding seats, upgrading, or asking about features the customer doesn’t have. You’ll be surprised how much pipeline is hiding in plain sight.\n2. Bridge CRM Data Into Support (and Support Data Into Your CRM). Both Directions Matter.\nThis was one of the sharpest tactical moves in Shalin’s playbook. He built two agents that work in opposite directions.\nDirection one",
+          "file_path": "gd_1330305cc3f41f63189528f0",
+          "chunk_id": "gd_1330305cc3f41f63189528f0-chunk-000"
+        },
+        {
+          "reference_id": "9",
+          "content": "So we’ve covered hero company Atlassian many times on this series.  First, it’s an epic bootstrapping success story. Second, it showed early you can build a SaaS and enterprise leader from anywhere.  And third, it’s a SaaS and Cloud leader we all have opinions on.  We have a sense of.\nAnd Atlassian has been saying something for quite a while — that while things have gotten harder the past 18 months or so, buyers are still buying.  Atlassian has seen some modest macro impacts, but they’ve just kept selling.  Through PLG motions, through partner-led motions, and through a modest sales team as well.\n5 Interesting Learnings:\n\n#1.  Revenue Up 31%, But New Customer Count Up Just 8%\nThis is perhaps where you can see the challenges of scale and macro impacts hitting Atlassian a bit.  Yes, 31% growth at $3.2 Billion in ARR is epic.  Epic.  But they had to monetize the base a fair amount to get there.  New customers grew significantly, but more modestly at +8%.\n\n#2.  Big Customers Have Helped Fuel the Impressive Growth\nThe new logo count has been modest, but $500k+ and $1m+ customers are outpacing the rest, growing 44%-52%.\n#3.  Atlassian’s Model Was Already Pretty Efficient.  But It Got Even More Efficient The Last 12 Months, Like Almost Everyone Else.\nAtlassian already spent less on sales and marketing than virtually ever other public SaaS company.  But that doesn’t mean it couldn’t get even more efficient — and it did.  It held heacount mostly flat like many other Cloud leaders and saw Operating Margins expan from 14% to a healthy 22%.\n\n#4.  Free-to-Paid Conversions Down / Tough in Current Macro, But NRR",
+          "file_path": "gd_86ca0d59379f4d8de28dab1d",
+          "chunk_id": "gd_86ca0d59379f4d8de28dab1d-chunk-000"
+        },
+        {
+          "reference_id": "10",
+          "content": "AI Company and Scale from 0 to 100 with Cohere’s former VP of Marketing + Salesforce Ventures\nHow top leaders like Cohere have rocketed to a $3B+ valuation — and acquired their customers.\n#3. Pricing AI Service-as-Software with Ununsual VC Sandhya Hegde, General Partner @ Unusual VC\n“Enterprise adoption of generative AI has hit an inflection point in 2024 with many successful tools productizing parts of professional services. They are essentially providing Services-as-Software – the full realization of the original vision of SaaS. However pricing these products is extremely challenging – even more so for incumbents who need to disrupt their current business models. Learn how the emerging leaders in AI are approaching pricing and packaging their products for hypergrowth.”\n#4. Beyond the Chatbot: How to Uplevel the CX with Practical AI with Calendly’s CPO and Head of User Experience\nA deep dive with Calendly’s CPO and Head of CX and what can really be doing with AI beyond bots.  Should be a great one!\n#5.  How to Leverage AI in Vertical SaaS with Activant Capital and CEOs of Owner, Alloy Automation, and Do Not Pay\n“The toolkit for vertical application software has advanced at breakneck speed, creating opportunities to unseat incumbents and digitize whole industries. This session explores how advancement in gen AI, fintech & middleware is creating opportunities to reshape almost every industry and how modern platforms are redefining SaaS in the process.”\n#6.  How Sales & CS 4x-ed Glean’s ARR and Top Tips for GTM Cross-Collaboration Strategies with Glean’s VP of Sales and Head of CS.\nGlean AI has rocketed to a $3B valuation by selling AI search to the enterprise.  How are the success and cross-selling motions different here?\n#7. 5 Things That Are Actually Working and 5 Things That Aren’t in Saa",
+          "file_path": "gd_3379ac6f5a6b256be3e535c1",
+          "chunk_id": "gd_3379ac6f5a6b256be3e535c1-chunk-001"
+        },
+        {
+          "reference_id": "11",
+          "content": "We’ve done so much great content with Atlassian over the years, from CEO Michael-Cannon Brooks to Trello Founder and CEO Michael Pryor to ex-President Jay Simons, and the learnings are always amazing. Atlassian is a fascinating case study because it showed so many of us that developer-focused SaaS products can be huge, and not just huge, but huge even in competitive markets. Atlassian dominates several markets where it still has intense competition (e.g., everyone from Asana on), and is fine ceding areas to partners where it’s less strong (e.g, Slack). And Atlassian has always done things a bit differently. With, for the most part, a relatively small sales team (although a large channel since the early days, providing a lot of those functions externally). And a huge investment in R&D since inception. And … proof that you can build a decacorn from anywhere. So what are 5 Interesting Learnings we call all take away from Atlassian at $2B in ARR? SEO and brand continue to work at scale\n. Atlassian had 21m unique viewers to its website last year, up 30% year-over-year. A vivid reminder that investment in content and brand pay dividends … forever.\n2. It’s never too late to add a great Free edition. Atlassian was relatively late to adding free editions for some of its products, but it’s working now\n. In fact, Atlassian sees Free as its key engine of growth for the next decade. While the Free editions of Jira and Confluence were somewhat inspired by Covid, the experiment worked. Sign-ups have tripled.\n3. 121% NRR overall, 130% in enterprise\n.\n\nThese numbers aren’t a surprise, but they are still top-tier and what you should aim for as well if you sell similar tools.\n\n4.  A long path to multi-product revenue streams, but today,",
+          "file_path": "gd_70a4342562c701cb49469cde",
+          "chunk_id": "gd_70a4342562c701cb49469cde-chunk-000"
+        },
+        {
+          "reference_id": "12",
+          "content": "Doing Just Over $1B in ARR\nVeeva has two core products today, each doing just over $1B in ARR (along with a lot of smaller sub-products).  It’s rolling out new marketing and sales and data products for life sciences, but arguably a smidge late.    Still, going multi-product has again been the key to scaling beyond $1B ARR.\n\n#4.  Looking to Do M&A With Their $4 Billion (!) In Cash\nA good strategy today given their large cash position and strong ARR multiple.",
+          "file_path": "gd_a7187d0b5d8f043ea80eae4a",
+          "chunk_id": "gd_a7187d0b5d8f043ea80eae4a-chunk-001"
+        }
+      ],
+      "references": [
+        {
+          "reference_id": "1",
+          "file_path": "gd_fd2a720d5ccdbfd8e0349e77"
+        },
+        {
+          "reference_id": "2",
+          "file_path": "gd_88b45eaf937a5ab5039dba4e"
+        },
+        {
+          "reference_id": "3",
+          "file_path": "gd_5526629b3d33ecf02b9b6951"
+        },
+        {
+          "reference_id": "4",
+          "file_path": "gd_5965fa9fb21505d682caeb90"
+        },
+        {
+          "reference_id": "5",
+          "file_path": "gd_b9da22c04e0fa0f306cd64d9"
+        },
+        {
+          "reference_id": "6",
+          "file_path": "gd_2da2607f440be8eb7f834419"
+        },
+        {
+          "reference_id": "7",
+          "file_path": "gd_5452a21f583d7a1ce5646101"
+        },
+        {
+          "reference_id": "8",
+          "file_path": "gd_1330305cc3f41f63189528f0"
+        },
+        {
+          "reference_id": "9",
+          "file_path": "gd_86ca0d59379f4d8de28dab1d"
+        },
+        {
+          "reference_id": "10",
+          "file_path": "gd_3379ac6f5a6b256be3e535c1"
+        },
+        {
+          "reference_id": "11",
+          "file_path": "gd_70a4342562c701cb49469cde"
+        },
+        {
+          "reference_id": "12",
+          "file_path": "gd_a7187d0b5d8f043ea80eae4a"
+        }
+      ]
+    },
+    "metadata": {
+      "query_mode": "hybrid",
+      "keywords": {
+        "high_level": [
+          "Atlassian",
+          "ARR",
+          "Learnings"
+        ],
+        "low_level": [
+          "5",
+          "Interesting",
+          "$3 Billion"
+        ]
+      },
+      "processing_info": {
+        "total_entities_found": 40,
+        "total_relations_found": 108,
+        "entities_after_truncation": 32,
+        "relations_after_truncation": 108,
+        "merged_chunks_count": 169,
+        "final_chunks_count": 12
+      }
+    },
+    "query": "5 Interesting Learnings from Atlassian at Almost $3 Billion in ARR"
+  },
+  "retrieval_seconds": 13.944,
+  "graph_summary": {
+    "status": "recorded",
+    "raw_entity_count": 32,
+    "raw_relationship_count": 108,
+    "raw_chunk_count": 12,
+    "entity_description_count": 32,
+    "entity_descriptions_nonempty": 32,
+    "entity_description_available": true,
+    "excluded_reason_counts": {
+      "omission_marker_span": 1,
+      "generated_summary_not_a_source_span": 140
+    },
+    "accepted_relationships": 26,
+    "rejected_relationships": 81,
+    "quarantined_relationships": 1,
+    "relationship_reason_counts": {
+      "weak_entity_name": 12,
+      "endpoints_not_in_source": 7,
+      "generated_summary_not_supported_by_source": 62,
+      "unresolved_conflict": 1
+    },
+    "missing_source_or_provenance_exclusions": 0,
+    "relationship_validation_status": "recorded",
+    "two_hop_path_count": 0,
+    "two_hop_path_available": false,
+    "path_status": "recorded",
+    "normalization": {
+      "payload_shape": "aquery_data",
+      "mode": "hybrid",
+      "entity_descriptions_not_retained": 0,
+      "malformed_records": 0,
+      "notes": [
+        "hits_already_budgeted_raw_chunks_not_added",
+        "validated_against_supplied_catalog"
+      ],
+      "validation_contract": "source-verified-relationship-v1",
+      "separator": "<SEP>",
+      "profile": "multihop",
+      "direct_edges": 26,
+      "paths": 24,
+      "withheld_edges": 82
+    },
+    "direct_edge_count": 26
+  }
+}

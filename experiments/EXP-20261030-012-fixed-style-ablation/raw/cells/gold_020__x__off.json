@@ -1,0 +1,367 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "topic_id": "gold_020",
+  "medium": "x",
+  "arm": "off",
+  "seed": 120,
+  "attempts": 1,
+  "evidence_sha256": "a18a72bf17af5f8c740945b615b4e5d76e737f9bc7a42b7144cf0807f7e31342",
+  "retrieval_hit_ids": [
+    "train_6928",
+    "train_1254",
+    "train_7740",
+    "train_7713"
+  ],
+  "retrieval_query": "Dear SaaStr: Is it Bad to Leave a Struggling Startup?",
+  "retrieval_filter": null,
+  "style_applied": false,
+  "style_in_prompt": false,
+  "prompt_tokens": 476,
+  "generated_tokens_including_stop": 50,
+  "latency_seconds": 7.664,
+  "exemplar_ids": [],
+  "saved_at": "2026-10-30T09:56:08.136406+00:00",
+  "trace": {
+    "id": "gold_020",
+    "format": "x_thread",
+    "topic": "Dear SaaStr: Is it Bad to Leave a Struggling Startup?",
+    "audience": "B2B SaaS founders and operators",
+    "goal": "Give honest career advice about when leaving a struggling startup is reasonable.",
+    "cta": "none",
+    "k": 8,
+    "expected_facts": [
+      "The answer should avoid moralizing about leaving.",
+      "It should explain that context matters: learning, integrity, runway, and role fit.",
+      "It should distinguish between normal startup hardship and a genuinely broken environment."
+    ],
+    "rubric_must_haves": [
+      "Acknowledges nuance rather than giving a slogan.",
+      "Provides criteria for staying vs leaving.",
+      "Uses an empathetic but clear tone.",
+      "Avoids generic career-coach language."
+    ],
+    "gold_reference": "A strong answer should say that leaving a struggling startup is not automatically bad. What matters is whether the company is still a good place to learn, whether leadership is honest, and whether there is a believable path forward. The right advice is to separate temporary startup pain from a structurally unhealthy situation.",
+    "medium": "x",
+    "prompt": "Write an X post in the style of Jason Lemkin about: Dear SaaStr: Is it Bad to Leave a Struggling Startup?\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] The best time to quit is the earlier of 6 months from the time you’ve decided to move on or when the other founders ask you to.\n[E2] Once you’ve made the decision to move on, the “Why” doesn’t matter anymore.\n[E3] Not 200% committed to winning no matter what.\n[E4] Good But Not Great CEO\n[E5] Refusal To Manage / Deal With The Burn Rate\n[E6] Great CEO, Merely Good CTO\n[E7] Growing, But Never Getting Efficient Enough\n[E8] Loss of Founder DNA\n[E9] The first time, the answer was price.\n[E10] The second time, the answer was time & risk & dilution\n[E11] The third time, well, most of the team was a bit tired after 5+ challenging years.\n\nNow write the requested X post about: Dear SaaStr: Is it Bad to Leave a Struggling Startup?",
+    "rendered_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nWrite an X post in the style of Jason Lemkin about: Dear SaaStr: Is it Bad to Leave a Struggling Startup?\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] The best time to quit is the earlier of 6 months from the time you’ve decided to move on or when the other founders ask you to.\n[E2] Once you’ve made the decision to move on, the “Why” doesn’t matter anymore.\n[E3] Not 200% committed to winning no matter what.\n[E4] Good But Not Great CEO\n[E5] Refusal To Manage / Deal With The Burn Rate\n[E6] Great CEO, Merely Good CTO\n[E7] Growing, But Never Getting Efficient Enough\n[E8] Loss of Founder DNA\n[E9] The first time, the answer was price.\n[E10] The second time, the answer was time & risk & dilution\n[E11] The third time, well, most of the team was a bit tired after 5+ challenging years.\n\nNow write the requested X post about: Dear SaaStr: Is it Bad to Leave a Struggling Startup?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "answer": "Dear SaaStr: Is it Bad to Leave a Struggling Startup?\n\nIt’s really just bad if you stay longer than 60 days once you've decided to go.\n\nAfter that, it starts taking mental energy away from your next startup.",
+    "raw_model_output": "Dear SaaStr: Is it Bad to Leave a Struggling Startup?\n\nIt’s really just bad if you stay longer than 60 days once you've decided to go.\n\nAfter that, it starts taking mental energy away from your next startup.",
+    "deployment_output": "Dear SaaStr: Is it Bad to Leave a Struggling Startup?\n\nIt’s really just bad if you stay longer than 60 days once you've decided to go.\n\nAfter that, it starts taking mental energy away from your next startup.",
+    "first_attempt_answer": "Dear SaaStr: Is it Bad to Leave a Struggling Startup?\n\nIt’s really just bad if you stay longer than 60 days once you've decided to go.\n\nAfter that, it starts taking mental energy away from your next startup.",
+    "retry_answer": null,
+    "query": "Dear SaaStr: Is it Bad to Leave a Struggling Startup?",
+    "max_new_tokens": 160,
+    "seed": 120,
+    "retry_seed": null,
+    "deployment_accepted": true,
+    "repair_occurred": false,
+    "generation_attempt": {
+      "seed": 120,
+      "answer": "Dear SaaStr: Is it Bad to Leave a Struggling Startup?\n\nIt’s really just bad if you stay longer than 60 days once you've decided to go.\n\nAfter that, it starts taking mental energy away from your next startup.",
+      "numeric_grounding": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [
+          "pct:200"
+        ],
+        "values": [],
+        "unsupported": []
+      },
+      "rag_source_copying": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 4,
+        "document_id": "train_6928",
+        "matched_generated_span": "you ve decided to",
+        "matched_retrieved_span": "you ve decided to"
+      },
+      "stop_reason": "eos"
+    },
+    "repair_attempt": null,
+    "accepted_attempt": 1,
+    "rag_source_copying": {
+      "applicable": true,
+      "threshold": 12,
+      "pass": true,
+      "flagged": false,
+      "max_contiguous_words": 4,
+      "document_id": "train_6928",
+      "matched_generated_span": "you ve decided to",
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 4,
+        "document_id": "train_6928",
+        "matched_generated_span": "you ve decided to",
+        "matched_retrieved_span": "you ve decided to"
+      },
+      "retry": null,
+      "retry_occurred": false,
+      "repair_occurred": false
+    },
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [
+          "pct:200"
+        ],
+        "values": [],
+        "unsupported": []
+      },
+      "retry": null
+    },
+    "prompt_tokens": 476,
+    "backend": "unsloth",
+    "retrieval": true,
+    "retrieval_query": "Dear SaaStr: Is it Bad to Leave a Struggling Startup?",
+    "retrieval_filter": null,
+    "retrieval_k": 4,
+    "retrieval_hits": [
+      {
+        "id": "train_6928",
+        "text": "Dear SaaStr: When Is the Best Time for a Co-Founder to Leave a Startup? The best time to quit is the earlier of (x) 6 months from the time you’ve decided to move on or (y) at any time when the other founders ask you to. If you’ve truly decided to leave, then it’s time. It’s now time to move on. First, though, make sure you aren’t being too emotional. And that you don’t just need a 2-week vacation. But if it’s time —  likely, your other founders already know, at least on some level. Everyone always knows these things in a small company. What isn’t clear often is whether an abrupt change, a gradual change, or something in the middle is the best:\nSometimes, engineering or other expertise is critical to keep on for a while\n. The site literally can’t stay up without you, a key feature can’t ship, etc. Other times, it’s best to get a founder or other employee whose core accomplishments are behind him out sooner\n. Just a few weeks’ transition may be plenty fine here. And other times, it’s just toxic\n. You need to leave now. Even if the toxicity isn’t your “fault”. But the best thing for the company, and for you, is to be flexible\n. Let emotion go and let your co-founders decide. Work out an agreement, both in spirit and on paper, where it’s up to them. You’ll commit to staying up to say, 6 months. But if they want you at any time to leave earlier, all they have to do is shake your hand and say, “We’re proud to make you an emeritus member of the team.”\nThen you can go off and be a proud founder (that title is always yours) and alum.",
+        "medium": "blog",
+        "group_id": "323207be6dd2b306d58fbbc18f7954780ecf2cb6d38724baf6e66f680102fdc0",
+        "row_id": 6928,
+        "split": "train",
+        "distance": 0.20186865329742432
+      },
+      {
+        "id": "train_1254",
+        "text": "Dear SaaStr:  As a startup founder, what’s the best way to announce your departure to the team and leave on good terms? The startup is series A/B, with 30+ employees.\nI have no magic insights, but I have transitioned post-acquisition out of 2 companies that I’ve co-founded. And I’ve had one key co-founder leave in the critical first year.\nAt your size (30+ employees), I’d approach it just like a divorce.\nOnce you’ve made the decision to move on, the “Why” doesn’t matter anymore.  Let it go\n.  Now, all that matters is, what’s the best thing for the kids? I.e, for your team, your employees, your customers, and your investors? If your company were larger (150-200+ employees), it’s just part of life …  folks come and go but at that stage.  But early on, it’s still a family and rather fragile, and built (I hope) on trust.\nSo my 5 simple suggestions:\n\n1. Thank Them\n. Thank all the employees, in public, together with your co-founders, and tell them what an amazing product you’ve built together, and how proud you are. If you’ve gotten to 30 employees … you should be proud. You have something.  Tell them you love them and you need to move on, but you will always be proud of them and there for them.  And be authentic.",
+        "medium": "blog",
+        "group_id": "427c3191a93fd0c737f62c9f2bbd1b7dae82d272e879e94206a3890ca36e88ad",
+        "row_id": 1254,
+        "split": "train",
+        "distance": 0.20519614219665527
+      },
+      {
+        "id": "train_7740",
+        "text": "Dear SaaStr:  What are some common reasons for the failure of startups? How can these mistakes be avoided to increase their chances of success? My experience across leading 30+ seed investments, including 4 billion+ exits so far, on why startups fail:\nNot 200% committed to winning no matter what. Even the smartest founders aren’t always 200% committed. Sometimes, they’re more in a “I’ll give it a shot” mode. So far, I’ve always lost my money here. Good But Not Great CEO\n. It’s just too competitive out there for a nice but not great CEO to win. Refusal To Manage / Deal With The Burn Rate\n. Some founders just hide from burning too much cash. That might be OK for a few months, but beyond that, startups fall into a decay curve they don’t recover from. There are other reasons startups something do “Good But Not Great” or just OK, but that don’t lead to failure IMHE:\nGreat CEO, Merely Good CTO\n. I don’t see these producing big category winners, because they can’t keep up on the product side. But they often can still be a decent #2 or #3 in the space and product a good exit. Just not a huge one. Growing, But Never Getting Efficient Enough\n. This is a subtle point, but some startups grow pretty quickly but never quite get their unit economics under control. Some fail, yes. But more often in my experience, they just end up selling for an OK but Not Great price. Loss of Founder DNA\n. This can happen for a lot of reasons, but I haven’t had a truly great outcome where all the founder DNA moved on.",
+        "medium": "blog",
+        "group_id": "b0d690f3ba78fef4a74f2864423a5be0194edb4762e7a20ea253f80e9c0f6a55",
+        "row_id": 7740,
+        "split": "train",
+        "distance": 0.21410280466079712
+      },
+      {
+        "id": "train_7713",
+        "text": "Dear SaaStr: What Prompted You To Sell Your Startups?\nI’ve been through it 3 times. Once as a start-up exec, and twice as founder.\nThe first time, the answer was price.\nIn my first start-up job, we were acquired for $1b with < $10m in revenue. It would have taken so long, with so much risk, to ever get to $1b in value, it’s tough to argue with. Although looking back, it was still maybe a mistake, as we picked the wrong acquirer.\nThe second time, the answer was time & risk & dilution\n. I sold my first start-up for $50m after 12.5m months. That sounds great, but we had to sell 60%+ in the seed round to get it done (tougher times), and we were likely 5 years away from market, with a ton of regulatory and other risk. And we took so much dilution in the first round, the math on 3 more rounds was intimidating. (The VCs were too greedy here. It backfired on them.)\nThe third time, well, most of the team was a bit tired after 5+ challenging years. And no one\nquite\nsaw how big Cloud would be. Not\nthis\nbig.  Not $200B+ a year big.\nThis was the most lucrative time of the 3, but looking back, the team being tired is both the most logical\nand\nthe worst reason to sell. Push on, bring in that extra VP, get the team more help. The team is often the most tired just as things are getting good, or even, getting better.",
+        "medium": "blog",
+        "group_id": "b8837ca9cdcb023bd2ac339a61baded1ab10f3b64afae706783998a09fc5ebc5",
+        "row_id": 7713,
+        "split": "train",
+        "distance": 0.218764066696167
+      }
+    ],
+    "copying": [
+      {
+        "id": "train_6928",
+        "shared_word_span": 3
+      },
+      {
+        "id": "train_1254",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_7740",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_7713",
+        "shared_word_span": 2
+      }
+    ],
+    "retrieval_backend": "dense",
+    "proposed_atomic_claims": [
+      {
+        "source_id": "train_6928",
+        "claim": "The best time to quit is the earlier of 6 months from the time you’ve decided to move on or when the other founders ask you to.",
+        "support_span": "The best time to quit is the earlier of (x) 6 months from the time you’ve decided to move on or (y) at any time when the other founders ask you to.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_1254",
+        "claim": "Once you’ve made the decision to move on, the “Why” doesn’t matter anymore.",
+        "support_span": "Once you’ve made the decision to move on, the “Why” doesn’t matter anymore.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7740",
+        "claim": "Not 200% committed to winning no matter what.",
+        "support_span": "Not 200% committed to winning no matter what.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7740",
+        "claim": "Good But Not Great CEO",
+        "support_span": "Good But Not Great CEO",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7740",
+        "claim": "Refusal To Manage / Deal With The Burn Rate",
+        "support_span": "Refusal To Manage / Deal With The Burn Rate",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7740",
+        "claim": "Great CEO, Merely Good CTO",
+        "support_span": "Great CEO, Merely Good CTO",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7740",
+        "claim": "Growing, But Never Getting Efficient Enough",
+        "support_span": "Growing, But Never Getting Efficient Enough",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7740",
+        "claim": "Loss of Founder DNA",
+        "support_span": "Loss of Founder DNA",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7713",
+        "claim": "The first time, the answer was price.",
+        "support_span": "The first time, the answer was price.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7713",
+        "claim": "The second time, the answer was time & risk & dilution",
+        "support_span": "The second time, the answer was time & risk & dilution",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7713",
+        "claim": "The third time, well, most of the team was a bit tired after 5+ challenging years.",
+        "support_span": "The third time, well, most of the team was a bit tired after 5+ challenging years.",
+        "claim_type": "fact"
+      }
+    ],
+    "validation_rejected": [],
+    "verifier_rejected": [],
+    "verified_claims": [
+      {
+        "source_id": "train_6928",
+        "claim": "The best time to quit is the earlier of 6 months from the time you’ve decided to move on or when the other founders ask you to.",
+        "support_span": "The best time to quit is the earlier of (x) 6 months from the time you’ve decided to move on or (y) at any time when the other founders ask you to.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_1254",
+        "claim": "Once you’ve made the decision to move on, the “Why” doesn’t matter anymore.",
+        "support_span": "Once you’ve made the decision to move on, the “Why” doesn’t matter anymore.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7740",
+        "claim": "Not 200% committed to winning no matter what.",
+        "support_span": "Not 200% committed to winning no matter what.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7740",
+        "claim": "Good But Not Great CEO",
+        "support_span": "Good But Not Great CEO",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7740",
+        "claim": "Refusal To Manage / Deal With The Burn Rate",
+        "support_span": "Refusal To Manage / Deal With The Burn Rate",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7740",
+        "claim": "Great CEO, Merely Good CTO",
+        "support_span": "Great CEO, Merely Good CTO",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7740",
+        "claim": "Growing, But Never Getting Efficient Enough",
+        "support_span": "Growing, But Never Getting Efficient Enough",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7740",
+        "claim": "Loss of Founder DNA",
+        "support_span": "Loss of Founder DNA",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7713",
+        "claim": "The first time, the answer was price.",
+        "support_span": "The first time, the answer was price.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7713",
+        "claim": "The second time, the answer was time & risk & dilution",
+        "support_span": "The second time, the answer was time & risk & dilution",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7713",
+        "claim": "The third time, well, most of the team was a bit tired after 5+ challenging years.",
+        "support_span": "The third time, well, most of the team was a bit tired after 5+ challenging years.",
+        "claim_type": "fact"
+      }
+    ],
+    "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] The best time to quit is the earlier of 6 months from the time you’ve decided to move on or when the other founders ask you to.\n[E2] Once you’ve made the decision to move on, the “Why” doesn’t matter anymore.\n[E3] Not 200% committed to winning no matter what.\n[E4] Good But Not Great CEO\n[E5] Refusal To Manage / Deal With The Burn Rate\n[E6] Great CEO, Merely Good CTO\n[E7] Growing, But Never Getting Efficient Enough\n[E8] Loss of Founder DNA\n[E9] The first time, the answer was price.\n[E10] The second time, the answer was time & risk & dilution\n[E11] The third time, well, most of the team was a bit tired after 5+ challenging years.",
+    "raw_extraction": "[\n  {\n    \"source_id\": \"train_6928\",\n    \"claim\": \"The best time to quit is the earlier of 6 months from the time you’ve decided to move on or when the other founders ask you to.\",\n    \"support_span\": \"The best time to quit is the earlier of (x) 6 months from the time you’ve decided to move on or (y) at any time when the other founders ask you to.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_1254\",\n    \"claim\": \"Once you’ve made the decision to move on, the “Why” doesn’t matter anymore.\",\n    \"support_span\": \"Once you’ve made the decision to move on, the “Why” doesn’t matter anymore.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7740\",\n    \"claim\": \"Not 200% committed to winning no matter what.\",\n    \"support_span\": \"Not 200% committed to winning no matter what.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7740\",\n    \"claim\": \"Good But Not Great CEO\",\n    \"support_span\": \"Good But Not Great CEO\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7740\",\n    \"claim\": \"Refusal To Manage / Deal With The Burn Rate\",\n    \"support_span\": \"Refusal To Manage / Deal With The Burn Rate\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7740\",\n    \"claim\": \"Great CEO, Merely Good CTO\",\n    \"support_span\": \"Great CEO, Merely Good CTO\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7740\",\n    \"claim\": \"Growing, But Never Getting Efficient Enough\",\n    \"support_span\": \"Growing, But Never Getting Efficient Enough\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7740\",\n    \"claim\": \"Loss of Founder DNA\",\n    \"support_span\": \"Loss of Founder DNA\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7713\",\n    \"claim\": \"The first time, the answer was price.\",\n    \"support_span\": \"The first time, the answer was price.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7713\",\n    \"claim\": \"The second time, the answer was time & risk & dilution\",\n    \"support_span\": \"The second time, the answer was time & risk & dilution\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7713\",\n    \"claim\": \"The third time, well, most of the team was a bit tired after 5+ challenging years.\",\n    \"support_span\": \"The third time, well, most of the team was a bit tired after 5+ challenging years.\",\n    \"claim_type\": \"fact\"\n  }\n]",
+    "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Dear SaaStr: Is it Bad to Leave a Struggling Startup?\n\nSource passages:\n[train_6928]\nDear SaaStr: When Is the Best Time for a Co-Founder to Leave a Startup? The best time to quit is the earlier of (x) 6 months from the time you’ve decided to move on or (y) at any time when the other founders ask you to. If you’ve truly decided to leave, then it’s time. It’s now time to move on. First, though, make sure you aren’t being too emotional. And that you don’t just need a 2-week vacation. But if it’s time —  likely, your other founders already know, at least on some level. Everyone always knows these things in a small company. What isn’t clear often is whether an abrupt change, a gradual change, or something in the middle is the best:\nSometimes, engineering or other expertise is critical to keep on for a while\n. The site literally can’t stay up without you, a key feature can’t ship, etc. Other times, it’s best to get a founder or other employee whose core accomplishments are behind him out sooner\n. Just a few weeks’ transition may be plenty fine here. And other times, it’s just toxic\n. You need to leave now. Even if the toxicity isn’t your “fault”. But the best thing for the company, and for you, is to be flexible\n. Let emotion go and let your co-founders decide. Work out an agreement, both in spirit and on paper, where it’s up to them. You’ll commit to staying up to say, 6 months. But if they want you at any time to leave earlier, all they have to do is shake your hand and say, “We’re proud to make you an emeritus member of the team.”\nThen you can go off and be a proud founder (that title is always yours) and alum.\n\n[train_1254]\nDear SaaStr:  As a startup founder, what’s the best way to announce your departure to the team and leave on good terms? The startup is series A/B, with 30+ employees.\nI have no magic insights, but I have transitioned post-acquisition out of 2 companies that I’ve co-founded. And I’ve had one key co-founder leave in the critical first year.\nAt your size (30+ employees), I’d approach it just like a divorce.\nOnce you’ve made the decision to move on, the “Why” doesn’t matter anymore.  Let it go\n.  Now, all that matters is, what’s the best thing for the kids? I.e, for your team, your employees, your customers, and your investors? If your company were larger (150-200+ employees), it’s just part of life …  folks come and go but at that stage.  But early on, it’s still a family and rather fragile, and built (I hope) on trust.\nSo my 5 simple suggestions:\n\n1. Thank Them\n. Thank all the employees, in public, together with your co-founders, and tell them what an amazing product you’ve built together, and how proud you are. If you’ve gotten to 30 employees … you should be proud. You have something.  Tell them you love them and you need to move on, but you will always be proud of them and there for them.  And be authentic.\n\n[train_7740]\nDear SaaStr:  What are some common reasons for the failure of startups? How can these mistakes be avoided to increase their chances of success? My experience across leading 30+ seed investments, including 4 billion+ exits so far, on why startups fail:\nNot 200% committed to winning no matter what. Even the smartest founders aren’t always 200% committed. Sometimes, they’re more in a “I’ll give it a shot” mode. So far, I’ve always lost my money here. Good But Not Great CEO\n. It’s just too competitive out there for a nice but not great CEO to win. Refusal To Manage / Deal With The Burn Rate\n. Some founders just hide from burning too much cash. That might be OK for a few months, but beyond that, startups fall into a decay curve they don’t recover from. There are other reasons startups something do “Good But Not Great” or just OK, but that don’t lead to failure IMHE:\nGreat CEO, Merely Good CTO\n. I don’t see these producing big category winners, because they can’t keep up on the product side. But they often can still be a decent #2 or #3 in the space and product a good exit. Just not a huge one. Growing, But Never Getting Efficient Enough\n. This is a subtle point, but some startups grow pretty quickly but never quite get their unit economics under control. Some fail, yes. But more often in my experience, they just end up selling for an OK but Not Great price. Loss of Founder DNA\n. This can happen for a lot of reasons, but I haven’t had a truly great outcome where all the founder DNA moved on.\n\n[train_7713]\nDear SaaStr: What Prompted You To Sell Your Startups?\nI’ve been through it 3 times. Once as a start-up exec, and twice as founder.\nThe first time, the answer was price.\nIn my first start-up job, we were acquired for $1b with < $10m in revenue. It would have taken so long, with so much risk, to ever get to $1b in value, it’s tough to argue with. Although looking back, it was still maybe a mistake, as we picked the wrong acquirer.\nThe second time, the answer was time & risk & dilution\n. I sold my first start-up for $50m after 12.5m months. That sounds great, but we had to sell 60%+ in the seed round to get it done (tougher times), and we were likely 5 years away from market, with a ton of regulatory and other risk. And we took so much dilution in the first round, the math on 3 more rounds was intimidating. (The VCs were too greedy here. It backfired on them.)\nThe third time, well, most of the team was a bit tired after 5+ challenging years. And no one\nquite\nsaw how big Cloud would be. Not\nthis\nbig.  Not $200B+ a year big.\nThis was the most lucrative time of the 3, but looking back, the team being tired is both the most logical\nand\nthe worst reason to sell. Push on, bring in that extra VP, get the team more help. The team is often the most tired just as things are getting good, or even, getting better.",
+    "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Dear SaaStr: Is it Bad to Leave a Struggling Startup?\n\nSource passages:\n[train_6928]\nDear SaaStr: When Is the Best Time for a Co-Founder to Leave a Startup? The best time to quit is the earlier of (x) 6 months from the time you’ve decided to move on or (y) at any time when the other founders ask you to. If you’ve truly decided to leave, then it’s time. It’s now time to move on. First, though, make sure you aren’t being too emotional. And that you don’t just need a 2-week vacation. But if it’s time —  likely, your other founders already know, at least on some level. Everyone always knows these things in a small company. What isn’t clear often is whether an abrupt change, a gradual change, or something in the middle is the best:\nSometimes, engineering or other expertise is critical to keep on for a while\n. The site literally can’t stay up without you, a key feature can’t ship, etc. Other times, it’s best to get a founder or other employee whose core accomplishments are behind him out sooner\n. Just a few weeks’ transition may be plenty fine here. And other times, it’s just toxic\n. You need to leave now. Even if the toxicity isn’t your “fault”. But the best thing for the company, and for you, is to be flexible\n. Let emotion go and let your co-founders decide. Work out an agreement, both in spirit and on paper, where it’s up to them. You’ll commit to staying up to say, 6 months. But if they want you at any time to leave earlier, all they have to do is shake your hand and say, “We’re proud to make you an emeritus member of the team.”\nThen you can go off and be a proud founder (that title is always yours) and alum.\n\n[train_1254]\nDear SaaStr:  As a startup founder, what’s the best way to announce your departure to the team and leave on good terms? The startup is series A/B, with 30+ employees.\nI have no magic insights, but I have transitioned post-acquisition out of 2 companies that I’ve co-founded. And I’ve had one key co-founder leave in the critical first year.\nAt your size (30+ employees), I’d approach it just like a divorce.\nOnce you’ve made the decision to move on, the “Why” doesn’t matter anymore.  Let it go\n.  Now, all that matters is, what’s the best thing for the kids? I.e, for your team, your employees, your customers, and your investors? If your company were larger (150-200+ employees), it’s just part of life …  folks come and go but at that stage.  But early on, it’s still a family and rather fragile, and built (I hope) on trust.\nSo my 5 simple suggestions:\n\n1. Thank Them\n. Thank all the employees, in public, together with your co-founders, and tell them what an amazing product you’ve built together, and how proud you are. If you’ve gotten to 30 employees … you should be proud. You have something.  Tell them you love them and you need to move on, but you will always be proud of them and there for them.  And be authentic.\n\n[train_7740]\nDear SaaStr:  What are some common reasons for the failure of startups? How can these mistakes be avoided to increase their chances of success? My experience across leading 30+ seed investments, including 4 billion+ exits so far, on why startups fail:\nNot 200% committed to winning no matter what. Even the smartest founders aren’t always 200% committed. Sometimes, they’re more in a “I’ll give it a shot” mode. So far, I’ve always lost my money here. Good But Not Great CEO\n. It’s just too competitive out there for a nice but not great CEO to win. Refusal To Manage / Deal With The Burn Rate\n. Some founders just hide from burning too much cash. That might be OK for a few months, but beyond that, startups fall into a decay curve they don’t recover from. There are other reasons startups something do “Good But Not Great” or just OK, but that don’t lead to failure IMHE:\nGreat CEO, Merely Good CTO\n. I don’t see these producing big category winners, because they can’t keep up on the product side. But they often can still be a decent #2 or #3 in the space and product a good exit. Just not a huge one. Growing, But Never Getting Efficient Enough\n. This is a subtle point, but some startups grow pretty quickly but never quite get their unit economics under control. Some fail, yes. But more often in my experience, they just end up selling for an OK but Not Great price. Loss of Founder DNA\n. This can happen for a lot of reasons, but I haven’t had a truly great outcome where all the founder DNA moved on.\n\n[train_7713]\nDear SaaStr: What Prompted You To Sell Your Startups?\nI’ve been through it 3 times. Once as a start-up exec, and twice as founder.\nThe first time, the answer was price.\nIn my first start-up job, we were acquired for $1b with < $10m in revenue. It would have taken so long, with so much risk, to ever get to $1b in value, it’s tough to argue with. Although looking back, it was still maybe a mistake, as we picked the wrong acquirer.\nThe second time, the answer was time & risk & dilution\n. I sold my first start-up for $50m after 12.5m months. That sounds great, but we had to sell 60%+ in the seed round to get it done (tougher times), and we were likely 5 years away from market, with a ton of regulatory and other risk. And we took so much dilution in the first round, the math on 3 more rounds was intimidating. (The VCs were too greedy here. It backfired on them.)\nThe third time, well, most of the team was a bit tired after 5+ challenging years. And no one\nquite\nsaw how big Cloud would be. Not\nthis\nbig.  Not $200B+ a year big.\nThis was the most lucrative time of the 3, but looking back, the team being tired is both the most logical\nand\nthe worst reason to sell. Push on, bring in that extra VP, get the team more help. The team is often the most tired just as things are getting good, or even, getting better.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "extraction_seconds": 18.664,
+    "verification_seconds": 0.0,
+    "verification_records": [],
+    "llm_verifier_on_critical_path": false,
+    "allowed_numeric_values": [
+      "pct:200"
+    ],
+    "distillation_adapter_enabled": false,
+    "verification_adapter_enabled": false,
+    "distillation_backend": "same_loaded_4bit_base_adapter_off",
+    "distillation_do_sample": false,
+    "extraction_max_new_tokens": 2560,
+    "verification_max_new_tokens": 24,
+    "distillation_seed": 0,
+    "support_spans_in_generator_prompt": false,
+    "evidence_stage_reason": null,
+    "evidence_status": "verified",
+    "extraction_attempts": 1,
+    "extraction_stop_reason": "eos",
+    "prompt_contract": "factual-reliability-v1",
+    "fixed_style_enabled": false,
+    "style_applied": false,
+    "style_exemplar_count": 0,
+    "latency_seconds": 7.664,
+    "generated_tokens_including_stop": 50,
+    "last_token_id": 128009,
+    "effective_eos_token_ids": [
+      128001,
+      128008,
+      128009
+    ],
+    "stop_reason": "eos",
+    "budget_fraction": 0.3125,
+    "early_eos": true,
+    "first_attempt_stop_reason": "eos",
+    "retry_stop_reason": null
+  }
+}

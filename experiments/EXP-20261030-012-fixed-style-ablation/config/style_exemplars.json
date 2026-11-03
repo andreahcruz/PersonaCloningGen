@@ -1,0 +1,96 @@
+{
+  "path": "host_finetune\\exemplars\\fixed_style_candidates.json",
+  "sha256": "003eea0b496d8002e7e499faf11add4c91268f0f1a5a1f832e9dccce37e2a1a4",
+  "empty_platforms": [
+    "youtube_jason"
+  ],
+  "selection": "Earliest train rows with sft_role unchanged. Gold-overlap families are excluded. Not loaded unless --fixed-style is set.",
+  "exemplars": [
+    {
+      "platform": "blog",
+      "row_id": 718,
+      "group_id": "5bbde357ba1ca702b92b0c5000582c9e0f1357a1f45fbcae4038bd4ed0f12a4d",
+      "split": "train",
+      "sft_role": "unchanged",
+      "source_file": "jasonlemkin_blog.jsonl",
+      "source_line": 108,
+      "gold_blocked": false,
+      "text_matches_dataset_output": true,
+      "sha256": "50ad29de9f5531d70edfe14de25015a054eff0df3388e4c5af2b64f68088f833",
+      "words": 178,
+      "use": "voice_only_not_evidence"
+    },
+    {
+      "platform": "blog",
+      "row_id": 787,
+      "group_id": "4fb30d6dfd79f7f4f663b9fe2e1502b3e43cbf282284f09a513436e1ca54d34c",
+      "split": "train",
+      "sft_role": "unchanged",
+      "source_file": "jasonlemkin_blog.jsonl",
+      "source_line": 119,
+      "gold_blocked": false,
+      "text_matches_dataset_output": true,
+      "sha256": "925542f0b38a8205cb444befbe4bc311b86cfe126822a4db19ffac2922ccc465",
+      "words": 211,
+      "use": "voice_only_not_evidence"
+    },
+    {
+      "platform": "linkedin",
+      "row_id": 11552,
+      "group_id": "69d3b02cba775f2db487da0f1e830f7db2453634006a39fab62fdf0a31661305",
+      "split": "train",
+      "sft_role": "unchanged",
+      "source_file": "jasonlemkinlinkedin.jsonl",
+      "source_line": 4,
+      "gold_blocked": false,
+      "text_matches_dataset_output": true,
+      "sha256": "cd958c2c4d15590339c902e58c60dcdf45a102c113bf607bc1f8cb6ab7bfef81",
+      "words": 97,
+      "use": "voice_only_not_evidence"
+    },
+    {
+      "platform": "linkedin",
+      "row_id": 11554,
+      "group_id": "23e068e61a2c378a896228ba4b1fa7f25446c47f74cd289b26da3555a7f3bf3b",
+      "split": "train",
+      "sft_role": "unchanged",
+      "source_file": "jasonlemkinlinkedin.jsonl",
+      "source_line": 8,
+      "gold_blocked": false,
+      "text_matches_dataset_output": true,
+      "sha256": "6108782cd14e5fb433dc50299f735243d191133f5d272d5070930caa7f5ee684",
+      "words": 98,
+      "use": "voice_only_not_evidence"
+    },
+    {
+      "platform": "x",
+      "row_id": 12508,
+      "group_id": "c35e6ca89d6bcde8c427f2db1237e07054093b5539c4bb5559aba290d4209520",
+      "split": "train",
+      "sft_role": "unchanged",
+      "source_file": "jasonlk_originals.jsonl",
+      "source_line": 1,
+      "gold_blocked": false,
+      "text_matches_dataset_output": true,
+      "sha256": "954ea8f900f25f2fc372a3cf40e210d1a436a60dd232c38781b7d6d16e5a4f17",
+      "words": 53,
+      "use": "voice_only_not_evidence"
+    },
+    {
+      "platform": "x",
+      "row_id": 12509,
+      "group_id": "dd8cf54afdd5f2ff98dbacc075de2725e7dbb7e1f3fcc1fe9710c36445221253",
+      "split": "train",
+      "sft_role": "unchanged",
+      "source_file": "jasonlk_originals.jsonl",
+      "source_line": 2,
+      "gold_blocked": false,
+      "text_matches_dataset_output": true,
+      "sha256": "3a58396ca9c1e92c72328d6f3d34c2c537782875f12f8119f06ece9b6162bfc7",
+      "words": 38,
+      "use": "voice_only_not_evidence"
+    }
+  ],
+  "talk_supported": false,
+  "talk_reason": "youtube_jason has no train-owned unchanged style exemplars"
+}

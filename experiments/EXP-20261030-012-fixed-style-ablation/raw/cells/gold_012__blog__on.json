@@ -1,0 +1,401 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "topic_id": "gold_012",
+  "medium": "blog",
+  "arm": "on",
+  "seed": 86,
+  "attempts": 1,
+  "evidence_sha256": "19a4edd212e66460f4938b70790fb370e139b1f3910727fe978f5dc8284b9dc8",
+  "retrieval_hit_ids": [
+    "train_176",
+    "train_180",
+    "train_78",
+    "train_13350"
+  ],
+  "retrieval_query": "Dear SaaStr: How Long Does It Take to Deploy an AI SDR?",
+  "retrieval_filter": null,
+  "style_applied": true,
+  "style_in_prompt": true,
+  "prompt_tokens": 899,
+  "generated_tokens_including_stop": 365,
+  "latency_seconds": 24.066,
+  "exemplar_ids": [
+    718,
+    787
+  ],
+  "saved_at": "2026-10-30T09:39:10.592135+00:00",
+  "trace": {
+    "id": "gold_012",
+    "format": "blog_draft",
+    "topic": "Dear SaaStr: How Long Does It Take to Deploy an AI SDR?",
+    "audience": "B2B SaaS founders and operators",
+    "goal": "Set realistic expectations for deploying an AI SDR and what readiness is required.",
+    "cta": "none",
+    "k": 8,
+    "expected_facts": [
+      "The answer should avoid treating AI SDR deployment as instant magic.",
+      "It should explain that speed depends on process clarity, data quality, and outbound readiness.",
+      "It should mention that founders need to supervise, iterate, and measure quality after launch."
+    ],
+    "rubric_must_haves": [
+      "Gives a realistic timeline or range.",
+      "Names the prerequisites for deployment.",
+      "Avoids hype and focuses on execution details.",
+      "Explains that deployment is only the start, not the finish."
+    ],
+    "gold_reference": "A strong answer should say that an AI SDR can go live quickly in raw technical terms, but meaningful deployment takes longer because it depends on clean data, working messaging, guardrails, and supervision. Founders should think in stages: setup, prompt and workflow tuning, and then ongoing monitoring to see whether the agent is actually producing qualified conversations.",
+    "medium": "blog",
+    "prompt": "Write a blog post in the style of Jason Lemkin about: Dear SaaStr: How Long Does It Take to Deploy an AI SDR?\n\nStyle examples from train-owned source text.\nUse them for voice only. They are not evidence for claims.\nDo not copy long passages verbatim.\n[Style 1]\nDear SaaStr: How Can You Ensure a Smooth Transition When A New Team Member Takes Over a Customer Account?\nAdd value in the first interaction.  This is so rare.\nThere’s nothing more frustrating than getting a random email, “Hi, Tony is gone from the company. I know nothing about you, but I’m your new rep. Can we schedule a call?”\nFind some way to add value.\nOne great way is to demo upcoming features / an upcoming release.\n“Hi, I’m Jason, your next account exec. I’d love to find a way to help even more. Can I show you or anyone on your team the new AI features we’re launching shortly? There’s no additional cost for them and based on what I can see, they may radically increase your efficiency.”\nNot perfect. But much better.\nA second, albeit riskier, way to add value is to set up a call asking for “honest feedback on how we’re doing.”\nThis works, too.  Customers often just want to be heard.  The “problem” is you might have to do something about it.\n[Style 2]\nDear SaaStr: When Is It Too Soon to Target Enterprise Customers in SaaS?\nIt too soon to target enterprise clients when you can’t support their needs 90 days\nafter\nyou close them.\nIt’s sort of OK in the enterprise to promise features and functionality that are sort of there … so long as you deliver them fairly promptly after the deal closes.\nIn fact, it happens all the time. Enterprise customers will even sign contracts agreeing to buy so long as you implement a key feature with X number of days.\nBut if you don’t have the team, commitment and experience to deliver that functionality at least X days after you close a Big Customer … you aren’t ready.  They’ll churn or at least, never fully deploy.\nYou don’t have to have the full enterprise package in the early days to close enterprise customers, especially if they have interest in you.  You’ll get some slack as a new, emerging vendor.  Especially if you have a strong deployment team.\nBut you have to meet your commitments and promises to them fairly soon after the deal closes.\nMore here:\nSecrets to Closing Your First 6 Figure Deal (Video + Transcript) | SaaStr\nSecrets to Closing Your First 6 Figure Deal (Video + Transcript)\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] A well-deployed AI SDR will do the work your human team isn't doing.\n[E2] 99% of people are happy to interact with your AI agent.\n[E3] The AI SDR can generate a high number of meetings.\n[E4] Ongoing tuning of an AI SDR requires a significant amount of time.\n\nNow write the requested blog post about: Dear SaaStr: How Long Does It Take to Deploy an AI SDR?",
+    "rendered_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nWrite a blog post in the style of Jason Lemkin about: Dear SaaStr: How Long Does It Take to Deploy an AI SDR?\n\nStyle examples from train-owned source text.\nUse them for voice only. They are not evidence for claims.\nDo not copy long passages verbatim.\n[Style 1]\nDear SaaStr: How Can You Ensure a Smooth Transition When A New Team Member Takes Over a Customer Account?\nAdd value in the first interaction.  This is so rare.\nThere’s nothing more frustrating than getting a random email, “Hi, Tony is gone from the company. I know nothing about you, but I’m your new rep. Can we schedule a call?”\nFind some way to add value.\nOne great way is to demo upcoming features / an upcoming release.\n“Hi, I’m Jason, your next account exec. I’d love to find a way to help even more. Can I show you or anyone on your team the new AI features we’re launching shortly? There’s no additional cost for them and based on what I can see, they may radically increase your efficiency.”\nNot perfect. But much better.\nA second, albeit riskier, way to add value is to set up a call asking for “honest feedback on how we’re doing.”\nThis works, too.  Customers often just want to be heard.  The “problem” is you might have to do something about it.\n[Style 2]\nDear SaaStr: When Is It Too Soon to Target Enterprise Customers in SaaS?\nIt too soon to target enterprise clients when you can’t support their needs 90 days\nafter\nyou close them.\nIt’s sort of OK in the enterprise to promise features and functionality that are sort of there … so long as you deliver them fairly promptly after the deal closes.\nIn fact, it happens all the time. Enterprise customers will even sign contracts agreeing to buy so long as you implement a key feature with X number of days.\nBut if you don’t have the team, commitment and experience to deliver that functionality at least X days after you close a Big Customer … you aren’t ready.  They’ll churn or at least, never fully deploy.\nYou don’t have to have the full enterprise package in the early days to close enterprise customers, especially if they have interest in you.  You’ll get some slack as a new, emerging vendor.  Especially if you have a strong deployment team.\nBut you have to meet your commitments and promises to them fairly soon after the deal closes.\nMore here:\nSecrets to Closing Your First 6 Figure Deal (Video + Transcript) | SaaStr\nSecrets to Closing Your First 6 Figure Deal (Video + Transcript)\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] A well-deployed AI SDR will do the work your human team isn't doing.\n[E2] 99% of people are happy to interact with your AI agent.\n[E3] The AI SDR can generate a high number of meetings.\n[E4] Ongoing tuning of an AI SDR requires a significant amount of time.\n\nNow write the requested blog post about: Dear SaaStr: How Long Does It Take to Deploy an AI SDR?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "answer": "Dear SaaStr: How Long Does It Take to Deploy an AI SDR?\nThe timeline varies depending on several factors including the complexity of the use case, the quality of training data, and the level of ongoing optimization required. Here’s a general outline of what to expect:\nWeeks 1-2: Setup & Training\nTime investment during this period:\n10–15 hours per week by someone who knows the product cold\nKey tasks:\nConnectors setup (e.g., Salesforce)\nData mapping and validation\nBasic conversation flows creation\nInitial content generation (emails, messaging templates)\nTraining approach:\nStart with small batches of training data (~100 emails, ~200 conversations)\nFocus on core messaging, tone, and formatting guidelines\nIterate rapidly based on initial results\nWeeks 3-6: Fine-Tuning & Expansion\nTime investment during this period:\n5–10 hours per week\nTasks:\nConversational flow refinement\nEdge cases handling\nPersonalization strategies development\nIntegration testing (web hooks, APIs)\nContent expansion (different segments, scenarios)\nOptimization philosophy:\nMeasure everything: response rates, conversion rates, conversation length, engagement metrics\nIdentify patterns through daily monitoring sessions\nAdjust tactics based on performance trends\nWeeks 7+ : Maintenance Mode\nDaily time commitment:\n30 minutes to review outputs, identify edge cases, and make adjustments\nWeekly time commitment:\n60–90 minutes for deep dives into performance trends and strategic planning\nOngoing responsibilities:\nRegularly update reference materials and training datasets\nMonitor for changes in market conditions, competitor activity, or shifts in buyer preferences\nMaintain system health checks (connectivity, latency, error rates)\nReal-world implementation lessons:\nSome organizations start seeing measurable improvements within two weeks, while others need four to six weeks to reach optimal performance levels.",
+    "raw_model_output": "Dear SaaStr: How Long Does It Take to Deploy an AI SDR?\nThe timeline varies depending on several factors including the complexity of the use case, the quality of training data, and the level of ongoing optimization required. Here’s a general outline of what to expect:\nWeeks 1-2: Setup & Training\nTime investment during this period:\n10–15 hours per week by someone who knows the product cold\nKey tasks:\nConnectors setup (e.g., Salesforce)\nData mapping and validation\nBasic conversation flows creation\nInitial content generation (emails, messaging templates)\nTraining approach:\nStart with small batches of training data (~100 emails, ~200 conversations)\nFocus on core messaging, tone, and formatting guidelines\nIterate rapidly based on initial results\nWeeks 3-6: Fine-Tuning & Expansion\nTime investment during this period:\n5–10 hours per week\nTasks:\nConversational flow refinement\nEdge cases handling\nPersonalization strategies development\nIntegration testing (web hooks, APIs)\nContent expansion (different segments, scenarios)\nOptimization philosophy:\nMeasure everything: response rates, conversion rates, conversation length, engagement metrics\nIdentify patterns through daily monitoring sessions\nAdjust tactics based on performance trends\nWeeks 7+ : Maintenance Mode\nDaily time commitment:\n30 minutes to review outputs, identify edge cases, and make adjustments\nWeekly time commitment:\n60–90 minutes for deep dives into performance trends and strategic planning\nOngoing responsibilities:\nRegularly update reference materials and training datasets\nMonitor for changes in market conditions, competitor activity, or shifts in buyer preferences\nMaintain system health checks (connectivity, latency, error rates)\nReal-world implementation lessons:\nSome organizations start seeing measurable improvements within two weeks, while others need four to six weeks to reach optimal performance levels.",
+    "deployment_output": "Dear SaaStr: How Long Does It Take to Deploy an AI SDR?\nThe timeline varies depending on several factors including the complexity of the use case, the quality of training data, and the level of ongoing optimization required. Here’s a general outline of what to expect:\nWeeks 1-2: Setup & Training\nTime investment during this period:\n10–15 hours per week by someone who knows the product cold\nKey tasks:\nConnectors setup (e.g., Salesforce)\nData mapping and validation\nBasic conversation flows creation\nInitial content generation (emails, messaging templates)\nTraining approach:\nStart with small batches of training data (~100 emails, ~200 conversations)\nFocus on core messaging, tone, and formatting guidelines\nIterate rapidly based on initial results\nWeeks 3-6: Fine-Tuning & Expansion\nTime investment during this period:\n5–10 hours per week\nTasks:\nConversational flow refinement\nEdge cases handling\nPersonalization strategies development\nIntegration testing (web hooks, APIs)\nContent expansion (different segments, scenarios)\nOptimization philosophy:\nMeasure everything: response rates, conversion rates, conversation length, engagement metrics\nIdentify patterns through daily monitoring sessions\nAdjust tactics based on performance trends\nWeeks 7+ : Maintenance Mode\nDaily time commitment:\n30 minutes to review outputs, identify edge cases, and make adjustments\nWeekly time commitment:\n60–90 minutes for deep dives into performance trends and strategic planning\nOngoing responsibilities:\nRegularly update reference materials and training datasets\nMonitor for changes in market conditions, competitor activity, or shifts in buyer preferences\nMaintain system health checks (connectivity, latency, error rates)\nReal-world implementation lessons:\nSome organizations start seeing measurable improvements within two weeks, while others need four to six weeks to reach optimal performance levels.",
+    "first_attempt_answer": "Dear SaaStr: How Long Does It Take to Deploy an AI SDR?\nThe timeline varies depending on several factors including the complexity of the use case, the quality of training data, and the level of ongoing optimization required. Here’s a general outline of what to expect:\nWeeks 1-2: Setup & Training\nTime investment during this period:\n10–15 hours per week by someone who knows the product cold\nKey tasks:\nConnectors setup (e.g., Salesforce)\nData mapping and validation\nBasic conversation flows creation\nInitial content generation (emails, messaging templates)\nTraining approach:\nStart with small batches of training data (~100 emails, ~200 conversations)\nFocus on core messaging, tone, and formatting guidelines\nIterate rapidly based on initial results\nWeeks 3-6: Fine-Tuning & Expansion\nTime investment during this period:\n5–10 hours per week\nTasks:\nConversational flow refinement\nEdge cases handling\nPersonalization strategies development\nIntegration testing (web hooks, APIs)\nContent expansion (different segments, scenarios)\nOptimization philosophy:\nMeasure everything: response rates, conversion rates, conversation length, engagement metrics\nIdentify patterns through daily monitoring sessions\nAdjust tactics based on performance trends\nWeeks 7+ : Maintenance Mode\nDaily time commitment:\n30 minutes to review outputs, identify edge cases, and make adjustments\nWeekly time commitment:\n60–90 minutes for deep dives into performance trends and strategic planning\nOngoing responsibilities:\nRegularly update reference materials and training datasets\nMonitor for changes in market conditions, competitor activity, or shifts in buyer preferences\nMaintain system health checks (connectivity, latency, error rates)\nReal-world implementation lessons:\nSome organizations start seeing measurable improvements within two weeks, while others need four to six weeks to reach optimal performance levels.",
+    "retry_answer": null,
+    "query": "Dear SaaStr: How Long Does It Take to Deploy an AI SDR?",
+    "max_new_tokens": 768,
+    "seed": 86,
+    "retry_seed": null,
+    "deployment_accepted": true,
+    "repair_occurred": false,
+    "generation_attempt": {
+      "seed": 86,
+      "answer": "Dear SaaStr: How Long Does It Take to Deploy an AI SDR?\nThe timeline varies depending on several factors including the complexity of the use case, the quality of training data, and the level of ongoing optimization required. Here’s a general outline of what to expect:\nWeeks 1-2: Setup & Training\nTime investment during this period:\n10–15 hours per week by someone who knows the product cold\nKey tasks:\nConnectors setup (e.g., Salesforce)\nData mapping and validation\nBasic conversation flows creation\nInitial content generation (emails, messaging templates)\nTraining approach:\nStart with small batches of training data (~100 emails, ~200 conversations)\nFocus on core messaging, tone, and formatting guidelines\nIterate rapidly based on initial results\nWeeks 3-6: Fine-Tuning & Expansion\nTime investment during this period:\n5–10 hours per week\nTasks:\nConversational flow refinement\nEdge cases handling\nPersonalization strategies development\nIntegration testing (web hooks, APIs)\nContent expansion (different segments, scenarios)\nOptimization philosophy:\nMeasure everything: response rates, conversion rates, conversation length, engagement metrics\nIdentify patterns through daily monitoring sessions\nAdjust tactics based on performance trends\nWeeks 7+ : Maintenance Mode\nDaily time commitment:\n30 minutes to review outputs, identify edge cases, and make adjustments\nWeekly time commitment:\n60–90 minutes for deep dives into performance trends and strategic planning\nOngoing responsibilities:\nRegularly update reference materials and training datasets\nMonitor for changes in market conditions, competitor activity, or shifts in buyer preferences\nMaintain system health checks (connectivity, latency, error rates)\nReal-world implementation lessons:\nSome organizations start seeing measurable improvements within two weeks, while others need four to six weeks to reach optimal performance levels.",
+      "numeric_grounding": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [
+          "pct:99"
+        ],
+        "values": [
+          {
+            "value": "100",
+            "canonical": "n:100",
+            "sentence": "Start with small batches of training data (~100 emails, ~200 conversations)",
+            "start": 621,
+            "end": 624
+          },
+          {
+            "value": "200",
+            "canonical": "n:200",
+            "sentence": "Start with small batches of training data (~100 emails, ~200 conversations)",
+            "start": 634,
+            "end": 637
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "100",
+            "canonical": "n:100",
+            "sentence": "Start with small batches of training data (~100 emails, ~200 conversations)",
+            "start": 621,
+            "end": 624
+          },
+          {
+            "value": "200",
+            "canonical": "n:200",
+            "sentence": "Start with small batches of training data (~100 emails, ~200 conversations)",
+            "start": 634,
+            "end": 637
+          }
+        ]
+      },
+      "rag_source_copying": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 3,
+        "document_id": "train_176",
+        "matched_generated_span": "an ai sdr",
+        "matched_retrieved_span": "an ai sdr"
+      },
+      "stop_reason": "eos"
+    },
+    "repair_attempt": null,
+    "accepted_attempt": 1,
+    "rag_source_copying": {
+      "applicable": true,
+      "threshold": 12,
+      "pass": true,
+      "flagged": false,
+      "max_contiguous_words": 3,
+      "document_id": "train_176",
+      "matched_generated_span": "an ai sdr",
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 3,
+        "document_id": "train_176",
+        "matched_generated_span": "an ai sdr",
+        "matched_retrieved_span": "an ai sdr"
+      },
+      "retry": null,
+      "retry_occurred": false,
+      "repair_occurred": false
+    },
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": false,
+      "failure": "unsupported_numeric_grounding",
+      "unsupported": [
+        {
+          "value": "100",
+          "canonical": "n:100",
+          "sentence": "Start with small batches of training data (~100 emails, ~200 conversations)",
+          "start": 621,
+          "end": 624
+        },
+        {
+          "value": "200",
+          "canonical": "n:200",
+          "sentence": "Start with small batches of training data (~100 emails, ~200 conversations)",
+          "start": 634,
+          "end": 637
+        }
+      ],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [
+          "pct:99"
+        ],
+        "values": [
+          {
+            "value": "100",
+            "canonical": "n:100",
+            "sentence": "Start with small batches of training data (~100 emails, ~200 conversations)",
+            "start": 621,
+            "end": 624
+          },
+          {
+            "value": "200",
+            "canonical": "n:200",
+            "sentence": "Start with small batches of training data (~100 emails, ~200 conversations)",
+            "start": 634,
+            "end": 637
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "100",
+            "canonical": "n:100",
+            "sentence": "Start with small batches of training data (~100 emails, ~200 conversations)",
+            "start": 621,
+            "end": 624
+          },
+          {
+            "value": "200",
+            "canonical": "n:200",
+            "sentence": "Start with small batches of training data (~100 emails, ~200 conversations)",
+            "start": 634,
+            "end": 637
+          }
+        ]
+      },
+      "retry": null
+    },
+    "prompt_tokens": 899,
+    "backend": "unsloth",
+    "retrieval": true,
+    "retrieval_query": "Dear SaaStr: How Long Does It Take to Deploy an AI SDR?",
+    "retrieval_filter": null,
+    "retrieval_k": 4,
+    "retrieval_hits": [
+      {
+        "id": "train_176",
+        "text": "Dear SaaStr: I Want to Roll Out an AI SDR. How Do I Start? First, get clear on what you’re actually buying — and what it actually does. We’ve now been running AI SDRs at SaaStr for over a year. Multiple platforms. Real data. Real pipeline. And the honest answer is: it works. But it works very differently than most vendors will tell you, and the gap between a good deployment and a wasted one comes down almost entirely to how you set it up. Here’s what we actually learned. The Single Best Use Case to Start With: The Leads Your Team Is Ignoring\nThis is the insight that changed how we think about AI SDRs entirely. Your human SDRs are force-ranking in their heads every single day. They’re chasing the big deals, the warm inbound, the accounts that feel like they could close this quarter. The leads they consider “not worth it” — return event attendees, old website visitors, ghosted CRM contacts — those get nothing. Not bad follow-up. Nothing. That’s where AI SDRs absolutely shine. When we deployed AI on the leads our human team refused to work — people who had engaged with SaaStr but never got follow-up — we got a\n72% open rate\non Agentforce and generated\n15% of our London event revenue\nfrom a segment that would have produced zero without AI. Not 15% incremental lift. 15% of total revenue from leads that were producing $0. So before you start thinking about AI SDRs as a way to scale your best motion, ask yourself: what’s the motion your team isn’t running at all? Start there.",
+        "medium": "blog",
+        "group_id": "74a74b1b151211a595866c36daf4250054d34758e3734b5ca8067b9a04ef45f7",
+        "row_id": 176,
+        "split": "train",
+        "distance": 0.21325504779815674
+      },
+      {
+        "id": "train_180",
+        "text": "The real implementation involves:\nICP and messaging work:\n2–4 weeks of your best sales brain. Don’t rush this. Integration and setup:\n1–2 weeks of technical lift depending on your CRM and stack. Ongoing tuning:\n30–45 minutes per day, minimum, for the first 60–90 days. Then 20–30 minutes daily after that. This is not set-it-and-forget-it. The vendors will tell you it takes an afternoon to set up. You can turn it on in an afternoon. That’s very different from having it work. The Honest Expectation\nA well-deployed AI SDR in 2026 will do the work your human team isn’t doing — the segments they consider too small, the leads they consider too cold, the follow-ups they keep meaning to send. That’s where the ROI is clearest and fastest. It will also scale your warm outbound to volumes no human team can match. We went from 285 emails per rep per month to 3,221 per month on a single platform, with equivalent or better response rates. What it won’t do is replace a great enterprise SDR who navigates complex organizations and handles nuanced objections in real-time. That’s still a human job — at least for now. Use AI SDRs to cover the motions where speed and volume matter most. Redeploy your human SDRs to the work where judgment and relationships matter most. That’s not a downgrade for your team. That’s a better use of everyone’s time — and more pipeline from leads that would have otherwise produced nothing. Have a question for SaaStr? We answer the real ones at\nSaaStr.ai\n.",
+        "medium": "blog",
+        "group_id": "74a74b1b151211a595866c36daf4250054d34758e3734b5ca8067b9a04ef45f7",
+        "row_id": 180,
+        "split": "train",
+        "distance": 0.21431267261505127
+      },
+      {
+        "id": "train_78",
+        "text": "SDR turnover is the highest of any go-to-market role. The best SDRs want to be AEs within six months. Get above the quality bar, and 99% of people are happy to interact with your AI agent. The 1% who get frustrated are a rounding error, and about half of those are just people trying to prompt-inject your bot for fun. The AI SDR is not a magic bullet. It requires real setup time, real ongoing maintenance, and real human judgment to run well. But if you do the work, the results are better than what most human SDR teams deliver, at a fraction of the cost and at genuinely infinite scale.",
+        "medium": "blog",
+        "group_id": "b39d54d99997932a690275ab351cf892134aa780e577faa1e5fd6a821209698a",
+        "row_id": 78,
+        "split": "train",
+        "distance": 0.22957837581634521
+      },
+      {
+        "id": "train_13350",
+        "text": "Rolling out our AI SDR this morning.  It took a bunch of training, tooling, etc.  But ...\n\nAlready got 15 meetings from it, 7.5% hit rate\n\nThat’s more than any human SDR did in 30+ days before\n\n(More to come)",
+        "medium": "x",
+        "group_id": "c5f9b7d50763a458acaae8aeb889fe172f56536e92c8853f83d383d098159cee",
+        "row_id": 13350,
+        "split": "train",
+        "distance": 0.24092215299606323
+      }
+    ],
+    "copying": [
+      {
+        "id": "train_176",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_180",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_78",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_13350",
+        "shared_word_span": 1
+      }
+    ],
+    "retrieval_backend": "dense",
+    "proposed_atomic_claims": [
+      {
+        "source_id": "train_176",
+        "claim": "It takes a significant amount of time to set up an AI SDR.",
+        "support_span": "The real implementation involves: ICP and messaging work: 2–4 weeks of your best sales brain. Don't rush this. Integration and setup: 1–2 weeks of technical lift depending on your CRM and stack.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_180",
+        "claim": "A well-deployed AI SDR will do the work your human team isn't doing.",
+        "support_span": "A well-deployed AI SDR in 2026 will do the work your human team isn't doing — the segments they consider too small, the leads they consider too cold, the follow-ups they keep meaning to send.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_78",
+        "claim": "99% of people are happy to interact with your AI agent.",
+        "support_span": "Get above the quality bar, and 99% of people are happy to interact with your AI agent.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_13350",
+        "claim": "The AI SDR can generate a high number of meetings.",
+        "support_span": "Already got 15 meetings from it, 7.5% hit rate",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_13350",
+        "claim": "The AI SDR can outperform human SDRs in terms of meeting generation.",
+        "support_span": "That's more than any human SDR did in 30+ days before",
+        "claim_type": "comparison"
+      },
+      {
+        "source_id": "train_176",
+        "claim": "AI SDRs can generate a high open rate.",
+        "support_span": "72% open rate",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_180",
+        "claim": "Ongoing tuning of an AI SDR requires a significant amount of time.",
+        "support_span": "Ongoing tuning: 30–45 minutes per day, minimum, for the first 60–90 days. Then 20–30 minutes daily after that.",
+        "claim_type": "fact"
+      }
+    ],
+    "validation_rejected": [
+      {
+        "source_id": "train_176",
+        "claim": "It takes a significant amount of time to set up an AI SDR.",
+        "support_span": "The real implementation involves: ICP and messaging work: 2–4 weeks of your best sales brain. Don't rush this. Integration and setup: 1–2 weeks of technical lift depending on your CRM and stack.",
+        "claim_type": "fact",
+        "reason": "support_not_in_source"
+      },
+      {
+        "source_id": "train_13350",
+        "claim": "The AI SDR can outperform human SDRs in terms of meeting generation.",
+        "support_span": "That's more than any human SDR did in 30+ days before",
+        "claim_type": "comparison",
+        "reason": "entity_not_in_source"
+      },
+      {
+        "source_id": "train_176",
+        "claim": "AI SDRs can generate a high open rate.",
+        "support_span": "72% open rate",
+        "claim_type": "number",
+        "reason": "entity_not_in_source"
+      }
+    ],
+    "verifier_rejected": [],
+    "verified_claims": [
+      {
+        "source_id": "train_180",
+        "claim": "A well-deployed AI SDR will do the work your human team isn't doing.",
+        "support_span": "A well-deployed AI SDR in 2026 will do the work your human team isn't doing — the segments they consider too small, the leads they consider too cold, the follow-ups they keep meaning to send.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_78",
+        "claim": "99% of people are happy to interact with your AI agent.",
+        "support_span": "Get above the quality bar, and 99% of people are happy to interact with your AI agent.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_13350",
+        "claim": "The AI SDR can generate a high number of meetings.",
+        "support_span": "Already got 15 meetings from it, 7.5% hit rate",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_180",
+        "claim": "Ongoing tuning of an AI SDR requires a significant amount of time.",
+        "support_span": "Ongoing tuning: 30–45 minutes per day, minimum, for the first 60–90 days. Then 20–30 minutes daily after that.",
+        "claim_type": "fact"
+      }
+    ],
+    "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] A well-deployed AI SDR will do the work your human team isn't doing.\n[E2] 99% of people are happy to interact with your AI agent.\n[E3] The AI SDR can generate a high number of meetings.\n[E4] Ongoing tuning of an AI SDR requires a significant amount of time.",
+    "raw_extraction": "[\n  {\n    \"source_id\": \"train_176\",\n    \"claim\": \"It takes a significant amount of time to set up an AI SDR.\",\n    \"support_span\": \"The real implementation involves: ICP and messaging work: 2–4 weeks of your best sales brain. Don't rush this. Integration and setup: 1–2 weeks of technical lift depending on your CRM and stack.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_180\",\n    \"claim\": \"A well-deployed AI SDR will do the work your human team isn't doing.\",\n    \"support_span\": \"A well-deployed AI SDR in 2026 will do the work your human team isn't doing — the segments they consider too small, the leads they consider too cold, the follow-ups they keep meaning to send.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_78\",\n    \"claim\": \"99% of people are happy to interact with your AI agent.\",\n    \"support_span\": \"Get above the quality bar, and 99% of people are happy to interact with your AI agent.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_13350\",\n    \"claim\": \"The AI SDR can generate a high number of meetings.\",\n    \"support_span\": \"Already got 15 meetings from it, 7.5% hit rate\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_13350\",\n    \"claim\": \"The AI SDR can outperform human SDRs in terms of meeting generation.\",\n    \"support_span\": \"That's more than any human SDR did in 30+ days before\",\n    \"claim_type\": \"comparison\"\n  },\n  {\n    \"source_id\": \"train_176\",\n    \"claim\": \"AI SDRs can generate a high open rate.\",\n    \"support_span\": \"72% open rate\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_180\",\n    \"claim\": \"Ongoing tuning of an AI SDR requires a significant amount of time.\",\n    \"support_span\": \"Ongoing tuning: 30–45 minutes per day, minimum, for the first 60–90 days. Then 20–30 minutes daily after that.\",\n    \"claim_type\": \"fact\"\n  }\n]",
+    "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Dear SaaStr: How Long Does It Take to Deploy an AI SDR?\n\nSource passages:\n[train_176]\nDear SaaStr: I Want to Roll Out an AI SDR. How Do I Start? First, get clear on what you’re actually buying — and what it actually does. We’ve now been running AI SDRs at SaaStr for over a year. Multiple platforms. Real data. Real pipeline. And the honest answer is: it works. But it works very differently than most vendors will tell you, and the gap between a good deployment and a wasted one comes down almost entirely to how you set it up. Here’s what we actually learned. The Single Best Use Case to Start With: The Leads Your Team Is Ignoring\nThis is the insight that changed how we think about AI SDRs entirely. Your human SDRs are force-ranking in their heads every single day. They’re chasing the big deals, the warm inbound, the accounts that feel like they could close this quarter. The leads they consider “not worth it” — return event attendees, old website visitors, ghosted CRM contacts — those get nothing. Not bad follow-up. Nothing. That’s where AI SDRs absolutely shine. When we deployed AI on the leads our human team refused to work — people who had engaged with SaaStr but never got follow-up — we got a\n72% open rate\non Agentforce and generated\n15% of our London event revenue\nfrom a segment that would have produced zero without AI. Not 15% incremental lift. 15% of total revenue from leads that were producing $0. So before you start thinking about AI SDRs as a way to scale your best motion, ask yourself: what’s the motion your team isn’t running at all? Start there.\n\n[train_180]\nThe real implementation involves:\nICP and messaging work:\n2–4 weeks of your best sales brain. Don’t rush this. Integration and setup:\n1–2 weeks of technical lift depending on your CRM and stack. Ongoing tuning:\n30–45 minutes per day, minimum, for the first 60–90 days. Then 20–30 minutes daily after that. This is not set-it-and-forget-it. The vendors will tell you it takes an afternoon to set up. You can turn it on in an afternoon. That’s very different from having it work. The Honest Expectation\nA well-deployed AI SDR in 2026 will do the work your human team isn’t doing — the segments they consider too small, the leads they consider too cold, the follow-ups they keep meaning to send. That’s where the ROI is clearest and fastest. It will also scale your warm outbound to volumes no human team can match. We went from 285 emails per rep per month to 3,221 per month on a single platform, with equivalent or better response rates. What it won’t do is replace a great enterprise SDR who navigates complex organizations and handles nuanced objections in real-time. That’s still a human job — at least for now. Use AI SDRs to cover the motions where speed and volume matter most. Redeploy your human SDRs to the work where judgment and relationships matter most. That’s not a downgrade for your team. That’s a better use of everyone’s time — and more pipeline from leads that would have otherwise produced nothing. Have a question for SaaStr? We answer the real ones at\nSaaStr.ai\n.\n\n[train_78]\nSDR turnover is the highest of any go-to-market role. The best SDRs want to be AEs within six months. Get above the quality bar, and 99% of people are happy to interact with your AI agent. The 1% who get frustrated are a rounding error, and about half of those are just people trying to prompt-inject your bot for fun. The AI SDR is not a magic bullet. It requires real setup time, real ongoing maintenance, and real human judgment to run well. But if you do the work, the results are better than what most human SDR teams deliver, at a fraction of the cost and at genuinely infinite scale.\n\n[train_13350]\nRolling out our AI SDR this morning.  It took a bunch of training, tooling, etc.  But ...\n\nAlready got 15 meetings from it, 7.5% hit rate\n\nThat’s more than any human SDR did in 30+ days before\n\n(More to come)",
+    "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Dear SaaStr: How Long Does It Take to Deploy an AI SDR?\n\nSource passages:\n[train_176]\nDear SaaStr: I Want to Roll Out an AI SDR. How Do I Start? First, get clear on what you’re actually buying — and what it actually does. We’ve now been running AI SDRs at SaaStr for over a year. Multiple platforms. Real data. Real pipeline. And the honest answer is: it works. But it works very differently than most vendors will tell you, and the gap between a good deployment and a wasted one comes down almost entirely to how you set it up. Here’s what we actually learned. The Single Best Use Case to Start With: The Leads Your Team Is Ignoring\nThis is the insight that changed how we think about AI SDRs entirely. Your human SDRs are force-ranking in their heads every single day. They’re chasing the big deals, the warm inbound, the accounts that feel like they could close this quarter. The leads they consider “not worth it” — return event attendees, old website visitors, ghosted CRM contacts — those get nothing. Not bad follow-up. Nothing. That’s where AI SDRs absolutely shine. When we deployed AI on the leads our human team refused to work — people who had engaged with SaaStr but never got follow-up — we got a\n72% open rate\non Agentforce and generated\n15% of our London event revenue\nfrom a segment that would have produced zero without AI. Not 15% incremental lift. 15% of total revenue from leads that were producing $0. So before you start thinking about AI SDRs as a way to scale your best motion, ask yourself: what’s the motion your team isn’t running at all? Start there.\n\n[train_180]\nThe real implementation involves:\nICP and messaging work:\n2–4 weeks of your best sales brain. Don’t rush this. Integration and setup:\n1–2 weeks of technical lift depending on your CRM and stack. Ongoing tuning:\n30–45 minutes per day, minimum, for the first 60–90 days. Then 20–30 minutes daily after that. This is not set-it-and-forget-it. The vendors will tell you it takes an afternoon to set up. You can turn it on in an afternoon. That’s very different from having it work. The Honest Expectation\nA well-deployed AI SDR in 2026 will do the work your human team isn’t doing — the segments they consider too small, the leads they consider too cold, the follow-ups they keep meaning to send. That’s where the ROI is clearest and fastest. It will also scale your warm outbound to volumes no human team can match. We went from 285 emails per rep per month to 3,221 per month on a single platform, with equivalent or better response rates. What it won’t do is replace a great enterprise SDR who navigates complex organizations and handles nuanced objections in real-time. That’s still a human job — at least for now. Use AI SDRs to cover the motions where speed and volume matter most. Redeploy your human SDRs to the work where judgment and relationships matter most. That’s not a downgrade for your team. That’s a better use of everyone’s time — and more pipeline from leads that would have otherwise produced nothing. Have a question for SaaStr? We answer the real ones at\nSaaStr.ai\n.\n\n[train_78]\nSDR turnover is the highest of any go-to-market role. The best SDRs want to be AEs within six months. Get above the quality bar, and 99% of people are happy to interact with your AI agent. The 1% who get frustrated are a rounding error, and about half of those are just people trying to prompt-inject your bot for fun. The AI SDR is not a magic bullet. It requires real setup time, real ongoing maintenance, and real human judgment to run well. But if you do the work, the results are better than what most human SDR teams deliver, at a fraction of the cost and at genuinely infinite scale.\n\n[train_13350]\nRolling out our AI SDR this morning.  It took a bunch of training, tooling, etc.  But ...\n\nAlready got 15 meetings from it, 7.5% hit rate\n\nThat’s more than any human SDR did in 30+ days before\n\n(More to come)<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "extraction_seconds": 13.919,
+    "verification_seconds": 0.0,
+    "verification_records": [],
+    "llm_verifier_on_critical_path": false,
+    "allowed_numeric_values": [
+      "pct:99"
+    ],
+    "distillation_adapter_enabled": false,
+    "verification_adapter_enabled": false,
+    "distillation_backend": "same_loaded_4bit_base_adapter_off",
+    "distillation_do_sample": false,
+    "extraction_max_new_tokens": 2560,
+    "verification_max_new_tokens": 24,
+    "distillation_seed": 0,
+    "support_spans_in_generator_prompt": false,
+    "evidence_stage_reason": null,
+    "evidence_status": "verified",
+    "extraction_attempts": 1,
+    "extraction_stop_reason": "eos",
+    "prompt_contract": "factual-reliability-v1",
+    "fixed_style_enabled": true,
+    "style_applied": true,
+    "style_exemplar_count": 2,
+    "latency_seconds": 24.066,
+    "generated_tokens_including_stop": 365,
+    "last_token_id": 128009,
+    "effective_eos_token_ids": [
+      128001,
+      128008,
+      128009
+    ],
+    "stop_reason": "eos",
+    "budget_fraction": 0.4752604166666667,
+    "early_eos": true,
+    "first_attempt_stop_reason": "eos",
+    "retry_stop_reason": null
+  }
+}

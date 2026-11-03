@@ -1,0 +1,425 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "topic_id": "gold_009",
+  "medium": "x",
+  "arm": "on",
+  "seed": 76,
+  "attempts": 1,
+  "evidence_sha256": "6f68806eff483121a007a40d1ed323a7cfc4e67215c2ec86e451ab9314b7854f",
+  "retrieval_hit_ids": [
+    "train_13786",
+    "train_7692",
+    "train_12216",
+    "train_7066"
+  ],
+  "retrieval_query": "5 Interesting Learnings from Atlassian at Almost $3 Billion in ARR",
+  "retrieval_filter": null,
+  "style_applied": true,
+  "style_in_prompt": true,
+  "prompt_tokens": 633,
+  "generated_tokens_including_stop": 74,
+  "latency_seconds": 2.712,
+  "exemplar_ids": [
+    12508,
+    12509
+  ],
+  "saved_at": "2026-10-30T09:32:21.326377+00:00",
+  "trace": {
+    "id": "gold_009",
+    "format": "x_thread",
+    "topic": "5 Interesting Learnings from Atlassian at Almost $3 Billion in ARR",
+    "audience": "B2B SaaS founders and operators",
+    "goal": "Teach one concrete operator lesson with specific examples and conviction.",
+    "cta": "none",
+    "k": 8,
+    "expected_facts": [
+      "The answer should draw founder lessons from Atlassian's scale, especially around product-led growth, efficiency, or durable expansion.",
+      "It should use ARR scale as evidence of a repeatable system, not as the lesson itself.",
+      "It should translate observations into actions for smaller SaaS teams."
+    ],
+    "rubric_must_haves": [
+      "Organizes the answer into distinct learnings.",
+      "Connects learnings to founder decisions or GTM design.",
+      "Uses concrete examples, metrics, or contrasts.",
+      "Avoids becoming a generic company summary."
+    ],
+    "gold_reference": "A strong answer should use Atlassian's scale to reinforce lessons around efficient growth, durable product-led distribution, and building systems that expand over time. The point is not that every company should copy Atlassian exactly, but that founders should pay attention to how repeatability and compounding distribution create resilience at scale.",
+    "medium": "x",
+    "prompt": "Write an X post in the style of Jason Lemkin about: 5 Interesting Learnings from Atlassian at Almost $3 Billion in ARR\n\nStyle examples from train-owned source text.\nUse them for voice only. They are not evidence for claims.\nDo not copy long passages verbatim.\n[Style 1]\nEveryone has an AI strategy. Almost nobody has agents in production.\n\nThat's the gap.\n\nGet ahead of the pack. Take 1 day our and join \nhttp://SaaStrDeploy.com '26 — our first-ever AI GTM Agent Summit inside of SaaStr AI 2026. May 12, SF.\n\nOne day. One mission. Deploy your AI agents.  No more excuses.\n[Style 2]\n\"The public markets just don't believe public leaders' revenue is durable anymore.\n\nSo the markets are going to panic every time we see any evidence their revenue might be even ... less durable.\" with \n@HarryStebbings\n \n@rodriscoll\n + me\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] Atlassian has cruised past $4 Billion in ARR\n[E2] Atlassian is still growing at 21% in a very efficient fashion\n[E3] Atlassian has 27% free-cash flow margins\n[E4] Atlassian's subscription growth is up 33%\n[E5] Atlassian's revenue overall is up 21%\n[E6] Atlassian has 500 $1M+ customers\n[E7] Atlassian's users are split 50/50 between business and technical\n[E8] Seat expansion is driving growth for Atlassian\n[E9] Atlassian plans to hit $10B ARR in 5 years\n[E10] Atlassian has 12,000 employees, generating $370,000 in revenue per employee\n\nNow write the requested X post about: 5 Interesting Learnings from Atlassian at Almost $3 Billion in ARR",
+    "rendered_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nWrite an X post in the style of Jason Lemkin about: 5 Interesting Learnings from Atlassian at Almost $3 Billion in ARR\n\nStyle examples from train-owned source text.\nUse them for voice only. They are not evidence for claims.\nDo not copy long passages verbatim.\n[Style 1]\nEveryone has an AI strategy. Almost nobody has agents in production.\n\nThat's the gap.\n\nGet ahead of the pack. Take 1 day our and join \nhttp://SaaStrDeploy.com '26 — our first-ever AI GTM Agent Summit inside of SaaStr AI 2026. May 12, SF.\n\nOne day. One mission. Deploy your AI agents.  No more excuses.\n[Style 2]\n\"The public markets just don't believe public leaders' revenue is durable anymore.\n\nSo the markets are going to panic every time we see any evidence their revenue might be even ... less durable.\" with \n@HarryStebbings\n \n@rodriscoll\n + me\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] Atlassian has cruised past $4 Billion in ARR\n[E2] Atlassian is still growing at 21% in a very efficient fashion\n[E3] Atlassian has 27% free-cash flow margins\n[E4] Atlassian's subscription growth is up 33%\n[E5] Atlassian's revenue overall is up 21%\n[E6] Atlassian has 500 $1M+ customers\n[E7] Atlassian's users are split 50/50 between business and technical\n[E8] Seat expansion is driving growth for Atlassian\n[E9] Atlassian plans to hit $10B ARR in 5 years\n[E10] Atlassian has 12,000 employees, generating $370,000 in revenue per employee\n\nNow write the requested X post about: 5 Interesting Learnings from Atlassian at Almost $3 Billion in ARR<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "answer": "5 Interesting Learnings:\n\n#1.  Revenue Growth Remains Strong, But Not Like It Used To Be\nAtlassian isn’t immune to macro issues like many others, seeing slowing growth in Q4’25 due to macro impacts on software spend, but it’s staying above pre-Covid levels.  And importantly, its core seat-based business remains strong.",
+    "raw_model_output": "5 Interesting Learnings:\n\n#1.  Revenue Growth Remains Strong, But Not Like It Used To Be\nAtlassian isn’t immune to macro issues like many others, seeing slowing growth in Q4’25 due to macro impacts on software spend, but it’s staying above pre-Covid levels.  And importantly, its core seat-based business remains strong.",
+    "deployment_output": "5 Interesting Learnings:\n\n#1.  Revenue Growth Remains Strong, But Not Like It Used To Be\nAtlassian isn’t immune to macro issues like many others, seeing slowing growth in Q4’25 due to macro impacts on software spend, but it’s staying above pre-Covid levels.  And importantly, its core seat-based business remains strong.",
+    "first_attempt_answer": "5 Interesting Learnings:\n\n#1.  Revenue Growth Remains Strong, But Not Like It Used To Be\nAtlassian isn’t immune to macro issues like many others, seeing slowing growth in Q4’25 due to macro impacts on software spend, but it’s staying above pre-Covid levels.  And importantly, its core seat-based business remains strong.",
+    "retry_answer": null,
+    "query": "5 Interesting Learnings from Atlassian at Almost $3 Billion in ARR",
+    "max_new_tokens": 160,
+    "seed": 76,
+    "retry_seed": null,
+    "deployment_accepted": true,
+    "repair_occurred": false,
+    "generation_attempt": {
+      "seed": 76,
+      "answer": "5 Interesting Learnings:\n\n#1.  Revenue Growth Remains Strong, But Not Like It Used To Be\nAtlassian isn’t immune to macro issues like many others, seeing slowing growth in Q4’25 due to macro impacts on software spend, but it’s staying above pre-Covid levels.  And importantly, its core seat-based business remains strong.",
+      "numeric_grounding": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [
+          "n:12000",
+          "n:500",
+          "pct:21",
+          "pct:27",
+          "pct:33",
+          "usd:1000000",
+          "usd:10000000000",
+          "usd:3000000000",
+          "usd:370000",
+          "usd:4000000000"
+        ],
+        "values": [],
+        "unsupported": []
+      },
+      "rag_source_copying": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 4,
+        "document_id": "train_7692",
+        "matched_generated_span": "5 interesting learnings 1",
+        "matched_retrieved_span": "5 interesting learnings 1"
+      },
+      "stop_reason": "eos"
+    },
+    "repair_attempt": null,
+    "accepted_attempt": 1,
+    "rag_source_copying": {
+      "applicable": true,
+      "threshold": 12,
+      "pass": true,
+      "flagged": false,
+      "max_contiguous_words": 4,
+      "document_id": "train_7692",
+      "matched_generated_span": "5 interesting learnings 1",
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 4,
+        "document_id": "train_7692",
+        "matched_generated_span": "5 interesting learnings 1",
+        "matched_retrieved_span": "5 interesting learnings 1"
+      },
+      "retry": null,
+      "retry_occurred": false,
+      "repair_occurred": false
+    },
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [
+          "n:12000",
+          "n:500",
+          "pct:21",
+          "pct:27",
+          "pct:33",
+          "usd:1000000",
+          "usd:10000000000",
+          "usd:3000000000",
+          "usd:370000",
+          "usd:4000000000"
+        ],
+        "values": [],
+        "unsupported": []
+      },
+      "retry": null
+    },
+    "prompt_tokens": 633,
+    "backend": "unsloth",
+    "retrieval": true,
+    "retrieval_query": "5 Interesting Learnings from Atlassian at Almost $3 Billion in ARR",
+    "retrieval_filter": null,
+    "retrieval_k": 4,
+    "retrieval_hits": [
+      {
+        "id": "train_13786",
+        "text": "New!!  5 Nonobvious Learnings from Atlassian’s Path to The First $10B in ARR With Ex-CRO Cameron Deatsch",
+        "medium": "x",
+        "group_id": "c4d520a6ca775b229c3c9583e08d1b78ddcf197da10d8d37ef8edd08cac6ca15",
+        "row_id": 13786,
+        "split": "train",
+        "distance": 0.16313660144805908
+      },
+      {
+        "id": "train_7692",
+        "text": "So Atlassian has cruised past $4 Billion in ARR, still growing a steady 21% in a very efficient fashion.  It’s raining cash, with 27% free-cash flow margins.\nThe markets like this combination.  Even with a few bumps, Atlassian is still trading at a $55 Billion market cap, so over 12x ARR.  That’s twice the average of 6x ARR for public SaaS companies.\nEfficient, steady, profitable growth at scale.  The markets say Yes to Atlassian.\n5 Interesting Learnings:\n#1.  300,000 Total Paying Customers, With 43,000 Paying $10k or More\nThe vast majority of Atlassian’s customers pay less than $10k a year, but the $10k+ ones make up the bulk of the revenue.  A reminder that the long tail really does work in collaboration.  And also how important it is to go a smidge upmarket if you sell to SMBs and smaller customers.",
+        "medium": "blog",
+        "group_id": "94d47b70fb8634af142b983df41d1460dd658ff4b285ade3f4a4921282f4918f",
+        "row_id": 7692,
+        "split": "train",
+        "distance": 0.19639325141906738
+      },
+      {
+        "id": "train_12216",
+        "text": "So Atlassian is bucking the trend. At almost $5B ARR, subscription growth is up a stunning 33%, and revenue overall up 21% The markets loved it, driving the stock up +29% the past month Is SaaS Back? 5 Interesting Learnings: #1. Raising Guidance and Growth Rate for Cloud Revenue That’s pretty darn impressive growth at almost $5B in ARR, and just as importantly, they’re raising their prediction here. Atlassian is bullish on maintain and accelerating Cloud growth over the next year. #2. 500 $1M+ Customers Atlassian is going more and more enterprise, which has become key to maintaining growth. It now has 500 $1M+ customers. #3. 51% of Revenue From Outside North America A reminder to go global as early as practical. #4. 50% of Users on \"Business Side”, 50% Technical An interesting breakdown across their core products. Yes, Atlassian’s roots are selling to developers. But as you go more upmarket, and more enterprise, the business users become critical stakeholders and users, too. It’s split 50/50 at Atlassian. #5. Seat Expansion Driving Growth, Along with Cross-Sell of New Products Long live per-seat models and pricing! Atlassian, HubSpot, GitLab and more are seeing growth fueled by classic account expansion of more seats. _______ The Atlassian engine just keeps on running!! Even at almost $5 Billion in ARR. Pretty impressive. Pretty, pretty impressive.",
+        "medium": "linkedin",
+        "group_id": "990997307679efc91891f9474f7f178b8b7147d2a443f40d92b71b5ba27f0014",
+        "row_id": 12216,
+        "split": "train",
+        "distance": 0.2059205174446106
+      },
+      {
+        "id": "train_7066",
+        "text": "#5.  Planning to Hit $10B ARR in 5 Years\nThe beauty of recurring revenue and 100%+ NRR — that is, if you are also growing net new customer count too.  Which is Atlassian is.  You can predict long-term growth with fairly high confidence.\nAnd a few other interesting learnings:\n\n#6.  Continuing to See Pressures on Seat Counts — And Plan to Continue to Increase Prices\nAtlassian isn’t immune from customers’ desires to cut and minimize seat count.  It just hasn’t seen the dramatic impact there\nSalesforce\nand others have.   They also plan to offset this with more price increases.\n#7.  12,000 Employees, So About $370,000 in Revenue Per Employee\nYou don’t need to be here in the start-up phase.  But the leaders in SaaS and Cloud all seem to be\nskating toward $400k in revenue per employee\nto hit Wall Street’s profitability expectations.\nPretty cool, Atlassian.  Pretty cool.",
+        "medium": "blog",
+        "group_id": "12ae1057e37102e90de6030560fcd3396d472b19cb01be83b526574e6ee06ae8",
+        "row_id": 7066,
+        "split": "train",
+        "distance": 0.22747600078582764
+      }
+    ],
+    "copying": [
+      {
+        "id": "train_13786",
+        "shared_word_span": 1
+      },
+      {
+        "id": "train_7692",
+        "shared_word_span": 4
+      },
+      {
+        "id": "train_12216",
+        "shared_word_span": 4
+      },
+      {
+        "id": "train_7066",
+        "shared_word_span": 3
+      }
+    ],
+    "retrieval_backend": "dense",
+    "proposed_atomic_claims": [
+      {
+        "source_id": "train_7692",
+        "claim": "Atlassian has cruised past $4 Billion in ARR",
+        "support_span": "So Atlassian has cruised past $4 Billion in ARR, still growing a steady 21% in a very efficient fashion.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7692",
+        "claim": "Atlassian is still growing at 21% in a very efficient fashion",
+        "support_span": "So Atlassian has cruised past $4 Billion in ARR, still growing a steady 21% in a very efficient fashion.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7692",
+        "claim": "Atlassian has 27% free-cash flow margins",
+        "support_span": "It’s raining cash, with 27% free-cash flow margins.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7692",
+        "claim": "Atlassian is trading at a $55 Billion market cap, so over 12x ARR",
+        "support_span": "That’s twice the average of 6x ARR for public SaaS companies.",
+        "claim_type": "comparison"
+      },
+      {
+        "source_id": "train_12216",
+        "claim": "Atlassian's subscription growth is up 33%",
+        "support_span": "So Atlassian is bucking the trend. At almost $5B ARR, subscription growth is up a stunning 33%,",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12216",
+        "claim": "Atlassian's revenue overall is up 21%",
+        "support_span": "So Atlassian is bucking the trend. At almost $5B ARR, subscription growth is up a stunning 33%, and revenue overall up 21%",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12216",
+        "claim": "Atlassian is raising their prediction for Cloud growth",
+        "support_span": "That’s pretty darn impressive growth at almost $5B in ARR, and just as importantly, they’re raising their prediction here.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12216",
+        "claim": "Atlassian has 500 $1M+ customers",
+        "support_span": "Atlassian is going more and more enterprise, which has become key to maintaining growth. It now has 500 $1M+ customers.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12216",
+        "claim": "51% of Atlassian's revenue comes from outside North America",
+        "support_span": "A reminder to go global as early as practical. #3. 51% of Revenue From Outside North America",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12216",
+        "claim": "Atlassian's users are split 50/50 between business and technical",
+        "support_span": "50% of Users on \"Business Side”, 50% Technical",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12216",
+        "claim": "Seat expansion is driving growth for Atlassian",
+        "support_span": "Seat Expansion Driving Growth, Along with Cross-Sell of New Products",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7066",
+        "claim": "Atlassian plans to hit $10B ARR in 5 years",
+        "support_span": "#5. Planning to Hit $10B ARR in 5 Years",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7066",
+        "claim": "Atlassian has 12,000 employees, generating $370,000 in revenue per employee",
+        "support_span": "12,000 Employees, So About $370,000 in Revenue Per Employee",
+        "claim_type": "fact"
+      }
+    ],
+    "validation_rejected": [
+      {
+        "source_id": "train_7692",
+        "claim": "Atlassian is trading at a $55 Billion market cap, so over 12x ARR",
+        "support_span": "That’s twice the average of 6x ARR for public SaaS companies.",
+        "claim_type": "comparison",
+        "reason": "numeric_not_in_span"
+      },
+      {
+        "source_id": "train_12216",
+        "claim": "Atlassian is raising their prediction for Cloud growth",
+        "support_span": "That’s pretty darn impressive growth at almost $5B in ARR, and just as importantly, they’re raising their prediction here.",
+        "claim_type": "fact",
+        "reason": "entity_not_in_source"
+      },
+      {
+        "source_id": "train_12216",
+        "claim": "51% of Atlassian's revenue comes from outside North America",
+        "support_span": "A reminder to go global as early as practical. #3. 51% of Revenue From Outside North America",
+        "claim_type": "fact",
+        "reason": "support_not_in_source"
+      }
+    ],
+    "verifier_rejected": [],
+    "verified_claims": [
+      {
+        "source_id": "train_7692",
+        "claim": "Atlassian has cruised past $4 Billion in ARR",
+        "support_span": "So Atlassian has cruised past $4 Billion in ARR, still growing a steady 21% in a very efficient fashion.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7692",
+        "claim": "Atlassian is still growing at 21% in a very efficient fashion",
+        "support_span": "So Atlassian has cruised past $4 Billion in ARR, still growing a steady 21% in a very efficient fashion.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7692",
+        "claim": "Atlassian has 27% free-cash flow margins",
+        "support_span": "It’s raining cash, with 27% free-cash flow margins.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12216",
+        "claim": "Atlassian's subscription growth is up 33%",
+        "support_span": "So Atlassian is bucking the trend. At almost $5B ARR, subscription growth is up a stunning 33%,",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12216",
+        "claim": "Atlassian's revenue overall is up 21%",
+        "support_span": "So Atlassian is bucking the trend. At almost $5B ARR, subscription growth is up a stunning 33%, and revenue overall up 21%",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12216",
+        "claim": "Atlassian has 500 $1M+ customers",
+        "support_span": "Atlassian is going more and more enterprise, which has become key to maintaining growth. It now has 500 $1M+ customers.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12216",
+        "claim": "Atlassian's users are split 50/50 between business and technical",
+        "support_span": "50% of Users on \"Business Side”, 50% Technical",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12216",
+        "claim": "Seat expansion is driving growth for Atlassian",
+        "support_span": "Seat Expansion Driving Growth, Along with Cross-Sell of New Products",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7066",
+        "claim": "Atlassian plans to hit $10B ARR in 5 years",
+        "support_span": "#5. Planning to Hit $10B ARR in 5 Years",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7066",
+        "claim": "Atlassian has 12,000 employees, generating $370,000 in revenue per employee",
+        "support_span": "12,000 Employees, So About $370,000 in Revenue Per Employee",
+        "claim_type": "fact"
+      }
+    ],
+    "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] Atlassian has cruised past $4 Billion in ARR\n[E2] Atlassian is still growing at 21% in a very efficient fashion\n[E3] Atlassian has 27% free-cash flow margins\n[E4] Atlassian's subscription growth is up 33%\n[E5] Atlassian's revenue overall is up 21%\n[E6] Atlassian has 500 $1M+ customers\n[E7] Atlassian's users are split 50/50 between business and technical\n[E8] Seat expansion is driving growth for Atlassian\n[E9] Atlassian plans to hit $10B ARR in 5 years\n[E10] Atlassian has 12,000 employees, generating $370,000 in revenue per employee",
+    "raw_extraction": "[\n  {\n    \"source_id\": \"train_7692\",\n    \"claim\": \"Atlassian has cruised past $4 Billion in ARR\",\n    \"support_span\": \"So Atlassian has cruised past $4 Billion in ARR, still growing a steady 21% in a very efficient fashion.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7692\",\n    \"claim\": \"Atlassian is still growing at 21% in a very efficient fashion\",\n    \"support_span\": \"So Atlassian has cruised past $4 Billion in ARR, still growing a steady 21% in a very efficient fashion.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7692\",\n    \"claim\": \"Atlassian has 27% free-cash flow margins\",\n    \"support_span\": \"It’s raining cash, with 27% free-cash flow margins.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7692\",\n    \"claim\": \"Atlassian is trading at a $55 Billion market cap, so over 12x ARR\",\n    \"support_span\": \"That’s twice the average of 6x ARR for public SaaS companies.\",\n    \"claim_type\": \"comparison\"\n  },\n  {\n    \"source_id\": \"train_12216\",\n    \"claim\": \"Atlassian's subscription growth is up 33%\",\n    \"support_span\": \"So Atlassian is bucking the trend. At almost $5B ARR, subscription growth is up a stunning 33%,\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_12216\",\n    \"claim\": \"Atlassian's revenue overall is up 21%\",\n    \"support_span\": \"So Atlassian is bucking the trend. At almost $5B ARR, subscription growth is up a stunning 33%, and revenue overall up 21%\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_12216\",\n    \"claim\": \"Atlassian is raising their prediction for Cloud growth\",\n    \"support_span\": \"That’s pretty darn impressive growth at almost $5B in ARR, and just as importantly, they’re raising their prediction here.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_12216\",\n    \"claim\": \"Atlassian has 500 $1M+ customers\",\n    \"support_span\": \"Atlassian is going more and more enterprise, which has become key to maintaining growth. It now has 500 $1M+ customers.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_12216\",\n    \"claim\": \"51% of Atlassian's revenue comes from outside North America\",\n    \"support_span\": \"A reminder to go global as early as practical. #3. 51% of Revenue From Outside North America\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_12216\",\n    \"claim\": \"Atlassian's users are split 50/50 between business and technical\",\n    \"support_span\": \"50% of Users on \"Business Side”, 50% Technical\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_12216\",\n    \"claim\": \"Seat expansion is driving growth for Atlassian\",\n    \"support_span\": \"Seat Expansion Driving Growth, Along with Cross-Sell of New Products\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7066\",\n    \"claim\": \"Atlassian plans to hit $10B ARR in 5 years\",\n    \"support_span\": \"#5. Planning to Hit $10B ARR in 5 Years\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7066\",\n    \"claim\": \"Atlassian has 12,000 employees, generating $370,000 in revenue per employee\",\n    \"support_span\": \"12,000 Employees, So About $370,000 in Revenue Per Employee\",\n    \"claim_type\": \"fact\"\n  }\n]",
+    "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: 5 Interesting Learnings from Atlassian at Almost $3 Billion in ARR\n\nSource passages:\n[train_13786]\nNew!!  5 Nonobvious Learnings from Atlassian’s Path to The First $10B in ARR With Ex-CRO Cameron Deatsch\n\n[train_7692]\nSo Atlassian has cruised past $4 Billion in ARR, still growing a steady 21% in a very efficient fashion.  It’s raining cash, with 27% free-cash flow margins.\nThe markets like this combination.  Even with a few bumps, Atlassian is still trading at a $55 Billion market cap, so over 12x ARR.  That’s twice the average of 6x ARR for public SaaS companies.\nEfficient, steady, profitable growth at scale.  The markets say Yes to Atlassian.\n5 Interesting Learnings:\n#1.  300,000 Total Paying Customers, With 43,000 Paying $10k or More\nThe vast majority of Atlassian’s customers pay less than $10k a year, but the $10k+ ones make up the bulk of the revenue.  A reminder that the long tail really does work in collaboration.  And also how important it is to go a smidge upmarket if you sell to SMBs and smaller customers.\n\n[train_12216]\nSo Atlassian is bucking the trend. At almost $5B ARR, subscription growth is up a stunning 33%, and revenue overall up 21% The markets loved it, driving the stock up +29% the past month Is SaaS Back? 5 Interesting Learnings: #1. Raising Guidance and Growth Rate for Cloud Revenue That’s pretty darn impressive growth at almost $5B in ARR, and just as importantly, they’re raising their prediction here. Atlassian is bullish on maintain and accelerating Cloud growth over the next year. #2. 500 $1M+ Customers Atlassian is going more and more enterprise, which has become key to maintaining growth. It now has 500 $1M+ customers. #3. 51% of Revenue From Outside North America A reminder to go global as early as practical. #4. 50% of Users on \"Business Side”, 50% Technical An interesting breakdown across their core products. Yes, Atlassian’s roots are selling to developers. But as you go more upmarket, and more enterprise, the business users become critical stakeholders and users, too. It’s split 50/50 at Atlassian. #5. Seat Expansion Driving Growth, Along with Cross-Sell of New Products Long live per-seat models and pricing! Atlassian, HubSpot, GitLab and more are seeing growth fueled by classic account expansion of more seats. _______ The Atlassian engine just keeps on running!! Even at almost $5 Billion in ARR. Pretty impressive. Pretty, pretty impressive.\n\n[train_7066]\n#5.  Planning to Hit $10B ARR in 5 Years\nThe beauty of recurring revenue and 100%+ NRR — that is, if you are also growing net new customer count too.  Which is Atlassian is.  You can predict long-term growth with fairly high confidence.\nAnd a few other interesting learnings:\n\n#6.  Continuing to See Pressures on Seat Counts — And Plan to Continue to Increase Prices\nAtlassian isn’t immune from customers’ desires to cut and minimize seat count.  It just hasn’t seen the dramatic impact there\nSalesforce\nand others have.   They also plan to offset this with more price increases.\n#7.  12,000 Employees, So About $370,000 in Revenue Per Employee\nYou don’t need to be here in the start-up phase.  But the leaders in SaaS and Cloud all seem to be\nskating toward $400k in revenue per employee\nto hit Wall Street’s profitability expectations.\nPretty cool, Atlassian.  Pretty cool.",
+    "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: 5 Interesting Learnings from Atlassian at Almost $3 Billion in ARR\n\nSource passages:\n[train_13786]\nNew!!  5 Nonobvious Learnings from Atlassian’s Path to The First $10B in ARR With Ex-CRO Cameron Deatsch\n\n[train_7692]\nSo Atlassian has cruised past $4 Billion in ARR, still growing a steady 21% in a very efficient fashion.  It’s raining cash, with 27% free-cash flow margins.\nThe markets like this combination.  Even with a few bumps, Atlassian is still trading at a $55 Billion market cap, so over 12x ARR.  That’s twice the average of 6x ARR for public SaaS companies.\nEfficient, steady, profitable growth at scale.  The markets say Yes to Atlassian.\n5 Interesting Learnings:\n#1.  300,000 Total Paying Customers, With 43,000 Paying $10k or More\nThe vast majority of Atlassian’s customers pay less than $10k a year, but the $10k+ ones make up the bulk of the revenue.  A reminder that the long tail really does work in collaboration.  And also how important it is to go a smidge upmarket if you sell to SMBs and smaller customers.\n\n[train_12216]\nSo Atlassian is bucking the trend. At almost $5B ARR, subscription growth is up a stunning 33%, and revenue overall up 21% The markets loved it, driving the stock up +29% the past month Is SaaS Back? 5 Interesting Learnings: #1. Raising Guidance and Growth Rate for Cloud Revenue That’s pretty darn impressive growth at almost $5B in ARR, and just as importantly, they’re raising their prediction here. Atlassian is bullish on maintain and accelerating Cloud growth over the next year. #2. 500 $1M+ Customers Atlassian is going more and more enterprise, which has become key to maintaining growth. It now has 500 $1M+ customers. #3. 51% of Revenue From Outside North America A reminder to go global as early as practical. #4. 50% of Users on \"Business Side”, 50% Technical An interesting breakdown across their core products. Yes, Atlassian’s roots are selling to developers. But as you go more upmarket, and more enterprise, the business users become critical stakeholders and users, too. It’s split 50/50 at Atlassian. #5. Seat Expansion Driving Growth, Along with Cross-Sell of New Products Long live per-seat models and pricing! Atlassian, HubSpot, GitLab and more are seeing growth fueled by classic account expansion of more seats. _______ The Atlassian engine just keeps on running!! Even at almost $5 Billion in ARR. Pretty impressive. Pretty, pretty impressive.\n\n[train_7066]\n#5.  Planning to Hit $10B ARR in 5 Years\nThe beauty of recurring revenue and 100%+ NRR — that is, if you are also growing net new customer count too.  Which is Atlassian is.  You can predict long-term growth with fairly high confidence.\nAnd a few other interesting learnings:\n\n#6.  Continuing to See Pressures on Seat Counts — And Plan to Continue to Increase Prices\nAtlassian isn’t immune from customers’ desires to cut and minimize seat count.  It just hasn’t seen the dramatic impact there\nSalesforce\nand others have.   They also plan to offset this with more price increases.\n#7.  12,000 Employees, So About $370,000 in Revenue Per Employee\nYou don’t need to be here in the start-up phase.  But the leaders in SaaS and Cloud all seem to be\nskating toward $400k in revenue per employee\nto hit Wall Street’s profitability expectations.\nPretty cool, Atlassian.  Pretty cool.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "extraction_seconds": 23.315,
+    "verification_seconds": 0.0,
+    "verification_records": [],
+    "llm_verifier_on_critical_path": false,
+    "allowed_numeric_values": [
+      "n:12000",
+      "n:500",
+      "pct:21",
+      "pct:27",
+      "pct:33",
+      "usd:1000000",
+      "usd:10000000000",
+      "usd:3000000000",
+      "usd:370000",
+      "usd:4000000000"
+    ],
+    "distillation_adapter_enabled": false,
+    "verification_adapter_enabled": false,
+    "distillation_backend": "same_loaded_4bit_base_adapter_off",
+    "distillation_do_sample": false,
+    "extraction_max_new_tokens": 2560,
+    "verification_max_new_tokens": 24,
+    "distillation_seed": 0,
+    "support_spans_in_generator_prompt": false,
+    "evidence_stage_reason": null,
+    "evidence_status": "verified",
+    "extraction_attempts": 1,
+    "extraction_stop_reason": "eos",
+    "prompt_contract": "factual-reliability-v1",
+    "fixed_style_enabled": true,
+    "style_applied": true,
+    "style_exemplar_count": 2,
+    "latency_seconds": 2.712,
+    "generated_tokens_including_stop": 74,
+    "last_token_id": 128009,
+    "effective_eos_token_ids": [
+      128001,
+      128008,
+      128009
+    ],
+    "stop_reason": "eos",
+    "budget_fraction": 0.4625,
+    "early_eos": true,
+    "first_attempt_stop_reason": "eos",
+    "retry_stop_reason": null
+  }
+}

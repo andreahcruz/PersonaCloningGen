@@ -1,0 +1,1394 @@
+{
+  "status": "complete",
+  "question_id": "gold_008",
+  "query": "Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too?",
+  "retrieval": {
+    "backend": "lightrag",
+    "mode": "hybrid",
+    "evidence_budget": 4,
+    "top_k": 20
+  },
+  "payload": {
+    "status": "success",
+    "message": "Query processed successfully",
+    "data": {
+      "entities": [
+        {
+          "entity_name": "public multiples",
+          "entity_type": "concept",
+          "description": "Public multiples are expected to increase in 2023.<SEP>Public multiples refer to the valuation multiples of publicly traded companies.<SEP>A financial metric used to evaluate the value of a company.",
+          "source_id": "gd_3a5f356153b9a32a14dc97fc-chunk-000<SEP>gd_602ec044e3ecdf3d2d224081-chunk-002<SEP>gd_7849200fd59aa068293f37a0-chunk-005",
+          "file_path": "gd_3a5f356153b9a32a14dc97fc<SEP>gd_602ec044e3ecdf3d2d224081<SEP>gd_7849200fd59aa068293f37a0",
+          "created_at": 1793586105
+        },
+        {
+          "entity_name": "Public Companies",
+          "entity_type": "concept",
+          "description": "Companies that are publicly traded.<SEP>Public companies are companies that are listed on the stock market and are subject to public scrutiny and expectations.",
+          "source_id": "gd_59f53ecd7fd13e9cb3d8702a-chunk-000<SEP>gd_79e602fce498ee721fb0af46-chunk-000<SEP>gd_249ae5f1a28ad2b6389c7b37-chunk-004",
+          "file_path": "gd_59f53ecd7fd13e9cb3d8702a<SEP>gd_249ae5f1a28ad2b6389c7b37",
+          "created_at": 1793622523
+        },
+        {
+          "entity_name": "Revenue Multiples",
+          "entity_type": "concept",
+          "description": "Revenue multiples are way down, making it hard for VCs to make money.<SEP>Revenue multiples are disconnected from interest rates.",
+          "source_id": "gd_24e298cda6ab82b9dd6500f8-chunk-000<SEP>gd_120d2ba4e4661896ed6d1f71-chunk-004<SEP>gd_bb94764426258ca6a129d4a8-chunk-000",
+          "file_path": "gd_24e298cda6ab82b9dd6500f8<SEP>gd_120d2ba4e4661896ed6d1f71",
+          "created_at": 1793628370
+        },
+        {
+          "entity_name": "VCs",
+          "entity_type": "organization",
+          "description": "**Venture Capitalists (VCs)**\n\nVenture Capitalists, commonly referred to as VCs, are organizations that manage funds, investing in companies, often in a position of authority. They are also venture capitalists who evaluate startups for investment, seeking opportunities to support innovative and promising ventures. Historically, VCs have been known to prioritize their own interests over those of the founders and top executives, although this is not a universal trait among all VCs.\n\nIn recent years, there has been a perceived decline in engagement among Venture Capitalists, with some attending high-profile events such as the SaaStr Annual conference. However, it is essential to note that this may not be representative of the entire VC community. VCs who invest in startups often have a significant impact on the companies they support, and their involvement can be crucial for growth and success.\n\nIt is also worth mentioning that some Venture Capitalists have been criticized for not discussing uncomfortable truths about unicorns that hit $1B+ valuations in 2020-2021. This has led to concerns about the transparency and accountability of some VCs in the industry. Despite these criticisms, VCs continue to play a vital role in the startup ecosystem, providing much-needed funding and expertise to innovative companies.\n\nWhile VCs are sometimes blamed for layoffs, they may not be the primary cause. Some Venture Capitalists have been known to recommend a \"power move\" approach to fundraising, which involves running a tight process, forcing tight deadlines, and collecting term sheets without needing a detailed deck. However, this approach can be seen as aggressive and may not be suitable for all startups.\n\nAdditionally, some Venture Capitalists have been accused of lowballing or overvaluing startups, which can have negative consequences for the companies they invest in. Nevertheless, VCs are investors who provide funding to startups in exchange for equity, and they play a crucial role in supporting the growth and development of innovative companies.\n\nSome notable characteristics of Venture Capitalists include being wired to process bad news and being patient. They often attend events such as the SaaStr Annual and Europa conferences, and are known to invest in startups in exchange for equity. Venture capital firms that invest in startups and other companies provide funding in exchange for equity, and are a crucial part of the startup ecosystem.\n\nIn summary, Venture Capitalists are organizations that manage funds, investing in companies and evaluating startups for investment opportunities. While they have been criticized for prioritizing their own interests and for not discussing uncomfortable truths, they continue to play a vital role in the startup ecosystem, providing funding and expertise to innovative companies.<SEP>VCs are top investors that have been onboarded to SaaStr.ai.<SEP>VCs (Venture Capitalists) are investors who provide funding to startups.<SEP>VCs are firms that invest in startups, and they hold reserves for second and third checks into their portfolio companies.<SEP>VCs (Venture Capitalists) are investors who provide funding to startups and scale-ups.",
+          "source_id": "gd_09e160ccf7663729c581d1e2-chunk-000<SEP>gd_001e030f3d72c14fbdcab1e7-chunk-000<SEP>gd_0e243f9c16a81abe061b3496-chunk-000<SEP>gd_11eb12a906f6fd665fab2d11-chunk-000<SEP>gd_17b19760754f113f649c8895-chunk-001<SEP>gd_3b1680bf5d9e4fa561a768aa-chunk-000<SEP>gd_15cebc29d9f85feb474c70c8-chunk-000<SEP>gd_709d7e8e2108c4354bc8e875-chunk-001<SEP>gd_323d938209b9791ba902f64f-chunk-000<SEP>gd_3a88f1d2afd6a79f4002151e-chunk-000<SEP>gd_d1423816ab12475e55e09a39-chunk-001<SEP>gd_f557745d3c0b715d003fda3e-chunk-000<SEP>gd_2fb5017109e363590b9c33a4-chunk-000<SEP>gd_5448911bf1d9e8cb3ec3f5e9-chunk-000<SEP>gd_fe420ff77a48eb8188aa287a-chunk-000<SEP>gd_019a6f50cee0326c5feb06b7-chunk-000<SEP>gd_36834ee214bcfc2b751a3463-chunk-000<SEP>gd_36834ee214bcfc2b751a3463-chunk-001<SEP>gd_6f932cb77ffe2cc35bb954a5-chunk-000<SEP>gd_63b752186f04b5c7b94740de-chunk-000<SEP>gd_63b752186f04b5c7b94740de-chunk-001<SEP>gd_1c4574bfd38001677b67039b-chunk-000<SEP>gd_6961e7279c1cf1e279a09fbd-chunk-000<SEP>gd_e921bb51c930b886e32cb391-chunk-000<SEP>gd_70a219235731dd098fa60c52-chunk-001<SEP>gd_c959908b794f2fc5ae9ef1a8-chunk-000<SEP>gd_52580e80aacd01c8a80e48c2-chunk-001<SEP>gd_9e5c348350596b05e4000d2b-chunk-001<SEP>gd_59786235ec03f6fe9fcba771-chunk-000<SEP>gd_c7085eab75e6259fc532726b-chunk-000<SEP>gd_28e630372aae90eb9315f28e-chunk-000<SEP>gd_5ce5a6fe45200ddaaa0c8e10-chunk-000<SEP>gd_8e71f90020a636fbd18c7c85-chunk-000<SEP>gd_853051b49a076dc2389d4553-chunk-000<SEP>gd_2f116f02b14cdfaa4b81e2d2-chunk-001<SEP>gd_2f116f02b14cdfaa4b81e2d2-chunk-000<SEP>gd_df2884cd4b9e1df28675d368-chunk-000<SEP>gd_70b6d21359f3ae0fd46e93c8-chunk-000<SEP>gd_70b6d21359f3ae0fd46e93c8-chunk-001<SEP>gd_33efe7307fb3edd348590ee0-chunk-000<SEP>gd_33efe7307fb3edd348590ee0-chunk-001<SEP>gd_8daf8d01fb36526bba6d5386-chunk-000<SEP>gd_4af809c8ff8e2354a0a664f6-chunk-000<SEP>gd_eac0bd25dd571eef326188a5-chunk-000<SEP>gd_3a9e187b9b599b728aa6cbb5-chunk-000<SEP>gd_3a9e187b9b599b728aa6cbb5-chunk-001<SEP>gd_3a9e187b9b599b728aa6cbb5-chunk-002<SEP>gd_d8634952bd688ae7ed11f624-chunk-000<SEP>gd_75932851b25a6ae5f2b75bbe-chunk-000<SEP>gd_75932851b25a6ae5f2b75bbe-chunk-001<SEP>gd_8c6328f934299808d2c073be-chunk-000<SEP>gd_7a791f2e4b82c615f22b9ceb-chunk-000<SEP>gd_f0bd1e3339cefb99a49b38be-chunk-000<SEP>gd_f0bd1e3339cefb99a49b38be-chunk-001<SEP>gd_81a8fb81aa8b94288300e068-chunk-000<SEP>gd_81a8fb81aa8b94288300e068-chunk-001<SEP>gd_81a8fb81aa8b94288300e068-chunk-002<SEP>gd_4031ee7fe0d2a8a3110cb120-chunk-001<SEP>gd_df3285fbd174b768d904c41b-chunk-001<SEP>gd_405c6f2411d4fac2a5b828ec-chunk-000<SEP>gd_405c6f2411d4fac2a5b828ec-chunk-001<SEP>gd_ee104bb152e961ea8ba19fdc-chunk-001<SEP>gd_408cdcbe6729fea2abaab084-chunk-001<SEP>gd_2cbfad976afb340343b8814f-chunk-000<SEP>gd_3e4e7645481539dd975330ab-chunk-002<SEP>gd_458c9690935002d5deb59788-chunk-000<SEP>gd_458c9690935002d5deb59788-chunk-001<SEP>gd_458c9690935002d5deb59788-chunk-002<SEP>gd_458c9690935002d5deb59788-chunk-003<SEP>gd_4f75b0a196e37ff6fef25fab-chunk-000<SEP>gd_687721f2b1e4566e02347026-chunk-003<SEP>gd_33db139c95f5187d07f2a853-chunk-000<SEP>gd_33db139c95f5187d07f2a853-chunk-001<SEP>gd_46c164422ce44025c08715e3-chunk-000<SEP>gd_a56bc20f68df8f59ed3205ac-chunk-000<SEP>gd_6f2a2ccba60bdfc28ecb0822-chunk-000<SEP>gd_7f1c721b2bb1bf244b51aa0c-chunk-000<SEP>gd_f40710255ec0807c839b50b6-chunk-000<SEP>gd_b9fb560509e773f69c0822bd-chunk-001<SEP>gd_ab890a3f6fa03f33cf08f29f-chunk-000<SEP>gd_ab890a3f6fa03f33cf08f29f-chunk-001<SEP>gd_6ca7cc81a9a17b7ef6f5b677-chunk-000<SEP>gd_f87b63c3e88f345595a20d8f-chunk-000<SEP>gd_dea85f0d36dab39f9127cd16-chunk-000<SEP>gd_edb617dd180778d2ae0d7d9d-chunk-000<SEP>gd_94dacf60a04c5ef0578e1af6-chunk-000<SEP>gd_767180be7d54ab4a716ed93b-chunk-000<SEP>gd_fc47ef364dc12c0df2188b60-chunk-000<SEP>gd_2653c5538444d865a164dacc-chunk-000<SEP>gd_7935ec63c0428c5b7c372279-chunk-000<SEP>gd_41206b6ae8862a0d08c4d070-chunk-000<SEP>gd_7d2adec11a535537402b762d-chunk-000<SEP>gd_5c48aef8412c18cffc899350-chunk-001<SEP>gd_ec98065364cfc525c93b67ce-chunk-001<SEP>gd_5a797c7a9ce1c480eb2813b2-chunk-000<SEP>gd_5a797c7a9ce1c480eb2813b2-chunk-001<SEP>gd_5a797c7a9ce1c480eb2813b2-chunk-002<SEP>gd_5a797c7a9ce1c480eb2813b2-chunk-003<SEP>gd_76b5eb1b3e501786f7b90715-chunk-001<SEP>gd_87e4169fe38c1cc0f4c4cb5f-chunk-000<SEP>gd_94ada0fbda73f8e5d06a49e6-chunk-000<SEP>gd_616307997522677a497f43ca-chunk-000<SEP>gd_db2a00ddbaae4ba4dae9d6b7-chunk-000<SEP>gd_dd66530312a46b3d2e095794-chunk-000<SEP>gd_dd66530312a46b3d2e095794-chunk-001<SEP>gd_6b21382225ac4404e1815a51-chunk-001<SEP>gd_99b299a9e9815f55ab550523-chunk-000<SEP>gd_24f21a5dbfdfd8e557428dbe-chunk-000<SEP>gd_704a724ff302ab18043fedf2-chunk-000<SEP>gd_704a724ff302ab18043fedf2-chunk-001<SEP>gd_fc5e3d369b99c8319468b0c7-chunk-000<SEP>gd_f45b018823888cddc25f3961-chunk-000<SEP>gd_031aceca5cbe7d0ead6c10cc-chunk-001<SEP>gd_f9670466382cf7e3a98843cb-chunk-000<SEP>gd_dd32c9e4383b69e45ec833e8-chunk-001<SEP>gd_e0fa9738b75ae5d9dd5b19c5-chunk-000<SEP>gd_e0fa9738b75ae5d9dd5b19c5-chunk-001<SEP>gd_8c776f785267de11da6d5c2a-chunk-000<SEP>gd_0db185d389f97a45ea8c228d-chunk-003<SEP>gd_0db185d389f97a45ea8c228d-chunk-000<SEP>gd_7e501541a37d9738987d633b-chunk-002<SEP>gd_19d3cb4a0d9ac32e95b41c33-chunk-001<SEP>gd_386bc825ffd9d3290623d25e-chunk-000<SEP>gd_386bc825ffd9d3290623d25e-chunk-001<SEP>gd_386bc825ffd9d3290623d25e-chunk-002<SEP>gd_48d5bb02ae961e8cb1651a12-chunk-000<SEP>gd_48d5bb02ae961e8cb1651a12-chunk-001<SEP>gd_6bdde8bd37b55a83f475e364-chunk-000<SEP>gd_84b389880b4e28a3333696a3-chunk-002<SEP>gd_84b389880b4e28a3333696a3-chunk-003<SEP>gd_d036f97a47d2121009f8326f-chunk-000<SEP>gd_eaa5497166b94d21e3d704a2-chunk-000<SEP>gd_eaa5497166b94d21e3d704a2-chunk-002<SEP>gd_f8ae7f57cda77aaea735104a-chunk-001<SEP>gd_f8ae7f57cda77aaea735104a-chunk-000<SEP>gd_2639750269d5ed1288adaeb1-chunk-001<SEP>gd_407023326040dc22077aec8b-chunk-000<SEP>gd_407023326040dc22077aec8b-chunk-001<SEP>gd_085322b364965f52c672f5d6-chunk-000<SEP>gd_085322b364965f52c672f5d6-chunk-003<SEP>gd_86c3f93917994af72e5fb2d7-chunk-003<SEP>gd_956e8a0995c87d3c1371ebeb-chunk-003<SEP>gd_a2133043d53f3401aad628c3-chunk-001<SEP>gd_3e9fc891239ffd34f4cf91b1-chunk-001<SEP>gd_3e9fc891239ffd34f4cf91b1-chunk-002<SEP>gd_3f3546419c8af125d66414d7-chunk-001<SEP>gd_3f3546419c8af125d66414d7-chunk-002<SEP>gd_4cb0b1f099da12e7bc82db73-chunk-000<SEP>gd_5218e82ee196498fcf0ff88e-chunk-002<SEP>gd_5218e82ee196498fcf0ff88e-chunk-003<SEP>gd_53d1d4d7cbdb83f9dd2abc9c-chunk-001<SEP>gd_aec80d112659415e5f81b06f-chunk-000<SEP>gd_aedced4d666c2a39627a1d0e-chunk-001<SEP>gd_a5875820b40f5fa110c11045-chunk-000<SEP>gd_a5875820b40f5fa110c11045-chunk-001<SEP>gd_676ceb1d508acba0f3613cd1-chunk-002<SEP>gd_b7dfbf6bccee4997ad659362-chunk-002<SEP>gd_6eb39dfa97bc0c5b2a621007-chunk-000<SEP>gd_6eb39dfa97bc0c5b2a621007-chunk-001<SEP>gd_6eb39dfa97bc0c5b2a621007-chunk-002<SEP>gd_87f9f1c85817eeb46b0ec74d-chunk-002<SEP>gd_7f230db59f735351cd7f94f6-chunk-000<SEP>gd_7f230db59f735351cd7f94f6-chunk-001<SEP>gd_d639410291b780c50bed6b5e-chunk-000<SEP>gd_bd082df4303cd5afcd085473-chunk-000<SEP>gd_97a171e4c7a15b4d31f48df0-chunk-000<SEP>gd_df6e2ce631e37fa9f046c119-chunk-000<SEP>gd_b6c9a73fc34a5325dd2c5e63-chunk-000<SEP>gd_c88aae57866bbd5d1887d219-chunk-000<SEP>gd_c88aae57866bbd5d1887d219-chunk-001<SEP>gd_c88aae57866bbd5d1887d219-chunk-002<SEP>gd_fb87546d14423eb7e21c5ce8-chunk-000<SEP>gd_fb87546d14423eb7e21c5ce8-chunk-002<SEP>gd_d81bb6cc0098a4c65b6265fe-chunk-001<SEP>gd_049759e82691fc2d49b30fe3-chunk-001<SEP>gd_1ae501bfdb3a7f714e292862-chunk-000<SEP>gd_1ae501bfdb3a7f714e292862-chunk-001<SEP>gd_1b7c7266cafc75867490fba8-chunk-000<SEP>gd_22758ffcbdc4d5995c4e9e60-chunk-000<SEP>gd_22758ffcbdc4d5995c4e9e60-chunk-001<SEP>gd_35db7b4ad7a78a616a0baa36-chunk-000<SEP>gd_35db7b4ad7a78a616a0baa36-chunk-001<SEP>gd_35db7b4ad7a78a616a0baa36-chunk-002<SEP>gd_35db7b4ad7a78a616a0baa36-chunk-003<SEP>gd_43b103e757dde13a736c902e-chunk-000<SEP>gd_daa035ed20483141490ae65c-chunk-000<SEP>gd_5aad07fbdf156798724a7a79-chunk-001<SEP>gd_62d899b9b70ba80a70d0e3da-chunk-000<SEP>gd_79d299de1756fd2933a7673f-chunk-000<SEP>gd_827de18357c3b1abbf9c7ae7-chunk-000<SEP>gd_86e630050935a1edf9737112-chunk-000<SEP>gd_cf0c652a02ee251792d5f7af-chunk-004<SEP>gd_995edd43bb903497883c63ce-chunk-000<SEP>gd_999472ab9bf390630ebf1126-chunk-000<SEP>gd_999472ab9bf390630ebf1126-chunk-001<SEP>gd_999472ab9bf390630ebf1126-chunk-002<SEP>gd_2ae4837fbbe4b5fbc2b412bd-chunk-004<SEP>gd_b5598f901756b268dfaf7770-chunk-000<SEP>gd_b5598f901756b268dfaf7770-chunk-001<SEP>gd_bd97c14fa0476835df73618f-chunk-001",
+          "file_path": "gd_09e160ccf7663729c581d1e2<SEP>gd_001e030f3d72c14fbdcab1e7<SEP>gd_0e243f9c16a81abe061b3496<SEP>gd_11eb12a906f6fd665fab2d11<SEP>gd_17b19760754f113f649c8895<SEP>gd_3b1680bf5d9e4fa561a768aa<SEP>gd_15cebc29d9f85feb474c70c8<SEP>gd_709d7e8e2108c4354bc8e875<SEP>gd_323d938209b9791ba902f64f<SEP>gd_3a88f1d2afd6a79f4002151e<SEP>gd_d1423816ab12475e55e09a39<SEP>gd_2fb5017109e363590b9c33a4<SEP>gd_5448911bf1d9e8cb3ec3f5e9<SEP>gd_fe420ff77a48eb8188aa287a<SEP>gd_019a6f50cee0326c5feb06b7<SEP>gd_36834ee214bcfc2b751a3463<SEP>gd_6f932cb77ffe2cc35bb954a5<SEP>gd_63b752186f04b5c7b94740de<SEP>gd_1c4574bfd38001677b67039b<SEP>gd_6961e7279c1cf1e279a09fbd<SEP>gd_e921bb51c930b886e32cb391<SEP>gd_70a219235731dd098fa60c52<SEP>gd_c959908b794f2fc5ae9ef1a8<SEP>gd_52580e80aacd01c8a80e48c2<SEP>gd_9e5c348350596b05e4000d2b<SEP>gd_59786235ec03f6fe9fcba771<SEP>gd_c7085eab75e6259fc532726b<SEP>gd_28e630372aae90eb9315f28e<SEP>gd_5ce5a6fe45200ddaaa0c8e10<SEP>gd_2f116f02b14cdfaa4b81e2d2<SEP>gd_df2884cd4b9e1df28675d368<SEP>gd_70b6d21359f3ae0fd46e93c8<SEP>gd_33efe7307fb3edd348590ee0<SEP>gd_8daf8d01fb36526bba6d5386<SEP>gd_4af809c8ff8e2354a0a664f6<SEP>gd_eac0bd25dd571eef326188a5<SEP>gd_3a9e187b9b599b728aa6cbb5<SEP>gd_d8634952bd688ae7ed11f624<SEP>gd_75932851b25a6ae5f2b75bbe<SEP>gd_8c6328f934299808d2c073be<SEP>gd_7a791f2e4b82c615f22b9ceb<SEP>gd_f0bd1e3339cefb99a49b38be<SEP>gd_81a8fb81aa8b94288300e068<SEP>gd_4031ee7fe0d2a8a3110cb120<SEP>gd_df3285fbd174b768d904c41b<SEP>gd_405c6f2411d4fac2a5b828ec<SEP>gd_ee104bb152e961ea8ba19fdc<SEP>gd_408cdcbe6729fea2abaab084<SEP>gd_2cbfad976afb340343b8814f<SEP>gd_3e4e7645481539dd975330ab<SEP>gd_458c9690935002d5deb59788<SEP>gd_4f75b0a196e37ff6fef25fab<SEP>gd_687721f2b1e4566e02347026<SEP>gd_33db139c95f5187d07f2a853<SEP>gd_46c164422ce44025c08715e3<SEP>gd_a56bc20f68df8f59ed3205ac<SEP>gd_6f2a2ccba60bdfc28ecb0822<SEP>gd_7f1c721b2bb1bf244b51aa0c<SEP>gd_f40710255ec0807c839b50b6<SEP>gd_b9fb560509e773f69c0822bd<SEP>gd_ab890a3f6fa03f33cf08f29f<SEP>gd_6ca7cc81a9a17b7ef6f5b677<SEP>gd_f87b63c3e88f345595a20d8f<SEP>gd_dea85f0d36dab39f9127cd16<SEP>gd_edb617dd180778d2ae0d7d9d<SEP>gd_94dacf60a04c5ef0578e1af6<SEP>gd_767180be7d54ab4a716ed93b<SEP>gd_fc47ef364dc12c0df2188b60<SEP>gd_2653c5538444d865a164dacc<SEP>gd_7935ec63c0428c5b7c372279<SEP>gd_41206b6ae8862a0d08c4d070<SEP>gd_7d2adec11a535537402b762d<SEP>gd_5c48aef8412c18cffc899350<SEP>gd_ec98065364cfc525c93b67ce<SEP>gd_5a797c7a9ce1c480eb2813b2<SEP>...truncated...(KEEP Old)",
+          "created_at": 1793535822
+        },
+        {
+          "entity_name": "Public Investor",
+          "entity_type": "UNKNOWN",
+          "description": "Halligan finds public investors to be less in his shorts than VCs.",
+          "source_id": "gd_057e49bf191f27538afc36dc-chunk-005",
+          "file_path": "gd_057e49bf191f27538afc36dc",
+          "created_at": 1793629788
+        },
+        {
+          "entity_name": "500+ VCs",
+          "entity_type": "person",
+          "description": "A group of venture capitalists attending the SaaStr London conference.",
+          "source_id": "gd_23ebc282dfbfcee03fe01904-chunk-005",
+          "file_path": "gd_23ebc282dfbfcee03fe01904",
+          "created_at": 1793592514
+        },
+        {
+          "entity_name": "you",
+          "entity_type": "person",
+          "description": "The entity in question is \"you\". You is a term used to refer to a named human, specifically the person being addressed by the speaker. This can be in the context of encouragement, as in the case of a start-up, where the person is urged to keep going and rebound. You can also refer to the subject of a sentence, a person likely referring to the reader or a team member, or even a generic term for the reader or a person in general.\n\nIn text, you can be the person being addressed, and it is often used as a way to engage the reader directly. The reader is being addressed directly, which is a common usage of the term. Additionally, you can refer to the person involved in a business dispute, the person being addressed in the text, the audience of a conference, or the person being addressed by the organizers of an event.\n\nIn a broader sense, you can refer to a named human, specifically the person being addressed. This can include individuals who may be confused about responsibilities, highlighting the importance of clear communication and understanding in various contexts.<SEP>The person being referred to.<SEP>The person being addressed in the text.<SEP>The person being addressed by the speaker.<SEP>The person who is currently reading or listening to this text.",
+          "source_id": "gd_0019c5e0dad1cf6315645b67-chunk-000<SEP>gd_01c4f3dd39890d28a5dfedd6-chunk-002<SEP>gd_86885aeea8cb170e94247e31-chunk-001<SEP>gd_46b909ad65ed633dbea1ba63-chunk-000<SEP>gd_8baa9f7d7141852a01a9fc43-chunk-001<SEP>gd_9b5dc2c121e06663621065c9-chunk-001<SEP>gd_e59ba8e80f7022cfe3cff394-chunk-000<SEP>gd_7b0e7182591740614dab3ade-chunk-000<SEP>gd_5c48aef8412c18cffc899350-chunk-001<SEP>gd_3b3eba2b0d649e6bf7cc6d2a-chunk-001<SEP>gd_e60a17124a0934759eb051ec-chunk-001<SEP>gd_6bdde8bd37b55a83f475e364-chunk-000<SEP>gd_53166d6f3672941cb6ee80e6-chunk-002<SEP>gd_87f9f1c85817eeb46b0ec74d-chunk-005<SEP>gd_049759e82691fc2d49b30fe3-chunk-002<SEP>gd_4e7fd53d3d57eeb978245741-chunk-002<SEP>gd_e06985c74890b6d620bb7c73-chunk-001<SEP>gd_0be38a893ae553682840f900-chunk-000<SEP>gd_dd626eb5f79a12db1cce58c5-chunk-002<SEP>gd_536d5be445e76fa4f98090da-chunk-001<SEP>gd_7849200fd59aa068293f37a0-chunk-005<SEP>gd_8c7c46de206e2398293aa7cd-chunk-001<SEP>gd_fd88decf2f277fd53c2293b7-chunk-007<SEP>gd_87131f4a34d2f70295f0cf04-chunk-010",
+          "file_path": "gd_0019c5e0dad1cf6315645b67<SEP>gd_01c4f3dd39890d28a5dfedd6<SEP>gd_86885aeea8cb170e94247e31<SEP>gd_46b909ad65ed633dbea1ba63<SEP>gd_8baa9f7d7141852a01a9fc43<SEP>gd_9b5dc2c121e06663621065c9<SEP>gd_e59ba8e80f7022cfe3cff394<SEP>gd_7b0e7182591740614dab3ade<SEP>gd_5c48aef8412c18cffc899350<SEP>gd_3b3eba2b0d649e6bf7cc6d2a<SEP>gd_53166d6f3672941cb6ee80e6<SEP>gd_87f9f1c85817eeb46b0ec74d<SEP>gd_049759e82691fc2d49b30fe3<SEP>gd_4e7fd53d3d57eeb978245741<SEP>gd_e06985c74890b6d620bb7c73<SEP>gd_0be38a893ae553682840f900<SEP>gd_dd626eb5f79a12db1cce58c5<SEP>gd_536d5be445e76fa4f98090da<SEP>gd_7849200fd59aa068293f37a0<SEP>gd_8c7c46de206e2398293aa7cd<SEP>gd_fd88decf2f277fd53c2293b7<SEP>gd_87131f4a34d2f70295f0cf04",
+          "created_at": 1793641657
+        },
+        {
+          "entity_name": "P2S.vc",
+          "entity_type": "organization",
+          "description": "A venture capital firm hosting a networking event.",
+          "source_id": "gd_3932b92d2302b6e6eb4c998a-chunk-000",
+          "file_path": "gd_3932b92d2302b6e6eb4c998a",
+          "created_at": 1793509230
+        },
+        {
+          "entity_name": "Private Companies",
+          "entity_type": "concept",
+          "description": "Private companies are companies that are not listed on the stock market and are not subject to public scrutiny and expectations.",
+          "source_id": "gd_249ae5f1a28ad2b6389c7b37-chunk-004",
+          "file_path": "gd_249ae5f1a28ad2b6389c7b37",
+          "created_at": 1793622523
+        },
+        {
+          "entity_name": "800 VCs",
+          "entity_type": "other",
+          "description": "A large number of venture capitalists.",
+          "source_id": "gd_0634861e207e1115b4eae553-chunk-000<SEP>gd_8e71f90020a636fbd18c7c85-chunk-000",
+          "file_path": "gd_0634861e207e1115b4eae553",
+          "created_at": 1793496435
+        },
+        {
+          "entity_name": "2023",
+          "entity_type": "event",
+          "description": "**2023: A Year of Recovery, Growth, and Moderation**\n\nThe year 2023 was a significant milestone in various sectors, marked by a focus on moderation in growth, spend, and time spent on work and personal life. This theme was particularly evident in the tech industry, where venture capitalists (VCs) began to resist the idea of \"unicorns\" - startups valued at over $1 billion - and instead emphasized the importance of sustainable growth.\n\nSeveral companies in the tech sector experienced significant growth and milestones. Twilio took a significant hit from the market crunch, while Snowflake projected 66% growth. AppFolio's non-GAAP operating margins rebounded, and free cash flow increased. These developments reflect the ongoing evolution of the tech industry, with a growing emphasis on balance and moderation.\n\nThe year 2023 is also notable for its mention in the context of platform scale, with some sources indicating it as a target year for achieving significant milestones. Additionally, 2023 saw a return to efficient growth in the SaaS industry, following a year of low demand for SaaS and Cloud services. However, the macro environment and market saturation led to slowing growth in SMB customers.\n\nGartner's comparison of software spend growth between 2022 and 2023 found that 69% of CFOs plan to increase their digital spending. This trend reflects the ongoing shift towards digital transformation and the growing importance of software spend in the business world.\n\nIn the context of specific events, 2023 was the year when the first SaaStr APAC conference was held, and Palantir experienced a growth trough of 13%. LegalZoom's growth was 8% in Q1, and SEMRush started the year slowly. These events highlight the diversity of experiences and trends that occurred within the year.\n\nHowever, it's worth noting that 2023 was also a year of slowdown in various aspects. The low point in the quarter, buying and growth slowed, and cloud adoption slowed down. Additionally, RingCentral's growth halved from 2021, and bridge rounds were done, leading to Reserves Exhaustion in 2024.\n\nDespite these challenges, 2023 was also a year of recovery and growth, particularly in the context of consumer and prosumer subscription sales, which rebounded during this period. Many startups were able to cut their burn and stretch their cash, making it a year of opportunity for those who were able to adapt to the changing market conditions.\n\nNotably, 2023 was also the year in which VC-backed buyers started acquiring companies, and Thoma Bravo returned over $30 billion to investors. The year also saw a significant change in PE activity, with a focus on moderation and sustainable growth.\n\nIn addition to its significance in the tech industry, 2023 is also mentioned in the context of AI adoption, with some sources indicating that it was a year of growth and development in this area. This trend is expected to continue in the upcoming year, with many companies investing heavily in AI research and development.\n\nIt's worth noting that 2023 was also a year of potential bounce back in usage growth, with many companies experiencing a rebound in sales and revenue. However, this growth was not uniform across all sectors, with some companies experiencing significant slowdowns in growth.\n\nOverall, 2023 was a complex and multifaceted year, marked by significant events and trends in various sectors. Its focus on moderation, sustainable growth, and digital transformation will likely have a lasting impact on the business world.\n\nThe year 2023 was also notable for the reopening of the IPO market after a 2-year closure. Additionally, customer retention was crucial in 2023, and companies focused on reaching SaaS buyers. The year was also used as a reference point for comparison in various contexts.\n\nKlaviyo's growth rate decelerated in 2023, and generative AI funding reached $25.2B, an 8x increase from 2022. The year 2023 was also marked by significant events and trends in various sectors, including the SaaS eSignature Market, which was valued at $5 Billion.\n\nIn terms of specific trends, 2023 saw a strong trend in pre-priced rounds, and Ed Zitron wrote a primer on PR. Motive commissioned a study from the Virginia Tech Transportation Institute, and many companies cut to profitability. However, some companies are now in a losing position, and R&D as a percentage of revenue was compared.\n\nIt's worth noting that 2023 was a tough year for Blackline, with growth slowing down to 11%. Additionally, 2023 was a tougher time overall for Cloud and SaaS. Wealthfront lost $12.9 million in 2023, and the year was also marked by a scarcity of venture capital, making it a challenging time for startups.\n\nOverall, 2023 was a year of recovery, growth, and moderation, marked by significant events and trends in various sectors. Its focus on moderation, sustainable growth, and digital transformation will likely have a lasting impact on the business world.<SEP>A specific year.<SEP>A year where adding AI features was novel and impressive.<SEP>A year in which adding AI features was novel and impressive.<SEP>2023 is the year DISCO's ARR growth further decelerated to basically flat.<SEP>A year when automation became the focus for Gorgias.",
+          "source_id": "gd_17b19760754f113f649c8895-chunk-001<SEP>gd_60e28b064ffcd3b2cf55b381-chunk-002<SEP>gd_15cebc29d9f85feb474c70c8-chunk-000<SEP>gd_3a5f356153b9a32a14dc97fc-chunk-001<SEP>gd_3a5f356153b9a32a14dc97fc-chunk-000<SEP>gd_7b8e1734f0309e1ac887f899-chunk-000<SEP>gd_16319806a8bc21c0b84682c3-chunk-000<SEP>gd_18771289802258996e9afe7d-chunk-001<SEP>gd_325cd64471734ab31072948f-chunk-000<SEP>gd_325cd64471734ab31072948f-chunk-001<SEP>gd_364298816fa40fc04075dea7-chunk-000<SEP>gd_6cc7964ce1c8d1e72526cd7b-chunk-000<SEP>gd_72b009a80ea6cf84fc300a5d-chunk-000<SEP>gd_7cf3e77240970cd17fe2178d-chunk-000<SEP>gd_22e2af05587860f4e41f0ece-chunk-000<SEP>gd_895dedc29953222d000c7f1a-chunk-000<SEP>gd_2d72fe9469e9f2b08dcd24ea-chunk-001<SEP>gd_e99bf7199e97068fdf9a90c8-chunk-000<SEP>gd_ae46602503f51cde09054ac5-chunk-000<SEP>gd_408cdcbe6729fea2abaab084-chunk-001<SEP>gd_f7ba8eca90542f70f780bc35-chunk-000<SEP>gd_409c0da0777cbb41bc6655ae-chunk-001<SEP>gd_409c0da0777cbb41bc6655ae-chunk-000<SEP>gd_4d1077b8bd608022a2166c3f-chunk-003<SEP>gd_4e6d11029cf183063e420d2f-chunk-000<SEP>gd_afcc2a3eb186119ed5062c31-chunk-001<SEP>gd_f87b63c3e88f345595a20d8f-chunk-000<SEP>gd_55bc540b610064fdcfa76b04-chunk-001<SEP>gd_55bc540b610064fdcfa76b04-chunk-002<SEP>gd_ed91c6f6935a201a6b91e194-chunk-000<SEP>gd_76b5eb1b3e501786f7b90715-chunk-000<SEP>gd_62287245a6ac5ca80038430f-chunk-001<SEP>gd_a51aabf5779c2323c9b3bd84-chunk-000<SEP>gd_a6fbf8f37d2f0906d276118e-chunk-000<SEP>gd_a6fbf8f37d2f0906d276118e-chunk-001<SEP>gd_fc560134d5cd034812dc8b69-chunk-000<SEP>gd_fc560134d5cd034812dc8b69-chunk-001<SEP>gd_fc560134d5cd034812dc8b69-chunk-002<SEP>gd_fc560134d5cd034812dc8b69-chunk-003<SEP>gd_80a6226f739cb5a531b3ca01-chunk-000<SEP>gd_80a6226f739cb5a531b3ca01-chunk-001<SEP>gd_85fb721c8c61021864128cd9-chunk-002<SEP>gd_85fb721c8c61021864128cd9-chunk-001<SEP>gd_8d5a01e786e521ceef6a39d4-chunk-000<SEP>gd_8d5a01e786e521ceef6a39d4-chunk-001<SEP>gd_f8ae7f57cda77aaea735104a-chunk-000<SEP>gd_f8ae7f57cda77aaea735104a-chunk-001<SEP>gd_d4924986b972e4ef59ad0d68-chunk-000<SEP>gd_97a171e4c7a15b4d31f48df0-chunk-001<SEP>gd_fbdd9492ef6e1dfed6ce228c-chunk-000<SEP>gd_fbefc4b12c239a53dfc13c82-chunk-000<SEP>gd_24e298cda6ab82b9dd6500f8-chunk-001<SEP>gd_279fb3e61996b4ed2bfae663-chunk-000<SEP>gd_279fb3e61996b4ed2bfae663-chunk-001<SEP>gd_346b6035bf8be7b5b8fd6cff-chunk-002<SEP>gd_35db7b4ad7a78a616a0baa36-chunk-000<SEP>gd_35db7b4ad7a78a616a0baa36-chunk-001<SEP>gd_3431ce388885d39d6d44c6b6-chunk-002<SEP>gd_3431ce388885d39d6d44c6b6-chunk-004<SEP>gd_66a851c0898a18a37032959c-chunk-000<SEP>gd_8eefb8100558ec83fae95a37-chunk-002<SEP>gd_9e2d016a1add7c06ba742fa3-chunk-000<SEP>gd_9e2d016a1add7c06ba742fa3-chunk-003<SEP>gd_c844d03b15eaeb661ca8042c-chunk-000<SEP>gd_c844d03b15eaeb661ca8042c-chunk-002<SEP>gd_0519f1abfcc0fb0a1e118638-chunk-000<SEP>gd_b43f687bba2892cbeb599d05-chunk-000<SEP>gd_e23054549f6afebbe65a7649-chunk-002<SEP>gd_0ddad4f1999e5f43ddc98a8a-chunk-003<SEP>gd_0ddad4f1999e5f43ddc98a8a-chunk-004<SEP>gd_0ddad4f1999e5f43ddc98a8a-chunk-005<SEP>gd_3c94d3509d88df4c189a0b68-chunk-003<SEP>gd_5041ab8c996980f3b7b34675-chunk-002<SEP>gd_5041ab8c996980f3b7b34675-chunk-003<SEP>gd_a9d9de4d6e05f2263c7403ee-chunk-002<SEP>gd_6a94dfb13f66f6c9a9ef3fe6-chunk-002<SEP>gd_b62b6ad34d4ba7357f8052f1-chunk-000<SEP>gd_cb4d1fe2519ac6e0de295c6c-chunk-003<SEP>gd_fe622fa2eae579716b604273-chunk-006<SEP>gd_b7d6d3bd89951116557fa67d-chunk-000<SEP>gd_bb2df0933484691709bc2edf-chunk-000<SEP>gd_bb2df0933484691709bc2edf-chunk-002<SEP>gd_5ad99af783e788fe13cc1713-chunk-001<SEP>gd_6fef5fe1dbbd9efcd44ed4b3-chunk-000<SEP>gd_7381b0b5b75c49fceeacc0ae-chunk-003<SEP>gd_d19ef462293cbfaf17f910e6-chunk-003<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-000<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-005<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-006<SEP>gd_1fd91b8995d47a37073154df-chunk-002<SEP>gd_708d527f092a474d63dd7bb0-chunk-000<SEP>gd_cf86f25295592edfe084b296-chunk-002<SEP>gd_e0e8f051a95a2e0ce0fb9f89-chunk-001<SEP>gd_e0e8f051a95a2e0ce0fb9f89-chunk-002<SEP>gd_ec32711adc8f9158a0b4a669-chunk-000<SEP>gd_44a82ca8cc22cfdc2cd4025a-chunk-001<SEP>gd_44a82ca8cc22cfdc2cd4025a-chunk-002<SEP>gd_78a8331869cec9a0326358f9-chunk-000<SEP>gd_92e55324cda2a73734ceb972-chunk-003<SEP>gd_92e55324cda2a73734ceb972-chunk-002<SEP>gd_1c786168860b4c364f13ef3b-chunk-001<SEP>gd_b4834e67822b74209783fdec-chunk-001<SEP>gd_c02798f3e4bfa8085c96e807-chunk-000<SEP>gd_9f64b63b5ae698d29604d98b-chunk-000<SEP>gd_0ab9e36612e164096f270f49-chunk-001<SEP>gd_20ccd2f0f91b9f75d6fb855b-chunk-002<SEP>gd_5088eba36f8b4b196a5837dd-chunk-000<SEP>gd_759a598bed674f64e17e1fa0-chunk-006<SEP>gd_7c0a2c0006a5bc39ac8e59fc-chunk-000<SEP>gd_de224f44af7a01a27aa7d4bf-chunk-006<SEP>gd_f6c00e0b3dd6d992b151a870-chunk-000<SEP>gd_c4bb467854b46e1211181bac-chunk-001<SEP>gd_fa7363b1de00027943a9fe94-chunk-001<SEP>gd_ea7005a17108c249256d6dae-chunk-011<SEP>gd_0ac6be7c075d45e2006382f0-chunk-003<SEP>gd_0488dbe0d1821eacec1cd206-chunk-005<SEP>gd_14b875b7fc4c7d4068c628c6-chunk-000<SEP>gd_14b875b7fc4c7d4068c628c6-chunk-001<SEP>gd_605e0c1f4fd4724182870b9e-chunk-000<SEP>gd_605e0c1f4fd4724182870b9e-chunk-001<SEP>gd_a351b7a8812fb540220d3381-chunk-011<SEP>gd_bd5af2f19abc9f9115e0783f-chunk-011<SEP>gd_bd5af2f19abc9f9115e0783f-chunk-012<SEP>gd_2278ccbbb419f2b27781cfed-chunk-001<SEP>gd_57f6b6270d8be867f0e4e105-chunk-000",
+          "file_path": "gd_17b19760754f113f649c8895<SEP>gd_60e28b064ffcd3b2cf55b381<SEP>gd_15cebc29d9f85feb474c70c8<SEP>gd_3a5f356153b9a32a14dc97fc<SEP>gd_7b8e1734f0309e1ac887f899<SEP>gd_16319806a8bc21c0b84682c3<SEP>gd_18771289802258996e9afe7d<SEP>gd_325cd64471734ab31072948f<SEP>gd_364298816fa40fc04075dea7<SEP>gd_6cc7964ce1c8d1e72526cd7b<SEP>gd_72b009a80ea6cf84fc300a5d<SEP>gd_7cf3e77240970cd17fe2178d<SEP>gd_22e2af05587860f4e41f0ece<SEP>gd_895dedc29953222d000c7f1a<SEP>gd_2d72fe9469e9f2b08dcd24ea<SEP>gd_e99bf7199e97068fdf9a90c8<SEP>gd_ae46602503f51cde09054ac5<SEP>gd_408cdcbe6729fea2abaab084<SEP>gd_f7ba8eca90542f70f780bc35<SEP>gd_409c0da0777cbb41bc6655ae<SEP>gd_4d1077b8bd608022a2166c3f<SEP>gd_4e6d11029cf183063e420d2f<SEP>gd_afcc2a3eb186119ed5062c31<SEP>gd_f87b63c3e88f345595a20d8f<SEP>gd_55bc540b610064fdcfa76b04<SEP>gd_ed91c6f6935a201a6b91e194<SEP>gd_76b5eb1b3e501786f7b90715<SEP>gd_62287245a6ac5ca80038430f<SEP>gd_a51aabf5779c2323c9b3bd84<SEP>gd_a6fbf8f37d2f0906d276118e<SEP>gd_fc560134d5cd034812dc8b69<SEP>gd_80a6226f739cb5a531b3ca01<SEP>gd_85fb721c8c61021864128cd9<SEP>gd_8d5a01e786e521ceef6a39d4<SEP>gd_f8ae7f57cda77aaea735104a<SEP>gd_d4924986b972e4ef59ad0d68<SEP>gd_97a171e4c7a15b4d31f48df0<SEP>gd_fbdd9492ef6e1dfed6ce228c<SEP>gd_fbefc4b12c239a53dfc13c82<SEP>gd_24e298cda6ab82b9dd6500f8<SEP>gd_279fb3e61996b4ed2bfae663<SEP>gd_346b6035bf8be7b5b8fd6cff<SEP>gd_35db7b4ad7a78a616a0baa36<SEP>gd_3431ce388885d39d6d44c6b6<SEP>gd_8eefb8100558ec83fae95a37<SEP>gd_9e2d016a1add7c06ba742fa3<SEP>gd_c844d03b15eaeb661ca8042c<SEP>gd_b43f687bba2892cbeb599d05<SEP>gd_e23054549f6afebbe65a7649<SEP>gd_0ddad4f1999e5f43ddc98a8a<SEP>gd_3c94d3509d88df4c189a0b68<SEP>gd_5041ab8c996980f3b7b34675<SEP>gd_a9d9de4d6e05f2263c7403ee<SEP>gd_6a94dfb13f66f6c9a9ef3fe6<SEP>gd_b62b6ad34d4ba7357f8052f1<SEP>gd_cb4d1fe2519ac6e0de295c6c<SEP>gd_fe622fa2eae579716b604273<SEP>gd_b7d6d3bd89951116557fa67d<SEP>gd_bb2df0933484691709bc2edf<SEP>gd_5ad99af783e788fe13cc1713<SEP>gd_6fef5fe1dbbd9efcd44ed4b3<SEP>gd_7381b0b5b75c49fceeacc0ae<SEP>gd_2a4d7b8a58e1c3110dd4d692<SEP>gd_1fd91b8995d47a37073154df<SEP>gd_708d527f092a474d63dd7bb0<SEP>gd_cf86f25295592edfe084b296<SEP>gd_e0e8f051a95a2e0ce0fb9f89<SEP>gd_ec32711adc8f9158a0b4a669<SEP>gd_44a82ca8cc22cfdc2cd4025a<SEP>gd_78a8331869cec9a0326358f9<SEP>gd_92e55324cda2a73734ceb972<SEP>gd_1c786168860b4c364f13ef3b<SEP>gd_b4834e67822b74209783fdec<SEP>gd_c02798f3e4bfa8085c96e807<SEP>gd_9f64b63b5ae698d29604d98b<SEP>...truncated...(KEEP Old)",
+          "created_at": 1793645259
+        },
+        {
+          "entity_name": "Many seed VCs",
+          "entity_type": "concept",
+          "description": "A large number of seed VCs.",
+          "source_id": "gd_750c6bd8cb5dee60057ca076-chunk-000",
+          "file_path": "gd_750c6bd8cb5dee60057ca076",
+          "created_at": 1793506094
+        },
+        {
+          "entity_name": "AI-Native Companies",
+          "entity_type": "concept",
+          "description": "**AI-Native Companies**\n\nAI-Native Companies are entities that have been built using artificial intelligence (AI) technology from the start. They are fundamentally constructed around AI, which enables them to achieve higher growth rates and Net Dollar Retention (NDR) compared to traditional Software as a Service (SaaS) companies. This unique approach allows AI-Native Companies to improve their operations and customer interactions, resulting in higher free trial conversion rates.\n\nThe core business idea of AI-Native Companies revolves around using AI infrastructure to drive innovation and efficiency. As a result, these companies have AI as a core part of their business, setting them apart from traditional SaaS companies that may only incorporate AI as a secondary feature. By leveraging AI technology, AI-Native Companies can create products that are more intelligent, adaptive, and responsive to customer needs, ultimately leading to increased customer satisfaction and loyalty.\n\nOne of the key characteristics of AI-Native Companies is their ability to maintain 100%+ growth rates across all funding stages, outperforming traditional SaaS companies. This is due in part to their focus on operating models that prioritize efficiency and speed, allowing them to absorb higher costs and still achieve better business outcomes. Additionally, AI-Native Companies are shifting their focus to operating models that prioritize efficiency and speed, allowing them to absorb higher costs and still achieve better business outcomes.\n\nIt's worth noting that while AI-Native Companies share a common characteristic of being built around AI technology, they may differ in their specific applications and use cases. However, their fundamental approach to business and product development remains centered around the strategic use of AI to drive growth and innovation. Overall, AI-Native Companies are organizations that have AI as a core part of their business, leveraging artificial intelligence to achieve significant revenue growth with smaller teams.<SEP>A category of companies that are native to AI and have high growth expectations and often negative gross margins.<SEP>AI-native companies are companies that are built on artificial intelligence and machine learning technologies.<SEP>Companies that may achieve decacorn status at rates 5-10x higher than historical averages, riding the $73.1 billion wave of 2025 funding.<SEP>AI-native companies where AI is the core product, not a feature.",
+          "source_id": "gd_671ccb77209644aa52b08550-chunk-000<SEP>gd_ec228e8695e416170bcef74e-chunk-000<SEP>gd_67eadcb9afdf2a74fbb9b074-chunk-001<SEP>gd_376a91437f248e422036d70c-chunk-001<SEP>gd_376a91437f248e422036d70c-chunk-002<SEP>gd_376a91437f248e422036d70c-chunk-005<SEP>gd_376a91437f248e422036d70c-chunk-006<SEP>gd_376a91437f248e422036d70c-chunk-007<SEP>gd_376a91437f248e422036d70c-chunk-008<SEP>gd_67d7970183aa4b991571839a-chunk-007<SEP>gd_67d7970183aa4b991571839a-chunk-008<SEP>gd_67d7970183aa4b991571839a-chunk-009<SEP>gd_3aae8a7c065a234aa5cc25dc-chunk-003<SEP>gd_547c5075e66aa644c0ab2a4f-chunk-002<SEP>gd_e1b4aa060048f3016d2be0d6-chunk-000<SEP>gd_e1b4aa060048f3016d2be0d6-chunk-001<SEP>gd_249ae5f1a28ad2b6389c7b37-chunk-003<SEP>gd_249ae5f1a28ad2b6389c7b37-chunk-004<SEP>gd_70d11aab5ebbbe36a7cd1b54-chunk-007<SEP>gd_b0ed35375cd1112218e7da45-chunk-001<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-008",
+          "file_path": "gd_671ccb77209644aa52b08550<SEP>gd_67eadcb9afdf2a74fbb9b074<SEP>gd_376a91437f248e422036d70c<SEP>gd_67d7970183aa4b991571839a<SEP>gd_3aae8a7c065a234aa5cc25dc<SEP>gd_547c5075e66aa644c0ab2a4f<SEP>gd_e1b4aa060048f3016d2be0d6<SEP>gd_249ae5f1a28ad2b6389c7b37<SEP>gd_70d11aab5ebbbe36a7cd1b54<SEP>gd_b0ed35375cd1112218e7da45",
+          "created_at": 1793635245
+        },
+        {
+          "entity_name": "VCs (Venture Capitalists)",
+          "entity_type": "organization",
+          "description": "Investors who provide funding to startups in exchange for equity.",
+          "source_id": "gd_24f21a5dbfdfd8e557428dbe-chunk-000",
+          "file_path": "gd_24f21a5dbfdfd8e557428dbe",
+          "created_at": 1793510644
+        },
+        {
+          "entity_name": "S multiples",
+          "entity_type": "concept",
+          "description": "S multiples correlate with the rise of interest rates, but the relationship between interest rates and spend is not clear.",
+          "source_id": "gd_bd97c14fa0476835df73618f-chunk-001",
+          "file_path": "gd_bd97c14fa0476835df73618f",
+          "created_at": 1793535822
+        },
+        {
+          "entity_name": "Secondaries",
+          "entity_type": "UNKNOWN",
+          "description": "VCs are involved in secondaries.",
+          "source_id": "gd_fc47ef364dc12c0df2188b60-chunk-000",
+          "file_path": "gd_fc47ef364dc12c0df2188b60",
+          "created_at": 1793506934
+        },
+        {
+          "entity_name": "Customers",
+          "entity_type": "other",
+          "description": "**Customers**\n\nThe term \"Customers\" refers to the individuals or organizations that engage in the purchase of a product or service. This can include people or businesses that buy a company's products or services, as well as those who use a product or service. In essence, customers are named groups of individuals who purchase and use a company's product or service. They are the people or businesses that use a product or service, and are often the primary focus of a company's sales and marketing efforts.\n\nCustomers can be individuals who purchase products or services from a company, or businesses that buy goods or services from other companies. The key characteristic of a customer is that they engage in the purchase of a product or service, whether it be a physical good or an intangible service. This can include a wide range of entities, from individuals who purchase everyday consumer goods to businesses that buy raw materials or services from other companies.\n\nIn the context of customer support, customers are individuals or organizations that are interacting with the AI system for assistance. Furthermore, visiting customers in person can be an effective strategy to reduce churn, increase purchases, and gather feedback to close other customers like them.\n\nCustomers are a critical component of any business, and are the driving force behind sales and revenue growth. By understanding the needs and preferences of their customers, companies can tailor their products and services to meet the demands of their target market, ultimately driving business success. Founders of startups must also consider the needs of their customers, as they are crucial for the success of the business.\n\nON24's services have a total of 1,900 customers. Customers are segmented into three groups: Growing, Struggling, and Shrinking, based on their growth rates. Individuals or businesses that purchase products or services are also referred to as customers. This can include individuals or entities that purchase goods or services, as well as individuals who purchase goods or services from a business.\n\nIt is worth noting that customers can also be individuals who have previously interacted with a company or organization, and are often the target of sales and marketing efforts. Additionally, customers are placing their trust in the company, and the company must accept some risk as part of that. In some cases, customers may be asking for longer payment terms, which is a common practice in industries under stress, managed by Procurement and/or Finance departments to manage cash.\n\nHowever, it is also worth noting that in some cases, customers may be promised functionality that doesn't really exist. This can lead to a loss of trust and confidence in the company, and can ultimately harm the business.\n\nIn summary, customers are the individuals or organizations that purchase products or services from a company, and are the primary focus of a company's sales and marketing efforts. Understanding the needs and preferences of customers is crucial for business success, and companies must tailor their products and services to meet the demands of their target market.<SEP>The definition of customers is being clarified, and it is being stated that pilots and unpaid users are not considered customers.<SEP>Individuals or organizations that purchase products or services from a company.<SEP>Customers are individuals or organizations that purchase goods or services from a company.<SEP>Potential clients who want to learn and grow<SEP>Customers will receive real value from the AI implementations.",
+          "source_id": "gd_0d4bd9ca1eb07b3d96b242da-chunk-001<SEP>gd_1586430bce2fffea00a8cd83-chunk-000<SEP>gd_1586430bce2fffea00a8cd83-chunk-001<SEP>gd_b69603cf3ff1c56f5acd6d17-chunk-001<SEP>gd_2a75d313a11b8eb4fd38114a-chunk-000<SEP>gd_02f130940c6192931a733ac0-chunk-000<SEP>gd_09267d6dfab254529a946b18-chunk-003<SEP>gd_32f9b005c8a5fcdd27214e24-chunk-000<SEP>gd_39f3ca3504c7549c58763fa2-chunk-000<SEP>gd_2281e82d8ac66ee74dadb9c8-chunk-000<SEP>gd_5339ef95acf5382961a2350a-chunk-001<SEP>gd_35709eb4ce9c8ee27e006220-chunk-001<SEP>gd_11dfec6d25e1a2b161158dde-chunk-000<SEP>gd_1282420851c57a65c41b3c9b-chunk-001<SEP>gd_16319806a8bc21c0b84682c3-chunk-000<SEP>gd_8b5c9d685eb413391c37f2fd-chunk-000<SEP>gd_6b0443a195bddf2b5a84a40a-chunk-001<SEP>gd_1bb89f0881d846204f69d052-chunk-002<SEP>gd_1bb89f0881d846204f69d052-chunk-000<SEP>gd_8aa8fb2b9328e174364a4ff2-chunk-000<SEP>gd_a6016d6c72ddea604b995fd3-chunk-002<SEP>gd_5526629b3d33ecf02b9b6951-chunk-000<SEP>gd_22e2af05587860f4e41f0ece-chunk-000<SEP>gd_59786235ec03f6fe9fcba771-chunk-000<SEP>gd_59786235ec03f6fe9fcba771-chunk-002<SEP>gd_9b857f6a5aebe00071184e04-chunk-000<SEP>gd_db59e3b56d518abae066116c-chunk-001<SEP>gd_d816377c1561e5a5204949f5-chunk-000<SEP>gd_d816377c1561e5a5204949f5-chunk-001<SEP>gd_d816377c1561e5a5204949f5-chunk-002<SEP>gd_83f8805152f3bf7e5d5d77a7-chunk-001<SEP>gd_9eb439882c36aee6170b8119-chunk-000<SEP>gd_2cbfad976afb340343b8814f-chunk-000<SEP>gd_53125c06356e76f287497023-chunk-000<SEP>gd_490259ae216c7d38a715cfb7-chunk-002<SEP>gd_4e6d11029cf183063e420d2f-chunk-001<SEP>gd_322b65748513e786ae1453d1-chunk-000<SEP>gd_aa01fc06c899106c220037a7-chunk-001<SEP>gd_81cb113e66af3876fd2fc794-chunk-001<SEP>gd_81cb113e66af3876fd2fc794-chunk-002<SEP>gd_9fbfe59451f165bdbe869eee-chunk-000<SEP>gd_e74d8ab024a7867ced071a73-chunk-000<SEP>gd_5a74e007239d6fa585aa9d42-chunk-002<SEP>gd_cb17d802afa999aa5a2020f3-chunk-002<SEP>gd_9afc3fc5d51d8286d88af633-chunk-001<SEP>gd_5f4341352a06f4cbdef81bcc-chunk-003<SEP>gd_d0997b9825dde450f885028e-chunk-002<SEP>gd_6c0640632fd219338512a716-chunk-000<SEP>gd_f8aec0ba52dbef1f0d858ec4-chunk-001<SEP>gd_59120cae360cdf09fa6d1198-chunk-001<SEP>gd_386bc825ffd9d3290623d25e-chunk-003<SEP>gd_208f945384e075f6e56fa4b2-chunk-001<SEP>gd_208f945384e075f6e56fa4b2-chunk-002<SEP>gd_60c9439291ef79f4610369b7-chunk-000<SEP>gd_28afe47b9b878d0011571004-chunk-001<SEP>gd_2d8eadb9a78b30ce64721a08-chunk-000<SEP>gd_9838e8220d789e78b7f4418d-chunk-002<SEP>gd_9e74edc08f0a69a8e46473e1-chunk-000<SEP>gd_3420b0d75274e09a6649b966-chunk-000<SEP>gd_3420b0d75274e09a6649b966-chunk-003<SEP>gd_a317deb61e243cd08d76cca3-chunk-000<SEP>gd_4cb0b1f099da12e7bc82db73-chunk-001<SEP>gd_5c912fefa31e5fba2a3e6a7f-chunk-000<SEP>gd_b3c813040c96089df47b4b77-chunk-000<SEP>gd_ba52cc631e909993b02211c8-chunk-000<SEP>gd_43870849c02a9d30476bc952-chunk-002<SEP>gd_829c76a509342e71ab5188cf-chunk-002<SEP>gd_8c5d383d6700632b00ecfb79-chunk-000<SEP>gd_8c5d383d6700632b00ecfb79-chunk-002<SEP>gd_8ed2bda7b3456893ea384f71-chunk-000<SEP>gd_d9ea34f00f4b82baa3450186-chunk-000<SEP>gd_989a9f944654ad07bf38af36-chunk-002<SEP>gd_de4f1cbf6a8bd8e3c5b1cd8f-chunk-002<SEP>gd_a173a4cadbd0b240296376ca-chunk-002<SEP>gd_a9cb3aa7fddefa1484ccdea9-chunk-002<SEP>gd_aa40273047bc4527e6a280c2-chunk-002<SEP>gd_ac8f35124cb7a427feac170a-chunk-002<SEP>gd_ef0a3cc3b5933f0a5cd3fccb-chunk-000<SEP>gd_b80d7d772933d7964f9d8df7-chunk-002<SEP>gd_f6156caa4c31f918c461f330-chunk-000<SEP>gd_f6156caa4c31f918c461f330-chunk-001<SEP>gd_f73c0f4e98a454788b21abf4-chunk-000<SEP>gd_f77103688699ee185cf2a786-chunk-001<SEP>gd_f77103688699ee185cf2a786-chunk-002<SEP>gd_c82b6638dbe58be010fd593c-chunk-002<SEP>gd_f7eddf4d50d326485a5879f0-chunk-000<SEP>gd_cb58fda6b14417ccf4f1d9f9-chunk-001<SEP>gd_d1f01ef7528f12c11f10247c-chunk-000<SEP>gd_d981b5f28d512ce3174a36d3-chunk-001<SEP>gd_09eef031dac3be82655d9682-chunk-000<SEP>gd_e055b666f5a204029f3ae6e6-chunk-003<SEP>gd_e37b599d60946ad436c4a46f-chunk-002<SEP>gd_e405a5b2373dc1ae2bcb1cb6-chunk-001<SEP>gd_1ae501bfdb3a7f714e292862-chunk-001<SEP>gd_1b7c7266cafc75867490fba8-chunk-000<SEP>gd_1d334f5cfd7bb7603fe5b3d8-chunk-000<SEP>gd_fb7245f61dab2fd033fc62d4-chunk-001<SEP>gd_19772d999a49aa7c05c1ed66-chunk-001<SEP>gd_273508a7bc6815efb71bbb38-chunk-001<SEP>gd_2da2607f440be8eb7f834419-chunk-001<SEP>gd_373a2c74571decc35d40816a-chunk-000<SEP>gd_373a2c74571decc35d40816a-chunk-001<SEP>gd_3be234868cffd1174ba430c1-chunk-000<SEP>gd_9611c8c5a46ce49697c4260a-chunk-000<SEP>gd_43942905c1222c1c0f30c1aa-chunk-000<SEP>gd_48aa7a1fedc2078897c63322-chunk-002<SEP>gd_4b2b6f0b7ccec41f6c409252-chunk-002<SEP>gd_4d77f67e4d236b7029d83bb8-chunk-002<SEP>gd_39aac781b0bdeaf45aebf21d-chunk-000<SEP>gd_4082d9286441e5d1b2ab3d21-chunk-002<SEP>gd_4082d9286441e5d1b2ab3d21-chunk-003<SEP>gd_685109a529dd46a0e19d6f2a-chunk-000<SEP>gd_685109a529dd46a0e19d6f2a-chunk-003<SEP>gd_7c2eea4b87dc4d9d7002646e-chunk-000<SEP>gd_7c7a216c8745503a287b7942-chunk-003<SEP>gd_b414f3ae82d1cf67bb537a11-chunk-001<SEP>gd_88c41e8fa8fc316e33319e5b-chunk-001<SEP>gd_88c41e8fa8fc316e33319e5b-chunk-002<SEP>gd_f623182a1b5011ff58dbdc15-chunk-001<SEP>gd_9021ddbc4daccae39880d4e2-chunk-002<SEP>gd_97f0d826a67928b2b5cd544a-chunk-000<SEP>gd_995edd43bb903497883c63ce-chunk-000<SEP>gd_1b9bbe7ebbb40cc7edaaca04-chunk-000<SEP>gd_99d17e0b73db2cd5429d2a76-chunk-002<SEP>gd_a753d199b9c468b7c9b06a64-chunk-001<SEP>gd_bb8500ff7693b3f67f77f68c-chunk-000<SEP>gd_bd97c14fa0476835df73618f-chunk-000<SEP>gd_75cde643d9c3a0816e36f6fe-chunk-000<SEP>gd_81df2c388bd8cae226612dc4-chunk-001<SEP>gd_a120d398e57a33365886f6a6-chunk-003<SEP>gd_a120d398e57a33365886f6a6-chunk-004<SEP>gd_abec5724b77815cf1198b62f-chunk-002<SEP>gd_d003453b3956b242efc0eccf-chunk-002<SEP>gd_dd626eb5f79a12db1cce58c5-chunk-000<SEP>gd_db83b3635bdade9c5ae7ff47-chunk-001<SEP>gd_de4b319e76c4f0d48550e144-chunk-003<SEP>gd_e86a8aefd448317878d3f98e-chunk-005<SEP>gd_e9c1756c084c459cb65002e1-chunk-000<SEP>gd_e2a836034c2fbbd00b9cc82a-chunk-000<SEP>gd_e3466d3d0dcfc9810320f04a-chunk-000<SEP>gd_e396b212b0c5e080520b685b-chunk-002<SEP>gd_13748852582b62cb8d40e795-chunk-001<SEP>gd_13748852582b62cb8d40e795-chunk-000<SEP>gd_1d29a7ab34aaf951a6c3c613-chunk-002<SEP>gd_2c01c27748878ad03067d439-chunk-003<SEP>gd_c9017b2c5b7fe53e70a885a4-chunk-000<SEP>gd_c9017b2c5b7fe53e70a885a4-chunk-001<SEP>gd_c9017b2c5b7fe53e70a885a4-chunk-002<SEP>gd_c9017b2c5b7fe53e70a885a4-chunk-003<SEP>gd_e23054549f6afebbe65a7649-chunk-002<SEP>gd_e4735d696b4fc29d7ad881a1-chunk-001<SEP>gd_f5a9a68ca1ce3e9ad54e9e5e-chunk-001<SEP>gd_062fdba1eb0375bef6607116-chunk-003<SEP>gd_0d5ce0b3e04a8314ef86c827-chunk-001<SEP>gd_0d5ce0b3e04a8314ef86c827-chunk-002<SEP>gd_0d5ce0b3e04a8314ef86c827-chunk-003<SEP>gd_0d5ce0b3e04a8314ef86c827-chunk-000<SEP>gd_1475e3e6808bcf1fde45f610-chunk-001<SEP>gd_24daecfca40dc0e745c734ab-chunk-004<SEP>gd_27b12de1d2b1d36b49ccd5e5-chunk-000<SEP>gd_4d74c8d25456712731b2794d-chunk-000<SEP>gd_4d74c8d25456712731b2794d-chunk-001<SEP>gd_4d74c8d25456712731b2794d-chunk-002<SEP>gd_4d74c8d25456712731b2794d-chunk-005<SEP>gd_3dd5c02a7eda4361172441d2-chunk-001<SEP>gd_4a79123a6f0bcc01c3ae5cee-chunk-000<SEP>gd_56365d05cf1b46c8c5dbc613-chunk-000<SEP>gd_4e03396df89ad1049c88ccc6-chunk-004<SEP>gd_6b0bb4f6eea86f76dabfe5ec-chunk-004<SEP>gd_6b0bb4f6eea86f76dabfe5ec-chunk-003<SEP>gd_6b0bb4f6eea86f76dabfe5ec-chunk-005<SEP>gd_5fcd96075c9c8c56ec80e1ba-chunk-004<SEP>gd_abeb00283957ad382493fe64-chunk-001<SEP>gd_b62b6ad34d4ba7357f8052f1-chunk-004<SEP>gd_c75af687e9a8e78065ced9f2-chunk-005<SEP>gd_046a67ab28edc774bd401b53-chunk-000<SEP>gd_16b616fcb6970053eaa0f408-chunk-004<SEP>gd_16bb7285d1b65903b0405cce-chunk-003<SEP>gd_6fef5fe1dbbd9efcd44ed4b3-chunk-001<SEP>gd_2ccb452a2204fe20b0d2b289-chunk-000<SEP>gd_2ccb452a2204fe20b0d2b289-chunk-001<SEP>gd_34886e1a288792f07a43f42e-chunk-000<SEP>gd_3b71943f6d453972b1bdd1de-chunk-002<SEP>gd_983ad03801135ea6eb85b5a0-chunk-000<SEP>gd_40d926c839abc68c68bb1a76-chunk-001<SEP>gd_536d5be445e76fa4f98090da-chunk-000<SEP>gd_d94d3f9d2ce04cefe79715db-chunk-001<SEP>gd_e01477e17866ee5836e50828-chunk-003<SEP>gd_e01477e17866ee5836e50828-chunk-005<SEP>gd_7b568e288974a5d1a83341c8-chunk-004<SEP>gd_fb163a389ea88c48ce1a606e-chunk-002<SEP>gd_101c1d2120f0d8c5427b447b-chunk-003<SEP>gd_9e84be7a06bff0542f4f560e-chunk-000<SEP>gd_ab2b44c18919e9af9f28a4d4-chunk-003<SEP>gd_cdb688c70f3a971827ac4543-chunk-001<SEP>gd_40a1e7bc45542f2904568d95-chunk-004<SEP>gd_e570bc885c853fe839d0ee57-chunk-001<SEP>gd_ec5bfd9094234dc841a0062d-chunk-001<SEP>gd_eed02ca0e99ddce2117cfb23-chunk-003<SEP>gd_9120b3a4129b207cf4bc200e-chunk-001",
+          "file_path": "gd_0d4bd9ca1eb07b3d96b242da<SEP>gd_1586430bce2fffea00a8cd83<SEP>gd_b69603cf3ff1c56f5acd6d17<SEP>gd_2a75d313a11b8eb4fd38114a<SEP>gd_02f130940c6192931a733ac0<SEP>gd_09267d6dfab254529a946b18<SEP>gd_32f9b005c8a5fcdd27214e24<SEP>gd_39f3ca3504c7549c58763fa2<SEP>gd_2281e82d8ac66ee74dadb9c8<SEP>gd_5339ef95acf5382961a2350a<SEP>gd_35709eb4ce9c8ee27e006220<SEP>gd_1282420851c57a65c41b3c9b<SEP>gd_8b5c9d685eb413391c37f2fd<SEP>gd_6b0443a195bddf2b5a84a40a<SEP>gd_1bb89f0881d846204f69d052<SEP>gd_8aa8fb2b9328e174364a4ff2<SEP>gd_a6016d6c72ddea604b995fd3<SEP>gd_59786235ec03f6fe9fcba771<SEP>gd_9b857f6a5aebe00071184e04<SEP>gd_db59e3b56d518abae066116c<SEP>gd_d816377c1561e5a5204949f5<SEP>gd_83f8805152f3bf7e5d5d77a7<SEP>gd_9eb439882c36aee6170b8119<SEP>gd_2cbfad976afb340343b8814f<SEP>gd_53125c06356e76f287497023<SEP>gd_490259ae216c7d38a715cfb7<SEP>gd_322b65748513e786ae1453d1<SEP>gd_81cb113e66af3876fd2fc794<SEP>gd_e74d8ab024a7867ced071a73<SEP>gd_5a74e007239d6fa585aa9d42<SEP>gd_cb17d802afa999aa5a2020f3<SEP>gd_f8aec0ba52dbef1f0d858ec4<SEP>gd_59120cae360cdf09fa6d1198<SEP>gd_386bc825ffd9d3290623d25e<SEP>gd_208f945384e075f6e56fa4b2<SEP>gd_60c9439291ef79f4610369b7<SEP>gd_28afe47b9b878d0011571004<SEP>gd_9e74edc08f0a69a8e46473e1<SEP>gd_3420b0d75274e09a6649b966<SEP>gd_a317deb61e243cd08d76cca3<SEP>gd_4cb0b1f099da12e7bc82db73<SEP>gd_5c912fefa31e5fba2a3e6a7f<SEP>gd_b3c813040c96089df47b4b77<SEP>gd_ba52cc631e909993b02211c8<SEP>gd_43870849c02a9d30476bc952<SEP>gd_829c76a509342e71ab5188cf<SEP>gd_8c5d383d6700632b00ecfb79<SEP>gd_8ed2bda7b3456893ea384f71<SEP>gd_d9ea34f00f4b82baa3450186<SEP>gd_989a9f944654ad07bf38af36<SEP>gd_de4f1cbf6a8bd8e3c5b1cd8f<SEP>gd_a173a4cadbd0b240296376ca<SEP>gd_aa40273047bc4527e6a280c2<SEP>gd_ac8f35124cb7a427feac170a<SEP>gd_ef0a3cc3b5933f0a5cd3fccb<SEP>gd_b80d7d772933d7964f9d8df7<SEP>gd_f6156caa4c31f918c461f330<SEP>gd_f77103688699ee185cf2a786<SEP>gd_f7eddf4d50d326485a5879f0<SEP>gd_cb58fda6b14417ccf4f1d9f9<SEP>gd_d1f01ef7528f12c11f10247c<SEP>gd_d981b5f28d512ce3174a36d3<SEP>gd_09eef031dac3be82655d9682<SEP>gd_e055b666f5a204029f3ae6e6<SEP>gd_e405a5b2373dc1ae2bcb1cb6<SEP>gd_1ae501bfdb3a7f714e292862<SEP>gd_1b7c7266cafc75867490fba8<SEP>gd_fb7245f61dab2fd033fc62d4<SEP>gd_3be234868cffd1174ba430c1<SEP>gd_43942905c1222c1c0f30c1aa<SEP>gd_48aa7a1fedc2078897c63322<SEP>gd_4b2b6f0b7ccec41f6c409252<SEP>gd_4d77f67e4d236b7029d83bb8<SEP>gd_4082d9286441e5d1b2ab3d21<SEP>gd_685109a529dd46a0e19d6f2a<SEP>...truncated...(KEEP Old)",
+          "created_at": 1793594632
+        },
+        {
+          "entity_name": "Most VCs",
+          "entity_type": "organization",
+          "description": "Most VCs refers to a group of Venture Capitalists.",
+          "source_id": "gd_8e0c4eb5068da67dbb8ad247-chunk-007",
+          "file_path": "gd_8e0c4eb5068da67dbb8ad247",
+          "created_at": 1793582919
+        },
+        {
+          "entity_name": "VCs-as-Yes-Men Problem",
+          "entity_type": "concept",
+          "description": "A phenomenon where venture capitalists become overly focused on pleasing successful founders and fail to provide adequate oversight.",
+          "source_id": "gd_0adbace75ffc5e3ea7aadf77-chunk-013",
+          "file_path": "gd_0adbace75ffc5e3ea7aadf77",
+          "created_at": 1793645484
+        },
+        {
+          "entity_name": "Venture Capital",
+          "entity_type": "concept",
+          "description": "**Venture Capital**\n\nVenture Capital is a type of financing provided by investors to startups and small businesses in exchange for equity. This investment strategy is focused on supporting early-stage companies, particularly those with high-growth potential. Venture capital firms provide funding to startups in exchange for equity, allowing them to grow and expand their operations.\n\nThe primary purpose of venture capital is to provide financial investments to start-ups and small businesses, enabling them to develop and launch their products or services. In return, venture capital firms receive a share of ownership in the company, typically in the form of equity. This type of funding is often provided to companies that are too early-stage for traditional bank financing, but have a strong potential for growth and returns.\n\nVenture capital can be a crucial source of funding for startups, enabling them to overcome the initial stages of development and reach a point where they can become self-sustaining. However, it is worth noting that venture capital investments often come with a high level of risk, as the success of the startup is not guaranteed. Nevertheless, venture capital firms play a vital role in supporting innovation and entrepreneurship, and have been instrumental in the growth and development of many successful companies.\n\nIn recent years, venture capital strategies have been changing due to the impact of Artificial Intelligence (AI). This shift has led to a focus on investing in AI companies, with a small number of firms receiving massive funding. As a result, the venture capital industry is facing challenges, including a \"flight to consensus\" where a few AI companies dominate the market. Despite these challenges, venture capital remains a vital source of funding for early-stage, high-growth companies, providing the necessary capital for success.\n\nThe venture capital industry, including venture capital firms and their investments, plays a significant role in supporting the growth and development of startups. Financial investments provided by venture capital firms are crucial for the success of many startups, and are often provided in the form of equity investments. In essence, venture capital is a type of investment that involves providing capital to early-stage companies in exchange for equity. It is a crucial source of funding for startups, enabling them to overcome the initial stages of development and reach a point where they can become self-sustaining.\n\nIt is worth noting that venture capital can obscure churn by providing capital, making it harder to identify unsustainable businesses. Additionally, pricing is more challenging than ever, and venture capital funding is more readily available. However, this increased availability of funding can also lead to a \"flight to consensus\" where a few companies dominate the market.\n\nOverall, venture capital is a specific business idea focused on investing in startups and small businesses with high growth potential. It is a type of financing provided by investors to startups in exchange for equity, and is often provided to support the growth of startups and early-stage companies with high growth potential.<SEP>A type of investment that provides funding to early-stage companies in exchange for equity.<SEP>Capital is back to 2021 levels, but 50% of that capital is going into just 4 deals.<SEP>Venture capital is a type of financing provided to early-stage companies in exchange for equity.<SEP>The type of capital that companies are struggling to raise, characterized by high growth expectations.<SEP>A type of investment that provides funding to startups and early-stage companies, often with a focus on high-growth potential and scalability.<SEP>An organization amplifying entrepreneurial success through brand, capital, and network effects.",
+          "source_id": "gd_2a75d313a11b8eb4fd38114a-chunk-000<SEP>gd_1bd5ee2654389c4b94695a77-chunk-000<SEP>gd_09fb9e5d797e0828baa6a4e3-chunk-000<SEP>gd_5fced1ec0d2b1205b8425a2d-chunk-000<SEP>gd_139cfa8f4e8f0bdb5835e6f2-chunk-000<SEP>gd_235342391fdde0066f0ee0eb-chunk-000<SEP>gd_70a219235731dd098fa60c52-chunk-001<SEP>gd_c7085eab75e6259fc532726b-chunk-000<SEP>gd_3aab2ebe3d4a17a4ae74909b-chunk-000<SEP>gd_9418ca008522c1893ccfe898-chunk-000<SEP>gd_cbc65b3eb8efa09f32370cb3-chunk-000<SEP>gd_512d6b1fc2ebd9c234e653d4-chunk-000<SEP>gd_d8634952bd688ae7ed11f624-chunk-001<SEP>gd_111b6b23b20d3f5268f61598-chunk-000<SEP>gd_f0bd1e3339cefb99a49b38be-chunk-000<SEP>gd_f0bd1e3339cefb99a49b38be-chunk-001<SEP>gd_81a8fb81aa8b94288300e068-chunk-000<SEP>gd_60d1cc427daa949c6165b421-chunk-000<SEP>gd_2dd93b6005056c1c7e39a189-chunk-000<SEP>gd_3511373c607b8a24206eba44-chunk-000<SEP>gd_687721f2b1e4566e02347026-chunk-000<SEP>gd_ac05c910be5b9a47651fdb3c-chunk-000<SEP>gd_7f1c721b2bb1bf244b51aa0c-chunk-000<SEP>gd_81cb113e66af3876fd2fc794-chunk-000<SEP>gd_87e4169fe38c1cc0f4c4cb5f-chunk-000<SEP>gd_dd66530312a46b3d2e095794-chunk-000<SEP>gd_32f5e4f1f3af8c48fe6d19b5-chunk-000<SEP>gd_12fe030017ff3b7201e562ae-chunk-003<SEP>gd_eaa5497166b94d21e3d704a2-chunk-000<SEP>gd_3e1e129a8206331df24e51bb-chunk-002<SEP>gd_d38bc5de76dea4c45c10753d-chunk-000<SEP>gd_d981b5f28d512ce3174a36d3-chunk-002<SEP>gd_24e298cda6ab82b9dd6500f8-chunk-000<SEP>gd_86e630050935a1edf9737112-chunk-003<SEP>gd_0e3d9828bb18a2e35d1f392a-chunk-000<SEP>gd_0e3d9828bb18a2e35d1f392a-chunk-002<SEP>gd_0e3d9828bb18a2e35d1f392a-chunk-003<SEP>gd_b03f095a8aee6491211a44f0-chunk-000<SEP>gd_c844d03b15eaeb661ca8042c-chunk-000<SEP>gd_e966c68c8b64742b54a64f35-chunk-000<SEP>gd_c0713c351046251ffaf03c4f-chunk-001<SEP>gd_caee282f4a0f013f91bbda7e-chunk-001<SEP>gd_1475e3e6808bcf1fde45f610-chunk-005<SEP>gd_1475e3e6808bcf1fde45f610-chunk-006<SEP>gd_45039ea6215ace79f501d25d-chunk-005<SEP>gd_a9d9de4d6e05f2263c7403ee-chunk-005<SEP>gd_9306d77bd848e8d41a565807-chunk-004<SEP>gd_47c445645895a885cb89d415-chunk-001<SEP>gd_7849200fd59aa068293f37a0-chunk-000<SEP>gd_05ddde0619abd1d6ef72e8bc-chunk-004<SEP>gd_569cd09f99799cba2950cf73-chunk-002<SEP>gd_569cd09f99799cba2950cf73-chunk-006<SEP>gd_fa3c292b49cb4f2ce802e3db-chunk-000<SEP>gd_708d527f092a474d63dd7bb0-chunk-000<SEP>gd_080ffd5535b5743e593659d5-chunk-000<SEP>gd_080ffd5535b5743e593659d5-chunk-001<SEP>gd_080ffd5535b5743e593659d5-chunk-005<SEP>gd_080ffd5535b5743e593659d5-chunk-006<SEP>gd_569ee69606db9effbeb61689-chunk-008<SEP>gd_5774b8c698ff82e597a30403-chunk-000<SEP>gd_5774b8c698ff82e597a30403-chunk-001<SEP>gd_69caa78963c10481cba0741f-chunk-002<SEP>gd_69caa78963c10481cba0741f-chunk-007<SEP>gd_8a750106d4513616691b5198-chunk-000<SEP>gd_df32839420b6112dc0266e66-chunk-006<SEP>gd_ec383ce985a64bfb84971349-chunk-003<SEP>gd_3004f80c56d68cccbb72b988-chunk-002<SEP>gd_35437854c8aefceadbe3a614-chunk-002<SEP>gd_fe5cda8843f27d3cb5268a08-chunk-002<SEP>gd_3165936d963d60a6dbcd9e79-chunk-000<SEP>gd_45895bb382839086f6554318-chunk-000<SEP>gd_73c06efd8b5772a9ba7bbdd0-chunk-000<SEP>gd_2b1b8318e2ec523237dbf3e3-chunk-009<SEP>gd_845dd3bb8fb4f09de1b94124-chunk-007<SEP>gd_845dd3bb8fb4f09de1b94124-chunk-008",
+          "file_path": "gd_2a75d313a11b8eb4fd38114a<SEP>gd_1bd5ee2654389c4b94695a77<SEP>gd_09fb9e5d797e0828baa6a4e3<SEP>gd_5fced1ec0d2b1205b8425a2d<SEP>gd_139cfa8f4e8f0bdb5835e6f2<SEP>gd_235342391fdde0066f0ee0eb<SEP>gd_70a219235731dd098fa60c52<SEP>gd_c7085eab75e6259fc532726b<SEP>gd_3aab2ebe3d4a17a4ae74909b<SEP>gd_9418ca008522c1893ccfe898<SEP>gd_cbc65b3eb8efa09f32370cb3<SEP>gd_512d6b1fc2ebd9c234e653d4<SEP>gd_d8634952bd688ae7ed11f624<SEP>gd_111b6b23b20d3f5268f61598<SEP>gd_f0bd1e3339cefb99a49b38be<SEP>gd_81a8fb81aa8b94288300e068<SEP>gd_60d1cc427daa949c6165b421<SEP>gd_2dd93b6005056c1c7e39a189<SEP>gd_3511373c607b8a24206eba44<SEP>gd_687721f2b1e4566e02347026<SEP>gd_ac05c910be5b9a47651fdb3c<SEP>gd_7f1c721b2bb1bf244b51aa0c<SEP>gd_81cb113e66af3876fd2fc794<SEP>gd_87e4169fe38c1cc0f4c4cb5f<SEP>gd_dd66530312a46b3d2e095794<SEP>gd_32f5e4f1f3af8c48fe6d19b5<SEP>gd_12fe030017ff3b7201e562ae<SEP>gd_eaa5497166b94d21e3d704a2<SEP>gd_3e1e129a8206331df24e51bb<SEP>gd_d38bc5de76dea4c45c10753d<SEP>gd_d981b5f28d512ce3174a36d3<SEP>gd_24e298cda6ab82b9dd6500f8<SEP>gd_86e630050935a1edf9737112<SEP>gd_0e3d9828bb18a2e35d1f392a<SEP>gd_b03f095a8aee6491211a44f0<SEP>gd_c844d03b15eaeb661ca8042c<SEP>gd_e966c68c8b64742b54a64f35<SEP>gd_c0713c351046251ffaf03c4f<SEP>gd_caee282f4a0f013f91bbda7e<SEP>gd_1475e3e6808bcf1fde45f610<SEP>gd_45039ea6215ace79f501d25d<SEP>gd_a9d9de4d6e05f2263c7403ee<SEP>gd_9306d77bd848e8d41a565807<SEP>gd_47c445645895a885cb89d415<SEP>gd_7849200fd59aa068293f37a0<SEP>gd_05ddde0619abd1d6ef72e8bc<SEP>gd_569cd09f99799cba2950cf73<SEP>gd_fa3c292b49cb4f2ce802e3db<SEP>gd_080ffd5535b5743e593659d5<SEP>gd_569ee69606db9effbeb61689<SEP>gd_5774b8c698ff82e597a30403<SEP>gd_69caa78963c10481cba0741f<SEP>gd_df32839420b6112dc0266e66<SEP>gd_ec383ce985a64bfb84971349<SEP>gd_3004f80c56d68cccbb72b988<SEP>gd_35437854c8aefceadbe3a614<SEP>gd_fe5cda8843f27d3cb5268a08<SEP>gd_3165936d963d60a6dbcd9e79<SEP>gd_45895bb382839086f6554318<SEP>gd_73c06efd8b5772a9ba7bbdd0<SEP>gd_2b1b8318e2ec523237dbf3e3<SEP>gd_845dd3bb8fb4f09de1b94124",
+          "created_at": 1793644885
+        },
+        {
+          "entity_name": "Mark-ups",
+          "entity_type": "concept",
+          "description": "Mark-ups are used by VCs to increase their paper valuation.",
+          "source_id": "gd_35545a4e5cadf30ca1df395c-chunk-001",
+          "file_path": "gd_35545a4e5cadf30ca1df395c",
+          "created_at": 1793512631
+        },
+        {
+          "entity_name": "Public Markets Arent the Enemy",
+          "entity_type": "concept",
+          "description": "A business concept arguing that properly managed public investors can be less intrusive than growth-stage VCs.",
+          "source_id": "gd_057e49bf191f27538afc36dc-chunk-007",
+          "file_path": "gd_057e49bf191f27538afc36dc",
+          "created_at": 1793629783
+        },
+        {
+          "entity_name": "Public investors",
+          "entity_type": "concept",
+          "description": "Investors in public companies<SEP>Public investors can be beneficial for companies if properly managed.",
+          "source_id": "gd_1e47900557b44bbcae52ed54-chunk-000<SEP>gd_057e49bf191f27538afc36dc-chunk-007",
+          "file_path": "gd_1e47900557b44bbcae52ed54<SEP>gd_057e49bf191f27538afc36dc",
+          "created_at": 1793629783
+        },
+        {
+          "entity_name": "The VCs-as-Yes-Men Problem",
+          "entity_type": "concept",
+          "description": "A phenomenon where venture capitalists become overly focused on pleasing successful founders and fail to provide adequate oversight.",
+          "source_id": "gd_0adbace75ffc5e3ea7aadf77-chunk-013<SEP>gd_0adbace75ffc5e3ea7aadf77-chunk-012",
+          "file_path": "gd_0adbace75ffc5e3ea7aadf77",
+          "created_at": 1793645525
+        },
+        {
+          "entity_name": "Top-tier businesses",
+          "entity_type": "organization",
+          "description": "Successful companies that were affected by the COVID-19 pandemic.",
+          "source_id": "gd_68ac04ba3ad5f88436c7c9a1-chunk-002",
+          "file_path": "gd_68ac04ba3ad5f88436c7c9a1",
+          "created_at": 1793599111
+        },
+        {
+          "entity_name": "The VCs Are Focus",
+          "entity_type": "concept",
+          "description": "The VCs Are Focus is a concept that describes the current state of venture capital.",
+          "source_id": "gd_45895bb382839086f6554318-chunk-001",
+          "file_path": "gd_45895bb382839086f6554318",
+          "created_at": 1793632606
+        },
+        {
+          "entity_name": "SaaS VCs",
+          "entity_type": "organization",
+          "description": "SaaS VCs (Software as a Service Venture Capitalists) are venture capitalists who specialize in investing in software companies.<SEP>A group of successful software as a service venture capitalists who are mentioned as having many companies in their portfolio that stalled out at $20m ARR.<SEP>Investment firms that specialize in Software as a Service (SaaS) startups, with varying parameters for investments.",
+          "source_id": "gd_d3437bb5a40ad558b64712e5-chunk-003<SEP>gd_d3437bb5a40ad558b64712e5-chunk-002<SEP>gd_e570bc885c853fe839d0ee57-chunk-000<SEP>gd_69a8fe4b02c060a542e2cb6c-chunk-006",
+          "file_path": "gd_d3437bb5a40ad558b64712e5<SEP>gd_e570bc885c853fe839d0ee57<SEP>gd_69a8fe4b02c060a542e2cb6c",
+          "created_at": 1793625884
+        },
+        {
+          "entity_name": "Negative Feedback",
+          "entity_type": "concept",
+          "description": "Information that is critical or unfavorable about the founder or team.",
+          "source_id": "gd_3dd5c02a7eda4361172441d2-chunk-002",
+          "file_path": "gd_3dd5c02a7eda4361172441d2",
+          "created_at": 1793566055
+        },
+        {
+          "entity_name": "Venture Capitalists (VCs)",
+          "entity_type": "organization",
+          "description": "Investors who provide funding to startups.",
+          "source_id": "gd_fed204635b6580cd54d93866-chunk-001",
+          "file_path": "gd_fed204635b6580cd54d93866",
+          "created_at": 1793558292
+        },
+        {
+          "entity_name": "TripActions",
+          "entity_type": "product",
+          "description": "A travel and expense management company that will be represented at the conference.<SEP>A travel and expense management platform for SaaS businesses.<SEP>A software company that provides travel management and expense tracking tools for SaaS businesses.<SEP>TripActions is the former name of Navan.<SEP>A travel management platform.<SEP>TripActions is a corporate travel and expense platform that was formerly known as Navan.<SEP>TripActions is a travel-related software company that was acquired by Navan.",
+          "source_id": "gd_22900bfc7fd815aa940fd8ac-chunk-000<SEP>gd_5ea880eb3548d655f51b5285-chunk-001<SEP>gd_5ea880eb3548d655f51b5285-chunk-000<SEP>gd_d553ceb07bd923001f7820f3-chunk-001<SEP>gd_b88c92b4f10cf414596ad164-chunk-000<SEP>gd_68ac04ba3ad5f88436c7c9a1-chunk-002<SEP>gd_faa2e63d5acfd50ac326251d-chunk-003<SEP>gd_89ed76474feb20a9ce6b4438-chunk-005",
+          "file_path": "gd_22900bfc7fd815aa940fd8ac<SEP>gd_5ea880eb3548d655f51b5285<SEP>gd_d553ceb07bd923001f7820f3<SEP>gd_b88c92b4f10cf414596ad164<SEP>gd_68ac04ba3ad5f88436c7c9a1<SEP>gd_faa2e63d5acfd50ac326251d<SEP>gd_89ed76474feb20a9ce6b4438",
+          "created_at": 1793643086
+        },
+        {
+          "entity_name": "1000+ VCs",
+          "entity_type": "organization",
+          "description": "A large number of venture capital firms that will be attending SaaStr Annual.",
+          "source_id": "gd_99b299a9e9815f55ab550523-chunk-000",
+          "file_path": "gd_99b299a9e9815f55ab550523",
+          "created_at": 1793510118
+        },
+        {
+          "entity_name": "Decent Growth",
+          "entity_type": "UNKNOWN",
+          "description": "VCs do not want to take the risk on decent growth or metrics without signs of being a unicorn.",
+          "source_id": "gd_8c776f785267de11da6d5c2a-chunk-000",
+          "file_path": "gd_8c776f785267de11da6d5c2a",
+          "created_at": 1793511771
+        },
+        {
+          "entity_name": "100s and 100s of VCs",
+          "entity_type": "UNKNOWN",
+          "description": "Relationship Description: 100s and 100s of VCs attend the SaaStr conference to invest in promising startups.",
+          "source_id": "gd_6bdde8bd37b55a83f475e364-chunk-000",
+          "file_path": "gd_6bdde8bd37b55a83f475e364",
+          "created_at": 1793513345
+        },
+        {
+          "entity_name": "AirBnb",
+          "entity_type": "product",
+          "description": "A popular online marketplace for short-term vacation rentals.",
+          "source_id": "gd_68ac04ba3ad5f88436c7c9a1-chunk-002",
+          "file_path": "gd_68ac04ba3ad5f88436c7c9a1",
+          "created_at": 1793599109
+        },
+        {
+          "entity_name": "VC is what it is",
+          "entity_type": "concept",
+          "description": "VCs prioritize investing in outliers and unicorns.",
+          "source_id": "gd_e18f43964570813392b71ca0-chunk-000",
+          "file_path": "gd_e18f43964570813392b71ca0",
+          "created_at": 1793516605
+        },
+        {
+          "entity_name": "Risk",
+          "entity_type": "concept",
+          "description": "Risk is a multifaceted concept that encompasses various aspects of uncertainty and potential loss. At its core, risk refers to the possibility that an investment may not yield the expected returns, making it a crucial consideration for investors and financial institutions. This concept is not limited to financial contexts, however, as it also pertains to the possibility of loss or negative outcome in various domains, including business, where the risk of hiring someone with no experience in small companies can be particularly pronounced.\n\nIn a broader sense, risk is defined as the possibility of loss or negative consequences associated with a particular decision or action. This can manifest as financial loss or failure, as seen in the context of start-ups, which are often characterized by high levels of risk due to the potential for failure and the challenges of conducting thorough due diligence in a timely manner. Furthermore, risk can also be understood as the possibility of loss or damage, which is a critical consideration in various fields, including finance, where the potential for financial loss or damage in an investment is a key concern.\n\nIt is worth noting that the context of risk can vary widely, and its definition and scope can be influenced by factors such as the specific domain or industry in question. However, at its core, risk remains a fundamental concept that is essential for understanding and mitigating uncertainty and potential loss in a wide range of contexts.<SEP>Accepting some risk is part of the trust placed in the company by customers.<SEP>The possibility that an investment may not generate a return or may result in a loss.<SEP>The risk of not meeting customer needs, leading to high churn rates and low upgrade rates.<SEP>A specific business idea related to potential dangers or uncertainties.<SEP>The possibility of financial loss or default.<SEP>A potential threat or danger that needs to be managed.",
+          "source_id": "gd_0e51f3f7afe6c971cc16a952-chunk-000<SEP>gd_127db65b11361511e7acc704-chunk-000<SEP>gd_1ff134cad37b3145694b65c9-chunk-000<SEP>gd_492b1c25f3885409dc43a6d3-chunk-000<SEP>gd_b536cc0ad4219b960caa5daf-chunk-001<SEP>gd_b18395ca886f06bbcc69f05c-chunk-000<SEP>gd_886c340f84e0b5c2aa089985-chunk-000<SEP>gd_0b60e94ececf3cb73976c5df-chunk-000<SEP>gd_8c776f785267de11da6d5c2a-chunk-000<SEP>gd_7e501541a37d9738987d633b-chunk-002<SEP>gd_830b1b91c9594b6c5f83a431-chunk-001<SEP>gd_3420b0d75274e09a6649b966-chunk-003<SEP>gd_35db7b4ad7a78a616a0baa36-chunk-003<SEP>gd_9021ddbc4daccae39880d4e2-chunk-002<SEP>gd_fef931cfcea01ce67476c021-chunk-003<SEP>gd_f7e90496738393725cca736e-chunk-003<SEP>gd_61ca61814cf700dc8252baf4-chunk-001<SEP>gd_61ca61814cf700dc8252baf4-chunk-000<SEP>gd_39b6f4d40075e7b8d3ea719d-chunk-005",
+          "file_path": "gd_0e51f3f7afe6c971cc16a952<SEP>gd_127db65b11361511e7acc704<SEP>gd_1ff134cad37b3145694b65c9<SEP>gd_492b1c25f3885409dc43a6d3<SEP>gd_b18395ca886f06bbcc69f05c<SEP>gd_886c340f84e0b5c2aa089985<SEP>gd_0b60e94ececf3cb73976c5df<SEP>gd_7e501541a37d9738987d633b<SEP>gd_830b1b91c9594b6c5f83a431<SEP>gd_3420b0d75274e09a6649b966<SEP>gd_35db7b4ad7a78a616a0baa36<SEP>gd_9021ddbc4daccae39880d4e2<SEP>gd_fef931cfcea01ce67476c021<SEP>gd_f7e90496738393725cca736e<SEP>gd_61ca61814cf700dc8252baf4",
+          "created_at": 1793610139
+        },
+        {
+          "entity_name": "Halligan",
+          "entity_type": "person",
+          "description": "Brian Halligan is a co-founder of HubSpot, a company that has grown to serve small businesses and has a valuation of over $30 billion. He is known for his unconventional approach to business, having a \"healthy disrespect for conventional wisdom.\" Halligan's goal is to build a company that his grandkids will be proud of, and he has achieved this through his innovative strategies and leadership.\n\nAs a founder of HubSpot, Halligan has had experience with both private and public investors. He has also been involved in discussions about CEO compensation and incentive structures, noting the importance of aligning executive pay with company performance. In fact, Halligan has discussed the Fidelity discussion and its impact on the IPO price, highlighting the complexities of navigating the public markets.\n\nHalligan's approach to business is not limited to his work at HubSpot. He has also been observed failing traditional marketing tactics, instead opting for a more innovative and outside-the-box approach. This willingness to challenge conventional wisdom has been a key factor in his success, both as a founder and as a leader in the industry.\n\nOverall, Brian Halligan is a highly accomplished and innovative entrepreneur, known for his leadership and vision at HubSpot. His commitment to building a company that is both successful and sustainable has earned him a reputation as a respected expert in the field of CEO compensation and incentive structures.<SEP>Halligan, a CEO, explained the shift from ISOs to RSUs in CEO compensation packages.<SEP>The speaker who walked the audience through the reality of compensation committees.<SEP>Halligan, a CEO compensation expert, observed that the company's compensation design was creative and effective.<SEP>The author of a point about compensation needing to be sized relative to CEO net worth, not just peer benchmarks.<SEP>Expert in CEO compensation and its alignment with shareholders' interests.",
+          "source_id": "gd_6c4bd4571fc26766189ae2a1-chunk-000<SEP>gd_ac4b8b9ed091ab54b1aba8f9-chunk-003<SEP>gd_ac4b8b9ed091ab54b1aba8f9-chunk-006<SEP>gd_ac4b8b9ed091ab54b1aba8f9-chunk-007<SEP>gd_057e49bf191f27538afc36dc-chunk-002<SEP>gd_057e49bf191f27538afc36dc-chunk-003<SEP>gd_057e49bf191f27538afc36dc-chunk-004<SEP>gd_057e49bf191f27538afc36dc-chunk-005<SEP>gd_057e49bf191f27538afc36dc-chunk-006<SEP>gd_3b0cd7a4547ffa30c6908e86-chunk-001<SEP>gd_3b0cd7a4547ffa30c6908e86-chunk-002<SEP>gd_3b0cd7a4547ffa30c6908e86-chunk-003<SEP>gd_3b0cd7a4547ffa30c6908e86-chunk-005<SEP>gd_3b0cd7a4547ffa30c6908e86-chunk-006",
+          "file_path": "gd_6c4bd4571fc26766189ae2a1<SEP>gd_ac4b8b9ed091ab54b1aba8f9<SEP>gd_057e49bf191f27538afc36dc<SEP>gd_3b0cd7a4547ffa30c6908e86",
+          "created_at": 1793638169
+        },
+        {
+          "entity_name": "Triple, Triple, Double, Double",
+          "entity_type": "concept",
+          "description": "A growth metric used to evaluate the success of a startup.<SEP>Triple, Triple, Double, Double is a traditional SaaS growth trajectory that is no longer exciting in today's market.",
+          "source_id": "gd_db2a00ddbaae4ba4dae9d6b7-chunk-000<SEP>gd_05ddde0619abd1d6ef72e8bc-chunk-003",
+          "file_path": "gd_db2a00ddbaae4ba4dae9d6b7<SEP>gd_05ddde0619abd1d6ef72e8bc",
+          "created_at": 1793588391
+        },
+        {
+          "entity_name": "Many VCs",
+          "entity_type": "organization",
+          "description": "Venture Capitalists who have smaller funds (< $400m or so) and get nervous around high burn rate startups.",
+          "source_id": "gd_69a8fe4b02c060a542e2cb6c-chunk-003",
+          "file_path": "gd_69a8fe4b02c060a542e2cb6c",
+          "created_at": 1793625881
+        }
+      ],
+      "relationships": [
+        {
+          "src_id": "SaaStr",
+          "tgt_id": "VCs",
+          "description": "**SaaStr and VCs Relationship Summary**\n\nSaaStr is a community that provides support and resources for SaaS entrepreneurs and professionals, where VCs can benefit from being part of the community. The relationship between SaaStr and VCs is multifaceted, with VCs attending the SaaStr conference to network with SaaS companies and invest in promising startups. VCs also use SaaStr as a resource for information and guidance, and provide investment and advice to startups featured on the platform.\n\nIn addition to networking and investment opportunities, SaaStr provides a community for startup founders and investors to discuss and learn from each other, with VCs offering support and seeking control. However, it's worth noting that SaaStr and VCs have different funding sources, with SaaStr relying on its own revenue and VCs providing external funding.\n\nVCs invest in and support SaaStr startups, and the community offers a platform for VCs to connect with SaaS companies and invest in promising startups. Overall, the relationship between SaaStr and VCs is one of mutual benefit, with VCs providing investment and advice to startups, and SaaStr offering a community and resources for VCs to support and invest in SaaS companies.<SEP>SaaStr provides a community for VCs to discuss topics related to software as a service.<SEP>SaaStr has a network of VCs who are part of their community.<SEP>Provides feedback to SaaStr.",
+          "keywords": "Advice,Different Funding Sources,Invest,Investment,Network,Partnership,Provides Feedback,Relationship Keywords: Attend,Relationship_keywords: hosts,Resource,Support,attends,community,control,discussion,relationship_keywords: community,resources,support",
+          "weight": 11.0,
+          "source_id": "gd_52580e80aacd01c8a80e48c2-chunk-001<SEP>gd_33db139c95f5187d07f2a853-chunk-000<SEP>gd_41206b6ae8862a0d08c4d070-chunk-000<SEP>gd_8c776f785267de11da6d5c2a-chunk-000<SEP>gd_6bdde8bd37b55a83f475e364-chunk-000<SEP>gd_3e9fc891239ffd34f4cf91b1-chunk-002<SEP>gd_4cb0b1f099da12e7bc82db73-chunk-000<SEP>gd_c88aae57866bbd5d1887d219-chunk-000<SEP>gd_62d899b9b70ba80a70d0e3da-chunk-000<SEP>gd_f88384010e5ca3ac6719bedb-chunk-002<SEP>gd_1fd2b9d62813a3a21d9e3a6c-chunk-001",
+          "file_path": "gd_52580e80aacd01c8a80e48c2<SEP>gd_33db139c95f5187d07f2a853<SEP>gd_41206b6ae8862a0d08c4d070<SEP>gd_8c776f785267de11da6d5c2a<SEP>gd_6bdde8bd37b55a83f475e364<SEP>gd_3e9fc891239ffd34f4cf91b1<SEP>gd_4cb0b1f099da12e7bc82db73<SEP>gd_c88aae57866bbd5d1887d219<SEP>gd_62d899b9b70ba80a70d0e3da<SEP>gd_f88384010e5ca3ac6719bedb<SEP>gd_1fd2b9d62813a3a21d9e3a6c",
+          "created_at": 1793592384
+        },
+        {
+          "src_id": "Public Companies",
+          "tgt_id": "VCs",
+          "description": "VCs have high expectations for public companies.",
+          "keywords": "Expectation",
+          "weight": 1.0,
+          "source_id": "gd_249ae5f1a28ad2b6389c7b37-chunk-004",
+          "file_path": "gd_249ae5f1a28ad2b6389c7b37",
+          "created_at": 1793622559
+        },
+        {
+          "src_id": "AI",
+          "tgt_id": "VCs",
+          "description": "VCs invested in AI, which absorbed massive budget in 2024.<SEP>VCs are investing in AI companies to get promoted.<SEP>relationship_description: VCs focus on AI investments and invest in AI startups.<SEP>Significant investments and interest in AI.<SEP>investment, funding",
+          "keywords": "Interest,Invest,Investment,absorption,investment,promotion,relationship_keywords,relationship_keywords: Focus",
+          "weight": 5.0,
+          "source_id": "gd_f87b63c3e88f345595a20d8f-chunk-000<SEP>gd_1a7fb29168de5435fd66465b-chunk-002<SEP>gd_3d2b5a48418908e312d216b5-chunk-000<SEP>gd_492e971bca8d8c69fd6cc299-chunk-000<SEP>gd_605e0c1f4fd4724182870b9e-chunk-000",
+          "file_path": "gd_f87b63c3e88f345595a20d8f<SEP>gd_1a7fb29168de5435fd66465b<SEP>gd_3d2b5a48418908e312d216b5<SEP>gd_492e971bca8d8c69fd6cc299<SEP>gd_605e0c1f4fd4724182870b9e",
+          "created_at": 1793643714
+        },
+        {
+          "src_id": "public multiples",
+          "tgt_id": "you",
+          "description": "PE firms often invest in companies with reasonably high public multiples.",
+          "keywords": "care,reasonably high",
+          "weight": 1.0,
+          "source_id": "gd_7849200fd59aa068293f37a0-chunk-005",
+          "file_path": "gd_7849200fd59aa068293f37a0",
+          "created_at": 1793586111
+        },
+        {
+          "src_id": "100s and 100s of VCs",
+          "tgt_id": "SaaStr",
+          "description": "Relationship Description: 100s and 100s of VCs attend the SaaStr conference to invest in promising startups.",
+          "keywords": "Invest,Relationship Keywords: Attend",
+          "weight": 1.0,
+          "source_id": "gd_6bdde8bd37b55a83f475e364-chunk-000",
+          "file_path": "gd_6bdde8bd37b55a83f475e364",
+          "created_at": 1793513345
+        },
+        {
+          "src_id": "Private Companies",
+          "tgt_id": "VCs",
+          "description": "VCs have high expectations for private companies.",
+          "keywords": "Expectation",
+          "weight": 1.0,
+          "source_id": "gd_249ae5f1a28ad2b6389c7b37-chunk-004",
+          "file_path": "gd_249ae5f1a28ad2b6389c7b37",
+          "created_at": 1793622559
+        },
+        {
+          "src_id": "SaaS",
+          "tgt_id": "VCs",
+          "description": "Venture capital firms have reduced investment in non-AI SaaS companies.<SEP>relationship_description: VCs give up on slow-growth SaaS companies and focus on AI investments.<SEP>SaaS multiples are still higher than where they were from 2010-2017, which is a concern for VCs.",
+          "keywords": "Checked out,Elevated Multiples,Focus,relationship_keywords: Give up",
+          "weight": 4.0,
+          "source_id": "gd_995edd43bb903497883c63ce-chunk-000<SEP>gd_3d2b5a48418908e312d216b5-chunk-000<SEP>gd_bb94764426258ca6a129d4a8-chunk-001",
+          "file_path": "gd_995edd43bb903497883c63ce<SEP>gd_3d2b5a48418908e312d216b5<SEP>gd_bb94764426258ca6a129d4a8",
+          "created_at": 1793628370
+        },
+        {
+          "src_id": "2023",
+          "tgt_id": "VCs",
+          "description": "There's a lot of optimism in here, especially for later in 2023<SEP>relationship_description=VCs are getting more and more nervous that no one is going to write the next check anymore.",
+          "keywords": "Fundraising,lot,optimism,relationship_keywords=Challenge",
+          "weight": 2.0,
+          "source_id": "gd_408cdcbe6729fea2abaab084-chunk-001<SEP>gd_35db7b4ad7a78a616a0baa36-chunk-000",
+          "file_path": "gd_408cdcbe6729fea2abaab084<SEP>gd_35db7b4ad7a78a616a0baa36",
+          "created_at": 1793527794
+        },
+        {
+          "src_id": "OpenAI",
+          "tgt_id": "VCs",
+          "description": "VCs are investing in OpenAI, which is a portfolio company of LPs.<SEP>VCs look for startups that are category winners, like OpenAI in the AI vertical.",
+          "keywords": "Category Winner,investment,portfolio",
+          "weight": 2.0,
+          "source_id": "gd_1a7fb29168de5435fd66465b-chunk-002<SEP>gd_249ae5f1a28ad2b6389c7b37-chunk-007",
+          "file_path": "gd_1a7fb29168de5435fd66465b<SEP>gd_249ae5f1a28ad2b6389c7b37",
+          "created_at": 1793622563
+        },
+        {
+          "src_id": "AI-Native Companies",
+          "tgt_id": "Public Companies",
+          "description": "VCs have high expectations for public companies.",
+          "keywords": "Expectation",
+          "weight": 1.0,
+          "source_id": "gd_249ae5f1a28ad2b6389c7b37-chunk-004",
+          "file_path": "gd_249ae5f1a28ad2b6389c7b37",
+          "created_at": 1793622559
+        },
+        {
+          "src_id": "Jason",
+          "tgt_id": "VCs",
+          "description": "Jason noted that VCs see deals they want to do once a month if they're lucky.<SEP>relationship_description: Jason argues that most VCs from the last decade are not the right people for the next decade.",
+          "keywords": "AI world,Deal-making,relationship_keywords: unnecessary",
+          "weight": 2.0,
+          "source_id": "gd_ea7005a17108c249256d6dae-chunk-009<SEP>gd_39b6f4d40075e7b8d3ea719d-chunk-015",
+          "file_path": "gd_ea7005a17108c249256d6dae<SEP>gd_39b6f4d40075e7b8d3ea719d",
+          "created_at": 1793646162
+        },
+        {
+          "src_id": "S multiples",
+          "tgt_id": "VCs",
+          "description": "The inversion of the SaaS Premium has made it difficult for VCs to beat Nasdaq.",
+          "keywords": "Causes",
+          "weight": 1.0,
+          "source_id": "gd_bd97c14fa0476835df73618f-chunk-001",
+          "file_path": "gd_bd97c14fa0476835df73618f",
+          "created_at": 1793535831
+        },
+        {
+          "src_id": "Founders",
+          "tgt_id": "VCs",
+          "description": "**Founders and Venture Capitalists (VCs) Relationship**\n\nThe relationship between founders and venture capitalists (VCs) is multifaceted and complex. Founders are seeking investment from VCs to fund their startups, which is a crucial step in their growth and development. VCs invest in and support the founders, providing them with the necessary resources to take their businesses to the next level.\n\nHowever, it is worth noting that VCs often prioritize their own interests over those of the founders and top executives in the event of a sale or liquidation. This can lead to conflicts of interest and may not always align with the founders' goals. In some cases, VCs may not actually be investing, which can be a challenge for founders who are relying on them for funding.\n\nDespite these potential challenges, the relationship between founders and VCs is also characterized by mutual support and collaboration. VCs meet with founders in the VC Lounge to network and build relationships, which can lead to valuable connections and opportunities. Founders often fund and support their startups with the help of VCs, who provide guidance and expertise to help them navigate the challenges of entrepreneurship.\n\nFounders can opt-in to meet with VCs at the 2024 SaaStr Annual, which can be an opportunity to build relationships and secure investment. Regular board meetings can also play a crucial role in securing subsequent rounds of funding, as VCs are more likely to introduce the next round if they attend these meetings. Furthermore, VCs are more likely to write a second check if they attend regular board meetings, indicating a strong commitment to the startup's success.\n\nThe relationship between founders and VCs is one of interdependence, with each party relying on the other to achieve their goals. While there may be potential conflicts and challenges, the benefits of this relationship can be significant, and it is an essential part of the startup ecosystem. Founders can make a profit and create a successful business with the help of VCs, but can also lose money if the startup fails. Similarly, VCs invest in startups and have a stake in their success, but can also lose money if the startup fails.\n\nTo secure investment and equity, founders must pitch the VC, presenting data and keeping the pitch concise. VCs expect founders to be prepared and provide clear, concise information about their startup. Ultimately, the relationship between founders and VCs is one of mutual support and collaboration, with each party working together to achieve their goals and create a successful business.\n\nIt is also worth noting that VCs interact with founders, providing support and guidance, and founders are influenced by VCs when making investment decisions. Regular communication and negotiation between VCs and founders are essential to reach a mutually beneficial agreement. VCs invest in start-ups in exchange for equity, and founders need to engage with VCs regularly to ensure they are on the same page.\n\nHowever, in some cases, VCs and founders may stop caring about the startup's growth and performance, which can be a challenge for the startup's success. Additionally, some VCs may be too manipulative or patronizing, which can create friction in the relationship. Founders should be honest and transparent with VCs to maintain a healthy relationship and trust.\n\nFounders who fundraise in summer may face less competition for VC attention and dollars. Founders often enjoy reconnecting with their first VCs and top angels. It is essential for founders to provide feedback, ideally with a score, to help them improve. Responding to investor emails quickly can help build trust and show respect. Founders should also give their best meetings room to breathe and allow for genuine chemistry to develop with VCs, as this can lead to a true partnership. Founders are often advised to share a strong pitch to get a meeting with VCs.\n\nIt is also important to note that founders should not assume that VCs will provide another check, but rather, they should assume that VCs are \"one-check-and-done.\" VCs invest in companies founded by entrepreneurs, and founders use the calculator to negotiate with VCs and plan their growth strategy. VCs use the calculator to understand the valuation and growth of founders' companies. Founders' goals must align with VCs' goals for a successful investment, and VCs need to believe that founders' goals are achievable.\n\nFounders should remember the dynamic in negotiations, where their commitment level is qualitatively different from their investors'. Founders risk everything, while VCs risk only a portion of their portfolio.\n\nIn some cases, VCs have done well in deals, but founders may not receive fair compensation. VCs often have a direct and critical approach to evaluating the company's performance, and founders must be prepared to receive feedback and criticism. Founders are putting pressure on VCs to deliver strong returns. Founders should communicate their zero cash date to VCs in every investor update to plan for a potential bridge. VCs work with founders to make investment decisions.<SEP>VCs invest in startups founded by Founders.<SEP>VCs invest in startups founded by individuals, providing them with financial support.<SEP>Founders are incentivized to stay with the company through equity provided by VCs.<SEP>relationship_description: VCs rarely block a sale to protect their preferences, as it usually ends badly for everyone.<SEP>VCs prioritize the quality of a company's $10M ARR over its growth velocity.",
+          "keywords": "Alignment,Assume,Benefited,Block Acquisition,Collaboration,Communication,Critical Approach,Data-Driven,Direct,Disappear Later,Equity,Friction,Funding,Hand-holding,Historical Imbalance,Honesty,Incentivize,Influenced By,Interaction,Introduces Next Round,Investment,Invests,Knows,Less competition for VC attention and dollars,Leverage,MRR growth,Manipulative,Negotiates Deal,Negotiation,Opt-in,Partnership,Patronizing,Pitch,Power,Presentation,Pressure,Provide advice,Relationship,Relationship Keywords: Chemistry,Relationship Keywords: Data,Relationship Keywords: Direct Answering,Relationship Keywords: Invest,Relationship Keywords: Investment,Relationship Keywords: Negotiation,Relationship Keywords: Pitch,Relationship Keywords: fund,Relationship Keywords: invest,Relationship Keywords: partnership,Relationship_keywords,Relationship_keywords: Sales,Relationship_keywords: Trust,Relationship_keywords: interact with,Relationship_keywords: invest,Relationship_keywords: meet,Relationship_keywords: pitch,Support,Supportive,Tactics,Terms,Writes Second Check,broken relationship,care,caring,collaboration,comparison,deal,decline,engaging,final meetings,first VCs,first meetings,fund,funding,future earnings,get to know,give 110%,growth,growth rate,growth_velocity,guidance,help,invest,investment,investor update,loss,meeting,metrics,middle meetings,negotiations,network,outsized valuations,predictable execution engines,preferences,priority,profit,protect,relationship_keywords: Mistake,relationship_keywords: block,relationship_keywords: communicate,relationship_keywords: investment,relationship_keywords: profit,relationship_keywords: reconnect,relationship_keywords=VC fundraising,relationship_keywords=reputation,risk profile,salary,sale,stake,support,tensions,top angels,valuation,zero cash date",
+          "weight": 80.0,
+          "source_id": "gd_11eb12a906f6fd665fab2d11-chunk-000<SEP>gd_3b1680bf5d9e4fa561a768aa-chunk-000<SEP>gd_36834ee214bcfc2b751a3463-chunk-001<SEP>gd_c959908b794f2fc5ae9ef1a8-chunk-000<SEP>gd_52580e80aacd01c8a80e48c2-chunk-001<SEP>gd_f0bd1e3339cefb99a49b38be-chunk-001<SEP>gd_df3285fbd174b768d904c41b-chunk-001<SEP>gd_ee104bb152e961ea8ba19fdc-chunk-001<SEP>gd_4f75b0a196e37ff6fef25fab-chunk-000<SEP>gd_33db139c95f5187d07f2a853-chunk-000<SEP>gd_7f1c721b2bb1bf244b51aa0c-chunk-000<SEP>gd_f40710255ec0807c839b50b6-chunk-000<SEP>gd_b9fb560509e773f69c0822bd-chunk-001<SEP>gd_ab890a3f6fa03f33cf08f29f-chunk-000<SEP>gd_6ca7cc81a9a17b7ef6f5b677-chunk-000<SEP>gd_edb617dd180778d2ae0d7d9d-chunk-000<SEP>gd_5a797c7a9ce1c480eb2813b2-chunk-000<SEP>gd_dd66530312a46b3d2e095794-chunk-000<SEP>gd_f9670466382cf7e3a98843cb-chunk-000<SEP>gd_8c776f785267de11da6d5c2a-chunk-000<SEP>gd_0db185d389f97a45ea8c228d-chunk-000<SEP>gd_386bc825ffd9d3290623d25e-chunk-000<SEP>gd_386bc825ffd9d3290623d25e-chunk-001<SEP>gd_386bc825ffd9d3290623d25e-chunk-002<SEP>gd_84b389880b4e28a3333696a3-chunk-002<SEP>gd_d036f97a47d2121009f8326f-chunk-000<SEP>gd_eaa5497166b94d21e3d704a2-chunk-000<SEP>gd_085322b364965f52c672f5d6-chunk-003<SEP>gd_956e8a0995c87d3c1371ebeb-chunk-003<SEP>gd_5218e82ee196498fcf0ff88e-chunk-002<SEP>gd_bd082df4303cd5afcd085473-chunk-000<SEP>gd_b6c9a73fc34a5325dd2c5e63-chunk-000<SEP>gd_c88aae57866bbd5d1887d219-chunk-002<SEP>gd_142c9ef5d600d437f46bbed4-chunk-000<SEP>gd_fed204635b6580cd54d93866-chunk-000<SEP>gd_15a070dc95aa3ff6e00d03e0-chunk-002<SEP>gd_3dd5c02a7eda4361172441d2-chunk-001<SEP>gd_a2a196fcdd6409c49ba31408-chunk-002<SEP>gd_a9d9de4d6e05f2263c7403ee-chunk-004<SEP>gd_16bb7285d1b65903b0405cce-chunk-003<SEP>gd_1a7fb29168de5435fd66465b-chunk-000<SEP>gd_ab2b44c18919e9af9f28a4d4-chunk-003<SEP>gd_3d2b5a48418908e312d216b5-chunk-000<SEP>gd_68ac04ba3ad5f88436c7c9a1-chunk-001<SEP>gd_68ac04ba3ad5f88436c7c9a1-chunk-002<SEP>gd_67d7970183aa4b991571839a-chunk-001<SEP>gd_df32839420b6112dc0266e66-chunk-010<SEP>gd_08ef0a08a6037c08cd1c3477-chunk-002<SEP>gd_b0ed35375cd1112218e7da45-chunk-002<SEP>gd_b0ed35375cd1112218e7da45-chunk-004<SEP>gd_73c06efd8b5772a9ba7bbdd0-chunk-000<SEP>gd_73c06efd8b5772a9ba7bbdd0-chunk-002<SEP>gd_73c06efd8b5772a9ba7bbdd0-chunk-007<SEP>gd_73c06efd8b5772a9ba7bbdd0-chunk-008<SEP>gd_2b1b8318e2ec523237dbf3e3-chunk-006",
+          "file_path": "gd_11eb12a906f6fd665fab2d11<SEP>gd_3b1680bf5d9e4fa561a768aa<SEP>gd_36834ee214bcfc2b751a3463<SEP>gd_c959908b794f2fc5ae9ef1a8<SEP>gd_52580e80aacd01c8a80e48c2<SEP>gd_f0bd1e3339cefb99a49b38be<SEP>gd_df3285fbd174b768d904c41b<SEP>gd_ee104bb152e961ea8ba19fdc<SEP>gd_4f75b0a196e37ff6fef25fab<SEP>gd_33db139c95f5187d07f2a853<SEP>gd_7f1c721b2bb1bf244b51aa0c<SEP>gd_f40710255ec0807c839b50b6<SEP>gd_b9fb560509e773f69c0822bd<SEP>gd_ab890a3f6fa03f33cf08f29f<SEP>gd_6ca7cc81a9a17b7ef6f5b677<SEP>gd_edb617dd180778d2ae0d7d9d<SEP>gd_5a797c7a9ce1c480eb2813b2<SEP>gd_dd66530312a46b3d2e095794<SEP>gd_f9670466382cf7e3a98843cb<SEP>gd_8c776f785267de11da6d5c2a<SEP>gd_0db185d389f97a45ea8c228d<SEP>gd_386bc825ffd9d3290623d25e<SEP>gd_84b389880b4e28a3333696a3<SEP>gd_d036f97a47d2121009f8326f<SEP>gd_eaa5497166b94d21e3d704a2<SEP>gd_085322b364965f52c672f5d6<SEP>gd_956e8a0995c87d3c1371ebeb<SEP>gd_5218e82ee196498fcf0ff88e<SEP>gd_bd082df4303cd5afcd085473<SEP>gd_b6c9a73fc34a5325dd2c5e63<SEP>gd_c88aae57866bbd5d1887d219<SEP>gd_142c9ef5d600d437f46bbed4<SEP>gd_fed204635b6580cd54d93866<SEP>gd_15a070dc95aa3ff6e00d03e0<SEP>gd_3dd5c02a7eda4361172441d2<SEP>gd_a2a196fcdd6409c49ba31408<SEP>gd_a9d9de4d6e05f2263c7403ee<SEP>gd_16bb7285d1b65903b0405cce<SEP>gd_1a7fb29168de5435fd66465b<SEP>gd_ab2b44c18919e9af9f28a4d4<SEP>gd_3d2b5a48418908e312d216b5<SEP>gd_68ac04ba3ad5f88436c7c9a1<SEP>gd_67d7970183aa4b991571839a<SEP>gd_df32839420b6112dc0266e66<SEP>gd_08ef0a08a6037c08cd1c3477<SEP>gd_b0ed35375cd1112218e7da45<SEP>gd_73c06efd8b5772a9ba7bbdd0<SEP>gd_2b1b8318e2ec523237dbf3e3",
+          "created_at": 1793640446
+        },
+        {
+          "src_id": "Customers",
+          "tgt_id": "VCs",
+          "description": "Relationships between customers and VCs are built on high NPS and low CAC.",
+          "keywords": "High NPS,Low CAC",
+          "weight": 1.0,
+          "source_id": "gd_cdb688c70f3a971827ac4543-chunk-001",
+          "file_path": "gd_cdb688c70f3a971827ac4543",
+          "created_at": 1793589349
+        },
+        {
+          "src_id": "Salesforce",
+          "tgt_id": "VCs",
+          "description": "expectations of insane growth.",
+          "keywords": "expectations",
+          "weight": 1.0,
+          "source_id": "gd_53d1d4d7cbdb83f9dd2abc9c-chunk-001",
+          "file_path": "gd_53d1d4d7cbdb83f9dd2abc9c",
+          "created_at": 1793518678
+        },
+        {
+          "src_id": "Revenue Multiples",
+          "tgt_id": "Venture Capital",
+          "description": "Revenue multiples are way down, making it hard for VCs to make money.",
+          "keywords": "Decline",
+          "weight": 1.0,
+          "source_id": "gd_24e298cda6ab82b9dd6500f8-chunk-000",
+          "file_path": "gd_24e298cda6ab82b9dd6500f8",
+          "created_at": 1793527017
+        },
+        {
+          "src_id": "Company",
+          "tgt_id": "VCs",
+          "description": "VCs are over-indexing on outlier growth rates.",
+          "keywords": "outlier growth rates",
+          "weight": 1.0,
+          "source_id": "gd_2b1b8318e2ec523237dbf3e3-chunk-007",
+          "file_path": "gd_2b1b8318e2ec523237dbf3e3",
+          "created_at": 1793640446
+        },
+        {
+          "src_id": "Public Markets Arent the Enemy",
+          "tgt_id": "Public investors",
+          "description": "relationship_description: Public investors can be beneficial for companies if properly managed.",
+          "keywords": "growth-stage VCs,intrusive,relationship_keywords: public investors",
+          "weight": 1.0,
+          "source_id": "gd_057e49bf191f27538afc36dc-chunk-007",
+          "file_path": "gd_057e49bf191f27538afc36dc",
+          "created_at": 1793629788
+        },
+        {
+          "src_id": "Founder",
+          "tgt_id": "VCs",
+          "description": "**Founder-Venture Capital (VC) Relationship**\n\nThe founder-VC relationship is a crucial aspect of startup development, where VCs provide guidance and support to founders in exchange for equity. VCs serve as mentors and guides, offering advice and assistance on fundraising decisions, which can be a complex and challenging process. However, it is essential to note that VCs' advice may be biased, as their primary goal is to protect their investment.\n\nFounders must demonstrate their capabilities and vision to VCs, who need to trust them and their team to execute their plan successfully. In fact, VCs have a significant stake in the startup's success, as they prioritize receiving their investment back in case of liquidation, while founders focus on receiving retention payments. This dynamic highlights the importance of building a strong relationship between founders and VCs.\n\nThroughout the process, founders must be prepared to pitch their idea multiple times, as seen in the case of one founder who pitched 110 times before securing investment. Additionally, VCs enable founders to have high burn rates, which can be a double-edged sword, as it allows for rapid growth but also increases the risk of failure.\n\nUltimately, the founder-VC relationship is built on trust, where VCs rely on founders to execute their vision and make informed decisions. By understanding the complexities and nuances of this relationship, founders can better navigate the challenges of securing investment and building a successful startup.",
+          "keywords": "110 times,Advice,Guidance,Investment,Mentorship,Pitched,Relationship Keywords: priority,Trust,high burn,preference,relationship_keywords=enable",
+          "weight": 8.0,
+          "source_id": "gd_2f116f02b14cdfaa4b81e2d2-chunk-001<SEP>gd_f0bd1e3339cefb99a49b38be-chunk-000<SEP>gd_86e630050935a1edf9737112-chunk-000<SEP>gd_caee282f4a0f013f91bbda7e-chunk-000<SEP>gd_3dd5c02a7eda4361172441d2-chunk-000<SEP>gd_3dd5c02a7eda4361172441d2-chunk-002<SEP>gd_73c06efd8b5772a9ba7bbdd0-chunk-001",
+          "file_path": "gd_2f116f02b14cdfaa4b81e2d2<SEP>gd_f0bd1e3339cefb99a49b38be<SEP>gd_86e630050935a1edf9737112<SEP>gd_caee282f4a0f013f91bbda7e<SEP>gd_3dd5c02a7eda4361172441d2<SEP>gd_73c06efd8b5772a9ba7bbdd0",
+          "created_at": 1793638398
+        },
+        {
+          "src_id": "Top-tier businesses",
+          "tgt_id": "VCs",
+          "description": "relationship_description: VCs provided a second check to top-tier businesses to help them avoid a write-off during the COVID-19 pandemic.",
+          "keywords": "avoid write-off,relationship_keywords: provide funding,second check",
+          "weight": 1.0,
+          "source_id": "gd_68ac04ba3ad5f88436c7c9a1-chunk-002",
+          "file_path": "gd_68ac04ba3ad5f88436c7c9a1",
+          "created_at": 1793599131
+        },
+        {
+          "src_id": "CEO",
+          "tgt_id": "VCs",
+          "description": "**CEO-Venture Capital (VC) Relationship**\n\nThe CEO-Venture Capital (VC) relationship is a crucial aspect of startup fundraising. The CEO gets to know the VCs, and this initial interaction is often the first step in securing investment. In fact, research suggests that 50% of fundraising efforts involve the VCs getting to know the CEO. This relationship is built on the CEO's ability to pitch the VC, as VCs expect the CEO to present a compelling investment opportunity.\n\nWhen VCs don't trust each other, they may engage in a blame game against the CEO, particularly in times of financial difficulty. However, the CEO must pitch the VC to secure investment, and VCs decide whether to invest in a startup based on the CEO's pitch. This pitch is often the initial point of contact between the CEO and VCs, as the CEO must pitch VCs directly to initiate the fundraising process.\n\nThe CEO's pitch is a critical component of the CEO-VC relationship, as VCs expect a clear and compelling presentation of the investment opportunity. The CEO must be able to effectively communicate the startup's value proposition, growth potential, and financial projections to secure investment. By building a strong relationship with VCs and delivering a persuasive pitch, the CEO can increase the chances of securing funding and driving the startup's growth.",
+          "keywords": "Blame Game,CEO,Decides,Investment,Pitches,Relationship Keywords: Pitch,importance,interaction,know,meet,relationship_keywords: getting",
+          "weight": 8.0,
+          "source_id": "gd_81a8fb81aa8b94288300e068-chunk-002<SEP>gd_458c9690935002d5deb59788-chunk-001<SEP>gd_7f1c721b2bb1bf244b51aa0c-chunk-000<SEP>gd_dd66530312a46b3d2e095794-chunk-000<SEP>gd_dd66530312a46b3d2e095794-chunk-001<SEP>gd_24f21a5dbfdfd8e557428dbe-chunk-000",
+          "file_path": "gd_81a8fb81aa8b94288300e068<SEP>gd_458c9690935002d5deb59788<SEP>gd_7f1c721b2bb1bf244b51aa0c<SEP>gd_dd66530312a46b3d2e095794<SEP>gd_24f21a5dbfdfd8e557428dbe",
+          "created_at": 1793510647
+        },
+        {
+          "src_id": "Secondaries",
+          "tgt_id": "VCs",
+          "description": "VCs are involved in secondaries.",
+          "keywords": "involved,risk",
+          "weight": 1.0,
+          "source_id": "gd_fc47ef364dc12c0df2188b60-chunk-000",
+          "file_path": "gd_fc47ef364dc12c0df2188b60",
+          "created_at": 1793506934
+        },
+        {
+          "src_id": "SaaStr Annual",
+          "tgt_id": "VCs",
+          "description": "The 2024 Founder+VC Brunch at SaaStr Annual is targeting VCs.<SEP>The VCs are attending the 2024 SaaStr Annual.<SEP>VCs attend SaaStr Annual to meet founders.<SEP>Relationship Description: VCs attend the SaaStr Annual conference to network with SaaS companies and invest in promising startups.",
+          "keywords": "Attending,Invest,Network,Relationship Keywords: Attend,attendee,target,target audience",
+          "weight": 5.0,
+          "source_id": "gd_8e71f90020a636fbd18c7c85-chunk-000<SEP>gd_ee104bb152e961ea8ba19fdc-chunk-001<SEP>gd_ec98065364cfc525c93b67ce-chunk-001<SEP>gd_6bdde8bd37b55a83f475e364-chunk-000",
+          "file_path": "gd_8e71f90020a636fbd18c7c85<SEP>gd_ee104bb152e961ea8ba19fdc<SEP>gd_ec98065364cfc525c93b67ce<SEP>gd_6bdde8bd37b55a83f475e364",
+          "created_at": 1793513345
+        },
+        {
+          "src_id": "Negative Feedback",
+          "tgt_id": "VCs",
+          "description": "VCs are concerned about negative feedback about the founder or team.",
+          "keywords": "Concern",
+          "weight": 1.0,
+          "source_id": "gd_3dd5c02a7eda4361172441d2-chunk-002",
+          "file_path": "gd_3dd5c02a7eda4361172441d2",
+          "created_at": 1793566061
+        },
+        {
+          "src_id": "Jason Lemkin",
+          "tgt_id": "VCs",
+          "description": "VCs are involved with Jason Lemkin.",
+          "keywords": "host,involved",
+          "weight": 1.0,
+          "source_id": "gd_fc47ef364dc12c0df2188b60-chunk-000",
+          "file_path": "gd_fc47ef364dc12c0df2188b60",
+          "created_at": 1793506934
+        },
+        {
+          "src_id": "TripActions",
+          "tgt_id": "VCs",
+          "description": "relationship_description: VCs provided a second check to TripActions to help them avoid a write-off during the COVID-19 pandemic.",
+          "keywords": "avoid write-off,relationship_keywords: provide funding,second check",
+          "weight": 1.0,
+          "source_id": "gd_68ac04ba3ad5f88436c7c9a1-chunk-002",
+          "file_path": "gd_68ac04ba3ad5f88436c7c9a1",
+          "created_at": 1793599131
+        },
+        {
+          "src_id": "ARR",
+          "tgt_id": "VCs",
+          "description": "Expectation of high growth rates from VCs at $10m ARR<SEP>VCs care about ARR.",
+          "keywords": "care_about,growth,high",
+          "weight": 2.0,
+          "source_id": "gd_408cdcbe6729fea2abaab084-chunk-001<SEP>gd_999472ab9bf390630ebf1126-chunk-000",
+          "file_path": "gd_408cdcbe6729fea2abaab084<SEP>gd_999472ab9bf390630ebf1126",
+          "created_at": 1793534074
+        },
+        {
+          "src_id": "Decent Growth",
+          "tgt_id": "VCs",
+          "description": "VCs do not want to take the risk on decent growth or metrics without signs of being a unicorn.",
+          "keywords": "Risk",
+          "weight": 1.0,
+          "source_id": "gd_8c776f785267de11da6d5c2a-chunk-000",
+          "file_path": "gd_8c776f785267de11da6d5c2a",
+          "created_at": 1793511771
+        },
+        {
+          "src_id": "Anthropic",
+          "tgt_id": "VCs",
+          "description": "VCs fund Anthropic based on its potential for growth and profitability.",
+          "keywords": "Investment",
+          "weight": 1.0,
+          "source_id": "gd_0488dbe0d1821eacec1cd206-chunk-007",
+          "file_path": "gd_0488dbe0d1821eacec1cd206",
+          "created_at": 1793643368
+        },
+        {
+          "src_id": "AirBnb",
+          "tgt_id": "VCs",
+          "description": "relationship_description: VCs provided a second check to AirBnb to help them avoid a write-off during the COVID-19 pandemic.",
+          "keywords": "avoid write-off,relationship_keywords: provide funding,second check",
+          "weight": 1.0,
+          "source_id": "gd_68ac04ba3ad5f88436c7c9a1-chunk-002",
+          "file_path": "gd_68ac04ba3ad5f88436c7c9a1",
+          "created_at": 1793599131
+        },
+        {
+          "src_id": "Customer",
+          "tgt_id": "VCs",
+          "description": "VCs invest in startups that increase usage of their product or service by customers.",
+          "keywords": "Usage",
+          "weight": 1.0,
+          "source_id": "gd_999472ab9bf390630ebf1126-chunk-001",
+          "file_path": "gd_999472ab9bf390630ebf1126",
+          "created_at": 1793534074
+        },
+        {
+          "src_id": "Risk",
+          "tgt_id": "VCs",
+          "description": "VCs are willing to take some risk on potential unicorns.<SEP>VCs are responsible for managing the risk of investments, and risk is a possibility that an investment may not generate a return or may result in a loss.",
+          "keywords": "Tolerance,Undirected",
+          "weight": 2.0,
+          "source_id": "gd_8c776f785267de11da6d5c2a-chunk-000<SEP>gd_35db7b4ad7a78a616a0baa36-chunk-003",
+          "file_path": "gd_8c776f785267de11da6d5c2a<SEP>gd_35db7b4ad7a78a616a0baa36",
+          "created_at": 1793527798
+        },
+        {
+          "src_id": "Shopify",
+          "tgt_id": "VCs",
+          "description": "VCs won't fund businesses that are not attached to Shopify.",
+          "keywords": "won't fund",
+          "weight": 1.0,
+          "source_id": "gd_c5fd94ac349d025fb78a37d0-chunk-005",
+          "file_path": "gd_c5fd94ac349d025fb78a37d0",
+          "created_at": 1793596639
+        },
+        {
+          "src_id": "Halligan",
+          "tgt_id": "Public Investor",
+          "description": "Halligan finds public investors to be less in his shorts than VCs.",
+          "keywords": "less in shorts",
+          "weight": 1.0,
+          "source_id": "gd_057e49bf191f27538afc36dc-chunk-005",
+          "file_path": "gd_057e49bf191f27538afc36dc",
+          "created_at": 1793629788
+        },
+        {
+          "src_id": "Snowflake",
+          "tgt_id": "VCs",
+          "description": "VCs are looking to invest in startups like Snowflake, which has shown potential for hypergrowth.",
+          "keywords": "Investment",
+          "weight": 1.0,
+          "source_id": "gd_fb87546d14423eb7e21c5ce8-chunk-002",
+          "file_path": "gd_fb87546d14423eb7e21c5ce8",
+          "created_at": 1793524384
+        },
+        {
+          "src_id": "Triple, Triple, Double, Double",
+          "tgt_id": "VCs",
+          "description": "VCs look for startups that can achieve the growth metric of Triple, Triple, Double, Double.",
+          "keywords": "goal",
+          "weight": 1.0,
+          "source_id": "gd_db2a00ddbaae4ba4dae9d6b7-chunk-000",
+          "file_path": "gd_db2a00ddbaae4ba4dae9d6b7",
+          "created_at": 1793509572
+        },
+        {
+          "src_id": "Databricks",
+          "tgt_id": "VCs",
+          "description": "VCs are looking to invest in startups like Databricks, which has shown potential for hypergrowth.",
+          "keywords": "Investment",
+          "weight": 1.0,
+          "source_id": "gd_fb87546d14423eb7e21c5ce8-chunk-002",
+          "file_path": "gd_fb87546d14423eb7e21c5ce8",
+          "created_at": 1793524384
+        },
+        {
+          "src_id": "Many VCs",
+          "tgt_id": "We-Lost-Money-On-This-Before Risk",
+          "description": "Many VCs are hesitant to invest due to past losses.",
+          "keywords": "Hesitant to Invest",
+          "weight": 1.0,
+          "source_id": "gd_69a8fe4b02c060a542e2cb6c-chunk-003",
+          "file_path": "gd_69a8fe4b02c060a542e2cb6c",
+          "created_at": 1793625896
+        },
+        {
+          "src_id": "Companies",
+          "tgt_id": "VCs",
+          "description": "VCs are investing in Companies.",
+          "keywords": "Investing",
+          "weight": 1.0,
+          "source_id": "gd_3f3546419c8af125d66414d7-chunk-002",
+          "file_path": "gd_3f3546419c8af125d66414d7",
+          "created_at": 1793517454
+        },
+        {
+          "src_id": "Product",
+          "tgt_id": "VCs",
+          "description": "High Growth, VCs will be looking for strong growth even at $10k-$20k MRR.<SEP>VCs invest in startups that expand their product or service offerings into new markets or segments.<SEP>VCs assess the product's potential to meet the needs of its target market.",
+          "keywords": "Assessment,Expansion,MRR",
+          "weight": 3.0,
+          "source_id": "gd_aedced4d666c2a39627a1d0e-chunk-001<SEP>gd_999472ab9bf390630ebf1126-chunk-001<SEP>gd_3dd5c02a7eda4361172441d2-chunk-002",
+          "file_path": "gd_aedced4d666c2a39627a1d0e<SEP>gd_999472ab9bf390630ebf1126<SEP>gd_3dd5c02a7eda4361172441d2",
+          "created_at": 1793566061
+        },
+        {
+          "src_id": "Figma",
+          "tgt_id": "VCs",
+          "description": "VCs invest in companies with high demand and potential for growth, like Figma<SEP>Figma had a problem with quirky and misaligned venture capital investors",
+          "keywords": "Investment Keywords,problem",
+          "weight": 2.0,
+          "source_id": "gd_69a8fe4b02c060a542e2cb6c-chunk-005<SEP>gd_057e49bf191f27538afc36dc-chunk-004",
+          "file_path": "gd_69a8fe4b02c060a542e2cb6c<SEP>gd_057e49bf191f27538afc36dc",
+          "created_at": 1793629788
+        },
+        {
+          "src_id": "Team",
+          "tgt_id": "VCs",
+          "description": "VCs evaluate the team's skills and experience to determine their potential for success.",
+          "keywords": "Evaluation",
+          "weight": 1.0,
+          "source_id": "gd_3dd5c02a7eda4361172441d2-chunk-002",
+          "file_path": "gd_3dd5c02a7eda4361172441d2",
+          "created_at": 1793566061
+        },
+        {
+          "src_id": "VCs",
+          "tgt_id": "Zoom",
+          "description": "VCs have become comfortable investing over Zoom, allowing them to invest faster and more efficiently.<SEP>Relationship_description: VCs use Zoom for pitches.",
+          "keywords": "Relationship_keywords: used for pitches,adoption,comfort",
+          "weight": 2.0,
+          "source_id": "gd_87e4169fe38c1cc0f4c4cb5f-chunk-000<SEP>gd_ab2b44c18919e9af9f28a4d4-chunk-000",
+          "file_path": "gd_87e4169fe38c1cc0f4c4cb5f<SEP>gd_ab2b44c18919e9af9f28a4d4",
+          "created_at": 1793588135
+        },
+        {
+          "src_id": "Startups",
+          "tgt_id": "VCs",
+          "description": "**Startups and Venture Capitalists (VCs)**\n\nVenture Capitalists (VCs) play a crucial role in the startup ecosystem, providing essential funding to innovative companies in exchange for equity. When evaluating potential investments, VCs typically consider specific criteria, including revenue growth and potential for scalability. Specifically, VCs often seek startups that have the potential to reach $100 million or more in revenue within a 7-10 year timeframe.\n\nHowever, it is essential to note that VCs may not always prioritize the best interests of the startup. In some cases, they may provide conflicting advice or prioritize their own interests over the company's needs. This can lead to a range of issues, including market saturation and complacency, as VCs may assume that future funding will be readily available.\n\nVCs conduct due diligence on startups before investing, which involves a thorough examination of the company's business model, financials, and growth potential. They also invest in startups in exchange for equity, which means they become part-owners of the company. In some cases, VCs have invested in startups that were affected by the pandemic, providing support and resources to help them recover.\n\nStartups must demonstrate growth to attract VC investment, and they should carefully forecast and re-forecast their zero cash date with VCs in every monthly update. VCs are involved in startup risks, and they make an initial decision within 20 minutes of the first meeting. However, it is essential for startups to be aware of the potential risks and challenges associated with VC investment and to carefully navigate the investment process to ensure a successful partnership.\n\nIn addition to providing funding, VCs can also block an acquisition if the terms are terrible for investors. Furthermore, VCs often disappear later if the startup doesn't do fairly well, which can be a significant challenge for startups. VCs also play timing games with startups, putting pressure on them to meet certain milestones and expectations.\n\nVCs use the concept of growing into valuations to simplify complex things. They invest in startups to provide funding in exchange for equity, and startups rely on VCs for investment and funding to grow and expand. VCs invest in startups that have a clear ROI and are capital-efficient, and they need to align their goals with those of the startup's founders.\n\nUltimately, the relationship between startups and VCs is complex and multifaceted. While VCs provide essential funding and expertise, they also have their own interests and priorities. Startups must be aware of these dynamics and carefully navigate the investment process to ensure a successful partnership.\n\nIt is worth noting that startups that understand data-driven decision making are getting term sheets, while others get ghosted. VCs are giving term sheets to startups that understand data-driven decision making. Additionally, VCs expect startups to achieve 10x productivity in exchange for funding, and startups seek funding from VCs. However, it is essential to clarify that VCs do not seek funding from startups, as they are the ones providing the funding in exchange for equity.<SEP>Keywords: Banging down doors, Founders, Desperately wanted",
+          "keywords": "Alignment,Are used to,Assessment,Block Acquisition,Disappear Later,Due Diligence,Equity,Evaluation,Expect,Expectation,Forecast Keywords,Fundable,Funding,Fundraising,Growth,Initial Decision,Investment,Pressure,Relationship_keywords: Funding,Seek Funding From,Term Sheets,Timing games,Undirected,conflicting advice,criteria,expectation,flooded markets with secondary liquidity,funded as pseudo-SaaS companies,funded with low gross margins,funding,growth_into_valuation,high growth rate,investment,involved,risk,stopped worrying about the next round,support",
+          "weight": 41.0,
+          "source_id": "gd_2fb5017109e363590b9c33a4-chunk-000<SEP>gd_2f116f02b14cdfaa4b81e2d2-chunk-000<SEP>gd_70b6d21359f3ae0fd46e93c8-chunk-000<SEP>gd_f0bd1e3339cefb99a49b38be-chunk-001<SEP>gd_81a8fb81aa8b94288300e068-chunk-000<SEP>gd_fc47ef364dc12c0df2188b60-chunk-000<SEP>gd_5a797c7a9ce1c480eb2813b2-chunk-001<SEP>gd_87e4169fe38c1cc0f4c4cb5f-chunk-000<SEP>gd_8c776f785267de11da6d5c2a-chunk-000<SEP>gd_386bc825ffd9d3290623d25e-chunk-001<SEP>gd_c88aae57866bbd5d1887d219-chunk-002<SEP>gd_35db7b4ad7a78a616a0baa36-chunk-001<SEP>gd_35db7b4ad7a78a616a0baa36-chunk-003<SEP>gd_43b103e757dde13a736c902e-chunk-000<SEP>gd_999472ab9bf390630ebf1126-chunk-001<SEP>gd_6c080774239412140ab932ec-chunk-003<SEP>gd_e2bce1b9c7a6125e8e0ff25b-chunk-000<SEP>gd_3dd5c02a7eda4361172441d2-chunk-001<SEP>gd_3dd5c02a7eda4361172441d2-chunk-002<SEP>gd_68ac04ba3ad5f88436c7c9a1-chunk-001<SEP>gd_67d7970183aa4b991571839a-chunk-008<SEP>gd_ec4952faf291c054baf7a979-chunk-010<SEP>gd_249ae5f1a28ad2b6389c7b37-chunk-007<SEP>gd_ed2b8d65841c247b3dbe6d97-chunk-005",
+          "file_path": "gd_2fb5017109e363590b9c33a4<SEP>gd_2f116f02b14cdfaa4b81e2d2<SEP>gd_70b6d21359f3ae0fd46e93c8<SEP>gd_f0bd1e3339cefb99a49b38be<SEP>gd_81a8fb81aa8b94288300e068<SEP>gd_fc47ef364dc12c0df2188b60<SEP>gd_5a797c7a9ce1c480eb2813b2<SEP>gd_87e4169fe38c1cc0f4c4cb5f<SEP>gd_8c776f785267de11da6d5c2a<SEP>gd_386bc825ffd9d3290623d25e<SEP>gd_c88aae57866bbd5d1887d219<SEP>gd_35db7b4ad7a78a616a0baa36<SEP>gd_43b103e757dde13a736c902e<SEP>gd_999472ab9bf390630ebf1126<SEP>gd_6c080774239412140ab932ec<SEP>gd_e2bce1b9c7a6125e8e0ff25b<SEP>gd_3dd5c02a7eda4361172441d2<SEP>gd_68ac04ba3ad5f88436c7c9a1<SEP>gd_67d7970183aa4b991571839a<SEP>gd_ec4952faf291c054baf7a979<SEP>gd_249ae5f1a28ad2b6389c7b37<SEP>gd_ed2b8d65841c247b3dbe6d97",
+          "created_at": 1793637950
+        },
+        {
+          "src_id": "Investors",
+          "tgt_id": "VCs",
+          "description": "**Investors, VCs**\n\nThe relationship between investors and venture capitalists (VCs) is multifaceted and involves a delicate balance of power and trust. In some cases, investors may lose money, while the founders and top executives may still benefit, regardless of liquidation preferences. This disparity can arise due to the complex dynamics of startup funding, where VCs invest in startups in exchange for equity, with the expectation of generating returns for their investors.\n\nVCs tend to invest in startups on behalf of their investors, providing funding and equity in exchange for a share of ownership. However, this relationship is not without its challenges. VCs should communicate with existing investors before presenting a term sheet to build trust and avoid conflict. Furthermore, VCs may overlook a period of flat growth if they see 3-4 months of strong growth, indicating a willingness to take calculated risks.\n\nIn addition to their role as investors, VCs often serve as trusted advisors, recommending later-stage investors they trust to build trust among the syndicate. This approach can help foster a sense of cooperation and shared responsibility among investors, ultimately benefiting the startup and its founders.\n\nVCs have more pattern matching experience and are looking for signs of startup success or failure. They are less dilution sensitive than other investors, which allows them to take on more risk. VCs are responsible for providing funding to startups, and investors are the ones who provide capital to startups in exchange for equity.\n\nIt's worth noting that VCs are wired to understand and expect bad news, but are spooked by out-of-the-blue surprises. This can be seen in the large number of VCs and investors who attend events, with hundreds and hundreds in attendance. Overall, the relationship between investors and VCs is built on a foundation of mutual trust and respect, with both parties working together to achieve a common goal: the success of the startup.<SEP>Investors and VCs provide financial support to companies in exchange for equity.<SEP>If existing investors aren't participating in a next round, new investors notice, sending a negative signal that can crater valuation and terms.<SEP>VCs are running a portfolio optimization algorithm in real-time, constantly reallocating capital to their highest-probability winners.<SEP>Market trends and growth stories.",
+          "keywords": "Equity,Expect Bad News,Financial Support,Follows,Fundable,Fundraising,Influenced by,Invest,Investment,Less Dilution Sensitive,Path to Better Times,Reason to Believe,Relationship Keywords: Funding,Relationship Keywords: Understand,Relationship Keywords: funding,Relationship Keywords: investment,Relationship_keywords: growth,Support,Undirected,attend,communication,equity,funding,investment,loss,pattern matching,portfolio optimization algorithm,recommendation,reserve allocation signals market position,returns,trust",
+          "weight": 19.0,
+          "source_id": "gd_3b1680bf5d9e4fa561a768aa-chunk-000<SEP>gd_5ce5a6fe45200ddaaa0c8e10-chunk-000<SEP>gd_81a8fb81aa8b94288300e068-chunk-000<SEP>gd_458c9690935002d5deb59788-chunk-002<SEP>gd_7f1c721b2bb1bf244b51aa0c-chunk-000<SEP>gd_f45b018823888cddc25f3961-chunk-000<SEP>gd_eaa5497166b94d21e3d704a2-chunk-000<SEP>gd_5218e82ee196498fcf0ff88e-chunk-002<SEP>gd_5218e82ee196498fcf0ff88e-chunk-003<SEP>gd_b6c9a73fc34a5325dd2c5e63-chunk-000<SEP>gd_c88aae57866bbd5d1887d219-chunk-002<SEP>gd_35db7b4ad7a78a616a0baa36-chunk-003<SEP>gd_02cc9b4adda4b7de1dabaa5d-chunk-000<SEP>gd_5ea880eb3548d655f51b5285-chunk-003<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-005<SEP>gd_08ef0a08a6037c08cd1c3477-chunk-002<SEP>gd_249ae5f1a28ad2b6389c7b37-chunk-015",
+          "file_path": "gd_3b1680bf5d9e4fa561a768aa<SEP>gd_5ce5a6fe45200ddaaa0c8e10<SEP>gd_81a8fb81aa8b94288300e068<SEP>gd_458c9690935002d5deb59788<SEP>gd_7f1c721b2bb1bf244b51aa0c<SEP>gd_f45b018823888cddc25f3961<SEP>gd_eaa5497166b94d21e3d704a2<SEP>gd_5218e82ee196498fcf0ff88e<SEP>gd_b6c9a73fc34a5325dd2c5e63<SEP>gd_c88aae57866bbd5d1887d219<SEP>gd_35db7b4ad7a78a616a0baa36<SEP>gd_02cc9b4adda4b7de1dabaa5d<SEP>gd_5ea880eb3548d655f51b5285<SEP>gd_2a4d7b8a58e1c3110dd4d692<SEP>gd_08ef0a08a6037c08cd1c3477<SEP>gd_249ae5f1a28ad2b6389c7b37",
+          "created_at": 1793622568
+        },
+        {
+          "src_id": "VCs",
+          "tgt_id": "You",
+          "description": "VCs expect startups to grow significantly in order to make a return on their investment.<SEP>Relationship Description: The VCs are being asked to answer questions directly and provide data-driven responses by the speaker.",
+          "keywords": "Data-Driven,Expectation,Relationship,Relationship Keywords: Direct Answering",
+          "weight": 2.0,
+          "source_id": "gd_3e9fc891239ffd34f4cf91b1-chunk-002<SEP>gd_ab2b44c18919e9af9f28a4d4-chunk-003",
+          "file_path": "gd_3e9fc891239ffd34f4cf91b1<SEP>gd_ab2b44c18919e9af9f28a4d4",
+          "created_at": 1793588143
+        },
+        {
+          "src_id": "Slack",
+          "tgt_id": "VCs",
+          "description": "VCs are looking to invest in startups like Slack, which has shown potential for hypergrowth.",
+          "keywords": "Investment",
+          "weight": 1.0,
+          "source_id": "gd_fb87546d14423eb7e21c5ce8-chunk-002",
+          "file_path": "gd_fb87546d14423eb7e21c5ce8",
+          "created_at": 1793524384
+        },
+        {
+          "src_id": "Rory",
+          "tgt_id": "VCs",
+          "description": "Rory predicted that the concentration effect will lead to fewer firms but more capital.",
+          "keywords": "Concentration effect",
+          "weight": 1.0,
+          "source_id": "gd_ea7005a17108c249256d6dae-chunk-009",
+          "file_path": "gd_ea7005a17108c249256d6dae",
+          "created_at": 1793640714
+        },
+        {
+          "src_id": "Startup",
+          "tgt_id": "VCs",
+          "description": "VCs invest in startups to generate returns on their investment.<SEP>relationship_description:VCs must also trust startups, but startups can commit fraud, making it difficult for VCs to protect themselves.<SEP>VCs fund a startup with 12 months of low growth, but require 3-4 months of strong growth before funding.<SEP>A startup needs to have 3-4 months of strong growth before being funded by VCs.<SEP>VCs invest in startups.",
+          "keywords": "Investment,Invests,funding,relationship_keywords:fraud,risk,trust",
+          "weight": 5.0,
+          "source_id": "gd_dd66530312a46b3d2e095794-chunk-000<SEP>gd_97a171e4c7a15b4d31f48df0-chunk-000<SEP>gd_df6e2ce631e37fa9f046c119-chunk-000<SEP>gd_3dd5c02a7eda4361172441d2-chunk-000",
+          "file_path": "gd_dd66530312a46b3d2e095794<SEP>gd_97a171e4c7a15b4d31f48df0<SEP>gd_df6e2ce631e37fa9f046c119<SEP>gd_3dd5c02a7eda4361172441d2",
+          "created_at": 1793566056
+        },
+        {
+          "src_id": "Market",
+          "tgt_id": "VCs",
+          "description": "VCs invest in startups that grow their market share by expanding their product or service offerings into new markets or segments.<SEP>VCs see potential in the market for the startup.<SEP>VCs analyze the market to determine its potential for growth and demand.<SEP>Relationship Description: The VCs are being mentioned as needing to understand the context of the market in which the company operates.<SEP>Market trends and growth stories.",
+          "keywords": "Analysis,Follow,Growth,Influenced by,Potential,Relationship Keywords: Context,Understanding",
+          "weight": 5.0,
+          "source_id": "gd_999472ab9bf390630ebf1126-chunk-001<SEP>gd_3dd5c02a7eda4361172441d2-chunk-000<SEP>gd_3dd5c02a7eda4361172441d2-chunk-002<SEP>gd_ab2b44c18919e9af9f28a4d4-chunk-003<SEP>gd_249ae5f1a28ad2b6389c7b37-chunk-015",
+          "file_path": "gd_999472ab9bf390630ebf1126<SEP>gd_3dd5c02a7eda4361172441d2<SEP>gd_ab2b44c18919e9af9f28a4d4<SEP>gd_249ae5f1a28ad2b6389c7b37",
+          "created_at": 1793622568
+        },
+        {
+          "src_id": "Datadog",
+          "tgt_id": "VCs",
+          "description": "VCs are telling Datadog they are geniuses.",
+          "keywords": "telling geniuses",
+          "weight": 1.0,
+          "source_id": "gd_dc18c861c82269cf5cc7e98b-chunk-003",
+          "file_path": "gd_dc18c861c82269cf5cc7e98b",
+          "created_at": 1793618516
+        },
+        {
+          "src_id": "CEOs",
+          "tgt_id": "VCs",
+          "description": "Most VCs struggle to apologize, even in their professional capacity.<SEP>Relationship_description: VCs meet with CEOs in the VC Lounge to network.<SEP>VCs are patronizing in their relationships with CEOs they invest in.<SEP>VCs should build trust with CEOs by being transparent and honest about their expectations and process.<SEP>CEOs should build trust with VCs by being transparent and honest about their product and team.<SEP>Both Venture Capitalists and Chief Executive Officers with ARR > $1m are excluded from receiving VIP passes.<SEP>relationship_description: CEOs should communicate with VCs to secure funding and support for their startups.",
+          "keywords": "Apologies Are Free,Build trust,Know your product,Relationship_keywords: meet,communication,invest,network,not_eligible,patronize,relationship_keywords: funding,support",
+          "weight": 8.0,
+          "source_id": "gd_17b19760754f113f649c8895-chunk-001<SEP>gd_52580e80aacd01c8a80e48c2-chunk-001<SEP>gd_87f9f1c85817eeb46b0ec74d-chunk-002<SEP>gd_1ae501bfdb3a7f714e292862-chunk-001<SEP>gd_5ea880eb3548d655f51b5285-chunk-005<SEP>gd_16bb7285d1b65903b0405cce-chunk-002",
+          "file_path": "gd_17b19760754f113f649c8895<SEP>gd_52580e80aacd01c8a80e48c2<SEP>gd_87f9f1c85817eeb46b0ec74d<SEP>gd_1ae501bfdb3a7f714e292862<SEP>gd_5ea880eb3548d655f51b5285<SEP>gd_16bb7285d1b65903b0405cce",
+          "created_at": 1793580287
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "VCs",
+          "description": "VCs will fund at least 1,000 AI SDR tools.",
+          "keywords": "funds",
+          "weight": 1.0,
+          "source_id": "gd_7935ec63c0428c5b7c372279-chunk-000",
+          "file_path": "gd_7935ec63c0428c5b7c372279",
+          "created_at": 1793507168
+        },
+        {
+          "src_id": "Harry Stebbings",
+          "tgt_id": "VCs",
+          "description": "VCs are involved with Harry Stebbings.<SEP>Harry Stebbings criticizes VCs for prioritizing option value over intrinsic value.",
+          "keywords": "criticizes VC model,guest,involved",
+          "weight": 2.0,
+          "source_id": "gd_fc47ef364dc12c0df2188b60-chunk-000<SEP>gd_9306d77bd848e8d41a565807-chunk-002",
+          "file_path": "gd_fc47ef364dc12c0df2188b60<SEP>gd_9306d77bd848e8d41a565807",
+          "created_at": 1793572435
+        },
+        {
+          "src_id": "VCs",
+          "tgt_id": "founders",
+          "description": "**VCs and Founders: A Comprehensive Summary**\n\nThe relationship between Venture Capitalists (VCs) and founders is multifaceted and often misunderstood. VCs and founders think that BigCos buy many startups, but this is not always the case. In reality, VCs are not interested in funding companies that are not already growing, and first-time founders often have a common misconception about what VCs fund.\n\nFounders should be aware that selling too many shares can result in giving up control, and it is essential to be more transparent with VCs. VCs want to trust and believe in the founders, and they provide investment to founders in exchange for equity. However, founders should not burn all the cash quicker than planned, as this can lead to financial instability.\n\nFounders often seek investment from VCs to support rapid growth and market pull. To build a strong partnership with VCs, founders should be open and transparent about their financial management. Founders who ask for feedback and manage their finances properly are more likely to gain respect from their VCs. This, in turn, can lead to increased financial support from VCs, as founders who manage their finances properly are less likely to run out of money in the eyes of their VCs.\n\nUltimately, the goal of VCs and founders is to create a successful and sustainable business that generates value for all stakeholders. VCs invest in start-ups, providing the necessary funding to support growth and market pull. By being transparent and open with VCs, founders can build a strong partnership that benefits both parties.<SEP>Founders seek funding from VCs.<SEP>VCs look for startups that have the potential to be outliers or unicorns.<SEP>VCs need to have conviction in a startup's potential to be a unicorn.<SEP>relationship_description=Founders seek funding from VCs, who invest in startups.<SEP>realistic<SEP>Founders raise capital from VCs.",
+          "keywords": "Cash,Control,Investment,Transparency,Trust,conviction,do not fund,feedback,financial support,fundraise,invest,investment,management,misconception,money,outliers,plan,relationship_keywords=seek funding,reputation,respect,seek_funding,think BigCos buy many startups,unicorns,used",
+          "weight": 22.0,
+          "source_id": "gd_d1423816ab12475e55e09a39-chunk-001<SEP>gd_4af809c8ff8e2354a0a664f6-chunk-000<SEP>gd_3a9e187b9b599b728aa6cbb5-chunk-002<SEP>gd_81a8fb81aa8b94288300e068-chunk-001<SEP>gd_94dacf60a04c5ef0578e1af6-chunk-000<SEP>gd_7d2adec11a535537402b762d-chunk-000<SEP>gd_5a797c7a9ce1c480eb2813b2-chunk-003<SEP>gd_eaa5497166b94d21e3d704a2-chunk-002<SEP>gd_6eb39dfa97bc0c5b2a621007-chunk-000<SEP>gd_fb87546d14423eb7e21c5ce8-chunk-000<SEP>gd_1ae501bfdb3a7f714e292862-chunk-000<SEP>gd_02cc9b4adda4b7de1dabaa5d-chunk-001<SEP>gd_708d527f092a474d63dd7bb0-chunk-002",
+          "file_path": "gd_d1423816ab12475e55e09a39<SEP>gd_4af809c8ff8e2354a0a664f6<SEP>gd_3a9e187b9b599b728aa6cbb5<SEP>gd_81a8fb81aa8b94288300e068<SEP>gd_94dacf60a04c5ef0578e1af6<SEP>gd_7d2adec11a535537402b762d<SEP>gd_5a797c7a9ce1c480eb2813b2<SEP>gd_eaa5497166b94d21e3d704a2<SEP>gd_6eb39dfa97bc0c5b2a621007<SEP>gd_fb87546d14423eb7e21c5ce8<SEP>gd_1ae501bfdb3a7f714e292862<SEP>gd_02cc9b4adda4b7de1dabaa5d<SEP>gd_708d527f092a474d63dd7bb0",
+          "created_at": 1793599358
+        },
+        {
+          "src_id": "IPO",
+          "tgt_id": "VCs",
+          "description": "VCs are looking for startups that can reach an IPO in 10 years or less.<SEP>VCs need true unicorn exits to survive, which are IPOs that result in significant returns.<SEP>VCs are expected to deliver strong returns from IPOs.<SEP>VCs often invest in companies before they go public.",
+          "keywords": "Expectation,True Unicorn Exits,goal,investment timing",
+          "weight": 4.0,
+          "source_id": "gd_db2a00ddbaae4ba4dae9d6b7-chunk-000<SEP>gd_704a724ff302ab18043fedf2-chunk-000<SEP>gd_1a7fb29168de5435fd66465b-chunk-000<SEP>gd_7849200fd59aa068293f37a0-chunk-004",
+          "file_path": "gd_db2a00ddbaae4ba4dae9d6b7<SEP>gd_704a724ff302ab18043fedf2<SEP>gd_1a7fb29168de5435fd66465b<SEP>gd_7849200fd59aa068293f37a0",
+          "created_at": 1793586111
+        },
+        {
+          "src_id": "SaaStr.ai",
+          "tgt_id": "VCs",
+          "description": "**SaaStr.ai and Venture Capitalists (VCs)**\n\nSaaStr.ai is a platform that facilitates connections between founders and venture capitalists (VCs) in real-time. The primary function of SaaStr.ai is to match founders with the most suitable VCs for funding opportunities. This is achieved through a process that helps founders obtain accurate valuations for their companies, enabling them to engage in informed funding conversations.\n\nIn addition to matchmaking, SaaStr.ai provides tools and resources to support the growth and funding of companies. This includes introducing startups to VCs, thereby increasing the quality of deal flow. By streamlining the process of finding and connecting with potential investors, SaaStr.ai aims to make it easier for founders to secure funding for their ventures.\n\nThe platform's functionality is designed to benefit both founders and VCs. For founders, SaaStr.ai offers a means to access a curated pool of potential investors, reducing the time and effort required to find suitable funding partners. For VCs, the platform provides a streamlined way to discover and engage with promising startups, potentially leading to more successful investment opportunities.\n\nOverall, SaaStr.ai plays a crucial role in facilitating connections between founders and VCs, thereby contributing to the growth and development of startups and the venture capital ecosystem as a whole.<SEP>A platform for startups to upload their pitch deck and receive a Traction Score and VC Fundability Score with specific recommendations.",
+          "keywords": "Introduces,Matches,Offers,Provides,Provides accurate valuations for funding conversations,Provides funding opportunities for startups,founders,match,operating system,relationship_keywords: route",
+          "weight": 10.0,
+          "source_id": "gd_709d7e8e2108c4354bc8e875-chunk-001<SEP>gd_2ae4837fbbe4b5fbc2b412bd-chunk-004<SEP>gd_15a070dc95aa3ff6e00d03e0-chunk-000<SEP>gd_9766ff5367bd30c141196a4c-chunk-004<SEP>gd_9766ff5367bd30c141196a4c-chunk-005<SEP>gd_5a82a5a11309c93654f577f0-chunk-004<SEP>gd_187175124950b21b5f4d57e6-chunk-004<SEP>gd_2b1b8318e2ec523237dbf3e3-chunk-011",
+          "file_path": "gd_709d7e8e2108c4354bc8e875<SEP>gd_2ae4837fbbe4b5fbc2b412bd<SEP>gd_15a070dc95aa3ff6e00d03e0<SEP>gd_9766ff5367bd30c141196a4c<SEP>gd_5a82a5a11309c93654f577f0<SEP>gd_187175124950b21b5f4d57e6<SEP>gd_2b1b8318e2ec523237dbf3e3",
+          "created_at": 1793640446
+        },
+        {
+          "src_id": "Author",
+          "tgt_id": "VCs",
+          "description": "Provided a billion+ cash exit to investors<SEP>VCs provided funding to Author's companies.<SEP>The author has had interactions with VCs, who invest in startups in exchange for equity.<SEP>The author partnered with VCs.",
+          "keywords": "Funded,Invested in,Partnered,made investors lots of money,relationship_keywords: investment,venture capitalists",
+          "weight": 4.0,
+          "source_id": "gd_c7085eab75e6259fc532726b-chunk-000<SEP>gd_94ada0fbda73f8e5d06a49e6-chunk-000<SEP>gd_aec80d112659415e5f81b06f-chunk-000<SEP>gd_1475e3e6808bcf1fde45f610-chunk-001",
+          "file_path": "gd_c7085eab75e6259fc532726b<SEP>gd_94ada0fbda73f8e5d06a49e6<SEP>gd_aec80d112659415e5f81b06f<SEP>gd_1475e3e6808bcf1fde45f610",
+          "created_at": 1793564261
+        },
+        {
+          "src_id": "I",
+          "tgt_id": "VCs",
+          "description": "The speaker states that the VCs bothered to come to the closing dinner.<SEP>The author, as a VC, lowered the standards for investments and hiring, leading to negative consequences.",
+          "keywords": "bothered,lowered the bar",
+          "weight": 2.0,
+          "source_id": "gd_019a6f50cee0326c5feb06b7-chunk-000<SEP>gd_70b6d21359f3ae0fd46e93c8-chunk-000",
+          "file_path": "gd_019a6f50cee0326c5feb06b7<SEP>gd_70b6d21359f3ae0fd46e93c8",
+          "created_at": 1793498120
+        },
+        {
+          "src_id": "ServiceNow",
+          "tgt_id": "VCs",
+          "description": "expectations of insane growth.",
+          "keywords": "expectations",
+          "weight": 1.0,
+          "source_id": "gd_53d1d4d7cbdb83f9dd2abc9c-chunk-001",
+          "file_path": "gd_53d1d4d7cbdb83f9dd2abc9c",
+          "created_at": 1793518678
+        },
+        {
+          "src_id": "Prospects",
+          "tgt_id": "VCs",
+          "description": "VCs invest in prospects in exchange for equity.",
+          "keywords": "Funding,Investment",
+          "weight": 1.0,
+          "source_id": "gd_6ca7cc81a9a17b7ef6f5b677-chunk-000",
+          "file_path": "gd_6ca7cc81a9a17b7ef6f5b677",
+          "created_at": 1793504940
+        },
+        {
+          "src_id": "SaaS companies",
+          "tgt_id": "VCs",
+          "description": "VCs are increasingly asking why to fund SaaS companies when they can fund AI startups.",
+          "keywords": "displacement,threat",
+          "weight": 1.0,
+          "source_id": "gd_8a750106d4513616691b5198-chunk-004",
+          "file_path": "gd_8a750106d4513616691b5198",
+          "created_at": 1793609596
+        },
+        {
+          "src_id": "Adobe",
+          "tgt_id": "VCs",
+          "description": "expectations of insane growth.",
+          "keywords": "expectations",
+          "weight": 1.0,
+          "source_id": "gd_53d1d4d7cbdb83f9dd2abc9c-chunk-001",
+          "file_path": "gd_53d1d4d7cbdb83f9dd2abc9c",
+          "created_at": 1793518678
+        },
+        {
+          "src_id": "Notion",
+          "tgt_id": "VCs",
+          "description": "VCs are looking to invest in startups like Notion, which has shown potential for hypergrowth.",
+          "keywords": "Investment",
+          "weight": 1.0,
+          "source_id": "gd_fb87546d14423eb7e21c5ce8-chunk-002",
+          "file_path": "gd_fb87546d14423eb7e21c5ce8",
+          "created_at": 1793524384
+        },
+        {
+          "src_id": "LinkedIn",
+          "tgt_id": "VCs",
+          "description": "LinkedIn and VCs are related to investments.<SEP>VCs prefer candidates with a strong LinkedIn presence, indicating a professional online presence and networking skills.<SEP>VCs pattern match with traditional LinkedIn profiles, favoring candidates with a strong online presence.",
+          "keywords": "Investment,Pattern Match,Preference",
+          "weight": 3.0,
+          "source_id": "gd_33efe7307fb3edd348590ee0-chunk-001<SEP>gd_142c9ef5d600d437f46bbed4-chunk-002",
+          "file_path": "gd_33efe7307fb3edd348590ee0<SEP>gd_142c9ef5d600d437f46bbed4",
+          "created_at": 1793558011
+        },
+        {
+          "src_id": "Start-up",
+          "tgt_id": "VCs",
+          "description": "The start-up received funding from the VCs<SEP>relationship_description: VCs invest in start-ups and have a stake in their success, but can also lose money if the start-up fails.<SEP>A start-up seeking financial support from venture capitalists.<SEP>Financial support from venture capitalists to a start-up.",
+          "keywords": "Funded,loss,profit,provide_funding,relationship_keywords: investment,seek_funding,stake",
+          "weight": 4.0,
+          "source_id": "gd_6961e7279c1cf1e279a09fbd-chunk-000<SEP>gd_33db139c95f5187d07f2a853-chunk-000<SEP>gd_676ceb1d508acba0f3613cd1-chunk-002",
+          "file_path": "gd_6961e7279c1cf1e279a09fbd<SEP>gd_33db139c95f5187d07f2a853<SEP>gd_676ceb1d508acba0f3613cd1",
+          "created_at": 1793519325
+        },
+        {
+          "src_id": "Investor",
+          "tgt_id": "VCs",
+          "description": "Relationship Description: VCs invest in startups and provide funding.<SEP>Investors provide capital for investments in exchange for equity or returns.<SEP>VCs choose to avoid creating waves about their opinions or feedback.<SEP>The VC and investor collaborate to provide funding to the startup.",
+          "keywords": "Avoidance,Capital,Fundraise,Investment,Relationship Keywords: Invest,Relationship_keywords: funding,Silence,equity,investment",
+          "weight": 4.0,
+          "source_id": "gd_6f932cb77ffe2cc35bb954a5-chunk-000<SEP>gd_84b389880b4e28a3333696a3-chunk-003<SEP>gd_8721a060426f25a8026402d1-chunk-002",
+          "file_path": "gd_6f932cb77ffe2cc35bb954a5<SEP>gd_84b389880b4e28a3333696a3<SEP>gd_8721a060426f25a8026402d1",
+          "created_at": 1793582525
+        },
+        {
+          "src_id": "Procore",
+          "tgt_id": "VCs",
+          "description": "VCs fund Procore after it gained traction with the release of the iPad.",
+          "keywords": "funding",
+          "weight": 1.0,
+          "source_id": "gd_df6e2ce631e37fa9f046c119-chunk-000",
+          "file_path": "gd_df6e2ce631e37fa9f046c119",
+          "created_at": 1793522271
+        },
+        {
+          "src_id": "Monday",
+          "tgt_id": "VCs",
+          "description": "unit economics for small ACV deals.",
+          "keywords": "struggled to understand",
+          "weight": 1.0,
+          "source_id": "gd_f9d8976f1578b772c33681e5-chunk-001",
+          "file_path": "gd_f9d8976f1578b772c33681e5",
+          "created_at": 1793558042
+        },
+        {
+          "src_id": "AI agents",
+          "tgt_id": "VCs",
+          "description": "The AI agents can match founders to VCs.",
+          "keywords": "Can match,Match founders to",
+          "weight": 1.0,
+          "source_id": "gd_28e630372aae90eb9315f28e-chunk-000",
+          "file_path": "gd_28e630372aae90eb9315f28e",
+          "created_at": 1793495351
+        },
+        {
+          "src_id": "Nvidia",
+          "tgt_id": "VCs",
+          "description": "Nvidia's success validates VCs' investment decisions.<SEP>VCs see validation in Nvidia's success.",
+          "keywords": "Validation",
+          "weight": 2.0,
+          "source_id": "gd_0488dbe0d1821eacec1cd206-chunk-008",
+          "file_path": "gd_0488dbe0d1821eacec1cd206",
+          "created_at": 1793643374
+        },
+        {
+          "src_id": "Growth",
+          "tgt_id": "VCs",
+          "description": "VCs care about the growth of the startups they invest in.<SEP>expectations of insane growth.<SEP>VCs desire to see growth in start-ups before investing.<SEP>VCs help startups achieve growth.",
+          "keywords": "Desire,Expectation,Impact,care,expectations",
+          "weight": 4.0,
+          "source_id": "gd_f9670466382cf7e3a98843cb-chunk-000<SEP>gd_53d1d4d7cbdb83f9dd2abc9c-chunk-001<SEP>gd_d639410291b780c50bed6b5e-chunk-000<SEP>gd_68ac04ba3ad5f88436c7c9a1-chunk-001",
+          "file_path": "gd_f9670466382cf7e3a98843cb<SEP>gd_53d1d4d7cbdb83f9dd2abc9c<SEP>gd_d639410291b780c50bed6b5e<SEP>gd_68ac04ba3ad5f88436c7c9a1",
+          "created_at": 1793599131
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "VCs",
+          "description": "VCs raised a record-breaking amount in 2021",
+          "keywords": "Fundraising",
+          "weight": 1.0,
+          "source_id": "gd_90f0625e16d8673be75aae16-chunk-000",
+          "file_path": "gd_90f0625e16d8673be75aae16",
+          "created_at": 1793627654
+        },
+        {
+          "src_id": "SaaStr AI",
+          "tgt_id": "VCs",
+          "description": "SaaStr AI provides a pitch deck review tool to VCs to analyze pitch decks.<SEP>VCs use SaaStr AI to benchmark startups and determine their funding odds.<SEP>VCs use SaaStr AI to benchmark and evaluate startups.",
+          "keywords": "Pitch deck review,Provides,Uses,benchmarking,evaluation",
+          "weight": 3.0,
+          "source_id": "gd_249ae5f1a28ad2b6389c7b37-chunk-005<SEP>gd_249ae5f1a28ad2b6389c7b37-chunk-007<SEP>gd_249ae5f1a28ad2b6389c7b37-chunk-016",
+          "file_path": "gd_249ae5f1a28ad2b6389c7b37",
+          "created_at": 1793622559
+        },
+        {
+          "src_id": "O'Driscoll",
+          "tgt_id": "VCs",
+          "description": "O'Driscoll's statement about limited partners being on the back foot behind the new trend is a commentary on the changing role of limited partners in venture capital.",
+          "keywords": "limited partners,venture capital",
+          "weight": 1.0,
+          "source_id": "gd_57de1d1dfc0b96aff9b97b1f-chunk-008",
+          "file_path": "gd_57de1d1dfc0b96aff9b97b1f",
+          "created_at": 1793601284
+        },
+        {
+          "src_id": "VCs",
+          "tgt_id": "Venture Capital",
+          "description": "The venture capital market has seen a significant decrease in the number of funding rounds, with a 25-30% drop compared to stable 2018-2020 levels.",
+          "keywords": "Fewer Rounds",
+          "weight": 1.0,
+          "source_id": "gd_70a219235731dd098fa60c52-chunk-001",
+          "file_path": "gd_70a219235731dd098fa60c52",
+          "created_at": 1793494282
+        },
+        {
+          "src_id": "SaaStrAnnual",
+          "tgt_id": "VCs",
+          "description": "Attracts 800+ VCs.",
+          "keywords": "Targets",
+          "weight": 1.0,
+          "source_id": "gd_7a791f2e4b82c615f22b9ceb-chunk-000",
+          "file_path": "gd_7a791f2e4b82c615f22b9ceb",
+          "created_at": 1793500874
+        },
+        {
+          "src_id": "Lemkin",
+          "tgt_id": "VCs",
+          "description": "Lemkin cautions VCs against over-emphasizing the overlap between media, community, and venture.<SEP>Lemkin discusses the changing partnership model in venture capital.<SEP>Lemkin explained that selling a company can be beneficial for VCs",
+          "keywords": "Benefit of selling,caution,emphasize,partnership model,relationship_keywords: invest,venture capital",
+          "weight": 3.0,
+          "source_id": "gd_569ee69606db9effbeb61689-chunk-001<SEP>gd_57de1d1dfc0b96aff9b97b1f-chunk-008<SEP>gd_14eaa99f6b156bd8099dd6b7-chunk-016",
+          "file_path": "gd_569ee69606db9effbeb61689<SEP>gd_57de1d1dfc0b96aff9b97b1f<SEP>gd_14eaa99f6b156bd8099dd6b7",
+          "created_at": 1793623352
+        },
+        {
+          "src_id": "Okta",
+          "tgt_id": "VCs",
+          "description": "Okta is a company that VCs have invested in.",
+          "keywords": "invested_in",
+          "weight": 1.0,
+          "source_id": "gd_999472ab9bf390630ebf1126-chunk-000",
+          "file_path": "gd_999472ab9bf390630ebf1126",
+          "created_at": 1793534074
+        },
+        {
+          "src_id": "Start-ups",
+          "tgt_id": "VCs",
+          "description": "Start-ups receive funding from VCs when they demonstrate strong growth and potential for hypergrowth.<SEP>VCs understand that start-ups often go through a rough patch before achieving product-market fit.<SEP>VCs trust start-ups that demonstrate consistent growth over time.",
+          "keywords": "Awareness,Confidence,Funding,Investment,Trust,Understanding",
+          "weight": 3.0,
+          "source_id": "gd_d639410291b780c50bed6b5e-chunk-000",
+          "file_path": "gd_d639410291b780c50bed6b5e",
+          "created_at": 1793521110
+        },
+        {
+          "src_id": "Monday.com",
+          "tgt_id": "VCs",
+          "description": "Struggled to understand unit economics due to low ACV.",
+          "keywords": "Struggled to understand unit economics",
+          "weight": 1.0,
+          "source_id": "gd_f9d8976f1578b772c33681e5-chunk-000",
+          "file_path": "gd_f9d8976f1578b772c33681e5",
+          "created_at": 1793558042
+        },
+        {
+          "src_id": "Lovable",
+          "tgt_id": "VCs",
+          "description": "VCs are hunting for the next Lovable, not the next incremental improvement to your 10-year-old SaaS platform.",
+          "keywords": "focused,hunting",
+          "weight": 2.0,
+          "source_id": "gd_45895bb382839086f6554318-chunk-002",
+          "file_path": "gd_45895bb382839086f6554318",
+          "created_at": 1793632665
+        },
+        {
+          "src_id": "VCs",
+          "tgt_id": "Wiz",
+          "description": "VCs invested in Wiz.",
+          "keywords": "Investment",
+          "weight": 1.0,
+          "source_id": "gd_a9d9de4d6e05f2263c7403ee-chunk-005",
+          "file_path": "gd_a9d9de4d6e05f2263c7403ee",
+          "created_at": 1793569157
+        },
+        {
+          "src_id": "Adobe Sign / EchoSign",
+          "tgt_id": "VCs",
+          "description": "VCs provided funding to Adobe Sign / EchoSign.",
+          "keywords": "Funded",
+          "weight": 1.0,
+          "source_id": "gd_94ada0fbda73f8e5d06a49e6-chunk-000",
+          "file_path": "gd_94ada0fbda73f8e5d06a49e6",
+          "created_at": 1793508534
+        },
+        {
+          "src_id": "Board",
+          "tgt_id": "VCs",
+          "description": "Boards often hesitate because they're focused on maximizing returns, but VCs are also in either Fear or Greed mode.<SEP>The speaker notes that VCs and boards have different roles, with VCs providing funding and boards providing oversight and guidance.",
+          "keywords": "Different Roles,Investment,Oversight",
+          "weight": 2.0,
+          "source_id": "gd_5448911bf1d9e8cb3ec3f5e9-chunk-000<SEP>gd_4cb0b1f099da12e7bc82db73-chunk-000",
+          "file_path": "gd_5448911bf1d9e8cb3ec3f5e9<SEP>gd_4cb0b1f099da12e7bc82db73",
+          "created_at": 1793517911
+        },
+        {
+          "src_id": "Harvey",
+          "tgt_id": "VCs",
+          "description": "The VCs backing Harvey clearly believe legal AI is a real, durable category.",
+          "keywords": "backing",
+          "weight": 1.0,
+          "source_id": "gd_2278ccbbb419f2b27781cfed-chunk-011",
+          "file_path": "gd_2278ccbbb419f2b27781cfed",
+          "created_at": 1793645064
+        },
+        {
+          "src_id": "Deal",
+          "tgt_id": "VCs",
+          "description": "Venture capitalists who invest in startups and businesses often participate in deals.<SEP>relationship_description: VCs rarely block a sale to protect their preferences, as it usually ends badly for everyone.",
+          "keywords": "funding,investment,preferences,protect,relationship_keywords: block",
+          "weight": 2.0,
+          "source_id": "gd_a9d9de4d6e05f2263c7403ee-chunk-006<SEP>gd_73c06efd8b5772a9ba7bbdd0-chunk-008",
+          "file_path": "gd_a9d9de4d6e05f2263c7403ee<SEP>gd_73c06efd8b5772a9ba7bbdd0",
+          "created_at": 1793638407
+        }
+      ],
+      "chunks": [
+        {
+          "reference_id": "1",
+          "content": "VCs flooded certain markets with secondary liquidity to get into hot deals\nAnd most importantly, VCs stopped worrying about the next round.  They just assumed it would come.\nI did some of this myself, both on people and investments.\nIn the end, it’s all a reminder.   Better to do with fewer people, fewer investments, fewer initiatives.  And no matter how hard it is, find someone you truly, honestly believe can do it.",
+          "file_path": "gd_70b6d21359f3ae0fd46e93c8",
+          "chunk_id": "gd_70b6d21359f3ae0fd46e93c8-chunk-001"
+        },
+        {
+          "reference_id": "2",
+          "content": "\"What destoys confidence with your board and VCs?\nUnexpected bad news.\nVCs are wired for bad news.  But you know it's coming well ahead of time in SaaS.\" with\n@kylecnorton\npic.twitter.com/kvVVbKBVC4\n\nThese are Strange Times Indeed in SaaS and Cloud.  SaaS is back, and AI is hot.  But times are still challenging for many.  And competition is fiercer than ever.\nIf things are in any way challenging, and you might need to raise more money — perhaps most important of all is keeping your existing investors’ confidence.\nYour existing investors are the ones that often will bring you the leads for the next financing round.  And most importantly, any new investors and leaders will reach out to them for diligence checks on how the company is doing.  You want them to be SuperFans.  Even, and perhaps especially, when times are a bit bumpy.\nYour investors are wired to understand you may not hit the plan for the year\nWhere they lose confidence is if:\n– You sort of hide it\n– You are running out of money\nRun toward Bad News.  Not from it.\n\nAnd most VCs are used to tougher times, and a missed quarter, and a botched hire or two.  That isn’t what undermines confidence.  Lack of vision, honesty, and transparency do.\nSo here’s a quick checklist of what undermines confidence in your existing investors:\n\n1. Surprises\n. Every VC expects a rough quarter or two, and even a rough year.  But as founders, you should know well ahead of time.  Nothing undermines confidence more than an out-of-the-blue email that growth plummeted. This spooks investors most of all. Give everyone multiple heads-ups early.\n\n2. Lack of a (realistic) plan\n.  What’s your realistic plan to grow faster?",
+          "file_path": "gd_02cc9b4adda4b7de1dabaa5d",
+          "chunk_id": "gd_02cc9b4adda4b7de1dabaa5d-chunk-000"
+        },
+        {
+          "reference_id": "3",
+          "content": "Dear SaaStr:  My VCs seem to have checked out. Should I do something about it? VCs are checking out on struggling investments in droves now — but not all of them. Overall though, it seems to be at record levels. It may or may not be right. But it is natural. If a VC made 20 investments in the Peak of 2021, and 17 of them were overfunded startups without a plan today — it just makes sense to spend less time there. As a top VC said to me recently, “I wish in my whole career I’d just make 2 of my investments, the two worth $10B+ today. I wish I’d make none of the rest of them.”  In essence, a waste of a huge amount of time, energy and money on the rest. Tough to hear, but also — that’s VC math. If growth has slowed and your VCs don’t seem to be responsive anymore, don’t care about board meetings, etc. — maybe that’s what you want. Maybe for prefer to just be left alone. If so, no problem. But if you want your VCs more engaged, maybe for help, maybe for another check down the road — it’s not that hard. When startups struggle, VCs get it. They are looking for founders (1) that are still truly giving it 110% and (2) that have a genuine plan to get back to real growth.",
+          "file_path": "gd_f9670466382cf7e3a98843cb",
+          "chunk_id": "gd_f9670466382cf7e3a98843cb-chunk-000"
+        },
+        {
+          "reference_id": "4",
+          "content": "VCs want to invest tons of capital, too, so it’s all synergistic. But where I think you have to be careful is you can raise a lot of capital, but you aren’t really in a new growth area for the BigGuys, even if your ARR is solid. This can happen a lot in SaaS. PE may still buy you, but the M&A offers here are fewer. So be thoughtful about overfunding yourself here. Which can leave you with nothing but an IPO or bust. Great work if you can get it. But it can be good to have options along the way. T-Shirt Image from Zazzle\nhere\n.\n\nIf most founders knew that eventually, they’d have to get to $1B in ARR for the math to pencil out\nWould they ever raise more than a few million in venture capital at all?",
+          "file_path": "gd_708d527f092a474d63dd7bb0",
+          "chunk_id": "gd_708d527f092a474d63dd7bb0-chunk-002"
+        },
+        {
+          "reference_id": "5",
+          "content": "That can create panic.  At that point, most VCs are already considering if another CEO could better manage the investment to success.\nCreeps\n. There is a lot less tolerance for creeps today, thankfully.  Hopefully zero.\nOverwhelmed, way over their head — for too long\n.\nVCs expect first-time founders especially to be learning, and for the management side of things to be a stretch set of skills. But if the job becomes so overwhelming, that they are constant “deers in the headlights” — it’s not going to work. These days, most VCs try to bring in a COO, mentors, and/or someone else to help. But sometimes, the job is just too much. This stuff is hard. Not everyone, in the end, can take the pressure.\nAnyhow, you’ll still hear horror stories, even today. And sometimes, VCs do want to push founders out. But in general, today, that’s a lot less common. And even when one VC wants to push a CEO out, oftentimes, the others won’t agree. I never have.\nSo if you are worried:\nDon’t sell too many shares\n. The more you sell, the more control you give up. Each round sounds great on TechCrunch, and it may be great. But it’s also, one way or another, giving up more control.\nPick VCs you can trust and believe in\n. This is far more important than brand, fancy retreats, domain expertise, or anything else.\nAnd be more transparent\n, and\nDon’t burn all the cash quicker than plan\n. And if you do, make sure everyone knows why, and is bought into why. Maybe even, pretend you raised 33% less than you did.\nThen you probably don’t need to worry.\n…\nLook at\nUiPath\n.  They did it the hard way.  It took them 10 years to get to the first $",
+          "file_path": "gd_3a9e187b9b599b728aa6cbb5",
+          "chunk_id": "gd_3a9e187b9b599b728aa6cbb5-chunk-002"
+        },
+        {
+          "reference_id": "6",
+          "content": "Your VCs aren’t the boss. They should work for you. You don’t need to do what they say, or have pre-pre-board meetings if you don’t want to. But … many, if not most, founders I work with make life harder on themselves by not doing easy things to “manage up” a bit\n. Here are my best 10 ideas to keep your board and investors calmer, happier — and on your side. It’s worth these relatively small investments of your time. And if you do all 10 of these, you’ll look more professional than 90%+ of their other investments. That can only help.\n#1:  Respond to emails\n. You don’t need to take their suggestions. But do reply. Many founders just don’t reply at all to emails from their largest investors. Think of them as large customers. You\ndon’t\nhave to do what they ask. But you should reply to their questions and concerns, promptly if possible. If you don’t, the customers start to worry that you don’t really want their business. I’ve seen founder response time just really stretch out in tougher times, often to weeks. VCs sort of write these ones off. The best CEOs really do respond promptly.\n#2\n:\nSend out monthly updates — and quickly\n. Few things instill confidence more than a crisp, metrics-filled monthly investor update that comes right after the month ends. Don’t make this complicated. Use a format that takes you no more than 30 minutes. But you should know how much you booked by the end of the month, what your NPS is, and how much you burned at least the month prior. Share those key metrics, plus some quick color. And push it out quickly.\n\n[Omitted same-source text between these sections: 168 words.]\n\n#4:  Don’t expect another check\n. Assume all your VCs are “one-check-and-done”. One way you can",
+          "file_path": "gd_142c9ef5d600d437f46bbed4",
+          "chunk_id": "gd_142c9ef5d600d437f46bbed4-chunk-000"
+        },
+        {
+          "reference_id": "7",
+          "content": "happening far later than they need to. Etc. Etc. There are some natural tensions points, and while founders bear the brunt (they have to run the place, after all), they are often at fault as well. Rarely in anything is one side 100% to blame. VCs and founders both just want every startup to be a big success.\n\n[Omitted same-source text between these sections: 144 words.]\n\n2.  Trust Matters.  Be a Bit Wary of “Nice” VCs and Too Many Sales and High Pressure Tactics from VCs.\nOnce a VC decides they want to do a deal, the vibe changes.  They move into sales mode instead of the founders.  And some are very, very good at this.  “Nice” doesn’t mean trustworthy,  “Nice” doesn’t mean alignment.  At least, be wary of Mr. Nice.  In the end, Ms. Honest and Trustworthy is better than Mr. Nice in a Puffer.\n\n#3.  Don’t Hide Stuff\nVCs are wired to take bad news along with good.  They expect hypergrowth, but they don’t expect perfection.  Too many founders hide things from their VCs, both during fundraising and after.  This almost always breaks the relationship.  Don’t do this.  And if you hide things during the fundraising process that are important and come up later — expect the relationship to never recover.\n\n#4.  Read\nA lot of VCs publish today.  Blog posts. Tweets.  Podcasts. Etc.  Read, watch, and listen.  Do this enough, you will get a sense of what they are truly like.  Folks really do express themselves on social media.  Not their 100% true self, but still, a lot of themselves.\n\n#5.",
+          "file_path": "gd_386bc825ffd9d3290623d25e",
+          "chunk_id": "gd_386bc825ffd9d3290623d25e-chunk-001"
+        },
+        {
+          "reference_id": "8",
+          "content": "Pitching VCs is like anything. You’ll get better at it over time. Later, you’ll even get great at it. Once you know how it works, it’s not even that hard to knock it out of the park. But until then, so many founders make unforced errors. Rookie errors. Here are 16 that you can easily avoid / fix right now today. Before your next pitch:\nCold emails work. But they need to be truly awesome. Every part of them\n. At the\nNew New in Venture SaaStr event\n, we asked many of the top VCs, from Aileen Lee to Keith Rabois and more, if they read cold emails. They almost all say that they do, and in fact read almost all of them. So don’t listen to anyone that tells you cold emails don’t work. VCs are in sales themselves, and they are hunting for that next great deal. But a cold email especially has to be awesome. The email subject line. The email itself. The deck. It has to stand alone. A cold email has to be so awesome, anyone would want to invest. Or at least instantly want to learn more. More\nhere\n. Being cagey with answers. Just answer the question\n. How much are you raising? Where are you in the process? Being direct (and honest) builds trust. With VCs, you want to build trust quickly, if you can. Especially over Zooms. Bringing the wrong people with you\n. Do not bring “consultants” to a VC pitch. Do not bring anyone with you that isn’t part of the senior team. As soon as you bring a “consultant” with you — most folks are out. It makes the team look weak and incomplete. Not sending the deck ahead of time. Just send it. All of it, usually\n.\n\nYou are wasting both a lot of time, and an opportunity, by not letting VCs do",
+          "file_path": "gd_ab2b44c18919e9af9f28a4d4",
+          "chunk_id": "gd_ab2b44c18919e9af9f28a4d4-chunk-000"
+        },
+        {
+          "reference_id": "9",
+          "content": "I know there’s tons of VC advice out there these days about being more efficient, and that’s good advice. And also, VCs are much more tolerant of lower growth for\nexisting\ninvestments they’ve already made — if they don’t need more money. But VCs just can’t afford to invest in lower growth startups. Sorry, I know this is a bit of a Louder For Those in the Back post, but so many don’t fully get it. VC is what it is. It’s a\nbusiness of outliers and unicorns\n. Even now. Maybe even, especially now. Why VCs Need Unicorns Just to Survive\nNow there are a few exceptions, but understand them:\nFirst\n, in the very early days, at low valuations (<$10m), VCs may have different views on just how many customers and traction you need to raise a relatively small round. But even there, VCs are still hunting for outliers. It’s just early. Second\n, your existing investors likely will still want to support you if you have Good But Not Great Growth. They’re in for a dollar. But ask. Ask them if they’d invest again. You have to ask. Ask. More on that\nhere:\nNeed a Second Check From Your VCs? Here’s How “Reserves” Work\nYes, you’ll hear a ton of stories from founders that had to meet 150 VCs to get 1 term sheet. I lived that myself, too. But you still have to check\nmost\nof the boxes to get funded even there. And mediocre growth … that’s just tough. Assume you’ll have to just push on without a capital injection, for now at least. In fact as a founder, I’d say 50% of the time, I was unfundable. Find out if that’s you or not.",
+          "file_path": "gd_e18f43964570813392b71ca0",
+          "chunk_id": "gd_e18f43964570813392b71ca0-chunk-000"
+        },
+        {
+          "reference_id": "10",
+          "content": "public markets will value each dollar of revenue\n. The reality is, the higher multiples are, the easier it is to get funded, the more everyone’s shares are worth, and more. And the lower multiples are, the harder anything involving external financing matters. Revenue multiples don’t affect customers, or even revenue itself. But they are very important to just how hard the journey will be.\n\nAnd what you can see here from the Bessemer Cloud index is that Forward Revenue Multiples are at their lowest in 3+ years:\n\nAnd yet … even with a multiple crash since Peak Covid, times are still really good in SaaS. Customers are buying more than ever. Amazon AWS, Microsoft Azure, and even Google Cloud are on fire, adding insane amounts of revenue this year. The top SaaS and Cloud leaders are even accelerating at $1B in ARR, for goodness sakes!! It’s not all tough news, folks. So let’s take a look at 3 practical scenarios from here, just looking at past SaaS multiples (before the Covid Boom and Hangover), and thinking about how SaaS is growing faster than ever:\n\n#1. The Bear Case: Multiples are still elevated compared to the pre-2018 period.\n. You can see a lot of VCs and others talking about this on Twitter. The point is that SaaS multiples are still higher than where they were from 2010-2017. So they can fall another 20%-30% just to revert back to that mean:\nSaaS was already on a tear starting in 2018. It just went nuts during Peak Covid. The argument here is that SaaS even in 2018 was overvalued. The Bears do have a lot of years of history on their side — all the years up to 2018. But I personally think this is just too pessimistic. SaaS companies are just so much bigger and better than even 4 years ago. And generating",
+          "file_path": "gd_bb94764426258ca6a129d4a8",
+          "chunk_id": "gd_bb94764426258ca6a129d4a8-chunk-001"
+        },
+        {
+          "reference_id": "11",
+          "content": "But especially these days, they will blow up on your when they don’t tick and tie and make sense.\n\n#5.  Address big structural issues up front, especially if you’ve already raised too much money\n.  VCs would overlook startups that had raised too much money in the Go-Go days, or had lots of founder turmoil, or lots of churn, if the growth was there.  Not so much today.  If there’s a big issue, just address it upfront.  “I know we’ve raised $5m already and that was a bit too much, but we’re hyper-efficient today and going to triple this year.”  That addresses it.\n\n#6. Give VCs enough time to see another card\n.  The simplest way to do this is if this month is going to be strong, send the VCs a prompt update on the last day of the month.  Another month of progress, another set of new customers, etc.  This always builds confidence.  VCs are always worried things will slow the day after the money goes into the bank.  Show the opposite.  More\nhere\n.\nMy #1 Best Hack for VC Fundraising\n#7.  “And Then We’ll Raise a Huge Series A Later This Year!”  Don’t talk about how you plan to raise an even bigger round in 6-12 months\n. Maybe you will, and hooray!  But the markets are so tight today in venture.  No one wants to take a bet that this is just enough money to get you to a mythical round in a few months that probably won’t remotely come on that schedule.\n\n#8.  There is No Pass for Slower Growth These Days\n.  Yes, macro issues are impacting many.  But that’s not VCs’ problem.  If growth has slowed, you may not be",
+          "file_path": "gd_35db7b4ad7a78a616a0baa36",
+          "chunk_id": "gd_35db7b4ad7a78a616a0baa36-chunk-002"
+        },
+        {
+          "reference_id": "12",
+          "content": "that means the elite folks—the genuinely 5-10x more productive ones—should be paid 2-3x more than before. No problem paying someone who manages 20 agents two or three times more than a traditional outbound director. But we’re expecting 10x the productivity. It’s not charity. Triple Triple Double Double Isn’t Enough Anymore. At Least Not for VCs. Let me be clear: triple triple double double is plenty good to build a multi-billion dollar company. Put it in a spreadsheet. 2→6→18→36→72. You’ll build something real. Three or four years ago, 50% of VCs would fund you at that growth rate. Today? Maybe 10%. It’s not 0%. But you have to find someone who really believes. The same amount of money is going into venture as the peak of 2021, but to less than half the companies. For startups, this means:\nWhatever capital you have needs to last\nRecruiting is harder because the best people want to work at the fastest-growing companies\nYou need to be ruthlessly honest about your fundability\nGo to saastr.ai/aivc. Upload your investor deck. It will tell you your exact percentage odds of getting funded based on all the benchmarks. A founder just below triple triple double double was confident they could raise. The AI said 38%. It changed their perspective.\n\n[Omitted same-source text between these sections: 200 words.]\n\n1. Running 8-10 vendor bakeoffs instead of picking two and going deep.\nYou can’t train 10 agents. You don’t have 300 days. Pick your incumbent option and one hot startup, do real deployments of both, and decide.\n\n2. Outsourcing deployment to agencies or consultants.\nThere are no AI GTM agencies that understand your business well enough to train your agents. Not yet. Maybe in 24 months. Today, you are the agency.",
+          "file_path": "gd_ec4952faf291c054baf7a979",
+          "chunk_id": "gd_ec4952faf291c054baf7a979-chunk-010"
+        }
+      ],
+      "references": [
+        {
+          "reference_id": "1",
+          "file_path": "gd_70b6d21359f3ae0fd46e93c8"
+        },
+        {
+          "reference_id": "2",
+          "file_path": "gd_02cc9b4adda4b7de1dabaa5d"
+        },
+        {
+          "reference_id": "3",
+          "file_path": "gd_f9670466382cf7e3a98843cb"
+        },
+        {
+          "reference_id": "4",
+          "file_path": "gd_708d527f092a474d63dd7bb0"
+        },
+        {
+          "reference_id": "5",
+          "file_path": "gd_3a9e187b9b599b728aa6cbb5"
+        },
+        {
+          "reference_id": "6",
+          "file_path": "gd_142c9ef5d600d437f46bbed4"
+        },
+        {
+          "reference_id": "7",
+          "file_path": "gd_386bc825ffd9d3290623d25e"
+        },
+        {
+          "reference_id": "8",
+          "file_path": "gd_ab2b44c18919e9af9f28a4d4"
+        },
+        {
+          "reference_id": "9",
+          "file_path": "gd_e18f43964570813392b71ca0"
+        },
+        {
+          "reference_id": "10",
+          "file_path": "gd_bb94764426258ca6a129d4a8"
+        },
+        {
+          "reference_id": "11",
+          "file_path": "gd_35db7b4ad7a78a616a0baa36"
+        },
+        {
+          "reference_id": "12",
+          "file_path": "gd_ec4952faf291c054baf7a979"
+        }
+      ]
+    },
+    "metadata": {
+      "query_mode": "hybrid",
+      "keywords": {
+        "high_level": [
+          "Public Multiples",
+          "VCs",
+          "Worry"
+        ],
+        "low_level": [
+          "VCs",
+          "Public Multiples"
+        ]
+      },
+      "processing_info": {
+        "total_entities_found": 41,
+        "total_relations_found": 477,
+        "entities_after_truncation": 39,
+        "relations_after_truncation": 87,
+        "merged_chunks_count": 234,
+        "final_chunks_count": 12
+      }
+    },
+    "query": "Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too?"
+  },
+  "retrieval_seconds": 13.633,
+  "graph_summary": {
+    "status": "recorded",
+    "raw_entity_count": 39,
+    "raw_relationship_count": 87,
+    "raw_chunk_count": 12,
+    "entity_description_count": 39,
+    "entity_descriptions_nonempty": 39,
+    "entity_description_available": true,
+    "excluded_reason_counts": {
+      "generated_summary_not_a_source_span": 126
+    },
+    "accepted_relationships": 35,
+    "rejected_relationships": 50,
+    "quarantined_relationships": 2,
+    "relationship_reason_counts": {
+      "generated_summary_not_supported_by_source": 27,
+      "weak_entity_name": 16,
+      "endpoints_not_in_source": 7,
+      "unresolved_conflict": 2
+    },
+    "missing_source_or_provenance_exclusions": 0,
+    "relationship_validation_status": "recorded",
+    "two_hop_path_count": 0,
+    "two_hop_path_available": false,
+    "path_status": "recorded",
+    "normalization": {
+      "payload_shape": "aquery_data",
+      "mode": "hybrid",
+      "entity_descriptions_not_retained": 0,
+      "malformed_records": 0,
+      "notes": [
+        "hits_already_budgeted_raw_chunks_not_added",
+        "validated_against_supplied_catalog"
+      ],
+      "validation_contract": "source-verified-relationship-v1",
+      "separator": "<SEP>",
+      "profile": "multihop",
+      "direct_edges": 35,
+      "paths": 24,
+      "withheld_edges": 52
+    },
+    "direct_edge_count": 35
+  }
+}

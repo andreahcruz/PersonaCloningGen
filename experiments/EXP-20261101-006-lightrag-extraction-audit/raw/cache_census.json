@@ -1,0 +1,821 @@
+{
+  "cache_extract_entries": 7839,
+  "summary": {
+    "responses": 7839,
+    "stages": {
+      "initial": 3921,
+      "gleaning": 3918
+    },
+    "relation_rows_by_field_count": {
+      "5": 37170,
+      "4": 3599,
+      "7": 843,
+      "6": 959,
+      "9": 2,
+      "8": 21,
+      "16": 1,
+      "17": 1,
+      "3": 4
+    },
+    "relation_rows_by_kind": {
+      "accepted_five": 36612,
+      "omitted_keywords": 2249,
+      "delimiter_inside_description": 1803,
+      "omitted_description": 1240,
+      "self_relation_dropped": 558,
+      "extra_fields_ambiguous": 24,
+      "four_fields_ambiguous": 110,
+      "too_few_fields": 4
+    },
+    "accepted_five_rows": 36612,
+    "unique_malformed_records": 3949,
+    "unique_syntactic_repairs": 2785,
+    "repeated_rows_inside_one_response": 5333,
+    "gleaning_repeats_of_initial_malformed": 1419,
+    "chunks_with_a_malformed_relation": 700,
+    "chunks_whose_relation_rows_were_all_rejected": 403,
+    "repairs_checked_against_chunk_text": 3970,
+    "repairs_with_both_endpoints_in_chunk": 3528,
+    "repairs_with_endpoint_and_description_overlap": 3396
+  },
+  "examples": [
+    {
+      "chunk_id": "gd_000c9a2f62aa1edcababf25c-chunk-001",
+      "stage": "initial",
+      "kind": "omitted_keywords",
+      "field_count": 4,
+      "fields": [
+        "relation",
+        "Rubrik",
+        "AI",
+        "Related, AI is part of Rubrik's pitch."
+      ],
+      "repair": "omitted_keywords"
+    },
+    {
+      "chunk_id": "gd_000c9a2f62aa1edcababf25c-chunk-001",
+      "stage": "initial",
+      "kind": "omitted_keywords",
+      "field_count": 4,
+      "fields": [
+        "relation",
+        "NRR",
+        "Data Growth",
+        "Driven by, 60% of NRR growth comes from data growth."
+      ],
+      "repair": "omitted_keywords"
+    },
+    {
+      "chunk_id": "gd_000c9a2f62aa1edcababf25c-chunk-001",
+      "stage": "initial",
+      "kind": "omitted_keywords",
+      "field_count": 4,
+      "fields": [
+        "relation",
+        "NRR",
+        "Buying More Security Products",
+        "Driven by, 40% of NRR growth comes from buying more security products."
+      ],
+      "repair": "omitted_keywords"
+    },
+    {
+      "chunk_id": "gd_000c9a2f62aa1edcababf25c-chunk-001",
+      "stage": "initial",
+      "kind": "omitted_keywords",
+      "field_count": 4,
+      "fields": [
+        "relation",
+        "Data Growth",
+        "Buying More Security Products",
+        "Together, both drive 120% NRR."
+      ],
+      "repair": "omitted_keywords"
+    },
+    {
+      "chunk_id": "gd_000c9a2f62aa1edcababf25c-chunk-001",
+      "stage": "gleaning",
+      "kind": "omitted_keywords",
+      "field_count": 4,
+      "fields": [
+        "relation",
+        "Rubrik",
+        "Go Rubrik Go",
+        "Related, \"Go Rubrik, Go!\" is part of Rubrik's pitch."
+      ],
+      "repair": "omitted_keywords"
+    },
+    {
+      "chunk_id": "gd_0019c5e0dad1cf6315645b67-chunk-000",
+      "stage": "initial",
+      "kind": "delimiter_inside_description",
+      "field_count": 7,
+      "fields": [
+        "relation",
+        "you",
+        "$1B ARR",
+        "relationship_keywords",
+        "achieved, milestone, AI",
+        "relationship_description",
+        "has achieved a milestone of $1B ARR in AI"
+      ],
+      "repair": "delimiter_inside_description"
+    },
+    {
+      "chunk_id": "gd_0019c5e0dad1cf6315645b67-chunk-000",
+      "stage": "initial",
+      "kind": "delimiter_inside_description",
+      "field_count": 7,
+      "fields": [
+        "relation",
+        "$1B ARR",
+        "AI",
+        "relationship_keywords",
+        "related, concept, AI",
+        "relationship_description",
+        "is related to the concept of AI"
+      ],
+      "repair": "delimiter_inside_description"
+    },
+    {
+      "chunk_id": "gd_0019c5e0dad1cf6315645b67-chunk-000",
+      "stage": "initial",
+      "kind": "delimiter_inside_description",
+      "field_count": 7,
+      "fields": [
+        "relation",
+        "you",
+        "VC",
+        "relationship_keywords",
+        "involved, concept, VC",
+        "relationship_description",
+        "is involved with the concept of VC"
+      ],
+      "repair": "delimiter_inside_description"
+    },
+    {
+      "chunk_id": "gd_0019c5e0dad1cf6315645b67-chunk-000",
+      "stage": "initial",
+      "kind": "delimiter_inside_description",
+      "field_count": 7,
+      "fields": [
+        "relation",
+        "AI",
+        "VC",
+        "relationship_keywords",
+        "related, concept, VC",
+        "relationship_description",
+        "is related to the concept of VC"
+      ],
+      "repair": "delimiter_inside_description"
+    },
+    {
+      "chunk_id": "gd_0019c5e0dad1cf6315645b67-chunk-000",
+      "stage": "gleaning",
+      "kind": "delimiter_inside_description",
+      "field_count": 7,
+      "fields": [
+        "relation",
+        "you",
+        "$1B ARR",
+        "relationship_keywords",
+        "achieved, milestone, AI",
+        "relationship_description",
+        "has achieved a milestone of $1B ARR in AI"
+      ],
+      "repair": "delimiter_inside_description"
+    },
+    {
+      "chunk_id": "gd_0019c5e0dad1cf6315645b67-chunk-000",
+      "stage": "gleaning",
+      "kind": "delimiter_inside_description",
+      "field_count": 7,
+      "fields": [
+        "relation",
+        "$1B ARR",
+        "AI",
+        "relationship_keywords",
+        "related, concept, AI",
+        "relationship_description",
+        "is related to the concept of AI"
+      ],
+      "repair": "delimiter_inside_description"
+    },
+    {
+      "chunk_id": "gd_0019c5e0dad1cf6315645b67-chunk-000",
+      "stage": "gleaning",
+      "kind": "delimiter_inside_description",
+      "field_count": 7,
+      "fields": [
+        "relation",
+        "you",
+        "VC",
+        "relationship_keywords",
+        "involved, concept, VC",
+        "relationship_description",
+        "is involved with the concept of VC"
+      ],
+      "repair": "delimiter_inside_description"
+    }
+  ],
+  "named_documents": {
+    "gd_a48dad30cf3032e3f22fcde5": {
+      "malformed_rows": 20,
+      "breakdown": {
+        "4:omitted_description:initial": 12,
+        "4:omitted_keywords:initial": 1,
+        "4:four_fields_ambiguous:initial": 1,
+        "4:omitted_keywords:gleaning": 1,
+        "4:omitted_description:gleaning": 5
+      },
+      "samples": [
+        {
+          "stage": "initial",
+          "kind": "omitted_description",
+          "fields": [
+            "relation",
+            "Freemium",
+            "The Force",
+            "Strong appeal, irresistible force"
+          ]
+        },
+        {
+          "stage": "initial",
+          "kind": "omitted_description",
+          "fields": [
+            "relation",
+            "Freemium",
+            "ChatGPT",
+            "Product offering, conversational AI chatbot"
+          ]
+        },
+        {
+          "stage": "initial",
+          "kind": "omitted_description",
+          "fields": [
+            "relation",
+            "Freemium",
+            "Claude",
+            "Product offering, conversational AI chatbot"
+          ]
+        }
+      ]
+    },
+    "gd_b5598f901756b268dfaf7770": {
+      "malformed_rows": 19,
+      "breakdown": {
+        "4:omitted_description:initial": 10,
+        "4:omitted_description:gleaning": 9
+      },
+      "samples": [
+        {
+          "stage": "initial",
+          "kind": "omitted_description",
+          "fields": [
+            "relation",
+            "CEO",
+            "Board",
+            "involved, leadership"
+          ]
+        },
+        {
+          "stage": "initial",
+          "kind": "omitted_description",
+          "fields": [
+            "relation",
+            "Founders",
+            "Board",
+            "involved, leadership"
+          ]
+        },
+        {
+          "stage": "initial",
+          "kind": "omitted_description",
+          "fields": [
+            "relation",
+            "Board",
+            "Team",
+            "oversight, guidance"
+          ]
+        }
+      ]
+    },
+    "gd_a753d199b9c468b7c9b06a64": {
+      "malformed_rows": 17,
+      "breakdown": {
+        "6:delimiter_inside_description:initial": 8,
+        "6:delimiter_inside_description:gleaning": 9
+      },
+      "samples": [
+        {
+          "stage": "initial",
+          "kind": "delimiter_inside_description",
+          "fields": [
+            "relation",
+            "SaaStr",
+            "Okta",
+            "Relationship_keywords",
+            "provides insights",
+            "The SaaStr community relies on Okta's data to understand SaaS adoption and usage patterns."
+          ]
+        },
+        {
+          "stage": "initial",
+          "kind": "delimiter_inside_description",
+          "fields": [
+            "relation",
+            "SaaStr",
+            "SaaS",
+            "Relationship_keywords",
+            "offers",
+            "The SaaStr community focuses on growth and sales strategies for SaaS companies."
+          ]
+        },
+        {
+          "stage": "initial",
+          "kind": "delimiter_inside_description",
+          "fields": [
+            "relation",
+            "Okta",
+            "SaaS",
+            "Relationship_keywords",
+            "provides",
+            "Okta offers insights on SaaS adoption and usage, which is crucial for SaaS companies."
+          ]
+        }
+      ]
+    },
+    "gd_bd97c14fa0476835df73618f": {
+      "malformed_rows": 1,
+      "breakdown": {
+        "8:delimiter_inside_description:initial": 1
+      },
+      "samples": [
+        {
+          "stage": "initial",
+          "kind": "delimiter_inside_description",
+          "fields": [
+            "relation",
+            "Interest rates",
+            "ZIRP",
+            "Post-ZIRP",
+            "High interest rates",
+            "Maybe",
+            "Does the downfall in SaaS multiples correlate with the rise of interest rates?",
+            "Maybe"
+          ]
+        }
+      ]
+    },
+    "gd_c19cd54fed6d5f7cfae5bbc2": {
+      "malformed_rows": 10,
+      "breakdown": {
+        "7:delimiter_inside_description:initial": 6,
+        "7:delimiter_inside_description:gleaning": 4
+      },
+      "samples": [
+        {
+          "stage": "initial",
+          "kind": "delimiter_inside_description",
+          "fields": [
+            "relation",
+            "Startup",
+            "Candidate",
+            "relationship_keywords",
+            "screening, interview",
+            "relationship_description",
+            "Startups use various methods to screen and interview candidates, including coding tests and email-based challenges."
+          ]
+        },
+        {
+          "stage": "initial",
+          "kind": "delimiter_inside_description",
+          "fields": [
+            "relation",
+            "Startup",
+            "Recruiter",
+            "relationship_keywords",
+            "hiring, management",
+            "relationship_description",
+            "Startups often hire internal recruiters to manage the hiring process and coordinate with external recruiters."
+          ]
+        },
+        {
+          "stage": "initial",
+          "kind": "delimiter_inside_description",
+          "fields": [
+            "relation",
+            "Startup",
+            "Investor",
+            "relationship_keywords",
+            "funding, support",
+            "relationship_description",
+            "Startups often seek funding and support from investors to help grow and scale their business."
+          ]
+        }
+      ]
+    },
+    "gd_c761713807815a161628791f": {
+      "malformed_rows": 9,
+      "breakdown": {
+        "7:delimiter_inside_description:initial": 6,
+        "7:delimiter_inside_description:gleaning": 3
+      },
+      "samples": [
+        {
+          "stage": "initial",
+          "kind": "delimiter_inside_description",
+          "fields": [
+            "relation",
+            "Salesforce",
+            "Procurement",
+            "relationship_keywords",
+            "automate, discounting, procurement",
+            "relationship_description",
+            "Salesforce automates any discounting at the low end by marking prices up 20%."
+          ]
+        },
+        {
+          "stage": "initial",
+          "kind": "delimiter_inside_description",
+          "fields": [
+            "relation",
+            "Salesforce",
+            "Discount",
+            "relationship_keywords",
+            "20%, prepayment",
+            "relationship_description",
+            "Salesforce offers a 20% discount for annual prepayment."
+          ]
+        },
+        {
+          "stage": "initial",
+          "kind": "delimiter_inside_description",
+          "fields": [
+            "relation",
+            "Salesforce",
+            "Price",
+            "relationship_keywords",
+            "mark up, 20%",
+            "relationship_description",
+            "Salesforce marks prices up 20% to account for potential discounts."
+          ]
+        }
+      ]
+    },
+    "gd_cbce5e6622c8c301403e5d87": {
+      "malformed_rows": 84,
+      "breakdown": {
+        "4:omitted_keywords:initial": 48,
+        "4:omitted_keywords:gleaning": 36
+      },
+      "samples": [
+        {
+          "stage": "initial",
+          "kind": "omitted_keywords",
+          "fields": [
+            "relation",
+            "SDR",
+            "AI",
+            "Assistance, AI tools help SDRs research and craft better messaging."
+          ]
+        },
+        {
+          "stage": "initial",
+          "kind": "omitted_keywords",
+          "fields": [
+            "relation",
+            "SDR",
+            "ICP",
+            "Understanding, SDRs need to understand their ICP to refine targeting and lead scoring."
+          ]
+        },
+        {
+          "stage": "initial",
+          "kind": "omitted_keywords",
+          "fields": [
+            "relation",
+            "SDR",
+            "AE",
+            "Collaboration, SDRs work closely with AEs to learn what \"great\" looks like."
+          ]
+        }
+      ]
+    }
+  },
+  "weak_endpoint_rows_among_accepted_five": {
+    "Founder": 738,
+    "Company": 596,
+    "Customer": 552,
+    "Founders": 515,
+    "Product": 320,
+    "Customers": 311,
+    "Team": 285,
+    "founders": 257,
+    "Startup": 254,
+    "You": 209,
+    "Monday": 208,
+    "Investor": 189,
+    "Revenue": 157,
+    "Market": 128,
+    "Sales": 128,
+    "I": 119,
+    "customers": 111,
+    "Growth": 109,
+    "2021": 95,
+    "Partner": 94,
+    "24vc": 92,
+    "Speaker": 91,
+    "founder": 86,
+    "team": 77,
+    "2025": 68,
+    "2024": 68,
+    "Event": 67,
+    "company": 57,
+    "2023": 54,
+    "growth": 48
+  },
+  "graph_nodes": 12888,
+  "graph_edges": 20983,
+  "numeric_node_names_sample": [
+    "SaaStr Annual 2024",
+    "2025",
+    "Startup That Just Raised $5m",
+    "2025 SaaStrAnnual.com",
+    "$150m",
+    "2015",
+    "$1B ARR",
+    "2020",
+    "2021",
+    "2022",
+    "23%",
+    "$2b+",
+    "$100/month",
+    "1H 2025",
+    "100% Recurring Revenue",
+    "$10m ARR",
+    "110% net rev retention from SMBs",
+    "40% rev from payments and interest",
+    "50% customers from word-of-mouth",
+    "2025 SaaStr Annual CFO SUMMIT",
+    "November 9, 2021",
+    "2017 CY financial update",
+    "2018",
+    "$3b+",
+    "2024 State of Subscription Apps Report",
+    "70% of Mobile Subscription Apps Now Offer Free Trials, At Least in Part",
+    "85.1% of Business Mobile App Trials Start in the First 24 Hours",
+    "Conversions Are Down 3% From Last Year",
+    "74% of Mobile Business Apps Renew",
+    "SaaStr Annual 2023",
+    "Fall 2025 Digital AI Day",
+    "2025 SaaStr Annual",
+    "$1m+ ARR",
+    "$100k",
+    "2024 SaaStr Annual",
+    "2024 plan",
+    "$4X0",
+    "$350m",
+    "$40m",
+    "$20m"
+  ],
+  "numeric_node_count": 840,
+  "alias_focus": [
+    {
+      "key": "servicenow",
+      "names": [
+        "ServiceNow"
+      ]
+    },
+    {
+      "key": "sevicenow",
+      "names": [
+        "SeviceNow"
+      ]
+    },
+    {
+      "key": "hubspot",
+      "names": [
+        "HubSpot",
+        "Hubspot"
+      ]
+    },
+    {
+      "key": "mongodb",
+      "names": [
+        "MongoDB"
+      ]
+    },
+    {
+      "key": "mongo",
+      "names": [
+        "Mongo"
+      ]
+    },
+    {
+      "key": "sdr",
+      "names": [
+        "SDR"
+      ]
+    },
+    {
+      "key": "salesdevelopmentrepresentative",
+      "names": [
+        "Sales Development Representative"
+      ]
+    },
+    {
+      "key": "ae",
+      "names": [
+        "AE"
+      ]
+    },
+    {
+      "key": "accountexecutive",
+      "names": [
+        "Account Executive"
+      ]
+    }
+  ],
+  "alias_groups_of_interest": [
+    {
+      "key": "hubspot",
+      "names": [
+        "HubSpot",
+        "Hubspot"
+      ]
+    },
+    {
+      "key": "mongodb",
+      "names": [
+        "MongoDB",
+        "@MongoDB"
+      ]
+    },
+    {
+      "key": "okta",
+      "names": [
+        "Okta",
+        "OKTA"
+      ]
+    },
+    {
+      "key": "salesforce",
+      "names": [
+        "Salesforce",
+        "@salesforce"
+      ]
+    }
+  ],
+  "edge_samples": [
+    {
+      "src": "SaaStr Annual 2024",
+      "tgt": "You",
+      "keywords": "Warning",
+      "description": "The speaker warns the reader that cutting back on marketing and sales goals can lead to slower growth and harder sales."
+    },
+    {
+      "src": "I",
+      "tgt": "You",
+      "keywords": "Address,Reference,same_person",
+      "description": "The speaker is addressing the person being addressed.<SEP>The speaker of the quotation is the same person."
+    },
+    {
+      "src": "I",
+      "tgt": "Customer",
+      "keywords": "Speaks",
+      "description": "The person speaking is also referred to as the customer."
+    },
+    {
+      "src": "You",
+      "tgt": "Toast",
+      "keywords": "easy,higher value,simple product,start,stickier",
+      "description": "Toast learns how to make its product even stickier.<SEP>Toast learns how to make its product higher value.<SEP>Toast starts with the smallest customers.<SEP>Toast starts with a simple product.<SEP>Toast starts with easy customers."
+    },
+    {
+      "src": "You",
+      "tgt": "HubSpot",
+      "keywords": "easy,higher value,simple product,start,stickier",
+      "description": "HubSpot learns how to make its product even stickier.<SEP>HubSpot learns how to make its product higher value.<SEP>HubSpot starts with the smallest customers.<SEP>HubSpot starts with a simple product.<SEP>HubSpot starts with easy customers."
+    },
+    {
+      "src": "You",
+      "tgt": "Commitment",
+      "keywords": "Return Keywords: return,fund",
+      "description": "The commitment is to return the fund to you"
+    },
+    {
+      "src": "You",
+      "tgt": "Them",
+      "keywords": "ARR,blame,criticism,impressed",
+      "description": "The speaker is suggesting that the reader and the organization or company being referred to as \"Them\" are both to blame for the situation<SEP>The speaker is criticizing the actions and behavior of the organization or company being referred "
+    },
+    {
+      "src": "You",
+      "tgt": "The best",
+      "keywords": "comparison,inspiration",
+      "description": "The speaker is using the example of exceptional individuals or teams to inspire the reader to improve their own performance<SEP>The speaker is comparing the reader's performance to that of exceptional individuals or teams"
+    },
+    {
+      "src": "You",
+      "tgt": "The next place",
+      "keywords": "challenge,opportunity",
+      "description": "The speaker is suggesting that the reader has a chance to improve and apply their skills in a future work or job opportunity<SEP>The speaker is implying that the reader will face challenges in their future work or job opportunity"
+    },
+    {
+      "src": "You",
+      "tgt": "Change",
+      "keywords": "Must Adapt",
+      "description": "The person being addressed must adapt to the changing business software landscape."
+    },
+    {
+      "src": "You",
+      "tgt": "AI",
+      "keywords": "Must Implement",
+      "description": "The person being addressed must implement AI in their business to stay competitive."
+    },
+    {
+      "src": "You",
+      "tgt": "Business",
+      "keywords": "Must Adapt",
+      "description": "The person being addressed must adapt to the changing business software landscape."
+    },
+    {
+      "src": "You",
+      "tgt": "Founder-CEO",
+      "keywords": "may be asked back",
+      "description": "The founder and CEO may be asked to return to their position after stepping down."
+    },
+    {
+      "src": "You",
+      "tgt": "Chief MRR Officer",
+      "keywords": "Needs,Requires",
+      "description": "The person referred to as \"You\" will need a Chief MRR Officer"
+    },
+    {
+      "src": "You",
+      "tgt": "Board Meeting",
+      "keywords": "Discuss,Present",
+      "description": "You are expected to present and discuss your work with the board during the meeting."
+    },
+    {
+      "src": "You",
+      "tgt": "Board",
+      "keywords": "Meet Anytime",
+      "description": "The board can meet with you at any time if they want to hear more from you."
+    },
+    {
+      "src": "You",
+      "tgt": "exec",
+      "keywords": "reached out",
+      "description": "The exec reached out to the person being addressed directly."
+    },
+    {
+      "src": "You",
+      "tgt": "job search",
+      "keywords": "helped",
+      "description": "The person being addressed directly helped the exec with a job search."
+    },
+    {
+      "src": "You",
+      "tgt": "Interview",
+      "keywords": "Interview,Interview Opportunity",
+      "description": "The speaker believes the person being addressed will get an interview."
+    },
+    {
+      "src": "You",
+      "tgt": "e-meet",
+      "keywords": "nice to e-meet you",
+      "description": "The speaker says \"nice to e-meet you\"."
+    },
+    {
+      "src": "You",
+      "tgt": "Programmes",
+      "keywords": "Join",
+      "description": "You can join one of our programs in London, Paris, Bangalore, or SF."
+    },
+    {
+      "src": "You",
+      "tgt": "The Author",
+      "keywords": "Address",
+      "description": "The author is addressing \"You\" in the text."
+    },
+    {
+      "src": "You",
+      "tgt": "Candidate",
+      "keywords": "blame,hiring",
+      "description": "You may blame the candidate if they don't succeed in their role.<SEP>The candidate is being hired by you."
+    },
+    {
+      "src": "You",
+      "tgt": "VP of Sales / CRO",
+      "keywords": "evaluation",
+      "description": "You evaluate the VP of Sales / CRO's performance in their role, which is related to the opportunity."
+    },
+    {
+      "src": "You",
+      "tgt": "It",
+      "keywords": "bootstrapping,help,need,relationship_keywords: discussed,responsibility,revenue,working on",
+      "description": "You are responsible for the success of the candidate in the opportunity.<SEP>They'll see and know you need more help.<SEP>You are working on it<SEP>The author of the article is discussing the challenges of bootstrapping with the reader."
+    }
+  ]
+}

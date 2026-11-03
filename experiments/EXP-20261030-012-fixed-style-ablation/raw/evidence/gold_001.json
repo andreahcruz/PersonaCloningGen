@@ -1,0 +1,72 @@
+{
+  "proposed": [
+    {
+      "source_id": "train_20783",
+      "claim": "There is a process for selling SaaS to a big corporation as a small startup.",
+      "support_span": "What is the process of selling SaaS to a big corporation as a small startup?",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_26362",
+      "claim": "Founders of startups refuse to sell them for hundreds of millions of dollars.",
+      "support_span": "Why do founders of startups refuse to sell them for hundreds of millions of dollars?",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_21878",
+      "claim": "CIOs of Workday, DISH, and BDP were present at DEMO '13.",
+      "support_span": "With CIOs of Workday, DISH, and BDP on How Startups Can Sell to the Enterprise at DEMO '13",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_25912",
+      "claim": "Startups in a $10-40 million market may be funded.",
+      "support_span": "If a startup is in a $10-40 million market, will anyone fund it?",
+      "claim_type": "fact"
+    }
+  ],
+  "raw_extraction": "[\n  {\n    \"source_id\": \"train_20783\",\n    \"claim\": \"There is a process for selling SaaS to a big corporation as a small startup.\",\n    \"support_span\": \"What is the process of selling SaaS to a big corporation as a small startup?\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_26362\",\n    \"claim\": \"Founders of startups refuse to sell them for hundreds of millions of dollars.\",\n    \"support_span\": \"Why do founders of startups refuse to sell them for hundreds of millions of dollars?\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_21878\",\n    \"claim\": \"CIOs of Workday, DISH, and BDP were present at DEMO '13.\",\n    \"support_span\": \"With CIOs of Workday, DISH, and BDP on How Startups Can Sell to the Enterprise at DEMO '13\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_25912\",\n    \"claim\": \"Startups in a $10-40 million market may be funded.\",\n    \"support_span\": \"If a startup is in a $10-40 million market, will anyone fund it?\",\n    \"claim_type\": \"fact\"\n  }\n]",
+  "validation_rejected": [
+    {
+      "source_id": "train_20783",
+      "claim": "There is a process for selling SaaS to a big corporation as a small startup.",
+      "support_span": "What is the process of selling SaaS to a big corporation as a small startup?",
+      "claim_type": "fact",
+      "reason": "interrogative_assertion"
+    },
+    {
+      "source_id": "train_26362",
+      "claim": "Founders of startups refuse to sell them for hundreds of millions of dollars.",
+      "support_span": "Why do founders of startups refuse to sell them for hundreds of millions of dollars?",
+      "claim_type": "fact",
+      "reason": "interrogative_assertion"
+    },
+    {
+      "source_id": "train_25912",
+      "claim": "Startups in a $10-40 million market may be funded.",
+      "support_span": "If a startup is in a $10-40 million market, will anyone fund it?",
+      "claim_type": "fact",
+      "reason": "interrogative_assertion"
+    }
+  ],
+  "verifier_rejected": [],
+  "verified": [
+    {
+      "source_id": "train_21878",
+      "claim": "CIOs of Workday, DISH, and BDP were present at DEMO '13.",
+      "support_span": "With CIOs of Workday, DISH, and BDP on How Startups Can Sell to the Enterprise at DEMO '13",
+      "claim_type": "fact"
+    }
+  ],
+  "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] CIOs of Workday, DISH, and BDP were present at DEMO '13.",
+  "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Can an 8-Person StartUp Sell to a CIO? Yes — If You Understand The Social Contract.\n\nSource passages:\n[train_20783]\nWhat is the process of selling SaaS to a big corporation as a small startup? What are the usual purchasing guid... \nhttp://saastr.com/process-selling-saas-big-corporation-small-startup-usual-purchasing-guidelines-manager-convinced-wants-buy-certain-service-team/\n…\n\n[train_26362]\nMy answer to Why do founders of startups refuse to sell them for hundreds of millions of dollars? \nhttp://qr.ae/1wi01\n\n[train_21878]\nBest of:  With CIOs of Workday, DISH, and BDP on How Startups Can Sell to the Enterprise at DEMO ’13 \nhttp://saastr.com/with-cios-of-workday-dish-and-bdp-on-how-startups-can-sell-to-the-enterprise-at-demo-13/\n…\n\n[train_25912]\nMy answer to If a startup is in a $10-40 million market, will anyone fund it? \nhttp://qr.ae/yi1vg",
+  "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Can an 8-Person StartUp Sell to a CIO? Yes — If You Understand The Social Contract.\n\nSource passages:\n[train_20783]\nWhat is the process of selling SaaS to a big corporation as a small startup? What are the usual purchasing guid... \nhttp://saastr.com/process-selling-saas-big-corporation-small-startup-usual-purchasing-guidelines-manager-convinced-wants-buy-certain-service-team/\n…\n\n[train_26362]\nMy answer to Why do founders of startups refuse to sell them for hundreds of millions of dollars? \nhttp://qr.ae/1wi01\n\n[train_21878]\nBest of:  With CIOs of Workday, DISH, and BDP on How Startups Can Sell to the Enterprise at DEMO ’13 \nhttp://saastr.com/with-cios-of-workday-dish-and-bdp-on-how-startups-can-sell-to-the-enterprise-at-demo-13/\n…\n\n[train_25912]\nMy answer to If a startup is in a $10-40 million market, will anyone fund it? \nhttp://qr.ae/yi1vg<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+  "extraction_seconds": 9.305,
+  "verification_seconds": 0.0,
+  "verification_records": [],
+  "allowed_numeric_values": [],
+  "reason": null,
+  "extraction_stop_reason": "eos",
+  "extraction_attempts": 1,
+  "evidence_status": "verified"
+}

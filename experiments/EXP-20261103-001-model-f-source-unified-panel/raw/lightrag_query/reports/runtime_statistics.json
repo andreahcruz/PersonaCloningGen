@@ -1,0 +1,128 @@
+{
+  "completed_count": 25,
+  "completed_mean_seconds": 11.943,
+  "by_medium_mean_seconds": {
+    "blog": 17.648,
+    "linkedin": 9.171,
+    "x": 5.178
+  },
+  "by_estimated_chunks": [
+    {
+      "min": 1,
+      "max": 1,
+      "documents": 20,
+      "mean_seconds": 9.453
+    },
+    {
+      "min": 2,
+      "max": 3,
+      "documents": 5,
+      "mean_seconds": 21.9
+    },
+    {
+      "min": 4,
+      "max": 99,
+      "documents": 0,
+      "mean_seconds": null
+    }
+  ],
+  "by_word_count": [
+    {
+      "min": 0,
+      "max": 40,
+      "documents": 6,
+      "mean_seconds": 5.178
+    },
+    {
+      "min": 41,
+      "max": 200,
+      "documents": 10,
+      "mean_seconds": 7.969
+    },
+    {
+      "min": 201,
+      "max": 600,
+      "documents": 9,
+      "mean_seconds": 20.867
+    },
+    {
+      "min": 601,
+      "max": 100000,
+      "documents": 0,
+      "mean_seconds": null
+    }
+  ],
+  "current_failures": [
+    {
+      "document_id": "gd_002be28d89a6ca9924e73be2",
+      "status": "failed_permanent",
+      "error_category": "process_interruption",
+      "word_count": 318,
+      "estimated_chunks": 2,
+      "runtime_seconds": 436.07,
+      "defer_reason": "expensive_timeout"
+    },
+    {
+      "document_id": "gd_4c65a0a559794e0816949bf4",
+      "status": "interrupted",
+      "error_category": "process_interruption",
+      "word_count": 610,
+      "estimated_chunks": 2,
+      "runtime_seconds": 436.138,
+      "defer_reason": "expensive_timeout"
+    }
+  ],
+  "expensive_or_deferred": [
+    {
+      "document_id": "gd_002be28d89a6ca9924e73be2",
+      "word_count": 318,
+      "estimated_chunks": 2,
+      "source_medium": "blog",
+      "runtime_seconds": 436.07,
+      "status": "failed_permanent",
+      "error_category": "process_interruption",
+      "defer_reason": "expensive_timeout"
+    },
+    {
+      "document_id": "gd_4c65a0a559794e0816949bf4",
+      "word_count": 610,
+      "estimated_chunks": 2,
+      "source_medium": "blog",
+      "runtime_seconds": 436.138,
+      "status": "interrupted",
+      "error_category": "process_interruption",
+      "defer_reason": "expensive_timeout"
+    }
+  ],
+  "failed_attempts": [
+    {
+      "document_id": "gd_756878d4d219336489c49168",
+      "attempt_number": 1,
+      "status": "interrupted",
+      "runtime_seconds": 436.127,
+      "error_category": "process_interruption"
+    },
+    {
+      "document_id": "gd_002be28d89a6ca9924e73be2",
+      "attempt_number": 1,
+      "status": "interrupted",
+      "runtime_seconds": 436.12,
+      "error_category": "process_interruption"
+    },
+    {
+      "document_id": "gd_002be28d89a6ca9924e73be2",
+      "attempt_number": 2,
+      "status": "interrupted",
+      "runtime_seconds": 436.07,
+      "error_category": "process_interruption"
+    },
+    {
+      "document_id": "gd_4c65a0a559794e0816949bf4",
+      "attempt_number": 1,
+      "status": "interrupted",
+      "runtime_seconds": 436.138,
+      "error_category": "process_interruption"
+    }
+  ],
+  "note": "Means use completed document runtimes only. A short document can still consume the per-document time limit. Those rows stay deferred and do not block the next selected document."
+}

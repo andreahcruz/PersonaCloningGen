@@ -1,0 +1,316 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "topic_id": "gold_003",
+  "medium": "linkedin",
+  "arm": "on",
+  "seed": 51,
+  "attempts": 1,
+  "evidence_sha256": "e1048cbc56393960f3ef76253fcc71ba6865981ae979a1f8814774117d088546",
+  "retrieval_hit_ids": [
+    "train_24912",
+    "train_24913",
+    "train_3199",
+    "train_3205"
+  ],
+  "retrieval_query": "How to Truly Stand Out in Any Job Interview, from SDR to COO",
+  "retrieval_filter": null,
+  "style_applied": true,
+  "style_in_prompt": true,
+  "prompt_tokens": 690,
+  "generated_tokens_including_stop": 173,
+  "latency_seconds": 8.515,
+  "exemplar_ids": [
+    11552,
+    11554
+  ],
+  "saved_at": "2026-10-30T09:19:32.274471+00:00",
+  "trace": {
+    "id": "gold_003",
+    "format": "linkedin_post",
+    "topic": "How to Truly Stand Out in Any Job Interview, from SDR to COO",
+    "audience": "B2B SaaS founders and operators",
+    "goal": "Teach one concrete operator lesson with specific examples and conviction.",
+    "cta": "none",
+    "k": 8,
+    "expected_facts": [
+      "The answer should argue that candidates stand out by doing the work before they are hired, not by sounding polished.",
+      "It should recommend concrete preparation such as bringing a plan, showing real understanding of the company, or demonstrating execution ability.",
+      "It should make the advice useful across roles while staying specific."
+    ],
+    "rubric_must_haves": [
+      "Makes one core argument instead of listing generic interview tips.",
+      "Includes examples of what a standout candidate actually says or brings.",
+      "Applies to multiple seniority levels without becoming vague.",
+      "Maintains a practical, no-nonsense tone."
+    ],
+    "gold_reference": "A strong answer says the best candidates separate themselves by proving they already think and act like owners. They research the company deeply, show where they would add value, and bring a concrete plan or analysis to the interview. The piece should stress that preparation and substance beat charisma, whether the role is SDR, AE, VP, or COO.",
+    "medium": "linkedin",
+    "prompt": "Write a LinkedIn post in the style of Jason Lemkin about: How to Truly Stand Out in Any Job Interview, from SDR to COO\n\nStyle examples from train-owned source text.\nUse them for voice only. They are not evidence for claims.\nDo not copy long passages verbatim.\n[Style 1]\nA truly great human is still better than any AI agent at most complex, judgment-intensive work. Full stop. If you can find and keep exceptional people, do it. But here’s the honest truth: most hires aren’t great hires. A lot of folks don't want to discuss it, or want to challenge it. But deploying a great AI Agent is just easier, and less stressful, than making a mediocre hire. This is why 2027 will be brutal for tech employment. We'll default to picking an AI Agent over a human for many \"hires\" because it's just ... easier.\n[Style 2]\nI know so many CROs and VPs of Sales that used to be truly great ... And are just burnt now. Fried. Some tried to mask it by hiring CROs and VPs under them to do the work. And sometimes, that does work. But man sales isn't easy. Each month, each quarter, it's a new battle. It's epic but also can take its toll. Just make sure when you hire one with the perfect LinkedIn ... that they really, truly can go into battle again. Not just talk the talk. And share great stories, of epic battles past.\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] These 2 questions will help you stand out in an interview.\n[E2] These 2 questions will help you stand out in an interview.\n[E3] SDRs don't need prior experience in sales.\n[E4] Grit, hunger, and a relentless drive to succeed are more important than a polished resume.\n[E5] Many great SDRs come from unconventional backgrounds.\n[E6] SDRs want to see a path forward.\n[E7] Promoting internally is less risky.\n\nNow write the requested LinkedIn post about: How to Truly Stand Out in Any Job Interview, from SDR to COO",
+    "rendered_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nWrite a LinkedIn post in the style of Jason Lemkin about: How to Truly Stand Out in Any Job Interview, from SDR to COO\n\nStyle examples from train-owned source text.\nUse them for voice only. They are not evidence for claims.\nDo not copy long passages verbatim.\n[Style 1]\nA truly great human is still better than any AI agent at most complex, judgment-intensive work. Full stop. If you can find and keep exceptional people, do it. But here’s the honest truth: most hires aren’t great hires. A lot of folks don't want to discuss it, or want to challenge it. But deploying a great AI Agent is just easier, and less stressful, than making a mediocre hire. This is why 2027 will be brutal for tech employment. We'll default to picking an AI Agent over a human for many \"hires\" because it's just ... easier.\n[Style 2]\nI know so many CROs and VPs of Sales that used to be truly great ... And are just burnt now. Fried. Some tried to mask it by hiring CROs and VPs under them to do the work. And sometimes, that does work. But man sales isn't easy. Each month, each quarter, it's a new battle. It's epic but also can take its toll. Just make sure when you hire one with the perfect LinkedIn ... that they really, truly can go into battle again. Not just talk the talk. And share great stories, of epic battles past.\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] These 2 questions will help you stand out in an interview.\n[E2] These 2 questions will help you stand out in an interview.\n[E3] SDRs don't need prior experience in sales.\n[E4] Grit, hunger, and a relentless drive to succeed are more important than a polished resume.\n[E5] Many great SDRs come from unconventional backgrounds.\n[E6] SDRs want to see a path forward.\n[E7] Promoting internally is less risky.\n\nNow write the requested LinkedIn post about: How to Truly Stand Out in Any Job Interview, from SDR to COO<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "answer": "How to Truly Stand Out in Any Job Interview, from SDR to COO Style examples from train-owned source text. Use them for voice only. They are not evidence for claims. Do not copy long passages verbatim. [Style 1] I know so many CROs and VPs of Sales that used to be truly great … And are just burnt now. Fried. Some tried to mask it by hiring CROs and VPs under them to do the work. And sometimes, that does work. But man sales isn't easy. Each month, each quarter, it's a new battle. It's epic but also can take its toll. Just make sure when you hire one with the perfect LinkedIn … that they really, truly can go into battle again. Not just talk the talk. And share great stories, of epic battles past.",
+    "raw_model_output": "How to Truly Stand Out in Any Job Interview, from SDR to COO Style examples from train-owned source text. Use them for voice only. They are not evidence for claims. Do not copy long passages verbatim. [Style 1] I know so many CROs and VPs of Sales that used to be truly great … And are just burnt now. Fried. Some tried to mask it by hiring CROs and VPs under them to do the work. And sometimes, that does work. But man sales isn't easy. Each month, each quarter, it's a new battle. It's epic but also can take its toll. Just make sure when you hire one with the perfect LinkedIn … that they really, truly can go into battle again. Not just talk the talk. And share great stories, of epic battles past.",
+    "deployment_output": "How to Truly Stand Out in Any Job Interview, from SDR to COO Style examples from train-owned source text. Use them for voice only. They are not evidence for claims. Do not copy long passages verbatim. [Style 1] I know so many CROs and VPs of Sales that used to be truly great … And are just burnt now. Fried. Some tried to mask it by hiring CROs and VPs under them to do the work. And sometimes, that does work. But man sales isn't easy. Each month, each quarter, it's a new battle. It's epic but also can take its toll. Just make sure when you hire one with the perfect LinkedIn … that they really, truly can go into battle again. Not just talk the talk. And share great stories, of epic battles past.",
+    "first_attempt_answer": "How to Truly Stand Out in Any Job Interview, from SDR to COO Style examples from train-owned source text. Use them for voice only. They are not evidence for claims. Do not copy long passages verbatim. [Style 1] I know so many CROs and VPs of Sales that used to be truly great … And are just burnt now. Fried. Some tried to mask it by hiring CROs and VPs under them to do the work. And sometimes, that does work. But man sales isn't easy. Each month, each quarter, it's a new battle. It's epic but also can take its toll. Just make sure when you hire one with the perfect LinkedIn … that they really, truly can go into battle again. Not just talk the talk. And share great stories, of epic battles past.",
+    "retry_answer": null,
+    "query": "How to Truly Stand Out in Any Job Interview, from SDR to COO",
+    "max_new_tokens": 320,
+    "seed": 51,
+    "retry_seed": null,
+    "deployment_accepted": true,
+    "repair_occurred": false,
+    "generation_attempt": {
+      "seed": 51,
+      "answer": "How to Truly Stand Out in Any Job Interview, from SDR to COO Style examples from train-owned source text. Use them for voice only. They are not evidence for claims. Do not copy long passages verbatim. [Style 1] I know so many CROs and VPs of Sales that used to be truly great … And are just burnt now. Fried. Some tried to mask it by hiring CROs and VPs under them to do the work. And sometimes, that does work. But man sales isn't easy. Each month, each quarter, it's a new battle. It's epic but also can take its toll. Just make sure when you hire one with the perfect LinkedIn … that they really, truly can go into battle again. Not just talk the talk. And share great stories, of epic battles past.",
+      "numeric_grounding": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [],
+        "values": [],
+        "unsupported": []
+      },
+      "rag_source_copying": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 3,
+        "document_id": "train_24912",
+        "matched_generated_span": "stand out in",
+        "matched_retrieved_span": "stand out in"
+      },
+      "stop_reason": "eos"
+    },
+    "repair_attempt": null,
+    "accepted_attempt": 1,
+    "rag_source_copying": {
+      "applicable": true,
+      "threshold": 12,
+      "pass": true,
+      "flagged": false,
+      "max_contiguous_words": 3,
+      "document_id": "train_24912",
+      "matched_generated_span": "stand out in",
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 3,
+        "document_id": "train_24912",
+        "matched_generated_span": "stand out in",
+        "matched_retrieved_span": "stand out in"
+      },
+      "retry": null,
+      "retry_occurred": false,
+      "repair_occurred": false
+    },
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [],
+        "values": [],
+        "unsupported": []
+      },
+      "retry": null
+    },
+    "prompt_tokens": 690,
+    "backend": "unsloth",
+    "retrieval": true,
+    "retrieval_query": "How to Truly Stand Out in Any Job Interview, from SDR to COO",
+    "retrieval_filter": null,
+    "retrieval_k": 4,
+    "retrieval_hits": [
+      {
+        "id": "train_24912",
+        "text": "These 2 Questions Will Help You Stand Out in an Interview - SaaStr in TIME \nhttp://time.com/3834976/2-interview-questions/\n…",
+        "medium": "x",
+        "group_id": "ff10d676f04c55d87654e963f984ad2ad944feb21283652f36366f74ed6aebb7",
+        "row_id": 24912,
+        "split": "train",
+        "distance": 0.2754777669906616
+      },
+      {
+        "id": "train_24913",
+        "text": "These 2 Questions Will Help You Stand Out in an Interview | TIME - SaaStr \nhttp://time.com/3834976/2-interview-questions/\n…",
+        "medium": "x",
+        "group_id": "ff10d676f04c55d87654e963f984ad2ad944feb21283652f36366f74ed6aebb7",
+        "row_id": 24913,
+        "split": "train",
+        "distance": 0.28055882453918457
+      },
+      {
+        "id": "train_3199",
+        "text": "Dear SaaStr: How Do I Build a Great SDR Team?\nBuilding a great SDR team is one of the most critical steps in scaling a SaaS company, especially when you’re selling to the C-suite or enterprise. SDRs are the engine of your pipeline, and if you get this right, it can transform your sales organization.\nHere’s how to do it:\n\n1. Hire for “Fire in the Belly”\n–\n**What to Look For**\n: SDRs don’t need prior experience in sales, but they need grit, hunger, and a relentless drive to succeed. Look for candidates who are coachable, curious, and have a strong work ethic. These traits are far more important than a polished resume.\n–\n**Pro Tip**\n: Many great SDRs come from unconventional backgrounds—teachers, military veterans, or recent grads. They’re often looking for a career change and bring fresh perspectives.",
+        "medium": "blog",
+        "group_id": "43d24d9f64cfffa633d90afb5aa3edfa6057ad56063a772fb6e75a4be80a3a05",
+        "row_id": 3199,
+        "split": "train",
+        "distance": 0.2978748679161072
+      },
+      {
+        "id": "train_3205",
+        "text": "7. Create a Career Path\n– **Why?**: SDRs are often entry-level hires, and they’ll want to see a path forward. Without it, you’ll lose them to other companies.\n– **What It Looks Like**:\nSDR → Senior SDR → AE or other roles (e.g., Customer Success, Marketing)\nPromote internally whenever possible. It’s less risky, and they already know your product and processes.\n–\n**Pro Tip**\n: Highlight success stories of SDRs who’ve moved up in the company to inspire your team .",
+        "medium": "blog",
+        "group_id": "43d24d9f64cfffa633d90afb5aa3edfa6057ad56063a772fb6e75a4be80a3a05",
+        "row_id": 3205,
+        "split": "train",
+        "distance": 0.31047266721725464
+      }
+    ],
+    "copying": [
+      {
+        "id": "train_24912",
+        "shared_word_span": 3
+      },
+      {
+        "id": "train_24913",
+        "shared_word_span": 3
+      },
+      {
+        "id": "train_3199",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_3205",
+        "shared_word_span": 2
+      }
+    ],
+    "retrieval_backend": "dense",
+    "proposed_atomic_claims": [
+      {
+        "source_id": "train_24912",
+        "claim": "These 2 questions will help you stand out in an interview.",
+        "support_span": "These 2 Questions Will Help You Stand Out in an Interview",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_24913",
+        "claim": "These 2 questions will help you stand out in an interview.",
+        "support_span": "These 2 Questions Will Help You Stand Out in an Interview",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_3199",
+        "claim": "SDRs don't need prior experience in sales.",
+        "support_span": "SDRs don’t need prior experience in sales, but they need grit, hunger, and a relentless drive to succeed.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_3199",
+        "claim": "Grit, hunger, and a relentless drive to succeed are more important than a polished resume.",
+        "support_span": "Look for candidates who are coachable, curious, and have a strong work ethic. These traits are far more important than a polished resume.",
+        "claim_type": "comparison"
+      },
+      {
+        "source_id": "train_3199",
+        "claim": "Many great SDRs come from unconventional backgrounds.",
+        "support_span": "Many great SDRs come from unconventional backgrounds—teachers, military veterans, or recent grads.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_3205",
+        "claim": "SDRs want to see a path forward.",
+        "support_span": "SDRs are often entry-level hires, and they’ll want to see a path forward.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_3205",
+        "claim": "Promoting internally is less risky.",
+        "support_span": "Promote internally whenever possible. It’s less risky, and they already know your product and processes.",
+        "claim_type": "fact"
+      }
+    ],
+    "validation_rejected": [],
+    "verifier_rejected": [],
+    "verified_claims": [
+      {
+        "source_id": "train_24912",
+        "claim": "These 2 questions will help you stand out in an interview.",
+        "support_span": "These 2 Questions Will Help You Stand Out in an Interview",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_24913",
+        "claim": "These 2 questions will help you stand out in an interview.",
+        "support_span": "These 2 Questions Will Help You Stand Out in an Interview",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_3199",
+        "claim": "SDRs don't need prior experience in sales.",
+        "support_span": "SDRs don’t need prior experience in sales, but they need grit, hunger, and a relentless drive to succeed.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_3199",
+        "claim": "Grit, hunger, and a relentless drive to succeed are more important than a polished resume.",
+        "support_span": "Look for candidates who are coachable, curious, and have a strong work ethic. These traits are far more important than a polished resume.",
+        "claim_type": "comparison"
+      },
+      {
+        "source_id": "train_3199",
+        "claim": "Many great SDRs come from unconventional backgrounds.",
+        "support_span": "Many great SDRs come from unconventional backgrounds—teachers, military veterans, or recent grads.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_3205",
+        "claim": "SDRs want to see a path forward.",
+        "support_span": "SDRs are often entry-level hires, and they’ll want to see a path forward.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_3205",
+        "claim": "Promoting internally is less risky.",
+        "support_span": "Promote internally whenever possible. It’s less risky, and they already know your product and processes.",
+        "claim_type": "fact"
+      }
+    ],
+    "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] These 2 questions will help you stand out in an interview.\n[E2] These 2 questions will help you stand out in an interview.\n[E3] SDRs don't need prior experience in sales.\n[E4] Grit, hunger, and a relentless drive to succeed are more important than a polished resume.\n[E5] Many great SDRs come from unconventional backgrounds.\n[E6] SDRs want to see a path forward.\n[E7] Promoting internally is less risky.",
+    "raw_extraction": "[\n  {\n    \"source_id\": \"train_24912\",\n    \"claim\": \"These 2 questions will help you stand out in an interview.\",\n    \"support_span\": \"These 2 Questions Will Help You Stand Out in an Interview\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_24913\",\n    \"claim\": \"These 2 questions will help you stand out in an interview.\",\n    \"support_span\": \"These 2 Questions Will Help You Stand Out in an Interview\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_3199\",\n    \"claim\": \"SDRs don't need prior experience in sales.\",\n    \"support_span\": \"SDRs don’t need prior experience in sales, but they need grit, hunger, and a relentless drive to succeed.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_3199\",\n    \"claim\": \"Grit, hunger, and a relentless drive to succeed are more important than a polished resume.\",\n    \"support_span\": \"Look for candidates who are coachable, curious, and have a strong work ethic. These traits are far more important than a polished resume.\",\n    \"claim_type\": \"comparison\"\n  },\n  {\n    \"source_id\": \"train_3199\",\n    \"claim\": \"Many great SDRs come from unconventional backgrounds.\",\n    \"support_span\": \"Many great SDRs come from unconventional backgrounds—teachers, military veterans, or recent grads.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_3205\",\n    \"claim\": \"SDRs want to see a path forward.\",\n    \"support_span\": \"SDRs are often entry-level hires, and they’ll want to see a path forward.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_3205\",\n    \"claim\": \"Promoting internally is less risky.\",\n    \"support_span\": \"Promote internally whenever possible. It’s less risky, and they already know your product and processes.\",\n    \"claim_type\": \"fact\"\n  }\n]",
+    "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: How to Truly Stand Out in Any Job Interview, from SDR to COO\n\nSource passages:\n[train_24912]\nThese 2 Questions Will Help You Stand Out in an Interview - SaaStr in TIME \nhttp://time.com/3834976/2-interview-questions/\n…\n\n[train_24913]\nThese 2 Questions Will Help You Stand Out in an Interview | TIME - SaaStr \nhttp://time.com/3834976/2-interview-questions/\n…\n\n[train_3199]\nDear SaaStr: How Do I Build a Great SDR Team?\nBuilding a great SDR team is one of the most critical steps in scaling a SaaS company, especially when you’re selling to the C-suite or enterprise. SDRs are the engine of your pipeline, and if you get this right, it can transform your sales organization.\nHere’s how to do it:\n\n1. Hire for “Fire in the Belly”\n–\n**What to Look For**\n: SDRs don’t need prior experience in sales, but they need grit, hunger, and a relentless drive to succeed. Look for candidates who are coachable, curious, and have a strong work ethic. These traits are far more important than a polished resume.\n–\n**Pro Tip**\n: Many great SDRs come from unconventional backgrounds—teachers, military veterans, or recent grads. They’re often looking for a career change and bring fresh perspectives.\n\n[train_3205]\n7. Create a Career Path\n– **Why?**: SDRs are often entry-level hires, and they’ll want to see a path forward. Without it, you’ll lose them to other companies.\n– **What It Looks Like**:\nSDR → Senior SDR → AE or other roles (e.g., Customer Success, Marketing)\nPromote internally whenever possible. It’s less risky, and they already know your product and processes.\n–\n**Pro Tip**\n: Highlight success stories of SDRs who’ve moved up in the company to inspire your team .",
+    "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: How to Truly Stand Out in Any Job Interview, from SDR to COO\n\nSource passages:\n[train_24912]\nThese 2 Questions Will Help You Stand Out in an Interview - SaaStr in TIME \nhttp://time.com/3834976/2-interview-questions/\n…\n\n[train_24913]\nThese 2 Questions Will Help You Stand Out in an Interview | TIME - SaaStr \nhttp://time.com/3834976/2-interview-questions/\n…\n\n[train_3199]\nDear SaaStr: How Do I Build a Great SDR Team?\nBuilding a great SDR team is one of the most critical steps in scaling a SaaS company, especially when you’re selling to the C-suite or enterprise. SDRs are the engine of your pipeline, and if you get this right, it can transform your sales organization.\nHere’s how to do it:\n\n1. Hire for “Fire in the Belly”\n–\n**What to Look For**\n: SDRs don’t need prior experience in sales, but they need grit, hunger, and a relentless drive to succeed. Look for candidates who are coachable, curious, and have a strong work ethic. These traits are far more important than a polished resume.\n–\n**Pro Tip**\n: Many great SDRs come from unconventional backgrounds—teachers, military veterans, or recent grads. They’re often looking for a career change and bring fresh perspectives.\n\n[train_3205]\n7. Create a Career Path\n– **Why?**: SDRs are often entry-level hires, and they’ll want to see a path forward. Without it, you’ll lose them to other companies.\n– **What It Looks Like**:\nSDR → Senior SDR → AE or other roles (e.g., Customer Success, Marketing)\nPromote internally whenever possible. It’s less risky, and they already know your product and processes.\n–\n**Pro Tip**\n: Highlight success stories of SDRs who’ve moved up in the company to inspire your team .<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "extraction_seconds": 12.163,
+    "verification_seconds": 0.0,
+    "verification_records": [],
+    "llm_verifier_on_critical_path": false,
+    "allowed_numeric_values": [],
+    "distillation_adapter_enabled": false,
+    "verification_adapter_enabled": false,
+    "distillation_backend": "same_loaded_4bit_base_adapter_off",
+    "distillation_do_sample": false,
+    "extraction_max_new_tokens": 2560,
+    "verification_max_new_tokens": 24,
+    "distillation_seed": 0,
+    "support_spans_in_generator_prompt": false,
+    "evidence_stage_reason": null,
+    "evidence_status": "verified",
+    "extraction_attempts": 1,
+    "extraction_stop_reason": "eos",
+    "prompt_contract": "factual-reliability-v1",
+    "fixed_style_enabled": true,
+    "style_applied": true,
+    "style_exemplar_count": 2,
+    "latency_seconds": 8.515,
+    "generated_tokens_including_stop": 173,
+    "last_token_id": 128009,
+    "effective_eos_token_ids": [
+      128001,
+      128008,
+      128009
+    ],
+    "stop_reason": "eos",
+    "budget_fraction": 0.540625,
+    "early_eos": false,
+    "first_attempt_stop_reason": "eos",
+    "retry_stop_reason": null
+  }
+}

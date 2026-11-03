@@ -1,0 +1,509 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "topic_id": "gold_006",
+  "medium": "linkedin",
+  "arm": "on",
+  "seed": 63,
+  "attempts": 1,
+  "evidence_sha256": "1ba22a29ab08a5ee56900716ad9b74c963e8eefb3325fdf88dc8009bc165b780",
+  "retrieval_hit_ids": [
+    "train_6833",
+    "train_23306",
+    "train_24276",
+    "train_24623"
+  ],
+  "retrieval_query": "SaaStr’s YouTube Crosses 5,000,000 Views. Our Top Videos and Sessions of All Time!",
+  "retrieval_filter": null,
+  "style_applied": true,
+  "style_in_prompt": true,
+  "prompt_tokens": 823,
+  "generated_tokens_including_stop": 320,
+  "latency_seconds": 21.814,
+  "exemplar_ids": [
+    11552,
+    11554
+  ],
+  "saved_at": "2026-10-30T09:25:23.065993+00:00",
+  "trace": {
+    "id": "gold_006",
+    "format": "linkedin_post",
+    "topic": "SaaStr’s YouTube Crosses 5,000,000 Views. Our Top Videos and Sessions of All Time!",
+    "audience": "B2B SaaS founders and operators",
+    "goal": "Teach one concrete operator lesson with specific examples and conviction.",
+    "cta": "none",
+    "k": 8,
+    "expected_facts": [
+      "The answer should connect audience growth to consistency, compounding content, or knowing what the audience repeatedly wants.",
+      "It should not just celebrate the milestone; it should explain the operating lesson behind it.",
+      "It should make content/community growth relevant to B2B founders."
+    ],
+    "rubric_must_haves": [
+      "Turns the milestone into a founder lesson.",
+      "Includes at least one example of compounding distribution or content repetition.",
+      "Maintains a practical SaaS/community-building lens.",
+      "Avoids sounding like a vanity-metrics post."
+    ],
+    "gold_reference": "A strong answer says the real lesson behind five million views is not virality but compounding consistency. Founders learn what their audience values, keep shipping, and let repeated useful content build trust and distribution over time. The piece should make the case that community and media scale the same way product and GTM do: through repetition, iteration, and audience fit.",
+    "medium": "linkedin",
+    "prompt": "Write a LinkedIn post in the style of Jason Lemkin about: SaaStr’s YouTube Crosses 5,000,000 Views. Our Top Videos and Sessions of All Time!\n\nStyle examples from train-owned source text.\nUse them for voice only. They are not evidence for claims.\nDo not copy long passages verbatim.\n[Style 1]\nA truly great human is still better than any AI agent at most complex, judgment-intensive work. Full stop. If you can find and keep exceptional people, do it. But here’s the honest truth: most hires aren’t great hires. A lot of folks don't want to discuss it, or want to challenge it. But deploying a great AI Agent is just easier, and less stressful, than making a mediocre hire. This is why 2027 will be brutal for tech employment. We'll default to picking an AI Agent over a human for many \"hires\" because it's just ... easier.\n[Style 2]\nI know so many CROs and VPs of Sales that used to be truly great ... And are just burnt now. Fried. Some tried to mask it by hiring CROs and VPs under them to do the work. And sometimes, that does work. But man sales isn't easy. Each month, each quarter, it's a new battle. It's epic but also can take its toll. Just make sure when you hire one with the perfect LinkedIn ... that they really, truly can go into battle again. Not just talk the talk. And share great stories, of epic battles past.\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] SaaStr YouTube has crossed 50,000 subs\n[E2] The Top 10 Most Popular SaaStr YouTube Sessions of All Time\n[E3] The most popular SaaStr YouTube session has 279,000 views\n[E4] The second most popular SaaStr YouTube session has 112,000 views\n[E5] The third most popular SaaStr YouTube session has 79,000 views\n[E6] The fourth most popular SaaStr YouTube session has 62,526 views\n[E7] The fifth most popular SaaStr YouTube session has 46,771 views\n[E8] The sixth most popular SaaStr YouTube session has 41,000 views\n[E9] The seventh most popular SaaStr YouTube session has 37,000 views\n[E10] The eighth most popular SaaStr YouTube session has 36,000 views\n[E11] The ninth most popular SaaStr YouTube session has 35,266 views\n[E12] The tenth most popular SaaStr YouTube session has 33,270 views\n\nNow write the requested LinkedIn post about: SaaStr’s YouTube Crosses 5,000,000 Views. Our Top Videos and Sessions of All Time!",
+    "rendered_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nWrite a LinkedIn post in the style of Jason Lemkin about: SaaStr’s YouTube Crosses 5,000,000 Views. Our Top Videos and Sessions of All Time!\n\nStyle examples from train-owned source text.\nUse them for voice only. They are not evidence for claims.\nDo not copy long passages verbatim.\n[Style 1]\nA truly great human is still better than any AI agent at most complex, judgment-intensive work. Full stop. If you can find and keep exceptional people, do it. But here’s the honest truth: most hires aren’t great hires. A lot of folks don't want to discuss it, or want to challenge it. But deploying a great AI Agent is just easier, and less stressful, than making a mediocre hire. This is why 2027 will be brutal for tech employment. We'll default to picking an AI Agent over a human for many \"hires\" because it's just ... easier.\n[Style 2]\nI know so many CROs and VPs of Sales that used to be truly great ... And are just burnt now. Fried. Some tried to mask it by hiring CROs and VPs under them to do the work. And sometimes, that does work. But man sales isn't easy. Each month, each quarter, it's a new battle. It's epic but also can take its toll. Just make sure when you hire one with the perfect LinkedIn ... that they really, truly can go into battle again. Not just talk the talk. And share great stories, of epic battles past.\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] SaaStr YouTube has crossed 50,000 subs\n[E2] The Top 10 Most Popular SaaStr YouTube Sessions of All Time\n[E3] The most popular SaaStr YouTube session has 279,000 views\n[E4] The second most popular SaaStr YouTube session has 112,000 views\n[E5] The third most popular SaaStr YouTube session has 79,000 views\n[E6] The fourth most popular SaaStr YouTube session has 62,526 views\n[E7] The fifth most popular SaaStr YouTube session has 46,771 views\n[E8] The sixth most popular SaaStr YouTube session has 41,000 views\n[E9] The seventh most popular SaaStr YouTube session has 37,000 views\n[E10] The eighth most popular SaaStr YouTube session has 36,000 views\n[E11] The ninth most popular SaaStr YouTube session has 35,266 views\n[E12] The tenth most popular SaaStr YouTube session has 33,270 views\n\nNow write the requested LinkedIn post about: SaaStr’s YouTube Crosses 5,000,000 Views. Our Top Videos and Sessions of All Time!<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "answer": "SaaStr’s YouTube Crosses 5,000,000 Views.  Our Top Videos and Sessions of All Time! Ok we’re close to hitting 5m total views on our YouTube channel (see everyone there!), so I thought this might be a good time to look back and see what the top sessions and videos have been since we started way back in 2014. #1: “How To Hire Great Sales Reps” With Mark Roberge, Former VP Global Field Operations at HubSpot This was way back in our early days when we had no video production team, just me and my iPhone and editing software. But the content remains timeless. Hiring sales reps is hard, and getting it right is critical. Watch it here: #2: “What You Really Need To Know About Venture Capital Today” with David Frankel, Managing General Partner, Forerunner Ventures A classic session on how venture capital works today, where deals happen, and more. Watch it here: #3: “The Future of B2B Software with CEO of Zendesk Mikkel Svane + How to Scale Customer Success” Mikkel is always great and insightful. Watch his session here: #4: “How Slack Became a Unicorn & More with Stewart Butterfield CEO & Co-Founder of Slack” Another classic session from when Slack was scaling and becoming something much bigger than just a simple tool. Watch it here: #5: “Why Your Product Needs to be 100x Better Than Competition w/ Ben Chestnut Founder & CCPO of Mailchimp” A deep dive on",
+    "raw_model_output": "SaaStr’s YouTube Crosses 5,000,000 Views.  Our Top Videos and Sessions of All Time! Ok we’re close to hitting 5m total views on our YouTube channel (see everyone there!), so I thought this might be a good time to look back and see what the top sessions and videos have been since we started way back in 2014. #1: “How To Hire Great Sales Reps” With Mark Roberge, Former VP Global Field Operations at HubSpot This was way back in our early days when we had no video production team, just me and my iPhone and editing software. But the content remains timeless. Hiring sales reps is hard, and getting it right is critical. Watch it here: #2: “What You Really Need To Know About Venture Capital Today” with David Frankel, Managing General Partner, Forerunner Ventures A classic session on how venture capital works today, where deals happen, and more. Watch it here: #3: “The Future of B2B Software with CEO of Zendesk Mikkel Svane + How to Scale Customer Success” Mikkel is always great and insightful. Watch his session here: #4: “How Slack Became a Unicorn & More with Stewart Butterfield CEO & Co-Founder of Slack” Another classic session from when Slack was scaling and becoming something much bigger than just a simple tool. Watch it here: #5: “Why Your Product Needs to be 100x Better Than Competition w/ Ben Chestnut Founder & CCPO of Mailchimp” A deep dive on",
+    "deployment_output": "SaaStr’s YouTube Crosses 5,000,000 Views.  Our Top Videos and Sessions of All Time! Ok we’re close to hitting 5m total views on our YouTube channel (see everyone there!), so I thought this might be a good time to look back and see what the top sessions and videos have been since we started way back in 2014. #1: “How To Hire Great Sales Reps” With Mark Roberge, Former VP Global Field Operations at HubSpot This was way back in our early days when we had no video production team, just me and my iPhone and editing software. But the content remains timeless. Hiring sales reps is hard, and getting it right is critical. Watch it here: #2: “What You Really Need To Know About Venture Capital Today” with David Frankel, Managing General Partner, Forerunner Ventures A classic session on how venture capital works today, where deals happen, and more. Watch it here: #3: “The Future of B2B Software with CEO of Zendesk Mikkel Svane + How to Scale Customer Success” Mikkel is always great and insightful. Watch his session here: #4: “How Slack Became a Unicorn & More with Stewart Butterfield CEO & Co-Founder of Slack” Another classic session from when Slack was scaling and becoming something much bigger than just a simple tool. Watch it here: #5: “Why Your Product Needs to be 100x Better Than Competition w/ Ben Chestnut Founder & CCPO of Mailchimp” A deep dive on",
+    "first_attempt_answer": "SaaStr’s YouTube Crosses 5,000,000 Views.  Our Top Videos and Sessions of All Time! Ok we’re close to hitting 5m total views on our YouTube channel (see everyone there!), so I thought this might be a good time to look back and see what the top sessions and videos have been since we started way back in 2014. #1: “How To Hire Great Sales Reps” With Mark Roberge, Former VP Global Field Operations at HubSpot This was way back in our early days when we had no video production team, just me and my iPhone and editing software. But the content remains timeless. Hiring sales reps is hard, and getting it right is critical. Watch it here: #2: “What You Really Need To Know About Venture Capital Today” with David Frankel, Managing General Partner, Forerunner Ventures A classic session on how venture capital works today, where deals happen, and more. Watch it here: #3: “The Future of B2B Software with CEO of Zendesk Mikkel Svane + How to Scale Customer Success” Mikkel is always great and insightful. Watch his session here: #4: “How Slack Became a Unicorn & More with Stewart Butterfield CEO & Co-Founder of Slack” Another classic session from when Slack was scaling and becoming something much bigger than just a simple tool. Watch it here: #5: “Why Your Product Needs to be 100x Better Than Competition w/ Ben Chestnut Founder & CCPO of Mailchimp” A deep dive on",
+    "retry_answer": null,
+    "query": "SaaStr’s YouTube Crosses 5,000,000 Views. Our Top Videos and Sessions of All Time!",
+    "max_new_tokens": 320,
+    "seed": 63,
+    "retry_seed": null,
+    "deployment_accepted": true,
+    "repair_occurred": false,
+    "generation_attempt": {
+      "seed": 63,
+      "answer": "SaaStr’s YouTube Crosses 5,000,000 Views.  Our Top Videos and Sessions of All Time! Ok we’re close to hitting 5m total views on our YouTube channel (see everyone there!), so I thought this might be a good time to look back and see what the top sessions and videos have been since we started way back in 2014. #1: “How To Hire Great Sales Reps” With Mark Roberge, Former VP Global Field Operations at HubSpot This was way back in our early days when we had no video production team, just me and my iPhone and editing software. But the content remains timeless. Hiring sales reps is hard, and getting it right is critical. Watch it here: #2: “What You Really Need To Know About Venture Capital Today” with David Frankel, Managing General Partner, Forerunner Ventures A classic session on how venture capital works today, where deals happen, and more. Watch it here: #3: “The Future of B2B Software with CEO of Zendesk Mikkel Svane + How to Scale Customer Success” Mikkel is always great and insightful. Watch his session here: #4: “How Slack Became a Unicorn & More with Stewart Butterfield CEO & Co-Founder of Slack” Another classic session from when Slack was scaling and becoming something much bigger than just a simple tool. Watch it here: #5: “Why Your Product Needs to be 100x Better Than Competition w/ Ben Chestnut Founder & CCPO of Mailchimp” A deep dive on",
+      "numeric_grounding": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [
+          "n:112000",
+          "n:279000",
+          "n:33270",
+          "n:35266",
+          "n:36000",
+          "n:37000",
+          "n:41000",
+          "n:46771",
+          "n:50000",
+          "n:5000000",
+          "n:62526",
+          "n:79000"
+        ],
+        "values": [
+          {
+            "value": "2014",
+            "canonical": "year:2014",
+            "sentence": "Ok we’re close to hitting 5m total views on our YouTube channel (see everyone there!), so I thought this might be a good time to look back and see what the top sessions and videos have been since we started way back in 2014",
+            "start": 303,
+            "end": 307
+          },
+          {
+            "value": "5,000,000",
+            "canonical": "n:5000000",
+            "sentence": "SaaStr’s YouTube Crosses 5,000,000 Views",
+            "start": 25,
+            "end": 34
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "2014",
+            "canonical": "year:2014",
+            "sentence": "Ok we’re close to hitting 5m total views on our YouTube channel (see everyone there!), so I thought this might be a good time to look back and see what the top sessions and videos have been since we started way back in 2014",
+            "start": 303,
+            "end": 307
+          }
+        ]
+      },
+      "rag_source_copying": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 4,
+        "document_id": "train_6833",
+        "matched_generated_span": "sessions of all time",
+        "matched_retrieved_span": "sessions of all time"
+      },
+      "stop_reason": "length"
+    },
+    "repair_attempt": null,
+    "accepted_attempt": 1,
+    "rag_source_copying": {
+      "applicable": true,
+      "threshold": 12,
+      "pass": true,
+      "flagged": false,
+      "max_contiguous_words": 4,
+      "document_id": "train_6833",
+      "matched_generated_span": "sessions of all time",
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 4,
+        "document_id": "train_6833",
+        "matched_generated_span": "sessions of all time",
+        "matched_retrieved_span": "sessions of all time"
+      },
+      "retry": null,
+      "retry_occurred": false,
+      "repair_occurred": false
+    },
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": false,
+      "failure": "unsupported_numeric_grounding",
+      "unsupported": [
+        {
+          "value": "2014",
+          "canonical": "year:2014",
+          "sentence": "Ok we’re close to hitting 5m total views on our YouTube channel (see everyone there!), so I thought this might be a good time to look back and see what the top sessions and videos have been since we started way back in 2014",
+          "start": 303,
+          "end": 307
+        }
+      ],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [
+          "n:112000",
+          "n:279000",
+          "n:33270",
+          "n:35266",
+          "n:36000",
+          "n:37000",
+          "n:41000",
+          "n:46771",
+          "n:50000",
+          "n:5000000",
+          "n:62526",
+          "n:79000"
+        ],
+        "values": [
+          {
+            "value": "2014",
+            "canonical": "year:2014",
+            "sentence": "Ok we’re close to hitting 5m total views on our YouTube channel (see everyone there!), so I thought this might be a good time to look back and see what the top sessions and videos have been since we started way back in 2014",
+            "start": 303,
+            "end": 307
+          },
+          {
+            "value": "5,000,000",
+            "canonical": "n:5000000",
+            "sentence": "SaaStr’s YouTube Crosses 5,000,000 Views",
+            "start": 25,
+            "end": 34
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "2014",
+            "canonical": "year:2014",
+            "sentence": "Ok we’re close to hitting 5m total views on our YouTube channel (see everyone there!), so I thought this might be a good time to look back and see what the top sessions and videos have been since we started way back in 2014",
+            "start": 303,
+            "end": 307
+          }
+        ]
+      },
+      "retry": null
+    },
+    "prompt_tokens": 823,
+    "backend": "unsloth",
+    "retrieval": true,
+    "retrieval_query": "SaaStr’s YouTube Crosses 5,000,000 Views. Our Top Videos and Sessions of All Time!",
+    "retrieval_filter": null,
+    "retrieval_k": 4,
+    "retrieval_hits": [
+      {
+        "id": "train_6833",
+        "text": "So we’ve finally crossed 50,000 subs on SaaStr YouTube.  It took a while, but I’m probably on the unparalled quality of our content, especially the past 18+ months or so where we stepped up the editing and more.\nSo if you want to catch up, here are The Top 10 Most Popular SaaStr YouTube Sessions of All Time.  Note I did take out a few that would have made the list but were a bit dated etc:\n#1,  279,000 Views: “How To Perfectly Pitch Your Seed Stage Startup With Y Combinator’s Michael Seibel:\nYcombinator is pretty popular\n#2.  112,000 Views: “What’s New at WordPress with Matt Mullenweg, CEO of Automattic and Co-Founder of WordPress”\n#3, 79,000 Views: “A Step by Step Guide to Revenue Growth with Mark Roberge, Harvard Business School”\n#4.  62,526 Views: “From 2 Weeks of Runway to $1B Acquisition: The Founder Playbook with Loom’s CEO and Co-Founder”\n#5.  46,771 Views: “From Burn-Out to $100M in ARR with Jason Cohen, Founder of WP Engine”\n#6.  41,000 Views:  “Veeva: The Biggest Vertical SaaS Success Story of All Time” with Founder/CEO Peter Gassner\n#7,  37,000 Views: “Sales Mistakes that Can Kill Your SaaS Business & How to Avoid Them”\n#8.  36,000 Views:  “Twilio: The Inside Story with Jeff Lawson, CEO/Co-Founder”\n#9.  35,266 Views: “The Secrets to YC’s Essential Startup Advice with Y Combinator with Michael Seibel”\n#10.  33,270 Views: “How To Innovate Faster with Community: Insights From GitLab CEO Sid Sijbrandij”",
+        "medium": "blog",
+        "group_id": "f970405f22acf5c88073355f60d800ab3ec19157e3310dfe132d1f9413669072",
+        "row_id": 6833,
+        "split": "train",
+        "distance": 0.15028953552246094
+      },
+      {
+        "id": "train_23306",
+        "text": "Did you know SaaStr has YouTube channel with tons of great content? Check it out & subscribe \nhttps://youtube.com/channel/UCwOILzAcxK5CM2M7oRBuWSg/videos\n…",
+        "medium": "x",
+        "group_id": "3f12119f205dadd191ee2881917f9c0bc5d5676c37946433923ddca6e7426b3e",
+        "row_id": 23306,
+        "split": "train",
+        "distance": 0.17228209972381592
+      },
+      {
+        "id": "train_24276",
+        "text": "Did you know SaaStr has YouTube channel with tons of great content? Check it out & subscribe  \nhttps://youtube.com/channel/UCwOILzAcxK5CM2M7oRBuWSg/videos\n…",
+        "medium": "x",
+        "group_id": "3f12119f205dadd191ee2881917f9c0bc5d5676c37946433923ddca6e7426b3e",
+        "row_id": 24276,
+        "split": "train",
+        "distance": 0.17228209972381592
+      },
+      {
+        "id": "train_24623",
+        "text": "Did you know SaaStr has YouTube channel with tons of great content? Check it out & subscribe  \nhttps://youtube.com/channel/UCwOILzAcxK5CM2M7oRBuWSg/videos\n…",
+        "medium": "x",
+        "group_id": "3f12119f205dadd191ee2881917f9c0bc5d5676c37946433923ddca6e7426b3e",
+        "row_id": 24623,
+        "split": "train",
+        "distance": 0.17228209972381592
+      }
+    ],
+    "copying": [
+      {
+        "id": "train_6833",
+        "shared_word_span": 3
+      },
+      {
+        "id": "train_23306",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_24276",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_24623",
+        "shared_word_span": 2
+      }
+    ],
+    "retrieval_backend": "dense",
+    "proposed_atomic_claims": [
+      {
+        "source_id": "train_6833",
+        "claim": "SaaStr YouTube has crossed 50,000 subs",
+        "support_span": "So we’ve finally crossed 50,000 subs on SaaStr YouTube.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_6833",
+        "claim": "The Top 10 Most Popular SaaStr YouTube Sessions of All Time",
+        "support_span": "So if you want to catch up, here are The Top 10 Most Popular SaaStr YouTube Sessions of All Time.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_6833",
+        "claim": "The most popular SaaStr YouTube session has 279,000 views",
+        "support_span": "#1, 279,000 Views: “How To Perfectly Pitch Your Seed Stage Startup With Y Combinator’s Michael Seibel:",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_6833",
+        "claim": "The second most popular SaaStr YouTube session has 112,000 views",
+        "support_span": "#2. 112,000 Views: “What’s New at WordPress with Matt Mullenweg, CEO of Automattic and Co-Founder of WordPress”",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_6833",
+        "claim": "The third most popular SaaStr YouTube session has 79,000 views",
+        "support_span": "#3, 79,000 Views: “A Step by Step Guide to Revenue Growth with Mark Roberge, Harvard Business School”",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_6833",
+        "claim": "The fourth most popular SaaStr YouTube session has 62,526 views",
+        "support_span": "#4. 62,526 Views: “From 2 Weeks of Runway to $1B Acquisition: The Founder Playbook with Loom’s CEO and Co-Founder”",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_6833",
+        "claim": "The fifth most popular SaaStr YouTube session has 46,771 views",
+        "support_span": "#5. 46,771 Views: “From Burn-Out to $100M in ARR with Jason Cohen, Founder of WP Engine”",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_6833",
+        "claim": "The sixth most popular SaaStr YouTube session has 41,000 views",
+        "support_span": "#6. 41,000 Views: “Veeva: The Biggest Vertical SaaS Success Story of All Time” with Founder/CEO Peter Gassner",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_6833",
+        "claim": "The seventh most popular SaaStr YouTube session has 37,000 views",
+        "support_span": "#7, 37,000 Views: “Sales Mistakes that Can Kill Your SaaS Business & How to Avoid Them”",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_6833",
+        "claim": "The eighth most popular SaaStr YouTube session has 36,000 views",
+        "support_span": "#8. 36,000 Views: “Twilio: The Inside Story with Jeff Lawson, CEO/Co-Founder”",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_6833",
+        "claim": "The ninth most popular SaaStr YouTube session has 35,266 views",
+        "support_span": "#9. 35,266 Views: “The Secrets to YC’s Essential Startup Advice with Y Combinator with Michael Seibel”",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_6833",
+        "claim": "The tenth most popular SaaStr YouTube session has 33,270 views",
+        "support_span": "#10. 33,270 Views: “How To Innovate Faster with Community: Insights From GitLab CEO Sid Sijbrandij”",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_23306",
+        "claim": "SaaStr has a YouTube channel",
+        "support_span": "Did you know SaaStr has YouTube channel with tons of great content?",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_24276",
+        "claim": "SaaStr has a YouTube channel",
+        "support_span": "Did you know SaaStr has YouTube channel with tons of great content?",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_24623",
+        "claim": "SaaStr has a YouTube channel",
+        "support_span": "Did you know SaaStr has YouTube channel with tons of great content?",
+        "claim_type": "fact"
+      }
+    ],
+    "validation_rejected": [
+      {
+        "source_id": "train_23306",
+        "claim": "SaaStr has a YouTube channel",
+        "support_span": "Did you know SaaStr has YouTube channel with tons of great content?",
+        "claim_type": "fact",
+        "reason": "interrogative_assertion"
+      },
+      {
+        "source_id": "train_24276",
+        "claim": "SaaStr has a YouTube channel",
+        "support_span": "Did you know SaaStr has YouTube channel with tons of great content?",
+        "claim_type": "fact",
+        "reason": "interrogative_assertion"
+      },
+      {
+        "source_id": "train_24623",
+        "claim": "SaaStr has a YouTube channel",
+        "support_span": "Did you know SaaStr has YouTube channel with tons of great content?",
+        "claim_type": "fact",
+        "reason": "interrogative_assertion"
+      }
+    ],
+    "verifier_rejected": [],
+    "verified_claims": [
+      {
+        "source_id": "train_6833",
+        "claim": "SaaStr YouTube has crossed 50,000 subs",
+        "support_span": "So we’ve finally crossed 50,000 subs on SaaStr YouTube.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_6833",
+        "claim": "The Top 10 Most Popular SaaStr YouTube Sessions of All Time",
+        "support_span": "So if you want to catch up, here are The Top 10 Most Popular SaaStr YouTube Sessions of All Time.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_6833",
+        "claim": "The most popular SaaStr YouTube session has 279,000 views",
+        "support_span": "#1, 279,000 Views: “How To Perfectly Pitch Your Seed Stage Startup With Y Combinator’s Michael Seibel:",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_6833",
+        "claim": "The second most popular SaaStr YouTube session has 112,000 views",
+        "support_span": "#2. 112,000 Views: “What’s New at WordPress with Matt Mullenweg, CEO of Automattic and Co-Founder of WordPress”",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_6833",
+        "claim": "The third most popular SaaStr YouTube session has 79,000 views",
+        "support_span": "#3, 79,000 Views: “A Step by Step Guide to Revenue Growth with Mark Roberge, Harvard Business School”",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_6833",
+        "claim": "The fourth most popular SaaStr YouTube session has 62,526 views",
+        "support_span": "#4. 62,526 Views: “From 2 Weeks of Runway to $1B Acquisition: The Founder Playbook with Loom’s CEO and Co-Founder”",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_6833",
+        "claim": "The fifth most popular SaaStr YouTube session has 46,771 views",
+        "support_span": "#5. 46,771 Views: “From Burn-Out to $100M in ARR with Jason Cohen, Founder of WP Engine”",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_6833",
+        "claim": "The sixth most popular SaaStr YouTube session has 41,000 views",
+        "support_span": "#6. 41,000 Views: “Veeva: The Biggest Vertical SaaS Success Story of All Time” with Founder/CEO Peter Gassner",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_6833",
+        "claim": "The seventh most popular SaaStr YouTube session has 37,000 views",
+        "support_span": "#7, 37,000 Views: “Sales Mistakes that Can Kill Your SaaS Business & How to Avoid Them”",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_6833",
+        "claim": "The eighth most popular SaaStr YouTube session has 36,000 views",
+        "support_span": "#8. 36,000 Views: “Twilio: The Inside Story with Jeff Lawson, CEO/Co-Founder”",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_6833",
+        "claim": "The ninth most popular SaaStr YouTube session has 35,266 views",
+        "support_span": "#9. 35,266 Views: “The Secrets to YC’s Essential Startup Advice with Y Combinator with Michael Seibel”",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_6833",
+        "claim": "The tenth most popular SaaStr YouTube session has 33,270 views",
+        "support_span": "#10. 33,270 Views: “How To Innovate Faster with Community: Insights From GitLab CEO Sid Sijbrandij”",
+        "claim_type": "number"
+      }
+    ],
+    "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] SaaStr YouTube has crossed 50,000 subs\n[E2] The Top 10 Most Popular SaaStr YouTube Sessions of All Time\n[E3] The most popular SaaStr YouTube session has 279,000 views\n[E4] The second most popular SaaStr YouTube session has 112,000 views\n[E5] The third most popular SaaStr YouTube session has 79,000 views\n[E6] The fourth most popular SaaStr YouTube session has 62,526 views\n[E7] The fifth most popular SaaStr YouTube session has 46,771 views\n[E8] The sixth most popular SaaStr YouTube session has 41,000 views\n[E9] The seventh most popular SaaStr YouTube session has 37,000 views\n[E10] The eighth most popular SaaStr YouTube session has 36,000 views\n[E11] The ninth most popular SaaStr YouTube session has 35,266 views\n[E12] The tenth most popular SaaStr YouTube session has 33,270 views",
+    "raw_extraction": "[\n  {\n    \"source_id\": \"train_6833\",\n    \"claim\": \"SaaStr YouTube has crossed 50,000 subs\",\n    \"support_span\": \"So we’ve finally crossed 50,000 subs on SaaStr YouTube.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_6833\",\n    \"claim\": \"The Top 10 Most Popular SaaStr YouTube Sessions of All Time\",\n    \"support_span\": \"So if you want to catch up, here are The Top 10 Most Popular SaaStr YouTube Sessions of All Time.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_6833\",\n    \"claim\": \"The most popular SaaStr YouTube session has 279,000 views\",\n    \"support_span\": \"#1, 279,000 Views: “How To Perfectly Pitch Your Seed Stage Startup With Y Combinator’s Michael Seibel:\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_6833\",\n    \"claim\": \"The second most popular SaaStr YouTube session has 112,000 views\",\n    \"support_span\": \"#2. 112,000 Views: “What’s New at WordPress with Matt Mullenweg, CEO of Automattic and Co-Founder of WordPress”\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_6833\",\n    \"claim\": \"The third most popular SaaStr YouTube session has 79,000 views\",\n    \"support_span\": \"#3, 79,000 Views: “A Step by Step Guide to Revenue Growth with Mark Roberge, Harvard Business School”\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_6833\",\n    \"claim\": \"The fourth most popular SaaStr YouTube session has 62,526 views\",\n    \"support_span\": \"#4. 62,526 Views: “From 2 Weeks of Runway to $1B Acquisition: The Founder Playbook with Loom’s CEO and Co-Founder”\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_6833\",\n    \"claim\": \"The fifth most popular SaaStr YouTube session has 46,771 views\",\n    \"support_span\": \"#5. 46,771 Views: “From Burn-Out to $100M in ARR with Jason Cohen, Founder of WP Engine”\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_6833\",\n    \"claim\": \"The sixth most popular SaaStr YouTube session has 41,000 views\",\n    \"support_span\": \"#6. 41,000 Views: “Veeva: The Biggest Vertical SaaS Success Story of All Time” with Founder/CEO Peter Gassner\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_6833\",\n    \"claim\": \"The seventh most popular SaaStr YouTube session has 37,000 views\",\n    \"support_span\": \"#7, 37,000 Views: “Sales Mistakes that Can Kill Your SaaS Business & How to Avoid Them”\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_6833\",\n    \"claim\": \"The eighth most popular SaaStr YouTube session has 36,000 views\",\n    \"support_span\": \"#8. 36,000 Views: “Twilio: The Inside Story with Jeff Lawson, CEO/Co-Founder”\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_6833\",\n    \"claim\": \"The ninth most popular SaaStr YouTube session has 35,266 views\",\n    \"support_span\": \"#9. 35,266 Views: “The Secrets to YC’s Essential Startup Advice with Y Combinator with Michael Seibel”\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_6833\",\n    \"claim\": \"The tenth most popular SaaStr YouTube session has 33,270 views\",\n    \"support_span\": \"#10. 33,270 Views: “How To Innovate Faster with Community: Insights From GitLab CEO Sid Sijbrandij”\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_23306\",\n    \"claim\": \"SaaStr has a YouTube channel\",\n    \"support_span\": \"Did you know SaaStr has YouTube channel with tons of great content?\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_24276\",\n    \"claim\": \"SaaStr has a YouTube channel\",\n    \"support_span\": \"Did you know SaaStr has YouTube channel with tons of great content?\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_24623\",\n    \"claim\": \"SaaStr has a YouTube channel\",\n    \"support_span\": \"Did you know SaaStr has YouTube channel with tons of great content?\",\n    \"claim_type\": \"fact\"\n  }\n]",
+    "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: SaaStr’s YouTube Crosses 5,000,000 Views. Our Top Videos and Sessions of All Time!\n\nSource passages:\n[train_6833]\nSo we’ve finally crossed 50,000 subs on SaaStr YouTube.  It took a while, but I’m probably on the unparalled quality of our content, especially the past 18+ months or so where we stepped up the editing and more.\nSo if you want to catch up, here are The Top 10 Most Popular SaaStr YouTube Sessions of All Time.  Note I did take out a few that would have made the list but were a bit dated etc:\n#1,  279,000 Views: “How To Perfectly Pitch Your Seed Stage Startup With Y Combinator’s Michael Seibel:\nYcombinator is pretty popular\n#2.  112,000 Views: “What’s New at WordPress with Matt Mullenweg, CEO of Automattic and Co-Founder of WordPress”\n#3, 79,000 Views: “A Step by Step Guide to Revenue Growth with Mark Roberge, Harvard Business School”\n#4.  62,526 Views: “From 2 Weeks of Runway to $1B Acquisition: The Founder Playbook with Loom’s CEO and Co-Founder”\n#5.  46,771 Views: “From Burn-Out to $100M in ARR with Jason Cohen, Founder of WP Engine”\n#6.  41,000 Views:  “Veeva: The Biggest Vertical SaaS Success Story of All Time” with Founder/CEO Peter Gassner\n#7,  37,000 Views: “Sales Mistakes that Can Kill Your SaaS Business & How to Avoid Them”\n#8.  36,000 Views:  “Twilio: The Inside Story with Jeff Lawson, CEO/Co-Founder”\n#9.  35,266 Views: “The Secrets to YC’s Essential Startup Advice with Y Combinator with Michael Seibel”\n#10.  33,270 Views: “How To Innovate Faster with Community: Insights From GitLab CEO Sid Sijbrandij”\n\n[train_23306]\nDid you know SaaStr has YouTube channel with tons of great content? Check it out & subscribe \nhttps://youtube.com/channel/UCwOILzAcxK5CM2M7oRBuWSg/videos\n…\n\n[train_24276]\nDid you know SaaStr has YouTube channel with tons of great content? Check it out & subscribe  \nhttps://youtube.com/channel/UCwOILzAcxK5CM2M7oRBuWSg/videos\n…\n\n[train_24623]\nDid you know SaaStr has YouTube channel with tons of great content? Check it out & subscribe  \nhttps://youtube.com/channel/UCwOILzAcxK5CM2M7oRBuWSg/videos\n…",
+    "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: SaaStr’s YouTube Crosses 5,000,000 Views. Our Top Videos and Sessions of All Time!\n\nSource passages:\n[train_6833]\nSo we’ve finally crossed 50,000 subs on SaaStr YouTube.  It took a while, but I’m probably on the unparalled quality of our content, especially the past 18+ months or so where we stepped up the editing and more.\nSo if you want to catch up, here are The Top 10 Most Popular SaaStr YouTube Sessions of All Time.  Note I did take out a few that would have made the list but were a bit dated etc:\n#1,  279,000 Views: “How To Perfectly Pitch Your Seed Stage Startup With Y Combinator’s Michael Seibel:\nYcombinator is pretty popular\n#2.  112,000 Views: “What’s New at WordPress with Matt Mullenweg, CEO of Automattic and Co-Founder of WordPress”\n#3, 79,000 Views: “A Step by Step Guide to Revenue Growth with Mark Roberge, Harvard Business School”\n#4.  62,526 Views: “From 2 Weeks of Runway to $1B Acquisition: The Founder Playbook with Loom’s CEO and Co-Founder”\n#5.  46,771 Views: “From Burn-Out to $100M in ARR with Jason Cohen, Founder of WP Engine”\n#6.  41,000 Views:  “Veeva: The Biggest Vertical SaaS Success Story of All Time” with Founder/CEO Peter Gassner\n#7,  37,000 Views: “Sales Mistakes that Can Kill Your SaaS Business & How to Avoid Them”\n#8.  36,000 Views:  “Twilio: The Inside Story with Jeff Lawson, CEO/Co-Founder”\n#9.  35,266 Views: “The Secrets to YC’s Essential Startup Advice with Y Combinator with Michael Seibel”\n#10.  33,270 Views: “How To Innovate Faster with Community: Insights From GitLab CEO Sid Sijbrandij”\n\n[train_23306]\nDid you know SaaStr has YouTube channel with tons of great content? Check it out & subscribe \nhttps://youtube.com/channel/UCwOILzAcxK5CM2M7oRBuWSg/videos\n…\n\n[train_24276]\nDid you know SaaStr has YouTube channel with tons of great content? Check it out & subscribe  \nhttps://youtube.com/channel/UCwOILzAcxK5CM2M7oRBuWSg/videos\n…\n\n[train_24623]\nDid you know SaaStr has YouTube channel with tons of great content? Check it out & subscribe  \nhttps://youtube.com/channel/UCwOILzAcxK5CM2M7oRBuWSg/videos\n…<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "extraction_seconds": 28.233,
+    "verification_seconds": 0.0,
+    "verification_records": [],
+    "llm_verifier_on_critical_path": false,
+    "allowed_numeric_values": [
+      "n:112000",
+      "n:279000",
+      "n:33270",
+      "n:35266",
+      "n:36000",
+      "n:37000",
+      "n:41000",
+      "n:46771",
+      "n:50000",
+      "n:5000000",
+      "n:62526",
+      "n:79000"
+    ],
+    "distillation_adapter_enabled": false,
+    "verification_adapter_enabled": false,
+    "distillation_backend": "same_loaded_4bit_base_adapter_off",
+    "distillation_do_sample": false,
+    "extraction_max_new_tokens": 2560,
+    "verification_max_new_tokens": 24,
+    "distillation_seed": 0,
+    "support_spans_in_generator_prompt": false,
+    "evidence_stage_reason": null,
+    "evidence_status": "verified",
+    "extraction_attempts": 1,
+    "extraction_stop_reason": "eos",
+    "prompt_contract": "factual-reliability-v1",
+    "fixed_style_enabled": true,
+    "style_applied": true,
+    "style_exemplar_count": 2,
+    "latency_seconds": 21.814,
+    "generated_tokens_including_stop": 320,
+    "last_token_id": 389,
+    "effective_eos_token_ids": [
+      128001,
+      128008,
+      128009
+    ],
+    "stop_reason": "length",
+    "budget_fraction": 1.0,
+    "early_eos": false,
+    "first_attempt_stop_reason": "length",
+    "retry_stop_reason": null
+  }
+}

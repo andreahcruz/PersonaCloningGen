@@ -18,6 +18,7 @@ from host_finetune.model_f_experiment.unified import (
     file_sha256,
     load_gold_topics,
     panel_cells,
+    panel_experiment_id,
     panel_status,
     record_overlap,
     record_posthoc_arm,
@@ -152,6 +153,15 @@ def test_posthoc_f_rel_selection_does_not_rewrite_prior_decisions(tmp_path: Path
     assert stage_path.read_text(encoding="utf-8") == stage
     assert json.loads(pilot)["selected_arm"] == "F-SOURCE"
     assert json.loads(stage)["selected_arm"] == "F-REL"
+    assert payload["later_engineering_selection"] == "F-REL"
+    assert payload["this_run_profile"] == "F-REL"
+    separate = tmp_path / "EXP-20261103-001-model-f-source-unified-panel"
+    plan = write_plan(separate, "F-SOURCE", tmp_path / "snapshot_copy")
+    assert plan["experiment_id"] == separate.name
+    assert plan["profile"] == "F-SOURCE"
+    assert plan["decoding"]["temperature"] == 0.7
+    assert plan["max_seq_length"] == 2048
+    assert panel_experiment_id(tmp_path / "panel") == UNIFIED_EXPERIMENT_ID
 
 
 def test_panel_status_counts_saved_cells_and_keeps_failures_retryable(tmp_path: Path):

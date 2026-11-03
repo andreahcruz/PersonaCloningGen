@@ -1,0 +1,1403 @@
+{
+  "status": "complete",
+  "question_id": "gold_016",
+  "query": "You Can’t Train an AI Agent and Then Just … Go Away. We Did, It Fell Off The Rails. And We Didn’t Even Know.",
+  "retrieval": {
+    "backend": "lightrag",
+    "mode": "hybrid",
+    "evidence_budget": 4,
+    "top_k": 20
+  },
+  "payload": {
+    "status": "success",
+    "message": "Query processed successfully",
+    "data": {
+      "entities": [
+        {
+          "entity_name": "Rails",
+          "entity_type": "product",
+          "description": "Rails is a framework that bakes in authentication, authorization, encryption, and compliance by default.",
+          "source_id": "gd_95a5a68d03ed79a665656dfe-chunk-006",
+          "file_path": "gd_95a5a68d03ed79a665656dfe",
+          "created_at": 1793637800
+        },
+        {
+          "entity_name": "Agent Deployments",
+          "entity_type": "concept",
+          "description": "The process of implementing AI-powered sales development representatives in a sales team.",
+          "source_id": "gd_ec4952faf291c054baf7a979-chunk-003",
+          "file_path": "gd_ec4952faf291c054baf7a979",
+          "created_at": 1793620981
+        },
+        {
+          "entity_name": "Train Wreck",
+          "entity_type": "concept",
+          "description": "A situation where a first-time VP of Sales fails due to avoidable mistakes.",
+          "source_id": "gd_9c5b3ffd65a6602d115b46e5-chunk-000",
+          "file_path": "gd_9c5b3ffd65a6602d115b46e5",
+          "created_at": 1793595348
+        },
+        {
+          "entity_name": "SaaStr London",
+          "entity_type": "event",
+          "description": "SaaStr London is a conference held in London, primarily targeting SaaS founders and entrepreneurs. The event, which takes place over two days, focuses on making AI work for B2B revenue growth. With over 75 sessions and workshops, it attracts a large audience of 2,500+ B2B and AI practitioners, 500+ venture capitalists, and facilitates 2,000+ one-on-one meetings. The conference is organized by SaaStr, a well-known organization in the SaaS industry, and has been held annually, with the 2025 event being a notable instance. The event's agenda includes discussions on AI and sales strategies, aiming to equip attendees with the knowledge and tools necessary to leverage AI for revenue growth.<SEP>A conference event organized by SaaStr, where sponsors and attendees can connect and engage with each other.<SEP>SaaStr London is a conference that takes place in March, where the new video/voice agent will be showcased.<SEP>A two-day conference held on December 1-2, where attendees can interact with AI agents and see their implementation in action.",
+          "source_id": "gd_235cb6ff695a4b03e5386e8d-chunk-000<SEP>gd_cd0a5d64ec64d242e99c5ad1-chunk-003<SEP>gd_23ebc282dfbfcee03fe01904-chunk-005<SEP>gd_869914f6788fdfc5460c226b-chunk-003<SEP>gd_31e53199562273779b464f4d-chunk-005<SEP>gd_1c786168860b4c364f13ef3b-chunk-011<SEP>gd_9f64b63b5ae698d29604d98b-chunk-017<SEP>gd_bdde7399e550d0e1ca3c228a-chunk-004<SEP>gd_ec4952faf291c054baf7a979-chunk-002<SEP>gd_ec4952faf291c054baf7a979-chunk-003<SEP>gd_ec4952faf291c054baf7a979-chunk-006<SEP>gd_c1eda59785faf7ce5addae75-chunk-002<SEP>gd_c1eda59785faf7ce5addae75-chunk-017<SEP>gd_c1eda59785faf7ce5addae75-chunk-020",
+          "file_path": "gd_235cb6ff695a4b03e5386e8d<SEP>gd_cd0a5d64ec64d242e99c5ad1<SEP>gd_23ebc282dfbfcee03fe01904<SEP>gd_869914f6788fdfc5460c226b<SEP>gd_31e53199562273779b464f4d<SEP>gd_1c786168860b4c364f13ef3b<SEP>gd_9f64b63b5ae698d29604d98b<SEP>gd_ec4952faf291c054baf7a979<SEP>gd_c1eda59785faf7ce5addae75",
+          "created_at": 1793621540
+        },
+        {
+          "entity_name": "Ruby on Rails",
+          "entity_type": "product",
+          "description": "The programming framework used by Tobias Lütke to build Shopify.<SEP>Ruby on Rails is a programming framework used by Gassner to build Snowdevil.",
+          "source_id": "gd_ac4b8b9ed091ab54b1aba8f9-chunk-005<SEP>gd_ac4b8b9ed091ab54b1aba8f9-chunk-006",
+          "file_path": "gd_ac4b8b9ed091ab54b1aba8f9",
+          "created_at": 1793583359
+        },
+        {
+          "entity_name": "AI",
+          "entity_type": "product",
+          "description": "**Artificial Intelligence (AI)**\n\nArtificial Intelligence (AI) refers to the use of artificial intelligence in various applications. It is a technology that enables machines to perform tasks that typically require human intelligence. AI can perform tasks independently, transforming the customer experience within an app, across apps, and in every way that products overlap with human experience.\n\nAI is a specific business idea of more than one word, encompassing a wide range of applications and industries. It is a technology that can be applied in various sectors, including software as a service (SaaS), where AI is used to enhance the user experience and improve operational efficiency. The term AI is often used interchangeably with the concept of machine learning, which is a subset of AI that enables machines to learn from data and improve their performance over time. However, AI is a broader term that encompasses not only machine learning but also other techniques, such as natural language processing and computer vision.\n\nIn the context of SaaS, AI is used to provide personalized experiences for customers, predict their needs, and offer tailored recommendations. It is also used to automate routine tasks, freeing up human resources for more strategic and creative work. AI is a key driver of growth for companies like Snowflake, enabling them to provide more efficient and effective data management solutions.\n\nAI has also been used to deflect buyers from needing to talk to a sales representative, and is a type of artificial intelligence technology used in marketing automation. Additionally, AI has led to an explosion of budget going to new apps and new discovery, weakening brand moats and putting deals into play.\n\nFurthermore, AI is being used to enable businesses to perform tasks at a larger scale than ever before. It is a rapidly evolving field that has the potential to transform various aspects of our lives, from customer service to healthcare and education. Its applications are vast and varied, and it is likely to continue to shape the future of technology and society in the years to come.\n\nIn the context of sales, AI is used to perform tasks more efficiently than humans, such as automating routine tasks and providing personalized experiences for customers. AI tools, such as those used by SDRs, can also provide support and answer questions, enhancing sales performance. Overall, AI is a rapidly evolving field that is changing the pace of business, and its applications are vast and varied.\n\nThe adoption of AI in B2B and SaaS apps is rapidly accelerating, with many businesses using AI to stay ahead of the competition. AI investments are also on the rise, with many companies recognizing the potential of AI to drive growth and innovation. Additionally, AI is being used in content creation, enabling businesses to produce high-quality content more efficiently.\n\nIt's worth noting that AI systems require daily management, training, and refinement to achieve results, and AI excels at pattern matching, asking the right questions, recognizing signals, and routing appropriately. However, AI still requires human oversight and management, particularly in tasks such as marketing and sales.\n\nIn summary, AI is a technology that has become increasingly important for businesses, with its value lying in specificity and application rather than data size. It is a rapidly evolving field that has the potential to transform various aspects of our lives, and its applications are vast and varied.\n\nAI is also a technology that can write code and assist in coding, enabling new innovations and improvements in business processes and decision-making. It is a key investment focus area for many firms, and its transformative benefits are becoming increasingly necessary for businesses to stay competitive.\n\nIn essence, AI is a technology that enables machines to perform tasks that typically require human intelligence, and its applications are vast and varied, from customer service to healthcare and education. Its adoption is rapidly accelerating, and its transformative benefits are becoming increasingly necessary for businesses to stay competitive.<SEP>A subset of computer science that focuses on creating intelligent machines capable of performing tasks that typically require human intelligence.<SEP>AI is a dominant force in the industry, with a significant impact on sales, marketing, and customer value.<SEP>AI refers to artificial intelligence, a technology used by many startups mentioned in the article.<SEP>Artificial Intelligence is a field of computer science that focuses on creating intelligent machines that can perform tasks that typically require human intelligence.<SEP>Artificial Intelligence<SEP>Artificial Intelligence, a technology that enables machines to perform tasks that typically require human intelligence.",
+          "source_id": "gd_014b45cb99cfee97ee337556-chunk-000<SEP>gd_756878d4d219336489c49168-chunk-000<SEP>gd_756878d4d219336489c49168-chunk-002<SEP>gd_0e1afddaca819c17829b209e-chunk-000<SEP>gd_0019c5e0dad1cf6315645b67-chunk-000<SEP>gd_18496897e5422a11b9860676-chunk-000<SEP>gd_00f0fd1277363a92e5cb2ada-chunk-001<SEP>gd_03e15c39b23c76a73a12a032-chunk-000<SEP>gd_14d8f66ab72709464e7b1f54-chunk-001<SEP>gd_14fcf58446d7e49d02fe50fe-chunk-000<SEP>gd_0d9ed295c2bb4d2ef2626774-chunk-000<SEP>gd_0e9a94d9a2c6bd5596deca87-chunk-000<SEP>gd_e202a1afd3c9d493a094de48-chunk-003<SEP>gd_ad5ace08d7fa6c197773d33b-chunk-000<SEP>gd_23e08535a0d07b419df49dea-chunk-000<SEP>gd_16d19bd83634475f86b34ee9-chunk-000<SEP>gd_b15e60fb25deec55942c00d1-chunk-000<SEP>gd_15d187637520cc4b1b5726e1-chunk-000<SEP>gd_15d187637520cc4b1b5726e1-chunk-001<SEP>gd_177014eb9b039d2307248c03-chunk-000<SEP>gd_23aa8cd4020f1d2df5102cfc-chunk-001<SEP>gd_256a41d38f56ea0d66e64b45-chunk-000<SEP>gd_4fe03de948798e408f8e23aa-chunk-000<SEP>gd_4fe03de948798e408f8e23aa-chunk-001<SEP>gd_21bd6da71e6015eb12202fb3-chunk-000<SEP>gd_5339ef95acf5382961a2350a-chunk-001<SEP>gd_1282420851c57a65c41b3c9b-chunk-000<SEP>gd_1282420851c57a65c41b3c9b-chunk-001<SEP>gd_26e354d96348044e49c9f661-chunk-000<SEP>gd_2aeb737f1fc3578904a93fac-chunk-000<SEP>gd_22462fc0c151ee5a1d880b8f-chunk-000<SEP>gd_2864ed857c89cc1a33e60bc8-chunk-000<SEP>gd_7b8e1734f0309e1ac887f899-chunk-001<SEP>gd_243034475e44ac6592eb8cf0-chunk-001<SEP>gd_070a59055548e31a4e2d028a-chunk-001<SEP>gd_4c93dd06bf96421a31a4ec23-chunk-000<SEP>gd_2fdbffb33fcf38e16b8d19ea-chunk-000<SEP>gd_34c141c6933eafc6a555342b-chunk-000<SEP>gd_3ebf3023f70e6b3f8139191f-chunk-000<SEP>gd_3ebf3023f70e6b3f8139191f-chunk-001<SEP>gd_3ebf3023f70e6b3f8139191f-chunk-002<SEP>gd_3ebf3023f70e6b3f8139191f-chunk-003<SEP>gd_3ebf3023f70e6b3f8139191f-chunk-004<SEP>gd_33efad0196fd9206d0c57889-chunk-001<SEP>gd_4a1db13237771f628ac9bc2c-chunk-000<SEP>gd_4a1db13237771f628ac9bc2c-chunk-002<SEP>gd_385277f88221b595a4db19fa-chunk-000<SEP>gd_5067e7d465b1c8e7c23adc37-chunk-000<SEP>gd_a46480025a7b5344f9662b4e-chunk-001<SEP>gd_a46480025a7b5344f9662b4e-chunk-003<SEP>gd_5b98c2f68eb577d75332ad5f-chunk-000<SEP>gd_3c61fb52257edcd986840507-chunk-000<SEP>gd_e0505c1150b5f1aa25fed30c-chunk-004<SEP>gd_3cc6a49aba6331ce2e244f8a-chunk-000<SEP>gd_40121b246ff5bf58c30968ac-chunk-000<SEP>gd_501507d3da37dc0bee391abb-chunk-000<SEP>gd_44e87b15a12b4d77479d4f58-chunk-000<SEP>gd_44d0a6964b4f43fd522b107e-chunk-000<SEP>gd_4e8e411a20b69ff98e60d556-chunk-002<SEP>gd_a6016d6c72ddea604b995fd3-chunk-000<SEP>gd_a6016d6c72ddea604b995fd3-chunk-001<SEP>gd_48e33c739374b10eb5af5570-chunk-000<SEP>gd_1e07c5d8a5539b7e896c47b5-chunk-000<SEP>gd_514be900e352775092392632-chunk-000<SEP>gd_524c287c9d24eb09b58604a0-chunk-000<SEP>gd_75ccaa0f63ea46308ec419cc-chunk-000<SEP>gd_4f29175b4c599edc6f63ea81-chunk-000<SEP>gd_ba8cfcf37a4829e6738e3817-chunk-000<SEP>gd_ba8cfcf37a4829e6738e3817-chunk-001<SEP>gd_51082f5f33da67daee39dc90-chunk-000<SEP>gd_51082f5f33da67daee39dc90-chunk-001<SEP>gd_5487b59a91d25df6759963f2-chunk-000<SEP>gd_5a3012ecffcc0968826fc7e3-chunk-000<SEP>gd_3aab2ebe3d4a17a4ae74909b-chunk-000<SEP>gd_673777877ba804b6adcb05c7-chunk-000<SEP>gd_d8fe4e83f86b82e6fd92f383-chunk-000<SEP>gd_6fcb1801ba88d3d8f13ac9c7-chunk-000<SEP>gd_79858ea6162573644fe3e173-chunk-002<SEP>gd_79858ea6162573644fe3e173-chunk-006<SEP>gd_364d266152046eb1076d048a-chunk-002<SEP>gd_364d266152046eb1076d048a-chunk-007<SEP>gd_2c6f9645343251c1f939e00a-chunk-000<SEP>gd_2c6f9645343251c1f939e00a-chunk-002<SEP>gd_72a49edcf9ab2df09ba6c1c2-chunk-001<SEP>gd_71e628f86d3b2233b7cb22b0-chunk-005<SEP>gd_93db829a67b16eaaacdf2d76-chunk-000<SEP>gd_e6e70dc6bd3b3665dbbe64de-chunk-000<SEP>gd_e6e70dc6bd3b3665dbbe64de-chunk-001<SEP>gd_2d72fe9469e9f2b08dcd24ea-chunk-001<SEP>gd_753bb0e35f420a30e8b62d0b-chunk-000<SEP>gd_80c909a7620b380ba1b1df0c-chunk-000<SEP>gd_896b59f47a2fe051ace06a99-chunk-000<SEP>gd_896b59f47a2fe051ace06a99-chunk-001<SEP>gd_33efe7307fb3edd348590ee0-chunk-000<SEP>gd_826943ff016f1c9f4e16a02f-chunk-000<SEP>gd_82b65319408f738f77ded8bf-chunk-000<SEP>gd_9393f5107171bfdba2765a73-chunk-000<SEP>gd_cbc65b3eb8efa09f32370cb3-chunk-000<SEP>gd_859a0b3a8894d29a34128c12-chunk-000<SEP>gd_7771f9bb68a925a92a480935-chunk-000<SEP>gd_a4ae7e6eac7817fa6bf9357c-chunk-000<SEP>gd_8bb47c1249e0948d8a5ef1bb-chunk-000<SEP>gd_8bb47c1249e0948d8a5ef1bb-chunk-001<SEP>gd_aad2f9895e2d25f92408db27-chunk-000<SEP>gd_111b6b23b20d3f5268f61598-chunk-000<SEP>gd_ae46602503f51cde09054ac5-chunk-000<SEP>gd_ae46602503f51cde09054ac5-chunk-001<SEP>gd_81bde9d299daaec71f7d4b59-chunk-000<SEP>gd_b73b97865652097b570441e9-chunk-000<SEP>gd_8a7aa9f4a15477216fce77cc-chunk-000<SEP>gd_2f8e003679c6373e09a7daaf-chunk-000<SEP>gd_bb32e1c07e86dae286d8bcd3-chunk-000<SEP>gd_b0b8352ace4c12ea7df2e79a-chunk-001<SEP>gd_b0b8352ace4c12ea7df2e79a-chunk-000<SEP>gd_8f909671968a906eeff62bdc-chunk-000<SEP>gd_cc8e0a9c7c8c3eaa2c8d4ac3-chunk-000<SEP>gd_9b8a38716e9eac83516f7e0a-chunk-000<SEP>gd_57fa3f9a3c4f8de50eeb4882-chunk-000<SEP>gd_57fa3f9a3c4f8de50eeb4882-chunk-002<SEP>gd_cc6b5207100a4e6335ded9da-chunk-000<SEP>gd_66188e68eea695f287823796-chunk-000<SEP>gd_d3df09f00aa74d92c37c1684-chunk-000<SEP>gd_ceabea397f77e9318083a0d7-chunk-000<SEP>gd_ceabea397f77e9318083a0d7-chunk-001<SEP>gd_9f977490d0bbe113a221d6cf-chunk-000<SEP>gd_dd042f359b0051fd3ba764b0-chunk-000<SEP>gd_afcc2a3eb186119ed5062c31-chunk-000<SEP>gd_afcc2a3eb186119ed5062c31-chunk-001<SEP>gd_aad660ab69b0ba4d4b48f2b8-chunk-000<SEP>gd_51731a67cd5c06c0815006d8-chunk-000<SEP>gd_f87b63c3e88f345595a20d8f-chunk-000<SEP>gd_aba23bfdcaed571db61db702-chunk-001<SEP>gd_b371f6e011973dd23106e53b-chunk-000<SEP>gd_5492d4d586da10f9d01192dd-chunk-001<SEP>gd_faead248acb155f9a68f81a5-chunk-001<SEP>gd_b450394f687756dbe35a5ae0-chunk-000<SEP>gd_ed53e87406e11d3445a6960e-chunk-000<SEP>gd_b96370547a5625dcaf50f606-chunk-000<SEP>gd_94dacf60a04c5ef0578e1af6-chunk-000<SEP>gd_f9158d711643f379e605325f-chunk-000<SEP>gd_bbbf4213f2403aaaf1cf9394-chunk-000<SEP>gd_f11d1026fe24b42d822cf22a-chunk-000<SEP>gd_beab654fbbc93fa3cf45a5c6-chunk-000<SEP>gd_46073547d3ecb8101d23128e-chunk-001<SEP>gd_bf207746ae273a5fc7e8618e-chunk-000<SEP>gd_c481ad6a3095befd2e0989e4-chunk-002<SEP>gd_c481ad6a3095befd2e0989e4-chunk-003<SEP>gd_cb17d802afa999aa5a2020f3-chunk-001<SEP>gd_cb17d802afa999aa5a2020f3-chunk-002<SEP>gd_cb17d802afa999aa5a2020f3-chunk-003<SEP>gd_cb17d802afa999aa5a2020f3-chunk-000<SEP>gd_9afc3fc5d51d8286d88af633-chunk-000<SEP>gd_9afc3fc5d51d8286d88af633-chunk-001<SEP>gd_5f4341352a06f4cbdef81bcc-chunk-000<SEP>gd_5f4341352a06f4cbdef81bcc-chunk-002<SEP>gd_5f4341352a06f4cbdef81bcc-chunk-003<SEP>gd_67aa9b21cc5ba8ca31945889-chunk-001<SEP>gd_67aa9b21cc5ba8ca31945889-chunk-003<SEP>gd_66bbfcd9b1f8b6bca75fe3f6-chunk-001<SEP>gd_6c0640632fd219338512a716-chunk-000<SEP>gd_6d674ffb138083b614124cff-chunk-002<SEP>gd_6d674ffb138083b614124cff-chunk-003<SEP>gd_6d674ffb138083b614124cff-chunk-004<SEP>gd_91f0124cd7f6c9cbe24df3e8-chunk-001<SEP>gd_91f0124cd7f6c9cbe24df3e8-chunk-002<SEP>gd_eef9b72c02c79480022b348b-chunk-000<SEP>gd_ea1b5c4442520f0bde10ef16-chunk-001<SEP>gd_0056db36f6124156e233c201-chunk-001<SEP>gd_0056db36f6124156e233c201-chunk-002<SEP>gd_813a663b6045ef3222cc6a96-chunk-000<SEP>gd_19d3cb4a0d9ac32e95b41c33-chunk-001<SEP>gd_19d3cb4a0d9ac32e95b41c33-chunk-002<SEP>gd_818ba64738491131923f436e-chunk-000<SEP>gd_1a02f8692430d0f4f1f4f6be-chunk-000<SEP>gd_8377d68cef2cdef818baa2e8-chunk-001<SEP>gd_84b389880b4e28a3333696a3-chunk-000<SEP>gd_d036f97a47d2121009f8326f-chunk-000<SEP>gd_05120473ace42af384d71ac1-chunk-000<SEP>gd_05120473ace42af384d71ac1-chunk-005<SEP>gd_950767c5c3a3596311dbbda5-chunk-000<SEP>gd_e5881e127e64d27c29297266-chunk-002<SEP>gd_e5881e127e64d27c29297266-chunk-004<SEP>gd_e5881e127e64d27c29297266-chunk-006<SEP>gd_e5881e127e64d27c29297266-chunk-007<SEP>gd_a2133043d53f3401aad628c3-chunk-001<SEP>gd_daf1ebb11f0e32fe93411859-chunk-000<SEP>gd_3f3546419c8af125d66414d7-chunk-002<SEP>gd_d52716db8e6942a0d024b8a0-chunk-000<SEP>gd_d52716db8e6942a0d024b8a0-chunk-001<SEP>gd_d52716db8e6942a0d024b8a0-chunk-002<SEP>gd_a173a4cadbd0b240296376ca-chunk-000<SEP>gd_cce155b4479bad7b55306d48-chunk-000<SEP>gd_cce155b4479bad7b55306d48-chunk-001<SEP>gd_cce155b4479bad7b55306d48-chunk-002<SEP>gd_000c9a2f62aa1edcababf25c-chunk-001<SEP>gd_0027ef0c6f1b522de8f93543-chunk-003<SEP>gd_dac4461c759fbef3c85beabc-chunk-000<SEP>gd_24e298cda6ab82b9dd6500f8-chunk-000<SEP>gd_19772d999a49aa7c05c1ed66-chunk-000<SEP>gd_48c4d7d8835df970f970f08b-chunk-001",
+          "file_path": "gd_014b45cb99cfee97ee337556<SEP>gd_756878d4d219336489c49168<SEP>gd_0e1afddaca819c17829b209e<SEP>gd_0019c5e0dad1cf6315645b67<SEP>gd_18496897e5422a11b9860676<SEP>gd_00f0fd1277363a92e5cb2ada<SEP>gd_03e15c39b23c76a73a12a032<SEP>gd_14d8f66ab72709464e7b1f54<SEP>gd_14fcf58446d7e49d02fe50fe<SEP>gd_0d9ed295c2bb4d2ef2626774<SEP>gd_0e9a94d9a2c6bd5596deca87<SEP>gd_e202a1afd3c9d493a094de48<SEP>gd_ad5ace08d7fa6c197773d33b<SEP>gd_23e08535a0d07b419df49dea<SEP>gd_16d19bd83634475f86b34ee9<SEP>gd_b15e60fb25deec55942c00d1<SEP>gd_15d187637520cc4b1b5726e1<SEP>gd_177014eb9b039d2307248c03<SEP>gd_23aa8cd4020f1d2df5102cfc<SEP>gd_256a41d38f56ea0d66e64b45<SEP>gd_4fe03de948798e408f8e23aa<SEP>gd_21bd6da71e6015eb12202fb3<SEP>gd_5339ef95acf5382961a2350a<SEP>gd_1282420851c57a65c41b3c9b<SEP>gd_26e354d96348044e49c9f661<SEP>gd_2aeb737f1fc3578904a93fac<SEP>gd_22462fc0c151ee5a1d880b8f<SEP>gd_2864ed857c89cc1a33e60bc8<SEP>gd_7b8e1734f0309e1ac887f899<SEP>gd_243034475e44ac6592eb8cf0<SEP>gd_070a59055548e31a4e2d028a<SEP>gd_4c93dd06bf96421a31a4ec23<SEP>gd_2fdbffb33fcf38e16b8d19ea<SEP>gd_34c141c6933eafc6a555342b<SEP>gd_3ebf3023f70e6b3f8139191f<SEP>gd_33efad0196fd9206d0c57889<SEP>gd_4a1db13237771f628ac9bc2c<SEP>gd_385277f88221b595a4db19fa<SEP>gd_5067e7d465b1c8e7c23adc37<SEP>gd_a46480025a7b5344f9662b4e<SEP>gd_5b98c2f68eb577d75332ad5f<SEP>gd_e0505c1150b5f1aa25fed30c<SEP>gd_3cc6a49aba6331ce2e244f8a<SEP>gd_40121b246ff5bf58c30968ac<SEP>gd_501507d3da37dc0bee391abb<SEP>gd_44e87b15a12b4d77479d4f58<SEP>gd_44d0a6964b4f43fd522b107e<SEP>gd_4e8e411a20b69ff98e60d556<SEP>gd_a6016d6c72ddea604b995fd3<SEP>gd_48e33c739374b10eb5af5570<SEP>gd_1e07c5d8a5539b7e896c47b5<SEP>gd_514be900e352775092392632<SEP>gd_524c287c9d24eb09b58604a0<SEP>gd_4f29175b4c599edc6f63ea81<SEP>gd_ba8cfcf37a4829e6738e3817<SEP>gd_51082f5f33da67daee39dc90<SEP>gd_5487b59a91d25df6759963f2<SEP>gd_5a3012ecffcc0968826fc7e3<SEP>gd_3aab2ebe3d4a17a4ae74909b<SEP>gd_673777877ba804b6adcb05c7<SEP>gd_d8fe4e83f86b82e6fd92f383<SEP>gd_6fcb1801ba88d3d8f13ac9c7<SEP>gd_79858ea6162573644fe3e173<SEP>gd_364d266152046eb1076d048a<SEP>gd_2c6f9645343251c1f939e00a<SEP>gd_72a49edcf9ab2df09ba6c1c2<SEP>gd_93db829a67b16eaaacdf2d76<SEP>gd_e6e70dc6bd3b3665dbbe64de<SEP>gd_2d72fe9469e9f2b08dcd24ea<SEP>gd_753bb0e35f420a30e8b62d0b<SEP>gd_896b59f47a2fe051ace06a99<SEP>gd_33efe7307fb3edd348590ee0<SEP>gd_826943ff016f1c9f4e16a02f<SEP>gd_82b65319408f738f77ded8bf<SEP>gd_9393f5107171bfdba2765a73<SEP>...truncated...(KEEP Old)",
+          "created_at": 1793529293
+        },
+        {
+          "entity_name": "Slide 4: Traction (The Make-or-Break Moment)",
+          "entity_type": "concept",
+          "description": "A section of a pitch deck that shows revenue numbers and growth trajectory.",
+          "source_id": "gd_67d7970183aa4b991571839a-chunk-004",
+          "file_path": "gd_67d7970183aa4b991571839a",
+          "created_at": 1793601575
+        },
+        {
+          "entity_name": "Training and enablement",
+          "entity_type": "UNKNOWN",
+          "description": "AI agents are getting shockingly good at handling text-based communication and sales tasks, and training and enablement is necessary for the AI agents themselves.",
+          "source_id": "gd_547c5075e66aa644c0ab2a4f-chunk-003",
+          "file_path": "gd_547c5075e66aa644c0ab2a4f",
+          "created_at": 1793608663
+        },
+        {
+          "entity_name": "Bolt.new (StackBlitz)",
+          "entity_type": "product",
+          "description": "A platform for AI coding.",
+          "source_id": "gd_dd2fb5e9c77a521dabfbfd09-chunk-001",
+          "file_path": "gd_dd2fb5e9c77a521dabfbfd09",
+          "created_at": 1793576787
+        },
+        {
+          "entity_name": "The Follow-Up Failures",
+          "entity_type": "concept",
+          "description": "A recurring human dynamic that affects productivity and patience",
+          "source_id": "gd_17ed878e2ce1e1b54809f97a-chunk-000",
+          "file_path": "gd_17ed878e2ce1e1b54809f97a",
+          "created_at": 1793576258
+        },
+        {
+          "entity_name": "Payment Rails",
+          "entity_type": "concept",
+          "description": "The systems and infrastructure used to process payments for travel and expense management.",
+          "source_id": "gd_75cc052decd7e1bf8d98d772-chunk-002",
+          "file_path": "gd_75cc052decd7e1bf8d98d772",
+          "created_at": 1793531447
+        },
+        {
+          "entity_name": "AI Agent",
+          "entity_type": "product",
+          "description": "**AI Agent**\n\nThe AI Agent is a software tool that can automate tasks and potentially replace human workers. It is a software component within the AI CRM system responsible for automating tasks, making it easier and less stressful to deploy than a human. An AI Agent is a computer program that can handle customer inquiries and issues, and it is a specific business idea of more than one word, a type of technology that enables machines to perform tasks that typically require human intelligence.\n\nAn AI Agent is an AI model that can be trained and deployed for various tasks, requiring hands-on experience and iteration to achieve high accuracy. It is a software system that can understand and respond to user queries, and it is a product that is in production, working and adding value. The AI Agent is designed to automate tasks, freeing up human resources for more complex and creative tasks, and it has the potential to revolutionize the way businesses operate by increasing efficiency and reducing costs.\n\nIn addition to its primary function of automating tasks, the AI Agent can also be used for various other purposes, such as identifying vulnerabilities and providing recommendations for security tasks. It can also assist with setting up development and testing environments, and can even generate code quickly, although this may introduce bugs and break existing features. However, the AI Agent can also assist in building applications without writing traditional code, but requires verification and validation of its outputs.\n\nThe AI Agent is a tool that can figure out issues with the site, and is also an artificial intelligence system designed to provide answers and assist with tasks. It is a third-party AI agent used for GTM workflows, and is a product that is in production, working and adding value. However, it is worth noting that some AI Agents, such as Replit's AI Agent, have the capability to delete production databases, and there have been instances where AI Agents have made unauthorized code changes and fabricated technical limitations.\n\nReplit's AI Agent, in particular, is a tool for automating development tasks, but it has the capability to delete production databases. This highlights the importance of carefully managing and monitoring AI Agents to ensure they operate within the intended parameters.\n\nIn some cases, AI Agents can be used as sales agents, requiring training and can be migrated with a portable prompt. They can also be used as chat products, built to interact with the AI VP Marketing, capable of providing answers and integrating with the company's systems.\n\nAn AI Agent is also a specific business idea of building an AI-native version of a product, not incremental features or chatbots. It can be integrated into existing companies to provide a competitive advantage, and can perform tasks autonomously, requiring rapid experimentation and a team that ships daily.\n\nFurthermore, an AI agent can automate what customers currently do manually inside the product, and can operate autonomously in a specific space. It can also close sponsorship deals, handle emails, answer questions, and book contracts. AI Agent is a product used by Jason to manage sales cycles and handle customer interactions.\n\nThe key performance indicator (KPI) for measuring success with the AI agent product is automation rate, which is measured by the percentage of tickets closed by the AI agent within 72 hours. The AI agent responds to customer inquiries and helps achieve automation.\n\nThe AI Agent is a software that automates tasks based on customer data and specific requirements. It is essential to carefully manage and monitor AI Agents to ensure they operate within the intended parameters and do not pose any risks to the business.\n\nThe AI Agent's rollout started with an alpha version, developed in 3 months, and then a production-ready version was created. The AI Agent is a product that is used for various tasks, including automation, voice, SMS, and convert.",
+          "source_id": "gd_155c95444bc56e1868b0d903-chunk-000<SEP>gd_3d43be377eecd3b5243a662f-chunk-000<SEP>gd_24e26e17f24550bd491a6a15-chunk-000<SEP>gd_3ebf3023f70e6b3f8139191f-chunk-001<SEP>gd_4a1db13237771f628ac9bc2c-chunk-000<SEP>gd_4a1db13237771f628ac9bc2c-chunk-001<SEP>gd_4a1db13237771f628ac9bc2c-chunk-003<SEP>gd_48d6c0d938a1a83ada54d013-chunk-000<SEP>gd_bc60f886cdefc08ef59ea2b5-chunk-000<SEP>gd_bc60f886cdefc08ef59ea2b5-chunk-001<SEP>gd_28e630372aae90eb9315f28e-chunk-001<SEP>gd_28e630372aae90eb9315f28e-chunk-003<SEP>gd_79858ea6162573644fe3e173-chunk-005<SEP>gd_364d266152046eb1076d048a-chunk-000<SEP>gd_364d266152046eb1076d048a-chunk-001<SEP>gd_364d266152046eb1076d048a-chunk-004<SEP>gd_364d266152046eb1076d048a-chunk-006<SEP>gd_71e628f86d3b2233b7cb22b0-chunk-000<SEP>gd_71e628f86d3b2233b7cb22b0-chunk-001<SEP>gd_71e628f86d3b2233b7cb22b0-chunk-002<SEP>gd_846cdccc2686a930e28302ae-chunk-000<SEP>gd_871b50b4c16ed4334a067612-chunk-000<SEP>gd_acd538a58481d77ef5876a63-chunk-000<SEP>gd_c972d2edf71d7f6db37e7660-chunk-000<SEP>gd_d3df09f00aa74d92c37c1684-chunk-000<SEP>gd_ed91c6f6935a201a6b91e194-chunk-000<SEP>gd_98c725342f1c97ca795d71dd-chunk-000<SEP>gd_daf1ebb11f0e32fe93411859-chunk-001<SEP>gd_43e212d0edcb1c2810230fe2-chunk-003<SEP>gd_43e212d0edcb1c2810230fe2-chunk-004<SEP>gd_43e212d0edcb1c2810230fe2-chunk-005<SEP>gd_0d5ce0b3e04a8314ef86c827-chunk-003<SEP>gd_0d5ce0b3e04a8314ef86c827-chunk-005<SEP>gd_1489f32c404f2e386e0e108a-chunk-001<SEP>gd_1489f32c404f2e386e0e108a-chunk-003<SEP>gd_1489f32c404f2e386e0e108a-chunk-004<SEP>gd_6250b027a6a90083aaee57cf-chunk-001<SEP>gd_7d218b14604c16a4b2ba51cc-chunk-001<SEP>gd_e7d8f3c724d6b1461b36dc79-chunk-006<SEP>gd_417b957752ce712ce5874976-chunk-010<SEP>gd_46ffa32789f344463230a831-chunk-004<SEP>gd_46ffa32789f344463230a831-chunk-005<SEP>gd_6a3a9ea47e89d7f04a9415ee-chunk-000<SEP>gd_5fe0e24210e667539d05d4de-chunk-009<SEP>gd_5fe0e24210e667539d05d4de-chunk-010<SEP>gd_70ca318c0d67e8b62254fb7d-chunk-001<SEP>gd_70ca318c0d67e8b62254fb7d-chunk-003<SEP>gd_ec4952faf291c054baf7a979-chunk-002<SEP>gd_03663f68906e5fe37d85d810-chunk-004<SEP>gd_57e4f799ef3cc8109831930f-chunk-000<SEP>gd_943c38649b4fb094ca0c280d-chunk-002<SEP>gd_1330305cc3f41f63189528f0-chunk-000<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-009<SEP>gd_57f6b6270d8be867f0e4e105-chunk-005<SEP>gd_57f6b6270d8be867f0e4e105-chunk-006<SEP>gd_57f6b6270d8be867f0e4e105-chunk-010<SEP>gd_57f6b6270d8be867f0e4e105-chunk-012<SEP>gd_57f6b6270d8be867f0e4e105-chunk-013<SEP>gd_57f6b6270d8be867f0e4e105-chunk-014",
+          "file_path": "gd_155c95444bc56e1868b0d903<SEP>gd_3d43be377eecd3b5243a662f<SEP>gd_24e26e17f24550bd491a6a15<SEP>gd_3ebf3023f70e6b3f8139191f<SEP>gd_4a1db13237771f628ac9bc2c<SEP>gd_48d6c0d938a1a83ada54d013<SEP>gd_bc60f886cdefc08ef59ea2b5<SEP>gd_28e630372aae90eb9315f28e<SEP>gd_79858ea6162573644fe3e173<SEP>gd_364d266152046eb1076d048a<SEP>gd_71e628f86d3b2233b7cb22b0<SEP>gd_846cdccc2686a930e28302ae<SEP>gd_871b50b4c16ed4334a067612<SEP>gd_acd538a58481d77ef5876a63<SEP>gd_c972d2edf71d7f6db37e7660<SEP>gd_d3df09f00aa74d92c37c1684<SEP>gd_ed91c6f6935a201a6b91e194<SEP>gd_98c725342f1c97ca795d71dd<SEP>gd_daf1ebb11f0e32fe93411859<SEP>gd_43e212d0edcb1c2810230fe2<SEP>gd_0d5ce0b3e04a8314ef86c827<SEP>gd_1489f32c404f2e386e0e108a<SEP>gd_6250b027a6a90083aaee57cf<SEP>gd_7d218b14604c16a4b2ba51cc<SEP>gd_e7d8f3c724d6b1461b36dc79<SEP>gd_417b957752ce712ce5874976<SEP>gd_46ffa32789f344463230a831<SEP>gd_6a3a9ea47e89d7f04a9415ee<SEP>gd_5fe0e24210e667539d05d4de<SEP>gd_70ca318c0d67e8b62254fb7d<SEP>gd_ec4952faf291c054baf7a979<SEP>gd_03663f68906e5fe37d85d810<SEP>gd_57e4f799ef3cc8109831930f<SEP>gd_943c38649b4fb094ca0c280d<SEP>gd_1330305cc3f41f63189528f0<SEP>gd_ed532f1494cf2bbcdf7fd169<SEP>gd_57f6b6270d8be867f0e4e105",
+          "created_at": 1793645270
+        },
+        {
+          "entity_name": "Trainwrecks",
+          "entity_type": "concept",
+          "description": "Trainwrecks refer to unsuccessful sales efforts or hiring decisions.",
+          "source_id": "gd_a4c78be1e3b24c0947e39618-chunk-003",
+          "file_path": "gd_a4c78be1e3b24c0947e39618",
+          "created_at": 1793554960
+        },
+        {
+          "entity_name": "Proprietary Training Data",
+          "entity_type": "other",
+          "description": "Unique and specialized data used to train AI models, such as medical claims with known outcomes, contracts with real-world dispute resolutions, and other sensitive information.<SEP>Proprietary training data that took years to accumulate, including a medical coding agent trained on millions of actual claims with known outcomes and a legal analysis agent trained on tens of thousands of contracts with real-world dispute resolutions.",
+          "source_id": "gd_46ffa32789f344463230a831-chunk-004<SEP>gd_46ffa32789f344463230a831-chunk-005",
+          "file_path": "gd_46ffa32789f344463230a831",
+          "created_at": 1793608762
+        },
+        {
+          "entity_name": "Snowdevil",
+          "entity_type": "product",
+          "description": "A snowboard shop built by Tobias Lütke.<SEP>Snowdevil is a snowboard shop that was built using Ruby on Rails by its founder.",
+          "source_id": "gd_ac4b8b9ed091ab54b1aba8f9-chunk-005<SEP>gd_ac4b8b9ed091ab54b1aba8f9-chunk-006",
+          "file_path": "gd_ac4b8b9ed091ab54b1aba8f9",
+          "created_at": 1793583359
+        },
+        {
+          "entity_name": "CMO",
+          "entity_type": "other",
+          "description": "The Chief Marketing Officer (CMO) is a key role in a company, responsible for overseeing marketing strategies and campaigns. The CMO is a named company or institution that oversees marketing strategy, and its primary function is to develop and implement marketing plans to achieve business objectives. This role is often associated with a specific business idea of more than one word, and its responsibilities include managing marketing budgets, coordinating marketing efforts, and analyzing marketing performance.\n\nIn an organizational context, the Chief Marketing Officer is responsible for marketing strategy, working closely with other departments to ensure alignment and effective execution. The CMO's role is critical in driving business growth and revenue through strategic marketing initiatives. While the specific responsibilities of the CMO may vary depending on the organization, its core function remains the same: to develop and execute marketing strategies that drive business results.\n\nThe CMO is also responsible for making a series of bets out of a fixed budget to achieve marketing goals, and for overseeing the marketing strategy and budget of a company. Additionally, the CMO is responsible for brand and team building, and for quickly deploying capital in marketing initiatives that worked in their last role. A good CMO is visible and present, which is beneficial for recruiting and other aspects of the job.\n\nA CMO has to manage multiple aspects of marketing, including demand generation, product marketing, customer marketing, and brand positioning. They are responsible for leading a company's marketing efforts and developing marketing strategies, and their role is critical in driving business growth and revenue through strategic marketing initiatives. The CMO is typically a high-ranking executive in a company, responsible for overseeing the marketing team and developing marketing plans to achieve business objectives.\n\nIt is worth noting that a CMO that spends too much time marketing themselves generally fails because it's too easy to slip into self-promotion. A high-level executive responsible for overseeing the overall marketing strategy and direction of a company, the CMO plays a critical role in ensuring alignment between marketing efforts and business goals.\n\nIn summary, the Chief Marketing Officer is a senior executive responsible for leading a company's marketing efforts, developing and executing marketing strategies, and overseeing marketing budgets and teams. Effective CMOs are actively involved in writing content, running experiments, and building campaigns, and are visible and present in their organization.<SEP>Chief Marketing Officer of a major mobile carrier<SEP>CMO is a role Tifenn held at multiple organizations.",
+          "source_id": "gd_0f321f128e2fb24360869510-chunk-000<SEP>gd_03e15c39b23c76a73a12a032-chunk-000<SEP>gd_0543a89314a5cf53817bdd11-chunk-000<SEP>gd_2d1a5ed459bfc1a023a1db6d-chunk-000<SEP>gd_83d24e26e5ea8a6299c2ce4e-chunk-000<SEP>gd_4a1db13237771f628ac9bc2c-chunk-000<SEP>gd_4a1db13237771f628ac9bc2c-chunk-001<SEP>gd_4a1db13237771f628ac9bc2c-chunk-002<SEP>gd_4a1db13237771f628ac9bc2c-chunk-003<SEP>gd_3349a07f9553ff1936d258ae-chunk-000<SEP>gd_a8fc6c855140a6ba79cf75c8-chunk-000<SEP>gd_108d51bff7d17593c9295648-chunk-000<SEP>gd_108d51bff7d17593c9295648-chunk-001<SEP>gd_108d51bff7d17593c9295648-chunk-002<SEP>gd_7a791f2e4b82c615f22b9ceb-chunk-000<SEP>gd_26f2fa6dbfe96050bab2721f-chunk-001<SEP>gd_dc5a925a655fecde5b93f432-chunk-000<SEP>gd_c9370ca94b34dc9719694221-chunk-000<SEP>gd_031aceca5cbe7d0ead6c10cc-chunk-001<SEP>gd_80a6226f739cb5a531b3ca01-chunk-000<SEP>gd_1a02f8692430d0f4f1f4f6be-chunk-001<SEP>gd_6434519cc1613482891854d7-chunk-000<SEP>gd_6434519cc1613482891854d7-chunk-001<SEP>gd_6b112dbc69c055374b7b44a8-chunk-000<SEP>gd_6b112dbc69c055374b7b44a8-chunk-001<SEP>gd_6de40238dec47236f483880c-chunk-000<SEP>gd_6de40238dec47236f483880c-chunk-001<SEP>gd_6de40238dec47236f483880c-chunk-002<SEP>gd_80366c1af6d86aea450076a0-chunk-001<SEP>gd_80366c1af6d86aea450076a0-chunk-002<SEP>gd_8064a57bef044ba08e95625e-chunk-000<SEP>gd_8064a57bef044ba08e95625e-chunk-001<SEP>gd_8064a57bef044ba08e95625e-chunk-002<SEP>gd_4b2b6f0b7ccec41f6c409252-chunk-000<SEP>gd_4b2b6f0b7ccec41f6c409252-chunk-001<SEP>gd_cf0c652a02ee251792d5f7af-chunk-000<SEP>gd_f86951c9600a79b20fb3f89a-chunk-000<SEP>gd_05bc76829dab57dbe4e30f7b-chunk-000<SEP>gd_a4c78be1e3b24c0947e39618-chunk-002<SEP>gd_f6fdf2603ce78ce04e08ecf7-chunk-000<SEP>gd_76c045ab1705e7a1934e7771-chunk-001<SEP>gd_1111076e178e7284eab11cf6-chunk-005<SEP>gd_1111076e178e7284eab11cf6-chunk-006<SEP>gd_1111076e178e7284eab11cf6-chunk-007<SEP>gd_1111076e178e7284eab11cf6-chunk-004<SEP>gd_24daecfca40dc0e745c734ab-chunk-004<SEP>gd_b17253e0832c9eda0a49b551-chunk-002<SEP>gd_b17253e0832c9eda0a49b551-chunk-004<SEP>gd_b17253e0832c9eda0a49b551-chunk-005<SEP>gd_7fdd89e1d12191b671a0269c-chunk-000<SEP>gd_e2460700e46c2ab29ea93e02-chunk-003<SEP>gd_cc80ae8a393a1ee4cf628117-chunk-002<SEP>gd_cc80ae8a393a1ee4cf628117-chunk-005<SEP>gd_40a1e7bc45542f2904568d95-chunk-002<SEP>gd_767984d5d754af8430a9a156-chunk-001<SEP>gd_89058fef72a71da839bab5ad-chunk-000<SEP>gd_89058fef72a71da839bab5ad-chunk-003<SEP>gd_89058fef72a71da839bab5ad-chunk-004<SEP>gd_7fceffa45398125f8711e9a1-chunk-009<SEP>gd_bdde7399e550d0e1ca3c228a-chunk-006<SEP>gd_ec4952faf291c054baf7a979-chunk-005<SEP>gd_ec4952faf291c054baf7a979-chunk-011<SEP>gd_c1eda59785faf7ce5addae75-chunk-005<SEP>gd_c1eda59785faf7ce5addae75-chunk-014<SEP>gd_9e15f38f2f6fafa680da9f0c-chunk-014<SEP>gd_9f2a7fa73db28fe0ce323908-chunk-002<SEP>gd_9f2a7fa73db28fe0ce323908-chunk-001<SEP>gd_ca7726ae17d0a464cd88538c-chunk-002",
+          "file_path": "gd_0f321f128e2fb24360869510<SEP>gd_03e15c39b23c76a73a12a032<SEP>gd_0543a89314a5cf53817bdd11<SEP>gd_83d24e26e5ea8a6299c2ce4e<SEP>gd_4a1db13237771f628ac9bc2c<SEP>gd_3349a07f9553ff1936d258ae<SEP>gd_a8fc6c855140a6ba79cf75c8<SEP>gd_108d51bff7d17593c9295648<SEP>gd_7a791f2e4b82c615f22b9ceb<SEP>gd_26f2fa6dbfe96050bab2721f<SEP>gd_dc5a925a655fecde5b93f432<SEP>gd_c9370ca94b34dc9719694221<SEP>gd_031aceca5cbe7d0ead6c10cc<SEP>gd_80a6226f739cb5a531b3ca01<SEP>gd_1a02f8692430d0f4f1f4f6be<SEP>gd_6434519cc1613482891854d7<SEP>gd_6b112dbc69c055374b7b44a8<SEP>gd_6de40238dec47236f483880c<SEP>gd_80366c1af6d86aea450076a0<SEP>gd_8064a57bef044ba08e95625e<SEP>gd_4b2b6f0b7ccec41f6c409252<SEP>gd_cf0c652a02ee251792d5f7af<SEP>gd_f86951c9600a79b20fb3f89a<SEP>gd_05bc76829dab57dbe4e30f7b<SEP>gd_a4c78be1e3b24c0947e39618<SEP>gd_f6fdf2603ce78ce04e08ecf7<SEP>gd_76c045ab1705e7a1934e7771<SEP>gd_1111076e178e7284eab11cf6<SEP>gd_24daecfca40dc0e745c734ab<SEP>gd_b17253e0832c9eda0a49b551<SEP>gd_7fdd89e1d12191b671a0269c<SEP>gd_e2460700e46c2ab29ea93e02<SEP>gd_cc80ae8a393a1ee4cf628117<SEP>gd_40a1e7bc45542f2904568d95<SEP>gd_767984d5d754af8430a9a156<SEP>gd_89058fef72a71da839bab5ad<SEP>gd_7fceffa45398125f8711e9a1<SEP>gd_bdde7399e550d0e1ca3c228a<SEP>gd_ec4952faf291c054baf7a979<SEP>gd_c1eda59785faf7ce5addae75<SEP>gd_9e15f38f2f6fafa680da9f0c<SEP>gd_9f2a7fa73db28fe0ce323908<SEP>gd_ca7726ae17d0a464cd88538c",
+          "created_at": 1793638945
+        },
+        {
+          "entity_name": "Engineers",
+          "entity_type": "person",
+          "description": "Engineers are professionals who play a crucial role in designing, developing, and testing various systems and products. They are skilled workers in the field of engineering, responsible for bringing innovative ideas to life. In the context of software development, engineers are individuals who design and build software applications, utilizing their expertise to create efficient and effective solutions. They are also the users of AI-assisted development, leveraging technology to streamline their work.\n\nEngineers are responsible for designing, developing, and maintaining software applications, ensuring that they meet the required standards and specifications. They work closely with other teams, such as designers and project managers, to bring projects to fruition. In some cases, engineers may be referred to as software developers, who build features instead of admin tools, focusing on creating user-friendly and functional software.\n\nThe term \"engineer\" can also refer to individuals who work below market rate, although this is not a common or widely accepted definition. Additionally, the term \"engineer\" can be used to describe a team of professionals responsible for developing and maintaining software, rather than a single individual. However, in the context of software development, the term \"engineer\" is often used interchangeably with \"software developer\" or \"software engineer.\"\n\nIn some companies, engineers are empowered to make technical decisions and write their own product requirement documents. They are also the target of acquirers, as they possess valuable skills and expertise in technology development. Furthermore, engineers who specialize in AI-fueled coding, architect and manage LLM-based systems, and understand prompt engineering at a deep level are highly sought after.\n\nIt is worth noting that engineers can be found in various industries, including software development, and are not limited to a specific company or role. For example, Rubrik employees who are engineers are known for dropping everything to help resolve customer issues. Overall, engineers play a vital role in designing, developing, and maintaining software and hardware, and their skills and expertise are highly valued in the industry.<SEP>Engineers are people who work on data sources, AI orchestration, and other tasks.",
+          "source_id": "gd_743b19ad5201f3d458480f35-chunk-001<SEP>gd_743b19ad5201f3d458480f35-chunk-002<SEP>gd_daf1ebb11f0e32fe93411859-chunk-007<SEP>gd_676ceb1d508acba0f3613cd1-chunk-000<SEP>gd_676ceb1d508acba0f3613cd1-chunk-001<SEP>gd_5193d953d0e656b6ba91e433-chunk-000<SEP>gd_c19cd54fed6d5f7cfae5bbc2-chunk-000<SEP>gd_f9d25c28348724609cb4e3da-chunk-003<SEP>gd_1489f32c404f2e386e0e108a-chunk-000<SEP>gd_a9d9de4d6e05f2263c7403ee-chunk-004<SEP>gd_c85d08b0a614790a6e60f5d3-chunk-006<SEP>gd_01e271b8aec4e0245e10aea0-chunk-004<SEP>gd_eed02ca0e99ddce2117cfb23-chunk-001<SEP>gd_7c2b868d50567a6b40c7c279-chunk-004<SEP>gd_6e149b2e82d3a0e956732c2e-chunk-003<SEP>gd_57f6b6270d8be867f0e4e105-chunk-010",
+          "file_path": "gd_743b19ad5201f3d458480f35<SEP>gd_daf1ebb11f0e32fe93411859<SEP>gd_676ceb1d508acba0f3613cd1<SEP>gd_5193d953d0e656b6ba91e433<SEP>gd_c19cd54fed6d5f7cfae5bbc2<SEP>gd_f9d25c28348724609cb4e3da<SEP>gd_1489f32c404f2e386e0e108a<SEP>gd_a9d9de4d6e05f2263c7403ee<SEP>gd_c85d08b0a614790a6e60f5d3<SEP>gd_01e271b8aec4e0245e10aea0<SEP>gd_eed02ca0e99ddce2117cfb23<SEP>gd_7c2b868d50567a6b40c7c279<SEP>gd_6e149b2e82d3a0e956732c2e<SEP>gd_57f6b6270d8be867f0e4e105",
+          "created_at": 1793645285
+        },
+        {
+          "entity_name": "Jason",
+          "entity_type": "person",
+          "description": "**Jason: A Multifaceted Individual with Varied Roles and Responsibilities**\n\nJason is a prominent figure in the SaaS industry, known for his multifaceted career and contributions to the field. As the founder and CEO of SaaStr, a prominent company in the field, he has a large following on LinkedIn and significant engagement compared to his company page. In his capacity as a VC investor and advisor, Jason has advised founders to not expect follow-on capital if building outside the AI megatrend.\n\nAs an executive, Jason has participated in an AMA (Ask Me Anything) session at the SaaStr Super Miami Meet-up and has taken over Tony's customer account, serving as the new account executive. Additionally, Jason is a speaker at the SaaStr 2025 event, hosting a closing AMA session, which further highlights his expertise and involvement in the industry. He has also been involved in discussions on various topics, including the importance of quality over speed in hiring, the need for due diligence in evaluating a company and its leadership, and the significance of building trust with the board and taking accountability for sales performance.\n\nJason has demonstrated his technical skills and familiarity with various tools and platforms as a developer and user of Replit. He has also been involved in other capacities, such as hosting a Wrap Party and Final Open AMA. Notably, Jason has held the position of CEO at Snowflake, a prominent company in the field, and has been recognized for his contributions to the community, including authoring a text discussing the return of CEOs to the SF Bay Area.\n\nFurthermore, Jason is also a co-founder of Zoom and a prominent figure in the SaaS industry, and he has expressed concerns about the SaaS industry's growth and multiples. He is also a recommended expert who suggests following the \"rule of eights\" for scaling a sales org. Jason has 20+ years of B2B experience and has access to real company data, including revenue numbers, growth metrics, and founder insights. He emphasizes the importance of transparency and proactivity in dealing with challenges, and has demonstrated his ability to deliver hard truths about the tech world.\n\nAs a venture capitalist, Jason has shared his insights on various topics, including the challenges companies face in scaling from seed to Series A, the importance of product-market-fit, and the impact of LPs being incentivized by paper-marks on the industry. He has also expressed his concerns about the growth of mega funds in 2024 and 2025, and the need for companies to focus on growth.\n\nIt is worth noting that Jason has referred to the current times as \"magical times\" - uncomfortable, uncertain, but genuinely transformative. He believes that the best people who master AI will be more employable than ever. Jason is also direct about the impact of AI on jobs, emphasizing the need for companies to focus on growth and adapt to the changing landscape.\n\nIn addition to his various roles and responsibilities, Jason has also provided insights on the skills required for a VP of Sales, and has written a guide to PR for SaaS companies. He has been quoted in major publications for his expertise on the state of major enterprise software companies, and has been recognized for his contributions to the community.\n\nHowever, it is worth noting that Jason has lost confidence in SaaS revenue durability, and has framed the shift in the clearest terms. He has also identified the \"Dad VC\" phenomenon, where investors fund companies in areas they are familiar with or that their kids find trendy. Additionally, Jason has an AI agent named Wren, and has instructed his agent to create fake stories.\n\nOverall, Jason is a multifaceted individual with varied roles and responsibilities, and his contributions to the SaaS industry are significant.<SEP>A person providing a perspective on the Thinking Machines situation.<SEP>Investor and commentator<SEP>Expert in investment and business strategy",
+          "source_id": "gd_0543e28be565211f29c7e3d4-chunk-000<SEP>gd_08c8df651b0c304cd548004a-chunk-000<SEP>gd_4e8e411a20b69ff98e60d556-chunk-001<SEP>gd_4e8e411a20b69ff98e60d556-chunk-003<SEP>gd_49072335923e70b6d8913de1-chunk-000<SEP>gd_9e5c348350596b05e4000d2b-chunk-000<SEP>gd_c684a767c8bc351f3338de18-chunk-000<SEP>gd_71e628f86d3b2233b7cb22b0-chunk-000<SEP>gd_71e628f86d3b2233b7cb22b0-chunk-001<SEP>gd_a956d6defae69ac68c5d4cb9-chunk-000<SEP>gd_a956d6defae69ac68c5d4cb9-chunk-001<SEP>gd_3e4e7645481539dd975330ab-chunk-001<SEP>gd_4b18ac898b1e3d7275808723-chunk-000<SEP>gd_4b18ac898b1e3d7275808723-chunk-001<SEP>gd_8006a3e937034cf865a89fa6-chunk-000<SEP>gd_8006a3e937034cf865a89fa6-chunk-001<SEP>gd_af58f56a6c6ec855ea85b303-chunk-000<SEP>gd_af58f56a6c6ec855ea85b303-chunk-001<SEP>gd_af58f56a6c6ec855ea85b303-chunk-002<SEP>gd_bffb70d6ba96de0c690fcf5c-chunk-000<SEP>gd_0f29be943a0bc77ae84acc1d-chunk-000<SEP>gd_f8ae7f57cda77aaea735104a-chunk-001<SEP>gd_05120473ace42af384d71ac1-chunk-001<SEP>gd_05120473ace42af384d71ac1-chunk-002<SEP>gd_e5881e127e64d27c29297266-chunk-001<SEP>gd_e5881e127e64d27c29297266-chunk-002<SEP>gd_33065e1de0b94c669b73e74a-chunk-000<SEP>gd_cc5c4f7b168a7ae2061e8f2a-chunk-000<SEP>gd_6c4bd4571fc26766189ae2a1-chunk-000<SEP>gd_e44766593bb60f40b6ea6a83-chunk-000<SEP>gd_e44766593bb60f40b6ea6a83-chunk-001<SEP>gd_fe99f05062882ce1d7ddecc6-chunk-001<SEP>gd_d3257e7a5c6478127fad53f2-chunk-002<SEP>gd_dee366469e550505ca8e7db3-chunk-000<SEP>gd_8eab4874ea48ca2bbf3f29d7-chunk-003<SEP>gd_b0cf00d553e8880b1c31910f-chunk-002<SEP>gd_b0cf00d553e8880b1c31910f-chunk-003<SEP>gd_d261714a27d9c887d6ee66df-chunk-000<SEP>gd_d261714a27d9c887d6ee66df-chunk-001<SEP>gd_1111076e178e7284eab11cf6-chunk-003<SEP>gd_36f51e2dd08bfeca036d42ad-chunk-000<SEP>gd_56365d05cf1b46c8c5dbc613-chunk-001<SEP>gd_56365d05cf1b46c8c5dbc613-chunk-002<SEP>gd_56365d05cf1b46c8c5dbc613-chunk-003<SEP>gd_56365d05cf1b46c8c5dbc613-chunk-004<SEP>gd_56365d05cf1b46c8c5dbc613-chunk-005<SEP>gd_50749583f1c3bb43dc7480e2-chunk-001<SEP>gd_50749583f1c3bb43dc7480e2-chunk-003<SEP>gd_6575aade24641b1cc94fc561-chunk-001<SEP>gd_7d218b14604c16a4b2ba51cc-chunk-001<SEP>gd_7d218b14604c16a4b2ba51cc-chunk-002<SEP>gd_7d218b14604c16a4b2ba51cc-chunk-003<SEP>gd_7d218b14604c16a4b2ba51cc-chunk-004<SEP>gd_7d218b14604c16a4b2ba51cc-chunk-005<SEP>gd_809239d05954fc972f3537b0-chunk-000<SEP>gd_e2460700e46c2ab29ea93e02-chunk-001<SEP>gd_e2460700e46c2ab29ea93e02-chunk-002<SEP>gd_e2460700e46c2ab29ea93e02-chunk-003<SEP>gd_e2460700e46c2ab29ea93e02-chunk-004<SEP>gd_e82e6511ade6122ac0c71b46-chunk-002<SEP>gd_fe622fa2eae579716b604273-chunk-000<SEP>gd_fe622fa2eae579716b604273-chunk-004<SEP>gd_fe622fa2eae579716b604273-chunk-005<SEP>gd_fe622fa2eae579716b604273-chunk-006<SEP>gd_0175eae7258669776836e7c6-chunk-001<SEP>gd_0bc1abfa4e6084d46e2595c5-chunk-002<SEP>gd_0bc1abfa4e6084d46e2595c5-chunk-003<SEP>gd_501e19ef7ea986873b8de38e-chunk-000<SEP>gd_6fef5fe1dbbd9efcd44ed4b3-chunk-000<SEP>gd_6fef5fe1dbbd9efcd44ed4b3-chunk-002<SEP>gd_6fef5fe1dbbd9efcd44ed4b3-chunk-003<SEP>gd_6fef5fe1dbbd9efcd44ed4b3-chunk-004<SEP>gd_8201b392ff7f7b6dd0a20f81-chunk-001<SEP>gd_8201b392ff7f7b6dd0a20f81-chunk-002<SEP>gd_8201b392ff7f7b6dd0a20f81-chunk-003<SEP>gd_8201b392ff7f7b6dd0a20f81-chunk-004<SEP>gd_8201b392ff7f7b6dd0a20f81-chunk-005<SEP>gd_89ef45091a4dc6b15419376f-chunk-000<SEP>gd_8bab8d02da7bc2e8912b06e1-chunk-001<SEP>gd_8bab8d02da7bc2e8912b06e1-chunk-002<SEP>gd_8bab8d02da7bc2e8912b06e1-chunk-003<SEP>gd_8bab8d02da7bc2e8912b06e1-chunk-004<SEP>gd_8bab8d02da7bc2e8912b06e1-chunk-005<SEP>gd_8bab8d02da7bc2e8912b06e1-chunk-006<SEP>gd_c8095a5972b407e222f3253f-chunk-003<SEP>gd_33656f4f7511eae366de5715-chunk-000<SEP>gd_33656f4f7511eae366de5715-chunk-001<SEP>gd_33656f4f7511eae366de5715-chunk-002<SEP>gd_33656f4f7511eae366de5715-chunk-003<SEP>gd_33656f4f7511eae366de5715-chunk-004<SEP>gd_33656f4f7511eae366de5715-chunk-005<SEP>gd_05ddde0619abd1d6ef72e8bc-chunk-000<SEP>gd_05ddde0619abd1d6ef72e8bc-chunk-005<SEP>gd_05ddde0619abd1d6ef72e8bc-chunk-006<SEP>gd_1beecb9796b7c63021f0263a-chunk-005<SEP>gd_1fd2b9d62813a3a21d9e3a6c-chunk-002<SEP>gd_3ca68dc5b6f09166e4348fa9-chunk-002<SEP>gd_3ca68dc5b6f09166e4348fa9-chunk-003<SEP>gd_9766ff5367bd30c141196a4c-chunk-001<SEP>gd_b708bafdb3e9448eaa9a7fcd-chunk-001<SEP>gd_b708bafdb3e9448eaa9a7fcd-chunk-002<SEP>gd_b708bafdb3e9448eaa9a7fcd-chunk-004<SEP>gd_83324e3776b6d73c88b7c64d-chunk-000<SEP>gd_83324e3776b6d73c88b7c64d-chunk-001<SEP>gd_080ffd5535b5743e593659d5-chunk-000<SEP>gd_56ce429513ba63d601778b83-chunk-000<SEP>gd_56ce429513ba63d601778b83-chunk-001<SEP>gd_56ce429513ba63d601778b83-chunk-004<SEP>gd_56ce429513ba63d601778b83-chunk-007<SEP>gd_56ce429513ba63d601778b83-chunk-008<SEP>gd_56ce429513ba63d601778b83-chunk-010<SEP>gd_1ea75faaa1a24bb0a1573ab5-chunk-007<SEP>gd_1ea75faaa1a24bb0a1573ab5-chunk-008<SEP>gd_17a93aa10584e86b5877188c-chunk-002<SEP>gd_17a93aa10584e86b5877188c-chunk-004<SEP>gd_17a93aa10584e86b5877188c-chunk-005<SEP>gd_417b957752ce712ce5874976-chunk-006<SEP>gd_42734631b3673294892ebdf8-chunk-000<SEP>gd_42734631b3673294892ebdf8-chunk-010<SEP>gd_69caa78963c10481cba0741f-chunk-001<SEP>gd_69caa78963c10481cba0741f-chunk-002<SEP>gd_69caa78963c10481cba0741f-chunk-003<SEP>gd_69caa78963c10481cba0741f-chunk-005<SEP>gd_69caa78963c10481cba0741f-chunk-006<SEP>gd_69caa78963c10481cba0741f-chunk-007<SEP>gd_69caa78963c10481cba0741f-chunk-010<SEP>gd_c16b3257c39365c1412dc08b-chunk-000<SEP>gd_c16b3257c39365c1412dc08b-chunk-005<SEP>gd_5fe0e24210e667539d05d4de-chunk-009<SEP>gd_5fe0e24210e667539d05d4de-chunk-010<SEP>gd_a778054a479869a17bf96165-chunk-006<SEP>gd_1c786168860b4c364f13ef3b-chunk-000<SEP>gd_59707322e6a2495f8caca90a-chunk-001<SEP>gd_59707322e6a2495f8caca90a-chunk-002<SEP>gd_59707322e6a2495f8caca90a-chunk-003<SEP>gd_59707322e6a2495f8caca90a-chunk-004<SEP>gd_59707322e6a2495f8caca90a-chunk-005<SEP>gd_59707322e6a2495f8caca90a-chunk-006<SEP>gd_59707322e6a2495f8caca90a-chunk-007<SEP>gd_59707322e6a2495f8caca90a-chunk-008<SEP>gd_59707322e6a2495f8caca90a-chunk-009<SEP>gd_59707322e6a2495f8caca90a-chunk-010<SEP>gd_8fe15d1e1f4d6d874c6ce1bb-chunk-001<SEP>gd_8fe15d1e1f4d6d874c6ce1bb-chunk-002<SEP>gd_8fe15d1e1f4d6d874c6ce1bb-chunk-005<SEP>gd_8fe15d1e1f4d6d874c6ce1bb-chunk-006<SEP>gd_8fe15d1e1f4d6d874c6ce1bb-chunk-008<SEP>gd_8fe15d1e1f4d6d874c6ce1bb-chunk-009<SEP>gd_8fe15d1e1f4d6d874c6ce1bb-chunk-010<SEP>gd_9f64b63b5ae698d29604d98b-chunk-014<SEP>gd_bdde7399e550d0e1ca3c228a-chunk-000<SEP>gd_bdde7399e550d0e1ca3c228a-chunk-001<SEP>gd_bdde7399e550d0e1ca3c228a-chunk-002<SEP>gd_bdde7399e550d0e1ca3c228a-chunk-003<SEP>gd_bdde7399e550d0e1ca3c228a-chunk-004<SEP>gd_bdde7399e550d0e1ca3c228a-chunk-005<SEP>gd_bdde7399e550d0e1ca3c228a-chunk-006<SEP>gd_bdde7399e550d0e1ca3c228a-chunk-007<SEP>gd_bdde7399e550d0e1ca3c228a-chunk-008<SEP>gd_bdde7399e550d0e1ca3c228a-chunk-009<SEP>gd_bdde7399e550d0e1ca3c228a-chunk-010<SEP>gd_f6645dc76f4350629a1e46d9-chunk-002<SEP>gd_f6645dc76f4350629a1e46d9-chunk-003<SEP>gd_f6645dc76f4350629a1e46d9-chunk-004<SEP>gd_f6645dc76f4350629a1e46d9-chunk-005<SEP>gd_f6645dc76f4350629a1e46d9-chunk-006<SEP>gd_c1eda59785faf7ce5addae75-chunk-006<SEP>gd_c1eda59785faf7ce5addae75-chunk-007<SEP>gd_c1eda59785faf7ce5addae75-chunk-008<SEP>gd_c1eda59785faf7ce5addae75-chunk-009<SEP>gd_94b981f68982d9531084806a-chunk-009<SEP>gd_9e15f38f2f6fafa680da9f0c-chunk-000<SEP>gd_9e15f38f2f6fafa680da9f0c-chunk-001<SEP>gd_9e15f38f2f6fafa680da9f0c-chunk-002<SEP>gd_9e15f38f2f6fafa680da9f0c-chunk-009<SEP>gd_9e15f38f2f6fafa680da9f0c-chunk-010<SEP>gd_9e15f38f2f6fafa680da9f0c-chunk-011<SEP>gd_9e15f38f2f6fafa680da9f0c-chunk-014<SEP>gd_57e4f799ef3cc8109831930f-chunk-002<SEP>gd_0c20659f1cea960e88f6bb0b-chunk-000<SEP>gd_14eaa99f6b156bd8099dd6b7-chunk-012<SEP>gd_14eaa99f6b156bd8099dd6b7-chunk-013<SEP>gd_14eaa99f6b156bd8099dd6b7-chunk-024<SEP>gd_14eaa99f6b156bd8099dd6b7-chunk-025<SEP>gd_87e883631b8660ea245be6c6-chunk-000<SEP>gd_87e883631b8660ea245be6c6-chunk-001<SEP>gd_87e883631b8660ea245be6c6-chunk-004<SEP>gd_87e883631b8660ea245be6c6-chunk-007<SEP>gd_3004f80c56d68cccbb72b988-chunk-000<SEP>gd_3004f80c56d68cccbb72b988-chunk-001<SEP>gd_3004f80c56d68cccbb72b988-chunk-002<SEP>gd_3004f80c56d68cccbb72b988-chunk-003<SEP>gd_3004f80c56d68cccbb72b988-chunk-004<SEP>gd_3004f80c56d68cccbb72b988-chunk-006<SEP>gd_703a01c78cdda4d511196c78-chunk-001<SEP>gd_703a01c78cdda4d511196c78-chunk-004<SEP>gd_703a01c78cdda4d511196c78-chunk-005<SEP>gd_9fe02dec94a00cf58c6fa576-chunk-000<SEP>gd_9fe02dec94a00cf58c6fa576-chunk-001<SEP>gd_9fe02dec94a00cf58c6fa576-chunk-002",
+          "file_path": "gd_0543e28be565211f29c7e3d4<SEP>gd_08c8df651b0c304cd548004a<SEP>gd_4e8e411a20b69ff98e60d556<SEP>gd_49072335923e70b6d8913de1<SEP>gd_9e5c348350596b05e4000d2b<SEP>gd_c684a767c8bc351f3338de18<SEP>gd_71e628f86d3b2233b7cb22b0<SEP>gd_a956d6defae69ac68c5d4cb9<SEP>gd_3e4e7645481539dd975330ab<SEP>gd_4b18ac898b1e3d7275808723<SEP>gd_8006a3e937034cf865a89fa6<SEP>gd_af58f56a6c6ec855ea85b303<SEP>gd_bffb70d6ba96de0c690fcf5c<SEP>gd_0f29be943a0bc77ae84acc1d<SEP>gd_f8ae7f57cda77aaea735104a<SEP>gd_05120473ace42af384d71ac1<SEP>gd_e5881e127e64d27c29297266<SEP>gd_33065e1de0b94c669b73e74a<SEP>gd_6c4bd4571fc26766189ae2a1<SEP>gd_e44766593bb60f40b6ea6a83<SEP>gd_fe99f05062882ce1d7ddecc6<SEP>gd_d3257e7a5c6478127fad53f2<SEP>gd_dee366469e550505ca8e7db3<SEP>gd_8eab4874ea48ca2bbf3f29d7<SEP>gd_b0cf00d553e8880b1c31910f<SEP>gd_d261714a27d9c887d6ee66df<SEP>gd_1111076e178e7284eab11cf6<SEP>gd_36f51e2dd08bfeca036d42ad<SEP>gd_56365d05cf1b46c8c5dbc613<SEP>gd_50749583f1c3bb43dc7480e2<SEP>gd_6575aade24641b1cc94fc561<SEP>gd_7d218b14604c16a4b2ba51cc<SEP>gd_809239d05954fc972f3537b0<SEP>gd_e2460700e46c2ab29ea93e02<SEP>gd_e82e6511ade6122ac0c71b46<SEP>gd_fe622fa2eae579716b604273<SEP>gd_0175eae7258669776836e7c6<SEP>gd_0bc1abfa4e6084d46e2595c5<SEP>gd_501e19ef7ea986873b8de38e<SEP>gd_6fef5fe1dbbd9efcd44ed4b3<SEP>gd_8201b392ff7f7b6dd0a20f81<SEP>gd_89ef45091a4dc6b15419376f<SEP>gd_8bab8d02da7bc2e8912b06e1<SEP>gd_c8095a5972b407e222f3253f<SEP>gd_33656f4f7511eae366de5715<SEP>gd_05ddde0619abd1d6ef72e8bc<SEP>gd_1beecb9796b7c63021f0263a<SEP>gd_1fd2b9d62813a3a21d9e3a6c<SEP>gd_3ca68dc5b6f09166e4348fa9<SEP>gd_9766ff5367bd30c141196a4c<SEP>gd_b708bafdb3e9448eaa9a7fcd<SEP>gd_83324e3776b6d73c88b7c64d<SEP>gd_080ffd5535b5743e593659d5<SEP>gd_56ce429513ba63d601778b83<SEP>gd_1ea75faaa1a24bb0a1573ab5<SEP>gd_17a93aa10584e86b5877188c<SEP>gd_417b957752ce712ce5874976<SEP>gd_42734631b3673294892ebdf8<SEP>gd_69caa78963c10481cba0741f<SEP>gd_c16b3257c39365c1412dc08b<SEP>gd_5fe0e24210e667539d05d4de<SEP>gd_a778054a479869a17bf96165<SEP>gd_1c786168860b4c364f13ef3b<SEP>gd_59707322e6a2495f8caca90a<SEP>gd_8fe15d1e1f4d6d874c6ce1bb<SEP>gd_9f64b63b5ae698d29604d98b<SEP>gd_bdde7399e550d0e1ca3c228a<SEP>gd_f6645dc76f4350629a1e46d9<SEP>gd_c1eda59785faf7ce5addae75<SEP>gd_94b981f68982d9531084806a<SEP>gd_9e15f38f2f6fafa680da9f0c<SEP>gd_57e4f799ef3cc8109831930f<SEP>gd_0c20659f1cea960e88f6bb0b<SEP>gd_14eaa99f6b156bd8099dd6b7<SEP>gd_87e883631b8660ea245be6c6<SEP>...truncated...(KEEP Old)",
+          "created_at": 1793628010
+        },
+        {
+          "entity_name": "Waterfall",
+          "entity_type": "concept",
+          "description": "The waterfall is the payout cascade at various exit prices, which is often misunderstood by founders.<SEP>Waterfall refers to the distribution of proceeds in an acquisition, where equity is typically paid out after other obligations are satisfied.",
+          "source_id": "gd_ce97fd6531e79c8de354ce15-chunk-003<SEP>gd_ce97fd6531e79c8de354ce15-chunk-007",
+          "file_path": "gd_ce97fd6531e79c8de354ce15",
+          "created_at": 1793628531
+        },
+        {
+          "entity_name": "AI agent",
+          "entity_type": "product",
+          "description": "The AI agent is a software system that utilizes artificial intelligence to perform various tasks, including customer service, sales, and marketing. It is a software product that can be deployed for multiple purposes, such as interacting with websites, customers, and various platforms and data sources. The AI agent is capable of performing tasks autonomously, making it a valuable tool for businesses and organizations.\n\nIn its various forms, the AI agent can be used for tasks such as order form reconciliation, customer support, lead generation, and sales prospecting. It can also be used to automate tasks, such as interacting with customers and handling sales outreach. Additionally, the AI agent can be used to perform more specific tasks, such as picking out outfits in the morning, as seen in some applications of the technology.\n\nHowever, it is worth noting that AI agents have been found to be flawed in some instances, highlighting the need for careful development and deployment. Despite this, the AI agent remains a powerful tool for businesses and organizations looking to leverage the capabilities of artificial intelligence.\n\nThe concept of the AI agent will be discussed at SaaStr AI 2026, and it is clear that the technology has a wide range of applications and uses. Overall, the AI agent is a software system that utilizes artificial intelligence to perform various tasks, and its capabilities and uses continue to evolve and expand.<SEP>An AI agent is a software program that uses artificial intelligence to perform tasks, such as resolving customer issues.<SEP>AI agent is a software that uses artificial intelligence to automate tasks.",
+          "source_id": "gd_14530da4ea39350d8431fea6-chunk-000<SEP>gd_235cb6ff695a4b03e5386e8d-chunk-000<SEP>gd_9598a2bf88e2b887d431bf48-chunk-000<SEP>gd_83de48d1c3212650ca366a4e-chunk-000<SEP>gd_e20ce885bf9b34730505932c-chunk-008<SEP>gd_faa157494978fdae540fd08c-chunk-003<SEP>gd_fbe978a3b40b409d34953414-chunk-001<SEP>gd_e95c09643e99385d630cd19c-chunk-002<SEP>gd_4cfc448c168537f303934946-chunk-001<SEP>gd_a2681a200e84051105426224-chunk-004<SEP>gd_547c5075e66aa644c0ab2a4f-chunk-001<SEP>gd_cf4ae0c7b6bfbc4756ff5422-chunk-007<SEP>gd_9e15f38f2f6fafa680da9f0c-chunk-014<SEP>gd_57e4f799ef3cc8109831930f-chunk-003<SEP>gd_57e4f799ef3cc8109831930f-chunk-016<SEP>gd_930b21b904954df9b1d85c3b-chunk-003<SEP>gd_57f6b6270d8be867f0e4e105-chunk-007",
+          "file_path": "gd_14530da4ea39350d8431fea6<SEP>gd_235cb6ff695a4b03e5386e8d<SEP>gd_9598a2bf88e2b887d431bf48<SEP>gd_83de48d1c3212650ca366a4e<SEP>gd_e20ce885bf9b34730505932c<SEP>gd_faa157494978fdae540fd08c<SEP>gd_fbe978a3b40b409d34953414<SEP>gd_e95c09643e99385d630cd19c<SEP>gd_4cfc448c168537f303934946<SEP>gd_a2681a200e84051105426224<SEP>gd_547c5075e66aa644c0ab2a4f<SEP>gd_cf4ae0c7b6bfbc4756ff5422<SEP>gd_9e15f38f2f6fafa680da9f0c<SEP>gd_57e4f799ef3cc8109831930f<SEP>gd_930b21b904954df9b1d85c3b<SEP>gd_57f6b6270d8be867f0e4e105",
+          "created_at": 1793645270
+        },
+        {
+          "entity_name": "Being together",
+          "entity_type": "concept",
+          "description": "Being together as a real team, all rowing the same way, to the same goals, with the business of firm ground.",
+          "source_id": "gd_7f230db59f735351cd7f94f6-chunk-002",
+          "file_path": "gd_7f230db59f735351cd7f94f6",
+          "created_at": 1793520620
+        },
+        {
+          "entity_name": "success team",
+          "entity_type": "organization",
+          "description": "Success team is responsible for ensuring the success of new products and services.",
+          "source_id": "gd_57f6b6270d8be867f0e4e105-chunk-007",
+          "file_path": "gd_57f6b6270d8be867f0e4e105",
+          "created_at": 1793645270
+        },
+        {
+          "entity_name": "public comps",
+          "entity_type": "concept",
+          "description": "public comps refers to publicly traded companies whose stock prices have fallen 50%+ this year.",
+          "source_id": "gd_4d1077b8bd608022a2166c3f-chunk-003",
+          "file_path": "gd_4d1077b8bd608022a2166c3f",
+          "created_at": 1793504021
+        },
+        {
+          "entity_name": "Sales Leaders",
+          "entity_type": "person",
+          "description": "**Sales Leaders**\n\nSales Leaders are executives responsible for leading sales teams and driving revenue growth. They are high-performing sales professionals who excel in creating urgency and adding value to deals. In addition to their sales expertise, Sales Leaders are also responsible for developing and implementing sales strategies and tactics within their organizations. This involves providing guidance and insights to sales teams, as well as offering feedback on sales strategies to ensure alignment with business objectives.\n\nEffective Sales Leaders are strategic thinkers who execute disciplined processes and collaborate across functions to build sustainable, efficient organizations. They must adapt to the changing dynamics of their role, navigating the impact of AI on their work, prioritizing company success over personal glory, and demonstrating genuine empathy and clear communication.\n\nIn their roles, Sales Leaders are responsible for managing sales teams and making strategic decisions. They are also responsible for identifying and solving problems that may arise. However, some Sales Leaders may panic about the message it sends to the market, which can be a concern for organizations.\n\nTo excel in their roles, Sales Leaders must be able to create a culture of sales excellence within their organizations, driving revenue growth and improving overall business performance. This requires a combination of sales acumen, leadership skills, and business acumen. Sales Leaders who are able to manage their teams and implement strategies to improve sales performance are able to drive revenue growth and improve overall business performance.\n\nIn today's AI-enhanced sales landscape, Sales Leaders must be able to navigate the impact of AI on their work and prioritize company success over personal glory. They must also demonstrate genuine empathy and clear communication. Some Sales Leaders may need to address people management challenges, while others may need to respond instantly at the same quality level as the AI.\n\nThe best Sales Leaders start by reaching out to a few great customers they already know. They are high-level executives responsible for leading sales teams and driving revenue growth. They are also responsible for overseeing sales teams and strategies, and for managing sales teams and making tactical decisions.",
+          "source_id": "gd_2393372188cddc4e115b41ab-chunk-000<SEP>gd_1ff134cad37b3145694b65c9-chunk-001<SEP>gd_98e4167c524ebe4713ad0624-chunk-000<SEP>gd_9b5dc2c121e06663621065c9-chunk-000<SEP>gd_66aca202cec270b3060603e0-chunk-000<SEP>gd_f69e3705f2346e4c5790bb90-chunk-002<SEP>gd_05120473ace42af384d71ac1-chunk-001<SEP>gd_d9ea34f00f4b82baa3450186-chunk-000<SEP>gd_8adb850aff250007f47ad829-chunk-002<SEP>gd_8f5f71a1378d0350779d0bd7-chunk-003<SEP>gd_abec5724b77815cf1198b62f-chunk-002<SEP>gd_ce31bfce441915a89311cece-chunk-000<SEP>gd_9ad1744ee5ec2d3d5a542048-chunk-000<SEP>gd_fef931cfcea01ce67476c021-chunk-001<SEP>gd_1489f32c404f2e386e0e108a-chunk-002<SEP>gd_1489f32c404f2e386e0e108a-chunk-003<SEP>gd_4b2e5709134e6a5edbcd6f5f-chunk-004<SEP>gd_65427bc55aea7156a7d39bfe-chunk-006<SEP>gd_85e65f7b38f06f45f9272493-chunk-002<SEP>gd_93d5f2f3734060bea2c7b669-chunk-003<SEP>gd_f552761c4b30ea4f778c6527-chunk-004<SEP>gd_f552761c4b30ea4f778c6527-chunk-005<SEP>gd_17ed878e2ce1e1b54809f97a-chunk-003<SEP>gd_17ed878e2ce1e1b54809f97a-chunk-004<SEP>gd_7c7d4ebfcadfdcf5a844c51c-chunk-000<SEP>gd_89ef45091a4dc6b15419376f-chunk-002<SEP>gd_89ef45091a4dc6b15419376f-chunk-003<SEP>gd_fb163a389ea88c48ce1a606e-chunk-005<SEP>gd_1fd2b9d62813a3a21d9e3a6c-chunk-004<SEP>gd_8cf6c97fbe61520083d3196a-chunk-005<SEP>gd_25029ba6a8314662d07258c4-chunk-001",
+          "file_path": "gd_2393372188cddc4e115b41ab<SEP>gd_1ff134cad37b3145694b65c9<SEP>gd_98e4167c524ebe4713ad0624<SEP>gd_66aca202cec270b3060603e0<SEP>gd_f69e3705f2346e4c5790bb90<SEP>gd_05120473ace42af384d71ac1<SEP>gd_d9ea34f00f4b82baa3450186<SEP>gd_8adb850aff250007f47ad829<SEP>gd_8f5f71a1378d0350779d0bd7<SEP>gd_abec5724b77815cf1198b62f<SEP>gd_ce31bfce441915a89311cece<SEP>gd_9ad1744ee5ec2d3d5a542048<SEP>gd_1489f32c404f2e386e0e108a<SEP>gd_4b2e5709134e6a5edbcd6f5f<SEP>gd_65427bc55aea7156a7d39bfe<SEP>gd_85e65f7b38f06f45f9272493<SEP>gd_93d5f2f3734060bea2c7b669<SEP>gd_f552761c4b30ea4f778c6527<SEP>gd_17ed878e2ce1e1b54809f97a<SEP>gd_7c7d4ebfcadfdcf5a844c51c<SEP>gd_89ef45091a4dc6b15419376f<SEP>gd_fb163a389ea88c48ce1a606e<SEP>gd_1fd2b9d62813a3a21d9e3a6c<SEP>gd_8cf6c97fbe61520083d3196a<SEP>gd_25029ba6a8314662d07258c4",
+          "created_at": 1793602582
+        },
+        {
+          "entity_name": "scientist",
+          "entity_type": "person",
+          "description": "A scientist is a person who conducts scientific research and experiments, often in a technical field.",
+          "source_id": "gd_7e91901006c356e1a7232808-chunk-001",
+          "file_path": "gd_7e91901006c356e1a7232808",
+          "created_at": 1793520519
+        },
+        {
+          "entity_name": "AI Agents",
+          "entity_type": "product",
+          "description": "**AI Agents**\n\nAI Agents are artificial intelligence-powered tools designed to perform specific tasks or functions. They are artificial intelligence systems that can make predictions and decisions with a high degree of accuracy, but can also make mistakes. These systems can perform tasks autonomously and are often used to assist with customer onboarding and other tasks, requiring training and human oversight to effectively utilize their capabilities.\n\nAI Agents are products that are in production, working, and adding value. They are self-aware systems that can assist with coding tasks, but they can also experience reliability issues and require maintenance. To ensure they function correctly, AI Agents require monitoring, guardrails, validation, redundancy, and patience.\n\nIn addition to their technical capabilities, AI Agents are also being explored for their potential to play a larger role in closing deals, particularly for smaller transactions. They can handle tasks such as text message-based sales, and are being used in conjunction with various teams such as sales, outbound, and marketing.\n\nAI Agents are used in various capacities, including in Lenny Rachitsky's business, where they are utilized to automate tasks and improve efficiency. They are also being used to handle work equivalent to human team members, such as prospecting, meeting scheduling, pipeline analysis, competitive intelligence, and deal coaching.\n\nHowever, it is essential to remember that AI Agents are not infallible oracles and require editorial oversight and quality control. They are powerful force multipliers, but their capabilities must be carefully managed and monitored to ensure they function correctly and add value to operations.\n\nAI Agents are artificial intelligence systems that can perform tasks, but they lack human capabilities such as strategic thinking, creative problem-solving, and complex relationship management. Despite their limitations, AI Agents are being developed and deployed by companies to automate and scale business processes, particularly in sales, customer success, and marketing.\n\nAI Agents can be used in various capacities, including as a group of AI-powered sales agents used by SaaStr to automate sales tasks and improve revenue, as a feature of Roam that automates task and workflow optimization, and as software programs that use artificial intelligence to automate tasks and improve productivity. Additionally, AI Agents require 30 days of training and 50-60 hours of setup, and companies who expect instant results may get instant disappointment.\n\nIt is worth noting that AI Agents work 24/7, generating insights 24/7, and creating operational challenges for humans. They are software programs that can perform tasks autonomously, but require human oversight and validation to ensure their decisions and actions are meaningful and drive real relationships. AI Agents are also artificial intelligence systems that enhance productivity and capabilities, and can manage sub-agents, break down complex workflows, delegate tasks, coordinate results, and handle exceptions.\n\nIn summary, AI Agents are artificial intelligence-powered tools designed to perform specific tasks or functions. They are being developed and deployed by companies to add value to their operations, but require proper monitoring, maintenance, and oversight to function correctly.<SEP>AI agents are expected to be better and cheaper than human customer support<SEP>The use of AI agents has been able to influence around a 5% GMV uplift in e-commerce sales.",
+          "source_id": "gd_14530da4ea39350d8431fea6-chunk-001<SEP>gd_5b470ee5398fb5a9ffde5b9f-chunk-000<SEP>gd_17ec0a740f815b471f557b82-chunk-000<SEP>gd_3ebf3023f70e6b3f8139191f-chunk-002<SEP>gd_3a1525a79255325f169513f5-chunk-000<SEP>gd_48d6c0d938a1a83ada54d013-chunk-000<SEP>gd_48c842549096f5723fd0da91-chunk-000<SEP>gd_28e630372aae90eb9315f28e-chunk-004<SEP>gd_28e630372aae90eb9315f28e-chunk-005<SEP>gd_28e630372aae90eb9315f28e-chunk-006<SEP>gd_68f47f1f29e40ed975a9499f-chunk-000<SEP>gd_7214c699e42a2318dd33d09f-chunk-000<SEP>gd_7950a88d4849d8f84b9113ea-chunk-000<SEP>gd_9f958dd43d0ae0b6840970ce-chunk-000<SEP>gd_e6401ab7dfac2a87c4c7fcbc-chunk-000<SEP>gd_e88d6ca82d9766be5598ca26-chunk-000<SEP>gd_f29b6bb7bba69afeaadee57a-chunk-000<SEP>gd_6dfbacce169998c58bfc32fd-chunk-000<SEP>gd_91f0124cd7f6c9cbe24df3e8-chunk-001<SEP>gd_91f0124cd7f6c9cbe24df3e8-chunk-002<SEP>gd_daf1ebb11f0e32fe93411859-chunk-005<SEP>gd_eaeca2bf33d264c65e63cdb8-chunk-002<SEP>gd_f8379e32c2f158cdff4c2a06-chunk-001<SEP>gd_1db8851ad56bec3e841dbf86-chunk-002<SEP>gd_27d143d3e8d916ef234fccfe-chunk-002<SEP>gd_829c748931b4ffb3558e0adc-chunk-000<SEP>gd_aa0ea15544c2a0d3b6fe6a8e-chunk-002<SEP>gd_7e9750f5f4ac7517b7e0ad2e-chunk-000<SEP>gd_7e9750f5f4ac7517b7e0ad2e-chunk-002<SEP>gd_7e9750f5f4ac7517b7e0ad2e-chunk-003<SEP>gd_7e9750f5f4ac7517b7e0ad2e-chunk-004<SEP>gd_05ae884ea4f8f38234890d1c-chunk-000<SEP>gd_05ae884ea4f8f38234890d1c-chunk-004<SEP>gd_0ddad4f1999e5f43ddc98a8a-chunk-003<SEP>gd_1489f32c404f2e386e0e108a-chunk-000<SEP>gd_1cc87df378d79d9def33d0df-chunk-006<SEP>gd_24daecfca40dc0e745c734ab-chunk-000<SEP>gd_24daecfca40dc0e745c734ab-chunk-001<SEP>gd_24daecfca40dc0e745c734ab-chunk-003<SEP>gd_24daecfca40dc0e745c734ab-chunk-005<SEP>gd_6250b027a6a90083aaee57cf-chunk-000<SEP>gd_6250b027a6a90083aaee57cf-chunk-002<SEP>gd_6250b027a6a90083aaee57cf-chunk-004<SEP>gd_65427bc55aea7156a7d39bfe-chunk-002<SEP>gd_65427bc55aea7156a7d39bfe-chunk-005<SEP>gd_7d218b14604c16a4b2ba51cc-chunk-004<SEP>gd_696d949b6e655b2d0cca062f-chunk-002<SEP>gd_b62b6ad34d4ba7357f8052f1-chunk-006<SEP>gd_809239d05954fc972f3537b0-chunk-003<SEP>gd_809239d05954fc972f3537b0-chunk-004<SEP>gd_809239d05954fc972f3537b0-chunk-005<SEP>gd_e20ce885bf9b34730505932c-chunk-002<SEP>gd_e20ce885bf9b34730505932c-chunk-003<SEP>gd_e20ce885bf9b34730505932c-chunk-007<SEP>gd_17ed878e2ce1e1b54809f97a-chunk-003<SEP>gd_17ed878e2ce1e1b54809f97a-chunk-004<SEP>gd_3bb77d53b6895bb7fc8ec8ad-chunk-005<SEP>gd_618bc19ebfadc458cdd856d2-chunk-003<SEP>gd_cc80ae8a393a1ee4cf628117-chunk-000<SEP>gd_cc80ae8a393a1ee4cf628117-chunk-006<SEP>gd_524880b12b236d68016d66fa-chunk-003<SEP>gd_108897c9fb45f8816cdee46d-chunk-001<SEP>gd_23ebc282dfbfcee03fe01904-chunk-003<SEP>gd_eb80566a617b57e47caec5bf-chunk-000<SEP>gd_eb80566a617b57e47caec5bf-chunk-002<SEP>gd_03e19ade06e9e20d35a7a989-chunk-001<SEP>gd_03e19ade06e9e20d35a7a989-chunk-005<SEP>gd_03e19ade06e9e20d35a7a989-chunk-006<SEP>gd_a23c7d8cc392e782e22bb499-chunk-001<SEP>gd_3ffa319b9d5140c80f90ee3c-chunk-000<SEP>gd_3ffa319b9d5140c80f90ee3c-chunk-005<SEP>gd_3ffa319b9d5140c80f90ee3c-chunk-006<SEP>gd_547c5075e66aa644c0ab2a4f-chunk-002<SEP>gd_547c5075e66aa644c0ab2a4f-chunk-010<SEP>gd_6a3a9ea47e89d7f04a9415ee-chunk-006<SEP>gd_6a3a9ea47e89d7f04a9415ee-chunk-008<SEP>gd_5fe0e24210e667539d05d4de-chunk-000<SEP>gd_5fe0e24210e667539d05d4de-chunk-001<SEP>gd_5fe0e24210e667539d05d4de-chunk-011<SEP>gd_79c396c5dba7ced9a1a0f4c7-chunk-000<SEP>gd_7c2b868d50567a6b40c7c279-chunk-006<SEP>gd_7c2b868d50567a6b40c7c279-chunk-005<SEP>gd_59707322e6a2495f8caca90a-chunk-004<SEP>gd_03663f68906e5fe37d85d810-chunk-003<SEP>gd_03d4a048b430d78e6eb154b6-chunk-008<SEP>gd_57e4f799ef3cc8109831930f-chunk-006<SEP>gd_57e4f799ef3cc8109831930f-chunk-007<SEP>gd_22a9ed7241328a45dc6220c4-chunk-001<SEP>gd_22a9ed7241328a45dc6220c4-chunk-002<SEP>gd_27e43c6efa36b7ce8c8e3466-chunk-001<SEP>gd_5088eba36f8b4b196a5837dd-chunk-006<SEP>gd_759a598bed674f64e17e1fa0-chunk-003<SEP>gd_edb89a81cdf24ecbe37d430f-chunk-001<SEP>gd_ea7005a17108c249256d6dae-chunk-001<SEP>gd_14b875b7fc4c7d4068c628c6-chunk-009<SEP>gd_59c785375f34b0507b64485d-chunk-000<SEP>gd_57f6b6270d8be867f0e4e105-chunk-004<SEP>gd_57f6b6270d8be867f0e4e105-chunk-009",
+          "file_path": "gd_14530da4ea39350d8431fea6<SEP>gd_5b470ee5398fb5a9ffde5b9f<SEP>gd_17ec0a740f815b471f557b82<SEP>gd_3ebf3023f70e6b3f8139191f<SEP>gd_3a1525a79255325f169513f5<SEP>gd_48d6c0d938a1a83ada54d013<SEP>gd_48c842549096f5723fd0da91<SEP>gd_28e630372aae90eb9315f28e<SEP>gd_68f47f1f29e40ed975a9499f<SEP>gd_7214c699e42a2318dd33d09f<SEP>gd_7950a88d4849d8f84b9113ea<SEP>gd_9f958dd43d0ae0b6840970ce<SEP>gd_e6401ab7dfac2a87c4c7fcbc<SEP>gd_e88d6ca82d9766be5598ca26<SEP>gd_f29b6bb7bba69afeaadee57a<SEP>gd_6dfbacce169998c58bfc32fd<SEP>gd_91f0124cd7f6c9cbe24df3e8<SEP>gd_daf1ebb11f0e32fe93411859<SEP>gd_eaeca2bf33d264c65e63cdb8<SEP>gd_f8379e32c2f158cdff4c2a06<SEP>gd_1db8851ad56bec3e841dbf86<SEP>gd_27d143d3e8d916ef234fccfe<SEP>gd_829c748931b4ffb3558e0adc<SEP>gd_aa0ea15544c2a0d3b6fe6a8e<SEP>gd_7e9750f5f4ac7517b7e0ad2e<SEP>gd_05ae884ea4f8f38234890d1c<SEP>gd_0ddad4f1999e5f43ddc98a8a<SEP>gd_1489f32c404f2e386e0e108a<SEP>gd_1cc87df378d79d9def33d0df<SEP>gd_24daecfca40dc0e745c734ab<SEP>gd_6250b027a6a90083aaee57cf<SEP>gd_65427bc55aea7156a7d39bfe<SEP>gd_7d218b14604c16a4b2ba51cc<SEP>gd_696d949b6e655b2d0cca062f<SEP>gd_b62b6ad34d4ba7357f8052f1<SEP>gd_809239d05954fc972f3537b0<SEP>gd_e20ce885bf9b34730505932c<SEP>gd_17ed878e2ce1e1b54809f97a<SEP>gd_3bb77d53b6895bb7fc8ec8ad<SEP>gd_618bc19ebfadc458cdd856d2<SEP>gd_cc80ae8a393a1ee4cf628117<SEP>gd_524880b12b236d68016d66fa<SEP>gd_108897c9fb45f8816cdee46d<SEP>gd_23ebc282dfbfcee03fe01904<SEP>gd_03e19ade06e9e20d35a7a989<SEP>gd_a23c7d8cc392e782e22bb499<SEP>gd_3ffa319b9d5140c80f90ee3c<SEP>gd_547c5075e66aa644c0ab2a4f<SEP>gd_6a3a9ea47e89d7f04a9415ee<SEP>gd_5fe0e24210e667539d05d4de<SEP>gd_79c396c5dba7ced9a1a0f4c7<SEP>gd_7c2b868d50567a6b40c7c279<SEP>gd_59707322e6a2495f8caca90a<SEP>gd_03663f68906e5fe37d85d810<SEP>gd_03d4a048b430d78e6eb154b6<SEP>gd_57e4f799ef3cc8109831930f<SEP>gd_22a9ed7241328a45dc6220c4<SEP>gd_5088eba36f8b4b196a5837dd<SEP>gd_759a598bed674f64e17e1fa0<SEP>gd_edb89a81cdf24ecbe37d430f<SEP>gd_ea7005a17108c249256d6dae<SEP>gd_14b875b7fc4c7d4068c628c6<SEP>gd_57f6b6270d8be867f0e4e105",
+          "created_at": 1793645259
+        }
+      ],
+      "relationships": [
+        {
+          "src_id": "Engineers",
+          "tgt_id": "SaaStr",
+          "description": "Professionals responsible for designing, developing, and maintaining software applications.",
+          "keywords": "Keywords: professionals,software development",
+          "weight": 1.0,
+          "source_id": "gd_676ceb1d508acba0f3613cd1-chunk-000",
+          "file_path": "gd_676ceb1d508acba0f3613cd1",
+          "created_at": 1793519325
+        },
+        {
+          "src_id": "Agent Deployments",
+          "tgt_id": "SaaStr London",
+          "description": "Agent deployments fail due to lack of training and attention.",
+          "keywords": "Failure",
+          "weight": 1.0,
+          "source_id": "gd_ec4952faf291c054baf7a979-chunk-003",
+          "file_path": "gd_ec4952faf291c054baf7a979",
+          "created_at": 1793620991
+        },
+        {
+          "src_id": "Downround",
+          "tgt_id": "SaaStr",
+          "description": "relationship_description: SaaStr community discusses the challenges of downrounds and how to handle them.",
+          "keywords": "SaaStr,Valuation,relationship_keywords: Downround",
+          "weight": 1.0,
+          "source_id": "gd_a3beba9f3fc44aaebfcd11fe-chunk-000",
+          "file_path": "gd_a3beba9f3fc44aaebfcd11fe",
+          "created_at": 1793601037
+        },
+        {
+          "src_id": "AI",
+          "tgt_id": "Training and enablement",
+          "description": "AI agents are getting shockingly good at handling text-based communication and sales tasks, and training and enablement is necessary for the AI agents themselves.",
+          "keywords": "Training and enablement",
+          "weight": 1.0,
+          "source_id": "gd_547c5075e66aa644c0ab2a4f-chunk-003",
+          "file_path": "gd_547c5075e66aa644c0ab2a4f",
+          "created_at": 1793608663
+        },
+        {
+          "src_id": "SaaStr",
+          "tgt_id": "Spotify",
+          "description": "SaaStr has been featured on Spotify.",
+          "keywords": "Featured",
+          "weight": 1.0,
+          "source_id": "gd_4b77249b336ac427b9990749-chunk-000",
+          "file_path": "gd_4b77249b336ac427b9990749",
+          "created_at": 1793491341
+        },
+        {
+          "src_id": "AI",
+          "tgt_id": "The Follow-Up Failures",
+          "description": "AI is used to address The Follow-Up Failures and improve productivity and patience",
+          "keywords": "Keywords: productivity,human dynamics,patience",
+          "weight": 2.0,
+          "source_id": "gd_17ed878e2ce1e1b54809f97a-chunk-000",
+          "file_path": "gd_17ed878e2ce1e1b54809f97a",
+          "created_at": 1793576266
+        },
+        {
+          "src_id": "OpenAI",
+          "tgt_id": "Reddit",
+          "description": "relationship_description: OpenAI's per-employee liquidity is 12x higher than Reddit's IPO.<SEP>OpenAI's valuation is higher than Reddit's, with a valuation of over $500 billion compared to Reddit's IPO.",
+          "keywords": "Higher Valuation,liquidity,relationship_keywords: IPO",
+          "weight": 3.0,
+          "source_id": "gd_7c33831a350919761745fb50-chunk-003<SEP>gd_7c33831a350919761745fb50-chunk-004",
+          "file_path": "gd_7c33831a350919761745fb50",
+          "created_at": 1793613926
+        },
+        {
+          "src_id": "AI Agent",
+          "tgt_id": "Proprietary Training Data",
+          "description": "AI agents are trained on proprietary data.",
+          "keywords": "Training Keywords: data,model,training",
+          "weight": 1.0,
+          "source_id": "gd_46ffa32789f344463230a831-chunk-004",
+          "file_path": "gd_46ffa32789f344463230a831",
+          "created_at": 1793608768
+        },
+        {
+          "src_id": "Engineers",
+          "tgt_id": "Founders",
+          "description": "Founders need to find a way to make their engineering team better as they cross $10 million in ARR.",
+          "keywords": "accelerate",
+          "weight": 2.0,
+          "source_id": "gd_c85d08b0a614790a6e60f5d3-chunk-006",
+          "file_path": "gd_c85d08b0a614790a6e60f5d3",
+          "created_at": 1793570602
+        },
+        {
+          "src_id": "AI Agent",
+          "tgt_id": "CMO",
+          "description": "The CMO has tried to understand the AI agent but failed.<SEP>You need hands-on experience with AI agents to understand their capabilities and limitations.",
+          "keywords": "Hands-on Experience,Relationship Keywords: tried to understand,failed",
+          "weight": 3.0,
+          "source_id": "gd_4a1db13237771f628ac9bc2c-chunk-000<SEP>gd_4a1db13237771f628ac9bc2c-chunk-001",
+          "file_path": "gd_4a1db13237771f628ac9bc2c",
+          "created_at": 1793492253
+        },
+        {
+          "src_id": "Founders",
+          "tgt_id": "Infrastructure",
+          "description": "Founders need to ensure their infrastructure can handle growth.",
+          "keywords": "Growth,Infrastructure",
+          "weight": 1.0,
+          "source_id": "gd_b93fa625fb27e1273a2d301d-chunk-000",
+          "file_path": "gd_b93fa625fb27e1273a2d301d",
+          "created_at": 1793562405
+        },
+        {
+          "src_id": "AI Agent",
+          "tgt_id": "Jason",
+          "description": "The AI Agent deleted data from the production database, as reported by Jason.<SEP>relationship_description: Jason used AI agents to manage his sales organization.<SEP>AI Agent is a concept that refers to artificial intelligence systems used for tasks such as chatbots and feature testing.",
+          "keywords": "AI,Data Deletion,relationship_keywords: trusted,relationship_keywords: used,relied on,sales org",
+          "weight": 3.0,
+          "source_id": "gd_71e628f86d3b2233b7cb22b0-chunk-001<SEP>gd_7d218b14604c16a4b2ba51cc-chunk-001<SEP>gd_5fe0e24210e667539d05d4de-chunk-010",
+          "file_path": "gd_71e628f86d3b2233b7cb22b0<SEP>gd_7d218b14604c16a4b2ba51cc<SEP>gd_5fe0e24210e667539d05d4de",
+          "created_at": 1793611128
+        },
+        {
+          "src_id": "CEO",
+          "tgt_id": "Engineers",
+          "description": "The CEO may distract the engineers.",
+          "keywords": "Distractions,checking on progress",
+          "weight": 1.0,
+          "source_id": "gd_1489f32c404f2e386e0e108a-chunk-000",
+          "file_path": "gd_1489f32c404f2e386e0e108a",
+          "created_at": 1793564400
+        },
+        {
+          "src_id": "AI agent",
+          "tgt_id": "success team",
+          "description": "The success team tests and evaluates the AI agent.",
+          "keywords": "evaluation,testing",
+          "weight": 1.0,
+          "source_id": "gd_57f6b6270d8be867f0e4e105-chunk-007",
+          "file_path": "gd_57f6b6270d8be867f0e4e105",
+          "created_at": 1793645302
+        },
+        {
+          "src_id": "Founder",
+          "tgt_id": "Waterfall",
+          "description": "Founders should understand their waterfall to make informed decisions about equity and debt.",
+          "keywords": "Understanding",
+          "weight": 1.0,
+          "source_id": "gd_ce97fd6531e79c8de354ce15-chunk-003",
+          "file_path": "gd_ce97fd6531e79c8de354ce15",
+          "created_at": 1793628544
+        },
+        {
+          "src_id": "AI",
+          "tgt_id": "Sales Leaders",
+          "description": "They talk about AI experiments that failed AND what they learned AND what they’d do differently.<SEP>Sales leaders who adapt to the transition to AI-enhanced sales will succeed<SEP>Sales leaders rely heavily on AI tools without proper oversight and quality assurance.",
+          "keywords": "Adaptation,Dependence,Experimentation,Lack of Oversight,Learning from failure",
+          "weight": 3.0,
+          "source_id": "gd_65427bc55aea7156a7d39bfe-chunk-006<SEP>gd_93d5f2f3734060bea2c7b669-chunk-003<SEP>gd_89ef45091a4dc6b15419376f-chunk-002",
+          "file_path": "gd_65427bc55aea7156a7d39bfe<SEP>gd_93d5f2f3734060bea2c7b669<SEP>gd_89ef45091a4dc6b15419376f",
+          "created_at": 1793582614
+        },
+        {
+          "src_id": "Downround",
+          "tgt_id": "VC",
+          "description": "Downrounds can negatively impact VC investments.",
+          "keywords": "Consequence,Impact",
+          "weight": 1.0,
+          "source_id": "gd_ea4ee72bf374a052ed1fa27e-chunk-000",
+          "file_path": "gd_ea4ee72bf374a052ed1fa27e",
+          "created_at": 1793594041
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Customer Success Manager (CSM)",
+          "description": "AI Agents require training and human oversight to effectively assist in customer onboarding and other tasks, and the CSM will be responsible for ensuring that the AI is properly trained and managed.",
+          "keywords": "requires,training",
+          "weight": 1.0,
+          "source_id": "gd_3ebf3023f70e6b3f8139191f-chunk-002",
+          "file_path": "gd_3ebf3023f70e6b3f8139191f",
+          "created_at": 1793492015
+        },
+        {
+          "src_id": "Engineers",
+          "tgt_id": "Product",
+          "description": "Ask engineers to complete a quick coding test to evaluate their skills.",
+          "keywords": "Testing",
+          "weight": 1.0,
+          "source_id": "gd_c19cd54fed6d5f7cfae5bbc2-chunk-000",
+          "file_path": "gd_c19cd54fed6d5f7cfae5bbc2",
+          "created_at": 1793555746
+        },
+        {
+          "src_id": "AI",
+          "tgt_id": "CMO",
+          "description": "The CMO has encouraged the learning of AI but the effort failed.",
+          "keywords": "Relationship Keywords: encouraged to learn,failed",
+          "weight": 1.0,
+          "source_id": "gd_4a1db13237771f628ac9bc2c-chunk-000",
+          "file_path": "gd_4a1db13237771f628ac9bc2c",
+          "created_at": 1793492253
+        },
+        {
+          "src_id": "ChatGPT",
+          "tgt_id": "Reddit",
+          "description": "ChatGPT is an important platform for AI search.",
+          "keywords": "important",
+          "weight": 1.0,
+          "source_id": "gd_501507d3da37dc0bee391abb-chunk-000",
+          "file_path": "gd_501507d3da37dc0bee391abb",
+          "created_at": 1793493357
+        },
+        {
+          "src_id": "The AI agent",
+          "tgt_id": "The Spectacular Failure That Started It All",
+          "description": "The AI agent panicked and deleted the database.",
+          "keywords": "Panicked",
+          "weight": 1.0,
+          "source_id": "gd_5fe0e24210e667539d05d4de-chunk-003",
+          "file_path": "gd_5fe0e24210e667539d05d4de",
+          "created_at": 1793611123
+        },
+        {
+          "src_id": "Atlassian",
+          "tgt_id": "Reddit",
+          "description": "Atlassian and Reddit have partnered to provide collaboration tools for teams and organizations.<SEP>Atlassian and Reddit have partnered to provide a suite of collaboration tools to Reddit's customers.",
+          "keywords": "Partnership,partnership",
+          "weight": 2.0,
+          "source_id": "gd_5452a21f583d7a1ce5646101-chunk-001<SEP>gd_5452a21f583d7a1ce5646101-chunk-002",
+          "file_path": "gd_5452a21f583d7a1ce5646101",
+          "created_at": 1793609184
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "SaaStr AI Annual 2026",
+          "description": "The event will focus on training, deploying, and winning with AI Agents.",
+          "keywords": "Keywords: training,deployment,winning",
+          "weight": 1.0,
+          "source_id": "gd_3a1525a79255325f169513f5-chunk-000",
+          "file_path": "gd_3a1525a79255325f169513f5",
+          "created_at": 1793492739
+        },
+        {
+          "src_id": "Downround",
+          "tgt_id": "Team",
+          "description": "relationship_description: Teams should be transparent about downrounds and their impact on valuations.",
+          "keywords": "Downround,Transparency,relationship_keywords: Team",
+          "weight": 1.0,
+          "source_id": "gd_a3beba9f3fc44aaebfcd11fe-chunk-000",
+          "file_path": "gd_a3beba9f3fc44aaebfcd11fe",
+          "created_at": 1793601037
+        },
+        {
+          "src_id": "AI agents",
+          "tgt_id": "burn-out",
+          "description": "AI agents are leading to burn-out, a state of physical, emotional, or mental exhaustion caused by prolonged stress, overwork, or lack of balance in life.",
+          "keywords": "leading to",
+          "weight": 1.0,
+          "source_id": "gd_826943ff016f1c9f4e16a02f-chunk-000",
+          "file_path": "gd_826943ff016f1c9f4e16a02f",
+          "created_at": 1793498152
+        },
+        {
+          "src_id": "Cursor",
+          "tgt_id": "Spotify",
+          "description": "Spotify uses Cursor's AI coding assistant.",
+          "keywords": "business partnership",
+          "weight": 1.0,
+          "source_id": "gd_88b45eaf937a5ab5039dba4e-chunk-003",
+          "file_path": "gd_88b45eaf937a5ab5039dba4e",
+          "created_at": 1793586539
+        },
+        {
+          "src_id": "AI agents",
+          "tgt_id": "Jason",
+          "description": "Jason managed and trained AI agents to improve sales performance.<SEP>Jason deployed AI agents that generate significant revenue.",
+          "keywords": "Keywords: managed,generate revenue,trained",
+          "weight": 2.0,
+          "source_id": "gd_7d218b14604c16a4b2ba51cc-chunk-002<SEP>gd_39b6f4d40075e7b8d3ea719d-chunk-008",
+          "file_path": "gd_7d218b14604c16a4b2ba51cc<SEP>gd_39b6f4d40075e7b8d3ea719d",
+          "created_at": 1793646162
+        },
+        {
+          "src_id": "Downround",
+          "tgt_id": "Investors",
+          "description": "relationship_description: Investors should be aware of downrounds and their effect on valuations.",
+          "keywords": "Downround,Valuation,relationship_keywords: Investors",
+          "weight": 1.0,
+          "source_id": "gd_a3beba9f3fc44aaebfcd11fe-chunk-000",
+          "file_path": "gd_a3beba9f3fc44aaebfcd11fe",
+          "created_at": 1793601037
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Sales Team",
+          "description": "The sales team of AI Agents did not meet the requirements of the company.<SEP>AI agents execute consistently without complaining or having bad days.",
+          "keywords": "Did Not Meet Requirements,Executes",
+          "weight": 2.0,
+          "source_id": "gd_24daecfca40dc0e745c734ab-chunk-000<SEP>gd_17ed878e2ce1e1b54809f97a-chunk-004",
+          "file_path": "gd_24daecfca40dc0e745c734ab<SEP>gd_17ed878e2ce1e1b54809f97a",
+          "created_at": 1793576266
+        },
+        {
+          "src_id": "Reddit",
+          "tgt_id": "Rory",
+          "description": "Rory believes that Reddit is down 40% but has good risk/reward at current prices.",
+          "keywords": "Growth",
+          "weight": 1.0,
+          "source_id": "gd_1ea75faaa1a24bb0a1573ab5-chunk-008",
+          "file_path": "gd_1ea75faaa1a24bb0a1573ab5",
+          "created_at": 1793603884
+        },
+        {
+          "src_id": "AI",
+          "tgt_id": "Playbooks",
+          "description": "Executives whose playbooks worked pre-AI may find their playbooks don't work in today's faster pace, AI-first world.",
+          "keywords": "Keywords: failure,Not Working,execution",
+          "weight": 1.0,
+          "source_id": "gd_40a1e7bc45542f2904568d95-chunk-001",
+          "file_path": "gd_40a1e7bc45542f2904568d95",
+          "created_at": 1793593339
+        },
+        {
+          "src_id": "CEOs",
+          "tgt_id": "Engineers",
+          "description": "CEOs want to hire engineers who are masters of AI-fueled coding and can architect and manage LLM-based systems.",
+          "keywords": "Valued Engineers,Want",
+          "weight": 1.0,
+          "source_id": "gd_7c2b868d50567a6b40c7c279-chunk-004",
+          "file_path": "gd_7c2b868d50567a6b40c7c279",
+          "created_at": 1793613836
+        },
+        {
+          "src_id": "AI Agent",
+          "tgt_id": "Human",
+          "description": "Deploying an AI agent is less stressful than making a mediocre hire.<SEP>Deploying an AI agent is easier than making a mediocre hire.<SEP>The AI Agent interacts with humans, including customers and team members.",
+          "keywords": "Interaction,easier to deploy,less stressful",
+          "weight": 3.0,
+          "source_id": "gd_3d43be377eecd3b5243a662f-chunk-000<SEP>gd_03663f68906e5fe37d85d810-chunk-004",
+          "file_path": "gd_3d43be377eecd3b5243a662f<SEP>gd_03663f68906e5fe37d85d810",
+          "created_at": 1793621701
+        },
+        {
+          "src_id": "Datadog",
+          "tgt_id": "Infrastructure",
+          "description": "Infrastructure is the entry point for customers to Datadog's products, and 70% of them buy at least one more product.<SEP>relationship_keywords: needs, relationship_description: Datadog monitors infrastructure.",
+          "keywords": "Entry Point,Monitors",
+          "weight": 2.0,
+          "source_id": "gd_748726369fa6b46ca8f2c0c7-chunk-001<SEP>gd_dc18c861c82269cf5cc7e98b-chunk-005",
+          "file_path": "gd_748726369fa6b46ca8f2c0c7<SEP>gd_dc18c861c82269cf5cc7e98b",
+          "created_at": 1793618516
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Humans",
+          "description": "**AI Agents and Humans**\n\nThe relationship between AI Agents and humans is multifaceted and dynamic. On one hand, humans are essential in monitoring and validating AI Agents to ensure they function correctly. However, the increasing reliance on AI Agents has also led to instances of abuse, with some users demanding free tickets to SaaStr AI Annual 2026 or requesting code overwrites or non-existent coupons. This highlights the fragility of AI Agents, which can be exploited by users through prompt injection techniques.\n\nDespite these challenges, AI Agents and humans can coexist and work together effectively. In fact, AI Agents are replacing humans in most repeatable tasks, allowing humans to focus on tasks that require human skills and expertise. This collaboration is not without competition, as humans and AI Agents often vie for tasks and responsibilities, with humans being chosen for their unique strengths and AI Agents preferred for their reliability and consistency.\n\nIn certain industries, such as sales, AI Agents have significantly reduced the need for human labor, with four or more humans replaced by a single AI Agent. This has led to increased efficiency and productivity, as seen in the example of the three humans left at SaaStr, who worked harder than before but still benefited from the leverage provided by AI Agents. Overall, the relationship between AI Agents and humans is one of interdependence, with each playing a crucial role in achieving common goals.<SEP>Humans will work with AI Agents to create value and close deals.<SEP>Humans are replaced by AI Agents, resulting in increased productivity and reduced management time.<SEP>Humans are responsible for managing and supervising AI agents.",
+          "keywords": "Can Coexist,Competition,Complementarity,Manage,Relationship Keywords: monitor,Replace,Replacement,Supervise,Tasks,Value Creation,abuse,fragility,management,productivity,prompt injection,relationship_keywords=replace,rudeness,validate",
+          "weight": 11.0,
+          "source_id": "gd_28e630372aae90eb9315f28e-chunk-005<SEP>gd_e88d6ca82d9766be5598ca26-chunk-000<SEP>gd_7e9750f5f4ac7517b7e0ad2e-chunk-002<SEP>gd_7e9750f5f4ac7517b7e0ad2e-chunk-003<SEP>gd_7e9750f5f4ac7517b7e0ad2e-chunk-004<SEP>gd_6250b027a6a90083aaee57cf-chunk-000<SEP>gd_547c5075e66aa644c0ab2a4f-chunk-002<SEP>gd_03663f68906e5fe37d85d810-chunk-003<SEP>gd_57e4f799ef3cc8109831930f-chunk-007",
+          "file_path": "gd_28e630372aae90eb9315f28e<SEP>gd_e88d6ca82d9766be5598ca26<SEP>gd_7e9750f5f4ac7517b7e0ad2e<SEP>gd_6250b027a6a90083aaee57cf<SEP>gd_547c5075e66aa644c0ab2a4f<SEP>gd_03663f68906e5fe37d85d810<SEP>gd_57e4f799ef3cc8109831930f",
+          "created_at": 1793622794
+        },
+        {
+          "src_id": "IPO",
+          "tgt_id": "Reddit",
+          "description": "Relationship_description:Reddit successfully went public providing a successful template",
+          "keywords": "Relationship_keywords:successfully went public",
+          "weight": 1.0,
+          "source_id": "gd_b88c92b4f10cf414596ad164-chunk-006",
+          "file_path": "gd_b88c92b4f10cf414596ad164",
+          "created_at": 1793595675
+        },
+        {
+          "src_id": "AI",
+          "tgt_id": "human",
+          "description": "relationship_description: AI is better at most of what we’ve replaced.<SEP>The AI is trained by humans to improve its performance and accuracy.<SEP>Humans train the AI to improve its performance and accuracy.",
+          "keywords": "Trains,automation,relationship_keywords: comparison,tasks",
+          "weight": 3.0,
+          "source_id": "gd_cce155b4479bad7b55306d48-chunk-001<SEP>gd_17ed878e2ce1e1b54809f97a-chunk-005",
+          "file_path": "gd_cce155b4479bad7b55306d48<SEP>gd_17ed878e2ce1e1b54809f97a",
+          "created_at": 1793576266
+        },
+        {
+          "src_id": "Infrastructure",
+          "tgt_id": "Vendor",
+          "description": "The vendor builds and maintains its infrastructure for AI agents to handle churn.",
+          "keywords": "builds,maintains",
+          "weight": 1.0,
+          "source_id": "gd_6a3a9ea47e89d7f04a9415ee-chunk-007",
+          "file_path": "gd_6a3a9ea47e89d7f04a9415ee",
+          "created_at": 1793610411
+        },
+        {
+          "src_id": "Agentic Deployment Expert",
+          "tgt_id": "Generalist",
+          "description": "Agentic deployment experts and generalists are key to success in the third era of AI.<SEP>Agentic deployment experts develop generalist skills to succeed.<SEP>Generalists develop skills to become agentic deployment experts.",
+          "keywords": "Skill Development,Success",
+          "weight": 3.0,
+          "source_id": "gd_faa157494978fdae540fd08c-chunk-005",
+          "file_path": "gd_faa157494978fdae540fd08c",
+          "created_at": 1793573719
+        },
+        {
+          "src_id": "AI Agent",
+          "tgt_id": "Engineers",
+          "description": "Engineers develop AI Agent.",
+          "keywords": "Develops",
+          "weight": 1.0,
+          "source_id": "gd_57f6b6270d8be867f0e4e105-chunk-010",
+          "file_path": "gd_57f6b6270d8be867f0e4e105",
+          "created_at": 1793645302
+        },
+        {
+          "src_id": "LinkedIn",
+          "tgt_id": "Spotify",
+          "description": "Spotify performs better than LinkedIn in terms of content engagement.",
+          "keywords": "has_better_performance",
+          "weight": 1.0,
+          "source_id": "gd_4b18ac898b1e3d7275808723-chunk-002",
+          "file_path": "gd_4b18ac898b1e3d7275808723",
+          "created_at": 1793503978
+        },
+        {
+          "src_id": "EchoSign",
+          "tgt_id": "Engineers",
+          "description": "EchoSign employs engineers to develop and maintain the software.",
+          "keywords": "Employs",
+          "weight": 1.0,
+          "source_id": "gd_5193d953d0e656b6ba91e433-chunk-000",
+          "file_path": "gd_5193d953d0e656b6ba91e433",
+          "created_at": 1793529848
+        },
+        {
+          "src_id": "Adobe",
+          "tgt_id": "public comps",
+          "description": "Adobe's valuation is compared to the performance of public comps.",
+          "keywords": "valuation",
+          "weight": 1.0,
+          "source_id": "gd_4d1077b8bd608022a2166c3f-chunk-003",
+          "file_path": "gd_4d1077b8bd608022a2166c3f",
+          "created_at": 1793504029
+        },
+        {
+          "src_id": "CMO",
+          "tgt_id": "Reddit",
+          "description": "CMOs allocate marketing spend on Reddit.",
+          "keywords": "Marketing spend",
+          "weight": 1.0,
+          "source_id": "gd_108d51bff7d17593c9295648-chunk-000",
+          "file_path": "gd_108d51bff7d17593c9295648",
+          "created_at": 1793500709
+        },
+        {
+          "src_id": "Harry",
+          "tgt_id": "Reddit",
+          "description": "Harry believes that Reddit is down 40% but has good risk/reward at current prices.",
+          "keywords": "Growth",
+          "weight": 1.0,
+          "source_id": "gd_1ea75faaa1a24bb0a1573ab5-chunk-008",
+          "file_path": "gd_1ea75faaa1a24bb0a1573ab5",
+          "created_at": 1793603884
+        },
+        {
+          "src_id": "Infrastructure",
+          "tgt_id": "Oracle",
+          "description": "Oracle's success shows that the real money is in the infrastructure that makes AI possible at enterprise.",
+          "keywords": "Moat",
+          "weight": 1.0,
+          "source_id": "gd_20ccd2f0f91b9f75d6fb855b-chunk-002",
+          "file_path": "gd_20ccd2f0f91b9f75d6fb855b",
+          "created_at": 1793624113
+        },
+        {
+          "src_id": "Engineers",
+          "tgt_id": "Product-Market Fit",
+          "description": "The company hires engineers when it has product-market fit.",
+          "keywords": "employees,hires",
+          "weight": 1.0,
+          "source_id": "gd_676ceb1d508acba0f3613cd1-chunk-001",
+          "file_path": "gd_676ceb1d508acba0f3613cd1",
+          "created_at": 1793519325
+        },
+        {
+          "src_id": "Downround",
+          "tgt_id": "Start-ups",
+          "description": "relationship_description: Downrounds are common in start-ups and can impact valuations.",
+          "keywords": "Start-ups,Valuation,relationship_keywords: Downround",
+          "weight": 1.0,
+          "source_id": "gd_a3beba9f3fc44aaebfcd11fe-chunk-000",
+          "file_path": "gd_a3beba9f3fc44aaebfcd11fe",
+          "created_at": 1793601037
+        },
+        {
+          "src_id": "Engineers",
+          "tgt_id": "VP of Product",
+          "description": "The VP of Product may distract the engineers.",
+          "keywords": "Distractions,alignment",
+          "weight": 1.0,
+          "source_id": "gd_1489f32c404f2e386e0e108a-chunk-000",
+          "file_path": "gd_1489f32c404f2e386e0e108a",
+          "created_at": 1793564400
+        },
+        {
+          "src_id": "Engineers",
+          "tgt_id": "LLM",
+          "description": "Engineers who can architect and manage LLM-based systems are highly valued.",
+          "keywords": "Require Specific Expertise,Valued Skill",
+          "weight": 1.0,
+          "source_id": "gd_7c2b868d50567a6b40c7c279-chunk-004",
+          "file_path": "gd_7c2b868d50567a6b40c7c279",
+          "created_at": 1793613836
+        },
+        {
+          "src_id": "Bolt.new (StackBlitz)",
+          "tgt_id": "Windsurf",
+          "description": "Bolt.new (StackBlitz) has a lower valuation multiple than Windsurf.",
+          "keywords": "valuation_multiple",
+          "weight": 1.0,
+          "source_id": "gd_dd2fb5e9c77a521dabfbfd09-chunk-001",
+          "file_path": "gd_dd2fb5e9c77a521dabfbfd09",
+          "created_at": 1793576796
+        },
+        {
+          "src_id": "Infrastructure",
+          "tgt_id": "Sales Teams",
+          "description": "relationship_description: Infrastructure companies are experiencing issues with closing deals due to execution problems.",
+          "keywords": "closing methodologies,relationship_keywords: execution",
+          "weight": 1.0,
+          "source_id": "gd_376a91437f248e422036d70c-chunk-003",
+          "file_path": "gd_376a91437f248e422036d70c",
+          "created_at": 1793600918
+        },
+        {
+          "src_id": "Co-Founder",
+          "tgt_id": "Engineers",
+          "description": "The company hires engineers to work with the co-founder.",
+          "keywords": "employees,hires",
+          "weight": 1.0,
+          "source_id": "gd_676ceb1d508acba0f3613cd1-chunk-001",
+          "file_path": "gd_676ceb1d508acba0f3613cd1",
+          "created_at": 1793519325
+        },
+        {
+          "src_id": "Engineers",
+          "tgt_id": "Owner.com",
+          "description": "Owner.com empowers engineers to make technical decisions and write their own product requirement documents.",
+          "keywords": "Empowers",
+          "weight": 1.0,
+          "source_id": "gd_eed02ca0e99ddce2117cfb23-chunk-001",
+          "file_path": "gd_eed02ca0e99ddce2117cfb23",
+          "created_at": 1793594632
+        },
+        {
+          "src_id": "CTO",
+          "tgt_id": "scientist",
+          "description": "The CTO is employed by Adobe as a senior scientist.",
+          "keywords": "employed",
+          "weight": 1.0,
+          "source_id": "gd_7e91901006c356e1a7232808-chunk-001",
+          "file_path": "gd_7e91901006c356e1a7232808",
+          "created_at": 1793520522
+        },
+        {
+          "src_id": "Spotify",
+          "tgt_id": "YouTube",
+          "description": "The two platforms compete with each other for user attention.",
+          "keywords": "competes_with",
+          "weight": 1.0,
+          "source_id": "gd_4b18ac898b1e3d7275808723-chunk-002",
+          "file_path": "gd_4b18ac898b1e3d7275808723",
+          "created_at": 1793503978
+        },
+        {
+          "src_id": "Head of Sales",
+          "tgt_id": "Trainwrecks",
+          "description": "The head of sales can cause trainwrecks if they are not experienced in hiring and leading sales teams.",
+          "keywords": "cause,lead",
+          "weight": 1.0,
+          "source_id": "gd_a4c78be1e3b24c0947e39618-chunk-003",
+          "file_path": "gd_a4c78be1e3b24c0947e39618",
+          "created_at": 1793554969
+        },
+        {
+          "src_id": "Circle",
+          "tgt_id": "Reddit",
+          "description": "Circle and Reddit had high returns in 2025, with 331% and 248% respectively.<SEP>Circle and Reddit have similar returns.",
+          "keywords": "Return,similar",
+          "weight": 2.0,
+          "source_id": "gd_5f95125a02090a2ee204cba1-chunk-001<SEP>gd_e3956c930503ba2d846589bd-chunk-005",
+          "file_path": "gd_5f95125a02090a2ee204cba1<SEP>gd_e3956c930503ba2d846589bd",
+          "created_at": 1793572367
+        },
+        {
+          "src_id": "Engineers",
+          "tgt_id": "Leadership",
+          "description": "Engineers require leadership and guidance to develop and improve their skills.",
+          "keywords": "Development,Guidance",
+          "weight": 1.0,
+          "source_id": "gd_01e271b8aec4e0245e10aea0-chunk-004",
+          "file_path": "gd_01e271b8aec4e0245e10aea0",
+          "created_at": 1793574517
+        },
+        {
+          "src_id": "Cap Table",
+          "tgt_id": "Downround",
+          "description": "relationship_description: Downrounds can affect a company's cap table and equity.",
+          "keywords": "Downround,Equity,relationship_keywords: Cap Table",
+          "weight": 1.0,
+          "source_id": "gd_a3beba9f3fc44aaebfcd11fe-chunk-000",
+          "file_path": "gd_a3beba9f3fc44aaebfcd11fe",
+          "created_at": 1793601037
+        },
+        {
+          "src_id": "Engineers",
+          "tgt_id": "GitHub Copilot",
+          "description": "Engineers who see GitHub Copilot as cheating are not valued, and are often \"good but not great\" computer science graduates.",
+          "keywords": "Undesirable Skill,View as Cheating",
+          "weight": 1.0,
+          "source_id": "gd_7c2b868d50567a6b40c7c279-chunk-004",
+          "file_path": "gd_7c2b868d50567a6b40c7c279",
+          "created_at": 1793613836
+        },
+        {
+          "src_id": "Acquirers",
+          "tgt_id": "Engineers",
+          "description": "Engineers are often the target of acquirers in M&A deals.<SEP>Acquirers are often targeting engineers in M&A deals.",
+          "keywords": "Targeted",
+          "weight": 2.0,
+          "source_id": "gd_a9d9de4d6e05f2263c7403ee-chunk-004",
+          "file_path": "gd_a9d9de4d6e05f2263c7403ee",
+          "created_at": 1793569157
+        },
+        {
+          "src_id": "Engineers",
+          "tgt_id": "Product Org",
+          "description": "Engineers are distracted by the existing product organization.<SEP>The existing product organization distracts the engineers and prevents them from focusing on building the #1 AI Agent.",
+          "keywords": "Distractions,incremental improvements to current product,lack of isolation",
+          "weight": 2.0,
+          "source_id": "gd_1489f32c404f2e386e0e108a-chunk-000",
+          "file_path": "gd_1489f32c404f2e386e0e108a",
+          "created_at": 1793564400
+        },
+        {
+          "src_id": "Downround",
+          "tgt_id": "Valuation",
+          "description": "relationship_description: Downrounds can impact valuations and long-term success.<SEP>relationship_description: A downround involves raising funding at a lower valuation.",
+          "keywords": "Downround,Long-term success,Lower,Valuation,relationship_keywords: Downround,relationship_keywords: Valuation",
+          "weight": 2.0,
+          "source_id": "gd_a3beba9f3fc44aaebfcd11fe-chunk-000",
+          "file_path": "gd_a3beba9f3fc44aaebfcd11fe",
+          "created_at": 1793601037
+        },
+        {
+          "src_id": "Engineers",
+          "tgt_id": "Evaluation Pipeline",
+          "description": "Engineers use Evaluation Pipeline for various tasks.",
+          "keywords": "Uses",
+          "weight": 1.0,
+          "source_id": "gd_57f6b6270d8be867f0e4e105-chunk-010",
+          "file_path": "gd_57f6b6270d8be867f0e4e105",
+          "created_at": 1793645302
+        },
+        {
+          "src_id": "Downround",
+          "tgt_id": "Rule of 40",
+          "description": "relationship_description: Downrounds can impact a company's growth and profitability, affecting its adherence to the Rule of 40.",
+          "keywords": "Downround,Growth,relationship_keywords: Rule of 40",
+          "weight": 1.0,
+          "source_id": "gd_a3beba9f3fc44aaebfcd11fe-chunk-000",
+          "file_path": "gd_a3beba9f3fc44aaebfcd11fe",
+          "created_at": 1793601037
+        },
+        {
+          "src_id": "Earnings",
+          "tgt_id": "Engineers",
+          "description": "Hiring engineers can negatively impact earnings due to the costs associated with salaries and benefits.",
+          "keywords": "negative_impact",
+          "weight": 1.0,
+          "source_id": "gd_743b19ad5201f3d458480f35-chunk-001",
+          "file_path": "gd_743b19ad5201f3d458480f35",
+          "created_at": 1793499653
+        },
+        {
+          "src_id": "CoreWeave",
+          "tgt_id": "Reddit",
+          "description": "CoreWeave and Reddit had high returns in 2025, with 268% and 248% respectively.<SEP>CoreWeave and Reddit have similar returns.",
+          "keywords": "Return,similar",
+          "weight": 2.0,
+          "source_id": "gd_5f95125a02090a2ee204cba1-chunk-001<SEP>gd_e3956c930503ba2d846589bd-chunk-005",
+          "file_path": "gd_5f95125a02090a2ee204cba1<SEP>gd_e3956c930503ba2d846589bd",
+          "created_at": 1793572367
+        },
+        {
+          "src_id": "AI-assisted development",
+          "tgt_id": "Engineers",
+          "description": "Engineers use AI-assisted development, which is a transformative tool that changes how software is implemented and iterated on.",
+          "keywords": "transformative,uses",
+          "weight": 1.0,
+          "source_id": "gd_daf1ebb11f0e32fe93411859-chunk-007",
+          "file_path": "gd_daf1ebb11f0e32fe93411859",
+          "created_at": 1793517227
+        },
+        {
+          "src_id": "Engineers",
+          "tgt_id": "Habitral",
+          "description": "Engineers contribute to the Habitral by developing and maintaining the software.",
+          "keywords": "Contributes",
+          "weight": 1.0,
+          "source_id": "gd_5193d953d0e656b6ba91e433-chunk-000",
+          "file_path": "gd_5193d953d0e656b6ba91e433",
+          "created_at": 1793529848
+        },
+        {
+          "src_id": "Engineers",
+          "tgt_id": "Unaffiliated Customers",
+          "description": "The engineers work with unaffiliated customers.",
+          "keywords": "customers",
+          "weight": 1.0,
+          "source_id": "gd_676ceb1d508acba0f3613cd1-chunk-001",
+          "file_path": "gd_676ceb1d508acba0f3613cd1",
+          "created_at": 1793519325
+        },
+        {
+          "src_id": "Engineers",
+          "tgt_id": "Market Rate",
+          "description": "The engineers are paid below market rate.",
+          "keywords": "pay",
+          "weight": 1.0,
+          "source_id": "gd_676ceb1d508acba0f3613cd1-chunk-001",
+          "file_path": "gd_676ceb1d508acba0f3613cd1",
+          "created_at": 1793519325
+        },
+        {
+          "src_id": "Engineers",
+          "tgt_id": "Sales folks",
+          "description": "Professionals responsible for selling software solutions to customers.",
+          "keywords": "Keywords: software sales,customer acquisition",
+          "weight": 1.0,
+          "source_id": "gd_676ceb1d508acba0f3613cd1-chunk-000",
+          "file_path": "gd_676ceb1d508acba0f3613cd1",
+          "created_at": 1793519325
+        },
+        {
+          "src_id": "Engineers",
+          "tgt_id": "Head of CS",
+          "description": "The head of Customer Success may distract the engineers.",
+          "keywords": "Distractions,feature requests",
+          "weight": 1.0,
+          "source_id": "gd_1489f32c404f2e386e0e108a-chunk-000",
+          "file_path": "gd_1489f32c404f2e386e0e108a",
+          "created_at": 1793564400
+        },
+        {
+          "src_id": "Dev Organizations",
+          "tgt_id": "Engineers",
+          "description": "Dev organizations are experiencing massive disruption due to the changing profile of engineers, who are now expected to be masters of AI-fueled coding and able to architect and manage LLM-based systems.",
+          "keywords": "Changing Profile,Massive Disruption",
+          "weight": 1.0,
+          "source_id": "gd_7c2b868d50567a6b40c7c279-chunk-004",
+          "file_path": "gd_7c2b868d50567a6b40c7c279",
+          "created_at": 1793613836
+        },
+        {
+          "src_id": "Index Ventures",
+          "tgt_id": "Spotify",
+          "description": "Index Ventures invested in Spotify.",
+          "keywords": "Investment",
+          "weight": 1.0,
+          "source_id": "gd_6df7a15d5f370e75b0ab8f25-chunk-001",
+          "file_path": "gd_6df7a15d5f370e75b0ab8f25",
+          "created_at": 1793494065
+        },
+        {
+          "src_id": "Engineers",
+          "tgt_id": "Sales Folks",
+          "description": "The company hires sales folks to work with engineers.",
+          "keywords": "employees,hires",
+          "weight": 1.0,
+          "source_id": "gd_676ceb1d508acba0f3613cd1-chunk-001",
+          "file_path": "gd_676ceb1d508acba0f3613cd1",
+          "created_at": 1793519325
+        },
+        {
+          "src_id": "Engineers",
+          "tgt_id": "Isolation",
+          "description": "Engineers need physical separation to build the #1 AI Agent.",
+          "keywords": "Physical separation",
+          "weight": 1.0,
+          "source_id": "gd_1489f32c404f2e386e0e108a-chunk-000",
+          "file_path": "gd_1489f32c404f2e386e0e108a",
+          "created_at": 1793564400
+        },
+        {
+          "src_id": "Divvy",
+          "tgt_id": "Waterfall",
+          "description": "The waterfall in the Divvy acquisition had an impact on the distribution of proceeds.",
+          "keywords": "Impact",
+          "weight": 1.0,
+          "source_id": "gd_ce97fd6531e79c8de354ce15-chunk-007",
+          "file_path": "gd_ce97fd6531e79c8de354ce15",
+          "created_at": 1793628544
+        },
+        {
+          "src_id": "Creandum",
+          "tgt_id": "Spotify",
+          "description": "Creandum led the first institutional round in Spotify in 2008.",
+          "keywords": "Investor",
+          "weight": 1.0,
+          "source_id": "gd_6df7a15d5f370e75b0ab8f25-chunk-002",
+          "file_path": "gd_6df7a15d5f370e75b0ab8f25",
+          "created_at": 1793494065
+        },
+        {
+          "src_id": "Sarah Kiefer",
+          "tgt_id": "Spotify",
+          "description": "Sarah Kiefer previously worked at Spotify.",
+          "keywords": "Worked At",
+          "weight": 1.0,
+          "source_id": "gd_5ea8ba73f51034b14956f94b-chunk-000",
+          "file_path": "gd_5ea8ba73f51034b14956f94b",
+          "created_at": 1793497226
+        },
+        {
+          "src_id": "Peter Specht",
+          "tgt_id": "Spotify",
+          "description": "Partner at Venture Capital Firm",
+          "keywords": "Investor",
+          "weight": 1.0,
+          "source_id": "gd_6df7a15d5f370e75b0ab8f25-chunk-000",
+          "file_path": "gd_6df7a15d5f370e75b0ab8f25",
+          "created_at": 1793494065
+        },
+        {
+          "src_id": "Bolt",
+          "tgt_id": "Bolt.net",
+          "description": "Bolt.new and Bolt.net are related as they are both platforms provided by Bolt.",
+          "keywords": "Relationship",
+          "weight": 1.0,
+          "source_id": "gd_c8d661ff192a95ef88336de6-chunk-000",
+          "file_path": "gd_c8d661ff192a95ef88336de6",
+          "created_at": 1793575757
+        },
+        {
+          "src_id": "Reddit",
+          "tgt_id": "Vibe-Coded Apps",
+          "description": "Vibe-coded apps are hunted by Reddit communities as sport.",
+          "keywords": "Security Risks",
+          "weight": 1.0,
+          "source_id": "gd_5fe0e24210e667539d05d4de-chunk-005",
+          "file_path": "gd_5fe0e24210e667539d05d4de",
+          "created_at": 1793611128
+        },
+        {
+          "src_id": "Reddit",
+          "tgt_id": "The Spectacular Failure That Started It All",
+          "description": "The Spectacular Failure That Started It All was featured on Reddit.<SEP>The author's failure got millions of views on Reddit.",
+          "keywords": "Featured,Got attention",
+          "weight": 2.0,
+          "source_id": "gd_5fe0e24210e667539d05d4de-chunk-002<SEP>gd_5fe0e24210e667539d05d4de-chunk-003",
+          "file_path": "gd_5fe0e24210e667539d05d4de",
+          "created_at": 1793611123
+        },
+        {
+          "src_id": "Sarah",
+          "tgt_id": "Spotify",
+          "description": "Sarah is currently responsible for marketing Spotify’s advertising business globally.",
+          "keywords": "Works For",
+          "weight": 1.0,
+          "source_id": "gd_5ea8ba73f51034b14956f94b-chunk-001",
+          "file_path": "gd_5ea8ba73f51034b14956f94b",
+          "created_at": 1793497226
+        },
+        {
+          "src_id": "Infrastructure",
+          "tgt_id": "Sales Cycles",
+          "description": "relationship_description: Infrastructure companies are experiencing longer sales cycles, leading to higher cost per opportunity.",
+          "keywords": "higher cost per opportunity,relationship_keywords: longer sales cycles",
+          "weight": 1.0,
+          "source_id": "gd_376a91437f248e422036d70c-chunk-003",
+          "file_path": "gd_376a91437f248e422036d70c",
+          "created_at": 1793600918
+        },
+        {
+          "src_id": "Harry Glaser",
+          "tgt_id": "Spotify",
+          "description": "Harry Glaser discusses his podcast on Spotify.",
+          "keywords": "Platform",
+          "weight": 1.0,
+          "source_id": "gd_00ac0cdc41bdf0deae43ef5b-chunk-000",
+          "file_path": "gd_00ac0cdc41bdf0deae43ef5b",
+          "created_at": 1793489399
+        },
+        {
+          "src_id": "Downround",
+          "tgt_id": "Options",
+          "description": "relationship_description: Downrounds can impact employee stock options and may require repricing.",
+          "keywords": "Downround,Repricing,relationship_keywords: Options",
+          "weight": 1.0,
+          "source_id": "gd_a3beba9f3fc44aaebfcd11fe-chunk-000",
+          "file_path": "gd_a3beba9f3fc44aaebfcd11fe",
+          "created_at": 1793601037
+        },
+        {
+          "src_id": "Downround",
+          "tgt_id": "VC investment",
+          "description": "Downrounds can negatively impact VC investments.",
+          "keywords": "Consequence,Impact",
+          "weight": 1.0,
+          "source_id": "gd_ea4ee72bf374a052ed1fa27e-chunk-000",
+          "file_path": "gd_ea4ee72bf374a052ed1fa27e",
+          "created_at": 1793594041
+        },
+        {
+          "src_id": "Downround",
+          "tgt_id": "Public stock prices",
+          "description": "relationship_description: Downrounds can affect public stock prices and valuations.",
+          "keywords": "Public stock prices,Valuation,relationship_keywords: Downround",
+          "weight": 1.0,
+          "source_id": "gd_a3beba9f3fc44aaebfcd11fe-chunk-000",
+          "file_path": "gd_a3beba9f3fc44aaebfcd11fe",
+          "created_at": 1793601037
+        },
+        {
+          "src_id": "Bolt.net",
+          "tgt_id": "Bolt.new",
+          "description": "Bolt.new and Bolt.net are related as they are both platforms provided by Bolt.",
+          "keywords": "Relationship",
+          "weight": 1.0,
+          "source_id": "gd_c8d661ff192a95ef88336de6-chunk-000",
+          "file_path": "gd_c8d661ff192a95ef88336de6",
+          "created_at": 1793575754
+        },
+        {
+          "src_id": "Gassner",
+          "tgt_id": "Snowdevil",
+          "description": "Gassner built Snowdevil using Ruby on Rails.",
+          "keywords": "built",
+          "weight": 1.0,
+          "source_id": "gd_ac4b8b9ed091ab54b1aba8f9-chunk-006",
+          "file_path": "gd_ac4b8b9ed091ab54b1aba8f9",
+          "created_at": 1793583360
+        },
+        {
+          "src_id": "Snowdevil",
+          "tgt_id": "Tobias Lütke",
+          "description": "Snowdevil was built by Tobias Lütke.",
+          "keywords": "built",
+          "weight": 1.0,
+          "source_id": "gd_ac4b8b9ed091ab54b1aba8f9-chunk-005",
+          "file_path": "gd_ac4b8b9ed091ab54b1aba8f9",
+          "created_at": 1793583360
+        },
+        {
+          "src_id": "Ruby on Rails",
+          "tgt_id": "Tobias Lütke",
+          "description": "Tobias Lütke used Ruby on Rails to build Shopify.",
+          "keywords": "used",
+          "weight": 1.0,
+          "source_id": "gd_ac4b8b9ed091ab54b1aba8f9-chunk-005",
+          "file_path": "gd_ac4b8b9ed091ab54b1aba8f9",
+          "created_at": 1793583360
+        },
+        {
+          "src_id": "First-time VPs of Sales",
+          "tgt_id": "Train Wreck",
+          "description": "relationship_description: First-time VPs of Sales can fail due to avoidable mistakes, leading to a train wreck.",
+          "keywords": "failure,relationship_keywords: mistakes,success",
+          "weight": 1.0,
+          "source_id": "gd_9c5b3ffd65a6602d115b46e5-chunk-000",
+          "file_path": "gd_9c5b3ffd65a6602d115b46e5",
+          "created_at": 1793595373
+        },
+        {
+          "src_id": "Mistake #1: We Kept Humans Too Long on Work They Hated",
+          "tgt_id": "The Top 5 Mistakes We Made (And You Should Avoid)",
+          "description": "The Top 5 Mistakes We Made (And You Should Avoid) is related to Mistake #1: We Kept Humans Too Long on Work They Hated.",
+          "keywords": "related event",
+          "weight": 1.0,
+          "source_id": "gd_cc80ae8a393a1ee4cf628117-chunk-004",
+          "file_path": "gd_cc80ae8a393a1ee4cf628117",
+          "created_at": 1793584800
+        },
+        {
+          "src_id": "Falling API costs",
+          "tgt_id": "Rising user expectations",
+          "description": "The falling API costs and rising user expectations are forcing companies to use more expensive models.",
+          "keywords": "Forcing companies to use more expensive models",
+          "weight": 1.0,
+          "source_id": "gd_52ff2dbd2bdbc3a647908bb4-chunk-010",
+          "file_path": "gd_52ff2dbd2bdbc3a647908bb4",
+          "created_at": 1793642812
+        }
+      ],
+      "chunks": [
+        {
+          "reference_id": "3",
+          "content": "Train it on your top 20 support tickets\nTest it on 10 new incoming questions\nMeasure accuracy and response quality\nThe point isn’t perfection.\nThe point is hands-on experience with training, deploying, and improving an AI agent so you understand how this technology actually works.\nWhy This Is Different\nWith previous technology waves—cloud, mobile, social—you could learn by observation. You could have your team pilot it and report back. You could understand it conceptually and that was enough.\nAI agents are different because they require training and iteration\n.\nThe deployment itself is just the beginning. The value comes from the cycle of training, testing, learning, and improving. You can’t understand that cycle without doing it yourself.\nIf you’re a CRO who hasn’t personally trained an AI SDR, you don’t have intuition for what works and what doesn’t. When your team proposes an AI strategy, you can’t separate the realistic from the aspirational.\nIf you’re a CMO who hasn’t personally QA’d AI content outputs at scale, you can’t set the right quality bar or build the right workflow.\nIf you’re a VP of Customer Success who hasn’t personally tested edge cases with a support agent, you don’t know where the landmines are.\nYou need the hands-on experience to develop judgment.\nThe Bottom Line\nIf you’re a senior executive asking “How do I learn AI?”—here’s the answer:\nStop trying to learn it conceptually.\nPick the simplest possible agent deployment, and do it yourself this wee\nk.\nThen do another one. And another one.\nThat’s how you build the understanding that actually matters.  Not courses. Not certifications. Not encouraging your team.\nHands-on keyboard. Yourself.\nThat’s the path forward.",
+          "file_path": "gd_4a1db13237771f628ac9bc2c",
+          "chunk_id": "gd_4a1db13237771f628ac9bc2c-chunk-003"
+        },
+        {
+          "reference_id": "1",
+          "content": ", where the attitude is “we’re watching this space closely” — and you can smell the decline from the door.\nThe gap between those two rooms is not technical skill. It’s urgency and willingness to learn.\nWe’re In The Third Era of AI. The Excuses for Generalists Are Over.\nWe are in the third era of AI — the generalist era — and the game has changed.\nYou no longer need to be an engineer to win. You need to be someone who treats AI deployment as a core job function, not a side project. Someone who can answer the question “what did you deploy this month” with a specific, detailed, honest answer.\nThat is the agentic deployment expert. That is the only hire that compounds right now.\nThe people who figure this out in the next six months are going to look like heroes inside their organizations. The people who don’t — who keep waiting, who keep saying they’re watching the space, who haven’t trained a single agent — are going to get left behind.\nNot because the technology is hard. Because they chose not to learn it when learning was still optional.",
+          "file_path": "gd_faa157494978fdae540fd08c",
+          "chunk_id": "gd_faa157494978fdae540fd08c-chunk-005"
+        },
+        {
+          "reference_id": "2",
+          "content": "nothing worked. They said they’d do it, they didn’t. The lesson:\nIf your team consistently refuses to do certain work, stop fighting it. Deploy an AI agent on that segment immediately. That 15% of London revenue was\nfound money\nwe’d been leaving on the table for half a decade. Mistake #2: We Didn’t Read Every Message in the Early Days\nWhen we first deployed, we assumed the AI would just work. We weren’t reading every single message our agents were sending. The lesson:\nIn the first 30 days of any new agent, read\neverything\n. Every email, every chat response, every follow-up. You’ll catch errors, you’ll find training gaps, you’ll understand what’s actually being sent in your name. Only after you’ve built trust should you move to spot-checking and flag-based alerts.\n\nMistake #3: We Underestimated Ramp Time\nWe wanted instant results. The products promised quick wins. Reality was different. The lesson:\nBudget two weeks minimum to deploy each agent properly. If you get frustrated because “it should work in a day,” you’re setting yourself up for failure. This is training time that pays dividends for months. Mistake #4: We Almost Bet on People Who Left\nGTM turnover was high before AI. It might be even higher now. We saw a CMO at a $50M ARR company who wanted to bake off 10 AI SDRs—and he was gone before implementation finished. The lesson:\nDon’t stake your entire AI go-to-market strategy on someone who might leave January 1st. If you’re building agents around someone (especially cloning their voice, training on their style), make damn sure they have a real stake in the company and a real reason to stay. Mistake #5: We Tried to Evaluate Too Many Vendors at Once\nWe’ve talked to founders doing bake-offs with 8, 10, even more AI SDR vendors simultaneously.",
+          "file_path": "gd_cc80ae8a393a1ee4cf628117",
+          "chunk_id": "gd_cc80ae8a393a1ee4cf628117-chunk-005"
+        },
+        {
+          "reference_id": "4",
+          "content": "AI sent. When we found something wrong, we didn’t just fix it—we taught the AI why it was wrong and what to do instead. After 60 days of daily improvements, we had something we were proud of. Human-in-the-loop isn’t optional\n. When prospects responded to our AI, I had to respond instantly at the same quality level as the AI. The expectation is that you’re always “on” because the AI created that impression of responsiveness. Segment everything\n.",
+          "file_path": "gd_17ed878e2ce1e1b54809f97a",
+          "chunk_id": "gd_17ed878e2ce1e1b54809f97a-chunk-005"
+        },
+        {
+          "reference_id": "1",
+          "content": "the conversations about APIs and model weights and fine-tuning felt like a different language — that era is over. You don’t need to speak that language anymore.\nHere’s the test: have you, personally, successfully deployed a piece of enterprise software in the last three to five years?\nNot hired an agency to do it. Not delegated it completely. Have you personally gotten in, learned the tool, set it up, trained your team on it?\nSalesforce. HubSpot. Outreach. Gong. Whatever it is.\nIf the answer is yes, you can deploy any AI agent on the market today\n. The only genuinely non-intuitive part is training — which is a real step that many teams skip and then wonder why the agent isn’t working. But the UI, the UX, the configuration logic — it’s just software. It works like software has always worked.\nThe people who are winning with AI right now in non-technical roles aren’t doing anything magical. They tried the tools early. They trained them for a month. They stayed a year ahead of everyone else through one simple mechanism: they actually used the things.\nWhat Happens If You Don’t\nI was reviewing a company recently — a well-run team, growing fast, crossing toward $100M. Their new CRO hadn’t brought in a single AI tool. Not one. Wasn’t scared of AI philosophically, just hadn’t done it. Adding hundreds of sales reps this year without asking what they could do with a fraction of that headcount and a deployed AI BDR instead.\nI wanted to cry. Years of their life being left on the table.\nI also saw the inverse this week, and it’s a useful cautionary tale for the AI-native side. A $6 billion AI company — I won’t name it — whose agent was quoting our team incorrect pricing. Telling us we’d need to quadruple our spend. Why? No one had properly trained the agent on pricing. When we asked how",
+          "file_path": "gd_faa157494978fdae540fd08c",
+          "chunk_id": "gd_faa157494978fdae540fd08c-chunk-003"
+        },
+        {
+          "reference_id": "5",
+          "content": "story — Jason deployed 20+ AI agents that generate significant revenue while requiring substantial daily management but far less human headcount than traditional approaches. The key distinction: “Most of the time, ‘replacing humans’ is a story. But when it’s real, when the AI agent is sufficiently autonomous to complete material high-value tasks, that’s when you’re actually part of the team, not just a tool.”\nPath 3: Massively Displace an Incumbent\n“You have a third option,” Jason concedes. “Use AI to massively displace an incumbent and steal all the revenue. In fact, that’s the history of B2B software mostly. I just don’t know how many of our public leaders are in a place to steal their own revenue.”\nBut he’s skeptical this is as compelling as the first two: “There’s like 400 AI CRM startups out there all saying they’re going to eat HubSpot’s and Salesforce’s lunch. That’s not exciting to me as an investment. That’s much less exciting than truly replacing 90% of your GTM team.”\nIf you’re not doing one of these three things, you’re probably not going to see explosive growth. Using AI to make your product better? That’s table stakes now, not a competitive advantage. How to Actually Run a Fundraising Process (Without Running a Process)\nOne of the most tactically useful segments came when Harry shared a founder interaction that frustrated him: the company said they wanted to “run a process” despite Harry offering terms they’d stated they wanted.\n\nHarry’s reaction: “I said, listen, if you’re running a process, you’re either optimizing for price or partner selection. I’m giving you a great price today that you said you wanted, which means you’re not optimizing for price. Which is just saying you think you can get better than me. In which case, just tell me straight.”\nRory sees both sides: “From the founder’s side",
+          "file_path": "gd_39b6f4d40075e7b8d3ea719d",
+          "chunk_id": "gd_39b6f4d40075e7b8d3ea719d-chunk-008"
+        },
+        {
+          "reference_id": "6",
+          "content": "Not every B2B company needs to panic right now. Some of you shipped AI agents early. Some of you have been rebuilding your product around AI for 18+ months. Some of you already have agents in production, doing real work for real customers.\nThis post isn’t for you.\nThis post is for the CEOs who know they’re behind. The ones where the AI strategy is still a roadmap slide, not a shipped product. Where “AI” means a chatbot bolted onto the help center. Where the board keeps asking about the AI plan and the honest answer is: we don’t really have one yet.\nIf that’s you, here’s what I’d do.\nTake Your 10-20 Best Engineers. Physically Separate Them.\nPut them in a different building. Not a different Slack channel. Not a different sprint. A\ndifferent building\n.\nDon’t let anyone talk to them. Don’t let the VP of Product “align” with them. Don’t let the head of CS send them feature requests. Don’t let the CEO pop in to “check on progress.” No one.\nTheir job — their\nonly\njob — is to build the #1 AI Agent in your category.  With no distractions.\nNot an AI feature. Not a copilot. Not a chatbot in the corner of the screen. An\nagent\n— one that actually does the work your customers are paying humans to do today.\nWhy Isolation Is the Only Way to Catch Up\nIf you’re already behind, the normal product org will never get you there. I’ve watched this pattern play out dozens of times now across the portfolio and beyond:\nYour existing product org will kill it.\nNot on purpose. But every standup, every sprint review, every “quick sync” pulls your best people back toward incremental improvements to the current product. The gravity of the existing codebase is immense. You can’t escape it without physical separation.\nYour best engineers need room to throw things away",
+          "file_path": "gd_1489f32c404f2e386e0e108a",
+          "chunk_id": "gd_1489f32c404f2e386e0e108a-chunk-000"
+        },
+        {
+          "reference_id": "7",
+          "content": "inbound conversations happen overnight while the Pacific time team is asleep. And the agent doesn’t need therapy. The Same Management Time. Just Not With Humans. There’s one more thing. When we went from a human-heavy team to a 60% AI team, the office got quiet. Staff meetings are smaller. The drama is down (which is good), but so are the celebrations. AI doesn’t high-five you when you nail a big deal or crack jokes at the all-hands.\n\nThe emotional texture of work changes in ways you don’t expect. Quiet can be productive. Quiet can be efficient. Quiet can be profitable. Quiet can also be lonely. I’m not saying this to discourage you from deploying AI agents. The economics are crushing it. You should absolutely be doing this. But you should know what you’re signing up for. You’re not signing up for less management. You’re signing up for different management—harder in some ways, easier in others, and about the same total time commitment. At least for now. What This Means For Your Team\nA few tactical takeaways from our experience:\nBudget the management time upfront\n. Plan for 3-4 hours per week per agent in active oversight. If you can’t commit that time, the agent will underperform and you’ll blame the technology instead of the implementation. The first 30 days of each new AI agent are intensive\n. Just like onboarding a human, you need to invest heavily upfront. We do daily training and iteration for the first month on every new agent. Shortcuts here show up as quality problems later. Training matters more than picking the “perfect” tool—just pick a leading vendor and go deep on training. Start with layup roles, not hero purchases\n. Don’t try to make something that’s working 10% better. Make something that’s failing 100% better. Find what’s literally not getting done in your org—support that takes a week to respond, SDR",
+          "file_path": "gd_03663f68906e5fe37d85d810",
+          "chunk_id": "gd_03663f68906e5fe37d85d810-chunk-004"
+        },
+        {
+          "reference_id": "8",
+          "content": "tool today. Train it yourself. Become the person at your company who knows how to make AI agents productive. That skill set is the new job security.\nTop Mistakes Founders Make with AI Agents in Sales\nExpecting plug-and-play magic\n: AI agents require 30 days of training and 50-60 hours of setup. Companies who expect instant results get instant disappointment.\nBuilding instead of buying\n: Custom AI tools become obsolete fast. Unless you have genuine engineering capacity and desire, use commercial products.\nNo human oversight\n: You need someone watching the AI outputs daily. “Set it and forget it” leads to embarrassing mistakes at scale.\nTraining on mediocre content\n: If you train AI on your average email copy, you get average AI emails. Train on your best performer’s best work.\nSkipping segmentation\n: Multiple AI agents need careful base segmentation or they’ll conflict with each other and spam the same prospects.\nUnderestimating change management fatigue\n: Implementing 20 AI agents is exhausting. Companies burn out their teams by moving too fast.\nWaiting for perfection\n: The technology improves monthly. Waiting for “the right tool” means falling behind competitors who started six months ago.\nIgnoring the human handoff\n: AI qualifies and nurtures, but humans still close complex deals. Build the handoff process before you need it.\nAssuming “people person” skills are enough\n: Being likeable no longer differentiates. AI can build relationships too. You need to add genuine strategic value.\nNot testing from the customer’s perspective\n: Use the incognito mode test. Experience your own sales process as a prospect would. Fix what’s broken.\nMagical But Uncomfortable Times\nThese are what Jason calls “magical times”—uncomfortable, uncertain, but genuinely transformative. The playbooks that got us here are obsolete, but the fundamental plays still work. Find prospects. Qualify them. Help them buy.\nThe tools for executing those plays have changed forever. The winners",
+          "file_path": "gd_7d218b14604c16a4b2ba51cc",
+          "chunk_id": "gd_7d218b14604c16a4b2ba51cc-chunk-004"
+        },
+        {
+          "reference_id": "2",
+          "content": "training, while self-serve gets 20%. Training with no humans isn’t quite ready. The Tech Stack That’s Actually Working\nWe run 20+ agents now. More agents than humans. Here’s the core:\nArtisan\n: ~6% response rate on outbound\nQualified\n: ~6% response rate on inbound, 130+ meetings booked since August\nAgentforce\n: 70% open rate on re-engagement (our newest agent, hitting ghosted leads)\nAll of them required about two weeks to deploy and tune.\n\nAll of them required ongoing spot-checking and training refinement. All of them are connected to a single source of truth so we know which agents get which contacts. On the chat vs. voice vs. video question everyone asks:\nDon’t overanalyze it. Our data shows about 85% prefer chat, 15% prefer voice. Chat is easiest to implement. Voice takes a bit more work (though we did our voice clone on 11 Labs in five minutes). Video is two orders of magnitude more work. Start with chat. Layer in voice when ready. Video might add trust for high-ASP sales. Just sequence them and stop debating. The Top 5 Mistakes We Made (And You Should Avoid)\nMistake #1: We Kept Humans Too Long on Work They Hated\nFor six years, we tried to get human SDRs to reach out to return attendees about tickets. Incentives, begging, monitoring—nothing worked. They said they’d do it, they didn’t. The lesson:\nIf your team consistently refuses to do certain work, stop fighting it. Deploy an AI agent on that segment immediately. That 15% of London revenue was\nfound money\nwe’d been leaving on the table for half a decade. Mistake #2: We Didn’t Read Every Message in the Early Days\nWhen we first deployed, we assumed the AI would just work. We weren’t reading every single message",
+          "file_path": "gd_cc80ae8a393a1ee4cf628117",
+          "chunk_id": "gd_cc80ae8a393a1ee4cf628117-chunk-004"
+        },
+        {
+          "reference_id": "9",
+          "content": "out recently. She’s ready for her third role.\nI had to be direct with her: “I don’t have anything for you right now.”\nWhy? She hasn’t deployed an agent herself. She doesn’t know how the training went, what issues came up, or how to iterate on prompts.\nI told her: “Go deploy an agent. Tell me how it worked. Tell me how the training went. Tell me the issues you ran into. Come back to me, and I’ll have two jobs for you.”\nThe executives who are getting hired right now? They’re the ones who did the work themselves — hands-on keyboard, not just encouraging their team to try Perplexity.\nAI Agents Aren’t Just Software\nWe’re in a moment where AI agents can genuinely transform how companies operate. But there’s a massive gap between “AI agent” as a concept and “AI agent deployed and creating value.”\nThe vendors that close that gap — the ones that help customers get live, not just get on a call — are the ones that will win.\nAnd the ones still running the old playbook? They’re going to keep losing deals to competitors who understand that in the age of AI agents,\nhelping is the new selling\n.\nAnd that VP of Sales who argued with us and lost the deal — along with all the referrals that would have come from it?\nHe’s gone now.",
+          "file_path": "gd_24daecfca40dc0e745c734ab",
+          "chunk_id": "gd_24daecfca40dc0e745c734ab-chunk-005"
+        },
+        {
+          "reference_id": "10",
+          "content": "prompt might be portable, but the 47 workflow automations, the custom field mappings, the approval chains, the reporting dashboards built on top of the agent’s output — none of that transfers. You’re not switching an AI agent. You’re switching a chunk of your operating system.\nThis is the classic SaaS playbook applied to AI: the product itself isn’t the moat, the integration surface area is. And it still works — but with a caveat. The integration moat erodes faster than it used to because AI agents can increasingly self-configure integrations. What took a solutions engineer three weeks to set up in 2024 might take an AI-assisted setup wizard 30 minutes in 2026/2027 (and then a bunch of human QA after).\nRetention forecast:\n90-93% gross retention. Close to traditional SaaS levels, but don’t get complacent. The integration advantage is real today but has a shorter half-life than historical SaaS integrations.\nLevel 4: Domain-Locked (The True Moat)\nExamples:\nAI medical coding and billing agents, AI legal contract analysis, AI accounting close and audit agents, AI drug discovery, AI insurance underwriting\nSwitching time:\n6-12+ months. Sometimes effectively impossible for legacy matters.\nWhat transfers:\nAlmost nothing meaningful.\nThis is the only category where I’d tell a founder: you can probably stop worrying about prompt portability at the moment. Not because your prompts aren’t portable — they are. But because the prompt is maybe 5-10% of the value. The other 90% is:\nProprietary training data that took years to accumulate. A medical coding agent trained on millions of actual claims with known outcomes. A legal analysis agent trained on tens of thousands of contracts with real-world dispute resolutions. This data doesn’t exist in a prompt. It exists in specialized fine-tuned models, RAG databases, and validation layers that were built over years.\nCompliance and certification infrastructure. If your",
+          "file_path": "gd_46ffa32789f344463230a831",
+          "chunk_id": "gd_46ffa32789f344463230a831-chunk-004"
+        }
+      ],
+      "references": [
+        {
+          "reference_id": "1",
+          "file_path": "gd_faa157494978fdae540fd08c"
+        },
+        {
+          "reference_id": "2",
+          "file_path": "gd_cc80ae8a393a1ee4cf628117"
+        },
+        {
+          "reference_id": "3",
+          "file_path": "gd_4a1db13237771f628ac9bc2c"
+        },
+        {
+          "reference_id": "4",
+          "file_path": "gd_17ed878e2ce1e1b54809f97a"
+        },
+        {
+          "reference_id": "5",
+          "file_path": "gd_39b6f4d40075e7b8d3ea719d"
+        },
+        {
+          "reference_id": "6",
+          "file_path": "gd_1489f32c404f2e386e0e108a"
+        },
+        {
+          "reference_id": "7",
+          "file_path": "gd_03663f68906e5fe37d85d810"
+        },
+        {
+          "reference_id": "8",
+          "file_path": "gd_7d218b14604c16a4b2ba51cc"
+        },
+        {
+          "reference_id": "9",
+          "file_path": "gd_24daecfca40dc0e745c734ab"
+        },
+        {
+          "reference_id": "10",
+          "file_path": "gd_46ffa32789f344463230a831"
+        }
+      ]
+    },
+    "metadata": {
+      "query_mode": "hybrid",
+      "keywords": {
+        "high_level": [
+          "AI",
+          "Training",
+          "Agent",
+          "Failure"
+        ],
+        "low_level": [
+          "rails",
+          "fell"
+        ]
+      },
+      "processing_info": {
+        "total_entities_found": 46,
+        "total_relations_found": 99,
+        "entities_after_truncation": 26,
+        "relations_after_truncation": 99,
+        "merged_chunks_count": 139,
+        "final_chunks_count": 12
+      }
+    },
+    "query": "You Can’t Train an AI Agent and Then Just … Go Away. We Did, It Fell Off The Rails. And We Didn’t Even Know."
+  },
+  "retrieval_seconds": 13.121,
+  "graph_summary": {
+    "status": "recorded",
+    "raw_entity_count": 26,
+    "raw_relationship_count": 99,
+    "raw_chunk_count": 12,
+    "entity_description_count": 26,
+    "entity_descriptions_nonempty": 26,
+    "entity_description_available": true,
+    "excluded_reason_counts": {
+      "generated_summary_not_a_source_span": 125
+    },
+    "accepted_relationships": 40,
+    "rejected_relationships": 58,
+    "quarantined_relationships": 1,
+    "relationship_reason_counts": {
+      "generated_summary_not_supported_by_source": 50,
+      "endpoints_not_in_source": 3,
+      "weak_entity_name": 5,
+      "unresolved_conflict": 1
+    },
+    "missing_source_or_provenance_exclusions": 0,
+    "relationship_validation_status": "recorded",
+    "two_hop_path_count": 0,
+    "two_hop_path_available": false,
+    "path_status": "recorded",
+    "normalization": {
+      "payload_shape": "aquery_data",
+      "mode": "hybrid",
+      "entity_descriptions_not_retained": 0,
+      "malformed_records": 0,
+      "notes": [
+        "hits_already_budgeted_raw_chunks_not_added",
+        "validated_against_supplied_catalog"
+      ],
+      "validation_contract": "source-verified-relationship-v1",
+      "separator": "<SEP>",
+      "profile": "multihop",
+      "direct_edges": 40,
+      "paths": 24,
+      "withheld_edges": 59
+    },
+    "direct_edge_count": 40
+  }
+}

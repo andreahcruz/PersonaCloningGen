@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-11-03T00:43:46.431318+00:00",
+  "command": "C:\\Users\\okevi\\SJSU\\DATA298\\298P\\host_finetune\\model_f_experiment\\__main__.py unified-judge --profile F-REL --out experiments\\EXP-20261102-001-model-f-unified-panel",
+  "git": {
+    "commit": "31b27c03eb04faf88f00a7c7930c3e9f5a32e7ed",
+    "dirty": true
+  },
+  "judge_model": "qwen2.5:14b",
+  "judge_config": {
+    "family": "qwen",
+    "temperature": 0,
+    "blinded": true,
+    "candidate_family": "llama"
+  },
+  "generation_sha256": "6ed2af4f47c3f592aa833c643dc6354956b0ea7f96b7634b98a902b2a746724c",
+  "python": "3.11.9",
+  "schema": "unified_eval.v1",
+  "utility_weights": {
+    "persona_style": 0.45,
+    "perspective_fidelity": 0.2,
+    "writing_quality": 0.25,
+    "task_adherence": 0.1
+  }
+}

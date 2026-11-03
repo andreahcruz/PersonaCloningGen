@@ -1,0 +1,15 @@
+{
+  "artifact": "posthoc_engineering_selection",
+  "does_not_modify": "experiments/EXP-model-f-desc-vs-rel-32/desc_vs_rel_recommendation.json",
+  "does_not_replace": "experiments/EXP-model-f-quick-pilot/arm_selection.json",
+  "frozen": false,
+  "frozen_pilot_arm": "F-SOURCE",
+  "frozen_pilot_unchanged": true,
+  "later_engineering_selection": "F-REL",
+  "later_engineering_selection_directory": "experiments/EXP-20261102-001-model-f-unified-panel",
+  "reason": "This directory runs F-SOURCE. The frozen pilot selection remains F-SOURCE. The later engineering selection remains F-REL. This panel does not revise either decision.",
+  "selected_arm": "F-SOURCE",
+  "stage2_recommendation_unchanged": true,
+  "this_run_profile": "F-SOURCE",
+  "uses_120_prompt_panel_for_selection": false
+}

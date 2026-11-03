@@ -1,0 +1,6 @@
+MATCH Base medium=all against architecture_comparison.json
+MATCH PersonaRAG medium=all against architecture_comparison.json
+MATCH Relabel RAG off medium=all against architecture_comparison.json
+MATCH Relabel + RAG medium=all against architecture_comparison.json
+MATCH Model F medium=all against architecture_comparison.json
+MATCH Model F eligible writing quality 3.2662 against aggregate_summary.json

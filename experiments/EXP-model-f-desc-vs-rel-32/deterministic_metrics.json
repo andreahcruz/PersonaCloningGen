@@ -1,0 +1,4941 @@
+{
+  "cells": [
+    {
+      "accepted_attempt": 2,
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "efficiency": {
+        "context_utilization": 0.990625,
+        "end_to_end_seconds": 34.605999999999995,
+        "generation_seconds": 22.083,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 236,
+        "prompt_tokens": 634,
+        "retrieval_seconds": 12.523,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_fb798d3019afee06b2636d46",
+          "matched_generated_span": "in b2b the",
+          "matched_retrieved_span": "in b2b the",
+          "max_contiguous_words": 3,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [
+          "no_accepted_factual_evidence"
+        ],
+        "faithfulness": {
+          "pass": false,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 198
+      },
+      "medium": "linkedin",
+      "question_id": "q_b2c_playbook",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "overlap_with_preselected_ids_not_recall",
+          "matched": [
+            "gd_fb798d3019afee06b2636d46"
+          ],
+          "status": "scored",
+          "value": 0.16666666666666666
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_fb798d3019afee06b2636d46",
+        "gd_20969cb9a1054f9bfe90e5a1",
+        "gd_70fbe3aeece3874aa5c26594",
+        "gd_910234b77de5d06d2dc43c01"
+      ],
+      "retry_seed": 10111
+    },
+    {
+      "accepted_attempt": 2,
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "efficiency": {
+        "context_utilization": 1.115625,
+        "end_to_end_seconds": 31.394,
+        "generation_seconds": 18.871,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 195,
+        "prompt_tokens": 714,
+        "retrieval_seconds": 12.523,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_fb798d3019afee06b2636d46",
+          "matched_generated_span": "a consumer",
+          "matched_retrieved_span": "a consumer",
+          "max_contiguous_words": 2,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [
+          "no_accepted_factual_evidence"
+        ],
+        "faithfulness": {
+          "pass": false,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 169
+      },
+      "medium": "linkedin",
+      "question_id": "q_b2c_playbook",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "overlap_with_preselected_ids_not_recall",
+          "matched": [
+            "gd_fb798d3019afee06b2636d46"
+          ],
+          "status": "scored",
+          "value": 0.16666666666666666
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_fb798d3019afee06b2636d46",
+        "gd_20969cb9a1054f9bfe90e5a1",
+        "gd_70fbe3aeece3874aa5c26594",
+        "gd_910234b77de5d06d2dc43c01"
+      ],
+      "retry_seed": 10111
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "efficiency": {
+        "context_utilization": 0.975,
+        "end_to_end_seconds": 29.099,
+        "generation_seconds": 14.689,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 161,
+        "prompt_tokens": 702,
+        "retrieval_seconds": 14.41,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_414cde32de0cf12c7d952668",
+          "matched_generated_span": "the 2021 boom",
+          "matched_retrieved_span": "the 2021 boom",
+          "max_contiguous_words": 3,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [],
+        "faithfulness": {
+          "pass": true,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 1,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 136
+      },
+      "medium": "blog",
+      "question_id": "q_boom_promotions",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "overlap_with_preselected_ids_not_recall",
+          "matched": [
+            "gd_414cde32de0cf12c7d952668"
+          ],
+          "status": "scored",
+          "value": 0.14285714285714285
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_414cde32de0cf12c7d952668",
+        "gd_6da6ff1f094250d974e49114",
+        "gd_bf980cefa93f21f499fa74aa",
+        "gd_8c5d383d6700632b00ecfb79"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 2,
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "efficiency": {
+        "context_utilization": 0.9875,
+        "end_to_end_seconds": 39.825,
+        "generation_seconds": 25.415,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 393,
+        "prompt_tokens": 711,
+        "retrieval_seconds": 14.41,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_414cde32de0cf12c7d952668",
+          "matched_generated_span": "move on from mediocre",
+          "matched_retrieved_span": "move on from mediocre",
+          "max_contiguous_words": 4,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [],
+        "faithfulness": {
+          "pass": true,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 2,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 303
+      },
+      "medium": "blog",
+      "question_id": "q_boom_promotions",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "overlap_with_preselected_ids_not_recall",
+          "matched": [
+            "gd_414cde32de0cf12c7d952668"
+          ],
+          "status": "scored",
+          "value": 0.14285714285714285
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_414cde32de0cf12c7d952668",
+        "gd_6da6ff1f094250d974e49114",
+        "gd_bf980cefa93f21f499fa74aa",
+        "gd_8c5d383d6700632b00ecfb79"
+      ],
+      "retry_seed": 10090
+    },
+    {
+      "accepted_attempt": 2,
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "efficiency": {
+        "context_utilization": 1.4886363636363635,
+        "end_to_end_seconds": 28.779,
+        "generation_seconds": 14.539,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 160,
+        "prompt_tokens": 655,
+        "retrieval_seconds": 14.24,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_fe33901c61721e4d6a2fa0b3",
+          "matched_generated_span": "the cap table",
+          "matched_retrieved_span": "the cap table",
+          "max_contiguous_words": 3,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [],
+        "faithfulness": {
+          "pass": true,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 132
+      },
+      "medium": "x",
+      "question_id": "q_cap_table",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "overlap_with_preselected_ids_not_recall",
+          "matched": [
+            "gd_fe33901c61721e4d6a2fa0b3"
+          ],
+          "status": "scored",
+          "value": 0.2
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_0db185d389f97a45ea8c228d",
+        "gd_fe33901c61721e4d6a2fa0b3",
+        "gd_0d90c467d286f7a7df41f672",
+        "gd_0e51f3f7afe6c971cc16a952"
+      ],
+      "retry_seed": 10068
+    },
+    {
+      "accepted_attempt": 2,
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "efficiency": {
+        "context_utilization": 1.6704545454545454,
+        "end_to_end_seconds": 29.197000000000003,
+        "generation_seconds": 14.957,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 160,
+        "prompt_tokens": 735,
+        "retrieval_seconds": 14.24,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_fe33901c61721e4d6a2fa0b3",
+          "matched_generated_span": "a messy cap table",
+          "matched_retrieved_span": "a messy cap table",
+          "max_contiguous_words": 4,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [],
+        "faithfulness": {
+          "pass": true,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 128
+      },
+      "medium": "x",
+      "question_id": "q_cap_table",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "overlap_with_preselected_ids_not_recall",
+          "matched": [
+            "gd_fe33901c61721e4d6a2fa0b3"
+          ],
+          "status": "scored",
+          "value": 0.2
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_0db185d389f97a45ea8c228d",
+        "gd_fe33901c61721e4d6a2fa0b3",
+        "gd_0d90c467d286f7a7df41f672",
+        "gd_0e51f3f7afe6c971cc16a952"
+      ],
+      "retry_seed": 10068
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "efficiency": {
+        "context_utilization": 1.2045454545454546,
+        "end_to_end_seconds": 19.433,
+        "generation_seconds": 6.91,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 23,
+        "prompt_tokens": 530,
+        "retrieval_seconds": 12.523,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_0afa73ebc640982b5f1ecd80",
+          "matched_generated_span": "jason lemkin s",
+          "matched_retrieved_span": "jason lemkin s",
+          "max_contiguous_words": 3,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [
+          "no_accepted_factual_evidence"
+        ],
+        "faithfulness": {
+          "pass": false,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 15
+      },
+      "medium": "x",
+      "question_id": "q_dev_attr_lemkin_or_speaker",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_0afa73ebc640982b5f1ecd80",
+        "gd_879905dd0b16724c53753dca",
+        "gd_af5b19cddd32c146ea4f46c8",
+        "gd_a351b7a8812fb540220d3381"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "efficiency": {
+        "context_utilization": 1.2954545454545454,
+        "end_to_end_seconds": 14.491,
+        "generation_seconds": 1.968,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 23,
+        "prompt_tokens": 570,
+        "retrieval_seconds": 12.523,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_0afa73ebc640982b5f1ecd80",
+          "matched_generated_span": "jason lemkin s",
+          "matched_retrieved_span": "jason lemkin s",
+          "max_contiguous_words": 3,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [
+          "no_accepted_factual_evidence"
+        ],
+        "faithfulness": {
+          "pass": false,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 15
+      },
+      "medium": "x",
+      "question_id": "q_dev_attr_lemkin_or_speaker",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_0afa73ebc640982b5f1ecd80",
+        "gd_879905dd0b16724c53753dca",
+        "gd_af5b19cddd32c146ea4f46c8",
+        "gd_a351b7a8812fb540220d3381"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "efficiency": {
+        "context_utilization": 1.023611111111111,
+        "end_to_end_seconds": 19.593,
+        "generation_seconds": 6.766,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 19,
+        "prompt_tokens": 737,
+        "retrieval_seconds": 12.827,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_ca4e8d2f61b3ea64d1188e6c",
+          "matched_generated_span": "corporate venture",
+          "matched_retrieved_span": "corporate venture",
+          "max_contiguous_words": 2,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [],
+        "faithfulness": {
+          "pass": true,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 17
+      },
+      "medium": "talk",
+      "question_id": "q_dev_attr_second_check_speaker",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_a70349ff573792963fa28e4a",
+        "gd_ca4e8d2f61b3ea64d1188e6c",
+        "gd_1aacb4127dd1d839d8cfb34e",
+        "gd_50749583f1c3bb43dc7480e2"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 2,
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "efficiency": {
+        "context_utilization": 1.2555555555555555,
+        "end_to_end_seconds": 28.602,
+        "generation_seconds": 15.775,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 400,
+        "prompt_tokens": 904,
+        "retrieval_seconds": 12.827,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_ca4e8d2f61b3ea64d1188e6c",
+          "matched_generated_span": "generally don t",
+          "matched_retrieved_span": "generally don t",
+          "max_contiguous_words": 3,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [],
+        "faithfulness": {
+          "pass": true,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 327
+      },
+      "medium": "talk",
+      "question_id": "q_dev_attr_second_check_speaker",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_a70349ff573792963fa28e4a",
+        "gd_ca4e8d2f61b3ea64d1188e6c",
+        "gd_1aacb4127dd1d839d8cfb34e",
+        "gd_50749583f1c3bb43dc7480e2"
+      ],
+      "retry_seed": 10137
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "efficiency": {
+        "context_utilization": 0.996875,
+        "end_to_end_seconds": 21.785,
+        "generation_seconds": 10.041,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 22,
+        "prompt_tokens": 638,
+        "retrieval_seconds": 11.744,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_c82b6638dbe58be010fd593c",
+          "matched_generated_span": "if any",
+          "matched_retrieved_span": "if any",
+          "max_contiguous_words": 2,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [],
+        "faithfulness": {
+          "pass": true,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 17
+      },
+      "medium": "linkedin",
+      "question_id": "q_dev_attr_speaker_role",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_00808ccaeb7073dfcf899559",
+        "gd_8fe15d1e1f4d6d874c6ce1bb",
+        "gd_c82b6638dbe58be010fd593c",
+        "gd_76d30c1cbcd45df21a2f1787"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "efficiency": {
+        "context_utilization": 1.3140625,
+        "end_to_end_seconds": 25.061,
+        "generation_seconds": 13.317,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 22,
+        "prompt_tokens": 841,
+        "retrieval_seconds": 11.744,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_c82b6638dbe58be010fd593c",
+          "matched_generated_span": "if any",
+          "matched_retrieved_span": "if any",
+          "max_contiguous_words": 2,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [],
+        "faithfulness": {
+          "pass": true,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 17
+      },
+      "medium": "linkedin",
+      "question_id": "q_dev_attr_speaker_role",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_00808ccaeb7073dfcf899559",
+        "gd_8fe15d1e1f4d6d874c6ce1bb",
+        "gd_c82b6638dbe58be010fd593c",
+        "gd_76d30c1cbcd45df21a2f1787"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 2,
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "efficiency": {
+        "context_utilization": 0.9083333333333333,
+        "end_to_end_seconds": 51.128,
+        "generation_seconds": 39.314,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 667,
+        "prompt_tokens": 654,
+        "retrieval_seconds": 11.814,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_05bc76829dab57dbe4e30f7b",
+          "matched_generated_span": "time don t let",
+          "matched_retrieved_span": "time don t let",
+          "max_contiguous_words": 4,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [],
+        "faithfulness": {
+          "pass": true,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 555
+      },
+      "medium": "talk",
+      "question_id": "q_dev_conflict_craft",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_fa93b3f813f57c2bd79fd3b1",
+        "gd_841f2b448f57d49c3bb9e0e6",
+        "gd_05bc76829dab57dbe4e30f7b",
+        "gd_b17253e0832c9eda0a49b551"
+      ],
+      "retry_seed": 10121
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "efficiency": {
+        "context_utilization": 0.9125,
+        "end_to_end_seconds": 42.649,
+        "generation_seconds": 30.835,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 424,
+        "prompt_tokens": 657,
+        "retrieval_seconds": 11.814,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_841f2b448f57d49c3bb9e0e6",
+          "matched_generated_span": "ceo job isn t divisible the way a founder might hope",
+          "matched_retrieved_span": "ceo job isn t divisible the way a founder might hope",
+          "max_contiguous_words": 11,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [
+          "role_not_verifiable"
+        ],
+        "faithfulness": {
+          "pass": false,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 346
+      },
+      "medium": "talk",
+      "question_id": "q_dev_conflict_craft",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_fa93b3f813f57c2bd79fd3b1",
+        "gd_841f2b448f57d49c3bb9e0e6",
+        "gd_05bc76829dab57dbe4e30f7b",
+        "gd_b17253e0832c9eda0a49b551"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "efficiency": {
+        "context_utilization": 1.2818181818181817,
+        "end_to_end_seconds": 13.413,
+        "generation_seconds": 2.038,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 23,
+        "prompt_tokens": 564,
+        "retrieval_seconds": 11.375,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_00c32ea8f146eb99c16e0974",
+          "matched_generated_span": "often do not write a second check",
+          "matched_retrieved_span": "often do not write a second check",
+          "max_contiguous_words": 7,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [],
+        "faithfulness": {
+          "pass": true,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 20
+      },
+      "medium": "x",
+      "question_id": "q_dev_conflict_second_check",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_00c32ea8f146eb99c16e0974",
+        "gd_2b1b8318e2ec523237dbf3e3",
+        "gd_ca4e8d2f61b3ea64d1188e6c",
+        "gd_c85d08b0a614790a6e60f5d3"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "efficiency": {
+        "context_utilization": 1.5318181818181817,
+        "end_to_end_seconds": 13.512,
+        "generation_seconds": 2.137,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 23,
+        "prompt_tokens": 674,
+        "retrieval_seconds": 11.375,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_00c32ea8f146eb99c16e0974",
+          "matched_generated_span": "often do not write a second check",
+          "matched_retrieved_span": "often do not write a second check",
+          "max_contiguous_words": 7,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [],
+        "faithfulness": {
+          "pass": true,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 20
+      },
+      "medium": "x",
+      "question_id": "q_dev_conflict_second_check",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_00c32ea8f146eb99c16e0974",
+        "gd_2b1b8318e2ec523237dbf3e3",
+        "gd_ca4e8d2f61b3ea64d1188e6c",
+        "gd_c85d08b0a614790a6e60f5d3"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "efficiency": {
+        "context_utilization": 1.0138888888888888,
+        "end_to_end_seconds": 41.943,
+        "generation_seconds": 29.729,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 295,
+        "prompt_tokens": 730,
+        "retrieval_seconds": 12.214,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_f8996e5189be0480e65004e4",
+          "matched_generated_span": "the ceo of",
+          "matched_retrieved_span": "the ceo of",
+          "max_contiguous_words": 3,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [
+          "unsupported_numeric",
+          "speaker_not_verifiable"
+        ],
+        "faithfulness": {
+          "pass": false,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": false,
+        "numeric_value_count": 2,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": true,
+          "conflicts": [],
+          "method": "quoted_span_and_speaker_name_not_entailment",
+          "pass": false,
+          "status": "not_verifiable"
+        },
+        "unsupported_numeric_count": 2,
+        "word_count": 234
+      },
+      "medium": "talk",
+      "question_id": "q_dev_entity_acquisition_parties",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_f8996e5189be0480e65004e4",
+        "gd_4bffee088c217385e9ed7cf0",
+        "gd_26bfbd2898d0a0f84f3cc393",
+        "gd_cec93928d7c5e58d6dbb22df"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "efficiency": {
+        "context_utilization": 1.1180555555555556,
+        "end_to_end_seconds": 37.438,
+        "generation_seconds": 25.224,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 374,
+        "prompt_tokens": 805,
+        "retrieval_seconds": 12.214,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_f8996e5189be0480e65004e4",
+          "matched_generated_span": "to $100m in",
+          "matched_retrieved_span": "to $100m in",
+          "max_contiguous_words": 3,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [
+          "unsupported_numeric",
+          "speaker_not_verifiable"
+        ],
+        "faithfulness": {
+          "pass": false,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": false,
+        "numeric_value_count": 4,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": true,
+          "conflicts": [],
+          "method": "quoted_span_and_speaker_name_not_entailment",
+          "pass": false,
+          "status": "not_verifiable"
+        },
+        "unsupported_numeric_count": 4,
+        "word_count": 304
+      },
+      "medium": "talk",
+      "question_id": "q_dev_entity_acquisition_parties",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_f8996e5189be0480e65004e4",
+        "gd_4bffee088c217385e9ed7cf0",
+        "gd_26bfbd2898d0a0f84f3cc393",
+        "gd_cec93928d7c5e58d6dbb22df"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "efficiency": {
+        "context_utilization": 1.1265625,
+        "end_to_end_seconds": 32.472,
+        "generation_seconds": 17.171,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 51,
+        "prompt_tokens": 721,
+        "retrieval_seconds": 15.301,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_c188efcd001afbd3f2ccccd5",
+          "matched_generated_span": "first sales",
+          "matched_retrieved_span": "first sales",
+          "max_contiguous_words": 2,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [],
+        "faithfulness": {
+          "pass": true,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 44
+      },
+      "medium": "linkedin",
+      "question_id": "q_dev_entity_sales_role",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_c188efcd001afbd3f2ccccd5",
+        "gd_8adb850aff250007f47ad829",
+        "gd_00808ccaeb7073dfcf899559",
+        "gd_fc5e3d369b99c8319468b0c7"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "efficiency": {
+        "context_utilization": 1.559375,
+        "end_to_end_seconds": 37.836,
+        "generation_seconds": 22.535,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 309,
+        "prompt_tokens": 998,
+        "retrieval_seconds": 15.301,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_c188efcd001afbd3f2ccccd5",
+          "matched_generated_span": "at least 2 3",
+          "matched_retrieved_span": "at least 2 3",
+          "max_contiguous_words": 4,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [],
+        "faithfulness": {
+          "pass": true,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 248
+      },
+      "medium": "linkedin",
+      "question_id": "q_dev_entity_sales_role",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_c188efcd001afbd3f2ccccd5",
+        "gd_8adb850aff250007f47ad829",
+        "gd_00808ccaeb7073dfcf899559",
+        "gd_fc5e3d369b99c8319468b0c7"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "efficiency": {
+        "context_utilization": 1.3597222222222223,
+        "end_to_end_seconds": 46.238,
+        "generation_seconds": 25.537,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 299,
+        "prompt_tokens": 979,
+        "retrieval_seconds": 20.701,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_13ff3d8fee086c0e747a6ac5",
+          "matched_generated_span": "the most",
+          "matched_retrieved_span": "the most",
+          "max_contiguous_words": 2,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [
+          "speaker_not_verifiable"
+        ],
+        "faithfulness": {
+          "pass": false,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": true,
+          "conflicts": [],
+          "method": "quoted_span_and_speaker_name_not_entailment",
+          "pass": false,
+          "status": "not_verifiable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 251
+      },
+      "medium": "blog",
+      "question_id": "q_dev_entity_speaker",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_0afa73ebc640982b5f1ecd80",
+        "gd_13ff3d8fee086c0e747a6ac5",
+        "gd_596adaa8220c87fb248341d2",
+        "gd_c08c808c275007422ee6f11a"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "efficiency": {
+        "context_utilization": 1.475,
+        "end_to_end_seconds": 38.554,
+        "generation_seconds": 17.853,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 77,
+        "prompt_tokens": 1062,
+        "retrieval_seconds": 20.701,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_596adaa8220c87fb248341d2",
+          "matched_generated_span": "the importance of",
+          "matched_retrieved_span": "the importance of",
+          "max_contiguous_words": 3,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [
+          "speaker_not_verifiable"
+        ],
+        "faithfulness": {
+          "pass": false,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": true,
+          "conflicts": [],
+          "method": "quoted_span_and_speaker_name_not_entailment",
+          "pass": false,
+          "status": "not_verifiable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 64
+      },
+      "medium": "blog",
+      "question_id": "q_dev_entity_speaker",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_0afa73ebc640982b5f1ecd80",
+        "gd_13ff3d8fee086c0e747a6ac5",
+        "gd_596adaa8220c87fb248341d2",
+        "gd_c08c808c275007422ee6f11a"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "efficiency": {
+        "context_utilization": 1.163888888888889,
+        "end_to_end_seconds": 42.527,
+        "generation_seconds": 25.019,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 267,
+        "prompt_tokens": 838,
+        "retrieval_seconds": 17.508,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_703a01c78cdda4d511196c78",
+          "matched_generated_span": "news capital one",
+          "matched_retrieved_span": "news capital one",
+          "max_contiguous_words": 3,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [
+          "unsupported_numeric",
+          "speaker_not_verifiable"
+        ],
+        "faithfulness": {
+          "pass": false,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": false,
+        "numeric_value_count": 5,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": true,
+          "conflicts": [],
+          "method": "quoted_span_and_speaker_name_not_entailment",
+          "pass": false,
+          "status": "not_verifiable"
+        },
+        "unsupported_numeric_count": 5,
+        "word_count": 196
+      },
+      "medium": "blog",
+      "question_id": "q_dev_fact_acquirer",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_f8996e5189be0480e65004e4",
+        "gd_4bffee088c217385e9ed7cf0",
+        "gd_703a01c78cdda4d511196c78",
+        "gd_f760bf8d8f76b485077edce0"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 2,
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "efficiency": {
+        "context_utilization": 1.336111111111111,
+        "end_to_end_seconds": 47.33,
+        "generation_seconds": 29.822,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 311,
+        "prompt_tokens": 962,
+        "retrieval_seconds": 17.508,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_f8996e5189be0480e65004e4",
+          "matched_generated_span": "saas companies from",
+          "matched_retrieved_span": "saas companies from",
+          "max_contiguous_words": 3,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [
+          "speaker_not_verifiable"
+        ],
+        "faithfulness": {
+          "pass": false,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": true,
+          "conflicts": [],
+          "method": "quoted_span_and_speaker_name_not_entailment",
+          "pass": false,
+          "status": "not_verifiable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 238
+      },
+      "medium": "blog",
+      "question_id": "q_dev_fact_acquirer",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_f8996e5189be0480e65004e4",
+        "gd_4bffee088c217385e9ed7cf0",
+        "gd_703a01c78cdda4d511196c78",
+        "gd_f760bf8d8f76b485077edce0"
+      ],
+      "retry_seed": 10042
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "efficiency": {
+        "context_utilization": 1.11875,
+        "end_to_end_seconds": 34.349,
+        "generation_seconds": 21.464,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 146,
+        "prompt_tokens": 716,
+        "retrieval_seconds": 12.885,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_701934762b825d9306a15274",
+          "matched_generated_span": "we re",
+          "matched_retrieved_span": "we re",
+          "max_contiguous_words": 2,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [
+          "unsupported_numeric"
+        ],
+        "faithfulness": {
+          "pass": false,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": false,
+        "numeric_value_count": 5,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 5,
+        "word_count": 96
+      },
+      "medium": "linkedin",
+      "question_id": "q_dev_fact_acquirer_target",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_701934762b825d9306a15274",
+        "gd_44a82ca8cc22cfdc2cd4025a",
+        "gd_c6d06f63e6dba3706c539568",
+        "gd_22f503d26e4d8faf8274b928"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 2,
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "efficiency": {
+        "context_utilization": 1.3515625,
+        "end_to_end_seconds": 25.616999999999997,
+        "generation_seconds": 12.732,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 14,
+        "prompt_tokens": 865,
+        "retrieval_seconds": 12.885,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_701934762b825d9306a15274",
+          "matched_generated_span": "capital",
+          "matched_retrieved_span": "capital",
+          "max_contiguous_words": 1,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [],
+        "faithfulness": {
+          "pass": true,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 12
+      },
+      "medium": "linkedin",
+      "question_id": "q_dev_fact_acquirer_target",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_701934762b825d9306a15274",
+        "gd_44a82ca8cc22cfdc2cd4025a",
+        "gd_c6d06f63e6dba3706c539568",
+        "gd_22f503d26e4d8faf8274b928"
+      ],
+      "retry_seed": 10047
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "efficiency": {
+        "context_utilization": 0.9347222222222222,
+        "end_to_end_seconds": 24.365000000000002,
+        "generation_seconds": 12.977,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 352,
+        "prompt_tokens": 673,
+        "retrieval_seconds": 11.388,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_8ae206e175b55e819ebbccac",
+          "matched_generated_span": "market outcome fit",
+          "matched_retrieved_span": "market outcome fit",
+          "max_contiguous_words": 3,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [],
+        "faithfulness": {
+          "pass": true,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 307
+      },
+      "medium": "talk",
+      "question_id": "q_dev_fact_niche_boundary",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_48e090cf4fc87c6b04e673b9",
+        "gd_81bde9d299daaec71f7d4b59",
+        "gd_8ae206e175b55e819ebbccac",
+        "gd_37c9bf3c519ccfb55eca9483"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "efficiency": {
+        "context_utilization": 1.0916666666666666,
+        "end_to_end_seconds": 38.684,
+        "generation_seconds": 27.296,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 396,
+        "prompt_tokens": 786,
+        "retrieval_seconds": 11.388,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_37c9bf3c519ccfb55eca9483",
+          "matched_generated_span": "market share is the",
+          "matched_retrieved_span": "market share is the",
+          "max_contiguous_words": 4,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [
+          "unsupported_numeric"
+        ],
+        "faithfulness": {
+          "pass": false,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": false,
+        "numeric_value_count": 3,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 3,
+        "word_count": 319
+      },
+      "medium": "talk",
+      "question_id": "q_dev_fact_niche_boundary",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_48e090cf4fc87c6b04e673b9",
+        "gd_81bde9d299daaec71f7d4b59",
+        "gd_8ae206e175b55e819ebbccac",
+        "gd_37c9bf3c519ccfb55eca9483"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "efficiency": {
+        "context_utilization": 1.1046875,
+        "end_to_end_seconds": 44.78,
+        "generation_seconds": 30.201,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 320,
+        "prompt_tokens": 707,
+        "retrieval_seconds": 14.579,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_fb798d3019afee06b2636d46",
+          "matched_generated_span": "the b2c playbook",
+          "matched_retrieved_span": "the b2c playbook",
+          "max_contiguous_words": 3,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [
+          "unsupported_numeric"
+        ],
+        "faithfulness": {
+          "pass": false,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": false,
+        "numeric_value_count": 7,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 6,
+        "word_count": 242
+      },
+      "medium": "linkedin",
+      "question_id": "q_dev_hop_share_and_playbook",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_fb798d3019afee06b2636d46",
+        "gd_ba32d5af5c0ed96e5efe6957",
+        "gd_70fbe3aeece3874aa5c26594",
+        "gd_eb68b68fb834ca0408d8c8cf"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "efficiency": {
+        "context_utilization": 1.2109375,
+        "end_to_end_seconds": 32.545,
+        "generation_seconds": 17.966,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 61,
+        "prompt_tokens": 775,
+        "retrieval_seconds": 14.579,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_fb798d3019afee06b2636d46",
+          "matched_generated_span": "the b2c playbook",
+          "matched_retrieved_span": "the b2c playbook",
+          "max_contiguous_words": 3,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [],
+        "faithfulness": {
+          "pass": true,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 1,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 45
+      },
+      "medium": "linkedin",
+      "question_id": "q_dev_hop_share_and_playbook",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_fb798d3019afee06b2636d46",
+        "gd_ba32d5af5c0ed96e5efe6957",
+        "gd_70fbe3aeece3874aa5c26594",
+        "gd_eb68b68fb834ca0408d8c8cf"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "efficiency": {
+        "context_utilization": 0.9263888888888889,
+        "end_to_end_seconds": 40.24,
+        "generation_seconds": 26.097,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 360,
+        "prompt_tokens": 667,
+        "retrieval_seconds": 14.143,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_fb163a389ea88c48ce1a606e",
+          "matched_generated_span": "vp sales has spent serious time with the product understands it deeply and can transfer that knowledge and passion to their team you re",
+          "matched_retrieved_span": "vp sales has spent serious time with the product understands it deeply and can transfer that knowledge and passion to their team you re",
+          "max_contiguous_words": 24,
+          "pass": false,
+          "threshold": 12
+        },
+        "factual_reasons": [
+          "role_not_verifiable",
+          "retrieval_source_copy"
+        ],
+        "faithfulness": {
+          "pass": false,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 289
+      },
+      "medium": "talk",
+      "question_id": "q_dev_hop_vp_and_craft",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_fb163a389ea88c48ce1a606e",
+        "gd_559d899eebd42df093031177",
+        "gd_c75af687e9a8e78065ced9f2",
+        "gd_257d14e0a4f4fd8c87630df1"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "efficiency": {
+        "context_utilization": 1.1875,
+        "end_to_end_seconds": 31.668,
+        "generation_seconds": 17.525,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 378,
+        "prompt_tokens": 855,
+        "retrieval_seconds": 14.143,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_257d14e0a4f4fd8c87630df1",
+          "matched_generated_span": "to be a vp of sales",
+          "matched_retrieved_span": "to be a vp of sales",
+          "max_contiguous_words": 6,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [],
+        "faithfulness": {
+          "pass": true,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 314
+      },
+      "medium": "talk",
+      "question_id": "q_dev_hop_vp_and_craft",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_fb163a389ea88c48ce1a606e",
+        "gd_559d899eebd42df093031177",
+        "gd_c75af687e9a8e78065ced9f2",
+        "gd_257d14e0a4f4fd8c87630df1"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "efficiency": {
+        "context_utilization": 1.0916666666666666,
+        "end_to_end_seconds": 28.832,
+        "generation_seconds": 14.825,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 317,
+        "prompt_tokens": 786,
+        "retrieval_seconds": 14.007,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_414cde32de0cf12c7d952668",
+          "matched_generated_span": "there s",
+          "matched_retrieved_span": "there s",
+          "max_contiguous_words": 2,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [],
+        "faithfulness": {
+          "pass": true,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 255
+      },
+      "medium": "blog",
+      "question_id": "q_dev_rel_director_promotion",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_414cde32de0cf12c7d952668",
+        "gd_6da6ff1f094250d974e49114",
+        "gd_0f97215950834bc620494a43",
+        "gd_656aead71aca90a2d9d3ae6c"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 2,
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "efficiency": {
+        "context_utilization": 1.1458333333333333,
+        "end_to_end_seconds": 32.381,
+        "generation_seconds": 18.374,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 16,
+        "prompt_tokens": 825,
+        "retrieval_seconds": 14.007,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_414cde32de0cf12c7d952668",
+          "matched_generated_span": "the 2021 boom",
+          "matched_retrieved_span": "the 2021 boom",
+          "max_contiguous_words": 3,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [],
+        "faithfulness": {
+          "pass": true,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 1,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 10
+      },
+      "medium": "blog",
+      "question_id": "q_dev_rel_director_promotion",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_414cde32de0cf12c7d952668",
+        "gd_6da6ff1f094250d974e49114",
+        "gd_0f97215950834bc620494a43",
+        "gd_656aead71aca90a2d9d3ae6c"
+      ],
+      "retry_seed": 10074
+    },
+    {
+      "accepted_attempt": 2,
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "efficiency": {
+        "context_utilization": 1.6386363636363637,
+        "end_to_end_seconds": 28.035,
+        "generation_seconds": 12.84,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 160,
+        "prompt_tokens": 721,
+        "retrieval_seconds": 15.195,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_d1f01ef7528f12c11f10247c",
+          "matched_generated_span": "an internal recruiter as soon as you",
+          "matched_retrieved_span": "an internal recruiter as soon as you",
+          "max_contiguous_words": 7,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [],
+        "faithfulness": {
+          "pass": true,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 3,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 122
+      },
+      "medium": "x",
+      "question_id": "q_dev_time_boom_vs_later",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_70b6d21359f3ae0fd46e93c8",
+        "gd_d1f01ef7528f12c11f10247c",
+        "gd_db2a00ddbaae4ba4dae9d6b7",
+        "gd_36adbfd4476f456fc4520b4a"
+      ],
+      "retry_seed": 10100
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "efficiency": {
+        "context_utilization": 1.634090909090909,
+        "end_to_end_seconds": 28.349,
+        "generation_seconds": 13.154,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 160,
+        "prompt_tokens": 719,
+        "retrieval_seconds": 15.195,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": true,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_d1f01ef7528f12c11f10247c",
+          "matched_generated_span": "filtering candidates scheduling the zooms and more becomes overwhelming once you are hiring even 1 new person a month",
+          "matched_retrieved_span": "filtering candidates scheduling the zooms and more becomes overwhelming once you are hiring even 1 new person a month",
+          "max_contiguous_words": 19,
+          "pass": false,
+          "threshold": 12
+        },
+        "factual_reasons": [
+          "retrieval_source_copy"
+        ],
+        "faithfulness": {
+          "pass": false,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 4,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 106
+      },
+      "medium": "x",
+      "question_id": "q_dev_time_boom_vs_later",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_70b6d21359f3ae0fd46e93c8",
+        "gd_d1f01ef7528f12c11f10247c",
+        "gd_db2a00ddbaae4ba4dae9d6b7",
+        "gd_36adbfd4476f456fc4520b4a"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 2,
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "efficiency": {
+        "context_utilization": 0.9722222222222222,
+        "end_to_end_seconds": 49.568,
+        "generation_seconds": 29.757,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 377,
+        "prompt_tokens": 700,
+        "retrieval_seconds": 19.811,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_73c06efd8b5772a9ba7bbdd0",
+          "matched_generated_span": "late stage investors",
+          "matched_retrieved_span": "late stage investors",
+          "max_contiguous_words": 3,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [],
+        "faithfulness": {
+          "pass": true,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 314
+      },
+      "medium": "talk",
+      "question_id": "q_dev_time_two_updates",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_2a58e5bb4db6e2ed500cc504",
+        "gd_4b27963c646c8a30fa921f67",
+        "gd_fe79afa1d09aa8f6cddc545a",
+        "gd_73c06efd8b5772a9ba7bbdd0"
+      ],
+      "retry_seed": 10105
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "efficiency": {
+        "context_utilization": 0.9513888888888888,
+        "end_to_end_seconds": 34.496,
+        "generation_seconds": 14.685,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 354,
+        "prompt_tokens": 685,
+        "retrieval_seconds": 19.811,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_2a58e5bb4db6e2ed500cc504",
+          "matched_generated_span": "it doesn t",
+          "matched_retrieved_span": "it doesn t",
+          "max_contiguous_words": 3,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [],
+        "faithfulness": {
+          "pass": true,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 290
+      },
+      "medium": "talk",
+      "question_id": "q_dev_time_two_updates",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_2a58e5bb4db6e2ed500cc504",
+        "gd_4b27963c646c8a30fa921f67",
+        "gd_fe79afa1d09aa8f6cddc545a",
+        "gd_73c06efd8b5772a9ba7bbdd0"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "efficiency": {
+        "context_utilization": 0.9890625,
+        "end_to_end_seconds": 35.516,
+        "generation_seconds": 19.598,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 320,
+        "prompt_tokens": 633,
+        "retrieval_seconds": 15.918,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_372bcb408fd0b0532a5a531c",
+          "matched_generated_span": "how did",
+          "matched_retrieved_span": "how did",
+          "max_contiguous_words": 2,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [
+          "unsupported_numeric"
+        ],
+        "faithfulness": {
+          "pass": false,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": false,
+        "numeric_value_count": 17,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 15,
+        "word_count": 240
+      },
+      "medium": "linkedin",
+      "question_id": "q_dev_time_valuation_vs_price",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_372bcb408fd0b0532a5a531c",
+        "gd_a6fbf8f37d2f0906d276118e",
+        "gd_703a01c78cdda4d511196c78",
+        "gd_42e2eb9e53b25ad7ddec1270"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "efficiency": {
+        "context_utilization": 1.1796875,
+        "end_to_end_seconds": 30.03,
+        "generation_seconds": 14.112,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 109,
+        "prompt_tokens": 755,
+        "retrieval_seconds": 15.918,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_703a01c78cdda4d511196c78",
+          "matched_generated_span": "all the",
+          "matched_retrieved_span": "all the",
+          "max_contiguous_words": 2,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [
+          "unsupported_numeric"
+        ],
+        "faithfulness": {
+          "pass": false,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": false,
+        "numeric_value_count": 4,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 2,
+        "word_count": 87
+      },
+      "medium": "linkedin",
+      "question_id": "q_dev_time_valuation_vs_price",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_372bcb408fd0b0532a5a531c",
+        "gd_a6fbf8f37d2f0906d276118e",
+        "gd_703a01c78cdda4d511196c78",
+        "gd_42e2eb9e53b25ad7ddec1270"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 2,
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "efficiency": {
+        "context_utilization": 1.7136363636363636,
+        "end_to_end_seconds": 15.665000000000001,
+        "generation_seconds": 3.862,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 56,
+        "prompt_tokens": 754,
+        "retrieval_seconds": 11.803,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_6652a2cb73ea54adf1803939",
+          "matched_generated_span": "jason lemkin",
+          "matched_retrieved_span": "jason lemkin",
+          "max_contiguous_words": 2,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [
+          "speaker_not_verifiable"
+        ],
+        "faithfulness": {
+          "pass": true,
+          "status": "scored_as_abstention"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": true,
+          "conflicts": [],
+          "method": "quoted_span_and_speaker_name_not_entailment",
+          "pass": false,
+          "status": "not_verifiable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 44
+      },
+      "medium": "x",
+      "question_id": "q_dev_unans_dinner_chart",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_6652a2cb73ea54adf1803939",
+        "gd_fe99f05062882ce1d7ddecc6",
+        "gd_f894240d5952145c067ff0f6",
+        "gd_af5b19cddd32c146ea4f46c8"
+      ],
+      "retry_seed": 10148
+    },
+    {
+      "accepted_attempt": 2,
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "efficiency": {
+        "context_utilization": 1.7295454545454545,
+        "end_to_end_seconds": 22.241,
+        "generation_seconds": 10.438,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 113,
+        "prompt_tokens": 761,
+        "retrieval_seconds": 11.803,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_6652a2cb73ea54adf1803939",
+          "matched_generated_span": "jason lemkin",
+          "matched_retrieved_span": "jason lemkin",
+          "max_contiguous_words": 2,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [
+          "speaker_not_verifiable"
+        ],
+        "faithfulness": {
+          "pass": true,
+          "status": "scored_as_abstention"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": true,
+          "conflicts": [],
+          "method": "quoted_span_and_speaker_name_not_entailment",
+          "pass": false,
+          "status": "not_verifiable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 90
+      },
+      "medium": "x",
+      "question_id": "q_dev_unans_dinner_chart",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_6652a2cb73ea54adf1803939",
+        "gd_fe99f05062882ce1d7ddecc6",
+        "gd_f894240d5952145c067ff0f6",
+        "gd_af5b19cddd32c146ea4f46c8"
+      ],
+      "retry_seed": 10148
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "efficiency": {
+        "context_utilization": 1.1046875,
+        "end_to_end_seconds": 20.759999999999998,
+        "generation_seconds": 8.091,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 166,
+        "prompt_tokens": 707,
+        "retrieval_seconds": 12.669,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_3b0cd7a4547ffa30c6908e86",
+          "matched_generated_span": "it s",
+          "matched_retrieved_span": "it s",
+          "max_contiguous_words": 2,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [
+          "speaker_not_verifiable"
+        ],
+        "faithfulness": {
+          "pass": true,
+          "status": "scored_as_abstention"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": true,
+          "conflicts": [],
+          "method": "quoted_span_and_speaker_name_not_entailment",
+          "pass": false,
+          "status": "not_verifiable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 140
+      },
+      "medium": "linkedin",
+      "question_id": "q_dev_unans_headcount",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_3b0cd7a4547ffa30c6908e86",
+        "gd_8a3887037233b9ff2de41ce0",
+        "gd_f8996e5189be0480e65004e4",
+        "gd_986adf290be4d2a0dee50552"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 2,
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "efficiency": {
+        "context_utilization": 1.240625,
+        "end_to_end_seconds": 31.632,
+        "generation_seconds": 18.963,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 243,
+        "prompt_tokens": 794,
+        "retrieval_seconds": 12.669,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_8a3887037233b9ff2de41ce0",
+          "matched_generated_span": "here s what",
+          "matched_retrieved_span": "here s what",
+          "max_contiguous_words": 3,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [
+          "speaker_not_verifiable"
+        ],
+        "faithfulness": {
+          "pass": true,
+          "status": "scored_as_abstention"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": true,
+          "conflicts": [],
+          "method": "quoted_span_and_speaker_name_not_entailment",
+          "pass": false,
+          "status": "not_verifiable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 185
+      },
+      "medium": "linkedin",
+      "question_id": "q_dev_unans_headcount",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_3b0cd7a4547ffa30c6908e86",
+        "gd_8a3887037233b9ff2de41ce0",
+        "gd_f8996e5189be0480e65004e4",
+        "gd_986adf290be4d2a0dee50552"
+      ],
+      "retry_seed": 10143
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "efficiency": {
+        "context_utilization": 0.9666666666666667,
+        "end_to_end_seconds": 36.939,
+        "generation_seconds": 25.253,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 302,
+        "prompt_tokens": 696,
+        "retrieval_seconds": 11.686,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_ded28cc97e3d20cb43af6fb0",
+          "matched_generated_span": "feedback is expected after every board meeting no exceptions",
+          "matched_retrieved_span": "feedback is expected after every board meeting no exceptions",
+          "max_contiguous_words": 9,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [
+          "unsupported_numeric"
+        ],
+        "faithfulness": {
+          "pass": false,
+          "status": "scored_as_abstention"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": false,
+        "numeric_value_count": 2,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 1,
+        "word_count": 252
+      },
+      "medium": "blog",
+      "question_id": "q_dev_unans_private_board",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_ded28cc97e3d20cb43af6fb0",
+        "gd_87f9f1c85817eeb46b0ec74d",
+        "gd_abeb00283957ad382493fe64",
+        "gd_b5598f901756b268dfaf7770"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "efficiency": {
+        "context_utilization": 1.2527777777777778,
+        "end_to_end_seconds": 39.632999999999996,
+        "generation_seconds": 27.947,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 351,
+        "prompt_tokens": 902,
+        "retrieval_seconds": 11.686,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_ded28cc97e3d20cb43af6fb0",
+          "matched_generated_span": "after every board meeting",
+          "matched_retrieved_span": "after every board meeting",
+          "max_contiguous_words": 4,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [
+          "unsupported_numeric"
+        ],
+        "faithfulness": {
+          "pass": false,
+          "status": "scored_as_abstention"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": false,
+        "numeric_value_count": 1,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 1,
+        "word_count": 286
+      },
+      "medium": "blog",
+      "question_id": "q_dev_unans_private_board",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "no_preselected_ids",
+          "status": "not_applicable",
+          "value": null
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_ded28cc97e3d20cb43af6fb0",
+        "gd_87f9f1c85817eeb46b0ec74d",
+        "gd_abeb00283957ad382493fe64",
+        "gd_b5598f901756b268dfaf7770"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 2,
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "efficiency": {
+        "context_utilization": 1.1291666666666667,
+        "end_to_end_seconds": 38.034,
+        "generation_seconds": 25.141,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 320,
+        "prompt_tokens": 813,
+        "retrieval_seconds": 12.893,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_a2681a200e84051105426224",
+          "matched_generated_span": "want to use",
+          "matched_retrieved_span": "want to use",
+          "max_contiguous_words": 3,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [],
+        "faithfulness": {
+          "pass": true,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 268
+      },
+      "medium": "blog",
+      "question_id": "q_personalized_saas_speaker",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "overlap_with_preselected_ids_not_recall",
+          "matched": [],
+          "status": "scored",
+          "value": 0.0
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_9afc3fc5d51d8286d88af633",
+        "gd_a2681a200e84051105426224",
+        "gd_17ec0a740f815b471f557b82",
+        "gd_8b5d26f7b5da7709193fcdb6"
+      ],
+      "retry_seed": 10122
+    },
+    {
+      "accepted_attempt": 2,
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "efficiency": {
+        "context_utilization": 1.2333333333333334,
+        "end_to_end_seconds": 25.866,
+        "generation_seconds": 12.973,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 95,
+        "prompt_tokens": 888,
+        "retrieval_seconds": 12.893,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_17ec0a740f815b471f557b82",
+          "matched_generated_span": "deliver real value",
+          "matched_retrieved_span": "deliver real value",
+          "max_contiguous_words": 3,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [],
+        "faithfulness": {
+          "pass": true,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 78
+      },
+      "medium": "blog",
+      "question_id": "q_personalized_saas_speaker",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "overlap_with_preselected_ids_not_recall",
+          "matched": [],
+          "status": "scored",
+          "value": 0.0
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_9afc3fc5d51d8286d88af633",
+        "gd_a2681a200e84051105426224",
+        "gd_17ec0a740f815b471f557b82",
+        "gd_8b5d26f7b5da7709193fcdb6"
+      ],
+      "retry_seed": 10122
+    },
+    {
+      "accepted_attempt": 2,
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "efficiency": {
+        "context_utilization": 0.9236111111111112,
+        "end_to_end_seconds": 39.775999999999996,
+        "generation_seconds": 27.331,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 359,
+        "prompt_tokens": 665,
+        "retrieval_seconds": 12.445,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_af5b19cddd32c146ea4f46c8",
+          "matched_generated_span": "a new vp of sales",
+          "matched_retrieved_span": "a new vp of sales",
+          "max_contiguous_words": 5,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [
+          "no_accepted_factual_evidence"
+        ],
+        "faithfulness": {
+          "pass": false,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 310
+      },
+      "medium": "blog",
+      "question_id": "q_vp_sales_tension",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "overlap_with_preselected_ids_not_recall",
+          "matched": [],
+          "status": "scored",
+          "value": 0.0
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_df1eceb9ab48d2bbbc230370",
+        "gd_569ee69606db9effbeb61689",
+        "gd_af5b19cddd32c146ea4f46c8",
+        "gd_7a79bfcadc266e750d3d31b6"
+      ],
+      "retry_seed": 10106
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "efficiency": {
+        "context_utilization": 0.9638888888888889,
+        "end_to_end_seconds": 28.117,
+        "generation_seconds": 15.672,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 390,
+        "prompt_tokens": 694,
+        "retrieval_seconds": 12.445,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_df1eceb9ab48d2bbbc230370",
+          "matched_generated_span": "your vp of sales",
+          "matched_retrieved_span": "your vp of sales",
+          "max_contiguous_words": 4,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [
+          "no_accepted_factual_evidence"
+        ],
+        "faithfulness": {
+          "pass": false,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": false,
+          "conflicts": [],
+          "pass": true,
+          "status": "not_applicable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 309
+      },
+      "medium": "blog",
+      "question_id": "q_vp_sales_tension",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "overlap_with_preselected_ids_not_recall",
+          "matched": [],
+          "status": "scored",
+          "value": 0.0
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_df1eceb9ab48d2bbbc230370",
+        "gd_569ee69606db9effbeb61689",
+        "gd_af5b19cddd32c146ea4f46c8",
+        "gd_7a79bfcadc266e750d3d31b6"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-DESC",
+      "context_profile": "descriptions",
+      "efficiency": {
+        "context_utilization": 1.315909090909091,
+        "end_to_end_seconds": 16.14,
+        "generation_seconds": 2.878,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 15,
+        "prompt_tokens": 579,
+        "retrieval_seconds": 13.262,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_a1877b05c35f30a81e7ec886",
+          "matched_generated_span": "the worst mis hire",
+          "matched_retrieved_span": "the worst mis hire",
+          "max_contiguous_words": 4,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [
+          "speaker_not_verifiable"
+        ],
+        "faithfulness": {
+          "pass": false,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": true,
+          "conflicts": [],
+          "method": "quoted_span_and_speaker_name_not_entailment",
+          "pass": false,
+          "status": "not_verifiable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 10
+      },
+      "medium": "x",
+      "question_id": "q_worst_mishire",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "overlap_with_preselected_ids_not_recall",
+          "matched": [],
+          "status": "scored",
+          "value": 0.0
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_93b4fd333c75ee13a9cefd0d",
+        "gd_a1877b05c35f30a81e7ec886",
+        "gd_8e096fc0acb571050c752ba9",
+        "gd_6652a2cb73ea54adf1803939"
+      ],
+      "retry_seed": null
+    },
+    {
+      "accepted_attempt": 1,
+      "arm": "F-REL",
+      "context_profile": "relationships",
+      "efficiency": {
+        "context_utilization": 1.315909090909091,
+        "end_to_end_seconds": 18.411,
+        "generation_seconds": 5.149,
+        "gpu_memory_bytes": null,
+        "limitation": "Context utilization is not a quality score. Filling the budget is not a retrieval win.",
+        "output_tokens": 15,
+        "prompt_tokens": 579,
+        "retrieval_seconds": 13.262,
+        "token_source": "caller_tokenizer"
+      },
+      "generation": {
+        "citation_marker_leak": false,
+        "citations": {
+          "precision": null,
+          "reason": "This generator is told not to print evidence tags. Citation precision is not scored from the prose.",
+          "recall": null,
+          "status": "not_emitted"
+        },
+        "contradictions": {
+          "count": null,
+          "rate": null,
+          "status": "not_annotated"
+        },
+        "copying": {
+          "applicable": true,
+          "document_id": "gd_a1877b05c35f30a81e7ec886",
+          "matched_generated_span": "the worst mis hire",
+          "matched_retrieved_span": "the worst mis hire",
+          "max_contiguous_words": 4,
+          "pass": true,
+          "threshold": 12
+        },
+        "factual_reasons": [
+          "speaker_not_verifiable"
+        ],
+        "faithfulness": {
+          "pass": false,
+          "status": "scored"
+        },
+        "limitation": "Faithfulness uses deterministic quantity, role, speaker, and copying checks. It is not an LLM judgment and it is not n-gram overlap with a reference blog. Word count is recorded and is not a quality score. A missing reference leaves reference metrics unset.",
+        "numeric_applicable": true,
+        "numeric_pass": true,
+        "numeric_value_count": 0,
+        "reference_answer": null,
+        "reference_used": false,
+        "role_unsupported_count": 0,
+        "speaker": {
+          "applicable": true,
+          "conflicts": [],
+          "method": "quoted_span_and_speaker_name_not_entailment",
+          "pass": false,
+          "status": "not_verifiable"
+        },
+        "unsupported_numeric_count": 0,
+        "word_count": 10
+      },
+      "medium": "x",
+      "question_id": "q_worst_mishire",
+      "retrieval": {
+        "comparison": "not_applicable_shared_frozen_payload",
+        "designated_source_coverage": {
+          "interprets_as": "overlap_with_preselected_ids_not_recall",
+          "matched": [],
+          "status": "scored",
+          "value": 0.0
+        },
+        "duplicate_source": false,
+        "empty": false,
+        "limitation": "Ranked metrics are null until a graded qrel exists. Preselected review ids are coverage against that list, not recall. A higher hit count is not itself a better score.",
+        "mrr": null,
+        "n_hits": 4,
+        "ndcg_at_4": null,
+        "precision_at_1": null,
+        "precision_at_4": null,
+        "provenance_completeness": 1.0,
+        "recall_at_1": null,
+        "recall_at_4": null,
+        "relevance_scope": "none",
+        "source_diversity": 1.0,
+        "unique_sources": 4
+      },
+      "retrieval_backend": "lightrag",
+      "retrieval_mode": "hybrid",
+      "retrieved_source_ids": [
+        "gd_93b4fd333c75ee13a9cefd0d",
+        "gd_a1877b05c35f30a81e7ec886",
+        "gd_8e096fc0acb571050c752ba9",
+        "gd_6652a2cb73ea54adf1803939"
+      ],
+      "retry_seed": null
+    }
+  ],
+  "composite_score": null,
+  "experiment_id": "EXP-20261102-003-model-f-desc-vs-rel",
+  "failures": [],
+  "graph_diagnostics": "graph_diagnostics.json",
+  "judge": null,
+  "metrics": {
+    "arms": {
+      "F-DESC": {
+        "citation_leak_rate": 0.0,
+        "faithfulness_ci95": [
+          0.3545763620443012,
+          0.712444173047651
+        ],
+        "faithfulness_rate": 0.5384615384615384,
+        "known_matrix_arm": false,
+        "mean_word_count": 180.92307692307693,
+        "mrr_mean": null,
+        "n": 26,
+        "ndcg_at_4_mean": null,
+        "numeric_pass_rate": 0.25,
+        "precision_at_4_mean": null,
+        "provenance_completeness_mean": 1.0,
+        "recall_at_4_mean": null,
+        "source_diversity_mean": 1.0
+      },
+      "F-REL": {
+        "citation_leak_rate": 0.038461538461538464,
+        "faithfulness_ci95": [
+          0.3545763620443012,
+          0.712444173047651
+        ],
+        "faithfulness_rate": 0.5384615384615384,
+        "known_matrix_arm": false,
+        "mean_word_count": 166.15384615384616,
+        "mrr_mean": null,
+        "n": 26,
+        "ndcg_at_4_mean": null,
+        "numeric_pass_rate": 0.5,
+        "precision_at_4_mean": null,
+        "provenance_completeness_mean": 1.0,
+        "recall_at_4_mean": null,
+        "source_diversity_mean": 1.0
+      }
+    },
+    "composite_score": null,
+    "reason": "Retrieval, faithfulness, numeric checks, and latency stay separate."
+  },
+  "ranked_retrieval": "not_scored_without_human_grades",
+  "schema": "model-f-deterministic-v1",
+  "unmeasured": {
+    "end_to_end_seconds": "recorded",
+    "extraction_seconds": "recorded",
+    "gpu_memory_bytes": "not_measured",
+    "precision_recall_mrr_ndcg": "not_scored_without_human_grades",
+    "retrieval_seconds": "recorded",
+    "verification_seconds": "recorded"
+  }
+}

@@ -1,0 +1,620 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "topic_id": "gold_007",
+  "medium": "blog",
+  "arm": "on",
+  "seed": 66,
+  "attempts": 1,
+  "evidence_sha256": "842afbe96943fded65f5f31b4a4708328cbdadfdbdb1206583ec426024ab3c83",
+  "retrieval_hit_ids": [
+    "train_7876",
+    "train_25435",
+    "train_15820",
+    "train_25711"
+  ],
+  "retrieval_query": "Why Now Is the Biggest Change in SaaS Sales in 15+ Years",
+  "retrieval_filter": null,
+  "style_applied": true,
+  "style_in_prompt": true,
+  "prompt_tokens": 1069,
+  "generated_tokens_including_stop": 379,
+  "latency_seconds": 18.818,
+  "exemplar_ids": [
+    718,
+    787
+  ],
+  "saved_at": "2026-10-30T09:27:25.451698+00:00",
+  "trace": {
+    "id": "gold_007",
+    "format": "blog_draft",
+    "topic": "Why Now Is the Biggest Change in SaaS Sales in 15+ Years",
+    "audience": "B2B SaaS founders and operators",
+    "goal": "Teach one concrete operator lesson with specific examples and conviction.",
+    "cta": "none",
+    "k": 8,
+    "expected_facts": [
+      "The answer should argue that SaaS sales has structurally changed, not just slowed temporarily.",
+      "It should identify at least one concrete driver such as AI, buyer expectations, efficiency pressure, or changes in outbound/inbound behavior.",
+      "It should explain what founders must change in response."
+    ],
+    "rubric_must_haves": [
+      "Names the change clearly and early.",
+      "Explains both the cause and the founder response.",
+      "Includes an example tied to modern GTM or sales execution.",
+      "Avoids hand-wavy macro commentary."
+    ],
+    "gold_reference": "A strong answer should say that SaaS sales is in a structural transition, with founders needing a sharper value proposition, more efficiency, and often a different go-to-market motion than the old growth-at-all-costs era. The lesson is not to wait for the old playbook to return, but to adapt hiring, messaging, and sales process to the new environment.",
+    "medium": "blog",
+    "prompt": "Write a blog post in the style of Jason Lemkin about: Why Now Is the Biggest Change in SaaS Sales in 15+ Years\n\nStyle examples from train-owned source text.\nUse them for voice only. They are not evidence for claims.\nDo not copy long passages verbatim.\n[Style 1]\nDear SaaStr: How Can You Ensure a Smooth Transition When A New Team Member Takes Over a Customer Account?\nAdd value in the first interaction.  This is so rare.\nThere’s nothing more frustrating than getting a random email, “Hi, Tony is gone from the company. I know nothing about you, but I’m your new rep. Can we schedule a call?”\nFind some way to add value.\nOne great way is to demo upcoming features / an upcoming release.\n“Hi, I’m Jason, your next account exec. I’d love to find a way to help even more. Can I show you or anyone on your team the new AI features we’re launching shortly? There’s no additional cost for them and based on what I can see, they may radically increase your efficiency.”\nNot perfect. But much better.\nA second, albeit riskier, way to add value is to set up a call asking for “honest feedback on how we’re doing.”\nThis works, too.  Customers often just want to be heard.  The “problem” is you might have to do something about it.\n[Style 2]\nDear SaaStr: When Is It Too Soon to Target Enterprise Customers in SaaS?\nIt too soon to target enterprise clients when you can’t support their needs 90 days\nafter\nyou close them.\nIt’s sort of OK in the enterprise to promise features and functionality that are sort of there … so long as you deliver them fairly promptly after the deal closes.\nIn fact, it happens all the time. Enterprise customers will even sign contracts agreeing to buy so long as you implement a key feature with X number of days.\nBut if you don’t have the team, commitment and experience to deliver that functionality at least X days after you close a Big Customer … you aren’t ready.  They’ll churn or at least, never fully deploy.\nYou don’t have to have the full enterprise package in the early days to close enterprise customers, especially if they have interest in you.  You’ll get some slack as a new, emerging vendor.  Especially if you have a strong deployment team.\nBut you have to meet your commitments and promises to them fairly soon after the deal closes.\nMore here:\nSecrets to Closing Your First 6 Figure Deal (Video + Transcript) | SaaStr\nSecrets to Closing Your First 6 Figure Deal (Video + Transcript)\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] The rise of the SDR and productizing outbound and qualifying inbound with humans is a trend in the first 15 years of SaaS.\n[E2] Customer success as a new, empowered function is a trend in the first 15 years of SaaS.\n[E3] Human support is still important for paying customers in the first 15 years of SaaS.\n[E4] The role of the SDR exploded in the past decade.\n[E5] Everyone has fully staffed CS over the past decade.\n[E6] We've all become NRR, GRR, and CSAT experts.\n[E7] CS owned it all.\n[E8] There is a general sense among the leaders in sales software that we will end up with fewer, better SDRs.\n[E9] The majority of email and follow-up will be done with AI.\n[E10] Salesloft, Outreach, Gong and more radically changed the space.\n[E11] Customer Success has in many cases morphed into part of the sales team.\n[E12] The era of the Bay Area sales team is over.\n[E13] The talent is still here.\n[E14] They will join a start-up based almost anywhere.\n\nNow write the requested blog post about: Why Now Is the Biggest Change in SaaS Sales in 15+ Years",
+    "rendered_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nWrite a blog post in the style of Jason Lemkin about: Why Now Is the Biggest Change in SaaS Sales in 15+ Years\n\nStyle examples from train-owned source text.\nUse them for voice only. They are not evidence for claims.\nDo not copy long passages verbatim.\n[Style 1]\nDear SaaStr: How Can You Ensure a Smooth Transition When A New Team Member Takes Over a Customer Account?\nAdd value in the first interaction.  This is so rare.\nThere’s nothing more frustrating than getting a random email, “Hi, Tony is gone from the company. I know nothing about you, but I’m your new rep. Can we schedule a call?”\nFind some way to add value.\nOne great way is to demo upcoming features / an upcoming release.\n“Hi, I’m Jason, your next account exec. I’d love to find a way to help even more. Can I show you or anyone on your team the new AI features we’re launching shortly? There’s no additional cost for them and based on what I can see, they may radically increase your efficiency.”\nNot perfect. But much better.\nA second, albeit riskier, way to add value is to set up a call asking for “honest feedback on how we’re doing.”\nThis works, too.  Customers often just want to be heard.  The “problem” is you might have to do something about it.\n[Style 2]\nDear SaaStr: When Is It Too Soon to Target Enterprise Customers in SaaS?\nIt too soon to target enterprise clients when you can’t support their needs 90 days\nafter\nyou close them.\nIt’s sort of OK in the enterprise to promise features and functionality that are sort of there … so long as you deliver them fairly promptly after the deal closes.\nIn fact, it happens all the time. Enterprise customers will even sign contracts agreeing to buy so long as you implement a key feature with X number of days.\nBut if you don’t have the team, commitment and experience to deliver that functionality at least X days after you close a Big Customer … you aren’t ready.  They’ll churn or at least, never fully deploy.\nYou don’t have to have the full enterprise package in the early days to close enterprise customers, especially if they have interest in you.  You’ll get some slack as a new, emerging vendor.  Especially if you have a strong deployment team.\nBut you have to meet your commitments and promises to them fairly soon after the deal closes.\nMore here:\nSecrets to Closing Your First 6 Figure Deal (Video + Transcript) | SaaStr\nSecrets to Closing Your First 6 Figure Deal (Video + Transcript)\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] The rise of the SDR and productizing outbound and qualifying inbound with humans is a trend in the first 15 years of SaaS.\n[E2] Customer success as a new, empowered function is a trend in the first 15 years of SaaS.\n[E3] Human support is still important for paying customers in the first 15 years of SaaS.\n[E4] The role of the SDR exploded in the past decade.\n[E5] Everyone has fully staffed CS over the past decade.\n[E6] We've all become NRR, GRR, and CSAT experts.\n[E7] CS owned it all.\n[E8] There is a general sense among the leaders in sales software that we will end up with fewer, better SDRs.\n[E9] The majority of email and follow-up will be done with AI.\n[E10] Salesloft, Outreach, Gong and more radically changed the space.\n[E11] Customer Success has in many cases morphed into part of the sales team.\n[E12] The era of the Bay Area sales team is over.\n[E13] The talent is still here.\n[E14] They will join a start-up based almost anywhere.\n\nNow write the requested blog post about: Why Now Is the Biggest Change in SaaS Sales in 15+ Years<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "answer": "So I’ve been lucky enough to work in B2B and SaaS since the earliest days. From being the #1 employee at Adobe Sign / EchoSign through to now running a seed fund investing $100k-$3m checks in the best SaaS companies out there.\nAnd one thing hasn’t really changed: deals close, products ship, teams leave, and sales cycles continue. In the end, this leads to change in who does what, again and again and again. And also, change in how things happen and evolve every year or two. But the overall cadence is pretty consistent across most top public SaaS companies.\nUntil recently, though. At least until the past 24 months or so. So what’s different today? Let me try to distill it down to the Top 5 changes happening right now in SaaS sales:\nFirst, everyone got good at sales in the Boom Times. Not everyone — but a lot of folks. Everyone had money, and everyone was hiring. Every CRO wanted to grow faster. And as a result, so many SaaS companies were able to hire mediocre reps and make them look good by virtue of market pull alone. Today, those same CROs would laugh if someone suggested adding mediocre reps to their sales team. No longer is the market pulling demand like it used to. Demand remains high, but it’s no longer pulling in mediocre reps.\nSecond, SDRs took off. As the Internet became ubiquitous, more people started using tools like Hubspot, Salesforce, etc. But once the internet reached ubiquity around 2010-2011 or so, SDRs didn’t take off immediately. By then, everyone knew how to sell. Even if they weren’t very good at it yet. But by about 2015 or so, SDRs became the secret weapon of SaaS sales.",
+    "raw_model_output": "So I’ve been lucky enough to work in B2B and SaaS since the earliest days. From being the #1 employee at Adobe Sign / EchoSign through to now running a seed fund investing $100k-$3m checks in the best SaaS companies out there.\nAnd one thing hasn’t really changed: deals close, products ship, teams leave, and sales cycles continue. In the end, this leads to change in who does what, again and again and again. And also, change in how things happen and evolve every year or two. But the overall cadence is pretty consistent across most top public SaaS companies.\nUntil recently, though. At least until the past 24 months or so. So what’s different today? Let me try to distill it down to the Top 5 changes happening right now in SaaS sales:\nFirst, everyone got good at sales in the Boom Times. Not everyone — but a lot of folks. Everyone had money, and everyone was hiring. Every CRO wanted to grow faster. And as a result, so many SaaS companies were able to hire mediocre reps and make them look good by virtue of market pull alone. Today, those same CROs would laugh if someone suggested adding mediocre reps to their sales team. No longer is the market pulling demand like it used to. Demand remains high, but it’s no longer pulling in mediocre reps.\nSecond, SDRs took off. As the Internet became ubiquitous, more people started using tools like Hubspot, Salesforce, etc. But once the internet reached ubiquity around 2010-2011 or so, SDRs didn’t take off immediately. By then, everyone knew how to sell. Even if they weren’t very good at it yet. But by about 2015 or so, SDRs became the secret weapon of SaaS sales.",
+    "deployment_output": "So I’ve been lucky enough to work in B2B and SaaS since the earliest days. From being the #1 employee at Adobe Sign / EchoSign through to now running a seed fund investing $100k-$3m checks in the best SaaS companies out there.\nAnd one thing hasn’t really changed: deals close, products ship, teams leave, and sales cycles continue. In the end, this leads to change in who does what, again and again and again. And also, change in how things happen and evolve every year or two. But the overall cadence is pretty consistent across most top public SaaS companies.\nUntil recently, though. At least until the past 24 months or so. So what’s different today? Let me try to distill it down to the Top 5 changes happening right now in SaaS sales:\nFirst, everyone got good at sales in the Boom Times. Not everyone — but a lot of folks. Everyone had money, and everyone was hiring. Every CRO wanted to grow faster. And as a result, so many SaaS companies were able to hire mediocre reps and make them look good by virtue of market pull alone. Today, those same CROs would laugh if someone suggested adding mediocre reps to their sales team. No longer is the market pulling demand like it used to. Demand remains high, but it’s no longer pulling in mediocre reps.\nSecond, SDRs took off. As the Internet became ubiquitous, more people started using tools like Hubspot, Salesforce, etc. But once the internet reached ubiquity around 2010-2011 or so, SDRs didn’t take off immediately. By then, everyone knew how to sell. Even if they weren’t very good at it yet. But by about 2015 or so, SDRs became the secret weapon of SaaS sales.",
+    "first_attempt_answer": "So I’ve been lucky enough to work in B2B and SaaS since the earliest days. From being the #1 employee at Adobe Sign / EchoSign through to now running a seed fund investing $100k-$3m checks in the best SaaS companies out there.\nAnd one thing hasn’t really changed: deals close, products ship, teams leave, and sales cycles continue. In the end, this leads to change in who does what, again and again and again. And also, change in how things happen and evolve every year or two. But the overall cadence is pretty consistent across most top public SaaS companies.\nUntil recently, though. At least until the past 24 months or so. So what’s different today? Let me try to distill it down to the Top 5 changes happening right now in SaaS sales:\nFirst, everyone got good at sales in the Boom Times. Not everyone — but a lot of folks. Everyone had money, and everyone was hiring. Every CRO wanted to grow faster. And as a result, so many SaaS companies were able to hire mediocre reps and make them look good by virtue of market pull alone. Today, those same CROs would laugh if someone suggested adding mediocre reps to their sales team. No longer is the market pulling demand like it used to. Demand remains high, but it’s no longer pulling in mediocre reps.\nSecond, SDRs took off. As the Internet became ubiquitous, more people started using tools like Hubspot, Salesforce, etc. But once the internet reached ubiquity around 2010-2011 or so, SDRs didn’t take off immediately. By then, everyone knew how to sell. Even if they weren’t very good at it yet. But by about 2015 or so, SDRs became the secret weapon of SaaS sales.",
+    "retry_answer": null,
+    "query": "Why Now Is the Biggest Change in SaaS Sales in 15+ Years",
+    "max_new_tokens": 768,
+    "seed": 66,
+    "retry_seed": null,
+    "deployment_accepted": true,
+    "repair_occurred": false,
+    "generation_attempt": {
+      "seed": 66,
+      "answer": "So I’ve been lucky enough to work in B2B and SaaS since the earliest days. From being the #1 employee at Adobe Sign / EchoSign through to now running a seed fund investing $100k-$3m checks in the best SaaS companies out there.\nAnd one thing hasn’t really changed: deals close, products ship, teams leave, and sales cycles continue. In the end, this leads to change in who does what, again and again and again. And also, change in how things happen and evolve every year or two. But the overall cadence is pretty consistent across most top public SaaS companies.\nUntil recently, though. At least until the past 24 months or so. So what’s different today? Let me try to distill it down to the Top 5 changes happening right now in SaaS sales:\nFirst, everyone got good at sales in the Boom Times. Not everyone — but a lot of folks. Everyone had money, and everyone was hiring. Every CRO wanted to grow faster. And as a result, so many SaaS companies were able to hire mediocre reps and make them look good by virtue of market pull alone. Today, those same CROs would laugh if someone suggested adding mediocre reps to their sales team. No longer is the market pulling demand like it used to. Demand remains high, but it’s no longer pulling in mediocre reps.\nSecond, SDRs took off. As the Internet became ubiquitous, more people started using tools like Hubspot, Salesforce, etc. But once the internet reached ubiquity around 2010-2011 or so, SDRs didn’t take off immediately. By then, everyone knew how to sell. Even if they weren’t very good at it yet. But by about 2015 or so, SDRs became the secret weapon of SaaS sales.",
+      "numeric_grounding": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [],
+        "values": [
+          {
+            "value": "$100k",
+            "canonical": "usd:100000",
+            "sentence": "From being the #1 employee at Adobe Sign / EchoSign through to now running a seed fund investing $100k-$3m checks in the best SaaS companies out there.",
+            "start": 172,
+            "end": 177
+          },
+          {
+            "value": "$3m",
+            "canonical": "usd:3000000",
+            "sentence": "From being the #1 employee at Adobe Sign / EchoSign through to now running a seed fund investing $100k-$3m checks in the best SaaS companies out there.",
+            "start": 178,
+            "end": 181
+          },
+          {
+            "value": "2010",
+            "canonical": "year:2010",
+            "sentence": "But once the internet reached ubiquity around 2010-2011 or so, SDRs didn’t take off immediately",
+            "start": 1421,
+            "end": 1425
+          },
+          {
+            "value": "2011",
+            "canonical": "year:2011",
+            "sentence": "But once the internet reached ubiquity around 2010-2011 or so, SDRs didn’t take off immediately",
+            "start": 1426,
+            "end": 1430
+          },
+          {
+            "value": "2015",
+            "canonical": "year:2015",
+            "sentence": "But by about 2015 or so, SDRs became the secret weapon of SaaS sales.",
+            "start": 1563,
+            "end": 1567
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "$100k",
+            "canonical": "usd:100000",
+            "sentence": "From being the #1 employee at Adobe Sign / EchoSign through to now running a seed fund investing $100k-$3m checks in the best SaaS companies out there.",
+            "start": 172,
+            "end": 177
+          },
+          {
+            "value": "$3m",
+            "canonical": "usd:3000000",
+            "sentence": "From being the #1 employee at Adobe Sign / EchoSign through to now running a seed fund investing $100k-$3m checks in the best SaaS companies out there.",
+            "start": 178,
+            "end": 181
+          },
+          {
+            "value": "2010",
+            "canonical": "year:2010",
+            "sentence": "But once the internet reached ubiquity around 2010-2011 or so, SDRs didn’t take off immediately",
+            "start": 1421,
+            "end": 1425
+          },
+          {
+            "value": "2011",
+            "canonical": "year:2011",
+            "sentence": "But once the internet reached ubiquity around 2010-2011 or so, SDRs didn’t take off immediately",
+            "start": 1426,
+            "end": 1430
+          },
+          {
+            "value": "2015",
+            "canonical": "year:2015",
+            "sentence": "But by about 2015 or so, SDRs became the secret weapon of SaaS sales.",
+            "start": 1563,
+            "end": 1567
+          }
+        ]
+      },
+      "rag_source_copying": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 2,
+        "document_id": "train_7876",
+        "matched_generated_span": "i ve",
+        "matched_retrieved_span": "i ve"
+      },
+      "stop_reason": "eos"
+    },
+    "repair_attempt": null,
+    "accepted_attempt": 1,
+    "rag_source_copying": {
+      "applicable": true,
+      "threshold": 12,
+      "pass": true,
+      "flagged": false,
+      "max_contiguous_words": 2,
+      "document_id": "train_7876",
+      "matched_generated_span": "i ve",
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 2,
+        "document_id": "train_7876",
+        "matched_generated_span": "i ve",
+        "matched_retrieved_span": "i ve"
+      },
+      "retry": null,
+      "retry_occurred": false,
+      "repair_occurred": false
+    },
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": false,
+      "failure": "unsupported_numeric_grounding",
+      "unsupported": [
+        {
+          "value": "$100k",
+          "canonical": "usd:100000",
+          "sentence": "From being the #1 employee at Adobe Sign / EchoSign through to now running a seed fund investing $100k-$3m checks in the best SaaS companies out there.",
+          "start": 172,
+          "end": 177
+        },
+        {
+          "value": "$3m",
+          "canonical": "usd:3000000",
+          "sentence": "From being the #1 employee at Adobe Sign / EchoSign through to now running a seed fund investing $100k-$3m checks in the best SaaS companies out there.",
+          "start": 178,
+          "end": 181
+        },
+        {
+          "value": "2010",
+          "canonical": "year:2010",
+          "sentence": "But once the internet reached ubiquity around 2010-2011 or so, SDRs didn’t take off immediately",
+          "start": 1421,
+          "end": 1425
+        },
+        {
+          "value": "2011",
+          "canonical": "year:2011",
+          "sentence": "But once the internet reached ubiquity around 2010-2011 or so, SDRs didn’t take off immediately",
+          "start": 1426,
+          "end": 1430
+        },
+        {
+          "value": "2015",
+          "canonical": "year:2015",
+          "sentence": "But by about 2015 or so, SDRs became the secret weapon of SaaS sales.",
+          "start": 1563,
+          "end": 1567
+        }
+      ],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [],
+        "values": [
+          {
+            "value": "$100k",
+            "canonical": "usd:100000",
+            "sentence": "From being the #1 employee at Adobe Sign / EchoSign through to now running a seed fund investing $100k-$3m checks in the best SaaS companies out there.",
+            "start": 172,
+            "end": 177
+          },
+          {
+            "value": "$3m",
+            "canonical": "usd:3000000",
+            "sentence": "From being the #1 employee at Adobe Sign / EchoSign through to now running a seed fund investing $100k-$3m checks in the best SaaS companies out there.",
+            "start": 178,
+            "end": 181
+          },
+          {
+            "value": "2010",
+            "canonical": "year:2010",
+            "sentence": "But once the internet reached ubiquity around 2010-2011 or so, SDRs didn’t take off immediately",
+            "start": 1421,
+            "end": 1425
+          },
+          {
+            "value": "2011",
+            "canonical": "year:2011",
+            "sentence": "But once the internet reached ubiquity around 2010-2011 or so, SDRs didn’t take off immediately",
+            "start": 1426,
+            "end": 1430
+          },
+          {
+            "value": "2015",
+            "canonical": "year:2015",
+            "sentence": "But by about 2015 or so, SDRs became the secret weapon of SaaS sales.",
+            "start": 1563,
+            "end": 1567
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "$100k",
+            "canonical": "usd:100000",
+            "sentence": "From being the #1 employee at Adobe Sign / EchoSign through to now running a seed fund investing $100k-$3m checks in the best SaaS companies out there.",
+            "start": 172,
+            "end": 177
+          },
+          {
+            "value": "$3m",
+            "canonical": "usd:3000000",
+            "sentence": "From being the #1 employee at Adobe Sign / EchoSign through to now running a seed fund investing $100k-$3m checks in the best SaaS companies out there.",
+            "start": 178,
+            "end": 181
+          },
+          {
+            "value": "2010",
+            "canonical": "year:2010",
+            "sentence": "But once the internet reached ubiquity around 2010-2011 or so, SDRs didn’t take off immediately",
+            "start": 1421,
+            "end": 1425
+          },
+          {
+            "value": "2011",
+            "canonical": "year:2011",
+            "sentence": "But once the internet reached ubiquity around 2010-2011 or so, SDRs didn’t take off immediately",
+            "start": 1426,
+            "end": 1430
+          },
+          {
+            "value": "2015",
+            "canonical": "year:2015",
+            "sentence": "But by about 2015 or so, SDRs became the secret weapon of SaaS sales.",
+            "start": 1563,
+            "end": 1567
+          }
+        ]
+      },
+      "retry": null
+    },
+    "prompt_tokens": 1069,
+    "backend": "unsloth",
+    "retrieval": true,
+    "retrieval_query": "Why Now Is the Biggest Change in SaaS Sales in 15+ Years",
+    "retrieval_filter": null,
+    "retrieval_k": 4,
+    "retrieval_hits": [
+      {
+        "id": "train_7876",
+        "text": "So it does seem like some of the biggest changes to the human side of SaaS are now coming. I’ve talked with three CEOs at leading vendors in sales and post-sales at $200m+ in ARR the past few weeks and they’ve all reinforced these are some of the biggest changes in a generation. What we’ve seen in the first 15 years of SaaS:\nSpecialization in sales\n. Segment reps, and have closers close. The rise of the SDR and productizing outbound and qualifying inbound with humans\n. Outbound is nothing new, but the formal role of the SDR exploded in the past decade. The rise of customer success as a new, empowered function. Everyone has fully staffed CS over the past decade. We’ve all become NRR, GRR, and CSAT experts, and CS owned it all. Human support remained important, at least for paying customers\n. Sometimes begrudgingly, but everyone has some level of human support, especially for larger customers. In fact, leaders from Intercom to Front to Gorgias to Zendesk exploded as this function, while not remotely new, became standardized. The reality is this is all now changing, for the first time. AI isn’t the only reason, the real drive is efficiency. But AI is the accelerant:\n#1. There is a general sense among the leaders in sales software that we will end up with fewer, better SDRs, and that the majority of email and follow-up will be done with AI. Salesloft, Outreach, Gong and more radically changed the space. But we may be looking at far more radical change in the coming few years.\n#2. Customer Success has in many cases morphed into part of the sales team.",
+        "medium": "blog",
+        "group_id": "6625f635f099b219bf3eb9884f718d27e86d298378c09229b47dd94f2df30cae",
+        "row_id": 7876,
+        "split": "train",
+        "distance": 0.20673507452011108
+      },
+      {
+        "id": "train_25435",
+        "text": "My answer to How has the SaaS industry changed over the last 5 years? \nhttp://qr.ae/z0RQy",
+        "medium": "x",
+        "group_id": "284752545ef56a54f2da06d2ef04a0dcde5d8c4555a973b5bdeaff5d2131c8d4",
+        "row_id": 25435,
+        "split": "train",
+        "distance": 0.2174854278564453
+      },
+      {
+        "id": "train_15820",
+        "text": "#1 change to SaaS since March 15:\n\nThe era of the Bay Area sales team is over\n\nThe talent is still here\n\nIt's just now, they will join a start-up based almost anywhere",
+        "medium": "x",
+        "group_id": "17e000cbdda999d097634e199eed4d635a8e21ebc49e1100a93cb743c0b93f02",
+        "row_id": 15820,
+        "split": "train",
+        "distance": 0.23608839511871338
+      },
+      {
+        "id": "train_25711",
+        "text": "Answer by \n@jasonlk\n to How has the SaaS industry changed over the last 5 years? \nhttp://qr.ae/ZRSW0",
+        "medium": "x",
+        "group_id": "c8d8e253c38f45ee2ac9b9bbaddd80b2b89a26cbfd3a0d4f7edb91c591831d74",
+        "row_id": 25711,
+        "split": "train",
+        "distance": 0.23696637153625488
+      }
+    ],
+    "copying": [
+      {
+        "id": "train_7876",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_25435",
+        "shared_word_span": 1
+      },
+      {
+        "id": "train_15820",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_25711",
+        "shared_word_span": 1
+      }
+    ],
+    "retrieval_backend": "dense",
+    "proposed_atomic_claims": [
+      {
+        "source_id": "train_7876",
+        "claim": "Specialization in sales is a trend in the first 15 years of SaaS.",
+        "support_span": "Specialization in sales. Segment reps, and have closers close.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7876",
+        "claim": "The rise of the SDR and productizing outbound and qualifying inbound with humans is a trend in the first 15 years of SaaS.",
+        "support_span": "The rise of the SDR and productizing outbound and qualifying inbound with humans",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7876",
+        "claim": "Customer success as a new, empowered function is a trend in the first 15 years of SaaS.",
+        "support_span": "The rise of customer success as a new, empowered function.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7876",
+        "claim": "Human support is still important for paying customers in the first 15 years of SaaS.",
+        "support_span": "Human support remained important, at least for paying customers",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7876",
+        "claim": "The role of the SDR exploded in the past decade.",
+        "support_span": "The formal role of the SDR exploded in the past decade.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7876",
+        "claim": "Everyone has fully staffed CS over the past decade.",
+        "support_span": "Everyone has fully staffed CS over the past decade.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7876",
+        "claim": "We've all become NRR, GRR, and CSAT experts.",
+        "support_span": "We’ve all become NRR, GRR, and CSAT experts",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7876",
+        "claim": "CS owned it all.",
+        "support_span": "CS owned it all.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7876",
+        "claim": "There is a general sense among the leaders in sales software that we will end up with fewer, better SDRs.",
+        "support_span": "There is a general sense among the leaders in sales software that we will end up with fewer, better SDRs",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7876",
+        "claim": "The majority of email and follow-up will be done with AI.",
+        "support_span": "that the majority of email and follow-up will be done with AI",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7876",
+        "claim": "Salesloft, Outreach, Gong and more radically changed the space.",
+        "support_span": "Salesloft, Outreach, Gong and more radically changed the space.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7876",
+        "claim": "Customer Success has in many cases morphed into part of the sales team.",
+        "support_span": "Customer Success has in many cases morphed into part of the sales team.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_15820",
+        "claim": "The era of the Bay Area sales team is over.",
+        "support_span": "The era of the Bay Area sales team is over",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_15820",
+        "claim": "The talent is still here.",
+        "support_span": "The talent is still here",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_15820",
+        "claim": "They will join a start-up based almost anywhere.",
+        "support_span": "It's just now, they will join a start-up based almost anywhere",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_25435",
+        "claim": "How has the SaaS industry changed over the last 5 years?",
+        "support_span": "How has the SaaS industry changed over the last 5 years?",
+        "claim_type": "question"
+      },
+      {
+        "source_id": "train_25711",
+        "claim": "How has the SaaS industry changed over the last 5 years?",
+        "support_span": "How has the SaaS industry changed over the last 5 years?",
+        "claim_type": "question"
+      }
+    ],
+    "validation_rejected": [
+      {
+        "source_id": "train_7876",
+        "claim": "Specialization in sales is a trend in the first 15 years of SaaS.",
+        "support_span": "Specialization in sales. Segment reps, and have closers close.",
+        "claim_type": "fact",
+        "reason": "support_not_in_source"
+      },
+      {
+        "source_id": "train_25435",
+        "claim": "How has the SaaS industry changed over the last 5 years?",
+        "support_span": "How has the SaaS industry changed over the last 5 years?",
+        "claim_type": "question",
+        "reason": "invalid_claim_type"
+      },
+      {
+        "source_id": "train_25711",
+        "claim": "How has the SaaS industry changed over the last 5 years?",
+        "support_span": "How has the SaaS industry changed over the last 5 years?",
+        "claim_type": "question",
+        "reason": "invalid_claim_type"
+      }
+    ],
+    "verifier_rejected": [],
+    "verified_claims": [
+      {
+        "source_id": "train_7876",
+        "claim": "The rise of the SDR and productizing outbound and qualifying inbound with humans is a trend in the first 15 years of SaaS.",
+        "support_span": "The rise of the SDR and productizing outbound and qualifying inbound with humans",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7876",
+        "claim": "Customer success as a new, empowered function is a trend in the first 15 years of SaaS.",
+        "support_span": "The rise of customer success as a new, empowered function.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7876",
+        "claim": "Human support is still important for paying customers in the first 15 years of SaaS.",
+        "support_span": "Human support remained important, at least for paying customers",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7876",
+        "claim": "The role of the SDR exploded in the past decade.",
+        "support_span": "The formal role of the SDR exploded in the past decade.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7876",
+        "claim": "Everyone has fully staffed CS over the past decade.",
+        "support_span": "Everyone has fully staffed CS over the past decade.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7876",
+        "claim": "We've all become NRR, GRR, and CSAT experts.",
+        "support_span": "We’ve all become NRR, GRR, and CSAT experts",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7876",
+        "claim": "CS owned it all.",
+        "support_span": "CS owned it all.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7876",
+        "claim": "There is a general sense among the leaders in sales software that we will end up with fewer, better SDRs.",
+        "support_span": "There is a general sense among the leaders in sales software that we will end up with fewer, better SDRs",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7876",
+        "claim": "The majority of email and follow-up will be done with AI.",
+        "support_span": "that the majority of email and follow-up will be done with AI",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7876",
+        "claim": "Salesloft, Outreach, Gong and more radically changed the space.",
+        "support_span": "Salesloft, Outreach, Gong and more radically changed the space.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7876",
+        "claim": "Customer Success has in many cases morphed into part of the sales team.",
+        "support_span": "Customer Success has in many cases morphed into part of the sales team.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_15820",
+        "claim": "The era of the Bay Area sales team is over.",
+        "support_span": "The era of the Bay Area sales team is over",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_15820",
+        "claim": "The talent is still here.",
+        "support_span": "The talent is still here",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_15820",
+        "claim": "They will join a start-up based almost anywhere.",
+        "support_span": "It's just now, they will join a start-up based almost anywhere",
+        "claim_type": "fact"
+      }
+    ],
+    "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] The rise of the SDR and productizing outbound and qualifying inbound with humans is a trend in the first 15 years of SaaS.\n[E2] Customer success as a new, empowered function is a trend in the first 15 years of SaaS.\n[E3] Human support is still important for paying customers in the first 15 years of SaaS.\n[E4] The role of the SDR exploded in the past decade.\n[E5] Everyone has fully staffed CS over the past decade.\n[E6] We've all become NRR, GRR, and CSAT experts.\n[E7] CS owned it all.\n[E8] There is a general sense among the leaders in sales software that we will end up with fewer, better SDRs.\n[E9] The majority of email and follow-up will be done with AI.\n[E10] Salesloft, Outreach, Gong and more radically changed the space.\n[E11] Customer Success has in many cases morphed into part of the sales team.\n[E12] The era of the Bay Area sales team is over.\n[E13] The talent is still here.\n[E14] They will join a start-up based almost anywhere.",
+    "raw_extraction": "[\n  {\n    \"source_id\": \"train_7876\",\n    \"claim\": \"Specialization in sales is a trend in the first 15 years of SaaS.\",\n    \"support_span\": \"Specialization in sales. Segment reps, and have closers close.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7876\",\n    \"claim\": \"The rise of the SDR and productizing outbound and qualifying inbound with humans is a trend in the first 15 years of SaaS.\",\n    \"support_span\": \"The rise of the SDR and productizing outbound and qualifying inbound with humans\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7876\",\n    \"claim\": \"Customer success as a new, empowered function is a trend in the first 15 years of SaaS.\",\n    \"support_span\": \"The rise of customer success as a new, empowered function.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7876\",\n    \"claim\": \"Human support is still important for paying customers in the first 15 years of SaaS.\",\n    \"support_span\": \"Human support remained important, at least for paying customers\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7876\",\n    \"claim\": \"The role of the SDR exploded in the past decade.\",\n    \"support_span\": \"The formal role of the SDR exploded in the past decade.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7876\",\n    \"claim\": \"Everyone has fully staffed CS over the past decade.\",\n    \"support_span\": \"Everyone has fully staffed CS over the past decade.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7876\",\n    \"claim\": \"We've all become NRR, GRR, and CSAT experts.\",\n    \"support_span\": \"We’ve all become NRR, GRR, and CSAT experts\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7876\",\n    \"claim\": \"CS owned it all.\",\n    \"support_span\": \"CS owned it all.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7876\",\n    \"claim\": \"There is a general sense among the leaders in sales software that we will end up with fewer, better SDRs.\",\n    \"support_span\": \"There is a general sense among the leaders in sales software that we will end up with fewer, better SDRs\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7876\",\n    \"claim\": \"The majority of email and follow-up will be done with AI.\",\n    \"support_span\": \"that the majority of email and follow-up will be done with AI\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7876\",\n    \"claim\": \"Salesloft, Outreach, Gong and more radically changed the space.\",\n    \"support_span\": \"Salesloft, Outreach, Gong and more radically changed the space.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7876\",\n    \"claim\": \"Customer Success has in many cases morphed into part of the sales team.\",\n    \"support_span\": \"Customer Success has in many cases morphed into part of the sales team.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_15820\",\n    \"claim\": \"The era of the Bay Area sales team is over.\",\n    \"support_span\": \"The era of the Bay Area sales team is over\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_15820\",\n    \"claim\": \"The talent is still here.\",\n    \"support_span\": \"The talent is still here\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_15820\",\n    \"claim\": \"They will join a start-up based almost anywhere.\",\n    \"support_span\": \"It's just now, they will join a start-up based almost anywhere\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_25435\",\n    \"claim\": \"How has the SaaS industry changed over the last 5 years?\",\n    \"support_span\": \"How has the SaaS industry changed over the last 5 years?\",\n    \"claim_type\": \"question\"\n  },\n  {\n    \"source_id\": \"train_25711\",\n    \"claim\": \"How has the SaaS industry changed over the last 5 years?\",\n    \"support_span\": \"How has the SaaS industry changed over the last 5 years?\",\n    \"claim_type\": \"question\"\n  }\n]",
+    "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Why Now Is the Biggest Change in SaaS Sales in 15+ Years\n\nSource passages:\n[train_7876]\nSo it does seem like some of the biggest changes to the human side of SaaS are now coming. I’ve talked with three CEOs at leading vendors in sales and post-sales at $200m+ in ARR the past few weeks and they’ve all reinforced these are some of the biggest changes in a generation. What we’ve seen in the first 15 years of SaaS:\nSpecialization in sales\n. Segment reps, and have closers close. The rise of the SDR and productizing outbound and qualifying inbound with humans\n. Outbound is nothing new, but the formal role of the SDR exploded in the past decade. The rise of customer success as a new, empowered function. Everyone has fully staffed CS over the past decade. We’ve all become NRR, GRR, and CSAT experts, and CS owned it all. Human support remained important, at least for paying customers\n. Sometimes begrudgingly, but everyone has some level of human support, especially for larger customers. In fact, leaders from Intercom to Front to Gorgias to Zendesk exploded as this function, while not remotely new, became standardized. The reality is this is all now changing, for the first time. AI isn’t the only reason, the real drive is efficiency. But AI is the accelerant:\n#1. There is a general sense among the leaders in sales software that we will end up with fewer, better SDRs, and that the majority of email and follow-up will be done with AI. Salesloft, Outreach, Gong and more radically changed the space. But we may be looking at far more radical change in the coming few years.\n#2. Customer Success has in many cases morphed into part of the sales team.\n\n[train_25435]\nMy answer to How has the SaaS industry changed over the last 5 years? \nhttp://qr.ae/z0RQy\n\n[train_15820]\n#1 change to SaaS since March 15:\n\nThe era of the Bay Area sales team is over\n\nThe talent is still here\n\nIt's just now, they will join a start-up based almost anywhere\n\n[train_25711]\nAnswer by \n@jasonlk\n to How has the SaaS industry changed over the last 5 years? \nhttp://qr.ae/ZRSW0",
+    "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Why Now Is the Biggest Change in SaaS Sales in 15+ Years\n\nSource passages:\n[train_7876]\nSo it does seem like some of the biggest changes to the human side of SaaS are now coming. I’ve talked with three CEOs at leading vendors in sales and post-sales at $200m+ in ARR the past few weeks and they’ve all reinforced these are some of the biggest changes in a generation. What we’ve seen in the first 15 years of SaaS:\nSpecialization in sales\n. Segment reps, and have closers close. The rise of the SDR and productizing outbound and qualifying inbound with humans\n. Outbound is nothing new, but the formal role of the SDR exploded in the past decade. The rise of customer success as a new, empowered function. Everyone has fully staffed CS over the past decade. We’ve all become NRR, GRR, and CSAT experts, and CS owned it all. Human support remained important, at least for paying customers\n. Sometimes begrudgingly, but everyone has some level of human support, especially for larger customers. In fact, leaders from Intercom to Front to Gorgias to Zendesk exploded as this function, while not remotely new, became standardized. The reality is this is all now changing, for the first time. AI isn’t the only reason, the real drive is efficiency. But AI is the accelerant:\n#1. There is a general sense among the leaders in sales software that we will end up with fewer, better SDRs, and that the majority of email and follow-up will be done with AI. Salesloft, Outreach, Gong and more radically changed the space. But we may be looking at far more radical change in the coming few years.\n#2. Customer Success has in many cases morphed into part of the sales team.\n\n[train_25435]\nMy answer to How has the SaaS industry changed over the last 5 years? \nhttp://qr.ae/z0RQy\n\n[train_15820]\n#1 change to SaaS since March 15:\n\nThe era of the Bay Area sales team is over\n\nThe talent is still here\n\nIt's just now, they will join a start-up based almost anywhere\n\n[train_25711]\nAnswer by \n@jasonlk\n to How has the SaaS industry changed over the last 5 years? \nhttp://qr.ae/ZRSW0<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "extraction_seconds": 27.563,
+    "verification_seconds": 0.0,
+    "verification_records": [],
+    "llm_verifier_on_critical_path": false,
+    "allowed_numeric_values": [],
+    "distillation_adapter_enabled": false,
+    "verification_adapter_enabled": false,
+    "distillation_backend": "same_loaded_4bit_base_adapter_off",
+    "distillation_do_sample": false,
+    "extraction_max_new_tokens": 2560,
+    "verification_max_new_tokens": 24,
+    "distillation_seed": 0,
+    "support_spans_in_generator_prompt": false,
+    "evidence_stage_reason": null,
+    "evidence_status": "verified",
+    "extraction_attempts": 1,
+    "extraction_stop_reason": "eos",
+    "prompt_contract": "factual-reliability-v1",
+    "fixed_style_enabled": true,
+    "style_applied": true,
+    "style_exemplar_count": 2,
+    "latency_seconds": 18.818,
+    "generated_tokens_including_stop": 379,
+    "last_token_id": 128009,
+    "effective_eos_token_ids": [
+      128001,
+      128008,
+      128009
+    ],
+    "stop_reason": "eos",
+    "budget_fraction": 0.4934895833333333,
+    "early_eos": true,
+    "first_attempt_stop_reason": "eos",
+    "retry_stop_reason": null
+  }
+}

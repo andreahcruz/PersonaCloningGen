@@ -1,0 +1,2156 @@
+{
+  "status": "complete",
+  "question_id": "gold_023",
+  "query": "The Rise of the “N=1” App: When Building It Yourself Really Beats Buying It.",
+  "retrieval": {
+    "backend": "lightrag",
+    "mode": "hybrid",
+    "evidence_budget": 4,
+    "top_k": 20
+  },
+  "payload": {
+    "status": "success",
+    "message": "Query processed successfully",
+    "data": {
+      "entities": [
+        {
+          "entity_name": "App",
+          "entity_type": "product",
+          "description": "The App is a software application developed by a company for its users. It is known for being easy to use and has been reference customers for the company, with their case study on the company's website and several of their largest customers acquired through direct recommendations. The app is a software product that can be rebuilt or debugged, but it may never be 100% stable due to the evolving nature of AI-generated code. Manual testing is required after changes are made to ensure core flows are intact.\n\nThe app serves the needs of its users, with a focus on ease of use and stability. It is also the subject of the Product Roadmap Review, and it has been created by a developer. In addition to its primary function, the app can be deployed on mobile devices, and it is often used as a digital application for business process change. Some users may require a free trial to get value from the app, but it is generally a software application or service that is used by individuals and businesses alike.\n\nIt is worth noting that the term \"App\" can refer to a mobile application, and this is indeed the case for the App in question. However, the app's functionality and purpose extend beyond just mobile devices, making it a more general software application that can be used in a variety of contexts.<SEP>A named product or service, specifically an application.<SEP>The software application or service provided by the SaaS company.<SEP>A software application provided as a service, often requiring a sales team's assistance for upgrades.<SEP>A software application designed to manage customer interactions and data.<SEP>An app is a software application that runs on a mobile device.<SEP>A platform where apps can drive users for product experience, with better margins and cleaner attribution.",
+          "source_id": "gd_09267d6dfab254529a946b18-chunk-002<SEP>gd_2740d9c87f5393610ce047ff-chunk-003<SEP>gd_8b5c054c9377bee23f1a4bd9-chunk-000<SEP>gd_816304ae833fa148e165ce04-chunk-000<SEP>gd_6b1a49b4098b8d5ced9cbc54-chunk-000<SEP>gd_79858ea6162573644fe3e173-chunk-005<SEP>gd_79858ea6162573644fe3e173-chunk-006<SEP>gd_364d266152046eb1076d048a-chunk-003<SEP>gd_8cdf3d9fe99e8ab9b22ed260-chunk-000<SEP>gd_aff22cfcaff5e7bbcca05126-chunk-000<SEP>gd_3766c53507450d46485f48b1-chunk-001<SEP>gd_dc316e2bc29fa87eaae0236e-chunk-000<SEP>gd_d3046abbff56769a90cbeea0-chunk-002<SEP>gd_b80d7d772933d7964f9d8df7-chunk-002<SEP>gd_d5dd5718c4d9070f399d45a0-chunk-000<SEP>gd_9021ddbc4daccae39880d4e2-chunk-001<SEP>gd_37f607fa6221f3f2f29989e0-chunk-001<SEP>gd_dfbe999d4fbee6b9fac2b631-chunk-003<SEP>gd_8e21e4824de46ec5db236abe-chunk-001<SEP>gd_cee3fa988d8406247d556896-chunk-005<SEP>gd_cee3fa988d8406247d556896-chunk-008",
+          "file_path": "gd_09267d6dfab254529a946b18<SEP>gd_2740d9c87f5393610ce047ff<SEP>gd_8b5c054c9377bee23f1a4bd9<SEP>gd_816304ae833fa148e165ce04<SEP>gd_6b1a49b4098b8d5ced9cbc54<SEP>gd_79858ea6162573644fe3e173<SEP>gd_364d266152046eb1076d048a<SEP>gd_8cdf3d9fe99e8ab9b22ed260<SEP>gd_aff22cfcaff5e7bbcca05126<SEP>gd_3766c53507450d46485f48b1<SEP>gd_dc316e2bc29fa87eaae0236e<SEP>gd_d3046abbff56769a90cbeea0<SEP>gd_b80d7d772933d7964f9d8df7<SEP>gd_d5dd5718c4d9070f399d45a0<SEP>gd_9021ddbc4daccae39880d4e2<SEP>gd_37f607fa6221f3f2f29989e0<SEP>gd_dfbe999d4fbee6b9fac2b631<SEP>gd_8e21e4824de46ec5db236abe<SEP>gd_cee3fa988d8406247d556896",
+          "created_at": 1793618632
+        },
+        {
+          "entity_name": "NNARR",
+          "entity_type": "concept",
+          "description": "Net New Annual Recurring Revenue, a metric used to measure the growth of a company's revenue",
+          "source_id": "gd_753a13ceccfb779879f29786-chunk-003",
+          "file_path": "gd_753a13ceccfb779879f29786",
+          "created_at": 1793570331
+        },
+        {
+          "entity_name": "Apps",
+          "entity_type": "product",
+          "description": "Apps are software applications that users can download and install on their devices. They provide specific functionality or services, and can be used by customers to achieve various goals. Apps can be categorized as software applications that offer similar amounts of value to the same buyer, or as best-of-breed apps that can be used anywhere. In some cases, apps are offered by companies, such as OpenAI, which has Fiji Simo as its new CEO. Overall, apps are a type of software application that can be downloaded and installed on mobile devices or computers, and are used by customers to access a wide range of services and functionality.",
+          "source_id": "gd_072a958576c3d08d325dd01b-chunk-001<SEP>gd_a956d6defae69ac68c5d4cb9-chunk-001<SEP>gd_7a9a67266e89c0a8630f6fbb-chunk-002<SEP>gd_dd626eb5f79a12db1cce58c5-chunk-000<SEP>gd_cee09e6c9f84106353f2f15e-chunk-003<SEP>gd_9b0a0e48daf169f6dd14b6a2-chunk-000<SEP>gd_bb6777cec9990f70dd72539b-chunk-002<SEP>gd_40d926c839abc68c68bb1a76-chunk-001<SEP>gd_cee3fa988d8406247d556896-chunk-010",
+          "file_path": "gd_072a958576c3d08d325dd01b<SEP>gd_a956d6defae69ac68c5d4cb9<SEP>gd_7a9a67266e89c0a8630f6fbb<SEP>gd_dd626eb5f79a12db1cce58c5<SEP>gd_cee09e6c9f84106353f2f15e<SEP>gd_9b0a0e48daf169f6dd14b6a2<SEP>gd_40d926c839abc68c68bb1a76<SEP>gd_cee3fa988d8406247d556896",
+          "created_at": 1793618647
+        },
+        {
+          "entity_name": "Product-Market Fit",
+          "entity_type": "concept",
+          "description": "Product-Market Fit is a critical stage in a company's development, where its product or service meets the needs and preferences of its target market, resulting in rapid growth, customer acquisition, and revenue growth. This alignment of product and market needs is essential for long-term success, enabling a company to scale and achieve significant revenue growth.\n\nProduct-market fit is characterized by exceptional early metrics, such as high demand, word-of-mouth referrals, and high retention rates. In some cases, it may be indicated by a company having more leads than it can handle, suggesting a strong connection between its product and market. Achieving product-market fit is essential for long-term success, as it enables a company to differentiate itself through innovation rather than implementation speed.\n\nIn the context of enterprise products, product-market fit is about business impact and organizational change. It looks different compared to consumer products, where the focus is on meeting the needs of the target market. However, in both cases, product-market fit is a state where a product meets the needs of its target market, allowing companies to achieve rapid growth, customer acquisition, and revenue growth.\n\nIt's worth noting that when a company begins to fall out of product-market fit, it can be a sign of slowing growth. This can be a critical point for companies to reassess their product and market alignment to ensure they remain competitive and continue to meet the needs of their target market.\n\nProduct-market fit is also crucial for companies in the 3-5 year growth phase, where it serves as an indicator of a successful business strategy, not solely determined by initial adoption. Furthermore, it is a specific business idea where a product meets the needs of the market and is adopted by customers, and it is characterized by a group of customers who are willing to pay a premium price for the product because of its value, not just because it is cheap.\n\nIn summary, product-market fit is a critical milestone in a company's development, and achieving it is essential for long-term success. It requires a deep understanding of the target audience's needs and preferences, as well as a product or service that meets those needs.",
+          "source_id": "gd_756878d4d219336489c49168-chunk-002<SEP>gd_db955e54acb5f8577117d673-chunk-000<SEP>gd_1bb89f0881d846204f69d052-chunk-001<SEP>gd_1bb89f0881d846204f69d052-chunk-002<SEP>gd_9abe86dab25f86afa82fe281-chunk-000<SEP>gd_0265f5c6332264fc5bf6dd71-chunk-000<SEP>gd_c2b27f4f31ca40ae0b724f8a-chunk-000<SEP>gd_0657a858eecd168dd602dd50-chunk-001<SEP>gd_7bba9b537a604be37c33394e-chunk-000<SEP>gd_932bc697e4f01828ec4da02a-chunk-000<SEP>gd_3e1e129a8206331df24e51bb-chunk-001<SEP>gd_3e9fc891239ffd34f4cf91b1-chunk-001<SEP>gd_3f3546419c8af125d66414d7-chunk-002<SEP>gd_676ceb1d508acba0f3613cd1-chunk-001<SEP>gd_6eb39dfa97bc0c5b2a621007-chunk-001<SEP>gd_8c5d383d6700632b00ecfb79-chunk-000<SEP>gd_8c5d383d6700632b00ecfb79-chunk-001<SEP>gd_a678b9c53d6c304ce6752527-chunk-000<SEP>gd_6439c400c1d09acb6a66a591-chunk-001<SEP>gd_f6c59f9553434ad6e6e2bfb5-chunk-000<SEP>gd_6eff26b54da2626095c45d1e-chunk-000<SEP>gd_909912d713eb9773f7971ff8-chunk-000<SEP>gd_b93fa625fb27e1273a2d301d-chunk-000<SEP>gd_062fdba1eb0375bef6607116-chunk-005<SEP>gd_3dd5c02a7eda4361172441d2-chunk-001<SEP>gd_3dd5c02a7eda4361172441d2-chunk-002<SEP>gd_6edf1c4b231b887f2e70c763-chunk-003<SEP>gd_70c193d5819b8687590e93ee-chunk-002<SEP>gd_753a13ceccfb779879f29786-chunk-003<SEP>gd_85e65f7b38f06f45f9272493-chunk-001<SEP>gd_e01477e17866ee5836e50828-chunk-000<SEP>gd_113e0fbb8166dfa5ea576718-chunk-005<SEP>gd_113e0fbb8166dfa5ea576718-chunk-006<SEP>gd_40a1e7bc45542f2904568d95-chunk-000<SEP>gd_c0b7bd08bc413e3e345d580d-chunk-007<SEP>gd_c991e66dc297f85bbf84346c-chunk-001<SEP>gd_6f7cec99215f9ff2f03605c0-chunk-005<SEP>gd_a778054a479869a17bf96165-chunk-010<SEP>gd_78a8331869cec9a0326358f9-chunk-004<SEP>gd_4ca05c1482a9b33757040d2a-chunk-008<SEP>gd_f827ff3faea250fe8b6cf999-chunk-008<SEP>gd_f827ff3faea250fe8b6cf999-chunk-009<SEP>gd_f827ff3faea250fe8b6cf999-chunk-011",
+          "file_path": "gd_756878d4d219336489c49168<SEP>gd_db955e54acb5f8577117d673<SEP>gd_1bb89f0881d846204f69d052<SEP>gd_9abe86dab25f86afa82fe281<SEP>gd_0265f5c6332264fc5bf6dd71<SEP>gd_c2b27f4f31ca40ae0b724f8a<SEP>gd_0657a858eecd168dd602dd50<SEP>gd_7bba9b537a604be37c33394e<SEP>gd_932bc697e4f01828ec4da02a<SEP>gd_3e1e129a8206331df24e51bb<SEP>gd_3e9fc891239ffd34f4cf91b1<SEP>gd_3f3546419c8af125d66414d7<SEP>gd_676ceb1d508acba0f3613cd1<SEP>gd_6eb39dfa97bc0c5b2a621007<SEP>gd_8c5d383d6700632b00ecfb79<SEP>gd_a678b9c53d6c304ce6752527<SEP>gd_6439c400c1d09acb6a66a591<SEP>gd_f6c59f9553434ad6e6e2bfb5<SEP>gd_6eff26b54da2626095c45d1e<SEP>gd_909912d713eb9773f7971ff8<SEP>gd_b93fa625fb27e1273a2d301d<SEP>gd_062fdba1eb0375bef6607116<SEP>gd_3dd5c02a7eda4361172441d2<SEP>gd_6edf1c4b231b887f2e70c763<SEP>gd_70c193d5819b8687590e93ee<SEP>gd_85e65f7b38f06f45f9272493<SEP>gd_e01477e17866ee5836e50828<SEP>gd_113e0fbb8166dfa5ea576718<SEP>gd_40a1e7bc45542f2904568d95<SEP>gd_c0b7bd08bc413e3e345d580d<SEP>gd_6f7cec99215f9ff2f03605c0<SEP>gd_a778054a479869a17bf96165<SEP>gd_78a8331869cec9a0326358f9<SEP>gd_4ca05c1482a9b33757040d2a<SEP>gd_f827ff3faea250fe8b6cf999",
+          "created_at": 1793616140
+        },
+        {
+          "entity_name": "1B+",
+          "entity_type": "metric",
+          "description": "1B+ is the number of transactions included in the data for the report \"The State of Subscription Apps 2026\".",
+          "source_id": "gd_cee3fa988d8406247d556896-chunk-009",
+          "file_path": "gd_cee3fa988d8406247d556896",
+          "created_at": 1793618640
+        },
+        {
+          "entity_name": "Shopify",
+          "entity_type": "organization",
+          "description": "Shopify is a Canadian e-commerce company that provides a comprehensive platform for businesses to design, set up, and manage their online stores. Founded on the principles of innovation and customer satisfaction, Shopify has successfully implemented a lean team structure, accelerating growth despite maintaining a flat headcount. The company's e-commerce platform is designed to cater to various sales channels, including web, mobile, social media, marketplaces, and physical retail locations.\n\nShopify's ecosystem is comprised of top partners, with notable integrations such as HubSpot, which is a part of the platform. This strategic partnership enables businesses to leverage the strengths of both Shopify and HubSpot, enhancing their online store's functionality and customer experience. As an e-commerce platform, Shopify provides businesses with the necessary tools to design, set up, and manage their online stores, making it an attractive solution for entrepreneurs and established retailers alike.\n\nUnder the leadership of CEO Tobi Lutke, Shopify has established itself as a leading player in the e-commerce industry. The company's software and payment processing services have become essential tools for businesses looking to succeed in the digital marketplace. With a majority of its revenue generated from payments and payment processing, Shopify has demonstrated its ability to adapt and thrive in a rapidly changing industry.\n\nShopify's business model is primarily fintech and merchant product-based, with subscription solutions revenue up 21% and payments and merchant solutions up 35%. The company has experienced a significant comeback after slowing down dramatically post-Covid, with a current run-rate of almost $7 Billion and a stunning 31% growth rate. Shopify is a SaaS company with a run-rate of almost $7 Billion and growing at a rate of 31% on a constant-currency basis.\n\nShopify's price increase was the biggest driver of its MRR growth, which is now at $139M, and its ARR is up to $1.7B. The company has a gross margin of 49.3%, with 80% margins on software and 38% on payments and merchant solutions. Shopify has become more efficient, with an adj operating income run-rate of over $600 million. Additionally, the company generates 29% of its business from enterprise clients.\n\nShopify is also a key partner for Klaviyo, a leading e-commerce platform with a significant market share and a deep revenue-sharing agreement with Klaviyo. In fact, Shopify is one of Klaviyo's largest shareholders and has a deep revenue-sharing agreement with Klaviyo. This partnership has enabled both companies to leverage each other's strengths and provide a comprehensive solution for businesses looking to succeed in the digital marketplace.\n\nIt's worth noting that Shopify is also used by PagerDuty, a product that utilizes Shopify's e-commerce platform. Additionally, Shopify is a product-led growth company that has held headcount flat for 3 years without hurting growth, and it is an e-commerce platform that provides online store management and payment processing services, as well as an e-commerce platform that allows businesses to create online stores and manage their sales. Furthermore, Shopify is an e-commerce company that took the biggest hit to post-Covid growth, but has since experienced a significant comeback.<SEP>An e-commerce platform that provides businesses with tools to design, set up, and manage their stores.",
+          "source_id": "gd_00f0fd1277363a92e5cb2ada-chunk-000<SEP>gd_1586430bce2fffea00a8cd83-chunk-000<SEP>gd_1bd11726aa0e0351aefe21ce-chunk-000<SEP>gd_155c95444bc56e1868b0d903-chunk-000<SEP>gd_15d187637520cc4b1b5726e1-chunk-001<SEP>gd_15d187637520cc4b1b5726e1-chunk-002<SEP>gd_256a41d38f56ea0d66e64b45-chunk-000<SEP>gd_13aa38370d7255559def2519-chunk-000<SEP>gd_2aeb737f1fc3578904a93fac-chunk-000<SEP>gd_d1423816ab12475e55e09a39-chunk-001<SEP>gd_d1423816ab12475e55e09a39-chunk-002<SEP>gd_2cc56f4022d63af2f1308876-chunk-000<SEP>gd_16e30ab3992e7d134cdf088c-chunk-000<SEP>gd_16e30ab3992e7d134cdf088c-chunk-001<SEP>gd_48ff16ec2e5560a86e6edea1-chunk-000<SEP>gd_325cd64471734ab31072948f-chunk-001<SEP>gd_325cd64471734ab31072948f-chunk-002<SEP>gd_19e4fce6eb43b72382d2042c-chunk-000<SEP>gd_19e4fce6eb43b72382d2042c-chunk-001<SEP>gd_19e4fce6eb43b72382d2042c-chunk-002<SEP>gd_71e29ba36019c37090ff3004-chunk-001<SEP>gd_60f7ec77f0785ad96797ddf2-chunk-000<SEP>gd_60f7ec77f0785ad96797ddf2-chunk-001<SEP>gd_64ee673f1818fe8a43d10d08-chunk-002<SEP>gd_ac14ab271ce681e57db14baa-chunk-000<SEP>gd_2d72fe9469e9f2b08dcd24ea-chunk-000<SEP>gd_e93488dc685e6f329218fa9e-chunk-000<SEP>gd_47ce87a8b2cb50240d38db90-chunk-000<SEP>gd_72e9e76a2cf7a8ea84a21acb-chunk-000<SEP>gd_72e9e76a2cf7a8ea84a21acb-chunk-001<SEP>gd_72e9e76a2cf7a8ea84a21acb-chunk-002<SEP>gd_72e9e76a2cf7a8ea84a21acb-chunk-003<SEP>gd_f31f8b0a1fadea1c4523c10b-chunk-000<SEP>gd_111b6b23b20d3f5268f61598-chunk-000<SEP>gd_3eb0d6dd205274318ede670c-chunk-001<SEP>gd_fb798d3019afee06b2636d46-chunk-000<SEP>gd_43594d2f7bc2be440a5dcaab-chunk-000<SEP>gd_43594d2f7bc2be440a5dcaab-chunk-001<SEP>gd_c58da68baa96abf8991bb93d-chunk-000<SEP>gd_4539e662ea7b31c661ff01a2-chunk-000<SEP>gd_4539e662ea7b31c661ff01a2-chunk-001<SEP>gd_4f2ce0775e5dfc8c29d679bb-chunk-000<SEP>gd_5a74e007239d6fa585aa9d42-chunk-000<SEP>gd_5a74e007239d6fa585aa9d42-chunk-001<SEP>gd_5aad825cc360da16fcbbd647-chunk-000<SEP>gd_5ebe9ad0324f615be28ce5a6-chunk-000<SEP>gd_5ebe9ad0324f615be28ce5a6-chunk-001<SEP>gd_a51aabf5779c2323c9b3bd84-chunk-000<SEP>gd_a51aabf5779c2323c9b3bd84-chunk-001<SEP>gd_6ac1c91f4cda2d936c6e05c7-chunk-000<SEP>gd_8d70e8e8a1094b7be78b99b3-chunk-000<SEP>gd_6d674ffb138083b614124cff-chunk-001<SEP>gd_6d549413d37ff7b55fa873f0-chunk-000<SEP>gd_6d549413d37ff7b55fa873f0-chunk-001<SEP>gd_fc560134d5cd034812dc8b69-chunk-000<SEP>gd_fc560134d5cd034812dc8b69-chunk-002<SEP>gd_744aedf69774b9787271020d-chunk-000<SEP>gd_7d9ae6c91b92a3f115f2c36d-chunk-000<SEP>gd_818ba64738491131923f436e-chunk-000<SEP>gd_818ba64738491131923f436e-chunk-001<SEP>gd_85fb721c8c61021864128cd9-chunk-000<SEP>gd_8bfdd2b067df03dfe42bfd16-chunk-000<SEP>gd_8bfdd2b067df03dfe42bfd16-chunk-001<SEP>gd_8d5a01e786e521ceef6a39d4-chunk-000<SEP>gd_2639750269d5ed1288adaeb1-chunk-000<SEP>gd_95b3a94a3095519b7c98c7d4-chunk-001<SEP>gd_95b3a94a3095519b7c98c7d4-chunk-002<SEP>gd_97046e558fd3687222a925dc-chunk-000<SEP>gd_97046e558fd3687222a925dc-chunk-001<SEP>gd_a0a7fac44cacd59c4debc742-chunk-000<SEP>gd_a0a7fac44cacd59c4debc742-chunk-001<SEP>gd_daf1ebb11f0e32fe93411859-chunk-003<SEP>gd_48e090cf4fc87c6b04e673b9-chunk-000<SEP>gd_48e090cf4fc87c6b04e673b9-chunk-001<SEP>gd_53d1d4d7cbdb83f9dd2abc9c-chunk-000<SEP>gd_f4a0aad5582252bb48f32929-chunk-000<SEP>gd_f4a0aad5582252bb48f32929-chunk-001<SEP>gd_b25e36a22becbd8c6055d801-chunk-000<SEP>gd_bdb7a3958d115cc79af181f3-chunk-000<SEP>gd_bdb7a3958d115cc79af181f3-chunk-001<SEP>gd_bdb7a3958d115cc79af181f3-chunk-002<SEP>gd_7fe0eca2827d883d8617fc1e-chunk-000<SEP>gd_7fe0eca2827d883d8617fc1e-chunk-001<SEP>gd_d57e7f67ccbcce42d68e491a-chunk-000<SEP>gd_d57e7f67ccbcce42d68e491a-chunk-001<SEP>gd_d57e7f67ccbcce42d68e491a-chunk-002<SEP>gd_d57e7f67ccbcce42d68e491a-chunk-003<SEP>gd_d798b5f87bc9f54fcb6dd69a-chunk-000<SEP>gd_ddc7dc8f7ea37c8335c55003-chunk-000<SEP>gd_de4f1cbf6a8bd8e3c5b1cd8f-chunk-000<SEP>gd_df2480bda3a01a10db6c97b1-chunk-002<SEP>gd_b127fece42e28ee1e64a63ce-chunk-000<SEP>gd_f3529cbb5ac4aa2e54f8622c-chunk-000<SEP>gd_f3529cbb5ac4aa2e54f8622c-chunk-001<SEP>gd_f3529cbb5ac4aa2e54f8622c-chunk-002<SEP>gd_f70b08b50e252ea315d757da-chunk-000<SEP>gd_f7eddf4d50d326485a5879f0-chunk-001<SEP>gd_cda981ad247a4046cb23c1c3-chunk-000<SEP>gd_cda981ad247a4046cb23c1c3-chunk-001<SEP>gd_2b1b51587c41073a82a2aa52-chunk-000<SEP>gd_2b1b51587c41073a82a2aa52-chunk-001<SEP>gd_37c9bf3c519ccfb55eca9483-chunk-001<SEP>gd_43942905c1222c1c0f30c1aa-chunk-000<SEP>gd_44d3149492b8c0b2ab981b6c-chunk-000<SEP>gd_44d3149492b8c0b2ab981b6c-chunk-001<SEP>gd_44e0cfa1d75cad6c2ff06403-chunk-001<SEP>gd_535dfe10c25ba8a8c83581c2-chunk-000<SEP>gd_39aac781b0bdeaf45aebf21d-chunk-000<SEP>gd_59b91b90c7bca58b13cca2ba-chunk-001<SEP>gd_685109a529dd46a0e19d6f2a-chunk-000<SEP>gd_7e66e7cef2564ee679d8470d-chunk-000<SEP>gd_827de18357c3b1abbf9c7ae7-chunk-002<SEP>gd_827de18357c3b1abbf9c7ae7-chunk-003<SEP>gd_c633c0bef0dccd9f73e20152-chunk-002<SEP>gd_8a7dfb05fb5713b4b66f0b9d-chunk-000<SEP>gd_8a7dfb05fb5713b4b66f0b9d-chunk-001<SEP>gd_8c21892693a7f5fa4fc4e1f0-chunk-000<SEP>gd_8eefb8100558ec83fae95a37-chunk-000<SEP>gd_8eefb8100558ec83fae95a37-chunk-001<SEP>gd_92c874aeaeb6d623f4f4d8d8-chunk-002<SEP>gd_58cf6619fe8ac95ceb1217f7-chunk-002<SEP>gd_58cf6619fe8ac95ceb1217f7-chunk-003<SEP>gd_b7a9c3d6a7a69a54d821cd14-chunk-000<SEP>gd_bb8500ff7693b3f67f77f68c-chunk-000<SEP>gd_bb8500ff7693b3f67f77f68c-chunk-001<SEP>gd_bb8500ff7693b3f67f77f68c-chunk-002<SEP>gd_c07fc83a924848f0be87fc81-chunk-000<SEP>gd_c55cf116da67b97c972bcbbc-chunk-000<SEP>gd_d37dd301b6f71a48ce01f589-chunk-000<SEP>gd_d37dd301b6f71a48ce01f589-chunk-001<SEP>gd_d003453b3956b242efc0eccf-chunk-003<SEP>gd_e966c68c8b64742b54a64f35-chunk-002<SEP>gd_ee1953fb4d4e788a8fcd0076-chunk-002<SEP>gd_ee1953fb4d4e788a8fcd0076-chunk-003<SEP>gd_35b0b03e2fac740e050962ba-chunk-001<SEP>gd_e23054549f6afebbe65a7649-chunk-000<SEP>gd_e23054549f6afebbe65a7649-chunk-001<SEP>gd_e4735d696b4fc29d7ad881a1-chunk-000<SEP>gd_e4735d696b4fc29d7ad881a1-chunk-001<SEP>gd_2e5fc1972640f43b4892f397-chunk-005<SEP>gd_2e5fc1972640f43b4892f397-chunk-006<SEP>gd_3c94d3509d88df4c189a0b68-chunk-000<SEP>gd_3c94d3509d88df4c189a0b68-chunk-003<SEP>gd_3c94d3509d88df4c189a0b68-chunk-004<SEP>gd_3c94d3509d88df4c189a0b68-chunk-005<SEP>gd_3c94d3509d88df4c189a0b68-chunk-006<SEP>gd_5ea880eb3548d655f51b5285-chunk-001<SEP>gd_6883af2ee760af258eff9978-chunk-002<SEP>gd_6883af2ee760af258eff9978-chunk-003<SEP>gd_c85d08b0a614790a6e60f5d3-chunk-006<SEP>gd_81aedc67a6609300cfea9c3e-chunk-001<SEP>gd_9b0a0e48daf169f6dd14b6a2-chunk-001<SEP>gd_9b0a0e48daf169f6dd14b6a2-chunk-002<SEP>gd_bb2df0933484691709bc2edf-chunk-000<SEP>gd_bb2df0933484691709bc2edf-chunk-001<SEP>gd_bb2df0933484691709bc2edf-chunk-002<SEP>gd_bb2df0933484691709bc2edf-chunk-003<SEP>gd_bb2df0933484691709bc2edf-chunk-004<SEP>gd_bb2df0933484691709bc2edf-chunk-005<SEP>gd_0bc1abfa4e6084d46e2595c5-chunk-001<SEP>gd_d553ceb07bd923001f7820f3-chunk-001<SEP>gd_2d7b7e7000a27d7ddc3ef566-chunk-001<SEP>gd_30b975e27b27dccba55465d5-chunk-003<SEP>gd_e5436d3079476b02a6f78670-chunk-001<SEP>gd_fbe978a3b40b409d34953414-chunk-001<SEP>gd_127b7c531bf91ae60817b680-chunk-000<SEP>gd_127b7c531bf91ae60817b680-chunk-001<SEP>gd_1e2e8fb9b9bcd7a56f0196bf-chunk-001<SEP>gd_1e2e8fb9b9bcd7a56f0196bf-chunk-002<SEP>gd_8bab8d02da7bc2e8912b06e1-chunk-004<SEP>gd_983ad03801135ea6eb85b5a0-chunk-002<SEP>gd_983ad03801135ea6eb85b5a0-chunk-003<SEP>gd_ac4b8b9ed091ab54b1aba8f9-chunk-005<SEP>gd_bbbfaf2a3dff5c657489eacb-chunk-006<SEP>gd_bbbfaf2a3dff5c657489eacb-chunk-007<SEP>gd_8e21e4824de46ec5db236abe-chunk-000<SEP>gd_98daa4e0c059d6a11d469b3d-chunk-001<SEP>gd_98daa4e0c059d6a11d469b3d-chunk-002<SEP>gd_33656f4f7511eae366de5715-chunk-004<SEP>gd_a4194312fb5370f0de4ff5e4-chunk-000<SEP>gd_108897c9fb45f8816cdee46d-chunk-000<SEP>gd_c64ce5c65f3866446eb8edac-chunk-001<SEP>gd_d6df94b37fa8cbecc13b60e9-chunk-000<SEP>gd_d9a2d04e717bef151e9c5a38-chunk-001<SEP>gd_e5fd52c7cfe02c717c8d6b06-chunk-001<SEP>gd_eb80566a617b57e47caec5bf-chunk-001<SEP>gd_eb80566a617b57e47caec5bf-chunk-003<SEP>gd_085568b71c36eb109160b42e-chunk-001<SEP>gd_b88c92b4f10cf414596ad164-chunk-000<SEP>gd_b88c92b4f10cf414596ad164-chunk-001<SEP>gd_296d96afd4f596ae364cab39-chunk-000<SEP>gd_c5fd94ac349d025fb78a37d0-chunk-000<SEP>gd_c5fd94ac349d025fb78a37d0-chunk-001<SEP>gd_c5fd94ac349d025fb78a37d0-chunk-003<SEP>gd_c5fd94ac349d025fb78a37d0-chunk-004<SEP>gd_c5fd94ac349d025fb78a37d0-chunk-005<SEP>gd_c5fd94ac349d025fb78a37d0-chunk-006<SEP>gd_c991e66dc297f85bbf84346c-chunk-001<SEP>gd_c991e66dc297f85bbf84346c-chunk-002<SEP>gd_3aee61f2fda0aaba4b885eac-chunk-001",
+          "file_path": "gd_00f0fd1277363a92e5cb2ada<SEP>gd_1586430bce2fffea00a8cd83<SEP>gd_1bd11726aa0e0351aefe21ce<SEP>gd_155c95444bc56e1868b0d903<SEP>gd_15d187637520cc4b1b5726e1<SEP>gd_256a41d38f56ea0d66e64b45<SEP>gd_13aa38370d7255559def2519<SEP>gd_2aeb737f1fc3578904a93fac<SEP>gd_d1423816ab12475e55e09a39<SEP>gd_2cc56f4022d63af2f1308876<SEP>gd_16e30ab3992e7d134cdf088c<SEP>gd_48ff16ec2e5560a86e6edea1<SEP>gd_325cd64471734ab31072948f<SEP>gd_19e4fce6eb43b72382d2042c<SEP>gd_71e29ba36019c37090ff3004<SEP>gd_60f7ec77f0785ad96797ddf2<SEP>gd_64ee673f1818fe8a43d10d08<SEP>gd_ac14ab271ce681e57db14baa<SEP>gd_2d72fe9469e9f2b08dcd24ea<SEP>gd_e93488dc685e6f329218fa9e<SEP>gd_47ce87a8b2cb50240d38db90<SEP>gd_72e9e76a2cf7a8ea84a21acb<SEP>gd_f31f8b0a1fadea1c4523c10b<SEP>gd_111b6b23b20d3f5268f61598<SEP>gd_3eb0d6dd205274318ede670c<SEP>gd_fb798d3019afee06b2636d46<SEP>gd_43594d2f7bc2be440a5dcaab<SEP>gd_c58da68baa96abf8991bb93d<SEP>gd_4539e662ea7b31c661ff01a2<SEP>gd_4f2ce0775e5dfc8c29d679bb<SEP>gd_5a74e007239d6fa585aa9d42<SEP>gd_5aad825cc360da16fcbbd647<SEP>gd_5ebe9ad0324f615be28ce5a6<SEP>gd_a51aabf5779c2323c9b3bd84<SEP>gd_6ac1c91f4cda2d936c6e05c7<SEP>gd_8d70e8e8a1094b7be78b99b3<SEP>gd_6d674ffb138083b614124cff<SEP>gd_6d549413d37ff7b55fa873f0<SEP>gd_fc560134d5cd034812dc8b69<SEP>gd_7d9ae6c91b92a3f115f2c36d<SEP>gd_818ba64738491131923f436e<SEP>gd_85fb721c8c61021864128cd9<SEP>gd_8bfdd2b067df03dfe42bfd16<SEP>gd_8d5a01e786e521ceef6a39d4<SEP>gd_2639750269d5ed1288adaeb1<SEP>gd_95b3a94a3095519b7c98c7d4<SEP>gd_97046e558fd3687222a925dc<SEP>gd_a0a7fac44cacd59c4debc742<SEP>gd_daf1ebb11f0e32fe93411859<SEP>gd_48e090cf4fc87c6b04e673b9<SEP>gd_53d1d4d7cbdb83f9dd2abc9c<SEP>gd_f4a0aad5582252bb48f32929<SEP>gd_bdb7a3958d115cc79af181f3<SEP>gd_7fe0eca2827d883d8617fc1e<SEP>gd_d57e7f67ccbcce42d68e491a<SEP>gd_d798b5f87bc9f54fcb6dd69a<SEP>gd_ddc7dc8f7ea37c8335c55003<SEP>gd_de4f1cbf6a8bd8e3c5b1cd8f<SEP>gd_df2480bda3a01a10db6c97b1<SEP>gd_b127fece42e28ee1e64a63ce<SEP>gd_f3529cbb5ac4aa2e54f8622c<SEP>gd_f70b08b50e252ea315d757da<SEP>gd_f7eddf4d50d326485a5879f0<SEP>gd_cda981ad247a4046cb23c1c3<SEP>gd_2b1b51587c41073a82a2aa52<SEP>gd_37c9bf3c519ccfb55eca9483<SEP>gd_43942905c1222c1c0f30c1aa<SEP>gd_44d3149492b8c0b2ab981b6c<SEP>gd_44e0cfa1d75cad6c2ff06403<SEP>gd_535dfe10c25ba8a8c83581c2<SEP>gd_39aac781b0bdeaf45aebf21d<SEP>gd_59b91b90c7bca58b13cca2ba<SEP>gd_685109a529dd46a0e19d6f2a<SEP>gd_7e66e7cef2564ee679d8470d<SEP>gd_827de18357c3b1abbf9c7ae7<SEP>...truncated...(KEEP Old)",
+          "created_at": 1793597184
+        },
+        {
+          "entity_name": "Math",
+          "entity_type": "concept",
+          "description": "Math is a fundamental branch of science that deals with numbers, quantities, and shapes. It encompasses a set of numbers and operations used to describe and analyze various aspects, including business metrics. The mathematical calculation of a company's financial situation is a crucial aspect of math, which focuses on the numbers rather than the company's story. This process involves calculating or evaluating numbers to gain a deeper understanding of the data. In the context of business, math is used to analyze data and make informed decisions.\n\nMath is also a fundamental tool for understanding and navigating complex data, with applications that are diverse and far-reaching. It is used to evaluate concepts, as seen in the SPICED methodology, where mathematical models are used to assess ideas. Additionally, math is used in AI adoption, where metrics are employed to measure progress. Furthermore, math is used to determine the efficiency of AI-driven sales and revenue, as well as to understand and solve business problems through the use of mathematical principles and formulas.\n\nIn some contexts, math is used to analyze data and make informed decisions, such as in the Sales Capacity Trap, a concept that highlights the importance of accurately calculating and analyzing data to avoid potential pitfalls. Math is also used to understand the impact of prompt portability and one-year contracts on AI agent companies through mathematical calculations and analysis.\n\nOverall, math is a versatile and essential tool for understanding and navigating complex data, with a wide range of applications in business and beyond.",
+          "source_id": "gd_0633915a8565a63d11f310ba-chunk-000<SEP>gd_b1b855d4d6cfa88b28a3b52f-chunk-001<SEP>gd_7c7a216c8745503a287b7942-chunk-000<SEP>gd_7e9750f5f4ac7517b7e0ad2e-chunk-000<SEP>gd_062fdba1eb0375bef6607116-chunk-000<SEP>gd_062fdba1eb0375bef6607116-chunk-001<SEP>gd_36f51e2dd08bfeca036d42ad-chunk-001<SEP>gd_65427bc55aea7156a7d39bfe-chunk-005<SEP>gd_c85d08b0a614790a6e60f5d3-chunk-005<SEP>gd_a4194312fb5370f0de4ff5e4-chunk-002<SEP>gd_569cd09f99799cba2950cf73-chunk-006<SEP>gd_97843612d08bfd01e9f83879-chunk-007<SEP>gd_3e8732484211557041408d86-chunk-011<SEP>gd_6a3a9ea47e89d7f04a9415ee-chunk-004<SEP>gd_f9269f1be6752e43ae909a14-chunk-003<SEP>gd_a351b7a8812fb540220d3381-chunk-011",
+          "file_path": "gd_0633915a8565a63d11f310ba<SEP>gd_b1b855d4d6cfa88b28a3b52f<SEP>gd_7c7a216c8745503a287b7942<SEP>gd_062fdba1eb0375bef6607116<SEP>gd_36f51e2dd08bfeca036d42ad<SEP>gd_65427bc55aea7156a7d39bfe<SEP>gd_c85d08b0a614790a6e60f5d3<SEP>gd_a4194312fb5370f0de4ff5e4<SEP>gd_569cd09f99799cba2950cf73<SEP>gd_97843612d08bfd01e9f83879<SEP>gd_3e8732484211557041408d86<SEP>gd_6a3a9ea47e89d7f04a9415ee<SEP>gd_f9269f1be6752e43ae909a14<SEP>gd_a351b7a8812fb540220d3381",
+          "created_at": 1793644009
+        },
+        {
+          "entity_name": "Shopify Plus",
+          "entity_type": "product",
+          "description": "Shopify Plus is a more enterprise-oriented offering of Shopify's e-commerce platform, designed for larger businesses and enterprises.<SEP>Shopify Plus is a product run by Loren Padelford.<SEP>Shopify Plus is a product offered by Loren Padelford.<SEP>A premium version of Shopify's e-commerce platform.<SEP>Enterprise offering of Shopify that provides solutions for bigger and enterprise customers and brands.<SEP>Shopify Plus is a product line and segment of Shopify that caters to its largest customers.",
+          "source_id": "gd_19e4fce6eb43b72382d2042c-chunk-001<SEP>gd_6e85972663521ddaa6463e51-chunk-000<SEP>gd_d388b3ee2eea7c93cd5a89d3-chunk-000<SEP>gd_7d9ae6c91b92a3f115f2c36d-chunk-000<SEP>gd_bdb7a3958d115cc79af181f3-chunk-001<SEP>gd_d7608d7e6dac4d722fb90de0-chunk-003<SEP>gd_786c275ee1a2e3b1c07c1db9-chunk-000",
+          "file_path": "gd_19e4fce6eb43b72382d2042c<SEP>gd_6e85972663521ddaa6463e51<SEP>gd_d388b3ee2eea7c93cd5a89d3<SEP>gd_7d9ae6c91b92a3f115f2c36d<SEP>gd_bdb7a3958d115cc79af181f3<SEP>gd_786c275ee1a2e3b1c07c1db9",
+          "created_at": 1793640126
+        },
+        {
+          "entity_name": "Coding App",
+          "entity_type": "product",
+          "description": "A coding app is a software application that enables users to write and edit code, often with features such as syntax highlighting, code completion, and debugging tools.",
+          "source_id": "gd_eaeca2bf33d264c65e63cdb8-chunk-003",
+          "file_path": "gd_eaeca2bf33d264c65e63cdb8",
+          "created_at": 1793522713
+        },
+        {
+          "entity_name": "Digital Ocean",
+          "entity_type": "product",
+          "description": "Digital Ocean is a cloud infrastructure and platform provider that offers a range of scalable and secure cloud computing services. Founded on the principle of providing a cheaper and simpler alternative to established cloud providers such as AWS, Azure, and Google Cloud, Digital Ocean has established itself as a major player in the cloud infrastructure market. The company's focus on customer satisfaction and retention has been key to its success, particularly in the Long Tail of Cloud, where it has carved out a niche for itself despite slower growth compared to larger competitors.\n\nDigital Ocean's cloud infrastructure platform provides on-demand infrastructure for businesses, allowing them to quickly and efficiently scale their operations as needed. The company's platform is designed to be highly secure, with robust measures in place to protect customer data and applications. With a strong focus on customer satisfaction, Digital Ocean has built a loyal customer base and has been successful in generating significant free cash flow, with $150m of free cash flow on $500m in revenue. Additionally, the company's EBITDA has been impressive, with $152m on $490m in ARR.\n\nDigital Ocean's success can be attributed to its ability to provide a scalable and secure cloud computing experience at a lower cost than its competitors. The company's platform is designed to be highly flexible, allowing customers to easily scale their resources up or down as needed. This flexibility, combined with Digital Ocean's strong focus on customer satisfaction and retention, has made it a popular choice among businesses looking for a cloud infrastructure provider.",
+          "source_id": "gd_59d3c90463b37c53f2c312bb-chunk-000<SEP>gd_59d3c90463b37c53f2c312bb-chunk-001<SEP>gd_3d00a2ad35f7082a70310e88-chunk-000<SEP>gd_3d00a2ad35f7082a70310e88-chunk-001<SEP>gd_3d00a2ad35f7082a70310e88-chunk-002<SEP>gd_ad4399ea29a32c2b3537e550-chunk-000<SEP>gd_402ba37a6bc85a4d1b4c34cb-chunk-001<SEP>gd_d7608d7e6dac4d722fb90de0-chunk-003<SEP>gd_a6563952729bc853829369cf-chunk-000",
+          "file_path": "gd_59d3c90463b37c53f2c312bb<SEP>gd_3d00a2ad35f7082a70310e88<SEP>gd_ad4399ea29a32c2b3537e550<SEP>gd_402ba37a6bc85a4d1b4c34cb<SEP>gd_d7608d7e6dac4d722fb90de0<SEP>gd_a6563952729bc853829369cf",
+          "created_at": 1793645661
+        },
+        {
+          "entity_name": "N8N",
+          "entity_type": "organization",
+          "description": "A company that provides workflow automation software, which has seen significant growth and valuation increases due to the integration of AI technology.",
+          "source_id": "gd_b80524f908bad21aeaf41dfe-chunk-001",
+          "file_path": "gd_b80524f908bad21aeaf41dfe",
+          "created_at": 1793635322
+        },
+        {
+          "entity_name": "Initial Scale",
+          "entity_type": "concept",
+          "description": "Initial Scale is a critical stage in a company's growth, marking a significant milestone where it has reached a certain level of maturity and is able to sustain its growth. This phase typically occurs around $10M in Annual Recurring Revenue (ARR), and it is characterized by rapid growth and expansion. At this stage, the company has achieved a certain level of revenue and customer acquisition, and is now focused on scaling and investing in growth.\n\nDuring Initial Scale, a company begins to experience significant growth, and its operations are expanding. It is a phase where a SaaS company has achieved significant growth and is preparing for further expansion. The company's growth becomes more sustainable and stable, allowing for more investments and growth. Initial Scale is a phase in a company's growth where it has achieved significant revenue and is expanding its operations.\n\nIt is worth noting that the exact definition and characteristics of Initial Scale may vary depending on the source and context. However, in general, it refers to the stage in a company's growth where it has reached a certain level of maturity and is able to sustain its growth, typically around $10M in ARR.\n\nIn this phase, a company is able to sustain itself without external funding, and its growth becomes self-sustaining, allowing it to drive and influence its own growth. This stage is characterized by the company's ability to expand its operations, increase its revenue, and hire more people to support its growth. The company has achieved significant growth and has a sufficient growth rate to sustain itself, making it a critical stage in its development.\n\nInitial Scale is often preceded by Initial Traction, where a company has achieved a certain level of success and is now looking to expand further. This phase is a natural progression from Initial Traction, where the company has a brand, a fully baked team, a robust product, and a self-generating stream of new leads and new business.<SEP>Initial Scale is a concept where a company reaches a certain level of ARR and becomes a real line of business.",
+          "source_id": "gd_0327fd5c4fc1590df1481cc3-chunk-000<SEP>gd_0011ae744ca49f3de80ffa70-chunk-000<SEP>gd_74fa8567086173e6d517e67c-chunk-003<SEP>gd_9bef8d767947839d50a36423-chunk-001<SEP>gd_0ebe200504c2767b18fadc12-chunk-002<SEP>gd_676ceb1d508acba0f3613cd1-chunk-000<SEP>gd_a678b9c53d6c304ce6752527-chunk-000<SEP>gd_a4c78be1e3b24c0947e39618-chunk-004<SEP>gd_4b4bf04e76ce09618e708a2a-chunk-001<SEP>gd_b0a33090385448bab0fdb263-chunk-001<SEP>gd_b93fa625fb27e1273a2d301d-chunk-000<SEP>gd_1475e3e6808bcf1fde45f610-chunk-000<SEP>gd_b59420b8a4157ccee2549a6f-chunk-005<SEP>gd_d94d3f9d2ce04cefe79715db-chunk-000<SEP>gd_d94d3f9d2ce04cefe79715db-chunk-002<SEP>gd_d94d3f9d2ce04cefe79715db-chunk-003<SEP>gd_d94d3f9d2ce04cefe79715db-chunk-005<SEP>gd_d94d3f9d2ce04cefe79715db-chunk-006<SEP>gd_8c9e1465c803d5cab436c220-chunk-003",
+          "file_path": "gd_0327fd5c4fc1590df1481cc3<SEP>gd_0011ae744ca49f3de80ffa70<SEP>gd_74fa8567086173e6d517e67c<SEP>gd_9bef8d767947839d50a36423<SEP>gd_0ebe200504c2767b18fadc12<SEP>gd_676ceb1d508acba0f3613cd1<SEP>gd_a678b9c53d6c304ce6752527<SEP>gd_a4c78be1e3b24c0947e39618<SEP>gd_4b4bf04e76ce09618e708a2a<SEP>gd_b0a33090385448bab0fdb263<SEP>gd_b93fa625fb27e1273a2d301d<SEP>gd_1475e3e6808bcf1fde45f610<SEP>gd_b59420b8a4157ccee2549a6f<SEP>gd_d94d3f9d2ce04cefe79715db<SEP>gd_8c9e1465c803d5cab436c220",
+          "created_at": 1793586835
+        },
+        {
+          "entity_name": "70%+",
+          "entity_type": "concept",
+          "description": "70%+ is the NPS (Net Promoter Score) of Zscaler.",
+          "source_id": "gd_447ac742e3a9ad53298cf2d6-chunk-002",
+          "file_path": "gd_447ac742e3a9ad53298cf2d6",
+          "created_at": 1793502553
+        },
+        {
+          "entity_name": "Money Is No Longer an Excuse",
+          "entity_type": "concept",
+          "description": "A stage in a startup's growth where it has achieved a certain level of revenue and customer acquisition, and money is no longer a significant issue.",
+          "source_id": "gd_676ceb1d508acba0f3613cd1-chunk-000",
+          "file_path": "gd_676ceb1d508acba0f3613cd1",
+          "created_at": 1793519321
+        },
+        {
+          "entity_name": "NPS",
+          "entity_type": "concept",
+          "description": "The Net Promoter Score (NPS) is a widely used metric to measure customer satisfaction and loyalty. It is a measure of customer satisfaction, ranging from -100 to 100, although some sources also report it as ranging from 0 to 100. The NPS is calculated by asking customers one simple question: \"On a scale of 0-10, how likely are you to recommend our company/product/service to a friend or colleague?\" Those who respond with a score of 9 or 10 are considered \"promoters,\" while those who respond with a score of 0-6 are considered \"detractors.\" The percentage of promoters minus the percentage of detractors gives the NPS score.\n\nThe NPS is a valuable tool for businesses to gauge their customer satisfaction and loyalty, and to identify areas for improvement. It is a specific business idea that focuses on measuring customer satisfaction through a simple yet effective metric. A high NPS score indicates a strong relationship between the company and its customers, while a low score suggests areas where improvement is needed.\n\nThe NPS has been widely adopted across various industries, and its simplicity and effectiveness have made it a popular choice for businesses looking to measure customer satisfaction and loyalty. However, it's also important to recognize that the NPS is not a perfect measure, and its limitations and potential biases should be taken into account when interpreting the results.\n\nSome companies have achieved high NPS scores, such as SaaStr Europa, which achieved a score of ~90. The NPS is also a key metric for some businesses, including Zscaler. Additionally, the NPS is sometimes referred to as a measure of customer loyalty, which is closely related to customer satisfaction.\n\nIt's worth noting that the NPS can be affected by aggressive pricing, which can lead to a decrease in inbound referrals. This is evident in some cases where the NPS has \"cratered\" due to such practices. On the other hand, the NPS can also be a good-enough metric for predicting churn, and it can work on a relative basis across an industry, building confidence in its results.\n\nIn essence, the Net Promoter Score is a measure of customer satisfaction and loyalty, calculated through a simple yet effective metric. It is a valuable tool for businesses to gauge their customer satisfaction and identify areas for improvement, but its limitations and potential biases should be considered when interpreting the results.<SEP>NPS stands for Net Promoter Score, a metric used to measure customer satisfaction.<SEP>A metric used to measure customer satisfaction and loyalty, often used in conjunction with NRR.<SEP>A metric used to measure customer satisfaction and loyalty.<SEP>Net Promoter Score, a measure of customer loyalty.<SEP>A metric used to measure customer satisfaction.",
+          "source_id": "gd_b69603cf3ff1c56f5acd6d17-chunk-001<SEP>gd_09267d6dfab254529a946b18-chunk-001<SEP>gd_09267d6dfab254529a946b18-chunk-002<SEP>gd_09267d6dfab254529a946b18-chunk-003<SEP>gd_18771289802258996e9afe7d-chunk-002<SEP>gd_1bb89f0881d846204f69d052-chunk-001<SEP>gd_1bb89f0881d846204f69d052-chunk-002<SEP>gd_4a57979eae25d40d519ab1f6-chunk-000<SEP>gd_7932b0cb72425a0f799285e1-chunk-000<SEP>gd_81ae300a5441b910da999070-chunk-000<SEP>gd_24f77dbf4b59912a1115a97e-chunk-000<SEP>gd_2ecc3785d60dab4bff563f4c-chunk-000<SEP>gd_9c328b8c5305e596c95c958f-chunk-000<SEP>gd_490259ae216c7d38a715cfb7-chunk-001<SEP>gd_490259ae216c7d38a715cfb7-chunk-002<SEP>gd_ab388e36b2c46d1b6afc8c4d-chunk-002<SEP>gd_7681722f354a46bf769c0671-chunk-001<SEP>gd_7681722f354a46bf769c0671-chunk-002<SEP>gd_78db847c7c7234a8eb04acc1-chunk-000<SEP>gd_0ebe200504c2767b18fadc12-chunk-002<SEP>gd_932bc697e4f01828ec4da02a-chunk-000<SEP>gd_a54f5bf886b30a7e8324893d-chunk-001<SEP>gd_4c4a5ac20c57f7f42509d190-chunk-001<SEP>gd_545a33a881beeb183329d2d6-chunk-002<SEP>gd_b3c813040c96089df47b4b77-chunk-001<SEP>gd_87f9f1c85817eeb46b0ec74d-chunk-003<SEP>gd_6feced8579df06c11c55ce7a-chunk-001<SEP>gd_8c5d383d6700632b00ecfb79-chunk-000<SEP>gd_a6ad2eaf169aed9b7f8a5f51-chunk-000<SEP>gd_ee48ad719b59c4df12151952-chunk-001<SEP>gd_ee48ad719b59c4df12151952-chunk-002<SEP>gd_bf7ad7fdcd83738eb7d097c7-chunk-000<SEP>gd_bf7ad7fdcd83738eb7d097c7-chunk-001<SEP>gd_c82b6638dbe58be010fd593c-chunk-000<SEP>gd_d6aa012be158b9d77ddffb46-chunk-001<SEP>gd_d6aa012be158b9d77ddffb46-chunk-002<SEP>gd_de5623a10d1c9531112cfe54-chunk-001<SEP>gd_0b07114179a95a92796b9f5b-chunk-000<SEP>gd_ed2685a046f505e85b4c7e3c-chunk-001<SEP>gd_1e47900557b44bbcae52ed54-chunk-000<SEP>gd_1e47900557b44bbcae52ed54-chunk-001<SEP>gd_1fd95d7bd6ed45e81b456fce-chunk-000<SEP>gd_4bde0767eaeffe8fda34ff9e-chunk-001<SEP>gd_4bde0767eaeffe8fda34ff9e-chunk-002<SEP>gd_343a80af8e5150bc1335a52e-chunk-001<SEP>gd_685109a529dd46a0e19d6f2a-chunk-001<SEP>gd_885984971dbc1d1315ea4765-chunk-001<SEP>gd_8c21892693a7f5fa4fc4e1f0-chunk-001<SEP>gd_1b9bbe7ebbb40cc7edaaca04-chunk-003<SEP>gd_1b9bbe7ebbb40cc7edaaca04-chunk-004<SEP>gd_a753d199b9c468b7c9b06a64-chunk-001<SEP>gd_a753d199b9c468b7c9b06a64-chunk-002<SEP>gd_b03f095a8aee6491211a44f0-chunk-000<SEP>gd_58cf6619fe8ac95ceb1217f7-chunk-003<SEP>gd_a120d398e57a33365886f6a6-chunk-003<SEP>gd_a120d398e57a33365886f6a6-chunk-004<SEP>gd_a120d398e57a33365886f6a6-chunk-005<SEP>gd_d5be599c09c06e3a2de7a86e-chunk-000<SEP>gd_d5be599c09c06e3a2de7a86e-chunk-002<SEP>gd_d5be599c09c06e3a2de7a86e-chunk-003<SEP>gd_ed65acecc6e4d39357b55384-chunk-000<SEP>gd_f4804f30c08b277f5a0cc977-chunk-000<SEP>gd_142c9ef5d600d437f46bbed4-chunk-000<SEP>gd_142c9ef5d600d437f46bbed4-chunk-001<SEP>gd_3acffa3c074be68c09c17ae4-chunk-000<SEP>gd_b0a33090385448bab0fdb263-chunk-000<SEP>gd_c9017b2c5b7fe53e70a885a4-chunk-000<SEP>gd_c9017b2c5b7fe53e70a885a4-chunk-001<SEP>gd_c9017b2c5b7fe53e70a885a4-chunk-002<SEP>gd_56365d05cf1b46c8c5dbc613-chunk-003<SEP>gd_56365d05cf1b46c8c5dbc613-chunk-004<SEP>gd_b62b6ad34d4ba7357f8052f1-chunk-004<SEP>gd_b62b6ad34d4ba7357f8052f1-chunk-005<SEP>gd_cee09e6c9f84106353f2f15e-chunk-003<SEP>gd_a557aed74a9f2d2938e996df-chunk-001<SEP>gd_3b3de8f2e09471d34298f323-chunk-003<SEP>gd_cdb688c70f3a971827ac4543-chunk-001<SEP>gd_cdb688c70f3a971827ac4543-chunk-003<SEP>gd_cdb688c70f3a971827ac4543-chunk-004<SEP>gd_e570bc885c853fe839d0ee57-chunk-001<SEP>gd_e570bc885c853fe839d0ee57-chunk-002<SEP>gd_e570bc885c853fe839d0ee57-chunk-003<SEP>gd_e570bc885c853fe839d0ee57-chunk-004<SEP>gd_8223a31e412ad6da256d3a2a-chunk-008<SEP>gd_fd88decf2f277fd53c2293b7-chunk-004<SEP>gd_fd88decf2f277fd53c2293b7-chunk-005<SEP>gd_39135822a5638787a5a43dd3-chunk-000<SEP>gd_6e149b2e82d3a0e956732c2e-chunk-002<SEP>gd_f2b8a74abf32d881b7443adf-chunk-002<SEP>gd_1b901fbe1ef64d57a6539100-chunk-005<SEP>gd_29be30ed143329dfc3e5ea0c-chunk-001<SEP>gd_641ddfbb18ea9d7661766b2e-chunk-000<SEP>gd_641ddfbb18ea9d7661766b2e-chunk-002<SEP>gd_d618018f549027002a61d265-chunk-001<SEP>gd_d618018f549027002a61d265-chunk-003",
+          "file_path": "gd_b69603cf3ff1c56f5acd6d17<SEP>gd_09267d6dfab254529a946b18<SEP>gd_18771289802258996e9afe7d<SEP>gd_1bb89f0881d846204f69d052<SEP>gd_4a57979eae25d40d519ab1f6<SEP>gd_7932b0cb72425a0f799285e1<SEP>gd_81ae300a5441b910da999070<SEP>gd_24f77dbf4b59912a1115a97e<SEP>gd_2ecc3785d60dab4bff563f4c<SEP>gd_9c328b8c5305e596c95c958f<SEP>gd_490259ae216c7d38a715cfb7<SEP>gd_ab388e36b2c46d1b6afc8c4d<SEP>gd_7681722f354a46bf769c0671<SEP>gd_78db847c7c7234a8eb04acc1<SEP>gd_0ebe200504c2767b18fadc12<SEP>gd_932bc697e4f01828ec4da02a<SEP>gd_a54f5bf886b30a7e8324893d<SEP>gd_4c4a5ac20c57f7f42509d190<SEP>gd_545a33a881beeb183329d2d6<SEP>gd_b3c813040c96089df47b4b77<SEP>gd_87f9f1c85817eeb46b0ec74d<SEP>gd_6feced8579df06c11c55ce7a<SEP>gd_8c5d383d6700632b00ecfb79<SEP>gd_a6ad2eaf169aed9b7f8a5f51<SEP>gd_ee48ad719b59c4df12151952<SEP>gd_bf7ad7fdcd83738eb7d097c7<SEP>gd_c82b6638dbe58be010fd593c<SEP>gd_d6aa012be158b9d77ddffb46<SEP>gd_de5623a10d1c9531112cfe54<SEP>gd_0b07114179a95a92796b9f5b<SEP>gd_ed2685a046f505e85b4c7e3c<SEP>gd_1e47900557b44bbcae52ed54<SEP>gd_1fd95d7bd6ed45e81b456fce<SEP>gd_4bde0767eaeffe8fda34ff9e<SEP>gd_343a80af8e5150bc1335a52e<SEP>gd_685109a529dd46a0e19d6f2a<SEP>gd_885984971dbc1d1315ea4765<SEP>gd_8c21892693a7f5fa4fc4e1f0<SEP>gd_1b9bbe7ebbb40cc7edaaca04<SEP>gd_a753d199b9c468b7c9b06a64<SEP>gd_b03f095a8aee6491211a44f0<SEP>gd_58cf6619fe8ac95ceb1217f7<SEP>gd_a120d398e57a33365886f6a6<SEP>gd_d5be599c09c06e3a2de7a86e<SEP>gd_ed65acecc6e4d39357b55384<SEP>gd_f4804f30c08b277f5a0cc977<SEP>gd_142c9ef5d600d437f46bbed4<SEP>gd_3acffa3c074be68c09c17ae4<SEP>gd_b0a33090385448bab0fdb263<SEP>gd_c9017b2c5b7fe53e70a885a4<SEP>gd_56365d05cf1b46c8c5dbc613<SEP>gd_b62b6ad34d4ba7357f8052f1<SEP>gd_cee09e6c9f84106353f2f15e<SEP>gd_a557aed74a9f2d2938e996df<SEP>gd_cdb688c70f3a971827ac4543<SEP>gd_e570bc885c853fe839d0ee57<SEP>gd_8223a31e412ad6da256d3a2a<SEP>gd_fd88decf2f277fd53c2293b7<SEP>gd_39135822a5638787a5a43dd3<SEP>gd_6e149b2e82d3a0e956732c2e<SEP>gd_f2b8a74abf32d881b7443adf<SEP>gd_1b901fbe1ef64d57a6539100<SEP>gd_29be30ed143329dfc3e5ea0c<SEP>gd_641ddfbb18ea9d7661766b2e<SEP>gd_d618018f549027002a61d265",
+          "created_at": 1793640957
+        },
+        {
+          "entity_name": "Pipeline",
+          "entity_type": "concept",
+          "description": "**Pipeline**\n\nThe Pipeline refers to the analysis of leads, lead flow, and conversion rates to determine if the plan is achievable. It is a list of potential customers or deals that a company is pursuing, which is also a collection of potential sales opportunities. The Pipeline is a visual representation of the sales process, showing the progress of leads through different stages. It is a critical component of a company's sales strategy, serving as a tool to track and manage potential sales opportunities.\n\nIn essence, the Pipeline enables companies to monitor the progress of leads, identify areas for improvement, and make data-driven decisions to optimize their sales efforts. By analyzing the Pipeline, companies can refine their sales strategies, allocate resources effectively, and ultimately drive revenue growth. The Pipeline can be viewed as a series of sales stages or steps in the sales process, where leads are moved from qualification to conversion.\n\nThe Pipeline is also a measure of the sales team's progress towards achieving their quota, and it represents the potential revenue stream from leads and sales-qualified leads. It is a sequence of sales development activities, and a visual representation of a company's sales prospects and opportunities, used to forecast and manage revenue growth. The Pipeline is a crucial component in generating revenue for the company, and it is a specific business idea that refers to the growing list of potential customers.\n\nTo effectively manage the Pipeline, sales teams should focus on metrics that they directly influence, such as SQLs (Sales Qualified Leads) or pipeline generated. This involves tracking the number of potential deals in the sales process, as well as the number of potential sales opportunities a company has. The Pipeline is a collection of potential sales leads and opportunities that are being pursued by a sales team, and it is essential to monitor and analyze this data to optimize sales efforts and drive revenue growth.\n\nAdditionally, the Pipeline involves optimizing resources from prospecting to customer success and implementation excellence, making it a comprehensive business strategy. It is also a list of potential sales opportunities and leads that a sales executive is working on, and a flow of potential customers. Furthermore, it is a set of potential sales opportunities, a visual representation of the sales process, including leads, deals, and opportunities, and a measure of the potential revenue from sales opportunities.\n\nIn some cases, the Pipeline may be referred to as the \"Marketing Pipeline,\" which highlights its importance in the marketing and sales process. Overall, the Pipeline is a critical component of a company's sales strategy, enabling them to track and manage potential sales opportunities, refine their sales strategies, and drive revenue growth.<SEP>Process of managing and tracking sales leads and opportunities.<SEP>Pipeline refers to a list of potential customers or businesses that a company is currently pursuing.",
+          "source_id": "gd_1586430bce2fffea00a8cd83-chunk-002<SEP>gd_2237831cf1e21662ef629603-chunk-001<SEP>gd_2551431949d1ccdc36a75aef-chunk-001<SEP>gd_50b0145865c1ee018c11796f-chunk-001<SEP>gd_6de40238dec47236f483880c-chunk-001<SEP>gd_8d4d38e0c3572b351003a51c-chunk-003<SEP>gd_ef0a3cc3b5933f0a5cd3fccb-chunk-000<SEP>gd_c7c952be7d593a9e41580e4f-chunk-001<SEP>gd_d38bc5de76dea4c45c10753d-chunk-001<SEP>gd_efafcab53b7bc6909e6d8baf-chunk-000<SEP>gd_4b2b6f0b7ccec41f6c409252-chunk-000<SEP>gd_21d2833750d0ecf95dae5b15-chunk-003<SEP>gd_54382ee86dba9da9d2277646-chunk-001<SEP>gd_c513cd5cd47320b3679f9406-chunk-001<SEP>gd_e5e2c2f0b32f6a1f5001b325-chunk-003<SEP>gd_6056979fb658f8547f535b87-chunk-000<SEP>gd_cbce5e6622c8c301403e5d87-chunk-001<SEP>gd_e73d7d628963265d6d4c1912-chunk-001<SEP>gd_d234c51138952a2a425c723a-chunk-000<SEP>gd_f75482c2f3e4cd3d4994097c-chunk-000<SEP>gd_25e0d1be23b4cec665bf128f-chunk-004<SEP>gd_968b2d7a0e01a54bc957abe5-chunk-000<SEP>gd_aea7c965af3368761d8786d3-chunk-002<SEP>gd_dafdfb0373bf649fdb449734-chunk-001<SEP>gd_fef931cfcea01ce67476c021-chunk-002<SEP>gd_062fdba1eb0375bef6607116-chunk-002<SEP>gd_103fb24d89f795fb02fdd13d-chunk-000<SEP>gd_24daecfca40dc0e745c734ab-chunk-001<SEP>gd_c75af687e9a8e78065ced9f2-chunk-000<SEP>gd_35e0f840f0e610e78f36a169-chunk-001<SEP>gd_35e0f840f0e610e78f36a169-chunk-002<SEP>gd_f374b222227a6a91a8bc883c-chunk-006<SEP>gd_f8fb7772addf6fc5de4ce4d2-chunk-002<SEP>gd_eb80566a617b57e47caec5bf-chunk-005<SEP>gd_c991e66dc297f85bbf84346c-chunk-002<SEP>gd_f05b87f300c865ec29a94835-chunk-001<SEP>gd_41404ff33aae48255b366dc5-chunk-000<SEP>gd_d959edaac730da7d91d984ad-chunk-001<SEP>gd_3e8732484211557041408d86-chunk-008<SEP>gd_3e8732484211557041408d86-chunk-009<SEP>gd_26bfbd2898d0a0f84f3cc393-chunk-009<SEP>gd_c16b3257c39365c1412dc08b-chunk-002<SEP>gd_a778054a479869a17bf96165-chunk-010<SEP>gd_35814a36a9b1f3b837986159-chunk-008<SEP>gd_57e4f799ef3cc8109831930f-chunk-002<SEP>gd_1330305cc3f41f63189528f0-chunk-001<SEP>gd_e259b4464cd93452130f852e-chunk-003<SEP>gd_bf8397f656238e9eba87fda2-chunk-001",
+          "file_path": "gd_1586430bce2fffea00a8cd83<SEP>gd_2237831cf1e21662ef629603<SEP>gd_2551431949d1ccdc36a75aef<SEP>gd_50b0145865c1ee018c11796f<SEP>gd_6de40238dec47236f483880c<SEP>gd_8d4d38e0c3572b351003a51c<SEP>gd_ef0a3cc3b5933f0a5cd3fccb<SEP>gd_c7c952be7d593a9e41580e4f<SEP>gd_d38bc5de76dea4c45c10753d<SEP>gd_efafcab53b7bc6909e6d8baf<SEP>gd_21d2833750d0ecf95dae5b15<SEP>gd_54382ee86dba9da9d2277646<SEP>gd_c513cd5cd47320b3679f9406<SEP>gd_e5e2c2f0b32f6a1f5001b325<SEP>gd_6056979fb658f8547f535b87<SEP>gd_cbce5e6622c8c301403e5d87<SEP>gd_e73d7d628963265d6d4c1912<SEP>gd_d234c51138952a2a425c723a<SEP>gd_f75482c2f3e4cd3d4994097c<SEP>gd_25e0d1be23b4cec665bf128f<SEP>gd_968b2d7a0e01a54bc957abe5<SEP>gd_aea7c965af3368761d8786d3<SEP>gd_dafdfb0373bf649fdb449734<SEP>gd_fef931cfcea01ce67476c021<SEP>gd_062fdba1eb0375bef6607116<SEP>gd_103fb24d89f795fb02fdd13d<SEP>gd_c75af687e9a8e78065ced9f2<SEP>gd_35e0f840f0e610e78f36a169<SEP>gd_f374b222227a6a91a8bc883c<SEP>gd_f8fb7772addf6fc5de4ce4d2<SEP>gd_eb80566a617b57e47caec5bf<SEP>gd_c991e66dc297f85bbf84346c<SEP>gd_f05b87f300c865ec29a94835<SEP>gd_41404ff33aae48255b366dc5<SEP>gd_d959edaac730da7d91d984ad<SEP>gd_3e8732484211557041408d86<SEP>gd_26bfbd2898d0a0f84f3cc393<SEP>gd_c16b3257c39365c1412dc08b<SEP>gd_a778054a479869a17bf96165<SEP>gd_35814a36a9b1f3b837986159<SEP>gd_57e4f799ef3cc8109831930f<SEP>gd_1330305cc3f41f63189528f0<SEP>gd_e259b4464cd93452130f852e<SEP>gd_bf8397f656238e9eba87fda2",
+          "created_at": 1793644542
+        },
+        {
+          "entity_name": "developer",
+          "entity_type": "person",
+          "description": "A developer is a person who creates and maintains software and applications.",
+          "source_id": "gd_4f2ce0775e5dfc8c29d679bb-chunk-000",
+          "file_path": "gd_4f2ce0775e5dfc8c29d679bb",
+          "created_at": 1793503305
+        },
+        {
+          "entity_name": "Sales AI SDR",
+          "entity_type": "product",
+          "description": "A software tool used for sales and marketing tasks.",
+          "source_id": "gd_57e4f799ef3cc8109831930f-chunk-002",
+          "file_path": "gd_57e4f799ef3cc8109831930f",
+          "created_at": 1793622769
+        },
+        {
+          "entity_name": "Number 1 metric",
+          "entity_type": "concept",
+          "description": "Number 1 metric is a specific business idea mentioned in the input text as the focus of retention.",
+          "source_id": "gd_db92ac60df8c2f40359a91ca-chunk-000",
+          "file_path": "gd_db92ac60df8c2f40359a91ca",
+          "created_at": 1793493344
+        },
+        {
+          "entity_name": "Companies",
+          "entity_type": "organization",
+          "description": "**Companies**\n\nCompanies are established businesses that operate in various industries and sectors. They are entities that have been able to identify new revenue opportunities and are under pressure to adapt to changing circumstances, which may lead to layoffs and a shift in the way employees leave their jobs. Companies are also businesses that use AI and engineering teams to develop products, and those that commit to daily orchestration, deep integration, human-in-the-loop escalation, and continuous training of AI systems. In order to win with AI, companies must make humans AI-capable, rather than replacing them.\n\nCompanies can be categorized based on their location, with those based in San Francisco being notable for having raised $10 million or more in venture funding. Additionally, companies can be distinguished by their adoption or rejection of AI technology, with those that recognize the potential of AI and commit to its orchestration outperforming those that treat AI as merely a means to augment human capabilities.\n\nCompanies are also entities that provide goods or services to customers, and those that struggle to find enough \"digital\" places to deploy capital with mediocre returns. Furthermore, companies are organizations that employ individuals and have certain expectations regarding their compensation. This includes companies that are still running outdated sales playbooks from 2015, which can hinder their ability to succeed in their respective markets.\n\nBusinesses that employ sales representatives and strive to achieve success in their respective markets are also considered companies. However, companies that recognize and address the hidden overhead of AI-produced possibilities are better equipped to navigate the challenges of the modern business landscape. Ultimately, companies that develop organizational designs and executive practices optimized for AI orchestration will outperform those that fail to adapt to the changing needs of their industry.\n\nSome notable characteristics of companies include those that are raising their Series A in under 2 years, have AI with explosive early traction, are B2B SaaS with immediate product-market fit, and are in hot categories that VCs are actively hunting for. Additionally, companies that are actively deploying customer-facing AI agents are also entities that are companies. Companies refer to organizations or businesses, and they are entities that need to control the quality of new deals.\n\nCompanies also hire A players and B players to perform various tasks, but AI Agents can now perform many of these tasks. The organizations founded by the system's developer are also considered companies. Businesses that adopt AI SDRs to improve sales performance are also companies. Overall, companies are complex entities that require adaptability, innovation, and a commitment to AI orchestration to succeed in the modern business landscape.\n\nIt is worth noting that companies that succeed with AI SDR treat its implementation as a significant investment, while those that fail view it as a minor expense. Companies that win have executive teams that can still do the work at the highest level. Companies that have reached $100M in revenue, with varying time horizons and enterprise values, are also considered successful entities.\n\nCompanies are spending 1-8% of total revenue on internal AI productivity, with $1B+ companies spending $34.2M in 2024, scaling to $60.4M in 2025. Companies with \"we've always done it this way\" sales cultures may struggle to adapt to the changing needs of their industry. Companies that are planning to go public need to be very careful and prepared.\n\nIn summary, companies are entities that operate in various industries and sectors, and are under pressure to adapt to changing circumstances. They can be categorized based on their location, adoption of AI technology, and other factors. Companies that succeed with AI SDR treat its implementation as a significant investment, while those that fail view it as a minor expense. Companies that develop organizational designs and executive practices optimized for AI orchestration will outperform those that fail to adapt to the changing needs of their industry.\n\nSome companies are businesses that are scaling AI-powered personalization and automation approaches. Others operate in various industries and sectors. Entities that are companies winning in AI, putting massive resources into AI, and having a high ratio of Sales Engineers (SEs) to Account Executives (AEs) are also notable. Additionally, companies that are owned and operated by founders, and those that are adopting AI-led growth and treating agents as employees, are also entities that are companies.\n\nCompanies deploying AI support are building competitive advantages in support quality. Companies waiting to deploy AI support are falling behind. Companies need these solutions now, either due to genuine need or to bring AI innovation to their enterprise. Entities that master the evolution of paying for the right things in the right way will continue to thrive, while those that will continue optimizing for mediocrity will struggle to adapt to the changing needs of their industry. Startups that are trying to raise venture capital, and companies with strong unit economics, experienced teams, and real customer traction, but struggling to raise institutional venture capital due to limited growth, are also entities that are companies.<SEP>The key focus of successful companies in the Gen AI space is on the human aspect.<SEP>Companies are going public older than ever (average 16 years vs. 12 in 2015)<SEP>Entities that aim to replace human headcount with AI-powered tools.",
+          "source_id": "gd_012e4b8ce2f7c11e62c5d74e-chunk-000<SEP>gd_492b1c25f3885409dc43a6d3-chunk-000<SEP>gd_3ebf3023f70e6b3f8139191f-chunk-003<SEP>gd_3ebf3023f70e6b3f8139191f-chunk-004<SEP>gd_3ebf3023f70e6b3f8139191f-chunk-000<SEP>gd_72b009a80ea6cf84fc300a5d-chunk-000<SEP>gd_6b9d3993bec3857248dcfa3b-chunk-000<SEP>gd_4f6908ae4b2f4c4e20daccaa-chunk-001<SEP>gd_26b1570b94094e492c6c5bf9-chunk-002<SEP>gd_e6e70dc6bd3b3665dbbe64de-chunk-001<SEP>gd_fb798d3019afee06b2636d46-chunk-001<SEP>gd_713a9f440af71e58ccdbf9ac-chunk-000<SEP>gd_6d674ffb138083b614124cff-chunk-005<SEP>gd_91f0124cd7f6c9cbe24df3e8-chunk-002<SEP>gd_91f0124cd7f6c9cbe24df3e8-chunk-003<SEP>gd_32f5e4f1f3af8c48fe6d19b5-chunk-001<SEP>gd_05120473ace42af384d71ac1-chunk-005<SEP>gd_50b0145865c1ee018c11796f-chunk-003<SEP>gd_3f3546419c8af125d66414d7-chunk-002<SEP>gd_f8379e32c2f158cdff4c2a06-chunk-001<SEP>gd_f8379e32c2f158cdff4c2a06-chunk-002<SEP>gd_f8379e32c2f158cdff4c2a06-chunk-000<SEP>gd_1e47900557b44bbcae52ed54-chunk-002<SEP>gd_dee366469e550505ca8e7db3-chunk-001<SEP>gd_8f5f71a1378d0350779d0bd7-chunk-003<SEP>gd_aece9c47f084112a109da7b9-chunk-000<SEP>gd_aece9c47f084112a109da7b9-chunk-001<SEP>gd_c513cd5cd47320b3679f9406-chunk-003<SEP>gd_7e9750f5f4ac7517b7e0ad2e-chunk-003<SEP>gd_f6fdf2603ce78ce04e08ecf7-chunk-001<SEP>gd_fd38abac1ff711f478d75bee-chunk-000<SEP>gd_f3ce56b2f035635f623c341a-chunk-000<SEP>gd_ae3f5c50899392de90f55b3d-chunk-001<SEP>gd_aea7c965af3368761d8786d3-chunk-003<SEP>gd_aea7c965af3368761d8786d3-chunk-002<SEP>gd_bcf71ee9bfd7ae832ca92ddb-chunk-001<SEP>gd_45039ea6215ace79f501d25d-chunk-004<SEP>gd_5fcd96075c9c8c56ec80e1ba-chunk-001<SEP>gd_696d949b6e655b2d0cca062f-chunk-001<SEP>gd_b17253e0832c9eda0a49b551-chunk-006<SEP>gd_70c193d5819b8687590e93ee-chunk-004<SEP>gd_76d30c1cbcd45df21a2f1787-chunk-003<SEP>gd_85e65f7b38f06f45f9272493-chunk-001<SEP>gd_e20ce885bf9b34730505932c-chunk-006<SEP>gd_e20ce885bf9b34730505932c-chunk-004<SEP>gd_93d5f2f3734060bea2c7b669-chunk-003<SEP>gd_93d5f2f3734060bea2c7b669-chunk-002<SEP>gd_ec228e8695e416170bcef74e-chunk-008<SEP>gd_fd90f8ff61dc14b7eae3257e-chunk-000<SEP>gd_015d273393160169bc16ee3e-chunk-004<SEP>gd_16b616fcb6970053eaa0f408-chunk-003<SEP>gd_05ddde0619abd1d6ef72e8bc-chunk-005<SEP>gd_bec03cccc4792714332d3b24-chunk-004<SEP>gd_23ebc282dfbfcee03fe01904-chunk-001<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-002<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-005<SEP>gd_40a1e7bc45542f2904568d95-chunk-003<SEP>gd_5b445ae4452b1cd5ee770467-chunk-003<SEP>gd_eb80566a617b57e47caec5bf-chunk-005<SEP>gd_67eadcb9afdf2a74fbb9b074-chunk-001<SEP>gd_eed02ca0e99ddce2117cfb23-chunk-002<SEP>gd_eed02ca0e99ddce2117cfb23-chunk-003<SEP>gd_823279392f3517de14a0233e-chunk-003<SEP>gd_823279392f3517de14a0233e-chunk-004<SEP>gd_c5fd94ac349d025fb78a37d0-chunk-004<SEP>gd_03e19ade06e9e20d35a7a989-chunk-005<SEP>gd_03e19ade06e9e20d35a7a989-chunk-006<SEP>gd_5d983738ccb8063f7f8a2ced-chunk-002<SEP>gd_83324e3776b6d73c88b7c64d-chunk-001<SEP>gd_080ffd5535b5743e593659d5-chunk-005<SEP>gd_a3beba9f3fc44aaebfcd11fe-chunk-001<SEP>gd_67d7970183aa4b991571839a-chunk-007<SEP>gd_1ea75faaa1a24bb0a1573ab5-chunk-004<SEP>gd_9a97c79b6f4bcad8c5a26ccc-chunk-002<SEP>gd_9a97c79b6f4bcad8c5a26ccc-chunk-003<SEP>gd_03d099fd7a2d1f943fc4fe54-chunk-004<SEP>gd_97843612d08bfd01e9f83879-chunk-006<SEP>gd_97843612d08bfd01e9f83879-chunk-007<SEP>gd_97843612d08bfd01e9f83879-chunk-009<SEP>gd_97843612d08bfd01e9f83879-chunk-010<SEP>gd_31e53199562273779b464f4d-chunk-003<SEP>gd_3aae8a7c065a234aa5cc25dc-chunk-001<SEP>gd_3e8732484211557041408d86-chunk-011<SEP>gd_3e8732484211557041408d86-chunk-010<SEP>gd_547c5075e66aa644c0ab2a4f-chunk-007<SEP>gd_5a82a5a11309c93654f577f0-chunk-006<SEP>gd_c16b3257c39365c1412dc08b-chunk-002<SEP>gd_70ca318c0d67e8b62254fb7d-chunk-001<SEP>gd_8188f705a58f509db9190d86-chunk-005<SEP>gd_f827ff3faea250fe8b6cf999-chunk-000<SEP>gd_3f9119ed9837d5ab5732aafa-chunk-002<SEP>gd_abfe41334169db7a9fdcf906-chunk-001<SEP>gd_dc18c861c82269cf5cc7e98b-chunk-002<SEP>gd_c1eda59785faf7ce5addae75-chunk-000<SEP>gd_c1eda59785faf7ce5addae75-chunk-016<SEP>gd_57e4f799ef3cc8109831930f-chunk-014<SEP>gd_57e4f799ef3cc8109831930f-chunk-015<SEP>gd_39135822a5638787a5a43dd3-chunk-005<SEP>gd_943c38649b4fb094ca0c280d-chunk-002<SEP>gd_6f67421c00686b7efde013a1-chunk-008<SEP>gd_1b901fbe1ef64d57a6539100-chunk-004<SEP>gd_45895bb382839086f6554318-chunk-006<SEP>gd_492e971bca8d8c69fd6cc299-chunk-000<SEP>gd_9892f4cb159a2427a2e6b59b-chunk-004<SEP>gd_3b0cd7a4547ffa30c6908e86-chunk-009<SEP>gd_7d6b408bcde324e8e7717ce7-chunk-006<SEP>gd_2b1b8318e2ec523237dbf3e3-chunk-008<SEP>gd_2b1b8318e2ec523237dbf3e3-chunk-009<SEP>gd_c3146fb15d0855ad8bbb5a02-chunk-008<SEP>gd_0488dbe0d1821eacec1cd206-chunk-006<SEP>gd_0488dbe0d1821eacec1cd206-chunk-009<SEP>gd_59c785375f34b0507b64485d-chunk-005<SEP>gd_bd5af2f19abc9f9115e0783f-chunk-006<SEP>gd_0adbace75ffc5e3ea7aadf77-chunk-015",
+          "file_path": "gd_012e4b8ce2f7c11e62c5d74e<SEP>gd_492b1c25f3885409dc43a6d3<SEP>gd_3ebf3023f70e6b3f8139191f<SEP>gd_6b9d3993bec3857248dcfa3b<SEP>gd_4f6908ae4b2f4c4e20daccaa<SEP>gd_e6e70dc6bd3b3665dbbe64de<SEP>gd_fb798d3019afee06b2636d46<SEP>gd_713a9f440af71e58ccdbf9ac<SEP>gd_6d674ffb138083b614124cff<SEP>gd_91f0124cd7f6c9cbe24df3e8<SEP>gd_32f5e4f1f3af8c48fe6d19b5<SEP>gd_05120473ace42af384d71ac1<SEP>gd_50b0145865c1ee018c11796f<SEP>gd_3f3546419c8af125d66414d7<SEP>gd_f8379e32c2f158cdff4c2a06<SEP>gd_1e47900557b44bbcae52ed54<SEP>gd_dee366469e550505ca8e7db3<SEP>gd_8f5f71a1378d0350779d0bd7<SEP>gd_7e9750f5f4ac7517b7e0ad2e<SEP>gd_f6fdf2603ce78ce04e08ecf7<SEP>gd_f3ce56b2f035635f623c341a<SEP>gd_aea7c965af3368761d8786d3<SEP>gd_bcf71ee9bfd7ae832ca92ddb<SEP>gd_5fcd96075c9c8c56ec80e1ba<SEP>gd_b17253e0832c9eda0a49b551<SEP>gd_70c193d5819b8687590e93ee<SEP>gd_76d30c1cbcd45df21a2f1787<SEP>gd_85e65f7b38f06f45f9272493<SEP>gd_e20ce885bf9b34730505932c<SEP>gd_93d5f2f3734060bea2c7b669<SEP>gd_ec228e8695e416170bcef74e<SEP>gd_fd90f8ff61dc14b7eae3257e<SEP>gd_015d273393160169bc16ee3e<SEP>gd_16b616fcb6970053eaa0f408<SEP>gd_bec03cccc4792714332d3b24<SEP>gd_40a1e7bc45542f2904568d95<SEP>gd_67eadcb9afdf2a74fbb9b074<SEP>gd_eed02ca0e99ddce2117cfb23<SEP>gd_823279392f3517de14a0233e<SEP>gd_03e19ade06e9e20d35a7a989<SEP>gd_5d983738ccb8063f7f8a2ced<SEP>gd_83324e3776b6d73c88b7c64d<SEP>gd_080ffd5535b5743e593659d5<SEP>gd_67d7970183aa4b991571839a<SEP>gd_97843612d08bfd01e9f83879<SEP>gd_31e53199562273779b464f4d<SEP>gd_3e8732484211557041408d86<SEP>gd_547c5075e66aa644c0ab2a4f<SEP>gd_5a82a5a11309c93654f577f0<SEP>gd_c16b3257c39365c1412dc08b<SEP>gd_70ca318c0d67e8b62254fb7d<SEP>gd_8188f705a58f509db9190d86<SEP>gd_c1eda59785faf7ce5addae75<SEP>gd_57e4f799ef3cc8109831930f<SEP>gd_39135822a5638787a5a43dd3<SEP>gd_943c38649b4fb094ca0c280d<SEP>gd_6f67421c00686b7efde013a1<SEP>gd_1b901fbe1ef64d57a6539100<SEP>gd_45895bb382839086f6554318<SEP>gd_3b0cd7a4547ffa30c6908e86<SEP>gd_2b1b8318e2ec523237dbf3e3<SEP>gd_c3146fb15d0855ad8bbb5a02<SEP>gd_0488dbe0d1821eacec1cd206<SEP>gd_bd5af2f19abc9f9115e0783f",
+          "created_at": 1793644447
+        },
+        {
+          "entity_name": "Application",
+          "entity_type": "concept",
+          "description": "An application is a software program that performs a specific task or set of tasks.<SEP>Software programs that run on top of infrastructure.",
+          "source_id": "gd_552e72a84c32d9d868dd8a37-chunk-000<SEP>gd_dc18c861c82269cf5cc7e98b-chunk-005",
+          "file_path": "gd_552e72a84c32d9d868dd8a37<SEP>gd_dc18c861c82269cf5cc7e98b",
+          "created_at": 1793618500
+        },
+        {
+          "entity_name": "Inbound Demand",
+          "entity_type": "concept",
+          "description": "Inbound demand refers to real demand, not demo requests from tire kickers.<SEP>The demand for a product or service that is generated through marketing and sales efforts.",
+          "source_id": "gd_3e8732484211557041408d86-chunk-005<SEP>gd_3e8732484211557041408d86-chunk-011<SEP>gd_3e8732484211557041408d86-chunk-010",
+          "file_path": "gd_3e8732484211557041408d86",
+          "created_at": 1793607058
+        },
+        {
+          "entity_name": "App Count",
+          "entity_type": "concept",
+          "description": "App count refers to the number of applications or tools used by a company.<SEP>App count refers to the number of software applications used by an organization.",
+          "source_id": "gd_bb6777cec9990f70dd72539b-chunk-004<SEP>gd_03e19ade06e9e20d35a7a989-chunk-001",
+          "file_path": "gd_bb6777cec9990f70dd72539b<SEP>gd_03e19ade06e9e20d35a7a989",
+          "created_at": 1793597992
+        },
+        {
+          "entity_name": "AI-Native Upstarts",
+          "entity_type": "concept",
+          "description": "AI-native upstarts are emerging, offering more value at a lower effective cost, causing market share to slip.",
+          "source_id": "gd_3aae8a7c065a234aa5cc25dc-chunk-001",
+          "file_path": "gd_3aae8a7c065a234aa5cc25dc",
+          "created_at": 1793606891
+        },
+        {
+          "entity_name": "Mindshare",
+          "entity_type": "concept",
+          "description": "Mindshare is the attention and interest that customers have given to the app.",
+          "source_id": "gd_53125c06356e76f287497023-chunk-000",
+          "file_path": "gd_53125c06356e76f287497023",
+          "created_at": 1793502768
+        },
+        {
+          "entity_name": "Traditional B2B Vendors",
+          "entity_type": "organization",
+          "description": "Traditional B2B vendors are struggling to adapt to the changing market, with customers pushing back against AI agent layer upcharges.",
+          "source_id": "gd_3aae8a7c065a234aa5cc25dc-chunk-001",
+          "file_path": "gd_3aae8a7c065a234aa5cc25dc",
+          "created_at": 1793606891
+        },
+        {
+          "entity_name": "115,000+",
+          "entity_type": "metric",
+          "description": "115,000+ is the number of apps included in the data for the report \"The State of Subscription Apps 2026\".",
+          "source_id": "gd_cee3fa988d8406247d556896-chunk-009",
+          "file_path": "gd_cee3fa988d8406247d556896",
+          "created_at": 1793618640
+        },
+        {
+          "entity_name": "Shopify's Payments",
+          "entity_type": "product",
+          "description": "Merchant services with 39.1% gross margins.",
+          "source_id": "gd_bdb7a3958d115cc79af181f3-chunk-001",
+          "file_path": "gd_bdb7a3958d115cc79af181f3",
+          "created_at": 1793519660
+        },
+        {
+          "entity_name": "The one-shot math",
+          "entity_type": "concept",
+          "description": "A mathematical model that estimates the time required to develop a complex app.",
+          "source_id": "gd_d3b6027dbaa2c2a8e59fe5b7-chunk-000",
+          "file_path": "gd_d3b6027dbaa2c2a8e59fe5b7",
+          "created_at": 1793490866
+        }
+      ],
+      "relationships": [
+        {
+          "src_id": "NPS",
+          "tgt_id": "SaaStr",
+          "description": "NPS is a leading indicator of retention and upsell potential.<SEP>Driving up NPS as a core KPI is preferred over just driving down churn.<SEP>relationship_description: SaaStr suggests focusing on NPS and Retention to improve customer satisfaction<SEP>SaaStr is related to the concept of NPS.",
+          "keywords": "Contextual,High,Related,core metric,relationship_keywords: customer satisfaction,relationship_keywords: drives up,retention",
+          "weight": 4.0,
+          "source_id": "gd_a54f5bf886b30a7e8324893d-chunk-001<SEP>gd_a6ad2eaf169aed9b7f8a5f51-chunk-000<SEP>gd_ed65acecc6e4d39357b55384-chunk-000<SEP>gd_f4804f30c08b277f5a0cc977-chunk-000",
+          "file_path": "gd_a54f5bf886b30a7e8324893d<SEP>gd_a6ad2eaf169aed9b7f8a5f51<SEP>gd_ed65acecc6e4d39357b55384<SEP>gd_f4804f30c08b277f5a0cc977",
+          "created_at": 1793557867
+        },
+        {
+          "src_id": "NNARR",
+          "tgt_id": "Product-Market Fit",
+          "description": "Customers are no longer willing to adopt “good enough” solutions in new vendors, and the bar for product quality, integration capabilities, and demonstrable ROI has never been higher.",
+          "keywords": "Growth,relationship_keywords=Escalation",
+          "weight": 1.0,
+          "source_id": "gd_753a13ceccfb779879f29786-chunk-003",
+          "file_path": "gd_753a13ceccfb779879f29786",
+          "created_at": 1793570345
+        },
+        {
+          "src_id": "Apps",
+          "tgt_id": "SaaStr",
+          "description": "The apps have influenced SaaStr to expect certain pricing.",
+          "keywords": "Keywords: influence,expectation",
+          "weight": 1.0,
+          "source_id": "gd_072a958576c3d08d325dd01b-chunk-001",
+          "file_path": "gd_072a958576c3d08d325dd01b",
+          "created_at": 1793488851
+        },
+        {
+          "src_id": "Shopify",
+          "tgt_id": "Shopify Plus",
+          "description": "Revenue Growth Description<SEP>Shopify Plus is a premium version of Shopify's e-commerce platform.<SEP>Shopify Plus is an enterprise offering of Shopify that provides solutions for bigger and enterprise customers and brands.<SEP>Shopify's NRR rate increases when it focuses on its bigger customers on \"Shopify Plus\", which helps drive their NRR to 100% and their unit economics up.<SEP>relationship_description: Shopify has a distinct product line and segment for its largest customers, Shopify Plus.",
+          "keywords": "Growth Keywords,Keywords: offers,NRR Growth Keywords,Related product,provides,relationship_keywords: distinct product line,segment,solutions",
+          "weight": 5.0,
+          "source_id": "gd_19e4fce6eb43b72382d2042c-chunk-001<SEP>gd_7d9ae6c91b92a3f115f2c36d-chunk-000<SEP>gd_bdb7a3958d115cc79af181f3-chunk-001<SEP>gd_d7608d7e6dac4d722fb90de0-chunk-003<SEP>gd_786c275ee1a2e3b1c07c1db9-chunk-000",
+          "file_path": "gd_19e4fce6eb43b72382d2042c<SEP>gd_7d9ae6c91b92a3f115f2c36d<SEP>gd_bdb7a3958d115cc79af181f3<SEP>gd_d7608d7e6dac4d722fb90de0<SEP>gd_786c275ee1a2e3b1c07c1db9",
+          "created_at": 1793640126
+        },
+        {
+          "src_id": "AI",
+          "tgt_id": "App",
+          "description": "The AI generates code quickly, making it faster to rebuild than debug.<SEP>The AI generates code for the application.",
+          "keywords": "Generates Code,Generates Code Quickly",
+          "weight": 2.0,
+          "source_id": "gd_79858ea6162573644fe3e173-chunk-006",
+          "file_path": "gd_79858ea6162573644fe3e173",
+          "created_at": 1793496393
+        },
+        {
+          "src_id": "Digital Ocean",
+          "tgt_id": "Shopify",
+          "description": "Shopify's NRR rate increases when it focuses on its bigger customers on \"Shopify Plus\", which helps drive their NRR to 100% and their unit economics up.",
+          "keywords": "NRR Growth Keywords",
+          "weight": 1.0,
+          "source_id": "gd_d7608d7e6dac4d722fb90de0-chunk-003",
+          "file_path": "gd_d7608d7e6dac4d722fb90de0",
+          "created_at": 1793628595
+        },
+        {
+          "src_id": "AI",
+          "tgt_id": "Math",
+          "description": "The AI system works out mathematically, increasing overall revenue.",
+          "keywords": "AI,Increases,Works",
+          "weight": 1.0,
+          "source_id": "gd_97843612d08bfd01e9f83879-chunk-007",
+          "file_path": "gd_97843612d08bfd01e9f83879",
+          "created_at": 1793605105
+        },
+        {
+          "src_id": "Initial Scale",
+          "tgt_id": "Money Is No Longer an Excuse",
+          "description": "The stage in a startup's growth where it has achieved a certain level of revenue and customer acquisition, and is now focused on scaling and investing in growth.",
+          "keywords": "Keywords: revenue,customer acquisition,scaling",
+          "weight": 1.0,
+          "source_id": "gd_676ceb1d508acba0f3613cd1-chunk-000",
+          "file_path": "gd_676ceb1d508acba0f3613cd1",
+          "created_at": 1793519325
+        },
+        {
+          "src_id": "NPS",
+          "tgt_id": "SaaS",
+          "description": "SaaS compounds with NPS, meaning that as NPS increases, SaaS growth becomes more stable and sustainable.",
+          "keywords": "Compound",
+          "weight": 1.0,
+          "source_id": "gd_0ebe200504c2767b18fadc12-chunk-002",
+          "file_path": "gd_0ebe200504c2767b18fadc12",
+          "created_at": 1793511932
+        },
+        {
+          "src_id": "Pipeline",
+          "tgt_id": "Sales AI SDR",
+          "description": "The Sales AI SDR builds and increases the pipeline.",
+          "keywords": "increases,relationship_keywords: builds",
+          "weight": 1.0,
+          "source_id": "gd_57e4f799ef3cc8109831930f-chunk-002",
+          "file_path": "gd_57e4f799ef3cc8109831930f",
+          "created_at": 1793622794
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "SaaS",
+          "description": "The app is a reference for the company's customers in the SaaS industry.",
+          "keywords": "Relationship_keywords: reference,customers",
+          "weight": 1.0,
+          "source_id": "gd_6b1a49b4098b8d5ced9cbc54-chunk-000",
+          "file_path": "gd_6b1a49b4098b8d5ced9cbc54",
+          "created_at": 1793495619
+        },
+        {
+          "src_id": "Companies",
+          "tgt_id": "Inbound Demand",
+          "description": "Companies that build real inbound demand before scaling sales are more successful.",
+          "keywords": "Keywords: build,real",
+          "weight": 1.0,
+          "source_id": "gd_3e8732484211557041408d86-chunk-011",
+          "file_path": "gd_3e8732484211557041408d86",
+          "created_at": 1793607082
+        },
+        {
+          "src_id": "NPS",
+          "tgt_id": "VP of Sales",
+          "description": "often influenced by the NPS of their previous role.",
+          "keywords": "influenced_by",
+          "weight": 1.0,
+          "source_id": "gd_545a33a881beeb183329d2d6-chunk-002",
+          "file_path": "gd_545a33a881beeb183329d2d6",
+          "created_at": 1793518756
+        },
+        {
+          "src_id": "AI-Native Upstarts",
+          "tgt_id": "Traditional B2B Vendors",
+          "description": "relationship_description=AI-native upstarts are emerging, offering more value at a lower effective cost.<SEP>relationship_description=AI-native upstarts are offering more value at a lower effective cost.",
+          "keywords": "relationship_keywords=losing market share,relationship_keywords=offering more value",
+          "weight": 2.0,
+          "source_id": "gd_3aae8a7c065a234aa5cc25dc-chunk-001",
+          "file_path": "gd_3aae8a7c065a234aa5cc25dc",
+          "created_at": 1793606904
+        },
+        {
+          "src_id": "Jason",
+          "tgt_id": "NPS",
+          "description": "Jason changed his mind about NPS and now uses it as a core metric to predict churn.<SEP>NPS builds confidence.",
+          "keywords": "Relationship_keywords: endorses,predicting churn,relationship_keywords: core metric,uses",
+          "weight": 2.0,
+          "source_id": "gd_56365d05cf1b46c8c5dbc613-chunk-003<SEP>gd_56365d05cf1b46c8c5dbc613-chunk-004",
+          "file_path": "gd_56365d05cf1b46c8c5dbc613",
+          "created_at": 1793566612
+        },
+        {
+          "src_id": "Shopify",
+          "tgt_id": "Shopify's Payments",
+          "description": "Shopify's Payments were growing slower than Shopify's SaaS in the past, but now SaaS is growing faster.",
+          "keywords": "Keywords: growing,faster,opposite",
+          "weight": 1.0,
+          "source_id": "gd_bdb7a3958d115cc79af181f3-chunk-001",
+          "file_path": "gd_bdb7a3958d115cc79af181f3",
+          "created_at": 1793519665
+        },
+        {
+          "src_id": "Apps",
+          "tgt_id": "OpenAI",
+          "description": "relationship_description=Fiji Simo is the new CEO of Apps at OpenAI.",
+          "keywords": "new CEO,relationship_keywords=new product",
+          "weight": 1.0,
+          "source_id": "gd_cee09e6c9f84106353f2f15e-chunk-003",
+          "file_path": "gd_cee09e6c9f84106353f2f15e",
+          "created_at": 1793571351
+        },
+        {
+          "src_id": "AI companies",
+          "tgt_id": "Peter Walker",
+          "description": "relationship_description: Peter Walker notes that AI companies are raising faster and achieving Series A metrics more quickly than other startups.",
+          "keywords": "faster,funding,relationship_keywords: raises",
+          "weight": 1.0,
+          "source_id": "gd_3f3546419c8af125d66414d7-chunk-001",
+          "file_path": "gd_3f3546419c8af125d66414d7",
+          "created_at": 1793517454
+        },
+        {
+          "src_id": "Company",
+          "tgt_id": "NPS",
+          "description": "Companies should set a goal to increase NPS to drive customer satisfaction.",
+          "keywords": "Goal",
+          "weight": 1.0,
+          "source_id": "gd_1b9bbe7ebbb40cc7edaaca04-chunk-003",
+          "file_path": "gd_1b9bbe7ebbb40cc7edaaca04",
+          "created_at": 1793534018
+        },
+        {
+          "src_id": "Existing Software",
+          "tgt_id": "Incumbent SaaS Company",
+          "description": "relationship_description: Incumbent SaaS companies are integrating AI features into existing software and raising prices.",
+          "keywords": "raises prices,relationship_keywords: integrates",
+          "weight": 1.0,
+          "source_id": "gd_55cf1d202b4f378f36410cec-chunk-006",
+          "file_path": "gd_55cf1d202b4f378f36410cec",
+          "created_at": 1793609477
+        },
+        {
+          "src_id": "HubSpot",
+          "tgt_id": "NPS",
+          "description": "HubSpot's NPS craters due to aggressive price extraction.",
+          "keywords": "cratering",
+          "weight": 1.0,
+          "source_id": "gd_b62b6ad34d4ba7357f8052f1-chunk-004",
+          "file_path": "gd_b62b6ad34d4ba7357f8052f1",
+          "created_at": 1793569787
+        },
+        {
+          "src_id": "AI B2B apps",
+          "tgt_id": "ElevenLabs",
+          "description": "ElevenLabs achieves profitability while scaling AI B2B apps, with lower customer acquisition costs, higher gross margins, faster time-to-value, and natural expansion revenue.",
+          "keywords": "relationship_keywords: profitability,scalability,unit economics",
+          "weight": 1.0,
+          "source_id": "gd_d19ef462293cbfaf17f910e6-chunk-003",
+          "file_path": "gd_d19ef462293cbfaf17f910e6",
+          "created_at": 1793589502
+        },
+        {
+          "src_id": "CEO",
+          "tgt_id": "NPS",
+          "description": "The CEO is responsible for monitoring the company's NPS to ensure customer satisfaction.<SEP>CEOs should set a goal to increase NPS to drive customer satisfaction.",
+          "keywords": "Goal,monitors",
+          "weight": 2.0,
+          "source_id": "gd_343a80af8e5150bc1335a52e-chunk-001<SEP>gd_1b9bbe7ebbb40cc7edaaca04-chunk-003",
+          "file_path": "gd_343a80af8e5150bc1335a52e<SEP>gd_1b9bbe7ebbb40cc7edaaca04",
+          "created_at": 1793534018
+        },
+        {
+          "src_id": "AWS Re:Invent",
+          "tgt_id": "Scaling Success: The Datadog Re:Invent Story",
+          "description": "AWS Re:Invent is the event where Datadog successfully scaled their customer acquisition channel.",
+          "keywords": "customer acquisition,event,scaling",
+          "weight": 1.0,
+          "source_id": "gd_e17729e5eca8acb5235bb5b2-chunk-002",
+          "file_path": "gd_e17729e5eca8acb5235bb5b2",
+          "created_at": 1793588209
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "Company",
+          "description": "The company charges its customers for branding the app, including adding a JPEG.<SEP>Lead scoring can be used to score leads based on their actions on the app.",
+          "keywords": "Relationship_keywords: branding,Use app for lead scoring,fee,revenue",
+          "weight": 2.0,
+          "source_id": "gd_6b1a49b4098b8d5ced9cbc54-chunk-000<SEP>gd_d5dd5718c4d9070f399d45a0-chunk-000",
+          "file_path": "gd_6b1a49b4098b8d5ced9cbc54<SEP>gd_d5dd5718c4d9070f399d45a0",
+          "created_at": 1793525160
+        },
+        {
+          "src_id": "customers",
+          "tgt_id": "growth",
+          "description": "As customers increase, the growth compounds.<SEP>reignite growth by serving big customers.<SEP>relationship_description: Customers benefit from the company's growth through improved products and services and may expect continued growth.",
+          "keywords": "compound,expects,increase,reignite,relationship_keywords: benefits",
+          "weight": 4.0,
+          "source_id": "gd_7ca43490977abcab30f71770-chunk-001<SEP>gd_e01477e17866ee5836e50828-chunk-006<SEP>gd_40a1e7bc45542f2904568d95-chunk-005",
+          "file_path": "gd_7ca43490977abcab30f71770<SEP>gd_e01477e17866ee5836e50828<SEP>gd_40a1e7bc45542f2904568d95",
+          "created_at": 1793593342
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "Founder",
+          "description": "Underpricing is not a growth strategy. It’s a self-inflicted LTV wound.",
+          "keywords": "Pricing Power",
+          "weight": 2.0,
+          "source_id": "gd_cee3fa988d8406247d556896-chunk-005",
+          "file_path": "gd_cee3fa988d8406247d556896",
+          "created_at": 1793618647
+        },
+        {
+          "src_id": "Customer Count",
+          "tgt_id": "Growth",
+          "description": "relationship_description: A growing customer count indicates rapid growth and expansion.",
+          "keywords": "doubling,relationship_keywords: increase",
+          "weight": 1.0,
+          "source_id": "gd_1bb89f0881d846204f69d052-chunk-001",
+          "file_path": "gd_1bb89f0881d846204f69d052",
+          "created_at": 1793493254
+        },
+        {
+          "src_id": "Founder",
+          "tgt_id": "Math",
+          "description": "The founder uses math to calculate the company's financial situation.",
+          "keywords": "calculation,financial situation",
+          "weight": 1.0,
+          "source_id": "gd_062fdba1eb0375bef6607116-chunk-000",
+          "file_path": "gd_062fdba1eb0375bef6607116",
+          "created_at": 1793563365
+        },
+        {
+          "src_id": "PE Market",
+          "tgt_id": "Value Creation",
+          "description": "relationship_description: Value creation is the process of increasing the value of a company.",
+          "keywords": "relationship_keywords: increase,value",
+          "weight": 1.0,
+          "source_id": "gd_605e0c1f4fd4724182870b9e-chunk-008",
+          "file_path": "gd_605e0c1f4fd4724182870b9e",
+          "created_at": 1793643721
+        },
+        {
+          "src_id": "ARR",
+          "tgt_id": "NPS",
+          "description": "NPS is correlated with ARR, as high customer satisfaction leads to revenue growth.<SEP>Measuring ARR is a key aspect of building a CS machine that scales to $100M ARR and beyond.",
+          "keywords": "Correlated With,Measuring",
+          "weight": 2.0,
+          "source_id": "gd_1bb89f0881d846204f69d052-chunk-002<SEP>gd_641ddfbb18ea9d7661766b2e-chunk-002",
+          "file_path": "gd_1bb89f0881d846204f69d052<SEP>gd_641ddfbb18ea9d7661766b2e",
+          "created_at": 1793639375
+        },
+        {
+          "src_id": "Monday",
+          "tgt_id": "Shopify",
+          "description": "Efficiency Comparison Description<SEP>Monday and Shopify are examples of SaaS companies that experienced significant efficiency gains in 2023.<SEP>Monday is going upmarket and that's important to its epic growth, but its customers still pay on average just a bit more than $2k.<SEP>Difficulty in Building Specific Agents<SEP>CrowdStrike, Shopify, Monday add intelligence to existing products.",
+          "keywords": "Comparison Keywords,Efficiency Gains,Integrate with,Verticals,upmarket growth",
+          "weight": 5.0,
+          "source_id": "gd_19e4fce6eb43b72382d2042c-chunk-001<SEP>gd_fc560134d5cd034812dc8b69-chunk-002<SEP>gd_6883af2ee760af258eff9978-chunk-002<SEP>gd_59c785375f34b0507b64485d-chunk-000<SEP>gd_59c785375f34b0507b64485d-chunk-005",
+          "file_path": "gd_19e4fce6eb43b72382d2042c<SEP>gd_fc560134d5cd034812dc8b69<SEP>gd_6883af2ee760af258eff9978<SEP>gd_59c785375f34b0507b64485d",
+          "created_at": 1793644273
+        },
+        {
+          "src_id": "Customer",
+          "tgt_id": "NPS",
+          "description": "relationship_description: Customers' NPS scores measure their satisfaction.<SEP>If every customer could leave tomorrow with zero switching costs, would they?",
+          "keywords": "Cancellation Friction,relationship_keywords: measure,satisfaction",
+          "weight": 2.0,
+          "source_id": "gd_4bde0767eaeffe8fda34ff9e-chunk-001<SEP>gd_fd88decf2f277fd53c2293b7-chunk-005",
+          "file_path": "gd_4bde0767eaeffe8fda34ff9e<SEP>gd_fd88decf2f277fd53c2293b7",
+          "created_at": 1793621332
+        },
+        {
+          "src_id": "Haves and Have Nots",
+          "tgt_id": "SaaS",
+          "description": "In the SaaS industry, there are companies that are having an incredible run (Haves) and those that are struggling with growth (Have Nots).<SEP>Those selling outside of B2B, those that are truly AI native, and more in many cases are part of the Haves in the Haves and Have Nots in SaaS today.<SEP>Inside of tech sales, a drop in NRR is just crushing growth for the Haves and Have Nots in SaaS today.<SEP>Those selling outside of B2B, those that are truly AI native, and more in many cases are having an incredible run and part of the Haves in the Haves and Have Nots in SaaS today.",
+          "keywords": "Classification,Growth,having an incredible run,relationship_keywords: crushing growth,relationship_keywords: incredible run",
+          "weight": 4.0,
+          "source_id": "gd_4f19c3ee254c8d45cc729019-chunk-000<SEP>gd_4f19c3ee254c8d45cc729019-chunk-001",
+          "file_path": "gd_4f19c3ee254c8d45cc729019",
+          "created_at": 1793561493
+        },
+        {
+          "src_id": "NPS",
+          "tgt_id": "Snowflake",
+          "description": "The company has a high Net Promoter Score of 68<SEP>Snowflake has a high Net Promoter Score of 67.<SEP>NPS is an excellent metric for Snowflake, indicating high customer satisfaction and loyalty.",
+          "keywords": "Excellent,High",
+          "weight": 3.0,
+          "source_id": "gd_18771289802258996e9afe7d-chunk-002<SEP>gd_7681722f354a46bf769c0671-chunk-001<SEP>gd_7681722f354a46bf769c0671-chunk-002",
+          "file_path": "gd_18771289802258996e9afe7d<SEP>gd_7681722f354a46bf769c0671",
+          "created_at": 1793511347
+        },
+        {
+          "src_id": "Shopify's Payments",
+          "tgt_id": "Shopify's SaaS",
+          "description": "Shopify's SaaS was growing slower than Shopify's Payments in the past, but now SaaS is growing faster.",
+          "keywords": "Keywords: opposite,growing",
+          "weight": 1.0,
+          "source_id": "gd_bdb7a3958d115cc79af181f3-chunk-001",
+          "file_path": "gd_bdb7a3958d115cc79af181f3",
+          "created_at": 1793519665
+        },
+        {
+          "src_id": "NPS",
+          "tgt_id": "Product",
+          "description": "This will benefit revenue.",
+          "keywords": "Benefit,Improvement",
+          "weight": 1.0,
+          "source_id": "gd_a120d398e57a33365886f6a6-chunk-005",
+          "file_path": "gd_a120d398e57a33365886f6a6",
+          "created_at": 1793554779
+        },
+        {
+          "src_id": "New Year's Resolutions",
+          "tgt_id": "Shopify",
+          "description": "Shopify is seeing higher e-commerce growth.",
+          "keywords": "Grow",
+          "weight": 1.0,
+          "source_id": "gd_111b6b23b20d3f5268f61598-chunk-000",
+          "file_path": "gd_111b6b23b20d3f5268f61598",
+          "created_at": 1793500857
+        },
+        {
+          "src_id": "Customers",
+          "tgt_id": "NPS",
+          "description": "Measuring customer satisfaction and loyalty.<SEP>Companies measure and track customer satisfaction through NPS.<SEP>Measure NPS. Do a customer conference. Get the feedback.",
+          "keywords": "Measuring,Relationship Keywords: measure,measure,satisfaction,track,tracking",
+          "weight": 3.0,
+          "source_id": "gd_490259ae216c7d38a715cfb7-chunk-002<SEP>gd_a120d398e57a33365886f6a6-chunk-003<SEP>gd_d618018f549027002a61d265-chunk-003",
+          "file_path": "gd_490259ae216c7d38a715cfb7<SEP>gd_a120d398e57a33365886f6a6<SEP>gd_d618018f549027002a61d265",
+          "created_at": 1793640960
+        },
+        {
+          "src_id": "B2B SaaS companies",
+          "tgt_id": "Peter Walker",
+          "description": "relationship_description: Peter Walker notes that B2B SaaS companies are raising faster and achieving Series A metrics more quickly than other startups.",
+          "keywords": "faster,funding,relationship_keywords: raises",
+          "weight": 1.0,
+          "source_id": "gd_3f3546419c8af125d66414d7-chunk-001",
+          "file_path": "gd_3f3546419c8af125d66414d7",
+          "created_at": 1793517454
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "Customer",
+          "description": "The customer uses the app for business process change.<SEP>It is easier to switch to a different app than you think, given enough time.<SEP>Even the most sticky enterprise app is at extra risk during Champion Change.",
+          "keywords": "Risk,Switching,uses",
+          "weight": 3.0,
+          "source_id": "gd_d3046abbff56769a90cbeea0-chunk-002<SEP>gd_9021ddbc4daccae39880d4e2-chunk-001",
+          "file_path": "gd_d3046abbff56769a90cbeea0<SEP>gd_9021ddbc4daccae39880d4e2",
+          "created_at": 1793533512
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "Sales Team",
+          "description": "The sales team may cause difficulty and friction when assisting with app upgrades.",
+          "keywords": "difficulty,friction",
+          "weight": 1.0,
+          "source_id": "gd_dfbe999d4fbee6b9fac2b631-chunk-003",
+          "file_path": "gd_dfbe999d4fbee6b9fac2b631",
+          "created_at": 1793576935
+        },
+        {
+          "src_id": "Customer Success",
+          "tgt_id": "NPS",
+          "description": "Customer success teams drive and increase NPS.<SEP>relationship_description: Customer success teams use NPS to measure customer satisfaction.<SEP>relationship_description: Customer success teams use NPS as a metric to measure customer satisfaction.<SEP>Happy customers drive growth, and companies should aim for an NPS of 60+.<SEP>Measuring NPS is important for ensuring Customer Success.",
+          "keywords": "Importance,Improvement Keywords,customer satisfaction,drives,increases,relationship_keywords: measure,relationship_keywords: metric,satisfaction",
+          "weight": 5.0,
+          "source_id": "gd_de5623a10d1c9531112cfe54-chunk-001<SEP>gd_4bde0767eaeffe8fda34ff9e-chunk-001<SEP>gd_d5be599c09c06e3a2de7a86e-chunk-000<SEP>gd_b0a33090385448bab0fdb263-chunk-000<SEP>gd_641ddfbb18ea9d7661766b2e-chunk-002",
+          "file_path": "gd_de5623a10d1c9531112cfe54<SEP>gd_4bde0767eaeffe8fda34ff9e<SEP>gd_d5be599c09c06e3a2de7a86e<SEP>gd_b0a33090385448bab0fdb263<SEP>gd_641ddfbb18ea9d7661766b2e",
+          "created_at": 1793639375
+        },
+        {
+          "src_id": "CEOs",
+          "tgt_id": "NPS",
+          "description": "CEOs are impacted and influenced by the concept of NPS.",
+          "keywords": "Impact,Influence",
+          "weight": 1.0,
+          "source_id": "gd_f4804f30c08b277f5a0cc977-chunk-000",
+          "file_path": "gd_f4804f30c08b277f5a0cc977",
+          "created_at": 1793557867
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "You",
+          "description": "The SaaS service provider should ensure that their software application or service performs well and is reliable, without downtime or slow performance.",
+          "keywords": "Performance",
+          "weight": 1.0,
+          "source_id": "gd_37f607fa6221f3f2f29989e0-chunk-001",
+          "file_path": "gd_37f607fa6221f3f2f29989e0",
+          "created_at": 1793534400
+        },
+        {
+          "src_id": "NPS",
+          "tgt_id": "Sales",
+          "description": "Sales representatives who drive and increase NPS.",
+          "keywords": "drives,increases",
+          "weight": 1.0,
+          "source_id": "gd_de5623a10d1c9531112cfe54-chunk-001",
+          "file_path": "gd_de5623a10d1c9531112cfe54",
+          "created_at": 1793525888
+        },
+        {
+          "src_id": "Box",
+          "tgt_id": "NPS",
+          "description": "Box's financials are related to NPS, as high NPS scores can lead to increased sales and revenue.",
+          "keywords": "Related",
+          "weight": 1.0,
+          "source_id": "gd_e570bc885c853fe839d0ee57-chunk-002",
+          "file_path": "gd_e570bc885c853fe839d0ee57",
+          "created_at": 1793593428
+        },
+        {
+          "src_id": "NPS",
+          "tgt_id": "Prospects",
+          "description": "relationship_description: Prospects are measured for satisfaction using NPS.<SEP>relationship_description: Prospects expect a high NPS if the buying process is painless.",
+          "keywords": "Satisfaction,relationship_keywords: Expect,relationship_keywords: measure,satisfaction",
+          "weight": 2.0,
+          "source_id": "gd_a753d199b9c468b7c9b06a64-chunk-001<SEP>gd_a753d199b9c468b7c9b06a64-chunk-002",
+          "file_path": "gd_a753d199b9c468b7c9b06a64",
+          "created_at": 1793534691
+        },
+        {
+          "src_id": "NPS",
+          "tgt_id": "Rubrik",
+          "description": "Rubrik has achieved an NPS of 80.<SEP>Rubrik uses NPS to measure customer satisfaction.",
+          "keywords": "Measurement,Metric,Performance",
+          "weight": 2.0,
+          "source_id": "gd_0b07114179a95a92796b9f5b-chunk-000<SEP>gd_6e149b2e82d3a0e956732c2e-chunk-002",
+          "file_path": "gd_0b07114179a95a92796b9f5b<SEP>gd_6e149b2e82d3a0e956732c2e",
+          "created_at": 1793626466
+        },
+        {
+          "src_id": "N8N",
+          "tgt_id": "Rory",
+          "description": "Rory is the founder of N8N, a company that provides workflow automation software.",
+          "keywords": "founder",
+          "weight": 1.0,
+          "source_id": "gd_b80524f908bad21aeaf41dfe-chunk-001",
+          "file_path": "gd_b80524f908bad21aeaf41dfe",
+          "created_at": 1793635341
+        },
+        {
+          "src_id": "NPS",
+          "tgt_id": "Navan",
+          "description": "Navan has reported NPS.",
+          "keywords": "Reported Metric",
+          "weight": 1.0,
+          "source_id": "gd_39135822a5638787a5a43dd3-chunk-000",
+          "file_path": "gd_39135822a5638787a5a43dd3",
+          "created_at": 1793625469
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "Vendor",
+          "description": "The vendor offers a buy-out contract to the customers.<SEP>The vendor does not charge until the app goes live.<SEP>The vendor does not charge for an overlap period.<SEP>If your end users aren’t happy, even the most sticky enterprise app is at extra risk during Champion Change.",
+          "keywords": "Buy-out contract,Go Live,No overlap charge,Switching",
+          "weight": 4.0,
+          "source_id": "gd_b80d7d772933d7964f9d8df7-chunk-002<SEP>gd_9021ddbc4daccae39880d4e2-chunk-001",
+          "file_path": "gd_b80d7d772933d7964f9d8df7<SEP>gd_9021ddbc4daccae39880d4e2",
+          "created_at": 1793533512
+        },
+        {
+          "src_id": "Apps",
+          "tgt_id": "Revenue",
+          "description": "Apps generate revenue through various means, including sales, subscriptions, and advertising.",
+          "keywords": "Generates,Income",
+          "weight": 1.0,
+          "source_id": "gd_cee3fa988d8406247d556896-chunk-010",
+          "file_path": "gd_cee3fa988d8406247d556896",
+          "created_at": 1793618647
+        },
+        {
+          "src_id": "Apps",
+          "tgt_id": "Market",
+          "description": "The apps have influenced the market to expect certain pricing.",
+          "keywords": "Keywords: influence,expectation",
+          "weight": 1.0,
+          "source_id": "gd_072a958576c3d08d325dd01b-chunk-001",
+          "file_path": "gd_072a958576c3d08d325dd01b",
+          "created_at": 1793488851
+        },
+        {
+          "src_id": "CEOs",
+          "tgt_id": "Math",
+          "description": "CEOs who use math to understand business problems are more effective than those who rely on magic.",
+          "keywords": "Keywords: scales,better",
+          "weight": 1.0,
+          "source_id": "gd_3e8732484211557041408d86-chunk-011",
+          "file_path": "gd_3e8732484211557041408d86",
+          "created_at": 1793607082
+        },
+        {
+          "src_id": "Application",
+          "tgt_id": "Datadog",
+          "description": "relationship_keywords: needs, relationship_description: Datadog monitors applications.",
+          "keywords": "Monitors",
+          "weight": 1.0,
+          "source_id": "gd_dc18c861c82269cf5cc7e98b-chunk-005",
+          "file_path": "gd_dc18c861c82269cf5cc7e98b",
+          "created_at": 1793618516
+        },
+        {
+          "src_id": "NPS",
+          "tgt_id": "Reps",
+          "description": "Sales representatives who drive and increase NPS.",
+          "keywords": "drives,increases",
+          "weight": 1.0,
+          "source_id": "gd_de5623a10d1c9531112cfe54-chunk-001",
+          "file_path": "gd_de5623a10d1c9531112cfe54",
+          "created_at": 1793525888
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "ServiceNow",
+          "description": "The app integrates with ServiceNow to enhance customer success.",
+          "keywords": "integrates_with",
+          "weight": 1.0,
+          "source_id": "gd_d3046abbff56769a90cbeea0-chunk-002",
+          "file_path": "gd_d3046abbff56769a90cbeea0",
+          "created_at": 1793520737
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "Prospects",
+          "description": "relationship_description: Prospects may not bother to use a free trial if it requires a lot of data input or real business process change.",
+          "keywords": "relationship_keywords: bother,use",
+          "weight": 1.0,
+          "source_id": "gd_dc316e2bc29fa87eaae0236e-chunk-000",
+          "file_path": "gd_dc316e2bc29fa87eaae0236e",
+          "created_at": 1793516525
+        },
+        {
+          "src_id": "IPO",
+          "tgt_id": "Math",
+          "description": "the math is brutal for companies considering an IPO",
+          "keywords": "Brutal Reality",
+          "weight": 1.0,
+          "source_id": "gd_569cd09f99799cba2950cf73-chunk-006",
+          "file_path": "gd_569cd09f99799cba2950cf73",
+          "created_at": 1793593516
+        },
+        {
+          "src_id": "Apps",
+          "tgt_id": "Vendor",
+          "description": "The vendor provides similar amounts of value to the same buyer through apps.",
+          "keywords": "provide",
+          "weight": 1.0,
+          "source_id": "gd_7a9a67266e89c0a8630f6fbb-chunk-002",
+          "file_path": "gd_7a9a67266e89c0a8630f6fbb",
+          "created_at": 1793532314
+        },
+        {
+          "src_id": "NPS",
+          "tgt_id": "Start-ups",
+          "description": "A poor product and low NPS can lead to slow growth<SEP>The relationship between start-ups and NPS is that start-ups with low NPS are more likely to lose product-market fit.",
+          "keywords": "low,low NPS,poor product",
+          "weight": 2.0,
+          "source_id": "gd_8c5d383d6700632b00ecfb79-chunk-000<SEP>gd_3acffa3c074be68c09c17ae4-chunk-000",
+          "file_path": "gd_8c5d383d6700632b00ecfb79<SEP>gd_3acffa3c074be68c09c17ae4",
+          "created_at": 1793558619
+        },
+        {
+          "src_id": "Churn",
+          "tgt_id": "NPS",
+          "description": "High NPS scores can lead to lower churn rates.",
+          "keywords": "NPS,churn",
+          "weight": 1.0,
+          "source_id": "gd_e570bc885c853fe839d0ee57-chunk-004",
+          "file_path": "gd_e570bc885c853fe839d0ee57",
+          "created_at": 1793593428
+        },
+        {
+          "src_id": "AI Agent",
+          "tgt_id": "App",
+          "description": "relationship_description: The AI agent generates code quickly, but may introduce bugs and break existing features.<SEP>relationship_description: The AI agent generates code that may introduce bugs in the app.<SEP>relationship_description: The AI agent generates code that may break existing features.",
+          "keywords": "breaks,introduces bugs,relationship_keywords: generates",
+          "weight": 3.0,
+          "source_id": "gd_79858ea6162573644fe3e173-chunk-005",
+          "file_path": "gd_79858ea6162573644fe3e173",
+          "created_at": 1793496393
+        },
+        {
+          "src_id": "NPS",
+          "tgt_id": "VPs",
+          "description": "Ensure that VPs are fed to NPS.",
+          "keywords": "Feed",
+          "weight": 1.0,
+          "source_id": "gd_2ecc3785d60dab4bff563f4c-chunk-000",
+          "file_path": "gd_2ecc3785d60dab4bff563f4c",
+          "created_at": 1793503572
+        },
+        {
+          "src_id": "NPS",
+          "tgt_id": "Zscaler",
+          "description": "Zscaler has achieved a high NPS of 70.<SEP>Zscaler achieved a 70 NPS, which is considered world-class customer satisfaction.",
+          "keywords": "High,World Class Customer Satisfaction",
+          "weight": 2.0,
+          "source_id": "gd_ee48ad719b59c4df12151952-chunk-002<SEP>gd_1fd95d7bd6ed45e81b456fce-chunk-000",
+          "file_path": "gd_ee48ad719b59c4df12151952<SEP>gd_1fd95d7bd6ed45e81b456fce",
+          "created_at": 1793526907
+        },
+        {
+          "src_id": "Board",
+          "tgt_id": "NPS",
+          "description": "NPS is a matter for the board.",
+          "keywords": "Importance",
+          "weight": 1.0,
+          "source_id": "gd_641ddfbb18ea9d7661766b2e-chunk-002",
+          "file_path": "gd_641ddfbb18ea9d7661766b2e",
+          "created_at": 1793639375
+        },
+        {
+          "src_id": "Deal",
+          "tgt_id": "NPS",
+          "description": "relationship_description: NPS scores measure deal satisfaction.",
+          "keywords": "relationship_keywords: measure,satisfaction",
+          "weight": 1.0,
+          "source_id": "gd_4bde0767eaeffe8fda34ff9e-chunk-001",
+          "file_path": "gd_4bde0767eaeffe8fda34ff9e",
+          "created_at": 1793529438
+        },
+        {
+          "src_id": "NPS",
+          "tgt_id": "Product-Market Fit",
+          "description": "relationship_description: Product-market fit is achieved when a product meets the needs of its target market, resulting in high NPS scores.<SEP>NPS is a key metric in achieving product-market fit.",
+          "keywords": "Achieved Through,relationship_keywords: metric,score",
+          "weight": 2.0,
+          "source_id": "gd_1bb89f0881d846204f69d052-chunk-001<SEP>gd_1bb89f0881d846204f69d052-chunk-002",
+          "file_path": "gd_1bb89f0881d846204f69d052",
+          "created_at": 1793493254
+        },
+        {
+          "src_id": "CFO",
+          "tgt_id": "NPS",
+          "description": "The CFO oversees NPS",
+          "keywords": "Manages,Oversees",
+          "weight": 1.0,
+          "source_id": "gd_b3c813040c96089df47b4b77-chunk-001",
+          "file_path": "gd_b3c813040c96089df47b4b77",
+          "created_at": 1793519039
+        },
+        {
+          "src_id": "Folks",
+          "tgt_id": "NPS",
+          "description": "Driving NPS up to a Key Number/Goal<SEP>Driving NPS up to say, 50 can inspire the team to improve everything.",
+          "keywords": "Goal,Target",
+          "weight": 2.0,
+          "source_id": "gd_a120d398e57a33365886f6a6-chunk-005",
+          "file_path": "gd_a120d398e57a33365886f6a6",
+          "created_at": 1793554779
+        },
+        {
+          "src_id": "NPS",
+          "tgt_id": "SaaStr Europa",
+          "description": "The SaaStr Europa event achieved a high NPS score.",
+          "keywords": "achieved",
+          "weight": 1.0,
+          "source_id": "gd_87f9f1c85817eeb46b0ec74d-chunk-003",
+          "file_path": "gd_87f9f1c85817eeb46b0ec74d",
+          "created_at": 1793520180
+        },
+        {
+          "src_id": "NPS",
+          "tgt_id": "VP of Customer Success",
+          "description": "The VP of Customer Success is responsible for improving the Net Promoter Score.",
+          "keywords": "improvement,increase",
+          "weight": 1.0,
+          "source_id": "gd_4c4a5ac20c57f7f42509d190-chunk-001",
+          "file_path": "gd_4c4a5ac20c57f7f42509d190",
+          "created_at": 1793517844
+        },
+        {
+          "src_id": "Mangomint",
+          "tgt_id": "NPS",
+          "description": "Mangomint requires a high NPS to sell more products.",
+          "keywords": "Relationship_keywords: requires,high",
+          "weight": 1.0,
+          "source_id": "gd_29be30ed143329dfc3e5ea0c-chunk-001",
+          "file_path": "gd_29be30ed143329dfc3e5ea0c",
+          "created_at": 1793637721
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "Vibe Coding",
+          "description": "relationship_description: The app uses vibe coding, which involves rapid prototyping and iteration.",
+          "keywords": "involves,relationship_keywords: uses",
+          "weight": 1.0,
+          "source_id": "gd_79858ea6162573644fe3e173-chunk-005",
+          "file_path": "gd_79858ea6162573644fe3e173",
+          "created_at": 1793496393
+        },
+        {
+          "src_id": "Metrics",
+          "tgt_id": "NPS",
+          "description": "Companies should track and measure their metrics, including NPS, to evaluate their performance and progress, and also use these metrics to make informed decisions.",
+          "keywords": "Track",
+          "weight": 1.0,
+          "source_id": "gd_142c9ef5d600d437f46bbed4-chunk-000",
+          "file_path": "gd_142c9ef5d600d437f46bbed4",
+          "created_at": 1793558011
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "Customer Success Team",
+          "description": "The team implements the app to change core business processes.<SEP>The team deploys the app to enhance customer success.",
+          "keywords": "deploys,implements",
+          "weight": 2.0,
+          "source_id": "gd_d3046abbff56769a90cbeea0-chunk-002",
+          "file_path": "gd_d3046abbff56769a90cbeea0",
+          "created_at": 1793520737
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "Prospect",
+          "description": "Encourages the prospect to develop their own app.",
+          "keywords": "DIY,Switcher",
+          "weight": 1.0,
+          "source_id": "gd_3766c53507450d46485f48b1-chunk-001",
+          "file_path": "gd_3766c53507450d46485f48b1",
+          "created_at": 1793514181
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "Year",
+          "description": "Years have priorities for apps.",
+          "keywords": "has_priority",
+          "weight": 1.0,
+          "source_id": "gd_aff22cfcaff5e7bbcca05126-chunk-000",
+          "file_path": "gd_aff22cfcaff5e7bbcca05126",
+          "created_at": 1793512963
+        },
+        {
+          "src_id": "MRR",
+          "tgt_id": "NPS",
+          "description": "A brand's NPS score can affect its MRR and second-order revenue.",
+          "keywords": "affect,revenue",
+          "weight": 1.0,
+          "source_id": "gd_d6aa012be158b9d77ddffb46-chunk-002",
+          "file_path": "gd_d6aa012be158b9d77ddffb46",
+          "created_at": 1793525511
+        },
+        {
+          "src_id": "GRR",
+          "tgt_id": "NPS",
+          "description": "Net Promoter Score and Growth Rate Ratio are related metrics.",
+          "keywords": "Related to",
+          "weight": 1.0,
+          "source_id": "gd_d5be599c09c06e3a2de7a86e-chunk-003",
+          "file_path": "gd_d5be599c09c06e3a2de7a86e",
+          "created_at": 1793556015
+        },
+        {
+          "src_id": "NPS",
+          "tgt_id": "Traction",
+          "description": "Traction is correlated with NPS, as high customer satisfaction leads to revenue growth and product-market fit.",
+          "keywords": "Correlated With",
+          "weight": 1.0,
+          "source_id": "gd_1bb89f0881d846204f69d052-chunk-002",
+          "file_path": "gd_1bb89f0881d846204f69d052",
+          "created_at": 1793493254
+        },
+        {
+          "src_id": "NPS",
+          "tgt_id": "Retention",
+          "description": "NPS affects retention",
+          "keywords": "Affects,Impacts",
+          "weight": 1.0,
+          "source_id": "gd_b3c813040c96089df47b4b77-chunk-001",
+          "file_path": "gd_b3c813040c96089df47b4b77",
+          "created_at": 1793519039
+        },
+        {
+          "src_id": "Five9",
+          "tgt_id": "NPS",
+          "description": "Five9 has seen significant growth in NPS.",
+          "keywords": "Growing,both,logos,new",
+          "weight": 1.0,
+          "source_id": "gd_8c21892693a7f5fa4fc4e1f0-chunk-001",
+          "file_path": "gd_8c21892693a7f5fa4fc4e1f0",
+          "created_at": 1793533341
+        },
+        {
+          "src_id": "NPS",
+          "tgt_id": "Second Order Revenue",
+          "description": "Second Order Revenue is related to NPS, as high NPS scores can lead to increased sales and revenue.",
+          "keywords": "Related",
+          "weight": 1.0,
+          "source_id": "gd_e570bc885c853fe839d0ee57-chunk-002",
+          "file_path": "gd_e570bc885c853fe839d0ee57",
+          "created_at": 1793593428
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "Support",
+          "description": "The chat feature in the app is designed to be fast and effective in solving customer problems.",
+          "keywords": "Fast and effective",
+          "weight": 1.0,
+          "source_id": "gd_09267d6dfab254529a946b18-chunk-002",
+          "file_path": "gd_09267d6dfab254529a946b18",
+          "created_at": 1793489532
+        },
+        {
+          "src_id": "Innovation",
+          "tgt_id": "NPS",
+          "description": "Ensure that Innovation is fed to NPS.",
+          "keywords": "Feed",
+          "weight": 1.0,
+          "source_id": "gd_2ecc3785d60dab4bff563f4c-chunk-000",
+          "file_path": "gd_2ecc3785d60dab4bff563f4c",
+          "created_at": 1793503572
+        },
+        {
+          "src_id": "Customer Success Professionals",
+          "tgt_id": "NPS",
+          "description": "Customer success professionals should be able to measure customer satisfaction through Net Promoter Score.<SEP>Customer success professionals should have a good understanding of NPS and be able to apply their knowledge in a practical way.",
+          "keywords": "Can Do,Knows",
+          "weight": 2.0,
+          "source_id": "gd_9c328b8c5305e596c95c958f-chunk-000<SEP>gd_c82b6638dbe58be010fd593c-chunk-000",
+          "file_path": "gd_9c328b8c5305e596c95c958f<SEP>gd_c82b6638dbe58be010fd593c",
+          "created_at": 1793524104
+        },
+        {
+          "src_id": "CSAT",
+          "tgt_id": "NPS",
+          "description": "Ensure that NPS is fed to CSAT.<SEP>NPS and CSAT are related metrics used to measure customer satisfaction.<SEP>Comparing NPS and CSAT can help companies understand their customer satisfaction levels.",
+          "keywords": "Analyze,Compare,Feed,Related",
+          "weight": 3.0,
+          "source_id": "gd_2ecc3785d60dab4bff563f4c-chunk-000<SEP>gd_e570bc885c853fe839d0ee57-chunk-002<SEP>gd_e570bc885c853fe839d0ee57-chunk-003",
+          "file_path": "gd_2ecc3785d60dab4bff563f4c<SEP>gd_e570bc885c853fe839d0ee57",
+          "created_at": 1793593428
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "Vendors",
+          "description": "relationship_description: Vendors build and offer software applications, including those that require a free trial.",
+          "keywords": "offer,relationship_keywords: build",
+          "weight": 1.0,
+          "source_id": "gd_dc316e2bc29fa87eaae0236e-chunk-000",
+          "file_path": "gd_dc316e2bc29fa87eaae0236e",
+          "created_at": 1793516525
+        },
+        {
+          "src_id": "Competitors",
+          "tgt_id": "Math",
+          "description": "The mathematical calculations and analysis show the opportunity for competitors to acquire new customers and gain market share.",
+          "keywords": "Opportunity",
+          "weight": 1.0,
+          "source_id": "gd_6a3a9ea47e89d7f04a9415ee-chunk-004",
+          "file_path": "gd_6a3a9ea47e89d7f04a9415ee",
+          "created_at": 1793610411
+        },
+        {
+          "src_id": "AI Support",
+          "tgt_id": "NPS",
+          "description": "NPS will improve with AI support.<SEP>AI support will improve NPS.",
+          "keywords": "improve_with",
+          "weight": 2.0,
+          "source_id": "gd_1b901fbe1ef64d57a6539100-chunk-005",
+          "file_path": "gd_1b901fbe1ef64d57a6539100",
+          "created_at": 1793631896
+        },
+        {
+          "src_id": "Expansion Revenue",
+          "tgt_id": "NPS",
+          "description": "NPS is a leading indicator of retention and upsell potential.",
+          "keywords": "High",
+          "weight": 1.0,
+          "source_id": "gd_a54f5bf886b30a7e8324893d-chunk-001",
+          "file_path": "gd_a54f5bf886b30a7e8324893d",
+          "created_at": 1793517478
+        },
+        {
+          "src_id": "Customer Marketing",
+          "tgt_id": "NPS",
+          "description": "Customer marketing can drive up NPS by engaging with existing customers.",
+          "keywords": "Drive up,drive",
+          "weight": 1.0,
+          "source_id": "gd_1b9bbe7ebbb40cc7edaaca04-chunk-004",
+          "file_path": "gd_1b9bbe7ebbb40cc7edaaca04",
+          "created_at": 1793534018
+        },
+        {
+          "src_id": "NPS",
+          "tgt_id": "Stealth AI",
+          "description": "Stealth AI can lead to an increase in NPS, as customers are happier with a smaller slice of their workflow.",
+          "keywords": "Increase",
+          "weight": 1.0,
+          "source_id": "gd_a557aed74a9f2d2938e996df-chunk-001",
+          "file_path": "gd_a557aed74a9f2d2938e996df",
+          "created_at": 1793573214
+        },
+        {
+          "src_id": "Customer Conference",
+          "tgt_id": "NPS",
+          "description": "Relationship between NPS measurement and customer conference for getting feedback.",
+          "keywords": "Get Feedback",
+          "weight": 1.0,
+          "source_id": "gd_cdb688c70f3a971827ac4543-chunk-004",
+          "file_path": "gd_cdb688c70f3a971827ac4543",
+          "created_at": 1793589357
+        },
+        {
+          "src_id": "Mini-Brand",
+          "tgt_id": "NPS",
+          "description": "Low NPS leads to a longer time to build a Mini-Brand and slower growth<SEP>A Mini-Brand's NPS score can affect its likelihood of escaping a lead plateau.",
+          "keywords": "affect,growth,longer,plateau",
+          "weight": 2.0,
+          "source_id": "gd_d6aa012be158b9d77ddffb46-chunk-001<SEP>gd_d6aa012be158b9d77ddffb46-chunk-002",
+          "file_path": "gd_d6aa012be158b9d77ddffb46",
+          "created_at": 1793525511
+        },
+        {
+          "src_id": "NPS",
+          "tgt_id": "Second-order revenue",
+          "description": "Low NPS leads to less second-order revenue and slower growth",
+          "keywords": "growth,less",
+          "weight": 1.0,
+          "source_id": "gd_d6aa012be158b9d77ddffb46-chunk-001",
+          "file_path": "gd_d6aa012be158b9d77ddffb46",
+          "created_at": 1793525511
+        },
+        {
+          "src_id": "Churn Rate",
+          "tgt_id": "NPS",
+          "description": "Improving NPS and decreasing churn rate are both benefits of AI support.",
+          "keywords": "improve_with_decrease",
+          "weight": 1.0,
+          "source_id": "gd_1b901fbe1ef64d57a6539100-chunk-005",
+          "file_path": "gd_1b901fbe1ef64d57a6539100",
+          "created_at": 1793631896
+        },
+        {
+          "src_id": "Customer Success team",
+          "tgt_id": "NPS",
+          "description": "The Customer Success team uses and focuses on NPS as a measure of customer satisfaction.",
+          "keywords": "focuses on,uses",
+          "weight": 1.0,
+          "source_id": "gd_d5be599c09c06e3a2de7a86e-chunk-002",
+          "file_path": "gd_d5be599c09c06e3a2de7a86e",
+          "created_at": 1793556015
+        },
+        {
+          "src_id": "Apps",
+          "tgt_id": "Data",
+          "description": "Apps use data from various sources to provide insights and improve their services.",
+          "keywords": "Leverage,Use",
+          "weight": 1.0,
+          "source_id": "gd_cee3fa988d8406247d556896-chunk-010",
+          "file_path": "gd_cee3fa988d8406247d556896",
+          "created_at": 1793618647
+        },
+        {
+          "src_id": "NPS",
+          "tgt_id": "Price Extraction",
+          "description": "Aggressive pricing leads to a decrease in NPS, making it difficult for companies to sustain.",
+          "keywords": "High Pricing,Low NPS",
+          "weight": 1.0,
+          "source_id": "gd_b62b6ad34d4ba7357f8052f1-chunk-005",
+          "file_path": "gd_b62b6ad34d4ba7357f8052f1",
+          "created_at": 1793569787
+        },
+        {
+          "src_id": "NPS",
+          "tgt_id": "Verbiflow",
+          "description": "Users report a 78 NPS.",
+          "keywords": "Metric",
+          "weight": 1.0,
+          "source_id": "gd_3b3de8f2e09471d34298f323-chunk-003",
+          "file_path": "gd_3b3de8f2e09471d34298f323",
+          "created_at": 1793582661
+        },
+        {
+          "src_id": "NPS",
+          "tgt_id": "Revenue Management",
+          "description": "Driving NPS up to say, 50 can inspire the team to improve everything.",
+          "keywords": "Growth,Revenue",
+          "weight": 1.0,
+          "source_id": "gd_a120d398e57a33365886f6a6-chunk-004",
+          "file_path": "gd_a120d398e57a33365886f6a6",
+          "created_at": 1793554779
+        },
+        {
+          "src_id": "Customer Satisfaction",
+          "tgt_id": "NPS",
+          "description": "NPS is a measure of customer satisfaction, calculated by subtracting the percentage of detractors from the percentage of promoters.",
+          "keywords": "measure,satisfaction",
+          "weight": 1.0,
+          "source_id": "gd_e570bc885c853fe839d0ee57-chunk-004",
+          "file_path": "gd_e570bc885c853fe839d0ee57",
+          "created_at": 1793593428
+        },
+        {
+          "src_id": "Eoghan McCabe",
+          "tgt_id": "NPS",
+          "description": "Eoghan McCabe endorses using NPS to measure customer satisfaction.",
+          "keywords": "endorsement",
+          "weight": 1.0,
+          "source_id": "gd_f2b8a74abf32d881b7443adf-chunk-002",
+          "file_path": "gd_f2b8a74abf32d881b7443adf",
+          "created_at": 1793628910
+        },
+        {
+          "src_id": "70%+",
+          "tgt_id": "Zscaler",
+          "description": "NPS, score",
+          "keywords": "relationship_keywords",
+          "weight": 1.0,
+          "source_id": "gd_447ac742e3a9ad53298cf2d6-chunk-002",
+          "file_path": "gd_447ac742e3a9ad53298cf2d6",
+          "created_at": 1793502553
+        },
+        {
+          "src_id": "Base 2020 plan",
+          "tgt_id": "NPS",
+          "description": "The plan aims to drive NPS up",
+          "keywords": "drive,improvement",
+          "weight": 1.0,
+          "source_id": "gd_4a57979eae25d40d519ab1f6-chunk-000",
+          "file_path": "gd_4a57979eae25d40d519ab1f6",
+          "created_at": 1793493329
+        },
+        {
+          "src_id": "Dire Straights",
+          "tgt_id": "NPS",
+          "description": "NPS affects dire straights companies",
+          "keywords": "Affects,Impacts",
+          "weight": 1.0,
+          "source_id": "gd_b3c813040c96089df47b4b77-chunk-001",
+          "file_path": "gd_b3c813040c96089df47b4b77",
+          "created_at": 1793519039
+        },
+        {
+          "src_id": "Customer satisfaction",
+          "tgt_id": "NPS",
+          "description": "NPS measures customer satisfaction, driving loyalty and retention.",
+          "keywords": "Measure,drive",
+          "weight": 1.0,
+          "source_id": "gd_1b9bbe7ebbb40cc7edaaca04-chunk-004",
+          "file_path": "gd_1b9bbe7ebbb40cc7edaaca04",
+          "created_at": 1793534018
+        },
+        {
+          "src_id": "Customer Happiness",
+          "tgt_id": "NPS",
+          "description": "Analyzing the correlation between customer happiness and NPS can help companies identify areas for improvement.",
+          "keywords": "Analyze,Correlate",
+          "weight": 1.0,
+          "source_id": "gd_e570bc885c853fe839d0ee57-chunk-003",
+          "file_path": "gd_e570bc885c853fe839d0ee57",
+          "created_at": 1793593428
+        },
+        {
+          "src_id": "NPS",
+          "tgt_id": "Truly Happy Customers",
+          "description": "Relationship between truly happy customers and NPS measurement.",
+          "keywords": "Measure",
+          "weight": 1.0,
+          "source_id": "gd_cdb688c70f3a971827ac4543-chunk-004",
+          "file_path": "gd_cdb688c70f3a971827ac4543",
+          "created_at": 1793589357
+        },
+        {
+          "src_id": "Detractors",
+          "tgt_id": "NPS",
+          "description": "Identifying and addressing pain points of detractors.<SEP>NPS is a measure of customer satisfaction, calculated by subtracting the percentage of detractors from the percentage of promoters.",
+          "keywords": "Identifying,NPS,addressing,detractors",
+          "weight": 2.0,
+          "source_id": "gd_490259ae216c7d38a715cfb7-chunk-002<SEP>gd_e570bc885c853fe839d0ee57-chunk-004",
+          "file_path": "gd_490259ae216c7d38a715cfb7<SEP>gd_e570bc885c853fe839d0ee57",
+          "created_at": 1793593428
+        },
+        {
+          "src_id": "NPS",
+          "tgt_id": "Promoters",
+          "description": "Appreciating and leveraging promoters for referrals and testimonials.<SEP>NPS is a measure of customer satisfaction, calculated by subtracting the percentage of detractors from the percentage of promoters.",
+          "keywords": "Appreciating,NPS,leveraging,promoters",
+          "weight": 2.0,
+          "source_id": "gd_490259ae216c7d38a715cfb7-chunk-002<SEP>gd_e570bc885c853fe839d0ee57-chunk-004",
+          "file_path": "gd_490259ae216c7d38a715cfb7<SEP>gd_e570bc885c853fe839d0ee57",
+          "created_at": 1793593428
+        },
+        {
+          "src_id": "NPS",
+          "tgt_id": "software companies",
+          "description": "The companies aim to increase their NPS by 10 points.",
+          "keywords": "keywords,target",
+          "weight": 1.0,
+          "source_id": "gd_ab388e36b2c46d1b6afc8c4d-chunk-002",
+          "file_path": "gd_ab388e36b2c46d1b6afc8c4d",
+          "created_at": 1793506785
+        },
+        {
+          "src_id": "NPS",
+          "tgt_id": "second-order customers",
+          "description": "Higher NPS leads to more second-order customers.",
+          "keywords": "increase,keywords",
+          "weight": 1.0,
+          "source_id": "gd_ab388e36b2c46d1b6afc8c4d-chunk-002",
+          "file_path": "gd_ab388e36b2c46d1b6afc8c4d",
+          "created_at": 1793506785
+        },
+        {
+          "src_id": "NPS",
+          "tgt_id": "upsell",
+          "description": "Higher NPS leads to more upsell opportunities.",
+          "keywords": "increase,keywords",
+          "weight": 1.0,
+          "source_id": "gd_ab388e36b2c46d1b6afc8c4d-chunk-002",
+          "file_path": "gd_ab388e36b2c46d1b6afc8c4d",
+          "created_at": 1793506785
+        },
+        {
+          "src_id": "NPS",
+          "tgt_id": "Second-order Revenue",
+          "description": "Second-order revenue becomes a huge accelerator at this stage.",
+          "keywords": "Acceleration Keywords",
+          "weight": 1.0,
+          "source_id": "gd_b0a33090385448bab0fdb263-chunk-000",
+          "file_path": "gd_b0a33090385448bab0fdb263",
+          "created_at": 1793562339
+        },
+        {
+          "src_id": "Inbound Referrals",
+          "tgt_id": "NPS",
+          "description": "Inbound referrals dry up when NPS craters.",
+          "keywords": "drying_up",
+          "weight": 1.0,
+          "source_id": "gd_b62b6ad34d4ba7357f8052f1-chunk-004",
+          "file_path": "gd_b62b6ad34d4ba7357f8052f1",
+          "created_at": 1793569787
+        },
+        {
+          "src_id": "Speaker",
+          "tgt_id": "Strava",
+          "description": "The speaker uses the example of Strava to illustrate the concept of \"good enough\" when it comes to using data.",
+          "keywords": "Example",
+          "weight": 1.0,
+          "source_id": "gd_abeb00283957ad382493fe64-chunk-001",
+          "file_path": "gd_abeb00283957ad382493fe64",
+          "created_at": 1793569329
+        },
+        {
+          "src_id": "Event",
+          "tgt_id": "Mobile App",
+          "description": "The mobile app is used for networking and meeting other attendees during the event",
+          "keywords": "Networking,Use",
+          "weight": 1.0,
+          "source_id": "gd_31740aa10f589ed549b4324e-chunk-001",
+          "file_path": "gd_31740aa10f589ed549b4324e",
+          "created_at": 1793489872
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "Platform",
+          "description": "relationship_description: The platform supports the app, and hosts its code.",
+          "keywords": "hosts,relationship_keywords: supports",
+          "weight": 1.0,
+          "source_id": "gd_79858ea6162573644fe3e173-chunk-005",
+          "file_path": "gd_79858ea6162573644fe3e173",
+          "created_at": 1793496393
+        },
+        {
+          "src_id": "B2B Leaders",
+          "tgt_id": "Math",
+          "description": "B2B leaders will soon be doing honest math to evaluate the value of B players versus the cost of AI agents.",
+          "keywords": "Cost,Evaluation",
+          "weight": 1.0,
+          "source_id": "gd_7e9750f5f4ac7517b7e0ad2e-chunk-000",
+          "file_path": "gd_7e9750f5f4ac7517b7e0ad2e",
+          "created_at": 1793536382
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "Code",
+          "description": "relationship_description: The app has code, and the code makes up the app's programming.",
+          "keywords": "makes up,relationship_keywords: has",
+          "weight": 1.0,
+          "source_id": "gd_79858ea6162573644fe3e173-chunk-005",
+          "file_path": "gd_79858ea6162573644fe3e173",
+          "created_at": 1793496393
+        },
+        {
+          "src_id": "Burn Rate",
+          "tgt_id": "Math",
+          "description": "The math is used to calculate the burn rate, which is a critical aspect of the company's financial situation.",
+          "keywords": "calculation,financial situation",
+          "weight": 1.0,
+          "source_id": "gd_062fdba1eb0375bef6607116-chunk-000",
+          "file_path": "gd_062fdba1eb0375bef6607116",
+          "created_at": 1793563365
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "User",
+          "description": "relationship_description: The user provides feedback on the app, and uses it to interact with the platform.<SEP>relationship_description: The user uses the app, and provides feedback on it.",
+          "keywords": "provides feedback,relationship_keywords: provides feedback,relationship_keywords: uses,uses",
+          "weight": 3.0,
+          "source_id": "gd_79858ea6162573644fe3e173-chunk-005",
+          "file_path": "gd_79858ea6162573644fe3e173",
+          "created_at": 1793496393
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "Session",
+          "description": "relationship_description: The app is developed and tested during the session.",
+          "keywords": "relationship_keywords: develops,tests",
+          "weight": 1.0,
+          "source_id": "gd_79858ea6162573644fe3e173-chunk-005",
+          "file_path": "gd_79858ea6162573644fe3e173",
+          "created_at": 1793496393
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "Developer",
+          "description": "The app is needed by the developer.<SEP>The app is wanted by the developer.<SEP>The developer creates the app.<SEP>The app excites the developer.",
+          "keywords": "builds,creates,excites,needs,wants",
+          "weight": 4.0,
+          "source_id": "gd_8b5c054c9377bee23f1a4bd9-chunk-000",
+          "file_path": "gd_8b5c054c9377bee23f1a4bd9",
+          "created_at": 1793494557
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "Debugging",
+          "description": "Debugging can be time-consuming, especially for complex issues.",
+          "keywords": "Time Consuming",
+          "weight": 1.0,
+          "source_id": "gd_79858ea6162573644fe3e173-chunk-006",
+          "file_path": "gd_79858ea6162573644fe3e173",
+          "created_at": 1793496393
+        },
+        {
+          "src_id": "Application",
+          "tgt_id": "MCP",
+          "description": "MCP can be integrated with any application to enable users to interact with it through natural language prompts.<SEP>Any application can be integrated with MCP to enable users to interact with it through natural language prompts.",
+          "keywords": "integration",
+          "weight": 2.0,
+          "source_id": "gd_552e72a84c32d9d868dd8a37-chunk-000",
+          "file_path": "gd_552e72a84c32d9d868dd8a37",
+          "created_at": 1793491931
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "Regressions",
+          "description": "The app encounters regressions.",
+          "keywords": "encounters",
+          "weight": 1.0,
+          "source_id": "gd_8b5c054c9377bee23f1a4bd9-chunk-000",
+          "file_path": "gd_8b5c054c9377bee23f1a4bd9",
+          "created_at": 1793494557
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "Production",
+          "description": "relationship_description: The app is released to the public during the production stage.",
+          "keywords": "hosts,relationship_keywords: releases",
+          "weight": 1.0,
+          "source_id": "gd_79858ea6162573644fe3e173-chunk-005",
+          "file_path": "gd_79858ea6162573644fe3e173",
+          "created_at": 1793496393
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "Web",
+          "description": "Web and App have better margins and cleaner attribution.",
+          "keywords": "better margins and cleaner attribution",
+          "weight": 1.0,
+          "source_id": "gd_cee3fa988d8406247d556896-chunk-008",
+          "file_path": "gd_cee3fa988d8406247d556896",
+          "created_at": 1793618647
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "Initiative",
+          "description": "Apps are key initiatives.",
+          "keywords": "is_key",
+          "weight": 1.0,
+          "source_id": "gd_aff22cfcaff5e7bbcca05126-chunk-000",
+          "file_path": "gd_aff22cfcaff5e7bbcca05126",
+          "created_at": 1793512963
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "Google Play",
+          "description": "Nearly a third of all subscription cancellations on Google Play are involuntary billing failures.",
+          "keywords": "Involuntary Churn Problem",
+          "weight": 1.0,
+          "source_id": "gd_cee3fa988d8406247d556896-chunk-005",
+          "file_path": "gd_cee3fa988d8406247d556896",
+          "created_at": 1793618647
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "Category Leader",
+          "description": "High price signals higher value, filters for more committed users, and improves the quality of the cohort.",
+          "keywords": "Pricing Power",
+          "weight": 1.0,
+          "source_id": "gd_cee3fa988d8406247d556896-chunk-005",
+          "file_path": "gd_cee3fa988d8406247d556896",
+          "created_at": 1793618647
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "Payer",
+          "description": "High-priced apps generate $62.19 in realized LTV per payer after Year 1.",
+          "keywords": "LTV",
+          "weight": 2.0,
+          "source_id": "gd_cee3fa988d8406247d556896-chunk-005",
+          "file_path": "gd_cee3fa988d8406247d556896",
+          "created_at": 1793618647
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "Pricing Power",
+          "description": "Higher price signals higher value, filters for more committed users, and improves the quality of the cohort.<SEP>High-priced apps generate $62.19 in realized LTV per payer after Year 1.",
+          "keywords": "Conversion Rate,LTV",
+          "weight": 2.0,
+          "source_id": "gd_cee3fa988d8406247d556896-chunk-005",
+          "file_path": "gd_cee3fa988d8406247d556896",
+          "created_at": 1793618647
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "Narrator",
+          "description": "The narrator had a window to deploy the app a few weeks ago.",
+          "keywords": "deployment_keywords",
+          "weight": 1.0,
+          "source_id": "gd_8cdf3d9fe99e8ab9b22ed260-chunk-000",
+          "file_path": "gd_8cdf3d9fe99e8ab9b22ed260",
+          "created_at": 1793506044
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "Page",
+          "description": "It's faster to rebuild the page from scratch than debug existing code.<SEP>The page is part of the application.",
+          "keywords": "Part of Application,Rebuilds From Scratch",
+          "weight": 2.0,
+          "source_id": "gd_79858ea6162573644fe3e173-chunk-006",
+          "file_path": "gd_79858ea6162573644fe3e173",
+          "created_at": 1793496393
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "Screenshots",
+          "description": "The app takes screenshots.",
+          "keywords": "takes",
+          "weight": 1.0,
+          "source_id": "gd_8b5c054c9377bee23f1a4bd9-chunk-000",
+          "file_path": "gd_8b5c054c9377bee23f1a4bd9",
+          "created_at": 1793494557
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "Iterates",
+          "description": "The app does iterates.",
+          "keywords": "does",
+          "weight": 1.0,
+          "source_id": "gd_8b5c054c9377bee23f1a4bd9-chunk-000",
+          "file_path": "gd_8b5c054c9377bee23f1a4bd9",
+          "created_at": 1793494557
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "Releases",
+          "description": "The app does releases.",
+          "keywords": "does",
+          "weight": 1.0,
+          "source_id": "gd_8b5c054c9377bee23f1a4bd9-chunk-000",
+          "file_path": "gd_8b5c054c9377bee23f1a4bd9",
+          "created_at": 1793494557
+        },
+        {
+          "src_id": "App",
+          "tgt_id": "Rough Patches",
+          "description": "The app encounters rough patches.",
+          "keywords": "encounters",
+          "weight": 1.0,
+          "source_id": "gd_8b5c054c9377bee23f1a4bd9-chunk-000",
+          "file_path": "gd_8b5c054c9377bee23f1a4bd9",
+          "created_at": 1793494557
+        },
+        {
+          "src_id": "Apple App Store",
+          "tgt_id": "Duolingo",
+          "description": "Duolingo generates a significant portion of its revenue through the Apple App Store.",
+          "keywords": "Revenue Source",
+          "weight": 1.0,
+          "source_id": "gd_29f68dd5d21caeef086b7329-chunk-002",
+          "file_path": "gd_29f68dd5d21caeef086b7329",
+          "created_at": 1793496520
+        },
+        {
+          "src_id": "developer",
+          "tgt_id": "vibe coding",
+          "description": "relationship_description: Vibe coding emphasizes creating products without needing a developer.",
+          "keywords": "creating,products,relationship_keywords: emphasizes,without",
+          "weight": 1.0,
+          "source_id": "gd_4f2ce0775e5dfc8c29d679bb-chunk-000",
+          "file_path": "gd_4f2ce0775e5dfc8c29d679bb",
+          "created_at": 1793503305
+        },
+        {
+          "src_id": "Apps",
+          "tgt_id": "Pricing",
+          "description": "The apps have influenced the market to expect certain pricing.",
+          "keywords": "Keywords: influence,expectation",
+          "weight": 1.0,
+          "source_id": "gd_072a958576c3d08d325dd01b-chunk-001",
+          "file_path": "gd_072a958576c3d08d325dd01b",
+          "created_at": 1793488851
+        },
+        {
+          "src_id": "Math",
+          "tgt_id": "Traditional SaaS Companies",
+          "description": "The mathematical calculations and analysis are used to compare the business models of traditional SaaS companies and AI agent companies.",
+          "keywords": "Comparison",
+          "weight": 1.0,
+          "source_id": "gd_6a3a9ea47e89d7f04a9415ee-chunk-004",
+          "file_path": "gd_6a3a9ea47e89d7f04a9415ee",
+          "created_at": 1793610411
+        },
+        {
+          "src_id": "Angels",
+          "tgt_id": "Math",
+          "description": "Angels struggle with the math of achieving 100x returns.",
+          "keywords": "Struggle",
+          "weight": 1.0,
+          "source_id": "gd_0633915a8565a63d11f310ba-chunk-000",
+          "file_path": "gd_0633915a8565a63d11f310ba",
+          "created_at": 1793488730
+        },
+        {
+          "src_id": "Apps",
+          "tgt_id": "Segment",
+          "description": "The segment that's growing by far the fastest is best served by best-of-breed apps that can be used anywhere.",
+          "keywords": "growing by far the fastest,used anywhere",
+          "weight": 1.0,
+          "source_id": "gd_40d926c839abc68c68bb1a76-chunk-001",
+          "file_path": "gd_40d926c839abc68c68bb1a76",
+          "created_at": 1793583051
+        },
+        {
+          "src_id": "Number 1 metric",
+          "tgt_id": "Retention",
+          "description": "Retention is the number 1 metric for SaaS founders to focus on.",
+          "keywords": "focus,metric",
+          "weight": 1.0,
+          "source_id": "gd_db92ac60df8c2f40359a91ca-chunk-000",
+          "file_path": "gd_db92ac60df8c2f40359a91ca",
+          "created_at": 1793493344
+        },
+        {
+          "src_id": "AI Agent Companies",
+          "tgt_id": "Math",
+          "description": "The mathematical calculations and analysis have a significant impact on the business model of AI agent companies.",
+          "keywords": "Impact",
+          "weight": 1.0,
+          "source_id": "gd_6a3a9ea47e89d7f04a9415ee-chunk-004",
+          "file_path": "gd_6a3a9ea47e89d7f04a9415ee",
+          "created_at": 1793610411
+        },
+        {
+          "src_id": "AI Support",
+          "tgt_id": "Mobile App",
+          "description": "Deploying AI support is like building a mobile app, and it's already good enough to deploy.",
+          "keywords": "deployment",
+          "weight": 1.0,
+          "source_id": "gd_1b901fbe1ef64d57a6539100-chunk-003",
+          "file_path": "gd_1b901fbe1ef64d57a6539100",
+          "created_at": 1793631896
+        },
+        {
+          "src_id": "Knowledge",
+          "tgt_id": "Math",
+          "description": "knowledge of the math is the ultimate competitive advantage in SaaS and venture capital",
+          "keywords": "Competitive Advantage",
+          "weight": 1.0,
+          "source_id": "gd_569cd09f99799cba2950cf73-chunk-006",
+          "file_path": "gd_569cd09f99799cba2950cf73",
+          "created_at": 1793593516
+        },
+        {
+          "src_id": "Math",
+          "tgt_id": "Smart Buyers",
+          "description": "The mathematical calculations and analysis help smart buyers understand the implications of prompt portability and one-year contracts on AI agent companies.",
+          "keywords": "Understanding",
+          "weight": 1.0,
+          "source_id": "gd_6a3a9ea47e89d7f04a9415ee-chunk-004",
+          "file_path": "gd_6a3a9ea47e89d7f04a9415ee",
+          "created_at": 1793610411
+        },
+        {
+          "src_id": "Churned Revenue",
+          "tgt_id": "Math",
+          "description": "The mathematical calculations and analysis are used to calculate the churned revenue of AI agent companies.",
+          "keywords": "Calculation",
+          "weight": 1.0,
+          "source_id": "gd_6a3a9ea47e89d7f04a9415ee-chunk-004",
+          "file_path": "gd_6a3a9ea47e89d7f04a9415ee",
+          "created_at": 1793610411
+        },
+        {
+          "src_id": "Math",
+          "tgt_id": "Portable Prompts",
+          "description": "The mathematical calculations and analysis enable the understanding of how portable prompts affect the business model of AI agent companies.",
+          "keywords": "Enabler",
+          "weight": 1.0,
+          "source_id": "gd_6a3a9ea47e89d7f04a9415ee-chunk-004",
+          "file_path": "gd_6a3a9ea47e89d7f04a9415ee",
+          "created_at": 1793610411
+        },
+        {
+          "src_id": "Math",
+          "tgt_id": "One-Year Contracts",
+          "description": "The mathematical calculations and analysis show the impact of one-year contracts on the business model of AI agent companies.",
+          "keywords": "Impact",
+          "weight": 1.0,
+          "source_id": "gd_6a3a9ea47e89d7f04a9415ee-chunk-004",
+          "file_path": "gd_6a3a9ea47e89d7f04a9415ee",
+          "created_at": 1793610411
+        },
+        {
+          "src_id": "Gross Retention Rate",
+          "tgt_id": "Math",
+          "description": "The mathematical calculations and analysis are used to calculate the gross retention rate of AI agent companies.",
+          "keywords": "Calculation",
+          "weight": 1.0,
+          "source_id": "gd_6a3a9ea47e89d7f04a9415ee-chunk-004",
+          "file_path": "gd_6a3a9ea47e89d7f04a9415ee",
+          "created_at": 1793610411
+        },
+        {
+          "src_id": "Math",
+          "tgt_id": "Net Growth Rate",
+          "description": "The mathematical calculations and analysis show the impact of the net growth rate on the business model of AI agent companies.",
+          "keywords": "Impact",
+          "weight": 1.0,
+          "source_id": "gd_6a3a9ea47e89d7f04a9415ee-chunk-004",
+          "file_path": "gd_6a3a9ea47e89d7f04a9415ee",
+          "created_at": 1793610411
+        },
+        {
+          "src_id": "Mobile App",
+          "tgt_id": "VC Braindates",
+          "description": "The mobile app is used during VC Braindates to meet specific VCs",
+          "keywords": "Networking,Use",
+          "weight": 1.0,
+          "source_id": "gd_31740aa10f589ed549b4324e-chunk-001",
+          "file_path": "gd_31740aa10f589ed549b4324e",
+          "created_at": 1793489872
+        },
+        {
+          "src_id": "Meet-a-VC Program",
+          "tgt_id": "Mobile App",
+          "description": "The mobile app is used during the meet-a-VC program to network and potentially secure funding",
+          "keywords": "Networking,Use",
+          "weight": 1.0,
+          "source_id": "gd_31740aa10f589ed549b4324e-chunk-001",
+          "file_path": "gd_31740aa10f589ed549b4324e",
+          "created_at": 1793489872
+        },
+        {
+          "src_id": "Apps",
+          "tgt_id": "Individual Employees",
+          "description": "individual employees introduce a significant number of apps.",
+          "keywords": "1/3,introduce",
+          "weight": 1.0,
+          "source_id": "gd_bb6777cec9990f70dd72539b-chunk-002",
+          "file_path": "gd_bb6777cec9990f70dd72539b",
+          "created_at": 1793575170
+        },
+        {
+          "src_id": "Mobile App",
+          "tgt_id": "SaaS Execs",
+          "description": "Attendees can use the mobile app to network with other SaaS execs",
+          "keywords": "Networking,Uses",
+          "weight": 1.0,
+          "source_id": "gd_31740aa10f589ed549b4324e-chunk-001",
+          "file_path": "gd_31740aa10f589ed549b4324e",
+          "created_at": 1793489872
+        },
+        {
+          "src_id": "Cocktail Parties",
+          "tgt_id": "Mobile App",
+          "description": "The mobile app is used during the cocktail parties on both evenings of the event",
+          "keywords": "Socializing,Use",
+          "weight": 1.0,
+          "source_id": "gd_31740aa10f589ed549b4324e-chunk-001",
+          "file_path": "gd_31740aa10f589ed549b4324e",
+          "created_at": 1793489872
+        },
+        {
+          "src_id": "Health & Safety Rules",
+          "tgt_id": "Mobile App",
+          "description": "Attendees must use the mobile app in accordance with the health and safety rules",
+          "keywords": "Precautions,Use",
+          "weight": 1.0,
+          "source_id": "gd_31740aa10f589ed549b4324e-chunk-001",
+          "file_path": "gd_31740aa10f589ed549b4324e",
+          "created_at": 1793489872
+        },
+        {
+          "src_id": "Application",
+          "tgt_id": "Vibe",
+          "description": "Any application can be integrated with Vibe to enable users to interact with it through natural language prompts.<SEP>Vibe enables users to interact with any application through natural language prompts.",
+          "keywords": "integration,vibe use",
+          "weight": 2.0,
+          "source_id": "gd_552e72a84c32d9d868dd8a37-chunk-000",
+          "file_path": "gd_552e72a84c32d9d868dd8a37",
+          "created_at": 1793491931
+        },
+        {
+          "src_id": "$1.1B ARR",
+          "tgt_id": "112% NRR",
+          "description": "$1.1B ARR achieves 112% NRR.",
+          "keywords": "Relationship Keywords: retention,customer",
+          "weight": 1.0,
+          "source_id": "gd_1046cf090a4b3e68d05dd668-chunk-000",
+          "file_path": "gd_1046cf090a4b3e68d05dd668",
+          "created_at": 1793493844
+        },
+        {
+          "src_id": "Coding App",
+          "tgt_id": "Superpower",
+          "description": "Provides users with a powerful tool for coding, giving them a sense of empowerment and ability, much like a superpower.",
+          "keywords": "Is Like",
+          "weight": 1.0,
+          "source_id": "gd_eaeca2bf33d264c65e63cdb8-chunk-003",
+          "file_path": "gd_eaeca2bf33d264c65e63cdb8",
+          "created_at": 1793522713
+        },
+        {
+          "src_id": "Goodreads",
+          "tgt_id": "Strava",
+          "description": "The speaker uses Strava as an example of a simple solution that can be effective in data analysis.<SEP>Goodreads focused on the right metrics that align with the desired business outcomes.<SEP>Goodreads improvised by using existing tools like SQL and Python to analyze data.<SEP>Goodreads used cost-effective solutions like SQL and Python to analyze data.<SEP>Goodreads considered the size of the team when sharing data learnings.<SEP>Goodreads gradually progressed to measure email performance.<SEP>Goodreads shared data learnings with teams.",
+          "keywords": "considering team size,cost-effective solutions,focusing on the right metrics,gradually progressing,improvisation,leveraging existing strengths,sharing data learnings",
+          "weight": 7.0,
+          "source_id": "gd_abeb00283957ad382493fe64-chunk-002",
+          "file_path": "gd_abeb00283957ad382493fe64",
+          "created_at": 1793569329
+        },
+        {
+          "src_id": "N8N",
+          "tgt_id": "Workflow Automation",
+          "description": "N8N provides workflow automation software, which uses AI technology to automate workflows.",
+          "keywords": "provides,uses",
+          "weight": 1.0,
+          "source_id": "gd_b80524f908bad21aeaf41dfe-chunk-001",
+          "file_path": "gd_b80524f908bad21aeaf41dfe",
+          "created_at": 1793635341
+        }
+      ],
+      "chunks": [
+        {
+          "reference_id": "1",
+          "content": "the more folks that use your product, all things being equal, ultimately the more folks that will buy it. Seeing strong growth in usage can show folks the light. Driving NPS Up to a Key Number/Goal\n. Driving NPS up to say, 50 can inspire the team to improve everything. This will benefit revenue.",
+          "file_path": "gd_a120d398e57a33365886f6a6",
+          "chunk_id": "gd_a120d398e57a33365886f6a6-chunk-005"
+        },
+        {
+          "reference_id": "2",
+          "content": "using data\n. He compares it to the idea of a minimum viable product (MVP) in product development, stating that sometimes having a simple solution, like copying and pasting data into an Excel file, can be effective instead of aiming for perfection. He uses the example of the fitness app Strava, where users don’t always need to click on the analysis button to understand their metrics, but can contextualize and analyze the data themselves. The moral of the story is that sometimes just having a number to start with is enough, and progress should not be blocked by the notion of needing comprehensive insights. The speaker also addresses the myth of scarcity, emphasizing that as founders of startups, dealing with limited resources is familiar territory. He suggests leveraging existing strengths and resources, such as the data already present in a product’s database, and not being afraid to try things and make mistakes since the stakes are not life or death. Overall, the key message is to focus on making progress and continuously improving, rather than getting caught up in perfectionism or perceived resource limitations.\n00:20:00\nIn this section, the speaker shares their experience of starting at Goodreads and being asked to measure user engagement with limited resources\n. They initially planned to use a data warehouse for analysis but quickly realized they didn’t have one, so they improvised by using existing tools like SQL and Python. They also highlight the importance of using cost-effective solutions where possible and resorting to more expensive options when necessary. Despite the scrappy approach, they were able to build impactful segmentation and provide valuable insights for the company. The speaker emphasizes the need to focus on the right metrics that align with the desired business outcomes, rather than solely relying on basic email metrics. They advise starting with a solid foundation for measuring success and then gradually progressing to measure email performance.\n00:25:00\nIn this section, the speaker addresses the question of how to share data learnings with teams and emphasizes the importance of considering the size of the team",
+          "file_path": "gd_abeb00283957ad382493fe64",
+          "chunk_id": "gd_abeb00283957ad382493fe64-chunk-002"
+        },
+        {
+          "reference_id": "3",
+          "content": "NPS matter for the board. But these three metrics?\n\nThey’re how you actually build a CS machine that scales to $100M ARR and beyond. A final note: if you’re not measuring these metrics today, don’t panic. Start tomorrow. The best time to plant a tree was 20 years ago. The second best time is now. Want more insights on scaling Customer Success?",
+          "file_path": "gd_641ddfbb18ea9d7661766b2e",
+          "chunk_id": "gd_641ddfbb18ea9d7661766b2e-chunk-002"
+        },
+        {
+          "reference_id": "4",
+          "content": "of -10%, -20% in NRR is just making growth so much harder. And driving even some leaders into The Single Digits Club. But not everyone:\nIt’s a world of Haves and Have Nots in SaaS today. Those selling outside of B2B, those that are truly AI native, and more in many cases are having an incredible run. But inside of tech sales, a drop in NRR is just crushing growth.",
+          "file_path": "gd_4f19c3ee254c8d45cc729019",
+          "chunk_id": "gd_4f19c3ee254c8d45cc729019-chunk-001"
+        },
+        {
+          "reference_id": "5",
+          "content": "love to. It’s what we use for sales automation of a certain process. Or marketing automation of a certain process, they say. We use it. But. It goes down all the time. But. It’s really dated. But. No one ever gets back to our calls. But. It doesn’t have core competitive features. But. No one ever comes and visits us and truly solves our problems. Because what happens is, just as you finally go\nfrom Mini-Brand to Real Brand\n, you start to get into\nevery\ndeal\n. That’s when it actually gets easier on many levels, usually around $10m ARR or so, whenever you have a true brand (more that\nhere\n). Then every prospect has heard of you. They all at least want to kick the tires. And if your customers love you — magic happens. This is when Second Order Revenue\nreally\nkicks in\n.\n\nThey actively recommend you to their colleagues, and their peers at other companies. Importantly, they buy more stuff from you, too. More seats. More editions. More of everything. Look at Alex Wilhelm’s tweet on Box’s financials above. I don’t know what Box’s NPS and CSAT scores are. But I do know they are high. Otherwise, there’s no way they could generate 40% of their growth from their existing base. And if Box (and its CEO) weren’t loved, they’d be growing 15-21% a year. Not 37%. That’s a huge, huge difference, my friends. More on second order revenue\nhere\n. OK, so what’s actionable here? A few things:\nFirst, if you aren’t measuring NPS and CSAT yet — start NOW. This month\n. THIS WEEK. DO IT. I didn’t. It was a big mistake. More on that\nhere\n. Then, segment your NPS and CSAT, so you can see",
+          "file_path": "gd_e570bc885c853fe839d0ee57",
+          "chunk_id": "gd_e570bc885c853fe839d0ee57-chunk-002"
+        },
+        {
+          "reference_id": "6",
+          "content": "creation. This is a story of existing software getting more expensive because it now includes AI features.\nThe cost of software is going up and both the cost of features and functionality is going up as well thanks to GenAI.\nWhat This Means for Your Company\nIf you’re an incumbent SaaS company:\nYou’re in the best position you’ve been in years. You have:\nAn installed base that expects to pay more\nA market that accepts AI as justification for price increases\nCustomers who want to buy AI from you, not build it themselves\nA budget flush happening in Q4 2025\nShip AI features. Raise prices. Capture the moment.\nIf you’re a non-AI SaaS startup:\nYou’re facing the hardest market in a decade. You’re competing against:\nIncumbents with pricing power\nBudgets being reallocated away from “low ROI software”\nBuyers who want to consolidate vendors, not add them\nA vertical SaaS market that’s underperforming\nYour only path is demonstrating ROI that’s so compelling it justifies ripping out existing software. Or being an AI infrastructure tool that enables other companies to deploy AI.\nThe Bottom Line\nYes, software spending will grow 15.2% in 2026 to $1.43 trillion. That’s real money.\nBut 60% of that growth is price increases on software companies already own. Another 30% is AI features being added to existing platforms. Only about 10% is genuinely new software purchases.\nNext year, we’re going to spend more on software with Gen AI in it than software without it.\nThe AI revolution in enterprise software isn’t about new categories or new vendors. It’s about existing software getting AI features and getting more expensive.\nThe companies that understand this – the ones shipping AI features now, raising prices strategically, and positioning as cost optimization – will capture the $1.43 trillion market.\nThe ones that miss it will find themselves in the “low ROI software getting cut",
+          "file_path": "gd_55cf1d202b4f378f36410cec",
+          "chunk_id": "gd_55cf1d202b4f378f36410cec-chunk-006"
+        },
+        {
+          "reference_id": "7",
+          "content": ": Shopify grew 30% at $12B because they ARE the platform. Fighting platform consolidation instead of riding the wave means missing the massive tailwind. VCs won’t fund you if you’re not attached to the winning platform.\n\n3. Delegating AI Implementation Instead of Learning It Personally\nThe Mistake\n: Telling someone on your team to “go implement AI” or hiring an agency to handle AI adoption while staying hands-off yourself.\nWhy It’s Fatal\n: AI tools require daily iteration and training. If you don’t understand how they work, you can’t manage them effectively. Every AI tool that moves the needle takes weeks of hardcore training and daily optimization—just like managing humans.\n\n4. Keeping Team Members Who Resist the New Reality\nThe Mistake\n: Hoping that resistant team members will eventually come around to working harder, learning new tools, and adapting to the AI-first world.\nWhy It’s Fatal\n: Most people won’t make this jump. They want to run the same playbook from three years ago, work from home on their schedule, and avoid the stress of constant change. These team members will actively slow down your transformation when speed is everything.\nThis analysis is based on insights from Jason Lemkin, founder of SaaStr and investor in B2B e-comm and related companies like Algolia, Gorgias, and RevenueCat. For more founder insights, visit\nSaaStr.com.",
+          "file_path": "gd_c5fd94ac349d025fb78a37d0",
+          "chunk_id": "gd_c5fd94ac349d025fb78a37d0-chunk-006"
+        },
+        {
+          "reference_id": "8",
+          "content": "stakeholders initially, but the results will speak for themselves.\n\n[Omitted same-source text between these sections: 36 words.]\n\n4. Use a Hypothesis-Driven Approach\nFor each campaign, establish:\nA clear hypothesis\nTime limits\nBudget constraints\nMinimum success criteria\nMost importantly, define what “success” looks like before you start.\n\n5. Follow the Pilot-Repeat-Enlarge Methodology\nPilot\n: Start small with minimal investment. Negotiate with vendors for smaller initial commitments. Repeat\n: If successful, run the campaign again to ensure it wasn’t a fluke. Enlarge\n: Once validated, scale it up significantly to find the ceiling. Scaling Success: The Datadog Re:Invent Story\nDatadog’s experience with AWS Re:Invent demonstrates this approach perfectly. What started as a focused experiment became their most efficient customer acquisition channel. By becoming a top sponsor, Datadog created a presence that:\nBrought in their largest customers\nPowered entire year-long deals\nDelivered the best ROI across all marketing metrics\nThey scaled to flying hundreds of team members to man large booth spaces – an enormous investment that paid off because they had thoroughly validated the channel’s effectiveness before going all-in. When to Expand: The 3 Signs\nHow do you know when it’s time to move beyond your first channel? Look for these indicators:\nYou’ve hit the ceiling\n– You can’t extract more value no matter how much you invest\nYou’ve documented the playbook\n– Someone else can run the channel\nYou’re turning down opportunities\n– Two full-time employees can’t keep up with demand\nWhen these conditions are met, it’s time to hire specialists to maintain the channel while you focus on conquering the next one. Team Scaling: The Critical Inflection Points\nAs your marketing operation grows, pay close attention to these moments:\nThe 10th Team Member\n: This is when informal processes break down.\n\nYou must:\nDocument everything\nCreate training programs",
+          "file_path": "gd_e17729e5eca8acb5235bb5b2",
+          "chunk_id": "gd_e17729e5eca8acb5235bb5b2-chunk-002"
+        },
+        {
+          "reference_id": "9",
+          "content": "software companies are ultimately built on word-of-mouth. More on that\nhere\n. So get your NPS up.  50+ means your word-of-mouth viral cycle is going to work well.  10 means it isn’t. But whatever your NPS is — measure it and set it as a core goal for the company to get it up 10 points, or whatever amount you think is right, by a certain date. The beauty of this goal is the whole company can rally around it. Everyone in the company can help get NPS up. And if you do get your NPS up 10 points, if nothing else — it will work. It will get you\nmore second-order customers\n. More upsell.",
+          "file_path": "gd_ab388e36b2c46d1b6afc8c4d",
+          "chunk_id": "gd_ab388e36b2c46d1b6afc8c4d-chunk-002"
+        },
+        {
+          "reference_id": "10",
+          "content": "with Customers\nFollow up with respondents, especially detractors. If someone gives you a low score, reach out to understand their pain points and try to fix them. For promoters, thank them and ask for referrals or testimonials.\nWay too often today, vendors barely follow up from negative NPS feedback.  That’s a big missed opportunities.  Folks that complain aren’t 100% ready to leave.  If they are truly gone, they say … nothing.\n9. Make It a Continuous Process\nNPS isn’t a one-and-done thing. Measure it regularly—quarterly or biannually—and track trends over time. This helps you see if your efforts to improve customer satisfaction are working.\nThe beauty of NPS is that it’s simple, but it can be incredibly powerful when done right. It’s not just a metric—it’s a tool to align your entire company around making customers happier. And happier customers lead to more referrals, less churn, and higher revenue. If you’re not already doing this, start now. It works.\nDear SaaStr: Do Net Promoter Scores Really Matter?",
+          "file_path": "gd_490259ae216c7d38a715cfb7",
+          "chunk_id": "gd_490259ae216c7d38a715cfb7-chunk-002"
+        },
+        {
+          "reference_id": "11",
+          "content": "market.  Even just a bit can help a lot with NRR\n.  Today, Zendesk’s big push is $1m deals.  But it didn’t start that way.  It started very SMB.  But even going a bit upmarket can drive NRR well above 100%.  Asana has about 100% NRR from SMBs (still impressive), but this grows to 140% for its $5k+ customers.  And Shopify gets about 25% of its revenue now from its bigger customers on “Shopify Plus”, which helps drive their NRR to 100% and their unit economics up.\n#3.  Digital Ocean went from 100% NRR to 116% NRR from SMBs in just 2 years by focusing on customers that could pay just a bit more ($50/month) — but got a lot more value\n.  This isn’t going enterprise. It’s just focusing on SMBs that value the product the most.\n\n#4.  Maybe don’t even charge some SMBs at all, like Zoom did\n.  Zoom’s SMB growth finally slowed, but not until $3.5 billion in ARR.  It had insane SMB NRR of 130%+ until then (although it’s come way down after $4B ARR — now they are seeing the “standard” 3% churn in their smallest customers).  Part of the key was making the Free version so good, they didn’t have to deal with churn from users who wouldn’t really benefit from the Paid version.  See also, Slack.",
+          "file_path": "gd_d7608d7e6dac4d722fb90de0",
+          "chunk_id": "gd_d7608d7e6dac4d722fb90de0-chunk-003"
+        },
+        {
+          "reference_id": "12",
+          "content": "AI B2B apps achieve profitability while scaling. ElevenLabs is reportedly profitable\nat $200M+ ARR.\n\nThis isn’t an accident—it’s a new model where AI enables better unit economics:\nLower customer acquisition costs (viral/word-of-mouth growth)\nHigher gross margins (software-only delivery)\nFaster time-to-value (immediate AI impact)\nNatural expansion revenue (more use cases = more spending)\nThe Funding Story: How AI Apps Are Raising Capital\nElevenLabs’ funding trajectory shows how investors are valuing AI application companies:\nThe progression:\n2023:\n$2M pre-seed → $19M Series A at $100M valuation\n2024:\n$80M Series B at $1.1B valuation (11x jump)\n2025:\n$180M Series C at $3.3B valuation → $6.6B tender offer\nKey insight:\nInvestors are paying premium multiples (37x ARR) for AI apps with proven traction because the growth rates and market opportunities are unprecedented. Strategic investors joining:\nDeutsche Telekom, LG Technology Ventures, HubSpot Ventures—showing that enterprise buyers are also becoming investors. What This Means for Your SaaS Strategy\nIf You’re Building in AI:\nFocus on workflows, not features:\nDon’t just add AI to existing products. Reimagine how work gets done. Think platform from day one:\nBuild for ecosystem effects, not just direct customers. Balance PLG + Enterprise:\nYou need both viral growth and enterprise validation. Nail the quality moat:\nIn commoditizing markets, exceptional execution creates defensibility. Optimize for profitability:\nThe best AI companies achieve sustainable unit economics early. If You’re in Traditional SaaS/B2B:\nThe disruption is coming. Every workflow in every industry is being reimagined with AI.\n\nThe question isn’t whether AI apps will disrupt your market—it’s whether you’ll build them or be displaced by them. Action items:\nAudit your workflows for AI enhancement opportunities\nIdentify",
+          "file_path": "gd_d19ef462293cbfaf17f910e6",
+          "chunk_id": "gd_d19ef462293cbfaf17f910e6-chunk-003"
+        }
+      ],
+      "references": [
+        {
+          "reference_id": "1",
+          "file_path": "gd_a120d398e57a33365886f6a6"
+        },
+        {
+          "reference_id": "2",
+          "file_path": "gd_abeb00283957ad382493fe64"
+        },
+        {
+          "reference_id": "3",
+          "file_path": "gd_641ddfbb18ea9d7661766b2e"
+        },
+        {
+          "reference_id": "4",
+          "file_path": "gd_4f19c3ee254c8d45cc729019"
+        },
+        {
+          "reference_id": "5",
+          "file_path": "gd_e570bc885c853fe839d0ee57"
+        },
+        {
+          "reference_id": "6",
+          "file_path": "gd_55cf1d202b4f378f36410cec"
+        },
+        {
+          "reference_id": "7",
+          "file_path": "gd_c5fd94ac349d025fb78a37d0"
+        },
+        {
+          "reference_id": "8",
+          "file_path": "gd_e17729e5eca8acb5235bb5b2"
+        },
+        {
+          "reference_id": "9",
+          "file_path": "gd_ab388e36b2c46d1b6afc8c4d"
+        },
+        {
+          "reference_id": "10",
+          "file_path": "gd_490259ae216c7d38a715cfb7"
+        },
+        {
+          "reference_id": "11",
+          "file_path": "gd_d7608d7e6dac4d722fb90de0"
+        },
+        {
+          "reference_id": "12",
+          "file_path": "gd_d19ef462293cbfaf17f910e6"
+        }
+      ]
+    },
+    "metadata": {
+      "query_mode": "hybrid",
+      "keywords": {
+        "high_level": [
+          "Rise",
+          "N=1",
+          "App",
+          "Building",
+          "Buying"
+        ],
+        "low_level": [
+          "N=1",
+          "App"
+        ]
+      },
+      "processing_info": {
+        "total_entities_found": 54,
+        "total_relations_found": 171,
+        "entities_after_truncation": 29,
+        "relations_after_truncation": 171,
+        "merged_chunks_count": 173,
+        "final_chunks_count": 12
+      }
+    },
+    "query": "The Rise of the “N=1” App: When Building It Yourself Really Beats Buying It."
+  },
+  "retrieval_seconds": 12.813,
+  "graph_summary": {
+    "status": "recorded",
+    "raw_entity_count": 29,
+    "raw_relationship_count": 171,
+    "raw_chunk_count": 12,
+    "entity_description_count": 29,
+    "entity_descriptions_nonempty": 29,
+    "entity_description_available": true,
+    "excluded_reason_counts": {
+      "generated_summary_not_a_source_span": 200
+    },
+    "accepted_relationships": 46,
+    "rejected_relationships": 124,
+    "quarantined_relationships": 1,
+    "relationship_reason_counts": {
+      "generated_summary_not_supported_by_source": 95,
+      "weak_entity_name": 20,
+      "endpoints_not_in_source": 9,
+      "unresolved_conflict": 1
+    },
+    "missing_source_or_provenance_exclusions": 0,
+    "relationship_validation_status": "recorded",
+    "two_hop_path_count": 0,
+    "two_hop_path_available": false,
+    "path_status": "recorded",
+    "normalization": {
+      "payload_shape": "aquery_data",
+      "mode": "hybrid",
+      "entity_descriptions_not_retained": 0,
+      "malformed_records": 0,
+      "notes": [
+        "hits_already_budgeted_raw_chunks_not_added",
+        "validated_against_supplied_catalog"
+      ],
+      "validation_contract": "source-verified-relationship-v1",
+      "separator": "<SEP>",
+      "profile": "multihop",
+      "direct_edges": 46,
+      "paths": 24,
+      "withheld_edges": 125
+    },
+    "direct_edge_count": 46
+  }
+}

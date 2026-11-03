@@ -1,0 +1,350 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "topic_id": "gold_027",
+  "medium": "linkedin",
+  "arm": "off",
+  "seed": 147,
+  "attempts": 1,
+  "evidence_sha256": "6b39be65870afd5b8ae2b96823fb18434adf4e009f416e7d8ca3ca33adab3999",
+  "retrieval_hit_ids": [
+    "train_1707",
+    "train_12557",
+    "train_5556",
+    "train_12610"
+  ],
+  "retrieval_query": "We Have 30 AI Agents in Production. Here Are the Top 5 Issues No One Talks About",
+  "retrieval_filter": null,
+  "style_applied": false,
+  "style_in_prompt": false,
+  "prompt_tokens": 421,
+  "generated_tokens_including_stop": 320,
+  "latency_seconds": 22.495,
+  "exemplar_ids": [],
+  "saved_at": "2026-10-30T10:11:40.986131+00:00",
+  "trace": {
+    "id": "gold_027",
+    "format": "linkedin_post",
+    "topic": "We Have 30 AI Agents in Production. Here Are the Top 5 Issues No One Talks About",
+    "audience": "B2B SaaS founders and operators",
+    "goal": "Surface hidden operational problems with multi-agent deployment.",
+    "cta": "none",
+    "k": 8,
+    "expected_facts": [
+      "The answer should focus on real operational friction, not futuristic speculation.",
+      "It should cover issues like supervision, drift, orchestration, or workflow brittleness.",
+      "It should frame these as solvable but under-discussed execution challenges."
+    ],
+    "rubric_must_haves": [
+      "Uses a structured issues list.",
+      "Keeps the focus on operating reality.",
+      "Includes at least one issue beyond prompt quality alone.",
+      "Maintains a candid, experience-based tone."
+    ],
+    "gold_reference": "A strong answer should explain that once many AI agents are live, the hard problems shift from demos to operations: monitoring, coordination, reliability, stale data, and human oversight. The point is that multi-agent systems create a new management surface area that most teams underestimate. Founders should treat these as production issues, not side notes.",
+    "medium": "linkedin",
+    "prompt": "Write a LinkedIn post in the style of Jason Lemkin about: We Have 30 AI Agents in Production. Here Are the Top 5 Issues No One Talks About\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] Companies deploying working AI agents are operating with 30-50% fewer humans in key functions.\n[E2] Companies deploying working AI agents are operating with 30-50% fewer humans in key functions.\n[E3] Our AI can help you figure out what to do about churn and other issues\n[E4] SaaStr AI 2026 will answer the question of how many AI agents a B2B company should be running\n\nNow write the requested LinkedIn post about: We Have 30 AI Agents in Production. Here Are the Top 5 Issues No One Talks About\n\nThe draft repeated the question. Write the requested piece itself. Do not repeat the question.",
+    "rendered_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nWrite a LinkedIn post in the style of Jason Lemkin about: We Have 30 AI Agents in Production. Here Are the Top 5 Issues No One Talks About\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] Companies deploying working AI agents are operating with 30-50% fewer humans in key functions.\n[E2] Companies deploying working AI agents are operating with 30-50% fewer humans in key functions.\n[E3] Our AI can help you figure out what to do about churn and other issues\n[E4] SaaStr AI 2026 will answer the question of how many AI agents a B2B company should be running\n\nNow write the requested LinkedIn post about: We Have 30 AI Agents in Production. Here Are the Top 5 Issues No One Talks About\n\nThe draft repeated the question. Write the requested piece itself. Do not repeat the question.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "answer": "We have 30+ AI agents deployed across our entire business now. Not just sales tools, not just support chatbots — real production agents managing critical workflows like sponsor operations, content review, and event planning. And after four months of this, I've identified five problems nobody talks about when they're hyping AI agent deployments. Problems everyone hits hard. Problem #1: The Data Ingestion Nightmare Nobody Warns You About This was my biggest surprise. Every single agent requires some form of data ingestion. Some demand massive datasets upfront before they'll even work properly. Others need constant updates throughout the day. What we learned: you cannot buy an agent without thinking through your data pipeline first. What kind of data does it require? How often do you need to update it? Who owns that process? Most vendors don't even want to talk about this. They'd rather sell you on their magical \"intelligence\" than admit their product needs clean, structured data to function. Our solution: treat data ingestions as a full-time job for someone who understands your systems. If you're a founder reading this, start budgeting for a dedicated \"AI Operations Manager\" role immediately. Someone whose sole responsibility is feeding these agents clean data. It's not glamorous, but it's essential. Problem #2: The Training Time That Vendors Downplay Terrible mistake most founders make: underestimating training time. Many agents promise \"plug-and-play\" experiences that never actually exist. The reality varies wildly depending on complexity and quality of vendor documentation. Our experience: plan for weeks of intense daily investment instead",
+    "raw_model_output": "We Have 30 AI Agents in Production. Here Are the Top 5 Issues No One Talks About When we started using AI agents six months ago, everything seemed simple enough. Just pick an agent, train it on our data, watch magic happen. Fast forward to today—after 10,000+ conversations across multiple platforms—and here’s what I’ve learned: this stuff is hard. Not because the technology doesn’t work (it does). But because nobody tells you about all the hidden problems until you’re already drowning in them. So let me save you some time and share the five things no one warns you about when you start your AI journey. #1: Your Team Won't Actually Adopt It. They'll Pretend To. And Then Ignore You This was my biggest surprise. Everyone talks about AI transformation like it’s easy—you just deploy an agent and suddenly everyone’s a convert. That’s completely wrong. After two years of trying every approach imaginable (including gamification campaigns), I've learned the truth: People don't want change. They pretend they're excited for weeks while secretly hoping it goes away. The reality? Most folks just tune out once initial questions get answered. Why? Because they genuinely believe they know more than they actually do, which leads to \"I'm good\" responses instead of honest questions. What actually works? Start small. Pick something so obvious that even skeptics have to admit you're right. For us, it was outbound—it literally cannot be ignored anymore. From there, build trust gradually. Don't force adoption. Let people find their own use cases",
+    "deployment_output": "We have 30+ AI agents deployed across our entire business now. Not just sales tools, not just support chatbots — real production agents managing critical workflows like sponsor operations, content review, and event planning. And after four months of this, I've identified five problems nobody talks about when they're hyping AI agent deployments. Problems everyone hits hard. Problem #1: The Data Ingestion Nightmare Nobody Warns You About This was my biggest surprise. Every single agent requires some form of data ingestion. Some demand massive datasets upfront before they'll even work properly. Others need constant updates throughout the day. What we learned: you cannot buy an agent without thinking through your data pipeline first. What kind of data does it require? How often do you need to update it? Who owns that process? Most vendors don't even want to talk about this. They'd rather sell you on their magical \"intelligence\" than admit their product needs clean, structured data to function. Our solution: treat data ingestions as a full-time job for someone who understands your systems. If you're a founder reading this, start budgeting for a dedicated \"AI Operations Manager\" role immediately. Someone whose sole responsibility is feeding these agents clean data. It's not glamorous, but it's essential. Problem #2: The Training Time That Vendors Downplay Terrible mistake most founders make: underestimating training time. Many agents promise \"plug-and-play\" experiences that never actually exist. The reality varies wildly depending on complexity and quality of vendor documentation. Our experience: plan for weeks of intense daily investment instead",
+    "first_attempt_answer": "We Have 30 AI Agents in Production. Here Are the Top 5 Issues No One Talks About When we started using AI agents six months ago, everything seemed simple enough. Just pick an agent, train it on our data, watch magic happen. Fast forward to today—after 10,000+ conversations across multiple platforms—and here’s what I’ve learned: this stuff is hard. Not because the technology doesn’t work (it does). But because nobody tells you about all the hidden problems until you’re already drowning in them. So let me save you some time and share the five things no one warns you about when you start your AI journey. #1: Your Team Won't Actually Adopt It. They'll Pretend To. And Then Ignore You This was my biggest surprise. Everyone talks about AI transformation like it’s easy—you just deploy an agent and suddenly everyone’s a convert. That’s completely wrong. After two years of trying every approach imaginable (including gamification campaigns), I've learned the truth: People don't want change. They pretend they're excited for weeks while secretly hoping it goes away. The reality? Most folks just tune out once initial questions get answered. Why? Because they genuinely believe they know more than they actually do, which leads to \"I'm good\" responses instead of honest questions. What actually works? Start small. Pick something so obvious that even skeptics have to admit you're right. For us, it was outbound—it literally cannot be ignored anymore. From there, build trust gradually. Don't force adoption. Let people find their own use cases",
+    "retry_answer": "We have 30+ AI agents deployed across our entire business now. Not just sales tools, not just support chatbots — real production agents managing critical workflows like sponsor operations, content review, and event planning. And after four months of this, I've identified five problems nobody talks about when they're hyping AI agent deployments. Problems everyone hits hard. Problem #1: The Data Ingestion Nightmare Nobody Warns You About This was my biggest surprise. Every single agent requires some form of data ingestion. Some demand massive datasets upfront before they'll even work properly. Others need constant updates throughout the day. What we learned: you cannot buy an agent without thinking through your data pipeline first. What kind of data does it require? How often do you need to update it? Who owns that process? Most vendors don't even want to talk about this. They'd rather sell you on their magical \"intelligence\" than admit their product needs clean, structured data to function. Our solution: treat data ingestions as a full-time job for someone who understands your systems. If you're a founder reading this, start budgeting for a dedicated \"AI Operations Manager\" role immediately. Someone whose sole responsibility is feeding these agents clean data. It's not glamorous, but it's essential. Problem #2: The Training Time That Vendors Downplay Terrible mistake most founders make: underestimating training time. Many agents promise \"plug-and-play\" experiences that never actually exist. The reality varies wildly depending on complexity and quality of vendor documentation. Our experience: plan for weeks of intense daily investment instead",
+    "query": "We Have 30 AI Agents in Production. Here Are the Top 5 Issues No One Talks About",
+    "max_new_tokens": 320,
+    "seed": 147,
+    "retry_seed": 10147,
+    "deployment_accepted": true,
+    "repair_occurred": false,
+    "generation_attempt": {
+      "seed": 147,
+      "answer": "We Have 30 AI Agents in Production. Here Are the Top 5 Issues No One Talks About When we started using AI agents six months ago, everything seemed simple enough. Just pick an agent, train it on our data, watch magic happen. Fast forward to today—after 10,000+ conversations across multiple platforms—and here’s what I’ve learned: this stuff is hard. Not because the technology doesn’t work (it does). But because nobody tells you about all the hidden problems until you’re already drowning in them. So let me save you some time and share the five things no one warns you about when you start your AI journey. #1: Your Team Won't Actually Adopt It. They'll Pretend To. And Then Ignore You This was my biggest surprise. Everyone talks about AI transformation like it’s easy—you just deploy an agent and suddenly everyone’s a convert. That’s completely wrong. After two years of trying every approach imaginable (including gamification campaigns), I've learned the truth: People don't want change. They pretend they're excited for weeks while secretly hoping it goes away. The reality? Most folks just tune out once initial questions get answered. Why? Because they genuinely believe they know more than they actually do, which leads to \"I'm good\" responses instead of honest questions. What actually works? Start small. Pick something so obvious that even skeptics have to admit you're right. For us, it was outbound—it literally cannot be ignored anymore. From there, build trust gradually. Don't force adoption. Let people find their own use cases",
+      "numeric_grounding": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [
+          "pct:50",
+          "year:2026"
+        ],
+        "values": [
+          {
+            "value": "10,000",
+            "canonical": "n:10000",
+            "sentence": "Fast forward to today—after 10,000+ conversations across multiple platforms—and here’s what I’ve learned: this stuff is hard",
+            "start": 252,
+            "end": 258
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "10,000",
+            "canonical": "n:10000",
+            "sentence": "Fast forward to today—after 10,000+ conversations across multiple platforms—and here’s what I’ve learned: this stuff is hard",
+            "start": 252,
+            "end": 258
+          }
+        ]
+      },
+      "rag_source_copying": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 4,
+        "document_id": "train_1707",
+        "matched_generated_span": "here s what i",
+        "matched_retrieved_span": "here s what i"
+      },
+      "stop_reason": "length"
+    },
+    "repair_attempt": null,
+    "accepted_attempt": 2,
+    "rag_source_copying": {
+      "applicable": true,
+      "threshold": 12,
+      "pass": true,
+      "flagged": false,
+      "max_contiguous_words": 3,
+      "document_id": "train_1707",
+      "matched_generated_span": "if you re",
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 4,
+        "document_id": "train_1707",
+        "matched_generated_span": "here s what i",
+        "matched_retrieved_span": "here s what i"
+      },
+      "retry": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 3,
+        "document_id": "train_1707",
+        "matched_generated_span": "if you re",
+        "matched_retrieved_span": "if you re"
+      },
+      "retry_occurred": true,
+      "repair_occurred": false
+    },
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [
+          "pct:50",
+          "year:2026"
+        ],
+        "values": [
+          {
+            "value": "10,000",
+            "canonical": "n:10000",
+            "sentence": "Fast forward to today—after 10,000+ conversations across multiple platforms—and here’s what I’ve learned: this stuff is hard",
+            "start": 252,
+            "end": 258
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "10,000",
+            "canonical": "n:10000",
+            "sentence": "Fast forward to today—after 10,000+ conversations across multiple platforms—and here’s what I’ve learned: this stuff is hard",
+            "start": 252,
+            "end": 258
+          }
+        ]
+      },
+      "retry": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [
+          "pct:50",
+          "year:2026"
+        ],
+        "values": [],
+        "unsupported": []
+      }
+    },
+    "prompt_tokens": 421,
+    "backend": "unsloth",
+    "retrieval": true,
+    "retrieval_query": "We Have 30 AI Agents in Production. Here Are the Top 5 Issues No One Talks About",
+    "retrieval_filter": null,
+    "retrieval_k": 4,
+    "retrieval_hits": [
+      {
+        "id": "train_1707",
+        "text": "#5. Launch Your First AI Agent That Actually Works.  And That You Can Really Sell.\nNot an AI feature. Not a chatbot. A real AI agent that handles actual workflows end-to-end.\nI’ve deployed 20+ AI agents across SaaStr’s operations. Support agents. Content agents. Sales qualification agents. Together they’ve generated over $1M in revenue while reducing our headcount needs.\nMost founders are still debating whether to add AI to their product. That’s table stakes now. The real question is: are you using AI agents to fundamentally transform your own operations?\nBecause here’s what I’m seeing: companies deploying working AI agents are operating with 30-50% fewer humans in key functions. Customer support. Sales development. Content creation. Implementation. Legal review.\nThose aren’t future capabilities. They’re working today. At scale. And if you’re not deploying them, your competitors are.\nLaunch one high value agent in Q1. Get it working. Learn. Then launch two more by end of year.\nThe companies that figure out AI agents first will have massive cost advantages and speed advantages over everyone else. Don’t wait.",
+        "medium": "blog",
+        "group_id": "a80e5776630a727e3a61b960855b40dc266b8b1f807e25062036c4497e492de3",
+        "row_id": 1707,
+        "split": "train",
+        "distance": 0.24536168575286865
+      },
+      {
+        "id": "train_12557",
+        "text": "How we manage 20+ AI Agents without them stepping all over each other ...",
+        "medium": "x",
+        "group_id": "0e55ceedbaa9b3c7bfc97792dc76c054ce1f2c3117a35a8f53a2e05d03f3163e",
+        "row_id": 12557,
+        "split": "train",
+        "distance": 0.250129759311676
+      },
+      {
+        "id": "train_5556",
+        "text": "#5.  Our AI Can Help You Figure Out What To Do About Churn and Other Issues\nShare all your challenges and metrics, and our AI will help come up with a game plan for you.",
+        "medium": "blog",
+        "group_id": "1fdbaf157bf014dce78d0b8105216dc57b3dcc0e143eb5b64289c226b9ca4312",
+        "row_id": 5556,
+        "split": "train",
+        "distance": 0.25806277990341187
+      },
+      {
+        "id": "train_12610",
+        "text": "Every B2B company I talk to right now has the same question: \"How many AI agents should we be running?\"\n\nAt SaaStr AI 2026, we answer that. With receipts.\n\nMay 12-14. SF Bay.",
+        "medium": "x",
+        "group_id": "4595c7e94527d61553497f95d42fb25fd239805d0fa8782e25be28ef9bc3e40b",
+        "row_id": 12610,
+        "split": "train",
+        "distance": 0.2655700445175171
+      }
+    ],
+    "copying": [
+      {
+        "id": "train_1707",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_12557",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_5556",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_12610",
+        "shared_word_span": 2
+      }
+    ],
+    "retrieval_backend": "dense",
+    "proposed_atomic_claims": [
+      {
+        "source_id": "train_1707",
+        "claim": "Companies deploying working AI agents are operating with 30-50% fewer humans in key functions.",
+        "support_span": "Because here’s what I’m seeing: companies deploying working AI agents are operating with 30-50% fewer humans in key functions.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_1707",
+        "claim": "Companies deploying working AI agents are operating with 30-50% fewer humans in key functions.",
+        "support_span": "Because here’s what I’m seeing: companies deploying working AI agents are operating with 30-50% fewer humans in key functions.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12557",
+        "claim": "How to manage 20+ AI Agents without them stepping all over each other",
+        "support_span": "How we manage 20+ AI Agents without them stepping all over each other...",
+        "claim_type": "position"
+      },
+      {
+        "source_id": "train_5556",
+        "claim": "Our AI can help you figure out what to do about churn and other issues",
+        "support_span": "Our AI Can Help You Figure Out What To Do About Churn and Other Issues",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12610",
+        "claim": "SaaStr AI 2026 will answer the question of how many AI agents a B2B company should be running",
+        "support_span": "At SaaStr AI 2026, we answer that. With receipts.",
+        "claim_type": "fact"
+      }
+    ],
+    "validation_rejected": [
+      {
+        "source_id": "train_12557",
+        "claim": "How to manage 20+ AI Agents without them stepping all over each other",
+        "support_span": "How we manage 20+ AI Agents without them stepping all over each other...",
+        "claim_type": "position",
+        "reason": "support_not_in_source"
+      }
+    ],
+    "verifier_rejected": [],
+    "verified_claims": [
+      {
+        "source_id": "train_1707",
+        "claim": "Companies deploying working AI agents are operating with 30-50% fewer humans in key functions.",
+        "support_span": "Because here’s what I’m seeing: companies deploying working AI agents are operating with 30-50% fewer humans in key functions.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_1707",
+        "claim": "Companies deploying working AI agents are operating with 30-50% fewer humans in key functions.",
+        "support_span": "Because here’s what I’m seeing: companies deploying working AI agents are operating with 30-50% fewer humans in key functions.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_5556",
+        "claim": "Our AI can help you figure out what to do about churn and other issues",
+        "support_span": "Our AI Can Help You Figure Out What To Do About Churn and Other Issues",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12610",
+        "claim": "SaaStr AI 2026 will answer the question of how many AI agents a B2B company should be running",
+        "support_span": "At SaaStr AI 2026, we answer that. With receipts.",
+        "claim_type": "fact"
+      }
+    ],
+    "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] Companies deploying working AI agents are operating with 30-50% fewer humans in key functions.\n[E2] Companies deploying working AI agents are operating with 30-50% fewer humans in key functions.\n[E3] Our AI can help you figure out what to do about churn and other issues\n[E4] SaaStr AI 2026 will answer the question of how many AI agents a B2B company should be running",
+    "raw_extraction": "[\n  {\n    \"source_id\": \"train_1707\",\n    \"claim\": \"Companies deploying working AI agents are operating with 30-50% fewer humans in key functions.\",\n    \"support_span\": \"Because here’s what I’m seeing: companies deploying working AI agents are operating with 30-50% fewer humans in key functions.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_1707\",\n    \"claim\": \"Companies deploying working AI agents are operating with 30-50% fewer humans in key functions.\",\n    \"support_span\": \"Because here’s what I’m seeing: companies deploying working AI agents are operating with 30-50% fewer humans in key functions.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_12557\",\n    \"claim\": \"How to manage 20+ AI Agents without them stepping all over each other\",\n    \"support_span\": \"How we manage 20+ AI Agents without them stepping all over each other...\",\n    \"claim_type\": \"position\"\n  },\n  {\n    \"source_id\": \"train_5556\",\n    \"claim\": \"Our AI can help you figure out what to do about churn and other issues\",\n    \"support_span\": \"Our AI Can Help You Figure Out What To Do About Churn and Other Issues\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_12610\",\n    \"claim\": \"SaaStr AI 2026 will answer the question of how many AI agents a B2B company should be running\",\n    \"support_span\": \"At SaaStr AI 2026, we answer that. With receipts.\",\n    \"claim_type\": \"fact\"\n  }\n]",
+    "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: We Have 30 AI Agents in Production. Here Are the Top 5 Issues No One Talks About\n\nSource passages:\n[train_1707]\n#5. Launch Your First AI Agent That Actually Works.  And That You Can Really Sell.\nNot an AI feature. Not a chatbot. A real AI agent that handles actual workflows end-to-end.\nI’ve deployed 20+ AI agents across SaaStr’s operations. Support agents. Content agents. Sales qualification agents. Together they’ve generated over $1M in revenue while reducing our headcount needs.\nMost founders are still debating whether to add AI to their product. That’s table stakes now. The real question is: are you using AI agents to fundamentally transform your own operations?\nBecause here’s what I’m seeing: companies deploying working AI agents are operating with 30-50% fewer humans in key functions. Customer support. Sales development. Content creation. Implementation. Legal review.\nThose aren’t future capabilities. They’re working today. At scale. And if you’re not deploying them, your competitors are.\nLaunch one high value agent in Q1. Get it working. Learn. Then launch two more by end of year.\nThe companies that figure out AI agents first will have massive cost advantages and speed advantages over everyone else. Don’t wait.\n\n[train_12557]\nHow we manage 20+ AI Agents without them stepping all over each other ...\n\n[train_5556]\n#5.  Our AI Can Help You Figure Out What To Do About Churn and Other Issues\nShare all your challenges and metrics, and our AI will help come up with a game plan for you.\n\n[train_12610]\nEvery B2B company I talk to right now has the same question: \"How many AI agents should we be running?\"\n\nAt SaaStr AI 2026, we answer that. With receipts.\n\nMay 12-14. SF Bay.",
+    "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: We Have 30 AI Agents in Production. Here Are the Top 5 Issues No One Talks About\n\nSource passages:\n[train_1707]\n#5. Launch Your First AI Agent That Actually Works.  And That You Can Really Sell.\nNot an AI feature. Not a chatbot. A real AI agent that handles actual workflows end-to-end.\nI’ve deployed 20+ AI agents across SaaStr’s operations. Support agents. Content agents. Sales qualification agents. Together they’ve generated over $1M in revenue while reducing our headcount needs.\nMost founders are still debating whether to add AI to their product. That’s table stakes now. The real question is: are you using AI agents to fundamentally transform your own operations?\nBecause here’s what I’m seeing: companies deploying working AI agents are operating with 30-50% fewer humans in key functions. Customer support. Sales development. Content creation. Implementation. Legal review.\nThose aren’t future capabilities. They’re working today. At scale. And if you’re not deploying them, your competitors are.\nLaunch one high value agent in Q1. Get it working. Learn. Then launch two more by end of year.\nThe companies that figure out AI agents first will have massive cost advantages and speed advantages over everyone else. Don’t wait.\n\n[train_12557]\nHow we manage 20+ AI Agents without them stepping all over each other ...\n\n[train_5556]\n#5.  Our AI Can Help You Figure Out What To Do About Churn and Other Issues\nShare all your challenges and metrics, and our AI will help come up with a game plan for you.\n\n[train_12610]\nEvery B2B company I talk to right now has the same question: \"How many AI agents should we be running?\"\n\nAt SaaStr AI 2026, we answer that. With receipts.\n\nMay 12-14. SF Bay.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "extraction_seconds": 9.969,
+    "verification_seconds": 0.0,
+    "verification_records": [],
+    "llm_verifier_on_critical_path": false,
+    "allowed_numeric_values": [
+      "pct:50",
+      "year:2026"
+    ],
+    "distillation_adapter_enabled": false,
+    "verification_adapter_enabled": false,
+    "distillation_backend": "same_loaded_4bit_base_adapter_off",
+    "distillation_do_sample": false,
+    "extraction_max_new_tokens": 2560,
+    "verification_max_new_tokens": 24,
+    "distillation_seed": 0,
+    "support_spans_in_generator_prompt": false,
+    "evidence_stage_reason": null,
+    "evidence_status": "verified",
+    "extraction_attempts": 1,
+    "extraction_stop_reason": "eos",
+    "prompt_contract": "factual-reliability-v1",
+    "fixed_style_enabled": false,
+    "style_applied": false,
+    "style_exemplar_count": 0,
+    "latency_seconds": 22.495,
+    "generated_tokens_including_stop": 320,
+    "last_token_id": 4619,
+    "effective_eos_token_ids": [
+      128001,
+      128008,
+      128009
+    ],
+    "stop_reason": "length",
+    "budget_fraction": 1.0,
+    "early_eos": false,
+    "first_attempt_stop_reason": "length",
+    "retry_stop_reason": "length"
+  }
+}

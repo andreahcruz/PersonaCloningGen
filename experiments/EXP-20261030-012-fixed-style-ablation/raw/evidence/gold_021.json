@@ -1,0 +1,107 @@
+{
+  "proposed": [
+    {
+      "source_id": "train_2689",
+      "claim": "Deploying AI without clear business metrics is a mistake.",
+      "support_span": "The mistake: deploying AI without clear business metrics.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_1243",
+      "claim": "The real AI budget is in three categories: Replace humans, Augment humans dramatically, and Highly productive tools that make possible what was impossible before.",
+      "support_span": "The real AI budget is going to three categories:",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_1243",
+      "claim": "Companies that captured AI spend are operating at 6x-12x the efficiency of traditional SaaS companies.",
+      "support_span": "The newer, AI-native companies are operating at 6x-12x the efficiency of traditional SaaS companies.",
+      "claim_type": "comparison"
+    },
+    {
+      "source_id": "train_14260",
+      "claim": "Folks that are pretending they have AI, or have slapped on some very basic functionality into their app, aren’t seeing any revenue boost from it.",
+      "support_span": "Aren’t seeing any revenue boost from it",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_2138",
+      "claim": "Capturing at least a few basis points of the massive AI spend should be table stakes for companies in a category where AI spending is happening.",
+      "support_span": "Captured at least a few basis points of the massive AI spend",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_2138",
+      "claim": "Going from 15% to 25% growth or from 10% to 20% growth should be table stakes for companies in a category where AI spending is happening.",
+      "support_span": "But going from 15% to 25% growth? From 10% to 20%? That should be table stakes",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_2138",
+      "claim": "There is a massive point spread between companies that captured AI spend and those that didn’t.",
+      "support_span": "There’s a massive point spread between companies that captured AI spend and those that didn’t",
+      "claim_type": "fact"
+    }
+  ],
+  "raw_extraction": "[\n  {\n    \"source_id\": \"train_2689\",\n    \"claim\": \"Deploying AI without clear business metrics is a mistake.\",\n    \"support_span\": \"The mistake: deploying AI without clear business metrics.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_1243\",\n    \"claim\": \"The real AI budget is in three categories: Replace humans, Augment humans dramatically, and Highly productive tools that make possible what was impossible before.\",\n    \"support_span\": \"The real AI budget is going to three categories:\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_1243\",\n    \"claim\": \"Companies that captured AI spend are operating at 6x-12x the efficiency of traditional SaaS companies.\",\n    \"support_span\": \"The newer, AI-native companies are operating at 6x-12x the efficiency of traditional SaaS companies.\",\n    \"claim_type\": \"comparison\"\n  },\n  {\n    \"source_id\": \"train_14260\",\n    \"claim\": \"Folks that are pretending they have AI, or have slapped on some very basic functionality into their app, aren’t seeing any revenue boost from it.\",\n    \"support_span\": \"Aren’t seeing any revenue boost from it\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_2138\",\n    \"claim\": \"Capturing at least a few basis points of the massive AI spend should be table stakes for companies in a category where AI spending is happening.\",\n    \"support_span\": \"Captured at least a few basis points of the massive AI spend\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_2138\",\n    \"claim\": \"Going from 15% to 25% growth or from 10% to 20% growth should be table stakes for companies in a category where AI spending is happening.\",\n    \"support_span\": \"But going from 15% to 25% growth? From 10% to 20%? That should be table stakes\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_2138\",\n    \"claim\": \"There is a massive point spread between companies that captured AI spend and those that didn’t.\",\n    \"support_span\": \"There’s a massive point spread between companies that captured AI spend and those that didn’t\",\n    \"claim_type\": \"fact\"\n  }\n]",
+  "validation_rejected": [
+    {
+      "source_id": "train_1243",
+      "claim": "The real AI budget is in three categories: Replace humans, Augment humans dramatically, and Highly productive tools that make possible what was impossible before.",
+      "support_span": "The real AI budget is going to three categories:",
+      "claim_type": "fact",
+      "reason": "entity_not_in_source"
+    },
+    {
+      "source_id": "train_2138",
+      "claim": "Going from 15% to 25% growth or from 10% to 20% growth should be table stakes for companies in a category where AI spending is happening.",
+      "support_span": "But going from 15% to 25% growth? From 10% to 20%? That should be table stakes",
+      "claim_type": "fact",
+      "reason": "interrogative_assertion"
+    }
+  ],
+  "verifier_rejected": [],
+  "verified": [
+    {
+      "source_id": "train_2689",
+      "claim": "Deploying AI without clear business metrics is a mistake.",
+      "support_span": "The mistake: deploying AI without clear business metrics.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_1243",
+      "claim": "Companies that captured AI spend are operating at 6x-12x the efficiency of traditional SaaS companies.",
+      "support_span": "The newer, AI-native companies are operating at 6x-12x the efficiency of traditional SaaS companies.",
+      "claim_type": "comparison"
+    },
+    {
+      "source_id": "train_14260",
+      "claim": "Folks that are pretending they have AI, or have slapped on some very basic functionality into their app, aren’t seeing any revenue boost from it.",
+      "support_span": "Aren’t seeing any revenue boost from it",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_2138",
+      "claim": "Capturing at least a few basis points of the massive AI spend should be table stakes for companies in a category where AI spending is happening.",
+      "support_span": "Captured at least a few basis points of the massive AI spend",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_2138",
+      "claim": "There is a massive point spread between companies that captured AI spend and those that didn’t.",
+      "support_span": "There’s a massive point spread between companies that captured AI spend and those that didn’t",
+      "claim_type": "fact"
+    }
+  ],
+  "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] Deploying AI without clear business metrics is a mistake.\n[E2] Companies that captured AI spend are operating at 6x-12x the efficiency of traditional SaaS companies.\n[E3] Folks that are pretending they have AI, or have slapped on some very basic functionality into their app, aren’t seeing any revenue boost from it.\n[E4] Capturing at least a few basis points of the massive AI spend should be table stakes for companies in a category where AI spending is happening.\n[E5] There is a massive point spread between companies that captured AI spend and those that didn’t.",
+  "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: If Your AI Feature Didn’t Materially Boost Revenue, It Doesn’t Count. Try Again.\n\nSource passages:\n[train_2689]\n2. Measuring AI by “Cool Factor” Instead of ROI\nChris noted customers initially bought AI tools “just because it’s AI” but that’s changing. The mistake: deploying AI without clear business metrics. Snowflake learned early to ask: “Is it generating more money or saving more money?” If you can’t measure 418 hours saved per week or 90% time reduction on specific tasks or real-time ad spend optimization ROI, you’re implementing technology without business justification. The bill comes due eventually.\n\n[train_1243]\nThe Brutal Truth: AI Features Alone Don’t Count\nLet me be very direct here: you need to tap into the AI budget, not just make your existing product better with AI features. The real AI budget is going to three categories:\nReplace humans\n(AI Contact Center, AI SDR)\nAugment humans dramatically\n(Cursor, Harvey, Claude + ChatGPT)\nHighly productive tools that make possible what was impossible before\n(Replit, Gamma, AI video tools)\nMost classic SaaS leaders are not going this far with their AI offerings. They’re just making their products… better. Great. But that’s table stakes now. And it’s extremely hard to monetize because customers expect AI features as part of the base product. If your AI strategy is “we added a copilot,” you’re not accessing the AI budget. You’re fighting for scraps from the traditional software budget, which is flat-to-down after price increases. Leaner Teams Are Very Real (Yes, That Means Fewer Humans)\nThe efficiency gains from AI are showing up in real numbers:\nLooking at ARR ($M) / FTE across companies:\nCursor\n: 6.1x\nLovable\n: 3.4x\nOpenAI\n: 1.5x\nAnthropic\n: 1.2x\nAtlassian\n: 0.46x\nDatadog\n: 0.51x\nServiceNow\n: 0.49x\nGitlab\n: 0.54x\nThe newer, AI-native companies are operating at 6x-12x the efficiency of traditional SaaS companies. And this advantage compounds over time. According to Iconiq Capital, AI-native companies show superior burn efficiency driven by faster compounding of ARR.\n\n[train_14260]\nOne thing seems clear to me in AI for SaaS:\n\nFolks that are sort of pretending they have AI, or have slapped on some very basic functionality into their app …\n\nAren’t seeing any revenue boost from it\n\n[train_2138]\nBy now, you should have:\nShipped AI features that customers actually want\nSeen some revenue acceleration from AI adoption\nCaptured at least a few basis points of the massive AI spend\nI’m not expecting you went from 30% growth to 300% growth. That’s unrealistic for most companies. But going from 15% to 25% growth? From 10% to 20%? That should be table stakes\nif you’re remotely positioned in a category where AI spending is happening. As I said on our 20VC pod this week:\n“Going into next year, you sure better have seen re-acceleration because of AI because there’s so much money there. If you got none of it guys, you had 18 months to not launch a single feature, tap into a single trend to reaccelerate. If you’re not growing faster at the end of 2025 than the start as a founder, I give you an F minus. There’s so much money and you don’t have to be Harvey to get a little piece of it. Twilio and MongoDB and Cloudflare and tons of folks have a little piece of it. A little piece of that massive pie.”\nThe Point Spread Between Winners and Losers\nRory O’Driscoll nailed this on our show: There’s a\nmassive point spread\nbetween companies that captured AI spend and those that didn’t.",
+  "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: If Your AI Feature Didn’t Materially Boost Revenue, It Doesn’t Count. Try Again.\n\nSource passages:\n[train_2689]\n2. Measuring AI by “Cool Factor” Instead of ROI\nChris noted customers initially bought AI tools “just because it’s AI” but that’s changing. The mistake: deploying AI without clear business metrics. Snowflake learned early to ask: “Is it generating more money or saving more money?” If you can’t measure 418 hours saved per week or 90% time reduction on specific tasks or real-time ad spend optimization ROI, you’re implementing technology without business justification. The bill comes due eventually.\n\n[train_1243]\nThe Brutal Truth: AI Features Alone Don’t Count\nLet me be very direct here: you need to tap into the AI budget, not just make your existing product better with AI features. The real AI budget is going to three categories:\nReplace humans\n(AI Contact Center, AI SDR)\nAugment humans dramatically\n(Cursor, Harvey, Claude + ChatGPT)\nHighly productive tools that make possible what was impossible before\n(Replit, Gamma, AI video tools)\nMost classic SaaS leaders are not going this far with their AI offerings. They’re just making their products… better. Great. But that’s table stakes now. And it’s extremely hard to monetize because customers expect AI features as part of the base product. If your AI strategy is “we added a copilot,” you’re not accessing the AI budget. You’re fighting for scraps from the traditional software budget, which is flat-to-down after price increases. Leaner Teams Are Very Real (Yes, That Means Fewer Humans)\nThe efficiency gains from AI are showing up in real numbers:\nLooking at ARR ($M) / FTE across companies:\nCursor\n: 6.1x\nLovable\n: 3.4x\nOpenAI\n: 1.5x\nAnthropic\n: 1.2x\nAtlassian\n: 0.46x\nDatadog\n: 0.51x\nServiceNow\n: 0.49x\nGitlab\n: 0.54x\nThe newer, AI-native companies are operating at 6x-12x the efficiency of traditional SaaS companies. And this advantage compounds over time. According to Iconiq Capital, AI-native companies show superior burn efficiency driven by faster compounding of ARR.\n\n[train_14260]\nOne thing seems clear to me in AI for SaaS:\n\nFolks that are sort of pretending they have AI, or have slapped on some very basic functionality into their app …\n\nAren’t seeing any revenue boost from it\n\n[train_2138]\nBy now, you should have:\nShipped AI features that customers actually want\nSeen some revenue acceleration from AI adoption\nCaptured at least a few basis points of the massive AI spend\nI’m not expecting you went from 30% growth to 300% growth. That’s unrealistic for most companies. But going from 15% to 25% growth? From 10% to 20%? That should be table stakes\nif you’re remotely positioned in a category where AI spending is happening. As I said on our 20VC pod this week:\n“Going into next year, you sure better have seen re-acceleration because of AI because there’s so much money there. If you got none of it guys, you had 18 months to not launch a single feature, tap into a single trend to reaccelerate. If you’re not growing faster at the end of 2025 than the start as a founder, I give you an F minus. There’s so much money and you don’t have to be Harvey to get a little piece of it. Twilio and MongoDB and Cloudflare and tons of folks have a little piece of it. A little piece of that massive pie.”\nThe Point Spread Between Winners and Losers\nRory O’Driscoll nailed this on our show: There’s a\nmassive point spread\nbetween companies that captured AI spend and those that didn’t.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+  "extraction_seconds": 14.157,
+  "verification_seconds": 0.0,
+  "verification_records": [],
+  "allowed_numeric_values": [],
+  "reason": null,
+  "extraction_stop_reason": "eos",
+  "extraction_attempts": 1,
+  "evidence_status": "verified"
+}

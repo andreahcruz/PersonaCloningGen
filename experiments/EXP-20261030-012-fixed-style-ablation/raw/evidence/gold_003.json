@@ -1,0 +1,104 @@
+{
+  "proposed": [
+    {
+      "source_id": "train_24912",
+      "claim": "These 2 questions will help you stand out in an interview.",
+      "support_span": "These 2 Questions Will Help You Stand Out in an Interview",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_24913",
+      "claim": "These 2 questions will help you stand out in an interview.",
+      "support_span": "These 2 Questions Will Help You Stand Out in an Interview",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_3199",
+      "claim": "SDRs don't need prior experience in sales.",
+      "support_span": "SDRs don’t need prior experience in sales, but they need grit, hunger, and a relentless drive to succeed.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_3199",
+      "claim": "Grit, hunger, and a relentless drive to succeed are more important than a polished resume.",
+      "support_span": "Look for candidates who are coachable, curious, and have a strong work ethic. These traits are far more important than a polished resume.",
+      "claim_type": "comparison"
+    },
+    {
+      "source_id": "train_3199",
+      "claim": "Many great SDRs come from unconventional backgrounds.",
+      "support_span": "Many great SDRs come from unconventional backgrounds—teachers, military veterans, or recent grads.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_3205",
+      "claim": "SDRs want to see a path forward.",
+      "support_span": "SDRs are often entry-level hires, and they’ll want to see a path forward.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_3205",
+      "claim": "Promoting internally is less risky.",
+      "support_span": "Promote internally whenever possible. It’s less risky, and they already know your product and processes.",
+      "claim_type": "fact"
+    }
+  ],
+  "raw_extraction": "[\n  {\n    \"source_id\": \"train_24912\",\n    \"claim\": \"These 2 questions will help you stand out in an interview.\",\n    \"support_span\": \"These 2 Questions Will Help You Stand Out in an Interview\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_24913\",\n    \"claim\": \"These 2 questions will help you stand out in an interview.\",\n    \"support_span\": \"These 2 Questions Will Help You Stand Out in an Interview\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_3199\",\n    \"claim\": \"SDRs don't need prior experience in sales.\",\n    \"support_span\": \"SDRs don’t need prior experience in sales, but they need grit, hunger, and a relentless drive to succeed.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_3199\",\n    \"claim\": \"Grit, hunger, and a relentless drive to succeed are more important than a polished resume.\",\n    \"support_span\": \"Look for candidates who are coachable, curious, and have a strong work ethic. These traits are far more important than a polished resume.\",\n    \"claim_type\": \"comparison\"\n  },\n  {\n    \"source_id\": \"train_3199\",\n    \"claim\": \"Many great SDRs come from unconventional backgrounds.\",\n    \"support_span\": \"Many great SDRs come from unconventional backgrounds—teachers, military veterans, or recent grads.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_3205\",\n    \"claim\": \"SDRs want to see a path forward.\",\n    \"support_span\": \"SDRs are often entry-level hires, and they’ll want to see a path forward.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_3205\",\n    \"claim\": \"Promoting internally is less risky.\",\n    \"support_span\": \"Promote internally whenever possible. It’s less risky, and they already know your product and processes.\",\n    \"claim_type\": \"fact\"\n  }\n]",
+  "validation_rejected": [],
+  "verifier_rejected": [],
+  "verified": [
+    {
+      "source_id": "train_24912",
+      "claim": "These 2 questions will help you stand out in an interview.",
+      "support_span": "These 2 Questions Will Help You Stand Out in an Interview",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_24913",
+      "claim": "These 2 questions will help you stand out in an interview.",
+      "support_span": "These 2 Questions Will Help You Stand Out in an Interview",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_3199",
+      "claim": "SDRs don't need prior experience in sales.",
+      "support_span": "SDRs don’t need prior experience in sales, but they need grit, hunger, and a relentless drive to succeed.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_3199",
+      "claim": "Grit, hunger, and a relentless drive to succeed are more important than a polished resume.",
+      "support_span": "Look for candidates who are coachable, curious, and have a strong work ethic. These traits are far more important than a polished resume.",
+      "claim_type": "comparison"
+    },
+    {
+      "source_id": "train_3199",
+      "claim": "Many great SDRs come from unconventional backgrounds.",
+      "support_span": "Many great SDRs come from unconventional backgrounds—teachers, military veterans, or recent grads.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_3205",
+      "claim": "SDRs want to see a path forward.",
+      "support_span": "SDRs are often entry-level hires, and they’ll want to see a path forward.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_3205",
+      "claim": "Promoting internally is less risky.",
+      "support_span": "Promote internally whenever possible. It’s less risky, and they already know your product and processes.",
+      "claim_type": "fact"
+    }
+  ],
+  "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] These 2 questions will help you stand out in an interview.\n[E2] These 2 questions will help you stand out in an interview.\n[E3] SDRs don't need prior experience in sales.\n[E4] Grit, hunger, and a relentless drive to succeed are more important than a polished resume.\n[E5] Many great SDRs come from unconventional backgrounds.\n[E6] SDRs want to see a path forward.\n[E7] Promoting internally is less risky.",
+  "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: How to Truly Stand Out in Any Job Interview, from SDR to COO\n\nSource passages:\n[train_24912]\nThese 2 Questions Will Help You Stand Out in an Interview - SaaStr in TIME \nhttp://time.com/3834976/2-interview-questions/\n…\n\n[train_24913]\nThese 2 Questions Will Help You Stand Out in an Interview | TIME - SaaStr \nhttp://time.com/3834976/2-interview-questions/\n…\n\n[train_3199]\nDear SaaStr: How Do I Build a Great SDR Team?\nBuilding a great SDR team is one of the most critical steps in scaling a SaaS company, especially when you’re selling to the C-suite or enterprise. SDRs are the engine of your pipeline, and if you get this right, it can transform your sales organization.\nHere’s how to do it:\n\n1. Hire for “Fire in the Belly”\n–\n**What to Look For**\n: SDRs don’t need prior experience in sales, but they need grit, hunger, and a relentless drive to succeed. Look for candidates who are coachable, curious, and have a strong work ethic. These traits are far more important than a polished resume.\n–\n**Pro Tip**\n: Many great SDRs come from unconventional backgrounds—teachers, military veterans, or recent grads. They’re often looking for a career change and bring fresh perspectives.\n\n[train_3205]\n7. Create a Career Path\n– **Why?**: SDRs are often entry-level hires, and they’ll want to see a path forward. Without it, you’ll lose them to other companies.\n– **What It Looks Like**:\nSDR → Senior SDR → AE or other roles (e.g., Customer Success, Marketing)\nPromote internally whenever possible. It’s less risky, and they already know your product and processes.\n–\n**Pro Tip**\n: Highlight success stories of SDRs who’ve moved up in the company to inspire your team .",
+  "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: How to Truly Stand Out in Any Job Interview, from SDR to COO\n\nSource passages:\n[train_24912]\nThese 2 Questions Will Help You Stand Out in an Interview - SaaStr in TIME \nhttp://time.com/3834976/2-interview-questions/\n…\n\n[train_24913]\nThese 2 Questions Will Help You Stand Out in an Interview | TIME - SaaStr \nhttp://time.com/3834976/2-interview-questions/\n…\n\n[train_3199]\nDear SaaStr: How Do I Build a Great SDR Team?\nBuilding a great SDR team is one of the most critical steps in scaling a SaaS company, especially when you’re selling to the C-suite or enterprise. SDRs are the engine of your pipeline, and if you get this right, it can transform your sales organization.\nHere’s how to do it:\n\n1. Hire for “Fire in the Belly”\n–\n**What to Look For**\n: SDRs don’t need prior experience in sales, but they need grit, hunger, and a relentless drive to succeed. Look for candidates who are coachable, curious, and have a strong work ethic. These traits are far more important than a polished resume.\n–\n**Pro Tip**\n: Many great SDRs come from unconventional backgrounds—teachers, military veterans, or recent grads. They’re often looking for a career change and bring fresh perspectives.\n\n[train_3205]\n7. Create a Career Path\n– **Why?**: SDRs are often entry-level hires, and they’ll want to see a path forward. Without it, you’ll lose them to other companies.\n– **What It Looks Like**:\nSDR → Senior SDR → AE or other roles (e.g., Customer Success, Marketing)\nPromote internally whenever possible. It’s less risky, and they already know your product and processes.\n–\n**Pro Tip**\n: Highlight success stories of SDRs who’ve moved up in the company to inspire your team .<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+  "extraction_seconds": 12.163,
+  "verification_seconds": 0.0,
+  "verification_records": [],
+  "allowed_numeric_values": [],
+  "reason": null,
+  "extraction_stop_reason": "eos",
+  "extraction_attempts": 1,
+  "evidence_status": "verified"
+}

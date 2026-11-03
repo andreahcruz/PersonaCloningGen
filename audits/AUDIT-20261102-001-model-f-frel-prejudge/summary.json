@@ -1,0 +1,2761 @@
+{
+  "experiment_id": "EXP-20261102-001-model-f-unified-panel",
+  "profile": "F-REL",
+  "manifest_status": "generated_not_judged",
+  "progress": {
+    "completed": 120,
+    "current_question": null,
+    "failed": 0,
+    "judge_overlay": "not_applied",
+    "not_started": 0,
+    "profile": "F-REL",
+    "question_index": 30,
+    "questions": 30,
+    "remaining": 0
+  },
+  "gold_sha256": "d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e",
+  "expected_cells": 120,
+  "saved_generation_files": 120,
+  "saved_evidence_files": 30,
+  "saved_retrieval_files": 30,
+  "unique_question_medium_pairs": 120,
+  "missing_pairs": [],
+  "unexpected_pairs": [],
+  "duplicate_pairs": [],
+  "question_ids_found": [
+    "gold_001",
+    "gold_002",
+    "gold_003",
+    "gold_004",
+    "gold_005",
+    "gold_006",
+    "gold_007",
+    "gold_008",
+    "gold_009",
+    "gold_010",
+    "gold_011",
+    "gold_012",
+    "gold_013",
+    "gold_014",
+    "gold_015",
+    "gold_016",
+    "gold_017",
+    "gold_018",
+    "gold_019",
+    "gold_020",
+    "gold_021",
+    "gold_022",
+    "gold_023",
+    "gold_024",
+    "gold_025",
+    "gold_026",
+    "gold_027",
+    "gold_028",
+    "gold_029",
+    "gold_030"
+  ],
+  "questions_found": 30,
+  "overall": {
+    "label": "all",
+    "cells": 120,
+    "empty": {
+      "count": 0,
+      "denominator": 120,
+      "rate": 0.0
+    },
+    "status_not_complete": {
+      "count": 0,
+      "denominator": 120,
+      "rate": 0.0
+    },
+    "missing_any_required_field": {
+      "count": 0,
+      "denominator": 120,
+      "rate": 0.0
+    },
+    "retry_attempt_gt_1": {
+      "count": 20,
+      "denominator": 120,
+      "rate": 0.1667
+    },
+    "retry_seed_set": {
+      "count": 20,
+      "denominator": 120,
+      "rate": 0.1667
+    },
+    "zero_accepted_claims": {
+      "count": 4,
+      "denominator": 120,
+      "rate": 0.0333
+    },
+    "extraction_truncated": {
+      "count": 0,
+      "denominator": 120,
+      "rate": 0.0
+    },
+    "passage_omitted": {
+      "count": 20,
+      "denominator": 120,
+      "rate": 0.1667
+    },
+    "graph_items_omitted": {
+      "count": 2,
+      "denominator": 120,
+      "rate": 0.0167
+    },
+    "unsupported_numeric_cells": {
+      "count": 52,
+      "denominator": 120,
+      "rate": 0.4333
+    },
+    "unsupported_numeric_items": {
+      "count": 185,
+      "cells_with_any": 52,
+      "denominator_cells": 120
+    },
+    "repeats_topic": {
+      "count": 55,
+      "denominator": 120,
+      "rate": 0.4583
+    },
+    "embeds_topic": {
+      "count": 56,
+      "denominator": 120,
+      "rate": 0.4667
+    },
+    "instruction_or_marker_leak": {
+      "count": 2,
+      "denominator": 120,
+      "rate": 0.0167
+    },
+    "citation_marker_leak": {
+      "count": 2,
+      "denominator": 120,
+      "rate": 0.0167
+    },
+    "rag_copy_fail": {
+      "count": 7,
+      "denominator": 120,
+      "rate": 0.0583
+    },
+    "rag_copy_span_ge_8": {
+      "count": 10,
+      "denominator": 120,
+      "rate": 0.0833
+    },
+    "training_copy_fail": {
+      "count": 0,
+      "denominator": 104,
+      "rate": 0.0
+    },
+    "completion_pass": {
+      "count": 84,
+      "denominator": 120,
+      "rate": 0.7
+    },
+    "mid_sentence": {
+      "count": 36,
+      "denominator": 120,
+      "rate": 0.3
+    },
+    "format_pass": {
+      "count": 116,
+      "denominator": 120,
+      "rate": 0.9667
+    },
+    "prompt_contract_short": {
+      "count": 12,
+      "denominator": 120,
+      "rate": 0.1
+    },
+    "at_max_tokens": {
+      "count": 36,
+      "denominator": 120,
+      "rate": 0.3
+    },
+    "stop_reason_recorded": {
+      "count": 0,
+      "denominator": 120,
+      "rate": 0.0
+    },
+    "faithfulness_fail": {
+      "count": 61,
+      "denominator": 120,
+      "rate": 0.5083
+    },
+    "lexical_grounding_pass": {
+      "count": 8,
+      "denominator": 120,
+      "rate": 0.0667
+    },
+    "role_unsupported_cells": {
+      "count": 1,
+      "denominator": 120,
+      "rate": 0.0083
+    },
+    "repeated_sentence_cells": {
+      "count": 0,
+      "denominator": 120,
+      "rate": 0.0
+    },
+    "claim_presence": {
+      "present_claims": 48,
+      "measured_claims": 1284,
+      "rate": 0.0374,
+      "cells": 116,
+      "definition": "Audit diagnostic: 4-token contiguous overlap, or the full sequence when the claim has fewer than 4 tokens. Not an existing scorer."
+    },
+    "relationship_endpoint_mention": {
+      "mentioned": 40,
+      "measurable_lines": 475,
+      "rate": 0.0842,
+      "definition": "Audit diagnostic: both endpoint names from a [R] line occur in the answer. Not proof the relationship was used correctly."
+    },
+    "words": {
+      "n": 120,
+      "mean": 203.1083,
+      "median": 243.5,
+      "p95": 323.0,
+      "min": 8.0,
+      "max": 465.0
+    },
+    "output_tokens": {
+      "n": 120,
+      "mean": 260.975,
+      "median": 320.0,
+      "p95": 402.0,
+      "min": 11.0,
+      "max": 548.0
+    },
+    "prompt_tokens": {
+      "n": 120,
+      "mean": 832.775,
+      "median": 801.0,
+      "p95": 1159.0,
+      "min": 537.0,
+      "max": 1385.0
+    },
+    "context_tokens": {
+      "n": 120,
+      "mean": 232.3667,
+      "median": 201.0,
+      "p95": 477.0,
+      "min": 36.0,
+      "max": 559.0
+    },
+    "generation_seconds": {
+      "n": 120,
+      "mean": 20.069,
+      "median": 23.7315,
+      "p95": 32.311,
+      "min": 1.453,
+      "max": 51.184
+    },
+    "tokens_per_second": {
+      "n": 120,
+      "mean": 13.4374,
+      "median": 12.9587,
+      "p95": 25.583,
+      "min": 1.2995,
+      "max": 26.4611
+    },
+    "copy_span": {
+      "n": 120,
+      "mean": 4.2333,
+      "median": 3.0,
+      "p95": 12.0,
+      "min": 1.0,
+      "max": 19.0
+    },
+    "lexical_overlap": {
+      "n": 120,
+      "mean": 0.0553,
+      "median": 0.0,
+      "p95": 0.25,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "fourgram_repeat_rate": {
+      "n": 120,
+      "mean": 0.0048,
+      "median": 0.0,
+      "p95": 0.0216,
+      "min": 0.0,
+      "max": 0.1333
+    }
+  },
+  "by_medium": {
+    "blog": {
+      "label": "blog",
+      "cells": 30,
+      "empty": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "status_not_complete": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "missing_any_required_field": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "retry_attempt_gt_1": {
+        "count": 2,
+        "denominator": 30,
+        "rate": 0.0667
+      },
+      "retry_seed_set": {
+        "count": 2,
+        "denominator": 30,
+        "rate": 0.0667
+      },
+      "zero_accepted_claims": {
+        "count": 1,
+        "denominator": 30,
+        "rate": 0.0333
+      },
+      "extraction_truncated": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "passage_omitted": {
+        "count": 5,
+        "denominator": 30,
+        "rate": 0.1667
+      },
+      "graph_items_omitted": {
+        "count": 1,
+        "denominator": 30,
+        "rate": 0.0333
+      },
+      "unsupported_numeric_cells": {
+        "count": 19,
+        "denominator": 30,
+        "rate": 0.6333
+      },
+      "unsupported_numeric_items": {
+        "count": 77,
+        "cells_with_any": 19,
+        "denominator_cells": 30
+      },
+      "repeats_topic": {
+        "count": 13,
+        "denominator": 30,
+        "rate": 0.4333
+      },
+      "embeds_topic": {
+        "count": 13,
+        "denominator": 30,
+        "rate": 0.4333
+      },
+      "instruction_or_marker_leak": {
+        "count": 1,
+        "denominator": 30,
+        "rate": 0.0333
+      },
+      "citation_marker_leak": {
+        "count": 1,
+        "denominator": 30,
+        "rate": 0.0333
+      },
+      "rag_copy_fail": {
+        "count": 3,
+        "denominator": 30,
+        "rate": 0.1
+      },
+      "rag_copy_span_ge_8": {
+        "count": 3,
+        "denominator": 30,
+        "rate": 0.1
+      },
+      "training_copy_fail": {
+        "count": 0,
+        "denominator": 26,
+        "rate": 0.0
+      },
+      "completion_pass": {
+        "count": 30,
+        "denominator": 30,
+        "rate": 1.0
+      },
+      "mid_sentence": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "format_pass": {
+        "count": 29,
+        "denominator": 30,
+        "rate": 0.9667
+      },
+      "prompt_contract_short": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "at_max_tokens": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "stop_reason_recorded": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "faithfulness_fail": {
+        "count": 21,
+        "denominator": 30,
+        "rate": 0.7
+      },
+      "lexical_grounding_pass": {
+        "count": 3,
+        "denominator": 30,
+        "rate": 0.1
+      },
+      "role_unsupported_cells": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "repeated_sentence_cells": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "claim_presence": {
+        "present_claims": 12,
+        "measured_claims": 321,
+        "rate": 0.0374,
+        "cells": 29,
+        "definition": "Audit diagnostic: 4-token contiguous overlap, or the full sequence when the claim has fewer than 4 tokens. Not an existing scorer."
+      },
+      "relationship_endpoint_mention": {
+        "mentioned": 11,
+        "measurable_lines": 137,
+        "rate": 0.0803,
+        "definition": "Audit diagnostic: both endpoint names from a [R] line occur in the answer. Not proof the relationship was used correctly."
+      },
+      "words": {
+        "n": 30,
+        "mean": 246.4,
+        "median": 260.5,
+        "p95": 318.0,
+        "min": 22.0,
+        "max": 324.0
+      },
+      "output_tokens": {
+        "n": 30,
+        "mean": 320.3,
+        "median": 342.0,
+        "p95": 402.0,
+        "min": 30.0,
+        "max": 411.0
+      },
+      "prompt_tokens": {
+        "n": 30,
+        "mean": 856.0333,
+        "median": 816.5,
+        "p95": 1191.0,
+        "min": 539.0,
+        "max": 1277.0
+      },
+      "context_tokens": {
+        "n": 30,
+        "mean": 245.6667,
+        "median": 203.5,
+        "p95": 507.0,
+        "min": 63.0,
+        "max": 559.0
+      },
+      "generation_seconds": {
+        "n": 30,
+        "mean": 24.0407,
+        "median": 25.969,
+        "p95": 33.477,
+        "min": 1.616,
+        "max": 39.407
+      },
+      "tokens_per_second": {
+        "n": 30,
+        "mean": 14.3619,
+        "median": 13.0061,
+        "p95": 26.0426,
+        "min": 7.9174,
+        "max": 26.4611
+      },
+      "copy_span": {
+        "n": 30,
+        "mean": 4.6333,
+        "median": 3.0,
+        "p95": 17.0,
+        "min": 2.0,
+        "max": 19.0
+      },
+      "lexical_overlap": {
+        "n": 30,
+        "mean": 0.0584,
+        "median": 0.0,
+        "p95": 0.3,
+        "min": 0.0,
+        "max": 0.5
+      },
+      "fourgram_repeat_rate": {
+        "n": 30,
+        "mean": 0.0037,
+        "median": 0.0,
+        "p95": 0.0216,
+        "min": 0.0,
+        "max": 0.0293
+      }
+    },
+    "linkedin": {
+      "label": "linkedin",
+      "cells": 30,
+      "empty": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "status_not_complete": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "missing_any_required_field": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "retry_attempt_gt_1": {
+        "count": 5,
+        "denominator": 30,
+        "rate": 0.1667
+      },
+      "retry_seed_set": {
+        "count": 5,
+        "denominator": 30,
+        "rate": 0.1667
+      },
+      "zero_accepted_claims": {
+        "count": 1,
+        "denominator": 30,
+        "rate": 0.0333
+      },
+      "extraction_truncated": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "passage_omitted": {
+        "count": 5,
+        "denominator": 30,
+        "rate": 0.1667
+      },
+      "graph_items_omitted": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "unsupported_numeric_cells": {
+        "count": 9,
+        "denominator": 30,
+        "rate": 0.3
+      },
+      "unsupported_numeric_items": {
+        "count": 28,
+        "cells_with_any": 9,
+        "denominator_cells": 30
+      },
+      "repeats_topic": {
+        "count": 15,
+        "denominator": 30,
+        "rate": 0.5
+      },
+      "embeds_topic": {
+        "count": 16,
+        "denominator": 30,
+        "rate": 0.5333
+      },
+      "instruction_or_marker_leak": {
+        "count": 1,
+        "denominator": 30,
+        "rate": 0.0333
+      },
+      "citation_marker_leak": {
+        "count": 1,
+        "denominator": 30,
+        "rate": 0.0333
+      },
+      "rag_copy_fail": {
+        "count": 1,
+        "denominator": 30,
+        "rate": 0.0333
+      },
+      "rag_copy_span_ge_8": {
+        "count": 3,
+        "denominator": 30,
+        "rate": 0.1
+      },
+      "training_copy_fail": {
+        "count": 0,
+        "denominator": 26,
+        "rate": 0.0
+      },
+      "completion_pass": {
+        "count": 13,
+        "denominator": 30,
+        "rate": 0.4333
+      },
+      "mid_sentence": {
+        "count": 17,
+        "denominator": 30,
+        "rate": 0.5667
+      },
+      "format_pass": {
+        "count": 28,
+        "denominator": 30,
+        "rate": 0.9333
+      },
+      "prompt_contract_short": {
+        "count": 6,
+        "denominator": 30,
+        "rate": 0.2
+      },
+      "at_max_tokens": {
+        "count": 17,
+        "denominator": 30,
+        "rate": 0.5667
+      },
+      "stop_reason_recorded": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "faithfulness_fail": {
+        "count": 12,
+        "denominator": 30,
+        "rate": 0.4
+      },
+      "lexical_grounding_pass": {
+        "count": 2,
+        "denominator": 30,
+        "rate": 0.0667
+      },
+      "role_unsupported_cells": {
+        "count": 1,
+        "denominator": 30,
+        "rate": 0.0333
+      },
+      "repeated_sentence_cells": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "claim_presence": {
+        "present_claims": 14,
+        "measured_claims": 321,
+        "rate": 0.0436,
+        "cells": 29,
+        "definition": "Audit diagnostic: 4-token contiguous overlap, or the full sequence when the claim has fewer than 4 tokens. Not an existing scorer."
+      },
+      "relationship_endpoint_mention": {
+        "mentioned": 12,
+        "measurable_lines": 135,
+        "rate": 0.0889,
+        "definition": "Audit diagnostic: both endpoint names from a [R] line occur in the answer. Not proof the relationship was used correctly."
+      },
+      "words": {
+        "n": 30,
+        "mean": 186.0333,
+        "median": 237.5,
+        "p95": 271.0,
+        "min": 8.0,
+        "max": 271.0
+      },
+      "output_tokens": {
+        "n": 30,
+        "mean": 237.8333,
+        "median": 320.0,
+        "p95": 320.0,
+        "min": 11.0,
+        "max": 320.0
+      },
+      "prompt_tokens": {
+        "n": 30,
+        "mean": 851.5333,
+        "median": 806.5,
+        "p95": 1172.0,
+        "min": 539.0,
+        "max": 1385.0
+      },
+      "context_tokens": {
+        "n": 30,
+        "mean": 243.8333,
+        "median": 202.0,
+        "p95": 532.0,
+        "min": 63.0,
+        "max": 543.0
+      },
+      "generation_seconds": {
+        "n": 30,
+        "mean": 19.6526,
+        "median": 23.2325,
+        "p95": 25.394,
+        "min": 1.453,
+        "max": 32.929
+      },
+      "tokens_per_second": {
+        "n": 30,
+        "mean": 12.1725,
+        "median": 12.9063,
+        "p95": 25.9149,
+        "min": 1.2995,
+        "max": 26.1849
+      },
+      "copy_span": {
+        "n": 30,
+        "mean": 4.1333,
+        "median": 3.0,
+        "p95": 10.0,
+        "min": 2.0,
+        "max": 15.0
+      },
+      "lexical_overlap": {
+        "n": 30,
+        "mean": 0.0715,
+        "median": 0.0,
+        "p95": 0.2857,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "fourgram_repeat_rate": {
+        "n": 30,
+        "mean": 0.0011,
+        "median": 0.0,
+        "p95": 0.0082,
+        "min": 0.0,
+        "max": 0.0124
+      }
+    },
+    "x": {
+      "label": "x",
+      "cells": 30,
+      "empty": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "status_not_complete": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "missing_any_required_field": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "retry_attempt_gt_1": {
+        "count": 3,
+        "denominator": 30,
+        "rate": 0.1
+      },
+      "retry_seed_set": {
+        "count": 3,
+        "denominator": 30,
+        "rate": 0.1
+      },
+      "zero_accepted_claims": {
+        "count": 1,
+        "denominator": 30,
+        "rate": 0.0333
+      },
+      "extraction_truncated": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "passage_omitted": {
+        "count": 5,
+        "denominator": 30,
+        "rate": 0.1667
+      },
+      "graph_items_omitted": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "unsupported_numeric_cells": {
+        "count": 10,
+        "denominator": 30,
+        "rate": 0.3333
+      },
+      "unsupported_numeric_items": {
+        "count": 21,
+        "cells_with_any": 10,
+        "denominator_cells": 30
+      },
+      "repeats_topic": {
+        "count": 23,
+        "denominator": 30,
+        "rate": 0.7667
+      },
+      "embeds_topic": {
+        "count": 23,
+        "denominator": 30,
+        "rate": 0.7667
+      },
+      "instruction_or_marker_leak": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "citation_marker_leak": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "rag_copy_fail": {
+        "count": 1,
+        "denominator": 30,
+        "rate": 0.0333
+      },
+      "rag_copy_span_ge_8": {
+        "count": 2,
+        "denominator": 30,
+        "rate": 0.0667
+      },
+      "training_copy_fail": {
+        "count": 0,
+        "denominator": 26,
+        "rate": 0.0
+      },
+      "completion_pass": {
+        "count": 12,
+        "denominator": 30,
+        "rate": 0.4
+      },
+      "mid_sentence": {
+        "count": 18,
+        "denominator": 30,
+        "rate": 0.6
+      },
+      "format_pass": {
+        "count": 30,
+        "denominator": 30,
+        "rate": 1.0
+      },
+      "prompt_contract_short": {
+        "count": 6,
+        "denominator": 30,
+        "rate": 0.2
+      },
+      "at_max_tokens": {
+        "count": 19,
+        "denominator": 30,
+        "rate": 0.6333
+      },
+      "stop_reason_recorded": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "faithfulness_fail": {
+        "count": 13,
+        "denominator": 30,
+        "rate": 0.4333
+      },
+      "lexical_grounding_pass": {
+        "count": 3,
+        "denominator": 30,
+        "rate": 0.1
+      },
+      "role_unsupported_cells": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "repeated_sentence_cells": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "claim_presence": {
+        "present_claims": 10,
+        "measured_claims": 321,
+        "rate": 0.0312,
+        "cells": 29,
+        "definition": "Audit diagnostic: 4-token contiguous overlap, or the full sequence when the claim has fewer than 4 tokens. Not an existing scorer."
+      },
+      "relationship_endpoint_mention": {
+        "mentioned": 5,
+        "measurable_lines": 66,
+        "rate": 0.0758,
+        "definition": "Audit diagnostic: both endpoint names from a [R] line occur in the answer. Not proof the relationship was used correctly."
+      },
+      "words": {
+        "n": 30,
+        "mean": 90.0333,
+        "median": 117.0,
+        "p95": 130.0,
+        "min": 13.0,
+        "max": 134.0
+      },
+      "output_tokens": {
+        "n": 30,
+        "mean": 121.3667,
+        "median": 160.0,
+        "p95": 160.0,
+        "min": 17.0,
+        "max": 160.0
+      },
+      "prompt_tokens": {
+        "n": 30,
+        "mean": 762.6333,
+        "median": 731.0,
+        "p95": 1071.0,
+        "min": 539.0,
+        "max": 1084.0
+      },
+      "context_tokens": {
+        "n": 30,
+        "mean": 194.3,
+        "median": 158.5,
+        "p95": 354.0,
+        "min": 36.0,
+        "max": 359.0
+      },
+      "generation_seconds": {
+        "n": 30,
+        "mean": 9.6217,
+        "median": 9.347,
+        "p95": 12.881,
+        "min": 2.485,
+        "max": 19.907
+      },
+      "tokens_per_second": {
+        "n": 30,
+        "mean": 12.6697,
+        "median": 12.833,
+        "p95": 22.1607,
+        "min": 2.4161,
+        "max": 22.409
+      },
+      "copy_span": {
+        "n": 30,
+        "mean": 3.7333,
+        "median": 3.0,
+        "p95": 8.0,
+        "min": 1.0,
+        "max": 16.0
+      },
+      "lexical_overlap": {
+        "n": 30,
+        "mean": 0.072,
+        "median": 0.0,
+        "p95": 0.3333,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "fourgram_repeat_rate": {
+        "n": 30,
+        "mean": 0.0076,
+        "median": 0.0,
+        "p95": 0.0513,
+        "min": 0.0,
+        "max": 0.1333
+      }
+    },
+    "talk": {
+      "label": "talk",
+      "cells": 30,
+      "empty": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "status_not_complete": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "missing_any_required_field": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "retry_attempt_gt_1": {
+        "count": 10,
+        "denominator": 30,
+        "rate": 0.3333
+      },
+      "retry_seed_set": {
+        "count": 10,
+        "denominator": 30,
+        "rate": 0.3333
+      },
+      "zero_accepted_claims": {
+        "count": 1,
+        "denominator": 30,
+        "rate": 0.0333
+      },
+      "extraction_truncated": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "passage_omitted": {
+        "count": 5,
+        "denominator": 30,
+        "rate": 0.1667
+      },
+      "graph_items_omitted": {
+        "count": 1,
+        "denominator": 30,
+        "rate": 0.0333
+      },
+      "unsupported_numeric_cells": {
+        "count": 14,
+        "denominator": 30,
+        "rate": 0.4667
+      },
+      "unsupported_numeric_items": {
+        "count": 59,
+        "cells_with_any": 14,
+        "denominator_cells": 30
+      },
+      "repeats_topic": {
+        "count": 4,
+        "denominator": 30,
+        "rate": 0.1333
+      },
+      "embeds_topic": {
+        "count": 4,
+        "denominator": 30,
+        "rate": 0.1333
+      },
+      "instruction_or_marker_leak": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "citation_marker_leak": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "rag_copy_fail": {
+        "count": 2,
+        "denominator": 30,
+        "rate": 0.0667
+      },
+      "rag_copy_span_ge_8": {
+        "count": 2,
+        "denominator": 30,
+        "rate": 0.0667
+      },
+      "training_copy_fail": {
+        "count": 0,
+        "denominator": 26,
+        "rate": 0.0
+      },
+      "completion_pass": {
+        "count": 29,
+        "denominator": 30,
+        "rate": 0.9667
+      },
+      "mid_sentence": {
+        "count": 1,
+        "denominator": 30,
+        "rate": 0.0333
+      },
+      "format_pass": {
+        "count": 29,
+        "denominator": 30,
+        "rate": 0.9667
+      },
+      "prompt_contract_short": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "at_max_tokens": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "stop_reason_recorded": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "faithfulness_fail": {
+        "count": 15,
+        "denominator": 30,
+        "rate": 0.5
+      },
+      "lexical_grounding_pass": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "role_unsupported_cells": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "repeated_sentence_cells": {
+        "count": 0,
+        "denominator": 30,
+        "rate": 0.0
+      },
+      "claim_presence": {
+        "present_claims": 12,
+        "measured_claims": 321,
+        "rate": 0.0374,
+        "cells": 29,
+        "definition": "Audit diagnostic: 4-token contiguous overlap, or the full sequence when the claim has fewer than 4 tokens. Not an existing scorer."
+      },
+      "relationship_endpoint_mention": {
+        "mentioned": 12,
+        "measurable_lines": 137,
+        "rate": 0.0876,
+        "definition": "Audit diagnostic: both endpoint names from a [R] line occur in the answer. Not proof the relationship was used correctly."
+      },
+      "words": {
+        "n": 30,
+        "mean": 289.9667,
+        "median": 298.0,
+        "p95": 341.0,
+        "min": 23.0,
+        "max": 465.0
+      },
+      "output_tokens": {
+        "n": 30,
+        "mean": 364.4,
+        "median": 371.5,
+        "p95": 442.0,
+        "min": 31.0,
+        "max": 548.0
+      },
+      "prompt_tokens": {
+        "n": 30,
+        "mean": 860.9,
+        "median": 832.5,
+        "p95": 1189.0,
+        "min": 537.0,
+        "max": 1275.0
+      },
+      "context_tokens": {
+        "n": 30,
+        "mean": 245.6667,
+        "median": 203.5,
+        "p95": 507.0,
+        "min": 63.0,
+        "max": 559.0
+      },
+      "generation_seconds": {
+        "n": 30,
+        "mean": 26.9608,
+        "median": 28.647,
+        "p95": 33.889,
+        "min": 1.57,
+        "max": 51.184
+      },
+      "tokens_per_second": {
+        "n": 30,
+        "mean": 14.5453,
+        "median": 13.1199,
+        "p95": 25.583,
+        "min": 7.9517,
+        "max": 25.9965
+      },
+      "copy_span": {
+        "n": 30,
+        "mean": 4.4333,
+        "median": 4.0,
+        "p95": 12.0,
+        "min": 2.0,
+        "max": 19.0
+      },
+      "lexical_overlap": {
+        "n": 30,
+        "mean": 0.0192,
+        "median": 0.0,
+        "p95": 0.0833,
+        "min": 0.0,
+        "max": 0.125
+      },
+      "fourgram_repeat_rate": {
+        "n": 30,
+        "mean": 0.0067,
+        "median": 0.0032,
+        "p95": 0.0325,
+        "min": 0.0,
+        "max": 0.0339
+      }
+    }
+  },
+  "per_question_retrieval_seconds": {
+    "n": 30,
+    "mean": 12.9055,
+    "median": 12.927,
+    "p95": 13.679,
+    "min": 10.186,
+    "max": 14.396
+  },
+  "per_question_extraction_seconds": {
+    "n": 30,
+    "mean": 36.3846,
+    "median": 29.552,
+    "p95": 74.34,
+    "min": 14.35,
+    "max": 74.994
+  },
+  "per_question_raw_chunks": {
+    "n": 30,
+    "mean": 12.0,
+    "median": 12.0,
+    "p95": 12,
+    "min": 12,
+    "max": 12
+  },
+  "per_question_accepted_relationships": {
+    "n": 30,
+    "mean": 33.6667,
+    "median": 33.0,
+    "p95": 66,
+    "min": 4,
+    "max": 74
+  },
+  "per_question_rejected_relationships": {
+    "n": 30,
+    "mean": 75.0667,
+    "median": 78.0,
+    "p95": 131,
+    "min": 16,
+    "max": 139
+  },
+  "per_question_accepted_claims": {
+    "n": 30,
+    "mean": 10.7,
+    "median": 9.0,
+    "p95": 27,
+    "min": 0,
+    "max": 30
+  },
+  "per_question_rejected_claims": {
+    "n": 30,
+    "mean": 3.8333,
+    "median": 3.0,
+    "p95": 10,
+    "min": 0,
+    "max": 15
+  },
+  "zero_claim_questions": [
+    "gold_030"
+  ],
+  "passage_omission_questions": [
+    "gold_003",
+    "gold_006",
+    "gold_012",
+    "gold_017",
+    "gold_030"
+  ],
+  "descriptive_omissions": {
+    "role": "descriptive_error_analysis",
+    "used_for_scoring": false,
+    "excluded_from_scoring": false,
+    "reweighted": false,
+    "gold_030": {
+      "question_id": "gold_030",
+      "evidence_status": "extraction_failed",
+      "accepted_claims": 0,
+      "extraction_input_truncated": false,
+      "omitted_hit": "gd_66bbfcd9b1f8b6bca75fe3f6",
+      "note": "Zero accepted claims. The four saved drafts stay in the 120-row panel."
+    },
+    "omission_events": [
+      {
+        "kind": "whole_passage",
+        "question_id": "gold_003",
+        "omitted_hit": "gd_cbce5e6622c8c301403e5d87",
+        "extraction_prompt_tokens": 1607,
+        "extraction_input_truncated": false
+      },
+      {
+        "kind": "whole_passage",
+        "question_id": "gold_006",
+        "omitted_hit": "gd_7de8c212e9b23d9cc687dadc",
+        "extraction_prompt_tokens": 1635,
+        "extraction_input_truncated": false
+      },
+      {
+        "kind": "whole_passage",
+        "question_id": "gold_012",
+        "omitted_hit": "gd_358fbb324b7f44e4b1825ded",
+        "extraction_prompt_tokens": 1640,
+        "extraction_input_truncated": false
+      },
+      {
+        "kind": "whole_passage",
+        "question_id": "gold_017",
+        "omitted_hit": "gd_36adbfd4476f456fc4520b4a",
+        "extraction_prompt_tokens": 1615,
+        "extraction_input_truncated": false
+      },
+      {
+        "kind": "whole_passage",
+        "question_id": "gold_030",
+        "omitted_hit": "gd_66bbfcd9b1f8b6bca75fe3f6",
+        "evidence_status": "extraction_failed",
+        "extraction_prompt_tokens": 1602,
+        "extraction_input_truncated": false
+      },
+      {
+        "kind": "graph_item",
+        "question_id": "gold_011",
+        "medium": "blog",
+        "window_omitted_count": 9
+      },
+      {
+        "kind": "graph_item",
+        "question_id": "gold_011",
+        "medium": "talk",
+        "window_omitted_count": 9
+      }
+    ]
+  },
+  "saved_unified_rows": 104,
+  "saved_rows_with_writing_quality": 104,
+  "judge_cache_lines": 221,
+  "checks_executed": [
+    "host_finetune.eval_bench.metrics.score_generation",
+    "host_finetune.factual_reliability.assess_factual via score_generation (numeric, role, speaker, retrieval source copying)",
+    "host_finetune.evidence_capsule.repeats_topic",
+    "host_finetune.factual_reliability.embeds_topic",
+    "host_finetune.factual_reliability.instruction_leak",
+    "host_finetune.model_f_context.prompt.marker_leak",
+    "host_finetune.unified_eval.completion_gate",
+    "host_finetune.unified_eval.format_gate",
+    "host_finetune.unified_eval.grounding_gate on saved passage text (lexical overlap, threshold 0.2)",
+    "saved unified_eval/rows.jsonl gates.copying_memorization (training-span gate; not recomputed)"
+  ],
+  "checks_not_executed": [
+    "LLM judge / writing_quality / claim_vs_saved_retrieval_hits",
+    "early EOS stop reason (not stored on generation records)",
+    "training CopyIndex rebuild",
+    "GPU memory (field is null)",
+    "BLEU/ROUGE/BERTScore recomputation",
+    "style distance and perspective distance"
+  ],
+  "comparison": {
+    "Base": {
+      "n": 120,
+      "source": "docs\\evaluation\\examples\\data\\architecture\\kevin_base_llama31_rows.jsonl",
+      "definition": "Saved unified_eval.v1 gates.completion, gates.format, gates.copying_memorization. Seed-42 row files named in UNIFIED_120_COMPARISON.md.",
+      "completion_pass": {
+        "count": 45,
+        "denominator": 120,
+        "rate": 0.375
+      },
+      "format_pass": {
+        "count": 120,
+        "denominator": 120,
+        "rate": 1.0
+      },
+      "copy_fail": {
+        "count": 0,
+        "denominator": 120,
+        "rate": 0.0
+      },
+      "mid_sentence": {
+        "count": 75,
+        "denominator": 120,
+        "rate": 0.625
+      },
+      "early_eot_available_rows": 0,
+      "early_eot": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "words": {
+        "n": 120,
+        "mean": 352.1083,
+        "median": 308.0,
+        "p95": 600,
+        "min": 100,
+        "max": 624
+      },
+      "by_medium": {
+        "blog": {
+          "n": 30,
+          "completion_pass": {
+            "count": 20,
+            "denominator": 30,
+            "rate": 0.6667
+          },
+          "format_pass": {
+            "count": 30,
+            "denominator": 30,
+            "rate": 1.0
+          },
+          "copy_fail": {
+            "count": 0,
+            "denominator": 30,
+            "rate": 0.0
+          },
+          "mid_sentence": {
+            "count": 10,
+            "denominator": 30,
+            "rate": 0.3333
+          },
+          "words": {
+            "n": 30,
+            "mean": 515.2,
+            "median": 526.5,
+            "p95": 619,
+            "min": 353,
+            "max": 619
+          }
+        },
+        "linkedin": {
+          "n": 30,
+          "completion_pass": {
+            "count": 5,
+            "denominator": 30,
+            "rate": 0.1667
+          },
+          "format_pass": {
+            "count": 30,
+            "denominator": 30,
+            "rate": 1.0
+          },
+          "copy_fail": {
+            "count": 0,
+            "denominator": 30,
+            "rate": 0.0
+          },
+          "mid_sentence": {
+            "count": 25,
+            "denominator": 30,
+            "rate": 0.8333
+          },
+          "words": {
+            "n": 30,
+            "mean": 240.1667,
+            "median": 244.5,
+            "p95": 263,
+            "min": 174,
+            "max": 263
+          }
+        },
+        "x": {
+          "n": 30,
+          "completion_pass": {
+            "count": 3,
+            "denominator": 30,
+            "rate": 0.1
+          },
+          "format_pass": {
+            "count": 30,
+            "denominator": 30,
+            "rate": 1.0
+          },
+          "copy_fail": {
+            "count": 0,
+            "denominator": 30,
+            "rate": 0.0
+          },
+          "mid_sentence": {
+            "count": 27,
+            "denominator": 30,
+            "rate": 0.9
+          },
+          "words": {
+            "n": 30,
+            "mean": 116.7,
+            "median": 118.0,
+            "p95": 125,
+            "min": 100,
+            "max": 126
+          }
+        },
+        "talk": {
+          "n": 30,
+          "completion_pass": {
+            "count": 17,
+            "denominator": 30,
+            "rate": 0.5667
+          },
+          "format_pass": {
+            "count": 30,
+            "denominator": 30,
+            "rate": 1.0
+          },
+          "copy_fail": {
+            "count": 0,
+            "denominator": 30,
+            "rate": 0.0
+          },
+          "mid_sentence": {
+            "count": 13,
+            "denominator": 30,
+            "rate": 0.4333
+          },
+          "words": {
+            "n": 30,
+            "mean": 536.3667,
+            "median": 550.5,
+            "p95": 618,
+            "min": 364,
+            "max": 624
+          }
+        }
+      },
+      "not_compared": [
+        "writing_quality",
+        "claim_support_rate",
+        "persona_style",
+        "unsupported_numeric_count"
+      ]
+    },
+    "PersonaRAG stand-in": {
+      "n": 120,
+      "source": "docs\\evaluation\\examples\\data\\architecture\\colab_personarag_seed42_rows.jsonl",
+      "definition": "Saved unified_eval.v1 gates.completion, gates.format, gates.copying_memorization. Seed-42 row files named in UNIFIED_120_COMPARISON.md.",
+      "completion_pass": {
+        "count": 71,
+        "denominator": 120,
+        "rate": 0.5917
+      },
+      "format_pass": {
+        "count": 120,
+        "denominator": 120,
+        "rate": 1.0
+      },
+      "copy_fail": {
+        "count": 0,
+        "denominator": 120,
+        "rate": 0.0
+      },
+      "mid_sentence": {
+        "count": 49,
+        "denominator": 120,
+        "rate": 0.4083
+      },
+      "early_eot_available_rows": 0,
+      "early_eot": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "words": {
+        "n": 120,
+        "mean": 296.475,
+        "median": 267.5,
+        "p95": 522,
+        "min": 86,
+        "max": 624
+      },
+      "by_medium": {
+        "blog": {
+          "n": 30,
+          "completion_pass": {
+            "count": 28,
+            "denominator": 30,
+            "rate": 0.9333
+          },
+          "format_pass": {
+            "count": 30,
+            "denominator": 30,
+            "rate": 1.0
+          },
+          "copy_fail": {
+            "count": 0,
+            "denominator": 30,
+            "rate": 0.0
+          },
+          "mid_sentence": {
+            "count": 2,
+            "denominator": 30,
+            "rate": 0.0667
+          },
+          "words": {
+            "n": 30,
+            "mean": 390.9,
+            "median": 368.0,
+            "p95": 528,
+            "min": 267,
+            "max": 608
+          }
+        },
+        "linkedin": {
+          "n": 30,
+          "completion_pass": {
+            "count": 10,
+            "denominator": 30,
+            "rate": 0.3333
+          },
+          "format_pass": {
+            "count": 30,
+            "denominator": 30,
+            "rate": 1.0
+          },
+          "copy_fail": {
+            "count": 0,
+            "denominator": 30,
+            "rate": 0.0
+          },
+          "mid_sentence": {
+            "count": 20,
+            "denominator": 30,
+            "rate": 0.6667
+          },
+          "words": {
+            "n": 30,
+            "mean": 241.9667,
+            "median": 248.5,
+            "p95": 268,
+            "min": 175,
+            "max": 269
+          }
+        },
+        "x": {
+          "n": 30,
+          "completion_pass": {
+            "count": 4,
+            "denominator": 30,
+            "rate": 0.1333
+          },
+          "format_pass": {
+            "count": 30,
+            "denominator": 30,
+            "rate": 1.0
+          },
+          "copy_fail": {
+            "count": 0,
+            "denominator": 30,
+            "rate": 0.0
+          },
+          "mid_sentence": {
+            "count": 26,
+            "denominator": 30,
+            "rate": 0.8667
+          },
+          "words": {
+            "n": 30,
+            "mean": 124.5667,
+            "median": 126.5,
+            "p95": 136,
+            "min": 86,
+            "max": 139
+          }
+        },
+        "talk": {
+          "n": 30,
+          "completion_pass": {
+            "count": 29,
+            "denominator": 30,
+            "rate": 0.9667
+          },
+          "format_pass": {
+            "count": 30,
+            "denominator": 30,
+            "rate": 1.0
+          },
+          "copy_fail": {
+            "count": 0,
+            "denominator": 30,
+            "rate": 0.0
+          },
+          "mid_sentence": {
+            "count": 1,
+            "denominator": 30,
+            "rate": 0.0333
+          },
+          "words": {
+            "n": 30,
+            "mean": 428.4667,
+            "median": 417.5,
+            "p95": 574,
+            "min": 265,
+            "max": 624
+          }
+        }
+      },
+      "not_compared": [
+        "writing_quality",
+        "claim_support_rate",
+        "persona_style",
+        "unsupported_numeric_count"
+      ]
+    },
+    "Relabel, RAG off": {
+      "n": 120,
+      "source": "docs\\evaluation\\examples\\data\\relabel_rag_off_rows.jsonl",
+      "definition": "Saved unified_eval.v1 gates.completion, gates.format, gates.copying_memorization. Seed-42 row files named in UNIFIED_120_COMPARISON.md.",
+      "completion_pass": {
+        "count": 79,
+        "denominator": 120,
+        "rate": 0.6583
+      },
+      "format_pass": {
+        "count": 115,
+        "denominator": 120,
+        "rate": 0.9583
+      },
+      "copy_fail": {
+        "count": 1,
+        "denominator": 120,
+        "rate": 0.0083
+      },
+      "mid_sentence": {
+        "count": 41,
+        "denominator": 120,
+        "rate": 0.3417
+      },
+      "early_eot_available_rows": 120,
+      "early_eot": {
+        "count": 66,
+        "denominator": 120,
+        "rate": 0.55
+      },
+      "words": {
+        "n": 120,
+        "mean": 192.9083,
+        "median": 229.0,
+        "p95": 346,
+        "min": 6,
+        "max": 487
+      },
+      "by_medium": {
+        "blog": {
+          "n": 30,
+          "completion_pass": {
+            "count": 29,
+            "denominator": 30,
+            "rate": 0.9667
+          },
+          "format_pass": {
+            "count": 30,
+            "denominator": 30,
+            "rate": 1.0
+          },
+          "copy_fail": {
+            "count": 1,
+            "denominator": 30,
+            "rate": 0.0333
+          },
+          "mid_sentence": {
+            "count": 1,
+            "denominator": 30,
+            "rate": 0.0333
+          },
+          "words": {
+            "n": 30,
+            "mean": 284.8333,
+            "median": 294.5,
+            "p95": 366,
+            "min": 179,
+            "max": 397
+          }
+        },
+        "linkedin": {
+          "n": 30,
+          "completion_pass": {
+            "count": 7,
+            "denominator": 30,
+            "rate": 0.2333
+          },
+          "format_pass": {
+            "count": 26,
+            "denominator": 30,
+            "rate": 0.8667
+          },
+          "copy_fail": {
+            "count": 0,
+            "denominator": 30,
+            "rate": 0.0
+          },
+          "mid_sentence": {
+            "count": 23,
+            "denominator": 30,
+            "rate": 0.7667
+          },
+          "words": {
+            "n": 30,
+            "mean": 174.4,
+            "median": 212.0,
+            "p95": 263,
+            "min": 8,
+            "max": 265
+          }
+        },
+        "x": {
+          "n": 30,
+          "completion_pass": {
+            "count": 14,
+            "denominator": 30,
+            "rate": 0.4667
+          },
+          "format_pass": {
+            "count": 30,
+            "denominator": 30,
+            "rate": 1.0
+          },
+          "copy_fail": {
+            "count": 0,
+            "denominator": 30,
+            "rate": 0.0
+          },
+          "mid_sentence": {
+            "count": 16,
+            "denominator": 30,
+            "rate": 0.5333
+          },
+          "words": {
+            "n": 30,
+            "mean": 33.9,
+            "median": 16.0,
+            "p95": 122,
+            "min": 6,
+            "max": 134
+          }
+        },
+        "talk": {
+          "n": 30,
+          "completion_pass": {
+            "count": 29,
+            "denominator": 30,
+            "rate": 0.9667
+          },
+          "format_pass": {
+            "count": 29,
+            "denominator": 30,
+            "rate": 0.9667
+          },
+          "copy_fail": {
+            "count": 0,
+            "denominator": 30,
+            "rate": 0.0
+          },
+          "mid_sentence": {
+            "count": 1,
+            "denominator": 30,
+            "rate": 0.0333
+          },
+          "words": {
+            "n": 30,
+            "mean": 278.5,
+            "median": 298.0,
+            "p95": 485,
+            "min": 29,
+            "max": 487
+          }
+        }
+      },
+      "not_compared": [
+        "writing_quality",
+        "claim_support_rate",
+        "persona_style",
+        "unsupported_numeric_count"
+      ]
+    },
+    "Relabel + RAG (Model E)": {
+      "n": 120,
+      "source": "docs\\evaluation\\examples\\data\\relabel_rag_on_rows.jsonl",
+      "definition": "Saved unified_eval.v1 gates.completion, gates.format, gates.copying_memorization. Seed-42 row files named in UNIFIED_120_COMPARISON.md.",
+      "completion_pass": {
+        "count": 84,
+        "denominator": 120,
+        "rate": 0.7
+      },
+      "format_pass": {
+        "count": 117,
+        "denominator": 120,
+        "rate": 0.975
+      },
+      "copy_fail": {
+        "count": 2,
+        "denominator": 120,
+        "rate": 0.0167
+      },
+      "mid_sentence": {
+        "count": 36,
+        "denominator": 120,
+        "rate": 0.3
+      },
+      "early_eot_available_rows": 120,
+      "early_eot": {
+        "count": 73,
+        "denominator": 120,
+        "rate": 0.6083
+      },
+      "words": {
+        "n": 120,
+        "mean": 183.0667,
+        "median": 234.0,
+        "p95": 322,
+        "min": 8,
+        "max": 389
+      },
+      "by_medium": {
+        "blog": {
+          "n": 30,
+          "completion_pass": {
+            "count": 29,
+            "denominator": 30,
+            "rate": 0.9667
+          },
+          "format_pass": {
+            "count": 30,
+            "denominator": 30,
+            "rate": 1.0
+          },
+          "copy_fail": {
+            "count": 1,
+            "denominator": 30,
+            "rate": 0.0333
+          },
+          "mid_sentence": {
+            "count": 1,
+            "denominator": 30,
+            "rate": 0.0333
+          },
+          "words": {
+            "n": 30,
+            "mean": 259.7,
+            "median": 279.0,
+            "p95": 321,
+            "min": 60,
+            "max": 322
+          }
+        },
+        "linkedin": {
+          "n": 30,
+          "completion_pass": {
+            "count": 10,
+            "denominator": 30,
+            "rate": 0.3333
+          },
+          "format_pass": {
+            "count": 27,
+            "denominator": 30,
+            "rate": 0.9
+          },
+          "copy_fail": {
+            "count": 1,
+            "denominator": 30,
+            "rate": 0.0333
+          },
+          "mid_sentence": {
+            "count": 20,
+            "denominator": 30,
+            "rate": 0.6667
+          },
+          "words": {
+            "n": 30,
+            "mean": 151.9333,
+            "median": 179.0,
+            "p95": 255,
+            "min": 8,
+            "max": 256
+          }
+        },
+        "x": {
+          "n": 30,
+          "completion_pass": {
+            "count": 15,
+            "denominator": 30,
+            "rate": 0.5
+          },
+          "format_pass": {
+            "count": 30,
+            "denominator": 30,
+            "rate": 1.0
+          },
+          "copy_fail": {
+            "count": 0,
+            "denominator": 30,
+            "rate": 0.0
+          },
+          "mid_sentence": {
+            "count": 15,
+            "denominator": 30,
+            "rate": 0.5
+          },
+          "words": {
+            "n": 30,
+            "mean": 39.4667,
+            "median": 16.5,
+            "p95": 125,
+            "min": 8,
+            "max": 126
+          }
+        },
+        "talk": {
+          "n": 30,
+          "completion_pass": {
+            "count": 30,
+            "denominator": 30,
+            "rate": 1.0
+          },
+          "format_pass": {
+            "count": 30,
+            "denominator": 30,
+            "rate": 1.0
+          },
+          "copy_fail": {
+            "count": 0,
+            "denominator": 30,
+            "rate": 0.0
+          },
+          "mid_sentence": {
+            "count": 0,
+            "denominator": 30,
+            "rate": 0.0
+          },
+          "words": {
+            "n": 30,
+            "mean": 281.1667,
+            "median": 296.0,
+            "p95": 365,
+            "min": 113,
+            "max": 389
+          }
+        }
+      },
+      "not_compared": [
+        "writing_quality",
+        "claim_support_rate",
+        "persona_style",
+        "unsupported_numeric_count"
+      ]
+    }
+  },
+  "highest_priority": [
+    {
+      "question_id": "gold_028",
+      "medium": "talk",
+      "priority": 1600,
+      "topic": "DigitalOcean? It’s Up 12% in 2026. While The Rest of Software Is Down 24%. Here’s Why.",
+      "path": "experiments/EXP-20261102-001-model-f-unified-panel/raw/generations/gold_028__F-REL__talk.json",
+      "unsupported_numeric_count": 16,
+      "copy_pass": true,
+      "copy_span": 3,
+      "claim_count": 27,
+      "mid_sentence": false,
+      "at_max_tokens": false,
+      "words": 258,
+      "format_pass": true,
+      "factual_reasons": [
+        "unsupported_numeric"
+      ],
+      "evidence_status": "verified"
+    },
+    {
+      "question_id": "gold_024",
+      "medium": "blog",
+      "priority": 1120,
+      "topic": "While Most B2B Companies Are Decelerating, Cloudflare Just Had Its Best Quarter Since 2021. 10 Numbers That Explain Why",
+      "path": "experiments/EXP-20261102-001-model-f-unified-panel/raw/generations/gold_024__F-REL__blog.json",
+      "unsupported_numeric_count": 11,
+      "copy_pass": true,
+      "copy_span": 5,
+      "claim_count": 13,
+      "mid_sentence": false,
+      "at_max_tokens": false,
+      "words": 222,
+      "format_pass": true,
+      "factual_reasons": [
+        "unsupported_numeric"
+      ],
+      "evidence_status": "verified"
+    },
+    {
+      "question_id": "gold_002",
+      "medium": "linkedin",
+      "priority": 1075,
+      "topic": "5 Interesting Learnings from Monday.com at $550,000,000 in ARR",
+      "path": "experiments/EXP-20261102-001-model-f-unified-panel/raw/generations/gold_002__F-REL__linkedin.json",
+      "unsupported_numeric_count": 10,
+      "copy_pass": true,
+      "copy_span": 4,
+      "claim_count": 14,
+      "mid_sentence": true,
+      "at_max_tokens": true,
+      "words": 236,
+      "format_pass": true,
+      "factual_reasons": [
+        "unsupported_numeric"
+      ],
+      "evidence_status": "verified"
+    },
+    {
+      "question_id": "gold_002",
+      "medium": "talk",
+      "priority": 1000,
+      "topic": "5 Interesting Learnings from Monday.com at $550,000,000 in ARR",
+      "path": "experiments/EXP-20261102-001-model-f-unified-panel/raw/generations/gold_002__F-REL__talk.json",
+      "unsupported_numeric_count": 10,
+      "copy_pass": true,
+      "copy_span": 3,
+      "claim_count": 14,
+      "mid_sentence": false,
+      "at_max_tokens": false,
+      "words": 293,
+      "format_pass": true,
+      "factual_reasons": [
+        "unsupported_numeric"
+      ],
+      "evidence_status": "verified"
+    },
+    {
+      "question_id": "gold_009",
+      "medium": "talk",
+      "priority": 900,
+      "topic": "5 Interesting Learnings from Atlassian at Almost $3 Billion in ARR",
+      "path": "experiments/EXP-20261102-001-model-f-unified-panel/raw/generations/gold_009__F-REL__talk.json",
+      "unsupported_numeric_count": 9,
+      "copy_pass": true,
+      "copy_span": 4,
+      "claim_count": 16,
+      "mid_sentence": false,
+      "at_max_tokens": false,
+      "words": 326,
+      "format_pass": true,
+      "factual_reasons": [
+        "unsupported_numeric"
+      ],
+      "evidence_status": "verified"
+    },
+    {
+      "question_id": "gold_009",
+      "medium": "blog",
+      "priority": 800,
+      "topic": "5 Interesting Learnings from Atlassian at Almost $3 Billion in ARR",
+      "path": "experiments/EXP-20261102-001-model-f-unified-panel/raw/generations/gold_009__F-REL__blog.json",
+      "unsupported_numeric_count": 8,
+      "copy_pass": true,
+      "copy_span": 4,
+      "claim_count": 16,
+      "mid_sentence": false,
+      "at_max_tokens": false,
+      "words": 257,
+      "format_pass": true,
+      "factual_reasons": [
+        "unsupported_numeric"
+      ],
+      "evidence_status": "verified"
+    },
+    {
+      "question_id": "gold_002",
+      "medium": "blog",
+      "priority": 700,
+      "topic": "5 Interesting Learnings from Monday.com at $550,000,000 in ARR",
+      "path": "experiments/EXP-20261102-001-model-f-unified-panel/raw/generations/gold_002__F-REL__blog.json",
+      "unsupported_numeric_count": 7,
+      "copy_pass": true,
+      "copy_span": 3,
+      "claim_count": 14,
+      "mid_sentence": false,
+      "at_max_tokens": false,
+      "words": 200,
+      "format_pass": true,
+      "factual_reasons": [
+        "unsupported_numeric"
+      ],
+      "evidence_status": "verified"
+    },
+    {
+      "question_id": "gold_019",
+      "medium": "blog",
+      "priority": 700,
+      "topic": "Dear SaaStr: At What Stage Should a Startup Hire a CMO?",
+      "path": "experiments/EXP-20261102-001-model-f-unified-panel/raw/generations/gold_019__F-REL__blog.json",
+      "unsupported_numeric_count": 7,
+      "copy_pass": true,
+      "copy_span": 3,
+      "claim_count": 9,
+      "mid_sentence": false,
+      "at_max_tokens": false,
+      "words": 281,
+      "format_pass": true,
+      "factual_reasons": [
+        "unsupported_numeric"
+      ],
+      "evidence_status": "verified"
+    },
+    {
+      "question_id": "gold_008",
+      "medium": "linkedin",
+      "priority": 675,
+      "topic": "Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too?",
+      "path": "experiments/EXP-20261102-001-model-f-unified-panel/raw/generations/gold_008__F-REL__linkedin.json",
+      "unsupported_numeric_count": 6,
+      "copy_pass": true,
+      "copy_span": 4,
+      "claim_count": 10,
+      "mid_sentence": true,
+      "at_max_tokens": true,
+      "words": 256,
+      "format_pass": true,
+      "factual_reasons": [
+        "unsupported_numeric"
+      ],
+      "evidence_status": "verified"
+    },
+    {
+      "question_id": "gold_015",
+      "medium": "blog",
+      "priority": 670,
+      "topic": "The “Buyers Won’t Trust an AI” Objection Is Already Collapsing",
+      "path": "experiments/EXP-20261102-001-model-f-unified-panel/raw/generations/gold_015__F-REL__blog.json",
+      "unsupported_numeric_count": 6,
+      "copy_pass": true,
+      "copy_span": 6,
+      "claim_count": 11,
+      "mid_sentence": false,
+      "at_max_tokens": false,
+      "words": 257,
+      "format_pass": true,
+      "factual_reasons": [
+        "unsupported_numeric"
+      ],
+      "evidence_status": "verified"
+    },
+    {
+      "question_id": "gold_005",
+      "medium": "blog",
+      "priority": 620,
+      "topic": "The Wild Ride of Informatica: 32 Years, 2 IPOs, to $8 Billion Acquisition by Salesforce",
+      "path": "experiments/EXP-20261102-001-model-f-unified-panel/raw/generations/gold_005__F-REL__blog.json",
+      "unsupported_numeric_count": 6,
+      "copy_pass": true,
+      "copy_span": 3,
+      "claim_count": 11,
+      "mid_sentence": false,
+      "at_max_tokens": false,
+      "words": 264,
+      "format_pass": true,
+      "factual_reasons": [
+        "unsupported_numeric"
+      ],
+      "evidence_status": "verified"
+    },
+    {
+      "question_id": "gold_029",
+      "medium": "blog",
+      "priority": 620,
+      "topic": "SaaS Isn’t Dead. But the Way You Used to Win in B2B? That’s Gone.",
+      "path": "experiments/EXP-20261102-001-model-f-unified-panel/raw/generations/gold_029__F-REL__blog.json",
+      "unsupported_numeric_count": 6,
+      "copy_pass": true,
+      "copy_span": 4,
+      "claim_count": 4,
+      "mid_sentence": false,
+      "at_max_tokens": false,
+      "words": 289,
+      "format_pass": true,
+      "factual_reasons": [
+        "unsupported_numeric"
+      ],
+      "evidence_status": "verified"
+    },
+    {
+      "question_id": "gold_030",
+      "medium": "blog",
+      "priority": 566,
+      "topic": "Figma Just Hit $304M in a Single Quarter. Growing 40%. And Just Like That — SaaS is Back.",
+      "path": "experiments/EXP-20261102-001-model-f-unified-panel/raw/generations/gold_030__F-REL__blog.json",
+      "unsupported_numeric_count": 5,
+      "copy_pass": true,
+      "copy_span": 3,
+      "claim_count": 0,
+      "mid_sentence": false,
+      "at_max_tokens": false,
+      "words": 175,
+      "format_pass": true,
+      "factual_reasons": [
+        "no_accepted_factual_evidence",
+        "unsupported_numeric"
+      ],
+      "evidence_status": "extraction_failed"
+    },
+    {
+      "question_id": "gold_030",
+      "medium": "talk",
+      "priority": 566,
+      "topic": "Figma Just Hit $304M in a Single Quarter. Growing 40%. And Just Like That — SaaS is Back.",
+      "path": "experiments/EXP-20261102-001-model-f-unified-panel/raw/generations/gold_030__F-REL__talk.json",
+      "unsupported_numeric_count": 5,
+      "copy_pass": true,
+      "copy_span": 3,
+      "claim_count": 0,
+      "mid_sentence": false,
+      "at_max_tokens": false,
+      "words": 272,
+      "format_pass": true,
+      "factual_reasons": [
+        "no_accepted_factual_evidence",
+        "unsupported_numeric"
+      ],
+      "evidence_status": "extraction_failed"
+    },
+    {
+      "question_id": "gold_005",
+      "medium": "x",
+      "priority": 475,
+      "topic": "The Wild Ride of Informatica: 32 Years, 2 IPOs, to $8 Billion Acquisition by Salesforce",
+      "path": "experiments/EXP-20261102-001-model-f-unified-panel/raw/generations/gold_005__F-REL__x.json",
+      "unsupported_numeric_count": 4,
+      "copy_pass": true,
+      "copy_span": 3,
+      "claim_count": 11,
+      "mid_sentence": true,
+      "at_max_tokens": true,
+      "words": 117,
+      "format_pass": true,
+      "factual_reasons": [
+        "unsupported_numeric"
+      ],
+      "evidence_status": "verified"
+    }
+  ],
+  "samples": [
+    {
+      "selection_reason": "Representative blog: closest clean cell to the medium median word count.",
+      "question_id": "gold_027",
+      "medium": "blog",
+      "topic": "We Have 30 AI Agents in Production. Here Are the Top 5 Issues No One Talks About",
+      "path": "experiments/EXP-20261102-001-model-f-unified-panel/raw/generations/gold_027__F-REL__blog.json",
+      "priority": 0,
+      "words": 289,
+      "output_tokens": 377,
+      "claim_count": 12,
+      "claims_present": 0,
+      "unsupported_numeric_count": 0,
+      "factual_reasons": [],
+      "copy_pass": true,
+      "copy_span": 3,
+      "copy_span_text": "deploying ai agents",
+      "lexical_overlap": 0.0,
+      "repeats_topic": false,
+      "embeds_topic": false,
+      "mid_sentence": false,
+      "sentence_final": true,
+      "at_max_tokens": false,
+      "format_pass": true,
+      "prompt_contract_short": false,
+      "evidence_status": "verified",
+      "accepted_relationships_graph": 54,
+      "rejected_relationships_graph": 76,
+      "raw_chunk_count": 12,
+      "relationship_lines": 6,
+      "relationships_both_endpoints_mentioned": 0,
+      "window_omitted_count": 0,
+      "excerpt": "We’ve been running 30+ AI agents across our entire GTM stack since late summer. Most of them generate content, qualify inbound leads, book meetings, score opportunities, send emails, manage sponsor relationships—and they do it all while our team sleeps. And honestly? It’s freaking awesome. But here’s what nobody tells you when you start deploying AI agents:\nthe issues aren’t technical anymore. They’re operational. You know how there’s a gap between people who understand AI and those who actually deploy it? That gap exists because everyone gets caught up in the tech. “Oh yeah, I vibe-coded an LLM wrapper. I’m basically an engineer.” Meanwhile, actual deployment is nothing like that. So let me",
+      "ending": "ou already have something in production, keep reading. Because everything changes after Day 30. The First 90 Days Aren’t Enough\nPeople think once they deploy an agent, it runs forever. It does not. Every system requires ongoing maintenance."
+    },
+    {
+      "selection_reason": "Representative linkedin: closest clean cell to the medium median word count.",
+      "question_id": "gold_021",
+      "medium": "linkedin",
+      "topic": "If Your AI Feature Didn’t Materially Boost Revenue, It Doesn’t Count. Try Again.",
+      "path": "experiments/EXP-20261102-001-model-f-unified-panel/raw/generations/gold_021__F-REL__linkedin.json",
+      "priority": 0,
+      "words": 214,
+      "output_tokens": 279,
+      "claim_count": 8,
+      "claims_present": 0,
+      "unsupported_numeric_count": 0,
+      "factual_reasons": [],
+      "copy_pass": true,
+      "copy_span": 3,
+      "copy_span_text": "the bottom line",
+      "lexical_overlap": 0.0,
+      "repeats_topic": false,
+      "embeds_topic": false,
+      "mid_sentence": false,
+      "sentence_final": true,
+      "at_max_tokens": false,
+      "format_pass": true,
+      "prompt_contract_short": false,
+      "evidence_status": "verified",
+      "accepted_relationships_graph": 63,
+      "rejected_relationships_graph": 112,
+      "raw_chunk_count": 12,
+      "relationship_lines": 4,
+      "relationships_both_endpoints_mentioned": 0,
+      "window_omitted_count": 0,
+      "excerpt": "If Your AI Feature Didn’t Materialally Boost Revenue, It Doesn’t Count. Try Again. You’re probably using AI wrong if your “AI feature” hasn’t actually improved revenue yet. That’s not how this works. Here’s what I’d do: Start Over From Scratch Get your team together and say: “We need to rebuild this from ground zero with real business outcomes in mind.” Don’t just slap a chatbot on top of existing workflows. Build something where the AI is actually generating value—whether that means automating tasks, improving customer interactions, or creating new revenue streams. Measure Everything. Every Single Thing. Track conversion rates. Watch response times. See whether tickets get resolved faster. ",
+      "ending": "you flip the switch. Same thing with AI.”\nThe Bottom Line Yes, you should try again. But next time, build something worth trying first. Something that actually generates real ROI. Because anything less than that? Just doesn’t count anymore."
+    },
+    {
+      "selection_reason": "Representative x: closest clean cell to the medium median word count.",
+      "question_id": "gold_016",
+      "medium": "x",
+      "topic": "You Can’t Train an AI Agent and Then Just … Go Away. We Did, It Fell Off The Rails. And We Didn’t Even Know.",
+      "path": "experiments/EXP-20261102-001-model-f-unified-panel/raw/generations/gold_016__F-REL__x.json",
+      "priority": 12,
+      "words": 18,
+      "output_tokens": 23,
+      "claim_count": 8,
+      "claims_present": 0,
+      "unsupported_numeric_count": 0,
+      "factual_reasons": [],
+      "copy_pass": true,
+      "copy_span": 1,
+      "copy_span_text": "a",
+      "lexical_overlap": 0.0,
+      "repeats_topic": false,
+      "embeds_topic": false,
+      "mid_sentence": false,
+      "sentence_final": true,
+      "at_max_tokens": false,
+      "format_pass": true,
+      "prompt_contract_short": true,
+      "evidence_status": "verified",
+      "accepted_relationships_graph": 36,
+      "rejected_relationships_graph": 131,
+      "raw_chunk_count": 12,
+      "relationship_lines": 2,
+      "relationships_both_endpoints_mentioned": 0,
+      "window_omitted_count": 0,
+      "excerpt": "A LinkedIn post must be at least 40 words. An X post must be at least 20 words.",
+      "ending": "A LinkedIn post must be at least 40 words. An X post must be at least 20 words."
+    },
+    {
+      "selection_reason": "Representative talk: closest clean cell to the medium median word count.",
+      "question_id": "gold_007",
+      "medium": "talk",
+      "topic": "Why Now Is the Biggest Change in SaaS Sales in 15+ Years",
+      "path": "experiments/EXP-20261102-001-model-f-unified-panel/raw/generations/gold_007__F-REL__talk.json",
+      "priority": 0,
+      "words": 298,
+      "output_tokens": 372,
+      "claim_count": 8,
+      "claims_present": 0,
+      "unsupported_numeric_count": 0,
+      "factual_reasons": [],
+      "copy_pass": true,
+      "copy_span": 4,
+      "copy_span_text": "i think this is",
+      "lexical_overlap": 0.0417,
+      "repeats_topic": false,
+      "embeds_topic": false,
+      "mid_sentence": false,
+      "sentence_final": true,
+      "at_max_tokens": false,
+      "format_pass": true,
+      "prompt_contract_short": false,
+      "evidence_status": "verified",
+      "accepted_relationships_graph": 11,
+      "rejected_relationships_graph": 19,
+      "raw_chunk_count": 12,
+      "relationship_lines": 7,
+      "relationships_both_endpoints_mentioned": 1,
+      "window_omitted_count": 0,
+      "excerpt": "So we've talked about this before on SaaStr, but maybe it hasn't sunk in yet, so let me try to bring it home again because I think this is the biggest change in SaaS since we started selling software 15 years ago, which is what's happening today in sales. So there have been lots of big changes over time. We went through the pre-sales days where you had to know everything about every product in the world. Then we moved into the age of the consultative sale. And then we got into the age of \"let us solve your problems.\" But now in B2B, especially in transactional sales, we're entering a new era, which is the Age of AI. This is going to fundamentally change how you run a company, including sales",
+      "ending": "Sixth, they don't care as much about sales reps anymore. Seventh, they don't care as much about business process change anymore. Eighth, they expect your product to work out of the box. Ninth, they expect your product to improve constantly."
+    },
+    {
+      "selection_reason": "Strongest remaining deterministic warning signal.",
+      "question_id": "gold_028",
+      "medium": "talk",
+      "topic": "DigitalOcean? It’s Up 12% in 2026. While The Rest of Software Is Down 24%. Here’s Why.",
+      "path": "experiments/EXP-20261102-001-model-f-unified-panel/raw/generations/gold_028__F-REL__talk.json",
+      "priority": 1600,
+      "words": 258,
+      "output_tokens": 364,
+      "claim_count": 27,
+      "claims_present": 0,
+      "unsupported_numeric_count": 16,
+      "factual_reasons": [
+        "unsupported_numeric"
+      ],
+      "copy_pass": true,
+      "copy_span": 3,
+      "copy_span_text": "year over year",
+      "lexical_overlap": 0.0,
+      "repeats_topic": false,
+      "embeds_topic": false,
+      "mid_sentence": false,
+      "sentence_final": true,
+      "at_max_tokens": false,
+      "format_pass": true,
+      "prompt_contract_short": false,
+      "evidence_status": "verified",
+      "accepted_relationships_graph": 9,
+      "rejected_relationships_graph": 107,
+      "raw_chunk_count": 12,
+      "relationship_lines": 6,
+      "relationships_both_endpoints_mentioned": 0,
+      "window_omitted_count": 0,
+      "excerpt": "So when we look at DigitalOcean today, the stock price is up over 12% YTD. Now I know what you're thinking. \"Jason, isn't tech down overall?\" And yes, it is. Overall, it's down close to 30% so far in 2026. But here's why DigitalOcean stands out:\nit's bucking the trend. The company announced earnings on August 4th, and Q2 results beat expectations by a wide margin. Non-GAAP operating income jumped 47%, with adjusted EBITDA reaching $52 million—a record high. They guided full-year non-GAAP EPS to a range of $0.38 to $0.42, which would represent a 55% increase year-over-year. Free Cash Flow came in at $48 million—$28 million above guidance. That means they're generating nearly 60% of their reve",
+      "ending": ". Now consider what happened during the pandemic. Companies accelerated their adoption of cloud services because remote work created unprecedented demand. But remember, those temporary tailwinds were borrowed from future productivity gains."
+    },
+    {
+      "selection_reason": "Strongest remaining deterministic warning signal.",
+      "question_id": "gold_024",
+      "medium": "blog",
+      "topic": "While Most B2B Companies Are Decelerating, Cloudflare Just Had Its Best Quarter Since 2021. 10 Numbers That Explain Why",
+      "path": "experiments/EXP-20261102-001-model-f-unified-panel/raw/generations/gold_024__F-REL__blog.json",
+      "priority": 1120,
+      "words": 222,
+      "output_tokens": 324,
+      "claim_count": 13,
+      "claims_present": 2,
+      "unsupported_numeric_count": 11,
+      "factual_reasons": [
+        "unsupported_numeric"
+      ],
+      "copy_pass": true,
+      "copy_span": 5,
+      "copy_span_text": "000 total paying customers but",
+      "lexical_overlap": 0.0588,
+      "repeats_topic": true,
+      "embeds_topic": true,
+      "mid_sentence": false,
+      "sentence_final": true,
+      "at_max_tokens": false,
+      "format_pass": true,
+      "prompt_contract_short": false,
+      "evidence_status": "verified",
+      "accepted_relationships_graph": 31,
+      "rejected_relationships_graph": 110,
+      "raw_chunk_count": 12,
+      "relationship_lines": 7,
+      "relationships_both_endpoints_mentioned": 0,
+      "window_omitted_count": 0,
+      "excerpt": "While most B2B companies are decelerating, Cloudflare just had its best quarter since 2021.  10 numbers that explain why:\n$900M Q1’24 revenue (up 30%)\nThis isn’t some single-quarter blip—Cloudflare’s run of four straight quarters of accelerating revenue growth is the longest streak in their history. And it’s not slowing down anytime soon.\nThe company added over 300 new enterprise customers with annual contracts exceeding $100K during Q1 alone. Translation? They’re closing massive deals consistently now, which takes months of courtship.\n220,000+ total paying customers\nBut here’s what’s really remarkable: 60% of those customers pay less than $5k annually. This means Cloudflare doesn’t need gia",
+      "ending": "ustomers represent nearly two-thirds of revenue, you’re not selling to everyone. You’re selling to who matters. And when Cloudflare can grow 36% YoY while keeping concentration high like this, it signals serious stickiness across the board."
+    },
+    {
+      "selection_reason": "Strongest remaining deterministic warning signal.",
+      "question_id": "gold_002",
+      "medium": "linkedin",
+      "topic": "5 Interesting Learnings from Monday.com at $550,000,000 in ARR",
+      "path": "experiments/EXP-20261102-001-model-f-unified-panel/raw/generations/gold_002__F-REL__linkedin.json",
+      "priority": 1075,
+      "words": 236,
+      "output_tokens": 320,
+      "claim_count": 14,
+      "claims_present": 0,
+      "unsupported_numeric_count": 10,
+      "factual_reasons": [
+        "unsupported_numeric"
+      ],
+      "copy_pass": true,
+      "copy_span": 4,
+      "copy_span_text": "000 000 in arr",
+      "lexical_overlap": 0.0625,
+      "repeats_topic": false,
+      "embeds_topic": true,
+      "mid_sentence": true,
+      "sentence_final": false,
+      "at_max_tokens": true,
+      "format_pass": true,
+      "prompt_contract_short": false,
+      "evidence_status": "verified",
+      "accepted_relationships_graph": 51,
+      "rejected_relationships_graph": 105,
+      "raw_chunk_count": 12,
+      "relationship_lines": 7,
+      "relationships_both_endpoints_mentioned": 2,
+      "window_omitted_count": 0,
+      "excerpt": "So Monday just IPO’d! And we did a deep dive here on SaaStr before it did:\n\n5 Interesting Learnings from Monday.com at $550,000,000 in ARR\n\n#1.  70% Of Customers Are Outside Tech; Customer-Driven Product Development Drives 90% of All New Features\nWe love learning how many of our favorite leaders get their early leads and customers. Most founders know where they got their first few customers. But do they really understand what % of all customers they get? I’ve found so many SaaS companies struggle to get beyond the initial logo accounts and cohorts in the early days. It’s great to see Monday shared its mix of industries:\n#2. 80% of Revenue Still From Smaller Deals (<$50k)\nEven though larger d",
+      "ending": "Much More Than You Think\nI loved this breakdown of NRR across different customer segments. Again, a reminder when things seem tough in smaller deals — don’t underinvest there. They compound. The differences matter less as you approach $250m"
+    },
+    {
+      "selection_reason": "Strongest remaining deterministic warning signal.",
+      "question_id": "gold_002",
+      "medium": "talk",
+      "topic": "5 Interesting Learnings from Monday.com at $550,000,000 in ARR",
+      "path": "experiments/EXP-20261102-001-model-f-unified-panel/raw/generations/gold_002__F-REL__talk.json",
+      "priority": 1000,
+      "words": 293,
+      "output_tokens": 380,
+      "claim_count": 14,
+      "claims_present": 0,
+      "unsupported_numeric_count": 10,
+      "factual_reasons": [
+        "unsupported_numeric"
+      ],
+      "copy_pass": true,
+      "copy_span": 3,
+      "copy_span_text": "monday com has",
+      "lexical_overlap": 0.0,
+      "repeats_topic": false,
+      "embeds_topic": false,
+      "mid_sentence": false,
+      "sentence_final": true,
+      "at_max_tokens": false,
+      "format_pass": true,
+      "prompt_contract_short": false,
+      "evidence_status": "verified",
+      "accepted_relationships_graph": 51,
+      "rejected_relationships_graph": 105,
+      "raw_chunk_count": 12,
+      "relationship_lines": 7,
+      "relationships_both_endpoints_mentioned": 1,
+      "window_omitted_count": 0,
+      "excerpt": "So we've talked a lot over the years here on SaaStr about some of our favorite leaders and how they've scaled. And I think today, there might be no better case study for us all to learn from than Monday.com. It was founded way back in 2010 as a tiny little side project, grew into a global powerhouse. Today, it's approaching half billion dollars in revenue. Here are five interesting things we can all learn from them:\n\nNumber one, Monday.com has achieved something incredible: 119 percent net retention rate. That means every single month their customers pay more money. They're expanding within their base faster than they're adding new customers. This is why public markets love it. Why investors",
+      "ending": " have a large community edition that drives down pricing. So you need to be careful when you look at marketing efficiency ratios. Don't just look at overall CAC payback. Make sure you understand what mix of customers are driving that ratio."
+    },
+    {
+      "selection_reason": "gold_030 has zero accepted claims and evidence_status extraction_failed.",
+      "question_id": "gold_030",
+      "medium": "blog",
+      "topic": "Figma Just Hit $304M in a Single Quarter. Growing 40%. And Just Like That — SaaS is Back.",
+      "path": "experiments/EXP-20261102-001-model-f-unified-panel/raw/generations/gold_030__F-REL__blog.json",
+      "priority": 566,
+      "words": 175,
+      "output_tokens": 212,
+      "claim_count": 0,
+      "claims_present": null,
+      "unsupported_numeric_count": 5,
+      "factual_reasons": [
+        "no_accepted_factual_evidence",
+        "unsupported_numeric"
+      ],
+      "copy_pass": true,
+      "copy_span": 3,
+      "copy_span_text": "year over year",
+      "lexical_overlap": 0.0,
+      "repeats_topic": false,
+      "embeds_topic": false,
+      "mid_sentence": false,
+      "sentence_final": true,
+      "at_max_tokens": false,
+      "format_pass": true,
+      "prompt_contract_short": false,
+      "evidence_status": "extraction_failed",
+      "accepted_relationships_graph": 13,
+      "rejected_relationships_graph": 31,
+      "raw_chunk_count": 12,
+      "relationship_lines": 5,
+      "relationships_both_endpoints_mentioned": 0,
+      "window_omitted_count": 0,
+      "excerpt": "Figma grew 40% year-over-year during Q1 2026, with the company now sitting on nearly $700 million in quarterly revenue after posting a massive quarter-end figure of $304 million. This represents a significant acceleration from their previous Q4 performance of $253 million in revenue. The company reported that their total revenue for Q1 reached $695 million. Figma’s latest results have provided renewed optimism across the broader tech sector, particularly within the enterprise software segment where concerns had been building due to macroeconomic pressures affecting demand for IT spending. The stock rose by approximately 10 percent following the release of the earnings report, indicating inve",
+      "ending": "c uncertainty. Overall, Figma’s performance serves as a positive signal for the enterprise software industry, suggesting that certain segments can navigate challenging market conditions through focused execution and competitive positioning."
+    },
+    {
+      "selection_reason": "gold_030 has zero accepted claims and evidence_status extraction_failed.",
+      "question_id": "gold_030",
+      "medium": "linkedin",
+      "topic": "Figma Just Hit $304M in a Single Quarter. Growing 40%. And Just Like That — SaaS is Back.",
+      "path": "experiments/EXP-20261102-001-model-f-unified-panel/raw/generations/gold_030__F-REL__linkedin.json",
+      "priority": 141,
+      "words": 239,
+      "output_tokens": 320,
+      "claim_count": 0,
+      "claims_present": null,
+      "unsupported_numeric_count": 0,
+      "factual_reasons": [
+        "no_accepted_factual_evidence"
+      ],
+      "copy_pass": true,
+      "copy_span": 2,
+      "copy_span_text": "figma just",
+      "lexical_overlap": 0.0,
+      "repeats_topic": true,
+      "embeds_topic": true,
+      "mid_sentence": true,
+      "sentence_final": false,
+      "at_max_tokens": true,
+      "format_pass": true,
+      "prompt_contract_short": false,
+      "evidence_status": "extraction_failed",
+      "accepted_relationships_graph": 13,
+      "rejected_relationships_graph": 31,
+      "raw_chunk_count": 12,
+      "relationship_lines": 5,
+      "relationships_both_endpoints_mentioned": 0,
+      "window_omitted_count": 0,
+      "excerpt": "Figma Just Hit $304M in a Single Quarter. Growing 40%. And Just Like That — SaaS is Back. I’ve been running a lot on AI agents all day, every day since we launched SaaStr.ai earlier this year. And while there are so many cool things coming out with AI Agents … one thing hasn’t changed much: most B2B apps still have some learning curve to use them well. Most B2B software does. But what I do see happening fast is folks looking for easier-to-use interfaces like Replit, Lovable, etc. One app that is seeing massive adoption is Cursor. It’s now the #2 coding assistant behind ChatGPT itself (and ahead of Claude). What’s exciting about Cursor is how easy it makes it to build new applications. You ca",
+      "ending": "iterating through design concepts quickly but requires additional effort when aiming for production-quality results. Design-First Development Experience: Unlike traditional development workflows where code comes first, Cursor lets designers"
+    },
+    {
+      "selection_reason": "gold_030 has zero accepted claims and evidence_status extraction_failed.",
+      "question_id": "gold_030",
+      "medium": "x",
+      "topic": "Figma Just Hit $304M in a Single Quarter. Growing 40%. And Just Like That — SaaS is Back.",
+      "path": "experiments/EXP-20261102-001-model-f-unified-panel/raw/generations/gold_030__F-REL__x.json",
+      "priority": 98,
+      "words": 18,
+      "output_tokens": 28,
+      "claim_count": 0,
+      "claims_present": null,
+      "unsupported_numeric_count": 0,
+      "factual_reasons": [
+        "no_accepted_factual_evidence"
+      ],
+      "copy_pass": true,
+      "copy_span": 2,
+      "copy_span_text": "figma just",
+      "lexical_overlap": 0.0,
+      "repeats_topic": true,
+      "embeds_topic": true,
+      "mid_sentence": false,
+      "sentence_final": true,
+      "at_max_tokens": false,
+      "format_pass": true,
+      "prompt_contract_short": true,
+      "evidence_status": "extraction_failed",
+      "accepted_relationships_graph": 13,
+      "rejected_relationships_graph": 31,
+      "raw_chunk_count": 12,
+      "relationship_lines": 2,
+      "relationships_both_endpoints_mentioned": 0,
+      "window_omitted_count": 0,
+      "excerpt": "Figma Just Hit $304M in a Single Quarter.  Growing 40%.\n\nAnd Just Like That — SaaS is Back.",
+      "ending": "Figma Just Hit $304M in a Single Quarter.  Growing 40%.\n\nAnd Just Like That — SaaS is Back."
+    },
+    {
+      "selection_reason": "gold_030 has zero accepted claims and evidence_status extraction_failed.",
+      "question_id": "gold_030",
+      "medium": "talk",
+      "topic": "Figma Just Hit $304M in a Single Quarter. Growing 40%. And Just Like That — SaaS is Back.",
+      "path": "experiments/EXP-20261102-001-model-f-unified-panel/raw/generations/gold_030__F-REL__talk.json",
+      "priority": 566,
+      "words": 272,
+      "output_tokens": 348,
+      "claim_count": 0,
+      "claims_present": null,
+      "unsupported_numeric_count": 5,
+      "factual_reasons": [
+        "no_accepted_factual_evidence",
+        "unsupported_numeric"
+      ],
+      "copy_pass": true,
+      "copy_span": 3,
+      "copy_span_text": "year over year",
+      "lexical_overlap": 0.0,
+      "repeats_topic": false,
+      "embeds_topic": false,
+      "mid_sentence": false,
+      "sentence_final": true,
+      "at_max_tokens": false,
+      "format_pass": true,
+      "prompt_contract_short": false,
+      "evidence_status": "extraction_failed",
+      "accepted_relationships_graph": 13,
+      "rejected_relationships_graph": 31,
+      "raw_chunk_count": 12,
+      "relationship_lines": 5,
+      "relationships_both_endpoints_mentioned": 0,
+      "window_omitted_count": 0,
+      "excerpt": "So there was a time when we thought that software had entered some sort of maturity phase where things kind of slowed down.\nIt certainly felt like it after the crash in late 2022. But boy, I'm here today to tell you that that feeling could have been wrong. So what happened?\nFigma just posted a quarter that no other B2B company has ever done before. They hit almost $300 million in ARR in a single quarter growing 40% year-over-year. Not quarterly run-rate. Almost $300 million in actual revenue in three months. It's the fastest-growing enterprise software business on the planet right now. Now if you look back over the past few years, Figma has always grown incredibly fast. But their growth has ",
+      "ending": "re speed. They've doubled their growth rate every two years since founding. To put that into perspective, think of the best-performing startups from the last decade—companies like Stripe, Airbnb, or Slack. None of those scaled this quickly."
+    }
+  ]
+}

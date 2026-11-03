@@ -1,0 +1,394 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "topic_id": "gold_014",
+  "medium": "linkedin",
+  "arm": "on",
+  "seed": 95,
+  "attempts": 1,
+  "evidence_sha256": "73caece1aabf126f81529fd9896d1f388a55183766190bfa4473645ab42fefbd",
+  "retrieval_hit_ids": [
+    "train_17203",
+    "train_8111",
+    "train_3128",
+    "train_7249"
+  ],
+  "retrieval_query": "Dear SaaStr: We’re At $8m ARR Growing 90% But Can’t Get a VC To Give Us a Term Sheet",
+  "retrieval_filter": null,
+  "style_applied": true,
+  "style_in_prompt": true,
+  "prompt_tokens": 746,
+  "generated_tokens_including_stop": 320,
+  "latency_seconds": 22.483,
+  "exemplar_ids": [
+    11552,
+    11554
+  ],
+  "saved_at": "2026-10-30T09:44:30.212597+00:00",
+  "trace": {
+    "id": "gold_014",
+    "format": "linkedin_post",
+    "topic": "Dear SaaStr: We’re At $8m ARR Growing 90% But Can’t Get a VC To Give Us a Term Sheet",
+    "audience": "B2B SaaS founders and operators",
+    "goal": "Explain why strong growth can still fail to convert into financing and what founders should do.",
+    "cta": "none",
+    "k": 8,
+    "expected_facts": [
+      "The answer should explain that headline growth alone is not enough for a term sheet.",
+      "It should mention gaps such as market narrative, efficiency, product strength, or investor fit.",
+      "It should recommend focusing on the underlying reasons instead of assuming the market is simply irrational."
+    ],
+    "rubric_must_haves": [
+      "Acknowledges that the numbers sound strong at first glance.",
+      "Explains why investors might still hesitate.",
+      "Offers concrete founder responses.",
+      "Avoids generic fundraising platitudes."
+    ],
+    "gold_reference": "A strong answer should say that 90 percent growth at $8 million ARR is attractive, but investors may still hesitate if retention, efficiency, product differentiation, or the category narrative are weak. The founder lesson is to inspect what part of the story is not landing and fix that, rather than assuming the answer is just to pitch harder.",
+    "medium": "linkedin",
+    "prompt": "Write a LinkedIn post in the style of Jason Lemkin about: Dear SaaStr: We’re At $8m ARR Growing 90% But Can’t Get a VC To Give Us a Term Sheet\n\nStyle examples from train-owned source text.\nUse them for voice only. They are not evidence for claims.\nDo not copy long passages verbatim.\n[Style 1]\nA truly great human is still better than any AI agent at most complex, judgment-intensive work. Full stop. If you can find and keep exceptional people, do it. But here’s the honest truth: most hires aren’t great hires. A lot of folks don't want to discuss it, or want to challenge it. But deploying a great AI Agent is just easier, and less stressful, than making a mediocre hire. This is why 2027 will be brutal for tech employment. We'll default to picking an AI Agent over a human for many \"hires\" because it's just ... easier.\n[Style 2]\nI know so many CROs and VPs of Sales that used to be truly great ... And are just burnt now. Fried. Some tried to mask it by hiring CROs and VPs under them to do the work. And sometimes, that does work. But man sales isn't easy. Each month, each quarter, it's a new battle. It's epic but also can take its toll. Just make sure when you hire one with the perfect LinkedIn ... that they really, truly can go into battle again. Not just talk the talk. And share great stories, of epic battles past.\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] It shouldn’t take more than a week, or even just a few days, to negotiate a term sheet.\n[E2] Most of the rest of the terms are much lower drama than they used to be.\n[E3] 40% growth at $10M ARR isn’t a rocketship.\n[E4] You can still get to $100m+ ARR.\n[E5] At $10M ARR, you need at least $5M on your balance sheet to scale properly.\n[E6] In the old days, and still mostly commonly today, term sheets only came from VCs.\n[E7] If you are very hot, it’s different.\n\nNow write the requested LinkedIn post about: Dear SaaStr: We’re At $8m ARR Growing 90% But Can’t Get a VC To Give Us a Term Sheet",
+    "rendered_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nWrite a LinkedIn post in the style of Jason Lemkin about: Dear SaaStr: We’re At $8m ARR Growing 90% But Can’t Get a VC To Give Us a Term Sheet\n\nStyle examples from train-owned source text.\nUse them for voice only. They are not evidence for claims.\nDo not copy long passages verbatim.\n[Style 1]\nA truly great human is still better than any AI agent at most complex, judgment-intensive work. Full stop. If you can find and keep exceptional people, do it. But here’s the honest truth: most hires aren’t great hires. A lot of folks don't want to discuss it, or want to challenge it. But deploying a great AI Agent is just easier, and less stressful, than making a mediocre hire. This is why 2027 will be brutal for tech employment. We'll default to picking an AI Agent over a human for many \"hires\" because it's just ... easier.\n[Style 2]\nI know so many CROs and VPs of Sales that used to be truly great ... And are just burnt now. Fried. Some tried to mask it by hiring CROs and VPs under them to do the work. And sometimes, that does work. But man sales isn't easy. Each month, each quarter, it's a new battle. It's epic but also can take its toll. Just make sure when you hire one with the perfect LinkedIn ... that they really, truly can go into battle again. Not just talk the talk. And share great stories, of epic battles past.\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] It shouldn’t take more than a week, or even just a few days, to negotiate a term sheet.\n[E2] Most of the rest of the terms are much lower drama than they used to be.\n[E3] 40% growth at $10M ARR isn’t a rocketship.\n[E4] You can still get to $100m+ ARR.\n[E5] At $10M ARR, you need at least $5M on your balance sheet to scale properly.\n[E6] In the old days, and still mostly commonly today, term sheets only came from VCs.\n[E7] If you are very hot, it’s different.\n\nNow write the requested LinkedIn post about: Dear SaaStr: We’re At $8m ARR Growing 90% But Can’t Get a VC To Give Us a Term Sheet<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "answer": "Dear SaaStr: We’re At $8m ARR Growing 90% But Can’t Get a VC To Give Us a Term Sheet Look first at your burn rate — and what you have in the bank. That alone should tell you if you are fundable or not yet. And if you aren’t yet … well, you’ll likely see the problem there. The next thing is to make sure your pitch deck makes sense. There are two issues I’ve seen time after time where seed-stage start-ups struggle to raise money: First, their burn rate is too high. Second, their pitch deck doesn’t pass the test. Let me explain both of these in further detail below. What do I mean by “pass the test”? I mean if someone with some capital to invest were reading this deck right now, would they immediately think, “This is something that could grow large enough to return my investment.” Because at the end of the day, investing in companies is risky. So before writing a check, investors want to understand how big a company it might become. How much equity they’d receive relative to others invested, etc. My point is that I believe many founders’ decks fail to convince investors that they can build a billion-dollar business. I’m going to outline three things you can do to fix this issue. Make sure your team passes the test. I’m not saying that you need a CEO who was previously successful (although that certainly helps). However, what I am saying is that everyone on your team needs to seem like they could potentially run a million-person company someday. This",
+    "raw_model_output": "Dear SaaStr: We’re At $8m ARR Growing 90% But Can’t Get a VC To Give Us a Term Sheet Look first at your burn rate — and what you have in the bank. That alone should tell you if you are fundable or not yet. And if you aren’t yet … well, you’ll likely see the problem there. The next thing is to make sure your pitch deck makes sense. There are two issues I’ve seen time after time where seed-stage start-ups struggle to raise money: First, their burn rate is too high. Second, their pitch deck doesn’t pass the test. Let me explain both of these in further detail below. What do I mean by “pass the test”? I mean if someone with some capital to invest were reading this deck right now, would they immediately think, “This is something that could grow large enough to return my investment.” Because at the end of the day, investing in companies is risky. So before writing a check, investors want to understand how big a company it might become. How much equity they’d receive relative to others invested, etc. My point is that I believe many founders’ decks fail to convince investors that they can build a billion-dollar business. I’m going to outline three things you can do to fix this issue. Make sure your team passes the test. I’m not saying that you need a CEO who was previously successful (although that certainly helps). However, what I am saying is that everyone on your team needs to seem like they could potentially run a million-person company someday. This",
+    "deployment_output": "Dear SaaStr: We’re At $8m ARR Growing 90% But Can’t Get a VC To Give Us a Term Sheet Look first at your burn rate — and what you have in the bank. That alone should tell you if you are fundable or not yet. And if you aren’t yet … well, you’ll likely see the problem there. The next thing is to make sure your pitch deck makes sense. There are two issues I’ve seen time after time where seed-stage start-ups struggle to raise money: First, their burn rate is too high. Second, their pitch deck doesn’t pass the test. Let me explain both of these in further detail below. What do I mean by “pass the test”? I mean if someone with some capital to invest were reading this deck right now, would they immediately think, “This is something that could grow large enough to return my investment.” Because at the end of the day, investing in companies is risky. So before writing a check, investors want to understand how big a company it might become. How much equity they’d receive relative to others invested, etc. My point is that I believe many founders’ decks fail to convince investors that they can build a billion-dollar business. I’m going to outline three things you can do to fix this issue. Make sure your team passes the test. I’m not saying that you need a CEO who was previously successful (although that certainly helps). However, what I am saying is that everyone on your team needs to seem like they could potentially run a million-person company someday. This",
+    "first_attempt_answer": "Dear SaaStr: We’re At $8m ARR Growing 90% But Can’t Get a VC To Give Us a Term Sheet Look first at your burn rate — and what you have in the bank. That alone should tell you if you are fundable or not yet. And if you aren’t yet … well, you’ll likely see the problem there. The next thing is to make sure your pitch deck makes sense. There are two issues I’ve seen time after time where seed-stage start-ups struggle to raise money: First, their burn rate is too high. Second, their pitch deck doesn’t pass the test. Let me explain both of these in further detail below. What do I mean by “pass the test”? I mean if someone with some capital to invest were reading this deck right now, would they immediately think, “This is something that could grow large enough to return my investment.” Because at the end of the day, investing in companies is risky. So before writing a check, investors want to understand how big a company it might become. How much equity they’d receive relative to others invested, etc. My point is that I believe many founders’ decks fail to convince investors that they can build a billion-dollar business. I’m going to outline three things you can do to fix this issue. Make sure your team passes the test. I’m not saying that you need a CEO who was previously successful (although that certainly helps). However, what I am saying is that everyone on your team needs to seem like they could potentially run a million-person company someday. This",
+    "retry_answer": null,
+    "query": "Dear SaaStr: We’re At $8m ARR Growing 90% But Can’t Get a VC To Give Us a Term Sheet",
+    "max_new_tokens": 320,
+    "seed": 95,
+    "retry_seed": null,
+    "deployment_accepted": true,
+    "repair_occurred": false,
+    "generation_attempt": {
+      "seed": 95,
+      "answer": "Dear SaaStr: We’re At $8m ARR Growing 90% But Can’t Get a VC To Give Us a Term Sheet Look first at your burn rate — and what you have in the bank. That alone should tell you if you are fundable or not yet. And if you aren’t yet … well, you’ll likely see the problem there. The next thing is to make sure your pitch deck makes sense. There are two issues I’ve seen time after time where seed-stage start-ups struggle to raise money: First, their burn rate is too high. Second, their pitch deck doesn’t pass the test. Let me explain both of these in further detail below. What do I mean by “pass the test”? I mean if someone with some capital to invest were reading this deck right now, would they immediately think, “This is something that could grow large enough to return my investment.” Because at the end of the day, investing in companies is risky. So before writing a check, investors want to understand how big a company it might become. How much equity they’d receive relative to others invested, etc. My point is that I believe many founders’ decks fail to convince investors that they can build a billion-dollar business. I’m going to outline three things you can do to fix this issue. Make sure your team passes the test. I’m not saying that you need a CEO who was previously successful (although that certainly helps). However, what I am saying is that everyone on your team needs to seem like they could potentially run a million-person company someday. This",
+      "numeric_grounding": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [
+          "pct:40",
+          "pct:90",
+          "usd:10000000",
+          "usd:100000000",
+          "usd:5000000",
+          "usd:8000000"
+        ],
+        "values": [
+          {
+            "value": "$8m",
+            "canonical": "usd:8000000",
+            "sentence": "Dear SaaStr: We’re At $8m ARR Growing 90% But Can’t Get a VC To Give Us a Term Sheet Look first at your burn rate — and what you have in the bank",
+            "start": 22,
+            "end": 25
+          },
+          {
+            "value": "90%",
+            "canonical": "pct:90",
+            "sentence": "Dear SaaStr: We’re At $8m ARR Growing 90% But Can’t Get a VC To Give Us a Term Sheet Look first at your burn rate — and what you have in the bank",
+            "start": 38,
+            "end": 41
+          }
+        ],
+        "unsupported": []
+      },
+      "rag_source_copying": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 4,
+        "document_id": "train_7249",
+        "matched_generated_span": "if you aren t",
+        "matched_retrieved_span": "if you aren t"
+      },
+      "stop_reason": "length"
+    },
+    "repair_attempt": null,
+    "accepted_attempt": 1,
+    "rag_source_copying": {
+      "applicable": true,
+      "threshold": 12,
+      "pass": true,
+      "flagged": false,
+      "max_contiguous_words": 4,
+      "document_id": "train_7249",
+      "matched_generated_span": "if you aren t",
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 4,
+        "document_id": "train_7249",
+        "matched_generated_span": "if you aren t",
+        "matched_retrieved_span": "if you aren t"
+      },
+      "retry": null,
+      "retry_occurred": false,
+      "repair_occurred": false
+    },
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [
+          "pct:40",
+          "pct:90",
+          "usd:10000000",
+          "usd:100000000",
+          "usd:5000000",
+          "usd:8000000"
+        ],
+        "values": [
+          {
+            "value": "$8m",
+            "canonical": "usd:8000000",
+            "sentence": "Dear SaaStr: We’re At $8m ARR Growing 90% But Can’t Get a VC To Give Us a Term Sheet Look first at your burn rate — and what you have in the bank",
+            "start": 22,
+            "end": 25
+          },
+          {
+            "value": "90%",
+            "canonical": "pct:90",
+            "sentence": "Dear SaaStr: We’re At $8m ARR Growing 90% But Can’t Get a VC To Give Us a Term Sheet Look first at your burn rate — and what you have in the bank",
+            "start": 38,
+            "end": 41
+          }
+        ],
+        "unsupported": []
+      },
+      "retry": null
+    },
+    "prompt_tokens": 746,
+    "backend": "unsloth",
+    "retrieval": true,
+    "retrieval_query": "Dear SaaStr: We’re At $8m ARR Growing 90% But Can’t Get a VC To Give Us a Term Sheet",
+    "retrieval_filter": null,
+    "retrieval_k": 4,
+    "retrieval_hits": [
+      {
+        "id": "train_17203",
+        "text": "New!!\n\n\"There Will Be 1,000 (!) VCs at 2020 SaaStr Annual.  Here’s How to Leverage That, Meet Them, and Maybe Even Get a Term Sheet.\"\n\nhttps://saastr.com/there-will-be-1000-vcs-at-2020-saastr-annual-heres-how-to-leverage-that-meet-them-and-maybe-even-get-a-term-sheet/\n…",
+        "medium": "x",
+        "group_id": "43b07e1a17e3e05f8e2be76c739a01e08484ee3d95634d256e1a4ddba4a7d67a",
+        "row_id": 17203,
+        "split": "train",
+        "distance": 0.24032026529312134
+      },
+      {
+        "id": "train_8111",
+        "text": "Dear SaaStr: How long does it take to negotiate a term sheet? Who should open the negotiation on valuation – VC or entrepreneur? What are the top tips for entrepreneurs preparing for a term sheet negotiation? It shouldn’t take more than a week, or even just a few days, to negotiate a term sheet. That is — once a VC decides they truly want to do a deal. There really aren’t many variables these days for seed to Series A deals, really just\nprice\nand\nhow much you are raising/selling. Most of the rest of the terms are much lower drama than they used to be. Most VCs aren’t trying to control your board and your company in the early days anymore. (If they do, that may take longer to work out). So what are the tips to get the\nbest deal\n— but\nalso\nto ensure the deal closes? A few learnings and insights:\nIt doesn’t really matter “who goes first”\n. Many founders will expect a VC to “go first” and make an offer. They may also think it gives them some leverage. Perhaps it does, in later stage and oversubscribed deals, and in general at the margin. But going first also might have advantages, in letting you anchor high. I am just not sure it much matters in earlier stage investing. Personally, I just\nask\n. “What is your ask? How much are you raising? What valuation are you looking for?” It’s not a game for me, at least. I just want to know. I just want to know if I can do it, if I can meet the ask. But what really gives you leverage, if you want it, are multiple offers\n. Going first, last, in the middle doesn’t matter nearly so much as having other\noptions\n.",
+        "medium": "blog",
+        "group_id": "f15502dedd19157a60c3706c52a3ef5a3bb20629385f416c9939ef5efc7238f7",
+        "row_id": 8111,
+        "split": "train",
+        "distance": 0.2446119785308838
+      },
+      {
+        "id": "train_3128",
+        "text": "Dear SaaStr: We are at $10MM ARR and it’s … hell.  We can’t seem to breakthrough and we are short on cash. Do we sell? Push through? Last year we grew 40% so growth is slow but we’re still growing.\nWe all get burnt out in a scenario like this.  Many years in, real ARR, but not at true scale.  Cash being tight only makes it harder.\nFirst, 40% growth at $10M ARR isn’t a rocketship.  But it’s still real growth.  You can still get to $100m+ ARR.\nIt’s not hypergrowth, but it’s respectable, especially in the enterprise, where sales cycles can be long and complex. This tells me the business isn’t broken—it’s just stuck in the grind of scaling. And scaling from $10M to $20M ARR is often the hardest phase. It’s where you feel like you’re running uphill with a boulder strapped to your back, especially since you just don’t have much redundancy on the team.\nThe cash crunch is the real issue here.\nWhen you’re short on cash, you’re forced to underinvest, and underinvestment kills momentum. I’ve seen this play out too many times. At $10M ARR, you need at least $5M on your balance sheet to scale properly. Without it, every decision feels like triage, and you can’t make the bold moves that drive growth.\nSo, should you sell or push through? Here’s how I’d think about it:\n\n1. Do You Believe in the Business?\nIf you still believe this is a $100M ARR business in the making, then you push through. But you need to be honest with yourself. Is the TAM big enough? Are your unit economics solid? If the answer is yes, then it’s worth fighting for.",
+        "medium": "blog",
+        "group_id": "2e5710c566f0c674d2d090140bd630e1fb743533ef83a8014f610fce0b18d7aa",
+        "row_id": 3128,
+        "split": "train",
+        "distance": 0.2597272992134094
+      },
+      {
+        "id": "train_7249",
+        "text": "Dear SaaStr: Who Drafts the Term Sheet, The Entrepreneurs or the VC?\nIt depends who is selling and who is buying.\nIn the old days, and still mostly commonly today, term sheets only came from VCs. Founders were almost always selling. Well,\nalmost\nalways.\nBut even in the Old Days, the hottest of start-ups made up the terms. Microsoft took one venture investor, sold them only 5%, and named the terms:\nThe Venture Capitalist Microsoft Allowed To Invest Early\nToday, it’s still the case. In almost all “standard” VC financings, the VC drafts and issues a fairly standard term sheet.\nBut if you are very hot, it’s different. At the seed stage, for example, Ycombinator SAFE notes have evolved essentially into a form of term sheet issued by founders. Originally, SAFEs were designed to save legal fees. But today, what they really serve as is a very simple, founder-friendly, founder-generated term sheet. The valuation is set by the founders, and the terms are the SAFE itself — again set by the founders, in essence.\nIn any stage of investing, if you get 4–5+ offers and demand for every 1 share available, the founders will set the terms, even if they don’t literally issue the term sheet.\nBut if you aren’t super hot — let the VCs take the lead there. It’s their money, and you are the one selling.",
+        "medium": "blog",
+        "group_id": "932df7ec1175b36a0693b698e21f4ee4cdaa9cf730ef0b41e9417894ae7e5777",
+        "row_id": 7249,
+        "split": "train",
+        "distance": 0.26218634843826294
+      }
+    ],
+    "copying": [
+      {
+        "id": "train_17203",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_8111",
+        "shared_word_span": 3
+      },
+      {
+        "id": "train_3128",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_7249",
+        "shared_word_span": 3
+      }
+    ],
+    "retrieval_backend": "dense",
+    "proposed_atomic_claims": [
+      {
+        "source_id": "train_8111",
+        "claim": "It shouldn’t take more than a week, or even just a few days, to negotiate a term sheet.",
+        "support_span": "That is — once a VC decides they truly want to do a deal.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_8111",
+        "claim": "Most of the rest of the terms are much lower drama than they used to be.",
+        "support_span": "Most of the rest of the terms are much lower drama than they used to be.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_8111",
+        "claim": "Going first, last, in the middle doesn’t matter nearly so much as having other options.",
+        "support_span": "Going first, last, in the middle doesn’t matter nearly so much as having other options.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_3128",
+        "claim": "40% growth at $10M ARR isn’t a rocketship.",
+        "support_span": "First, 40% growth at $10M ARR isn’t a rocketship.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_3128",
+        "claim": "You can still get to $100m+ ARR.",
+        "support_span": "You can still get to $100m+ ARR.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_3128",
+        "claim": "At $10M ARR, you need at least $5M on your balance sheet to scale properly.",
+        "support_span": "At $10M ARR, you need at least $5M on your balance sheet to scale properly.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7249",
+        "claim": "In the old days, and still mostly commonly today, term sheets only came from VCs.",
+        "support_span": "In the old days, and still mostly commonly today, term sheets only came from VCs.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7249",
+        "claim": "If you are very hot, it’s different.",
+        "support_span": "But if you are very hot, it’s different.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7249",
+        "claim": "If you get 4–5+ offers and demand for every 1 share available, the founders will set the terms, even if they don’t literally issue the term sheet.",
+        "support_span": "But if you get 4–5+ offers and demand for every 1 share available, the founders will set the terms, even if they don’t literally issue the term sheet.",
+        "claim_type": "fact"
+      }
+    ],
+    "validation_rejected": [
+      {
+        "source_id": "train_8111",
+        "claim": "Going first, last, in the middle doesn’t matter nearly so much as having other options.",
+        "support_span": "Going first, last, in the middle doesn’t matter nearly so much as having other options.",
+        "claim_type": "fact",
+        "reason": "support_not_in_source"
+      },
+      {
+        "source_id": "train_7249",
+        "claim": "If you get 4–5+ offers and demand for every 1 share available, the founders will set the terms, even if they don’t literally issue the term sheet.",
+        "support_span": "But if you get 4–5+ offers and demand for every 1 share available, the founders will set the terms, even if they don’t literally issue the term sheet.",
+        "claim_type": "fact",
+        "reason": "support_not_in_source"
+      }
+    ],
+    "verifier_rejected": [],
+    "verified_claims": [
+      {
+        "source_id": "train_8111",
+        "claim": "It shouldn’t take more than a week, or even just a few days, to negotiate a term sheet.",
+        "support_span": "That is — once a VC decides they truly want to do a deal.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_8111",
+        "claim": "Most of the rest of the terms are much lower drama than they used to be.",
+        "support_span": "Most of the rest of the terms are much lower drama than they used to be.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_3128",
+        "claim": "40% growth at $10M ARR isn’t a rocketship.",
+        "support_span": "First, 40% growth at $10M ARR isn’t a rocketship.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_3128",
+        "claim": "You can still get to $100m+ ARR.",
+        "support_span": "You can still get to $100m+ ARR.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_3128",
+        "claim": "At $10M ARR, you need at least $5M on your balance sheet to scale properly.",
+        "support_span": "At $10M ARR, you need at least $5M on your balance sheet to scale properly.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7249",
+        "claim": "In the old days, and still mostly commonly today, term sheets only came from VCs.",
+        "support_span": "In the old days, and still mostly commonly today, term sheets only came from VCs.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7249",
+        "claim": "If you are very hot, it’s different.",
+        "support_span": "But if you are very hot, it’s different.",
+        "claim_type": "fact"
+      }
+    ],
+    "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] It shouldn’t take more than a week, or even just a few days, to negotiate a term sheet.\n[E2] Most of the rest of the terms are much lower drama than they used to be.\n[E3] 40% growth at $10M ARR isn’t a rocketship.\n[E4] You can still get to $100m+ ARR.\n[E5] At $10M ARR, you need at least $5M on your balance sheet to scale properly.\n[E6] In the old days, and still mostly commonly today, term sheets only came from VCs.\n[E7] If you are very hot, it’s different.",
+    "raw_extraction": "[\n  {\n    \"source_id\": \"train_8111\",\n    \"claim\": \"It shouldn’t take more than a week, or even just a few days, to negotiate a term sheet.\",\n    \"support_span\": \"That is — once a VC decides they truly want to do a deal.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_8111\",\n    \"claim\": \"Most of the rest of the terms are much lower drama than they used to be.\",\n    \"support_span\": \"Most of the rest of the terms are much lower drama than they used to be.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_8111\",\n    \"claim\": \"Going first, last, in the middle doesn’t matter nearly so much as having other options.\",\n    \"support_span\": \"Going first, last, in the middle doesn’t matter nearly so much as having other options.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_3128\",\n    \"claim\": \"40% growth at $10M ARR isn’t a rocketship.\",\n    \"support_span\": \"First, 40% growth at $10M ARR isn’t a rocketship.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_3128\",\n    \"claim\": \"You can still get to $100m+ ARR.\",\n    \"support_span\": \"You can still get to $100m+ ARR.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_3128\",\n    \"claim\": \"At $10M ARR, you need at least $5M on your balance sheet to scale properly.\",\n    \"support_span\": \"At $10M ARR, you need at least $5M on your balance sheet to scale properly.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7249\",\n    \"claim\": \"In the old days, and still mostly commonly today, term sheets only came from VCs.\",\n    \"support_span\": \"In the old days, and still mostly commonly today, term sheets only came from VCs.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7249\",\n    \"claim\": \"If you are very hot, it’s different.\",\n    \"support_span\": \"But if you are very hot, it’s different.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7249\",\n    \"claim\": \"If you get 4–5+ offers and demand for every 1 share available, the founders will set the terms, even if they don’t literally issue the term sheet.\",\n    \"support_span\": \"But if you get 4–5+ offers and demand for every 1 share available, the founders will set the terms, even if they don’t literally issue the term sheet.\",\n    \"claim_type\": \"fact\"\n  }\n]",
+    "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Dear SaaStr: We’re At $8m ARR Growing 90% But Can’t Get a VC To Give Us a Term Sheet\n\nSource passages:\n[train_17203]\nNew!!\n\n\"There Will Be 1,000 (!) VCs at 2020 SaaStr Annual.  Here’s How to Leverage That, Meet Them, and Maybe Even Get a Term Sheet.\"\n\nhttps://saastr.com/there-will-be-1000-vcs-at-2020-saastr-annual-heres-how-to-leverage-that-meet-them-and-maybe-even-get-a-term-sheet/\n…\n\n[train_8111]\nDear SaaStr: How long does it take to negotiate a term sheet? Who should open the negotiation on valuation – VC or entrepreneur? What are the top tips for entrepreneurs preparing for a term sheet negotiation? It shouldn’t take more than a week, or even just a few days, to negotiate a term sheet. That is — once a VC decides they truly want to do a deal. There really aren’t many variables these days for seed to Series A deals, really just\nprice\nand\nhow much you are raising/selling. Most of the rest of the terms are much lower drama than they used to be. Most VCs aren’t trying to control your board and your company in the early days anymore. (If they do, that may take longer to work out). So what are the tips to get the\nbest deal\n— but\nalso\nto ensure the deal closes? A few learnings and insights:\nIt doesn’t really matter “who goes first”\n. Many founders will expect a VC to “go first” and make an offer. They may also think it gives them some leverage. Perhaps it does, in later stage and oversubscribed deals, and in general at the margin. But going first also might have advantages, in letting you anchor high. I am just not sure it much matters in earlier stage investing. Personally, I just\nask\n. “What is your ask? How much are you raising? What valuation are you looking for?” It’s not a game for me, at least. I just want to know. I just want to know if I can do it, if I can meet the ask. But what really gives you leverage, if you want it, are multiple offers\n. Going first, last, in the middle doesn’t matter nearly so much as having other\noptions\n.\n\n[train_3128]\nDear SaaStr: We are at $10MM ARR and it’s … hell.  We can’t seem to breakthrough and we are short on cash. Do we sell? Push through? Last year we grew 40% so growth is slow but we’re still growing.\nWe all get burnt out in a scenario like this.  Many years in, real ARR, but not at true scale.  Cash being tight only makes it harder.\nFirst, 40% growth at $10M ARR isn’t a rocketship.  But it’s still real growth.  You can still get to $100m+ ARR.\nIt’s not hypergrowth, but it’s respectable, especially in the enterprise, where sales cycles can be long and complex. This tells me the business isn’t broken—it’s just stuck in the grind of scaling. And scaling from $10M to $20M ARR is often the hardest phase. It’s where you feel like you’re running uphill with a boulder strapped to your back, especially since you just don’t have much redundancy on the team.\nThe cash crunch is the real issue here.\nWhen you’re short on cash, you’re forced to underinvest, and underinvestment kills momentum. I’ve seen this play out too many times. At $10M ARR, you need at least $5M on your balance sheet to scale properly. Without it, every decision feels like triage, and you can’t make the bold moves that drive growth.\nSo, should you sell or push through? Here’s how I’d think about it:\n\n1. Do You Believe in the Business?\nIf you still believe this is a $100M ARR business in the making, then you push through. But you need to be honest with yourself. Is the TAM big enough? Are your unit economics solid? If the answer is yes, then it’s worth fighting for.\n\n[train_7249]\nDear SaaStr: Who Drafts the Term Sheet, The Entrepreneurs or the VC?\nIt depends who is selling and who is buying.\nIn the old days, and still mostly commonly today, term sheets only came from VCs. Founders were almost always selling. Well,\nalmost\nalways.\nBut even in the Old Days, the hottest of start-ups made up the terms. Microsoft took one venture investor, sold them only 5%, and named the terms:\nThe Venture Capitalist Microsoft Allowed To Invest Early\nToday, it’s still the case. In almost all “standard” VC financings, the VC drafts and issues a fairly standard term sheet.\nBut if you are very hot, it’s different. At the seed stage, for example, Ycombinator SAFE notes have evolved essentially into a form of term sheet issued by founders. Originally, SAFEs were designed to save legal fees. But today, what they really serve as is a very simple, founder-friendly, founder-generated term sheet. The valuation is set by the founders, and the terms are the SAFE itself — again set by the founders, in essence.\nIn any stage of investing, if you get 4–5+ offers and demand for every 1 share available, the founders will set the terms, even if they don’t literally issue the term sheet.\nBut if you aren’t super hot — let the VCs take the lead there. It’s their money, and you are the one selling.",
+    "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Dear SaaStr: We’re At $8m ARR Growing 90% But Can’t Get a VC To Give Us a Term Sheet\n\nSource passages:\n[train_17203]\nNew!!\n\n\"There Will Be 1,000 (!) VCs at 2020 SaaStr Annual.  Here’s How to Leverage That, Meet Them, and Maybe Even Get a Term Sheet.\"\n\nhttps://saastr.com/there-will-be-1000-vcs-at-2020-saastr-annual-heres-how-to-leverage-that-meet-them-and-maybe-even-get-a-term-sheet/\n…\n\n[train_8111]\nDear SaaStr: How long does it take to negotiate a term sheet? Who should open the negotiation on valuation – VC or entrepreneur? What are the top tips for entrepreneurs preparing for a term sheet negotiation? It shouldn’t take more than a week, or even just a few days, to negotiate a term sheet. That is — once a VC decides they truly want to do a deal. There really aren’t many variables these days for seed to Series A deals, really just\nprice\nand\nhow much you are raising/selling. Most of the rest of the terms are much lower drama than they used to be. Most VCs aren’t trying to control your board and your company in the early days anymore. (If they do, that may take longer to work out). So what are the tips to get the\nbest deal\n— but\nalso\nto ensure the deal closes? A few learnings and insights:\nIt doesn’t really matter “who goes first”\n. Many founders will expect a VC to “go first” and make an offer. They may also think it gives them some leverage. Perhaps it does, in later stage and oversubscribed deals, and in general at the margin. But going first also might have advantages, in letting you anchor high. I am just not sure it much matters in earlier stage investing. Personally, I just\nask\n. “What is your ask? How much are you raising? What valuation are you looking for?” It’s not a game for me, at least. I just want to know. I just want to know if I can do it, if I can meet the ask. But what really gives you leverage, if you want it, are multiple offers\n. Going first, last, in the middle doesn’t matter nearly so much as having other\noptions\n.\n\n[train_3128]\nDear SaaStr: We are at $10MM ARR and it’s … hell.  We can’t seem to breakthrough and we are short on cash. Do we sell? Push through? Last year we grew 40% so growth is slow but we’re still growing.\nWe all get burnt out in a scenario like this.  Many years in, real ARR, but not at true scale.  Cash being tight only makes it harder.\nFirst, 40% growth at $10M ARR isn’t a rocketship.  But it’s still real growth.  You can still get to $100m+ ARR.\nIt’s not hypergrowth, but it’s respectable, especially in the enterprise, where sales cycles can be long and complex. This tells me the business isn’t broken—it’s just stuck in the grind of scaling. And scaling from $10M to $20M ARR is often the hardest phase. It’s where you feel like you’re running uphill with a boulder strapped to your back, especially since you just don’t have much redundancy on the team.\nThe cash crunch is the real issue here.\nWhen you’re short on cash, you’re forced to underinvest, and underinvestment kills momentum. I’ve seen this play out too many times. At $10M ARR, you need at least $5M on your balance sheet to scale properly. Without it, every decision feels like triage, and you can’t make the bold moves that drive growth.\nSo, should you sell or push through? Here’s how I’d think about it:\n\n1. Do You Believe in the Business?\nIf you still believe this is a $100M ARR business in the making, then you push through. But you need to be honest with yourself. Is the TAM big enough? Are your unit economics solid? If the answer is yes, then it’s worth fighting for.\n\n[train_7249]\nDear SaaStr: Who Drafts the Term Sheet, The Entrepreneurs or the VC?\nIt depends who is selling and who is buying.\nIn the old days, and still mostly commonly today, term sheets only came from VCs. Founders were almost always selling. Well,\nalmost\nalways.\nBut even in the Old Days, the hottest of start-ups made up the terms. Microsoft took one venture investor, sold them only 5%, and named the terms:\nThe Venture Capitalist Microsoft Allowed To Invest Early\nToday, it’s still the case. In almost all “standard” VC financings, the VC drafts and issues a fairly standard term sheet.\nBut if you are very hot, it’s different. At the seed stage, for example, Ycombinator SAFE notes have evolved essentially into a form of term sheet issued by founders. Originally, SAFEs were designed to save legal fees. But today, what they really serve as is a very simple, founder-friendly, founder-generated term sheet. The valuation is set by the founders, and the terms are the SAFE itself — again set by the founders, in essence.\nIn any stage of investing, if you get 4–5+ offers and demand for every 1 share available, the founders will set the terms, even if they don’t literally issue the term sheet.\nBut if you aren’t super hot — let the VCs take the lead there. It’s their money, and you are the one selling.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "extraction_seconds": 17.428,
+    "verification_seconds": 0.0,
+    "verification_records": [],
+    "llm_verifier_on_critical_path": false,
+    "allowed_numeric_values": [
+      "pct:40",
+      "pct:90",
+      "usd:10000000",
+      "usd:100000000",
+      "usd:5000000",
+      "usd:8000000"
+    ],
+    "distillation_adapter_enabled": false,
+    "verification_adapter_enabled": false,
+    "distillation_backend": "same_loaded_4bit_base_adapter_off",
+    "distillation_do_sample": false,
+    "extraction_max_new_tokens": 2560,
+    "verification_max_new_tokens": 24,
+    "distillation_seed": 0,
+    "support_spans_in_generator_prompt": false,
+    "evidence_stage_reason": null,
+    "evidence_status": "verified",
+    "extraction_attempts": 1,
+    "extraction_stop_reason": "eos",
+    "prompt_contract": "factual-reliability-v1",
+    "fixed_style_enabled": true,
+    "style_applied": true,
+    "style_exemplar_count": 2,
+    "latency_seconds": 22.483,
+    "generated_tokens_including_stop": 320,
+    "last_token_id": 1115,
+    "effective_eos_token_ids": [
+      128001,
+      128008,
+      128009
+    ],
+    "stop_reason": "length",
+    "budget_fraction": 1.0,
+    "early_eos": false,
+    "first_attempt_stop_reason": "length",
+    "retry_stop_reason": null
+  }
+}

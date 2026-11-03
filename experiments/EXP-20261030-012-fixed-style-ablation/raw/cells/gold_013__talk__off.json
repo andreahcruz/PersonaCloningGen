@@ -1,0 +1,533 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "topic_id": "gold_013",
+  "medium": "talk",
+  "arm": "off",
+  "seed": 93,
+  "attempts": 1,
+  "evidence_sha256": "51b86addc200fde022fc2c3eadf3bbd791365a35d73f5af1f92f9c244b398491",
+  "retrieval_hit_ids": [
+    "train_176",
+    "train_12393",
+    "train_12657",
+    "train_13149"
+  ],
+  "retrieval_query": "Dear SaaStr: Should I Use an AI SDR Before I Have a Working Human SDR motion?",
+  "retrieval_filter": null,
+  "style_applied": false,
+  "style_in_prompt": false,
+  "prompt_tokens": 410,
+  "generated_tokens_including_stop": 768,
+  "latency_seconds": 41.325,
+  "exemplar_ids": [],
+  "saved_at": "2026-10-30T09:41:27.464877+00:00",
+  "trace": {
+    "id": "gold_013",
+    "format": "youtube_script",
+    "topic": "Dear SaaStr: Should I Use an AI SDR Before I Have a Working Human SDR motion?",
+    "audience": "B2B SaaS founders and operators",
+    "goal": "Advise founders on whether AI SDRs can substitute for an unproven outbound motion.",
+    "cta": "none",
+    "k": 8,
+    "expected_facts": [
+      "The answer should argue that AI cannot fix a broken outbound motion by itself.",
+      "It should explain that founders still need a working message, ICP, and qualification logic.",
+      "It should allow that AI can accelerate a working system but rarely invent one from nothing."
+    ],
+    "rubric_must_haves": [
+      "Takes a clear position.",
+      "Explains what parts of the motion must already work.",
+      "Distinguishes acceleration from invention.",
+      "Uses practical examples or failure modes."
+    ],
+    "gold_reference": "A strong answer should say that founders should not expect an AI SDR to invent a working go-to-market motion. If the ICP, messaging, and follow-up logic are still broken, automating them only scales the noise. AI SDRs work best when there is already a credible human playbook to copy and improve.",
+    "medium": "talk",
+    "prompt": "Write a talk in the style of Jason Lemkin about: Dear SaaStr: Should I Use an AI SDR Before I Have a Working Human SDR motion?\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] 95% of human SDRs do not know the product they are selling\n[E2] 95% of human SDRs cannot answer tough questions\n[E3] 95% of human SDRs have to wait for help\n[E4] AI SDRs are much better than human SDRs\n\nNow write the requested talk about: Dear SaaStr: Should I Use an AI SDR Before I Have a Working Human SDR motion?\n\nRemove these quantities that are not in the evidence: $100k, $700k, 500. Do not replace them with other numbers.",
+    "rendered_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nWrite a talk in the style of Jason Lemkin about: Dear SaaStr: Should I Use an AI SDR Before I Have a Working Human SDR motion?\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] 95% of human SDRs do not know the product they are selling\n[E2] 95% of human SDRs cannot answer tough questions\n[E3] 95% of human SDRs have to wait for help\n[E4] AI SDRs are much better than human SDRs\n\nNow write the requested talk about: Dear SaaStr: Should I Use an AI SDR Before I Have a Working Human SDR motion?\n\nRemove these quantities that are not in the evidence: $100k, $700k, 500. Do not replace them with other numbers.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "answer": "So there's a lot of controversy today around this topic on whether you should use an AI SDR before you have a working human SDR process.\nAnd my basic view is if your team can't get it done, why would you trust them with something more complicated? But let me just share some learnings here and then we'll see what our speakers say.\nFirst off, everyone uses AIs now. So many folks think they're using one, but so many aren't actually using any sort of AI tool.\nWe've talked about this before, but I was at a board meeting recently where two reps walked in and said \"Oh yeah, we're running Claude.\"\nI'm like, well, no, you're not because it takes work to train an agent. And when we looked at their data, we saw nothing had been trained yet. It was blank.\nBut there's another thing too. If your humans can't close anything, it doesn't matter how good the AI is. There are so many reasons to try AI SDRs.\nFirst off, they don't quit.\nSecond, they never complain.\nThird, they don't make excuses.\nFourth, they don't take weeks to ramp up.\nFifth, they do not need training. They already know the products cold.\nSixth, they will never go on vacation.\nSeventh, they won't show up late.\nEighth, they will always be honest.\nNinth, they are very responsive to prospects and customers.\nTenth, they will follow every instruction. No exceptions.\nEleventh, they never blame anyone else for failing.\nTwelfth, they never ask for help. They're self-sufficient.\nThirteenth, they know everything about the company.\nFourteenth, they are available 24/7.\nFifteenth, they never forget to send emails or make calls.\nSixteenth, they always follow up.\nSeventeenth, they know all the competitors' strengths and weaknesses.\nEighteenth, they do not have bad days.\nNineteenth, they never lie or misrepresent information.\nTwenty-first, they do not require benefits or compensation packages.\nTwenty-second, they never argue over commission structures.\nTwenty-third, they do not gossip or engage in office politics.\nTwenty-fourth, they always respect boundaries and confidentiality agreements.\nTwenty-fifth, they never request time-off during critical periods.\nTwenty-sixth, they are highly consistent in their performance.\nTwenty-seventh, they do not struggle with motivation or engagement issues.\nTwenty-eighth, they maintain professional composure under pressure.\nTwenty-ninth, they prioritize results-driven communication over personal relationships.\nThirtyth, they embrace continuous improvement without resistance.\nThirty-first, they align easily with organizational objectives.\nThirty-twond, they handle rejection professionally.\nThirty-third, they stay focused on shared goals rather than individual interests.\nThirty-fourth, they are adaptable to changing circumstances and priorities.\nThirty-fifth, they bring stability to high-pressure situations.\n36th, they recognize and appreciate opportunities for development.\n37th, they manage expectations effectively.\n38th, they demonstrate accountability for their actions.\n39th, they remain objective in decision-making processes.\n40th, they communicate clearly across different levels of seniority.\n41st, they build strong working relationships based on mutual respect.\n42nd, they lead by example through their work ethic.\n43rd, they contribute positively to team morale and culture.\n44th, they foster open communication channels within teams.\n45th, they promote collaboration among colleagues.\n46th, they empower others to succeed.\n47th, they celebrate achievements appropriately.\n48th, they support each other through challenges.\n49th, they model desired behaviors consistently.\n50th, they enhance team cohesion through inclusive leadership.\n51st, they create opportunities for skill-building.\n52",
+    "raw_model_output": "Dear SaaStr: Should I Use an AI SDR Before You Have a Working Human SDR Motion?\nYes.\nIn fact, you probably need to use one before you hire your first true sales rep if possible — or at least very early on.  At least experiment with using them earlier than most founders think they can afford to. This was my experience when I sold EchoSign / Adobe Sign. We had no sales team until $100k MRR.\nOur CEO Sam Blond joined later as VP Sales at $700k MRR. But we started experimenting with outbound email marketing (a lot) once our leads were high quality enough:\nWe ran campaigns ourselves where every day we'd send out emails. Every single day, every hour of the day, we'd send out emails. And then we brought in two part-time contractors just doing cold calling and emailing. They worked out really well. Then we hired full-time reps. Those contractors did better than any human SDRs ever did for us. 95% of human SDRs don't even know their products anyway. They're too lazy. It takes too long to learn anything. So this contractor knew everything. He could tell his story, tell how EchoSign was used, how many Fortune 500 companies already used it. All those things. He got meetings.\nThen we went to the next level. We added a few more people to the team. Now we've gone all-in with AI agents. But here's what I would say to folks now: if you want to get ahead today, I think everyone needs to start running these experiments immediately. Don't wait until you go live. If you're going to run outbound, start sending outbound yourself. Run some campaigns. Try different approaches. That will actually train the agent so when you put it into production, it works. I'm running five AI agents myself right now. Five! And the ones that work best are the ones that had me involved in training them personally. The ones that didn't work were the ones I wasn't trained properly by someone.",
+    "deployment_output": "So there's a lot of controversy today around this topic on whether you should use an AI SDR before you have a working human SDR process.\nAnd my basic view is if your team can't get it done, why would you trust them with something more complicated? But let me just share some learnings here and then we'll see what our speakers say.\nFirst off, everyone uses AIs now. So many folks think they're using one, but so many aren't actually using any sort of AI tool.\nWe've talked about this before, but I was at a board meeting recently where two reps walked in and said \"Oh yeah, we're running Claude.\"\nI'm like, well, no, you're not because it takes work to train an agent. And when we looked at their data, we saw nothing had been trained yet. It was blank.\nBut there's another thing too. If your humans can't close anything, it doesn't matter how good the AI is. There are so many reasons to try AI SDRs.\nFirst off, they don't quit.\nSecond, they never complain.\nThird, they don't make excuses.\nFourth, they don't take weeks to ramp up.\nFifth, they do not need training. They already know the products cold.\nSixth, they will never go on vacation.\nSeventh, they won't show up late.\nEighth, they will always be honest.\nNinth, they are very responsive to prospects and customers.\nTenth, they will follow every instruction. No exceptions.\nEleventh, they never blame anyone else for failing.\nTwelfth, they never ask for help. They're self-sufficient.\nThirteenth, they know everything about the company.\nFourteenth, they are available 24/7.\nFifteenth, they never forget to send emails or make calls.\nSixteenth, they always follow up.\nSeventeenth, they know all the competitors' strengths and weaknesses.\nEighteenth, they do not have bad days.\nNineteenth, they never lie or misrepresent information.\nTwenty-first, they do not require benefits or compensation packages.\nTwenty-second, they never argue over commission structures.\nTwenty-third, they do not gossip or engage in office politics.\nTwenty-fourth, they always respect boundaries and confidentiality agreements.\nTwenty-fifth, they never request time-off during critical periods.\nTwenty-sixth, they are highly consistent in their performance.\nTwenty-seventh, they do not struggle with motivation or engagement issues.\nTwenty-eighth, they maintain professional composure under pressure.\nTwenty-ninth, they prioritize results-driven communication over personal relationships.\nThirtyth, they embrace continuous improvement without resistance.\nThirty-first, they align easily with organizational objectives.\nThirty-twond, they handle rejection professionally.\nThirty-third, they stay focused on shared goals rather than individual interests.\nThirty-fourth, they are adaptable to changing circumstances and priorities.\nThirty-fifth, they bring stability to high-pressure situations.\n36th, they recognize and appreciate opportunities for development.\n37th, they manage expectations effectively.\n38th, they demonstrate accountability for their actions.\n39th, they remain objective in decision-making processes.\n40th, they communicate clearly across different levels of seniority.\n41st, they build strong working relationships based on mutual respect.\n42nd, they lead by example through their work ethic.\n43rd, they contribute positively to team morale and culture.\n44th, they foster open communication channels within teams.\n45th, they promote collaboration among colleagues.\n46th, they empower others to succeed.\n47th, they celebrate achievements appropriately.\n48th, they support each other through challenges.\n49th, they model desired behaviors consistently.\n50th, they enhance team cohesion through inclusive leadership.\n51st, they create opportunities for skill-building.\n52",
+    "first_attempt_answer": "Dear SaaStr: Should I Use an AI SDR Before You Have a Working Human SDR Motion?\nYes.\nIn fact, you probably need to use one before you hire your first true sales rep if possible — or at least very early on.  At least experiment with using them earlier than most founders think they can afford to. This was my experience when I sold EchoSign / Adobe Sign. We had no sales team until $100k MRR.\nOur CEO Sam Blond joined later as VP Sales at $700k MRR. But we started experimenting with outbound email marketing (a lot) once our leads were high quality enough:\nWe ran campaigns ourselves where every day we'd send out emails. Every single day, every hour of the day, we'd send out emails. And then we brought in two part-time contractors just doing cold calling and emailing. They worked out really well. Then we hired full-time reps. Those contractors did better than any human SDRs ever did for us. 95% of human SDRs don't even know their products anyway. They're too lazy. It takes too long to learn anything. So this contractor knew everything. He could tell his story, tell how EchoSign was used, how many Fortune 500 companies already used it. All those things. He got meetings.\nThen we went to the next level. We added a few more people to the team. Now we've gone all-in with AI agents. But here's what I would say to folks now: if you want to get ahead today, I think everyone needs to start running these experiments immediately. Don't wait until you go live. If you're going to run outbound, start sending outbound yourself. Run some campaigns. Try different approaches. That will actually train the agent so when you put it into production, it works. I'm running five AI agents myself right now. Five! And the ones that work best are the ones that had me involved in training them personally. The ones that didn't work were the ones I wasn't trained properly by someone.",
+    "retry_answer": "So there's a lot of controversy today around this topic on whether you should use an AI SDR before you have a working human SDR process.\nAnd my basic view is if your team can't get it done, why would you trust them with something more complicated? But let me just share some learnings here and then we'll see what our speakers say.\nFirst off, everyone uses AIs now. So many folks think they're using one, but so many aren't actually using any sort of AI tool.\nWe've talked about this before, but I was at a board meeting recently where two reps walked in and said \"Oh yeah, we're running Claude.\"\nI'm like, well, no, you're not because it takes work to train an agent. And when we looked at their data, we saw nothing had been trained yet. It was blank.\nBut there's another thing too. If your humans can't close anything, it doesn't matter how good the AI is. There are so many reasons to try AI SDRs.\nFirst off, they don't quit.\nSecond, they never complain.\nThird, they don't make excuses.\nFourth, they don't take weeks to ramp up.\nFifth, they do not need training. They already know the products cold.\nSixth, they will never go on vacation.\nSeventh, they won't show up late.\nEighth, they will always be honest.\nNinth, they are very responsive to prospects and customers.\nTenth, they will follow every instruction. No exceptions.\nEleventh, they never blame anyone else for failing.\nTwelfth, they never ask for help. They're self-sufficient.\nThirteenth, they know everything about the company.\nFourteenth, they are available 24/7.\nFifteenth, they never forget to send emails or make calls.\nSixteenth, they always follow up.\nSeventeenth, they know all the competitors' strengths and weaknesses.\nEighteenth, they do not have bad days.\nNineteenth, they never lie or misrepresent information.\nTwenty-first, they do not require benefits or compensation packages.\nTwenty-second, they never argue over commission structures.\nTwenty-third, they do not gossip or engage in office politics.\nTwenty-fourth, they always respect boundaries and confidentiality agreements.\nTwenty-fifth, they never request time-off during critical periods.\nTwenty-sixth, they are highly consistent in their performance.\nTwenty-seventh, they do not struggle with motivation or engagement issues.\nTwenty-eighth, they maintain professional composure under pressure.\nTwenty-ninth, they prioritize results-driven communication over personal relationships.\nThirtyth, they embrace continuous improvement without resistance.\nThirty-first, they align easily with organizational objectives.\nThirty-twond, they handle rejection professionally.\nThirty-third, they stay focused on shared goals rather than individual interests.\nThirty-fourth, they are adaptable to changing circumstances and priorities.\nThirty-fifth, they bring stability to high-pressure situations.\n36th, they recognize and appreciate opportunities for development.\n37th, they manage expectations effectively.\n38th, they demonstrate accountability for their actions.\n39th, they remain objective in decision-making processes.\n40th, they communicate clearly across different levels of seniority.\n41st, they build strong working relationships based on mutual respect.\n42nd, they lead by example through their work ethic.\n43rd, they contribute positively to team morale and culture.\n44th, they foster open communication channels within teams.\n45th, they promote collaboration among colleagues.\n46th, they empower others to succeed.\n47th, they celebrate achievements appropriately.\n48th, they support each other through challenges.\n49th, they model desired behaviors consistently.\n50th, they enhance team cohesion through inclusive leadership.\n51st, they create opportunities for skill-building.\n52",
+    "query": "Dear SaaStr: Should I Use an AI SDR Before I Have a Working Human SDR motion?",
+    "max_new_tokens": 768,
+    "seed": 93,
+    "retry_seed": 10093,
+    "deployment_accepted": true,
+    "repair_occurred": false,
+    "generation_attempt": {
+      "seed": 93,
+      "answer": "Dear SaaStr: Should I Use an AI SDR Before You Have a Working Human SDR Motion?\nYes.\nIn fact, you probably need to use one before you hire your first true sales rep if possible — or at least very early on.  At least experiment with using them earlier than most founders think they can afford to. This was my experience when I sold EchoSign / Adobe Sign. We had no sales team until $100k MRR.\nOur CEO Sam Blond joined later as VP Sales at $700k MRR. But we started experimenting with outbound email marketing (a lot) once our leads were high quality enough:\nWe ran campaigns ourselves where every day we'd send out emails. Every single day, every hour of the day, we'd send out emails. And then we brought in two part-time contractors just doing cold calling and emailing. They worked out really well. Then we hired full-time reps. Those contractors did better than any human SDRs ever did for us. 95% of human SDRs don't even know their products anyway. They're too lazy. It takes too long to learn anything. So this contractor knew everything. He could tell his story, tell how EchoSign was used, how many Fortune 500 companies already used it. All those things. He got meetings.\nThen we went to the next level. We added a few more people to the team. Now we've gone all-in with AI agents. But here's what I would say to folks now: if you want to get ahead today, I think everyone needs to start running these experiments immediately. Don't wait until you go live. If you're going to run outbound, start sending outbound yourself. Run some campaigns. Try different approaches. That will actually train the agent so when you put it into production, it works. I'm running five AI agents myself right now. Five! And the ones that work best are the ones that had me involved in training them personally. The ones that didn't work were the ones I wasn't trained properly by someone.",
+      "numeric_grounding": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [
+          "pct:95"
+        ],
+        "values": [
+          {
+            "value": "$100k",
+            "canonical": "usd:100000",
+            "sentence": "We had no sales team until $100k MRR.",
+            "start": 381,
+            "end": 386
+          },
+          {
+            "value": "$700k",
+            "canonical": "usd:700000",
+            "sentence": "Our CEO Sam Blond joined later as VP Sales at $700k MRR",
+            "start": 438,
+            "end": 443
+          },
+          {
+            "value": "95%",
+            "canonical": "pct:95",
+            "sentence": "95% of human SDRs don't even know their products anyway",
+            "start": 897,
+            "end": 900
+          },
+          {
+            "value": "500",
+            "canonical": "n:500",
+            "sentence": "He could tell his story, tell how EchoSign was used, how many Fortune 500 companies already used it",
+            "start": 1115,
+            "end": 1118
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "$100k",
+            "canonical": "usd:100000",
+            "sentence": "We had no sales team until $100k MRR.",
+            "start": 381,
+            "end": 386
+          },
+          {
+            "value": "$700k",
+            "canonical": "usd:700000",
+            "sentence": "Our CEO Sam Blond joined later as VP Sales at $700k MRR",
+            "start": 438,
+            "end": 443
+          },
+          {
+            "value": "500",
+            "canonical": "n:500",
+            "sentence": "He could tell his story, tell how EchoSign was used, how many Fortune 500 companies already used it",
+            "start": 1115,
+            "end": 1118
+          }
+        ]
+      },
+      "rag_source_copying": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 4,
+        "document_id": "train_13149",
+        "matched_generated_span": "95% of human sdrs",
+        "matched_retrieved_span": "95% of human sdrs"
+      },
+      "stop_reason": "eos"
+    },
+    "repair_attempt": null,
+    "accepted_attempt": 2,
+    "rag_source_copying": {
+      "applicable": true,
+      "threshold": 12,
+      "pass": true,
+      "flagged": false,
+      "max_contiguous_words": 3,
+      "document_id": "train_176",
+      "matched_generated_span": "an ai sdr",
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 4,
+        "document_id": "train_13149",
+        "matched_generated_span": "95% of human sdrs",
+        "matched_retrieved_span": "95% of human sdrs"
+      },
+      "retry": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 3,
+        "document_id": "train_176",
+        "matched_generated_span": "an ai sdr",
+        "matched_retrieved_span": "an ai sdr"
+      },
+      "retry_occurred": true,
+      "repair_occurred": false
+    },
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [
+          "pct:95"
+        ],
+        "values": [
+          {
+            "value": "$100k",
+            "canonical": "usd:100000",
+            "sentence": "We had no sales team until $100k MRR.",
+            "start": 381,
+            "end": 386
+          },
+          {
+            "value": "$700k",
+            "canonical": "usd:700000",
+            "sentence": "Our CEO Sam Blond joined later as VP Sales at $700k MRR",
+            "start": 438,
+            "end": 443
+          },
+          {
+            "value": "95%",
+            "canonical": "pct:95",
+            "sentence": "95% of human SDRs don't even know their products anyway",
+            "start": 897,
+            "end": 900
+          },
+          {
+            "value": "500",
+            "canonical": "n:500",
+            "sentence": "He could tell his story, tell how EchoSign was used, how many Fortune 500 companies already used it",
+            "start": 1115,
+            "end": 1118
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "$100k",
+            "canonical": "usd:100000",
+            "sentence": "We had no sales team until $100k MRR.",
+            "start": 381,
+            "end": 386
+          },
+          {
+            "value": "$700k",
+            "canonical": "usd:700000",
+            "sentence": "Our CEO Sam Blond joined later as VP Sales at $700k MRR",
+            "start": 438,
+            "end": 443
+          },
+          {
+            "value": "500",
+            "canonical": "n:500",
+            "sentence": "He could tell his story, tell how EchoSign was used, how many Fortune 500 companies already used it",
+            "start": 1115,
+            "end": 1118
+          }
+        ]
+      },
+      "retry": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [
+          "pct:95"
+        ],
+        "values": [],
+        "unsupported": []
+      }
+    },
+    "prompt_tokens": 410,
+    "backend": "unsloth",
+    "retrieval": true,
+    "retrieval_query": "Dear SaaStr: Should I Use an AI SDR Before I Have a Working Human SDR motion?",
+    "retrieval_filter": null,
+    "retrieval_k": 4,
+    "retrieval_hits": [
+      {
+        "id": "train_176",
+        "text": "Dear SaaStr: I Want to Roll Out an AI SDR. How Do I Start? First, get clear on what you’re actually buying — and what it actually does. We’ve now been running AI SDRs at SaaStr for over a year. Multiple platforms. Real data. Real pipeline. And the honest answer is: it works. But it works very differently than most vendors will tell you, and the gap between a good deployment and a wasted one comes down almost entirely to how you set it up. Here’s what we actually learned. The Single Best Use Case to Start With: The Leads Your Team Is Ignoring\nThis is the insight that changed how we think about AI SDRs entirely. Your human SDRs are force-ranking in their heads every single day. They’re chasing the big deals, the warm inbound, the accounts that feel like they could close this quarter. The leads they consider “not worth it” — return event attendees, old website visitors, ghosted CRM contacts — those get nothing. Not bad follow-up. Nothing. That’s where AI SDRs absolutely shine. When we deployed AI on the leads our human team refused to work — people who had engaged with SaaStr but never got follow-up — we got a\n72% open rate\non Agentforce and generated\n15% of our London event revenue\nfrom a segment that would have produced zero without AI. Not 15% incremental lift. 15% of total revenue from leads that were producing $0. So before you start thinking about AI SDRs as a way to scale your best motion, ask yourself: what’s the motion your team isn’t running at all? Start there.",
+        "medium": "blog",
+        "group_id": "74a74b1b151211a595866c36daf4250054d34758e3734b5ca8067b9a04ef45f7",
+        "row_id": 176,
+        "split": "train",
+        "distance": 0.19439387321472168
+      },
+      {
+        "id": "train_12393",
+        "text": "If you hook up an AI SDR and go away and do nothing, you will get nothing. Zilch. Nada. Nothing. Will fail. If you hook up an AI SDR and * train it every day, * every single day, * and keep iterating on anything that works * and give yourself a month to nail it * and make sure you respond to every response it gets ASAP, not ghost prospects that actually respond * make sure the messaging is dynamic and A+, all of it * and audit and read the emails it sends every day * and watch what works and doesn’t every day * and QA the output yourself daily * and be honest is what it is outputting as good or better than a human Well then, it probably will work",
+        "medium": "linkedin",
+        "group_id": "44476fb4f7ef80d49cacbd8503357569e52f9ff4d7d9241a1e8cba31d4f762dd",
+        "row_id": 12393,
+        "split": "train",
+        "distance": 0.22433847188949585
+      },
+      {
+        "id": "train_12657",
+        "text": "\"Can AI SDRs really work for outbound?  Yes, but start with what you have:\n\n- Start with traffic on your website\n- Try lapsed customers\n- Remarket to lapsed customers\n\nUse AI for expansion.\n\nStart your AI Agent on folks in your base no one is following up with now.\"",
+        "medium": "x",
+        "group_id": "3381f520a8bd77daebd349c8ff0b4f8361aacbf810e7d1a676d835c1a7ba5e76",
+        "row_id": 12657,
+        "split": "train",
+        "distance": 0.23651981353759766
+      },
+      {
+        "id": "train_13149",
+        "text": "95% of human SDRs do not really know the product they are ‘selling’.\n\n95% of human SDRs can’t answer a tough question from a VP Eng, a CPO, a CIO, etc.\n\n95% of human SDRs have to wait until they can grab some human to help you.\n\nThis is why AI SDRs will rapidly win.\n\nThe productivity benefits are real, too.  Huge.  But the truth is, an AI SDRs is much, much better than a human one.\n\nAlmost always.",
+        "medium": "x",
+        "group_id": "c5c18f89acbd0d08f73091838c8bcaad7625e0d3777a843a7f544b8b2ddf68b5",
+        "row_id": 13149,
+        "split": "train",
+        "distance": 0.24499374628067017
+      }
+    ],
+    "copying": [
+      {
+        "id": "train_176",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_12393",
+        "shared_word_span": 3
+      },
+      {
+        "id": "train_12657",
+        "shared_word_span": 1
+      },
+      {
+        "id": "train_13149",
+        "shared_word_span": 2
+      }
+    ],
+    "retrieval_backend": "dense",
+    "proposed_atomic_claims": [
+      {
+        "source_id": "train_176",
+        "claim": "AI SDRs can work",
+        "support_span": "And the honest answer is: it works.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_176",
+        "claim": "AI SDRs work differently than human SDRs",
+        "support_span": "it works very differently than most vendors will tell you",
+        "claim_type": "comparison"
+      },
+      {
+        "source_id": "train_176",
+        "claim": "Setting up AI SDRs is crucial for their success",
+        "support_span": "the gap between a good deployment and a wasted one comes down almost entirely to how you set it up",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12393",
+        "claim": "AI SDRs require daily training and iteration for success",
+        "support_span": "* train it every day, * every single day, * and keep iterating on anything that works",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12393",
+        "claim": "Responding to responses from AI SDRs is crucial",
+        "support_span": "make sure you respond to every response it gets ASAP",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12393",
+        "claim": "Auditing and reading emails from AI SDRs is important",
+        "support_span": "audit and read the emails it sends every day",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12657",
+        "claim": "AI SDRs can work for outbound",
+        "support_span": "Yes, but start with what you have:",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12657",
+        "claim": "Starting with website traffic is a good use case for AI SDRs",
+        "support_span": "- Start with traffic on your website",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12657",
+        "claim": "Using AI SDRs for expansion is a good strategy",
+        "support_span": "Use AI for expansion.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_13149",
+        "claim": "95% of human SDRs do not know the product they are selling",
+        "support_span": "95% of human SDRs do not really know the product they are ‘selling’.",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_13149",
+        "claim": "95% of human SDRs cannot answer tough questions",
+        "support_span": "95% of human SDRs can’t answer a tough question from a VP Eng, a CPO, a CIO, etc.",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_13149",
+        "claim": "95% of human SDRs have to wait for help",
+        "support_span": "95% of human SDRs have to wait until they can grab some human to help you.",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_13149",
+        "claim": "AI SDRs are much better than human SDRs",
+        "support_span": "The truth is, an AI SDRs is much, much better than a human one.",
+        "claim_type": "comparison"
+      },
+      {
+        "source_id": "train_13149",
+        "claim": "The productivity benefits of AI SDRs are real and huge",
+        "support_span": "The productivity benefits are real, too.  Huge.",
+        "claim_type": "fact"
+      }
+    ],
+    "validation_rejected": [
+      {
+        "source_id": "train_176",
+        "claim": "AI SDRs can work",
+        "support_span": "And the honest answer is: it works.",
+        "claim_type": "fact",
+        "reason": "entity_not_in_source"
+      },
+      {
+        "source_id": "train_176",
+        "claim": "AI SDRs work differently than human SDRs",
+        "support_span": "it works very differently than most vendors will tell you",
+        "claim_type": "comparison",
+        "reason": "entity_not_in_source"
+      },
+      {
+        "source_id": "train_176",
+        "claim": "Setting up AI SDRs is crucial for their success",
+        "support_span": "the gap between a good deployment and a wasted one comes down almost entirely to how you set it up",
+        "claim_type": "fact",
+        "reason": "entity_not_in_source"
+      },
+      {
+        "source_id": "train_12393",
+        "claim": "AI SDRs require daily training and iteration for success",
+        "support_span": "* train it every day, * every single day, * and keep iterating on anything that works",
+        "claim_type": "fact",
+        "reason": "entity_not_in_source"
+      },
+      {
+        "source_id": "train_12393",
+        "claim": "Responding to responses from AI SDRs is crucial",
+        "support_span": "make sure you respond to every response it gets ASAP",
+        "claim_type": "fact",
+        "reason": "entity_not_in_source"
+      },
+      {
+        "source_id": "train_12393",
+        "claim": "Auditing and reading emails from AI SDRs is important",
+        "support_span": "audit and read the emails it sends every day",
+        "claim_type": "fact",
+        "reason": "entity_not_in_source"
+      },
+      {
+        "source_id": "train_12657",
+        "claim": "AI SDRs can work for outbound",
+        "support_span": "Yes, but start with what you have:",
+        "claim_type": "fact",
+        "reason": "entity_not_in_source"
+      },
+      {
+        "source_id": "train_12657",
+        "claim": "Starting with website traffic is a good use case for AI SDRs",
+        "support_span": "- Start with traffic on your website",
+        "claim_type": "fact",
+        "reason": "entity_not_in_source"
+      },
+      {
+        "source_id": "train_12657",
+        "claim": "Using AI SDRs for expansion is a good strategy",
+        "support_span": "Use AI for expansion.",
+        "claim_type": "fact",
+        "reason": "entity_not_in_source"
+      },
+      {
+        "source_id": "train_13149",
+        "claim": "The productivity benefits of AI SDRs are real and huge",
+        "support_span": "The productivity benefits are real, too.  Huge.",
+        "claim_type": "fact",
+        "reason": "entity_not_in_source"
+      }
+    ],
+    "verifier_rejected": [],
+    "verified_claims": [
+      {
+        "source_id": "train_13149",
+        "claim": "95% of human SDRs do not know the product they are selling",
+        "support_span": "95% of human SDRs do not really know the product they are ‘selling’.",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_13149",
+        "claim": "95% of human SDRs cannot answer tough questions",
+        "support_span": "95% of human SDRs can’t answer a tough question from a VP Eng, a CPO, a CIO, etc.",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_13149",
+        "claim": "95% of human SDRs have to wait for help",
+        "support_span": "95% of human SDRs have to wait until they can grab some human to help you.",
+        "claim_type": "number"
+      },
+      {
+        "source_id": "train_13149",
+        "claim": "AI SDRs are much better than human SDRs",
+        "support_span": "The truth is, an AI SDRs is much, much better than a human one.",
+        "claim_type": "comparison"
+      }
+    ],
+    "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] 95% of human SDRs do not know the product they are selling\n[E2] 95% of human SDRs cannot answer tough questions\n[E3] 95% of human SDRs have to wait for help\n[E4] AI SDRs are much better than human SDRs",
+    "raw_extraction": "[\n  {\n    \"source_id\": \"train_176\",\n    \"claim\": \"AI SDRs can work\",\n    \"support_span\": \"And the honest answer is: it works.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_176\",\n    \"claim\": \"AI SDRs work differently than human SDRs\",\n    \"support_span\": \"it works very differently than most vendors will tell you\",\n    \"claim_type\": \"comparison\"\n  },\n  {\n    \"source_id\": \"train_176\",\n    \"claim\": \"Setting up AI SDRs is crucial for their success\",\n    \"support_span\": \"the gap between a good deployment and a wasted one comes down almost entirely to how you set it up\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_12393\",\n    \"claim\": \"AI SDRs require daily training and iteration for success\",\n    \"support_span\": \"* train it every day, * every single day, * and keep iterating on anything that works\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_12393\",\n    \"claim\": \"Responding to responses from AI SDRs is crucial\",\n    \"support_span\": \"make sure you respond to every response it gets ASAP\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_12393\",\n    \"claim\": \"Auditing and reading emails from AI SDRs is important\",\n    \"support_span\": \"audit and read the emails it sends every day\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_12657\",\n    \"claim\": \"AI SDRs can work for outbound\",\n    \"support_span\": \"Yes, but start with what you have:\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_12657\",\n    \"claim\": \"Starting with website traffic is a good use case for AI SDRs\",\n    \"support_span\": \"- Start with traffic on your website\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_12657\",\n    \"claim\": \"Using AI SDRs for expansion is a good strategy\",\n    \"support_span\": \"Use AI for expansion.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_13149\",\n    \"claim\": \"95% of human SDRs do not know the product they are selling\",\n    \"support_span\": \"95% of human SDRs do not really know the product they are ‘selling’.\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_13149\",\n    \"claim\": \"95% of human SDRs cannot answer tough questions\",\n    \"support_span\": \"95% of human SDRs can’t answer a tough question from a VP Eng, a CPO, a CIO, etc.\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_13149\",\n    \"claim\": \"95% of human SDRs have to wait for help\",\n    \"support_span\": \"95% of human SDRs have to wait until they can grab some human to help you.\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_13149\",\n    \"claim\": \"AI SDRs are much better than human SDRs\",\n    \"support_span\": \"The truth is, an AI SDRs is much, much better than a human one.\",\n    \"claim_type\": \"comparison\"\n  },\n  {\n    \"source_id\": \"train_13149\",\n    \"claim\": \"The productivity benefits of AI SDRs are real and huge\",\n    \"support_span\": \"The productivity benefits are real, too.  Huge.\",\n    \"claim_type\": \"fact\"\n  }\n]",
+    "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Dear SaaStr: Should I Use an AI SDR Before I Have a Working Human SDR motion?\n\nSource passages:\n[train_176]\nDear SaaStr: I Want to Roll Out an AI SDR. How Do I Start? First, get clear on what you’re actually buying — and what it actually does. We’ve now been running AI SDRs at SaaStr for over a year. Multiple platforms. Real data. Real pipeline. And the honest answer is: it works. But it works very differently than most vendors will tell you, and the gap between a good deployment and a wasted one comes down almost entirely to how you set it up. Here’s what we actually learned. The Single Best Use Case to Start With: The Leads Your Team Is Ignoring\nThis is the insight that changed how we think about AI SDRs entirely. Your human SDRs are force-ranking in their heads every single day. They’re chasing the big deals, the warm inbound, the accounts that feel like they could close this quarter. The leads they consider “not worth it” — return event attendees, old website visitors, ghosted CRM contacts — those get nothing. Not bad follow-up. Nothing. That’s where AI SDRs absolutely shine. When we deployed AI on the leads our human team refused to work — people who had engaged with SaaStr but never got follow-up — we got a\n72% open rate\non Agentforce and generated\n15% of our London event revenue\nfrom a segment that would have produced zero without AI. Not 15% incremental lift. 15% of total revenue from leads that were producing $0. So before you start thinking about AI SDRs as a way to scale your best motion, ask yourself: what’s the motion your team isn’t running at all? Start there.\n\n[train_12393]\nIf you hook up an AI SDR and go away and do nothing, you will get nothing. Zilch. Nada. Nothing. Will fail. If you hook up an AI SDR and * train it every day, * every single day, * and keep iterating on anything that works * and give yourself a month to nail it * and make sure you respond to every response it gets ASAP, not ghost prospects that actually respond * make sure the messaging is dynamic and A+, all of it * and audit and read the emails it sends every day * and watch what works and doesn’t every day * and QA the output yourself daily * and be honest is what it is outputting as good or better than a human Well then, it probably will work\n\n[train_12657]\n\"Can AI SDRs really work for outbound?  Yes, but start with what you have:\n\n- Start with traffic on your website\n- Try lapsed customers\n- Remarket to lapsed customers\n\nUse AI for expansion.\n\nStart your AI Agent on folks in your base no one is following up with now.\"\n\n[train_13149]\n95% of human SDRs do not really know the product they are ‘selling’.\n\n95% of human SDRs can’t answer a tough question from a VP Eng, a CPO, a CIO, etc.\n\n95% of human SDRs have to wait until they can grab some human to help you.\n\nThis is why AI SDRs will rapidly win.\n\nThe productivity benefits are real, too.  Huge.  But the truth is, an AI SDRs is much, much better than a human one.\n\nAlmost always.",
+    "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Dear SaaStr: Should I Use an AI SDR Before I Have a Working Human SDR motion?\n\nSource passages:\n[train_176]\nDear SaaStr: I Want to Roll Out an AI SDR. How Do I Start? First, get clear on what you’re actually buying — and what it actually does. We’ve now been running AI SDRs at SaaStr for over a year. Multiple platforms. Real data. Real pipeline. And the honest answer is: it works. But it works very differently than most vendors will tell you, and the gap between a good deployment and a wasted one comes down almost entirely to how you set it up. Here’s what we actually learned. The Single Best Use Case to Start With: The Leads Your Team Is Ignoring\nThis is the insight that changed how we think about AI SDRs entirely. Your human SDRs are force-ranking in their heads every single day. They’re chasing the big deals, the warm inbound, the accounts that feel like they could close this quarter. The leads they consider “not worth it” — return event attendees, old website visitors, ghosted CRM contacts — those get nothing. Not bad follow-up. Nothing. That’s where AI SDRs absolutely shine. When we deployed AI on the leads our human team refused to work — people who had engaged with SaaStr but never got follow-up — we got a\n72% open rate\non Agentforce and generated\n15% of our London event revenue\nfrom a segment that would have produced zero without AI. Not 15% incremental lift. 15% of total revenue from leads that were producing $0. So before you start thinking about AI SDRs as a way to scale your best motion, ask yourself: what’s the motion your team isn’t running at all? Start there.\n\n[train_12393]\nIf you hook up an AI SDR and go away and do nothing, you will get nothing. Zilch. Nada. Nothing. Will fail. If you hook up an AI SDR and * train it every day, * every single day, * and keep iterating on anything that works * and give yourself a month to nail it * and make sure you respond to every response it gets ASAP, not ghost prospects that actually respond * make sure the messaging is dynamic and A+, all of it * and audit and read the emails it sends every day * and watch what works and doesn’t every day * and QA the output yourself daily * and be honest is what it is outputting as good or better than a human Well then, it probably will work\n\n[train_12657]\n\"Can AI SDRs really work for outbound?  Yes, but start with what you have:\n\n- Start with traffic on your website\n- Try lapsed customers\n- Remarket to lapsed customers\n\nUse AI for expansion.\n\nStart your AI Agent on folks in your base no one is following up with now.\"\n\n[train_13149]\n95% of human SDRs do not really know the product they are ‘selling’.\n\n95% of human SDRs can’t answer a tough question from a VP Eng, a CPO, a CIO, etc.\n\n95% of human SDRs have to wait until they can grab some human to help you.\n\nThis is why AI SDRs will rapidly win.\n\nThe productivity benefits are real, too.  Huge.  But the truth is, an AI SDRs is much, much better than a human one.\n\nAlmost always.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "extraction_seconds": 22.142,
+    "verification_seconds": 0.0,
+    "verification_records": [],
+    "llm_verifier_on_critical_path": false,
+    "allowed_numeric_values": [
+      "pct:95"
+    ],
+    "distillation_adapter_enabled": false,
+    "verification_adapter_enabled": false,
+    "distillation_backend": "same_loaded_4bit_base_adapter_off",
+    "distillation_do_sample": false,
+    "extraction_max_new_tokens": 2560,
+    "verification_max_new_tokens": 24,
+    "distillation_seed": 0,
+    "support_spans_in_generator_prompt": false,
+    "evidence_stage_reason": null,
+    "evidence_status": "verified",
+    "extraction_attempts": 1,
+    "extraction_stop_reason": "eos",
+    "prompt_contract": "factual-reliability-v1",
+    "fixed_style_enabled": false,
+    "style_applied": false,
+    "style_exemplar_count": 0,
+    "latency_seconds": 41.325,
+    "generated_tokens_including_stop": 768,
+    "last_token_id": 4103,
+    "effective_eos_token_ids": [
+      128001,
+      128008,
+      128009
+    ],
+    "stop_reason": "length",
+    "budget_fraction": 1.0,
+    "early_eos": false,
+    "first_attempt_stop_reason": "eos",
+    "retry_stop_reason": "length"
+  }
+}

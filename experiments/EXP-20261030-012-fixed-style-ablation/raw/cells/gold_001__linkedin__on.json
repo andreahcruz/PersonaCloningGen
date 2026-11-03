@@ -1,0 +1,394 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "topic_id": "gold_001",
+  "medium": "linkedin",
+  "arm": "on",
+  "seed": 43,
+  "attempts": 1,
+  "evidence_sha256": "de09ee7567190052607f3ac3abb9b15d23ea437cdb6e2a1ea0a05ff626495a38",
+  "retrieval_hit_ids": [
+    "train_20783",
+    "train_26362",
+    "train_21878",
+    "train_25912"
+  ],
+  "retrieval_query": "Can an 8-Person StartUp Sell to a CIO? Yes — If You Understand The Social Contract.",
+  "retrieval_filter": null,
+  "style_applied": true,
+  "style_in_prompt": true,
+  "prompt_tokens": 623,
+  "generated_tokens_including_stop": 320,
+  "latency_seconds": 23.319,
+  "exemplar_ids": [
+    11552,
+    11554
+  ],
+  "saved_at": "2026-10-30T09:15:22.272914+00:00",
+  "trace": {
+    "id": "gold_001",
+    "format": "linkedin_post",
+    "topic": "Can an 8-Person StartUp Sell to a CIO? Yes — If You Understand The Social Contract.",
+    "audience": "B2B SaaS founders and operators",
+    "goal": "Teach one concrete operator lesson with specific examples and conviction.",
+    "cta": "none",
+    "k": 8,
+    "expected_facts": [
+      "Early-stage startups can sell to CIOs if the value is differentiated and the risk to the buyer is contained.",
+      "CIO trust matters more than polish on day one; founders need credibility, responsiveness, and a plan to close gaps.",
+      "Founders should not try to bypass enterprise constraints entirely; they should frame the relationship as a pragmatic pilot with clear ROI."
+    ],
+    "rubric_must_haves": [
+      "States a clear thesis early.",
+      "Explains why trust and buyer risk matter in enterprise sales.",
+      "Includes at least one concrete example, scenario, or metric.",
+      "Sounds like direct operator advice rather than generic enterprise-sales theory."
+    ],
+    "gold_reference": "A strong answer argues that even a tiny SaaS team can sell to a CIO, but only when the founder understands the buyer's social contract: do not create career risk, be honest about what is missing, show fast ROI, and build trust directly. The piece should emphasize that CIOs can back startups when the upside is meaningful and the initial blast radius is small.",
+    "medium": "linkedin",
+    "prompt": "Write a LinkedIn post in the style of Jason Lemkin about: Can an 8-Person StartUp Sell to a CIO? Yes — If You Understand The Social Contract.\n\nStyle examples from train-owned source text.\nUse them for voice only. They are not evidence for claims.\nDo not copy long passages verbatim.\n[Style 1]\nA truly great human is still better than any AI agent at most complex, judgment-intensive work. Full stop. If you can find and keep exceptional people, do it. But here’s the honest truth: most hires aren’t great hires. A lot of folks don't want to discuss it, or want to challenge it. But deploying a great AI Agent is just easier, and less stressful, than making a mediocre hire. This is why 2027 will be brutal for tech employment. We'll default to picking an AI Agent over a human for many \"hires\" because it's just ... easier.\n[Style 2]\nI know so many CROs and VPs of Sales that used to be truly great ... And are just burnt now. Fried. Some tried to mask it by hiring CROs and VPs under them to do the work. And sometimes, that does work. But man sales isn't easy. Each month, each quarter, it's a new battle. It's epic but also can take its toll. Just make sure when you hire one with the perfect LinkedIn ... that they really, truly can go into battle again. Not just talk the talk. And share great stories, of epic battles past.\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] CIOs of Workday, DISH, and BDP were present at DEMO '13.\n\nNow write the requested LinkedIn post about: Can an 8-Person StartUp Sell to a CIO? Yes — If You Understand The Social Contract.",
+    "rendered_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nWrite a LinkedIn post in the style of Jason Lemkin about: Can an 8-Person StartUp Sell to a CIO? Yes — If You Understand The Social Contract.\n\nStyle examples from train-owned source text.\nUse them for voice only. They are not evidence for claims.\nDo not copy long passages verbatim.\n[Style 1]\nA truly great human is still better than any AI agent at most complex, judgment-intensive work. Full stop. If you can find and keep exceptional people, do it. But here’s the honest truth: most hires aren’t great hires. A lot of folks don't want to discuss it, or want to challenge it. But deploying a great AI Agent is just easier, and less stressful, than making a mediocre hire. This is why 2027 will be brutal for tech employment. We'll default to picking an AI Agent over a human for many \"hires\" because it's just ... easier.\n[Style 2]\nI know so many CROs and VPs of Sales that used to be truly great ... And are just burnt now. Fried. Some tried to mask it by hiring CROs and VPs under them to do the work. And sometimes, that does work. But man sales isn't easy. Each month, each quarter, it's a new battle. It's epic but also can take its toll. Just make sure when you hire one with the perfect LinkedIn ... that they really, truly can go into battle again. Not just talk the talk. And share great stories, of epic battles past.\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] CIOs of Workday, DISH, and BDP were present at DEMO '13.\n\nNow write the requested LinkedIn post about: Can an 8-Person StartUp Sell to a CIO? Yes — If You Understand The Social Contract.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "answer": "Can an 8-Person StartUp Sell to a CIO? Yes — If You Understand The Social Contract In SaaS, we've all heard some version of this: “We're too small” … “We don't have enterprise features”… “We haven't had our SOC-2 yet”… “This deal is too big.” I get it. Enterprise sales seem like they would be way beyond your reach if you’re building something lean. But trust me, these barriers are mostly illusions. I’ve seen multiple companies sell their first $50M+ deals before hitting $10m in revenue. Their secret? Understanding what customers mean by “enterprise software”. The Real Definition of Enterprise Software What makes software “enterprise”? At its core, it means being able to deliver confidence. That’s it. When a buyer at a Fortune 500 company signs off on your solution, they need to feel confident that you won’t disappear tomorrow. They need to know their data will stay safe, their processes will integrate seamlessly, and you’ll be around to support them through whatever challenges come next. These buyers use phrases like “social contract”, which sounds fancy but essentially means they’re looking for someone who will treat them well during the relationship, and then stick around after the sale closes. Let’s break down the social contract between vendors and enterprises: Trust: The Foundation Everything else builds on top of this. Enterprises expect transparency in how you operate—your financial health, security posture, compliance credentials. Your website should clearly state your vision, leadership team, investors, and technology stack. Don’t hide",
+    "raw_model_output": "Can an 8-Person StartUp Sell to a CIO? Yes — If You Understand The Social Contract In SaaS, we've all heard some version of this: “We're too small” … “We don't have enterprise features”… “We haven't had our SOC-2 yet”… “This deal is too big.” I get it. Enterprise sales seem like they would be way beyond your reach if you’re building something lean. But trust me, these barriers are mostly illusions. I’ve seen multiple companies sell their first $50M+ deals before hitting $10m in revenue. Their secret? Understanding what customers mean by “enterprise software”. The Real Definition of Enterprise Software What makes software “enterprise”? At its core, it means being able to deliver confidence. That’s it. When a buyer at a Fortune 500 company signs off on your solution, they need to feel confident that you won’t disappear tomorrow. They need to know their data will stay safe, their processes will integrate seamlessly, and you’ll be around to support them through whatever challenges come next. These buyers use phrases like “social contract”, which sounds fancy but essentially means they’re looking for someone who will treat them well during the relationship, and then stick around after the sale closes. Let’s break down the social contract between vendors and enterprises: Trust: The Foundation Everything else builds on top of this. Enterprises expect transparency in how you operate—your financial health, security posture, compliance credentials. Your website should clearly state your vision, leadership team, investors, and technology stack. Don’t hide",
+    "deployment_output": "Can an 8-Person StartUp Sell to a CIO? Yes — If You Understand The Social Contract In SaaS, we've all heard some version of this: “We're too small” … “We don't have enterprise features”… “We haven't had our SOC-2 yet”… “This deal is too big.” I get it. Enterprise sales seem like they would be way beyond your reach if you’re building something lean. But trust me, these barriers are mostly illusions. I’ve seen multiple companies sell their first $50M+ deals before hitting $10m in revenue. Their secret? Understanding what customers mean by “enterprise software”. The Real Definition of Enterprise Software What makes software “enterprise”? At its core, it means being able to deliver confidence. That’s it. When a buyer at a Fortune 500 company signs off on your solution, they need to feel confident that you won’t disappear tomorrow. They need to know their data will stay safe, their processes will integrate seamlessly, and you’ll be around to support them through whatever challenges come next. These buyers use phrases like “social contract”, which sounds fancy but essentially means they’re looking for someone who will treat them well during the relationship, and then stick around after the sale closes. Let’s break down the social contract between vendors and enterprises: Trust: The Foundation Everything else builds on top of this. Enterprises expect transparency in how you operate—your financial health, security posture, compliance credentials. Your website should clearly state your vision, leadership team, investors, and technology stack. Don’t hide",
+    "first_attempt_answer": "Can an 8-Person StartUp Sell to a CIO? Yes — If You Understand The Social Contract In SaaS, we've all heard some version of this: “We're too small” … “We don't have enterprise features”… “We haven't had our SOC-2 yet”… “This deal is too big.” I get it. Enterprise sales seem like they would be way beyond your reach if you’re building something lean. But trust me, these barriers are mostly illusions. I’ve seen multiple companies sell their first $50M+ deals before hitting $10m in revenue. Their secret? Understanding what customers mean by “enterprise software”. The Real Definition of Enterprise Software What makes software “enterprise”? At its core, it means being able to deliver confidence. That’s it. When a buyer at a Fortune 500 company signs off on your solution, they need to feel confident that you won’t disappear tomorrow. They need to know their data will stay safe, their processes will integrate seamlessly, and you’ll be around to support them through whatever challenges come next. These buyers use phrases like “social contract”, which sounds fancy but essentially means they’re looking for someone who will treat them well during the relationship, and then stick around after the sale closes. Let’s break down the social contract between vendors and enterprises: Trust: The Foundation Everything else builds on top of this. Enterprises expect transparency in how you operate—your financial health, security posture, compliance credentials. Your website should clearly state your vision, leadership team, investors, and technology stack. Don’t hide",
+    "retry_answer": null,
+    "query": "Can an 8-Person StartUp Sell to a CIO? Yes — If You Understand The Social Contract.",
+    "max_new_tokens": 320,
+    "seed": 43,
+    "retry_seed": null,
+    "deployment_accepted": true,
+    "repair_occurred": false,
+    "generation_attempt": {
+      "seed": 43,
+      "answer": "Can an 8-Person StartUp Sell to a CIO? Yes — If You Understand The Social Contract In SaaS, we've all heard some version of this: “We're too small” … “We don't have enterprise features”… “We haven't had our SOC-2 yet”… “This deal is too big.” I get it. Enterprise sales seem like they would be way beyond your reach if you’re building something lean. But trust me, these barriers are mostly illusions. I’ve seen multiple companies sell their first $50M+ deals before hitting $10m in revenue. Their secret? Understanding what customers mean by “enterprise software”. The Real Definition of Enterprise Software What makes software “enterprise”? At its core, it means being able to deliver confidence. That’s it. When a buyer at a Fortune 500 company signs off on your solution, they need to feel confident that you won’t disappear tomorrow. They need to know their data will stay safe, their processes will integrate seamlessly, and you’ll be around to support them through whatever challenges come next. These buyers use phrases like “social contract”, which sounds fancy but essentially means they’re looking for someone who will treat them well during the relationship, and then stick around after the sale closes. Let’s break down the social contract between vendors and enterprises: Trust: The Foundation Everything else builds on top of this. Enterprises expect transparency in how you operate—your financial health, security posture, compliance credentials. Your website should clearly state your vision, leadership team, investors, and technology stack. Don’t hide",
+      "numeric_grounding": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [],
+        "values": [
+          {
+            "value": "$50M+",
+            "canonical": "usd:50000000",
+            "sentence": "I’ve seen multiple companies sell their first $50M+ deals before hitting $10m in revenue",
+            "start": 448,
+            "end": 453
+          },
+          {
+            "value": "$10m",
+            "canonical": "usd:10000000",
+            "sentence": "I’ve seen multiple companies sell their first $50M+ deals before hitting $10m in revenue",
+            "start": 475,
+            "end": 479
+          },
+          {
+            "value": "500",
+            "canonical": "n:500",
+            "sentence": "When a buyer at a Fortune 500 company signs off on your solution, they need to feel confident that you won’t disappear tomorrow",
+            "start": 736,
+            "end": 739
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "$50M+",
+            "canonical": "usd:50000000",
+            "sentence": "I’ve seen multiple companies sell their first $50M+ deals before hitting $10m in revenue",
+            "start": 448,
+            "end": 453
+          },
+          {
+            "value": "$10m",
+            "canonical": "usd:10000000",
+            "sentence": "I’ve seen multiple companies sell their first $50M+ deals before hitting $10m in revenue",
+            "start": 475,
+            "end": 479
+          },
+          {
+            "value": "500",
+            "canonical": "n:500",
+            "sentence": "When a buyer at a Fortune 500 company signs off on your solution, they need to feel confident that you won’t disappear tomorrow",
+            "start": 736,
+            "end": 739
+          }
+        ]
+      },
+      "rag_source_copying": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 2,
+        "document_id": "train_20783",
+        "matched_generated_span": "to a",
+        "matched_retrieved_span": "to a"
+      },
+      "stop_reason": "length"
+    },
+    "repair_attempt": null,
+    "accepted_attempt": 1,
+    "rag_source_copying": {
+      "applicable": true,
+      "threshold": 12,
+      "pass": true,
+      "flagged": false,
+      "max_contiguous_words": 2,
+      "document_id": "train_20783",
+      "matched_generated_span": "to a",
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 2,
+        "document_id": "train_20783",
+        "matched_generated_span": "to a",
+        "matched_retrieved_span": "to a"
+      },
+      "retry": null,
+      "retry_occurred": false,
+      "repair_occurred": false
+    },
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": false,
+      "failure": "unsupported_numeric_grounding",
+      "unsupported": [
+        {
+          "value": "$50M+",
+          "canonical": "usd:50000000",
+          "sentence": "I’ve seen multiple companies sell their first $50M+ deals before hitting $10m in revenue",
+          "start": 448,
+          "end": 453
+        },
+        {
+          "value": "$10m",
+          "canonical": "usd:10000000",
+          "sentence": "I’ve seen multiple companies sell their first $50M+ deals before hitting $10m in revenue",
+          "start": 475,
+          "end": 479
+        },
+        {
+          "value": "500",
+          "canonical": "n:500",
+          "sentence": "When a buyer at a Fortune 500 company signs off on your solution, they need to feel confident that you won’t disappear tomorrow",
+          "start": 736,
+          "end": 739
+        }
+      ],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [],
+        "values": [
+          {
+            "value": "$50M+",
+            "canonical": "usd:50000000",
+            "sentence": "I’ve seen multiple companies sell their first $50M+ deals before hitting $10m in revenue",
+            "start": 448,
+            "end": 453
+          },
+          {
+            "value": "$10m",
+            "canonical": "usd:10000000",
+            "sentence": "I’ve seen multiple companies sell their first $50M+ deals before hitting $10m in revenue",
+            "start": 475,
+            "end": 479
+          },
+          {
+            "value": "500",
+            "canonical": "n:500",
+            "sentence": "When a buyer at a Fortune 500 company signs off on your solution, they need to feel confident that you won’t disappear tomorrow",
+            "start": 736,
+            "end": 739
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "$50M+",
+            "canonical": "usd:50000000",
+            "sentence": "I’ve seen multiple companies sell their first $50M+ deals before hitting $10m in revenue",
+            "start": 448,
+            "end": 453
+          },
+          {
+            "value": "$10m",
+            "canonical": "usd:10000000",
+            "sentence": "I’ve seen multiple companies sell their first $50M+ deals before hitting $10m in revenue",
+            "start": 475,
+            "end": 479
+          },
+          {
+            "value": "500",
+            "canonical": "n:500",
+            "sentence": "When a buyer at a Fortune 500 company signs off on your solution, they need to feel confident that you won’t disappear tomorrow",
+            "start": 736,
+            "end": 739
+          }
+        ]
+      },
+      "retry": null
+    },
+    "prompt_tokens": 623,
+    "backend": "unsloth",
+    "retrieval": true,
+    "retrieval_query": "Can an 8-Person StartUp Sell to a CIO? Yes — If You Understand The Social Contract.",
+    "retrieval_filter": null,
+    "retrieval_k": 4,
+    "retrieval_hits": [
+      {
+        "id": "train_20783",
+        "text": "What is the process of selling SaaS to a big corporation as a small startup? What are the usual purchasing guid... \nhttp://saastr.com/process-selling-saas-big-corporation-small-startup-usual-purchasing-guidelines-manager-convinced-wants-buy-certain-service-team/\n…",
+        "medium": "x",
+        "group_id": "96862fb2c19735fe49517f078115699d2997d623d776aa5705b1cb8de3ae09d3",
+        "row_id": 20783,
+        "split": "train",
+        "distance": 0.3080511689186096
+      },
+      {
+        "id": "train_26362",
+        "text": "My answer to Why do founders of startups refuse to sell them for hundreds of millions of dollars? \nhttp://qr.ae/1wi01",
+        "medium": "x",
+        "group_id": "0ea99f20dd53c111f55edc0ba275080dfc7e08aca0fe3e936336148b85abccdd",
+        "row_id": 26362,
+        "split": "train",
+        "distance": 0.30929994583129883
+      },
+      {
+        "id": "train_21878",
+        "text": "Best of:  With CIOs of Workday, DISH, and BDP on How Startups Can Sell to the Enterprise at DEMO ’13 \nhttp://saastr.com/with-cios-of-workday-dish-and-bdp-on-how-startups-can-sell-to-the-enterprise-at-demo-13/\n…",
+        "medium": "x",
+        "group_id": "796048a4ece6d5a632a8eeafa26781565b711722b823a3e882d22feddeb73385",
+        "row_id": 21878,
+        "split": "train",
+        "distance": 0.315865159034729
+      },
+      {
+        "id": "train_25912",
+        "text": "My answer to If a startup is in a $10-40 million market, will anyone fund it? \nhttp://qr.ae/yi1vg",
+        "medium": "x",
+        "group_id": "b278184c6e1df285e0d1f04249aa40008d9c68915af040f37967c02d80cb906c",
+        "row_id": 25912,
+        "split": "train",
+        "distance": 0.3237498998641968
+      }
+    ],
+    "copying": [
+      {
+        "id": "train_20783",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_26362",
+        "shared_word_span": 1
+      },
+      {
+        "id": "train_21878",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_25912",
+        "shared_word_span": 1
+      }
+    ],
+    "retrieval_backend": "dense",
+    "proposed_atomic_claims": [
+      {
+        "source_id": "train_20783",
+        "claim": "There is a process for selling SaaS to a big corporation as a small startup.",
+        "support_span": "What is the process of selling SaaS to a big corporation as a small startup?",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_26362",
+        "claim": "Founders of startups refuse to sell them for hundreds of millions of dollars.",
+        "support_span": "Why do founders of startups refuse to sell them for hundreds of millions of dollars?",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_21878",
+        "claim": "CIOs of Workday, DISH, and BDP were present at DEMO '13.",
+        "support_span": "With CIOs of Workday, DISH, and BDP on How Startups Can Sell to the Enterprise at DEMO '13",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_25912",
+        "claim": "Startups in a $10-40 million market may be funded.",
+        "support_span": "If a startup is in a $10-40 million market, will anyone fund it?",
+        "claim_type": "fact"
+      }
+    ],
+    "validation_rejected": [
+      {
+        "source_id": "train_20783",
+        "claim": "There is a process for selling SaaS to a big corporation as a small startup.",
+        "support_span": "What is the process of selling SaaS to a big corporation as a small startup?",
+        "claim_type": "fact",
+        "reason": "interrogative_assertion"
+      },
+      {
+        "source_id": "train_26362",
+        "claim": "Founders of startups refuse to sell them for hundreds of millions of dollars.",
+        "support_span": "Why do founders of startups refuse to sell them for hundreds of millions of dollars?",
+        "claim_type": "fact",
+        "reason": "interrogative_assertion"
+      },
+      {
+        "source_id": "train_25912",
+        "claim": "Startups in a $10-40 million market may be funded.",
+        "support_span": "If a startup is in a $10-40 million market, will anyone fund it?",
+        "claim_type": "fact",
+        "reason": "interrogative_assertion"
+      }
+    ],
+    "verifier_rejected": [],
+    "verified_claims": [
+      {
+        "source_id": "train_21878",
+        "claim": "CIOs of Workday, DISH, and BDP were present at DEMO '13.",
+        "support_span": "With CIOs of Workday, DISH, and BDP on How Startups Can Sell to the Enterprise at DEMO '13",
+        "claim_type": "fact"
+      }
+    ],
+    "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] CIOs of Workday, DISH, and BDP were present at DEMO '13.",
+    "raw_extraction": "[\n  {\n    \"source_id\": \"train_20783\",\n    \"claim\": \"There is a process for selling SaaS to a big corporation as a small startup.\",\n    \"support_span\": \"What is the process of selling SaaS to a big corporation as a small startup?\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_26362\",\n    \"claim\": \"Founders of startups refuse to sell them for hundreds of millions of dollars.\",\n    \"support_span\": \"Why do founders of startups refuse to sell them for hundreds of millions of dollars?\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_21878\",\n    \"claim\": \"CIOs of Workday, DISH, and BDP were present at DEMO '13.\",\n    \"support_span\": \"With CIOs of Workday, DISH, and BDP on How Startups Can Sell to the Enterprise at DEMO '13\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_25912\",\n    \"claim\": \"Startups in a $10-40 million market may be funded.\",\n    \"support_span\": \"If a startup is in a $10-40 million market, will anyone fund it?\",\n    \"claim_type\": \"fact\"\n  }\n]",
+    "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Can an 8-Person StartUp Sell to a CIO? Yes — If You Understand The Social Contract.\n\nSource passages:\n[train_20783]\nWhat is the process of selling SaaS to a big corporation as a small startup? What are the usual purchasing guid... \nhttp://saastr.com/process-selling-saas-big-corporation-small-startup-usual-purchasing-guidelines-manager-convinced-wants-buy-certain-service-team/\n…\n\n[train_26362]\nMy answer to Why do founders of startups refuse to sell them for hundreds of millions of dollars? \nhttp://qr.ae/1wi01\n\n[train_21878]\nBest of:  With CIOs of Workday, DISH, and BDP on How Startups Can Sell to the Enterprise at DEMO ’13 \nhttp://saastr.com/with-cios-of-workday-dish-and-bdp-on-how-startups-can-sell-to-the-enterprise-at-demo-13/\n…\n\n[train_25912]\nMy answer to If a startup is in a $10-40 million market, will anyone fund it? \nhttp://qr.ae/yi1vg",
+    "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Can an 8-Person StartUp Sell to a CIO? Yes — If You Understand The Social Contract.\n\nSource passages:\n[train_20783]\nWhat is the process of selling SaaS to a big corporation as a small startup? What are the usual purchasing guid... \nhttp://saastr.com/process-selling-saas-big-corporation-small-startup-usual-purchasing-guidelines-manager-convinced-wants-buy-certain-service-team/\n…\n\n[train_26362]\nMy answer to Why do founders of startups refuse to sell them for hundreds of millions of dollars? \nhttp://qr.ae/1wi01\n\n[train_21878]\nBest of:  With CIOs of Workday, DISH, and BDP on How Startups Can Sell to the Enterprise at DEMO ’13 \nhttp://saastr.com/with-cios-of-workday-dish-and-bdp-on-how-startups-can-sell-to-the-enterprise-at-demo-13/\n…\n\n[train_25912]\nMy answer to If a startup is in a $10-40 million market, will anyone fund it? \nhttp://qr.ae/yi1vg<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "extraction_seconds": 9.305,
+    "verification_seconds": 0.0,
+    "verification_records": [],
+    "llm_verifier_on_critical_path": false,
+    "allowed_numeric_values": [],
+    "distillation_adapter_enabled": false,
+    "verification_adapter_enabled": false,
+    "distillation_backend": "same_loaded_4bit_base_adapter_off",
+    "distillation_do_sample": false,
+    "extraction_max_new_tokens": 2560,
+    "verification_max_new_tokens": 24,
+    "distillation_seed": 0,
+    "support_spans_in_generator_prompt": false,
+    "evidence_stage_reason": null,
+    "evidence_status": "verified",
+    "extraction_attempts": 1,
+    "extraction_stop_reason": "eos",
+    "prompt_contract": "factual-reliability-v1",
+    "fixed_style_enabled": true,
+    "style_applied": true,
+    "style_exemplar_count": 2,
+    "latency_seconds": 23.319,
+    "generated_tokens_including_stop": 320,
+    "last_token_id": 10477,
+    "effective_eos_token_ids": [
+      128001,
+      128008,
+      128009
+    ],
+    "stop_reason": "length",
+    "budget_fraction": 1.0,
+    "early_eos": false,
+    "first_attempt_stop_reason": "length",
+    "retry_stop_reason": null
+  }
+}

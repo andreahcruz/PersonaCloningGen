@@ -1,0 +1,64 @@
+{
+  "role": "descriptive_error_analysis",
+  "used_for_scoring": false,
+  "excluded_from_scoring": false,
+  "reweighted": false,
+  "gold_030": {
+    "question_id": "gold_030",
+    "evidence_status": "extraction_failed",
+    "accepted_claims": 0,
+    "extraction_input_truncated": false,
+    "omitted_hit": "gd_66bbfcd9b1f8b6bca75fe3f6",
+    "note": "Zero accepted claims. The four saved drafts stay in the 120-row panel."
+  },
+  "omission_events": [
+    {
+      "kind": "whole_passage",
+      "question_id": "gold_003",
+      "omitted_hit": "gd_cbce5e6622c8c301403e5d87",
+      "extraction_prompt_tokens": 1607,
+      "extraction_input_truncated": false
+    },
+    {
+      "kind": "whole_passage",
+      "question_id": "gold_006",
+      "omitted_hit": "gd_7de8c212e9b23d9cc687dadc",
+      "extraction_prompt_tokens": 1635,
+      "extraction_input_truncated": false
+    },
+    {
+      "kind": "whole_passage",
+      "question_id": "gold_012",
+      "omitted_hit": "gd_358fbb324b7f44e4b1825ded",
+      "extraction_prompt_tokens": 1640,
+      "extraction_input_truncated": false
+    },
+    {
+      "kind": "whole_passage",
+      "question_id": "gold_017",
+      "omitted_hit": "gd_36adbfd4476f456fc4520b4a",
+      "extraction_prompt_tokens": 1615,
+      "extraction_input_truncated": false
+    },
+    {
+      "kind": "whole_passage",
+      "question_id": "gold_030",
+      "omitted_hit": "gd_66bbfcd9b1f8b6bca75fe3f6",
+      "evidence_status": "extraction_failed",
+      "extraction_prompt_tokens": 1602,
+      "extraction_input_truncated": false
+    },
+    {
+      "kind": "graph_item",
+      "question_id": "gold_011",
+      "medium": "blog",
+      "window_omitted_count": 9
+    },
+    {
+      "kind": "graph_item",
+      "question_id": "gold_011",
+      "medium": "talk",
+      "window_omitted_count": 9
+    }
+  ]
+}

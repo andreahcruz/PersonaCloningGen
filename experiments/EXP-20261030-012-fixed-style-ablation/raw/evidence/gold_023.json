@@ -1,0 +1,110 @@
+{
+  "proposed": [
+    {
+      "source_id": "train_6305",
+      "claim": "The build vs. buy decision isn't binary.",
+      "claim_type": "fact",
+      "support_span": "The Build vs. Buy Decision Isn’t Binary"
+    },
+    {
+      "source_id": "train_4420",
+      "claim": "Hiring a development team costs $50,000-150,000.",
+      "claim_type": "number",
+      "support_span": "Hire development team: $50,000-150,000"
+    },
+    {
+      "source_id": "train_4420",
+      "claim": "The traditional approach takes 3-6 months.",
+      "claim_type": "number",
+      "support_span": "Timeline: 3-6 months"
+    },
+    {
+      "source_id": "train_4420",
+      "claim": "The ideation-to-commercial experiment takes 30-45 days.",
+      "claim_type": "number",
+      "support_span": "Timeline: 30-45 days"
+    },
+    {
+      "source_id": "train_4420",
+      "claim": "The ideation-to-commercial experiment costs $8,000-$10,000.",
+      "claim_type": "number",
+      "support_span": "Cost: $8,000-$10,000 (even worst case)"
+    },
+    {
+      "source_id": "train_15616",
+      "claim": "Software is always cheaper to buy than to build.",
+      "claim_type": "fact",
+      "support_span": "Software is always cheaper to buy than to build"
+    },
+    {
+      "source_id": "train_11720",
+      "claim": "The author has spent over 200 hours coding.",
+      "claim_type": "number",
+      "support_span": "I’ve spent over 200 hours vibe coding the last 100 or so days"
+    }
+  ],
+  "raw_extraction": "[\n  {\n    \"source_id\": \"train_6305\",\n    \"claim\": \"The build vs. buy decision isn't binary.\",\n    \"claim_type\": \"fact\",\n    \"support_span\": \"The Build vs. Buy Decision Isn’t Binary\"\n  },\n  {\n    \"source_id\": \"train_4420\",\n    \"claim\": \"Hiring a development team costs $50,000-150,000.\",\n    \"claim_type\": \"number\",\n    \"support_span\": \"Hire development team: $50,000-150,000\"\n  },\n  {\n    \"source_id\": \"train_4420\",\n    \"claim\": \"The traditional approach takes 3-6 months.\",\n    \"claim_type\": \"number\",\n    \"support_span\": \"Timeline: 3-6 months\"\n  },\n  {\n    \"source_id\": \"train_4420\",\n    \"claim\": \"The ideation-to-commercial experiment takes 30-45 days.\",\n    \"claim_type\": \"number\",\n    \"support_span\": \"Timeline: 30-45 days\"\n  },\n  {\n    \"source_id\": \"train_4420\",\n    \"claim\": \"The ideation-to-commercial experiment costs $8,000-$10,000.\",\n    \"claim_type\": \"number\",\n    \"support_span\": \"Cost: $8,000-$10,000 (even worst case)\"\n  },\n  {\n    \"source_id\": \"train_15616\",\n    \"claim\": \"Software is always cheaper to buy than to build.\",\n    \"claim_type\": \"fact\",\n    \"support_span\": \"Software is always cheaper to buy than to build\"\n  },\n  {\n    \"source_id\": \"train_11720\",\n    \"claim\": \"The author has spent over 200 hours coding.\",\n    \"claim_type\": \"number\",\n    \"support_span\": \"I’ve spent over 200 hours vibe coding the last 100 or so days\"\n  }\n]",
+  "validation_rejected": [],
+  "verifier_rejected": [],
+  "verified": [
+    {
+      "source_id": "train_6305",
+      "claim": "The build vs. buy decision isn't binary.",
+      "support_span": "The Build vs. Buy Decision Isn’t Binary",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_4420",
+      "claim": "Hiring a development team costs $50,000-150,000.",
+      "support_span": "Hire development team: $50,000-150,000",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_4420",
+      "claim": "The traditional approach takes 3-6 months.",
+      "support_span": "Timeline: 3-6 months",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_4420",
+      "claim": "The ideation-to-commercial experiment takes 30-45 days.",
+      "support_span": "Timeline: 30-45 days",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_4420",
+      "claim": "The ideation-to-commercial experiment costs $8,000-$10,000.",
+      "support_span": "Cost: $8,000-$10,000 (even worst case)",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_15616",
+      "claim": "Software is always cheaper to buy than to build.",
+      "support_span": "Software is always cheaper to buy than to build",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_11720",
+      "claim": "The author has spent over 200 hours coding.",
+      "support_span": "I’ve spent over 200 hours vibe coding the last 100 or so days",
+      "claim_type": "number"
+    }
+  ],
+  "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] The build vs. buy decision isn't binary.\n[E2] Hiring a development team costs $50,000-150,000.\n[E3] The traditional approach takes 3-6 months.\n[E4] The ideation-to-commercial experiment takes 30-45 days.\n[E5] The ideation-to-commercial experiment costs $8,000-$10,000.\n[E6] Software is always cheaper to buy than to build.\n[E7] The author has spent over 200 hours coding.",
+  "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: The Rise of the “N=1” App: When Building It Yourself Really Beats Buying It.\n\nSource passages:\n[train_6305]\n1. The Build vs. Buy Decision Isn’t Binary\nA common mistake companies make is thinking they need to either build everything from scratch or rely entirely on third-party APIs. The reality is more nuanced:\nStart with clear use cases\n: Don’t implement AI just because it’s trendy. Dialpad began with specific problems they wanted to solve around conversation intelligence.\nUnderstand the trade-offs\n: Real-time processing has different cost, throughput, and risk profiles compared to batch processing. Make this decision early.\nConsider a hybrid approach\n: You can start with third-party APIs while building your data foundation, then gradually move to custom solutions as you scale.\n\n[train_4420]\nThe Future May Not Be Here, But If Not, It’s Close\nHere’s the perspective that keeps me sleeping at night with my spend\nTraditional approach for a commercial app:\nHire development team: $50,000-150,000\nTimeline: 3-6 months\nManaging contractors, QA, deployment\nDoesn’t really work the way you wanted\nStill need technical co-founder or CTO\nMy ideation-to-commercial experiment:\nTimeline: 30-45 days\nCost: $8,000-$10,000 (even worst case)\nFull control and understanding of every line\nLearning while building\nCan iterate and pivot instantly\nIf this works, it’s a 10x improvement in cost and speed. The Hidden Costs Everyone Ignores\nWhen you see that $607.70 charge for the first few days, you’re not just paying for compute. You’re paying for:\nCompressed Learning Cycles\nInstead of spending weeks reading documentation\nInstead of trial-and-error debugging sessions\nInstead of architectural mistakes that cost days to fix\nPremium Development Experience\nInstant code reviews and suggestions\nArchitecture guidance from a AI\nDebugging partner that never gets tired\nOpportunity Cost Mitigation\nShipping in hours instead of days\nGetting to market faster — possibly. Possibly. Learning while building instead of building while learning\nThe Scenarios You Should Budget For\nBased on my experience and others I’ve talked to, there are a lot of play apps you can build for the base $20-$25 a month. But you can’t go that far.\n\n[train_15616]\nSoftware is always cheaper to buy than to build\n\nSo that's just an excuse\n\n[train_11720]\nSo I’ve spent over 200 hours vibe coding the last 100 or so days. And I really don’t have a spare 200 hours. Why? One reason was to learn. But not really. The real reason was to build things I needed to build, I wanted to build, that … I just couldn’t get built otherwise. One app that I’d been waiting 10 years to build. Build those ones. The ones you want to will into existence, but just can’t find the help. The ones you need to build, but are too niche to excite most developers. Build the app you’ve been yearning to build. That’s what will push you through the learning curve, the screenshots, the iterates, the 100s of releases, the rough patches, the regressions, and more.",
+  "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: The Rise of the “N=1” App: When Building It Yourself Really Beats Buying It.\n\nSource passages:\n[train_6305]\n1. The Build vs. Buy Decision Isn’t Binary\nA common mistake companies make is thinking they need to either build everything from scratch or rely entirely on third-party APIs. The reality is more nuanced:\nStart with clear use cases\n: Don’t implement AI just because it’s trendy. Dialpad began with specific problems they wanted to solve around conversation intelligence.\nUnderstand the trade-offs\n: Real-time processing has different cost, throughput, and risk profiles compared to batch processing. Make this decision early.\nConsider a hybrid approach\n: You can start with third-party APIs while building your data foundation, then gradually move to custom solutions as you scale.\n\n[train_4420]\nThe Future May Not Be Here, But If Not, It’s Close\nHere’s the perspective that keeps me sleeping at night with my spend\nTraditional approach for a commercial app:\nHire development team: $50,000-150,000\nTimeline: 3-6 months\nManaging contractors, QA, deployment\nDoesn’t really work the way you wanted\nStill need technical co-founder or CTO\nMy ideation-to-commercial experiment:\nTimeline: 30-45 days\nCost: $8,000-$10,000 (even worst case)\nFull control and understanding of every line\nLearning while building\nCan iterate and pivot instantly\nIf this works, it’s a 10x improvement in cost and speed. The Hidden Costs Everyone Ignores\nWhen you see that $607.70 charge for the first few days, you’re not just paying for compute. You’re paying for:\nCompressed Learning Cycles\nInstead of spending weeks reading documentation\nInstead of trial-and-error debugging sessions\nInstead of architectural mistakes that cost days to fix\nPremium Development Experience\nInstant code reviews and suggestions\nArchitecture guidance from a AI\nDebugging partner that never gets tired\nOpportunity Cost Mitigation\nShipping in hours instead of days\nGetting to market faster — possibly. Possibly. Learning while building instead of building while learning\nThe Scenarios You Should Budget For\nBased on my experience and others I’ve talked to, there are a lot of play apps you can build for the base $20-$25 a month. But you can’t go that far.\n\n[train_15616]\nSoftware is always cheaper to buy than to build\n\nSo that's just an excuse\n\n[train_11720]\nSo I’ve spent over 200 hours vibe coding the last 100 or so days. And I really don’t have a spare 200 hours. Why? One reason was to learn. But not really. The real reason was to build things I needed to build, I wanted to build, that … I just couldn’t get built otherwise. One app that I’d been waiting 10 years to build. Build those ones. The ones you want to will into existence, but just can’t find the help. The ones you need to build, but are too niche to excite most developers. Build the app you’ve been yearning to build. That’s what will push you through the learning curve, the screenshots, the iterates, the 100s of releases, the rough patches, the regressions, and more.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+  "extraction_seconds": 11.096,
+  "verification_seconds": 0.0,
+  "verification_records": [],
+  "allowed_numeric_values": [
+    "n:150000",
+    "n:200",
+    "usd:10000",
+    "usd:50000",
+    "usd:8000"
+  ],
+  "reason": null,
+  "extraction_stop_reason": "eos",
+  "extraction_attempts": 1,
+  "evidence_status": "verified"
+}

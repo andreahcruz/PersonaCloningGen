@@ -1,0 +1,202 @@
+{
+  "proposed": [
+    {
+      "source_id": "train_6348",
+      "claim": "A massive percentage of training data contains PII",
+      "support_span": "A massive percentage of training data contains PII (no one wants to admit how much)",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_6348",
+      "claim": "Training data exposure exists in public datasets, proprietary data, customer prompts, and documents",
+      "support_span": "Your data exposure exists in: public datasets, proprietary data, customer prompts, and documents",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_6351",
+      "claim": "Companies implementing this stack are seeing a 90%+ reduction in PII exposure",
+      "support_span": "90%+ reduction in PII exposure",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_6351",
+      "claim": "Faster enterprise sales cycles are seen by companies implementing this stack",
+      "support_span": "Faster enterprise sales cycles (because they can actually answer security questionnaires)",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_6351",
+      "claim": "Better model performance is seen by companies implementing this stack",
+      "support_span": "Better model performance (because clean data = better training)",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_6351",
+      "claim": "Every major enterprise customer is asking about AI data handling in sales calls",
+      "support_span": "Every major enterprise customer is asking about this in sales calls",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_6351",
+      "claim": "Every data breach is 10x more expensive when AI systems are involved",
+      "support_span": "And every data breach is 10x more expensive when AI systems are involved",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_1418",
+      "claim": "Generative AI chatbots are now more trusted than vendor salespeople for final purchase decisions",
+      "support_span": "Generative AI chatbots (17.2%) are now MORE trusted than vendor salespeople (9.3%) for final purchase decisions",
+      "claim_type": "comparison"
+    },
+    {
+      "source_id": "train_1418",
+      "claim": "Customers won't accept waiting, getting wrong answers, or dealing with reps who don't know the product",
+      "support_span": "Customers simply won’t accept waiting, getting wrong answers, or dealing with reps who don’t know the product",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_1418",
+      "claim": "Amazon-like expectations are coming to B2B",
+      "support_span": "Amazon-like expectations are coming to B2B",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_1418",
+      "claim": "There's a 50/50 split between traditional website purchases and AI-driven chat sales",
+      "support_span": "We’re seeing a 50/50 split between traditional website purchases and AI-driven chat sales for our events",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_1418",
+      "claim": "LLMs become sales channels",
+      "support_span": "LLMs become sales channels",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_1418",
+      "claim": "Buyers complete entire purchase journeys within chat interfaces",
+      "support_span": "Buyers complete entire purchase journeys within chat interfaces",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_1418",
+      "claim": "Websites become data sources for AI systems rather than human destinations",
+      "support_span": "Websites become data sources for AI systems rather than human destinations",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_6347",
+      "claim": "The explosion of AI adoption has created massive new privacy risks for SaaS companies",
+      "support_span": "The explosion of AI adoption has created massive new privacy risks for SaaS companies",
+      "claim_type": "fact"
+    }
+  ],
+  "raw_extraction": "[\n  {\n    \"source_id\": \"train_6348\",\n    \"claim\": \"A massive percentage of training data contains PII\",\n    \"support_span\": \"A massive percentage of training data contains PII (no one wants to admit how much)\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_6348\",\n    \"claim\": \"Training data exposure exists in public datasets, proprietary data, customer prompts, and documents\",\n    \"support_span\": \"Your data exposure exists in: public datasets, proprietary data, customer prompts, and documents\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_6351\",\n    \"claim\": \"Companies implementing this stack are seeing a 90%+ reduction in PII exposure\",\n    \"support_span\": \"90%+ reduction in PII exposure\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_6351\",\n    \"claim\": \"Faster enterprise sales cycles are seen by companies implementing this stack\",\n    \"support_span\": \"Faster enterprise sales cycles (because they can actually answer security questionnaires)\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_6351\",\n    \"claim\": \"Better model performance is seen by companies implementing this stack\",\n    \"support_span\": \"Better model performance (because clean data = better training)\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_6351\",\n    \"claim\": \"Every major enterprise customer is asking about AI data handling in sales calls\",\n    \"support_span\": \"Every major enterprise customer is asking about this in sales calls\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_6351\",\n    \"claim\": \"Every data breach is 10x more expensive when AI systems are involved\",\n    \"support_span\": \"And every data breach is 10x more expensive when AI systems are involved\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_1418\",\n    \"claim\": \"Generative AI chatbots are now more trusted than vendor salespeople for final purchase decisions\",\n    \"support_span\": \"Generative AI chatbots (17.2%) are now MORE trusted than vendor salespeople (9.3%) for final purchase decisions\",\n    \"claim_type\": \"comparison\"\n  },\n  {\n    \"source_id\": \"train_1418\",\n    \"claim\": \"Customers won't accept waiting, getting wrong answers, or dealing with reps who don't know the product\",\n    \"support_span\": \"Customers simply won’t accept waiting, getting wrong answers, or dealing with reps who don’t know the product\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_1418\",\n    \"claim\": \"Amazon-like expectations are coming to B2B\",\n    \"support_span\": \"Amazon-like expectations are coming to B2B\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_1418\",\n    \"claim\": \"There's a 50/50 split between traditional website purchases and AI-driven chat sales\",\n    \"support_span\": \"We’re seeing a 50/50 split between traditional website purchases and AI-driven chat sales for our events\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_1418\",\n    \"claim\": \"LLMs become sales channels\",\n    \"support_span\": \"LLMs become sales channels\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_1418\",\n    \"claim\": \"Buyers complete entire purchase journeys within chat interfaces\",\n    \"support_span\": \"Buyers complete entire purchase journeys within chat interfaces\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_1418\",\n    \"claim\": \"Websites become data sources for AI systems rather than human destinations\",\n    \"support_span\": \"Websites become data sources for AI systems rather than human destinations\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_6347\",\n    \"claim\": \"The explosion of AI adoption has created massive new privacy risks for SaaS companies\",\n    \"support_span\": \"The explosion of AI adoption has created massive new privacy risks for SaaS companies\",\n    \"claim_type\": \"fact\"\n  }\n]",
+  "validation_rejected": [],
+  "verifier_rejected": [],
+  "verified": [
+    {
+      "source_id": "train_6348",
+      "claim": "A massive percentage of training data contains PII",
+      "support_span": "A massive percentage of training data contains PII (no one wants to admit how much)",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_6348",
+      "claim": "Training data exposure exists in public datasets, proprietary data, customer prompts, and documents",
+      "support_span": "Your data exposure exists in: public datasets, proprietary data, customer prompts, and documents",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_6351",
+      "claim": "Companies implementing this stack are seeing a 90%+ reduction in PII exposure",
+      "support_span": "90%+ reduction in PII exposure",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_6351",
+      "claim": "Faster enterprise sales cycles are seen by companies implementing this stack",
+      "support_span": "Faster enterprise sales cycles (because they can actually answer security questionnaires)",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_6351",
+      "claim": "Better model performance is seen by companies implementing this stack",
+      "support_span": "Better model performance (because clean data = better training)",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_6351",
+      "claim": "Every major enterprise customer is asking about AI data handling in sales calls",
+      "support_span": "Every major enterprise customer is asking about this in sales calls",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_6351",
+      "claim": "Every data breach is 10x more expensive when AI systems are involved",
+      "support_span": "And every data breach is 10x more expensive when AI systems are involved",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_1418",
+      "claim": "Generative AI chatbots are now more trusted than vendor salespeople for final purchase decisions",
+      "support_span": "Generative AI chatbots (17.2%) are now MORE trusted than vendor salespeople (9.3%) for final purchase decisions",
+      "claim_type": "comparison"
+    },
+    {
+      "source_id": "train_1418",
+      "claim": "Customers won't accept waiting, getting wrong answers, or dealing with reps who don't know the product",
+      "support_span": "Customers simply won’t accept waiting, getting wrong answers, or dealing with reps who don’t know the product",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_1418",
+      "claim": "Amazon-like expectations are coming to B2B",
+      "support_span": "Amazon-like expectations are coming to B2B",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_1418",
+      "claim": "There's a 50/50 split between traditional website purchases and AI-driven chat sales",
+      "support_span": "We’re seeing a 50/50 split between traditional website purchases and AI-driven chat sales for our events",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_1418",
+      "claim": "LLMs become sales channels",
+      "support_span": "LLMs become sales channels",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_1418",
+      "claim": "Buyers complete entire purchase journeys within chat interfaces",
+      "support_span": "Buyers complete entire purchase journeys within chat interfaces",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_1418",
+      "claim": "Websites become data sources for AI systems rather than human destinations",
+      "support_span": "Websites become data sources for AI systems rather than human destinations",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_6347",
+      "claim": "The explosion of AI adoption has created massive new privacy risks for SaaS companies",
+      "support_span": "The explosion of AI adoption has created massive new privacy risks for SaaS companies",
+      "claim_type": "fact"
+    }
+  ],
+  "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] A massive percentage of training data contains PII\n[E2] Training data exposure exists in public datasets, proprietary data, customer prompts, and documents\n[E3] Companies implementing this stack are seeing a 90%+ reduction in PII exposure\n[E4] Faster enterprise sales cycles are seen by companies implementing this stack\n[E5] Better model performance is seen by companies implementing this stack\n[E6] Every major enterprise customer is asking about AI data handling in sales calls\n[E7] Every data breach is 10x more expensive when AI systems are involved\n[E8] Generative AI chatbots are now more trusted than vendor salespeople for final purchase decisions\n[E9] Customers won't accept waiting, getting wrong answers, or dealing with reps who don't know the product\n[E10] Amazon-like expectations are coming to B2B\n[E11] There's a 50/50 split between traditional website purchases and AI-driven chat sales\n[E12] LLMs become sales channels\n[E13] Buyers complete entire purchase journeys within chat interfaces\n[E14] Websites become data sources for AI systems rather than human destinations\n[E15] The explosion of AI adoption has created massive new privacy risks for SaaS companies",
+  "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: 5 Uncomfortable Truths About AI Adoption That Most VPs of Sales Don’t Want to Hear: The Data From Larridin\n\nSource passages:\n[train_6348]\n1. The Dirty Secret of AI Training Data\nLet’s get real: Everyone’s rushing to build AI features into their SaaS products. But here’s what most founders don’t tell you – training these models is a privacy nightmare waiting to happen.\nThe brutal numbers:\nA massive percentage of training data contains PII (no one wants to admit how much)\nYour data exposure exists in: public datasets, proprietary data, customer prompts, and documents\nThe monitoring systems for AI models? They’re years behind where they need to be\nHere’s what’s scarier: Even foundation models like OpenAI and ChatGPT are telling users “don’t send us sensitive data.” When the biggest players in the space are waving red flags, you better pay attention.\n\n[train_6351]\n5. The Hard Numbers on Implementation\nCompanies implementing this stack are seeing:\n90%+ reduction in PII exposure\nFaster enterprise sales cycles (because they can actually answer security questionnaires)\nBetter model performance (because clean data = better training)\nThe $100M Question\nHere’s what separates the companies that will hit $100M ARR from those that won’t: Are you treating AI data privacy as a core feature or an afterthought?\nBecause here’s the truth about 2025: Every major enterprise customer is asking about this in sales calls. Every security review is diving deep on AI data handling. And every data breach is 10x more expensive when AI systems are involved.\nWhat You Should Do Tomorrow\nAudit your AI data flows (most companies find scary surprises)\nImplement a privacy gateway before your next model training\nBuild access controls at every layer\nDocument your AI data governance (your enterprise customers will ask)\nThe Bottom Line\nIn 2023, you could get away with handwaving about AI data privacy. In 2024, you needed basic protections. In 2025? This is existential. The companies that nail this will win their markets. The rest? They’re one data breach away from disaster.\nRemember: In SaaS, trust is everything. And in AI-powered SaaS? Trust is all about how you handle sensitive data. Get this right now, or someone else will.\n\n[train_1418]\n6. Buyers Trust AI More Than Salespeople\nG2 Buyer Behavior Data:\nGenerative AI chatbots (17.2%) are now MORE trusted than vendor salespeople (9.3%) for final purchase decisions.\nWhy:\nAI synthesizes multiple data sources without an agenda. It doesn’t have quota pressure. It doesn’t have a bad day. It knows the product comprehensively. A great AI provides a better experience than a mediocre human rep.\nThe Expectation Reset:\nCustomers simply won’t accept waiting, getting wrong answers, or dealing with reps who don’t know the product. Amazon-like expectations are coming to B2B.\n7. “Sell by Chat” Is Now 50/50\nSaaStr’s Own Data:\nWe’re seeing a 50/50 split between traditional website purchases and AI-driven chat sales for our events. “We call it sell by chat. Our AI is basically selling tickets to future SaaStr events all via email, all automated.”\nThe Future:\nLLMs become sales channels. Buyers complete entire purchase journeys within chat interfaces. Websites become data sources for AI systems rather than human destinations.\n\n[train_6347]\nThe Real Truth About AI Data Privacy in 2025: What Every SaaS Company Needs to Know\nThe explosion of AI adoption has created massive new privacy risks for SaaS companies. Here’s what we learned from talking with Skyflow’s Chief Product Officer about protecting your company (and your customers) from AI data breaches:\nAI and data privacy. Not the fluffy marketing version – the real, nitty-gritty details that determine whether your SaaS company thrives or dies in the AI era. Here’s what Skyflow’s Chief Product Officer shared with us, and frankly, it’s keeping a lot of founders up at night.",
+  "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: 5 Uncomfortable Truths About AI Adoption That Most VPs of Sales Don’t Want to Hear: The Data From Larridin\n\nSource passages:\n[train_6348]\n1. The Dirty Secret of AI Training Data\nLet’s get real: Everyone’s rushing to build AI features into their SaaS products. But here’s what most founders don’t tell you – training these models is a privacy nightmare waiting to happen.\nThe brutal numbers:\nA massive percentage of training data contains PII (no one wants to admit how much)\nYour data exposure exists in: public datasets, proprietary data, customer prompts, and documents\nThe monitoring systems for AI models? They’re years behind where they need to be\nHere’s what’s scarier: Even foundation models like OpenAI and ChatGPT are telling users “don’t send us sensitive data.” When the biggest players in the space are waving red flags, you better pay attention.\n\n[train_6351]\n5. The Hard Numbers on Implementation\nCompanies implementing this stack are seeing:\n90%+ reduction in PII exposure\nFaster enterprise sales cycles (because they can actually answer security questionnaires)\nBetter model performance (because clean data = better training)\nThe $100M Question\nHere’s what separates the companies that will hit $100M ARR from those that won’t: Are you treating AI data privacy as a core feature or an afterthought?\nBecause here’s the truth about 2025: Every major enterprise customer is asking about this in sales calls. Every security review is diving deep on AI data handling. And every data breach is 10x more expensive when AI systems are involved.\nWhat You Should Do Tomorrow\nAudit your AI data flows (most companies find scary surprises)\nImplement a privacy gateway before your next model training\nBuild access controls at every layer\nDocument your AI data governance (your enterprise customers will ask)\nThe Bottom Line\nIn 2023, you could get away with handwaving about AI data privacy. In 2024, you needed basic protections. In 2025? This is existential. The companies that nail this will win their markets. The rest? They’re one data breach away from disaster.\nRemember: In SaaS, trust is everything. And in AI-powered SaaS? Trust is all about how you handle sensitive data. Get this right now, or someone else will.\n\n[train_1418]\n6. Buyers Trust AI More Than Salespeople\nG2 Buyer Behavior Data:\nGenerative AI chatbots (17.2%) are now MORE trusted than vendor salespeople (9.3%) for final purchase decisions.\nWhy:\nAI synthesizes multiple data sources without an agenda. It doesn’t have quota pressure. It doesn’t have a bad day. It knows the product comprehensively. A great AI provides a better experience than a mediocre human rep.\nThe Expectation Reset:\nCustomers simply won’t accept waiting, getting wrong answers, or dealing with reps who don’t know the product. Amazon-like expectations are coming to B2B.\n7. “Sell by Chat” Is Now 50/50\nSaaStr’s Own Data:\nWe’re seeing a 50/50 split between traditional website purchases and AI-driven chat sales for our events. “We call it sell by chat. Our AI is basically selling tickets to future SaaStr events all via email, all automated.”\nThe Future:\nLLMs become sales channels. Buyers complete entire purchase journeys within chat interfaces. Websites become data sources for AI systems rather than human destinations.\n\n[train_6347]\nThe Real Truth About AI Data Privacy in 2025: What Every SaaS Company Needs to Know\nThe explosion of AI adoption has created massive new privacy risks for SaaS companies. Here’s what we learned from talking with Skyflow’s Chief Product Officer about protecting your company (and your customers) from AI data breaches:\nAI and data privacy. Not the fluffy marketing version – the real, nitty-gritty details that determine whether your SaaS company thrives or dies in the AI era. Here’s what Skyflow’s Chief Product Officer shared with us, and frankly, it’s keeping a lot of founders up at night.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+  "extraction_seconds": 25.31,
+  "verification_seconds": 0.0,
+  "verification_records": [],
+  "allowed_numeric_values": [
+    "pct:90"
+  ],
+  "reason": null,
+  "extraction_stop_reason": "eos",
+  "extraction_attempts": 1,
+  "evidence_status": "verified"
+}

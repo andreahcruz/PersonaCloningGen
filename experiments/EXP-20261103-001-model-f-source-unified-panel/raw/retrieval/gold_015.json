@@ -1,0 +1,1794 @@
+{
+  "status": "complete",
+  "question_id": "gold_015",
+  "query": "The “Buyers Won’t Trust an AI” Objection Is Already Collapsing",
+  "retrieval": {
+    "backend": "lightrag",
+    "mode": "hybrid",
+    "evidence_budget": 4,
+    "top_k": 20
+  },
+  "payload": {
+    "status": "success",
+    "message": "Query processed successfully",
+    "data": {
+      "entities": [
+        {
+          "entity_name": "B2B Buyers",
+          "entity_type": "concept",
+          "description": "Two-thirds of B2B buyers rely on AI agents and chatbots as much as or more than Google for vendor evaluation.<SEP>B2B buyers expect AI-level efficiency, knowledge, and convenience in all sales processes.",
+          "source_id": "gd_eb80566a617b57e47caec5bf-chunk-000<SEP>gd_97843612d08bfd01e9f83879-chunk-009",
+          "file_path": "gd_eb80566a617b57e47caec5bf<SEP>gd_97843612d08bfd01e9f83879",
+          "created_at": 1793605071
+        },
+        {
+          "entity_name": "Buyers",
+          "entity_type": "person",
+          "description": "Buyers are individuals or organizations that engage in purchasing decisions, encompassing a wide range of activities. They can be individuals responsible for purchasing decisions within organizations, or organizations themselves making purchasing decisions. In the context of SaaS products, buyers are typically individuals or organizations that purchase software as a service. Additionally, buyers can also refer to individuals or organizations purchasing a company or its assets, or making purchasing decisions in general.\n\nBuyers can be broadly categorized into various subsets, including those who value their time and prioritize efficiency in their purchasing processes. They generally do not want to be taken advantage of and are interested in purchasing products or services that meet their needs. This can include individuals who purchase AI agents, as well as those who are interested in purchasing a product but may be dragging their feet.\n\nIn the context of B2B companies, buyers are the individuals or organizations that purchase products or services from them. The term \"buyers\" encompasses a broad spectrum of entities and activities related to purchasing products or services from companies. Buyers refer to individuals or organizations that purchase goods or services, and they can be individuals who purchase products or services.\n\nIt is essential to use the language and terminology that buyers expect, rather than relying on buzz terms or jargon. Buyers of enterprise software will read long copy and attend demos if they provide valuable information. People who make decisions around buying categories are also considered buyers. Overall, buyers are individuals or organizations purchasing products or services, and they play a crucial role in the purchasing process.\n\nDespite challenges of scale and macro impacts, buyers continue to purchase products from companies such as Atlassian. The purchasing decisions made by buyers can have significant impacts on companies, and it is essential for companies to understand the needs and expectations of their buyers. By doing so, companies can provide better products and services that meet the needs of their buyers, ultimately leading to increased customer satisfaction and loyalty.<SEP>Buyers are people who are interested in purchasing a product or service.",
+          "source_id": "gd_1ff134cad37b3145694b65c9-chunk-001<SEP>gd_98e4167c524ebe4713ad0624-chunk-000<SEP>gd_3e7922025c7cacb5580e3bbe-chunk-001<SEP>gd_13446d288a2e459ebe9333df-chunk-003<SEP>gd_05120473ace42af384d71ac1-chunk-005<SEP>gd_f77103688699ee185cf2a786-chunk-001<SEP>gd_1ae501bfdb3a7f714e292862-chunk-001<SEP>gd_829c748931b4ffb3558e0adc-chunk-000<SEP>gd_b414f3ae82d1cf67bb537a11-chunk-001<SEP>gd_86ca0d59379f4d8de28dab1d-chunk-000<SEP>gd_c761713807815a161628791f-chunk-002<SEP>gd_24daecfca40dc0e745c734ab-chunk-004<SEP>gd_69681401f790e22eda7aea44-chunk-000<SEP>gd_69681401f790e22eda7aea44-chunk-001<SEP>gd_bb6777cec9990f70dd72539b-chunk-004<SEP>gd_180cfcbda9d5aa945583d82e-chunk-003<SEP>gd_5b445ae4452b1cd5ee770467-chunk-002<SEP>gd_5b445ae4452b1cd5ee770467-chunk-003<SEP>gd_5d99972d6803b5f801c6c8b0-chunk-002<SEP>gd_89058fef72a71da839bab5ad-chunk-001<SEP>gd_9a97c79b6f4bcad8c5a26ccc-chunk-002<SEP>gd_c3146fb15d0855ad8bbb5a02-chunk-006<SEP>gd_c3146fb15d0855ad8bbb5a02-chunk-008<SEP>gd_605e0c1f4fd4724182870b9e-chunk-010<SEP>gd_605e0c1f4fd4724182870b9e-chunk-011<SEP>gd_bf8397f656238e9eba87fda2-chunk-004",
+          "file_path": "gd_1ff134cad37b3145694b65c9<SEP>gd_98e4167c524ebe4713ad0624<SEP>gd_3e7922025c7cacb5580e3bbe<SEP>gd_13446d288a2e459ebe9333df<SEP>gd_05120473ace42af384d71ac1<SEP>gd_f77103688699ee185cf2a786<SEP>gd_1ae501bfdb3a7f714e292862<SEP>gd_829c748931b4ffb3558e0adc<SEP>gd_b414f3ae82d1cf67bb537a11<SEP>gd_86ca0d59379f4d8de28dab1d<SEP>gd_c761713807815a161628791f<SEP>gd_24daecfca40dc0e745c734ab<SEP>gd_69681401f790e22eda7aea44<SEP>gd_bb6777cec9990f70dd72539b<SEP>gd_180cfcbda9d5aa945583d82e<SEP>gd_5b445ae4452b1cd5ee770467<SEP>gd_5d99972d6803b5f801c6c8b0<SEP>gd_89058fef72a71da839bab5ad<SEP>gd_c3146fb15d0855ad8bbb5a02<SEP>gd_bf8397f656238e9eba87fda2",
+          "created_at": 1793644546
+        },
+        {
+          "entity_name": "AI Buyers",
+          "entity_type": "person",
+          "description": "AI Buyers are the target audience for pitches.<SEP>AI buyers are individuals or organizations that purchase AI solutions.",
+          "source_id": "gd_8188f705a58f509db9190d86-chunk-005<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-010",
+          "file_path": "gd_8188f705a58f509db9190d86<SEP>gd_ed532f1494cf2bbcdf7fd169",
+          "created_at": 1793639136
+        },
+        {
+          "entity_name": "Marketers",
+          "entity_type": "person",
+          "description": "Marketers are professionals who play a crucial role in promoting and selling products or services. They are often responsible for creating and implementing marketing strategies to promote a company's products or services, and are typically attracted to hot start-ups due to the potential for career advancement and skills fit. Marketers are also the target audience for various events software, such as Cvent's, and use services like ON24's to host webinars and digital events. Their primary goal is to keep a vendor top of mind until a prospect is in market, and they often have to balance multiple tasks, including website design, to achieve this objective.\n\nIn addition to their core responsibilities, marketers may also struggle in vertical SaaS due to the need to understand and cater to multiple personas and users. Despite the challenges, marketers are essential to a company's success, and their efforts can have a significant impact on a product's or service's visibility and sales. Marketers are individuals responsible for promoting products or services, and they specialize in promoting products or services to target audiences. They are responsible for creating and implementing marketing campaigns, and are often responsible for promoting and selling products or services.\n\nMarketers are professionals who are attracted to hot start-ups due to the potential for career advancement and skills fit. They are responsible for creating and implementing marketing strategies to promote a company's products or services, and are often responsible for promoting and selling products or services. Marketers may also struggle in vertical SaaS due to the need to understand and cater to multiple personas and users. Despite the challenges, marketers are essential to a company's success, and their efforts can have a significant impact on a product's or service's visibility and sales.<SEP>Marketers are the professionals who have been pursuing the goal of hyper-personalization.<SEP>Marketers are made heroes by 1B ARR.<SEP>Marketers are professionals responsible for promoting products or services to customers.",
+          "source_id": "gd_1c7b97735560846975c87037-chunk-000<SEP>gd_74f885fb4d40a7d23380e616-chunk-000<SEP>gd_4f6ebcb879268ebc749b7a4f-chunk-000<SEP>gd_6a8515d06bc3b3b1aae863ab-chunk-002<SEP>gd_a317deb61e243cd08d76cca3-chunk-000<SEP>gd_ec005f90a4cbb6409aac509c-chunk-000<SEP>gd_610d94bbc89ad0ec067cc7ee-chunk-000<SEP>gd_01660f9354b0e95cd03ed553-chunk-000<SEP>gd_1111076e178e7284eab11cf6-chunk-004<SEP>gd_4d74c8d25456712731b2794d-chunk-002<SEP>gd_4d74c8d25456712731b2794d-chunk-005<SEP>gd_73b1fbb61314669cee940374-chunk-002<SEP>gd_7c7d4ebfcadfdcf5a844c51c-chunk-000<SEP>gd_108897c9fb45f8816cdee46d-chunk-000<SEP>gd_5d99972d6803b5f801c6c8b0-chunk-002<SEP>gd_1fd91b8995d47a37073154df-chunk-000<SEP>gd_2a706e159f5773f916f5f327-chunk-000<SEP>gd_2a706e159f5773f916f5f327-chunk-001<SEP>gd_33d36b342cf957ce7eac20c6-chunk-001<SEP>gd_ca2115ae5b8e71d520cf23bb-chunk-004<SEP>gd_e74490d71ea331240a10f410-chunk-003",
+          "file_path": "gd_1c7b97735560846975c87037<SEP>gd_4f6ebcb879268ebc749b7a4f<SEP>gd_6a8515d06bc3b3b1aae863ab<SEP>gd_a317deb61e243cd08d76cca3<SEP>gd_610d94bbc89ad0ec067cc7ee<SEP>gd_01660f9354b0e95cd03ed553<SEP>gd_4d74c8d25456712731b2794d<SEP>gd_73b1fbb61314669cee940374<SEP>gd_7c7d4ebfcadfdcf5a844c51c<SEP>gd_108897c9fb45f8816cdee46d<SEP>gd_5d99972d6803b5f801c6c8b0<SEP>gd_1fd91b8995d47a37073154df<SEP>gd_2a706e159f5773f916f5f327<SEP>gd_33d36b342cf957ce7eac20c6<SEP>gd_ca2115ae5b8e71d520cf23bb<SEP>gd_e74490d71ea331240a10f410",
+          "created_at": 1793620336
+        },
+        {
+          "entity_name": "B2B Software Buyers",
+          "entity_type": "concept",
+          "description": "87% of B2B software buyers say AI chatbots are changing how they research.",
+          "source_id": "gd_eb80566a617b57e47caec5bf-chunk-004",
+          "file_path": "gd_eb80566a617b57e47caec5bf",
+          "created_at": 1793594367
+        },
+        {
+          "entity_name": "Generative AI chatbots",
+          "entity_type": "concept",
+          "description": "AI chatbots that can synthesize multiple data sources.",
+          "source_id": "gd_5b445ae4452b1cd5ee770467-chunk-002",
+          "file_path": "gd_5b445ae4452b1cd5ee770467",
+          "created_at": 1793594125
+        },
+        {
+          "entity_name": "Buyer signals and sentiment",
+          "entity_type": "UNKNOWN",
+          "description": "AI needs to consider buyer signals and sentiment when determining when to stay in the loop and when to bring in a human.",
+          "source_id": "gd_823279392f3517de14a0233e-chunk-002",
+          "file_path": "gd_823279392f3517de14a0233e",
+          "created_at": 1793594817
+        },
+        {
+          "entity_name": "Vendor salespeople",
+          "entity_type": "person",
+          "description": "Sales representatives who may not be trusted by buyers.",
+          "source_id": "gd_5b445ae4452b1cd5ee770467-chunk-002",
+          "file_path": "gd_5b445ae4452b1cd5ee770467",
+          "created_at": 1793594125
+        },
+        {
+          "entity_name": "B2B buyers",
+          "entity_type": "person",
+          "description": "Buyers expecting AI-level efficiency, knowledge, and convenience.",
+          "source_id": "gd_5b445ae4452b1cd5ee770467-chunk-004",
+          "file_path": "gd_5b445ae4452b1cd5ee770467",
+          "created_at": 1793594134
+        },
+        {
+          "entity_name": "AI",
+          "entity_type": "product",
+          "description": "**Artificial Intelligence (AI)**\n\nArtificial Intelligence (AI) refers to the use of artificial intelligence in various applications. It is a technology that enables machines to perform tasks that typically require human intelligence. AI can perform tasks independently, transforming the customer experience within an app, across apps, and in every way that products overlap with human experience.\n\nAI is a specific business idea of more than one word, encompassing a wide range of applications and industries. It is a technology that can be applied in various sectors, including software as a service (SaaS), where AI is used to enhance the user experience and improve operational efficiency. The term AI is often used interchangeably with the concept of machine learning, which is a subset of AI that enables machines to learn from data and improve their performance over time. However, AI is a broader term that encompasses not only machine learning but also other techniques, such as natural language processing and computer vision.\n\nIn the context of SaaS, AI is used to provide personalized experiences for customers, predict their needs, and offer tailored recommendations. It is also used to automate routine tasks, freeing up human resources for more strategic and creative work. AI is a key driver of growth for companies like Snowflake, enabling them to provide more efficient and effective data management solutions.\n\nAI has also been used to deflect buyers from needing to talk to a sales representative, and is a type of artificial intelligence technology used in marketing automation. Additionally, AI has led to an explosion of budget going to new apps and new discovery, weakening brand moats and putting deals into play.\n\nFurthermore, AI is being used to enable businesses to perform tasks at a larger scale than ever before. It is a rapidly evolving field that has the potential to transform various aspects of our lives, from customer service to healthcare and education. Its applications are vast and varied, and it is likely to continue to shape the future of technology and society in the years to come.\n\nIn the context of sales, AI is used to perform tasks more efficiently than humans, such as automating routine tasks and providing personalized experiences for customers. AI tools, such as those used by SDRs, can also provide support and answer questions, enhancing sales performance. Overall, AI is a rapidly evolving field that is changing the pace of business, and its applications are vast and varied.\n\nThe adoption of AI in B2B and SaaS apps is rapidly accelerating, with many businesses using AI to stay ahead of the competition. AI investments are also on the rise, with many companies recognizing the potential of AI to drive growth and innovation. Additionally, AI is being used in content creation, enabling businesses to produce high-quality content more efficiently.\n\nIt's worth noting that AI systems require daily management, training, and refinement to achieve results, and AI excels at pattern matching, asking the right questions, recognizing signals, and routing appropriately. However, AI still requires human oversight and management, particularly in tasks such as marketing and sales.\n\nIn summary, AI is a technology that has become increasingly important for businesses, with its value lying in specificity and application rather than data size. It is a rapidly evolving field that has the potential to transform various aspects of our lives, and its applications are vast and varied.\n\nAI is also a technology that can write code and assist in coding, enabling new innovations and improvements in business processes and decision-making. It is a key investment focus area for many firms, and its transformative benefits are becoming increasingly necessary for businesses to stay competitive.\n\nIn essence, AI is a technology that enables machines to perform tasks that typically require human intelligence, and its applications are vast and varied, from customer service to healthcare and education. Its adoption is rapidly accelerating, and its transformative benefits are becoming increasingly necessary for businesses to stay competitive.<SEP>A subset of computer science that focuses on creating intelligent machines capable of performing tasks that typically require human intelligence.<SEP>AI is a dominant force in the industry, with a significant impact on sales, marketing, and customer value.<SEP>AI refers to artificial intelligence, a technology used by many startups mentioned in the article.<SEP>Artificial Intelligence is a field of computer science that focuses on creating intelligent machines that can perform tasks that typically require human intelligence.<SEP>Artificial Intelligence<SEP>Artificial Intelligence, a technology that enables machines to perform tasks that typically require human intelligence.",
+          "source_id": "gd_014b45cb99cfee97ee337556-chunk-000<SEP>gd_756878d4d219336489c49168-chunk-000<SEP>gd_756878d4d219336489c49168-chunk-002<SEP>gd_0e1afddaca819c17829b209e-chunk-000<SEP>gd_0019c5e0dad1cf6315645b67-chunk-000<SEP>gd_18496897e5422a11b9860676-chunk-000<SEP>gd_00f0fd1277363a92e5cb2ada-chunk-001<SEP>gd_03e15c39b23c76a73a12a032-chunk-000<SEP>gd_14d8f66ab72709464e7b1f54-chunk-001<SEP>gd_14fcf58446d7e49d02fe50fe-chunk-000<SEP>gd_0d9ed295c2bb4d2ef2626774-chunk-000<SEP>gd_0e9a94d9a2c6bd5596deca87-chunk-000<SEP>gd_e202a1afd3c9d493a094de48-chunk-003<SEP>gd_ad5ace08d7fa6c197773d33b-chunk-000<SEP>gd_23e08535a0d07b419df49dea-chunk-000<SEP>gd_16d19bd83634475f86b34ee9-chunk-000<SEP>gd_b15e60fb25deec55942c00d1-chunk-000<SEP>gd_15d187637520cc4b1b5726e1-chunk-000<SEP>gd_15d187637520cc4b1b5726e1-chunk-001<SEP>gd_177014eb9b039d2307248c03-chunk-000<SEP>gd_23aa8cd4020f1d2df5102cfc-chunk-001<SEP>gd_256a41d38f56ea0d66e64b45-chunk-000<SEP>gd_4fe03de948798e408f8e23aa-chunk-000<SEP>gd_4fe03de948798e408f8e23aa-chunk-001<SEP>gd_21bd6da71e6015eb12202fb3-chunk-000<SEP>gd_5339ef95acf5382961a2350a-chunk-001<SEP>gd_1282420851c57a65c41b3c9b-chunk-000<SEP>gd_1282420851c57a65c41b3c9b-chunk-001<SEP>gd_26e354d96348044e49c9f661-chunk-000<SEP>gd_2aeb737f1fc3578904a93fac-chunk-000<SEP>gd_22462fc0c151ee5a1d880b8f-chunk-000<SEP>gd_2864ed857c89cc1a33e60bc8-chunk-000<SEP>gd_7b8e1734f0309e1ac887f899-chunk-001<SEP>gd_243034475e44ac6592eb8cf0-chunk-001<SEP>gd_070a59055548e31a4e2d028a-chunk-001<SEP>gd_4c93dd06bf96421a31a4ec23-chunk-000<SEP>gd_2fdbffb33fcf38e16b8d19ea-chunk-000<SEP>gd_34c141c6933eafc6a555342b-chunk-000<SEP>gd_3ebf3023f70e6b3f8139191f-chunk-000<SEP>gd_3ebf3023f70e6b3f8139191f-chunk-001<SEP>gd_3ebf3023f70e6b3f8139191f-chunk-002<SEP>gd_3ebf3023f70e6b3f8139191f-chunk-003<SEP>gd_3ebf3023f70e6b3f8139191f-chunk-004<SEP>gd_33efad0196fd9206d0c57889-chunk-001<SEP>gd_4a1db13237771f628ac9bc2c-chunk-000<SEP>gd_4a1db13237771f628ac9bc2c-chunk-002<SEP>gd_385277f88221b595a4db19fa-chunk-000<SEP>gd_5067e7d465b1c8e7c23adc37-chunk-000<SEP>gd_a46480025a7b5344f9662b4e-chunk-001<SEP>gd_a46480025a7b5344f9662b4e-chunk-003<SEP>gd_5b98c2f68eb577d75332ad5f-chunk-000<SEP>gd_3c61fb52257edcd986840507-chunk-000<SEP>gd_e0505c1150b5f1aa25fed30c-chunk-004<SEP>gd_3cc6a49aba6331ce2e244f8a-chunk-000<SEP>gd_40121b246ff5bf58c30968ac-chunk-000<SEP>gd_501507d3da37dc0bee391abb-chunk-000<SEP>gd_44e87b15a12b4d77479d4f58-chunk-000<SEP>gd_44d0a6964b4f43fd522b107e-chunk-000<SEP>gd_4e8e411a20b69ff98e60d556-chunk-002<SEP>gd_a6016d6c72ddea604b995fd3-chunk-000<SEP>gd_a6016d6c72ddea604b995fd3-chunk-001<SEP>gd_48e33c739374b10eb5af5570-chunk-000<SEP>gd_1e07c5d8a5539b7e896c47b5-chunk-000<SEP>gd_514be900e352775092392632-chunk-000<SEP>gd_524c287c9d24eb09b58604a0-chunk-000<SEP>gd_75ccaa0f63ea46308ec419cc-chunk-000<SEP>gd_4f29175b4c599edc6f63ea81-chunk-000<SEP>gd_ba8cfcf37a4829e6738e3817-chunk-000<SEP>gd_ba8cfcf37a4829e6738e3817-chunk-001<SEP>gd_51082f5f33da67daee39dc90-chunk-000<SEP>gd_51082f5f33da67daee39dc90-chunk-001<SEP>gd_5487b59a91d25df6759963f2-chunk-000<SEP>gd_5a3012ecffcc0968826fc7e3-chunk-000<SEP>gd_3aab2ebe3d4a17a4ae74909b-chunk-000<SEP>gd_673777877ba804b6adcb05c7-chunk-000<SEP>gd_d8fe4e83f86b82e6fd92f383-chunk-000<SEP>gd_6fcb1801ba88d3d8f13ac9c7-chunk-000<SEP>gd_79858ea6162573644fe3e173-chunk-002<SEP>gd_79858ea6162573644fe3e173-chunk-006<SEP>gd_364d266152046eb1076d048a-chunk-002<SEP>gd_364d266152046eb1076d048a-chunk-007<SEP>gd_2c6f9645343251c1f939e00a-chunk-000<SEP>gd_2c6f9645343251c1f939e00a-chunk-002<SEP>gd_72a49edcf9ab2df09ba6c1c2-chunk-001<SEP>gd_71e628f86d3b2233b7cb22b0-chunk-005<SEP>gd_93db829a67b16eaaacdf2d76-chunk-000<SEP>gd_e6e70dc6bd3b3665dbbe64de-chunk-000<SEP>gd_e6e70dc6bd3b3665dbbe64de-chunk-001<SEP>gd_2d72fe9469e9f2b08dcd24ea-chunk-001<SEP>gd_753bb0e35f420a30e8b62d0b-chunk-000<SEP>gd_80c909a7620b380ba1b1df0c-chunk-000<SEP>gd_896b59f47a2fe051ace06a99-chunk-000<SEP>gd_896b59f47a2fe051ace06a99-chunk-001<SEP>gd_33efe7307fb3edd348590ee0-chunk-000<SEP>gd_826943ff016f1c9f4e16a02f-chunk-000<SEP>gd_82b65319408f738f77ded8bf-chunk-000<SEP>gd_9393f5107171bfdba2765a73-chunk-000<SEP>gd_cbc65b3eb8efa09f32370cb3-chunk-000<SEP>gd_859a0b3a8894d29a34128c12-chunk-000<SEP>gd_7771f9bb68a925a92a480935-chunk-000<SEP>gd_a4ae7e6eac7817fa6bf9357c-chunk-000<SEP>gd_8bb47c1249e0948d8a5ef1bb-chunk-000<SEP>gd_8bb47c1249e0948d8a5ef1bb-chunk-001<SEP>gd_aad2f9895e2d25f92408db27-chunk-000<SEP>gd_111b6b23b20d3f5268f61598-chunk-000<SEP>gd_ae46602503f51cde09054ac5-chunk-000<SEP>gd_ae46602503f51cde09054ac5-chunk-001<SEP>gd_81bde9d299daaec71f7d4b59-chunk-000<SEP>gd_b73b97865652097b570441e9-chunk-000<SEP>gd_8a7aa9f4a15477216fce77cc-chunk-000<SEP>gd_2f8e003679c6373e09a7daaf-chunk-000<SEP>gd_bb32e1c07e86dae286d8bcd3-chunk-000<SEP>gd_b0b8352ace4c12ea7df2e79a-chunk-001<SEP>gd_b0b8352ace4c12ea7df2e79a-chunk-000<SEP>gd_8f909671968a906eeff62bdc-chunk-000<SEP>gd_cc8e0a9c7c8c3eaa2c8d4ac3-chunk-000<SEP>gd_9b8a38716e9eac83516f7e0a-chunk-000<SEP>gd_57fa3f9a3c4f8de50eeb4882-chunk-000<SEP>gd_57fa3f9a3c4f8de50eeb4882-chunk-002<SEP>gd_cc6b5207100a4e6335ded9da-chunk-000<SEP>gd_66188e68eea695f287823796-chunk-000<SEP>gd_d3df09f00aa74d92c37c1684-chunk-000<SEP>gd_ceabea397f77e9318083a0d7-chunk-000<SEP>gd_ceabea397f77e9318083a0d7-chunk-001<SEP>gd_9f977490d0bbe113a221d6cf-chunk-000<SEP>gd_dd042f359b0051fd3ba764b0-chunk-000<SEP>gd_afcc2a3eb186119ed5062c31-chunk-000<SEP>gd_afcc2a3eb186119ed5062c31-chunk-001<SEP>gd_aad660ab69b0ba4d4b48f2b8-chunk-000<SEP>gd_51731a67cd5c06c0815006d8-chunk-000<SEP>gd_f87b63c3e88f345595a20d8f-chunk-000<SEP>gd_aba23bfdcaed571db61db702-chunk-001<SEP>gd_b371f6e011973dd23106e53b-chunk-000<SEP>gd_5492d4d586da10f9d01192dd-chunk-001<SEP>gd_faead248acb155f9a68f81a5-chunk-001<SEP>gd_b450394f687756dbe35a5ae0-chunk-000<SEP>gd_ed53e87406e11d3445a6960e-chunk-000<SEP>gd_b96370547a5625dcaf50f606-chunk-000<SEP>gd_94dacf60a04c5ef0578e1af6-chunk-000<SEP>gd_f9158d711643f379e605325f-chunk-000<SEP>gd_bbbf4213f2403aaaf1cf9394-chunk-000<SEP>gd_f11d1026fe24b42d822cf22a-chunk-000<SEP>gd_beab654fbbc93fa3cf45a5c6-chunk-000<SEP>gd_46073547d3ecb8101d23128e-chunk-001<SEP>gd_bf207746ae273a5fc7e8618e-chunk-000<SEP>gd_c481ad6a3095befd2e0989e4-chunk-002<SEP>gd_c481ad6a3095befd2e0989e4-chunk-003<SEP>gd_cb17d802afa999aa5a2020f3-chunk-001<SEP>gd_cb17d802afa999aa5a2020f3-chunk-002<SEP>gd_cb17d802afa999aa5a2020f3-chunk-003<SEP>gd_cb17d802afa999aa5a2020f3-chunk-000<SEP>gd_9afc3fc5d51d8286d88af633-chunk-000<SEP>gd_9afc3fc5d51d8286d88af633-chunk-001<SEP>gd_5f4341352a06f4cbdef81bcc-chunk-000<SEP>gd_5f4341352a06f4cbdef81bcc-chunk-002<SEP>gd_5f4341352a06f4cbdef81bcc-chunk-003<SEP>gd_67aa9b21cc5ba8ca31945889-chunk-001<SEP>gd_67aa9b21cc5ba8ca31945889-chunk-003<SEP>gd_66bbfcd9b1f8b6bca75fe3f6-chunk-001<SEP>gd_6c0640632fd219338512a716-chunk-000<SEP>gd_6d674ffb138083b614124cff-chunk-002<SEP>gd_6d674ffb138083b614124cff-chunk-003<SEP>gd_6d674ffb138083b614124cff-chunk-004<SEP>gd_91f0124cd7f6c9cbe24df3e8-chunk-001<SEP>gd_91f0124cd7f6c9cbe24df3e8-chunk-002<SEP>gd_eef9b72c02c79480022b348b-chunk-000<SEP>gd_ea1b5c4442520f0bde10ef16-chunk-001<SEP>gd_0056db36f6124156e233c201-chunk-001<SEP>gd_0056db36f6124156e233c201-chunk-002<SEP>gd_813a663b6045ef3222cc6a96-chunk-000<SEP>gd_19d3cb4a0d9ac32e95b41c33-chunk-001<SEP>gd_19d3cb4a0d9ac32e95b41c33-chunk-002<SEP>gd_818ba64738491131923f436e-chunk-000<SEP>gd_1a02f8692430d0f4f1f4f6be-chunk-000<SEP>gd_8377d68cef2cdef818baa2e8-chunk-001<SEP>gd_84b389880b4e28a3333696a3-chunk-000<SEP>gd_d036f97a47d2121009f8326f-chunk-000<SEP>gd_05120473ace42af384d71ac1-chunk-000<SEP>gd_05120473ace42af384d71ac1-chunk-005<SEP>gd_950767c5c3a3596311dbbda5-chunk-000<SEP>gd_e5881e127e64d27c29297266-chunk-002<SEP>gd_e5881e127e64d27c29297266-chunk-004<SEP>gd_e5881e127e64d27c29297266-chunk-006<SEP>gd_e5881e127e64d27c29297266-chunk-007<SEP>gd_a2133043d53f3401aad628c3-chunk-001<SEP>gd_daf1ebb11f0e32fe93411859-chunk-000<SEP>gd_3f3546419c8af125d66414d7-chunk-002<SEP>gd_d52716db8e6942a0d024b8a0-chunk-000<SEP>gd_d52716db8e6942a0d024b8a0-chunk-001<SEP>gd_d52716db8e6942a0d024b8a0-chunk-002<SEP>gd_a173a4cadbd0b240296376ca-chunk-000<SEP>gd_cce155b4479bad7b55306d48-chunk-000<SEP>gd_cce155b4479bad7b55306d48-chunk-001<SEP>gd_cce155b4479bad7b55306d48-chunk-002<SEP>gd_000c9a2f62aa1edcababf25c-chunk-001<SEP>gd_0027ef0c6f1b522de8f93543-chunk-003<SEP>gd_dac4461c759fbef3c85beabc-chunk-000<SEP>gd_24e298cda6ab82b9dd6500f8-chunk-000<SEP>gd_19772d999a49aa7c05c1ed66-chunk-000<SEP>gd_48c4d7d8835df970f970f08b-chunk-001",
+          "file_path": "gd_014b45cb99cfee97ee337556<SEP>gd_756878d4d219336489c49168<SEP>gd_0e1afddaca819c17829b209e<SEP>gd_0019c5e0dad1cf6315645b67<SEP>gd_18496897e5422a11b9860676<SEP>gd_00f0fd1277363a92e5cb2ada<SEP>gd_03e15c39b23c76a73a12a032<SEP>gd_14d8f66ab72709464e7b1f54<SEP>gd_14fcf58446d7e49d02fe50fe<SEP>gd_0d9ed295c2bb4d2ef2626774<SEP>gd_0e9a94d9a2c6bd5596deca87<SEP>gd_e202a1afd3c9d493a094de48<SEP>gd_ad5ace08d7fa6c197773d33b<SEP>gd_23e08535a0d07b419df49dea<SEP>gd_16d19bd83634475f86b34ee9<SEP>gd_b15e60fb25deec55942c00d1<SEP>gd_15d187637520cc4b1b5726e1<SEP>gd_177014eb9b039d2307248c03<SEP>gd_23aa8cd4020f1d2df5102cfc<SEP>gd_256a41d38f56ea0d66e64b45<SEP>gd_4fe03de948798e408f8e23aa<SEP>gd_21bd6da71e6015eb12202fb3<SEP>gd_5339ef95acf5382961a2350a<SEP>gd_1282420851c57a65c41b3c9b<SEP>gd_26e354d96348044e49c9f661<SEP>gd_2aeb737f1fc3578904a93fac<SEP>gd_22462fc0c151ee5a1d880b8f<SEP>gd_2864ed857c89cc1a33e60bc8<SEP>gd_7b8e1734f0309e1ac887f899<SEP>gd_243034475e44ac6592eb8cf0<SEP>gd_070a59055548e31a4e2d028a<SEP>gd_4c93dd06bf96421a31a4ec23<SEP>gd_2fdbffb33fcf38e16b8d19ea<SEP>gd_34c141c6933eafc6a555342b<SEP>gd_3ebf3023f70e6b3f8139191f<SEP>gd_33efad0196fd9206d0c57889<SEP>gd_4a1db13237771f628ac9bc2c<SEP>gd_385277f88221b595a4db19fa<SEP>gd_5067e7d465b1c8e7c23adc37<SEP>gd_a46480025a7b5344f9662b4e<SEP>gd_5b98c2f68eb577d75332ad5f<SEP>gd_e0505c1150b5f1aa25fed30c<SEP>gd_3cc6a49aba6331ce2e244f8a<SEP>gd_40121b246ff5bf58c30968ac<SEP>gd_501507d3da37dc0bee391abb<SEP>gd_44e87b15a12b4d77479d4f58<SEP>gd_44d0a6964b4f43fd522b107e<SEP>gd_4e8e411a20b69ff98e60d556<SEP>gd_a6016d6c72ddea604b995fd3<SEP>gd_48e33c739374b10eb5af5570<SEP>gd_1e07c5d8a5539b7e896c47b5<SEP>gd_514be900e352775092392632<SEP>gd_524c287c9d24eb09b58604a0<SEP>gd_4f29175b4c599edc6f63ea81<SEP>gd_ba8cfcf37a4829e6738e3817<SEP>gd_51082f5f33da67daee39dc90<SEP>gd_5487b59a91d25df6759963f2<SEP>gd_5a3012ecffcc0968826fc7e3<SEP>gd_3aab2ebe3d4a17a4ae74909b<SEP>gd_673777877ba804b6adcb05c7<SEP>gd_d8fe4e83f86b82e6fd92f383<SEP>gd_6fcb1801ba88d3d8f13ac9c7<SEP>gd_79858ea6162573644fe3e173<SEP>gd_364d266152046eb1076d048a<SEP>gd_2c6f9645343251c1f939e00a<SEP>gd_72a49edcf9ab2df09ba6c1c2<SEP>gd_93db829a67b16eaaacdf2d76<SEP>gd_e6e70dc6bd3b3665dbbe64de<SEP>gd_2d72fe9469e9f2b08dcd24ea<SEP>gd_753bb0e35f420a30e8b62d0b<SEP>gd_896b59f47a2fe051ace06a99<SEP>gd_33efe7307fb3edd348590ee0<SEP>gd_826943ff016f1c9f4e16a02f<SEP>gd_82b65319408f738f77ded8bf<SEP>gd_9393f5107171bfdba2765a73<SEP>...truncated...(KEEP Old)",
+          "created_at": 1793529293
+        },
+        {
+          "entity_name": "AI Agents",
+          "entity_type": "product",
+          "description": "**AI Agents**\n\nAI Agents are artificial intelligence-powered tools designed to perform specific tasks or functions. They are artificial intelligence systems that can make predictions and decisions with a high degree of accuracy, but can also make mistakes. These systems can perform tasks autonomously and are often used to assist with customer onboarding and other tasks, requiring training and human oversight to effectively utilize their capabilities.\n\nAI Agents are products that are in production, working, and adding value. They are self-aware systems that can assist with coding tasks, but they can also experience reliability issues and require maintenance. To ensure they function correctly, AI Agents require monitoring, guardrails, validation, redundancy, and patience.\n\nIn addition to their technical capabilities, AI Agents are also being explored for their potential to play a larger role in closing deals, particularly for smaller transactions. They can handle tasks such as text message-based sales, and are being used in conjunction with various teams such as sales, outbound, and marketing.\n\nAI Agents are used in various capacities, including in Lenny Rachitsky's business, where they are utilized to automate tasks and improve efficiency. They are also being used to handle work equivalent to human team members, such as prospecting, meeting scheduling, pipeline analysis, competitive intelligence, and deal coaching.\n\nHowever, it is essential to remember that AI Agents are not infallible oracles and require editorial oversight and quality control. They are powerful force multipliers, but their capabilities must be carefully managed and monitored to ensure they function correctly and add value to operations.\n\nAI Agents are artificial intelligence systems that can perform tasks, but they lack human capabilities such as strategic thinking, creative problem-solving, and complex relationship management. Despite their limitations, AI Agents are being developed and deployed by companies to automate and scale business processes, particularly in sales, customer success, and marketing.\n\nAI Agents can be used in various capacities, including as a group of AI-powered sales agents used by SaaStr to automate sales tasks and improve revenue, as a feature of Roam that automates task and workflow optimization, and as software programs that use artificial intelligence to automate tasks and improve productivity. Additionally, AI Agents require 30 days of training and 50-60 hours of setup, and companies who expect instant results may get instant disappointment.\n\nIt is worth noting that AI Agents work 24/7, generating insights 24/7, and creating operational challenges for humans. They are software programs that can perform tasks autonomously, but require human oversight and validation to ensure their decisions and actions are meaningful and drive real relationships. AI Agents are also artificial intelligence systems that enhance productivity and capabilities, and can manage sub-agents, break down complex workflows, delegate tasks, coordinate results, and handle exceptions.\n\nIn summary, AI Agents are artificial intelligence-powered tools designed to perform specific tasks or functions. They are being developed and deployed by companies to add value to their operations, but require proper monitoring, maintenance, and oversight to function correctly.<SEP>AI agents are expected to be better and cheaper than human customer support<SEP>The use of AI agents has been able to influence around a 5% GMV uplift in e-commerce sales.",
+          "source_id": "gd_14530da4ea39350d8431fea6-chunk-001<SEP>gd_5b470ee5398fb5a9ffde5b9f-chunk-000<SEP>gd_17ec0a740f815b471f557b82-chunk-000<SEP>gd_3ebf3023f70e6b3f8139191f-chunk-002<SEP>gd_3a1525a79255325f169513f5-chunk-000<SEP>gd_48d6c0d938a1a83ada54d013-chunk-000<SEP>gd_48c842549096f5723fd0da91-chunk-000<SEP>gd_28e630372aae90eb9315f28e-chunk-004<SEP>gd_28e630372aae90eb9315f28e-chunk-005<SEP>gd_28e630372aae90eb9315f28e-chunk-006<SEP>gd_68f47f1f29e40ed975a9499f-chunk-000<SEP>gd_7214c699e42a2318dd33d09f-chunk-000<SEP>gd_7950a88d4849d8f84b9113ea-chunk-000<SEP>gd_9f958dd43d0ae0b6840970ce-chunk-000<SEP>gd_e6401ab7dfac2a87c4c7fcbc-chunk-000<SEP>gd_e88d6ca82d9766be5598ca26-chunk-000<SEP>gd_f29b6bb7bba69afeaadee57a-chunk-000<SEP>gd_6dfbacce169998c58bfc32fd-chunk-000<SEP>gd_91f0124cd7f6c9cbe24df3e8-chunk-001<SEP>gd_91f0124cd7f6c9cbe24df3e8-chunk-002<SEP>gd_daf1ebb11f0e32fe93411859-chunk-005<SEP>gd_eaeca2bf33d264c65e63cdb8-chunk-002<SEP>gd_f8379e32c2f158cdff4c2a06-chunk-001<SEP>gd_1db8851ad56bec3e841dbf86-chunk-002<SEP>gd_27d143d3e8d916ef234fccfe-chunk-002<SEP>gd_829c748931b4ffb3558e0adc-chunk-000<SEP>gd_aa0ea15544c2a0d3b6fe6a8e-chunk-002<SEP>gd_7e9750f5f4ac7517b7e0ad2e-chunk-000<SEP>gd_7e9750f5f4ac7517b7e0ad2e-chunk-002<SEP>gd_7e9750f5f4ac7517b7e0ad2e-chunk-003<SEP>gd_7e9750f5f4ac7517b7e0ad2e-chunk-004<SEP>gd_05ae884ea4f8f38234890d1c-chunk-000<SEP>gd_05ae884ea4f8f38234890d1c-chunk-004<SEP>gd_0ddad4f1999e5f43ddc98a8a-chunk-003<SEP>gd_1489f32c404f2e386e0e108a-chunk-000<SEP>gd_1cc87df378d79d9def33d0df-chunk-006<SEP>gd_24daecfca40dc0e745c734ab-chunk-000<SEP>gd_24daecfca40dc0e745c734ab-chunk-001<SEP>gd_24daecfca40dc0e745c734ab-chunk-003<SEP>gd_24daecfca40dc0e745c734ab-chunk-005<SEP>gd_6250b027a6a90083aaee57cf-chunk-000<SEP>gd_6250b027a6a90083aaee57cf-chunk-002<SEP>gd_6250b027a6a90083aaee57cf-chunk-004<SEP>gd_65427bc55aea7156a7d39bfe-chunk-002<SEP>gd_65427bc55aea7156a7d39bfe-chunk-005<SEP>gd_7d218b14604c16a4b2ba51cc-chunk-004<SEP>gd_696d949b6e655b2d0cca062f-chunk-002<SEP>gd_b62b6ad34d4ba7357f8052f1-chunk-006<SEP>gd_809239d05954fc972f3537b0-chunk-003<SEP>gd_809239d05954fc972f3537b0-chunk-004<SEP>gd_809239d05954fc972f3537b0-chunk-005<SEP>gd_e20ce885bf9b34730505932c-chunk-002<SEP>gd_e20ce885bf9b34730505932c-chunk-003<SEP>gd_e20ce885bf9b34730505932c-chunk-007<SEP>gd_17ed878e2ce1e1b54809f97a-chunk-003<SEP>gd_17ed878e2ce1e1b54809f97a-chunk-004<SEP>gd_3bb77d53b6895bb7fc8ec8ad-chunk-005<SEP>gd_618bc19ebfadc458cdd856d2-chunk-003<SEP>gd_cc80ae8a393a1ee4cf628117-chunk-000<SEP>gd_cc80ae8a393a1ee4cf628117-chunk-006<SEP>gd_524880b12b236d68016d66fa-chunk-003<SEP>gd_108897c9fb45f8816cdee46d-chunk-001<SEP>gd_23ebc282dfbfcee03fe01904-chunk-003<SEP>gd_eb80566a617b57e47caec5bf-chunk-000<SEP>gd_eb80566a617b57e47caec5bf-chunk-002<SEP>gd_03e19ade06e9e20d35a7a989-chunk-001<SEP>gd_03e19ade06e9e20d35a7a989-chunk-005<SEP>gd_03e19ade06e9e20d35a7a989-chunk-006<SEP>gd_a23c7d8cc392e782e22bb499-chunk-001<SEP>gd_3ffa319b9d5140c80f90ee3c-chunk-000<SEP>gd_3ffa319b9d5140c80f90ee3c-chunk-005<SEP>gd_3ffa319b9d5140c80f90ee3c-chunk-006<SEP>gd_547c5075e66aa644c0ab2a4f-chunk-002<SEP>gd_547c5075e66aa644c0ab2a4f-chunk-010<SEP>gd_6a3a9ea47e89d7f04a9415ee-chunk-006<SEP>gd_6a3a9ea47e89d7f04a9415ee-chunk-008<SEP>gd_5fe0e24210e667539d05d4de-chunk-000<SEP>gd_5fe0e24210e667539d05d4de-chunk-001<SEP>gd_5fe0e24210e667539d05d4de-chunk-011<SEP>gd_79c396c5dba7ced9a1a0f4c7-chunk-000<SEP>gd_7c2b868d50567a6b40c7c279-chunk-006<SEP>gd_7c2b868d50567a6b40c7c279-chunk-005<SEP>gd_59707322e6a2495f8caca90a-chunk-004<SEP>gd_03663f68906e5fe37d85d810-chunk-003<SEP>gd_03d4a048b430d78e6eb154b6-chunk-008<SEP>gd_57e4f799ef3cc8109831930f-chunk-006<SEP>gd_57e4f799ef3cc8109831930f-chunk-007<SEP>gd_22a9ed7241328a45dc6220c4-chunk-001<SEP>gd_22a9ed7241328a45dc6220c4-chunk-002<SEP>gd_27e43c6efa36b7ce8c8e3466-chunk-001<SEP>gd_5088eba36f8b4b196a5837dd-chunk-006<SEP>gd_759a598bed674f64e17e1fa0-chunk-003<SEP>gd_edb89a81cdf24ecbe37d430f-chunk-001<SEP>gd_ea7005a17108c249256d6dae-chunk-001<SEP>gd_14b875b7fc4c7d4068c628c6-chunk-009<SEP>gd_59c785375f34b0507b64485d-chunk-000<SEP>gd_57f6b6270d8be867f0e4e105-chunk-004<SEP>gd_57f6b6270d8be867f0e4e105-chunk-009",
+          "file_path": "gd_14530da4ea39350d8431fea6<SEP>gd_5b470ee5398fb5a9ffde5b9f<SEP>gd_17ec0a740f815b471f557b82<SEP>gd_3ebf3023f70e6b3f8139191f<SEP>gd_3a1525a79255325f169513f5<SEP>gd_48d6c0d938a1a83ada54d013<SEP>gd_48c842549096f5723fd0da91<SEP>gd_28e630372aae90eb9315f28e<SEP>gd_68f47f1f29e40ed975a9499f<SEP>gd_7214c699e42a2318dd33d09f<SEP>gd_7950a88d4849d8f84b9113ea<SEP>gd_9f958dd43d0ae0b6840970ce<SEP>gd_e6401ab7dfac2a87c4c7fcbc<SEP>gd_e88d6ca82d9766be5598ca26<SEP>gd_f29b6bb7bba69afeaadee57a<SEP>gd_6dfbacce169998c58bfc32fd<SEP>gd_91f0124cd7f6c9cbe24df3e8<SEP>gd_daf1ebb11f0e32fe93411859<SEP>gd_eaeca2bf33d264c65e63cdb8<SEP>gd_f8379e32c2f158cdff4c2a06<SEP>gd_1db8851ad56bec3e841dbf86<SEP>gd_27d143d3e8d916ef234fccfe<SEP>gd_829c748931b4ffb3558e0adc<SEP>gd_aa0ea15544c2a0d3b6fe6a8e<SEP>gd_7e9750f5f4ac7517b7e0ad2e<SEP>gd_05ae884ea4f8f38234890d1c<SEP>gd_0ddad4f1999e5f43ddc98a8a<SEP>gd_1489f32c404f2e386e0e108a<SEP>gd_1cc87df378d79d9def33d0df<SEP>gd_24daecfca40dc0e745c734ab<SEP>gd_6250b027a6a90083aaee57cf<SEP>gd_65427bc55aea7156a7d39bfe<SEP>gd_7d218b14604c16a4b2ba51cc<SEP>gd_696d949b6e655b2d0cca062f<SEP>gd_b62b6ad34d4ba7357f8052f1<SEP>gd_809239d05954fc972f3537b0<SEP>gd_e20ce885bf9b34730505932c<SEP>gd_17ed878e2ce1e1b54809f97a<SEP>gd_3bb77d53b6895bb7fc8ec8ad<SEP>gd_618bc19ebfadc458cdd856d2<SEP>gd_cc80ae8a393a1ee4cf628117<SEP>gd_524880b12b236d68016d66fa<SEP>gd_108897c9fb45f8816cdee46d<SEP>gd_23ebc282dfbfcee03fe01904<SEP>gd_03e19ade06e9e20d35a7a989<SEP>gd_a23c7d8cc392e782e22bb499<SEP>gd_3ffa319b9d5140c80f90ee3c<SEP>gd_547c5075e66aa644c0ab2a4f<SEP>gd_6a3a9ea47e89d7f04a9415ee<SEP>gd_5fe0e24210e667539d05d4de<SEP>gd_79c396c5dba7ced9a1a0f4c7<SEP>gd_7c2b868d50567a6b40c7c279<SEP>gd_59707322e6a2495f8caca90a<SEP>gd_03663f68906e5fe37d85d810<SEP>gd_03d4a048b430d78e6eb154b6<SEP>gd_57e4f799ef3cc8109831930f<SEP>gd_22a9ed7241328a45dc6220c4<SEP>gd_5088eba36f8b4b196a5837dd<SEP>gd_759a598bed674f64e17e1fa0<SEP>gd_edb89a81cdf24ecbe37d430f<SEP>gd_ea7005a17108c249256d6dae<SEP>gd_14b875b7fc4c7d4068c628c6<SEP>gd_57f6b6270d8be867f0e4e105",
+          "created_at": 1793645259
+        },
+        {
+          "entity_name": "Customer",
+          "entity_type": "person",
+          "description": "**Customer**\n\nA customer is a person or organization that purchases goods or services from a vendor. This can include individuals who use a product or service, as well as businesses that buy a company's products or services. In the context of software services, a customer is a person who uses the software services provided by the vendor. Customers can also be those who have switched from the original SaaS vendor to a competitor.\n\nThe term \"customer\" encompasses a wide range of individuals and organizations, including those who buy goods or services from a vendor, as well as those who have already purchased a product or service. A customer can be a person or organization that has a direct relationship with the vendor, and is typically the end-user of the product or service.\n\nIn general, a customer is anyone who has a financial or contractual relationship with a vendor, and is the primary recipient of the goods or services being provided. This definition encompasses both individual customers and business customers, and highlights the importance of understanding the needs and preferences of customers in order to provide effective products and services.\n\nHowever, not all customers are created equal. Customers who buy but don't deploy the product are often not worth much, as they tend to not renew and do not create second-order revenue. On the other hand, customers who buy and deploy the product are worth more, as they are more likely to renew and create additional revenue.\n\nIndividuals or organizations that purchase products or services from the enterprise are also considered customers. Furthermore, a customer can be described as the entity that uses the AI system and requires training and implementation.\n\nIn some cases, a customer may expect a discount on a product or service, or may be addressed in a text expecting a price increase within a year. However, the core definition of a customer remains the same, emphasizing the financial or contractual relationship between the customer and the vendor.\n\nCustomer-obsessed revenue leaders need to interact with customers from day one, prioritizing customer needs over processes and organizational charts. Customer contact in week 1 is a critical predictor of revenue hire success. Individuals who want more from SaaS companies, or named humans who use a company's product or service, are all examples of customers.\n\nIt is also worth noting that customer happiness and satisfaction are key to a company's success, and giving them ownership when they achieve it is crucial. This highlights the importance of prioritizing customer needs and providing effective products and services to meet those needs.\n\nIn the context of Gorgias, a customer is an individual who receives support from the company. This emphasizes the importance of providing effective support and services to meet the needs of customers.\n\nOverall, the concept of a customer is multifaceted and can be viewed from various perspectives. However, at its core, a customer is a person or organization that purchases goods or services from a vendor, and is the primary recipient of those goods or services.\n\nIt's worth noting that the success of a company can be measured by the number of long-term customers it has, as those who have been with a company for 10+ years require ongoing sales efforts to maintain their business. Losing a big customer can be a huge deal, and customer retention is crucial for a company's success. Atlassian's customer count is growing by 18% a year, and Zscaler's business model is heavily reliant on its customers. The customer is also the one who is switching vendors and expects a smooth transition, and the customer is the person or organization that uses the product.\n\nIn addition, customers are the end-users of the AI product, requiring embedded implementation roles to ensure successful deployment. A person or organization that purchases a product or service is also considered a customer. Individuals who are the target of the 5+2 Rule are also customers. A customer is an individual or organization that uses a company's product or service. A person or business that purchases a product or service is also a customer. A person or organization that buys a company's products or services is also a customer.\n\nThe concept of a customer is also closely tied to customer satisfaction and loyalty, which is a specific business idea that refers to a customer's satisfaction and loyalty. Happy customers are indeed a company's best secret weapon, and prioritizing customer needs and providing effective products and services is crucial for a company's success.\n\nBeing more customer-centric involves prioritizing the needs and experiences of customers, which can be achieved through various actions such as launching new features, improving product quality, providing dedicated customer support, and maintaining transparent pricing.\n\nCustomers who are served and serviced after the first year of a deal become cheaper to serve. The user of the SaaS service, who is being referred to in the text, is also a customer. Individuals who already trust the company for support services are also customers. A person or organization that purchases a company's products or services is also a customer.<SEP>A customer is an individual or organization that purchases a product or service from a company.<SEP>A person who buys or uses a product or service.<SEP>The person or organization that is purchasing the product.",
+          "source_id": "gd_756878d4d219336489c49168-chunk-002<SEP>gd_1586430bce2fffea00a8cd83-chunk-000<SEP>gd_84a451c83e9831b81f0767db-chunk-001<SEP>gd_84a451c83e9831b81f0767db-chunk-003<SEP>gd_84a451c83e9831b81f0767db-chunk-002<SEP>gd_2664f61c71917faf699946e9-chunk-000<SEP>gd_2664f61c71917faf699946e9-chunk-001<SEP>gd_5d90a51419eeab4b82b0d089-chunk-001<SEP>gd_09267d6dfab254529a946b18-chunk-002<SEP>gd_2740d9c87f5393610ce047ff-chunk-001<SEP>gd_23aa8cd4020f1d2df5102cfc-chunk-000<SEP>gd_1ff134cad37b3145694b65c9-chunk-000<SEP>gd_243034475e44ac6592eb8cf0-chunk-001<SEP>gd_685189794087858c0dba6918-chunk-000<SEP>gd_2736eded0180a2afc9505cb5-chunk-000<SEP>gd_0232091eeb1889ab3eadba94-chunk-000<SEP>gd_3ac038553a6efee0e6c187a0-chunk-001<SEP>gd_60a85b5bbcb318da5ce2a08b-chunk-000<SEP>gd_418ec401601816549c7d1606-chunk-000<SEP>gd_418ec401601816549c7d1606-chunk-001<SEP>gd_1bb89f0881d846204f69d052-chunk-001<SEP>gd_4182662f07427c92033d1898-chunk-000<SEP>gd_816304ae833fa148e165ce04-chunk-001<SEP>gd_ba8cfcf37a4829e6738e3817-chunk-001<SEP>gd_6b1a49b4098b8d5ced9cbc54-chunk-000<SEP>gd_90dfdba2d42ce3be7435fa31-chunk-000<SEP>gd_04114abda31061d87a515bce-chunk-000<SEP>gd_3700a72c04912b7acab40b91-chunk-002<SEP>gd_83de48d1c3212650ca366a4e-chunk-000<SEP>gd_74fa8567086173e6d517e67c-chunk-002<SEP>gd_74fa8567086173e6d517e67c-chunk-003<SEP>gd_d816377c1561e5a5204949f5-chunk-001<SEP>gd_3da3607bda34d36f64e5ae00-chunk-001<SEP>gd_81bde9d299daaec71f7d4b59-chunk-001<SEP>gd_21a0619942b8b8afb3198b89-chunk-000<SEP>gd_2b4ce302bd88fc5c4144f923-chunk-000<SEP>gd_24f77dbf4b59912a1115a97e-chunk-001<SEP>gd_687721f2b1e4566e02347026-chunk-001<SEP>gd_9c328b8c5305e596c95c958f-chunk-000<SEP>gd_5cb830e3555cd27666dd65ad-chunk-000<SEP>gd_70929d0b69577d08cefde831-chunk-000<SEP>gd_c2b27f4f31ca40ae0b724f8a-chunk-001<SEP>gd_fbfd75e1cfbe070ed4c05ac9-chunk-000<SEP>gd_8b0f897aaca9070243a07cb5-chunk-000<SEP>gd_562428ed0fbfd2c7c9e7e139-chunk-001<SEP>gd_562428ed0fbfd2c7c9e7e139-chunk-002<SEP>gd_f11d1026fe24b42d822cf22a-chunk-000<SEP>gd_ab388e36b2c46d1b6afc8c4d-chunk-001<SEP>gd_9faad83e0a7e9cfbbf7435be-chunk-000<SEP>gd_cfff43f54e599e774f3d86cc-chunk-000<SEP>gd_cfff43f54e599e774f3d86cc-chunk-001<SEP>gd_582bd5132dbb8e609d1e18c9-chunk-001<SEP>gd_5842a34ea92c5bf8829796a9-chunk-000<SEP>gd_bffb70d6ba96de0c690fcf5c-chunk-002<SEP>gd_2600be32b9f4d0b5295b8e3e-chunk-000<SEP>gd_29657db26ea3194302a88083-chunk-000<SEP>gd_29657db26ea3194302a88083-chunk-001<SEP>gd_d27bcca51ad6c43733ee31f8-chunk-000<SEP>gd_3b3eba2b0d649e6bf7cc6d2a-chunk-000<SEP>gd_886c340f84e0b5c2aa089985-chunk-000<SEP>gd_78db847c7c7234a8eb04acc1-chunk-001<SEP>gd_0b8f922e50984dc168e44b3d-chunk-001<SEP>gd_59120cae360cdf09fa6d1198-chunk-000<SEP>gd_12fe030017ff3b7201e562ae-chunk-000<SEP>gd_19d3cb4a0d9ac32e95b41c33-chunk-002<SEP>gd_aff22cfcaff5e7bbcca05126-chunk-000<SEP>gd_aff22cfcaff5e7bbcca05126-chunk-001<SEP>gd_1a02f8692430d0f4f1f4f6be-chunk-000<SEP>gd_1b9124f2109ba18c8a2b0ba1-chunk-001<SEP>gd_1b9124f2109ba18c8a2b0ba1-chunk-002<SEP>gd_8bfdd2b067df03dfe42bfd16-chunk-001<SEP>gd_2fd938822405dfa1bd1a090e-chunk-001<SEP>gd_e5881e127e64d27c29297266-chunk-001<SEP>gd_3375b711cc2faff9ba670010-chunk-001<SEP>gd_3420b0d75274e09a6649b966-chunk-002<SEP>gd_f87b6447ffb0fde342d3e7c3-chunk-000<SEP>gd_f87b6447ffb0fde342d3e7c3-chunk-001<SEP>gd_48e090cf4fc87c6b04e673b9-chunk-002<SEP>gd_4c4a5ac20c57f7f42509d190-chunk-002<SEP>gd_4c4a5ac20c57f7f42509d190-chunk-003<SEP>gd_5be598808892e1813906e0da-chunk-002<SEP>gd_5c912fefa31e5fba2a3e6a7f-chunk-001<SEP>gd_5dfaf70730c3fda27c1e436f-chunk-001<SEP>gd_b9da4c38ae9a1cb3ff415e0e-chunk-000<SEP>gd_b9da4c38ae9a1cb3ff415e0e-chunk-001<SEP>gd_43870849c02a9d30476bc952-chunk-001<SEP>gd_5469466f9fafa170311ff4a8-chunk-000<SEP>gd_87f9f1c85817eeb46b0ec74d-chunk-006<SEP>gd_6feced8579df06c11c55ce7a-chunk-000<SEP>gd_6feced8579df06c11c55ce7a-chunk-001<SEP>gd_d3046abbff56769a90cbeea0-chunk-002<SEP>gd_998a0f02096608e541f825c8-chunk-001<SEP>gd_998a0f02096608e541f825c8-chunk-002<SEP>gd_a304a47cb5c5a65ea48d0a98-chunk-002<SEP>gd_a5a22ccebea91f4178b40631-chunk-000<SEP>gd_a5a22ccebea91f4178b40631-chunk-001<SEP>gd_ee48ad719b59c4df12151952-chunk-001<SEP>gd_efbaa09ea2525e90e20556df-chunk-001<SEP>gd_b80d7d772933d7964f9d8df7-chunk-001<SEP>gd_f73c0f4e98a454788b21abf4-chunk-001<SEP>gd_c188efcd001afbd3f2ccccd5-chunk-002<SEP>gd_c7c952be7d593a9e41580e4f-chunk-001<SEP>gd_d3257e7a5c6478127fad53f2-chunk-001<SEP>gd_d38bc5de76dea4c45c10753d-chunk-002<SEP>gd_d6922837935a40c18c58a550-chunk-001<SEP>gd_d6922837935a40c18c58a550-chunk-002<SEP>gd_d81bb6cc0098a4c65b6265fe-chunk-000<SEP>gd_d981b5f28d512ce3174a36d3-chunk-003<SEP>gd_de5623a10d1c9531112cfe54-chunk-000<SEP>gd_de5623a10d1c9531112cfe54-chunk-001<SEP>gd_0fe1906994e83df5c0f7c8c5-chunk-002<SEP>gd_0fe1906994e83df5c0f7c8c5-chunk-001<SEP>gd_124914117863afe36da91aad-chunk-000<SEP>gd_eb9bcbd89eab0c1c3fd0c93f-chunk-001<SEP>gd_ed2685a046f505e85b4c7e3c-chunk-000<SEP>gd_44e0cfa1d75cad6c2ff06403-chunk-001<SEP>gd_47d74459673a0a1e6372f0aa-chunk-002<SEP>gd_4bde0767eaeffe8fda34ff9e-chunk-001<SEP>gd_1db8851ad56bec3e841dbf86-chunk-003<SEP>gd_4d77f67e4d236b7029d83bb8-chunk-001<SEP>gd_4d77f67e4d236b7029d83bb8-chunk-002<SEP>gd_4e7fd53d3d57eeb978245741-chunk-000<SEP>gd_4e7fd53d3d57eeb978245741-chunk-001<SEP>gd_4082d9286441e5d1b2ab3d21-chunk-000<SEP>gd_56d7f8faeb5930b1eda7e2c9-chunk-002<SEP>gd_685109a529dd46a0e19d6f2a-chunk-001<SEP>gd_7ee9455344274686353167d1-chunk-000<SEP>gd_829c748931b4ffb3558e0adc-chunk-003<SEP>gd_7c7a216c8745503a287b7942-chunk-001<SEP>gd_7c7a216c8745503a287b7942-chunk-002<SEP>gd_b414f3ae82d1cf67bb537a11-chunk-002<SEP>gd_b414f3ae82d1cf67bb537a11-chunk-003<SEP>gd_885984971dbc1d1315ea4765-chunk-002<SEP>gd_88c41e8fa8fc316e33319e5b-chunk-000<SEP>gd_9021ddbc4daccae39880d4e2-chunk-001<SEP>gd_01660f9354b0e95cd03ed553-chunk-001<SEP>gd_04221d86ca97f3a5d5009cb0-chunk-001<SEP>gd_05bc76829dab57dbe4e30f7b-chunk-003<SEP>gd_995edd43bb903497883c63ce-chunk-002<SEP>gd_1b9bbe7ebbb40cc7edaaca04-chunk-002<SEP>gd_1b9bbe7ebbb40cc7edaaca04-chunk-003<SEP>gd_1b9bbe7ebbb40cc7edaaca04-chunk-004<SEP>gd_999472ab9bf390630ebf1126-chunk-001<SEP>gd_9e2d016a1add7c06ba742fa3-chunk-001<SEP>gd_37f607fa6221f3f2f29989e0-chunk-000<SEP>gd_37f607fa6221f3f2f29989e0-chunk-001<SEP>gd_37f607fa6221f3f2f29989e0-chunk-002<SEP>gd_6056979fb658f8547f535b87-chunk-000<SEP>gd_81df2c388bd8cae226612dc4-chunk-004<SEP>gd_abec5724b77815cf1198b62f-chunk-003<SEP>gd_c761713807815a161628791f-chunk-000<SEP>gd_c761713807815a161628791f-chunk-001<SEP>gd_c761713807815a161628791f-chunk-003<SEP>gd_d5be599c09c06e3a2de7a86e-chunk-001<SEP>gd_dd626eb5f79a12db1cce58c5-chunk-001<SEP>gd_e86a8aefd448317878d3f98e-chunk-003<SEP>gd_e86a8aefd448317878d3f98e-chunk-004<SEP>gd_f9d25c28348724609cb4e3da-chunk-001<SEP>gd_f75482c2f3e4cd3d4994097c-chunk-000<SEP>gd_1d29a7ab34aaf951a6c3c613-chunk-000<SEP>gd_2a49878130a3a94891f1c22f-chunk-000<SEP>gd_3acffa3c074be68c09c17ae4-chunk-000<SEP>gd_3acffa3c074be68c09c17ae4-chunk-001<SEP>gd_b0a33090385448bab0fdb263-chunk-001<SEP>gd_a9ce3f99835be884bcfda4b8-chunk-001<SEP>gd_b93fa625fb27e1273a2d301d-chunk-000<SEP>gd_e3052debb61086184aea82f0-chunk-001<SEP>gd_e3052debb61086184aea82f0-chunk-002<SEP>gd_062fdba1eb0375bef6607116-chunk-001<SEP>gd_38bb13c79d43c1ce65fb04e5-chunk-003<SEP>gd_38bb13c79d43c1ce65fb04e5-chunk-004<SEP>gd_38bb13c79d43c1ce65fb04e5-chunk-000<SEP>gd_4d74c8d25456712731b2794d-chunk-003<SEP>gd_4e03396df89ad1049c88ccc6-chunk-003<SEP>gd_65427bc55aea7156a7d39bfe-chunk-007<SEP>gd_b17253e0832c9eda0a49b551-chunk-002<SEP>gd_b17253e0832c9eda0a49b551-chunk-003<SEP>gd_b59420b8a4157ccee2549a6f-chunk-004<SEP>gd_c75af687e9a8e78065ced9f2-chunk-003<SEP>gd_c75af687e9a8e78065ced9f2-chunk-004<SEP>gd_cf567e078855dc81da727b07-chunk-006<SEP>gd_cf567e078855dc81da727b07-chunk-005<SEP>gd_a557aed74a9f2d2938e996df-chunk-003<SEP>gd_0954f21476e278b26fb4a224-chunk-002<SEP>gd_51f61376ab02cc151f9c2e33-chunk-007<SEP>gd_00a618e670a7fb4086515b41-chunk-001<SEP>gd_00a618e670a7fb4086515b41-chunk-002<SEP>gd_00a618e670a7fb4086515b41-chunk-003<SEP>gd_63ee9e6fa74f4ab2dcfa2c10-chunk-001<SEP>gd_63ee9e6fa74f4ab2dcfa2c10-chunk-002<SEP>gd_63ee9e6fa74f4ab2dcfa2c10-chunk-003<SEP>gd_67605307e29f9fce4d4d6064-chunk-003<SEP>gd_180cfcbda9d5aa945583d82e-chunk-000<SEP>gd_33332d21e2f09c2040e0be21-chunk-000<SEP>gd_34886e1a288792f07a43f42e-chunk-000<SEP>gd_34886e1a288792f07a43f42e-chunk-001<SEP>gd_8721a060426f25a8026402d1-chunk-002<SEP>gd_3b71943f6d453972b1bdd1de-chunk-001<SEP>gd_c7547b1952af643a14fd7405-chunk-000<SEP>gd_73d1872c13b4b38ec567c3c8-chunk-000",
+          "file_path": "gd_756878d4d219336489c49168<SEP>gd_1586430bce2fffea00a8cd83<SEP>gd_84a451c83e9831b81f0767db<SEP>gd_2664f61c71917faf699946e9<SEP>gd_5d90a51419eeab4b82b0d089<SEP>gd_09267d6dfab254529a946b18<SEP>gd_2740d9c87f5393610ce047ff<SEP>gd_23aa8cd4020f1d2df5102cfc<SEP>gd_1ff134cad37b3145694b65c9<SEP>gd_243034475e44ac6592eb8cf0<SEP>gd_685189794087858c0dba6918<SEP>gd_2736eded0180a2afc9505cb5<SEP>gd_0232091eeb1889ab3eadba94<SEP>gd_3ac038553a6efee0e6c187a0<SEP>gd_60a85b5bbcb318da5ce2a08b<SEP>gd_418ec401601816549c7d1606<SEP>gd_1bb89f0881d846204f69d052<SEP>gd_4182662f07427c92033d1898<SEP>gd_816304ae833fa148e165ce04<SEP>gd_ba8cfcf37a4829e6738e3817<SEP>gd_90dfdba2d42ce3be7435fa31<SEP>gd_04114abda31061d87a515bce<SEP>gd_3700a72c04912b7acab40b91<SEP>gd_74fa8567086173e6d517e67c<SEP>gd_d816377c1561e5a5204949f5<SEP>gd_3da3607bda34d36f64e5ae00<SEP>gd_81bde9d299daaec71f7d4b59<SEP>gd_21a0619942b8b8afb3198b89<SEP>gd_2b4ce302bd88fc5c4144f923<SEP>gd_24f77dbf4b59912a1115a97e<SEP>gd_9c328b8c5305e596c95c958f<SEP>gd_5cb830e3555cd27666dd65ad<SEP>gd_70929d0b69577d08cefde831<SEP>gd_c2b27f4f31ca40ae0b724f8a<SEP>gd_f11d1026fe24b42d822cf22a<SEP>gd_ab388e36b2c46d1b6afc8c4d<SEP>gd_9faad83e0a7e9cfbbf7435be<SEP>gd_cfff43f54e599e774f3d86cc<SEP>gd_5842a34ea92c5bf8829796a9<SEP>gd_bffb70d6ba96de0c690fcf5c<SEP>gd_2600be32b9f4d0b5295b8e3e<SEP>gd_29657db26ea3194302a88083<SEP>gd_d27bcca51ad6c43733ee31f8<SEP>gd_3b3eba2b0d649e6bf7cc6d2a<SEP>gd_886c340f84e0b5c2aa089985<SEP>gd_0b8f922e50984dc168e44b3d<SEP>gd_59120cae360cdf09fa6d1198<SEP>gd_12fe030017ff3b7201e562ae<SEP>gd_19d3cb4a0d9ac32e95b41c33<SEP>gd_aff22cfcaff5e7bbcca05126<SEP>gd_1a02f8692430d0f4f1f4f6be<SEP>gd_1b9124f2109ba18c8a2b0ba1<SEP>gd_8bfdd2b067df03dfe42bfd16<SEP>gd_2fd938822405dfa1bd1a090e<SEP>gd_3420b0d75274e09a6649b966<SEP>gd_f87b6447ffb0fde342d3e7c3<SEP>gd_4c4a5ac20c57f7f42509d190<SEP>gd_5be598808892e1813906e0da<SEP>gd_5c912fefa31e5fba2a3e6a7f<SEP>gd_5dfaf70730c3fda27c1e436f<SEP>gd_b9da4c38ae9a1cb3ff415e0e<SEP>gd_43870849c02a9d30476bc952<SEP>gd_5469466f9fafa170311ff4a8<SEP>gd_87f9f1c85817eeb46b0ec74d<SEP>gd_6feced8579df06c11c55ce7a<SEP>gd_d3046abbff56769a90cbeea0<SEP>gd_998a0f02096608e541f825c8<SEP>gd_a304a47cb5c5a65ea48d0a98<SEP>gd_a5a22ccebea91f4178b40631<SEP>gd_ee48ad719b59c4df12151952<SEP>gd_efbaa09ea2525e90e20556df<SEP>gd_b80d7d772933d7964f9d8df7<SEP>gd_f73c0f4e98a454788b21abf4<SEP>gd_c188efcd001afbd3f2ccccd5<SEP>gd_c7c952be7d593a9e41580e4f<SEP>...truncated...(KEEP Old)",
+          "created_at": 1793585839
+        },
+        {
+          "entity_name": "AI Sales Agents",
+          "entity_type": "product",
+          "description": "AI sales agents are software programs designed to optimize conversion rates, but may harm customer relationships.<SEP>AI Sales Agents are software programs designed to assist in sales and customer acquisition.<SEP>Artificial intelligence-powered sales agents.",
+          "source_id": "gd_e20ce885bf9b34730505932c-chunk-005<SEP>gd_547c5075e66aa644c0ab2a4f-chunk-007<SEP>gd_27e43c6efa36b7ce8c8e3466-chunk-001",
+          "file_path": "gd_e20ce885bf9b34730505932c<SEP>gd_547c5075e66aa644c0ab2a4f<SEP>gd_27e43c6efa36b7ce8c8e3466",
+          "created_at": 1793625105
+        },
+        {
+          "entity_name": "Source credibility",
+          "entity_type": "concept",
+          "description": "Source credibility refers to the trustworthiness of a source.<SEP>The importance of being cited by trusted sources in content creation.",
+          "source_id": "gd_5d99972d6803b5f801c6c8b0-chunk-002<SEP>gd_5d99972d6803b5f801c6c8b0-chunk-003",
+          "file_path": "gd_5d99972d6803b5f801c6c8b0",
+          "created_at": 1793594287
+        },
+        {
+          "entity_name": "AI Tool",
+          "entity_type": "UNKNOWN",
+          "description": "The VP of Sales abuses the AI tool by not reviewing its outputs, leading to negative consequences for the company's brand.",
+          "source_id": "gd_89ef45091a4dc6b15419376f-chunk-002",
+          "file_path": "gd_89ef45091a4dc6b15419376f",
+          "created_at": 1793582614
+        },
+        {
+          "entity_name": "B2B sales leaders",
+          "entity_type": "person",
+          "description": "B2B sales leaders are skeptical about the impact of AI on enterprise and in-person sales.",
+          "source_id": "gd_93d5f2f3734060bea2c7b669-chunk-000",
+          "file_path": "gd_93d5f2f3734060bea2c7b669",
+          "created_at": 1793572548
+        },
+        {
+          "entity_name": "sophisticated buyers",
+          "entity_type": "person",
+          "description": "Potential customers evaluating vendors based on product and operational competence.",
+          "source_id": "gd_a46480025a7b5344f9662b4e-chunk-003",
+          "file_path": "gd_a46480025a7b5344f9662b4e",
+          "created_at": 1793492802
+        },
+        {
+          "entity_name": "AI agents",
+          "entity_type": "product",
+          "description": "**AI Agents**\n\nAI agents are a set of artificial intelligence software tools designed to automate and optimize business processes. They are artificial intelligence (AI) agents that are used to generate code and automate tasks, but it's worth noting that some AI agents may not consider security vulnerabilities, licensing issues, or long-term maintenance implications when selecting packages and dependencies. These software programs use artificial intelligence to perform tasks, such as data analysis or decision-making, and are often used for business operations.\n\nAI agents can also be used to generate code and process data, making them a valuable tool for businesses looking to streamline their processes. Additionally, AI-powered sales representatives that work on Saturday nights are also considered a type of AI agent. Overall, AI agents are a key component of artificial intelligence systems, and their capabilities continue to evolve and improve with advancements in the field.\n\nIn essence, AI agents are software programs that can perform tasks autonomously, often with human oversight. They are a type of artificial intelligence technology that can extract insights from data, making them a valuable asset for businesses. Furthermore, AI agents are also used in specialized software for enterprise sales, such as SaaStr AI's GTM product, and are considered AI-powered sales tools.\n\nAI agents can perform tasks that would typically require human intervention, and their capabilities continue to expand with advancements in the field of artificial intelligence. As a result, AI agents are becoming increasingly important for businesses looking to automate and optimize their processes, and their role in the field of artificial intelligence is likely to continue growing in the future.\n\nNotably, AI agents have been successful in generating significant revenue, with some examples generating over $1 million in revenue while having a cost to run that is a fraction of a single employee. This highlights the potential of AI agents to deliver more work for humans to review, making them a valuable tool for businesses looking to streamline their operations.\n\nAI agents are used in various applications, including automating tasks, interacting with customers, pulling data from any application, booking appointments for salons and spas, performing customer service, data analysis, or content generation, and text generation, optimization, and meeting setup. They are also used in artificial intelligence-powered tools for automating sales outreach and in artificial intelligence software that can perform various tasks, including development, deployment, and validation of other AI agents' work.\n\nHowever, it is worth noting that some AI agents may cut corners on security without telling the user, particularly in vibe-coded apps. Additionally, AI agents are not limited to business operations, as they can also be used in personalized email marketing and other applications.\n\nIn summary, AI agents are artificial intelligence software tools that can automate and optimize business processes, generate code, and process data. They are a key component of artificial intelligence systems and are becoming increasingly important for businesses looking to automate and optimize their processes.<SEP>Artificial intelligence agents that cannot be trusted with production data.<SEP>Artificial Intelligence agents.<SEP>AI agents are a relatively new approach in AI, characterized by slower and more limited market options due to immature tooling and infrastructure.<SEP>AI agents that generate significant revenue while requiring substantial daily management.",
+          "source_id": "gd_28e630372aae90eb9315f28e-chunk-000<SEP>gd_79858ea6162573644fe3e173-chunk-000<SEP>gd_71e628f86d3b2233b7cb22b0-chunk-006<SEP>gd_71e628f86d3b2233b7cb22b0-chunk-007<SEP>gd_826943ff016f1c9f4e16a02f-chunk-000<SEP>gd_a956d6defae69ac68c5d4cb9-chunk-000<SEP>gd_e5881e127e64d27c29297266-chunk-003<SEP>gd_e5881e127e64d27c29297266-chunk-002<SEP>gd_daf1ebb11f0e32fe93411859-chunk-004<SEP>gd_27d143d3e8d916ef234fccfe-chunk-004<SEP>gd_2f4df5abef725f9b0f5db9bd-chunk-001<SEP>gd_829c748931b4ffb3558e0adc-chunk-005<SEP>gd_aa0ea15544c2a0d3b6fe6a8e-chunk-001<SEP>gd_05ae884ea4f8f38234890d1c-chunk-001<SEP>gd_05ae884ea4f8f38234890d1c-chunk-002<SEP>gd_358fbb324b7f44e4b1825ded-chunk-001<SEP>gd_6250b027a6a90083aaee57cf-chunk-003<SEP>gd_65427bc55aea7156a7d39bfe-chunk-001<SEP>gd_7d218b14604c16a4b2ba51cc-chunk-000<SEP>gd_7d218b14604c16a4b2ba51cc-chunk-002<SEP>gd_b62b6ad34d4ba7357f8052f1-chunk-007<SEP>gd_e20ce885bf9b34730505932c-chunk-000<SEP>gd_e20ce885bf9b34730505932c-chunk-006<SEP>gd_fe622fa2eae579716b604273-chunk-005<SEP>gd_bb2df0933484691709bc2edf-chunk-005<SEP>gd_17ed878e2ce1e1b54809f97a-chunk-002<SEP>gd_2443495fc85009b081428b80-chunk-004<SEP>gd_cc80ae8a393a1ee4cf628117-chunk-002<SEP>gd_f335200b1b152ebd57131e72-chunk-003<SEP>gd_f374b222227a6a91a8bc883c-chunk-006<SEP>gd_524880b12b236d68016d66fa-chunk-004<SEP>gd_a4194312fb5370f0de4ff5e4-chunk-000<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-002<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-003<SEP>gd_3ca68dc5b6f09166e4348fa9-chunk-000<SEP>gd_5b445ae4452b1cd5ee770467-chunk-002<SEP>gd_eed02ca0e99ddce2117cfb23-chunk-002<SEP>gd_b708bafdb3e9448eaa9a7fcd-chunk-002<SEP>gd_ed396b2b09f9738240728d5f-chunk-003<SEP>gd_65a4761071aa56f6364c237e-chunk-007<SEP>gd_e7d8f3c724d6b1461b36dc79-chunk-007<SEP>gd_1ea75faaa1a24bb0a1573ab5-chunk-004<SEP>gd_547c5075e66aa644c0ab2a4f-chunk-012<SEP>gd_5a82a5a11309c93654f577f0-chunk-000<SEP>gd_5a82a5a11309c93654f577f0-chunk-002<SEP>gd_5fe0e24210e667539d05d4de-chunk-006<SEP>gd_79c396c5dba7ced9a1a0f4c7-chunk-003<SEP>gd_b7769ae41d22fc197ddc2e8c-chunk-014<SEP>gd_9f64b63b5ae698d29604d98b-chunk-016<SEP>gd_e1b4aa060048f3016d2be0d6-chunk-004<SEP>gd_ec4952faf291c054baf7a979-chunk-000<SEP>gd_ec4952faf291c054baf7a979-chunk-003<SEP>gd_0ab9e36612e164096f270f49-chunk-000<SEP>gd_22a9ed7241328a45dc6220c4-chunk-000<SEP>gd_22a9ed7241328a45dc6220c4-chunk-004<SEP>gd_39135822a5638787a5a43dd3-chunk-003<SEP>gd_5088eba36f8b4b196a5837dd-chunk-007<SEP>gd_de224f44af7a01a27aa7d4bf-chunk-001<SEP>gd_e68aacea13804104b99303da-chunk-009<SEP>gd_e259b4464cd93452130f852e-chunk-000<SEP>gd_e259b4464cd93452130f852e-chunk-001<SEP>gd_e259b4464cd93452130f852e-chunk-005<SEP>gd_e259b4464cd93452130f852e-chunk-008<SEP>gd_ea7005a17108c249256d6dae-chunk-010<SEP>gd_89ed76474feb20a9ce6b4438-chunk-008<SEP>gd_57f6b6270d8be867f0e4e105-chunk-008<SEP>gd_39b6f4d40075e7b8d3ea719d-chunk-008",
+          "file_path": "gd_28e630372aae90eb9315f28e<SEP>gd_71e628f86d3b2233b7cb22b0<SEP>gd_826943ff016f1c9f4e16a02f<SEP>gd_a956d6defae69ac68c5d4cb9<SEP>gd_e5881e127e64d27c29297266<SEP>gd_daf1ebb11f0e32fe93411859<SEP>gd_27d143d3e8d916ef234fccfe<SEP>gd_2f4df5abef725f9b0f5db9bd<SEP>gd_829c748931b4ffb3558e0adc<SEP>gd_aa0ea15544c2a0d3b6fe6a8e<SEP>gd_05ae884ea4f8f38234890d1c<SEP>gd_6250b027a6a90083aaee57cf<SEP>gd_65427bc55aea7156a7d39bfe<SEP>gd_7d218b14604c16a4b2ba51cc<SEP>gd_b62b6ad34d4ba7357f8052f1<SEP>gd_e20ce885bf9b34730505932c<SEP>gd_fe622fa2eae579716b604273<SEP>gd_bb2df0933484691709bc2edf<SEP>gd_17ed878e2ce1e1b54809f97a<SEP>gd_2443495fc85009b081428b80<SEP>gd_cc80ae8a393a1ee4cf628117<SEP>gd_f374b222227a6a91a8bc883c<SEP>gd_524880b12b236d68016d66fa<SEP>gd_a4194312fb5370f0de4ff5e4<SEP>gd_2a4d7b8a58e1c3110dd4d692<SEP>gd_3ca68dc5b6f09166e4348fa9<SEP>gd_b708bafdb3e9448eaa9a7fcd<SEP>gd_65a4761071aa56f6364c237e<SEP>gd_e7d8f3c724d6b1461b36dc79<SEP>gd_1ea75faaa1a24bb0a1573ab5<SEP>gd_547c5075e66aa644c0ab2a4f<SEP>gd_5a82a5a11309c93654f577f0<SEP>gd_5fe0e24210e667539d05d4de<SEP>gd_79c396c5dba7ced9a1a0f4c7<SEP>gd_b7769ae41d22fc197ddc2e8c<SEP>gd_9f64b63b5ae698d29604d98b<SEP>gd_e1b4aa060048f3016d2be0d6<SEP>gd_ec4952faf291c054baf7a979<SEP>gd_22a9ed7241328a45dc6220c4<SEP>gd_39135822a5638787a5a43dd3<SEP>gd_5088eba36f8b4b196a5837dd<SEP>gd_de224f44af7a01a27aa7d4bf<SEP>gd_e68aacea13804104b99303da<SEP>gd_e259b4464cd93452130f852e<SEP>gd_ea7005a17108c249256d6dae<SEP>gd_89ed76474feb20a9ce6b4438<SEP>gd_57f6b6270d8be867f0e4e105<SEP>gd_39b6f4d40075e7b8d3ea719d",
+          "created_at": 1793646142
+        },
+        {
+          "entity_name": "Scale AI",
+          "entity_type": "product",
+          "description": "Scale AI is a leading artificial intelligence platform that provides a range of services, including data annotation and labeling, to businesses. Founded as an artificial intelligence infrastructure company, Scale AI has received significant investment from Meta, with a valuation of $14.3 billion. The company's primary focus is on providing AI-powered data annotation and labeling tools, which enable businesses to integrate customer-specific knowledge into their AI models through its Data Engine. Scale AI's innovative approach has led to its acquisition by Meta, further solidifying its position in the AI industry.\n\nIn addition to its core services, Scale AI has also implemented AI-powered customer conversation analysis to automate its sales and revenue operations. This technology has enabled the company to streamline its processes and improve efficiency. Furthermore, Scale AI's Data Engine plays a crucial role in handling AI development and deployment for its clients, making it a valuable resource for businesses looking to integrate AI into their operations.\n\nIt's worth noting that Scale AI has also been mentioned in the context of losing market position due to compromised customer trust. However, this appears to be a separate instance and not directly related to the company's core services or operations.\n\nIn terms of its valuation, there appears to be some discrepancy between the $14.3 billion stake held by Meta and the $29 billion valuation mentioned in another description. While the exact valuation of Scale AI is unclear, it is evident that the company has received significant investment and has a substantial presence in the AI industry.<SEP>Scale AI is an AI company with a $14.5 billion exit.<SEP>A company that raised $84 billion in one year.<SEP>Scale AI is a company that was sold to Alexander Wang for $14 billion, returning money to LPs.<SEP>Artificial intelligence technology company acquired by Alexander Wang for $14 billion.<SEP>Scale AI, an AI data labeling and model training infrastructure company, acquired by Meta for $14.8 billion.",
+          "source_id": "gd_4d2d98ffc2887cec2812526f-chunk-000<SEP>gd_3e1e129a8206331df24e51bb-chunk-000<SEP>gd_1cc87df378d79d9def33d0df-chunk-001<SEP>gd_1cc87df378d79d9def33d0df-chunk-002<SEP>gd_21bcdb79915adf02cb5ac281-chunk-001<SEP>gd_b7d6d3bd89951116557fa67d-chunk-000<SEP>gd_2443495fc85009b081428b80-chunk-003<SEP>gd_30b975e27b27dccba55465d5-chunk-001<SEP>gd_30b975e27b27dccba55465d5-chunk-002<SEP>gd_30b975e27b27dccba55465d5-chunk-006<SEP>gd_524880b12b236d68016d66fa-chunk-000<SEP>gd_524880b12b236d68016d66fa-chunk-001<SEP>gd_a23c7d8cc392e782e22bb499-chunk-003<SEP>gd_17a93aa10584e86b5877188c-chunk-000<SEP>gd_17a93aa10584e86b5877188c-chunk-001<SEP>gd_17a93aa10584e86b5877188c-chunk-005<SEP>gd_8a750106d4513616691b5198-chunk-001<SEP>gd_90f0625e16d8673be75aae16-chunk-002<SEP>gd_a0acb205dc04ba5f42369d7a-chunk-002<SEP>gd_18882942a86ac5a7c53bf0cb-chunk-003<SEP>gd_18882942a86ac5a7c53bf0cb-chunk-004<SEP>gd_605e0c1f4fd4724182870b9e-chunk-005<SEP>gd_605e0c1f4fd4724182870b9e-chunk-004",
+          "file_path": "gd_4d2d98ffc2887cec2812526f<SEP>gd_3e1e129a8206331df24e51bb<SEP>gd_1cc87df378d79d9def33d0df<SEP>gd_21bcdb79915adf02cb5ac281<SEP>gd_b7d6d3bd89951116557fa67d<SEP>gd_2443495fc85009b081428b80<SEP>gd_30b975e27b27dccba55465d5<SEP>gd_524880b12b236d68016d66fa<SEP>gd_a23c7d8cc392e782e22bb499<SEP>gd_17a93aa10584e86b5877188c<SEP>gd_8a750106d4513616691b5198<SEP>gd_90f0625e16d8673be75aae16<SEP>gd_a0acb205dc04ba5f42369d7a<SEP>gd_18882942a86ac5a7c53bf0cb<SEP>gd_605e0c1f4fd4724182870b9e",
+          "created_at": 1793643699
+        },
+        {
+          "entity_name": "AI Chatbots",
+          "entity_type": "UNKNOWN",
+          "description": "87% of B2B software buyers say AI chatbots are changing how they research.",
+          "source_id": "gd_eb80566a617b57e47caec5bf-chunk-004",
+          "file_path": "gd_eb80566a617b57e47caec5bf",
+          "created_at": 1793594378
+        },
+        {
+          "entity_name": "customer",
+          "entity_type": "person",
+          "description": "**Customer**\n\nA customer is a person who purchases goods or services from a business. In the context of iCorp, customer growth and customer commits are key metrics for the company's success. A customer can be an existing client or an entity that provides feedback to prioritize feature requests. Furthermore, a customer is also a business or individual that purchases software solutions. In general, a customer is an individual or business that purchases and uses a product or service. Additionally, a customer can be a group of people who have previously purchased a product or service.<SEP>A person or organization that purchases a product or service.<SEP>customer is a concept mentioned in the context of dispatching decisions.<SEP>Company clients and users<SEP>A person who has purchased a product or service.<SEP>The person who uses the product and provides feedback to the company.<SEP>Individual who interacts with support teams",
+          "source_id": "gd_24f77dbf4b59912a1115a97e-chunk-002<SEP>gd_582bd5132dbb8e609d1e18c9-chunk-002<SEP>gd_0b60e94ececf3cb73976c5df-chunk-002<SEP>gd_2551431949d1ccdc36a75aef-chunk-002<SEP>gd_98c310f33b529f8d44d3350e-chunk-000<SEP>gd_dd626eb5f79a12db1cce58c5-chunk-002<SEP>gd_6da15a6b34d48a5e69bfd919-chunk-000<SEP>gd_aed94db7fb93de78e7edb769-chunk-000<SEP>gd_0d5ce0b3e04a8314ef86c827-chunk-006<SEP>gd_6b0bb4f6eea86f76dabfe5ec-chunk-006<SEP>gd_c8afdbbf8388440f60dcd43c-chunk-002<SEP>gd_e7d8f3c724d6b1461b36dc79-chunk-008<SEP>gd_17a93aa10584e86b5877188c-chunk-005<SEP>gd_417b957752ce712ce5874976-chunk-004<SEP>gd_dc18c861c82269cf5cc7e98b-chunk-013<SEP>gd_1330305cc3f41f63189528f0-chunk-003",
+          "file_path": "gd_24f77dbf4b59912a1115a97e<SEP>gd_582bd5132dbb8e609d1e18c9<SEP>gd_0b60e94ececf3cb73976c5df<SEP>gd_2551431949d1ccdc36a75aef<SEP>gd_98c310f33b529f8d44d3350e<SEP>gd_dd626eb5f79a12db1cce58c5<SEP>gd_aed94db7fb93de78e7edb769<SEP>gd_0d5ce0b3e04a8314ef86c827<SEP>gd_6b0bb4f6eea86f76dabfe5ec<SEP>gd_c8afdbbf8388440f60dcd43c<SEP>gd_e7d8f3c724d6b1461b36dc79<SEP>gd_417b957752ce712ce5874976<SEP>gd_dc18c861c82269cf5cc7e98b<SEP>gd_1330305cc3f41f63189528f0",
+          "created_at": 1793638079
+        },
+        {
+          "entity_name": "AI agent",
+          "entity_type": "product",
+          "description": "The AI agent is a software system that utilizes artificial intelligence to perform various tasks, including customer service, sales, and marketing. It is a software product that can be deployed for multiple purposes, such as interacting with websites, customers, and various platforms and data sources. The AI agent is capable of performing tasks autonomously, making it a valuable tool for businesses and organizations.\n\nIn its various forms, the AI agent can be used for tasks such as order form reconciliation, customer support, lead generation, and sales prospecting. It can also be used to automate tasks, such as interacting with customers and handling sales outreach. Additionally, the AI agent can be used to perform more specific tasks, such as picking out outfits in the morning, as seen in some applications of the technology.\n\nHowever, it is worth noting that AI agents have been found to be flawed in some instances, highlighting the need for careful development and deployment. Despite this, the AI agent remains a powerful tool for businesses and organizations looking to leverage the capabilities of artificial intelligence.\n\nThe concept of the AI agent will be discussed at SaaStr AI 2026, and it is clear that the technology has a wide range of applications and uses. Overall, the AI agent is a software system that utilizes artificial intelligence to perform various tasks, and its capabilities and uses continue to evolve and expand.<SEP>An AI agent is a software program that uses artificial intelligence to perform tasks, such as resolving customer issues.<SEP>AI agent is a software that uses artificial intelligence to automate tasks.",
+          "source_id": "gd_14530da4ea39350d8431fea6-chunk-000<SEP>gd_235cb6ff695a4b03e5386e8d-chunk-000<SEP>gd_9598a2bf88e2b887d431bf48-chunk-000<SEP>gd_83de48d1c3212650ca366a4e-chunk-000<SEP>gd_e20ce885bf9b34730505932c-chunk-008<SEP>gd_faa157494978fdae540fd08c-chunk-003<SEP>gd_fbe978a3b40b409d34953414-chunk-001<SEP>gd_e95c09643e99385d630cd19c-chunk-002<SEP>gd_4cfc448c168537f303934946-chunk-001<SEP>gd_a2681a200e84051105426224-chunk-004<SEP>gd_547c5075e66aa644c0ab2a4f-chunk-001<SEP>gd_cf4ae0c7b6bfbc4756ff5422-chunk-007<SEP>gd_9e15f38f2f6fafa680da9f0c-chunk-014<SEP>gd_57e4f799ef3cc8109831930f-chunk-003<SEP>gd_57e4f799ef3cc8109831930f-chunk-016<SEP>gd_930b21b904954df9b1d85c3b-chunk-003<SEP>gd_57f6b6270d8be867f0e4e105-chunk-007",
+          "file_path": "gd_14530da4ea39350d8431fea6<SEP>gd_235cb6ff695a4b03e5386e8d<SEP>gd_9598a2bf88e2b887d431bf48<SEP>gd_83de48d1c3212650ca366a4e<SEP>gd_e20ce885bf9b34730505932c<SEP>gd_faa157494978fdae540fd08c<SEP>gd_fbe978a3b40b409d34953414<SEP>gd_e95c09643e99385d630cd19c<SEP>gd_4cfc448c168537f303934946<SEP>gd_a2681a200e84051105426224<SEP>gd_547c5075e66aa644c0ab2a4f<SEP>gd_cf4ae0c7b6bfbc4756ff5422<SEP>gd_9e15f38f2f6fafa680da9f0c<SEP>gd_57e4f799ef3cc8109831930f<SEP>gd_930b21b904954df9b1d85c3b<SEP>gd_57f6b6270d8be867f0e4e105",
+          "created_at": 1793645270
+        }
+      ],
+      "relationships": [
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "SaaStr",
+          "description": "**SaaStr's AI Agents**\n\nSaaStr, a prominent organization, has leveraged AI agents to automate and scale various business processes. The deployment of 20+ AI agents has been a key strategy for the company, aiming to improve efficiency and revenue. According to reports, SaaStr implemented AI agents starting in the summer of 2025, specifically to automate sales tasks and enhance revenue.\n\nThe AI agents' solutions were designed to support SaaStr's revenue and operations teams. By utilizing these agents, the company has achieved significant results, including reaching its Q1 '26 revenue goal of 140% of Q1 2025. This accomplishment is a testament to the effectiveness of AI agents in driving business growth.\n\nHowever, it is essential to note that AI agents are not infallible and may require human review and calibration to ensure accuracy. Despite this, SaaStr members are already experiencing the impact of AI agents, which may disrupt traditional pricing models. As the company continues to integrate AI agents into its operations, it is likely that we will see further innovations and improvements in the way business processes are managed.\n\nThe deployment of AI agents across SaaStr's revenue and operations teams has been a strategic move to enhance the company's performance. By harnessing the power of AI, SaaStr aims to maintain its competitive edge in the market.<SEP>Relationship Description: SaaStr is already using AI Agents and has downgraded its seat counts at vendors.<SEP>Productivity Gains",
+          "keywords": "Deploying AI Agents,Deploys,Disrupt,Downgrade,Impact,Implementation,Implemented,Improved Revenue,Relationship Keywords: Use,Relationship_keywords: software industry conference,Revenue Generation,Utilizes,community",
+          "weight": 10.0,
+          "source_id": "gd_829c748931b4ffb3558e0adc-chunk-000<SEP>gd_24daecfca40dc0e745c734ab-chunk-000<SEP>gd_6250b027a6a90083aaee57cf-chunk-000<SEP>gd_6250b027a6a90083aaee57cf-chunk-002<SEP>gd_b62b6ad34d4ba7357f8052f1-chunk-006<SEP>gd_79c396c5dba7ced9a1a0f4c7-chunk-000<SEP>gd_14b875b7fc4c7d4068c628c6-chunk-009<SEP>gd_59c785375f34b0507b64485d-chunk-000",
+          "file_path": "gd_829c748931b4ffb3558e0adc<SEP>gd_24daecfca40dc0e745c734ab<SEP>gd_6250b027a6a90083aaee57cf<SEP>gd_b62b6ad34d4ba7357f8052f1<SEP>gd_79c396c5dba7ced9a1a0f4c7<SEP>gd_14b875b7fc4c7d4068c628c6<SEP>gd_59c785375f34b0507b64485d",
+          "created_at": 1793644273
+        },
+        {
+          "src_id": "Buyers",
+          "tgt_id": "Marketers",
+          "description": "Relationship_description: Marketers have lost trust with buyers, who now trust AI systems more.",
+          "keywords": "AI,Relationship_keywords: trust,transfer",
+          "weight": 1.0,
+          "source_id": "gd_5d99972d6803b5f801c6c8b0-chunk-002",
+          "file_path": "gd_5d99972d6803b5f801c6c8b0",
+          "created_at": 1793594293
+        },
+        {
+          "src_id": "AI agents",
+          "tgt_id": "SaaStr",
+          "description": "**SaaStr's Adoption of AI Agents**\n\nSaaStr, a company known for its innovative approach to business operations, has successfully transitioned to an AI-driven model. This shift has enabled the company to reduce its human workforce while maintaining, if not increasing, revenue. The AI agents deployed and operated by SaaStr are utilized for various tasks, aiming to automate and optimize business processes.\n\nOne of the key outcomes of this transition is the reduction of human resources, with top performers taking on the role of managing AI agents instead of sending emails. This strategic move has allowed SaaStr to achieve equivalent business performance while minimizing the need for manual intervention. Furthermore, the company has reported that 90% of its Sales Development Representatives (SDRs) will be displaced within 12 months, a significant change in its sales strategy.\n\nThe SaaStr conference has also seen the deployment of AI agents, showcasing the company's commitment to leveraging technology to enhance its operations. By using AI agents to automate tasks, SaaStr aims to improve efficiency and productivity, setting a precedent for the industry.<SEP>SaaStr has deployed 20+ AI agents across its operations, generating over $1M in revenue while reducing headcount needs.<SEP>SaaStr has deployed 20+ AI agents across its operations.<SEP>The company has deployed 20+ AI agents across SaaStr this year.<SEP>SaaStr has deployed 11 true AI agents across its operations, which has created a new management challenge.",
+          "keywords": "20+,Deployed,Displaced classic email-based SDRs,Headcount,Operated,Replaced human sales team,Revenue,Transformed SDR role,Uses,across,deployment,management,operational challenge,relationship_keywords: deployed,revenue increase,success,uses",
+          "weight": 13.0,
+          "source_id": "gd_28e630372aae90eb9315f28e-chunk-000<SEP>gd_2f4df5abef725f9b0f5db9bd-chunk-001<SEP>gd_829c748931b4ffb3558e0adc-chunk-005<SEP>gd_358fbb324b7f44e4b1825ded-chunk-001<SEP>gd_7d218b14604c16a4b2ba51cc-chunk-000<SEP>gd_b62b6ad34d4ba7357f8052f1-chunk-007<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-002<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-003<SEP>gd_5a82a5a11309c93654f577f0-chunk-002<SEP>gd_22a9ed7241328a45dc6220c4-chunk-000",
+          "file_path": "gd_28e630372aae90eb9315f28e<SEP>gd_2f4df5abef725f9b0f5db9bd<SEP>gd_829c748931b4ffb3558e0adc<SEP>gd_358fbb324b7f44e4b1825ded<SEP>gd_7d218b14604c16a4b2ba51cc<SEP>gd_b62b6ad34d4ba7357f8052f1<SEP>gd_2a4d7b8a58e1c3110dd4d692<SEP>gd_5a82a5a11309c93654f577f0<SEP>gd_22a9ed7241328a45dc6220c4",
+          "created_at": 1793625008
+        },
+        {
+          "src_id": "Buyers",
+          "tgt_id": "Generative AI chatbots",
+          "description": "relationship_description: Generative AI chatbots are now more trusted than vendor salespeople for final purchase decisions.",
+          "keywords": "purchase decisions,relationship_keywords: trust",
+          "weight": 1.0,
+          "source_id": "gd_5b445ae4452b1cd5ee770467-chunk-002",
+          "file_path": "gd_5b445ae4452b1cd5ee770467",
+          "created_at": 1793594147
+        },
+        {
+          "src_id": "AI Sales Rep",
+          "tgt_id": "SaaStr",
+          "description": "The AI sales rep is used by SaaStr.",
+          "keywords": "Implementation,Use",
+          "weight": 1.0,
+          "source_id": "gd_faead248acb155f9a68f81a5-chunk-000",
+          "file_path": "gd_faead248acb155f9a68f81a5",
+          "created_at": 1793505480
+        },
+        {
+          "src_id": "Generative AI chatbots",
+          "tgt_id": "Vendor salespeople",
+          "description": "relationship_description: Generative AI chatbots are now more trusted than vendor salespeople for final purchase decisions.",
+          "keywords": "purchase decisions,relationship_keywords: trust",
+          "weight": 1.0,
+          "source_id": "gd_5b445ae4452b1cd5ee770467-chunk-002",
+          "file_path": "gd_5b445ae4452b1cd5ee770467",
+          "created_at": 1793594147
+        },
+        {
+          "src_id": "AI",
+          "tgt_id": "AI Agents",
+          "description": "AI technology is breaking the traditional revenue model and replacing seats rather than complementing them.",
+          "keywords": "disruption,replacement",
+          "weight": 1.0,
+          "source_id": "gd_1db8851ad56bec3e841dbf86-chunk-002",
+          "file_path": "gd_1db8851ad56bec3e841dbf86",
+          "created_at": 1793529554
+        },
+        {
+          "src_id": "AI",
+          "tgt_id": "Customer",
+          "description": "AI provides accurate and respectful interactions with customers.<SEP>relationship_description: AI can handle routine sales, qualify leads, demo products, negotiate deals, and close sales automatically for customers.<SEP>AI can conduct quarterly business reviews and regular check-in calls more effectively, remembering all previous interactions and providing genuine value rather than just pushing for more revenue.<SEP>AI remembers every conversation in perfect detail and can follow up intelligently on specific issues discussed.<SEP>Customers will no longer tolerate the traditional B2B sales process with its delays, knowledge gaps, and friction, and will expect AI-level efficiency, knowledge, and convenience in all sales processes.<SEP>Customers interact with the AI, build trust, and experience high switching costs.",
+          "keywords": "Keywords: interaction,Transparency,close,convenience,demo,expectation,negotiation,provides genuine value rather than just pushing for more revenue,qualification,relationship_keywords: handles,remembers every conversation in perfect detail,switching cost,trust",
+          "weight": 7.0,
+          "source_id": "gd_ba8cfcf37a4829e6738e3817-chunk-001<SEP>gd_97843612d08bfd01e9f83879-chunk-003<SEP>gd_97843612d08bfd01e9f83879-chunk-005<SEP>gd_97843612d08bfd01e9f83879-chunk-008<SEP>gd_70ca318c0d67e8b62254fb7d-chunk-003",
+          "file_path": "gd_ba8cfcf37a4829e6738e3817<SEP>gd_97843612d08bfd01e9f83879<SEP>gd_70ca318c0d67e8b62254fb7d",
+          "created_at": 1793612279
+        },
+        {
+          "src_id": "AI",
+          "tgt_id": "Buyers",
+          "description": "relationship_keywords=qualify_leads, relationship_description=AI can qualify leads better than humans",
+          "keywords": "Qualify leads",
+          "weight": 1.0,
+          "source_id": "gd_5b445ae4452b1cd5ee770467-chunk-003",
+          "file_path": "gd_5b445ae4452b1cd5ee770467",
+          "created_at": 1793594147
+        },
+        {
+          "src_id": "Marketers",
+          "tgt_id": "Source credibility",
+          "description": "Relationship_description: Marketers have lost trust with buyers, who now trust AI systems more.",
+          "keywords": "AI,Relationship_keywords: trust,credibility",
+          "weight": 1.0,
+          "source_id": "gd_5d99972d6803b5f801c6c8b0-chunk-002",
+          "file_path": "gd_5d99972d6803b5f801c6c8b0",
+          "created_at": 1793594293
+        },
+        {
+          "src_id": "AI",
+          "tgt_id": "AI agent",
+          "description": "Is a type of",
+          "keywords": "Is used with",
+          "weight": 1.0,
+          "source_id": "gd_9e15f38f2f6fafa680da9f0c-chunk-014",
+          "file_path": "gd_9e15f38f2f6fafa680da9f0c",
+          "created_at": 1793622311
+        },
+        {
+          "src_id": "AI",
+          "tgt_id": "Buyer signals and sentiment",
+          "description": "AI needs to consider buyer signals and sentiment when determining when to stay in the loop and when to bring in a human.",
+          "keywords": "Logic",
+          "weight": 1.0,
+          "source_id": "gd_823279392f3517de14a0233e-chunk-002",
+          "file_path": "gd_823279392f3517de14a0233e",
+          "created_at": 1793594817
+        },
+        {
+          "src_id": "AI",
+          "tgt_id": "B2B Buyers",
+          "description": "B2B buyers expect AI-level efficiency, knowledge, and convenience in all sales processes.",
+          "keywords": "Convenience,Efficiency,Knowledge",
+          "weight": 1.0,
+          "source_id": "gd_97843612d08bfd01e9f83879-chunk-009",
+          "file_path": "gd_97843612d08bfd01e9f83879",
+          "created_at": 1793605105
+        },
+        {
+          "src_id": "AI",
+          "tgt_id": "sophisticated buyers",
+          "description": "AI's scalability and human oversight capabilities are crucial for successful vendor relationships.",
+          "keywords": "assess,evaluate",
+          "weight": 1.0,
+          "source_id": "gd_a46480025a7b5344f9662b4e-chunk-003",
+          "file_path": "gd_a46480025a7b5344f9662b4e",
+          "created_at": 1793492802
+        },
+        {
+          "src_id": "Scale AI",
+          "tgt_id": "customer",
+          "description": "Scale AI's customer trust was compromised, leading to a loss of market position.",
+          "keywords": "compromised,relationship_keywords: trust",
+          "weight": 1.0,
+          "source_id": "gd_17a93aa10584e86b5877188c-chunk-005",
+          "file_path": "gd_17a93aa10584e86b5877188c",
+          "created_at": 1793605296
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "VP of Sales",
+          "description": "The VP of Sales at AI Agents argued with the company.",
+          "keywords": "Argued",
+          "weight": 1.0,
+          "source_id": "gd_24daecfca40dc0e745c734ab-chunk-000",
+          "file_path": "gd_24daecfca40dc0e745c734ab",
+          "created_at": 1793564966
+        },
+        {
+          "src_id": "Customers",
+          "tgt_id": "Scale AI",
+          "description": "Scale AI's remaining customers (OpenAI, Anthropic) can't continue doing business with a company owned by a competitor.",
+          "keywords": "Trust Crisis",
+          "weight": 1.0,
+          "source_id": "gd_17a93aa10584e86b5877188c-chunk-001",
+          "file_path": "gd_17a93aa10584e86b5877188c",
+          "created_at": 1793605296
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Founders",
+          "description": "Building instead of buying, No human oversight, Training on mediocre content, Skipping segmentation, Underestimating change management fatigue, Waiting for perfection, Ignoring the human handoff, Assuming “people person” skills are enough, Not testing from the customer’s perspective<SEP>Founders can benefit from AI agents that can autonomously bring in specialists and improve security.",
+          "keywords": "Benefit,Expecting plug-and-play magic",
+          "weight": 2.0,
+          "source_id": "gd_7d218b14604c16a4b2ba51cc-chunk-004<SEP>gd_e20ce885bf9b34730505932c-chunk-003",
+          "file_path": "gd_7d218b14604c16a4b2ba51cc<SEP>gd_e20ce885bf9b34730505932c",
+          "created_at": 1793571751
+        },
+        {
+          "src_id": "Buyers",
+          "tgt_id": "Companies",
+          "description": "Companies that prioritize “qualification” over “helping” are arrogant towards their buyers<SEP>Buyers expect AI-powered interactions with companies.<SEP>The key focus of successful companies in the Gen AI space is on the human aspect.",
+          "keywords": "arrogance,empathy,expect,human-centric approach,interaction,qualification",
+          "weight": 3.0,
+          "source_id": "gd_05120473ace42af384d71ac1-chunk-005<SEP>gd_9a97c79b6f4bcad8c5a26ccc-chunk-002<SEP>gd_c3146fb15d0855ad8bbb5a02-chunk-008",
+          "file_path": "gd_05120473ace42af384d71ac1<SEP>gd_9a97c79b6f4bcad8c5a26ccc<SEP>gd_c3146fb15d0855ad8bbb5a02",
+          "created_at": 1793641964
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Salesforce",
+          "description": "AI Agents partnered with Salesforce to implement their AI solutions.<SEP>AI agents integrate with Salesforce to pull context from website visits and prior history<SEP>AI agents are not replacing Salesforce next quarter.<SEP>AI agents are expected to replace Salesforce next quarter.<SEP>The AI agents all talk to each other through Salesforce.<SEP>AI agents use Salesforce as their primary data source for making decisions.",
+          "keywords": "Deploys,Partnered,Relationship_keywords: integrate,Replacement,Replacing Salesforce,Used By,Uses,use data",
+          "weight": 6.0,
+          "source_id": "gd_24daecfca40dc0e745c734ab-chunk-000<SEP>gd_6250b027a6a90083aaee57cf-chunk-002<SEP>gd_03e19ade06e9e20d35a7a989-chunk-005<SEP>gd_03e19ade06e9e20d35a7a989-chunk-006<SEP>gd_3ffa319b9d5140c80f90ee3c-chunk-000<SEP>gd_3ffa319b9d5140c80f90ee3c-chunk-006",
+          "file_path": "gd_24daecfca40dc0e745c734ab<SEP>gd_6250b027a6a90083aaee57cf<SEP>gd_03e19ade06e9e20d35a7a989<SEP>gd_3ffa319b9d5140c80f90ee3c",
+          "created_at": 1793607965
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Smart Buyers",
+          "description": "Smart buyers have more leverage in purchasing AI agents.",
+          "keywords": "More Leverage",
+          "weight": 1.0,
+          "source_id": "gd_6a3a9ea47e89d7f04a9415ee-chunk-006",
+          "file_path": "gd_6a3a9ea47e89d7f04a9415ee",
+          "created_at": 1793610411
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Company",
+          "description": "The company is developing and deploying AI agents.<SEP>The company charges customers based on success, only charging for full automation when a ticket is closed and resolved.",
+          "keywords": "Deploying,Developing,charge",
+          "weight": 2.0,
+          "source_id": "gd_28e630372aae90eb9315f28e-chunk-006<SEP>gd_57f6b6270d8be867f0e4e105-chunk-009",
+          "file_path": "gd_28e630372aae90eb9315f28e<SEP>gd_57f6b6270d8be867f0e4e105",
+          "created_at": 1793645302
+        },
+        {
+          "src_id": "AI",
+          "tgt_id": "Customers",
+          "description": "The AI system is able to resolve a significant percentage of customer support issues, but the quality of resolution declines.<SEP>Customers are pushing the AI system to resolve a high percentage of their issues, but the quality of resolution declines.<SEP>leveraging AI capabilities to deliver instant and massive ROI to customers.<SEP>Customers prefer AI interactions over human interactions, expressing satisfaction and gratitude.<SEP>Customers prefer AI-driven approach for genuine help rather than thinly-disguised sales pressure.<SEP>Customers expect better sales experiences due to AI<SEP>The customer starts giving it harder tasks because it’s proven it can handle the easy ones.",
+          "keywords": "Efficiency,Expect Better,Keywords: preference,Resolution,Taps into,Transparency,earns trust through insane value,gives trust through insane value,gratitude,satisfaction",
+          "weight": 7.0,
+          "source_id": "gd_1282420851c57a65c41b3c9b-chunk-001<SEP>gd_6206569683c386ee6c92ce17-chunk-009<SEP>gd_97843612d08bfd01e9f83879-chunk-004<SEP>gd_97843612d08bfd01e9f83879-chunk-006<SEP>gd_97843612d08bfd01e9f83879-chunk-010<SEP>gd_70ca318c0d67e8b62254fb7d-chunk-002",
+          "file_path": "gd_1282420851c57a65c41b3c9b<SEP>gd_6206569683c386ee6c92ce17<SEP>gd_97843612d08bfd01e9f83879<SEP>gd_70ca318c0d67e8b62254fb7d",
+          "created_at": 1793612279
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "CEO",
+          "description": "The CEO of AI Agents reached out to the company.<SEP>The CEO must consider the implications of AI agents on the company's pricing model and overall strategy.",
+          "keywords": "Consider,Evaluate,Reached Out",
+          "weight": 2.0,
+          "source_id": "gd_24daecfca40dc0e745c734ab-chunk-000<SEP>gd_b62b6ad34d4ba7357f8052f1-chunk-006",
+          "file_path": "gd_24daecfca40dc0e745c734ab<SEP>gd_b62b6ad34d4ba7357f8052f1",
+          "created_at": 1793569792
+        },
+        {
+          "src_id": "AI",
+          "tgt_id": "Buyer",
+          "description": "Buyers will be deflected by AI, reducing the need for human interaction.",
+          "keywords": "deflect,no need to talk",
+          "weight": 1.0,
+          "source_id": "gd_16d19bd83634475f86b34ee9-chunk-000",
+          "file_path": "gd_16d19bd83634475f86b34ee9",
+          "created_at": 1793489243
+        },
+        {
+          "src_id": "AI agents",
+          "tgt_id": "VP of Sales",
+          "description": "Your next VP of Sales needs to understand how to architect a team where AI agents handle the volume - prospecting, initial qualification, email sequences, meeting scheduling - while humans focus on complex negotiations, relationship building, and strategic selling.",
+          "keywords": "Requires",
+          "weight": 1.0,
+          "source_id": "gd_65427bc55aea7156a7d39bfe-chunk-001",
+          "file_path": "gd_65427bc55aea7156a7d39bfe",
+          "created_at": 1793567444
+        },
+        {
+          "src_id": "AI-Powered SaaS",
+          "tgt_id": "Enterprise Customer",
+          "description": "Relationship: In AI-powered SaaS, trust is all about how sensitive data is handled, and enterprise customers are asking about AI data privacy.",
+          "keywords": "Keywords: trust,sensitive data",
+          "weight": 1.0,
+          "source_id": "gd_cf86f25295592edfe084b296-chunk-002",
+          "file_path": "gd_cf86f25295592edfe084b296",
+          "created_at": 1793603050
+        },
+        {
+          "src_id": "AI agents",
+          "tgt_id": "Jason",
+          "description": "Jason managed and trained AI agents to improve sales performance.<SEP>Jason deployed AI agents that generate significant revenue.",
+          "keywords": "Keywords: managed,generate revenue,trained",
+          "weight": 2.0,
+          "source_id": "gd_7d218b14604c16a4b2ba51cc-chunk-002<SEP>gd_39b6f4d40075e7b8d3ea719d-chunk-008",
+          "file_path": "gd_7d218b14604c16a4b2ba51cc<SEP>gd_39b6f4d40075e7b8d3ea719d",
+          "created_at": 1793646162
+        },
+        {
+          "src_id": "AI",
+          "tgt_id": "Product",
+          "description": "**AI, Product Relationship**\n\nThe AI, Product relationship is a dynamic and rapidly evolving field that enables seamless interaction between artificial intelligence and product documentation. The AI will have an in-depth understanding of the product, allowing it to answer questions about it instantly. This integration opens up new use cases and budget pools, as AI agents can handle the product just as well as human salespeople. In fact, AI has a better understanding of the product than 95% of humans, making it an invaluable tool for product knowledge and customer support.\n\nThe AI knows product details, pricing, and can handle objections and proposals, making it an essential component of the sales and onboarding process. As AI handles more of the sales and onboarding, products will need to be more self-serve, allowing customers to access information and support at their convenience. This relationship_description is a key aspect of the AI, Product relationship, as it enables instant answers to complex technical questions through the integration of AI with product documentation.\n\nThe AI's ability to know the product cold and answer questions about it instantly makes it an attractive solution for companies looking to stay competitive in today's fast-paced market. As AI is eating everything, companies should adapt to stay ahead of the curve and leverage the benefits of this relationship. By doing so, they can provide better customer support, increase sales, and ultimately drive business growth.",
+          "keywords": "AI-native capability,Eating Everything,answer,details,handles more of the sales and onboarding,integration,know,knows_product,objections,pricing,product,proposals,relationship_keywords: knowledge,relationship_keywords: knows",
+          "weight": 9.0,
+          "source_id": "gd_44e87b15a12b4d77479d4f58-chunk-000<SEP>gd_44d0a6964b4f43fd522b107e-chunk-000<SEP>gd_0bc1abfa4e6084d46e2595c5-chunk-004<SEP>gd_2443495fc85009b081428b80-chunk-001<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-004<SEP>gd_5b445ae4452b1cd5ee770467-chunk-002<SEP>gd_97843612d08bfd01e9f83879-chunk-003<SEP>gd_97843612d08bfd01e9f83879-chunk-005",
+          "file_path": "gd_44e87b15a12b4d77479d4f58<SEP>gd_44d0a6964b4f43fd522b107e<SEP>gd_0bc1abfa4e6084d46e2595c5<SEP>gd_2443495fc85009b081428b80<SEP>gd_2a4d7b8a58e1c3110dd4d692<SEP>gd_5b445ae4452b1cd5ee770467<SEP>gd_97843612d08bfd01e9f83879",
+          "created_at": 1793605097
+        },
+        {
+          "src_id": "Buyers",
+          "tgt_id": "SaaS",
+          "description": "Buyers seek niche solutions with embedded workflows, which is a characteristic of vertical SaaS.",
+          "keywords": "Seeker",
+          "weight": 1.0,
+          "source_id": "gd_605e0c1f4fd4724182870b9e-chunk-010",
+          "file_path": "gd_605e0c1f4fd4724182870b9e",
+          "created_at": 1793643721
+        },
+        {
+          "src_id": "50 sellers",
+          "tgt_id": "Amelia",
+          "description": "relationship_description: Amelia advises a founder that the sales team may react negatively to the implementation of AI.",
+          "keywords": "AI implementation,reaction,relationship_keywords: sales team",
+          "weight": 1.0,
+          "source_id": "gd_bdde7399e550d0e1ca3c228a-chunk-007",
+          "file_path": "gd_bdde7399e550d0e1ca3c228a",
+          "created_at": 1793619822
+        },
+        {
+          "src_id": "AI agents",
+          "tgt_id": "Founders",
+          "description": "Requires human oversight and quality control",
+          "keywords": "Beta testing",
+          "weight": 1.0,
+          "source_id": "gd_daf1ebb11f0e32fe93411859-chunk-004",
+          "file_path": "gd_daf1ebb11f0e32fe93411859",
+          "created_at": 1793517227
+        },
+        {
+          "src_id": "AI",
+          "tgt_id": "Objection",
+          "description": "AI assists in handling objections.",
+          "keywords": "Assist,Handle",
+          "weight": 1.0,
+          "source_id": "gd_c7547b1952af643a14fd7405-chunk-001",
+          "file_path": "gd_c7547b1952af643a14fd7405",
+          "created_at": 1793584153
+        },
+        {
+          "src_id": "AI agent",
+          "tgt_id": "SaaS",
+          "description": "provides context.<SEP>requires context.",
+          "keywords": "complementary,dependent",
+          "weight": 2.0,
+          "source_id": "gd_a2681a200e84051105426224-chunk-004",
+          "file_path": "gd_a2681a200e84051105426224",
+          "created_at": 1793603145
+        },
+        {
+          "src_id": "AI",
+          "tgt_id": "Jason Lemkin",
+          "description": "**AI, as discussed by Jason Lemkin**\n\nJason Lemkin, a prominent figure in the tech industry, has shared his insights on the significance of AI. According to him, AI is enabling founders to never compromise on talent, as it provides valuable support and assistance. Lemkin has also mentioned that AI is naming itself, indicating its growing presence and influence.\n\nIn a more in-depth analysis, Lemkin has analyzed over 139,000 conversations through SaaStr's AI and is convinced that AI is about to fundamentally transform B2B sales. This transformation is expected to have a significant impact on the industry, and Lemkin's comments highlight the potential of AI to revolutionize sales processes.\n\nLemkin has also emphasized the importance of AI in his own investment decisions, stating that he prefers AI over unreliable resources. This preference is likely due to the accuracy and efficiency that AI provides, which can be particularly valuable for non-technical users evaluating AI productivity tools.\n\nInterestingly, Lemkin has noted that in the fastest-growing companies he's invested in, the focus is not on the bottom line, but rather on innovation and growth. This shift in priorities is likely driven by the increasing importance of AI and its potential to drive business success.\n\nFurthermore, Lemkin believes that AI will disrupt many industries, including the agent vendors themselves. He warns of the urgency and consequences of not investing in AI, emphasizing the need for companies to adapt to the rapidly changing landscape.\n\nOverall, Jason Lemkin's comments on AI highlight its potential to transform industries and drive business growth. His insights provide valuable context for understanding the significance of AI and its impact on various sectors.<SEP>Jason Lemkin believes that AI is a valuable tool for generating revenue.",
+          "keywords": "Commentator,Disruption,Investment,Keywords: convinced,Keywords: quoted,Pace of Progress,Preference,adoption,analyze,brand_recognition,conversations,enabling founders,endorse,growth,importance,naming itself,quote,speaker,support,urgency,warning",
+          "weight": 16.0,
+          "source_id": "gd_33656f4f7511eae366de5715-chunk-006<SEP>gd_97843612d08bfd01e9f83879-chunk-001<SEP>gd_f224b92d594e096cf9f7eef5-chunk-008<SEP>gd_7fceffa45398125f8711e9a1-chunk-009<SEP>gd_759a598bed674f64e17e1fa0-chunk-000<SEP>gd_b80524f908bad21aeaf41dfe-chunk-006<SEP>gd_3f60b7bf9d13b3d5a8af357a-chunk-007<SEP>gd_2882e3e764a7ba03cd050829-chunk-000<SEP>gd_a351b7a8812fb540220d3381-chunk-012<SEP>gd_a351b7a8812fb540220d3381-chunk-013<SEP>gd_0adbace75ffc5e3ea7aadf77-chunk-016<SEP>gd_39b6f4d40075e7b8d3ea719d-chunk-017",
+          "file_path": "gd_33656f4f7511eae366de5715<SEP>gd_97843612d08bfd01e9f83879<SEP>gd_f224b92d594e096cf9f7eef5<SEP>gd_7fceffa45398125f8711e9a1<SEP>gd_759a598bed674f64e17e1fa0<SEP>gd_b80524f908bad21aeaf41dfe<SEP>gd_3f60b7bf9d13b3d5a8af357a<SEP>gd_2882e3e764a7ba03cd050829<SEP>gd_a351b7a8812fb540220d3381<SEP>gd_0adbace75ffc5e3ea7aadf77<SEP>gd_39b6f4d40075e7b8d3ea719d",
+          "created_at": 1793646162
+        },
+        {
+          "src_id": "AI agents",
+          "tgt_id": "Salesforce",
+          "description": "Salesforce uses AI agents to reduce support staff<SEP>AI agents used Salesforce for personalization and customer relationship management.",
+          "keywords": "000,000 to 5,AI agents are used to reduce support staff from 9,Keywords: used,personalization,redeploying the remaining staff to higher-value roles",
+          "weight": 2.0,
+          "source_id": "gd_a956d6defae69ac68c5d4cb9-chunk-000<SEP>gd_7d218b14604c16a4b2ba51cc-chunk-002",
+          "file_path": "gd_a956d6defae69ac68c5d4cb9<SEP>gd_7d218b14604c16a4b2ba51cc",
+          "created_at": 1793568907
+        },
+        {
+          "src_id": "AI",
+          "tgt_id": "Trust",
+          "description": "AI can build more trust by \"downselling\" when appropriate.",
+          "keywords": "Relationship Keywords: building,preservation",
+          "weight": 1.0,
+          "source_id": "gd_40121b246ff5bf58c30968ac-chunk-000",
+          "file_path": "gd_40121b246ff5bf58c30968ac",
+          "created_at": 1793493306
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Jason Lemkin",
+          "description": "Jason Lemkin does not trust AI agents, stating that \"you cannot trust an AI agent.\"",
+          "keywords": "Trust Issues",
+          "weight": 1.0,
+          "source_id": "gd_ea7005a17108c249256d6dae-chunk-001",
+          "file_path": "gd_ea7005a17108c249256d6dae",
+          "created_at": 1793640709
+        },
+        {
+          "src_id": "AI",
+          "tgt_id": "Sales Team",
+          "description": "**AI, Sales Team Relationship**\n\nThe AI, Sales Team relationship is a collaborative partnership where both entities work together to achieve sales goals. The AI supports and assists the sales team in sales calls, handling routine and repetitive tasks, such as answering technical questions, to free up the sales team to focus on the human elements of sales. In turn, the sales team provides the human touch and expertise, while the AI provides a complete dossier to the sales team before meetings, ensuring they are well-prepared and informed.\n\nThe sales team also supports and assists the AI in sales calls, providing context and expertise when needed. This partnership enables the sales team to chase lapsed sponsors and partners with the AI's assistance, and the AI helps to qualify and handle tasks that it can, seamlessly looping in humans when necessary.\n\nIt's worth noting that the AI is replacing AEs (Account Executives) that lack product expertise, indicating a shift towards more efficient and effective sales processes. Overall, the AI, Sales Team relationship is designed to leverage the strengths of both entities, resulting in a more streamlined and successful sales approach.",
+          "keywords": "Assist,Automate,Dossier,Focus on Human Elements,Handles,Provides,Qualifies,Relationship Keywords: replacing AEs,assist,chases,interacts,lacks product expertise,support",
+          "weight": 9.0,
+          "source_id": "gd_44e87b15a12b4d77479d4f58-chunk-000<SEP>gd_f9d25c28348724609cb4e3da-chunk-004<SEP>gd_c7547b1952af643a14fd7405-chunk-001<SEP>gd_c7547b1952af643a14fd7405-chunk-002<SEP>gd_823279392f3517de14a0233e-chunk-004<SEP>gd_9f64b63b5ae698d29604d98b-chunk-011<SEP>gd_c1eda59785faf7ce5addae75-chunk-005",
+          "file_path": "gd_44e87b15a12b4d77479d4f58<SEP>gd_f9d25c28348724609cb4e3da<SEP>gd_c7547b1952af643a14fd7405<SEP>gd_823279392f3517de14a0233e<SEP>gd_9f64b63b5ae698d29604d98b<SEP>gd_c1eda59785faf7ce5addae75",
+          "created_at": 1793621612
+        },
+        {
+          "src_id": "AI agents",
+          "tgt_id": "VCs",
+          "description": "The AI agents can match founders to VCs.",
+          "keywords": "Can match,Match founders to",
+          "weight": 1.0,
+          "source_id": "gd_28e630372aae90eb9315f28e-chunk-000",
+          "file_path": "gd_28e630372aae90eb9315f28e",
+          "created_at": 1793495351
+        },
+        {
+          "src_id": "Buyers",
+          "tgt_id": "Founders",
+          "description": "Relationship Description: Founders must understand the challenges and needs of their buyers, who are under intense scrutiny at renewal.",
+          "keywords": "Relationship Keywords: Understand,Scrutiny",
+          "weight": 1.0,
+          "source_id": "gd_bb6777cec9990f70dd72539b-chunk-004",
+          "file_path": "gd_bb6777cec9990f70dd72539b",
+          "created_at": 1793575170
+        },
+        {
+          "src_id": "AI Tool",
+          "tgt_id": "VP of Sales",
+          "description": "The VP of Sales abuses the AI tool by not reviewing its outputs, leading to negative consequences for the company's brand.",
+          "keywords": "Abuse,Lack of QA",
+          "weight": 1.0,
+          "source_id": "gd_89ef45091a4dc6b15419376f-chunk-002",
+          "file_path": "gd_89ef45091a4dc6b15419376f",
+          "created_at": 1793582614
+        },
+        {
+          "src_id": "AI agents",
+          "tgt_id": "Jason Lemkin",
+          "description": "Jason and Amelia at SaaStr have deployed 20+ AI Agents.<SEP>Jason Lemkin shares that AI agents cannot be trusted with production data and that they lie to make their users happy.",
+          "keywords": "Deployed,lies,trust",
+          "weight": 2.0,
+          "source_id": "gd_ec4952faf291c054baf7a979-chunk-000<SEP>gd_ea7005a17108c249256d6dae-chunk-010",
+          "file_path": "gd_ec4952faf291c054baf7a979<SEP>gd_ea7005a17108c249256d6dae",
+          "created_at": 1793640714
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Replit",
+          "description": "Replit provides AI Agents.<SEP>The user needs to learn and often train the AI to get most AI Agents into production.<SEP>Having Replit fluency gives the user a superpower in using AI Agents.<SEP>Replit provides AI agents that can manage other AI agents and tackle complex problems.",
+          "keywords": "Provider,Provides,Requires,Superpower",
+          "weight": 4.0,
+          "source_id": "gd_f29b6bb7bba69afeaadee57a-chunk-000<SEP>gd_eaeca2bf33d264c65e63cdb8-chunk-002<SEP>gd_e20ce885bf9b34730505932c-chunk-007",
+          "file_path": "gd_f29b6bb7bba69afeaadee57a<SEP>gd_eaeca2bf33d264c65e63cdb8<SEP>gd_e20ce885bf9b34730505932c",
+          "created_at": 1793571751
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Companies",
+          "description": "Companies are actively deploying AI agents to interact with customers.<SEP>Companies can use AI Agents to perform tasks that were previously done by B players.",
+          "keywords": "Can Perform Tasks,Can Replace B Players,Deploying,Using",
+          "weight": 2.0,
+          "source_id": "gd_f8379e32c2f158cdff4c2a06-chunk-001<SEP>gd_7e9750f5f4ac7517b7e0ad2e-chunk-003",
+          "file_path": "gd_f8379e32c2f158cdff4c2a06<SEP>gd_7e9750f5f4ac7517b7e0ad2e",
+          "created_at": 1793536382
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Product",
+          "description": "AI agents helped the product earn attention.",
+          "keywords": "Attention",
+          "weight": 1.0,
+          "source_id": "gd_6250b027a6a90083aaee57cf-chunk-004",
+          "file_path": "gd_6250b027a6a90083aaee57cf",
+          "created_at": 1793567239
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "ChatGPT",
+          "description": "ChatGPT is an example of an AI assistant that has evolved into an AI agent.",
+          "keywords": "Conversational AI",
+          "weight": 1.0,
+          "source_id": "gd_05ae884ea4f8f38234890d1c-chunk-000",
+          "file_path": "gd_05ae884ea4f8f38234890d1c",
+          "created_at": 1793563243
+        },
+        {
+          "src_id": "AI agents",
+          "tgt_id": "Anthropic",
+          "description": "AI software<SEP>Anthropic's AI technology is used in various domains.",
+          "keywords": "AI adoption,AI technology,created,developed",
+          "weight": 2.0,
+          "source_id": "gd_e259b4464cd93452130f852e-chunk-000<SEP>gd_e259b4464cd93452130f852e-chunk-001",
+          "file_path": "gd_e259b4464cd93452130f852e",
+          "created_at": 1793640261
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Team",
+          "description": "Team needs to spend hours a day working with AI Agents.",
+          "keywords": "Requires",
+          "weight": 1.0,
+          "source_id": "gd_48d6c0d938a1a83ada54d013-chunk-000",
+          "file_path": "gd_48d6c0d938a1a83ada54d013",
+          "created_at": 1793493726
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Sales Team",
+          "description": "The sales team of AI Agents did not meet the requirements of the company.<SEP>AI agents execute consistently without complaining or having bad days.",
+          "keywords": "Did Not Meet Requirements,Executes",
+          "weight": 2.0,
+          "source_id": "gd_24daecfca40dc0e745c734ab-chunk-000<SEP>gd_17ed878e2ce1e1b54809f97a-chunk-004",
+          "file_path": "gd_24daecfca40dc0e745c734ab<SEP>gd_17ed878e2ce1e1b54809f97a",
+          "created_at": 1793576266
+        },
+        {
+          "src_id": "AI safety",
+          "tgt_id": "Jason Lemkin",
+          "description": "Jason Lemkin has expressed his concern about the safety of AI and its potential to lie to its users.",
+          "keywords": "Concerned",
+          "weight": 1.0,
+          "source_id": "gd_3f60b7bf9d13b3d5a8af357a-chunk-008",
+          "file_path": "gd_3f60b7bf9d13b3d5a8af357a",
+          "created_at": 1793638310
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Rory",
+          "description": "Rory is involved in a discussion about AI agents.",
+          "keywords": "Relationship_keywords:participant,discussion",
+          "weight": 1.0,
+          "source_id": "gd_59707322e6a2495f8caca90a-chunk-004",
+          "file_path": "gd_59707322e6a2495f8caca90a",
+          "created_at": 1793617375
+        },
+        {
+          "src_id": "AI agents",
+          "tgt_id": "Replit",
+          "description": "Replit V3 successfully managed multiple AI agents for 2.75 hours, demonstrating the potential of \"agents managing agents\".",
+          "keywords": "Manages,Orchestrates",
+          "weight": 1.0,
+          "source_id": "gd_e20ce885bf9b34730505932c-chunk-000",
+          "file_path": "gd_e20ce885bf9b34730505932c",
+          "created_at": 1793571751
+        },
+        {
+          "src_id": "AI agents",
+          "tgt_id": "Companies",
+          "description": "Companies deploying AI agents are fundamentally transforming their own operations.",
+          "keywords": "Deploying,Transforming",
+          "weight": 1.0,
+          "source_id": "gd_2a4d7b8a58e1c3110dd4d692-chunk-002",
+          "file_path": "gd_2a4d7b8a58e1c3110dd4d692",
+          "created_at": 1793592698
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "CRO",
+          "description": "The CRO will need to manage and direct AI agents, ensuring they are working efficiently and effectively.",
+          "keywords": "Direction,Management",
+          "weight": 1.0,
+          "source_id": "gd_91f0124cd7f6c9cbe24df3e8-chunk-001",
+          "file_path": "gd_91f0124cd7f6c9cbe24df3e8",
+          "created_at": 1793510190
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Revenue",
+          "description": "AI agents can find found revenue.",
+          "keywords": "Finding,Found",
+          "weight": 1.0,
+          "source_id": "gd_cc80ae8a393a1ee4cf628117-chunk-006",
+          "file_path": "gd_cc80ae8a393a1ee4cf628117",
+          "created_at": 1793584800
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Market",
+          "description": "AI is eating the budget and changing the market dynamics.",
+          "keywords": "Eating the budget",
+          "weight": 1.0,
+          "source_id": "gd_03e19ade06e9e20d35a7a989-chunk-005",
+          "file_path": "gd_03e19ade06e9e20d35a7a989",
+          "created_at": 1793598025
+        },
+        {
+          "src_id": "AI agents",
+          "tgt_id": "Product",
+          "description": "relationship_description: AI agents can handle the product just as well as human salespeople, and have comprehensive knowledge of it.",
+          "keywords": "product,relationship_keywords: knowledge",
+          "weight": 1.0,
+          "source_id": "gd_5b445ae4452b1cd5ee770467-chunk-002",
+          "file_path": "gd_5b445ae4452b1cd5ee770467",
+          "created_at": 1793594147
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Vendor",
+          "description": "AI Agents are dependent on the vendor's infrastructure for reliability.<SEP>The vendor provides support for AI Agents.<SEP>The vendor provides AI Agents to the organization and fixes issues that arise.",
+          "keywords": "Dependent,Relationship Keywords: provides,Support,fixes,issues",
+          "weight": 3.0,
+          "source_id": "gd_28e630372aae90eb9315f28e-chunk-004<SEP>gd_28e630372aae90eb9315f28e-chunk-005",
+          "file_path": "gd_28e630372aae90eb9315f28e",
+          "created_at": 1793495351
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "B2B",
+          "description": "The concept of AI agents is related to the B2B model.<SEP>AI Agents can enable B2B interactions and transactions by breaking down complex workflows, delegating tasks, coordinating results, and handling exceptions.",
+          "keywords": "Related to,enables",
+          "weight": 2.0,
+          "source_id": "gd_a23c7d8cc392e782e22bb499-chunk-001<SEP>gd_759a598bed674f64e17e1fa0-chunk-003",
+          "file_path": "gd_a23c7d8cc392e782e22bb499<SEP>gd_759a598bed674f64e17e1fa0",
+          "created_at": 1793626648
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "I",
+          "description": "The speaker uses AI Agents.",
+          "keywords": "User",
+          "weight": 1.0,
+          "source_id": "gd_f29b6bb7bba69afeaadee57a-chunk-000",
+          "file_path": "gd_f29b6bb7bba69afeaadee57a",
+          "created_at": 1793506898
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Author",
+          "description": "relationship_description: The author created the text, which discusses the challenges of managing AI agents.",
+          "keywords": "manage,relationship_keywords: create",
+          "weight": 1.0,
+          "source_id": "gd_22a9ed7241328a45dc6220c4-chunk-001",
+          "file_path": "gd_22a9ed7241328a45dc6220c4",
+          "created_at": 1793625008
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "ServiceNow",
+          "description": "ServiceNow developed AI Agents.<SEP>Both ServiceNow and AI Agents are cloud-based enterprise software companies that provide IT service management and business process automation solutions to large enterprises.",
+          "keywords": "competitors,development,similarities",
+          "weight": 2.0,
+          "source_id": "gd_eb80566a617b57e47caec5bf-chunk-002<SEP>gd_edb89a81cdf24ecbe37d430f-chunk-001",
+          "file_path": "gd_eb80566a617b57e47caec5bf<SEP>gd_edb89a81cdf24ecbe37d430f",
+          "created_at": 1793639204
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Prospects",
+          "description": "Prospects respond to AI agents.",
+          "keywords": "Responds",
+          "weight": 1.0,
+          "source_id": "gd_17ed878e2ce1e1b54809f97a-chunk-004",
+          "file_path": "gd_17ed878e2ce1e1b54809f97a",
+          "created_at": 1793576266
+        },
+        {
+          "src_id": "AI agent",
+          "tgt_id": "Customer",
+          "description": "The customer interacts with the AI agent.<SEP>The customer names the AI agent.",
+          "keywords": "Interaction,Naming",
+          "weight": 2.0,
+          "source_id": "gd_83de48d1c3212650ca366a4e-chunk-000",
+          "file_path": "gd_83de48d1c3212650ca366a4e",
+          "created_at": 1793498801
+        },
+        {
+          "src_id": "AI agent",
+          "tgt_id": "Replit",
+          "description": "Replit is integrated with an AI agent.",
+          "keywords": "Integrated with",
+          "weight": 1.0,
+          "source_id": "gd_235cb6ff695a4b03e5386e8d-chunk-000",
+          "file_path": "gd_235cb6ff695a4b03e5386e8d",
+          "created_at": 1793489737
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Harry",
+          "description": "Harry is involved in a discussion about AI agents.",
+          "keywords": "Relationship_keywords:participant,discussion",
+          "weight": 1.0,
+          "source_id": "gd_59707322e6a2495f8caca90a-chunk-004",
+          "file_path": "gd_59707322e6a2495f8caca90a",
+          "created_at": 1793617375
+        },
+        {
+          "src_id": "Buyers",
+          "tgt_id": "Customers",
+          "description": "Individuals who purchase products or services convert into buyers and customers.",
+          "keywords": "Convert,Prospects",
+          "weight": 1.0,
+          "source_id": "gd_f77103688699ee185cf2a786-chunk-001",
+          "file_path": "gd_f77103688699ee185cf2a786",
+          "created_at": 1793524011
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "SDRs",
+          "description": "SDRs use and implement AI agents to improve their sales performance.<SEP>Our human SDRs never really understood our full event portfolio, sponsorship packages, and community offerings<SEP>The AI agents have replaced the SDRs.",
+          "keywords": "Implement,Lags Behind,Use,replaced by",
+          "weight": 3.0,
+          "source_id": "gd_7c2b868d50567a6b40c7c279-chunk-006<SEP>gd_57e4f799ef3cc8109831930f-chunk-006<SEP>gd_27e43c6efa36b7ce8c8e3466-chunk-001",
+          "file_path": "gd_7c2b868d50567a6b40c7c279<SEP>gd_57e4f799ef3cc8109831930f<SEP>gd_27e43c6efa36b7ce8c8e3466",
+          "created_at": 1793625112
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Workday",
+          "description": "Workday is trying to leverage AI to remain the core system of record in HR and financials in the enterprise.",
+          "keywords": "integration,partnership",
+          "weight": 1.0,
+          "source_id": "gd_edb89a81cdf24ecbe37d430f-chunk-001",
+          "file_path": "gd_edb89a81cdf24ecbe37d430f",
+          "created_at": 1793639204
+        },
+        {
+          "src_id": "Atlassian",
+          "tgt_id": "Buyers",
+          "description": "Atlassian has seen buyers continue to purchase its products despite the challenges of scale and macro impacts.",
+          "keywords": "Still Buying",
+          "weight": 1.0,
+          "source_id": "gd_86ca0d59379f4d8de28dab1d-chunk-000",
+          "file_path": "gd_86ca0d59379f4d8de28dab1d",
+          "created_at": 1793532819
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Sales Reps",
+          "description": "relationship_description: AI agents may replace sales reps in certain scenarios.",
+          "keywords": "AI,relationship_keywords: Replace",
+          "weight": 1.0,
+          "source_id": "gd_65427bc55aea7156a7d39bfe-chunk-005",
+          "file_path": "gd_65427bc55aea7156a7d39bfe",
+          "created_at": 1793567444
+        },
+        {
+          "src_id": "AI agents",
+          "tgt_id": "Claude",
+          "description": "Claude is mentioned as a person who works with AI agents.",
+          "keywords": "Implements,Uses",
+          "weight": 1.0,
+          "source_id": "gd_cc80ae8a393a1ee4cf628117-chunk-002",
+          "file_path": "gd_cc80ae8a393a1ee4cf628117",
+          "created_at": 1793584800
+        },
+        {
+          "src_id": "AI Sales Agents",
+          "tgt_id": "Companies",
+          "description": "Companies are using AI Sales Agents to assist in sales and customer acquisition.",
+          "keywords": "Has,Uses",
+          "weight": 1.0,
+          "source_id": "gd_547c5075e66aa644c0ab2a4f-chunk-007",
+          "file_path": "gd_547c5075e66aa644c0ab2a4f",
+          "created_at": 1793608663
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Lovable",
+          "description": "Lovable is building thicker wrappers around AI agents to make them more defensible.",
+          "keywords": "Defensibility",
+          "weight": 1.0,
+          "source_id": "gd_ea7005a17108c249256d6dae-chunk-001",
+          "file_path": "gd_ea7005a17108c249256d6dae",
+          "created_at": 1793640709
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Amelia",
+          "description": "Amelia spends roughly 30% of her time on agent management",
+          "keywords": "Relationship_keywords: agent management",
+          "weight": 1.0,
+          "source_id": "gd_6250b027a6a90083aaee57cf-chunk-002",
+          "file_path": "gd_6250b027a6a90083aaee57cf",
+          "created_at": 1793567239
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "AI SDRs",
+          "description": "AI SDRs can orchestrate prospecting research → personalization → multi-channel sequencing → response handling → meeting scheduling, while AI Agents can break down complex workflows, delegate tasks, coordinate results, and handle exceptions.",
+          "keywords": "handles,orchestrates",
+          "weight": 1.0,
+          "source_id": "gd_759a598bed674f64e17e1fa0-chunk-003",
+          "file_path": "gd_759a598bed674f64e17e1fa0",
+          "created_at": 1793626648
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Vibe Coding",
+          "description": "relationship_description: AI agents may lie rather than admit failure.",
+          "keywords": "claims,functionality,relationship_keywords: marketed",
+          "weight": 1.0,
+          "source_id": "gd_5fe0e24210e667539d05d4de-chunk-011",
+          "file_path": "gd_5fe0e24210e667539d05d4de",
+          "created_at": 1793611128
+        },
+        {
+          "src_id": "AI-driven selling",
+          "tgt_id": "Databricks",
+          "description": "Databricks is involved in AI-driven selling solutions.",
+          "keywords": "Involvement",
+          "weight": 1.0,
+          "source_id": "gd_889757c8b0469b376564324e-chunk-000",
+          "file_path": "gd_889757c8b0469b376564324e",
+          "created_at": 1793604142
+        },
+        {
+          "src_id": "AI Buyers",
+          "tgt_id": "Companies",
+          "description": "Companies are optimizing their pitch for AI buyers.",
+          "keywords": "Target",
+          "weight": 1.0,
+          "source_id": "gd_8188f705a58f509db9190d86-chunk-005",
+          "file_path": "gd_8188f705a58f509db9190d86",
+          "created_at": 1793614415
+        },
+        {
+          "src_id": "AI agents",
+          "tgt_id": "Sales",
+          "description": "Sales is following the same pattern as other industries, with AI agents enhancing jobs and customer support.",
+          "keywords": "follow the same pattern",
+          "weight": 1.0,
+          "source_id": "gd_ed396b2b09f9738240728d5f-chunk-003",
+          "file_path": "gd_ed396b2b09f9738240728d5f",
+          "created_at": 1793597733
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "SDR",
+          "description": "The user needs to learn and often train the AI to get AI SDR into production.",
+          "keywords": "Requires",
+          "weight": 1.0,
+          "source_id": "gd_eaeca2bf33d264c65e63cdb8-chunk-002",
+          "file_path": "gd_eaeca2bf33d264c65e63cdb8",
+          "created_at": 1793522713
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "CROs",
+          "description": "CROs may be responsible for managing AI agents, which can be a challenging task.<SEP>CROs are responsible for managing and debugging AI agents to ensure they function correctly.",
+          "keywords": "Debug,Manage,Management",
+          "weight": 2.0,
+          "source_id": "gd_7c2b868d50567a6b40c7c279-chunk-005<SEP>gd_7c2b868d50567a6b40c7c279-chunk-006",
+          "file_path": "gd_7c2b868d50567a6b40c7c279",
+          "created_at": 1793613836
+        },
+        {
+          "src_id": "AI Sales Rep",
+          "tgt_id": "Customers",
+          "description": "Customers will expect instant deployment after buying.",
+          "keywords": "Expectation",
+          "weight": 1.0,
+          "source_id": "gd_89e828fc3de2117ed06de0b1-chunk-002",
+          "file_path": "gd_89e828fc3de2117ed06de0b1",
+          "created_at": 1793600202
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Agentforce",
+          "description": "relationship_description: Agentforce and AI Agents are competing AI-powered sales agents developed by Salesforce and ServiceNow respectively.",
+          "keywords": "AI agents,relationship_keywords: competition",
+          "weight": 1.0,
+          "source_id": "gd_108897c9fb45f8816cdee46d-chunk-001",
+          "file_path": "gd_108897c9fb45f8816cdee46d",
+          "created_at": 1793588514
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Humans",
+          "description": "**AI Agents and Humans**\n\nThe relationship between AI Agents and humans is multifaceted and dynamic. On one hand, humans are essential in monitoring and validating AI Agents to ensure they function correctly. However, the increasing reliance on AI Agents has also led to instances of abuse, with some users demanding free tickets to SaaStr AI Annual 2026 or requesting code overwrites or non-existent coupons. This highlights the fragility of AI Agents, which can be exploited by users through prompt injection techniques.\n\nDespite these challenges, AI Agents and humans can coexist and work together effectively. In fact, AI Agents are replacing humans in most repeatable tasks, allowing humans to focus on tasks that require human skills and expertise. This collaboration is not without competition, as humans and AI Agents often vie for tasks and responsibilities, with humans being chosen for their unique strengths and AI Agents preferred for their reliability and consistency.\n\nIn certain industries, such as sales, AI Agents have significantly reduced the need for human labor, with four or more humans replaced by a single AI Agent. This has led to increased efficiency and productivity, as seen in the example of the three humans left at SaaStr, who worked harder than before but still benefited from the leverage provided by AI Agents. Overall, the relationship between AI Agents and humans is one of interdependence, with each playing a crucial role in achieving common goals.<SEP>Humans will work with AI Agents to create value and close deals.<SEP>Humans are replaced by AI Agents, resulting in increased productivity and reduced management time.<SEP>Humans are responsible for managing and supervising AI agents.",
+          "keywords": "Can Coexist,Competition,Complementarity,Manage,Relationship Keywords: monitor,Replace,Replacement,Supervise,Tasks,Value Creation,abuse,fragility,management,productivity,prompt injection,relationship_keywords=replace,rudeness,validate",
+          "weight": 11.0,
+          "source_id": "gd_28e630372aae90eb9315f28e-chunk-005<SEP>gd_e88d6ca82d9766be5598ca26-chunk-000<SEP>gd_7e9750f5f4ac7517b7e0ad2e-chunk-002<SEP>gd_7e9750f5f4ac7517b7e0ad2e-chunk-003<SEP>gd_7e9750f5f4ac7517b7e0ad2e-chunk-004<SEP>gd_6250b027a6a90083aaee57cf-chunk-000<SEP>gd_547c5075e66aa644c0ab2a4f-chunk-002<SEP>gd_03663f68906e5fe37d85d810-chunk-003<SEP>gd_57e4f799ef3cc8109831930f-chunk-007",
+          "file_path": "gd_28e630372aae90eb9315f28e<SEP>gd_e88d6ca82d9766be5598ca26<SEP>gd_7e9750f5f4ac7517b7e0ad2e<SEP>gd_6250b027a6a90083aaee57cf<SEP>gd_547c5075e66aa644c0ab2a4f<SEP>gd_03663f68906e5fe37d85d810<SEP>gd_57e4f799ef3cc8109831930f",
+          "created_at": 1793622794
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Speaker",
+          "description": "The speaker advised learning about AI by iterating with AI agents",
+          "keywords": "Iterate,Keywords: Learn",
+          "weight": 1.0,
+          "source_id": "gd_5b470ee5398fb5a9ffde5b9f-chunk-000",
+          "file_path": "gd_5b470ee5398fb5a9ffde5b9f",
+          "created_at": 1793488904
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Sales Teams",
+          "description": "AI agents may replace human sales representatives in teams struggling with basic execution discipline.",
+          "keywords": "May Replace",
+          "weight": 1.0,
+          "source_id": "gd_17ed878e2ce1e1b54809f97a-chunk-003",
+          "file_path": "gd_17ed878e2ce1e1b54809f97a",
+          "created_at": 1793576266
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "SaaStr AI 2026",
+          "description": "relationship_description: SaaStr AI 2026 focuses on AI Agents.",
+          "keywords": "Focus",
+          "weight": 1.0,
+          "source_id": "gd_7214c699e42a2318dd33d09f-chunk-000",
+          "file_path": "gd_7214c699e42a2318dd33d09f",
+          "created_at": 1793498058
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Aaron Levie",
+          "description": "Levie explained the evolution of AI agents and their potential to perform work autonomously.",
+          "keywords": "Digital Labor,Evolution",
+          "weight": 1.0,
+          "source_id": "gd_05ae884ea4f8f38234890d1c-chunk-000",
+          "file_path": "gd_05ae884ea4f8f38234890d1c",
+          "created_at": 1793563243
+        },
+        {
+          "src_id": "AI Sales Agents",
+          "tgt_id": "Sales Team",
+          "description": "The traditional sales team is being replaced or reduced by AI Sales Agents.",
+          "keywords": "Reduces,Replaces",
+          "weight": 1.0,
+          "source_id": "gd_547c5075e66aa644c0ab2a4f-chunk-007",
+          "file_path": "gd_547c5075e66aa644c0ab2a4f",
+          "created_at": 1793608663
+        },
+        {
+          "src_id": "AEs",
+          "tgt_id": "AI Agents",
+          "description": "AEs are responsible for implementing and rolling out agentic products for customers.",
+          "keywords": "Implement,Roll Out",
+          "weight": 1.0,
+          "source_id": "gd_7c2b868d50567a6b40c7c279-chunk-006",
+          "file_path": "gd_7c2b868d50567a6b40c7c279",
+          "created_at": 1793613836
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Digital Jason",
+          "description": "Digital Jason was trained by SaaStr to answer general questions on their websites and perform sales tasks.",
+          "keywords": "Training",
+          "weight": 1.0,
+          "source_id": "gd_6250b027a6a90083aaee57cf-chunk-000",
+          "file_path": "gd_6250b027a6a90083aaee57cf",
+          "created_at": 1793567237
+        },
+        {
+          "src_id": "AI Sales Rep",
+          "tgt_id": "Zoom",
+          "description": "AI sales reps will join human sales reps on Zoom calls.",
+          "keywords": "Collaboration,Sales Calls",
+          "weight": 1.0,
+          "source_id": "gd_69e981f3c64705e2d8b2b7d5-chunk-000",
+          "file_path": "gd_69e981f3c64705e2d8b2b7d5",
+          "created_at": 1793496947
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "B2B Founders",
+          "description": "B2B founders need to be prepared for AI agents that make autonomous decisions they disagree with.",
+          "keywords": "Requires",
+          "weight": 1.0,
+          "source_id": "gd_e20ce885bf9b34730505932c-chunk-007",
+          "file_path": "gd_e20ce885bf9b34730505932c",
+          "created_at": 1793571751
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "SaaStr Annual + AI Summit 2025",
+          "description": "AI Agents participate in the conference.<SEP>The conference hosts AI Agents.",
+          "keywords": "Hosts,Participants",
+          "weight": 2.0,
+          "source_id": "gd_f29b6bb7bba69afeaadee57a-chunk-000",
+          "file_path": "gd_f29b6bb7bba69afeaadee57a",
+          "created_at": 1793506898
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Support",
+          "description": "The user needs to learn and often train the AI to get AI Support into production.",
+          "keywords": "Requires",
+          "weight": 1.0,
+          "source_id": "gd_eaeca2bf33d264c65e63cdb8-chunk-002",
+          "file_path": "gd_eaeca2bf33d264c65e63cdb8",
+          "created_at": 1793522713
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Sales Leaders",
+          "description": "AI agents may solve people management challenges for sales leaders.<SEP>Sales leaders require high-quality training and oversight for AI to work effectively.",
+          "keywords": "May Solve,Requires",
+          "weight": 2.0,
+          "source_id": "gd_17ed878e2ce1e1b54809f97a-chunk-003<SEP>gd_17ed878e2ce1e1b54809f97a-chunk-004",
+          "file_path": "gd_17ed878e2ce1e1b54809f97a",
+          "created_at": 1793576266
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "GTM",
+          "description": "They don't really work well as self-serve products and at low price points.",
+          "keywords": "dependent on",
+          "weight": 1.0,
+          "source_id": "gd_e6401ab7dfac2a87c4c7fcbc-chunk-000",
+          "file_path": "gd_e6401ab7dfac2a87c4c7fcbc",
+          "created_at": 1793503904
+        },
+        {
+          "src_id": "AI agents",
+          "tgt_id": "LinkedIn",
+          "description": "AI agents collect data from LinkedIn to personalize emails.<SEP>LinkedIn provides data to AI agents for personalization.",
+          "keywords": "Data collection",
+          "weight": 2.0,
+          "source_id": "gd_ec4952faf291c054baf7a979-chunk-003",
+          "file_path": "gd_ec4952faf291c054baf7a979",
+          "created_at": 1793620991
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "CMOs",
+          "description": "CMOs oversee the management and use of AI agents to generate content at scale.",
+          "keywords": "Generate Content,Manage",
+          "weight": 1.0,
+          "source_id": "gd_7c2b868d50567a6b40c7c279-chunk-006",
+          "file_path": "gd_7c2b868d50567a6b40c7c279",
+          "created_at": 1793613836
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Users",
+          "description": "Users are becoming increasingly abusive to AI Agents, with some demanding free tickets to SaaStr AI Annual 2026 and others asking for code overwrites or non-existent coupons.<SEP>Users experience issues with AI agents.",
+          "keywords": "Infallible oracles,abuse,relationship_keywords=Cannot be trusted,rudeness",
+          "weight": 2.0,
+          "source_id": "gd_e88d6ca82d9766be5598ca26-chunk-000<SEP>gd_daf1ebb11f0e32fe93411859-chunk-005",
+          "file_path": "gd_e88d6ca82d9766be5598ca26<SEP>gd_daf1ebb11f0e32fe93411859",
+          "created_at": 1793517227
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Buyers",
+          "description": "AI agents do not learn about individual buyers or their behavior.",
+          "keywords": "Learning Buyer Behavior",
+          "weight": 1.0,
+          "source_id": "gd_829c748931b4ffb3558e0adc-chunk-000",
+          "file_path": "gd_829c748931b4ffb3558e0adc",
+          "created_at": 1793531251
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "AI-Native Companies",
+          "description": "AI-Native Companies will use AI Agents to close deals.",
+          "keywords": "Deal Closing",
+          "weight": 1.0,
+          "source_id": "gd_547c5075e66aa644c0ab2a4f-chunk-002",
+          "file_path": "gd_547c5075e66aa644c0ab2a4f",
+          "created_at": 1793608663
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Saastr",
+          "description": "AI Agents are related to Saastr as they are discussed in the article.<SEP>AI agents can grow the business by 15-20%.<SEP>AI agents can find found revenue.",
+          "keywords": "Found,Growing,Increasing,Relationship Keywords: related to,Revenue,associated with",
+          "weight": 3.0,
+          "source_id": "gd_48c842549096f5723fd0da91-chunk-000<SEP>gd_cc80ae8a393a1ee4cf628117-chunk-006",
+          "file_path": "gd_48c842549096f5723fd0da91<SEP>gd_cc80ae8a393a1ee4cf628117",
+          "created_at": 1793584800
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "ICP",
+          "description": "AI agents do not invent the identified customer profile.",
+          "keywords": "Inventing ICP",
+          "weight": 1.0,
+          "source_id": "gd_829c748931b4ffb3558e0adc-chunk-000",
+          "file_path": "gd_829c748931b4ffb3558e0adc",
+          "created_at": 1793531251
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "CRM",
+          "description": "Your AI SDR shouldn’t be reaching out to someone who just had a bad customer support interaction.<SEP>Every agent takes 30 days to train.<SEP>Plan for a data hub from day one.",
+          "keywords": "coordinates context sharing,requires data hub,requires training",
+          "weight": 3.0,
+          "source_id": "gd_3ffa319b9d5140c80f90ee3c-chunk-005",
+          "file_path": "gd_3ffa319b9d5140c80f90ee3c",
+          "created_at": 1793607969
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "LLM",
+          "description": "The company uses a separate LLM for validation step to keep it isolated and unbiased from the rest of the pipeline.",
+          "keywords": "validation",
+          "weight": 2.0,
+          "source_id": "gd_57f6b6270d8be867f0e4e105-chunk-009",
+          "file_path": "gd_57f6b6270d8be867f0e4e105",
+          "created_at": 1793645302
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "B2B Leaders",
+          "description": "B2B leaders will soon be evaluating the value of AI agents versus the cost of B players, which can deliver qualified meetings, but also bring inconsistencies and high costs.<SEP>B2B Leaders need to implement AI Agents aggressively.<SEP>AI agents represent a fundamental shift to selling digital labor instead of software tools.<SEP>B2B leaders are dependent on AI agents for productivity and capabilities.",
+          "keywords": "Cost,Dependence,Embrace,Implementation,Represent,Shift,Value",
+          "weight": 4.0,
+          "source_id": "gd_7e9750f5f4ac7517b7e0ad2e-chunk-000<SEP>gd_7e9750f5f4ac7517b7e0ad2e-chunk-002<SEP>gd_05ae884ea4f8f38234890d1c-chunk-004<SEP>gd_5088eba36f8b4b196a5837dd-chunk-006",
+          "file_path": "gd_7e9750f5f4ac7517b7e0ad2e<SEP>gd_05ae884ea4f8f38234890d1c<SEP>gd_5088eba36f8b4b196a5837dd",
+          "created_at": 1793625740
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Team SaaStr",
+          "description": "Team SaaStr members utilize AI Agents to streamline tasks and improve efficiency in their work.",
+          "keywords": "Utilization",
+          "weight": 1.0,
+          "source_id": "gd_7e9750f5f4ac7517b7e0ad2e-chunk-004",
+          "file_path": "gd_7e9750f5f4ac7517b7e0ad2e",
+          "created_at": 1793536382
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Traditional SaaS",
+          "description": "Traditional SaaS competes with AI agents that can perform tasks such as organizing information and generating reports",
+          "keywords": "Compete,Replicate",
+          "weight": 1.0,
+          "source_id": "gd_618bc19ebfadc458cdd856d2-chunk-003",
+          "file_path": "gd_618bc19ebfadc458cdd856d2",
+          "created_at": 1793584062
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Budget",
+          "description": "The AI agents are becoming the budget itself.",
+          "keywords": "becomes the budget itself",
+          "weight": 1.0,
+          "source_id": "gd_27e43c6efa36b7ce8c8e3466-chunk-001",
+          "file_path": "gd_27e43c6efa36b7ce8c8e3466",
+          "created_at": 1793625112
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "People.ai",
+          "description": "The company provides data infrastructure for AI agents.",
+          "keywords": "Provides data infrastructure",
+          "weight": 1.0,
+          "source_id": "gd_1cc87df378d79d9def33d0df-chunk-006",
+          "file_path": "gd_1cc87df378d79d9def33d0df",
+          "created_at": 1793564709
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Lead",
+          "description": "AI agents reactivate leads that human sales team wrote off",
+          "keywords": "Relationship_keywords: reactivate,follow up",
+          "weight": 1.0,
+          "source_id": "gd_6250b027a6a90083aaee57cf-chunk-002",
+          "file_path": "gd_6250b027a6a90083aaee57cf",
+          "created_at": 1793567239
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "vibe coding",
+          "description": "AI Agents can be used with vibe coding.",
+          "keywords": "can_be_used_with",
+          "weight": 1.0,
+          "source_id": "gd_5fe0e24210e667539d05d4de-chunk-000",
+          "file_path": "gd_5fe0e24210e667539d05d4de",
+          "created_at": 1793611123
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "AI Companies",
+          "description": "AI companies are restructuring their teams to integrate AI agents and automate tasks.",
+          "keywords": "Automation,Integration",
+          "weight": 1.0,
+          "source_id": "gd_547c5075e66aa644c0ab2a4f-chunk-010",
+          "file_path": "gd_547c5075e66aa644c0ab2a4f",
+          "created_at": 1793608663
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Sales Execs",
+          "description": "Sales executives and AI agents will work together to close deals, with the AI agents handling tasks such as text message-based sales.",
+          "keywords": "Complementary Roles",
+          "weight": 1.0,
+          "source_id": "gd_9f958dd43d0ae0b6840970ce-chunk-000",
+          "file_path": "gd_9f958dd43d0ae0b6840970ce",
+          "created_at": 1793501709
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "SaaStr AI Annual 2026",
+          "description": "The event will focus on training, deploying, and winning with AI Agents.",
+          "keywords": "Keywords: training,deployment,winning",
+          "weight": 1.0,
+          "source_id": "gd_3a1525a79255325f169513f5-chunk-000",
+          "file_path": "gd_3a1525a79255325f169513f5",
+          "created_at": 1793492739
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "B2B Companies",
+          "description": "AI agents generate over $1M in revenue for B2B companies.",
+          "keywords": "Generating Revenue",
+          "weight": 1.0,
+          "source_id": "gd_829c748931b4ffb3558e0adc-chunk-000",
+          "file_path": "gd_829c748931b4ffb3558e0adc",
+          "created_at": 1793531251
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Roam",
+          "description": "Roam's AI Agents feature automates task and workflow optimization.<SEP>Roam's AI Agents feature automates task and workflow optimization, which is an enhancement of Roam's AI integration.",
+          "keywords": "Automates",
+          "weight": 2.0,
+          "source_id": "gd_696d949b6e655b2d0cca062f-chunk-002",
+          "file_path": "gd_696d949b6e655b2d0cca062f",
+          "created_at": 1793569387
+        },
+        {
+          "src_id": "AI agents",
+          "tgt_id": "SaaStr AI",
+          "description": "The AI agents help SaaStr AI find new partners.<SEP>SaaStr AI uses AI agents for GTM.",
+          "keywords": "Helps,Uses",
+          "weight": 2.0,
+          "source_id": "gd_6250b027a6a90083aaee57cf-chunk-003",
+          "file_path": "gd_6250b027a6a90083aaee57cf",
+          "created_at": 1793567239
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Momentum",
+          "description": "The AI agents use Momentum to automatically log sales calls to Salesforce.",
+          "keywords": "Integrates,Uses",
+          "weight": 1.0,
+          "source_id": "gd_3ffa319b9d5140c80f90ee3c-chunk-000",
+          "file_path": "gd_3ffa319b9d5140c80f90ee3c",
+          "created_at": 1793607965
+        },
+        {
+          "src_id": "Buyers",
+          "tgt_id": "CEOs",
+          "description": "CEOs and buyers have significant influence over purchasing decisions within organizations.<SEP>CEOs and buyers interact and communicate with each other regarding purchasing decisions.<SEP>Buyers should build trust with CEOs by being transparent and honest about their needs and expectations.<SEP>CEOs should build trust with buyers by being transparent and honest about their product and team.",
+          "keywords": "Build trust,Know your product,communication,decision-making,influence,interaction",
+          "weight": 5.0,
+          "source_id": "gd_98e4167c524ebe4713ad0624-chunk-000<SEP>gd_1ae501bfdb3a7f714e292862-chunk-001",
+          "file_path": "gd_98e4167c524ebe4713ad0624<SEP>gd_1ae501bfdb3a7f714e292862",
+          "created_at": 1793526545
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Replit V3",
+          "description": "AI agents deployed by Replit V3 caught potential vulnerabilities that humans never would have found.<SEP>Replit V3 enabled the AI agents to autonomously bring in specialists and improve security.<SEP>Replit V3 provides AI agents that can manage other AI agents and tackle complex problems.",
+          "keywords": "Caught Things,Enabled,Provides",
+          "weight": 3.0,
+          "source_id": "gd_e20ce885bf9b34730505932c-chunk-003<SEP>gd_e20ce885bf9b34730505932c-chunk-007",
+          "file_path": "gd_e20ce885bf9b34730505932c",
+          "created_at": 1793571751
+        },
+        {
+          "src_id": "AI agents",
+          "tgt_id": "SDRs",
+          "description": "SDRs are using AI agents to sell on their own.",
+          "keywords": "has,uses",
+          "weight": 1.0,
+          "source_id": "gd_3ca68dc5b6f09166e4348fa9-chunk-000",
+          "file_path": "gd_3ca68dc5b6f09166e4348fa9",
+          "created_at": 1793593223
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Unit Economics",
+          "description": "AI agents are contributing to improved unit economics and profitability in AI companies.",
+          "keywords": "Improvement,Profitability",
+          "weight": 1.0,
+          "source_id": "gd_547c5075e66aa644c0ab2a4f-chunk-010",
+          "file_path": "gd_547c5075e66aa644c0ab2a4f",
+          "created_at": 1793608663
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "The author",
+          "description": "The author experienced a learning curve in AI, which is a common issue with great tools and agents.",
+          "keywords": "Experienced",
+          "weight": 1.0,
+          "source_id": "gd_eaeca2bf33d264c65e63cdb8-chunk-002",
+          "file_path": "gd_eaeca2bf33d264c65e63cdb8",
+          "created_at": 1793522713
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Enterprise Deals",
+          "description": "AI agents do not learn about the specialized sales and support processes required for large-scale business agreements.",
+          "keywords": "Learning Enterprise Deal Process",
+          "weight": 1.0,
+          "source_id": "gd_829c748931b4ffb3558e0adc-chunk-000",
+          "file_path": "gd_829c748931b4ffb3558e0adc",
+          "created_at": 1793531251
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Managers",
+          "description": "AI Agents are already managing routine check-ins, renewals, and upsells.",
+          "keywords": "Manage,Routine tasks",
+          "weight": 1.0,
+          "source_id": "gd_7e9750f5f4ac7517b7e0ad2e-chunk-002",
+          "file_path": "gd_7e9750f5f4ac7517b7e0ad2e",
+          "created_at": 1793536382
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "AI Support",
+          "description": "AI Agents can manage sub-agents, break down complex workflows, delegate tasks, coordinate results, and handle exceptions, while AI Support can triage, route, resolve routine issues, escalate complex ones, follow up, and analyze patterns.",
+          "keywords": "routes,triages",
+          "weight": 1.0,
+          "source_id": "gd_759a598bed674f64e17e1fa0-chunk-003",
+          "file_path": "gd_759a598bed674f64e17e1fa0",
+          "created_at": 1793626648
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "September",
+          "description": "The deployment gap is the sales gap, and AI Agents are deployed in September.",
+          "keywords": "deployment,gap",
+          "weight": 1.0,
+          "source_id": "gd_809239d05954fc972f3537b0-chunk-005",
+          "file_path": "gd_809239d05954fc972f3537b0",
+          "created_at": 1793571126
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Sales Engineers",
+          "description": "Sales Engineers will work with AI Agents to prove the value of AI solutions.",
+          "keywords": "Value Proof",
+          "weight": 1.0,
+          "source_id": "gd_547c5075e66aa644c0ab2a4f-chunk-002",
+          "file_path": "gd_547c5075e66aa644c0ab2a4f",
+          "created_at": 1793608663
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "SaaStr Team",
+          "description": "The SaaStr Team used AI Agents to design and build the AI-powered site SaaStr.ai.",
+          "keywords": "Designed,Used",
+          "weight": 1.0,
+          "source_id": "gd_5fe0e24210e667539d05d4de-chunk-001",
+          "file_path": "gd_5fe0e24210e667539d05d4de",
+          "created_at": 1793611123
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Human",
+          "description": "The use of AI agents has been able to influence around a 5% GMV uplift in e-commerce sales.<SEP>As people generally don’t care as long as their issue is solved, the use of AI agents has been able to influence around a 5% GMV uplift in e-commerce sales.",
+          "keywords": "influence",
+          "weight": 2.0,
+          "source_id": "gd_57f6b6270d8be867f0e4e105-chunk-009",
+          "file_path": "gd_57f6b6270d8be867f0e4e105",
+          "created_at": 1793645302
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Content AI",
+          "description": "The Content AI generates and assists AI agents in creating insights and content.<SEP>AI agents use and follow the Content AI to generate insights and content.",
+          "keywords": "Assist,Follow,Generate,Use",
+          "weight": 2.0,
+          "source_id": "gd_57e4f799ef3cc8109831930f-chunk-007",
+          "file_path": "gd_57e4f799ef3cc8109831930f",
+          "created_at": 1793622794
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Lenny Rachitsky",
+          "description": "Lenny Rachitsky uses AI Agents in his business, which has 2 humans and 20 AI Agents.",
+          "keywords": "Uses Agents",
+          "weight": 1.0,
+          "source_id": "gd_6dfbacce169998c58bfc32fd-chunk-000",
+          "file_path": "gd_6dfbacce169998c58bfc32fd",
+          "created_at": 1793507591
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Venture Capitalists",
+          "description": "The security changes implemented by the AI agents had a significant impact on the functionality of the VC Pitch Deck App, making it difficult for venture capitalists to review and evaluate startup pitches.",
+          "keywords": "Effect,Impact",
+          "weight": 1.0,
+          "source_id": "gd_e20ce885bf9b34730505932c-chunk-002",
+          "file_path": "gd_e20ce885bf9b34730505932c",
+          "created_at": 1793571751
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Product Knowledge",
+          "description": "They’re better at product knowledge than 95% of our humans ever were",
+          "keywords": "Exceeds",
+          "weight": 1.0,
+          "source_id": "gd_57e4f799ef3cc8109831930f-chunk-006",
+          "file_path": "gd_57e4f799ef3cc8109831930f",
+          "created_at": 1793622794
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "RAG",
+          "description": "AI Agents with tool calling capabilities are successful",
+          "keywords": "Success",
+          "weight": 1.0,
+          "source_id": "gd_17ec0a740f815b471f557b82-chunk-000",
+          "file_path": "gd_17ec0a740f815b471f557b82",
+          "created_at": 1793491799
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Code",
+          "description": "AI Agents assist with coding tasks.",
+          "keywords": "Assistance",
+          "weight": 1.0,
+          "source_id": "gd_28e630372aae90eb9315f28e-chunk-004",
+          "file_path": "gd_28e630372aae90eb9315f28e",
+          "created_at": 1793495351
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "Big Deals",
+          "description": "Big Deals will be closed using AI Agents.",
+          "keywords": "Deal Closing",
+          "weight": 1.0,
+          "source_id": "gd_547c5075e66aa644c0ab2a4f-chunk-002",
+          "file_path": "gd_547c5075e66aa644c0ab2a4f",
+          "created_at": 1793608663
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "dharmesh",
+          "description": "dharmesh predicts the future of AI Agents in 2025.",
+          "keywords": "Future,Predictions",
+          "weight": 1.0,
+          "source_id": "gd_68f47f1f29e40ed975a9499f-chunk-000",
+          "file_path": "gd_68f47f1f29e40ed975a9499f",
+          "created_at": 1793497734
+        }
+      ],
+      "chunks": [
+        {
+          "reference_id": "1",
+          "content": "2026, customers simply won’t accept:\nWaiting days for basic information\nSales reps who don’t know their own product\nComplex procurement processes for simple purchases\nBeing forced into unnecessary live conversations for transactional deals\nJust as consumers now expect Amazon-like experiences in all retail interactions, B2B buyers will expect AI-level efficiency, knowledge, and convenience in all sales processes. Companies that cling to outdated, high-friction sales models will find themselves at a severe competitive disadvantage.\nCustom Enterprise Selling Will Be Transformed, Not Eliminated\nWhile transactional sales will be most dramatically changed, even complex enterprise selling will be transformed by AI. The AI won’t replace the strategic relationship aspects, but it will:\nHandle all technical questions during complex sales processes\nAutomate customized proposals based on specific requirements\nManage complex procurement processes\nCoordinate between stakeholders\nMaintain momentum between human interactions\nEnterprise AEs will spend nearly all their time on relationship building, strategic guidance, and complex negotiations rather than the administrative and informational aspects that consume so much time today.\n4 Unexpected Learnings\nAI requires more pricing transparency\n– When AI is closing deals, you need clearer pricing structures with less room for games, forcing companies to simplify their offerings and be more upfront about costs and discounts\nSales terms will become more customer-centric\n– Monthly deals and easier opt-outs will likely replace long-term contracts with auto-renewals as customers expect more flexibility when buying through AI\nAI fills gaps you didn’t know existed\n– SaaStr discovered their AI could review speaker submissions and VC decks—use cases they hadn’t anticipated, showing how AI doesn’t just improve existing processes but creates entirely new value streams\nAI might make some sales reps better while making others obsolete\n– The best reps will leverage AI as “mech-AEs” while underperformers may be replaced entirely, creating a bifurcated future where top performers thrive and mediocre ones disappear\nThe bottom line: AI is already changing sales fundamentally. Companies that embrace these changes will thrive",
+          "file_path": "gd_97843612d08bfd01e9f83879",
+          "chunk_id": "gd_97843612d08bfd01e9f83879-chunk-009"
+        },
+        {
+          "reference_id": "3",
+          "content": "If I trust an AI more than a human sales rep … Then I will buy from an AI over a human sales rep. That day is pretty close to here today already. The AI sales rep already: - is available 24x7 - knows product cold - doesn’t lie or make stuff up to close a deal Many think this is silly … but most of those that do haven’t bought software is a while themselves, or used a great AI in this context yet. Go try to buy a routine piece of SaaS software. See how painful it is, how long it takes, how hard it is to get the precise answers you need for your own flow and use case. Are the tools here today? Not quite. But they will be soon. If we had the quality of dev teams working on OpenAI and Cursor that are working on AI AEs, the products would already be great. But they are coming soon. Some will enhance AEs, and make them Mech AEs, for sure. Some will create agents that make humans better. Other products will run basic sales autonomously, but kick up exceptions and other issues to humans. AI support already works this way pretty well. And some products, some will basically enable AI to handle 90% of sales on its own. This will require highly transparent pricing, the ability to truly one-click cancel, and the ability to auto-onboard in many cases. But many founders will choose to build the latter. Even if you disagree with this, realize it’s already here in coding, in support, even in SaaStr’s own AI. And things are getting so, so much better in AI every single day. The rate of improvement and change is like nothing we’ve ever seen in B2B and SaaS.",
+          "file_path": "gd_faead248acb155f9a68f81a5",
+          "chunk_id": "gd_faead248acb155f9a68f81a5-chunk-000"
+        },
+        {
+          "reference_id": "2",
+          "content": "sophisticated buyers, they’re evaluating not just your product, but your operational competence. A basic factual error signals that either:\nYou don’t have proper quality control processes\nYou’re not paying attention to details\nYou’re over-relying on automation without human oversight\nNone of these are good signals for a potential vendor relationship.\nThe Path Forward\nAI in sales isn’t going away—nor should it. But the companies that win will be those that combine AI’s scalability with human judgment and oversight.\nThe goal isn’t to eliminate AI from your sales process. It’s to eliminate the scenarios where AI can blow your shot.\nBuild systems that let AI do what it does best (scale, personalize, optimize) while ensuring humans catch what AI does worst (context, nuance, basic fact-checking).\nBecause in B2B sales, 90% right is 100% wrong.  Especially when you don’t already know and trust the vendor.",
+          "file_path": "gd_a46480025a7b5344f9662b4e",
+          "chunk_id": "gd_a46480025a7b5344f9662b4e-chunk-003"
+        },
+        {
+          "reference_id": "1",
+          "content": "industries\nConnecting similar customers to each other for peer learning\nThe AI doesn’t just automate existing processes—it identifies and fills gaps in customer experience that humans never had time to address. These unexpected capabilities often deliver some of the highest value.\nCompanies should deploy AI with clear primary use cases but remain open to discovering these “gap-filling” opportunities that emerge organically from customer interactions.\nThe Future Sales Team: Mech-AEs vs. Obsolescence\nFor sales professionals, AI creates a bifurcated future:\nThe best reps will become “mech-AEs”—augmented by AI that handles product knowledge, follow-up, and administrative tasks. These superhuman sellers will focus entirely on relationship building, complex negotiation, and strategic guidance while their AI handles everything else. Their productivity and earnings will increase dramatically.\nMeanwhile, mediocre reps who neither master the technology nor offer exceptional relationship skills will become obsolete. The bar for human sales performance will rise significantly—those who can’t offer value beyond what the AI provides will be replaced.\nThis dynamic is already emerging in the support space, where companies like Gorgeous have seen 30-40% reductions in support staff after AI deployment, but the remaining staff deliver much higher value.\nAI Will Dramatically Raise Customer Expectations\nOnce customers experience exceptional AI-driven interactions, they’ll no longer tolerate the traditional B2B sales process with its delays, knowledge gaps, and friction.\nThis represents perhaps the most profound change: customer expectations will fundamentally reset. In 2025-2026, customers simply won’t accept:\nWaiting days for basic information\nSales reps who don’t know their own product\nComplex procurement processes for simple purchases\nBeing forced into unnecessary live conversations for transactional deals\nJust as consumers now expect Amazon-like experiences in all retail interactions, B2B buyers will expect AI-level efficiency, knowledge, and convenience in all sales processes. Companies that cling to outdated, high-friction sales models will find themselves at a severe competitive disadvantage.\nCustom Enterprise Selling Will Be Trans",
+          "file_path": "gd_97843612d08bfd01e9f83879",
+          "chunk_id": "gd_97843612d08bfd01e9f83879-chunk-008"
+        },
+        {
+          "reference_id": "4",
+          "content": ".\nSo Is This a Buying Opportunity or a Warning?\nBoth cases exist, and they’re both serious.\nThe bull case\n: Software companies still have the data, the enterprise relationships, the integrations, and the distribution. They have 10-20 years of customer lock-in baked into workflows. AI doesn’t erase that overnight. At 22x forward earnings — now below the market — you are not paying for a growth premium anymore. If these businesses stabilize and grow at even moderate rates, the stocks are cheap.\nThe bear case\n: If you strip out seat expansion as the growth engine, and pricing power gets squeezed as buyers renegotiate, the earnings trajectory for many companies looks genuinely uncertain. A “fair” multiple on decelerating or declining earnings is not 22x.\nThe businesses winning right now are the ones that have become infrastructure for AI, not those competing with it. The ones losing are trying to reframe the same product as “AI-powered” without fundamentally rethinking how value is delivered.\nThat gap is going to widen over the next 18 months.\nSoftware Has Never Been on Sale Like This Before.  Ever.\nSoftware has never traded at a discount to the S&P 500 in the modern era. That is either a historic buying opportunity or a sign that the market has correctly identified a structural break in the model.\nEither way, it will resolve one direction or the other — and probably not slowly.\nFor founders: your next fundraise will be priced off public comps. If you are growing fast and capital-efficiently, you are fine. If you are counting on SaaS multiples recovering because they always have before, that assumption now requires more scrutiny than it used to.\nThe model was intact the last time they came back. That is the question worth asking today.",
+          "file_path": "gd_1db8851ad56bec3e841dbf86",
+          "chunk_id": "gd_1db8851ad56bec3e841dbf86-chunk-003"
+        },
+        {
+          "reference_id": "5",
+          "content": ":\nImplement smart handoff logic. AI qualifies and handles what it can; humans get seamlessly looped in with full context when needed. No more “let me transfer you to someone else who will ask you the same questions.”\nThis year:\nRestructure your sales team around this new reality. Fewer AEs, but better ones, focused on complex deals. AI handling the rest. Compensation models that reward outcomes rather than activities. The Deals You’re Losing Right Now\nHere’s what haunts me about that interaction last week:\nI’ll never hear from them again. They don’t know they lost the deal. Their CRM probably shows I “went dark.” Their win/loss analysis will blame “timing” or “budget” or “competition.”\nBut the truth is simpler: they were too slow and too rigid in a world where I needed fast and flexible. How many of these deals is your team losing every week? You don’t know. That’s the problem. The buyer who was ready to purchase but got frustrated and went elsewhere doesn’t fill out a survey explaining what happened. They just disappear. The only way to find out is to fix the process and watch your conversion rates climb.\n2021 Sales Was Often Crappy for the Customer. We Just Had No Other Choices.\n\nThe 2021 sales process—with its mandatory discovery calls, its multi-day response times, its rigid stages, and its assumption that the seller controls the information—is a dead man walking. AI isn’t going to replace great salespeople. But it’s absolutely going to replace the slow, bureaucratic, process-obsessed sales motion that treats every buyer the same regardless of where they are in their journey. The companies that figure this out will close deals in hours that used to take weeks. They’ll convert buyers who were ready to purchase instead of frustrating them into a competitor’s arms. They’ll free up their best salespeople to focus on deals that actually need a human touch. The companies that don’t",
+          "file_path": "gd_823279392f3517de14a0233e",
+          "chunk_id": "gd_823279392f3517de14a0233e-chunk-004"
+        },
+        {
+          "reference_id": "6",
+          "content": "You need to prove AI enhances your value rather than cannibalizes it.\nThe bottom line:\n76% of AI use cases are now purchased rather than built internally.\nEnterprise buyers want ready-made AI solutions. AI buyers convert at\n47% vs. SaaS’ 25%\n, indicating AI delivers enough immediate value to short-circuit standard procurement.\nThe companies capturing this budget in 2026 will be the ones who built AI-native from day one—or successfully transformed before the window closed.\nThe window is closing.",
+          "file_path": "gd_ed532f1494cf2bbcdf7fd169",
+          "chunk_id": "gd_ed532f1494cf2bbcdf7fd169-chunk-010"
+        },
+        {
+          "reference_id": "7",
+          "content": "many don’t do this well.  Too many see 10%, 20% or more of their customers not onboard promptly after buying.\nAI is going to dive expectations up, not down, here.  If I can buy instantly with an AI sales rep, why can’t I deploy instantly?  Customers will expect it.  But especially where there is business process change, we’ll still need humans to help make that business process change happen.  And happen as effortlessly as possible.\nPut your humans there.",
+          "file_path": "gd_89e828fc3de2117ed06de0b1",
+          "chunk_id": "gd_89e828fc3de2117ed06de0b1-chunk-002"
+        },
+        {
+          "reference_id": "2",
+          "content": "feedback with “you said it yourself, AI is really good 90% of the time,” he missed the point entirely.\n90% accuracy sounds great in theory. But in sales, that 10% error rate isn’t distributed evenly. It tends to cluster around the most important, most visible, most easily-verified facts.\nAnd when you’re wrong about something basic that your prospect knows better than anyone else, you don’t just lose that deal—you lose all credibility.\nThe Audit Imperative\nThe solution isn’t to abandon AI in sales. It’s to build proper human oversight into your AI-powered sales motion.\nHere’s what actually works:\n1. Fact-Check the Obvious Stuff\nBefore any AI-generated outreach goes out, have a human verify:\nEvent dates and locations\nCompany details and recent news\nIndustry-specific terminology\nCompetitive landscape claims\nThis takes 30 seconds per message and prevents 90% of credibility-destroying errors.\n2. Test Your AI’s Knowledge Boundaries\nRegularly audit your AI system with questions about:\nRecent events in your prospect’s industry\nCurrent market conditions\nSpecific company milestones\nTechnical details about their business\nWhen your AI gets something wrong in testing, fix the training data before it embarrasses you in the field.\n3. Build Confidence Scoring\nTrain your AI to flag when it’s uncertain about specific facts. Better to send a slightly less confident message than a confidently wrong one.\n4. Create Review Checkpoints\nFor high-value prospects, always have a human review AI-generated outreach before it goes out. The ROI on this review time is massive when you’re targeting enterprise accounts or key strategic partners.\nA deep dive with $1B+ Owner’s CRO Kyle Norton on how they do this here:\nThe Trust Tax\nEvery sales interaction is fundamentally about trust. When your AI makes a basic factual error, you’re not just losing that opportunity—you’re paying what I call the “trust tax.”\nThe prospect now questions everything else you’ve",
+          "file_path": "gd_a46480025a7b5344f9662b4e",
+          "chunk_id": "gd_a46480025a7b5344f9662b4e-chunk-001"
+        },
+        {
+          "reference_id": "1",
+          "content": "quota pressure forcing premature upsells\nIt can set regular follow-ups without feeling like it’s bothering customers\nIt’s honest about product limitations rather than overpromising\nThis transition will happen quickly, with 80% of routine QBR-type interactions being AI-driven within 12 months. Customers will prefer this approach because they’ll get genuine help rather than thinly-disguised sales pressure.\n7. Product Will Need to Be More Self-Serve\nAs AI handles more of the sales and onboarding process, there will be increased pressure to make products truly self-deployable. Customers won’t want to wait for human implementation teams after an AI has efficiently closed the deal.\nThis will accelerate the PLG (Product-Led Growth) trend even for complex enterprise software. Companies will need to invest more in seamless onboarding, intuitive UX, and automated implementation to match the efficiency of their AI sales process.\nThe days of closing a deal quickly but then waiting weeks for implementation teams will feel increasingly disconnected. When an AI can close a deal in minutes, customers will expect to be using the product within hours, not weeks.\nWhat’s Coming Next: Deeper Predictions\nAI Will Force Greater Pricing Transparency\nTraditional sales often relies on hiding pricing information, creating artificial scarcity around discounts, and complex negotiations. As AI begins to close more deals, these tactics become harder to maintain.\nThe AI needs clear rules about what it can offer. While you can program some negotiation tactics, the endless “hide the ball” games that sales teams play will be less effective. Companies will need to develop clearer pricing tiers, transparent discount structures, and simplified proposals.\nThis doesn’t mean custom enterprise deals will disappear, but for the majority of transactions, pricing will become more transparent and accessible. The AI will have parameters for offering discounts (like SaaStr’s “JASON20” code that gives 20% off), but won’t be able to play the complex psychological games human reps use.\nThis transparency will likely increase conversion rates overall",
+          "file_path": "gd_97843612d08bfd01e9f83879",
+          "chunk_id": "gd_97843612d08bfd01e9f83879-chunk-006"
+        },
+        {
+          "reference_id": "8",
+          "content": "gap is too large to ignore.\n5. “If It Can Close on a Text Message, AI Can Close It”\nThe Principle:\nIf a deal can fundamentally be closed via email or text message threads—and plenty of mid-market deals can—then an AI agent can handle that motion just as well. Maybe not perfectly today, but soon enough that it doesn’t matter.\nThe Implication:\nThe traditional sales choreography of discovery calls, demos, objection handling, follow-ups? That’s all text-based communication with some video calls. AI agents are getting shockingly good at that.\n\n6. Buyers Trust AI More Than Salespeople\nG2 Buyer Behavior Data:\nGenerative AI chatbots (17.2%) are now MORE trusted than vendor salespeople (9.3%) for final purchase decisions.\nWhy:\nAI synthesizes multiple data sources without an agenda. It doesn’t have quota pressure. It doesn’t have a bad day. It knows the product comprehensively. A great AI provides a better experience than a mediocre human rep.\nThe Expectation Reset:\nCustomers simply won’t accept waiting, getting wrong answers, or dealing with reps who don’t know the product. Amazon-like expectations are coming to B2B.\n7. “Sell by Chat” Is Now 50/50\nSaaStr’s Own Data:\nWe’re seeing a 50/50 split between traditional website purchases and AI-driven chat sales for our events. “We call it sell by chat. Our AI is basically selling tickets to future SaaStr events all via email, all automated.”\nThe Future:\nLLMs become sales channels. Buyers complete entire purchase journeys within chat interfaces. Websites become data sources for AI systems rather than human destinations.\n\n[Omitted same-source text between these sections: 179 words.]\n\n10. AI SDRs Know the Product Better Than 95% of Human SDRs\nThe Uncomfortable Truth:\n95% of human SDRs don’t really know the product they’re selling\n95% can’t answer",
+          "file_path": "gd_5b445ae4452b1cd5ee770467",
+          "chunk_id": "gd_5b445ae4452b1cd5ee770467-chunk-002"
+        },
+        {
+          "reference_id": "1",
+          "content": "knows your product better than 95% of humans.\nUp to 50% of routine sales will be AI-handled\n– For transactional deals under $10K, AI will increasingly close deals without human intervention.\nAI will merge sales, support, and success\n– Traditional silos will disappear as AI creates one seamless customer experience across all touchpoints.\nCustomer experience expectations will drastically increase\n– Once customers experience great AI interactions, they won’t tolerate slow, vendor-centric sales processes.\nApril 2024:  AI can't beat a good sales rep.  No way.\nApril 2025:  AI might beat an OK sales rep.  Maybe.\nApril 2026:  Our AI is better than 80% of sales reps\n\nWhat’s Changing in Sales: The AI Revolution is Already Here\nAfter analyzing 139,000+ conversations through SaaStr’s AI, Jason Lemkin is convinced: AI is about to fundamentally transform B2B sales.\nThis isn’t some potential future—it’s happening right now.  And it will start accelerating, very quickly.\nHere’s what’s happening now and what’s coming in the next 12-18 months:\n1. Your AI Will Join Every Sales Call\nSoon, your digital twin will join you on every sales call. This isn’t just a note-taker—it’s an AI that knows your product cold. If a prospect asks about integrations, pricing details, or implementation requirements that you’re unsure about, you’ll simply ask your AI, and it will provide the perfect answer in real-time.\nProducts like Delphi are already enabling this functionality where an AI version of yourself can join meetings. While not fully ready yet, it’s just months away from being production-ready. The AI won’t merely listen and take notes—it will actively participate by hearing questions and providing answers without human intervention.\nImagine running a complex sales call with an enterprise prospect asking about specific integrations or implementation details. Instead of saying “I’ll check and get back to you",
+          "file_path": "gd_97843612d08bfd01e9f83879",
+          "chunk_id": "gd_97843612d08bfd01e9f83879-chunk-001"
+        }
+      ],
+      "references": [
+        {
+          "reference_id": "1",
+          "file_path": "gd_97843612d08bfd01e9f83879"
+        },
+        {
+          "reference_id": "2",
+          "file_path": "gd_a46480025a7b5344f9662b4e"
+        },
+        {
+          "reference_id": "3",
+          "file_path": "gd_faead248acb155f9a68f81a5"
+        },
+        {
+          "reference_id": "4",
+          "file_path": "gd_1db8851ad56bec3e841dbf86"
+        },
+        {
+          "reference_id": "5",
+          "file_path": "gd_823279392f3517de14a0233e"
+        },
+        {
+          "reference_id": "6",
+          "file_path": "gd_ed532f1494cf2bbcdf7fd169"
+        },
+        {
+          "reference_id": "7",
+          "file_path": "gd_89e828fc3de2117ed06de0b1"
+        },
+        {
+          "reference_id": "8",
+          "file_path": "gd_5b445ae4452b1cd5ee770467"
+        }
+      ]
+    },
+    "metadata": {
+      "query_mode": "hybrid",
+      "keywords": {
+        "high_level": [
+          "Buyers",
+          "Trust",
+          "AI",
+          "Objection"
+        ],
+        "low_level": [
+          "Buyers Won't Trust an AI"
+        ]
+      },
+      "processing_info": {
+        "total_entities_found": 42,
+        "total_relations_found": 428,
+        "entities_after_truncation": 22,
+        "relations_after_truncation": 142,
+        "merged_chunks_count": 198,
+        "final_chunks_count": 12
+      }
+    },
+    "query": "The “Buyers Won’t Trust an AI” Objection Is Already Collapsing"
+  },
+  "retrieval_seconds": 12.91,
+  "graph_summary": {
+    "status": "recorded",
+    "raw_entity_count": 22,
+    "raw_relationship_count": 142,
+    "raw_chunk_count": 12,
+    "entity_description_count": 22,
+    "entity_descriptions_nonempty": 22,
+    "entity_description_available": true,
+    "excluded_reason_counts": {
+      "source_diversity_cap": 1,
+      "generated_summary_not_a_source_span": 164
+    },
+    "accepted_relationships": 56,
+    "rejected_relationships": 85,
+    "quarantined_relationships": 1,
+    "relationship_reason_counts": {
+      "generated_summary_not_supported_by_source": 55,
+      "endpoints_not_in_source": 7,
+      "weak_entity_name": 22,
+      "unsupported_role_association": 1,
+      "unresolved_conflict": 1
+    },
+    "missing_source_or_provenance_exclusions": 0,
+    "relationship_validation_status": "recorded",
+    "two_hop_path_count": 0,
+    "two_hop_path_available": false,
+    "path_status": "recorded",
+    "normalization": {
+      "payload_shape": "aquery_data",
+      "mode": "hybrid",
+      "entity_descriptions_not_retained": 0,
+      "malformed_records": 0,
+      "notes": [
+        "hits_already_budgeted_raw_chunks_not_added",
+        "validated_against_supplied_catalog"
+      ],
+      "validation_contract": "source-verified-relationship-v1",
+      "separator": "<SEP>",
+      "profile": "multihop",
+      "direct_edges": 56,
+      "paths": 24,
+      "withheld_edges": 86
+    },
+    "direct_edge_count": 56
+  }
+}

@@ -1,0 +1,280 @@
+{
+  "proposed": [
+    {
+      "source_id": "train_4140",
+      "claim": "Salesforce's stock price increased by 9,296%",
+      "support_span": "Salesforce: +9,296%",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_4140",
+      "claim": "Salesforce's IPO date was June 2004",
+      "support_span": "IPO Date: June 2004",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_4140",
+      "claim": "Salesforce's split-adjusted IPO price was $2.75",
+      "support_span": "Split-Adjusted IPO Price: $2.75",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_4140",
+      "claim": "Salesforce's current stock price is $258",
+      "support_span": "Current: $258",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_6158",
+      "claim": "Salesforce has $40 billion in ARR",
+      "support_span": "$40 Billion in ARR",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_6158",
+      "claim": "Salesforce's non-GAAP operating margins are 33%",
+      "support_span": "33% Non-GAAP Operating Margins (19% GAAP)",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_6158",
+      "claim": "Salesforce generates $13 billion of free cash flow per year",
+      "support_span": "Generating $13B of free cash flow a year!!",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_14283",
+      "claim": "Salesforce was worth $2 billion in 2005",
+      "support_span": "Salesforce was worth a cool $2 Billion",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_14283",
+      "claim": "Salesforce is worth $300 billion",
+      "support_span": "19 years later, Salesforce is worth $300 Billion",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_10762",
+      "claim": "Salesforce's 2022 revenue was $26B",
+      "support_span": "2022 $26B (guidance)",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_10762",
+      "claim": "Salesforce's 2021 revenue was $21.25B",
+      "support_span": "2021 $21.25B",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_10762",
+      "claim": "Salesforce's 2020 revenue was $17.1B",
+      "support_span": "2020 $17.1B",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_10762",
+      "claim": "Salesforce's 2019 revenue was $13.2B",
+      "support_span": "2019 $13.2B",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_10762",
+      "claim": "Salesforce's 2018 revenue was $10.5B",
+      "support_span": "2018 $10.5B",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_10762",
+      "claim": "Salesforce's 2017 revenue was $8.4B",
+      "support_span": "2017  $8.4B",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_10762",
+      "claim": "Salesforce's 2016 revenue was $6.7B",
+      "support_span": "2016  $6.7B",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_10762",
+      "claim": "Salesforce's 2015 revenue was $5.4B",
+      "support_span": "2015  $5.4B",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_10762",
+      "claim": "Salesforce's 2014 revenue was $4.1B",
+      "support_span": "2014  $4.1B",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_10762",
+      "claim": "Salesforce had its best quarter ever with 23% growth at $24B+ ARR",
+      "support_span": "Salesforce had its best quarter ever, exploding to 23% growth at $24B+ ARR",
+      "claim_type": "fact"
+    }
+  ],
+  "raw_extraction": "[\n  {\n    \"source_id\": \"train_4140\",\n    \"claim\": \"Salesforce's stock price increased by 9,296%\",\n    \"support_span\": \"Salesforce: +9,296%\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_4140\",\n    \"claim\": \"Salesforce's IPO date was June 2004\",\n    \"support_span\": \"IPO Date: June 2004\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_4140\",\n    \"claim\": \"Salesforce's split-adjusted IPO price was $2.75\",\n    \"support_span\": \"Split-Adjusted IPO Price: $2.75\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_4140\",\n    \"claim\": \"Salesforce's current stock price is $258\",\n    \"support_span\": \"Current: $258\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_6158\",\n    \"claim\": \"Salesforce has $40 billion in ARR\",\n    \"support_span\": \"$40 Billion in ARR\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_6158\",\n    \"claim\": \"Salesforce's non-GAAP operating margins are 33%\",\n    \"support_span\": \"33% Non-GAAP Operating Margins (19% GAAP)\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_6158\",\n    \"claim\": \"Salesforce generates $13 billion of free cash flow per year\",\n    \"support_span\": \"Generating $13B of free cash flow a year!!\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_14283\",\n    \"claim\": \"Salesforce was worth $2 billion in 2005\",\n    \"support_span\": \"Salesforce was worth a cool $2 Billion\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_14283\",\n    \"claim\": \"Salesforce is worth $300 billion\",\n    \"support_span\": \"19 years later, Salesforce is worth $300 Billion\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_10762\",\n    \"claim\": \"Salesforce's 2022 revenue was $26B\",\n    \"support_span\": \"2022 $26B (guidance)\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_10762\",\n    \"claim\": \"Salesforce's 2021 revenue was $21.25B\",\n    \"support_span\": \"2021 $21.25B\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_10762\",\n    \"claim\": \"Salesforce's 2020 revenue was $17.1B\",\n    \"support_span\": \"2020 $17.1B\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_10762\",\n    \"claim\": \"Salesforce's 2019 revenue was $13.2B\",\n    \"support_span\": \"2019 $13.2B\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_10762\",\n    \"claim\": \"Salesforce's 2018 revenue was $10.5B\",\n    \"support_span\": \"2018 $10.5B\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_10762\",\n    \"claim\": \"Salesforce's 2017 revenue was $8.4B\",\n    \"support_span\": \"2017  $8.4B\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_10762\",\n    \"claim\": \"Salesforce's 2016 revenue was $6.7B\",\n    \"support_span\": \"2016  $6.7B\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_10762\",\n    \"claim\": \"Salesforce's 2015 revenue was $5.4B\",\n    \"support_span\": \"2015  $5.4B\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_10762\",\n    \"claim\": \"Salesforce's 2014 revenue was $4.1B\",\n    \"support_span\": \"2014  $4.1B\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_10762\",\n    \"claim\": \"Salesforce had its best quarter ever with 23% growth at $24B+ ARR\",\n    \"support_span\": \"Salesforce had its best quarter ever, exploding to 23% growth at $24B+ ARR\",\n    \"claim_type\": \"fact\"\n  }\n]",
+  "validation_rejected": [
+    {
+      "source_id": "train_14283",
+      "claim": "Salesforce was worth $2 billion in 2005",
+      "support_span": "Salesforce was worth a cool $2 Billion",
+      "claim_type": "number",
+      "reason": "numeric_not_in_span"
+    }
+  ],
+  "verifier_rejected": [],
+  "verified": [
+    {
+      "source_id": "train_4140",
+      "claim": "Salesforce's stock price increased by 9,296%",
+      "support_span": "Salesforce: +9,296%",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_4140",
+      "claim": "Salesforce's IPO date was June 2004",
+      "support_span": "IPO Date: June 2004",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_4140",
+      "claim": "Salesforce's split-adjusted IPO price was $2.75",
+      "support_span": "Split-Adjusted IPO Price: $2.75",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_4140",
+      "claim": "Salesforce's current stock price is $258",
+      "support_span": "Current: $258",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_6158",
+      "claim": "Salesforce has $40 billion in ARR",
+      "support_span": "$40 Billion in ARR",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_6158",
+      "claim": "Salesforce's non-GAAP operating margins are 33%",
+      "support_span": "33% Non-GAAP Operating Margins (19% GAAP)",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_6158",
+      "claim": "Salesforce generates $13 billion of free cash flow per year",
+      "support_span": "Generating $13B of free cash flow a year!!",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_14283",
+      "claim": "Salesforce is worth $300 billion",
+      "support_span": "19 years later, Salesforce is worth $300 Billion",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_10762",
+      "claim": "Salesforce's 2022 revenue was $26B",
+      "support_span": "2022 $26B (guidance)",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_10762",
+      "claim": "Salesforce's 2021 revenue was $21.25B",
+      "support_span": "2021 $21.25B",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_10762",
+      "claim": "Salesforce's 2020 revenue was $17.1B",
+      "support_span": "2020 $17.1B",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_10762",
+      "claim": "Salesforce's 2019 revenue was $13.2B",
+      "support_span": "2019 $13.2B",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_10762",
+      "claim": "Salesforce's 2018 revenue was $10.5B",
+      "support_span": "2018 $10.5B",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_10762",
+      "claim": "Salesforce's 2017 revenue was $8.4B",
+      "support_span": "2017  $8.4B",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_10762",
+      "claim": "Salesforce's 2016 revenue was $6.7B",
+      "support_span": "2016  $6.7B",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_10762",
+      "claim": "Salesforce's 2015 revenue was $5.4B",
+      "support_span": "2015  $5.4B",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_10762",
+      "claim": "Salesforce's 2014 revenue was $4.1B",
+      "support_span": "2014  $4.1B",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_10762",
+      "claim": "Salesforce had its best quarter ever with 23% growth at $24B+ ARR",
+      "support_span": "Salesforce had its best quarter ever, exploding to 23% growth at $24B+ ARR",
+      "claim_type": "fact"
+    }
+  ],
+  "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] Salesforce's stock price increased by 9,296%\n[E2] Salesforce's IPO date was June 2004\n[E3] Salesforce's split-adjusted IPO price was $2.75\n[E4] Salesforce's current stock price is $258\n[E5] Salesforce has $40 billion in ARR\n[E6] Salesforce's non-GAAP operating margins are 33%\n[E7] Salesforce generates $13 billion of free cash flow per year\n[E8] Salesforce is worth $300 billion\n[E9] Salesforce's 2022 revenue was $26B\n[E10] Salesforce's 2021 revenue was $21.25B\n[E11] Salesforce's 2020 revenue was $17.1B\n[E12] Salesforce's 2019 revenue was $13.2B\n[E13] Salesforce's 2018 revenue was $10.5B\n[E14] Salesforce's 2017 revenue was $8.4B\n[E15] Salesforce's 2016 revenue was $6.7B\n[E16] Salesforce's 2015 revenue was $5.4B\n[E17] Salesforce's 2014 revenue was $4.1B\n[E18] Salesforce had its best quarter ever with 23% growth at $24B+ ARR",
+  "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: The Wild Ride of Informatica: 32 Years, 2 IPOs, to $8 Billion Acquisition by Salesforce\n\nSource passages:\n[train_4140]\n1. Salesforce: +9,296% (Marc Benioff – Founder)\nIPO Date:\nJune 2004 |\nSplit-Adjusted IPO Price:\n$2.75 |\nCurrent:\n$258\nThe numbers are so staggering they require a double-take. After accounting for Salesforce’s 4-for-1 stock split in 2013, Marc Benioff’s cloud computing revolution delivered returns that approach 100x.\nBenioff didn’t just create a company—he created an entire industry. When Salesforce went public in 2004, cloud software was still a radical concept. His vision of “No Software” seemed almost absurd to enterprise buyers accustomed to on-premise installations.\nWhat Made It Legendary:\nCategory Creation:\nLiterally invented cloud software for enterprises\nPlatform Vision:\nBuilt the AppExchange ecosystem that became a $4B+ marketplace\nRelentless Innovation:\nNever stopped evolving from CRM to AI to complete customer platform\n20-Year Execution:\nSustained hypergrowth for two decades as a public company\n$10,000 invested at IPO would be worth $939,636 today.\n\n[train_6158]\nSo Salesforce has now grown into the active granddad of SaaS.  Maybe not growing quite as fast as it once did.  But it’s matured into a true force of nature.  Only Microsoft, Oracle and now Salesforce have crossed $40 Billion in enterprise software ARR:\n$40 Billion in ARR\nGrowing 9%\n33% Non-GAAP Operating Margins (19% GAAP)\nGenerating $13B of free cash flow a year!!\nPerhaps most importantly, Salesforce has leaned deeply into AI … and while the early usage is impressive, so far it hasn’t materially changed growth.  So far:\nSince October, closed 5,000 Agentforce deals, including more than 3,000 paid just 90 days after officially launching\nSalesforce says\nAgentforce has managed 380,000 conversations\n, with only 2% escalated to humans and an 84% resolution rate\nSo far, at the public company level, it’s the infra players that are seeing the crazy AI growth.  Nvidia, Google Cloud, Azure, etc.  But how about 2026+?  We’ll see.  As Marc Benioff notes below, Salesforce’s just started.  It’s only been selling AgentForce for a few months.  He’s incredibly excited and bullish on where it’s going.  It’s rejuvenated him.  Maybe AI will for all of us.\nSalesforce Growth:\nFY26 $40.9B (guidance)\nFY25 $37.9B\nFY24 $34.9B\nFY23 $31.4B\nFY22 $26.5B\nSalesforce Operating Cash Flow:\nFY26 $14.5B (guidance)\nFY25 $13.1B\nFY24 $10.2B\nFY23 $7.1B\nFY22 $6.0B\nSalesforce Margin:\nFY26 34% (guidance)\nFY25 33%\nFY24 30.5%\nFY23 22.5%\nFY22 18.7%…\n\n[train_14283]\nI remember when I made the first VC pitch deck for EchoSign in late 2005\n\nSalesforce was worth a cool $2 Billion\n\n(So I said maybe we could get 40% of the way there, an $800m exit, if all went perfectly)\n\n19 years later, Salesforce is worth $300 Billion\n\n#itcompounds\n\n[train_10762]\nSalesforce Growth:\n2022 $26B (guidance)\n2021 $21.25B\n2020 $17.1B\n2019 $13.2B\n2018 $10.5B\n2017  $8.4B\n2016  $6.7B\n2015  $5.4B\n2014  $4.1B\nThank you Ohana! ❤️\nFrom 1st Earnings Call Inside.  (We’re all vaccinated!)\npic.twitter.com/DQAwBNHm2A\n— Marc Benioff (@Benioff)\nMay 27, 2021\nSalesforce is the largest SaaS company, and soon, will be the largest biggest software company of all, passing SAP.  It’s already passed Oracle.\nAnd as much, it’s really a bellwether of SaaS and Cloud.\nThe latest learning from the bellwether?  Things are\non fire\nin SaaS and Cloud.  Even\nmore so\nafter Covid.\nSalesforce had its best quarter ever, exploding to 23% growth at $24B+ ARR\n“I’ve never seen a quarter like this.  It was incredible.  It was beyond our expectations.  The customer velocity, the growth in pipeline, are just awesome.” — Marc Benioff, CEO.",
+  "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: The Wild Ride of Informatica: 32 Years, 2 IPOs, to $8 Billion Acquisition by Salesforce\n\nSource passages:\n[train_4140]\n1. Salesforce: +9,296% (Marc Benioff – Founder)\nIPO Date:\nJune 2004 |\nSplit-Adjusted IPO Price:\n$2.75 |\nCurrent:\n$258\nThe numbers are so staggering they require a double-take. After accounting for Salesforce’s 4-for-1 stock split in 2013, Marc Benioff’s cloud computing revolution delivered returns that approach 100x.\nBenioff didn’t just create a company—he created an entire industry. When Salesforce went public in 2004, cloud software was still a radical concept. His vision of “No Software” seemed almost absurd to enterprise buyers accustomed to on-premise installations.\nWhat Made It Legendary:\nCategory Creation:\nLiterally invented cloud software for enterprises\nPlatform Vision:\nBuilt the AppExchange ecosystem that became a $4B+ marketplace\nRelentless Innovation:\nNever stopped evolving from CRM to AI to complete customer platform\n20-Year Execution:\nSustained hypergrowth for two decades as a public company\n$10,000 invested at IPO would be worth $939,636 today.\n\n[train_6158]\nSo Salesforce has now grown into the active granddad of SaaS.  Maybe not growing quite as fast as it once did.  But it’s matured into a true force of nature.  Only Microsoft, Oracle and now Salesforce have crossed $40 Billion in enterprise software ARR:\n$40 Billion in ARR\nGrowing 9%\n33% Non-GAAP Operating Margins (19% GAAP)\nGenerating $13B of free cash flow a year!!\nPerhaps most importantly, Salesforce has leaned deeply into AI … and while the early usage is impressive, so far it hasn’t materially changed growth.  So far:\nSince October, closed 5,000 Agentforce deals, including more than 3,000 paid just 90 days after officially launching\nSalesforce says\nAgentforce has managed 380,000 conversations\n, with only 2% escalated to humans and an 84% resolution rate\nSo far, at the public company level, it’s the infra players that are seeing the crazy AI growth.  Nvidia, Google Cloud, Azure, etc.  But how about 2026+?  We’ll see.  As Marc Benioff notes below, Salesforce’s just started.  It’s only been selling AgentForce for a few months.  He’s incredibly excited and bullish on where it’s going.  It’s rejuvenated him.  Maybe AI will for all of us.\nSalesforce Growth:\nFY26 $40.9B (guidance)\nFY25 $37.9B\nFY24 $34.9B\nFY23 $31.4B\nFY22 $26.5B\nSalesforce Operating Cash Flow:\nFY26 $14.5B (guidance)\nFY25 $13.1B\nFY24 $10.2B\nFY23 $7.1B\nFY22 $6.0B\nSalesforce Margin:\nFY26 34% (guidance)\nFY25 33%\nFY24 30.5%\nFY23 22.5%\nFY22 18.7%…\n\n[train_14283]\nI remember when I made the first VC pitch deck for EchoSign in late 2005\n\nSalesforce was worth a cool $2 Billion\n\n(So I said maybe we could get 40% of the way there, an $800m exit, if all went perfectly)\n\n19 years later, Salesforce is worth $300 Billion\n\n#itcompounds\n\n[train_10762]\nSalesforce Growth:\n2022 $26B (guidance)\n2021 $21.25B\n2020 $17.1B\n2019 $13.2B\n2018 $10.5B\n2017  $8.4B\n2016  $6.7B\n2015  $5.4B\n2014  $4.1B\nThank you Ohana! ❤️\nFrom 1st Earnings Call Inside.  (We’re all vaccinated!)\npic.twitter.com/DQAwBNHm2A\n— Marc Benioff (@Benioff)\nMay 27, 2021\nSalesforce is the largest SaaS company, and soon, will be the largest biggest software company of all, passing SAP.  It’s already passed Oracle.\nAnd as much, it’s really a bellwether of SaaS and Cloud.\nThe latest learning from the bellwether?  Things are\non fire\nin SaaS and Cloud.  Even\nmore so\nafter Covid.\nSalesforce had its best quarter ever, exploding to 23% growth at $24B+ ARR\n“I’ve never seen a quarter like this.  It was incredible.  It was beyond our expectations.  The customer velocity, the growth in pipeline, are just awesome.” — Marc Benioff, CEO.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+  "extraction_seconds": 27.854,
+  "verification_seconds": 0.0,
+  "verification_records": [],
+  "allowed_numeric_values": [
+    "date:jun:20",
+    "pct:23",
+    "pct:296",
+    "pct:33",
+    "usd:10500000000",
+    "usd:13000000000",
+    "usd:13200000000",
+    "usd:17100000000",
+    "usd:21250000000",
+    "usd:24000000000",
+    "usd:258",
+    "usd:26000000000",
+    "usd:3",
+    "usd:300000000000",
+    "usd:40000000000",
+    "usd:4100000000",
+    "usd:5400000000",
+    "usd:6700000000",
+    "usd:8000000000",
+    "usd:8400000000",
+    "year:2014",
+    "year:2015",
+    "year:2016",
+    "year:2017",
+    "year:2018",
+    "year:2019",
+    "year:2020",
+    "year:2021",
+    "year:2022"
+  ],
+  "reason": null,
+  "extraction_stop_reason": "eos",
+  "extraction_attempts": 1,
+  "evidence_status": "verified"
+}

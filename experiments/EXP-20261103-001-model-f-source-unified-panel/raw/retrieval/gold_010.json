@@ -1,0 +1,1780 @@
+{
+  "status": "complete",
+  "question_id": "gold_010",
+  "query": "What to Do If You’re An NRR Zombie",
+  "retrieval": {
+    "backend": "lightrag",
+    "mode": "hybrid",
+    "evidence_budget": 4,
+    "top_k": 20
+  },
+  "payload": {
+    "status": "success",
+    "message": "Query processed successfully",
+    "data": {
+      "entities": [
+        {
+          "entity_name": "What You Should Do Right Now",
+          "entity_type": "UNKNOWN",
+          "description": "The event is promoted as a place to learn from operators and master playbooks.",
+          "source_id": "gd_31e53199562273779b464f4d-chunk-005",
+          "file_path": "gd_31e53199562273779b464f4d",
+          "created_at": 1793606678
+        },
+        {
+          "entity_name": "NRR",
+          "entity_type": "concept",
+          "description": "**Net Retention Rate (NRR)**\n\nThe Net Retention Rate (NRR) is a crucial metric for Software as a Service (SaaS) companies, measuring customer retention and loyalty. It represents the percentage of revenue retained from existing customers over a specific period, often compared to the previous period. NRR is a key indicator of a company's ability to retain and grow its revenue over time, making it a vital component of a company's financial health and success.\n\nNRR is calculated by comparing the revenue generated from existing customers over a specific period to the revenue generated from those same customers in the previous period. A higher NRR indicates that a company is successfully retaining its customers and growing its revenue, while a lower NRR may indicate issues with customer satisfaction, product quality, or pricing.\n\nIn the context of various companies, including MongoDB, Crowdstrike, and Bill.com, the Net New Customer Retention Rate is reported to be exceptionally high, indicating exceptional customer retention and revenue growth. This metric is a testament to the companies' ability to deliver value to their customers and maintain a strong customer base.\n\nNRR is a widely accepted metric in the SaaS industry, used to measure customer health and loyalty. It is an essential tool for companies to evaluate their customer retention strategies and make data-driven decisions to improve their financial performance. By focusing on NRR, companies can identify areas for improvement and optimize their customer retention efforts to drive long-term growth and success.\n\nSome companies, such as Twilio, Cvent, Monday.com, Shopify, and Zoom, have reported high NRR values, indicating exceptional customer retention and revenue growth. However, it is worth noting that NRR can sometimes dip a bit as companies approach $1B ARR.\n\nIt is worth noting that NRR can also be referred to as Net Revenue Retention, a metric used to measure growth, or Net retention rate, a measure of customer loyalty. Additionally, NRR stands for Net New Recurring Revenue, which is a measure of a company's new revenue over a year. However, in the context of this summary, we will focus on the Net Retention Rate (NRR) as a measure of customer retention and revenue growth.\n\nThe percentage of revenue retained from existing customers is a key aspect of NRR, and it is often used as a benchmark for companies to evaluate their customer retention strategies. Net new customer count is also an important factor in calculating NRR, as it represents the number of new customers acquired by a company over a specific period.\n\nIn some cases, NRR can be affected by macro impacts, leading to a decrease in the net retention rate to around 100%. However, this is not a universal trend, and companies can take steps to mitigate the impact of macro factors on their NRR.\n\nOverall, NRR is a critical metric for SaaS companies to measure customer loyalty and retention, and it is essential for companies to focus on improving their NRR to drive long-term growth and success.<SEP>Net retention rate, a measure of customer loyalty<SEP>Net Revenue Retention, a measure of a company's revenue growth.<SEP>A measure of a company's ability to retain its customers and generate revenue from them over time.<SEP>Net retention rate, a measure of customer loyalty.",
+          "source_id": "gd_5e5a08212de37032e6d7f6ef-chunk-000<SEP>gd_6cfd6bdb0808ecd788793abf-chunk-000<SEP>gd_b69603cf3ff1c56f5acd6d17-chunk-001<SEP>gd_fffeab476928134deffcd852-chunk-000<SEP>gd_0b6743ce6338d33e96dc8605-chunk-000<SEP>gd_00ad17ccfaf7848c9ea7bb4b-chunk-000<SEP>gd_15cebc29d9f85feb474c70c8-chunk-001<SEP>gd_1846fc5b4438018cd9d72d3a-chunk-000<SEP>gd_1846fc5b4438018cd9d72d3a-chunk-001<SEP>gd_1ba5b6429d4f7d40a66b28cc-chunk-000<SEP>gd_288a5003e251475f9d1c194f-chunk-000<SEP>gd_13e89e60c3f8b41c3f077c76-chunk-000<SEP>gd_16319806a8bc21c0b84682c3-chunk-000<SEP>gd_16319806a8bc21c0b84682c3-chunk-001<SEP>gd_16e30ab3992e7d134cdf088c-chunk-000<SEP>gd_18771289802258996e9afe7d-chunk-000<SEP>gd_33520150e254f44e44dd6979-chunk-000<SEP>gd_22e2af05587860f4e41f0ece-chunk-001<SEP>gd_7212707c2707213a0b5b7a4b-chunk-000<SEP>gd_7212707c2707213a0b5b7a4b-chunk-001<SEP>gd_30eff1507c63be40216a7465-chunk-000<SEP>gd_31ba1c8d581ac1985f549c14-chunk-001<SEP>gd_9393f5107171bfdba2765a73-chunk-000<SEP>gd_72e9e76a2cf7a8ea84a21acb-chunk-001<SEP>gd_3d00a2ad35f7082a70310e88-chunk-001<SEP>gd_3d00a2ad35f7082a70310e88-chunk-000<SEP>gd_22d5c05d08d7a97c95048cbe-chunk-000<SEP>gd_111b6b23b20d3f5268f61598-chunk-000<SEP>gd_3eb0d6dd205274318ede670c-chunk-002<SEP>gd_409c0da0777cbb41bc6655ae-chunk-000<SEP>gd_447ac742e3a9ad53298cf2d6-chunk-000<SEP>gd_44f8e082ac34ddf53ddb2b27-chunk-000<SEP>gd_cc8e0a9c7c8c3eaa2c8d4ac3-chunk-000<SEP>gd_4539e662ea7b31c661ff01a2-chunk-000<SEP>gd_9bef8d767947839d50a36423-chunk-001<SEP>gd_acdaede66f21479bf7fc8842-chunk-000<SEP>gd_acdaede66f21479bf7fc8842-chunk-001<SEP>gd_5492d4d586da10f9d01192dd-chunk-000<SEP>gd_5492d4d586da10f9d01192dd-chunk-001<SEP>gd_54bd4156ae896dbaad104bd8-chunk-000<SEP>gd_54bd4156ae896dbaad104bd8-chunk-001<SEP>gd_5800c214ae9e8b5b722bd8e8-chunk-000<SEP>gd_5800c214ae9e8b5b722bd8e8-chunk-001<SEP>gd_2568bb11c77922603ee35b63-chunk-000<SEP>gd_582bd5132dbb8e609d1e18c9-chunk-002<SEP>gd_5cec6448ee1a1a69c556f58a-chunk-001<SEP>gd_cb6f7f1ed90ef9c2a5407c3e-chunk-000<SEP>gd_cb6f7f1ed90ef9c2a5407c3e-chunk-001<SEP>gd_5ebe9ad0324f615be28ce5a6-chunk-002<SEP>gd_5f4341352a06f4cbdef81bcc-chunk-000<SEP>gd_6a8515d06bc3b3b1aae863ab-chunk-001<SEP>gd_6a8515d06bc3b3b1aae863ab-chunk-000<SEP>gd_6ac1c91f4cda2d936c6e05c7-chunk-000<SEP>gd_f5f9ed8360f239ae1fb3b192-chunk-000<SEP>gd_6ea8e86d7fad6b3f2243fdd7-chunk-000<SEP>gd_7681722f354a46bf769c0671-chunk-000<SEP>gd_7681722f354a46bf769c0671-chunk-002<SEP>gd_7bba9b537a604be37c33394e-chunk-001<SEP>gd_818ba64738491131923f436e-chunk-000<SEP>gd_8a2e4bcae8f2920869d46348-chunk-001<SEP>gd_8e6d2b9f0a7221fef2693074-chunk-000<SEP>gd_928c6555503d6e90d241cf1e-chunk-002<SEP>gd_97498438a84724d394645274-chunk-001<SEP>gd_97498438a84724d394645274-chunk-002<SEP>gd_97498438a84724d394645274-chunk-003<SEP>gd_97498438a84724d394645274-chunk-000<SEP>gd_2f154a1abb9146e370cabb36-chunk-001<SEP>gd_2f154a1abb9146e370cabb36-chunk-002<SEP>gd_a0a7fac44cacd59c4debc742-chunk-001<SEP>gd_a0a7fac44cacd59c4debc742-chunk-002<SEP>gd_3e259415f45afa9ddd480b31-chunk-000<SEP>gd_a54f5bf886b30a7e8324893d-chunk-000<SEP>gd_a54f5bf886b30a7e8324893d-chunk-001<SEP>gd_aafe6164084bc84cbf056a39-chunk-003<SEP>gd_aafe6164084bc84cbf056a39-chunk-002<SEP>gd_ab75f2e3473b4cebe15356bc-chunk-001<SEP>gd_53d1d4d7cbdb83f9dd2abc9c-chunk-002<SEP>gd_b6e4509693f55652d6720194-chunk-000<SEP>gd_b6e4509693f55652d6720194-chunk-001<SEP>gd_c46a4714d0edfa9fffe154cc-chunk-000<SEP>gd_748726369fa6b46ca8f2c0c7-chunk-001<SEP>gd_7fe0eca2827d883d8617fc1e-chunk-000<SEP>gd_d4924986b972e4ef59ad0d68-chunk-000<SEP>gd_d4924986b972e4ef59ad0d68-chunk-001<SEP>gd_d57e7f67ccbcce42d68e491a-chunk-000<SEP>gd_d57e7f67ccbcce42d68e491a-chunk-001<SEP>gd_d9290ed0e1780f3bb8b02f05-chunk-000<SEP>gd_d9290ed0e1780f3bb8b02f05-chunk-001<SEP>gd_dd13d18c16228c212a2cf778-chunk-000<SEP>gd_9681438bb1fb03d4d598c7ec-chunk-000<SEP>gd_ddc7dc8f7ea37c8335c55003-chunk-001<SEP>gd_df2480bda3a01a10db6c97b1-chunk-001<SEP>gd_9e81292eb060381b8e3d2d34-chunk-000<SEP>gd_e1dfd752f2d87263a2213397-chunk-000<SEP>gd_e1dfd752f2d87263a2213397-chunk-001<SEP>gd_a173a4cadbd0b240296376ca-chunk-002<SEP>gd_ec3d26e97aaf29783bf1cc74-chunk-000<SEP>gd_ee48ad719b59c4df12151952-chunk-001<SEP>gd_ee48ad719b59c4df12151952-chunk-002<SEP>gd_f7eddf4d50d326485a5879f0-chunk-000<SEP>gd_f8ae6dd6116877ca7df38ed1-chunk-001<SEP>gd_f8ae6dd6116877ca7df38ed1-chunk-002<SEP>gd_cb58fda6b14417ccf4f1d9f9-chunk-001<SEP>gd_000c9a2f62aa1edcababf25c-chunk-001<SEP>gd_0259c305ba76bc55f7d176e9-chunk-000<SEP>gd_04623b1fddba511b7a7c1974-chunk-001<SEP>gd_dcda4a2144d729e8dec91089-chunk-000<SEP>gd_dcda4a2144d729e8dec91089-chunk-001<SEP>gd_de5623a10d1c9531112cfe54-chunk-001<SEP>gd_0b07114179a95a92796b9f5b-chunk-000<SEP>gd_1533cc903c2153ac92a1a879-chunk-000<SEP>gd_1533cc903c2153ac92a1a879-chunk-001<SEP>gd_ec005f90a4cbb6409aac509c-chunk-000<SEP>gd_efafcab53b7bc6909e6d8baf-chunk-000<SEP>gd_efafcab53b7bc6909e6d8baf-chunk-001<SEP>gd_efafcab53b7bc6909e6d8baf-chunk-002<SEP>gd_1d334f5cfd7bb7603fe5b3d8-chunk-001<SEP>gd_1d8159452be5bb0ad3f50cf3-chunk-000<SEP>gd_1e47900557b44bbcae52ed54-chunk-000<SEP>gd_1e47900557b44bbcae52ed54-chunk-001<SEP>gd_1e47900557b44bbcae52ed54-chunk-002<SEP>gd_1fd95d7bd6ed45e81b456fce-chunk-000<SEP>gd_28b7a01469df284bcf16e7da-chunk-000<SEP>gd_28b7a01469df284bcf16e7da-chunk-001<SEP>gd_2b1b51587c41073a82a2aa52-chunk-000<SEP>gd_2b1b51587c41073a82a2aa52-chunk-001<SEP>gd_2b1b51587c41073a82a2aa52-chunk-002<SEP>gd_2b1b51587c41073a82a2aa52-chunk-003<SEP>gd_2da2607f440be8eb7f834419-chunk-001<SEP>gd_3e9ec411c232dd80bb16e459-chunk-000<SEP>gd_402ba37a6bc85a4d1b4c34cb-chunk-000<SEP>gd_43c58eec07c53d9d42856441-chunk-001<SEP>gd_44e0cfa1d75cad6c2ff06403-chunk-000<SEP>gd_47d74459673a0a1e6372f0aa-chunk-001<SEP>gd_47d74459673a0a1e6372f0aa-chunk-002<SEP>gd_4b2b6f0b7ccec41f6c409252-chunk-001<SEP>gd_4b2b6f0b7ccec41f6c409252-chunk-002<SEP>gd_535dfe10c25ba8a8c83581c2-chunk-001<SEP>gd_602ec044e3ecdf3d2d224081-chunk-001<SEP>gd_674534f65c5990a2632ae6a2-chunk-001<SEP>gd_70a4342562c701cb49469cde-chunk-001<SEP>gd_7abf2d5bddb3539f3b30b683-chunk-001<SEP>gd_7c2eea4b87dc4d9d7002646e-chunk-001<SEP>gd_827de18357c3b1abbf9c7ae7-chunk-001<SEP>gd_827de18357c3b1abbf9c7ae7-chunk-002<SEP>gd_827de18357c3b1abbf9c7ae7-chunk-003<SEP>gd_b414f3ae82d1cf67bb537a11-chunk-000<SEP>gd_8c21892693a7f5fa4fc4e1f0-chunk-001<SEP>gd_8eefb8100558ec83fae95a37-chunk-000<SEP>gd_8eefb8100558ec83fae95a37-chunk-001<SEP>gd_8eefb8100558ec83fae95a37-chunk-002<SEP>gd_f6c59f9553434ad6e6e2bfb5-chunk-001<SEP>gd_f6c59f9553434ad6e6e2bfb5-chunk-003<SEP>gd_01660f9354b0e95cd03ed553-chunk-002<SEP>gd_01660f9354b0e95cd03ed553-chunk-003<SEP>gd_92c874aeaeb6d623f4f4d8d8-chunk-001<SEP>gd_92c874aeaeb6d623f4f4d8d8-chunk-002<SEP>gd_92c874aeaeb6d623f4f4d8d8-chunk-003<SEP>gd_97f0d826a67928b2b5cd544a-chunk-001<SEP>gd_0e3d9828bb18a2e35d1f392a-chunk-001<SEP>gd_99d17e0b73db2cd5429d2a76-chunk-000<SEP>gd_99d17e0b73db2cd5429d2a76-chunk-001<SEP>gd_99d17e0b73db2cd5429d2a76-chunk-002<SEP>gd_9e2d016a1add7c06ba742fa3-chunk-001<SEP>gd_a68c9faa653f5e712be83386-chunk-001<SEP>gd_a68c9faa653f5e712be83386-chunk-002<SEP>gd_a68c9faa653f5e712be83386-chunk-000<SEP>gd_b7a9c3d6a7a69a54d821cd14-chunk-000<SEP>gd_b9da22c04e0fa0f306cd64d9-chunk-000<SEP>gd_d41775f7696f5ceaa33be6ca-chunk-000<SEP>gd_d5be599c09c06e3a2de7a86e-chunk-002<SEP>gd_d5be599c09c06e3a2de7a86e-chunk-003<SEP>gd_e86a8aefd448317878d3f98e-chunk-004<SEP>gd_de849f9697aac7fb10faa6dd-chunk-000<SEP>gd_de849f9697aac7fb10faa6dd-chunk-001<SEP>gd_e3466d3d0dcfc9810320f04a-chunk-000<SEP>gd_e3466d3d0dcfc9810320f04a-chunk-001<SEP>gd_e44b0dd4186bb74827cefd1c-chunk-000<SEP>gd_e44b0dd4186bb74827cefd1c-chunk-001<SEP>gd_e4c7335907a173919efb58a2-chunk-001<SEP>gd_e4c7335907a173919efb58a2-chunk-000<SEP>gd_ee13ea80f2b3331f1021832d-chunk-002<SEP>gd_ee1953fb4d4e788a8fcd0076-chunk-001<SEP>gd_f006f6ca7bfb307626d61034-chunk-001<SEP>gd_0519f1abfcc0fb0a1e118638-chunk-000<SEP>gd_f9d8976f1578b772c33681e5-chunk-000<SEP>gd_f9d8976f1578b772c33681e5-chunk-001<SEP>gd_2c01c27748878ad03067d439-chunk-000<SEP>gd_2c01c27748878ad03067d439-chunk-002<SEP>gd_3935feebf31197fb1a5804eb-chunk-001<SEP>gd_5064c30bcbe6c098d75a7b09-chunk-001<SEP>gd_4f19c3ee254c8d45cc729019-chunk-000<SEP>gd_4f19c3ee254c8d45cc729019-chunk-001<SEP>gd_8a0c4ba9d8721c33a0e6afbf-chunk-001<SEP>gd_e23054549f6afebbe65a7649-chunk-000<SEP>gd_e23054549f6afebbe65a7649-chunk-001<SEP>gd_e3052debb61086184aea82f0-chunk-001<SEP>gd_e3052debb61086184aea82f0-chunk-002<SEP>gd_f5a9a68ca1ce3e9ad54e9e5e-chunk-001<SEP>gd_0d5ce0b3e04a8314ef86c827-chunk-004",
+          "file_path": "gd_5e5a08212de37032e6d7f6ef<SEP>gd_6cfd6bdb0808ecd788793abf<SEP>gd_b69603cf3ff1c56f5acd6d17<SEP>gd_fffeab476928134deffcd852<SEP>gd_0b6743ce6338d33e96dc8605<SEP>gd_00ad17ccfaf7848c9ea7bb4b<SEP>gd_15cebc29d9f85feb474c70c8<SEP>gd_1846fc5b4438018cd9d72d3a<SEP>gd_1ba5b6429d4f7d40a66b28cc<SEP>gd_288a5003e251475f9d1c194f<SEP>gd_13e89e60c3f8b41c3f077c76<SEP>gd_16319806a8bc21c0b84682c3<SEP>gd_16e30ab3992e7d134cdf088c<SEP>gd_18771289802258996e9afe7d<SEP>gd_33520150e254f44e44dd6979<SEP>gd_22e2af05587860f4e41f0ece<SEP>gd_7212707c2707213a0b5b7a4b<SEP>gd_30eff1507c63be40216a7465<SEP>gd_31ba1c8d581ac1985f549c14<SEP>gd_9393f5107171bfdba2765a73<SEP>gd_72e9e76a2cf7a8ea84a21acb<SEP>gd_3d00a2ad35f7082a70310e88<SEP>gd_111b6b23b20d3f5268f61598<SEP>gd_3eb0d6dd205274318ede670c<SEP>gd_409c0da0777cbb41bc6655ae<SEP>gd_447ac742e3a9ad53298cf2d6<SEP>gd_44f8e082ac34ddf53ddb2b27<SEP>gd_cc8e0a9c7c8c3eaa2c8d4ac3<SEP>gd_9bef8d767947839d50a36423<SEP>gd_acdaede66f21479bf7fc8842<SEP>gd_5492d4d586da10f9d01192dd<SEP>gd_54bd4156ae896dbaad104bd8<SEP>gd_5800c214ae9e8b5b722bd8e8<SEP>gd_582bd5132dbb8e609d1e18c9<SEP>gd_5cec6448ee1a1a69c556f58a<SEP>gd_cb6f7f1ed90ef9c2a5407c3e<SEP>gd_5ebe9ad0324f615be28ce5a6<SEP>gd_5f4341352a06f4cbdef81bcc<SEP>gd_6a8515d06bc3b3b1aae863ab<SEP>gd_6ac1c91f4cda2d936c6e05c7<SEP>gd_f5f9ed8360f239ae1fb3b192<SEP>gd_6ea8e86d7fad6b3f2243fdd7<SEP>gd_7681722f354a46bf769c0671<SEP>gd_7bba9b537a604be37c33394e<SEP>gd_818ba64738491131923f436e<SEP>gd_8a2e4bcae8f2920869d46348<SEP>gd_8e6d2b9f0a7221fef2693074<SEP>gd_928c6555503d6e90d241cf1e<SEP>gd_97498438a84724d394645274<SEP>gd_2f154a1abb9146e370cabb36<SEP>gd_a0a7fac44cacd59c4debc742<SEP>gd_3e259415f45afa9ddd480b31<SEP>gd_a54f5bf886b30a7e8324893d<SEP>gd_aafe6164084bc84cbf056a39<SEP>gd_ab75f2e3473b4cebe15356bc<SEP>gd_53d1d4d7cbdb83f9dd2abc9c<SEP>gd_b6e4509693f55652d6720194<SEP>gd_748726369fa6b46ca8f2c0c7<SEP>gd_7fe0eca2827d883d8617fc1e<SEP>gd_d4924986b972e4ef59ad0d68<SEP>gd_d57e7f67ccbcce42d68e491a<SEP>gd_d9290ed0e1780f3bb8b02f05<SEP>gd_dd13d18c16228c212a2cf778<SEP>gd_9681438bb1fb03d4d598c7ec<SEP>gd_df2480bda3a01a10db6c97b1<SEP>gd_9e81292eb060381b8e3d2d34<SEP>gd_e1dfd752f2d87263a2213397<SEP>gd_a173a4cadbd0b240296376ca<SEP>gd_ec3d26e97aaf29783bf1cc74<SEP>gd_ee48ad719b59c4df12151952<SEP>gd_f7eddf4d50d326485a5879f0<SEP>gd_f8ae6dd6116877ca7df38ed1<SEP>gd_cb58fda6b14417ccf4f1d9f9<SEP>gd_000c9a2f62aa1edcababf25c<SEP>gd_0259c305ba76bc55f7d176e9<SEP>...truncated...(KEEP Old)",
+          "created_at": 1793563461
+        },
+        {
+          "entity_name": "Do It Yourself, Dude",
+          "entity_type": "UNKNOWN",
+          "description": "CROs must follow the advice \"Do It Yourself, Dude\" to stay relevant.",
+          "source_id": "gd_ec4952faf291c054baf7a979-chunk-004",
+          "file_path": "gd_ec4952faf291c054baf7a979",
+          "created_at": 1793620991
+        },
+        {
+          "entity_name": "SEMrush",
+          "entity_type": "product",
+          "description": "A digital marketing and SEO tool.<SEP>SEMrush is a product with $455M ARR growing 14-15%, 105% NRR, solid cash flow margins.<SEP>SEMrush is a digital marketing tool that provides insights and analytics for businesses, with a revenue of ~$455M ARR and a growth rate of 14-15%.<SEP>A digital marketing platform acquired by Adobe.<SEP>Acquired by Adobe, validating the market<SEP>Digital marketing tool with AI integration",
+          "source_id": "gd_0bc1abfa4e6084d46e2595c5-chunk-000<SEP>gd_0bc1abfa4e6084d46e2595c5-chunk-001<SEP>gd_0bc1abfa4e6084d46e2595c5-chunk-002<SEP>gd_9fe02dec94a00cf58c6fa576-chunk-004<SEP>gd_9fe02dec94a00cf58c6fa576-chunk-006<SEP>gd_779f8cd7c960fe9dc8c9d716-chunk-000",
+          "file_path": "gd_0bc1abfa4e6084d46e2595c5<SEP>gd_9fe02dec94a00cf58c6fa576<SEP>gd_779f8cd7c960fe9dc8c9d716",
+          "created_at": 1793634089
+        },
+        {
+          "entity_name": "Process",
+          "entity_type": "concept",
+          "description": "The Process is a series of steps or activities that are followed to achieve a goal. It is a set of procedures and guidelines for executing tasks and achieving goals, which can be a specific business idea related to running a process. The steps taken to ensure the product works as expected are also part of the process. Additionally, a promotion process is a type of process that involves a series of actions or steps taken to achieve a goal.\n\nIn the context of business, a process can be a set of procedures or methods used to achieve a specific goal or outcome. Elaborate processes can hinder revenue growth, but a well-designed process can help organizations achieve their objectives efficiently. The process refers to a series of actions or steps that are taken to achieve a goal, and it is essential to have a clear understanding of the process to ensure that it is effective and efficient.\n\nOverall, the Process is a critical component of any organization, and it is essential to have a well-designed process in place to achieve goals and objectives.<SEP>Method or procedure used to achieve a goal.<SEP>A series of steps or activities to achieve a goal.<SEP>A process that revolves around data and trust to achieve 7,000 customers.<SEP>A series of actions or steps that are taken to achieve a specific goal.<SEP>A process for investment is a concept discussed in the conversation.",
+          "source_id": "gd_418ec401601816549c7d1606-chunk-001<SEP>gd_d036f97a47d2121009f8326f-chunk-003<SEP>gd_aa40273047bc4527e6a280c2-chunk-001<SEP>gd_aa40273047bc4527e6a280c2-chunk-002<SEP>gd_685109a529dd46a0e19d6f2a-chunk-003<SEP>gd_f623182a1b5011ff58dbdc15-chunk-001<SEP>gd_fc3e77cb57f44ffbbe446d99-chunk-003<SEP>gd_38bb13c79d43c1ce65fb04e5-chunk-003<SEP>gd_65427bc55aea7156a7d39bfe-chunk-004<SEP>gd_8089ccf1cf2e3da0d6897103-chunk-002<SEP>gd_7a79bfcadc266e750d3d31b6-chunk-003<SEP>gd_27f182a645fe476c1df921f6-chunk-007<SEP>gd_605e0c1f4fd4724182870b9e-chunk-008<SEP>gd_39b6f4d40075e7b8d3ea719d-chunk-009",
+          "file_path": "gd_418ec401601816549c7d1606<SEP>gd_d036f97a47d2121009f8326f<SEP>gd_aa40273047bc4527e6a280c2<SEP>gd_685109a529dd46a0e19d6f2a<SEP>gd_f623182a1b5011ff58dbdc15<SEP>gd_38bb13c79d43c1ce65fb04e5<SEP>gd_65427bc55aea7156a7d39bfe<SEP>gd_8089ccf1cf2e3da0d6897103<SEP>gd_7a79bfcadc266e750d3d31b6<SEP>gd_27f182a645fe476c1df921f6<SEP>gd_605e0c1f4fd4724182870b9e<SEP>gd_39b6f4d40075e7b8d3ea719d",
+          "created_at": 1793646142
+        },
+        {
+          "entity_name": "Fastly",
+          "entity_type": "product",
+          "description": "Fastly is a public Cloud and SaaS company that provides a content delivery network (CDN) and edge computing services. It has been able to grow despite adding no new customers in the past two years, thanks to its high Net Revenue Retention (NRR) rate of 114-118%. Fastly is a cloud computing company that offers a suite of tools for developers to build, deliver, and secure online applications. The company has become EBITDA positive in the past two quarters, but is still losing $40m a year on a non-GAAP basis.\n\nFastly's strong customer retention rate (NRR) and slow march to profitability have been notable aspects of its growth. The company's focus on enterprise customers has been a key factor in its success, although some have criticized it for not diversifying and iterating enough. Fastly's financial engineering play has been a significant aspect of its growth, with the company's ability to generate revenue without adding new customers being a key driver of its success.\n\nIn terms of its services, Fastly provides online content delivery and security services through its CDN. The company's edge computing services allow developers to build, deliver, and secure online applications more efficiently. Fastly's next-generation CDN service is designed to provide fast and secure content delivery, making it a popular choice for companies looking to improve their online presence.\n\nOverall, Fastly is a cloud computing company that has established itself as a leader in the CDN market. Its strong customer retention rate, slow march to profitability, and financial engineering play have all contributed to its growth and success.<SEP>Cloud-based content delivery network<SEP>A company with a similar \"Enterprise Cloud\" distribution to Snowflake and Twilio.<SEP>A company providing cloud-based content delivery network (CDN) services.<SEP>A company removed from Blossom Street Ventures' tracking index due to distress.",
+          "source_id": "gd_1cc7db10c34d802d7c089d9f-chunk-000<SEP>gd_cb6f7f1ed90ef9c2a5407c3e-chunk-000<SEP>gd_cb6f7f1ed90ef9c2a5407c3e-chunk-001<SEP>gd_f894240d5952145c067ff0f6-chunk-000<SEP>gd_f894240d5952145c067ff0f6-chunk-001<SEP>gd_21785bfd1839a4c309194464-chunk-000<SEP>gd_d4924986b972e4ef59ad0d68-chunk-000<SEP>gd_d4924986b972e4ef59ad0d68-chunk-001<SEP>gd_d4924986b972e4ef59ad0d68-chunk-002<SEP>gd_535dfe10c25ba8a8c83581c2-chunk-000<SEP>gd_535dfe10c25ba8a8c83581c2-chunk-001<SEP>gd_f335200b1b152ebd57131e72-chunk-000<SEP>gd_f335200b1b152ebd57131e72-chunk-003",
+          "file_path": "gd_1cc7db10c34d802d7c089d9f<SEP>gd_cb6f7f1ed90ef9c2a5407c3e<SEP>gd_f894240d5952145c067ff0f6<SEP>gd_21785bfd1839a4c309194464<SEP>gd_d4924986b972e4ef59ad0d68<SEP>gd_535dfe10c25ba8a8c83581c2<SEP>gd_f335200b1b152ebd57131e72",
+          "created_at": 1793586613
+        },
+        {
+          "entity_name": "Board of Directors",
+          "entity_type": "concept",
+          "description": "The Board of Directors is a group of individuals elected by a company's shareholders to oversee the company's operations and make strategic decisions. They are responsible for overseeing the management and direction of a company, ensuring that the company's goals and objectives are met. The Board of Directors is a group of individuals who are elected to oversee the management of a company, and they are responsible for making key decisions that impact the company's future.\n\nThe Board of Directors typically consists of a group of experienced and skilled individuals who bring a range of expertise and perspectives to the table. They are responsible for providing guidance and oversight to the company's management team, and they work closely with the CEO and other senior executives to develop and implement the company's strategy.\n\nIn their role, the Board of Directors is responsible for a range of key responsibilities, including setting the company's overall direction and strategy, overseeing the company's financial performance, and ensuring that the company is operating in compliance with all relevant laws and regulations. They also play a key role in identifying and mitigating risks, and in making key decisions about the company's investments and acquisitions.\n\nOverall, the Board of Directors plays a critical role in the success of a company, and they are responsible for ensuring that the company is operating in a responsible and sustainable manner.",
+          "source_id": "gd_05487ab1ca74e82a45061548-chunk-000<SEP>gd_f3d2354d1cee771bb21e888e-chunk-000<SEP>gd_3e4e7645481539dd975330ab-chunk-000<SEP>gd_458c9690935002d5deb59788-chunk-001<SEP>gd_b9fb560509e773f69c0822bd-chunk-001<SEP>gd_b9fb560509e773f69c0822bd-chunk-002<SEP>gd_29b51d2dab14acadfc88e927-chunk-000<SEP>gd_97964724e5679d79581100be-chunk-000<SEP>gd_830b1b91c9594b6c5f83a431-chunk-000<SEP>gd_d98d25fd1759d7c632bfd5f2-chunk-000",
+          "file_path": "gd_05487ab1ca74e82a45061548<SEP>gd_f3d2354d1cee771bb21e888e<SEP>gd_3e4e7645481539dd975330ab<SEP>gd_458c9690935002d5deb59788<SEP>gd_b9fb560509e773f69c0822bd<SEP>gd_29b51d2dab14acadfc88e927<SEP>gd_830b1b91c9594b6c5f83a431<SEP>gd_d98d25fd1759d7c632bfd5f2",
+          "created_at": 1793517062
+        },
+        {
+          "entity_name": "Rick Zullo",
+          "entity_type": "person",
+          "description": "A guest on 20VC discussing his lessons learned from the experience.<SEP>Co-Founder and General Partner at Equal Ventures, former investor at Lightbank.",
+          "source_id": "gd_50749583f1c3bb43dc7480e2-chunk-000<SEP>gd_50749583f1c3bb43dc7480e2-chunk-002",
+          "file_path": "gd_50749583f1c3bb43dc7480e2",
+          "created_at": 1793567499
+        },
+        {
+          "entity_name": "Plan",
+          "entity_type": "concept",
+          "description": "The Plan is a strategic document that outlines sales goals, targets, and strategies for achieving them. It is also a detailed strategy or set of actions to achieve a specific goal, and a document outlining steps and actions to achieve a particular objective. In some cases, a plan can be a specific business plan with a rough outline and good ideas, or a proposed or intended course of action or strategy.\n\nA plan can be used to ensure survival in case of a market shift or slow sales, and it helps to keep the lights on by providing a backup plan for the company. It can also be a set of goals and objectives that a company aims to achieve, such as the 2018 management offsite plan. The plan is a crucial tool for businesses to stay competitive and adapt to changing market conditions.\n\nIn essence, a plan is a comprehensive and detailed strategy that outlines the steps and actions necessary to achieve a specific goal or objective. It is a vital component of any business or organization, and is often used to ensure success and survival in a rapidly changing environment.\n\nA plan can also be a set of goals and objectives for a company's growth, and it can be used to estimate cash reserves based on revenue and burn rate projections. Furthermore, a plan can be a specific business idea or strategy, and it can be a detailed strategy or set of goals that a sales executive is expected to follow to meet their sales targets.\n\nIn terms of sales efforts, a plan can be a set of goals and objectives that are realistic yet challenging, and it can be a business strategy or goal that a company aims to achieve. Overall, the Plan is a critical component of any business or organization, and it plays a vital role in ensuring success and survival in a rapidly changing environment.",
+          "source_id": "gd_64ee673f1818fe8a43d10d08-chunk-001<SEP>gd_069564576966cc6fcb830092-chunk-000<SEP>gd_2237831cf1e21662ef629603-chunk-001<SEP>gd_aa40273047bc4527e6a280c2-chunk-002<SEP>gd_97240520fb902da9bd3fea4e-chunk-002<SEP>gd_88c41e8fa8fc316e33319e5b-chunk-000<SEP>gd_447f2bf2f57ac5304215cd63-chunk-000<SEP>gd_72aeec36a95526889d6cc973-chunk-001<SEP>gd_39cd89c3453734568726c5f0-chunk-000<SEP>gd_39cd89c3453734568726c5f0-chunk-001<SEP>gd_2d7b7e7000a27d7ddc3ef566-chunk-004<SEP>gd_47c445645895a885cb89d415-chunk-002<SEP>gd_f8fb7772addf6fc5de4ce4d2-chunk-002<SEP>gd_41404ff33aae48255b366dc5-chunk-000<SEP>gd_1e05dfcbe029aa7967072747-chunk-000",
+          "file_path": "gd_64ee673f1818fe8a43d10d08<SEP>gd_069564576966cc6fcb830092<SEP>gd_2237831cf1e21662ef629603<SEP>gd_aa40273047bc4527e6a280c2<SEP>gd_97240520fb902da9bd3fea4e<SEP>gd_88c41e8fa8fc316e33319e5b<SEP>gd_447f2bf2f57ac5304215cd63<SEP>gd_72aeec36a95526889d6cc973<SEP>gd_39cd89c3453734568726c5f0<SEP>gd_2d7b7e7000a27d7ddc3ef566<SEP>gd_47c445645895a885cb89d415<SEP>gd_f8fb7772addf6fc5de4ce4d2<SEP>gd_41404ff33aae48255b366dc5<SEP>gd_1e05dfcbe029aa7967072747",
+          "created_at": 1793604892
+        },
+        {
+          "entity_name": "Net Revenue Retention (NRR)",
+          "entity_type": "concept",
+          "description": "Net Revenue Retention (NRR) is a crucial metric used by companies to measure customer retention and revenue growth. It is a key indicator of a company's ability to retain existing customers and increase their spending. NRR measures the revenue retained and expanded from existing customers, including upsells and expansions, with high NRR (100%+) indicating strong adoption and satisfaction.\n\nThe metric is used by companies such as Crowdstrike to gauge customer retention and satisfaction. A high NRR rate, such as 107%, suggests that a company is successful in retaining and expanding revenue from its existing customer base. NRR is a percentage-based metric that measures the percentage of revenue retained from existing customers, making it a valuable tool for businesses to assess their customer retention strategies.\n\nIn essence, NRR is a metric for adoption, indicating a company's ability to retain and grow revenue from its existing customer base. It is a key performance indicator (KPI) that helps businesses understand their customer retention and revenue growth, enabling them to make informed decisions to improve their customer relationships and revenue streams.",
+          "source_id": "gd_13e89e60c3f8b41c3f077c76-chunk-001<SEP>gd_4539e662ea7b31c661ff01a2-chunk-002<SEP>gd_97498438a84724d394645274-chunk-000<SEP>gd_db6479edd9a75b82284415c0-chunk-000<SEP>gd_416d899dac7f819ff4229569-chunk-000<SEP>gd_416d899dac7f819ff4229569-chunk-001<SEP>gd_a3beba9f3fc44aaebfcd11fe-chunk-001<SEP>gd_78a8331869cec9a0326358f9-chunk-002",
+          "file_path": "gd_13e89e60c3f8b41c3f077c76<SEP>gd_4539e662ea7b31c661ff01a2<SEP>gd_97498438a84724d394645274<SEP>gd_db6479edd9a75b82284415c0<SEP>gd_416d899dac7f819ff4229569<SEP>gd_a3beba9f3fc44aaebfcd11fe<SEP>gd_78a8331869cec9a0326358f9",
+          "created_at": 1793613515
+        },
+        {
+          "entity_name": "How to Handle Them",
+          "entity_type": "concept",
+          "description": "A guide or framework for addressing and resolving common objections.",
+          "source_id": "gd_ded28cc97e3d20cb43af6fb0-chunk-003",
+          "file_path": "gd_ded28cc97e3d20cb43af6fb0",
+          "created_at": 1793514846
+        },
+        {
+          "entity_name": "Upsells and cross-sells",
+          "entity_type": "concept",
+          "description": "Strategies to increase revenue from existing customers.",
+          "source_id": "gd_78a8331869cec9a0326358f9-chunk-002",
+          "file_path": "gd_78a8331869cec9a0326358f9",
+          "created_at": 1793613513
+        },
+        {
+          "entity_name": "Hire someone",
+          "entity_type": "concept",
+          "description": "A suggestion or recommendation for taking action.",
+          "source_id": "gd_2870c7b96cfd8e9db7bee62f-chunk-000",
+          "file_path": "gd_2870c7b96cfd8e9db7bee62f",
+          "created_at": 1793491616
+        },
+        {
+          "entity_name": "Crowdstrike",
+          "entity_type": "product",
+          "description": "Crowdstrike is a leading cybersecurity technology company that provides cloud-delivered endpoint protection and threat intelligence solutions. Founded in 2011, the company has experienced significant growth, with a market capitalization of almost $50 billion and a growth rate of 37% at almost $3 billion in annual recurring revenue (ARR). Crowdstrike has demonstrated impressive efficiency in generating free cash flow and non-GAAP operating margins, with a notable 120% Net Revenue Retention (NRR) benchmark.\n\nThe company's cloud-delivered endpoint protection platform offers real-time threat prevention, detection, and response capabilities, making it a prominent player in the cybersecurity industry. As a SaaS company, Crowdstrike provides cybersecurity solutions through a cloud-based platform, catering to the growing demand for cloud-based security services. With a strong focus on innovation and customer satisfaction, Crowdstrike has established itself as a leading SaaS and Cloud company, boasting impressive metrics such as $3.65 billion in ARR, 120% NRR, and a 33% growth rate.\n\nCrowdstrike's success can be attributed to its ability to provide effective and efficient cybersecurity solutions, generating significant free cash flow and strong non-GAAP operating margins. The company's commitment to innovation and customer satisfaction has enabled it to establish a strong presence in the market, making it a prominent player in the cybersecurity industry.<SEP>Crowdstrike is a SaaS company that gets 8% of its revenues from professional services and has 27% gross margins.",
+          "source_id": "gd_13e89e60c3f8b41c3f077c76-chunk-000<SEP>gd_13e89e60c3f8b41c3f077c76-chunk-001<SEP>gd_54bd4156ae896dbaad104bd8-chunk-000<SEP>gd_a51aabf5779c2323c9b3bd84-chunk-000<SEP>gd_a51aabf5779c2323c9b3bd84-chunk-001<SEP>gd_f21f5ca514b48d55610e810c-chunk-000<SEP>gd_674534f65c5990a2632ae6a2-chunk-000<SEP>gd_674534f65c5990a2632ae6a2-chunk-001<SEP>gd_b19a35cfa6511ab25db5f90f-chunk-000",
+          "file_path": "gd_13e89e60c3f8b41c3f077c76<SEP>gd_54bd4156ae896dbaad104bd8<SEP>gd_a51aabf5779c2323c9b3bd84<SEP>gd_f21f5ca514b48d55610e810c<SEP>gd_674534f65c5990a2632ae6a2<SEP>gd_b19a35cfa6511ab25db5f90f",
+          "created_at": 1793562480
+        },
+        {
+          "entity_name": "Tree Planting",
+          "entity_type": "UNKNOWN",
+          "description": "The board should take action now, just like planting a tree.",
+          "source_id": "gd_641ddfbb18ea9d7661766b2e-chunk-002",
+          "file_path": "gd_641ddfbb18ea9d7661766b2e",
+          "created_at": 1793639375
+        },
+        {
+          "entity_name": "Rubrik",
+          "entity_type": "product",
+          "description": "**Rubrik: A Comprehensive Cloud Data Management and Security Platform**\n\nRubrik is a cloud-based data management and security platform that provides a range of solutions for protecting and managing data. As a cloud data management company, Rubrik offers a platform that enables organizations to manage and secure their data in a scalable and efficient manner. The platform provides data security and management capabilities, including data protection and security solutions, to help organizations protect their data from various threats.\n\nRubrik's platform is designed to provide a comprehensive data management and security solution, allowing organizations to manage and secure their data in a single platform. The platform is cloud-based, which means that it can be accessed and managed from anywhere, at any time. This provides organizations with the flexibility to manage their data in a way that is convenient and efficient.\n\nRubrik has successfully transitioned to a public company through an initial public offering (IPO), solidifying its position in the cloud security and data management market. The company's cloud data management platform is well-suited to meet the needs of organizations of all sizes, providing a reliable and secure solution for managing and securing data.\n\nIn terms of its offerings, Rubrik provides data protection and management solutions, including data backup, recovery, and security. The company's platform is designed to provide a range of benefits to organizations, including improved data protection, reduced data loss, and increased data availability.\n\nRubrik has achieved significant growth and success since its IPO, with a market cap of $17 billion and a +80% growth rate. The company has also achieved non-GAAP profitability and is growing at a rate of 39% at $1.1 billion ARR. Rubrik's recent public offering has solidified its position as a leading player in the cloud security and data management market.\n\nRubrik is also a cyber resilience platform that provides data protection and security solutions for businesses. The company's platform is designed to provide a comprehensive solution for protecting and managing data, and has achieved significant growth and success since its IPO. With its scalable and efficient design, Rubrik's platform is well-positioned to address the evolving needs of organizations in the cloud data management and security space.\n\nRubrik was founded in 2013 by Bipul Sinha, Arvind Nithrakashyap, Arvind Jain, and Soham Mazumdar. The company has a clear functional ownership structure and has achieved significant revenue scale as a data security company.\n\nOverall, Rubrik is a cloud-based data management and security platform that provides a comprehensive solution for protecting and managing data. With its scalable and efficient design, Rubrik's platform is well-positioned to address the evolving needs of organizations in the cloud data management and security space.<SEP>Rubrik is a cloud-based data security platform that provides backup, recovery, and threat detection capabilities.<SEP>A data security platform that capitalized on enterprise data protection concerns.<SEP>Rubrik is an AI security tool.<SEP>A company<SEP>A cloud data management platform.",
+          "source_id": "gd_0671f71cf02d19206bacd8c5-chunk-000<SEP>gd_0e243f9c16a81abe061b3496-chunk-000<SEP>gd_0f84eb0397d3f9ebe9982fe6-chunk-000<SEP>gd_120a3c3451bb99437cbaa161-chunk-000<SEP>gd_b15e60fb25deec55942c00d1-chunk-000<SEP>gd_1ecb44fc6ec32f8d1b46fa09-chunk-000<SEP>gd_2d1a5ed459bfc1a023a1db6d-chunk-000<SEP>gd_4561147ae4b4a79577d41c1c-chunk-000<SEP>gd_76a682c6cb97a5d19a642ab0-chunk-000<SEP>gd_91ca62fc51a49d25bd8a80bb-chunk-000<SEP>gd_924e4ef0dddeabd891814f8c-chunk-000<SEP>gd_9f9c3f5ffa8b3edb4964b83b-chunk-000<SEP>gd_c3979c9f267bec7d23352d3e-chunk-000<SEP>gd_dfcdb3714e2bfa2686b5fb16-chunk-000<SEP>gd_e89b9c2b09f0adc100e313d0-chunk-000<SEP>gd_46073547d3ecb8101d23128e-chunk-000<SEP>gd_46073547d3ecb8101d23128e-chunk-001<SEP>gd_8e6d2b9f0a7221fef2693074-chunk-000<SEP>gd_8e6d2b9f0a7221fef2693074-chunk-001<SEP>gd_8e6d2b9f0a7221fef2693074-chunk-002<SEP>gd_dbd9f4f3bcb72e688defbe7d-chunk-000<SEP>gd_d3437bb5a40ad558b64712e5-chunk-000<SEP>gd_d3437bb5a40ad558b64712e5-chunk-002<SEP>gd_000c9a2f62aa1edcababf25c-chunk-000<SEP>gd_000c9a2f62aa1edcababf25c-chunk-001<SEP>gd_0b07114179a95a92796b9f5b-chunk-000<SEP>gd_0b07114179a95a92796b9f5b-chunk-001<SEP>gd_4404a0e79f3c28872ef7443e-chunk-000<SEP>gd_7c2eea4b87dc4d9d7002646e-chunk-003<SEP>gd_c6789733e88ba6c13281ffbb-chunk-000<SEP>gd_1ae9b4571e84b8b887bf810d-chunk-002<SEP>gd_1ae9b4571e84b8b887bf810d-chunk-003<SEP>gd_3c94d3509d88df4c189a0b68-chunk-000<SEP>gd_3c94d3509d88df4c189a0b68-chunk-002<SEP>gd_3c94d3509d88df4c189a0b68-chunk-003<SEP>gd_3c94d3509d88df4c189a0b68-chunk-004<SEP>gd_3c94d3509d88df4c189a0b68-chunk-005<SEP>gd_3c94d3509d88df4c189a0b68-chunk-006<SEP>gd_9aaaf87c9b9d043595bc5848-chunk-000<SEP>gd_9aaaf87c9b9d043595bc5848-chunk-002<SEP>gd_0bc1abfa4e6084d46e2595c5-chunk-000<SEP>gd_015d273393160169bc16ee3e-chunk-001<SEP>gd_f1824ce0652da7d37ababe44-chunk-002<SEP>gd_f1824ce0652da7d37ababe44-chunk-003<SEP>gd_767984d5d754af8430a9a156-chunk-005<SEP>gd_c4134d3194f34616f1c338ba-chunk-001<SEP>gd_6f7cec99215f9ff2f03605c0-chunk-000<SEP>gd_b7769ae41d22fc197ddc2e8c-chunk-011<SEP>gd_2f45e5c21df8cafc73c920bb-chunk-001<SEP>gd_6e149b2e82d3a0e956732c2e-chunk-000<SEP>gd_6e149b2e82d3a0e956732c2e-chunk-001<SEP>gd_6e149b2e82d3a0e956732c2e-chunk-002<SEP>gd_6e149b2e82d3a0e956732c2e-chunk-003<SEP>gd_6e149b2e82d3a0e956732c2e-chunk-004<SEP>gd_6e149b2e82d3a0e956732c2e-chunk-005<SEP>gd_6e149b2e82d3a0e956732c2e-chunk-006<SEP>gd_6e149b2e82d3a0e956732c2e-chunk-007<SEP>gd_d9367d2354469b61c124d3c2-chunk-002<SEP>gd_d9367d2354469b61c124d3c2-chunk-003<SEP>gd_45895bb382839086f6554318-chunk-005<SEP>gd_a6aa111fa6629fc198bbb940-chunk-002<SEP>gd_605e0c1f4fd4724182870b9e-chunk-006",
+          "file_path": "gd_0671f71cf02d19206bacd8c5<SEP>gd_0e243f9c16a81abe061b3496<SEP>gd_0f84eb0397d3f9ebe9982fe6<SEP>gd_120a3c3451bb99437cbaa161<SEP>gd_b15e60fb25deec55942c00d1<SEP>gd_1ecb44fc6ec32f8d1b46fa09<SEP>gd_2d1a5ed459bfc1a023a1db6d<SEP>gd_4561147ae4b4a79577d41c1c<SEP>gd_76a682c6cb97a5d19a642ab0<SEP>gd_91ca62fc51a49d25bd8a80bb<SEP>gd_924e4ef0dddeabd891814f8c<SEP>gd_9f9c3f5ffa8b3edb4964b83b<SEP>gd_c3979c9f267bec7d23352d3e<SEP>gd_dfcdb3714e2bfa2686b5fb16<SEP>gd_e89b9c2b09f0adc100e313d0<SEP>gd_46073547d3ecb8101d23128e<SEP>gd_8e6d2b9f0a7221fef2693074<SEP>gd_dbd9f4f3bcb72e688defbe7d<SEP>gd_d3437bb5a40ad558b64712e5<SEP>gd_000c9a2f62aa1edcababf25c<SEP>gd_0b07114179a95a92796b9f5b<SEP>gd_4404a0e79f3c28872ef7443e<SEP>gd_7c2eea4b87dc4d9d7002646e<SEP>gd_c6789733e88ba6c13281ffbb<SEP>gd_1ae9b4571e84b8b887bf810d<SEP>gd_3c94d3509d88df4c189a0b68<SEP>gd_9aaaf87c9b9d043595bc5848<SEP>gd_0bc1abfa4e6084d46e2595c5<SEP>gd_015d273393160169bc16ee3e<SEP>gd_f1824ce0652da7d37ababe44<SEP>gd_767984d5d754af8430a9a156<SEP>gd_c4134d3194f34616f1c338ba<SEP>gd_6f7cec99215f9ff2f03605c0<SEP>gd_b7769ae41d22fc197ddc2e8c<SEP>gd_2f45e5c21df8cafc73c920bb<SEP>gd_6e149b2e82d3a0e956732c2e<SEP>gd_d9367d2354469b61c124d3c2<SEP>gd_45895bb382839086f6554318<SEP>gd_a6aa111fa6629fc198bbb940<SEP>gd_605e0c1f4fd4724182870b9e",
+          "created_at": 1793643704
+        },
+        {
+          "entity_name": "Next Move",
+          "entity_type": "UNKNOWN",
+          "description": "The founder should think about their next move and consider their readiness to start over or pursue a new idea.",
+          "source_id": "gd_e73005b9f40be88c3e795228-chunk-000",
+          "file_path": "gd_e73005b9f40be88c3e795228",
+          "created_at": 1793603752
+        },
+        {
+          "entity_name": "Five9",
+          "entity_type": "product",
+          "description": "Five9 is a cloud-based software company that provides contact center as a service (CCaaS) solutions. Founded in 2001, the company has grown significantly in value and revenue, with a current valuation of $12 billion. Five9 offers a cloud-native contact center platform that provides call center and contact center solutions for businesses, allowing them to manage customer interactions more efficiently. With its cloud-based architecture, Five9 enables businesses to scale their contact center operations quickly and easily, while also reducing costs and improving customer satisfaction.\n\nThe company has achieved impressive growth, with a Net Revenue Retention (NRR) of 121%, up from 112% in the past 24 months. Additionally, Five9 has increased its number of $1m ACV customers from 3 in 2014 to 91 today, and has grown its enterprise revenue from 60% in 2014 to 83% currently. Furthermore, the company has seen new logo growth and upsells at all-time records.\n\nFive9's cloud contact center platform has also been recognized for its ability to save sellers over 1,000 hours annually of manual data entry. The company was evaluated by multiple vendors and chose People.ai for its high accuracy in activity-to-deal matching. As a result, Five9 has become a trusted partner for businesses looking to improve their customer interactions and reduce costs.<SEP>A company providing cloud contact center solutions.",
+          "source_id": "gd_4561147ae4b4a79577d41c1c-chunk-000<SEP>gd_22f503d26e4d8faf8274b928-chunk-001<SEP>gd_22f503d26e4d8faf8274b928-chunk-002<SEP>gd_c3979c9f267bec7d23352d3e-chunk-000<SEP>gd_cd33756bd319ab7b66758a0d-chunk-000<SEP>gd_cd33756bd319ab7b66758a0d-chunk-001<SEP>gd_cd33756bd319ab7b66758a0d-chunk-002<SEP>gd_8c21892693a7f5fa4fc4e1f0-chunk-000<SEP>gd_8c21892693a7f5fa4fc4e1f0-chunk-001<SEP>gd_1cc87df378d79d9def33d0df-chunk-000<SEP>gd_1cc87df378d79d9def33d0df-chunk-003<SEP>gd_1cc87df378d79d9def33d0df-chunk-004<SEP>gd_1cc87df378d79d9def33d0df-chunk-005<SEP>gd_f335200b1b152ebd57131e72-chunk-000<SEP>gd_f335200b1b152ebd57131e72-chunk-004",
+          "file_path": "gd_4561147ae4b4a79577d41c1c<SEP>gd_22f503d26e4d8faf8274b928<SEP>gd_c3979c9f267bec7d23352d3e<SEP>gd_cd33756bd319ab7b66758a0d<SEP>gd_8c21892693a7f5fa4fc4e1f0<SEP>gd_1cc87df378d79d9def33d0df<SEP>gd_f335200b1b152ebd57131e72",
+          "created_at": 1793586613
+        },
+        {
+          "entity_name": "Tips and tricks",
+          "entity_type": "concept",
+          "description": "Tips and tricks refer to advice or techniques that can be used to achieve a specific goal or solve a problem.",
+          "source_id": "gd_a387884f047f923cf1f1232e-chunk-002",
+          "file_path": "gd_a387884f047f923cf1f1232e",
+          "created_at": 1793519193
+        },
+        {
+          "entity_name": "Palantir",
+          "entity_type": "product",
+          "description": "Palantir is a multinational technology company that provides data integration and analytics software. Founded in 2003, Palantir has established itself as a leading provider of data analytics solutions, offering a range of services, including data integration and analytics platforms, which have been particularly influential in the government sector.\n\nThe company's success is evident in its impressive financial metrics, boasting a revenue run rate of $2 Billion and a growth rate of 31%. Furthermore, Palantir's high Net Revenue Retention (NRR) of 124% and its ability to secure large customers, with an average annual payment of $40,000,000, with no reported churn, underscore its position as a vital AI infrastructure provider. Additionally, Palantir has been recognized for its innovative approach to data analytics, with a story of 5 Interesting Learnings at $1 Billion in ARR.\n\nPalantir is also characterized as a cloud-based data integration and analytics platform, providing enterprise software solutions with a market cap of $23B and average customer payments of $5,000,000+ a year. The company has taken its time to reach 60% gross-margins before its IPO and has reached $1 Billion in ARR, making it a prominent player in the data analytics market. Its commitment to data integration and analytics has made it a vital AI infrastructure provider, and its story of growth and success continues to be an interesting case study in the industry.\n\nIn addition to its data analytics capabilities, Palantir is also a software company that provides an artificial intelligence platform (AIP) for customer acquisition and enterprise software solutions. The company has institutionalized the concept of delivering value in under an hour, and its software has been used in various industries, including government and commercial sectors. Palantir has also built one of the most efficient cash generation machines in enterprise software, with adjusted free cash flow margins hitting 57%.\n\nHowever, it is worth noting that Palantir's gross margins have recently changed, dropping from the teens or 20% range to a lower margin. This change has been a notable shift for the company, which has been recognized for its ability to reaccelerate growth, reaching 39% growth at $3.5B scale driven by enterprise AI deals.\n\nPalantir's commercial success with its products has also been notable, with the company achieving significant growth in its revenue, crossing the $1 billion quarterly revenue milestone for the first time in Q2 2025. The company's AI-powered platform for enterprise customers has been recognized for its effectiveness, providing data analysis and integration services to various industries.\n\nPalantir's physical presence has also undergone significant changes, moving from Palo Alto to Menlo Park. Despite this change, Palantir remains a SaaS company with high COGS, but achieves software-like Gross Margins (60%-80%) after IPO. Its stock price has also been notable, with a gain of 122% in 2023, second only to Fastly's.\n\nThe company's use of forward-deployed engineers to improve AI performance has been particularly influential, and its software has been used in various industries, including government and commercial sectors. Palantir's AI implementation layer for enterprises has been recognized for its effectiveness, with the company achieving +18 points of acceleration at $4B scale.\n\nPalantir has also been associated with notable individuals, including Mati Staniszewski, who worked at the company before co-founding ElevenLabs, and Alex Atallah, who has also worked at Palantir.<SEP>Provider of data integration and analytics software.",
+          "source_id": "gd_ac14ab271ce681e57db14baa-chunk-000<SEP>gd_a4ae7e6eac7817fa6bf9357c-chunk-000<SEP>gd_a956d6defae69ac68c5d4cb9-chunk-000<SEP>gd_ae46602503f51cde09054ac5-chunk-000<SEP>gd_ae46602503f51cde09054ac5-chunk-001<SEP>gd_44f8e082ac34ddf53ddb2b27-chunk-000<SEP>gd_7fb7e01a7be820d17b0fd2ff-chunk-001<SEP>gd_616307997522677a497f43ca-chunk-000<SEP>gd_7e501541a37d9738987d633b-chunk-000<SEP>gd_1b9124f2109ba18c8a2b0ba1-chunk-003<SEP>gd_86c3f93917994af72e5fb2d7-chunk-000<SEP>gd_86c3f93917994af72e5fb2d7-chunk-001<SEP>gd_d4924986b972e4ef59ad0d68-chunk-000<SEP>gd_2da2607f440be8eb7f834419-chunk-002<SEP>gd_35e2a72ebda9a867d1609c05-chunk-000<SEP>gd_35e2a72ebda9a867d1609c05-chunk-001<SEP>gd_535dfe10c25ba8a8c83581c2-chunk-000<SEP>gd_535dfe10c25ba8a8c83581c2-chunk-001<SEP>gd_535dfe10c25ba8a8c83581c2-chunk-002<SEP>gd_777f00c3ae66d359daa39f22-chunk-000<SEP>gd_777f00c3ae66d359daa39f22-chunk-001<SEP>gd_bb8500ff7693b3f67f77f68c-chunk-002<SEP>gd_bb8500ff7693b3f67f77f68c-chunk-003<SEP>gd_c55cf116da67b97c972bcbbc-chunk-000<SEP>gd_1ae9b4571e84b8b887bf810d-chunk-004<SEP>gd_1c2c4466317bf96df4add7d8-chunk-000<SEP>gd_1c2c4466317bf96df4add7d8-chunk-001<SEP>gd_1c2c4466317bf96df4add7d8-chunk-002<SEP>gd_1c2c4466317bf96df4add7d8-chunk-003<SEP>gd_1c2c4466317bf96df4add7d8-chunk-004<SEP>gd_2e5fc1972640f43b4892f397-chunk-000<SEP>gd_2e5fc1972640f43b4892f397-chunk-001<SEP>gd_2e5fc1972640f43b4892f397-chunk-004<SEP>gd_2e5fc1972640f43b4892f397-chunk-005<SEP>gd_2e5fc1972640f43b4892f397-chunk-008<SEP>gd_3c94d3509d88df4c189a0b68-chunk-000<SEP>gd_3c94d3509d88df4c189a0b68-chunk-001<SEP>gd_3c94d3509d88df4c189a0b68-chunk-002<SEP>gd_3c94d3509d88df4c189a0b68-chunk-005<SEP>gd_5bb51715b8afd0ac39acecba-chunk-002<SEP>gd_65a75474e1ce2d1bfe099f42-chunk-001<SEP>gd_753a13ceccfb779879f29786-chunk-004<SEP>gd_809239d05954fc972f3537b0-chunk-000<SEP>gd_809239d05954fc972f3537b0-chunk-001<SEP>gd_d6e2503b0360a9909720cf18-chunk-001<SEP>gd_9aaaf87c9b9d043595bc5848-chunk-000<SEP>gd_9aaaf87c9b9d043595bc5848-chunk-001<SEP>gd_9aaaf87c9b9d043595bc5848-chunk-002<SEP>gd_0bc1abfa4e6084d46e2595c5-chunk-000<SEP>gd_2443495fc85009b081428b80-chunk-003<SEP>gd_30b975e27b27dccba55465d5-chunk-001<SEP>gd_30b975e27b27dccba55465d5-chunk-002<SEP>gd_30b975e27b27dccba55465d5-chunk-006<SEP>gd_30b975e27b27dccba55465d5-chunk-007<SEP>gd_e5436d3079476b02a6f78670-chunk-001<SEP>gd_f5c6d6478f03c43f9106c211-chunk-000<SEP>gd_f5c6d6478f03c43f9106c211-chunk-001<SEP>gd_f5c6d6478f03c43f9106c211-chunk-002<SEP>gd_f5c6d6478f03c43f9106c211-chunk-003<SEP>gd_f5c6d6478f03c43f9106c211-chunk-004<SEP>gd_8201b392ff7f7b6dd0a20f81-chunk-003<SEP>gd_8bab8d02da7bc2e8912b06e1-chunk-004<SEP>gd_3e9857fef8b3ef58b19416dc-chunk-000<SEP>gd_3e9857fef8b3ef58b19416dc-chunk-001<SEP>gd_3e9857fef8b3ef58b19416dc-chunk-002<SEP>gd_3e9857fef8b3ef58b19416dc-chunk-003<SEP>gd_3e9857fef8b3ef58b19416dc-chunk-004<SEP>gd_ac4b8b9ed091ab54b1aba8f9-chunk-000<SEP>gd_ac4b8b9ed091ab54b1aba8f9-chunk-001<SEP>gd_f335200b1b152ebd57131e72-chunk-000<SEP>gd_f335200b1b152ebd57131e72-chunk-001<SEP>gd_c6f21bde42fb4a0c42f82a9e-chunk-003<SEP>gd_d19ef462293cbfaf17f910e6-chunk-000<SEP>gd_d19ef462293cbfaf17f910e6-chunk-001<SEP>gd_e569b162bd704a1f08dfbf1c-chunk-002<SEP>gd_20e60735f48eae1b55d1b0a4-chunk-001<SEP>gd_c5fd94ac349d025fb78a37d0-chunk-002<SEP>gd_467a724d308c3f02fc973fa8-chunk-000<SEP>gd_467a724d308c3f02fc973fa8-chunk-001<SEP>gd_467a724d308c3f02fc973fa8-chunk-002<SEP>gd_a23c7d8cc392e782e22bb499-chunk-002<SEP>gd_56ce429513ba63d601778b83-chunk-000<SEP>gd_56ce429513ba63d601778b83-chunk-001<SEP>gd_56ce429513ba63d601778b83-chunk-004<SEP>gd_56ce429513ba63d601778b83-chunk-005<SEP>gd_56ce429513ba63d601778b83-chunk-006<SEP>gd_56ce429513ba63d601778b83-chunk-007<SEP>gd_56ce429513ba63d601778b83-chunk-009<SEP>gd_56ce429513ba63d601778b83-chunk-010<SEP>gd_1ea75faaa1a24bb0a1573ab5-chunk-008<SEP>gd_1ea75faaa1a24bb0a1573ab5-chunk-009<SEP>gd_f224b92d594e096cf9f7eef5-chunk-000<SEP>gd_3c8d2efa348e102a23b24a6b-chunk-000<SEP>gd_3c8d2efa348e102a23b24a6b-chunk-002<SEP>gd_3c8d2efa348e102a23b24a6b-chunk-003<SEP>gd_3c8d2efa348e102a23b24a6b-chunk-004<SEP>gd_3c8d2efa348e102a23b24a6b-chunk-005<SEP>gd_7fceffa45398125f8711e9a1-chunk-000<SEP>gd_8a750106d4513616691b5198-chunk-005<SEP>gd_8a750106d4513616691b5198-chunk-007<SEP>gd_8a750106d4513616691b5198-chunk-008<SEP>gd_1c786168860b4c364f13ef3b-chunk-007<SEP>gd_8fe15d1e1f4d6d874c6ce1bb-chunk-000<SEP>gd_9f64b63b5ae698d29604d98b-chunk-007<SEP>gd_7579e8b1402637800b33e210-chunk-004<SEP>gd_7579e8b1402637800b33e210-chunk-007<SEP>gd_7579e8b1402637800b33e210-chunk-008<SEP>gd_7579e8b1402637800b33e210-chunk-009<SEP>gd_7579e8b1402637800b33e210-chunk-010<SEP>gd_7579e8b1402637800b33e210-chunk-011<SEP>gd_7579e8b1402637800b33e210-chunk-012<SEP>gd_249ae5f1a28ad2b6389c7b37-chunk-012<SEP>gd_249ae5f1a28ad2b6389c7b37-chunk-013<SEP>gd_5088eba36f8b4b196a5837dd-chunk-002<SEP>gd_5088eba36f8b4b196a5837dd-chunk-003<SEP>gd_7bf916ab9e234b1482e89f26-chunk-000<SEP>gd_7bf916ab9e234b1482e89f26-chunk-001<SEP>gd_7bf916ab9e234b1482e89f26-chunk-003<SEP>gd_7bf916ab9e234b1482e89f26-chunk-004<SEP>gd_d9367d2354469b61c124d3c2-chunk-003<SEP>gd_d9367d2354469b61c124d3c2-chunk-004<SEP>gd_f6c00e0b3dd6d992b151a870-chunk-000<SEP>gd_f6c00e0b3dd6d992b151a870-chunk-001<SEP>gd_f6c00e0b3dd6d992b151a870-chunk-002<SEP>gd_f6c00e0b3dd6d992b151a870-chunk-003<SEP>gd_f6c00e0b3dd6d992b151a870-chunk-004<SEP>gd_f6c00e0b3dd6d992b151a870-chunk-005<SEP>gd_f6c00e0b3dd6d992b151a870-chunk-006<SEP>gd_f6c00e0b3dd6d992b151a870-chunk-007<SEP>gd_45895bb382839086f6554318-chunk-000<SEP>gd_45895bb382839086f6554318-chunk-001<SEP>gd_9892f4cb159a2427a2e6b59b-chunk-000<SEP>gd_9892f4cb159a2427a2e6b59b-chunk-002<SEP>gd_9892f4cb159a2427a2e6b59b-chunk-004<SEP>gd_9892f4cb159a2427a2e6b59b-chunk-005<SEP>gd_9892f4cb159a2427a2e6b59b-chunk-007<SEP>gd_b80524f908bad21aeaf41dfe-chunk-002<SEP>gd_b80524f908bad21aeaf41dfe-chunk-003<SEP>gd_b80524f908bad21aeaf41dfe-chunk-005<SEP>gd_b80524f908bad21aeaf41dfe-chunk-006<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-001<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-002<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-003<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-004<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-007<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-008<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-009<SEP>gd_235360b752f8c3285228290d-chunk-000<SEP>gd_235360b752f8c3285228290d-chunk-001<SEP>gd_235360b752f8c3285228290d-chunk-002<SEP>gd_87131f4a34d2f70295f0cf04-chunk-006<SEP>gd_87131f4a34d2f70295f0cf04-chunk-007<SEP>gd_87131f4a34d2f70295f0cf04-chunk-008<SEP>gd_59c785375f34b0507b64485d-chunk-000<SEP>gd_59c785375f34b0507b64485d-chunk-001<SEP>gd_59c785375f34b0507b64485d-chunk-004<SEP>gd_59c785375f34b0507b64485d-chunk-009<SEP>gd_59c785375f34b0507b64485d-chunk-010<SEP>gd_a6563952729bc853829369cf-chunk-012<SEP>gd_9809d37cd527c2958295b062-chunk-000<SEP>gd_9809d37cd527c2958295b062-chunk-004<SEP>gd_9809d37cd527c2958295b062-chunk-005<SEP>gd_9809d37cd527c2958295b062-chunk-007<SEP>gd_9809d37cd527c2958295b062-chunk-008<SEP>gd_9809d37cd527c2958295b062-chunk-009<SEP>gd_9809d37cd527c2958295b062-chunk-014<SEP>gd_9809d37cd527c2958295b062-chunk-015<SEP>gd_9809d37cd527c2958295b062-chunk-016<SEP>gd_39b6f4d40075e7b8d3ea719d-chunk-002",
+          "file_path": "gd_ac14ab271ce681e57db14baa<SEP>gd_a4ae7e6eac7817fa6bf9357c<SEP>gd_a956d6defae69ac68c5d4cb9<SEP>gd_ae46602503f51cde09054ac5<SEP>gd_44f8e082ac34ddf53ddb2b27<SEP>gd_7fb7e01a7be820d17b0fd2ff<SEP>gd_616307997522677a497f43ca<SEP>gd_7e501541a37d9738987d633b<SEP>gd_1b9124f2109ba18c8a2b0ba1<SEP>gd_86c3f93917994af72e5fb2d7<SEP>gd_d4924986b972e4ef59ad0d68<SEP>gd_2da2607f440be8eb7f834419<SEP>gd_35e2a72ebda9a867d1609c05<SEP>gd_535dfe10c25ba8a8c83581c2<SEP>gd_777f00c3ae66d359daa39f22<SEP>gd_bb8500ff7693b3f67f77f68c<SEP>gd_c55cf116da67b97c972bcbbc<SEP>gd_1ae9b4571e84b8b887bf810d<SEP>gd_1c2c4466317bf96df4add7d8<SEP>gd_2e5fc1972640f43b4892f397<SEP>gd_3c94d3509d88df4c189a0b68<SEP>gd_5bb51715b8afd0ac39acecba<SEP>gd_65a75474e1ce2d1bfe099f42<SEP>gd_753a13ceccfb779879f29786<SEP>gd_809239d05954fc972f3537b0<SEP>gd_d6e2503b0360a9909720cf18<SEP>gd_9aaaf87c9b9d043595bc5848<SEP>gd_0bc1abfa4e6084d46e2595c5<SEP>gd_2443495fc85009b081428b80<SEP>gd_30b975e27b27dccba55465d5<SEP>gd_e5436d3079476b02a6f78670<SEP>gd_f5c6d6478f03c43f9106c211<SEP>gd_8201b392ff7f7b6dd0a20f81<SEP>gd_8bab8d02da7bc2e8912b06e1<SEP>gd_3e9857fef8b3ef58b19416dc<SEP>gd_ac4b8b9ed091ab54b1aba8f9<SEP>gd_f335200b1b152ebd57131e72<SEP>gd_c6f21bde42fb4a0c42f82a9e<SEP>gd_d19ef462293cbfaf17f910e6<SEP>gd_e569b162bd704a1f08dfbf1c<SEP>gd_20e60735f48eae1b55d1b0a4<SEP>gd_c5fd94ac349d025fb78a37d0<SEP>gd_467a724d308c3f02fc973fa8<SEP>gd_a23c7d8cc392e782e22bb499<SEP>gd_56ce429513ba63d601778b83<SEP>gd_1ea75faaa1a24bb0a1573ab5<SEP>gd_f224b92d594e096cf9f7eef5<SEP>gd_3c8d2efa348e102a23b24a6b<SEP>gd_7fceffa45398125f8711e9a1<SEP>gd_8a750106d4513616691b5198<SEP>gd_1c786168860b4c364f13ef3b<SEP>gd_8fe15d1e1f4d6d874c6ce1bb<SEP>gd_9f64b63b5ae698d29604d98b<SEP>gd_7579e8b1402637800b33e210<SEP>gd_249ae5f1a28ad2b6389c7b37<SEP>gd_5088eba36f8b4b196a5837dd<SEP>gd_7bf916ab9e234b1482e89f26<SEP>gd_d9367d2354469b61c124d3c2<SEP>gd_f6c00e0b3dd6d992b151a870<SEP>gd_45895bb382839086f6554318<SEP>gd_9892f4cb159a2427a2e6b59b<SEP>gd_b80524f908bad21aeaf41dfe<SEP>gd_ed532f1494cf2bbcdf7fd169<SEP>gd_235360b752f8c3285228290d<SEP>gd_87131f4a34d2f70295f0cf04<SEP>gd_59c785375f34b0507b64485d<SEP>gd_a6563952729bc853829369cf<SEP>gd_9809d37cd527c2958295b062<SEP>gd_39b6f4d40075e7b8d3ea719d",
+          "created_at": 1793646125
+        },
+        {
+          "entity_name": "Director",
+          "entity_type": "person",
+          "description": "The Director is a high-ranking executive in a company, responsible for overseeing a specific department or function. This leadership position often involves managing a team of employees, including sales representatives, and making strategic decisions to drive business growth. A Director typically holds a formal management position and has been promoted to a leadership role within the company, but has not yet reached the level of Vice President. They are often responsible for recruiting and developing great managers to work under them, and are expected to perform at a high level in order to advance in their career.\n\nIn some cases, a Director may be a mid-level sales executive, responsible for managing a team of sales representatives and driving revenue growth. Alternatively, a Director may serve on the board of directors for a company, often responsible for making strategic decisions. This role is distinct from the mid-level management position, which involves overseeing a specific department or function within a company.\n\nA Director is also a named human, likely an employee or executive, who holds a mid-level management position. This position is characterized by overseeing a team or department, and is often a stepping stone to more senior roles, such as Vice President. The Director plays a crucial role in the success of a company, and is a key part of its leadership team.<SEP>A role or title on a resume that may not necessarily indicate experience in the specific phase of sales growth.<SEP>Manages a team of sales reps under the guidance of a VP of Sales.<SEP>They direct it.",
+          "source_id": "gd_028b8a676781e0db7a6b323d-chunk-000<SEP>gd_111b6b23b20d3f5268f61598-chunk-001<SEP>gd_a2ec45a7c4351b7e34245f87-chunk-000<SEP>gd_d94811ba075e36bb67ccf23b-chunk-002<SEP>gd_193f47f188ade57b0783fae1-chunk-000<SEP>gd_407023326040dc22077aec8b-chunk-000<SEP>gd_53166d6f3672941cb6ee80e6-chunk-000<SEP>gd_829c76a509342e71ab5188cf-chunk-000<SEP>gd_93c3f50c7ddebd6750401de9-chunk-001<SEP>gd_989a9f944654ad07bf38af36-chunk-001<SEP>gd_bb3340c32d0587264587a2e5-chunk-000<SEP>gd_76c045ab1705e7a1934e7771-chunk-001<SEP>gd_e23054549f6afebbe65a7649-chunk-002<SEP>gd_fef931cfcea01ce67476c021-chunk-003<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-004<SEP>gd_9120b3a4129b207cf4bc200e-chunk-003<SEP>gd_d4711abd5ac9be9d4438c90d-chunk-001<SEP>gd_103dd66256994169ffe0170e-chunk-002",
+          "file_path": "gd_028b8a676781e0db7a6b323d<SEP>gd_111b6b23b20d3f5268f61598<SEP>gd_a2ec45a7c4351b7e34245f87<SEP>gd_d94811ba075e36bb67ccf23b<SEP>gd_193f47f188ade57b0783fae1<SEP>gd_407023326040dc22077aec8b<SEP>gd_53166d6f3672941cb6ee80e6<SEP>gd_829c76a509342e71ab5188cf<SEP>gd_93c3f50c7ddebd6750401de9<SEP>gd_989a9f944654ad07bf38af36<SEP>gd_bb3340c32d0587264587a2e5<SEP>gd_76c045ab1705e7a1934e7771<SEP>gd_e23054549f6afebbe65a7649<SEP>gd_fef931cfcea01ce67476c021<SEP>gd_2a4d7b8a58e1c3110dd4d692<SEP>gd_9120b3a4129b207cf4bc200e<SEP>gd_d4711abd5ac9be9d4438c90d<SEP>gd_103dd66256994169ffe0170e",
+          "created_at": 1793603713
+        },
+        {
+          "entity_name": "PagerDuty",
+          "entity_type": "organization",
+          "description": "**PagerDuty**\n\nPagerDuty is a leading provider of incident management and alerting solutions, helping businesses to manage and respond to incidents more efficiently and effectively. The company specializes in incident management and alerting platforms, enabling organizations to manage and respond to incidents in a more efficient and effective manner. PagerDuty's incident management platform is designed to help organizations streamline their incident response processes, reducing downtime and improving overall system reliability.\n\nAs a company, PagerDuty has demonstrated its commitment to sharing knowledge and best practices with the community. Its leaders have been prominent speakers at industry events, such as SaaStr, highlighting the company's thought leadership in the industry. PagerDuty has achieved net negative churn from SMBs, demonstrating its ability to provide value to its customers. The company's story of growth and success in the industry is evident in its consistent 33%-34% growth rate for quarter after quarter.\n\nPagerDuty is a cloud software company that offers incident management and monitoring products, and has seen significant growth in revenue and user adoption. The company's digital operations platform helps businesses manage and respond to IT incidents and outages, making it a valuable tool for organizations looking to improve their incident response processes. PagerDuty has a large customer base, with over 15,000 paying customers, including prominent companies such as Cisco, Zoom, Fox, Shopify, and the NYSE.\n\nPagerDuty has gone public through an IPO, and its valuation has reached $1 billion. The company has crossed $500M in ARR and has a strong presence in the industry. However, its NRR trajectory shows a decline in growth, indicating a potential shift in the company's focus or market conditions.\n\nIn addition to its incident management platform, PagerDuty also provides website monitoring and DevOps solutions, making it a comprehensive platform for businesses. The company's software is cloud-based, providing tools for IT teams to manage and resolve IT incidents. PagerDuty's incident management and alerting tools are designed for DevOps and IT teams, helping them to manage and respond to incidents more effectively.\n\nPagerDuty is a profitable organization with a fortress balance sheet, serving mission-critical use cases and having a 95% renewal rate, even with 10,000+ SMB customers. The company's software provides incident response workflow solutions, and it serves real customers with real pain. Overall, PagerDuty is a leading provider of incident management and alerting solutions, helping businesses to manage and respond to incidents more efficiently and effectively.<SEP>PagerDuty is a company that provides IT operations management solutions and has revenue growth decelerated to just 5% YoY.<SEP>A IT operations company with flat customer growth and a multiple of 3-4x.<SEP>A software development platform",
+          "source_id": "gd_0e243f9c16a81abe061b3496-chunk-000<SEP>gd_6ae058143aa014ace1a3e93c-chunk-000<SEP>gd_179963266b84ebecb1409519-chunk-000<SEP>gd_71e29ba36019c37090ff3004-chunk-001<SEP>gd_68cb736bea20f2941b1d42fb-chunk-000<SEP>gd_dd8f0f160c812180403f7b6f-chunk-000<SEP>gd_ec98065364cfc525c93b67ce-chunk-002<SEP>gd_e1dfd752f2d87263a2213397-chunk-000<SEP>gd_e1dfd752f2d87263a2213397-chunk-001<SEP>gd_f08cd0499462cb9f7ebd5219-chunk-000<SEP>gd_f70b08b50e252ea315d757da-chunk-000<SEP>gd_2da2607f440be8eb7f834419-chunk-002<SEP>gd_3ee14687ce9032e056d1cdfc-chunk-000<SEP>gd_3ee14687ce9032e056d1cdfc-chunk-001<SEP>gd_535dfe10c25ba8a8c83581c2-chunk-002<SEP>gd_602ec044e3ecdf3d2d224081-chunk-000<SEP>gd_602ec044e3ecdf3d2d224081-chunk-001<SEP>gd_602ec044e3ecdf3d2d224081-chunk-002<SEP>gd_70a4342562c701cb49469cde-chunk-001<SEP>gd_70a4342562c701cb49469cde-chunk-002<SEP>gd_9e2d016a1add7c06ba742fa3-chunk-002<SEP>gd_9e2d016a1add7c06ba742fa3-chunk-003<SEP>gd_bb8500ff7693b3f67f77f68c-chunk-002<SEP>gd_bb8500ff7693b3f67f77f68c-chunk-003<SEP>gd_e396b212b0c5e080520b685b-chunk-000<SEP>gd_e396b212b0c5e080520b685b-chunk-001<SEP>gd_6883af2ee760af258eff9978-chunk-002<SEP>gd_6883af2ee760af258eff9978-chunk-003<SEP>gd_0bc1abfa4e6084d46e2595c5-chunk-000<SEP>gd_0bc1abfa4e6084d46e2595c5-chunk-001<SEP>gd_0bc1abfa4e6084d46e2595c5-chunk-002<SEP>gd_0bc1abfa4e6084d46e2595c5-chunk-003<SEP>gd_0bc1abfa4e6084d46e2595c5-chunk-004<SEP>gd_c6f21bde42fb4a0c42f82a9e-chunk-003<SEP>gd_c6f21bde42fb4a0c42f82a9e-chunk-004<SEP>gd_e7d8f3c724d6b1461b36dc79-chunk-004<SEP>gd_e7d8f3c724d6b1461b36dc79-chunk-005<SEP>gd_264f36d1cab20f425e0992cf-chunk-000<SEP>gd_264f36d1cab20f425e0992cf-chunk-001<SEP>gd_7fceffa45398125f8711e9a1-chunk-001<SEP>gd_7fceffa45398125f8711e9a1-chunk-006<SEP>gd_7fceffa45398125f8711e9a1-chunk-007<SEP>gd_7fceffa45398125f8711e9a1-chunk-011<SEP>gd_9f64b63b5ae698d29604d98b-chunk-010<SEP>gd_3165936d963d60a6dbcd9e79-chunk-001<SEP>gd_6d36e9d789605a02741458e1-chunk-000<SEP>gd_6d36e9d789605a02741458e1-chunk-001<SEP>gd_6d36e9d789605a02741458e1-chunk-002<SEP>gd_6d36e9d789605a02741458e1-chunk-003<SEP>gd_6d36e9d789605a02741458e1-chunk-004<SEP>gd_6d36e9d789605a02741458e1-chunk-005<SEP>gd_6d36e9d789605a02741458e1-chunk-006<SEP>gd_6d36e9d789605a02741458e1-chunk-007<SEP>gd_87131f4a34d2f70295f0cf04-chunk-003<SEP>gd_87131f4a34d2f70295f0cf04-chunk-007<SEP>gd_87131f4a34d2f70295f0cf04-chunk-008",
+          "file_path": "gd_0e243f9c16a81abe061b3496<SEP>gd_6ae058143aa014ace1a3e93c<SEP>gd_179963266b84ebecb1409519<SEP>gd_71e29ba36019c37090ff3004<SEP>gd_68cb736bea20f2941b1d42fb<SEP>gd_dd8f0f160c812180403f7b6f<SEP>gd_ec98065364cfc525c93b67ce<SEP>gd_e1dfd752f2d87263a2213397<SEP>gd_f08cd0499462cb9f7ebd5219<SEP>gd_f70b08b50e252ea315d757da<SEP>gd_2da2607f440be8eb7f834419<SEP>gd_3ee14687ce9032e056d1cdfc<SEP>gd_535dfe10c25ba8a8c83581c2<SEP>gd_602ec044e3ecdf3d2d224081<SEP>gd_70a4342562c701cb49469cde<SEP>gd_9e2d016a1add7c06ba742fa3<SEP>gd_bb8500ff7693b3f67f77f68c<SEP>gd_e396b212b0c5e080520b685b<SEP>gd_6883af2ee760af258eff9978<SEP>gd_0bc1abfa4e6084d46e2595c5<SEP>gd_c6f21bde42fb4a0c42f82a9e<SEP>gd_e7d8f3c724d6b1461b36dc79<SEP>gd_264f36d1cab20f425e0992cf<SEP>gd_7fceffa45398125f8711e9a1<SEP>gd_9f64b63b5ae698d29604d98b<SEP>gd_3165936d963d60a6dbcd9e79<SEP>gd_6d36e9d789605a02741458e1<SEP>gd_87131f4a34d2f70295f0cf04",
+          "created_at": 1793641625
+        },
+        {
+          "entity_name": "When in doubt - dont do the hire",
+          "entity_type": "UNKNOWN",
+          "description": "When in doubt, it's best to err on the side of caution and not make the hire.",
+          "source_id": "gd_d94d3f9d2ce04cefe79715db-chunk-006",
+          "file_path": "gd_d94d3f9d2ce04cefe79715db",
+          "created_at": 1793585391
+        }
+      ],
+      "relationships": [
+        {
+          "src_id": "AI",
+          "tgt_id": "sales",
+          "description": "The future of sales in the AI age.",
+          "keywords": "future",
+          "weight": 1.0,
+          "source_id": "gd_80c909a7620b380ba1b1df0c-chunk-000",
+          "file_path": "gd_80c909a7620b380ba1b1df0c",
+          "created_at": 1793498010
+        },
+        {
+          "src_id": "NRR",
+          "tgt_id": "SEMrush",
+          "description": "SEMrush's NRR is compared to PagerDuty's decline in growth.",
+          "keywords": "Comparison",
+          "weight": 1.0,
+          "source_id": "gd_0bc1abfa4e6084d46e2595c5-chunk-002",
+          "file_path": "gd_0bc1abfa4e6084d46e2595c5",
+          "created_at": 1793575241
+        },
+        {
+          "src_id": "VP of Sales",
+          "tgt_id": "sales",
+          "description": "The VP of Sales wins in sales.<SEP>The VP of Sales knows sales.",
+          "keywords": "know,win",
+          "weight": 2.0,
+          "source_id": "gd_abec5724b77815cf1198b62f-chunk-001",
+          "file_path": "gd_abec5724b77815cf1198b62f",
+          "created_at": 1793555138
+        },
+        {
+          "src_id": "Fastly",
+          "tgt_id": "NRR",
+          "description": "Fastly's NRR is holding up at 114%, despite a slight dip from 116%.",
+          "keywords": "Concept",
+          "weight": 1.0,
+          "source_id": "gd_d4924986b972e4ef59ad0d68-chunk-000",
+          "file_path": "gd_d4924986b972e4ef59ad0d68",
+          "created_at": 1793520879
+        },
+        {
+          "src_id": "Director",
+          "tgt_id": "VP of Sales",
+          "description": "The VP of Sales hires a Director to manage a team of sales representatives.<SEP>The input text suggests that having a title or role does not guarantee experience in the specific phase of sales growth.<SEP>Manages a team of sales reps under the guidance of a VP of Sales.",
+          "keywords": "Delegates tasks to,May not necessarily indicate experience in the specific phase of sales growth,hires",
+          "weight": 4.0,
+          "source_id": "gd_a2ec45a7c4351b7e34245f87-chunk-000<SEP>gd_9120b3a4129b207cf4bc200e-chunk-003<SEP>gd_d4711abd5ac9be9d4438c90d-chunk-001",
+          "file_path": "gd_a2ec45a7c4351b7e34245f87<SEP>gd_9120b3a4129b207cf4bc200e<SEP>gd_d4711abd5ac9be9d4438c90d",
+          "created_at": 1793603205
+        },
+        {
+          "src_id": "NRR",
+          "tgt_id": "Rick Zullo",
+          "description": "Rick Zullo discussed NRR, a metric used to measure a company's ability to retain customers and increase revenue.",
+          "keywords": "discuss,metric",
+          "weight": 1.0,
+          "source_id": "gd_50749583f1c3bb43dc7480e2-chunk-000",
+          "file_path": "gd_50749583f1c3bb43dc7480e2",
+          "created_at": 1793567512
+        },
+        {
+          "src_id": "Process",
+          "tgt_id": "VP of Sales",
+          "description": "Process alone isn’t the #1 thing a VP of Sales should be thinking about.",
+          "keywords": "Evolve",
+          "weight": 1.0,
+          "source_id": "gd_aa40273047bc4527e6a280c2-chunk-001",
+          "file_path": "gd_aa40273047bc4527e6a280c2",
+          "created_at": 1793522879
+        },
+        {
+          "src_id": "Net Revenue Retention (NRR)",
+          "tgt_id": "Upsells and cross-sells",
+          "description": "NRR is a metric that measures the effectiveness of upsells and cross-sells strategies.",
+          "keywords": "strategy",
+          "weight": 1.0,
+          "source_id": "gd_78a8331869cec9a0326358f9-chunk-002",
+          "file_path": "gd_78a8331869cec9a0326358f9",
+          "created_at": 1793613515
+        },
+        {
+          "src_id": "Plan",
+          "tgt_id": "VP of Sales",
+          "description": "The VP of Sales is struggling to hit the plan.",
+          "keywords": "Miss,The",
+          "weight": 1.0,
+          "source_id": "gd_1e05dfcbe029aa7967072747-chunk-000",
+          "file_path": "gd_1e05dfcbe029aa7967072747",
+          "created_at": 1793604892
+        },
+        {
+          "src_id": "Crowdstrike",
+          "tgt_id": "Net Revenue Retention (NRR)",
+          "description": "Crowdstrike has targeted a 120% NRR benchmark.",
+          "keywords": "Benchmark",
+          "weight": 1.0,
+          "source_id": "gd_13e89e60c3f8b41c3f077c76-chunk-001",
+          "file_path": "gd_13e89e60c3f8b41c3f077c76",
+          "created_at": 1793491211
+        },
+        {
+          "src_id": "Jason",
+          "tgt_id": "Tool",
+          "description": "relationship_description=Jason emphasizes the need for careful planning when adding new tools.",
+          "keywords": "relationship_keywords=emphasizes",
+          "weight": 1.0,
+          "source_id": "gd_bdde7399e550d0e1ca3c228a-chunk-009",
+          "file_path": "gd_bdde7399e550d0e1ca3c228a",
+          "created_at": 1793619822
+        },
+        {
+          "src_id": "NRR",
+          "tgt_id": "Rubrik",
+          "description": "Rubrik has achieved a high NRR of 120%.",
+          "keywords": "Performance",
+          "weight": 1.0,
+          "source_id": "gd_0b07114179a95a92796b9f5b-chunk-000",
+          "file_path": "gd_0b07114179a95a92796b9f5b",
+          "created_at": 1793525907
+        },
+        {
+          "src_id": "Board of Directors",
+          "tgt_id": "Founders",
+          "description": "Founders are influenced by the board of directors when making investment decisions.",
+          "keywords": "Influenced By",
+          "weight": 1.0,
+          "source_id": "gd_b9fb560509e773f69c0822bd-chunk-001",
+          "file_path": "gd_b9fb560509e773f69c0822bd",
+          "created_at": 1793504854
+        },
+        {
+          "src_id": "Five9",
+          "tgt_id": "NRR",
+          "description": "Five9 has seen significant growth in NRR from 112% to 121% in the past 24 months.",
+          "keywords": "Growing,both,logos,new",
+          "weight": 1.0,
+          "source_id": "gd_8c21892693a7f5fa4fc4e1f0-chunk-001",
+          "file_path": "gd_8c21892693a7f5fa4fc4e1f0",
+          "created_at": 1793533341
+        },
+        {
+          "src_id": "Company",
+          "tgt_id": "Plan",
+          "description": "The company uses this plan to ensure survival in case of a market shift or slow sales.<SEP>Companies need to have a clear plan to get to the new baseline of $300K ARR per employee.",
+          "keywords": "Ensure,Strategy,Use",
+          "weight": 2.0,
+          "source_id": "gd_72aeec36a95526889d6cc973-chunk-001<SEP>gd_2d7b7e7000a27d7ddc3ef566-chunk-004",
+          "file_path": "gd_72aeec36a95526889d6cc973<SEP>gd_2d7b7e7000a27d7ddc3ef566",
+          "created_at": 1793576729
+        },
+        {
+          "src_id": "NRR",
+          "tgt_id": "Palantir",
+          "description": "Palantir's NRR is 124%, indicating strong revenue growth.<SEP>Palantir’s net retention rate (NRR) is a key metric for measuring customer loyalty and revenue growth.",
+          "keywords": "Key Metric,related_to",
+          "weight": 2.0,
+          "source_id": "gd_467a724d308c3f02fc973fa8-chunk-000<SEP>gd_467a724d308c3f02fc973fa8-chunk-001",
+          "file_path": "gd_467a724d308c3f02fc973fa8",
+          "created_at": 1793598055
+        },
+        {
+          "src_id": "Company",
+          "tgt_id": "Tool",
+          "description": "The company uses the Tool “prompt layer” for template registry, evaluation, and A/B testing, and chose this vendor due to their eagerness to develop and mature technology",
+          "keywords": "Uses",
+          "weight": 1.0,
+          "source_id": "gd_57f6b6270d8be867f0e4e105-chunk-012",
+          "file_path": "gd_57f6b6270d8be867f0e4e105",
+          "created_at": 1793645302
+        },
+        {
+          "src_id": "NRR",
+          "tgt_id": "PagerDuty",
+          "description": "PagerDuty's 107% NRR is fueling most of its 109% growth.<SEP>relationship_description: PagerDuty has achieved top-tier NRR, which has fueled its 34% annual growth.<SEP>relationship_description: PagerDuty's NRR has decreased to 100%, meaning that existing customers are not expanding at all anymore.<SEP>The company's growth engine fundamentally broke, switching from a flywheel to a treadmill<SEP>PagerDuty's NRR has been declining for five straight quarters.",
+          "keywords": "Decline,Dropped from 130%+ to 100%,Fueling Growth,growth,metric,relationship_keywords: NRR,relationship_keywords: top-tier,trend",
+          "weight": 5.0,
+          "source_id": "gd_e1dfd752f2d87263a2213397-chunk-001<SEP>gd_602ec044e3ecdf3d2d224081-chunk-001<SEP>gd_6d36e9d789605a02741458e1-chunk-000<SEP>gd_6d36e9d789605a02741458e1-chunk-001<SEP>gd_6d36e9d789605a02741458e1-chunk-006",
+          "file_path": "gd_e1dfd752f2d87263a2213397<SEP>gd_602ec044e3ecdf3d2d224081<SEP>gd_6d36e9d789605a02741458e1",
+          "created_at": 1793633304
+        },
+        {
+          "src_id": "Board of Directors",
+          "tgt_id": "Company",
+          "description": "Relationship between the board of directors and the company they oversee.",
+          "keywords": "Membership",
+          "weight": 1.0,
+          "source_id": "gd_b9fb560509e773f69c0822bd-chunk-002",
+          "file_path": "gd_b9fb560509e773f69c0822bd",
+          "created_at": 1793504854
+        },
+        {
+          "src_id": "Crowdstrike",
+          "tgt_id": "NRR",
+          "description": "Crowdstrike's NRR is growing materially and targeting a 120% benchmark, driven by its strong sales and marketing efforts.<SEP>Crowdstrike's net retention rate (NRR) is likely still close to 120%+, indicating high customer loyalty and revenue retention.",
+          "keywords": "Growth,Metric",
+          "weight": 2.0,
+          "source_id": "gd_13e89e60c3f8b41c3f077c76-chunk-000<SEP>gd_674534f65c5990a2632ae6a2-chunk-001",
+          "file_path": "gd_13e89e60c3f8b41c3f077c76<SEP>gd_674534f65c5990a2632ae6a2",
+          "created_at": 1793530918
+        },
+        {
+          "src_id": "Founder",
+          "tgt_id": "Plan",
+          "description": "The founder creates and implements a plan.<SEP>The founder resets the plan for the current year.",
+          "keywords": "Reset,implement,relationship_keywords: create",
+          "weight": 2.0,
+          "source_id": "gd_2237831cf1e21662ef629603-chunk-001<SEP>gd_39cd89c3453734568726c5f0-chunk-000",
+          "file_path": "gd_2237831cf1e21662ef629603<SEP>gd_39cd89c3453734568726c5f0",
+          "created_at": 1793558915
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "NRR",
+          "description": "NRR had an insane 171% performance in 2021.",
+          "keywords": "Keywords: performance,year",
+          "weight": 1.0,
+          "source_id": "gd_acdaede66f21479bf7fc8842-chunk-001",
+          "file_path": "gd_acdaede66f21479bf7fc8842",
+          "created_at": 1793505402
+        },
+        {
+          "src_id": "Founder",
+          "tgt_id": "Process",
+          "description": "relationship_description=As a company grows, processes may become calcified, leading to a distance between the founder and the process.",
+          "keywords": "distance,relationship_keywords=calcification",
+          "weight": 1.0,
+          "source_id": "gd_38bb13c79d43c1ce65fb04e5-chunk-003",
+          "file_path": "gd_38bb13c79d43c1ce65fb04e5",
+          "created_at": 1793565650
+        },
+        {
+          "src_id": "NRR",
+          "tgt_id": "Toast",
+          "description": "Toast's NRR is a key metric for its growth.",
+          "keywords": "metric",
+          "weight": 1.0,
+          "source_id": "gd_6cfd6bdb0808ecd788793abf-chunk-000",
+          "file_path": "gd_6cfd6bdb0808ecd788793abf",
+          "created_at": 1793484467
+        },
+        {
+          "src_id": "Director",
+          "tgt_id": "Founder",
+          "description": "The founder may consider hiring a director to fill a specific role within the company.",
+          "keywords": "hire,stretch",
+          "weight": 1.0,
+          "source_id": "gd_76c045ab1705e7a1934e7771-chunk-001",
+          "file_path": "gd_76c045ab1705e7a1934e7771",
+          "created_at": 1793561469
+        },
+        {
+          "src_id": "Agent Additions",
+          "tgt_id": "NRR",
+          "description": "Agent additions are the biggest driver of NRR expansion for Freshworks.",
+          "keywords": "Driver of NRR Expansion",
+          "weight": 1.0,
+          "source_id": "gd_0519f1abfcc0fb0a1e118638-chunk-000",
+          "file_path": "gd_0519f1abfcc0fb0a1e118638",
+          "created_at": 1793557835
+        },
+        {
+          "src_id": "Board of Directors",
+          "tgt_id": "Founder",
+          "description": "Relationship between founders and the board of directors, where founders are members of the board.<SEP>Founders are responsible for managing their companies and making decisions with the guidance of their boards.<SEP>Founders' compensation packages must be approved by their boards.",
+          "keywords": "Compensation,Governance,Membership",
+          "weight": 3.0,
+          "source_id": "gd_b9fb560509e773f69c0822bd-chunk-002<SEP>gd_29b51d2dab14acadfc88e927-chunk-000",
+          "file_path": "gd_b9fb560509e773f69c0822bd<SEP>gd_29b51d2dab14acadfc88e927",
+          "created_at": 1793509907
+        },
+        {
+          "src_id": "75% NRR",
+          "tgt_id": "Zoom",
+          "description": "Zoom has achieved 75% Net Revenue Retention (NRR) selling to SMBs",
+          "keywords": "Achievement",
+          "weight": 1.0,
+          "source_id": "gd_3aee61f2fda0aaba4b885eac-chunk-003",
+          "file_path": "gd_3aee61f2fda0aaba4b885eac",
+          "created_at": 1793597193
+        },
+        {
+          "src_id": "CEO",
+          "tgt_id": "sales",
+          "description": "The CEO is responsible for overseeing the sales process and making strategic decisions related to it.",
+          "keywords": "manages",
+          "weight": 1.0,
+          "source_id": "gd_019bb5e57d7761fc0f833123-chunk-000",
+          "file_path": "gd_019bb5e57d7761fc0f833123",
+          "created_at": 1793492184
+        },
+        {
+          "src_id": "Toast",
+          "tgt_id": "Your NRR",
+          "description": "Don’t settle for growing at least +40% next year",
+          "keywords": "+20%",
+          "weight": 1.0,
+          "source_id": "gd_e4735d696b4fc29d7ad881a1-chunk-001",
+          "file_path": "gd_e4735d696b4fc29d7ad881a1",
+          "created_at": 1793562980
+        },
+        {
+          "src_id": "CEO",
+          "tgt_id": "Director",
+          "description": "Manages",
+          "keywords": "Reports_to",
+          "weight": 1.0,
+          "source_id": "gd_028b8a676781e0db7a6b323d-chunk-000",
+          "file_path": "gd_028b8a676781e0db7a6b323d",
+          "created_at": 1793483939
+        },
+        {
+          "src_id": "Domo",
+          "tgt_id": "NRR",
+          "description": "Domo's NRR is just under 100%, indicating a low level of new customer acquisition.",
+          "keywords": "Performance",
+          "weight": 1.0,
+          "source_id": "gd_1d8159452be5bb0ad3f50cf3-chunk-000",
+          "file_path": "gd_1d8159452be5bb0ad3f50cf3",
+          "created_at": 1793526772
+        },
+        {
+          "src_id": "Founder",
+          "tgt_id": "Next Move",
+          "description": "The founder should think about their next move and consider their readiness to start over or pursue a new idea.",
+          "keywords": "pursue,ready",
+          "weight": 1.0,
+          "source_id": "gd_e73005b9f40be88c3e795228-chunk-000",
+          "file_path": "gd_e73005b9f40be88c3e795228",
+          "created_at": 1793603752
+        },
+        {
+          "src_id": "2022",
+          "tgt_id": "Crowdstrike",
+          "description": "Crowdstrike's NRR in 2022 was at a low point compared to other years.",
+          "keywords": "Comparison",
+          "weight": 1.0,
+          "source_id": "gd_13e89e60c3f8b41c3f077c76-chunk-001",
+          "file_path": "gd_13e89e60c3f8b41c3f077c76",
+          "created_at": 1793491211
+        },
+        {
+          "src_id": "Board of Directors",
+          "tgt_id": "VCs",
+          "description": "When VCs don't trust each other, they become more self-interested and may engage in activities that harm the company.",
+          "keywords": "Trust",
+          "weight": 1.0,
+          "source_id": "gd_458c9690935002d5deb59788-chunk-001",
+          "file_path": "gd_458c9690935002d5deb59788",
+          "created_at": 1793502652
+        },
+        {
+          "src_id": "ARR",
+          "tgt_id": "NRR",
+          "description": "The ARR (Annual Recurring Revenue) and NRR (Net Revenue Retention) relationship is a crucial aspect of a company's financial performance. ARR and NRR are closely related, with NRR expansion contributing to growth in ARR. A high NRR of 3.6x is considered a good valuation for a company, indicating a strong ability to retain customers and generate revenue.\n\nHowever, a high NRR of 100% is likely to lead to stagnant ARR growth, as it may indicate a lack of new customer acquisition. Growth is considered 2x as important as efficiency, suggesting that companies prioritize increasing revenue over optimizing costs. The metric NRR drives the metric ARR, meaning that a high NRR is essential for achieving strong ARR growth.\n\nIn fact, high NRR is correlated with high ARR growth, as it demonstrates a company's ability to retain customers and generate consistent revenue. High Net Revenue Retention contributes to strong ARR growth, making it a key performance indicator for companies seeking to increase their recurring revenue. Overall, the relationship between ARR and NRR is complex, but understanding their interdependence is essential for making informed business decisions.<SEP>relationship_description: ARR and NRR are key performance indicators that measure revenue growth and retention.<SEP>Zendesk's high NRR has contributed to its growth, with ARR and NRR being key drivers of the company's success<SEP>Relationship between customer retention and revenue growth.<SEP>Okta's ARR growth is closely tied to its NRR, which is a key indicator of its revenue growth.<SEP>A dollar of ARR growing 30%+ is worth 5-7x more than a dollar of ARR growing 4%",
+          "keywords": "Correlation,Net retention rate and annual recurring revenue,Relationship,Worth 5-7x more,challenges,drives,growth,impact,importance,price,priority,relationship,relationship_keywords: growth,relationship_keywords: measure,retention,stagnation,track,valuation",
+          "weight": 13.0,
+          "source_id": "gd_9bef8d767947839d50a36423-chunk-001<SEP>gd_5cec6448ee1a1a69c556f58a-chunk-001<SEP>gd_97498438a84724d394645274-chunk-003<SEP>gd_f8ae6dd6116877ca7df38ed1-chunk-002<SEP>gd_8eefb8100558ec83fae95a37-chunk-002<SEP>gd_f6c59f9553434ad6e6e2bfb5-chunk-003<SEP>gd_962d28932214f30f9a7d6b58-chunk-002<SEP>gd_c5fd94ac349d025fb78a37d0-chunk-002<SEP>gd_7c8278d1de75266255de50d7-chunk-000<SEP>gd_6d36e9d789605a02741458e1-chunk-001",
+          "file_path": "gd_9bef8d767947839d50a36423<SEP>gd_5cec6448ee1a1a69c556f58a<SEP>gd_97498438a84724d394645274<SEP>gd_f8ae6dd6116877ca7df38ed1<SEP>gd_8eefb8100558ec83fae95a37<SEP>gd_f6c59f9553434ad6e6e2bfb5<SEP>gd_962d28932214f30f9a7d6b58<SEP>gd_c5fd94ac349d025fb78a37d0<SEP>gd_7c8278d1de75266255de50d7<SEP>gd_6d36e9d789605a02741458e1",
+          "created_at": 1793633304
+        },
+        {
+          "src_id": "Jason Lemkin",
+          "tgt_id": "sales",
+          "description": "Jason Lemkin focuses on sales and helping companies with sales.",
+          "keywords": "expertise",
+          "weight": 1.0,
+          "source_id": "gd_569ee69606db9effbeb61689-chunk-002",
+          "file_path": "gd_569ee69606db9effbeb61689",
+          "created_at": 1793601142
+        },
+        {
+          "src_id": "NRR",
+          "tgt_id": "New ARR",
+          "description": "New ARR is a metric that measures the growth of NRR.",
+          "keywords": "metric",
+          "weight": 1.0,
+          "source_id": "gd_78a8331869cec9a0326358f9-chunk-002",
+          "file_path": "gd_78a8331869cec9a0326358f9",
+          "created_at": 1793613515
+        },
+        {
+          "src_id": "Board of Directors",
+          "tgt_id": "VC",
+          "description": "VCs may ask for too much control by demanding a board seat or veto rights, especially if they don't lead the round.",
+          "keywords": "control,protection",
+          "weight": 1.0,
+          "source_id": "gd_f3d2354d1cee771bb21e888e-chunk-000",
+          "file_path": "gd_f3d2354d1cee771bb21e888e",
+          "created_at": 1793501272
+        },
+        {
+          "src_id": "NRR",
+          "tgt_id": "New Relic",
+          "description": "New Relic's net retention rate has improved significantly, contributing to its revenue growth.<SEP>New Relic's revenue has recurring-revenue like characteristics, with high NRR and predictable revenue.",
+          "keywords": "improvement,relationship,revenue",
+          "weight": 2.0,
+          "source_id": "gd_827de18357c3b1abbf9c7ae7-chunk-001<SEP>gd_827de18357c3b1abbf9c7ae7-chunk-002",
+          "file_path": "gd_827de18357c3b1abbf9c7ae7",
+          "created_at": 1793532643
+        },
+        {
+          "src_id": "Process",
+          "tgt_id": "Product",
+          "description": "relationship_description: The product's performance was ensured through the process steps.",
+          "keywords": "relationship_keywords: ensured,steps",
+          "weight": 1.0,
+          "source_id": "gd_685109a529dd46a0e19d6f2a-chunk-003",
+          "file_path": "gd_685109a529dd46a0e19d6f2a",
+          "created_at": 1793531025
+        },
+        {
+          "src_id": "Plan",
+          "tgt_id": "Sales Team",
+          "description": "The sales team is expected to meet the targets outlined in the plan.",
+          "keywords": "Hit Numbers",
+          "weight": 1.0,
+          "source_id": "gd_39cd89c3453734568726c5f0-chunk-001",
+          "file_path": "gd_39cd89c3453734568726c5f0",
+          "created_at": 1793558915
+        },
+        {
+          "src_id": "Director",
+          "tgt_id": "Sales Team",
+          "description": "Directors are promoted from the sales team.",
+          "keywords": "Advancement,Promotion",
+          "weight": 1.0,
+          "source_id": "gd_fef931cfcea01ce67476c021-chunk-003",
+          "file_path": "gd_fef931cfcea01ce67476c021",
+          "created_at": 1793563146
+        },
+        {
+          "src_id": "Customers",
+          "tgt_id": "Get on the road",
+          "description": "Establishing personal connections with customers.",
+          "keywords": "Attend industry events",
+          "weight": 1.0,
+          "source_id": "gd_81cb113e66af3876fd2fc794-chunk-002",
+          "file_path": "gd_81cb113e66af3876fd2fc794",
+          "created_at": 1793504958
+        },
+        {
+          "src_id": "Team",
+          "tgt_id": "Tool",
+          "description": "The team uses the Tool to perform specific tasks.",
+          "keywords": "Usage",
+          "weight": 1.0,
+          "source_id": "gd_03663f68906e5fe37d85d810-chunk-004",
+          "file_path": "gd_03663f68906e5fe37d85d810",
+          "created_at": 1793621701
+        },
+        {
+          "src_id": "Board of Directors",
+          "tgt_id": "Investors",
+          "description": "When the board and investors don't trust each other, they may not communicate effectively, leading to issues that are not socialized and de-escalated.",
+          "keywords": "Communication Breakdown",
+          "weight": 1.0,
+          "source_id": "gd_458c9690935002d5deb59788-chunk-001",
+          "file_path": "gd_458c9690935002d5deb59788",
+          "created_at": 1793502652
+        },
+        {
+          "src_id": "Process",
+          "tgt_id": "Startup",
+          "description": "Startups should optimize their process to work effectively with VCs.",
+          "keywords": "optimize",
+          "weight": 1.0,
+          "source_id": "gd_d036f97a47d2121009f8326f-chunk-003",
+          "file_path": "gd_d036f97a47d2121009f8326f",
+          "created_at": 1793514068
+        },
+        {
+          "src_id": "Plan",
+          "tgt_id": "Startup",
+          "description": "The startup resets its plan to a lower bar.",
+          "keywords": "Reset",
+          "weight": 1.0,
+          "source_id": "gd_39cd89c3453734568726c5f0-chunk-000",
+          "file_path": "gd_39cd89c3453734568726c5f0",
+          "created_at": 1793558915
+        },
+        {
+          "src_id": "VP",
+          "tgt_id": "sales",
+          "description": "A VP can own the sales function in a company.",
+          "keywords": "own",
+          "weight": 1.0,
+          "source_id": "gd_6b17bbba5420d6fbf5097fdf-chunk-003",
+          "file_path": "gd_6b17bbba5420d6fbf5097fdf",
+          "created_at": 1793519560
+        },
+        {
+          "src_id": "Director",
+          "tgt_id": "VP",
+          "description": "Manages<SEP>Promoting a Director to VP is a key strategy for career development and recognition, and can be related to higher e-commerce growth.<SEP>It’s less risky, and a faster way to advance, more times than not.<SEP>When they already know you and believe in you.<SEP>Directors and managers under them need to be able to recruit great managers.<SEP>A director may be considered for a VP role if they have the necessary skills and experience.<SEP>A VP may evolve into a director role if they have the necessary skills and experience.",
+          "keywords": "Promotion,Reports_to,advance,believe,evolve,grow,hire,know,promote,recruit,stretch",
+          "weight": 7.0,
+          "source_id": "gd_028b8a676781e0db7a6b323d-chunk-000<SEP>gd_111b6b23b20d3f5268f61598-chunk-001<SEP>gd_d94811ba075e36bb67ccf23b-chunk-002<SEP>gd_53166d6f3672941cb6ee80e6-chunk-000<SEP>gd_76c045ab1705e7a1934e7771-chunk-001",
+          "file_path": "gd_028b8a676781e0db7a6b323d<SEP>gd_111b6b23b20d3f5268f61598<SEP>gd_d94811ba075e36bb67ccf23b<SEP>gd_53166d6f3672941cb6ee80e6<SEP>gd_76c045ab1705e7a1934e7771",
+          "created_at": 1793561469
+        },
+        {
+          "src_id": "Plan",
+          "tgt_id": "VP",
+          "description": "A VP meets deadlines and achieves the company's plan, but fails to do so in their current role.",
+          "keywords": "fails,meets",
+          "weight": 1.0,
+          "source_id": "gd_447f2bf2f57ac5304215cd63-chunk-000",
+          "file_path": "gd_447f2bf2f57ac5304215cd63",
+          "created_at": 1793534542
+        },
+        {
+          "src_id": "Tool",
+          "tgt_id": "VP",
+          "description": "The VP does not prioritize buying tools.",
+          "keywords": "not_priority",
+          "weight": 1.0,
+          "source_id": "gd_45d625247214f2e5d3dc11aa-chunk-002",
+          "file_path": "gd_45d625247214f2e5d3dc11aa",
+          "created_at": 1793583256
+        },
+        {
+          "src_id": "Boss",
+          "tgt_id": "Sales Rep",
+          "description": "Sales representatives who are skilled and experienced in selling products or services work under and report to a supervisor or manager.<SEP>Bosses retain and keep sales reps in the boiler room.",
+          "keywords": "keep,reports to,retain,works under",
+          "weight": 2.0,
+          "source_id": "gd_9fd8e6443d56bea959fbffdc-chunk-001<SEP>gd_9fd8e6443d56bea959fbffdc-chunk-002",
+          "file_path": "gd_9fd8e6443d56bea959fbffdc",
+          "created_at": 1793583194
+        },
+        {
+          "src_id": "VP",
+          "tgt_id": "move",
+          "description": "If the VP fails to meet expectations, it is recommended to move on and find a more suitable candidate.",
+          "keywords": "on",
+          "weight": 1.0,
+          "source_id": "gd_bf7ad7fdcd83738eb7d097c7-chunk-002",
+          "file_path": "gd_bf7ad7fdcd83738eb7d097c7",
+          "created_at": 1793523888
+        },
+        {
+          "src_id": "Process",
+          "tgt_id": "VP Sales",
+          "description": "VP of Sales should not focus on process, but on customers.",
+          "keywords": "Not focus on process",
+          "weight": 1.0,
+          "source_id": "gd_8089ccf1cf2e3da0d6897103-chunk-002",
+          "file_path": "gd_8089ccf1cf2e3da0d6897103",
+          "created_at": 1793598791
+        },
+        {
+          "src_id": "Tool",
+          "tgt_id": "Vendor",
+          "description": "Entities provide software solutions for AI deployment.<SEP>The vendor selects the tool based on its ability to improve performance.<SEP>Training is more important than selecting the \"perfect\" tool.",
+          "keywords": "Importance,Selection,buying a tool",
+          "weight": 3.0,
+          "source_id": "gd_ec4952faf291c054baf7a979-chunk-011<SEP>gd_03663f68906e5fe37d85d810-chunk-005",
+          "file_path": "gd_ec4952faf291c054baf7a979<SEP>gd_03663f68906e5fe37d85d810",
+          "created_at": 1793621701
+        },
+        {
+          "src_id": "Author",
+          "tgt_id": "Boss",
+          "description": "The author advises informing the boss about their decision to leave, demonstrating responsible communication.",
+          "keywords": "decision to leave,relationship_keywords: inform,responsible communication",
+          "weight": 1.0,
+          "source_id": "gd_8a03683eb5d32e2b7289cf60-chunk-000",
+          "file_path": "gd_8a03683eb5d32e2b7289cf60",
+          "created_at": 1793519057
+        },
+        {
+          "src_id": "Investor",
+          "tgt_id": "Plan",
+          "description": "The investor supports and implements a plan.",
+          "keywords": "implement,relationship_keywords: support",
+          "weight": 1.0,
+          "source_id": "gd_2237831cf1e21662ef629603-chunk-001",
+          "file_path": "gd_2237831cf1e21662ef629603",
+          "created_at": 1793513996
+        },
+        {
+          "src_id": "Get on the road",
+          "tgt_id": "Prospects",
+          "description": "Building relationships with potential customers.",
+          "keywords": "Attend industry events",
+          "weight": 1.0,
+          "source_id": "gd_81cb113e66af3876fd2fc794-chunk-002",
+          "file_path": "gd_81cb113e66af3876fd2fc794",
+          "created_at": 1793504958
+        },
+        {
+          "src_id": "Nvidia",
+          "tgt_id": "sales",
+          "description": "Nvidia offers equity compensation to its sales employees.",
+          "keywords": "offers",
+          "weight": 1.0,
+          "source_id": "gd_c02798f3e4bfa8085c96e807-chunk-002",
+          "file_path": "gd_c02798f3e4bfa8085c96e807",
+          "created_at": 1793618262
+        },
+        {
+          "src_id": "Hire someone",
+          "tgt_id": "LinkedIn",
+          "description": "The input text suggests hiring someone who is skilled in creating strategies, which is a key aspect of LinkedIn.",
+          "keywords": "Recommendation,Strategy",
+          "weight": 1.0,
+          "source_id": "gd_2870c7b96cfd8e9db7bee62f-chunk-000",
+          "file_path": "gd_2870c7b96cfd8e9db7bee62f",
+          "created_at": 1793491616
+        },
+        {
+          "src_id": "SMB",
+          "tgt_id": "sales",
+          "description": "SMB sales can lead to longevity and growth",
+          "keywords": "growth",
+          "weight": 1.0,
+          "source_id": "gd_fe6035c6efecd3a79fb64aed-chunk-000",
+          "file_path": "gd_fe6035c6efecd3a79fb64aed",
+          "created_at": 1793498028
+        },
+        {
+          "src_id": "AE",
+          "tgt_id": "Director",
+          "description": "An AE may be considered for a director role if they have the necessary skills and experience.<SEP>AE is managed by Directors.",
+          "keywords": "Leadership,Management,hire,stretch",
+          "weight": 2.0,
+          "source_id": "gd_76c045ab1705e7a1934e7771-chunk-001<SEP>gd_fef931cfcea01ce67476c021-chunk-003",
+          "file_path": "gd_76c045ab1705e7a1934e7771<SEP>gd_fef931cfcea01ce67476c021",
+          "created_at": 1793563146
+        },
+        {
+          "src_id": "Boss",
+          "tgt_id": "Start-ups",
+          "description": "The supervisor provides guidance and advice on navigating promotion discussions in start-ups.",
+          "keywords": "advice,relationship_keywords: guidance",
+          "weight": 1.0,
+          "source_id": "gd_ee510d46f089453b75495a41-chunk-000",
+          "file_path": "gd_ee510d46f089453b75495a41",
+          "created_at": 1793517891
+        },
+        {
+          "src_id": "Director",
+          "tgt_id": "SDR",
+          "description": "An SDR may be considered for a director role if they have the necessary skills and experience.",
+          "keywords": "hire,stretch",
+          "weight": 1.0,
+          "source_id": "gd_76c045ab1705e7a1934e7771-chunk-001",
+          "file_path": "gd_76c045ab1705e7a1934e7771",
+          "created_at": 1793561469
+        },
+        {
+          "src_id": "AE",
+          "tgt_id": "Boss",
+          "description": "The boss has placed the AE in the right role with the right leads.<SEP>The boss has backfilled the AE's weaknesses.<SEP>The boss has trained the AE.",
+          "keywords": "has_backfilled,has_placed,has_trained",
+          "weight": 3.0,
+          "source_id": "gd_a12721c0e193cfcccf235132-chunk-002",
+          "file_path": "gd_a12721c0e193cfcccf235132",
+          "created_at": 1793522549
+        },
+        {
+          "src_id": "Data",
+          "tgt_id": "Process",
+          "description": "The process relies on data to optimize its performance.",
+          "keywords": "Optimization,relationship_keywords: Relying",
+          "weight": 1.0,
+          "source_id": "gd_27f182a645fe476c1df921f6-chunk-007",
+          "file_path": "gd_27f182a645fe476c1df921f6",
+          "created_at": 1793606817
+        },
+        {
+          "src_id": "M&A",
+          "tgt_id": "Process",
+          "description": "M&A is a complicated process.",
+          "keywords": "complicated,overly complex",
+          "weight": 1.0,
+          "source_id": "gd_fc3e77cb57f44ffbbe446d99-chunk-003",
+          "file_path": "gd_fc3e77cb57f44ffbbe446d99",
+          "created_at": 1793558114
+        },
+        {
+          "src_id": "Plan",
+          "tgt_id": "Year",
+          "description": "The company develops a sales plan for the year to outline sales goals, targets, and strategies for achieving them.",
+          "keywords": "Develop",
+          "weight": 1.0,
+          "source_id": "gd_64ee673f1818fe8a43d10d08-chunk-001",
+          "file_path": "gd_64ee673f1818fe8a43d10d08",
+          "created_at": 1793496488
+        },
+        {
+          "src_id": "founder",
+          "tgt_id": "sales",
+          "description": "A founder embraces sales to scale the company.",
+          "keywords": "embraces",
+          "weight": 1.0,
+          "source_id": "gd_c0713c351046251ffaf03c4f-chunk-000",
+          "file_path": "gd_c0713c351046251ffaf03c4f",
+          "created_at": 1793562462
+        },
+        {
+          "src_id": "ROI",
+          "tgt_id": "sales",
+          "description": "sales uses ROI as a metric to measure performance.",
+          "keywords": "metric,performance",
+          "weight": 1.0,
+          "source_id": "gd_e259b4464cd93452130f852e-chunk-001",
+          "file_path": "gd_e259b4464cd93452130f852e",
+          "created_at": 1793640261
+        },
+        {
+          "src_id": "Board",
+          "tgt_id": "Tree Planting",
+          "description": "The board should take action now, just like planting a tree.",
+          "keywords": "Metaphor",
+          "weight": 1.0,
+          "source_id": "gd_641ddfbb18ea9d7661766b2e-chunk-002",
+          "file_path": "gd_641ddfbb18ea9d7661766b2e",
+          "created_at": 1793639375
+        },
+        {
+          "src_id": "growth",
+          "tgt_id": "sales",
+          "description": "When growth slows down, sales efforts become harder.",
+          "keywords": "harder,slows",
+          "weight": 1.0,
+          "source_id": "gd_09e160ccf7663729c581d1e2-chunk-001",
+          "file_path": "gd_09e160ccf7663729c581d1e2",
+          "created_at": 1793471136
+        },
+        {
+          "src_id": "B2B companies",
+          "tgt_id": "sales",
+          "description": "Companies that experience rapid growth often have strong sales teams and strategies.",
+          "keywords": "growth",
+          "weight": 1.0,
+          "source_id": "gd_94dacf60a04c5ef0578e1af6-chunk-000",
+          "file_path": "gd_94dacf60a04c5ef0578e1af6",
+          "created_at": 1793506071
+        },
+        {
+          "src_id": "CROs",
+          "tgt_id": "Do It Yourself, Dude",
+          "description": "CROs must follow the advice \"Do It Yourself, Dude\" to stay relevant.",
+          "keywords": "Advice",
+          "weight": 1.0,
+          "source_id": "gd_ec4952faf291c054baf7a979-chunk-004",
+          "file_path": "gd_ec4952faf291c054baf7a979",
+          "created_at": 1793620991
+        },
+        {
+          "src_id": "Director",
+          "tgt_id": "Manager",
+          "description": "Directors need to be able to hire great managers under them.",
+          "keywords": "hire,recruit",
+          "weight": 1.0,
+          "source_id": "gd_53166d6f3672941cb6ee80e6-chunk-000",
+          "file_path": "gd_53166d6f3672941cb6ee80e6",
+          "created_at": 1793518449
+        },
+        {
+          "src_id": "Boss",
+          "tgt_id": "Folks",
+          "description": "A good boss can make a significant difference in one's happiness.",
+          "keywords": "Good",
+          "weight": 1.0,
+          "source_id": "gd_7cf3e77240970cd17fe2178d-chunk-002",
+          "file_path": "gd_7cf3e77240970cd17fe2178d",
+          "created_at": 1793494486
+        },
+        {
+          "src_id": "Metrics",
+          "tgt_id": "Process",
+          "description": "The process requires metrics to evaluate and improve its performance.",
+          "keywords": "Improvement,relationship_keywords: Evaluation",
+          "weight": 1.0,
+          "source_id": "gd_27f182a645fe476c1df921f6-chunk-007",
+          "file_path": "gd_27f182a645fe476c1df921f6",
+          "created_at": 1793606817
+        },
+        {
+          "src_id": "Director",
+          "tgt_id": "Time",
+          "description": "A director may have time to evolve into a VP role if they have the necessary skills and experience.",
+          "keywords": "evolve,grow",
+          "weight": 1.0,
+          "source_id": "gd_76c045ab1705e7a1934e7771-chunk-001",
+          "file_path": "gd_76c045ab1705e7a1934e7771",
+          "created_at": 1793561469
+        },
+        {
+          "src_id": "Candidate",
+          "tgt_id": "Process",
+          "description": "The candidate should not focus solely on process, but rather on customers.",
+          "keywords": "talk about nothing but process",
+          "weight": 1.0,
+          "source_id": "gd_7a79bfcadc266e750d3d31b6-chunk-003",
+          "file_path": "gd_7a79bfcadc266e750d3d31b6",
+          "created_at": 1793599400
+        },
+        {
+          "src_id": "Bill",
+          "tgt_id": "Boss",
+          "description": "relationship_description: The boss loves Bill for its ability to simplify and streamline vendor management.",
+          "keywords": "relationship_keywords: loves,simplifies,streamlines",
+          "weight": 1.0,
+          "source_id": "gd_7fbefa9a8ed2d27e45cbea65-chunk-001",
+          "file_path": "gd_7fbefa9a8ed2d27e45cbea65",
+          "created_at": 1793495370
+        },
+        {
+          "src_id": "Partner",
+          "tgt_id": "Tool",
+          "description": "Having a cool tool is not reason enough. There are 1000s of startups any BigCo can and does partner with. Or even more.",
+          "keywords": "program,relationship_keywords: partner,revenue",
+          "weight": 3.0,
+          "source_id": "gd_43942905c1222c1c0f30c1aa-chunk-000",
+          "file_path": "gd_43942905c1222c1c0f30c1aa",
+          "created_at": 1793528399
+        },
+        {
+          "src_id": "LLM",
+          "tgt_id": "Tool",
+          "description": "The LLM uses the tool to perform tasks such as answering questions and generating text.",
+          "keywords": "performs,uses",
+          "weight": 1.0,
+          "source_id": "gd_abfe41334169db7a9fdcf906-chunk-001",
+          "file_path": "gd_abfe41334169db7a9fdcf906",
+          "created_at": 1793617218
+        },
+        {
+          "src_id": "Director",
+          "tgt_id": "Employee",
+          "description": "The employee is promoted from director to senior director.",
+          "keywords": "Promoted To",
+          "weight": 1.0,
+          "source_id": "gd_93c3f50c7ddebd6750401de9-chunk-001",
+          "file_path": "gd_93c3f50c7ddebd6750401de9",
+          "created_at": 1793521472
+        },
+        {
+          "src_id": "product",
+          "tgt_id": "sales",
+          "description": "Collaboration between sales and product teams to refine sales efforts.",
+          "keywords": "Iterate,Track Metrics",
+          "weight": 1.0,
+          "source_id": "gd_2551431949d1ccdc36a75aef-chunk-002",
+          "file_path": "gd_2551431949d1ccdc36a75aef",
+          "created_at": 1793514220
+        },
+        {
+          "src_id": "CMOs",
+          "tgt_id": "Do It Yourself, Dude",
+          "description": "CMOs must follow the advice \"Do It Yourself, Dude\" to stay relevant.",
+          "keywords": "Advice",
+          "weight": 1.0,
+          "source_id": "gd_ec4952faf291c054baf7a979-chunk-004",
+          "file_path": "gd_ec4952faf291c054baf7a979",
+          "created_at": 1793620991
+        },
+        {
+          "src_id": "Boss",
+          "tgt_id": "Job",
+          "description": "A good job and a good boss can make a significant difference in one's happiness.<SEP>A good boss and a good job can make a significant difference in one's happiness.<SEP>A boss who believes in an employee and counts on their commitment may be let down if they find out the employee is working multiple jobs.",
+          "keywords": "Good,committed,relationship_keywords: counting",
+          "weight": 3.0,
+          "source_id": "gd_7cf3e77240970cd17fe2178d-chunk-002<SEP>gd_0157ef04bd75d35d652924ce-chunk-000",
+          "file_path": "gd_7cf3e77240970cd17fe2178d<SEP>gd_0157ef04bd75d35d652924ce",
+          "created_at": 1793519520
+        },
+        {
+          "src_id": "Board of Directors",
+          "tgt_id": "DropBox",
+          "description": "DropBox has added a new member to its Board of Directors.",
+          "keywords": "New addition",
+          "weight": 1.0,
+          "source_id": "gd_05487ab1ca74e82a45061548-chunk-000",
+          "file_path": "gd_05487ab1ca74e82a45061548",
+          "created_at": 1793500735
+        },
+        {
+          "src_id": "L4M Model",
+          "tgt_id": "Plan",
+          "description": "The L4M Model improves upon the Plan by providing a more accurate estimate of cash reserves.",
+          "keywords": "Improves upon",
+          "weight": 2.0,
+          "source_id": "gd_47c445645895a885cb89d415-chunk-002",
+          "file_path": "gd_47c445645895a885cb89d415",
+          "created_at": 1793578119
+        },
+        {
+          "src_id": "Process",
+          "tgt_id": "Revenue Leader",
+          "description": "Revenue leaders should avoid building elaborate processes that hinder revenue growth.",
+          "keywords": "Avoid elaborate processes",
+          "weight": 1.0,
+          "source_id": "gd_418ec401601816549c7d1606-chunk-001",
+          "file_path": "gd_418ec401601816549c7d1606",
+          "created_at": 1793493232
+        },
+        {
+          "src_id": "Boss",
+          "tgt_id": "Leader",
+          "description": "A leader communicates with their boss to provide feedback and receive guidance.",
+          "keywords": "Communication,Feedback",
+          "weight": 1.0,
+          "source_id": "gd_784841998dedd1b08e0224bb-chunk-001",
+          "file_path": "gd_784841998dedd1b08e0224bb",
+          "created_at": 1793520412
+        },
+        {
+          "src_id": "Enterprise Customers",
+          "tgt_id": "Tool",
+          "description": "relationship_description: The Tool may not be suitable for Enterprise Customers who require high prices and comprehensive features.",
+          "keywords": "high prices,relationship_keywords: specific features",
+          "weight": 1.0,
+          "source_id": "gd_45d625247214f2e5d3dc11aa-chunk-004",
+          "file_path": "gd_45d625247214f2e5d3dc11aa",
+          "created_at": 1793583256
+        },
+        {
+          "src_id": "it",
+          "tgt_id": "sales",
+          "description": "When the same thing is being seen, sales efforts become harder.",
+          "keywords": "harder",
+          "weight": 1.0,
+          "source_id": "gd_09e160ccf7663729c581d1e2-chunk-001",
+          "file_path": "gd_09e160ccf7663729c581d1e2",
+          "created_at": 1793471136
+        },
+        {
+          "src_id": "Process",
+          "tgt_id": "Talent",
+          "description": "Top talent contributing to growth and promotion.<SEP>Top talent contributing to growth and promotion through the process.",
+          "keywords": "Promotion,relationship_keywords: Growth",
+          "weight": 2.0,
+          "source_id": "gd_f623182a1b5011ff58dbdc15-chunk-001",
+          "file_path": "gd_f623182a1b5011ff58dbdc15",
+          "created_at": 1793533369
+        },
+        {
+          "src_id": "Plan",
+          "tgt_id": "Update",
+          "description": "The update tracks the company's plan.",
+          "keywords": "performance,progress,relationship_keywords: track",
+          "weight": 1.0,
+          "source_id": "gd_2237831cf1e21662ef629603-chunk-001",
+          "file_path": "gd_2237831cf1e21662ef629603",
+          "created_at": 1793513996
+        },
+        {
+          "src_id": "enterprise",
+          "tgt_id": "sales",
+          "description": "The enterprise makes a dedicated marketing and sales effort to get customers back.",
+          "keywords": "effort",
+          "weight": 1.0,
+          "source_id": "gd_7932b0cb72425a0f799285e1-chunk-001",
+          "file_path": "gd_7932b0cb72425a0f799285e1",
+          "created_at": 1793494297
+        },
+        {
+          "src_id": "C-60 Plan",
+          "tgt_id": "Plan",
+          "description": "The C-60 Plan is used as a base plan for estimating cash reserves.",
+          "keywords": "Uses",
+          "weight": 1.0,
+          "source_id": "gd_47c445645895a885cb89d415-chunk-002",
+          "file_path": "gd_47c445645895a885cb89d415",
+          "created_at": 1793578119
+        },
+        {
+          "src_id": "marketing",
+          "tgt_id": "sales",
+          "description": "The marketing and sales effort is a dedicated effort.<SEP>Collaboration between marketing and sales teams to refine sales efforts.<SEP>Collaboration between sales and marketing teams to iterate and track metrics.",
+          "keywords": "Iterate,Track Metrics,effort",
+          "weight": 3.0,
+          "source_id": "gd_7932b0cb72425a0f799285e1-chunk-001<SEP>gd_2551431949d1ccdc36a75aef-chunk-002",
+          "file_path": "gd_7932b0cb72425a0f799285e1<SEP>gd_2551431949d1ccdc36a75aef",
+          "created_at": 1793514220
+        },
+        {
+          "src_id": "Board of Directors",
+          "tgt_id": "Lead Investor",
+          "description": "The lead investor is expected to do the bulk of the board of directors-level work.<SEP>The lead investor is expected to lead the board of directors-level work.",
+          "keywords": "Leader,Organizer",
+          "weight": 2.0,
+          "source_id": "gd_97964724e5679d79581100be-chunk-000<SEP>gd_d98d25fd1759d7c632bfd5f2-chunk-000",
+          "file_path": "gd_97964724e5679d79581100be<SEP>gd_d98d25fd1759d7c632bfd5f2",
+          "created_at": 1793517062
+        },
+        {
+          "src_id": "Elon",
+          "tgt_id": "Plan",
+          "description": "Elon is mentioned in the context of the Plan.",
+          "keywords": "Mentioned in",
+          "weight": 1.0,
+          "source_id": "gd_47c445645895a885cb89d415-chunk-002",
+          "file_path": "gd_47c445645895a885cb89d415",
+          "created_at": 1793578119
+        },
+        {
+          "src_id": "Director",
+          "tgt_id": "Start-Up",
+          "description": "Employed_by",
+          "keywords": "Works_for",
+          "weight": 1.0,
+          "source_id": "gd_028b8a676781e0db7a6b323d-chunk-000",
+          "file_path": "gd_028b8a676781e0db7a6b323d",
+          "created_at": 1793483939
+        },
+        {
+          "src_id": "BDRs",
+          "tgt_id": "Process",
+          "description": "Refining the promotion process for BDRs.",
+          "keywords": "Promotion,relationship_keywords: Refine",
+          "weight": 1.0,
+          "source_id": "gd_f623182a1b5011ff58dbdc15-chunk-001",
+          "file_path": "gd_f623182a1b5011ff58dbdc15",
+          "created_at": 1793533369
+        },
+        {
+          "src_id": "Director",
+          "tgt_id": "IC",
+          "description": "A director may be considered for an IC role if they have the necessary skills and experience.",
+          "keywords": "hire,stretch",
+          "weight": 1.0,
+          "source_id": "gd_76c045ab1705e7a1934e7771-chunk-001",
+          "file_path": "gd_76c045ab1705e7a1934e7771",
+          "created_at": 1793561469
+        },
+        {
+          "src_id": "2021 Boom",
+          "tgt_id": "Director",
+          "description": "Consider promoting a Director to VP to fill leadership gaps and drive growth.",
+          "keywords": "Promote to VP",
+          "weight": 1.0,
+          "source_id": "gd_e23054549f6afebbe65a7649-chunk-002",
+          "file_path": "gd_e23054549f6afebbe65a7649",
+          "created_at": 1793562825
+        },
+        {
+          "src_id": "Enterprise Customer",
+          "tgt_id": "Tool",
+          "description": "The tool is not a priority for the enterprise customer.",
+          "keywords": "not_priority",
+          "weight": 1.0,
+          "source_id": "gd_45d625247214f2e5d3dc11aa-chunk-002",
+          "file_path": "gd_45d625247214f2e5d3dc11aa",
+          "created_at": 1793583256
+        },
+        {
+          "src_id": "Solution",
+          "tgt_id": "Tool",
+          "description": "Upgrading from a tool to a solution can increase the worth of each lead.",
+          "keywords": "upgrade,worth",
+          "weight": 1.0,
+          "source_id": "gd_d6aa012be158b9d77ddffb46-chunk-002",
+          "file_path": "gd_d6aa012be158b9d77ddffb46",
+          "created_at": 1793525511
+        },
+        {
+          "src_id": "Angel Investor",
+          "tgt_id": "Board of Directors",
+          "description": "Relationship between angel investors and the board of directors, where angel investors are members of the board.<SEP>Investors who seek control of the board of directors may have problematic intentions.",
+          "keywords": "Control,Membership,Overreach",
+          "weight": 2.0,
+          "source_id": "gd_b9fb560509e773f69c0822bd-chunk-002<SEP>gd_830b1b91c9594b6c5f83a431-chunk-000",
+          "file_path": "gd_b9fb560509e773f69c0822bd<SEP>gd_830b1b91c9594b6c5f83a431",
+          "created_at": 1793513009
+        },
+        {
+          "src_id": "B2B Founder",
+          "tgt_id": "Tool",
+          "description": "A B2B founder selling a simple tool must ensure their product does more than what someone can vibe code in 20 minutes.",
+          "keywords": "Must Do More",
+          "weight": 1.0,
+          "source_id": "gd_7de8c212e9b23d9cc687dadc-chunk-013",
+          "file_path": "gd_7de8c212e9b23d9cc687dadc",
+          "created_at": 1793642956
+        },
+        {
+          "src_id": "Article",
+          "tgt_id": "Process",
+          "description": "The article emphasizes the importance of building a process to achieve 7,000 customers, highlighting the need for a process that revolves around data and trust.",
+          "keywords": "Data,Trust,relationship_keywords: Importance",
+          "weight": 1.0,
+          "source_id": "gd_27f182a645fe476c1df921f6-chunk-007",
+          "file_path": "gd_27f182a645fe476c1df921f6",
+          "created_at": 1793606817
+        },
+        {
+          "src_id": "efficiency",
+          "tgt_id": "sales",
+          "description": "But efficiency goes down in other places (sales efficiency usually, marketing efficiency often)",
+          "keywords": "decreases",
+          "weight": 1.0,
+          "source_id": "gd_9bef8d767947839d50a36423-chunk-000",
+          "file_path": "gd_9bef8d767947839d50a36423",
+          "created_at": 1793503451
+        },
+        {
+          "src_id": "Seed stage",
+          "tgt_id": "sales",
+          "description": "Focus of sales efforts during Seed stage.",
+          "keywords": "Iterate,Track Metrics",
+          "weight": 1.0,
+          "source_id": "gd_2551431949d1ccdc36a75aef-chunk-002",
+          "file_path": "gd_2551431949d1ccdc36a75aef",
+          "created_at": 1793514220
+        },
+        {
+          "src_id": "A/B Test",
+          "tgt_id": "Process",
+          "description": "Refining the promotion process through A/B testing.",
+          "keywords": "Promotion,relationship_keywords: Refine",
+          "weight": 1.0,
+          "source_id": "gd_f623182a1b5011ff58dbdc15-chunk-001",
+          "file_path": "gd_f623182a1b5011ff58dbdc15",
+          "created_at": 1793533369
+        },
+        {
+          "src_id": "Number",
+          "tgt_id": "Plan",
+          "description": "The number is related to the plan in terms of sales targets and goals.",
+          "keywords": "related_to",
+          "weight": 1.0,
+          "source_id": "gd_f8fb7772addf6fc5de4ce4d2-chunk-002",
+          "file_path": "gd_f8fb7772addf6fc5de4ce4d2",
+          "created_at": 1793587031
+        },
+        {
+          "src_id": "2018 management offsite",
+          "tgt_id": "Plan",
+          "description": "The plan is related to the event.",
+          "keywords": "related_to",
+          "weight": 1.0,
+          "source_id": "gd_069564576966cc6fcb830092-chunk-000",
+          "file_path": "gd_069564576966cc6fcb830092",
+          "created_at": 1793502440
+        },
+        {
+          "src_id": "Boss",
+          "tgt_id": "First-Time Managers",
+          "description": "Bosses need to be informed about challenges and mistakes made by first-time managers.",
+          "keywords": "inform,need",
+          "weight": 1.0,
+          "source_id": "gd_784841998dedd1b08e0224bb-chunk-000",
+          "file_path": "gd_784841998dedd1b08e0224bb",
+          "created_at": 1793520412
+        },
+        {
+          "src_id": "Director",
+          "tgt_id": "Ms. Go Big",
+          "description": "The input text suggests that individuals with the title of Director or VP of Sales may not necessarily be able to handle the phase of sales growth.",
+          "keywords": "Can be a glorified order taker",
+          "weight": 1.0,
+          "source_id": "gd_9120b3a4129b207cf4bc200e-chunk-003",
+          "file_path": "gd_9120b3a4129b207cf4bc200e",
+          "created_at": 1793595155
+        },
+        {
+          "src_id": "Director",
+          "tgt_id": "Mr. Make-it-Repeatable",
+          "description": "The input text suggests that having a title or role does not guarantee experience in the specific phase of sales growth.",
+          "keywords": "May not necessarily indicate experience in the specific phase of sales growth",
+          "weight": 1.0,
+          "source_id": "gd_9120b3a4129b207cf4bc200e-chunk-003",
+          "file_path": "gd_9120b3a4129b207cf4bc200e",
+          "created_at": 1793595155
+        },
+        {
+          "src_id": "attendance",
+          "tgt_id": "sales",
+          "description": "When sales efforts become harder, attendance goals become more challenging.",
+          "keywords": "gets,harder",
+          "weight": 1.0,
+          "source_id": "gd_09e160ccf7663729c581d1e2-chunk-001",
+          "file_path": "gd_09e160ccf7663729c581d1e2",
+          "created_at": 1793471136
+        },
+        {
+          "src_id": "business development",
+          "tgt_id": "sales",
+          "description": "Sales is related to business development and partners.",
+          "keywords": "related_to",
+          "weight": 1.0,
+          "source_id": "gd_c0713c351046251ffaf03c4f-chunk-000",
+          "file_path": "gd_c0713c351046251ffaf03c4f",
+          "created_at": 1793562462
+        },
+        {
+          "src_id": "Plan",
+          "tgt_id": "http://bit.ly/saastr18",
+          "description": "The plan is related to the link.",
+          "keywords": "related_to",
+          "weight": 1.0,
+          "source_id": "gd_069564576966cc6fcb830092-chunk-000",
+          "file_path": "gd_069564576966cc6fcb830092",
+          "created_at": 1793502440
+        },
+        {
+          "src_id": "Boss",
+          "tgt_id": "Loop",
+          "description": "It's almost always worth it to be a good sport and just see what happens.<SEP>Maybe he’ll be terrible. But they might be great.",
+          "keywords": "worth_it",
+          "weight": 2.0,
+          "source_id": "gd_3e8f256d260095c60f31c75a-chunk-001",
+          "file_path": "gd_3e8f256d260095c60f31c75a",
+          "created_at": 1793517247
+        },
+        {
+          "src_id": "First 30-60-90 Day Plan",
+          "tgt_id": "Process",
+          "description": "The plan should include meeting customers in the first 30 days.",
+          "keywords": "Include",
+          "weight": 1.0,
+          "source_id": "gd_aa40273047bc4527e6a280c2-chunk-001",
+          "file_path": "gd_aa40273047bc4527e6a280c2",
+          "created_at": 1793522879
+        },
+        {
+          "src_id": "First 30-60-90 Day Plan Flags",
+          "tgt_id": "Process",
+          "description": "The plan should evolve beyond just process.",
+          "keywords": "Evolve",
+          "weight": 1.0,
+          "source_id": "gd_aa40273047bc4527e6a280c2-chunk-001",
+          "file_path": "gd_aa40273047bc4527e6a280c2",
+          "created_at": 1793522879
+        },
+        {
+          "src_id": "Growth Mindset",
+          "tgt_id": "Process",
+          "description": "The process needs a growth mindset to continuously look for inefficiencies and ways to make it better.",
+          "keywords": "Inefficiencies,relationship_keywords: Optimization",
+          "weight": 1.0,
+          "source_id": "gd_27f182a645fe476c1df921f6-chunk-007",
+          "file_path": "gd_27f182a645fe476c1df921f6",
+          "created_at": 1793606817
+        },
+        {
+          "src_id": "Plan",
+          "tgt_id": "Pressure",
+          "description": "The plan should be challenging enough to leave no room for error and ensure the team meets the targets.",
+          "keywords": "Leave Nothing",
+          "weight": 1.0,
+          "source_id": "gd_39cd89c3453734568726c5f0-chunk-001",
+          "file_path": "gd_39cd89c3453734568726c5f0",
+          "created_at": 1793558915
+        },
+        {
+          "src_id": "Board of Directors",
+          "tgt_id": "Seed Investor",
+          "description": "Seed investors may ask for too much control by demanding a board seat, especially if they buy a large percentage of equity.",
+          "keywords": "control",
+          "weight": 1.0,
+          "source_id": "gd_f3d2354d1cee771bb21e888e-chunk-000",
+          "file_path": "gd_f3d2354d1cee771bb21e888e",
+          "created_at": 1793501272
+        },
+        {
+          "src_id": "Overall",
+          "tgt_id": "Plan",
+          "description": "The company develops a sales plan to outline overall sales goals, targets, and strategies for achieving them.",
+          "keywords": "Develop",
+          "weight": 1.0,
+          "source_id": "gd_64ee673f1818fe8a43d10d08-chunk-001",
+          "file_path": "gd_64ee673f1818fe8a43d10d08",
+          "created_at": 1793496488
+        },
+        {
+          "src_id": "Director",
+          "tgt_id": "My Bosses",
+          "description": "Relationship Description: The investor's bosses came up through the ranks.",
+          "keywords": "Relationship Keywords: came up through the ranks",
+          "weight": 1.0,
+          "source_id": "gd_193f47f188ade57b0783fae1-chunk-000",
+          "file_path": "gd_193f47f188ade57b0783fae1",
+          "created_at": 1793512863
+        },
+        {
+          "src_id": "Director",
+          "tgt_id": "Informal Team Lead",
+          "description": "Informal team leads must be promoted to formal management positions to provide career advancement opportunities.",
+          "keywords": "Must Be Promoted",
+          "weight": 1.0,
+          "source_id": "gd_407023326040dc22077aec8b-chunk-000",
+          "file_path": "gd_407023326040dc22077aec8b",
+          "created_at": 1793514436
+        },
+        {
+          "src_id": "Boss",
+          "tgt_id": "Stretch VP of Hires",
+          "description": "A stretch VP of hires needs to have one good reference from a boss who can vouch for their skills and work history.<SEP>A stretch VP of hires may have one bad reference from a boss they didn't mesh with.",
+          "keywords": "One Bad Reference,One Good Reference",
+          "weight": 2.0,
+          "source_id": "gd_196ec4dc3cd54147ebb0c3b9-chunk-000",
+          "file_path": "gd_196ec4dc3cd54147ebb0c3b9",
+          "created_at": 1793512980
+        },
+        {
+          "src_id": "Boss",
+          "tgt_id": "Top Performer",
+          "description": "The supervisor evaluates the employee's performance and determines if they are a top performer.",
+          "keywords": "evaluation,relationship_keywords: supervisor",
+          "weight": 1.0,
+          "source_id": "gd_ee510d46f089453b75495a41-chunk-000",
+          "file_path": "gd_ee510d46f089453b75495a41",
+          "created_at": 1793517891
+        },
+        {
+          "src_id": "SaaStr AI London 2025",
+          "tgt_id": "What You Should Do Right Now",
+          "description": "The event is promoted as a place to learn from operators and master playbooks.",
+          "keywords": "Event Promotion",
+          "weight": 1.0,
+          "source_id": "gd_31e53199562273779b464f4d-chunk-005",
+          "file_path": "gd_31e53199562273779b464f4d",
+          "created_at": 1793606678
+        },
+        {
+          "src_id": "Speakers",
+          "tgt_id": "Tips and tricks",
+          "description": "relationship_description>Speakers who share their tips and tricks are well-received by the audience.",
+          "keywords": "relationship_keywords=event,speakers",
+          "weight": 1.0,
+          "source_id": "gd_a387884f047f923cf1f1232e-chunk-002",
+          "file_path": "gd_a387884f047f923cf1f1232e",
+          "created_at": 1793519204
+        },
+        {
+          "src_id": "Cash runway",
+          "tgt_id": "Get on the road",
+          "description": "Visiting customers and prospects in person to boost business and extend cash runway.",
+          "keywords": "Extend cash runway",
+          "weight": 1.0,
+          "source_id": "gd_81cb113e66af3876fd2fc794-chunk-002",
+          "file_path": "gd_81cb113e66af3876fd2fc794",
+          "created_at": 1793504958
+        },
+        {
+          "src_id": "Get on the road",
+          "tgt_id": "Industry events",
+          "description": "Staying up-to-date with industry developments.",
+          "keywords": "Attend industry events",
+          "weight": 1.0,
+          "source_id": "gd_81cb113e66af3876fd2fc794-chunk-002",
+          "file_path": "gd_81cb113e66af3876fd2fc794",
+          "created_at": 1793504958
+        },
+        {
+          "src_id": "Have your advisors review your picks",
+          "tgt_id": "When in doubt - dont do the hire",
+          "description": "When in doubt, it's best to err on the side of caution and not make the hire.",
+          "keywords": "caution,hesitation",
+          "weight": 1.0,
+          "source_id": "gd_d94d3f9d2ce04cefe79715db-chunk-006",
+          "file_path": "gd_d94d3f9d2ce04cefe79715db",
+          "created_at": 1793585391
+        },
+        {
+          "src_id": "Find someone better",
+          "tgt_id": "When in doubt - dont do the hire",
+          "description": "When in doubt, it's best to search for a better candidate.",
+          "keywords": "improvement,search",
+          "weight": 1.0,
+          "source_id": "gd_d94d3f9d2ce04cefe79715db-chunk-006",
+          "file_path": "gd_d94d3f9d2ce04cefe79715db",
+          "created_at": 1793585391
+        },
+        {
+          "src_id": "Hiring reps and/or a VP that hasnt sold at your price point before",
+          "tgt_id": "Sometimes you have no choice in the early days, but specialize as soon as possible",
+          "description": "relationship_description=Specializing as soon as possible is a strategy for building a sales team, and hiring reps and/or a VP that hasn’t sold at your price point before can be a necessary step in the early days.",
+          "keywords": "relationship_keywords=sales team building,specialization",
+          "weight": 1.0,
+          "source_id": "gd_8d4d38e0c3572b351003a51c-chunk-002",
+          "file_path": "gd_8d4d38e0c3572b351003a51c",
+          "created_at": 1793521239
+        },
+        {
+          "src_id": "Pick your platform",
+          "tgt_id": "Prepare to spend more time",
+          "description": "Prepare to spend more time and pick your platform.",
+          "keywords": "Recommendation,Suggestion",
+          "weight": 1.0,
+          "source_id": "gd_cd0a5d64ec64d242e99c5ad1-chunk-003",
+          "file_path": "gd_cd0a5d64ec64d242e99c5ad1",
+          "created_at": 1793555960
+        }
+      ],
+      "chunks": [
+        {
+          "reference_id": "1",
+          "content": "ing. LIke you can see it in sales. But when the product organically has 120%+ NRR, everyone sort of gets a pass. So just a few thoughts:\nFirst, strive for new logo growth of at least 50% of your total revenue growth\n. I.e., if you’re growing 100% a year, strive for at least 50% growth in new customers and revenue from new accounts. Once the ratio starts to tilt past 2:1 of your new bookings from existing customers, you probably aren’t adding enough new customers. Second, measure logo retention as often as you do NRR. Align them and track them together. Strive for 90% logo retention in general wherever you have 120%+ NRR. Third, remember to segment your NRR and logo retention by deal size. This will expose trends you don’t otherwise see, especially in your smaller customers. And enforce greater accountability on whomever owns those accounts. And finally, be honest if net new count count ever drops below 20% a yea\nr. That’s a warning sign growth will stall in the future. Even in upsells and other high NRR attributes are masking it. I see too many founders not sounding the warning bell when net new customer count falls below +20% a year. If you have 120%, even 130%+ NRR, that’s magic. Do whatever it does to keep it and even drive it up further. Just remember as founders, it can also mask a lot of issues. Issues that will lead to slower growth than you’d otherwise have.",
+          "file_path": "gd_1533cc903c2153ac92a1a879",
+          "chunk_id": "gd_1533cc903c2153ac92a1a879-chunk-001"
+        },
+        {
+          "reference_id": "2",
+          "content": "for you, well, they can’t be tougher everywhere. Toast says restaurants aren’t slowing down.  Shopify is seeing higher e-commerce growth at almost $10B ARR (!) than it’s seen in years.  Healthcare has seen no real downturn or impacts.  Asana’s growth may have slowed, but Monday.com is on fire at $1B+ ARR … because it sells 70% outside of tech.  Go find a segment where you can win.\n\n#4.  Don’t settle for less growth than Your NRR + 20%\n.\nE.g., if your NRR is 120%, even if times are tougher, don’t settle for growing at least +40% next year. Don’t hide in excuses and a high NRR.  Don’t hide in renewals and in your CRO forcing the base to pay more.  Force yourself to at least grow +20% more than your NRR.\n\n#5.  Launch a truly great second product\n.\nBest case, your happy customers buy more from you. Worst case, they still use it and are happy, and churn less.  All the best are now multi-product.  And most of us regret not having gone there a bit earlier.  A related post\nhere\n.\n\n#6.  Launch a truly more valuable, new higher-end edition\n.\nRaising prices may or may not work for you. Be thoughtful.  But launching a new, more enterprise / more powerful / better edition?  That’s a value-add, done right.  A bit more\nhere\n.\n\n#7.  Just move on from any underperformers\n.\nEveryone lowered the hiring bar in the Boom.  And it’s just harder to know these days before you make a hire, especially with remote and hybrid work.  If you’re stuck with any underperformers, just humanely move on from them in January.",
+          "file_path": "gd_e4735d696b4fc29d7ad881a1",
+          "chunk_id": "gd_e4735d696b4fc29d7ad881a1-chunk-001"
+        },
+        {
+          "reference_id": "3",
+          "content": ".  Starting Monday.\nZoom Had a Burn Rate Budget.  So Should You.\n\n5. Cut out toxic folks\n.\nAnd probably medicore folks, too.\nMost of us keep / sit on a hire or two that has strong skills, that we feel we need, but that is dragging down the team.  It turns out, you don’t need them.  It turns out, the week you move them out of the company, the folks that are great and positive will somehow fill the gap, someway.  And it turns out, you’ll do better just one week after moving the super experienced, but toxic folks out.  Do it this week.  Do it on Monday.  And you will do better this month.\nAnd the tough reality is, today, many aren’t willing or able to work at the pace and on the projects necessary in the Age of AI.  Try.  Try to help them, reskill them, given them time.  But you need to make sure your company doesn’t run out of time.  Consider replacing at least the bottom 10%-15% of your team with folks with the right skills and energy to win today.\n\n[Omitted same-source text between these sections: 91 words.]\n\n7.  Add a real Customer Marketing function, and spend at least 20% of your marketing dollars and time on\nexisting\ncustomers.\nAlmost all of us wait way too long to add Customer Marketing.  But if 90% of the revenue from customers is after the first dollar in, and especially if you see NRR of 100% or more, then marketing should only start when the customer first e-signs.  You’ll job is to increase the odds they stay happy, and buy more from you.  More content, more webinars, more drip marketing, more help, more events, more steak dinners more your\nexisting\ncustomers.  Not just the potential ones.",
+          "file_path": "gd_e3052debb61086184aea82f0",
+          "chunk_id": "gd_e3052debb61086184aea82f0-chunk-001"
+        },
+        {
+          "reference_id": "4",
+          "content": "daily training and iteration for the first month on every new agent. Shortcuts here show up as quality problems later. Training matters more than picking the “perfect” tool—just pick a leading vendor and go deep on training. Start with layup roles, not hero purchases\n. Don’t try to make something that’s working 10% better. Make something that’s failing 100% better. Find what’s literally not getting done in your org—support that takes a week to respond, SDRs who won’t send emails, qualification that relies on “fill out this form and hope.” Deploy there first. Stair-step your deployment\n.",
+          "file_path": "gd_03663f68906e5fe37d85d810",
+          "chunk_id": "gd_03663f68906e5fe37d85d810-chunk-005"
+        },
+        {
+          "reference_id": "5",
+          "content": "worked.  Once they added a sales team, NRR and cohort retention went way, way up:\nEventually, almost everyone\nadds a sales team\n.  Zoom did, Slack did, Monday did, Asana did.  Not always on Day 1.  But do it right, and magic happens.",
+          "file_path": "gd_aafe6164084bc84cbf056a39",
+          "chunk_id": "gd_aafe6164084bc84cbf056a39-chunk-003"
+        },
+        {
+          "reference_id": "6",
+          "content": "get there\neventually\n.  Some get there earlier, like Zoom.  Some never really do.  It’s hard to balance growth and high operating margins and profits.  HubSpot is being deliberate.   They’ve increased operating margins to 8% today, on the long-term path to 20%.  But they haven’t rushed it.  In fact, both R&D and sales and marketing investments have stayed consistent, with only G&A declining:\nWow, what a story.\nBe inspired, especially if you sell to SMBs.  Challenge yourself, that yes, you can go from 75% NRR to 110% NRR selling to SMBs.  Challenge yourself to really learn about “the channel” and what it can do for you.  And remember how critical going multi-product is.  Where are you on that journey?",
+          "file_path": "gd_3aee61f2fda0aaba4b885eac",
+          "chunk_id": "gd_3aee61f2fda0aaba4b885eac-chunk-003"
+        },
+        {
+          "reference_id": "1",
+          "content": "Having high net revenue / dollar retention is the magic of SaaS.  If you have 120% NRR, you double in less than 5 years, even with no new customers!  Above that, and you really get into magical compounding growth.\nBut … high NRR can also mask issues.  I see this so often:\n\n1. High NRR can mask mediocre growth in new logos and customers.  This is issue #1\n.\nYou need to be careful in a high NRR environment that customer count is still growing fast enough.  High NRR can hide it.  With 150% NRR, you can “hide” just 20%-30% or so new customer growth and it will be hard to see that slow growth in new customers in the revenue growth numbers.\n\n2.  High NRR can mask logo churn\n.\nI also see this, in high NRR environments, there isn’t enough talk about logo churn.  Losing a few $10k customers seems OK if you upsold $100k.  Again, the high NRR can mask the customer loses.  But your losing your future if you lose more customers than you need to.\n\n3. High NRR can mask a lot of mediocre customer success reps\n. I know this is a bit controversial, but it’s true. In low NRR environments, everyone can see the customer success folks that are underperforming. LIke you can see it in sales. But when the product organically has 120%+ NRR, everyone sort of gets a pass. So just a few thoughts:\nFirst, strive for new logo growth of at least 50% of your total revenue growth\n. I.e., if you’re growing 100% a year, strive for at least 50% growth in new customers and revenue from new accounts. Once the ratio starts to tilt past 2:1 of your",
+          "file_path": "gd_1533cc903c2153ac92a1a879",
+          "chunk_id": "gd_1533cc903c2153ac92a1a879-chunk-000"
+        },
+        {
+          "reference_id": "7",
+          "content": "ators. #10. Get on the road. Go visit customers and prospects Show up to your bigger deals in person much more often. Be at all top events in your industry — your customers will be. This always gives your a boost, at very little additional cost beyond time and a few tickets & hotels. Applying the above can often extend your cash runway 20%-30% right there. Without impacting growth at all.",
+          "file_path": "gd_81cb113e66af3876fd2fc794",
+          "chunk_id": "gd_81cb113e66af3876fd2fc794-chunk-002"
+        },
+        {
+          "reference_id": "8",
+          "content": "expansion per se.  But some do.  Some VPs of CS do have a bit of the sales leader in them.  And when those ones do want to own expansion, it can be powerful.  In that case, they own the entire NRR number for the company.\n5. In these models, companies need to have a way to control the quality of new deals; one company measures sales team members based upon the “quality” (adoption/retention) of their new deals\nChurn-and-burn and low-quality deals are the nemesis of Customer Success.  I don’t view this as big of a deal as Nick does — I think this works itself out in the end.  But it’s definitely a stressor, and a good one, when commissions are tied to NRR.",
+          "file_path": "gd_1e47900557b44bbcae52ed54",
+          "chunk_id": "gd_1e47900557b44bbcae52ed54-chunk-002"
+        },
+        {
+          "reference_id": "9",
+          "content": "3M ARR:\nNeed 50% growth\n>$20M ARR:\nNeed just 31% growth\nWhat this means for you:\nStop comparing yourself to companies with different ARR levels\nUnderstand that growth gets harder as you scale (and that’s normal)\nYour investors should have different expectations based on your size\nThe takeaway:\nContext is everything. Know where you stand relative to your actual peer group, not the entire SaaS universe.\nLearning #3: The NRR Superpower – This One Metric Can Transform Your Entire Business\nHere’s a stat that should make every SaaS executive stop what they’re doing:\nCompanies with the highest Net Revenue Retention report median growth that is 83% higher than the population median.\nThe data reveals a clear exponential relationship:\nBelow 90% NRR:\n15% median growth\n90-100% NRR:\n15% median growth\n100-110% NRR:\n20% median growth\n110-120% NRR:\n30% median growth\n120-130% NRR:\n32% median growth\nAbove 130% NRR:\n44% median growth\nThis is what SaaS Capital calls “a rare example of increasing returns from investment in upsells and cross-sells.”\nWhy this matters:\nMoving from 90-100% NRR to 100-110% NRR adds 5 percentage points of growth\nThe impact is cumulative – it compounds year after year\nUnlike acquisition-driven growth, retention-driven growth is more predictable and valuable\nWhat this means for you:\nStop obsessing over new customer acquisition if your NRR is below 100%\nInvest heavily in customer success, upselling, and expansion revenue\nTrack NRR as closely as you track new ARR\nThe takeaway\n:\nNRR isn’t just a metric – it’s your growth engine. Master it, and you’ll outperform 83% of your peers.\nLearning #4: The Equity vs. Bootstrap Reality – Paying for Growth Has Hidden Costs",
+          "file_path": "gd_78a8331869cec9a0326358f9",
+          "chunk_id": "gd_78a8331869cec9a0326358f9-chunk-002"
+        },
+        {
+          "reference_id": "10",
+          "content": "The other day Nick Mehta CEO of Gainsight invited me to talk about the latest trends in Customer Success.  The full session is below.  A few points we dove in on:\nShould your VP of CS be most focused on NRR or Churn?\nThe real answer is often — whatever they are best at.\nWe now know at scale, the #1 best thing you can do to drive NRR up is add a second (or third) great product\n.  From Box to Datadog, NRR is highest when your larger customers love you so much, they buy 2+ products from you.\nEvery SaaS startup now has 2-10 public SaaS companies that are somewhat similar in customer make-up and product.  Aim for churn at least as low as they have\n.  Are you like HubSpot or Shopify?  Aim for at least 100% NRR.  Like Twilio or Gitlab?  Aim for 140%.  Etc. etc.  If you aren’t there yet, that’s job #1 in customer success.\nMuch more below:",
+          "file_path": "gd_6ac1c91f4cda2d936c6e05c7",
+          "chunk_id": "gd_6ac1c91f4cda2d936c6e05c7-chunk-000"
+        },
+        {
+          "reference_id": "11",
+          "content": "a bit in the 2021 Boom.  If you’re stuck with any underperformers, just humanely move on from them in January.  There’s no room to carry them anymore.  Move on from your worst reps that don’t really close.  And perhaps most important, move on from mediocre customer success folks.  You need the team sharp to retain your customers in 2023.  Not folks phoning it in.  More\nhere\n.\n\n#8.  Promote your best, get extra grants to the best\n.  Hopefully, you already did this at the end of the year.  But if not, it’s OK.  Promote your top few ICs, and if you can, promote a Director to VP.  And whether you promote them or not, get extra stock grants to your Top 10% hires.  Those are the keepers.  More\nhere\n.\n\n#9. Do a better job communicating with your investors\n.  Almost everyone got a bit slack here during the Boom.  If you ever want any more help from your VCs and other investors, you have to communicate.  Do prompt monthly updates.  Do real board meetings every 8-10 weeks.  Do a real budget, and get it approved.  More\nhere\n.\n\n#10.  At least grow faster than the competition\n.  If times are more challenging in your space, at least challenge the team to do well on a relative basis.  Really find out how your Top 2-3 competitors are doing.  And at least grow faster than them.  At least take market share.  That’s a win and a victory right there.  More\nhere\n.",
+          "file_path": "gd_e23054549f6afebbe65a7649",
+          "chunk_id": "gd_e23054549f6afebbe65a7649-chunk-002"
+        }
+      ],
+      "references": [
+        {
+          "reference_id": "1",
+          "file_path": "gd_1533cc903c2153ac92a1a879"
+        },
+        {
+          "reference_id": "2",
+          "file_path": "gd_e4735d696b4fc29d7ad881a1"
+        },
+        {
+          "reference_id": "3",
+          "file_path": "gd_e3052debb61086184aea82f0"
+        },
+        {
+          "reference_id": "4",
+          "file_path": "gd_03663f68906e5fe37d85d810"
+        },
+        {
+          "reference_id": "5",
+          "file_path": "gd_aafe6164084bc84cbf056a39"
+        },
+        {
+          "reference_id": "6",
+          "file_path": "gd_3aee61f2fda0aaba4b885eac"
+        },
+        {
+          "reference_id": "7",
+          "file_path": "gd_81cb113e66af3876fd2fc794"
+        },
+        {
+          "reference_id": "8",
+          "file_path": "gd_1e47900557b44bbcae52ed54"
+        },
+        {
+          "reference_id": "9",
+          "file_path": "gd_78a8331869cec9a0326358f9"
+        },
+        {
+          "reference_id": "10",
+          "file_path": "gd_6ac1c91f4cda2d936c6e05c7"
+        },
+        {
+          "reference_id": "11",
+          "file_path": "gd_e23054549f6afebbe65a7649"
+        }
+      ]
+    },
+    "metadata": {
+      "query_mode": "hybrid",
+      "keywords": {
+        "high_level": [
+          "NRR Zombie"
+        ],
+        "low_level": [
+          "What to Do"
+        ]
+      },
+      "processing_info": {
+        "total_entities_found": 42,
+        "total_relations_found": 139,
+        "entities_after_truncation": 23,
+        "relations_after_truncation": 139,
+        "merged_chunks_count": 168,
+        "final_chunks_count": 12
+      }
+    },
+    "query": "What to Do If You’re An NRR Zombie"
+  },
+  "retrieval_seconds": 13.998,
+  "graph_summary": {
+    "status": "recorded",
+    "raw_entity_count": 23,
+    "raw_relationship_count": 139,
+    "raw_chunk_count": 12,
+    "entity_description_count": 23,
+    "entity_descriptions_nonempty": 23,
+    "entity_description_available": true,
+    "excluded_reason_counts": {
+      "omission_marker_span": 1,
+      "generated_summary_not_a_source_span": 162
+    },
+    "accepted_relationships": 27,
+    "rejected_relationships": 109,
+    "quarantined_relationships": 3,
+    "relationship_reason_counts": {
+      "generated_summary_not_supported_by_source": 57,
+      "weak_entity_name": 41,
+      "endpoints_not_in_source": 11,
+      "unresolved_conflict": 3
+    },
+    "missing_source_or_provenance_exclusions": 0,
+    "relationship_validation_status": "recorded",
+    "two_hop_path_count": 0,
+    "two_hop_path_available": false,
+    "path_status": "recorded",
+    "normalization": {
+      "payload_shape": "aquery_data",
+      "mode": "hybrid",
+      "entity_descriptions_not_retained": 0,
+      "malformed_records": 0,
+      "notes": [
+        "hits_already_budgeted_raw_chunks_not_added",
+        "validated_against_supplied_catalog"
+      ],
+      "validation_contract": "source-verified-relationship-v1",
+      "separator": "<SEP>",
+      "profile": "multihop",
+      "direct_edges": 27,
+      "paths": 24,
+      "withheld_edges": 112
+    },
+    "direct_edge_count": 27
+  }
+}

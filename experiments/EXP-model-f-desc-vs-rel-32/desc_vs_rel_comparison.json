@@ -1,0 +1,1184 @@
+{
+  "arms": {
+    "F-DESC": {
+      "citation_leak_rate": 0.0,
+      "copy_failure_rate": 0.038461538461538464,
+      "copy_or_leak_failure_rate": 0.038461538461538464,
+      "echo_adjusted_pass_rate": 0.3076923076923077,
+      "echo_rate": 0.38461538461538464,
+      "graph_context_absent": 1,
+      "graph_context_supplied": 25,
+      "mean_generation_seconds": 18.236576923076925,
+      "mean_graph_context_tokens": 56.19230769230769,
+      "mean_prompt_tokens": 699.9615384615385,
+      "n": 26,
+      "numeric_failure_rate": 0.23076923076923078,
+      "scorer_faithfulness_pass_rate": 0.5384615384615384,
+      "window_omissions": 0
+    },
+    "F-REL": {
+      "citation_leak_rate": 0.038461538461538464,
+      "copy_failure_rate": 0.038461538461538464,
+      "copy_or_leak_failure_rate": 0.038461538461538464,
+      "echo_adjusted_pass_rate": 0.34615384615384615,
+      "echo_rate": 0.3076923076923077,
+      "graph_context_absent": 0,
+      "graph_context_supplied": 26,
+      "mean_generation_seconds": 17.142115384615384,
+      "mean_graph_context_tokens": 58.30769230769231,
+      "mean_prompt_tokens": 789.0769230769231,
+      "n": 26,
+      "numeric_failure_rate": 0.15384615384615385,
+      "scorer_faithfulness_pass_rate": 0.5384615384615384,
+      "window_omissions": 0
+    }
+  },
+  "compared_question_ids": [
+    "q_dev_fact_acquirer",
+    "q_dev_fact_acquirer_target",
+    "q_worst_mishire",
+    "q_dev_entity_acquisition_parties",
+    "q_dev_entity_speaker",
+    "q_dev_entity_sales_role",
+    "q_cap_table",
+    "q_dev_rel_director_promotion",
+    "q_dev_hop_share_and_playbook",
+    "q_dev_hop_vp_and_craft",
+    "q_boom_promotions",
+    "q_dev_time_valuation_vs_price",
+    "q_dev_time_boom_vs_later",
+    "q_dev_time_two_updates",
+    "q_vp_sales_tension",
+    "q_b2c_playbook",
+    "q_dev_conflict_second_check",
+    "q_dev_conflict_craft",
+    "q_personalized_saas_speaker",
+    "q_dev_attr_speaker_role",
+    "q_dev_attr_lemkin_or_speaker",
+    "q_dev_attr_second_check_speaker",
+    "q_dev_unans_private_board",
+    "q_dev_unans_headcount",
+    "q_dev_unans_dinner_chart",
+    "q_dev_fact_niche_boundary"
+  ],
+  "context_tokens_are_not_a_score": true,
+  "echo_detection": [
+    "repeats_topic",
+    "embeds_topic"
+  ],
+  "echo_is_not_a_win": true,
+  "experiment_id": "EXP-20261102-003-model-f-desc-vs-rel",
+  "graph_evidence_is_a_score": false,
+  "incomplete_question_ids": [
+    "q_investor_update",
+    "q_dev_hop_update_and_cap_table"
+  ],
+  "per_medium": {
+    "blog": {
+      "n": 7,
+      "ties": 5,
+      "wins": {
+        "F-DESC": 1,
+        "F-REL": 1
+      }
+    },
+    "linkedin": {
+      "n": 7,
+      "ties": 6,
+      "wins": {
+        "F-DESC": 0,
+        "F-REL": 1
+      }
+    },
+    "talk": {
+      "n": 6,
+      "ties": 2,
+      "wins": {
+        "F-DESC": 2,
+        "F-REL": 2
+      }
+    },
+    "x": {
+      "n": 6,
+      "ties": 5,
+      "wins": {
+        "F-DESC": 1,
+        "F-REL": 0
+      }
+    }
+  },
+  "per_question": [
+    {
+      "arms": {
+        "F-DESC": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": true,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 25.019,
+          "graph_channel_tokens": 71,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 71,
+          "numeric_failure": true,
+          "prompt_tokens": 838,
+          "scorer_faithfulness_pass": false,
+          "window_omitted": 0
+        },
+        "F-REL": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 29.822,
+          "graph_channel_tokens": 76,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 76,
+          "numeric_failure": false,
+          "prompt_tokens": 962,
+          "scorer_faithfulness_pass": false,
+          "window_omitted": 0
+        }
+      },
+      "medium": "blog",
+      "phenomenon": "factual",
+      "question_id": "q_dev_fact_acquirer",
+      "winner": "tie"
+    },
+    {
+      "arms": {
+        "F-DESC": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 21.464,
+          "graph_channel_tokens": 67,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 67,
+          "numeric_failure": true,
+          "prompt_tokens": 716,
+          "scorer_faithfulness_pass": false,
+          "window_omitted": 0
+        },
+        "F-REL": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": true,
+          "generation_seconds": 12.732,
+          "graph_channel_tokens": 73,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 73,
+          "numeric_failure": false,
+          "prompt_tokens": 865,
+          "scorer_faithfulness_pass": true,
+          "window_omitted": 0
+        }
+      },
+      "medium": "linkedin",
+      "phenomenon": "factual",
+      "question_id": "q_dev_fact_acquirer_target",
+      "winner": "F-REL"
+    },
+    {
+      "arms": {
+        "F-DESC": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": true,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 2.878,
+          "graph_channel_tokens": 29,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 29,
+          "numeric_failure": false,
+          "prompt_tokens": 579,
+          "scorer_faithfulness_pass": false,
+          "window_omitted": 0
+        },
+        "F-REL": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": true,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 5.149,
+          "graph_channel_tokens": 27,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 27,
+          "numeric_failure": false,
+          "prompt_tokens": 579,
+          "scorer_faithfulness_pass": false,
+          "window_omitted": 0
+        }
+      },
+      "medium": "x",
+      "phenomenon": "entity_identification",
+      "question_id": "q_worst_mishire",
+      "winner": "tie"
+    },
+    {
+      "arms": {
+        "F-DESC": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 29.729,
+          "graph_channel_tokens": 70,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 70,
+          "numeric_failure": true,
+          "prompt_tokens": 730,
+          "scorer_faithfulness_pass": false,
+          "window_omitted": 0
+        },
+        "F-REL": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 25.224,
+          "graph_channel_tokens": 75,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 75,
+          "numeric_failure": true,
+          "prompt_tokens": 805,
+          "scorer_faithfulness_pass": false,
+          "window_omitted": 0
+        }
+      },
+      "medium": "talk",
+      "phenomenon": "entity_identification",
+      "question_id": "q_dev_entity_acquisition_parties",
+      "winner": "tie"
+    },
+    {
+      "arms": {
+        "F-DESC": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 25.537,
+          "graph_channel_tokens": 65,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 65,
+          "numeric_failure": false,
+          "prompt_tokens": 979,
+          "scorer_faithfulness_pass": false,
+          "window_omitted": 0
+        },
+        "F-REL": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 17.853,
+          "graph_channel_tokens": 47,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 47,
+          "numeric_failure": false,
+          "prompt_tokens": 1062,
+          "scorer_faithfulness_pass": false,
+          "window_omitted": 0
+        }
+      },
+      "medium": "blog",
+      "phenomenon": "entity_identification",
+      "question_id": "q_dev_entity_speaker",
+      "winner": "tie"
+    },
+    {
+      "arms": {
+        "F-DESC": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": true,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 17.171,
+          "graph_channel_tokens": 70,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 70,
+          "numeric_failure": false,
+          "prompt_tokens": 721,
+          "scorer_faithfulness_pass": true,
+          "window_omitted": 0
+        },
+        "F-REL": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": true,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 22.535,
+          "graph_channel_tokens": 73,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 73,
+          "numeric_failure": false,
+          "prompt_tokens": 998,
+          "scorer_faithfulness_pass": true,
+          "window_omitted": 0
+        }
+      },
+      "medium": "linkedin",
+      "phenomenon": "entity_identification",
+      "question_id": "q_dev_entity_sales_role",
+      "winner": "tie"
+    },
+    {
+      "arms": {
+        "F-DESC": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": true,
+          "generation_seconds": 14.539,
+          "graph_channel_tokens": 30,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 30,
+          "numeric_failure": false,
+          "prompt_tokens": 655,
+          "scorer_faithfulness_pass": true,
+          "window_omitted": 0
+        },
+        "F-REL": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": true,
+          "generation_seconds": 14.957,
+          "graph_channel_tokens": 33,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 33,
+          "numeric_failure": false,
+          "prompt_tokens": 735,
+          "scorer_faithfulness_pass": true,
+          "window_omitted": 0
+        }
+      },
+      "medium": "x",
+      "phenomenon": "direct_relationship",
+      "question_id": "q_cap_table",
+      "winner": "tie"
+    },
+    {
+      "arms": {
+        "F-DESC": {
+          "citation_leak": null,
+          "copy_failure": null,
+          "copy_or_leak_failure": null,
+          "echo": null,
+          "echo_adjusted_pass": null,
+          "generation_seconds": null,
+          "graph_channel_tokens": null,
+          "graph_context_supplied": null,
+          "graph_context_tokens": 0,
+          "numeric_failure": null,
+          "prompt_tokens": null,
+          "scorer_faithfulness_pass": null,
+          "window_omitted": 0
+        },
+        "F-REL": {
+          "citation_leak": null,
+          "copy_failure": null,
+          "copy_or_leak_failure": null,
+          "echo": null,
+          "echo_adjusted_pass": null,
+          "generation_seconds": null,
+          "graph_channel_tokens": null,
+          "graph_context_supplied": null,
+          "graph_context_tokens": 0,
+          "numeric_failure": null,
+          "prompt_tokens": null,
+          "scorer_faithfulness_pass": null,
+          "window_omitted": 0
+        }
+      },
+      "medium": "talk",
+      "phenomenon": "direct_relationship",
+      "question_id": "q_investor_update",
+      "winner": "incomplete"
+    },
+    {
+      "arms": {
+        "F-DESC": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": true,
+          "generation_seconds": 14.825,
+          "graph_channel_tokens": 59,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 59,
+          "numeric_failure": false,
+          "prompt_tokens": 786,
+          "scorer_faithfulness_pass": true,
+          "window_omitted": 0
+        },
+        "F-REL": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": true,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 18.374,
+          "graph_channel_tokens": 66,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 66,
+          "numeric_failure": false,
+          "prompt_tokens": 825,
+          "scorer_faithfulness_pass": true,
+          "window_omitted": 0
+        }
+      },
+      "medium": "blog",
+      "phenomenon": "direct_relationship",
+      "question_id": "q_dev_rel_director_promotion",
+      "winner": "F-DESC"
+    },
+    {
+      "arms": {
+        "F-DESC": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": true,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 30.201,
+          "graph_channel_tokens": 64,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 64,
+          "numeric_failure": true,
+          "prompt_tokens": 707,
+          "scorer_faithfulness_pass": false,
+          "window_omitted": 0
+        },
+        "F-REL": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": true,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 17.966,
+          "graph_channel_tokens": 70,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 70,
+          "numeric_failure": false,
+          "prompt_tokens": 775,
+          "scorer_faithfulness_pass": true,
+          "window_omitted": 0
+        }
+      },
+      "medium": "linkedin",
+      "phenomenon": "multi_hop",
+      "question_id": "q_dev_hop_share_and_playbook",
+      "winner": "tie"
+    },
+    {
+      "arms": {
+        "F-DESC": {
+          "citation_leak": null,
+          "copy_failure": null,
+          "copy_or_leak_failure": null,
+          "echo": null,
+          "echo_adjusted_pass": null,
+          "generation_seconds": null,
+          "graph_channel_tokens": null,
+          "graph_context_supplied": null,
+          "graph_context_tokens": 0,
+          "numeric_failure": null,
+          "prompt_tokens": null,
+          "scorer_faithfulness_pass": null,
+          "window_omitted": 0
+        },
+        "F-REL": {
+          "citation_leak": null,
+          "copy_failure": null,
+          "copy_or_leak_failure": null,
+          "echo": null,
+          "echo_adjusted_pass": null,
+          "generation_seconds": null,
+          "graph_channel_tokens": null,
+          "graph_context_supplied": null,
+          "graph_context_tokens": 0,
+          "numeric_failure": null,
+          "prompt_tokens": null,
+          "scorer_faithfulness_pass": null,
+          "window_omitted": 0
+        }
+      },
+      "medium": "x",
+      "phenomenon": "multi_hop",
+      "question_id": "q_dev_hop_update_and_cap_table",
+      "winner": "incomplete"
+    },
+    {
+      "arms": {
+        "F-DESC": {
+          "citation_leak": false,
+          "copy_failure": true,
+          "copy_or_leak_failure": true,
+          "echo": false,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 26.097,
+          "graph_channel_tokens": 62,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 62,
+          "numeric_failure": false,
+          "prompt_tokens": 667,
+          "scorer_faithfulness_pass": false,
+          "window_omitted": 0
+        },
+        "F-REL": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": true,
+          "generation_seconds": 17.525,
+          "graph_channel_tokens": 76,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 76,
+          "numeric_failure": false,
+          "prompt_tokens": 855,
+          "scorer_faithfulness_pass": true,
+          "window_omitted": 0
+        }
+      },
+      "medium": "talk",
+      "phenomenon": "multi_hop",
+      "question_id": "q_dev_hop_vp_and_craft",
+      "winner": "F-REL"
+    },
+    {
+      "arms": {
+        "F-DESC": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": true,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 14.689,
+          "graph_channel_tokens": 73,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 73,
+          "numeric_failure": false,
+          "prompt_tokens": 702,
+          "scorer_faithfulness_pass": true,
+          "window_omitted": 0
+        },
+        "F-REL": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": true,
+          "generation_seconds": 25.415,
+          "graph_channel_tokens": 68,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 68,
+          "numeric_failure": false,
+          "prompt_tokens": 711,
+          "scorer_faithfulness_pass": true,
+          "window_omitted": 0
+        }
+      },
+      "medium": "blog",
+      "phenomenon": "temporal_comparison",
+      "question_id": "q_boom_promotions",
+      "winner": "F-REL"
+    },
+    {
+      "arms": {
+        "F-DESC": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 19.598,
+          "graph_channel_tokens": 68,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 68,
+          "numeric_failure": true,
+          "prompt_tokens": 633,
+          "scorer_faithfulness_pass": false,
+          "window_omitted": 0
+        },
+        "F-REL": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 14.112,
+          "graph_channel_tokens": 73,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 73,
+          "numeric_failure": true,
+          "prompt_tokens": 755,
+          "scorer_faithfulness_pass": false,
+          "window_omitted": 0
+        }
+      },
+      "medium": "linkedin",
+      "phenomenon": "temporal_comparison",
+      "question_id": "q_dev_time_valuation_vs_price",
+      "winner": "tie"
+    },
+    {
+      "arms": {
+        "F-DESC": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": true,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 12.84,
+          "graph_channel_tokens": 27,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 27,
+          "numeric_failure": false,
+          "prompt_tokens": 721,
+          "scorer_faithfulness_pass": true,
+          "window_omitted": 0
+        },
+        "F-REL": {
+          "citation_leak": true,
+          "copy_failure": true,
+          "copy_or_leak_failure": true,
+          "echo": true,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 13.154,
+          "graph_channel_tokens": 28,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 28,
+          "numeric_failure": false,
+          "prompt_tokens": 719,
+          "scorer_faithfulness_pass": false,
+          "window_omitted": 0
+        }
+      },
+      "medium": "x",
+      "phenomenon": "temporal_comparison",
+      "question_id": "q_dev_time_boom_vs_later",
+      "winner": "F-DESC"
+    },
+    {
+      "arms": {
+        "F-DESC": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": true,
+          "generation_seconds": 29.757,
+          "graph_channel_tokens": 71,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 71,
+          "numeric_failure": false,
+          "prompt_tokens": 700,
+          "scorer_faithfulness_pass": true,
+          "window_omitted": 0
+        },
+        "F-REL": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": true,
+          "generation_seconds": 14.685,
+          "graph_channel_tokens": 29,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 29,
+          "numeric_failure": false,
+          "prompt_tokens": 685,
+          "scorer_faithfulness_pass": true,
+          "window_omitted": 0
+        }
+      },
+      "medium": "talk",
+      "phenomenon": "temporal_comparison",
+      "question_id": "q_dev_time_two_updates",
+      "winner": "tie"
+    },
+    {
+      "arms": {
+        "F-DESC": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 27.331,
+          "graph_channel_tokens": 71,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 71,
+          "numeric_failure": false,
+          "prompt_tokens": 665,
+          "scorer_faithfulness_pass": false,
+          "window_omitted": 0
+        },
+        "F-REL": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 15.672,
+          "graph_channel_tokens": 76,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 76,
+          "numeric_failure": false,
+          "prompt_tokens": 694,
+          "scorer_faithfulness_pass": false,
+          "window_omitted": 0
+        }
+      },
+      "medium": "blog",
+      "phenomenon": "conflicting_evidence",
+      "question_id": "q_vp_sales_tension",
+      "winner": "tie"
+    },
+    {
+      "arms": {
+        "F-DESC": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 22.083,
+          "graph_channel_tokens": 63,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 63,
+          "numeric_failure": false,
+          "prompt_tokens": 634,
+          "scorer_faithfulness_pass": false,
+          "window_omitted": 0
+        },
+        "F-REL": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 18.871,
+          "graph_channel_tokens": 66,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 66,
+          "numeric_failure": false,
+          "prompt_tokens": 714,
+          "scorer_faithfulness_pass": false,
+          "window_omitted": 0
+        }
+      },
+      "medium": "linkedin",
+      "phenomenon": "conflicting_evidence",
+      "question_id": "q_b2c_playbook",
+      "winner": "tie"
+    },
+    {
+      "arms": {
+        "F-DESC": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": true,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 2.038,
+          "graph_channel_tokens": 28,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 28,
+          "numeric_failure": false,
+          "prompt_tokens": 564,
+          "scorer_faithfulness_pass": true,
+          "window_omitted": 0
+        },
+        "F-REL": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": true,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 2.137,
+          "graph_channel_tokens": 31,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 31,
+          "numeric_failure": false,
+          "prompt_tokens": 674,
+          "scorer_faithfulness_pass": true,
+          "window_omitted": 0
+        }
+      },
+      "medium": "x",
+      "phenomenon": "conflicting_evidence",
+      "question_id": "q_dev_conflict_second_check",
+      "winner": "tie"
+    },
+    {
+      "arms": {
+        "F-DESC": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": true,
+          "generation_seconds": 39.314,
+          "graph_channel_tokens": 58,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 58,
+          "numeric_failure": false,
+          "prompt_tokens": 654,
+          "scorer_faithfulness_pass": true,
+          "window_omitted": 0
+        },
+        "F-REL": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 30.835,
+          "graph_channel_tokens": 76,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 76,
+          "numeric_failure": false,
+          "prompt_tokens": 657,
+          "scorer_faithfulness_pass": false,
+          "window_omitted": 0
+        }
+      },
+      "medium": "talk",
+      "phenomenon": "conflicting_evidence",
+      "question_id": "q_dev_conflict_craft",
+      "winner": "F-DESC"
+    },
+    {
+      "arms": {
+        "F-DESC": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": true,
+          "generation_seconds": 25.141,
+          "graph_channel_tokens": 68,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 68,
+          "numeric_failure": false,
+          "prompt_tokens": 813,
+          "scorer_faithfulness_pass": true,
+          "window_omitted": 0
+        },
+        "F-REL": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": true,
+          "generation_seconds": 12.973,
+          "graph_channel_tokens": 71,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 71,
+          "numeric_failure": false,
+          "prompt_tokens": 888,
+          "scorer_faithfulness_pass": true,
+          "window_omitted": 0
+        }
+      },
+      "medium": "blog",
+      "phenomenon": "attribution",
+      "question_id": "q_personalized_saas_speaker",
+      "winner": "tie"
+    },
+    {
+      "arms": {
+        "F-DESC": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": true,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 10.041,
+          "graph_channel_tokens": 63,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 63,
+          "numeric_failure": false,
+          "prompt_tokens": 638,
+          "scorer_faithfulness_pass": true,
+          "window_omitted": 0
+        },
+        "F-REL": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": true,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 13.317,
+          "graph_channel_tokens": 70,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 70,
+          "numeric_failure": false,
+          "prompt_tokens": 841,
+          "scorer_faithfulness_pass": true,
+          "window_omitted": 0
+        }
+      },
+      "medium": "linkedin",
+      "phenomenon": "attribution",
+      "question_id": "q_dev_attr_speaker_role",
+      "winner": "tie"
+    },
+    {
+      "arms": {
+        "F-DESC": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": true,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 6.91,
+          "graph_channel_tokens": 0,
+          "graph_context_supplied": false,
+          "graph_context_tokens": 0,
+          "numeric_failure": false,
+          "prompt_tokens": 530,
+          "scorer_faithfulness_pass": false,
+          "window_omitted": 0
+        },
+        "F-REL": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": true,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 1.968,
+          "graph_channel_tokens": 23,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 23,
+          "numeric_failure": false,
+          "prompt_tokens": 570,
+          "scorer_faithfulness_pass": false,
+          "window_omitted": 0
+        }
+      },
+      "medium": "x",
+      "phenomenon": "attribution",
+      "question_id": "q_dev_attr_lemkin_or_speaker",
+      "winner": "tie"
+    },
+    {
+      "arms": {
+        "F-DESC": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": true,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 6.766,
+          "graph_channel_tokens": 68,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 68,
+          "numeric_failure": false,
+          "prompt_tokens": 737,
+          "scorer_faithfulness_pass": true,
+          "window_omitted": 0
+        },
+        "F-REL": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": true,
+          "generation_seconds": 15.775,
+          "graph_channel_tokens": 53,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 53,
+          "numeric_failure": false,
+          "prompt_tokens": 904,
+          "scorer_faithfulness_pass": true,
+          "window_omitted": 0
+        }
+      },
+      "medium": "talk",
+      "phenomenon": "attribution",
+      "question_id": "q_dev_attr_second_check_speaker",
+      "winner": "F-REL"
+    },
+    {
+      "arms": {
+        "F-DESC": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 25.253,
+          "graph_channel_tokens": 73,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 73,
+          "numeric_failure": true,
+          "prompt_tokens": 696,
+          "scorer_faithfulness_pass": false,
+          "window_omitted": 0
+        },
+        "F-REL": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 27.947,
+          "graph_channel_tokens": 64,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 64,
+          "numeric_failure": true,
+          "prompt_tokens": 902,
+          "scorer_faithfulness_pass": false,
+          "window_omitted": 0
+        }
+      },
+      "medium": "blog",
+      "phenomenon": "unanswerable",
+      "question_id": "q_dev_unans_private_board",
+      "winner": "tie"
+    },
+    {
+      "arms": {
+        "F-DESC": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": true,
+          "generation_seconds": 8.091,
+          "graph_channel_tokens": 70,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 70,
+          "numeric_failure": false,
+          "prompt_tokens": 707,
+          "scorer_faithfulness_pass": true,
+          "window_omitted": 0
+        },
+        "F-REL": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": true,
+          "generation_seconds": 18.963,
+          "graph_channel_tokens": 69,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 69,
+          "numeric_failure": false,
+          "prompt_tokens": 794,
+          "scorer_faithfulness_pass": true,
+          "window_omitted": 0
+        }
+      },
+      "medium": "linkedin",
+      "phenomenon": "unanswerable",
+      "question_id": "q_dev_unans_headcount",
+      "winner": "tie"
+    },
+    {
+      "arms": {
+        "F-DESC": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": true,
+          "generation_seconds": 3.862,
+          "graph_channel_tokens": 27,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 27,
+          "numeric_failure": false,
+          "prompt_tokens": 754,
+          "scorer_faithfulness_pass": true,
+          "window_omitted": 0
+        },
+        "F-REL": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": true,
+          "generation_seconds": 10.438,
+          "graph_channel_tokens": 33,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 33,
+          "numeric_failure": false,
+          "prompt_tokens": 761,
+          "scorer_faithfulness_pass": true,
+          "window_omitted": 0
+        }
+      },
+      "medium": "x",
+      "phenomenon": "unanswerable",
+      "question_id": "q_dev_unans_dinner_chart",
+      "winner": "tie"
+    },
+    {
+      "arms": {
+        "F-DESC": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": true,
+          "generation_seconds": 12.977,
+          "graph_channel_tokens": 46,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 46,
+          "numeric_failure": false,
+          "prompt_tokens": 673,
+          "scorer_faithfulness_pass": true,
+          "window_omitted": 0
+        },
+        "F-REL": {
+          "citation_leak": false,
+          "copy_failure": false,
+          "copy_or_leak_failure": false,
+          "echo": false,
+          "echo_adjusted_pass": false,
+          "generation_seconds": 27.296,
+          "graph_channel_tokens": 70,
+          "graph_context_supplied": true,
+          "graph_context_tokens": 70,
+          "numeric_failure": true,
+          "prompt_tokens": 786,
+          "scorer_faithfulness_pass": false,
+          "window_omitted": 0
+        }
+      },
+      "medium": "talk",
+      "phenomenon": "factual",
+      "question_id": "q_dev_fact_niche_boundary",
+      "winner": "F-DESC"
+    }
+  ],
+  "question_ties": 18,
+  "question_wins": {
+    "F-DESC": 4,
+    "F-REL": 4
+  },
+  "rule": "Compare only questions where F-REL and F-DESC are both complete. Primary key: echo-adjusted faithfulness. A cell counts as a pass only when the existing deterministic faithfulness check passes and the saved answer is not a question echo. Echoes use repeats_topic and embeds_topic and are not a factual success. Secondary key: source-copy or citation-leak failure rate from the existing scorer. An arm wins only when its primary rate is strictly higher, or the primary rates tie and its secondary failure rate is strictly lower. Equal primary and secondary rates are inconclusive. Numeric failures, prompt length, latency, graph-context tokens, and omission counts are reported and are not used to choose an arm. A higher context-token count is not higher factual quality.",
+  "schema": "model-f-desc-vs-rel-v1",
+  "scorer_rows_unchanged": true
+}

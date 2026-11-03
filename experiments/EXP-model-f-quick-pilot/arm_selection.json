@@ -1,0 +1,22 @@
+{
+  "complete_question_ids": [
+    "q_brex_price",
+    "q_dev_hop_valuation_and_price",
+    "q_cvc_second_check",
+    "q_dev_unans_halftime",
+    "q_five_percent_share",
+    "q_exec_craft",
+    "q_first_vp_sales",
+    "q_olympics_ceremony"
+  ],
+  "do_not_revise_after_unified_eval": true,
+  "does_not_measure": "persona style, stance, and writing quality",
+  "excluded_incomplete_question_ids": [],
+  "experiment_id": "EXP-20261102-002-model-f-quick-pilot",
+  "frozen": true,
+  "graph_context_availability_used_as_score": false,
+  "reason": "no graph arm beat F-SOURCE on factual reliability or copy and leakage",
+  "rule": "Compare only questions where F-SOURCE, F-REL, F-DESC, and F-HOP are all complete. Primary key: faithfulness pass rate from the existing deterministic factual check. Secondary key: source-copy or prompt-leak failure rate. A graph arm is chosen only when it strictly beats F-SOURCE on the primary key, or ties that key and strictly beats F-SOURCE on the secondary key. Usable graph context is reported and is not a score. Retry rate and generation latency break ties only between graph arms that already beat F-SOURCE. A tie, an incomplete pilot, or no such benefit freezes F-SOURCE.",
+  "selected_arm": "F-SOURCE",
+  "status": "fallback"
+}

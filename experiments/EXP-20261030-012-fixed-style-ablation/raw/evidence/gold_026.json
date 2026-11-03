@@ -1,0 +1,133 @@
+{
+  "proposed": [
+    {
+      "source_id": "train_11459",
+      "claim": "Founders can sell to customers and prospects by leveraging their superpowers.",
+      "support_span": "You don’t have to be the World’s Best Salesperson to sell as a founder, you just have to try to sell. And then, there are your superpowers.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_11459",
+      "claim": "Founders can identify their superpowers and double down on them.",
+      "support_span": "The idea is to identify your superpower(s) and double down on it.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_9376",
+      "claim": "Founders should raise 25% more than they think they need.",
+      "support_span": "You always need about 25% more than your raise.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_9376",
+      "claim": "Losing a year to a truly terrible VP hire is a common occurrence.",
+      "support_span": "You’ll lose a year to a truly terrible VP hire.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_9376",
+      "claim": "Competition doesn’t kill a company.",
+      "support_span": "Competition doesn’t kill you.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_9376",
+      "claim": "Not having a 10x feature kills a company.",
+      "support_span": "Not having a 10x feature kills you.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_6479",
+      "claim": "Founders should not hire a co-founder who is not at least as committed as they are.",
+      "support_span": "Make sure they are at least as committed as you are.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_9100",
+      "claim": "Founders should discuss their financial situation and plan for a bridge round if needed.",
+      "support_span": "If you need a bridge round, discuss it — early.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_9100",
+      "claim": "Founders should plan for at least 18-24 months of runway.",
+      "support_span": "Talk about what to do if you have less than 18-24 months of runway.",
+      "claim_type": "fact"
+    }
+  ],
+  "raw_extraction": "[\n  {\n    \"source_id\": \"train_11459\",\n    \"claim\": \"Founders can sell to customers and prospects by leveraging their superpowers.\",\n    \"support_span\": \"You don’t have to be the World’s Best Salesperson to sell as a founder, you just have to try to sell. And then, there are your superpowers.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_11459\",\n    \"claim\": \"Founders can identify their superpowers and double down on them.\",\n    \"support_span\": \"The idea is to identify your superpower(s) and double down on it.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_9376\",\n    \"claim\": \"Founders should raise 25% more than they think they need.\",\n    \"support_span\": \"You always need about 25% more than your raise.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_9376\",\n    \"claim\": \"Losing a year to a truly terrible VP hire is a common occurrence.\",\n    \"support_span\": \"You’ll lose a year to a truly terrible VP hire.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_9376\",\n    \"claim\": \"Competition doesn’t kill a company.\",\n    \"support_span\": \"Competition doesn’t kill you.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_9376\",\n    \"claim\": \"Not having a 10x feature kills a company.\",\n    \"support_span\": \"Not having a 10x feature kills you.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_6479\",\n    \"claim\": \"Founders should not hire a co-founder who is not at least as committed as they are.\",\n    \"support_span\": \"Make sure they are at least as committed as you are.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_9100\",\n    \"claim\": \"Founders should discuss their financial situation and plan for a bridge round if needed.\",\n    \"support_span\": \"If you need a bridge round, discuss it — early.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_9100\",\n    \"claim\": \"Founders should plan for at least 18-24 months of runway.\",\n    \"support_span\": \"Talk about what to do if you have less than 18-24 months of runway.\",\n    \"claim_type\": \"fact\"\n  }\n]",
+  "validation_rejected": [
+    {
+      "source_id": "train_9376",
+      "claim": "Founders should raise 25% more than they think they need.",
+      "support_span": "You always need about 25% more than your raise.",
+      "claim_type": "fact",
+      "reason": "support_not_in_source"
+    },
+    {
+      "source_id": "train_9376",
+      "claim": "Losing a year to a truly terrible VP hire is a common occurrence.",
+      "support_span": "You’ll lose a year to a truly terrible VP hire.",
+      "claim_type": "fact",
+      "reason": "support_not_in_source"
+    },
+    {
+      "source_id": "train_9376",
+      "claim": "Competition doesn’t kill a company.",
+      "support_span": "Competition doesn’t kill you.",
+      "claim_type": "fact",
+      "reason": "support_not_in_source"
+    },
+    {
+      "source_id": "train_9100",
+      "claim": "Founders should discuss their financial situation and plan for a bridge round if needed.",
+      "support_span": "If you need a bridge round, discuss it — early.",
+      "claim_type": "fact",
+      "reason": "interrogative_assertion"
+    }
+  ],
+  "verifier_rejected": [],
+  "verified": [
+    {
+      "source_id": "train_11459",
+      "claim": "Founders can sell to customers and prospects by leveraging their superpowers.",
+      "support_span": "You don’t have to be the World’s Best Salesperson to sell as a founder, you just have to try to sell. And then, there are your superpowers.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_11459",
+      "claim": "Founders can identify their superpowers and double down on them.",
+      "support_span": "The idea is to identify your superpower(s) and double down on it.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_9376",
+      "claim": "Not having a 10x feature kills a company.",
+      "support_span": "Not having a 10x feature kills you.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_6479",
+      "claim": "Founders should not hire a co-founder who is not at least as committed as they are.",
+      "support_span": "Make sure they are at least as committed as you are.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_9100",
+      "claim": "Founders should plan for at least 18-24 months of runway.",
+      "support_span": "Talk about what to do if you have less than 18-24 months of runway.",
+      "claim_type": "fact"
+    }
+  ],
+  "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] Founders can sell to customers and prospects by leveraging their superpowers.\n[E2] Founders can identify their superpowers and double down on them.\n[E3] Not having a 10x feature kills a company.\n[E4] Founders should not hire a co-founder who is not at least as committed as they are.\n[E5] Founders should plan for at least 18-24 months of runway.",
+  "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: How To Not Run Out of Cash as a Founder: 2 Things That Really, Really Help\n\nSource passages:\n[train_11459]\n2. On acquiring customers consistently\nYou may not have that magical sales person, but as a founder, you simply have to sell. Here’s the trick with founder lead sales: customers and prospects love to talk to the CEO. If you can solve a prospect’s problem and you are the CEO leverage that. You don’t have to be the World’s Best Salesperson to sell as a founder, you just have to try to sell. And then, there are your superpowers. In those early days, founders are good at one or two aspects— these are what work well for your company. These are what Jason calls your superpowers. For instance, when Algolia was trying to get off the ground, the co-founder Nicolas Dessaigne often got on the stage at events, which generated a lot of buzz and product interest. He would also attend developer networking events and man a booth. His consistent efforts paid off when Algolia became a known brand among developers. Julien Lemoine, Algolia’s other co-founder, wrote a data-rich blog article comparing Algolia with its top competitor at the time. It was an earnest piece that spoke about instances where the competitor was better than Algolia and vice versa. The article which was well-researched with supporting data brought in consistent leads for a very long time. This generated tons of leads and credibility — before content marketing was even a consideration. The idea is to identify your superpower(s) and double down on it. Most SaaS startup founders have shiny object syndrome— they want to try events, blog articles, partner programs, outbound outreach all at once.\n\n[train_9376]\nDear SaaStr: What Are the 5 Things Every Founder Should Know In the Early Days?\nMy list:\nSlow it down if you don’t have a great co-founder\n. Another idea will come, but it’s almost impossible to thrive without an amazing co-founder.  More\nhere\n.\nYou always need about 25% more than your raise\n. So always raise 25% more than you think you need, even in an angel round. But don’t spend that 25%. Maybe even put it in a different business bank account.  A bit more\nhere\n.\nYou’ll lose a year to a truly terrible VP hire\n. They’ll hire an entire terrible team, your revenue will slow, and they’ll spend a ton of money doing it. You are better off with No VP than a bad one.  More\nhere\n.\nCompetition doesn’t kill you\n. Not having a 10x feature kills you. Giving up kills you. But even the best competitors don’t try to win in every segment of the market. And even the best competitor doesn’t have 100% market share.  More\nhere\n.\nYou can and will grow your TAM (market size) later.\nIt’s OK to start in a small segment of a large market. Better to win there first, usually.  More\nhere\n.\n\n[train_6479]\n#2. Not hiring a 100+% truly committed co-founder.\nI see so many founders just quit now, even just in the first few months. Make sure they are at least as committed as you are. Don’t just assume it.\n\n[train_9100]\n#10. Don’t Run Out of Money\n.  The entire venture industry is under stress this year.  If you need a bridge round, discuss it — early.  Talk about it,  Talk about what to do if you have less than 18-24 months of runway.  Don’t just … run out of money.  You might laugh, but this is far too common.  Founders hide from running out of money, and/or plan way too optimistic financial plans that can’t realistically be hit.\nTo some, this will look like a very basic checklist.  But it isn’t, or at least, isn’t anymore.  Almost everyone stopped doing at least some or even all of this stuff.  But if you don’t, your investors are less likely to be there when you need them.  Not the best look these days.",
+  "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: How To Not Run Out of Cash as a Founder: 2 Things That Really, Really Help\n\nSource passages:\n[train_11459]\n2. On acquiring customers consistently\nYou may not have that magical sales person, but as a founder, you simply have to sell. Here’s the trick with founder lead sales: customers and prospects love to talk to the CEO. If you can solve a prospect’s problem and you are the CEO leverage that. You don’t have to be the World’s Best Salesperson to sell as a founder, you just have to try to sell. And then, there are your superpowers. In those early days, founders are good at one or two aspects— these are what work well for your company. These are what Jason calls your superpowers. For instance, when Algolia was trying to get off the ground, the co-founder Nicolas Dessaigne often got on the stage at events, which generated a lot of buzz and product interest. He would also attend developer networking events and man a booth. His consistent efforts paid off when Algolia became a known brand among developers. Julien Lemoine, Algolia’s other co-founder, wrote a data-rich blog article comparing Algolia with its top competitor at the time. It was an earnest piece that spoke about instances where the competitor was better than Algolia and vice versa. The article which was well-researched with supporting data brought in consistent leads for a very long time. This generated tons of leads and credibility — before content marketing was even a consideration. The idea is to identify your superpower(s) and double down on it. Most SaaS startup founders have shiny object syndrome— they want to try events, blog articles, partner programs, outbound outreach all at once.\n\n[train_9376]\nDear SaaStr: What Are the 5 Things Every Founder Should Know In the Early Days?\nMy list:\nSlow it down if you don’t have a great co-founder\n. Another idea will come, but it’s almost impossible to thrive without an amazing co-founder.  More\nhere\n.\nYou always need about 25% more than your raise\n. So always raise 25% more than you think you need, even in an angel round. But don’t spend that 25%. Maybe even put it in a different business bank account.  A bit more\nhere\n.\nYou’ll lose a year to a truly terrible VP hire\n. They’ll hire an entire terrible team, your revenue will slow, and they’ll spend a ton of money doing it. You are better off with No VP than a bad one.  More\nhere\n.\nCompetition doesn’t kill you\n. Not having a 10x feature kills you. Giving up kills you. But even the best competitors don’t try to win in every segment of the market. And even the best competitor doesn’t have 100% market share.  More\nhere\n.\nYou can and will grow your TAM (market size) later.\nIt’s OK to start in a small segment of a large market. Better to win there first, usually.  More\nhere\n.\n\n[train_6479]\n#2. Not hiring a 100+% truly committed co-founder.\nI see so many founders just quit now, even just in the first few months. Make sure they are at least as committed as you are. Don’t just assume it.\n\n[train_9100]\n#10. Don’t Run Out of Money\n.  The entire venture industry is under stress this year.  If you need a bridge round, discuss it — early.  Talk about it,  Talk about what to do if you have less than 18-24 months of runway.  Don’t just … run out of money.  You might laugh, but this is far too common.  Founders hide from running out of money, and/or plan way too optimistic financial plans that can’t realistically be hit.\nTo some, this will look like a very basic checklist.  But it isn’t, or at least, isn’t anymore.  Almost everyone stopped doing at least some or even all of this stuff.  But if you don’t, your investors are less likely to be there when you need them.  Not the best look these days.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+  "extraction_seconds": 15.039,
+  "verification_seconds": 0.0,
+  "verification_records": [],
+  "allowed_numeric_values": [],
+  "reason": null,
+  "extraction_stop_reason": "eos",
+  "extraction_attempts": 1,
+  "evidence_status": "verified"
+}

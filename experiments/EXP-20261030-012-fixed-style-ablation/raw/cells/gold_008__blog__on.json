@@ -1,0 +1,522 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "topic_id": "gold_008",
+  "medium": "blog",
+  "arm": "on",
+  "seed": 70,
+  "attempts": 1,
+  "evidence_sha256": "f17315854b0c01d49b50def4a692ba6516d8c9bc0e1e06c8878a33638f435dbb",
+  "retrieval_hit_ids": [
+    "train_22819",
+    "train_7403",
+    "train_7765",
+    "train_15003"
+  ],
+  "retrieval_query": "Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too?",
+  "retrieval_filter": null,
+  "style_applied": true,
+  "style_in_prompt": true,
+  "prompt_tokens": 917,
+  "generated_tokens_including_stop": 21,
+  "latency_seconds": 13.958,
+  "exemplar_ids": [
+    718,
+    787
+  ],
+  "saved_at": "2026-10-30T09:29:36.137165+00:00",
+  "trace": {
+    "id": "gold_008",
+    "format": "blog_draft",
+    "topic": "Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too?",
+    "audience": "B2B SaaS founders and operators",
+    "goal": "Teach one concrete operator lesson with specific examples and conviction.",
+    "cta": "none",
+    "k": 8,
+    "expected_facts": [
+      "The answer should explain that public multiples matter because they shape private funding expectations and exit math.",
+      "It should distinguish between what founders can control and what they cannot.",
+      "It should advise founders to focus on fundamentals rather than obsessing over market chatter."
+    ],
+    "rubric_must_haves": [
+      "Makes the public/private linkage clear.",
+      "Provides practical founder guidance, not just investor commentary.",
+      "Includes at least one example of how multiples affect fundraising, burn, or planning.",
+      "Balances realism with actionable advice."
+    ],
+    "gold_reference": "A strong answer should say that founders cannot ignore public multiples because they influence valuation, fundraising, and investor psychology, but they also should not let them run the company. The right move is to understand the implications, tighten execution, and build the kind of business that works under tougher market assumptions.",
+    "medium": "blog",
+    "prompt": "Write a blog post in the style of Jason Lemkin about: Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too?\n\nStyle examples from train-owned source text.\nUse them for voice only. They are not evidence for claims.\nDo not copy long passages verbatim.\n[Style 1]\nDear SaaStr: How Can You Ensure a Smooth Transition When A New Team Member Takes Over a Customer Account?\nAdd value in the first interaction.  This is so rare.\nThere’s nothing more frustrating than getting a random email, “Hi, Tony is gone from the company. I know nothing about you, but I’m your new rep. Can we schedule a call?”\nFind some way to add value.\nOne great way is to demo upcoming features / an upcoming release.\n“Hi, I’m Jason, your next account exec. I’d love to find a way to help even more. Can I show you or anyone on your team the new AI features we’re launching shortly? There’s no additional cost for them and based on what I can see, they may radically increase your efficiency.”\nNot perfect. But much better.\nA second, albeit riskier, way to add value is to set up a call asking for “honest feedback on how we’re doing.”\nThis works, too.  Customers often just want to be heard.  The “problem” is you might have to do something about it.\n[Style 2]\nDear SaaStr: When Is It Too Soon to Target Enterprise Customers in SaaS?\nIt too soon to target enterprise clients when you can’t support their needs 90 days\nafter\nyou close them.\nIt’s sort of OK in the enterprise to promise features and functionality that are sort of there … so long as you deliver them fairly promptly after the deal closes.\nIn fact, it happens all the time. Enterprise customers will even sign contracts agreeing to buy so long as you implement a key feature with X number of days.\nBut if you don’t have the team, commitment and experience to deliver that functionality at least X days after you close a Big Customer … you aren’t ready.  They’ll churn or at least, never fully deploy.\nYou don’t have to have the full enterprise package in the early days to close enterprise customers, especially if they have interest in you.  You’ll get some slack as a new, emerging vendor.  Especially if you have a strong deployment team.\nBut you have to meet your commitments and promises to them fairly soon after the deal closes.\nMore here:\nSecrets to Closing Your First 6 Figure Deal (Video + Transcript) | SaaStr\nSecrets to Closing Your First 6 Figure Deal (Video + Transcript)\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] VCs can't cause significant harm\n[E2] Sharing all fears is not recommended\n[E3] Sharing most fears is recommended\n[E4] Sharing all fears is not recommended\n\nNow write the requested blog post about: Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too?\n\nRemove these quantities that are not in the evidence: $1m, 50%, 2020, 2021, 2019, 2022, 100. Do not replace them with other numbers.",
+    "rendered_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nWrite a blog post in the style of Jason Lemkin about: Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too?\n\nStyle examples from train-owned source text.\nUse them for voice only. They are not evidence for claims.\nDo not copy long passages verbatim.\n[Style 1]\nDear SaaStr: How Can You Ensure a Smooth Transition When A New Team Member Takes Over a Customer Account?\nAdd value in the first interaction.  This is so rare.\nThere’s nothing more frustrating than getting a random email, “Hi, Tony is gone from the company. I know nothing about you, but I’m your new rep. Can we schedule a call?”\nFind some way to add value.\nOne great way is to demo upcoming features / an upcoming release.\n“Hi, I’m Jason, your next account exec. I’d love to find a way to help even more. Can I show you or anyone on your team the new AI features we’re launching shortly? There’s no additional cost for them and based on what I can see, they may radically increase your efficiency.”\nNot perfect. But much better.\nA second, albeit riskier, way to add value is to set up a call asking for “honest feedback on how we’re doing.”\nThis works, too.  Customers often just want to be heard.  The “problem” is you might have to do something about it.\n[Style 2]\nDear SaaStr: When Is It Too Soon to Target Enterprise Customers in SaaS?\nIt too soon to target enterprise clients when you can’t support their needs 90 days\nafter\nyou close them.\nIt’s sort of OK in the enterprise to promise features and functionality that are sort of there … so long as you deliver them fairly promptly after the deal closes.\nIn fact, it happens all the time. Enterprise customers will even sign contracts agreeing to buy so long as you implement a key feature with X number of days.\nBut if you don’t have the team, commitment and experience to deliver that functionality at least X days after you close a Big Customer … you aren’t ready.  They’ll churn or at least, never fully deploy.\nYou don’t have to have the full enterprise package in the early days to close enterprise customers, especially if they have interest in you.  You’ll get some slack as a new, emerging vendor.  Especially if you have a strong deployment team.\nBut you have to meet your commitments and promises to them fairly soon after the deal closes.\nMore here:\nSecrets to Closing Your First 6 Figure Deal (Video + Transcript) | SaaStr\nSecrets to Closing Your First 6 Figure Deal (Video + Transcript)\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] VCs can't cause significant harm\n[E2] Sharing all fears is not recommended\n[E3] Sharing most fears is recommended\n[E4] Sharing all fears is not recommended\n\nNow write the requested blog post about: Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too?\n\nRemove these quantities that are not in the evidence: $1m, 50%, 2020, 2021, 2019, 2022, 100. Do not replace them with other numbers.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "answer": "Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too?",
+    "raw_model_output": "So public multiples have fallen significantly since Q2’22. We’ve seen that before. And in the end, it doesn’t matter — as long as your start-up is growing well.\nFirst, remember the markets go through cycles\n.  We had crazy valuations in late 2020-early 2021, then dropped -50%+, and now are back down again.  That’s natural.\nSecond, public multiples are still pretty darn high by historical standards\n. So while yes, this may make VC funding harder, and yes, it does mean founders won’t raise quite as many rounds as they did at peak times … those same issues existed during all prior downturns.\nThird, private market valuations remain higher than ever\n. If anything, that’s where the real pressure is right now.  Yes, things may seem tougher for startups today.  But if you have a good business and happy customers — you probably really don’t need to worry so much about public market multiples.\nFourth, most of us would rather sell our companies today than wait a few years\n. In fact, a survey of 100+ top tech CEOs found half were considering selling. Why? Because the best offers may be coming later, but we already got 10x+ revenue multiples. Those offers likely won’t come again.\nAnd finally, let me share one piece of data that tells you everything you need to know:\nAt the 2019\nSaaStr Annual,\nour speakers averaged 18 months from founding to $1m ARR. Today, they average 12 months. Not 24 months, like in 2022. Or 30 months, like pre-pandemic. But 12 months. One year.\nThat’s not because the product is any different. It’s not because the market has changed. It’s not because of COVID.",
+    "deployment_output": "Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too?",
+    "first_attempt_answer": "So public multiples have fallen significantly since Q2’22. We’ve seen that before. And in the end, it doesn’t matter — as long as your start-up is growing well.\nFirst, remember the markets go through cycles\n.  We had crazy valuations in late 2020-early 2021, then dropped -50%+, and now are back down again.  That’s natural.\nSecond, public multiples are still pretty darn high by historical standards\n. So while yes, this may make VC funding harder, and yes, it does mean founders won’t raise quite as many rounds as they did at peak times … those same issues existed during all prior downturns.\nThird, private market valuations remain higher than ever\n. If anything, that’s where the real pressure is right now.  Yes, things may seem tougher for startups today.  But if you have a good business and happy customers — you probably really don’t need to worry so much about public market multiples.\nFourth, most of us would rather sell our companies today than wait a few years\n. In fact, a survey of 100+ top tech CEOs found half were considering selling. Why? Because the best offers may be coming later, but we already got 10x+ revenue multiples. Those offers likely won’t come again.\nAnd finally, let me share one piece of data that tells you everything you need to know:\nAt the 2019\nSaaStr Annual,\nour speakers averaged 18 months from founding to $1m ARR. Today, they average 12 months. Not 24 months, like in 2022. Or 30 months, like pre-pandemic. But 12 months. One year.\nThat’s not because the product is any different. It’s not because the market has changed. It’s not because of COVID.",
+    "retry_answer": "Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too?",
+    "query": "Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too?",
+    "max_new_tokens": 768,
+    "seed": 70,
+    "retry_seed": 10070,
+    "deployment_accepted": true,
+    "repair_occurred": false,
+    "generation_attempt": {
+      "seed": 70,
+      "answer": "So public multiples have fallen significantly since Q2’22. We’ve seen that before. And in the end, it doesn’t matter — as long as your start-up is growing well.\nFirst, remember the markets go through cycles\n.  We had crazy valuations in late 2020-early 2021, then dropped -50%+, and now are back down again.  That’s natural.\nSecond, public multiples are still pretty darn high by historical standards\n. So while yes, this may make VC funding harder, and yes, it does mean founders won’t raise quite as many rounds as they did at peak times … those same issues existed during all prior downturns.\nThird, private market valuations remain higher than ever\n. If anything, that’s where the real pressure is right now.  Yes, things may seem tougher for startups today.  But if you have a good business and happy customers — you probably really don’t need to worry so much about public market multiples.\nFourth, most of us would rather sell our companies today than wait a few years\n. In fact, a survey of 100+ top tech CEOs found half were considering selling. Why? Because the best offers may be coming later, but we already got 10x+ revenue multiples. Those offers likely won’t come again.\nAnd finally, let me share one piece of data that tells you everything you need to know:\nAt the 2019\nSaaStr Annual,\nour speakers averaged 18 months from founding to $1m ARR. Today, they average 12 months. Not 24 months, like in 2022. Or 30 months, like pre-pandemic. But 12 months. One year.\nThat’s not because the product is any different. It’s not because the market has changed. It’s not because of COVID.",
+      "numeric_grounding": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [],
+        "values": [
+          {
+            "value": "$1m",
+            "canonical": "usd:1000000",
+            "sentence": "our speakers averaged 18 months from founding to $1m ARR",
+            "start": 1350,
+            "end": 1353
+          },
+          {
+            "value": "50%",
+            "canonical": "pct:50",
+            "sentence": ".  We had crazy valuations in late 2020-early 2021, then dropped -50%+, and now are back down again.  That’s natural.",
+            "start": 273,
+            "end": 276
+          },
+          {
+            "value": "2020",
+            "canonical": "year:2020",
+            "sentence": ".  We had crazy valuations in late 2020-early 2021, then dropped -50%+, and now are back down again.  That’s natural.",
+            "start": 242,
+            "end": 246
+          },
+          {
+            "value": "2021",
+            "canonical": "year:2021",
+            "sentence": ".  We had crazy valuations in late 2020-early 2021, then dropped -50%+, and now are back down again.  That’s natural.",
+            "start": 253,
+            "end": 257
+          },
+          {
+            "value": "2019",
+            "canonical": "year:2019",
+            "sentence": "At the 2019",
+            "start": 1281,
+            "end": 1285
+          },
+          {
+            "value": "2022",
+            "canonical": "year:2022",
+            "sentence": "Not 24 months, like in 2022",
+            "start": 1413,
+            "end": 1417
+          },
+          {
+            "value": "100",
+            "canonical": "n:100",
+            "sentence": "In fact, a survey of 100+ top tech CEOs found half were considering selling",
+            "start": 999,
+            "end": 1002
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "$1m",
+            "canonical": "usd:1000000",
+            "sentence": "our speakers averaged 18 months from founding to $1m ARR",
+            "start": 1350,
+            "end": 1353
+          },
+          {
+            "value": "50%",
+            "canonical": "pct:50",
+            "sentence": ".  We had crazy valuations in late 2020-early 2021, then dropped -50%+, and now are back down again.  That’s natural.",
+            "start": 273,
+            "end": 276
+          },
+          {
+            "value": "2020",
+            "canonical": "year:2020",
+            "sentence": ".  We had crazy valuations in late 2020-early 2021, then dropped -50%+, and now are back down again.  That’s natural.",
+            "start": 242,
+            "end": 246
+          },
+          {
+            "value": "2021",
+            "canonical": "year:2021",
+            "sentence": ".  We had crazy valuations in late 2020-early 2021, then dropped -50%+, and now are back down again.  That’s natural.",
+            "start": 253,
+            "end": 257
+          },
+          {
+            "value": "2019",
+            "canonical": "year:2019",
+            "sentence": "At the 2019",
+            "start": 1281,
+            "end": 1285
+          },
+          {
+            "value": "2022",
+            "canonical": "year:2022",
+            "sentence": "Not 24 months, like in 2022",
+            "start": 1413,
+            "end": 1417
+          },
+          {
+            "value": "100",
+            "canonical": "n:100",
+            "sentence": "In fact, a survey of 100+ top tech CEOs found half were considering selling",
+            "start": 999,
+            "end": 1002
+          }
+        ]
+      },
+      "rag_source_copying": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 2,
+        "document_id": "train_7403",
+        "matched_generated_span": "don t",
+        "matched_retrieved_span": "don t"
+      },
+      "stop_reason": "eos"
+    },
+    "repair_attempt": null,
+    "accepted_attempt": 2,
+    "rag_source_copying": {
+      "applicable": true,
+      "threshold": 12,
+      "pass": true,
+      "flagged": false,
+      "max_contiguous_words": 2,
+      "document_id": "train_7403",
+      "matched_generated_span": "your vcs",
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 2,
+        "document_id": "train_7403",
+        "matched_generated_span": "don t",
+        "matched_retrieved_span": "don t"
+      },
+      "retry": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 2,
+        "document_id": "train_7403",
+        "matched_generated_span": "your vcs",
+        "matched_retrieved_span": "your vcs"
+      },
+      "retry_occurred": true,
+      "repair_occurred": false
+    },
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [],
+        "values": [
+          {
+            "value": "$1m",
+            "canonical": "usd:1000000",
+            "sentence": "our speakers averaged 18 months from founding to $1m ARR",
+            "start": 1350,
+            "end": 1353
+          },
+          {
+            "value": "50%",
+            "canonical": "pct:50",
+            "sentence": ".  We had crazy valuations in late 2020-early 2021, then dropped -50%+, and now are back down again.  That’s natural.",
+            "start": 273,
+            "end": 276
+          },
+          {
+            "value": "2020",
+            "canonical": "year:2020",
+            "sentence": ".  We had crazy valuations in late 2020-early 2021, then dropped -50%+, and now are back down again.  That’s natural.",
+            "start": 242,
+            "end": 246
+          },
+          {
+            "value": "2021",
+            "canonical": "year:2021",
+            "sentence": ".  We had crazy valuations in late 2020-early 2021, then dropped -50%+, and now are back down again.  That’s natural.",
+            "start": 253,
+            "end": 257
+          },
+          {
+            "value": "2019",
+            "canonical": "year:2019",
+            "sentence": "At the 2019",
+            "start": 1281,
+            "end": 1285
+          },
+          {
+            "value": "2022",
+            "canonical": "year:2022",
+            "sentence": "Not 24 months, like in 2022",
+            "start": 1413,
+            "end": 1417
+          },
+          {
+            "value": "100",
+            "canonical": "n:100",
+            "sentence": "In fact, a survey of 100+ top tech CEOs found half were considering selling",
+            "start": 999,
+            "end": 1002
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "$1m",
+            "canonical": "usd:1000000",
+            "sentence": "our speakers averaged 18 months from founding to $1m ARR",
+            "start": 1350,
+            "end": 1353
+          },
+          {
+            "value": "50%",
+            "canonical": "pct:50",
+            "sentence": ".  We had crazy valuations in late 2020-early 2021, then dropped -50%+, and now are back down again.  That’s natural.",
+            "start": 273,
+            "end": 276
+          },
+          {
+            "value": "2020",
+            "canonical": "year:2020",
+            "sentence": ".  We had crazy valuations in late 2020-early 2021, then dropped -50%+, and now are back down again.  That’s natural.",
+            "start": 242,
+            "end": 246
+          },
+          {
+            "value": "2021",
+            "canonical": "year:2021",
+            "sentence": ".  We had crazy valuations in late 2020-early 2021, then dropped -50%+, and now are back down again.  That’s natural.",
+            "start": 253,
+            "end": 257
+          },
+          {
+            "value": "2019",
+            "canonical": "year:2019",
+            "sentence": "At the 2019",
+            "start": 1281,
+            "end": 1285
+          },
+          {
+            "value": "2022",
+            "canonical": "year:2022",
+            "sentence": "Not 24 months, like in 2022",
+            "start": 1413,
+            "end": 1417
+          },
+          {
+            "value": "100",
+            "canonical": "n:100",
+            "sentence": "In fact, a survey of 100+ top tech CEOs found half were considering selling",
+            "start": 999,
+            "end": 1002
+          }
+        ]
+      },
+      "retry": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [],
+        "values": [],
+        "unsupported": []
+      }
+    },
+    "prompt_tokens": 917,
+    "backend": "unsloth",
+    "retrieval": true,
+    "retrieval_query": "Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too?",
+    "retrieval_filter": null,
+    "retrieval_k": 4,
+    "retrieval_hits": [
+      {
+        "id": "train_22819",
+        "text": "dont worry about what VCs can \"do to you\"\n\ndo have someone you trust on the board",
+        "medium": "x",
+        "group_id": "0d0ea1f782ef405cfb8fa7880e09edbdca98c39e6f502094f257112459a50536",
+        "row_id": 22819,
+        "split": "train",
+        "distance": 0.2996854782104492
+      },
+      {
+        "id": "train_7403",
+        "text": "4. But don’t share\nall\nyour fears.  Maybe 80% is enough\n.\nHighlight risks for your VCs, but even with them, don’t let them see you sweat. If they see you sweat too much, they’ll get scared/nervous too, and it will spiral downward.  Share the risks, and most of your concerns — but come with a plan.",
+        "medium": "blog",
+        "group_id": "8fd42429582c749d9918c76ade81f2f927285afe204ab72a0341d2418635ad88",
+        "row_id": 7403,
+        "split": "train",
+        "distance": 0.3011927604675293
+      },
+      {
+        "id": "train_7765",
+        "text": "4. But don’t share\nall\nyour fears\n.\nHighlight risks for your VCs, but even with them, don’t let them see you sweat. If they see you sweat, they’ll get scared/nervous too, and it will spiral downward.",
+        "medium": "blog",
+        "group_id": "8fd42429582c749d9918c76ade81f2f927285afe204ab72a0341d2418635ad88",
+        "row_id": 7765,
+        "split": "train",
+        "distance": 0.31981611251831055
+      },
+      {
+        "id": "train_15003",
+        "text": "\"Can VCs make money on growth rounds with current 5x-6x public multiples?  Probably ... not\" with \n@HarryStebbings\n\nFull convo here -> \nhttps://youtu.be/6IM-yO1gZOE?si=P1WOQ2cILZYHhpsX\n…",
+        "medium": "x",
+        "group_id": "19901b7b08087b45f291ac9d4a2010fc1deca2a852c74eb484118808fb902d12",
+        "row_id": 15003,
+        "split": "train",
+        "distance": 0.32515329122543335
+      }
+    ],
+    "copying": [
+      {
+        "id": "train_22819",
+        "shared_word_span": 1
+      },
+      {
+        "id": "train_7403",
+        "shared_word_span": 1
+      },
+      {
+        "id": "train_7765",
+        "shared_word_span": 1
+      },
+      {
+        "id": "train_15003",
+        "shared_word_span": 1
+      }
+    ],
+    "retrieval_backend": "dense",
+    "proposed_atomic_claims": [
+      {
+        "source_id": "train_22819",
+        "claim": "VCs can't cause significant harm",
+        "claim_type": "fact",
+        "support_span": "dont worry about what VCs can \"do to you\""
+      },
+      {
+        "source_id": "train_7403",
+        "claim": "Sharing all fears is not recommended",
+        "claim_type": "fact",
+        "support_span": "But don’t share all your fears."
+      },
+      {
+        "source_id": "train_7403",
+        "claim": "Sharing most fears is recommended",
+        "claim_type": "fact",
+        "support_span": "Share the risks, and most of your concerns"
+      },
+      {
+        "source_id": "train_7765",
+        "claim": "Sharing all fears is not recommended",
+        "claim_type": "fact",
+        "support_span": "But don’t share all your fears"
+      },
+      {
+        "source_id": "train_7765",
+        "claim": "Sharing fears can lead to a downward spiral",
+        "claim_type": "fact",
+        "support_span": "If they see you sweat, they’ll get scared/nervous too, and it will spiral downward"
+      },
+      {
+        "source_id": "train_15003",
+        "claim": "VCs can't make money on growth rounds with current 5x-6x public multiples",
+        "claim_type": "fact",
+        "support_span": "Probably... not"
+      }
+    ],
+    "validation_rejected": [
+      {
+        "source_id": "train_7765",
+        "claim": "Sharing fears can lead to a downward spiral",
+        "support_span": "If they see you sweat, they’ll get scared/nervous too, and it will spiral downward",
+        "claim_type": "fact",
+        "reason": "interrogative_assertion"
+      },
+      {
+        "source_id": "train_15003",
+        "claim": "VCs can't make money on growth rounds with current 5x-6x public multiples",
+        "support_span": "Probably... not",
+        "claim_type": "fact",
+        "reason": "support_not_in_source"
+      }
+    ],
+    "verifier_rejected": [],
+    "verified_claims": [
+      {
+        "source_id": "train_22819",
+        "claim": "VCs can't cause significant harm",
+        "support_span": "dont worry about what VCs can \"do to you\"",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7403",
+        "claim": "Sharing all fears is not recommended",
+        "support_span": "But don’t share all your fears.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7403",
+        "claim": "Sharing most fears is recommended",
+        "support_span": "Share the risks, and most of your concerns",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7765",
+        "claim": "Sharing all fears is not recommended",
+        "support_span": "But don’t share all your fears",
+        "claim_type": "fact"
+      }
+    ],
+    "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] VCs can't cause significant harm\n[E2] Sharing all fears is not recommended\n[E3] Sharing most fears is recommended\n[E4] Sharing all fears is not recommended",
+    "raw_extraction": "[\n  {\n    \"source_id\": \"train_22819\",\n    \"claim\": \"VCs can't cause significant harm\",\n    \"claim_type\": \"fact\",\n    \"support_span\": \"dont worry about what VCs can \\\"do to you\\\"\"\n  },\n  {\n    \"source_id\": \"train_7403\",\n    \"claim\": \"Sharing all fears is not recommended\",\n    \"claim_type\": \"fact\",\n    \"support_span\": \"But don’t share all your fears.\"\n  },\n  {\n    \"source_id\": \"train_7403\",\n    \"claim\": \"Sharing most fears is recommended\",\n    \"claim_type\": \"fact\",\n    \"support_span\": \"Share the risks, and most of your concerns\"\n  },\n  {\n    \"source_id\": \"train_7765\",\n    \"claim\": \"Sharing all fears is not recommended\",\n    \"claim_type\": \"fact\",\n    \"support_span\": \"But don’t share all your fears\"\n  },\n  {\n    \"source_id\": \"train_7765\",\n    \"claim\": \"Sharing fears can lead to a downward spiral\",\n    \"claim_type\": \"fact\",\n    \"support_span\": \"If they see you sweat, they’ll get scared/nervous too, and it will spiral downward\"\n  },\n  {\n    \"source_id\": \"train_15003\",\n    \"claim\": \"VCs can't make money on growth rounds with current 5x-6x public multiples\",\n    \"claim_type\": \"fact\",\n    \"support_span\": \"Probably... not\"\n  }\n]",
+    "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too?\n\nSource passages:\n[train_22819]\ndont worry about what VCs can \"do to you\"\n\ndo have someone you trust on the board\n\n[train_7403]\n4. But don’t share\nall\nyour fears.  Maybe 80% is enough\n.\nHighlight risks for your VCs, but even with them, don’t let them see you sweat. If they see you sweat too much, they’ll get scared/nervous too, and it will spiral downward.  Share the risks, and most of your concerns — but come with a plan.\n\n[train_7765]\n4. But don’t share\nall\nyour fears\n.\nHighlight risks for your VCs, but even with them, don’t let them see you sweat. If they see you sweat, they’ll get scared/nervous too, and it will spiral downward.\n\n[train_15003]\n\"Can VCs make money on growth rounds with current 5x-6x public multiples?  Probably ... not\" with \n@HarryStebbings\n\nFull convo here -> \nhttps://youtu.be/6IM-yO1gZOE?si=P1WOQ2cILZYHhpsX\n…",
+    "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too?\n\nSource passages:\n[train_22819]\ndont worry about what VCs can \"do to you\"\n\ndo have someone you trust on the board\n\n[train_7403]\n4. But don’t share\nall\nyour fears.  Maybe 80% is enough\n.\nHighlight risks for your VCs, but even with them, don’t let them see you sweat. If they see you sweat too much, they’ll get scared/nervous too, and it will spiral downward.  Share the risks, and most of your concerns — but come with a plan.\n\n[train_7765]\n4. But don’t share\nall\nyour fears\n.\nHighlight risks for your VCs, but even with them, don’t let them see you sweat. If they see you sweat, they’ll get scared/nervous too, and it will spiral downward.\n\n[train_15003]\n\"Can VCs make money on growth rounds with current 5x-6x public multiples?  Probably ... not\" with \n@HarryStebbings\n\nFull convo here -> \nhttps://youtu.be/6IM-yO1gZOE?si=P1WOQ2cILZYHhpsX\n…<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "extraction_seconds": 8.434,
+    "verification_seconds": 0.0,
+    "verification_records": [],
+    "llm_verifier_on_critical_path": false,
+    "allowed_numeric_values": [],
+    "distillation_adapter_enabled": false,
+    "verification_adapter_enabled": false,
+    "distillation_backend": "same_loaded_4bit_base_adapter_off",
+    "distillation_do_sample": false,
+    "extraction_max_new_tokens": 2560,
+    "verification_max_new_tokens": 24,
+    "distillation_seed": 0,
+    "support_spans_in_generator_prompt": false,
+    "evidence_stage_reason": null,
+    "evidence_status": "verified",
+    "extraction_attempts": 1,
+    "extraction_stop_reason": "eos",
+    "prompt_contract": "factual-reliability-v1",
+    "fixed_style_enabled": true,
+    "style_applied": true,
+    "style_exemplar_count": 2,
+    "latency_seconds": 13.958,
+    "generated_tokens_including_stop": 21,
+    "last_token_id": 128009,
+    "effective_eos_token_ids": [
+      128001,
+      128008,
+      128009
+    ],
+    "stop_reason": "eos",
+    "budget_fraction": 0.02734375,
+    "early_eos": true,
+    "first_attempt_stop_reason": "eos",
+    "retry_stop_reason": "eos"
+  }
+}

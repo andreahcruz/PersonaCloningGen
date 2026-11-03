@@ -1,0 +1,17 @@
+comparator,metric,n_pairs,n_topics,mean_difference_f_minus_other,ci95_low,ci95_high,method,interpretation
+Base,writing_quality,120,30,-0.4125,-0.5500,-0.2764,"topic-cluster bootstrap, 4000 draws, seed 42, percentile interval",Positive means Model F is higher on this saved score.
+Base,task_adherence,120,30,-0.0478,-0.0730,-0.0248,"topic-cluster bootstrap, 4000 draws, seed 42, percentile interval",Positive means Model F is higher on this saved score.
+Base,style_distance,90,30,-0.3041,-0.3790,-0.2190,"topic-cluster bootstrap, 4000 draws, seed 42, percentile interval",Negative means Model F is closer to the held-out style profile. Distance is not authorship accuracy.
+Base,word_count,120,30,-149.0000,-164.0000,-133.3583,"topic-cluster bootstrap, 4000 draws, seed 42, percentile interval",Difference in mean words. Not a quality score.
+PersonaRAG,writing_quality,120,30,-0.4333,-0.5472,-0.3250,"topic-cluster bootstrap, 4000 draws, seed 42, percentile interval",Positive means Model F is higher on this saved score.
+PersonaRAG,task_adherence,120,30,-0.0295,-0.0574,-0.0046,"topic-cluster bootstrap, 4000 draws, seed 42, percentile interval",Positive means Model F is higher on this saved score.
+PersonaRAG,style_distance,90,30,-0.1671,-0.2381,-0.0862,"topic-cluster bootstrap, 4000 draws, seed 42, percentile interval",Negative means Model F is closer to the held-out style profile. Distance is not authorship accuracy.
+PersonaRAG,word_count,120,30,-93.3667,-111.7417,-75.3500,"topic-cluster bootstrap, 4000 draws, seed 42, percentile interval",Difference in mean words. Not a quality score.
+Relabel RAG off,writing_quality,120,30,0.1653,0.0264,0.2958,"topic-cluster bootstrap, 4000 draws, seed 42, percentile interval",Positive means Model F is higher on this saved score.
+Relabel RAG off,task_adherence,120,30,-0.0055,-0.0334,0.0199,"topic-cluster bootstrap, 4000 draws, seed 42, percentile interval",Positive means Model F is higher on this saved score.
+Relabel RAG off,style_distance,90,30,-0.0109,-0.0826,0.0732,"topic-cluster bootstrap, 4000 draws, seed 42, percentile interval",Negative means Model F is closer to the held-out style profile. Distance is not authorship accuracy.
+Relabel RAG off,word_count,120,30,10.2000,-3.4167,23.6083,"topic-cluster bootstrap, 4000 draws, seed 42, percentile interval",Difference in mean words. Not a quality score.
+Relabel + RAG,writing_quality,120,30,0.2694,0.1278,0.4125,"topic-cluster bootstrap, 4000 draws, seed 42, percentile interval",Positive means Model F is higher on this saved score.
+Relabel + RAG,task_adherence,120,30,-0.0139,-0.0393,0.0054,"topic-cluster bootstrap, 4000 draws, seed 42, percentile interval",Positive means Model F is higher on this saved score.
+Relabel + RAG,style_distance,90,30,-0.0664,-0.1472,0.0222,"topic-cluster bootstrap, 4000 draws, seed 42, percentile interval",Negative means Model F is closer to the held-out style profile. Distance is not authorship accuracy.
+Relabel + RAG,word_count,120,30,20.0417,4.2500,35.6583,"topic-cluster bootstrap, 4000 draws, seed 42, percentile interval",Difference in mean words. Not a quality score.

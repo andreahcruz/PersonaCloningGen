@@ -1,0 +1,1775 @@
+{
+  "status": "complete",
+  "question_id": "gold_024",
+  "query": "While Most B2B Companies Are Decelerating, Cloudflare Just Had Its Best Quarter Since 2021. 10 Numbers That Explain Why",
+  "retrieval": {
+    "backend": "lightrag",
+    "mode": "hybrid",
+    "evidence_budget": 4,
+    "top_k": 20
+  },
+  "payload": {
+    "status": "success",
+    "message": "Query processed successfully",
+    "data": {
+      "entities": [
+        {
+          "entity_name": "Cloudflare",
+          "entity_type": "organization",
+          "description": "Cloudflare is a cloud infrastructure leader that has experienced significant growth, with a strong market position, innovative offerings, and experienced leadership. Founded in San Francisco, California, the company has evolved into a global entity with a substantial presence in the SF Bay Area. Cloudflare's market capitalization stands at $39 billion, and its annual recurring revenue (ARR) has surpassed $1.7 billion.\n\nThe company's core offerings include a content delivery network (CDN) and security services, which provide a range of benefits for websites and applications, including improved security, performance, and reliability. Cloudflare's platform is designed to meet the needs of businesses and organizations, offering a comprehensive suite of security and performance solutions.\n\nUnder the leadership of Matthew Prince, the company's founder, Cloudflare has become a B2B SaaS company that offers a range of security services, catering to the needs of businesses and organizations worldwide. The company's commitment to its Free plan has contributed to its success, allowing it to reach a wide audience and establish itself as a leader in the industry.\n\nCloudflare has generated a significant amount of cash for its employees, with a substantial portion of its revenue coming from international sources. The company's strong market position, innovative offerings, and experienced leadership have enabled it to establish itself as a leader in the cloud-based security and performance platform market.\n\nIn addition to its growth and market position, Cloudflare is also notable for its ability to respond to and mitigate security threats. The company was affected by the Drift security breach, but was able to reconstruct the entire attack timeline from their logs, highlighting the importance of Cloudflare's security features.\n\nCloudflare's services are centered around providing security and performance solutions for websites, making it a prominent player in the cloud-based security and performance platform market. The company has 3,200,000 Free users and 100,000+ paid customers at $500m+ ARR, making it a significant player in the industry.\n\nIn summary, Cloudflare is a cloud security company that provides various security services, including web application and DDoS protection, and has achieved significant growth, with a strong market position, innovative offerings, and experienced leadership. The company's commitment to its Free plan has contributed to its success, allowing it to reach a wide audience and establish itself as a leader in the industry.<SEP>A cloud-based security and performance platform.<SEP>Cloud-based infrastructure and security platform that enables AI inference at the edge.<SEP>Cloudflare is a cloud computing company that provides a platform for developers to build AI-powered applications.<SEP>Cloudflare is an AI-native company that positions itself as essential AI infrastructure.<SEP>Cloudflare is positioned as essential AI infrastructure.",
+          "source_id": "gd_1846fc5b4438018cd9d72d3a-chunk-000<SEP>gd_3379ac6f5a6b256be3e535c1-chunk-000<SEP>gd_47fbbf612af3204e5ab5ce5e-chunk-000<SEP>gd_9e5c348350596b05e4000d2b-chunk-000<SEP>gd_7212707c2707213a0b5b7a4b-chunk-000<SEP>gd_908d2f537b31f1d2ee730044-chunk-000<SEP>gd_c83bf75262a7beba5a5178ce-chunk-000<SEP>gd_ec98065364cfc525c93b67ce-chunk-000<SEP>gd_c4d88074f382c56078d251bf-chunk-002<SEP>gd_c4d88074f382c56078d251bf-chunk-003<SEP>gd_32f5e4f1f3af8c48fe6d19b5-chunk-000<SEP>gd_744aedf69774b9787271020d-chunk-000<SEP>gd_7e501541a37d9738987d633b-chunk-000<SEP>gd_8d5a01e786e521ceef6a39d4-chunk-000<SEP>gd_a4d8185dde8f14e2d5e547b5-chunk-000<SEP>gd_d3437bb5a40ad558b64712e5-chunk-001<SEP>gd_d3437bb5a40ad558b64712e5-chunk-002<SEP>gd_9c2e5ea13cd633d8cc823ba7-chunk-000<SEP>gd_efbaa09ea2525e90e20556df-chunk-000<SEP>gd_d1ee1b80cb9f51a51d4a2b27-chunk-000<SEP>gd_d1ee1b80cb9f51a51d4a2b27-chunk-002<SEP>gd_e396b212b0c5e080520b685b-chunk-000<SEP>gd_e396b212b0c5e080520b685b-chunk-001<SEP>gd_ee1953fb4d4e788a8fcd0076-chunk-002<SEP>gd_ee1953fb4d4e788a8fcd0076-chunk-003<SEP>gd_ed65acecc6e4d39357b55384-chunk-000<SEP>gd_f006f6ca7bfb307626d61034-chunk-000<SEP>gd_512e13ce7fe186171e6697c2-chunk-002<SEP>gd_512e13ce7fe186171e6697c2-chunk-003<SEP>gd_a2a196fcdd6409c49ba31408-chunk-001<SEP>gd_a2a196fcdd6409c49ba31408-chunk-002<SEP>gd_6883af2ee760af258eff9978-chunk-003<SEP>gd_6883af2ee760af258eff9978-chunk-004<SEP>gd_8c64b86e666809ad9984af65-chunk-001<SEP>gd_9aaaf87c9b9d043595bc5848-chunk-000<SEP>gd_9aaaf87c9b9d043595bc5848-chunk-001<SEP>gd_9aaaf87c9b9d043595bc5848-chunk-002<SEP>gd_9aaaf87c9b9d043595bc5848-chunk-003<SEP>gd_9aaaf87c9b9d043595bc5848-chunk-004<SEP>gd_127b7c531bf91ae60817b680-chunk-000<SEP>gd_8bab8d02da7bc2e8912b06e1-chunk-004<SEP>gd_bb4dc4329ce0acd94d0e9994-chunk-000<SEP>gd_1ea75faaa1a24bb0a1573ab5-chunk-006<SEP>gd_1ea75faaa1a24bb0a1573ab5-chunk-008<SEP>gd_ec32711adc8f9158a0b4a669-chunk-000<SEP>gd_ec32711adc8f9158a0b4a669-chunk-001<SEP>gd_f224b92d594e096cf9f7eef5-chunk-000<SEP>gd_264f36d1cab20f425e0992cf-chunk-000<SEP>gd_264f36d1cab20f425e0992cf-chunk-001<SEP>gd_264f36d1cab20f425e0992cf-chunk-003<SEP>gd_264f36d1cab20f425e0992cf-chunk-004<SEP>gd_5fe0e24210e667539d05d4de-chunk-005<SEP>gd_7579e8b1402637800b33e210-chunk-003<SEP>gd_7579e8b1402637800b33e210-chunk-004<SEP>gd_7579e8b1402637800b33e210-chunk-006<SEP>gd_7579e8b1402637800b33e210-chunk-012<SEP>gd_7579e8b1402637800b33e210-chunk-013<SEP>gd_869bec1b88bfc735253c3fc5-chunk-000<SEP>gd_9892f4cb159a2427a2e6b59b-chunk-001<SEP>gd_9892f4cb159a2427a2e6b59b-chunk-002<SEP>gd_d1252ef53f89bdd11bc98204-chunk-000<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-001<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-004<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-008<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-009<SEP>gd_87131f4a34d2f70295f0cf04-chunk-002<SEP>gd_87131f4a34d2f70295f0cf04-chunk-003<SEP>gd_87131f4a34d2f70295f0cf04-chunk-007<SEP>gd_87131f4a34d2f70295f0cf04-chunk-008<SEP>gd_59c785375f34b0507b64485d-chunk-001<SEP>gd_59c785375f34b0507b64485d-chunk-002<SEP>gd_59c785375f34b0507b64485d-chunk-009<SEP>gd_59c785375f34b0507b64485d-chunk-010<SEP>gd_9809d37cd527c2958295b062-chunk-000<SEP>gd_9809d37cd527c2958295b062-chunk-011<SEP>gd_9809d37cd527c2958295b062-chunk-012<SEP>gd_9809d37cd527c2958295b062-chunk-014<SEP>gd_9809d37cd527c2958295b062-chunk-015<SEP>gd_9809d37cd527c2958295b062-chunk-016",
+          "file_path": "gd_1846fc5b4438018cd9d72d3a<SEP>gd_3379ac6f5a6b256be3e535c1<SEP>gd_47fbbf612af3204e5ab5ce5e<SEP>gd_9e5c348350596b05e4000d2b<SEP>gd_7212707c2707213a0b5b7a4b<SEP>gd_908d2f537b31f1d2ee730044<SEP>gd_c83bf75262a7beba5a5178ce<SEP>gd_ec98065364cfc525c93b67ce<SEP>gd_c4d88074f382c56078d251bf<SEP>gd_32f5e4f1f3af8c48fe6d19b5<SEP>gd_744aedf69774b9787271020d<SEP>gd_7e501541a37d9738987d633b<SEP>gd_8d5a01e786e521ceef6a39d4<SEP>gd_a4d8185dde8f14e2d5e547b5<SEP>gd_d3437bb5a40ad558b64712e5<SEP>gd_9c2e5ea13cd633d8cc823ba7<SEP>gd_efbaa09ea2525e90e20556df<SEP>gd_d1ee1b80cb9f51a51d4a2b27<SEP>gd_e396b212b0c5e080520b685b<SEP>gd_ee1953fb4d4e788a8fcd0076<SEP>gd_ed65acecc6e4d39357b55384<SEP>gd_f006f6ca7bfb307626d61034<SEP>gd_512e13ce7fe186171e6697c2<SEP>gd_a2a196fcdd6409c49ba31408<SEP>gd_6883af2ee760af258eff9978<SEP>gd_8c64b86e666809ad9984af65<SEP>gd_9aaaf87c9b9d043595bc5848<SEP>gd_127b7c531bf91ae60817b680<SEP>gd_8bab8d02da7bc2e8912b06e1<SEP>gd_bb4dc4329ce0acd94d0e9994<SEP>gd_1ea75faaa1a24bb0a1573ab5<SEP>gd_ec32711adc8f9158a0b4a669<SEP>gd_f224b92d594e096cf9f7eef5<SEP>gd_264f36d1cab20f425e0992cf<SEP>gd_5fe0e24210e667539d05d4de<SEP>gd_7579e8b1402637800b33e210<SEP>gd_869bec1b88bfc735253c3fc5<SEP>gd_9892f4cb159a2427a2e6b59b<SEP>gd_d1252ef53f89bdd11bc98204<SEP>gd_ed532f1494cf2bbcdf7fd169<SEP>gd_87131f4a34d2f70295f0cf04<SEP>gd_59c785375f34b0507b64485d<SEP>gd_9809d37cd527c2958295b062",
+          "created_at": 1793645860
+        },
+        {
+          "entity_name": "B2B SaaS",
+          "entity_type": "product",
+          "description": "**B2B SaaS: A Comprehensive Overview**\n\nB2B SaaS, or business-to-business software as a service, is a business model that provides software applications to other businesses over the internet. This model has gained immense popularity in recent years due to its flexibility, scalability, and cost savings. By leveraging the cloud, B2B SaaS companies can offer their software applications to a wide range of customers, from small startups to large enterprises.\n\nAt its core, B2B SaaS is designed for business-to-business use cases, providing companies with access to the latest software technologies and innovations without significant upfront investments. This has enabled businesses to stay competitive in today's fast-paced environment, where technology is constantly evolving. Additionally, B2B SaaS companies often provide ongoing support and maintenance, ensuring that their software applications remain up-to-date and secure.\n\nThe B2B SaaS model has become increasingly popular due to its ability to provide businesses with greater flexibility, scalability, and cost savings. By leveraging the cloud, B2B SaaS companies can offer their software applications to a wide range of customers, from small startups to large enterprises. This has led to a proliferation of B2B SaaS companies, each offering a unique set of software applications and services tailored to specific business needs.\n\nOne of the key benefits of B2B SaaS is its ability to provide businesses with access to the latest software technologies and innovations, without the need for significant upfront investments. This has enabled companies to stay competitive in today's fast-paced business environment, where technology is constantly evolving. Additionally, B2B SaaS companies often provide ongoing support and maintenance, ensuring that their software applications remain up-to-date and secure.\n\nThe B2B SaaS industry is expected to be impacted by AI adoption, with companies leveraging artificial intelligence to improve their software applications and services. Overall, B2B SaaS is a business model that provides software as a service to other businesses, offering a range of benefits and advantages. With its flexibility, scalability, and cost savings, B2B SaaS has become an increasingly popular choice for companies looking to leverage the latest software technologies and innovations.\n\nIt's worth noting that B2B SaaS can expand globally, with few borders, and is a software category that includes business-to-business software as a service. The industry is also referred to as business-to-business software as a service, software as a service for business-to-business vendors, traditional business-to-business software as a service, and a business model for software as a service, focusing on growth and revenue solutions.",
+          "source_id": "gd_2864ed857c89cc1a33e60bc8-chunk-000<SEP>gd_4f6908ae4b2f4c4e20daccaa-chunk-000<SEP>gd_7212707c2707213a0b5b7a4b-chunk-000<SEP>gd_afcc2a3eb186119ed5062c31-chunk-000<SEP>gd_afcc2a3eb186119ed5062c31-chunk-001<SEP>gd_5800c214ae9e8b5b722bd8e8-chunk-000<SEP>gd_62287245a6ac5ca80038430f-chunk-000<SEP>gd_6b007f03167b87bbac2e346b-chunk-002<SEP>gd_7bba9b537a604be37c33394e-chunk-000<SEP>gd_3f3546419c8af125d66414d7-chunk-002<SEP>gd_4404a0e79f3c28872ef7443e-chunk-001<SEP>gd_79e602fce498ee721fb0af46-chunk-001<SEP>gd_512e13ce7fe186171e6697c2-chunk-000<SEP>gd_512e13ce7fe186171e6697c2-chunk-002<SEP>gd_38bb13c79d43c1ce65fb04e5-chunk-003<SEP>gd_b59420b8a4157ccee2549a6f-chunk-002<SEP>gd_962d28932214f30f9a7d6b58-chunk-004<SEP>gd_a9dab0843535359d6cf5e232-chunk-003<SEP>gd_dfbe999d4fbee6b9fac2b631-chunk-002<SEP>gd_16a3c7a1ec7b146ffc12ba1e-chunk-001<SEP>gd_16a3c7a1ec7b146ffc12ba1e-chunk-003<SEP>gd_16a3c7a1ec7b146ffc12ba1e-chunk-004<SEP>gd_eb80566a617b57e47caec5bf-chunk-003<SEP>gd_67eadcb9afdf2a74fbb9b074-chunk-000<SEP>gd_9766ff5367bd30c141196a4c-chunk-001<SEP>gd_176d0f3314a7ef7fbcee3aac-chunk-000<SEP>gd_83324e3776b6d73c88b7c64d-chunk-002<SEP>gd_c2e7a2ed8809b4893526ef1c-chunk-000<SEP>gd_103dd66256994169ffe0170e-chunk-001<SEP>gd_6a3a9ea47e89d7f04a9415ee-chunk-007<SEP>gd_8188f705a58f509db9190d86-chunk-000<SEP>gd_fdfc938e80525a46455d9f0f-chunk-002<SEP>gd_fdfc938e80525a46455d9f0f-chunk-009<SEP>gd_7579e8b1402637800b33e210-chunk-010<SEP>gd_7579e8b1402637800b33e210-chunk-011<SEP>gd_3eb6356a668a45371f13b852-chunk-005<SEP>gd_3eb6356a668a45371f13b852-chunk-006<SEP>gd_45895bb382839086f6554318-chunk-009<SEP>gd_203f248339b833dc26e44807-chunk-005<SEP>gd_203f248339b833dc26e44807-chunk-006<SEP>gd_18882942a86ac5a7c53bf0cb-chunk-007<SEP>gd_2b1b8318e2ec523237dbf3e3-chunk-000<SEP>gd_2b1b8318e2ec523237dbf3e3-chunk-001<SEP>gd_2b1b8318e2ec523237dbf3e3-chunk-004",
+          "file_path": "gd_2864ed857c89cc1a33e60bc8<SEP>gd_4f6908ae4b2f4c4e20daccaa<SEP>gd_7212707c2707213a0b5b7a4b<SEP>gd_afcc2a3eb186119ed5062c31<SEP>gd_5800c214ae9e8b5b722bd8e8<SEP>gd_62287245a6ac5ca80038430f<SEP>gd_6b007f03167b87bbac2e346b<SEP>gd_7bba9b537a604be37c33394e<SEP>gd_3f3546419c8af125d66414d7<SEP>gd_4404a0e79f3c28872ef7443e<SEP>gd_79e602fce498ee721fb0af46<SEP>gd_512e13ce7fe186171e6697c2<SEP>gd_38bb13c79d43c1ce65fb04e5<SEP>gd_b59420b8a4157ccee2549a6f<SEP>gd_962d28932214f30f9a7d6b58<SEP>gd_a9dab0843535359d6cf5e232<SEP>gd_dfbe999d4fbee6b9fac2b631<SEP>gd_16a3c7a1ec7b146ffc12ba1e<SEP>gd_67eadcb9afdf2a74fbb9b074<SEP>gd_9766ff5367bd30c141196a4c<SEP>gd_176d0f3314a7ef7fbcee3aac<SEP>gd_83324e3776b6d73c88b7c64d<SEP>gd_c2e7a2ed8809b4893526ef1c<SEP>gd_103dd66256994169ffe0170e<SEP>gd_6a3a9ea47e89d7f04a9415ee<SEP>gd_8188f705a58f509db9190d86<SEP>gd_fdfc938e80525a46455d9f0f<SEP>gd_7579e8b1402637800b33e210<SEP>gd_3eb6356a668a45371f13b852<SEP>gd_45895bb382839086f6554318<SEP>gd_203f248339b833dc26e44807<SEP>gd_18882942a86ac5a7c53bf0cb<SEP>gd_2b1b8318e2ec523237dbf3e3",
+          "created_at": 1793640420
+        },
+        {
+          "entity_name": "80%+",
+          "entity_type": "metric",
+          "description": "A high probability of investment success.<SEP>Year-to-date growth rate of Cloudflare.",
+          "source_id": "gd_fdc06d575c8bc962e662ebaa-chunk-001<SEP>gd_9809d37cd527c2958295b062-chunk-011",
+          "file_path": "gd_fdc06d575c8bc962e662ebaa<SEP>gd_9809d37cd527c2958295b062",
+          "created_at": 1793645896
+        },
+        {
+          "entity_name": "$1.5B",
+          "entity_type": "concept",
+          "description": "$1.5B is a financial metric representing Cloudflare's target Annual Recurring Revenue.",
+          "source_id": "gd_ec32711adc8f9158a0b4a669-chunk-001",
+          "file_path": "gd_ec32711adc8f9158a0b4a669",
+          "created_at": 1793603912
+        },
+        {
+          "entity_name": "Snowflake",
+          "entity_type": "product",
+          "description": "**Snowflake: A Cloud-Based Data Warehousing and Analytics Platform**\n\nSnowflake is a cloud-based data warehousing and analytics platform that provides enterprise-grade data management solutions. Founded as a cloud-based data warehousing company, Snowflake offers a range of services, including data storage, processing, and analytics. The company's platform is designed to provide scalable and secure data management capabilities, allowing businesses to store, process, and analyze large datasets in the cloud.\n\nSnowflake's cloud-based architecture enables users to access their data from anywhere, at any time, and on any device. The platform provides a range of features, including data warehousing, data integration, and data governance, making it an attractive solution for businesses looking to manage their data in the cloud. Snowflake's pricing model is based on the company's capabilities, with prices commensurate with the services provided.\n\nIn addition to its core data warehousing and analytics capabilities, Snowflake also offers a range of additional features and services, including data storage, processing, and analytics. The company's platform is designed to be highly scalable, allowing businesses to easily add or remove resources as needed. Snowflake's cloud-based architecture also provides a high level of security and data protection, making it an attractive solution for businesses looking to manage their data in the cloud.\n\nNotably, Snowflake has gone public and has faced challenges in the public markets due to heavy investment in growth and lack of free cash flow until recently. However, the company remains a leading provider of cloud-based data warehousing and analytics solutions, offering a range of services and features designed to help businesses manage their data in the cloud. With its scalable and secure architecture, Snowflake provides a flexible and reliable solution for businesses looking to store, process, and analyze large datasets.\n\nSnowflake was founded by Benoit Dageville, Thierry Cruanes, and Mariano Martinez-Negri, and has since become a prominent player in the cloud-based data warehousing and analytics market. The company has been represented at various industry events, including the SaaStr 2025 event, where its CEO was a speaker. Additionally, the company's CMO has attended the CMO Brunch and the VIP event, further highlighting its presence in the industry.\n\nSnowflake's growth has been steady, with the company doubling its free-cash flow in one year from 12% to 25% of revenue. The company has also made slow and steady progress on gross margins, now at 77%. However, Snowflake is being cautious for next year, modeling only 34% growth. Despite this, the company is predicting epic free cash flow in 2024 of 46%.\n\nIt's worth noting that Snowflake has high COGS, but achieves software-like Gross Margins (60%-80%) after IPO, and has managed to outsource a lot of lower-margin professional services. The company's market cap is over $85B+, and it has taken its time to reach 60%+ gross margins.\n\nAs a top SaaS company, Snowflake has demonstrated its ability to provide innovative solutions for businesses looking to manage their data in the cloud. With its cloud-based data warehousing platform, Snowflake has become a leading provider of cloud-based data warehousing and analytics solutions, offering a range of services and features designed to help businesses manage their data in the cloud.\n\nIn terms of partnerships, Snowflake has partnered with various companies, including Omni and Linear, to provide its data warehousing and analytics solutions to a wider range of customers. This has enabled Snowflake to expand its reach and offer its services to a broader market, further solidifying its position as a leading provider of cloud-based data warehousing and analytics solutions.<SEP>Snowflake is a cloud-based data warehousing company.<SEP>Snowflake is a cloud-based data platform.<SEP>A cloud computing company that reported $1.2B in quarterly revenue, growing 29%, with a 20% YoY increase in customer count to 12,621 customers.<SEP>A cloud-based data warehousing platform<SEP>Snowflake is a cloud-based data warehousing platform that raised $3.9 billion in its IPO in 2020, with a valuation of $33 billion.",
+          "source_id": "gd_0671f71cf02d19206bacd8c5-chunk-000<SEP>gd_0d4bd9ca1eb07b3d96b242da-chunk-000<SEP>gd_1354204b842e11ae5bc077c9-chunk-000<SEP>gd_0ace1948b4408743294020bf-chunk-000<SEP>gd_0d9ed295c2bb4d2ef2626774-chunk-000<SEP>gd_0d9ed295c2bb4d2ef2626774-chunk-001<SEP>gd_33a2f840865e7f2aa3f4d2eb-chunk-000<SEP>gd_1bd11726aa0e0351aefe21ce-chunk-000<SEP>gd_1cfb5f5f8eb38e249dccd37c-chunk-000<SEP>gd_0f84eb0397d3f9ebe9982fe6-chunk-000<SEP>gd_1ecb44fc6ec32f8d1b46fa09-chunk-000<SEP>gd_11dfec6d25e1a2b161158dde-chunk-000<SEP>gd_2d1a5ed459bfc1a023a1db6d-chunk-000<SEP>gd_16319806a8bc21c0b84682c3-chunk-000<SEP>gd_48ff16ec2e5560a86e6edea1-chunk-000<SEP>gd_18771289802258996e9afe7d-chunk-000<SEP>gd_18771289802258996e9afe7d-chunk-001<SEP>gd_18771289802258996e9afe7d-chunk-002<SEP>gd_6cc7964ce1c8d1e72526cd7b-chunk-000<SEP>gd_4e8e411a20b69ff98e60d556-chunk-001<SEP>gd_4e8e411a20b69ff98e60d556-chunk-002<SEP>gd_4e8e411a20b69ff98e60d556-chunk-003<SEP>gd_02c919f5dc7714ddf44c6d9f-chunk-000<SEP>gd_7472af22e2cfe0889f69b031-chunk-000<SEP>gd_c684a767c8bc351f3338de18-chunk-000<SEP>gd_c684a767c8bc351f3338de18-chunk-001<SEP>gd_8c81486cc1789c7975082f46-chunk-000<SEP>gd_64ee673f1818fe8a43d10d08-chunk-002<SEP>gd_5f1c7ad07d6a9ab88ee9b6cf-chunk-000<SEP>gd_b75f4cd65a5597ce3fa78d3b-chunk-000<SEP>gd_b42ff3af2d17e5abb47d2fab-chunk-000<SEP>gd_b42ff3af2d17e5abb47d2fab-chunk-001<SEP>gd_37e6ead88ae30f9387c556c8-chunk-000<SEP>gd_c1e9d1572caf7b2632adf129-chunk-000<SEP>gd_c1e9d1572caf7b2632adf129-chunk-001<SEP>gd_3d4100e6126fba5cc27eaf91-chunk-000<SEP>gd_3d4100e6126fba5cc27eaf91-chunk-001<SEP>gd_91ca62fc51a49d25bd8a80bb-chunk-000<SEP>gd_924e4ef0dddeabd891814f8c-chunk-000<SEP>gd_40842015ea048621b1aee5ee-chunk-000<SEP>gd_f7ba8eca90542f70f780bc35-chunk-000<SEP>gd_9f9c3f5ffa8b3edb4964b83b-chunk-000<SEP>gd_dfcdb3714e2bfa2686b5fb16-chunk-000<SEP>gd_e89b9c2b09f0adc100e313d0-chunk-000<SEP>gd_cd24c01cc5dae9b805dfd724-chunk-001<SEP>gd_cd24c01cc5dae9b805dfd724-chunk-000<SEP>gd_5800c214ae9e8b5b722bd8e8-chunk-000<SEP>gd_582bd5132dbb8e609d1e18c9-chunk-000<SEP>gd_d0997b9825dde450f885028e-chunk-000<SEP>gd_d0997b9825dde450f885028e-chunk-001<SEP>gd_d0997b9825dde450f885028e-chunk-002<SEP>gd_a51aabf5779c2323c9b3bd84-chunk-000<SEP>gd_a51aabf5779c2323c9b3bd84-chunk-001<SEP>gd_7298e57f5a8875ad3995649a-chunk-000<SEP>gd_7298e57f5a8875ad3995649a-chunk-001<SEP>gd_744aedf69774b9787271020d-chunk-000<SEP>gd_7681722f354a46bf769c0671-chunk-000<SEP>gd_7681722f354a46bf769c0671-chunk-001<SEP>gd_7681722f354a46bf769c0671-chunk-002<SEP>gd_818ba64738491131923f436e-chunk-000<SEP>gd_818ba64738491131923f436e-chunk-001<SEP>gd_81bbd7bc18b73e6c09bfbc28-chunk-000<SEP>gd_85fb721c8c61021864128cd9-chunk-000<SEP>gd_a0a7fac44cacd59c4debc742-chunk-001<SEP>gd_a0a7fac44cacd59c4debc742-chunk-002<SEP>gd_a8aaca4c490d0892dd6978f0-chunk-000<SEP>gd_eefdcfd6d5a86c442d5790f4-chunk-000<SEP>gd_deab4259d7f30666e4d2f1a5-chunk-000<SEP>gd_a173a4cadbd0b240296376ca-chunk-000<SEP>gd_a173a4cadbd0b240296376ca-chunk-001<SEP>gd_f70b08b50e252ea315d757da-chunk-000<SEP>gd_fb87546d14423eb7e21c5ce8-chunk-001<SEP>gd_fb87546d14423eb7e21c5ce8-chunk-002<SEP>gd_34ce0fed4a7952d583f28cae-chunk-001<SEP>gd_35e2a72ebda9a867d1609c05-chunk-000<SEP>gd_35e2a72ebda9a867d1609c05-chunk-001<SEP>gd_44e0cfa1d75cad6c2ff06403-chunk-001<SEP>gd_44e0cfa1d75cad6c2ff06403-chunk-002<SEP>gd_535dfe10c25ba8a8c83581c2-chunk-000<SEP>gd_535dfe10c25ba8a8c83581c2-chunk-001<SEP>gd_39aac781b0bdeaf45aebf21d-chunk-000<SEP>gd_4e1941795ff466487799501f-chunk-000<SEP>gd_73df91a3d3076d3a9388eb48-chunk-000<SEP>gd_73df91a3d3076d3a9388eb48-chunk-001<SEP>gd_c55cf116da67b97c972bcbbc-chunk-000<SEP>gd_c55cf116da67b97c972bcbbc-chunk-001<SEP>gd_ce31bfce441915a89311cece-chunk-000<SEP>gd_e3466d3d0dcfc9810320f04a-chunk-000<SEP>gd_e424b816b7ffc8ed454f8d82-chunk-000<SEP>gd_e424b816b7ffc8ed454f8d82-chunk-001<SEP>gd_b43f687bba2892cbeb599d05-chunk-000<SEP>gd_b43f687bba2892cbeb599d05-chunk-001<SEP>gd_cb86d0090e3b91f1c710654e-chunk-001<SEP>gd_c3986ea7b0d7d530a08e10c0-chunk-000<SEP>gd_c3986ea7b0d7d530a08e10c0-chunk-001<SEP>gd_d70c2a97c2a8b7f1ea023a98-chunk-000<SEP>gd_d70c2a97c2a8b7f1ea023a98-chunk-001<SEP>gd_1ae9b4571e84b8b887bf810d-chunk-000<SEP>gd_1ae9b4571e84b8b887bf810d-chunk-001<SEP>gd_1ae9b4571e84b8b887bf810d-chunk-002<SEP>gd_1cc87df378d79d9def33d0df-chunk-000<SEP>gd_1cc87df378d79d9def33d0df-chunk-005<SEP>gd_35bba6f7fbcad146853237d3-chunk-002<SEP>gd_3c94d3509d88df4c189a0b68-chunk-004<SEP>gd_553a30b96ae700aac99318da-chunk-000<SEP>gd_7fdd89e1d12191b671a0269c-chunk-000<SEP>gd_7fdd89e1d12191b671a0269c-chunk-001<SEP>gd_2d7b7e7000a27d7ddc3ef566-chunk-002<SEP>gd_2d7b7e7000a27d7ddc3ef566-chunk-003<SEP>gd_fe9184e0ab77202749f57674-chunk-002<SEP>gd_127b7c531bf91ae60817b680-chunk-000<SEP>gd_8bab8d02da7bc2e8912b06e1-chunk-003<SEP>gd_8bab8d02da7bc2e8912b06e1-chunk-004<SEP>gd_7b568e288974a5d1a83341c8-chunk-000<SEP>gd_88b45eaf937a5ab5039dba4e-chunk-002<SEP>gd_e59e0716ef5b3ae07ad9cc40-chunk-004<SEP>gd_5d983738ccb8063f7f8a2ced-chunk-001<SEP>gd_c2e7a2ed8809b4893526ef1c-chunk-002<SEP>gd_c4134d3194f34616f1c338ba-chunk-001<SEP>gd_1ea75faaa1a24bb0a1573ab5-chunk-008<SEP>gd_264f36d1cab20f425e0992cf-chunk-000<SEP>gd_264f36d1cab20f425e0992cf-chunk-001<SEP>gd_7fceffa45398125f8711e9a1-chunk-002<SEP>gd_7fceffa45398125f8711e9a1-chunk-010<SEP>gd_7fceffa45398125f8711e9a1-chunk-011<SEP>gd_6f7cec99215f9ff2f03605c0-chunk-000<SEP>gd_9f64b63b5ae698d29604d98b-chunk-005<SEP>gd_9f64b63b5ae698d29604d98b-chunk-006<SEP>gd_310914d31f4bf71a5e4a8a5e-chunk-000<SEP>gd_310914d31f4bf71a5e4a8a5e-chunk-001<SEP>gd_310914d31f4bf71a5e4a8a5e-chunk-002<SEP>gd_310914d31f4bf71a5e4a8a5e-chunk-003<SEP>gd_310914d31f4bf71a5e4a8a5e-chunk-004<SEP>gd_310914d31f4bf71a5e4a8a5e-chunk-005<SEP>gd_310914d31f4bf71a5e4a8a5e-chunk-006<SEP>gd_310914d31f4bf71a5e4a8a5e-chunk-007<SEP>gd_310914d31f4bf71a5e4a8a5e-chunk-008<SEP>gd_310914d31f4bf71a5e4a8a5e-chunk-009<SEP>gd_310914d31f4bf71a5e4a8a5e-chunk-010<SEP>gd_310914d31f4bf71a5e4a8a5e-chunk-011<SEP>gd_310914d31f4bf71a5e4a8a5e-chunk-012<SEP>gd_310914d31f4bf71a5e4a8a5e-chunk-013<SEP>gd_310914d31f4bf71a5e4a8a5e-chunk-014<SEP>gd_869bec1b88bfc735253c3fc5-chunk-009<SEP>gd_03d4a048b430d78e6eb154b6-chunk-003<SEP>gd_a41a47d36f792781108d47d3-chunk-002<SEP>gd_a41a47d36f792781108d47d3-chunk-004<SEP>gd_a41a47d36f792781108d47d3-chunk-005<SEP>gd_a41a47d36f792781108d47d3-chunk-007<SEP>gd_a41a47d36f792781108d47d3-chunk-008<SEP>gd_1f71615c9fe24efc15168339-chunk-000<SEP>gd_1f71615c9fe24efc15168339-chunk-001<SEP>gd_1f71615c9fe24efc15168339-chunk-002<SEP>gd_7bf916ab9e234b1482e89f26-chunk-001<SEP>gd_7bf916ab9e234b1482e89f26-chunk-002<SEP>gd_90f0625e16d8673be75aae16-chunk-000<SEP>gd_90f0625e16d8673be75aae16-chunk-001<SEP>gd_9c63ca3cd132590f56cc4437-chunk-000<SEP>gd_9c63ca3cd132590f56cc4437-chunk-001<SEP>gd_9c63ca3cd132590f56cc4437-chunk-002<SEP>gd_9c63ca3cd132590f56cc4437-chunk-003<SEP>gd_9c63ca3cd132590f56cc4437-chunk-004<SEP>gd_9c63ca3cd132590f56cc4437-chunk-005<SEP>gd_9fe02dec94a00cf58c6fa576-chunk-004<SEP>gd_bb4a4bb3b7f29f638a1cfd7c-chunk-003<SEP>gd_d9367d2354469b61c124d3c2-chunk-000<SEP>gd_d9367d2354469b61c124d3c2-chunk-001<SEP>gd_d9367d2354469b61c124d3c2-chunk-002<SEP>gd_d9367d2354469b61c124d3c2-chunk-003<SEP>gd_de224f44af7a01a27aa7d4bf-chunk-000<SEP>gd_f6c00e0b3dd6d992b151a870-chunk-006<SEP>gd_6f67421c00686b7efde013a1-chunk-000<SEP>gd_9892f4cb159a2427a2e6b59b-chunk-001<SEP>gd_3b0cd7a4547ffa30c6908e86-chunk-006<SEP>gd_8569097982e6e44111eec925-chunk-001<SEP>gd_8569097982e6e44111eec925-chunk-002<SEP>gd_8fb6aa290d8ac667817c8b57-chunk-002<SEP>gd_9f2a7fa73db28fe0ce323908-chunk-000<SEP>gd_9f2a7fa73db28fe0ce323908-chunk-001<SEP>gd_9f2a7fa73db28fe0ce323908-chunk-002<SEP>gd_9f2a7fa73db28fe0ce323908-chunk-003<SEP>gd_9f2a7fa73db28fe0ce323908-chunk-004<SEP>gd_9f2a7fa73db28fe0ce323908-chunk-005<SEP>gd_9f2a7fa73db28fe0ce323908-chunk-006<SEP>gd_9f2a7fa73db28fe0ce323908-chunk-007<SEP>gd_9f2a7fa73db28fe0ce323908-chunk-008<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-001<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-002<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-004<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-008<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-009<SEP>gd_e68aacea13804104b99303da-chunk-007<SEP>gd_a6aa111fa6629fc198bbb940-chunk-002<SEP>gd_a6aa111fa6629fc198bbb940-chunk-003<SEP>gd_a6aa111fa6629fc198bbb940-chunk-007<SEP>gd_2882e3e764a7ba03cd050829-chunk-001<SEP>gd_2882e3e764a7ba03cd050829-chunk-002<SEP>gd_87131f4a34d2f70295f0cf04-chunk-002<SEP>gd_87131f4a34d2f70295f0cf04-chunk-008<SEP>gd_d0181ecbeaf3780e6b58ca0e-chunk-000",
+          "file_path": "gd_0671f71cf02d19206bacd8c5<SEP>gd_0d4bd9ca1eb07b3d96b242da<SEP>gd_1354204b842e11ae5bc077c9<SEP>gd_0ace1948b4408743294020bf<SEP>gd_0d9ed295c2bb4d2ef2626774<SEP>gd_33a2f840865e7f2aa3f4d2eb<SEP>gd_1bd11726aa0e0351aefe21ce<SEP>gd_1cfb5f5f8eb38e249dccd37c<SEP>gd_0f84eb0397d3f9ebe9982fe6<SEP>gd_1ecb44fc6ec32f8d1b46fa09<SEP>gd_11dfec6d25e1a2b161158dde<SEP>gd_2d1a5ed459bfc1a023a1db6d<SEP>gd_16319806a8bc21c0b84682c3<SEP>gd_48ff16ec2e5560a86e6edea1<SEP>gd_18771289802258996e9afe7d<SEP>gd_6cc7964ce1c8d1e72526cd7b<SEP>gd_4e8e411a20b69ff98e60d556<SEP>gd_02c919f5dc7714ddf44c6d9f<SEP>gd_7472af22e2cfe0889f69b031<SEP>gd_c684a767c8bc351f3338de18<SEP>gd_8c81486cc1789c7975082f46<SEP>gd_64ee673f1818fe8a43d10d08<SEP>gd_5f1c7ad07d6a9ab88ee9b6cf<SEP>gd_b75f4cd65a5597ce3fa78d3b<SEP>gd_b42ff3af2d17e5abb47d2fab<SEP>gd_37e6ead88ae30f9387c556c8<SEP>gd_c1e9d1572caf7b2632adf129<SEP>gd_3d4100e6126fba5cc27eaf91<SEP>gd_91ca62fc51a49d25bd8a80bb<SEP>gd_924e4ef0dddeabd891814f8c<SEP>gd_40842015ea048621b1aee5ee<SEP>gd_f7ba8eca90542f70f780bc35<SEP>gd_9f9c3f5ffa8b3edb4964b83b<SEP>gd_dfcdb3714e2bfa2686b5fb16<SEP>gd_e89b9c2b09f0adc100e313d0<SEP>gd_cd24c01cc5dae9b805dfd724<SEP>gd_5800c214ae9e8b5b722bd8e8<SEP>gd_582bd5132dbb8e609d1e18c9<SEP>gd_d0997b9825dde450f885028e<SEP>gd_a51aabf5779c2323c9b3bd84<SEP>gd_7298e57f5a8875ad3995649a<SEP>gd_744aedf69774b9787271020d<SEP>gd_7681722f354a46bf769c0671<SEP>gd_818ba64738491131923f436e<SEP>gd_81bbd7bc18b73e6c09bfbc28<SEP>gd_85fb721c8c61021864128cd9<SEP>gd_a0a7fac44cacd59c4debc742<SEP>gd_a8aaca4c490d0892dd6978f0<SEP>gd_eefdcfd6d5a86c442d5790f4<SEP>gd_deab4259d7f30666e4d2f1a5<SEP>gd_a173a4cadbd0b240296376ca<SEP>gd_f70b08b50e252ea315d757da<SEP>gd_fb87546d14423eb7e21c5ce8<SEP>gd_34ce0fed4a7952d583f28cae<SEP>gd_35e2a72ebda9a867d1609c05<SEP>gd_44e0cfa1d75cad6c2ff06403<SEP>gd_535dfe10c25ba8a8c83581c2<SEP>gd_39aac781b0bdeaf45aebf21d<SEP>gd_4e1941795ff466487799501f<SEP>gd_73df91a3d3076d3a9388eb48<SEP>gd_c55cf116da67b97c972bcbbc<SEP>gd_ce31bfce441915a89311cece<SEP>gd_e3466d3d0dcfc9810320f04a<SEP>gd_e424b816b7ffc8ed454f8d82<SEP>gd_b43f687bba2892cbeb599d05<SEP>gd_cb86d0090e3b91f1c710654e<SEP>gd_c3986ea7b0d7d530a08e10c0<SEP>gd_d70c2a97c2a8b7f1ea023a98<SEP>gd_1ae9b4571e84b8b887bf810d<SEP>gd_1cc87df378d79d9def33d0df<SEP>gd_35bba6f7fbcad146853237d3<SEP>gd_3c94d3509d88df4c189a0b68<SEP>gd_553a30b96ae700aac99318da<SEP>gd_7fdd89e1d12191b671a0269c<SEP>gd_2d7b7e7000a27d7ddc3ef566<SEP>...truncated...(KEEP Old)",
+          "created_at": 1793642096
+        },
+        {
+          "entity_name": "$1 billion cloud quarter",
+          "entity_type": "concept",
+          "description": "$1 billion cloud quarter is Atlassian's first-ever milestone.",
+          "source_id": "gd_5452a21f583d7a1ce5646101-chunk-000",
+          "file_path": "gd_5452a21f583d7a1ce5646101",
+          "created_at": 1793609174
+        },
+        {
+          "entity_name": "110%",
+          "entity_type": "concept",
+          "description": "Net new ARR growth rate.<SEP>110% is a financial metric representing Cloudflare's Net Revenue Retention.",
+          "source_id": "gd_7212707c2707213a0b5b7a4b-chunk-001<SEP>gd_ec32711adc8f9158a0b4a669-chunk-001",
+          "file_path": "gd_7212707c2707213a0b5b7a4b<SEP>gd_ec32711adc8f9158a0b4a669",
+          "created_at": 1793603912
+        },
+        {
+          "entity_name": "115%",
+          "entity_type": "concept",
+          "description": "Previous year's net new ARR growth rate.<SEP>115% is a financial metric representing Cloudflare's previous Net Revenue Retention.",
+          "source_id": "gd_7212707c2707213a0b5b7a4b-chunk-001<SEP>gd_ec32711adc8f9158a0b4a669-chunk-001",
+          "file_path": "gd_7212707c2707213a0b5b7a4b<SEP>gd_ec32711adc8f9158a0b4a669",
+          "created_at": 1793603912
+        },
+        {
+          "entity_name": "Shopify",
+          "entity_type": "organization",
+          "description": "Shopify is a Canadian e-commerce company that provides a comprehensive platform for businesses to design, set up, and manage their online stores. Founded on the principles of innovation and customer satisfaction, Shopify has successfully implemented a lean team structure, accelerating growth despite maintaining a flat headcount. The company's e-commerce platform is designed to cater to various sales channels, including web, mobile, social media, marketplaces, and physical retail locations.\n\nShopify's ecosystem is comprised of top partners, with notable integrations such as HubSpot, which is a part of the platform. This strategic partnership enables businesses to leverage the strengths of both Shopify and HubSpot, enhancing their online store's functionality and customer experience. As an e-commerce platform, Shopify provides businesses with the necessary tools to design, set up, and manage their online stores, making it an attractive solution for entrepreneurs and established retailers alike.\n\nUnder the leadership of CEO Tobi Lutke, Shopify has established itself as a leading player in the e-commerce industry. The company's software and payment processing services have become essential tools for businesses looking to succeed in the digital marketplace. With a majority of its revenue generated from payments and payment processing, Shopify has demonstrated its ability to adapt and thrive in a rapidly changing industry.\n\nShopify's business model is primarily fintech and merchant product-based, with subscription solutions revenue up 21% and payments and merchant solutions up 35%. The company has experienced a significant comeback after slowing down dramatically post-Covid, with a current run-rate of almost $7 Billion and a stunning 31% growth rate. Shopify is a SaaS company with a run-rate of almost $7 Billion and growing at a rate of 31% on a constant-currency basis.\n\nShopify's price increase was the biggest driver of its MRR growth, which is now at $139M, and its ARR is up to $1.7B. The company has a gross margin of 49.3%, with 80% margins on software and 38% on payments and merchant solutions. Shopify has become more efficient, with an adj operating income run-rate of over $600 million. Additionally, the company generates 29% of its business from enterprise clients.\n\nShopify is also a key partner for Klaviyo, a leading e-commerce platform with a significant market share and a deep revenue-sharing agreement with Klaviyo. In fact, Shopify is one of Klaviyo's largest shareholders and has a deep revenue-sharing agreement with Klaviyo. This partnership has enabled both companies to leverage each other's strengths and provide a comprehensive solution for businesses looking to succeed in the digital marketplace.\n\nIt's worth noting that Shopify is also used by PagerDuty, a product that utilizes Shopify's e-commerce platform. Additionally, Shopify is a product-led growth company that has held headcount flat for 3 years without hurting growth, and it is an e-commerce platform that provides online store management and payment processing services, as well as an e-commerce platform that allows businesses to create online stores and manage their sales. Furthermore, Shopify is an e-commerce company that took the biggest hit to post-Covid growth, but has since experienced a significant comeback.<SEP>An e-commerce platform that provides businesses with tools to design, set up, and manage their stores.",
+          "source_id": "gd_00f0fd1277363a92e5cb2ada-chunk-000<SEP>gd_1586430bce2fffea00a8cd83-chunk-000<SEP>gd_1bd11726aa0e0351aefe21ce-chunk-000<SEP>gd_155c95444bc56e1868b0d903-chunk-000<SEP>gd_15d187637520cc4b1b5726e1-chunk-001<SEP>gd_15d187637520cc4b1b5726e1-chunk-002<SEP>gd_256a41d38f56ea0d66e64b45-chunk-000<SEP>gd_13aa38370d7255559def2519-chunk-000<SEP>gd_2aeb737f1fc3578904a93fac-chunk-000<SEP>gd_d1423816ab12475e55e09a39-chunk-001<SEP>gd_d1423816ab12475e55e09a39-chunk-002<SEP>gd_2cc56f4022d63af2f1308876-chunk-000<SEP>gd_16e30ab3992e7d134cdf088c-chunk-000<SEP>gd_16e30ab3992e7d134cdf088c-chunk-001<SEP>gd_48ff16ec2e5560a86e6edea1-chunk-000<SEP>gd_325cd64471734ab31072948f-chunk-001<SEP>gd_325cd64471734ab31072948f-chunk-002<SEP>gd_19e4fce6eb43b72382d2042c-chunk-000<SEP>gd_19e4fce6eb43b72382d2042c-chunk-001<SEP>gd_19e4fce6eb43b72382d2042c-chunk-002<SEP>gd_71e29ba36019c37090ff3004-chunk-001<SEP>gd_60f7ec77f0785ad96797ddf2-chunk-000<SEP>gd_60f7ec77f0785ad96797ddf2-chunk-001<SEP>gd_64ee673f1818fe8a43d10d08-chunk-002<SEP>gd_ac14ab271ce681e57db14baa-chunk-000<SEP>gd_2d72fe9469e9f2b08dcd24ea-chunk-000<SEP>gd_e93488dc685e6f329218fa9e-chunk-000<SEP>gd_47ce87a8b2cb50240d38db90-chunk-000<SEP>gd_72e9e76a2cf7a8ea84a21acb-chunk-000<SEP>gd_72e9e76a2cf7a8ea84a21acb-chunk-001<SEP>gd_72e9e76a2cf7a8ea84a21acb-chunk-002<SEP>gd_72e9e76a2cf7a8ea84a21acb-chunk-003<SEP>gd_f31f8b0a1fadea1c4523c10b-chunk-000<SEP>gd_111b6b23b20d3f5268f61598-chunk-000<SEP>gd_3eb0d6dd205274318ede670c-chunk-001<SEP>gd_fb798d3019afee06b2636d46-chunk-000<SEP>gd_43594d2f7bc2be440a5dcaab-chunk-000<SEP>gd_43594d2f7bc2be440a5dcaab-chunk-001<SEP>gd_c58da68baa96abf8991bb93d-chunk-000<SEP>gd_4539e662ea7b31c661ff01a2-chunk-000<SEP>gd_4539e662ea7b31c661ff01a2-chunk-001<SEP>gd_4f2ce0775e5dfc8c29d679bb-chunk-000<SEP>gd_5a74e007239d6fa585aa9d42-chunk-000<SEP>gd_5a74e007239d6fa585aa9d42-chunk-001<SEP>gd_5aad825cc360da16fcbbd647-chunk-000<SEP>gd_5ebe9ad0324f615be28ce5a6-chunk-000<SEP>gd_5ebe9ad0324f615be28ce5a6-chunk-001<SEP>gd_a51aabf5779c2323c9b3bd84-chunk-000<SEP>gd_a51aabf5779c2323c9b3bd84-chunk-001<SEP>gd_6ac1c91f4cda2d936c6e05c7-chunk-000<SEP>gd_8d70e8e8a1094b7be78b99b3-chunk-000<SEP>gd_6d674ffb138083b614124cff-chunk-001<SEP>gd_6d549413d37ff7b55fa873f0-chunk-000<SEP>gd_6d549413d37ff7b55fa873f0-chunk-001<SEP>gd_fc560134d5cd034812dc8b69-chunk-000<SEP>gd_fc560134d5cd034812dc8b69-chunk-002<SEP>gd_744aedf69774b9787271020d-chunk-000<SEP>gd_7d9ae6c91b92a3f115f2c36d-chunk-000<SEP>gd_818ba64738491131923f436e-chunk-000<SEP>gd_818ba64738491131923f436e-chunk-001<SEP>gd_85fb721c8c61021864128cd9-chunk-000<SEP>gd_8bfdd2b067df03dfe42bfd16-chunk-000<SEP>gd_8bfdd2b067df03dfe42bfd16-chunk-001<SEP>gd_8d5a01e786e521ceef6a39d4-chunk-000<SEP>gd_2639750269d5ed1288adaeb1-chunk-000<SEP>gd_95b3a94a3095519b7c98c7d4-chunk-001<SEP>gd_95b3a94a3095519b7c98c7d4-chunk-002<SEP>gd_97046e558fd3687222a925dc-chunk-000<SEP>gd_97046e558fd3687222a925dc-chunk-001<SEP>gd_a0a7fac44cacd59c4debc742-chunk-000<SEP>gd_a0a7fac44cacd59c4debc742-chunk-001<SEP>gd_daf1ebb11f0e32fe93411859-chunk-003<SEP>gd_48e090cf4fc87c6b04e673b9-chunk-000<SEP>gd_48e090cf4fc87c6b04e673b9-chunk-001<SEP>gd_53d1d4d7cbdb83f9dd2abc9c-chunk-000<SEP>gd_f4a0aad5582252bb48f32929-chunk-000<SEP>gd_f4a0aad5582252bb48f32929-chunk-001<SEP>gd_b25e36a22becbd8c6055d801-chunk-000<SEP>gd_bdb7a3958d115cc79af181f3-chunk-000<SEP>gd_bdb7a3958d115cc79af181f3-chunk-001<SEP>gd_bdb7a3958d115cc79af181f3-chunk-002<SEP>gd_7fe0eca2827d883d8617fc1e-chunk-000<SEP>gd_7fe0eca2827d883d8617fc1e-chunk-001<SEP>gd_d57e7f67ccbcce42d68e491a-chunk-000<SEP>gd_d57e7f67ccbcce42d68e491a-chunk-001<SEP>gd_d57e7f67ccbcce42d68e491a-chunk-002<SEP>gd_d57e7f67ccbcce42d68e491a-chunk-003<SEP>gd_d798b5f87bc9f54fcb6dd69a-chunk-000<SEP>gd_ddc7dc8f7ea37c8335c55003-chunk-000<SEP>gd_de4f1cbf6a8bd8e3c5b1cd8f-chunk-000<SEP>gd_df2480bda3a01a10db6c97b1-chunk-002<SEP>gd_b127fece42e28ee1e64a63ce-chunk-000<SEP>gd_f3529cbb5ac4aa2e54f8622c-chunk-000<SEP>gd_f3529cbb5ac4aa2e54f8622c-chunk-001<SEP>gd_f3529cbb5ac4aa2e54f8622c-chunk-002<SEP>gd_f70b08b50e252ea315d757da-chunk-000<SEP>gd_f7eddf4d50d326485a5879f0-chunk-001<SEP>gd_cda981ad247a4046cb23c1c3-chunk-000<SEP>gd_cda981ad247a4046cb23c1c3-chunk-001<SEP>gd_2b1b51587c41073a82a2aa52-chunk-000<SEP>gd_2b1b51587c41073a82a2aa52-chunk-001<SEP>gd_37c9bf3c519ccfb55eca9483-chunk-001<SEP>gd_43942905c1222c1c0f30c1aa-chunk-000<SEP>gd_44d3149492b8c0b2ab981b6c-chunk-000<SEP>gd_44d3149492b8c0b2ab981b6c-chunk-001<SEP>gd_44e0cfa1d75cad6c2ff06403-chunk-001<SEP>gd_535dfe10c25ba8a8c83581c2-chunk-000<SEP>gd_39aac781b0bdeaf45aebf21d-chunk-000<SEP>gd_59b91b90c7bca58b13cca2ba-chunk-001<SEP>gd_685109a529dd46a0e19d6f2a-chunk-000<SEP>gd_7e66e7cef2564ee679d8470d-chunk-000<SEP>gd_827de18357c3b1abbf9c7ae7-chunk-002<SEP>gd_827de18357c3b1abbf9c7ae7-chunk-003<SEP>gd_c633c0bef0dccd9f73e20152-chunk-002<SEP>gd_8a7dfb05fb5713b4b66f0b9d-chunk-000<SEP>gd_8a7dfb05fb5713b4b66f0b9d-chunk-001<SEP>gd_8c21892693a7f5fa4fc4e1f0-chunk-000<SEP>gd_8eefb8100558ec83fae95a37-chunk-000<SEP>gd_8eefb8100558ec83fae95a37-chunk-001<SEP>gd_92c874aeaeb6d623f4f4d8d8-chunk-002<SEP>gd_58cf6619fe8ac95ceb1217f7-chunk-002<SEP>gd_58cf6619fe8ac95ceb1217f7-chunk-003<SEP>gd_b7a9c3d6a7a69a54d821cd14-chunk-000<SEP>gd_bb8500ff7693b3f67f77f68c-chunk-000<SEP>gd_bb8500ff7693b3f67f77f68c-chunk-001<SEP>gd_bb8500ff7693b3f67f77f68c-chunk-002<SEP>gd_c07fc83a924848f0be87fc81-chunk-000<SEP>gd_c55cf116da67b97c972bcbbc-chunk-000<SEP>gd_d37dd301b6f71a48ce01f589-chunk-000<SEP>gd_d37dd301b6f71a48ce01f589-chunk-001<SEP>gd_d003453b3956b242efc0eccf-chunk-003<SEP>gd_e966c68c8b64742b54a64f35-chunk-002<SEP>gd_ee1953fb4d4e788a8fcd0076-chunk-002<SEP>gd_ee1953fb4d4e788a8fcd0076-chunk-003<SEP>gd_35b0b03e2fac740e050962ba-chunk-001<SEP>gd_e23054549f6afebbe65a7649-chunk-000<SEP>gd_e23054549f6afebbe65a7649-chunk-001<SEP>gd_e4735d696b4fc29d7ad881a1-chunk-000<SEP>gd_e4735d696b4fc29d7ad881a1-chunk-001<SEP>gd_2e5fc1972640f43b4892f397-chunk-005<SEP>gd_2e5fc1972640f43b4892f397-chunk-006<SEP>gd_3c94d3509d88df4c189a0b68-chunk-000<SEP>gd_3c94d3509d88df4c189a0b68-chunk-003<SEP>gd_3c94d3509d88df4c189a0b68-chunk-004<SEP>gd_3c94d3509d88df4c189a0b68-chunk-005<SEP>gd_3c94d3509d88df4c189a0b68-chunk-006<SEP>gd_5ea880eb3548d655f51b5285-chunk-001<SEP>gd_6883af2ee760af258eff9978-chunk-002<SEP>gd_6883af2ee760af258eff9978-chunk-003<SEP>gd_c85d08b0a614790a6e60f5d3-chunk-006<SEP>gd_81aedc67a6609300cfea9c3e-chunk-001<SEP>gd_9b0a0e48daf169f6dd14b6a2-chunk-001<SEP>gd_9b0a0e48daf169f6dd14b6a2-chunk-002<SEP>gd_bb2df0933484691709bc2edf-chunk-000<SEP>gd_bb2df0933484691709bc2edf-chunk-001<SEP>gd_bb2df0933484691709bc2edf-chunk-002<SEP>gd_bb2df0933484691709bc2edf-chunk-003<SEP>gd_bb2df0933484691709bc2edf-chunk-004<SEP>gd_bb2df0933484691709bc2edf-chunk-005<SEP>gd_0bc1abfa4e6084d46e2595c5-chunk-001<SEP>gd_d553ceb07bd923001f7820f3-chunk-001<SEP>gd_2d7b7e7000a27d7ddc3ef566-chunk-001<SEP>gd_30b975e27b27dccba55465d5-chunk-003<SEP>gd_e5436d3079476b02a6f78670-chunk-001<SEP>gd_fbe978a3b40b409d34953414-chunk-001<SEP>gd_127b7c531bf91ae60817b680-chunk-000<SEP>gd_127b7c531bf91ae60817b680-chunk-001<SEP>gd_1e2e8fb9b9bcd7a56f0196bf-chunk-001<SEP>gd_1e2e8fb9b9bcd7a56f0196bf-chunk-002<SEP>gd_8bab8d02da7bc2e8912b06e1-chunk-004<SEP>gd_983ad03801135ea6eb85b5a0-chunk-002<SEP>gd_983ad03801135ea6eb85b5a0-chunk-003<SEP>gd_ac4b8b9ed091ab54b1aba8f9-chunk-005<SEP>gd_bbbfaf2a3dff5c657489eacb-chunk-006<SEP>gd_bbbfaf2a3dff5c657489eacb-chunk-007<SEP>gd_8e21e4824de46ec5db236abe-chunk-000<SEP>gd_98daa4e0c059d6a11d469b3d-chunk-001<SEP>gd_98daa4e0c059d6a11d469b3d-chunk-002<SEP>gd_33656f4f7511eae366de5715-chunk-004<SEP>gd_a4194312fb5370f0de4ff5e4-chunk-000<SEP>gd_108897c9fb45f8816cdee46d-chunk-000<SEP>gd_c64ce5c65f3866446eb8edac-chunk-001<SEP>gd_d6df94b37fa8cbecc13b60e9-chunk-000<SEP>gd_d9a2d04e717bef151e9c5a38-chunk-001<SEP>gd_e5fd52c7cfe02c717c8d6b06-chunk-001<SEP>gd_eb80566a617b57e47caec5bf-chunk-001<SEP>gd_eb80566a617b57e47caec5bf-chunk-003<SEP>gd_085568b71c36eb109160b42e-chunk-001<SEP>gd_b88c92b4f10cf414596ad164-chunk-000<SEP>gd_b88c92b4f10cf414596ad164-chunk-001<SEP>gd_296d96afd4f596ae364cab39-chunk-000<SEP>gd_c5fd94ac349d025fb78a37d0-chunk-000<SEP>gd_c5fd94ac349d025fb78a37d0-chunk-001<SEP>gd_c5fd94ac349d025fb78a37d0-chunk-003<SEP>gd_c5fd94ac349d025fb78a37d0-chunk-004<SEP>gd_c5fd94ac349d025fb78a37d0-chunk-005<SEP>gd_c5fd94ac349d025fb78a37d0-chunk-006<SEP>gd_c991e66dc297f85bbf84346c-chunk-001<SEP>gd_c991e66dc297f85bbf84346c-chunk-002<SEP>gd_3aee61f2fda0aaba4b885eac-chunk-001",
+          "file_path": "gd_00f0fd1277363a92e5cb2ada<SEP>gd_1586430bce2fffea00a8cd83<SEP>gd_1bd11726aa0e0351aefe21ce<SEP>gd_155c95444bc56e1868b0d903<SEP>gd_15d187637520cc4b1b5726e1<SEP>gd_256a41d38f56ea0d66e64b45<SEP>gd_13aa38370d7255559def2519<SEP>gd_2aeb737f1fc3578904a93fac<SEP>gd_d1423816ab12475e55e09a39<SEP>gd_2cc56f4022d63af2f1308876<SEP>gd_16e30ab3992e7d134cdf088c<SEP>gd_48ff16ec2e5560a86e6edea1<SEP>gd_325cd64471734ab31072948f<SEP>gd_19e4fce6eb43b72382d2042c<SEP>gd_71e29ba36019c37090ff3004<SEP>gd_60f7ec77f0785ad96797ddf2<SEP>gd_64ee673f1818fe8a43d10d08<SEP>gd_ac14ab271ce681e57db14baa<SEP>gd_2d72fe9469e9f2b08dcd24ea<SEP>gd_e93488dc685e6f329218fa9e<SEP>gd_47ce87a8b2cb50240d38db90<SEP>gd_72e9e76a2cf7a8ea84a21acb<SEP>gd_f31f8b0a1fadea1c4523c10b<SEP>gd_111b6b23b20d3f5268f61598<SEP>gd_3eb0d6dd205274318ede670c<SEP>gd_fb798d3019afee06b2636d46<SEP>gd_43594d2f7bc2be440a5dcaab<SEP>gd_c58da68baa96abf8991bb93d<SEP>gd_4539e662ea7b31c661ff01a2<SEP>gd_4f2ce0775e5dfc8c29d679bb<SEP>gd_5a74e007239d6fa585aa9d42<SEP>gd_5aad825cc360da16fcbbd647<SEP>gd_5ebe9ad0324f615be28ce5a6<SEP>gd_a51aabf5779c2323c9b3bd84<SEP>gd_6ac1c91f4cda2d936c6e05c7<SEP>gd_8d70e8e8a1094b7be78b99b3<SEP>gd_6d674ffb138083b614124cff<SEP>gd_6d549413d37ff7b55fa873f0<SEP>gd_fc560134d5cd034812dc8b69<SEP>gd_7d9ae6c91b92a3f115f2c36d<SEP>gd_818ba64738491131923f436e<SEP>gd_85fb721c8c61021864128cd9<SEP>gd_8bfdd2b067df03dfe42bfd16<SEP>gd_8d5a01e786e521ceef6a39d4<SEP>gd_2639750269d5ed1288adaeb1<SEP>gd_95b3a94a3095519b7c98c7d4<SEP>gd_97046e558fd3687222a925dc<SEP>gd_a0a7fac44cacd59c4debc742<SEP>gd_daf1ebb11f0e32fe93411859<SEP>gd_48e090cf4fc87c6b04e673b9<SEP>gd_53d1d4d7cbdb83f9dd2abc9c<SEP>gd_f4a0aad5582252bb48f32929<SEP>gd_bdb7a3958d115cc79af181f3<SEP>gd_7fe0eca2827d883d8617fc1e<SEP>gd_d57e7f67ccbcce42d68e491a<SEP>gd_d798b5f87bc9f54fcb6dd69a<SEP>gd_ddc7dc8f7ea37c8335c55003<SEP>gd_de4f1cbf6a8bd8e3c5b1cd8f<SEP>gd_df2480bda3a01a10db6c97b1<SEP>gd_b127fece42e28ee1e64a63ce<SEP>gd_f3529cbb5ac4aa2e54f8622c<SEP>gd_f70b08b50e252ea315d757da<SEP>gd_f7eddf4d50d326485a5879f0<SEP>gd_cda981ad247a4046cb23c1c3<SEP>gd_2b1b51587c41073a82a2aa52<SEP>gd_37c9bf3c519ccfb55eca9483<SEP>gd_43942905c1222c1c0f30c1aa<SEP>gd_44d3149492b8c0b2ab981b6c<SEP>gd_44e0cfa1d75cad6c2ff06403<SEP>gd_535dfe10c25ba8a8c83581c2<SEP>gd_39aac781b0bdeaf45aebf21d<SEP>gd_59b91b90c7bca58b13cca2ba<SEP>gd_685109a529dd46a0e19d6f2a<SEP>gd_7e66e7cef2564ee679d8470d<SEP>gd_827de18357c3b1abbf9c7ae7<SEP>...truncated...(KEEP Old)",
+          "created_at": 1793597184
+        },
+        {
+          "entity_name": "USA",
+          "entity_type": "country",
+          "description": "USA is the country where 50% of Cloudflare's revenue comes from.",
+          "source_id": "gd_7212707c2707213a0b5b7a4b-chunk-000",
+          "file_path": "gd_7212707c2707213a0b5b7a4b",
+          "created_at": 1793496725
+        },
+        {
+          "entity_name": "Developer-first",
+          "entity_type": "UNKNOWN",
+          "description": "Cloudflare's market cap has declined due to its developer-first approach.",
+          "source_id": "gd_9aaaf87c9b9d043595bc5848-chunk-001",
+          "file_path": "gd_9aaaf87c9b9d043595bc5848",
+          "created_at": 1793572931
+        },
+        {
+          "entity_name": "$1B",
+          "entity_type": "concept",
+          "description": "$1B is a significant financial milestone for companies, particularly those in the SaaS industry. It represents a valuation of $1 billion, which is a benchmark for companies that have achieved a high level of success and growth. This milestone is often associated with companies that have reached the 99th percentile in terms of their potential outcome. In the context of SaaS companies, $1B is a financial milestone that indicates a high level of revenue and growth.\n\nThe valuation of $1 billion can be achieved through various means, such as a company's annual recurring revenue (ARR). For instance, Model N, a cloud-based software company, has reached a $1B valuation through its ARR. Similarly, Wix and Twilio have also achieved significant milestones in their ARR growth, reaching a $1B valuation.\n\nIn addition to being a financial milestone, $1B is also a significant indicator of a company's success and growth. It represents a high level of revenue and a strong market position, which can be a key factor in a company's ability to continue growing and expanding its operations. Overall, $1B is a significant milestone for companies that have achieved a high level of success and growth, and it is often seen as a benchmark for companies that are looking to reach new heights.<SEP>Total share repurchase authorization.<SEP>One Billion US Dollars<SEP>$1B refers to the annual recurring revenue (ARR) milestone.<SEP>$1B is a financial metric representing Cloudflare's Annual Recurring Revenue.<SEP>A stock value mentioned in the article.",
+          "source_id": "gd_1ad10391f7c7d8033e146f8c-chunk-001<SEP>gd_8ca4d6a4c90650ad0c2e25a3-chunk-000<SEP>gd_47ce87a8b2cb50240d38db90-chunk-000<SEP>gd_ea1b5c4442520f0bde10ef16-chunk-001<SEP>gd_81bbd7bc18b73e6c09bfbc28-chunk-003<SEP>gd_928c6555503d6e90d241cf1e-chunk-002<SEP>gd_95b3a94a3095519b7c98c7d4-chunk-003<SEP>gd_f08cd0499462cb9f7ebd5219-chunk-000<SEP>gd_ca5f3e3852d84e9e393ac069-chunk-002<SEP>gd_f8ae6dd6116877ca7df38ed1-chunk-002<SEP>gd_a7187d0b5d8f043ea80eae4a-chunk-001<SEP>gd_ec32711adc8f9158a0b4a669-chunk-001<SEP>gd_0ac6be7c075d45e2006382f0-chunk-001",
+          "file_path": "gd_1ad10391f7c7d8033e146f8c<SEP>gd_8ca4d6a4c90650ad0c2e25a3<SEP>gd_47ce87a8b2cb50240d38db90<SEP>gd_ea1b5c4442520f0bde10ef16<SEP>gd_81bbd7bc18b73e6c09bfbc28<SEP>gd_928c6555503d6e90d241cf1e<SEP>gd_95b3a94a3095519b7c98c7d4<SEP>gd_f08cd0499462cb9f7ebd5219<SEP>gd_ca5f3e3852d84e9e393ac069<SEP>gd_f8ae6dd6116877ca7df38ed1<SEP>gd_a7187d0b5d8f043ea80eae4a<SEP>gd_ec32711adc8f9158a0b4a669<SEP>gd_0ac6be7c075d45e2006382f0",
+          "created_at": 1793642649
+        },
+        {
+          "entity_name": "Quarter",
+          "entity_type": "concept",
+          "description": "The Quarter is a fundamental unit of time used to divide the year into smaller, manageable periods. It is commonly defined as a period of three months, which is a widely accepted standard in various contexts, including business, finance, and marketing. In business and financial contexts, the quarter is used to measure performance, track sales, and evaluate progress over a specific period. This three-month period is typically used to align with the calendar year, with each quarter corresponding to a specific season: Q1 (January to March), Q2 (April to June), Q3 (July to September), and Q4 (October to December).\n\nThe quarter is also used in marketing and sales to track performance and evaluate the success of marketing campaigns. It provides a useful framework for businesses to plan, execute, and evaluate their strategies over a defined period. The quarter's duration of three months allows for a balance between short-term and long-term planning, enabling businesses to respond to changing market conditions and make informed decisions.\n\nIn addition to its role in business and finance, the quarter is also used to measure sales performance and commission earnings. It is a specific period of time used for sales targets, and its three-month duration makes it an essential tool for businesses to achieve their goals and objectives. The quarter is particularly relevant in the context of startups, where it is used to measure progress and evaluate performance over a three-month period. Growth rates that were previously high have dropped significantly, from 40% quarter-over-quarter to single digits.\n\nThe quarter is also used for financial reporting, providing a standardized unit of time for businesses to track their performance and progress. It is a widely accepted and standardized unit of time used to track performance and progress in various aspects of business, finance, and marketing. Furthermore, the quarter is used as a time period for tracking outbound campaign performance, and it is also a specific business idea that encompasses more than one word. Additionally, it is used as a period of three months in a fiscal year, and it is a short-term period of time used to measure revenue.",
+          "source_id": "gd_4b27963c646c8a30fa921f67-chunk-000<SEP>gd_d1840e931c8712170e3a9122-chunk-000<SEP>gd_a8ad9518fe2741e2ed944b31-chunk-000<SEP>gd_0907c1098f08172d46eda211-chunk-001<SEP>gd_e982d34f030e5fcc87768837-chunk-001<SEP>gd_0657a858eecd168dd602dd50-chunk-000<SEP>gd_1a02f8692430d0f4f1f4f6be-chunk-000<SEP>gd_1bc1ca14c3d0e348065ae74c-chunk-002<SEP>gd_2237831cf1e21662ef629603-chunk-001<SEP>gd_50b0145865c1ee018c11796f-chunk-001<SEP>gd_906ef5196b8f7ab71fff80c3-chunk-002<SEP>gd_b127fece42e28ee1e64a63ce-chunk-001<SEP>gd_4e7fd53d3d57eeb978245741-chunk-000<SEP>gd_b2cbf2042a041b1d4ced9070-chunk-004<SEP>gd_c761713807815a161628791f-chunk-000<SEP>gd_4780ee23688787de7d58a7da-chunk-000<SEP>gd_c9017b2c5b7fe53e70a885a4-chunk-000<SEP>gd_c9017b2c5b7fe53e70a885a4-chunk-002<SEP>gd_1475e3e6808bcf1fde45f610-chunk-007<SEP>gd_35bba6f7fbcad146853237d3-chunk-004<SEP>gd_3bb77d53b6895bb7fc8ec8ad-chunk-003<SEP>gd_536b8e8143a9a6d616f95b8a-chunk-001<SEP>gd_5ad99af783e788fe13cc1713-chunk-002<SEP>gd_67605307e29f9fce4d4d6064-chunk-004<SEP>gd_40a1e7bc45542f2904568d95-chunk-000<SEP>gd_e570bc885c853fe839d0ee57-chunk-003<SEP>gd_9c5b3ffd65a6602d115b46e5-chunk-004<SEP>gd_c991e66dc297f85bbf84346c-chunk-004<SEP>gd_03e19ade06e9e20d35a7a989-chunk-006<SEP>gd_417b957752ce712ce5874976-chunk-008<SEP>gd_8fdb2b4384c2295b581058ff-chunk-010<SEP>gd_70ca318c0d67e8b62254fb7d-chunk-003<SEP>gd_9a6413e72ef87aaa24c6a060-chunk-004<SEP>gd_fd88decf2f277fd53c2293b7-chunk-005<SEP>gd_8a7f9d97ab81a0e9545f71eb-chunk-000<SEP>gd_87131f4a34d2f70295f0cf04-chunk-000",
+          "file_path": "gd_4b27963c646c8a30fa921f67<SEP>gd_d1840e931c8712170e3a9122<SEP>gd_a8ad9518fe2741e2ed944b31<SEP>gd_0907c1098f08172d46eda211<SEP>gd_e982d34f030e5fcc87768837<SEP>gd_0657a858eecd168dd602dd50<SEP>gd_1a02f8692430d0f4f1f4f6be<SEP>gd_1bc1ca14c3d0e348065ae74c<SEP>gd_2237831cf1e21662ef629603<SEP>gd_50b0145865c1ee018c11796f<SEP>gd_906ef5196b8f7ab71fff80c3<SEP>gd_b127fece42e28ee1e64a63ce<SEP>gd_4e7fd53d3d57eeb978245741<SEP>gd_b2cbf2042a041b1d4ced9070<SEP>gd_c761713807815a161628791f<SEP>gd_4780ee23688787de7d58a7da<SEP>gd_c9017b2c5b7fe53e70a885a4<SEP>gd_1475e3e6808bcf1fde45f610<SEP>gd_35bba6f7fbcad146853237d3<SEP>gd_3bb77d53b6895bb7fc8ec8ad<SEP>gd_536b8e8143a9a6d616f95b8a<SEP>gd_5ad99af783e788fe13cc1713<SEP>gd_67605307e29f9fce4d4d6064<SEP>gd_40a1e7bc45542f2904568d95<SEP>gd_e570bc885c853fe839d0ee57<SEP>gd_9c5b3ffd65a6602d115b46e5<SEP>gd_c991e66dc297f85bbf84346c<SEP>gd_03e19ade06e9e20d35a7a989<SEP>gd_417b957752ce712ce5874976<SEP>gd_8fdb2b4384c2295b581058ff<SEP>gd_70ca318c0d67e8b62254fb7d<SEP>gd_9a6413e72ef87aaa24c6a060<SEP>gd_fd88decf2f277fd53c2293b7<SEP>gd_8a7f9d97ab81a0e9545f71eb<SEP>gd_87131f4a34d2f70295f0cf04",
+          "created_at": 1793641625
+        },
+        {
+          "entity_name": "Wall Street",
+          "entity_type": "organization",
+          "description": "**Wall Street**\n\nWall Street is a term that encompasses the financial industry and its expectations for companies' performance. It refers to the financial markets and institutions that facilitate the buying and selling of securities. As a financial institution, Wall Street values profitable growth and is willing to trade slower growth for non-GAAP profits and material free cash flow. This means that companies are often judged on their ability to generate profits, even if it means sacrificing some growth in the short term.\n\nWall Street is also known for setting high standards for companies, particularly those in the cloud sector. Analysts and market experts closely monitor the performance of companies, and any deviation from expected growth or profitability can have significant consequences. In some cases, Wall Street may be more forgiving, as seen in the case of nCino, which was valued at $3.3 Billion despite a change in growth rate.\n\nIn addition to its role as a financial institution, Wall Street is also a physical location - a financial district in New York City. This district is home to many major financial institutions, including banks, investment firms, and stock exchanges. The term \"Wall Street\" is often used to describe the financial industry as a whole, but it also has a specific geographical meaning.\n\nWall Street has specific expectations for certain companies, such as a target of 20% operating margin for Sprinklr. It also provides investment services and has been concerned about companies' revenue, as seen in the case of GitLab. However, Wall Street seems to be okay with low margins as companies scale.\n\nIt's worth noting that Wall Street is also associated with the financial institution that Freshworks beat in revenue and adjusted profit estimates. Additionally, Wall Street is a financial market where companies are valued based on their performance and growth. The district is also home to many financial institutions, including banks, investment firms, and stock exchanges.\n\nOverall, Wall Street is a complex and multifaceted term that encompasses both the financial industry and its expectations, as well as a specific physical location in New York City.<SEP>Wall Street is a financial district in New York City.<SEP>Financial institutions that are treating budget displacement and substitution as the same event.<SEP>Wall Street analysts have given ADP a median price target of $310.00.<SEP>Financial district in New York City<SEP>A financial district in New York City.",
+          "source_id": "gd_29f68dd5d21caeef086b7329-chunk-000<SEP>gd_76a682c6cb97a5d19a642ab0-chunk-000<SEP>gd_66bbfcd9b1f8b6bca75fe3f6-chunk-002<SEP>gd_66bbfcd9b1f8b6bca75fe3f6-chunk-003<SEP>gd_6ea8e86d7fad6b3f2243fdd7-chunk-000<SEP>gd_6ea8e86d7fad6b3f2243fdd7-chunk-001<SEP>gd_9838e8220d789e78b7f4418d-chunk-000<SEP>gd_bdb7a3958d115cc79af181f3-chunk-001<SEP>gd_bdb7a3958d115cc79af181f3-chunk-002<SEP>gd_cd33756bd319ab7b66758a0d-chunk-001<SEP>gd_d9290ed0e1780f3bb8b02f05-chunk-000<SEP>gd_d9290ed0e1780f3bb8b02f05-chunk-001<SEP>gd_ee48ad719b59c4df12151952-chunk-002<SEP>gd_efbaa09ea2525e90e20556df-chunk-002<SEP>gd_f8ae6dd6116877ca7df38ed1-chunk-000<SEP>gd_35e2a72ebda9a867d1609c05-chunk-001<SEP>gd_602ec044e3ecdf3d2d224081-chunk-001<SEP>gd_7abf2d5bddb3539f3b30b683-chunk-000<SEP>gd_827de18357c3b1abbf9c7ae7-chunk-002<SEP>gd_827de18357c3b1abbf9c7ae7-chunk-003<SEP>gd_a7187d0b5d8f043ea80eae4a-chunk-000<SEP>gd_b9da22c04e0fa0f306cd64d9-chunk-000<SEP>gd_0519f1abfcc0fb0a1e118638-chunk-000<SEP>gd_f5a9a68ca1ce3e9ad54e9e5e-chunk-000<SEP>gd_b59420b8a4157ccee2549a6f-chunk-000<SEP>gd_bb2df0933484691709bc2edf-chunk-000<SEP>gd_7070389b6ad9bb595965eca5-chunk-002<SEP>gd_4305ca7b896da20cc09c6c3b-chunk-000<SEP>gd_3aee61f2fda0aaba4b885eac-chunk-002<SEP>gd_ec32711adc8f9158a0b4a669-chunk-000<SEP>gd_f97ee368587022535f9ff611-chunk-000<SEP>gd_59707322e6a2495f8caca90a-chunk-002<SEP>gd_59707322e6a2495f8caca90a-chunk-012<SEP>gd_59707322e6a2495f8caca90a-chunk-011<SEP>gd_310914d31f4bf71a5e4a8a5e-chunk-014<SEP>gd_a0acb205dc04ba5f42369d7a-chunk-000<SEP>gd_de224f44af7a01a27aa7d4bf-chunk-005<SEP>gd_7df7dbd1ef357295466a8e49-chunk-007<SEP>gd_2882e3e764a7ba03cd050829-chunk-005<SEP>gd_a351b7a8812fb540220d3381-chunk-014<SEP>gd_a351b7a8812fb540220d3381-chunk-000",
+          "file_path": "gd_29f68dd5d21caeef086b7329<SEP>gd_76a682c6cb97a5d19a642ab0<SEP>gd_6ea8e86d7fad6b3f2243fdd7<SEP>gd_9838e8220d789e78b7f4418d<SEP>gd_bdb7a3958d115cc79af181f3<SEP>gd_cd33756bd319ab7b66758a0d<SEP>gd_d9290ed0e1780f3bb8b02f05<SEP>gd_ee48ad719b59c4df12151952<SEP>gd_efbaa09ea2525e90e20556df<SEP>gd_f8ae6dd6116877ca7df38ed1<SEP>gd_35e2a72ebda9a867d1609c05<SEP>gd_602ec044e3ecdf3d2d224081<SEP>gd_7abf2d5bddb3539f3b30b683<SEP>gd_827de18357c3b1abbf9c7ae7<SEP>gd_a7187d0b5d8f043ea80eae4a<SEP>gd_b9da22c04e0fa0f306cd64d9<SEP>gd_0519f1abfcc0fb0a1e118638<SEP>gd_f5a9a68ca1ce3e9ad54e9e5e<SEP>gd_b59420b8a4157ccee2549a6f<SEP>gd_bb2df0933484691709bc2edf<SEP>gd_7070389b6ad9bb595965eca5<SEP>gd_4305ca7b896da20cc09c6c3b<SEP>gd_3aee61f2fda0aaba4b885eac<SEP>gd_ec32711adc8f9158a0b4a669<SEP>gd_f97ee368587022535f9ff611<SEP>gd_59707322e6a2495f8caca90a<SEP>gd_310914d31f4bf71a5e4a8a5e<SEP>gd_de224f44af7a01a27aa7d4bf<SEP>gd_7df7dbd1ef357295466a8e49<SEP>gd_2882e3e764a7ba03cd050829<SEP>gd_a351b7a8812fb540220d3381",
+          "created_at": 1793644009
+        },
+        {
+          "entity_name": "NET",
+          "entity_type": "product",
+          "description": "The ticker symbol for Cloudflare.",
+          "source_id": "gd_9aaaf87c9b9d043595bc5848-chunk-000",
+          "file_path": "gd_9aaaf87c9b9d043595bc5848",
+          "created_at": 1793572911
+        },
+        {
+          "entity_name": "Market",
+          "entity_type": "concept",
+          "description": "**Market**\n\nThe Market is a multifaceted concept that encompasses various aspects of business and commerce. At its core, the Market refers to the audience or customers that a business is targeting with its products or services. This can be a specific segment of a larger Market where a company operates, or a specific geographic area where a product or service is sold. In a broader sense, the Market is the business environment where companies compete and operate, interacting with buyers and sellers to exchange goods and services.\n\nThe Market can also refer to the overall demand and supply of a product or service, as well as a specific area or industry where a startup operates. In some cases, the Market can be a place or system where buyers and sellers interact to exchange goods, services, or assets, or simply a place where products or services are sold. Additionally, the Market can be the value of a company or asset based on its current Market conditions and prices.\n\nA Market can be defined as a group of potential customers with similar needs and preferences, which is a key consideration for businesses looking to target a specific audience. It can also refer to a specific segment or area of business that a SaaS company operates in, highlighting the importance of understanding the nuances of different Markets and industries.\n\nThe current Market conditions and trends are also a significant consideration for businesses, as they can impact the success of a product or service. The Market's belief in a product is also a crucial factor in its success. Furthermore, the Market has correctly identified a structural break in the model, and companies need to focus on their products and internal issues rather than external competition.\n\nIn terms of geographic scope, a Market can be a specific area or region where a product or service is sold, or a demographic group that a product or service is targeted towards. Entities that operate within a specific geographic area or industry are also considered part of the Market.\n\nThe overall economic conditions and trends that affect a company's performance are also an important aspect of the Market. Currently, the funding environment is still tight, and growth expectations are still high. However, the Market is also changing due to new technology paradigms, and companies need to be adaptable to succeed.\n\nThe Market size is projected to be between $676-912 billion in 2025, with a growth rate of 16-21% CAGR through 2030. By 2030, the Market size is projected to be between $2.3T – $2.6T, and by 2034, it is projected to reach $5.1T.\n\nIt's worth noting that the Market can also be affected by external factors such as the overall sales environment, which may be affecting the company's performance. Additionally, the Market can be a place or situation where goods or services are bought and sold, used to describe a factor that can affect business decisions.\n\nThe Market has a massive bifurcation, with a handful of AI companies raising billion-dollar rounds, while everyone else is fighting for scraps. This highlights the importance of being adaptable and innovative in a rapidly changing Market. The Market can also be a group of investors and buyers, or a group of people who have a need for a product or service.\n\nEntering a large Market can be easier, and the Market refers to the industry or sector in which a business operates. The area or industry in which a company operates is also an important aspect of the Market. Having a lot of competitors who talk about a product but few who can actually deliver is a common challenge in the Market.\n\nThe Market refers to the financial Market, which includes the stock Market, bond Market, and other financial Markets. Market is a concept that refers to a Market or industry, and the ranking of companies in the Market, where #5 received the same premium as #1, is a notable aspect of the Market.\n\nOverall, the Market is a complex and multifaceted concept that requires a deep understanding of its various aspects and nuances. By understanding the Market and its various components, businesses can better navigate its complexities and make informed decisions to succeed.",
+          "source_id": "gd_072a958576c3d08d325dd01b-chunk-001<SEP>gd_e202a1afd3c9d493a094de48-chunk-003<SEP>gd_21919aca3c400d60f87d44a8-chunk-000<SEP>gd_5448911bf1d9e8cb3ec3f5e9-chunk-000<SEP>gd_325cd64471734ab31072948f-chunk-000<SEP>gd_6bbd9f87d5f3da64cd6e9e0a-chunk-001<SEP>gd_3ac038553a6efee0e6c187a0-chunk-001<SEP>gd_47fbbf612af3204e5ab5ce5e-chunk-002<SEP>gd_8aa8fb2b9328e174364a4ff2-chunk-000<SEP>gd_1e07c5d8a5539b7e896c47b5-chunk-000<SEP>gd_715f8f4234bd072860c827a5-chunk-000<SEP>gd_9864ca1feb02f2cb55a1a9c2-chunk-000<SEP>gd_59786235ec03f6fe9fcba771-chunk-000<SEP>gd_673777877ba804b6adcb05c7-chunk-000<SEP>gd_31ba1c8d581ac1985f549c14-chunk-003<SEP>gd_ae46602503f51cde09054ac5-chunk-001<SEP>gd_81bde9d299daaec71f7d4b59-chunk-001<SEP>gd_905be8c3f8d3ed19a7f2a935-chunk-000<SEP>gd_af58f56a6c6ec855ea85b303-chunk-001<SEP>gd_f69e3705f2346e4c5790bb90-chunk-000<SEP>gd_a004fa7f87187d6b6f18a664-chunk-001<SEP>gd_b34fa0b5c05ac1d04fa62aa7-chunk-000<SEP>gd_e2447a83645e8c86cf82915d-chunk-000<SEP>gd_29b51d2dab14acadfc88e927-chunk-000<SEP>gd_32f5e4f1f3af8c48fe6d19b5-chunk-001<SEP>gd_fc5e3d369b99c8319468b0c7-chunk-000<SEP>gd_09aff9d34799836ada09cb39-chunk-000<SEP>gd_797f4c605871b4eaa3c89596-chunk-002<SEP>gd_7d9ae6c91b92a3f115f2c36d-chunk-001<SEP>gd_19d3cb4a0d9ac32e95b41c33-chunk-002<SEP>gd_1ec6e750a5915487f6b0f4fa-chunk-001<SEP>gd_750070fac576fb48120f9904-chunk-000<SEP>gd_8c5d383d6700632b00ecfb79-chunk-001<SEP>gd_ef0a3cc3b5933f0a5cd3fccb-chunk-000<SEP>gd_d6aa012be158b9d77ddffb46-chunk-000<SEP>gd_d81bb6cc0098a4c65b6265fe-chunk-000<SEP>gd_e1c7894260cde2622274f477-chunk-002<SEP>gd_ec005f90a4cbb6409aac509c-chunk-002<SEP>gd_1ae501bfdb3a7f714e292862-chunk-001<SEP>gd_1fd95d7bd6ed45e81b456fce-chunk-002<SEP>gd_346b6035bf8be7b5b8fd6cff-chunk-001<SEP>gd_346b6035bf8be7b5b8fd6cff-chunk-002<SEP>gd_37c9bf3c519ccfb55eca9483-chunk-000<SEP>gd_638504ad2255cea838cacfbf-chunk-000<SEP>gd_638504ad2255cea838cacfbf-chunk-001<SEP>gd_09ee42740580eeee1bc58b01-chunk-000<SEP>gd_1db8851ad56bec3e841dbf86-chunk-003<SEP>gd_4d77f67e4d236b7029d83bb8-chunk-000<SEP>gd_4d77f67e4d236b7029d83bb8-chunk-001<SEP>gd_2f4df5abef725f9b0f5db9bd-chunk-002<SEP>gd_3431ce388885d39d6d44c6b6-chunk-004<SEP>gd_56d7f8faeb5930b1eda7e2c9-chunk-000<SEP>gd_56d7f8faeb5930b1eda7e2c9-chunk-003<SEP>gd_56d7f8faeb5930b1eda7e2c9-chunk-004<SEP>gd_6439c400c1d09acb6a66a591-chunk-000<SEP>gd_6439c400c1d09acb6a66a591-chunk-002<SEP>gd_6439c400c1d09acb6a66a591-chunk-001<SEP>gd_7234fba9ded2d36b213af4f5-chunk-000<SEP>gd_7a9a67266e89c0a8630f6fbb-chunk-002<SEP>gd_1b9bbe7ebbb40cc7edaaca04-chunk-002<SEP>gd_1b9bbe7ebbb40cc7edaaca04-chunk-003<SEP>gd_999472ab9bf390630ebf1126-chunk-001<SEP>gd_a68c9faa653f5e712be83386-chunk-000<SEP>gd_4fbe2efd627b9252bdea5ea3-chunk-002<SEP>gd_72aeec36a95526889d6cc973-chunk-001<SEP>gd_a120d398e57a33365886f6a6-chunk-003<SEP>gd_c91e035894efec4c6e9873e9-chunk-001<SEP>gd_e2a836034c2fbbd00b9cc82a-chunk-003<SEP>gd_e4c7335907a173919efb58a2-chunk-000<SEP>gd_3acffa3c074be68c09c17ae4-chunk-000<SEP>gd_3acffa3c074be68c09c17ae4-chunk-001<SEP>gd_81574416d816b9ed5a9e6fb1-chunk-003<SEP>gd_81574416d816b9ed5a9e6fb1-chunk-004<SEP>gd_b0a33090385448bab0fdb263-chunk-001<SEP>gd_e23054549f6afebbe65a7649-chunk-003<SEP>gd_062fdba1eb0375bef6607116-chunk-003<SEP>gd_062fdba1eb0375bef6607116-chunk-004<SEP>gd_0d5ce0b3e04a8314ef86c827-chunk-005<SEP>gd_f8a9bb89d833767e5b63d5a7-chunk-000<SEP>gd_f8a9bb89d833767e5b63d5a7-chunk-001<SEP>gd_1489f32c404f2e386e0e108a-chunk-004<SEP>gd_36f51e2dd08bfeca036d42ad-chunk-002<SEP>gd_36f51e2dd08bfeca036d42ad-chunk-003<SEP>gd_45039ea6215ace79f501d25d-chunk-001<SEP>gd_45039ea6215ace79f501d25d-chunk-005<SEP>gd_3c94d3509d88df4c189a0b68-chunk-006<SEP>gd_3dd5c02a7eda4361172441d2-chunk-000<SEP>gd_3dd5c02a7eda4361172441d2-chunk-001<SEP>gd_3dd5c02a7eda4361172441d2-chunk-002<SEP>gd_5041ab8c996980f3b7b34675-chunk-001<SEP>gd_85e65f7b38f06f45f9272493-chunk-001<SEP>gd_ec228e8695e416170bcef74e-chunk-007<SEP>gd_dd2fb5e9c77a521dabfbfd09-chunk-003<SEP>gd_fe9184e0ab77202749f57674-chunk-004<SEP>gd_015d273393160169bc16ee3e-chunk-004<SEP>gd_16b616fcb6970053eaa0f408-chunk-003<SEP>gd_67605307e29f9fce4d4d6064-chunk-003<SEP>gd_180cfcbda9d5aa945583d82e-chunk-002<SEP>gd_8e0c4eb5068da67dbb8ad247-chunk-004<SEP>gd_9fd8e6443d56bea959fbffdc-chunk-001<SEP>gd_9fd8e6443d56bea959fbffdc-chunk-002<SEP>gd_6f5a1d107624d40a3141bbb7-chunk-002<SEP>gd_6f5a1d107624d40a3141bbb7-chunk-003<SEP>gd_e01477e17866ee5836e50828-chunk-005<SEP>gd_e01477e17866ee5836e50828-chunk-001<SEP>gd_88b45eaf937a5ab5039dba4e-chunk-005<SEP>gd_f335200b1b152ebd57131e72-chunk-005<SEP>gd_9e84be7a06bff0542f4f560e-chunk-000<SEP>gd_ab2b44c18919e9af9f28a4d4-chunk-003<SEP>gd_d19ef462293cbfaf17f910e6-chunk-004<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-007<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-005<SEP>gd_40a1e7bc45542f2904568d95-chunk-000<SEP>gd_e570bc885c853fe839d0ee57-chunk-001<SEP>gd_eed02ca0e99ddce2117cfb23-chunk-003<SEP>gd_03e19ade06e9e20d35a7a989-chunk-002<SEP>gd_03e19ade06e9e20d35a7a989-chunk-005<SEP>gd_03e19ade06e9e20d35a7a989-chunk-006<SEP>gd_03e19ade06e9e20d35a7a989-chunk-000<SEP>gd_5d983738ccb8063f7f8a2ced-chunk-001<SEP>gd_57de1d1dfc0b96aff9b97b1f-chunk-005<SEP>gd_e0e8f051a95a2e0ce0fb9f89-chunk-000<SEP>gd_1ea75faaa1a24bb0a1573ab5-chunk-006<SEP>gd_2565933e9e131902a1c3741b-chunk-003<SEP>gd_889757c8b0469b376564324e-chunk-010<SEP>gd_8c7c46de206e2398293aa7cd-chunk-000<SEP>gd_132a794bad65f88dee461787-chunk-005<SEP>gd_132a794bad65f88dee461787-chunk-006<SEP>gd_3aae8a7c065a234aa5cc25dc-chunk-005<SEP>gd_3e8732484211557041408d86-chunk-005<SEP>gd_3e8732484211557041408d86-chunk-006<SEP>gd_5452a21f583d7a1ce5646101-chunk-005<SEP>gd_8fdb2b4384c2295b581058ff-chunk-005<SEP>gd_6a3a9ea47e89d7f04a9415ee-chunk-003<SEP>gd_6f7cec99215f9ff2f03605c0-chunk-007<SEP>gd_35814a36a9b1f3b837986159-chunk-001<SEP>gd_df32839420b6112dc0266e66-chunk-005<SEP>gd_df32839420b6112dc0266e66-chunk-006<SEP>gd_9e15f38f2f6fafa680da9f0c-chunk-001<SEP>gd_249ae5f1a28ad2b6389c7b37-chunk-001<SEP>gd_249ae5f1a28ad2b6389c7b37-chunk-006<SEP>gd_249ae5f1a28ad2b6389c7b37-chunk-015<SEP>gd_0c20659f1cea960e88f6bb0b-chunk-005<SEP>gd_14eaa99f6b156bd8099dd6b7-chunk-028<SEP>gd_39135822a5638787a5a43dd3-chunk-001<SEP>gd_7c0a2c0006a5bc39ac8e59fc-chunk-004<SEP>gd_825ec3c64d586d4857342d32-chunk-002<SEP>gd_930b21b904954df9b1d85c3b-chunk-002<SEP>gd_930b21b904954df9b1d85c3b-chunk-005<SEP>gd_930b21b904954df9b1d85c3b-chunk-004<SEP>gd_a32a13229e6ff834fda4827a-chunk-007<SEP>gd_d7608d7e6dac4d722fb90de0-chunk-003<SEP>gd_f6c00e0b3dd6d992b151a870-chunk-006<SEP>gd_fe5cda8843f27d3cb5268a08-chunk-004<SEP>gd_6f67421c00686b7efde013a1-chunk-008<SEP>gd_e6d10122d4b3f67d0762c9ad-chunk-000<SEP>gd_5aa00b3ad8097a02a532ea01-chunk-005<SEP>gd_6d36e9d789605a02741458e1-chunk-006<SEP>gd_7df7dbd1ef357295466a8e49-chunk-007<SEP>gd_b0ed35375cd1112218e7da45-chunk-004<SEP>gd_b80524f908bad21aeaf41dfe-chunk-005<SEP>gd_faa2e63d5acfd50ac326251d-chunk-003<SEP>gd_203f248339b833dc26e44807-chunk-006<SEP>gd_18882942a86ac5a7c53bf0cb-chunk-002<SEP>gd_2b1b8318e2ec523237dbf3e3-chunk-008<SEP>gd_66374b54f26da8ea58393cdf-chunk-003<SEP>gd_e697a048be1ba443df9f5c20-chunk-000<SEP>gd_87131f4a34d2f70295f0cf04-chunk-005<SEP>gd_c3146fb15d0855ad8bbb5a02-chunk-003<SEP>gd_0ac6be7c075d45e2006382f0-chunk-007<SEP>gd_0488dbe0d1821eacec1cd206-chunk-009<SEP>gd_bd5af2f19abc9f9115e0783f-chunk-007<SEP>gd_57f40ea85543a2a411181d29-chunk-000",
+          "file_path": "gd_072a958576c3d08d325dd01b<SEP>gd_e202a1afd3c9d493a094de48<SEP>gd_21919aca3c400d60f87d44a8<SEP>gd_6bbd9f87d5f3da64cd6e9e0a<SEP>gd_3ac038553a6efee0e6c187a0<SEP>gd_47fbbf612af3204e5ab5ce5e<SEP>gd_8aa8fb2b9328e174364a4ff2<SEP>gd_1e07c5d8a5539b7e896c47b5<SEP>gd_9864ca1feb02f2cb55a1a9c2<SEP>gd_59786235ec03f6fe9fcba771<SEP>gd_673777877ba804b6adcb05c7<SEP>gd_31ba1c8d581ac1985f549c14<SEP>gd_ae46602503f51cde09054ac5<SEP>gd_81bde9d299daaec71f7d4b59<SEP>gd_905be8c3f8d3ed19a7f2a935<SEP>gd_af58f56a6c6ec855ea85b303<SEP>gd_f69e3705f2346e4c5790bb90<SEP>gd_a004fa7f87187d6b6f18a664<SEP>gd_b34fa0b5c05ac1d04fa62aa7<SEP>gd_e2447a83645e8c86cf82915d<SEP>gd_29b51d2dab14acadfc88e927<SEP>gd_32f5e4f1f3af8c48fe6d19b5<SEP>gd_fc5e3d369b99c8319468b0c7<SEP>gd_09aff9d34799836ada09cb39<SEP>gd_19d3cb4a0d9ac32e95b41c33<SEP>gd_1ec6e750a5915487f6b0f4fa<SEP>gd_8c5d383d6700632b00ecfb79<SEP>gd_ef0a3cc3b5933f0a5cd3fccb<SEP>gd_d6aa012be158b9d77ddffb46<SEP>gd_e1c7894260cde2622274f477<SEP>gd_ec005f90a4cbb6409aac509c<SEP>gd_1ae501bfdb3a7f714e292862<SEP>gd_346b6035bf8be7b5b8fd6cff<SEP>gd_37c9bf3c519ccfb55eca9483<SEP>gd_638504ad2255cea838cacfbf<SEP>gd_09ee42740580eeee1bc58b01<SEP>gd_1db8851ad56bec3e841dbf86<SEP>gd_4d77f67e4d236b7029d83bb8<SEP>gd_2f4df5abef725f9b0f5db9bd<SEP>gd_3431ce388885d39d6d44c6b6<SEP>gd_56d7f8faeb5930b1eda7e2c9<SEP>gd_6439c400c1d09acb6a66a591<SEP>gd_7a9a67266e89c0a8630f6fbb<SEP>gd_1b9bbe7ebbb40cc7edaaca04<SEP>gd_999472ab9bf390630ebf1126<SEP>gd_4fbe2efd627b9252bdea5ea3<SEP>gd_72aeec36a95526889d6cc973<SEP>gd_a120d398e57a33365886f6a6<SEP>gd_c91e035894efec4c6e9873e9<SEP>gd_e2a836034c2fbbd00b9cc82a<SEP>gd_3acffa3c074be68c09c17ae4<SEP>gd_81574416d816b9ed5a9e6fb1<SEP>gd_b0a33090385448bab0fdb263<SEP>gd_e23054549f6afebbe65a7649<SEP>gd_062fdba1eb0375bef6607116<SEP>gd_0d5ce0b3e04a8314ef86c827<SEP>gd_f8a9bb89d833767e5b63d5a7<SEP>gd_36f51e2dd08bfeca036d42ad<SEP>gd_45039ea6215ace79f501d25d<SEP>gd_3c94d3509d88df4c189a0b68<SEP>gd_3dd5c02a7eda4361172441d2<SEP>gd_5041ab8c996980f3b7b34675<SEP>gd_85e65f7b38f06f45f9272493<SEP>gd_015d273393160169bc16ee3e<SEP>gd_16b616fcb6970053eaa0f408<SEP>gd_67605307e29f9fce4d4d6064<SEP>gd_180cfcbda9d5aa945583d82e<SEP>gd_8e0c4eb5068da67dbb8ad247<SEP>gd_9fd8e6443d56bea959fbffdc<SEP>gd_6f5a1d107624d40a3141bbb7<SEP>gd_e01477e17866ee5836e50828<SEP>gd_9e84be7a06bff0542f4f560e<SEP>gd_ab2b44c18919e9af9f28a4d4<SEP>gd_2a4d7b8a58e1c3110dd4d692<SEP>gd_40a1e7bc45542f2904568d95<SEP>...truncated...(KEEP Old)",
+          "created_at": 1793645088
+        },
+        {
+          "entity_name": "Chris Merritt",
+          "entity_type": "person",
+          "description": "CRO at Cloudflare.<SEP>Chris Merritt is the CRO of Cloudflare.",
+          "source_id": "gd_26bfbd2898d0a0f84f3cc393-chunk-010<SEP>gd_26bfbd2898d0a0f84f3cc393-chunk-011",
+          "file_path": "gd_26bfbd2898d0a0f84f3cc393",
+          "created_at": 1793608120
+        },
+        {
+          "entity_name": "ARR",
+          "entity_type": "concept",
+          "description": "**Annual Recurring Revenue (ARR)**\n\nAnnual Recurring Revenue (ARR) is a key financial metric used to measure a company's revenue growth over a specific period of time. It represents the annual recurring revenue of a company, which is a crucial indicator of its financial health and stability. ARR is a measure of a company's revenue over a year, and it is widely used in the Software as a Service (SaaS) industry to evaluate business growth.\n\nThe concept of ARR is straightforward: it is the total revenue that a company can expect to generate from its existing customer base over a 12-month period. This metric is essential for investors, analysts, and business leaders to assess a company's financial performance and make informed decisions. ARR is often used in conjunction with other metrics, such as customer acquisition cost and customer lifetime value, to gain a comprehensive understanding of a company's revenue growth potential.\n\nIn essence, ARR is a measure of a company's ability to generate recurring revenue from its existing customer base, which is a critical factor in determining its long-term financial sustainability. By tracking ARR, companies can identify areas for improvement, optimize their revenue streams, and make data-driven decisions to drive growth and profitability.\n\nNotably, ARR has been achieved by several companies, including a milestone of $7m, which is a significant milestone. Crowdstrike's ARR has been growing at a rate of 37% at almost $3B, highlighting the importance of this metric in measuring business growth. ARR is also a key metric for SaaS companies, providing valuable insights into their revenue streams and growth potential.\n\nIt's worth noting that ARR is a key metric for sales efficiency, with a decline in efficiency expected after $8-$10m in ARR. This highlights the importance of monitoring ARR to ensure that sales efforts are optimized and revenue growth is sustained.\n\nIn recent years, the definition of ARR has evolved to include any software-related revenue with 100%+ Net Revenue Retention. This shift in definition reflects the changing landscape of the SaaS industry and the growing importance of recurring revenue streams.\n\nFreshworks, for instance, has achieved significant growth in its ARR, reaching $350m and expected to reach $400m. This demonstrates the importance of tracking ARR in measuring a company's revenue growth and making informed decisions to drive business success.\n\nOverall, ARR is a critical metric for companies to track their revenue growth and make informed decisions to drive business success.<SEP>ARR stands for Annual Recurring Revenue, a metric used to measure a company's revenue growth.<SEP>Annual Recurring Revenue is a financial metric used to measure the revenue generated by a company's subscription-based business model.<SEP>Annual Recurring Revenue, a key metric for SaaS companies.<SEP>ARR stands for Annual Recurring Revenue.",
+          "source_id": "gd_087a4675a11cf57ae08ea7cf-chunk-000<SEP>gd_0327fd5c4fc1590df1481cc3-chunk-000<SEP>gd_03e15c39b23c76a73a12a032-chunk-000<SEP>gd_07f2aff54dd7489cb3053484-chunk-000<SEP>gd_17c3b096c9e3f1e1c46be346-chunk-004<SEP>gd_158776503ae4c718d7c4a6c6-chunk-000<SEP>gd_0461f8f47c14300f7a278cef-chunk-000<SEP>gd_15cebc29d9f85feb474c70c8-chunk-001<SEP>gd_17f44165842fee018cbbd653-chunk-000<SEP>gd_0469dfa7d7642dd1811fc886-chunk-000<SEP>gd_3d7ffaecb9f0e7708246cfcd-chunk-000<SEP>gd_05d0d2bed2dadbf7007f9ef2-chunk-000<SEP>gd_1ba5b6429d4f7d40a66b28cc-chunk-000<SEP>gd_2071687707b6854abd28f69a-chunk-000<SEP>gd_13aa38370d7255559def2519-chunk-001<SEP>gd_22462fc0c151ee5a1d880b8f-chunk-000<SEP>gd_1f6dc332a7e2fcdbc169d98a-chunk-000<SEP>gd_07a0467e91997eb1227209b3-chunk-000<SEP>gd_13e89e60c3f8b41c3f077c76-chunk-000<SEP>gd_087d1d57d2263adb70e18521-chunk-000<SEP>gd_2870c7b96cfd8e9db7bee62f-chunk-000<SEP>gd_08a182bf31e33d7ffdb32016-chunk-000<SEP>gd_319670abac439d85128abe9e-chunk-002<SEP>gd_18771289802258996e9afe7d-chunk-000<SEP>gd_33520150e254f44e44dd6979-chunk-000<SEP>gd_09d735b098e3b67a26d13fd5-chunk-000<SEP>gd_325cd64471734ab31072948f-chunk-000<SEP>gd_3349a07f9553ff1936d258ae-chunk-000<SEP>gd_3d0d6d44b2000b775e587514-chunk-000<SEP>gd_0ad8c121612141fd51e8dfdd-chunk-000<SEP>gd_19e4fce6eb43b72382d2042c-chunk-001<SEP>gd_46b909ad65ed633dbea1ba63-chunk-000<SEP>gd_0d5e7a2bb6724c2fbd8eedf5-chunk-000<SEP>gd_1bb89f0881d846204f69d052-chunk-001<SEP>gd_1bb89f0881d846204f69d052-chunk-002<SEP>gd_119edf801b4d0b93bff506d4-chunk-000<SEP>gd_53fc2d9afb27be1532ef1ccb-chunk-000<SEP>gd_524c287c9d24eb09b58604a0-chunk-001<SEP>gd_5526629b3d33ecf02b9b6951-chunk-000<SEP>gd_5526629b3d33ecf02b9b6951-chunk-001<SEP>gd_1416a0037964f56deb2cb027-chunk-000<SEP>gd_22e2af05587860f4e41f0ece-chunk-000<SEP>gd_22e2af05587860f4e41f0ece-chunk-001<SEP>gd_149d34c40951e05bcfd6ff3c-chunk-000<SEP>gd_59786235ec03f6fe9fcba771-chunk-001<SEP>gd_59786235ec03f6fe9fcba771-chunk-002<SEP>gd_25ceb76e34b0404af1e8edec-chunk-000<SEP>gd_166caf910842878d5953dcfd-chunk-000<SEP>gd_d1840e931c8712170e3a9122-chunk-000<SEP>gd_60de4000b7fcfd0de9e07c8e-chunk-001<SEP>gd_17505400cb1c2ff630646d67-chunk-000<SEP>gd_29e1dd86d0ac04d5850953cd-chunk-000<SEP>gd_64ee673f1818fe8a43d10d08-chunk-001<SEP>gd_7212707c2707213a0b5b7a4b-chunk-000<SEP>gd_7212707c2707213a0b5b7a4b-chunk-001<SEP>gd_194f64a1f64b18a69ad9ca08-chunk-000<SEP>gd_2c6f9645343251c1f939e00a-chunk-001<SEP>gd_8bcd55008ece70b021b2c6b1-chunk-000<SEP>gd_1bf7fe347a0c9dc13f54563a-chunk-000<SEP>gd_846cdccc2686a930e28302ae-chunk-000<SEP>gd_8eafdb05531ee643b616bc41-chunk-000<SEP>gd_9393f5107171bfdba2765a73-chunk-000<SEP>gd_72e9e76a2cf7a8ea84a21acb-chunk-001<SEP>gd_9c3e28f19f1d094b0061a9c0-chunk-000<SEP>gd_207acc44ec371cd502bfa5dc-chunk-000<SEP>gd_218350c7dbc6d35bcf1726f7-chunk-000<SEP>gd_2191fd60a5995f96a9ed59d8-chunk-000<SEP>gd_74fa8567086173e6d517e67c-chunk-003<SEP>gd_3d4100e6126fba5cc27eaf91-chunk-000<SEP>gd_22d5c05d08d7a97c95048cbe-chunk-000<SEP>gd_a8ad9518fe2741e2ed944b31-chunk-000<SEP>gd_112ea69bb6a3ea5e091e34f2-chunk-000<SEP>gd_ae2fbdf9b2241fe42aaffadf-chunk-000<SEP>gd_2483263853e6d497ce4282df-chunk-000<SEP>gd_b47ed9cc588fce82b05c28e0-chunk-000<SEP>gd_252e57f3faedb1a974310daf-chunk-000<SEP>gd_b73b97865652097b570441e9-chunk-000<SEP>gd_408cdcbe6729fea2abaab084-chunk-001<SEP>gd_409c0da0777cbb41bc6655ae-chunk-000<SEP>gd_3dfdb4bf306dae374788f006-chunk-000<SEP>gd_bb32e1c07e86dae286d8bcd3-chunk-000<SEP>gd_2a61634862ecc037805585cb-chunk-000<SEP>gd_447ac742e3a9ad53298cf2d6-chunk-000<SEP>gd_447ac742e3a9ad53298cf2d6-chunk-003<SEP>gd_44f8e082ac34ddf53ddb2b27-chunk-000<SEP>gd_be1386341dd4367eb93a0474-chunk-000<SEP>gd_4539e662ea7b31c661ff01a2-chunk-001<SEP>gd_4539e662ea7b31c661ff01a2-chunk-000<SEP>gd_cdefe846b947b98de2b169d4-chunk-000<SEP>gd_9bef8d767947839d50a36423-chunk-000<SEP>gd_9bef8d767947839d50a36423-chunk-001<SEP>gd_2ecc3785d60dab4bff563f4c-chunk-000<SEP>gd_9c328b8c5305e596c95c958f-chunk-002<SEP>gd_2f3e6a0ac4b20122171e3896-chunk-000<SEP>gd_303dd3e2c7fc3438092c5462-chunk-000<SEP>gd_4d1077b8bd608022a2166c3f-chunk-001<SEP>gd_cbaa6c66435557483e83346d-chunk-000<SEP>gd_a2ec45a7c4351b7e34245f87-chunk-000<SEP>gd_322b65748513e786ae1453d1-chunk-000<SEP>gd_aa01fc06c899106c220037a7-chunk-000<SEP>gd_aa01fc06c899106c220037a7-chunk-001<SEP>gd_328e4c418c6a8a049f0d2b8b-chunk-000<SEP>gd_acdaede66f21479bf7fc8842-chunk-000<SEP>gd_5492d4d586da10f9d01192dd-chunk-002<SEP>gd_5492d4d586da10f9d01192dd-chunk-001<SEP>gd_54bd4156ae896dbaad104bd8-chunk-000<SEP>gd_372bb9fead5c91e7d4c8e30b-chunk-000<SEP>gd_55bc540b610064fdcfa76b04-chunk-000<SEP>gd_dfc74c8d651a325a8a2ea5fb-chunk-000<SEP>gd_2568bb11c77922603ee35b63-chunk-001<SEP>gd_3b76b9c47b22c900d003738c-chunk-000<SEP>gd_582bd5132dbb8e609d1e18c9-chunk-002<SEP>gd_3e1a01be91ac3ea01f208dc6-chunk-000<SEP>gd_c481ad6a3095befd2e0989e4-chunk-004<SEP>gd_5cec6448ee1a1a69c556f58a-chunk-000<SEP>gd_5cec6448ee1a1a69c556f58a-chunk-001<SEP>gd_db2a00ddbaae4ba4dae9d6b7-chunk-001<SEP>gd_6a8515d06bc3b3b1aae863ab-chunk-000<SEP>gd_6b21382225ac4404e1815a51-chunk-000<SEP>gd_e60a17124a0934759eb051ec-chunk-000<SEP>gd_e60a17124a0934759eb051ec-chunk-001<SEP>gd_6d549413d37ff7b55fa873f0-chunk-001<SEP>gd_704a724ff302ab18043fedf2-chunk-000<SEP>gd_744aedf69774b9787271020d-chunk-001<SEP>gd_7681722f354a46bf769c0671-chunk-000<SEP>gd_7681722f354a46bf769c0671-chunk-001<SEP>gd_0b60e94ececf3cb73976c5df-chunk-000<SEP>gd_0b60e94ececf3cb73976c5df-chunk-002<SEP>gd_0b8f922e50984dc168e44b3d-chunk-003<SEP>gd_7bba9b537a604be37c33394e-chunk-000<SEP>gd_7bba9b537a604be37c33394e-chunk-001<SEP>gd_0ebe200504c2767b18fadc12-chunk-001<SEP>gd_0ebe200504c2767b18fadc12-chunk-002<SEP>gd_7e501541a37d9738987d633b-chunk-001<SEP>gd_12fe030017ff3b7201e562ae-chunk-000<SEP>gd_12fe030017ff3b7201e562ae-chunk-001<SEP>gd_12fe030017ff3b7201e562ae-chunk-002<SEP>gd_17761a0ae750203bc01fd5f9-chunk-002<SEP>gd_2551431949d1ccdc36a75aef-chunk-001<SEP>gd_950767c5c3a3596311dbbda5-chunk-000<SEP>gd_95b3a94a3095519b7c98c7d4-chunk-002<SEP>gd_2ab1e3a03f3d50096c7ab6ed-chunk-000<SEP>gd_2c957f14a38fcd59365f4dce-chunk-000<SEP>gd_2c957f14a38fcd59365f4dce-chunk-002<SEP>gd_97498438a84724d394645274-chunk-002<SEP>gd_97498438a84724d394645274-chunk-003<SEP>gd_9838e8220d789e78b7f4418d-chunk-000<SEP>gd_2f154a1abb9146e370cabb36-chunk-000<SEP>gd_2f154a1abb9146e370cabb36-chunk-001<SEP>gd_9c6a7c574379d69104b95c98-chunk-000<SEP>gd_a0a7fac44cacd59c4debc742-chunk-000<SEP>gd_a0a7fac44cacd59c4debc742-chunk-001<SEP>gd_a0a7fac44cacd59c4debc742-chunk-002<SEP>gd_3420b0d75274e09a6649b966-chunk-000<SEP>gd_398d2e70e82899806f0a81c2-chunk-001<SEP>gd_3e259415f45afa9ddd480b31-chunk-001<SEP>gd_3e259415f45afa9ddd480b31-chunk-002<SEP>gd_a317deb61e243cd08d76cca3-chunk-000<SEP>gd_a54f5bf886b30a7e8324893d-chunk-000<SEP>gd_a54f5bf886b30a7e8324893d-chunk-001<SEP>gd_48e090cf4fc87c6b04e673b9-chunk-000<SEP>gd_aafe6164084bc84cbf056a39-chunk-001<SEP>gd_ab75f2e3473b4cebe15356bc-chunk-001<SEP>gd_53166d6f3672941cb6ee80e6-chunk-000<SEP>gd_53d1d4d7cbdb83f9dd2abc9c-chunk-002<SEP>gd_545a33a881beeb183329d2d6-chunk-002<SEP>gd_5c912fefa31e5fba2a3e6a7f-chunk-002<SEP>gd_5dfaf70730c3fda27c1e436f-chunk-001<SEP>gd_b6e4509693f55652d6720194-chunk-000<SEP>gd_676ceb1d508acba0f3613cd1-chunk-000<SEP>gd_676ceb1d508acba0f3613cd1-chunk-001<SEP>gd_676ceb1d508acba0f3613cd1-chunk-002<SEP>gd_676ceb1d508acba0f3613cd1-chunk-003<SEP>gd_b740a4f2a516a3f3a59a462d-chunk-001<SEP>gd_68c4bad7befcf56510eda4bc-chunk-000<SEP>gd_68c4bad7befcf56510eda4bc-chunk-001<SEP>gd_68c4bad7befcf56510eda4bc-chunk-002<SEP>gd_b7dfbf6bccee4997ad659362-chunk-002<SEP>gd_c46a4714d0edfa9fffe154cc-chunk-000<SEP>gd_748726369fa6b46ca8f2c0c7-chunk-001<SEP>gd_7a13301eee783b0ef105cc0a-chunk-003<SEP>gd_d0a5b775db90809dc7e03872-chunk-001<SEP>gd_7f230db59f735351cd7f94f6-chunk-000<SEP>gd_d4924986b972e4ef59ad0d68-chunk-000<SEP>gd_d57e7f67ccbcce42d68e491a-chunk-000<SEP>gd_d798b5f87bc9f54fcb6dd69a-chunk-001<SEP>gd_8d4d38e0c3572b351003a51c-chunk-003<SEP>gd_d9290ed0e1780f3bb8b02f05-chunk-000<SEP>gd_dbd1ff1a0fadf0dcb04b5f45-chunk-000<SEP>gd_dd13d18c16228c212a2cf778-chunk-000<SEP>gd_9681438bb1fb03d4d598c7ec-chunk-000<SEP>gd_9681438bb1fb03d4d598c7ec-chunk-001<SEP>gd_ddc7dc8f7ea37c8335c55003-chunk-002<SEP>gd_de4f1cbf6a8bd8e3c5b1cd8f-chunk-001<SEP>gd_de4f1cbf6a8bd8e3c5b1cd8f-chunk-002<SEP>gd_de63970852a4e885149cd5f3-chunk-000<SEP>gd_de63970852a4e885149cd5f3-chunk-001<SEP>gd_de63970852a4e885149cd5f3-chunk-002<SEP>gd_df2480bda3a01a10db6c97b1-chunk-001<SEP>gd_df2480bda3a01a10db6c97b1-chunk-002",
+          "file_path": "gd_087a4675a11cf57ae08ea7cf<SEP>gd_0327fd5c4fc1590df1481cc3<SEP>gd_03e15c39b23c76a73a12a032<SEP>gd_07f2aff54dd7489cb3053484<SEP>gd_17c3b096c9e3f1e1c46be346<SEP>gd_158776503ae4c718d7c4a6c6<SEP>gd_0461f8f47c14300f7a278cef<SEP>gd_15cebc29d9f85feb474c70c8<SEP>gd_17f44165842fee018cbbd653<SEP>gd_0469dfa7d7642dd1811fc886<SEP>gd_3d7ffaecb9f0e7708246cfcd<SEP>gd_05d0d2bed2dadbf7007f9ef2<SEP>gd_1ba5b6429d4f7d40a66b28cc<SEP>gd_2071687707b6854abd28f69a<SEP>gd_13aa38370d7255559def2519<SEP>gd_22462fc0c151ee5a1d880b8f<SEP>gd_1f6dc332a7e2fcdbc169d98a<SEP>gd_07a0467e91997eb1227209b3<SEP>gd_13e89e60c3f8b41c3f077c76<SEP>gd_087d1d57d2263adb70e18521<SEP>gd_2870c7b96cfd8e9db7bee62f<SEP>gd_08a182bf31e33d7ffdb32016<SEP>gd_319670abac439d85128abe9e<SEP>gd_18771289802258996e9afe7d<SEP>gd_33520150e254f44e44dd6979<SEP>gd_09d735b098e3b67a26d13fd5<SEP>gd_325cd64471734ab31072948f<SEP>gd_3349a07f9553ff1936d258ae<SEP>gd_3d0d6d44b2000b775e587514<SEP>gd_0ad8c121612141fd51e8dfdd<SEP>gd_19e4fce6eb43b72382d2042c<SEP>gd_46b909ad65ed633dbea1ba63<SEP>gd_0d5e7a2bb6724c2fbd8eedf5<SEP>gd_1bb89f0881d846204f69d052<SEP>gd_119edf801b4d0b93bff506d4<SEP>gd_53fc2d9afb27be1532ef1ccb<SEP>gd_524c287c9d24eb09b58604a0<SEP>gd_5526629b3d33ecf02b9b6951<SEP>gd_1416a0037964f56deb2cb027<SEP>gd_22e2af05587860f4e41f0ece<SEP>gd_149d34c40951e05bcfd6ff3c<SEP>gd_59786235ec03f6fe9fcba771<SEP>gd_25ceb76e34b0404af1e8edec<SEP>gd_d1840e931c8712170e3a9122<SEP>gd_60de4000b7fcfd0de9e07c8e<SEP>gd_17505400cb1c2ff630646d67<SEP>gd_29e1dd86d0ac04d5850953cd<SEP>gd_64ee673f1818fe8a43d10d08<SEP>gd_7212707c2707213a0b5b7a4b<SEP>gd_194f64a1f64b18a69ad9ca08<SEP>gd_8bcd55008ece70b021b2c6b1<SEP>gd_1bf7fe347a0c9dc13f54563a<SEP>gd_846cdccc2686a930e28302ae<SEP>gd_8eafdb05531ee643b616bc41<SEP>gd_9393f5107171bfdba2765a73<SEP>gd_72e9e76a2cf7a8ea84a21acb<SEP>gd_9c3e28f19f1d094b0061a9c0<SEP>gd_207acc44ec371cd502bfa5dc<SEP>gd_218350c7dbc6d35bcf1726f7<SEP>gd_2191fd60a5995f96a9ed59d8<SEP>gd_74fa8567086173e6d517e67c<SEP>gd_3d4100e6126fba5cc27eaf91<SEP>gd_22d5c05d08d7a97c95048cbe<SEP>gd_a8ad9518fe2741e2ed944b31<SEP>gd_112ea69bb6a3ea5e091e34f2<SEP>gd_ae2fbdf9b2241fe42aaffadf<SEP>gd_2483263853e6d497ce4282df<SEP>gd_b47ed9cc588fce82b05c28e0<SEP>gd_252e57f3faedb1a974310daf<SEP>gd_b73b97865652097b570441e9<SEP>gd_408cdcbe6729fea2abaab084<SEP>gd_409c0da0777cbb41bc6655ae<SEP>gd_3dfdb4bf306dae374788f006<SEP>gd_bb32e1c07e86dae286d8bcd3<SEP>gd_2a61634862ecc037805585cb<SEP>...truncated...(KEEP Old)",
+          "created_at": 1793522198
+        },
+        {
+          "entity_name": "Mini-crash",
+          "entity_type": "UNKNOWN",
+          "description": "The recent mini-crash in Cloud stocks did not slow down unicorn growth in 2021.",
+          "source_id": "gd_b47d0381318f8c03ba8b235e-chunk-000",
+          "file_path": "gd_b47d0381318f8c03ba8b235e",
+          "created_at": 1793498739
+        }
+      ],
+      "relationships": [
+        {
+          "src_id": "2021",
+          "tgt_id": "SaaStr",
+          "description": "The speaker reflects on the lessons learned from the challenges faced by startups in 2021.<SEP>The speaker reflects on the challenges faced by startups in 2021.<SEP>The Twitter account SaaStr believes that the era of inefficient growth will be behind SaaS companies in 2021.<SEP>SaaStr has replaced human resources with AI since late 2024.",
+          "keywords": "Relationship_keywords: challenges,Relationship_keywords: lessons,Replacement,efficiency,growth,learned,struggling",
+          "weight": 4.0,
+          "source_id": "gd_7e501541a37d9738987d633b-chunk-000<SEP>gd_73df91a3d3076d3a9388eb48-chunk-002<SEP>gd_1c9f0c1497d224d0411bf40f-chunk-000",
+          "file_path": "gd_7e501541a37d9738987d633b<SEP>gd_73df91a3d3076d3a9388eb48<SEP>gd_1c9f0c1497d224d0411bf40f",
+          "created_at": 1793564546
+        },
+        {
+          "src_id": "B2B SaaS",
+          "tgt_id": "Cloudflare",
+          "description": "Cloudflare has a market cap of $39 Billion.<SEP>Cloudflare has seen 15% non-GAAP profit.<SEP>Cloudflare has seen 28% growth in ARR.",
+          "keywords": "Growth,Market Cap,Profit",
+          "weight": 3.0,
+          "source_id": "gd_7212707c2707213a0b5b7a4b-chunk-000",
+          "file_path": "gd_7212707c2707213a0b5b7a4b",
+          "created_at": 1793496729
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "SaaStr",
+          "description": "Cloudflare has partnered with SaaStr to provide resources and insights to SaaS companies.<SEP>Cloudflare was featured as one of the top SaaS companies at the 2022 SaaStr Annual.<SEP>The speaker notes that some companies, like Cloudflare, are still thriving despite the challenges faced by others.<SEP>Cloudflare generates 47% of its revenue from international sources.<SEP>Cloudflare is hosting the SaaStr Annual conference.",
+          "keywords": "Event Host,Featured,International Presence,Partnered,Relationship_keywords: still the best of times,successful",
+          "weight": 5.0,
+          "source_id": "gd_c4d88074f382c56078d251bf-chunk-003<SEP>gd_744aedf69774b9787271020d-chunk-000<SEP>gd_7e501541a37d9738987d633b-chunk-000<SEP>gd_9c2e5ea13cd633d8cc823ba7-chunk-000<SEP>gd_512e13ce7fe186171e6697c2-chunk-003",
+          "file_path": "gd_c4d88074f382c56078d251bf<SEP>gd_744aedf69774b9787271020d<SEP>gd_7e501541a37d9738987d633b<SEP>gd_9c2e5ea13cd633d8cc823ba7<SEP>gd_512e13ce7fe186171e6697c2",
+          "created_at": 1793558952
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "Snowflake",
+          "description": "Both Snowflake and Cloudflare are cloud-based software companies<SEP>Both companies provide edge computing and cloud data warehousing services.<SEP>Snowflake and Cloudflare are both achieving high revenue growth, with Snowflake reporting $1.2B in quarterly revenue, growing 29%, and Cloudflare hitting $562M in Q3 revenue, up 31%.<SEP>Snowflake's AI technology and data infrastructure enable Cloudflare's AI inference at the edge.<SEP>Cloudflare's edge compute capabilities are powered by Snowflake's data infrastructure.<SEP>Cloudflare and Snowflake are examples of companies that have successfully transitioned to consumption-based models and have seen significant revenue growth.",
+          "keywords": "AI,Data infrastructure,Edge compute,Edge computing and cloud data warehousing,High revenue growth,Industry,not seats,win on outcomes",
+          "weight": 6.0,
+          "source_id": "gd_127b7c531bf91ae60817b680-chunk-000<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-001<SEP>gd_87131f4a34d2f70295f0cf04-chunk-002<SEP>gd_9809d37cd527c2958295b062-chunk-011<SEP>gd_9809d37cd527c2958295b062-chunk-016",
+          "file_path": "gd_127b7c531bf91ae60817b680<SEP>gd_ed532f1494cf2bbcdf7fd169<SEP>gd_87131f4a34d2f70295f0cf04<SEP>gd_9809d37cd527c2958295b062",
+          "created_at": 1793645941
+        },
+        {
+          "src_id": "AI",
+          "tgt_id": "Cloudflare",
+          "description": "AI has presented an opportunity for Cloudflare to capture some of the budget.<SEP>Cloudflare has presented an opportunity for AI to capture some of the budget.<SEP>Cloudflare's AI technology is a key growth driver for the company.",
+          "keywords": "Growth driver,infrastructure,opportunity",
+          "weight": 3.0,
+          "source_id": "gd_7579e8b1402637800b33e210-chunk-013<SEP>gd_9809d37cd527c2958295b062-chunk-011",
+          "file_path": "gd_7579e8b1402637800b33e210<SEP>gd_9809d37cd527c2958295b062",
+          "created_at": 1793645941
+        },
+        {
+          "src_id": "110%",
+          "tgt_id": "Cloudflare",
+          "description": "Cloudflare's growth remains top-tier, but its NRR has come down to 110% from 115% a year ago.",
+          "keywords": "Growth,Performance",
+          "weight": 1.0,
+          "source_id": "gd_ec32711adc8f9158a0b4a669-chunk-001",
+          "file_path": "gd_ec32711adc8f9158a0b4a669",
+          "created_at": 1793603918
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "SaaS",
+          "description": "The SaaS of 2021 is considered geriatric and dying.<SEP>SaaS companies experienced significant growth in 2021.",
+          "keywords": "dying,geriatric,growth",
+          "weight": 2.0,
+          "source_id": "gd_3a1abe6cc8ce1e3e0b241ddc-chunk-000<SEP>gd_b47d0381318f8c03ba8b235e-chunk-000",
+          "file_path": "gd_3a1abe6cc8ce1e3e0b241ddc<SEP>gd_b47d0381318f8c03ba8b235e",
+          "created_at": 1793498739
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "Shopify",
+          "description": "**Cloudflare and Shopify: A Summary of Their Growth and Services**\n\nCloudflare and Shopify are two companies that have experienced significant growth in recent years. In 2023, both companies saw substantial growth, with Cloudflare's growth rate surpassing that of Shopify. Cloudflare's revenue has reached $1 billion in annual recurring revenue (ARR), with a growth rate of 47%. This growth is comparable to Shopify's growth, which has also been substantial.\n\nBoth companies operate in the software market and have high growth rates. They provide edge computing and e-commerce services, catering to the needs of various customers. Shopify's AI tools, including Sidekick and Magic, run on Cloudflare's platform, highlighting their strategic partnership. This collaboration enables Shopify to leverage Cloudflare's infrastructure, further enhancing its services.\n\nShopify has established itself as a platform with high stickiness, serving both enterprises and governments. Cloudflare, on the other hand, is positioned as essential AI infrastructure, providing a critical component for various applications. The two companies are examples of successful transitions to consumption-based models, resulting in significant revenue growth.\n\nTheir growth and success can be attributed to their innovative approaches and strategic partnerships. By providing edge computing and e-commerce services, they have carved out a niche in the software market, catering to the evolving needs of their customers. As they continue to grow and expand their services, Cloudflare and Shopify remain prominent players in the industry.",
+          "keywords": "AI,E-commerce,Edge computing and e-commerce,Enterprise and Government Customers,growth,growth_competition,growth_rate,not seats,revenue,win on outcomes",
+          "weight": 8.0,
+          "source_id": "gd_8d5a01e786e521ceef6a39d4-chunk-000<SEP>gd_ee1953fb4d4e788a8fcd0076-chunk-002<SEP>gd_ee1953fb4d4e788a8fcd0076-chunk-003<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-001<SEP>gd_9809d37cd527c2958295b062-chunk-012<SEP>gd_9809d37cd527c2958295b062-chunk-015<SEP>gd_9809d37cd527c2958295b062-chunk-016",
+          "file_path": "gd_8d5a01e786e521ceef6a39d4<SEP>gd_ee1953fb4d4e788a8fcd0076<SEP>gd_ed532f1494cf2bbcdf7fd169<SEP>gd_9809d37cd527c2958295b062",
+          "created_at": 1793645943
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "OpenAI",
+          "description": "OpenAI had a high valuation in 2021.",
+          "keywords": "High Valuation",
+          "weight": 1.0,
+          "source_id": "gd_90f0625e16d8673be75aae16-chunk-002",
+          "file_path": "gd_90f0625e16d8673be75aae16",
+          "created_at": 1793627658
+        },
+        {
+          "src_id": "115%",
+          "tgt_id": "Cloudflare",
+          "description": "Cloudflare's previous NRR was 115%, but it has come down to 110% a year ago.",
+          "keywords": "Growth,Performance",
+          "weight": 1.0,
+          "source_id": "gd_ec32711adc8f9158a0b4a669-chunk-001",
+          "file_path": "gd_ec32711adc8f9158a0b4a669",
+          "created_at": 1793603918
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "SaaS",
+          "description": "Cloudflare's land-and-expand strategy is working perfectly with customer growth exceeding revenue growth in the SaaS model.",
+          "keywords": "market_expansion",
+          "weight": 1.0,
+          "source_id": "gd_87131f4a34d2f70295f0cf04-chunk-007",
+          "file_path": "gd_87131f4a34d2f70295f0cf04",
+          "created_at": 1793641663
+        },
+        {
+          "src_id": "80%+",
+          "tgt_id": "Cloudflare",
+          "description": "Cloudflare's year-to-date growth rate is 80%+.",
+          "keywords": "Growth",
+          "weight": 1.0,
+          "source_id": "gd_9809d37cd527c2958295b062-chunk-011",
+          "file_path": "gd_9809d37cd527c2958295b062",
+          "created_at": 1793645941
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Jason",
+          "description": "Jason suggests writing off 2021 valuations.",
+          "keywords": "valuations,write off",
+          "weight": 1.0,
+          "source_id": "gd_3004f80c56d68cccbb72b988-chunk-004",
+          "file_path": "gd_3004f80c56d68cccbb72b988",
+          "created_at": 1793625228
+        },
+        {
+          "src_id": "$1B",
+          "tgt_id": "Cloudflare",
+          "description": "Cloudflare grew from $300k in revenue per employee at $1B ARR to $400k at $1.5B ARR.",
+          "keywords": "Efficiency,Growth",
+          "weight": 1.0,
+          "source_id": "gd_ec32711adc8f9158a0b4a669-chunk-001",
+          "file_path": "gd_ec32711adc8f9158a0b4a669",
+          "created_at": 1793603918
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Founders",
+          "description": "Founders experienced growth in 2021.",
+          "keywords": "Growth,Past",
+          "weight": 1.0,
+          "source_id": "gd_0bc1abfa4e6084d46e2595c5-chunk-003",
+          "file_path": "gd_0bc1abfa4e6084d46e2595c5",
+          "created_at": 1793575241
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "Wall Street",
+          "description": "relationship_description: Cloudflare has achieved durable revenue, top-tier growth, and cash-flow positivity, meeting Wall Street's expectations.",
+          "keywords": "cash-flow positivity,relationship_keywords: durable revenue,top-tier growth",
+          "weight": 1.0,
+          "source_id": "gd_ec32711adc8f9158a0b4a669-chunk-000",
+          "file_path": "gd_ec32711adc8f9158a0b4a669",
+          "created_at": 1793603918
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "HubSpot",
+          "description": "Keywords: peak, performance, exceptional, multi-hub, strategy, success, platform, expansion, stride, customers, using, hubs, four, year-over-year, company, evolved, single-product, marketing, tool, comprehensive, customer, platform.<SEP>Keywords: product, innovation, acceleration, features, released, hundreds, AI-first, strategy, dividends, engagement, hubs.<SEP>Keywords: larger, deals, accelerated, growth, enterprise, customers, opportunities, better, retention.<SEP>HubSpot's growth level in 2021 was at its highest pace.",
+          "keywords": "Achieved,Driven,Growth,Won",
+          "weight": 4.0,
+          "source_id": "gd_cb4d1fe2519ac6e0de295c6c-chunk-002<SEP>gd_085568b71c36eb109160b42e-chunk-000",
+          "file_path": "gd_cb4d1fe2519ac6e0de295c6c<SEP>gd_085568b71c36eb109160b42e",
+          "created_at": 1793595180
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "Market",
+          "description": "relationship_description: Cloudflare has successfully reaccelerated its growth with 27% growth a year ago, 34% growth last quarter, and 40% year-over-year increase in net new customers.",
+          "keywords": "relationship_keywords: reacceleration",
+          "weight": 1.0,
+          "source_id": "gd_1ea75faaa1a24bb0a1573ab5-chunk-006",
+          "file_path": "gd_1ea75faaa1a24bb0a1573ab5",
+          "created_at": 1793603883
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "Jason",
+          "description": "Jason believes that Cloudflare is benefiting from AI and has 27% to 34% growth acceleration.<SEP>Jason had a different take on the market reaction compared to Cloudflare.",
+          "keywords": "Different Take,Growth",
+          "weight": 2.0,
+          "source_id": "gd_1ea75faaa1a24bb0a1573ab5-chunk-008<SEP>gd_59c785375f34b0507b64485d-chunk-001",
+          "file_path": "gd_1ea75faaa1a24bb0a1573ab5<SEP>gd_59c785375f34b0507b64485d",
+          "created_at": 1793644273
+        },
+        {
+          "src_id": "ARR",
+          "tgt_id": "Cloudflare",
+          "description": "Cloudflare's ARR has grown from $1B to $1.5B.<SEP>Cloudflare's growth is competing with ARR's high growth rate.<SEP>Cloudflare has a large number of self-served customers.<SEP>relationship_description: Cloudflare has achieved $1.7B+ ARR.<SEP>Cloudflare aims to balance growth and efficiency by targeting $400,000 in revenue per employee at $1.5B ARR.",
+          "keywords": "Annual Recurring Revenue,Efficiency,Growth,growth_competition,relationship_keywords: $1.7B+,self-served customers",
+          "weight": 5.0,
+          "source_id": "gd_7212707c2707213a0b5b7a4b-chunk-000<SEP>gd_ee1953fb4d4e788a8fcd0076-chunk-002<SEP>gd_6883af2ee760af258eff9978-chunk-003<SEP>gd_ec32711adc8f9158a0b4a669-chunk-000<SEP>gd_ec32711adc8f9158a0b4a669-chunk-001",
+          "file_path": "gd_7212707c2707213a0b5b7a4b<SEP>gd_ee1953fb4d4e788a8fcd0076<SEP>gd_6883af2ee760af258eff9978<SEP>gd_ec32711adc8f9158a0b4a669",
+          "created_at": 1793603918
+        },
+        {
+          "src_id": "Q4",
+          "tgt_id": "SaaS",
+          "description": "The SaaS industry experienced a 33% decrease in growth in Q4.",
+          "keywords": "Industry,Market",
+          "weight": 1.0,
+          "source_id": "gd_d055344c8bce1842912e3f73-chunk-000",
+          "file_path": "gd_d055344c8bce1842912e3f73",
+          "created_at": 1793520494
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "MongoDB",
+          "description": "**Cloudflare and MongoDB: A Comparative Analysis**\n\nCloudflare and MongoDB are two leading companies in the SaaS and Cloud industries, known for their high growth rates. Both companies have experienced significant expansion and infrastructure spend, with a notable increase in 2023. This growth is attributed to their ability to provide edge computing and data platform services, catering to a large number of self-served customers.\n\nOne of the key differences between the two companies is their growth rates. While both companies have seen significant growth, their rates differ. However, both companies have managed to maintain high growth rates, making them prominent players in their respective industries.\n\nBoth Cloudflare and MongoDB offer a range of services, including edge computing and data platform services. These services have been well-received by customers, with both companies boasting a large number of self-served customers. This indicates a strong demand for their services, further contributing to their growth.\n\nIn summary, Cloudflare and MongoDB are two leading companies in the SaaS and Cloud industries, known for their high growth rates and ability to provide edge computing and data platform services. While they share some similarities, they also have distinct differences in their growth rates and services offered.<SEP>Cloudflare's edge compute capabilities are used by MongoDB to power its turnaround in 2025.<SEP>Cloudflare's platform provides the infrastructure for MongoDB's AI-powered applications to run on.<SEP>Cloudflare and MongoDB are examples of companies that have successfully transitioned to consumption-based models and have seen significant revenue growth.",
+          "keywords": "AI,Edge compute,Edge computing and data platform,Infrastructure,expansion,growth,growth rates,high,infrastructure,not seats,revenue,self-served customers,win on outcomes",
+          "weight": 11.0,
+          "source_id": "gd_1846fc5b4438018cd9d72d3a-chunk-000<SEP>gd_8d5a01e786e521ceef6a39d4-chunk-000<SEP>gd_a4d8185dde8f14e2d5e547b5-chunk-000<SEP>gd_6883af2ee760af258eff9978-chunk-003<SEP>gd_7579e8b1402637800b33e210-chunk-013<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-001<SEP>gd_9809d37cd527c2958295b062-chunk-011<SEP>gd_9809d37cd527c2958295b062-chunk-012<SEP>gd_9809d37cd527c2958295b062-chunk-016",
+          "file_path": "gd_1846fc5b4438018cd9d72d3a<SEP>gd_8d5a01e786e521ceef6a39d4<SEP>gd_a4d8185dde8f14e2d5e547b5<SEP>gd_6883af2ee760af258eff9978<SEP>gd_7579e8b1402637800b33e210<SEP>gd_ed532f1494cf2bbcdf7fd169<SEP>gd_9809d37cd527c2958295b062",
+          "created_at": 1793645941
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "Salesforce",
+          "description": "Salesforce's market cap has declined more than Cloudflare's.<SEP>Cloudflare's market cap has declined more than Salesforce's.<SEP>Both Salesforce and Cloudflare are cloud-based software companies",
+          "keywords": "Decline,Industry,Market Cap",
+          "weight": 3.0,
+          "source_id": "gd_9aaaf87c9b9d043595bc5848-chunk-001<SEP>gd_127b7c531bf91ae60817b680-chunk-000",
+          "file_path": "gd_9aaaf87c9b9d043595bc5848<SEP>gd_127b7c531bf91ae60817b680",
+          "created_at": 1793579711
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "GitLab",
+          "description": "Both Cloudflare and GitLab are growing at 30% at $1.6 Billion and $730m ARR respectively.",
+          "keywords": "growth rates",
+          "weight": 1.0,
+          "source_id": "gd_d1252ef53f89bdd11bc98204-chunk-000",
+          "file_path": "gd_d1252ef53f89bdd11bc98204",
+          "created_at": 1793638969
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "HubSpot",
+          "description": "Business model<SEP>relationship_description=Both HubSpot and Cloudflare have doubled down on their free editions, which has led to significant customer growth for both companies.<SEP>HubSpot's market cap has declined more than Cloudflare's.<SEP>Cloudflare's market cap has declined more than HubSpot's.<SEP>HubSpot and Cloudflare are both achieving high customer counts, with HubSpot having over 279,000 customers and Cloudflare having nearly 296,000 paying customers.",
+          "keywords": "Decline,High customer count,Market Cap,Similarity,customer growth,free edition,relationship_keywords=doubling down",
+          "weight": 5.0,
+          "source_id": "gd_e396b212b0c5e080520b685b-chunk-000<SEP>gd_e396b212b0c5e080520b685b-chunk-001<SEP>gd_9aaaf87c9b9d043595bc5848-chunk-001<SEP>gd_87131f4a34d2f70295f0cf04-chunk-002",
+          "file_path": "gd_e396b212b0c5e080520b685b<SEP>gd_9aaaf87c9b9d043595bc5848<SEP>gd_87131f4a34d2f70295f0cf04",
+          "created_at": 1793641661
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "NRR",
+          "description": "Cloudflare's NRR has come down a bit, but is still strong at 110%.<SEP>Cloudflare's growth remains top-tier, but its NRR has come down to 110% from 115% a year ago, making growth 20%-30% harder than before.",
+          "keywords": "Growth,Performance",
+          "weight": 2.0,
+          "source_id": "gd_7212707c2707213a0b5b7a4b-chunk-000<SEP>gd_ec32711adc8f9158a0b4a669-chunk-001",
+          "file_path": "gd_7212707c2707213a0b5b7a4b<SEP>gd_ec32711adc8f9158a0b4a669",
+          "created_at": 1793603918
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "VCs",
+          "description": "VCs raised a record-breaking amount in 2021",
+          "keywords": "Fundraising",
+          "weight": 1.0,
+          "source_id": "gd_90f0625e16d8673be75aae16-chunk-000",
+          "file_path": "gd_90f0625e16d8673be75aae16",
+          "created_at": 1793627654
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "non-GAAP operating profit",
+          "description": "relationship_description: Cloudflare has achieved 15% non-GAAP operating profit.",
+          "keywords": "non-GAAP operating profit,relationship_keywords: 15%",
+          "weight": 1.0,
+          "source_id": "gd_ec32711adc8f9158a0b4a669-chunk-000",
+          "file_path": "gd_ec32711adc8f9158a0b4a669",
+          "created_at": 1793603918
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "Founder",
+          "description": "Cloudflare was founded by a founder.<SEP>The founder of Cloudflare is capturing a significant share of the AI spending wave.",
+          "keywords": "AI,Capture,Related to",
+          "weight": 2.0,
+          "source_id": "gd_908d2f537b31f1d2ee730044-chunk-000<SEP>gd_7579e8b1402637800b33e210-chunk-012",
+          "file_path": "gd_908d2f537b31f1d2ee730044<SEP>gd_7579e8b1402637800b33e210",
+          "created_at": 1793620831
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "Tech Industry",
+          "description": "already reached the $400,000 in revenue per employee milestone.",
+          "keywords": "already there",
+          "weight": 1.0,
+          "source_id": "gd_bb4dc4329ce0acd94d0e9994-chunk-000",
+          "file_path": "gd_bb4dc4329ce0acd94d0e9994",
+          "created_at": 1793588329
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "SaaStr Annual",
+          "description": "Cloudflare is hosting the SaaStr Annual conference.",
+          "keywords": "Event Host",
+          "weight": 1.0,
+          "source_id": "gd_512e13ce7fe186171e6697c2-chunk-003",
+          "file_path": "gd_512e13ce7fe186171e6697c2",
+          "created_at": 1793558952
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "Thomasz",
+          "description": "Thomasz mentioned that public SaaS and Cloud companies, and AI leaders like NVidia, have still generated a lot of cash for shares, which is good liquidity times for employees at Cloudflare.",
+          "keywords": "Liquidity",
+          "weight": 1.0,
+          "source_id": "gd_d3437bb5a40ad558b64712e5-chunk-001",
+          "file_path": "gd_d3437bb5a40ad558b64712e5",
+          "created_at": 1793520806
+        },
+        {
+          "src_id": "Q4",
+          "tgt_id": "VP of Sales",
+          "description": "The Vice President of Sales claims they will make up all the lost ground at the start of the year with a massive Q4.",
+          "keywords": "Claims to Make Up Lost Ground",
+          "weight": 1.0,
+          "source_id": "gd_5b4dcd8b8dcce699f8e93c2f-chunk-001",
+          "file_path": "gd_5b4dcd8b8dcce699f8e93c2f",
+          "created_at": 1793490570
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "Net new customer growth",
+          "description": "Cloudflare is achieving high net new customer growth, growing paying customers 33% YoY.",
+          "keywords": "High",
+          "weight": 1.0,
+          "source_id": "gd_87131f4a34d2f70295f0cf04-chunk-002",
+          "file_path": "gd_87131f4a34d2f70295f0cf04",
+          "created_at": 1793641661
+        },
+        {
+          "src_id": "Founder",
+          "tgt_id": "Quarter",
+          "description": "The founder tracks the company's progress and performance over a quarter.",
+          "keywords": "performance,progress,relationship_keywords: track",
+          "weight": 1.0,
+          "source_id": "gd_2237831cf1e21662ef629603-chunk-001",
+          "file_path": "gd_2237831cf1e21662ef629603",
+          "created_at": 1793513996
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "Growth",
+          "description": "33% customer growth = 0.9:1 ratio",
+          "keywords": "31% revenue growth",
+          "weight": 1.0,
+          "source_id": "gd_87131f4a34d2f70295f0cf04-chunk-008",
+          "file_path": "gd_87131f4a34d2f70295f0cf04",
+          "created_at": 1793641663
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "ARR",
+          "description": "Year in which the companies' growth was inefficient.",
+          "keywords": "Association",
+          "weight": 1.0,
+          "source_id": "gd_73df91a3d3076d3a9388eb48-chunk-001",
+          "file_path": "gd_73df91a3d3076d3a9388eb48",
+          "created_at": 1793531357
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "free-cash flow margins",
+          "description": "relationship_description: Cloudflare has achieved 11% free-cash flow margins.",
+          "keywords": "free-cash flow margins,relationship_keywords: 11%",
+          "weight": 1.0,
+          "source_id": "gd_ec32711adc8f9158a0b4a669-chunk-000",
+          "file_path": "gd_ec32711adc8f9158a0b4a669",
+          "created_at": 1793603918
+        },
+        {
+          "src_id": "2022 SaaStr Annual",
+          "tgt_id": "Cloudflare",
+          "description": "Cloudflare was featured as one of the top SaaS companies.",
+          "keywords": "Featured",
+          "weight": 1.0,
+          "source_id": "gd_744aedf69774b9787271020d-chunk-000",
+          "file_path": "gd_744aedf69774b9787271020d",
+          "created_at": 1793511234
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Palantir",
+          "description": "relationship_description: Palantir experienced 49% growth in early 2021.<SEP>Palantir is re-accelerating while many companies are decelerating from their growth rates in 2021.<SEP>Palantir experienced its peak quarterly growth of 49% in early 2021.",
+          "keywords": "Growth rate,Keywords: growth,peak,relationship_keywords: growth",
+          "weight": 3.0,
+          "source_id": "gd_ae46602503f51cde09054ac5-chunk-000<SEP>gd_f5c6d6478f03c43f9106c211-chunk-003<SEP>gd_f6c00e0b3dd6d992b151a870-chunk-000",
+          "file_path": "gd_ae46602503f51cde09054ac5<SEP>gd_f5c6d6478f03c43f9106c211<SEP>gd_f6c00e0b3dd6d992b151a870",
+          "created_at": 1793629012
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Anthropic",
+          "description": "Anthropic had a high valuation in 2021.",
+          "keywords": "High Valuation",
+          "weight": 1.0,
+          "source_id": "gd_90f0625e16d8673be75aae16-chunk-002",
+          "file_path": "gd_90f0625e16d8673be75aae16",
+          "created_at": 1793627658
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "Palantir",
+          "description": "Cloudflare and Palantir are two companies that share similar characteristics of success. Both are AI-native and edge computing providers, with a strong focus on innovation and customer growth. Cloudflare's land-and-expand strategy has proven successful, with customer growth exceeding revenue growth. Palantir's valuation is justified by their market expansion through customer growth, and they are also an example of a company that has successfully transitioned to a consumption-based model, resulting in significant revenue growth.\n\nHowever, there is a notable difference in their market performance. Palantir's market cap has declined more than Cloudflare's, which may be attributed to various factors such as market conditions, competition, or internal factors. Despite this, both companies are considered high-growth and have strong performance records. They are positioned as essential AI infrastructure, with Palantir's market expansion and customer growth justifying their valuation. Overall, both Cloudflare and Palantir are successful companies that have adapted to changing market conditions and have seen significant growth in their respective markets.",
+          "keywords": "AI-Native or AI-Infrastructure,AI-native and edge computing,Decline,High growth,Market Cap,Relationship_keywords: similar,market_expansion,not seats,successful,up 142% and up 80% respectively.,win on outcomes",
+          "weight": 9.0,
+          "source_id": "gd_7e501541a37d9738987d633b-chunk-000<SEP>gd_9aaaf87c9b9d043595bc5848-chunk-001<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-001<SEP>gd_87131f4a34d2f70295f0cf04-chunk-007<SEP>gd_9809d37cd527c2958295b062-chunk-000<SEP>gd_9809d37cd527c2958295b062-chunk-015<SEP>gd_9809d37cd527c2958295b062-chunk-016",
+          "file_path": "gd_7e501541a37d9738987d633b<SEP>gd_9aaaf87c9b9d043595bc5848<SEP>gd_ed532f1494cf2bbcdf7fd169<SEP>gd_87131f4a34d2f70295f0cf04<SEP>gd_9809d37cd527c2958295b062",
+          "created_at": 1793645917
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "VC",
+          "description": "Investors giving advice from 2021",
+          "keywords": "outdated_market",
+          "weight": 1.0,
+          "source_id": "gd_249ae5f1a28ad2b6389c7b37-chunk-010",
+          "file_path": "gd_249ae5f1a28ad2b6389c7b37",
+          "created_at": 1793622568
+        },
+        {
+          "src_id": "Anthropic",
+          "tgt_id": "Cloudflare",
+          "description": "Anthropic's valuation is comparable to Cloudflare's.<SEP>Anthropic ships software ahead of schedule compared to Cloudflare.<SEP>relationship_description: The market reaction to Claude's capabilities was dramatic, with Cloudflare getting hammered.",
+          "keywords": "Ahead of Schedule,Comparable Valuation,capabilities,existing vendors,relationship_keywords: panic",
+          "weight": 4.0,
+          "source_id": "gd_f224b92d594e096cf9f7eef5-chunk-000<SEP>gd_59c785375f34b0507b64485d-chunk-001<SEP>gd_59c785375f34b0507b64485d-chunk-002",
+          "file_path": "gd_f224b92d594e096cf9f7eef5<SEP>gd_59c785375f34b0507b64485d",
+          "created_at": 1793644273
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Snowflake",
+          "description": "Looked immortal in 2021",
+          "keywords": "Year",
+          "weight": 1.0,
+          "source_id": "gd_a173a4cadbd0b240296376ca-chunk-000",
+          "file_path": "gd_a173a4cadbd0b240296376ca",
+          "created_at": 1793522595
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Databricks",
+          "description": "Databricks had a high valuation in 2021.<SEP>Databricks raised at $38B in August 2021 on $600M ARR and went public in 2026, with revenue growing from $1B ARR in 2022 to $4B in 2025.",
+          "keywords": "High Valuation,growth,valuation",
+          "weight": 2.0,
+          "source_id": "gd_90f0625e16d8673be75aae16-chunk-002<SEP>gd_d27c1c4b9ca0dc0f6e7b58a6-chunk-004",
+          "file_path": "gd_90f0625e16d8673be75aae16<SEP>gd_d27c1c4b9ca0dc0f6e7b58a6",
+          "created_at": 1793635953
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "Customer",
+          "description": "The market rewards customer acquisition",
+          "keywords": "Growth",
+          "weight": 1.0,
+          "source_id": "gd_87131f4a34d2f70295f0cf04-chunk-008",
+          "file_path": "gd_87131f4a34d2f70295f0cf04",
+          "created_at": 1793641663
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "Replit",
+          "description": "relationship_description: Replit's team didn't even know their own security audit had gotten that good, thanks to Claude's capabilities, which are also used by Cloudflare.",
+          "keywords": "existing vendors,relationship_keywords: capabilities",
+          "weight": 1.0,
+          "source_id": "gd_59c785375f34b0507b64485d-chunk-002",
+          "file_path": "gd_59c785375f34b0507b64485d",
+          "created_at": 1793644273
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "Databricks",
+          "description": "Databricks and Cloudflare are integrating AI into their platforms to deliver better solutions.",
+          "keywords": "AI Integration",
+          "weight": 1.0,
+          "source_id": "gd_512e13ce7fe186171e6697c2-chunk-003",
+          "file_path": "gd_512e13ce7fe186171e6697c2",
+          "created_at": 1793558952
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Zoom",
+          "description": "Zoom has seen a decrease in its stock price from 2021 to 2023.",
+          "keywords": "2023,Below",
+          "weight": 1.0,
+          "source_id": "gd_468b5135ea05ec7beab9cfd0-chunk-000",
+          "file_path": "gd_468b5135ea05ec7beab9cfd0",
+          "created_at": 1793503284
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "Figma",
+          "description": "Figma and Cloudflare are companies that added AI features to their products.<SEP>Cloudflare's market cap has declined more than Figma's.<SEP>Figma's market cap has declined more than Cloudflare's.",
+          "keywords": "Decline,Keywords: AI,Market Cap,adoption,product development",
+          "weight": 3.0,
+          "source_id": "gd_3379ac6f5a6b256be3e535c1-chunk-000<SEP>gd_9aaaf87c9b9d043595bc5848-chunk-001",
+          "file_path": "gd_3379ac6f5a6b256be3e535c1<SEP>gd_9aaaf87c9b9d043595bc5848",
+          "created_at": 1793572931
+        },
+        {
+          "src_id": "Atlassian",
+          "tgt_id": "Cloudflare",
+          "description": "Atlassian and Cloudflare are top SaaS companies mentioned in the context of CROs taking on additional responsibilities.<SEP>Atlassian and Cloudflare have partnered with SaaStr to provide resources and insights to SaaS companies.<SEP>strong presence in the developer, infrastructure, and Cloud side of the world<SEP>Atlassian and Cloudflare are competing in the software market with high growth rates.<SEP>Atlassian's growth rate is higher than Cloudflare's.<SEP>Atlassian's market cap has declined more than Cloudflare's.<SEP>Cloudflare's market cap has declined more than Atlassian's.",
+          "keywords": "Decline,Market Cap,Partnered,growth_competition,growth_rate,related,strong presence",
+          "weight": 7.0,
+          "source_id": "gd_c4d88074f382c56078d251bf-chunk-002<SEP>gd_c4d88074f382c56078d251bf-chunk-003<SEP>gd_efbaa09ea2525e90e20556df-chunk-000<SEP>gd_ee1953fb4d4e788a8fcd0076-chunk-002<SEP>gd_9aaaf87c9b9d043595bc5848-chunk-001",
+          "file_path": "gd_c4d88074f382c56078d251bf<SEP>gd_efbaa09ea2525e90e20556df<SEP>gd_ee1953fb4d4e788a8fcd0076<SEP>gd_9aaaf87c9b9d043595bc5848",
+          "created_at": 1793572931
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "Zoom",
+          "description": "Zoom and Cloudflare are top SaaS companies mentioned in the context of CROs taking on additional responsibilities.<SEP>Zoom and Cloudflare have partnered with SaaStr to provide resources and insights to SaaS companies.<SEP>Cloudflare offers a Free plan that is critical to its mission, and Zoom has a Free edition that is popular.<SEP>Cloudflare and Zoom both have a high percentage of customers paying monthly, contributing to their ARR.",
+          "keywords": "Free plan,Free-to-Paid conversions,Partnered,related",
+          "weight": 4.0,
+          "source_id": "gd_c4d88074f382c56078d251bf-chunk-002<SEP>gd_c4d88074f382c56078d251bf-chunk-003<SEP>gd_d1ee1b80cb9f51a51d4a2b27-chunk-000<SEP>gd_6883af2ee760af258eff9978-chunk-004",
+          "file_path": "gd_c4d88074f382c56078d251bf<SEP>gd_d1ee1b80cb9f51a51d4a2b27<SEP>gd_6883af2ee760af258eff9978",
+          "created_at": 1793569207
+        },
+        {
+          "src_id": "2019",
+          "tgt_id": "VC",
+          "description": "VC firms were involved in the seed valuations in 2019.",
+          "keywords": "Was involved in",
+          "weight": 1.0,
+          "source_id": "gd_5ad99af783e788fe13cc1713-chunk-001",
+          "file_path": "gd_5ad99af783e788fe13cc1713",
+          "created_at": 1793579590
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "Microsoft",
+          "description": "relationship_description: Microsoft and Cloudflare are working together to provide cloud computing services",
+          "keywords": "collaboration,relationship_keywords: partnership",
+          "weight": 1.0,
+          "source_id": "gd_ed65acecc6e4d39357b55384-chunk-000",
+          "file_path": "gd_ed65acecc6e4d39357b55384",
+          "created_at": 1793557656
+        },
+        {
+          "src_id": "2020-2021",
+          "tgt_id": "VC",
+          "description": "VCs have experienced fraud in their portfolios during 2020-2021",
+          "keywords": "fraud,investment",
+          "weight": 1.0,
+          "source_id": "gd_2fdbffb33fcf38e16b8d19ea-chunk-000",
+          "file_path": "gd_2fdbffb33fcf38e16b8d19ea",
+          "created_at": 1793491751
+        },
+        {
+          "src_id": "80%+",
+          "tgt_id": "VC",
+          "description": "The VCs know the odds of investment success, which is 80%+.",
+          "keywords": "Odds",
+          "weight": 1.0,
+          "source_id": "gd_fdc06d575c8bc962e662ebaa-chunk-001",
+          "file_path": "gd_fdc06d575c8bc962e662ebaa",
+          "created_at": 1793502350
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Market",
+          "description": "relationship_keywords=timeline adjustment, relationship_description=The timeline for going public in 2021 needs to be adjusted by 12-18 months.<SEP>The year 2021 saw significant market anomalies, including SPACs worth billions with no revenue.",
+          "keywords": "Timeline adjustment,anomalies",
+          "weight": 2.0,
+          "source_id": "gd_015d273393160169bc16ee3e-chunk-004<SEP>gd_57f40ea85543a2a411181d29-chunk-000",
+          "file_path": "gd_015d273393160169bc16ee3e<SEP>gd_57f40ea85543a2a411181d29",
+          "created_at": 1793645088
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "Slack",
+          "description": "Cloudflare and Slack both use free products to build massive awareness and generate revenue.",
+          "keywords": "Free-to-Paid conversions",
+          "weight": 1.0,
+          "source_id": "gd_6883af2ee760af258eff9978-chunk-004",
+          "file_path": "gd_6883af2ee760af258eff9978",
+          "created_at": 1793569207
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "NRR",
+          "description": "NRR had an insane 171% performance in 2021.",
+          "keywords": "Keywords: performance,year",
+          "weight": 1.0,
+          "source_id": "gd_acdaede66f21479bf7fc8842-chunk-001",
+          "file_path": "gd_acdaede66f21479bf7fc8842",
+          "created_at": 1793505402
+        },
+        {
+          "src_id": "Customers",
+          "tgt_id": "Q4",
+          "description": "Customers go dark in December due to holidays, affecting the sales team's performance in Q4.",
+          "keywords": "Dark,Holidays",
+          "weight": 1.0,
+          "source_id": "gd_c16b3257c39365c1412dc08b-chunk-004",
+          "file_path": "gd_c16b3257c39365c1412dc08b",
+          "created_at": 1793610053
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Klaviyo",
+          "description": "Klaviyo raised at $9.5B in May 2021 and went public in September 2023, with revenue growing from ~$270M to $640M ARR.",
+          "keywords": "growth,valuation",
+          "weight": 1.0,
+          "source_id": "gd_d27c1c4b9ca0dc0f6e7b58a6-chunk-004",
+          "file_path": "gd_d27c1c4b9ca0dc0f6e7b58a6",
+          "created_at": 1793635953
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "Datadog",
+          "description": "Both Datadog and Cloudflare are cloud-based software companies",
+          "keywords": "Industry",
+          "weight": 1.0,
+          "source_id": "gd_127b7c531bf91ae60817b680-chunk-000",
+          "file_path": "gd_127b7c531bf91ae60817b680",
+          "created_at": 1793579711
+        },
+        {
+          "src_id": "Quarter",
+          "tgt_id": "Team",
+          "description": "The team plans and executes their work during the quarter.",
+          "keywords": "execution,planning",
+          "weight": 1.0,
+          "source_id": "gd_906ef5196b8f7ab71fff80c3-chunk-002",
+          "file_path": "gd_906ef5196b8f7ab71fff80c3",
+          "created_at": 1793521400
+        },
+        {
+          "src_id": "Quarter",
+          "tgt_id": "Sales Team",
+          "description": "The sales team is behind or ahead of the quarter's performance.",
+          "keywords": "Ahead,Behind",
+          "weight": 1.0,
+          "source_id": "gd_0657a858eecd168dd602dd50-chunk-000",
+          "file_path": "gd_0657a858eecd168dd602dd50",
+          "created_at": 1793511413
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Enterprise",
+          "description": "In 2021, startups were doing better than enterprise leaders in the tech industry.",
+          "keywords": "Market Trend",
+          "weight": 1.0,
+          "source_id": "gd_fd2a720d5ccdbfd8e0349e77-chunk-001",
+          "file_path": "gd_fd2a720d5ccdbfd8e0349e77",
+          "created_at": 1793558159
+        },
+        {
+          "src_id": "2020-2021",
+          "tgt_id": "Figma",
+          "description": "Figma went public at the perfect inflection point of IPO market recovery during the 2020-2021 period.",
+          "keywords": "Market Timing and Positioning",
+          "weight": 1.0,
+          "source_id": "gd_d0181ecbeaf3780e6b58ca0e-chunk-002",
+          "file_path": "gd_d0181ecbeaf3780e6b58ca0e",
+          "created_at": 1793642108
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Box",
+          "description": "Box has seen a decrease in its stock price from 2021 to 2023.",
+          "keywords": "2023,Below",
+          "weight": 1.0,
+          "source_id": "gd_468b5135ea05ec7beab9cfd0-chunk-000",
+          "file_path": "gd_468b5135ea05ec7beab9cfd0",
+          "created_at": 1793503284
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "Klaviyo",
+          "description": "Cloudflare and Klaviyo have generated a lot of cash for their employees.",
+          "keywords": "Generated Cash",
+          "weight": 1.0,
+          "source_id": "gd_d3437bb5a40ad558b64712e5-chunk-002",
+          "file_path": "gd_d3437bb5a40ad558b64712e5",
+          "created_at": 1793520806
+        },
+        {
+          "src_id": "$1 billion cloud quarter",
+          "tgt_id": "Atlassian",
+          "description": "Atlassian achieved its first-ever $1 billion cloud quarter.",
+          "keywords": "achieved,milestone",
+          "weight": 1.0,
+          "source_id": "gd_5452a21f583d7a1ce5646101-chunk-000",
+          "file_path": "gd_5452a21f583d7a1ce5646101",
+          "created_at": 1793609184
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Twilio",
+          "description": "Relationship Description: Twilio's growth was at its peak in 2021.",
+          "keywords": "Relationship Keywords: peak,had",
+          "weight": 1.0,
+          "source_id": "gd_5f4341352a06f4cbdef81bcc-chunk-000",
+          "file_path": "gd_5f4341352a06f4cbdef81bcc",
+          "created_at": 1793508719
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "Enterprise",
+          "description": "Cloudflare's developer-first approach leads to enterprise success.",
+          "keywords": "Developer-first",
+          "weight": 1.0,
+          "source_id": "gd_9aaaf87c9b9d043595bc5848-chunk-002",
+          "file_path": "gd_9aaaf87c9b9d043595bc5848",
+          "created_at": 1793572931
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Notion",
+          "description": "Notion's valuation was basically flat between 2021 and 2025, but the company grew its revenue 19x.<SEP>Notion's revenue grew 19x between 2021 and 2025.<SEP>Notion's peak valuation was in 2021.",
+          "keywords": "Associated With,revenue,valuation",
+          "weight": 4.0,
+          "source_id": "gd_d27c1c4b9ca0dc0f6e7b58a6-chunk-005<SEP>gd_d27c1c4b9ca0dc0f6e7b58a6-chunk-006",
+          "file_path": "gd_d27c1c4b9ca0dc0f6e7b58a6",
+          "created_at": 1793635953
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Rubrik",
+          "description": "Rubrik was losing far less than in the Go Go Times of 2021.",
+          "keywords": "Loss",
+          "weight": 1.0,
+          "source_id": "gd_8e6d2b9f0a7221fef2693074-chunk-000",
+          "file_path": "gd_8e6d2b9f0a7221fef2693074",
+          "created_at": 1793514035
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "Twilio",
+          "description": "relationship_description: Twilio and Cloudflare sit at a strategic intersection where they can add features to their products.",
+          "keywords": "product expansion,relationship_keywords: strategic intersection",
+          "weight": 1.0,
+          "source_id": "gd_a2a196fcdd6409c49ba31408-chunk-001",
+          "file_path": "gd_a2a196fcdd6409c49ba31408",
+          "created_at": 1793569016
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Growth",
+          "description": "Going back to 2021's growth strategies is not recommended.",
+          "keywords": "Insanity",
+          "weight": 1.0,
+          "source_id": "gd_0bc1abfa4e6084d46e2595c5-chunk-004",
+          "file_path": "gd_0bc1abfa4e6084d46e2595c5",
+          "created_at": 1793575241
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "2025",
+          "description": "The relation (2021, 2025) refers to the comparison between the years 2021 and 2025, highlighting significant changes and trends in various aspects.\n\nThe year 2025 follows the year 2021, and a notable shift in market reality has occurred between these two periods. The pace of change in 2025 is more furious than in 2021, indicating a rapid evolution in the job market and industry trends. This is reflected in the decline of senior roles and the increasing adoption of AI-first workflows in 2025, as opposed to the high demand and low hiring bars observed in 2021.\n\nIn terms of specific metrics, the average seed-stage team size decreased from 2021 to 2025, while the average Series A team size also saw a decline during this period. Furthermore, the 2025 levels are now below pre-pandemic 2019 levels, indicating a downward trend in certain economic or market indicators.\n\nA 53% decline from the 2021 peak is also observed, suggesting a significant drop in performance or achievement. Overall, the relation (2021, 2025) highlights the challenges and changes faced by the job market and industries between these two years, with a focus on the increased pace of change and the shift towards more AI-driven workflows.<SEP>decreased, dropped",
+          "keywords": "AI-first workflows,Decreased,Faster Pace,Market Reality,decline,differences,follows,relationship_keywords,succeeds",
+          "weight": 9.0,
+          "source_id": "gd_70a219235731dd098fa60c52-chunk-000<SEP>gd_8f909671968a906eeff62bdc-chunk-000<SEP>gd_2f4df5abef725f9b0f5db9bd-chunk-001<SEP>gd_1c9f0c1497d224d0411bf40f-chunk-000<SEP>gd_cee09e6c9f84106353f2f15e-chunk-001<SEP>gd_5ad99af783e788fe13cc1713-chunk-003<SEP>gd_605e0c1f4fd4724182870b9e-chunk-000",
+          "file_path": "gd_70a219235731dd098fa60c52<SEP>gd_8f909671968a906eeff62bdc<SEP>gd_2f4df5abef725f9b0f5db9bd<SEP>gd_1c9f0c1497d224d0411bf40f<SEP>gd_cee09e6c9f84106353f2f15e<SEP>gd_5ad99af783e788fe13cc1713<SEP>gd_605e0c1f4fd4724182870b9e",
+          "created_at": 1793643714
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Perplexity",
+          "description": "Perplexity had a high valuation in 2021.",
+          "keywords": "High Valuation",
+          "weight": 1.0,
+          "source_id": "gd_90f0625e16d8673be75aae16-chunk-002",
+          "file_path": "gd_90f0625e16d8673be75aae16",
+          "created_at": 1793627658
+        },
+        {
+          "src_id": "Quarter",
+          "tgt_id": "Startup",
+          "description": "Startups often measure their progress over time, using quarters as a unit of measurement.",
+          "keywords": "Progress",
+          "weight": 1.0,
+          "source_id": "gd_5ad99af783e788fe13cc1713-chunk-002",
+          "file_path": "gd_5ad99af783e788fe13cc1713",
+          "created_at": 1793579592
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Cloud",
+          "description": "Cloud companies experienced significant growth in 2021.",
+          "keywords": "growth",
+          "weight": 1.0,
+          "source_id": "gd_b47d0381318f8c03ba8b235e-chunk-000",
+          "file_path": "gd_b47d0381318f8c03ba8b235e",
+          "created_at": 1793498739
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "PagerDuty",
+          "description": "Business model<SEP>relationship_description=Cloudflare has a large number of small customers who use its free edition, similar to PagerDuty.",
+          "keywords": "Similarity,relationship_keywords=free edition,small customers",
+          "weight": 2.0,
+          "source_id": "gd_e396b212b0c5e080520b685b-chunk-000<SEP>gd_e396b212b0c5e080520b685b-chunk-001",
+          "file_path": "gd_e396b212b0c5e080520b685b",
+          "created_at": 1793557151
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Vercel",
+          "description": "Vercel had a high valuation in 2021.",
+          "keywords": "High Valuation",
+          "weight": 1.0,
+          "source_id": "gd_90f0625e16d8673be75aae16-chunk-002",
+          "file_path": "gd_90f0625e16d8673be75aae16",
+          "created_at": 1793627658
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "Samsara",
+          "description": "Cloudflare and Samsara are both reaching high ARR, with Cloudflare at $562M in Q3 revenue and Samsara at $1.75B ARR.<SEP>Samsara is growing 29% in ARR, and Cloudflare is also growing in ARR.",
+          "keywords": "29%,ARR,High ARR,growth",
+          "weight": 2.0,
+          "source_id": "gd_87131f4a34d2f70295f0cf04-chunk-002<SEP>gd_87131f4a34d2f70295f0cf04-chunk-003",
+          "file_path": "gd_87131f4a34d2f70295f0cf04",
+          "created_at": 1793641661
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "CrowdStrike",
+          "description": "Security.<SEP>Both companies provide edge computing and security services.<SEP>Both companies provide AI-powered security solutions to enterprises<SEP>Cloudflare and CrowdStrike are examples of companies that have successfully transitioned to consumption-based models and have seen significant revenue growth.",
+          "keywords": "AI-powered security solutions,Cybersecurity,Edge computing and security,Security,not seats,win on outcomes",
+          "weight": 4.0,
+          "source_id": "gd_9892f4cb159a2427a2e6b59b-chunk-001<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-001<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-009<SEP>gd_9809d37cd527c2958295b062-chunk-016",
+          "file_path": "gd_9892f4cb159a2427a2e6b59b<SEP>gd_ed532f1494cf2bbcdf7fd169<SEP>gd_9809d37cd527c2958295b062",
+          "created_at": 1793645946
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "Gartner",
+          "description": "Gartner predicts record Cloud spend in 2024, which includes Cloudflare<SEP>Gartner forecasts global AI spending will approach $1.5 trillion in 2025.",
+          "keywords": "Forecasted AI spending,forecast,prediction",
+          "weight": 2.0,
+          "source_id": "gd_8d5a01e786e521ceef6a39d4-chunk-000<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-001",
+          "file_path": "gd_8d5a01e786e521ceef6a39d4<SEP>gd_ed532f1494cf2bbcdf7fd169",
+          "created_at": 1793639144
+        },
+        {
+          "src_id": "NRR",
+          "tgt_id": "Quarter",
+          "description": "The net revenue retention rate exceeds the quarterly target.",
+          "keywords": "Exceeds",
+          "weight": 1.0,
+          "source_id": "gd_35bba6f7fbcad146853237d3-chunk-004",
+          "file_path": "gd_35bba6f7fbcad146853237d3",
+          "created_at": 1793565525
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Q4",
+          "description": "AI SDR performed well in Q4.",
+          "keywords": "Performance",
+          "weight": 1.0,
+          "source_id": "gd_5b445ae4452b1cd5ee770467-chunk-001",
+          "file_path": "gd_5b445ae4452b1cd5ee770467",
+          "created_at": 1793594147
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Zscaler",
+          "description": "year, revenue<SEP>94% of Zscaler’s revenue came in part or in whole from channel partners in 2021.",
+          "keywords": "Growth,Revenue,relationship_keywords",
+          "weight": 2.0,
+          "source_id": "gd_447ac742e3a9ad53298cf2d6-chunk-002<SEP>gd_1fd95d7bd6ed45e81b456fce-chunk-001",
+          "file_path": "gd_447ac742e3a9ad53298cf2d6<SEP>gd_1fd95d7bd6ed45e81b456fce",
+          "created_at": 1793526907
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Unicorns",
+          "description": "Unicorns experienced significant growth in 2021.",
+          "keywords": "growth",
+          "weight": 1.0,
+          "source_id": "gd_b47d0381318f8c03ba8b235e-chunk-000",
+          "file_path": "gd_b47d0381318f8c03ba8b235e",
+          "created_at": 1793498739
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "Oracle",
+          "description": "Cloudflare positioned itself as essential AI infrastructure with Oracle's support.",
+          "keywords": "AI-Infrastructure,Positioned",
+          "weight": 1.0,
+          "source_id": "gd_9809d37cd527c2958295b062-chunk-014",
+          "file_path": "gd_9809d37cd527c2958295b062",
+          "created_at": 1793645943
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "Okta",
+          "description": "Okta and Cloudflare are leaders in the cloud security market.<SEP>Okta blocked the attack that hit Cloudflare.<SEP>Security.",
+          "keywords": "Leader,Security,blocked,protected",
+          "weight": 3.0,
+          "source_id": "gd_f006f6ca7bfb307626d61034-chunk-000<SEP>gd_264f36d1cab20f425e0992cf-chunk-004<SEP>gd_9892f4cb159a2427a2e6b59b-chunk-001",
+          "file_path": "gd_f006f6ca7bfb307626d61034<SEP>gd_264f36d1cab20f425e0992cf<SEP>gd_9892f4cb159a2427a2e6b59b",
+          "created_at": 1793634761
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "RingCentral",
+          "description": "RingCentral's growth has halved from 2021<SEP>RingCentral's SBC was 23.6% of revenue in 2021.",
+          "keywords": "Keywords: year,growth_halved,performance",
+          "weight": 2.0,
+          "source_id": "gd_55bc540b610064fdcfa76b04-chunk-001<SEP>gd_950767c5c3a3596311dbbda5-chunk-000",
+          "file_path": "gd_55bc540b610064fdcfa76b04<SEP>gd_950767c5c3a3596311dbbda5",
+          "created_at": 1793514638
+        },
+        {
+          "src_id": "Datadog",
+          "tgt_id": "Revenue Per Employee",
+          "description": "Datadog has 5,200 employees and generates $410,000 in revenue per employee.",
+          "keywords": "Metric",
+          "weight": 1.0,
+          "source_id": "gd_e3466d3d0dcfc9810320f04a-chunk-000",
+          "file_path": "gd_e3466d3d0dcfc9810320f04a",
+          "created_at": 1793557036
+        },
+        {
+          "src_id": "Q4",
+          "tgt_id": "founders",
+          "description": "The lack of hiring will make it almost impossible to hit the plan by Q4.",
+          "keywords": "hiring",
+          "weight": 1.0,
+          "source_id": "gd_bbf4a1909f198377322580af-chunk-001",
+          "file_path": "gd_bbf4a1909f198377322580af",
+          "created_at": 1793523821
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "Monday.com",
+          "description": "Monday.com's market cap has declined more than Cloudflare's.<SEP>Cloudflare's market cap has declined more than Monday.com's.",
+          "keywords": "Decline,Market Cap",
+          "weight": 2.0,
+          "source_id": "gd_9aaaf87c9b9d043595bc5848-chunk-001",
+          "file_path": "gd_9aaaf87c9b9d043595bc5848",
+          "created_at": 1793572931
+        },
+        {
+          "src_id": "Quarter",
+          "tgt_id": "Sales",
+          "description": "When sales performance is not meeting expectations, it can lead to a loss of confidence in the quarter.",
+          "keywords": "confidence,loss",
+          "weight": 1.0,
+          "source_id": "gd_9c5b3ffd65a6602d115b46e5-chunk-004",
+          "file_path": "gd_9c5b3ffd65a6602d115b46e5",
+          "created_at": 1793595380
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "startups",
+          "description": "In 2021, startups had the Go-Go Days, which saw a peak of 41% of optionees buying their shares.<SEP>Startups experienced rapid growth in 2021.",
+          "keywords": "experienced growth,had Go-Go Days",
+          "weight": 3.0,
+          "source_id": "gd_364298816fa40fc04075dea7-chunk-000<SEP>gd_364298816fa40fc04075dea7-chunk-001",
+          "file_path": "gd_364298816fa40fc04075dea7",
+          "created_at": 1793492866
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "2024",
+          "description": "The number of IPOs dropped significantly between 2021 and 2024.<SEP>The number of VC firms investing is pacing to be down 62% from 2021 to 2024.<SEP>The situation in 2024 is still like 2021, with easy money available for hot AI startups.",
+          "keywords": "Decrease,Drop,IPO,Still 2021 There",
+          "weight": 3.0,
+          "source_id": "gd_a6fbf8f37d2f0906d276118e-chunk-002<SEP>gd_24e298cda6ab82b9dd6500f8-chunk-001<SEP>gd_c844d03b15eaeb661ca8042c-chunk-000",
+          "file_path": "gd_a6fbf8f37d2f0906d276118e<SEP>gd_24e298cda6ab82b9dd6500f8<SEP>gd_c844d03b15eaeb661ca8042c",
+          "created_at": 1793554820
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "Zscaler",
+          "description": "Security.<SEP>Both companies provide AI-powered security solutions to enterprises",
+          "keywords": "AI-powered security solutions,Cybersecurity,Security",
+          "weight": 2.0,
+          "source_id": "gd_9892f4cb159a2427a2e6b59b-chunk-001<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-009",
+          "file_path": "gd_9892f4cb159a2427a2e6b59b<SEP>gd_ed532f1494cf2bbcdf7fd169",
+          "created_at": 1793639149
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "2023",
+          "description": "The number of VC firms investing decreased by 25% from 2021 to 2023.<SEP>relationship_description=VC capital hit record highs in 2021 and is now at multi-year lows.",
+          "keywords": "Decrease,VC capital,relationship_keywords=Time Period",
+          "weight": 2.0,
+          "source_id": "gd_24e298cda6ab82b9dd6500f8-chunk-001<SEP>gd_35db7b4ad7a78a616a0baa36-chunk-000",
+          "file_path": "gd_24e298cda6ab82b9dd6500f8<SEP>gd_35db7b4ad7a78a616a0baa36",
+          "created_at": 1793527794
+        },
+        {
+          "src_id": "Asana",
+          "tgt_id": "Quarter",
+          "description": "Asana has accelerated its growth each quarter since reaching $200m ARR.",
+          "keywords": "Growth",
+          "weight": 1.0,
+          "source_id": "gd_8a7f9d97ab81a0e9545f71eb-chunk-000",
+          "file_path": "gd_8a7f9d97ab81a0e9545f71eb",
+          "created_at": 1793634210
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "A16Z",
+          "description": "A16Z invested in various companies in 2021.<SEP>A16Z's investments in the 2014-2018 vintages resulted in significant success in 2021, which is a key factor in the current high valuations of companies like OpenAI and Databricks.",
+          "keywords": "Investment,Success",
+          "weight": 2.0,
+          "source_id": "gd_90f0625e16d8673be75aae16-chunk-002<SEP>gd_90f0625e16d8673be75aae16-chunk-005",
+          "file_path": "gd_90f0625e16d8673be75aae16",
+          "created_at": 1793627658
+        },
+        {
+          "src_id": "2020",
+          "tgt_id": "2021",
+          "description": "The (2020, 2021) relation refers to the consecutive years of 2020 and 2021. These years witnessed significant developments in the SaaS industry, with 2021 building upon the inefficiencies observed in 2020. One notable trend was the tripling of unicorn production in 2021 compared to the previous year, indicating a surge in successful startups.\n\nThe period from mid-2020 to early 2022 saw various lessons being learned, but it appears that these insights no longer apply. The summer months of 2020-2021 outperformed, likely due to the zero-interest-rate frenzy that characterized this period. In terms of funding, the environment reset expectations for Series B SaaS companies in 2021, marking a shift from the previous year.\n\nFurthermore, 2021 generated more exit value and had unprecedented fundraising compared to 2020. This growth rate of SaaS companies during the go-go days of 2021 was a notable aspect of the industry's performance. Overall, the (2020, 2021) relation highlights the dynamic nature of the SaaS industry, with each year bringing new challenges and opportunities.",
+          "keywords": "Continues,Different,Exit value and fundraising,Outperformance,Temporal Relationship,Time Period,funding environment,growth,unicorn production rate",
+          "weight": 8.0,
+          "source_id": "gd_7cf3e77240970cd17fe2178d-chunk-000<SEP>gd_b47d0381318f8c03ba8b235e-chunk-000<SEP>gd_512d6b1fc2ebd9c234e653d4-chunk-000<SEP>gd_32f5e4f1f3af8c48fe6d19b5-chunk-000<SEP>gd_085322b364965f52c672f5d6-chunk-001<SEP>gd_e6cc9327047fdb1610bff1ec-chunk-000<SEP>gd_4a9d27615a3fede9dec6444e-chunk-001<SEP>gd_90f0625e16d8673be75aae16-chunk-000",
+          "file_path": "gd_7cf3e77240970cd17fe2178d<SEP>gd_b47d0381318f8c03ba8b235e<SEP>gd_512d6b1fc2ebd9c234e653d4<SEP>gd_32f5e4f1f3af8c48fe6d19b5<SEP>gd_085322b364965f52c672f5d6<SEP>gd_e6cc9327047fdb1610bff1ec<SEP>gd_4a9d27615a3fede9dec6444e<SEP>gd_90f0625e16d8673be75aae16",
+          "created_at": 1793627656
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Scale AI",
+          "description": "Scale AI had a high valuation in 2021.",
+          "keywords": "High Valuation",
+          "weight": 1.0,
+          "source_id": "gd_90f0625e16d8673be75aae16-chunk-002",
+          "file_path": "gd_90f0625e16d8673be75aae16",
+          "created_at": 1793627658
+        },
+        {
+          "src_id": "Quarter",
+          "tgt_id": "Start-up",
+          "description": "Start-ups should prioritize customer happiness and focus on improving NPS and CSAT each quarter.",
+          "keywords": "Focus,Prioritize",
+          "weight": 1.0,
+          "source_id": "gd_e570bc885c853fe839d0ee57-chunk-003",
+          "file_path": "gd_e570bc885c853fe839d0ee57",
+          "created_at": 1793593428
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Blackline",
+          "description": "2021 was a year of consistent growth for Blackline, with 20%+ growth.",
+          "keywords": "Relationship_keywords: growth,year",
+          "weight": 1.0,
+          "source_id": "gd_e0e8f051a95a2e0ce0fb9f89-chunk-001",
+          "file_path": "gd_e0e8f051a95a2e0ce0fb9f89",
+          "created_at": 1793603517
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "2022",
+          "description": "2022 saw widespread layoffs in the SaaS industry.<SEP>Market changes and low multiples<SEP>2021's \"growth at any cost\" mentality led to a sharp downturn in 2022 due to inflation and rising rates.",
+          "keywords": "Continues,inflation,rates,sharp downturn,significant changes",
+          "weight": 3.0,
+          "source_id": "gd_7cf3e77240970cd17fe2178d-chunk-000<SEP>gd_9b8c7ee744bab17138f98f95-chunk-000<SEP>gd_0488dbe0d1821eacec1cd206-chunk-005",
+          "file_path": "gd_7cf3e77240970cd17fe2178d<SEP>gd_9b8c7ee744bab17138f98f95<SEP>gd_0488dbe0d1821eacec1cd206",
+          "created_at": 1793643368
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Unicorn",
+          "description": "40 Unicorns were being minted every month.",
+          "keywords": "Was at its peak",
+          "weight": 1.0,
+          "source_id": "gd_de3967876a8f223511714e23-chunk-000",
+          "file_path": "gd_de3967876a8f223511714e23",
+          "created_at": 1793511069
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Confluent",
+          "description": "Confluent's self-service cloud adoption helped grow its customer base 65% year-over-year to approximately 3,470 customers in 2021.",
+          "keywords": "Customer Growth",
+          "weight": 1.0,
+          "source_id": "gd_35bba6f7fbcad146853237d3-chunk-003",
+          "file_path": "gd_35bba6f7fbcad146853237d3",
+          "created_at": 1793565525
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "venture capital",
+          "description": "The venture capital in 2021 has experienced a significant decrease.",
+          "keywords": "radical slow down",
+          "weight": 1.0,
+          "source_id": "gd_4305ca7b896da20cc09c6c3b-chunk-001",
+          "file_path": "gd_4305ca7b896da20cc09c6c3b",
+          "created_at": 1793583119
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "xAI",
+          "description": "xAI had a high valuation in 2021.",
+          "keywords": "High Valuation",
+          "weight": 1.0,
+          "source_id": "gd_90f0625e16d8673be75aae16-chunk-002",
+          "file_path": "gd_90f0625e16d8673be75aae16",
+          "created_at": 1793627658
+        },
+        {
+          "src_id": "AI companies",
+          "tgt_id": "Cloudflare",
+          "description": "Capturing security spend from AI companies<SEP>Cloudflare provides CDN and security services to AI companies and is capturing AI spend.",
+          "keywords": "AI spend,CDN,security",
+          "weight": 2.0,
+          "source_id": "gd_7579e8b1402637800b33e210-chunk-003<SEP>gd_7579e8b1402637800b33e210-chunk-004",
+          "file_path": "gd_7579e8b1402637800b33e210",
+          "created_at": 1793620822
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "U.S.",
+          "description": "Cloudflare aims to expand its revenue outside the U.S. by 50%.",
+          "keywords": "Expansion,Revenue",
+          "weight": 1.0,
+          "source_id": "gd_ec32711adc8f9158a0b4a669-chunk-001",
+          "file_path": "gd_ec32711adc8f9158a0b4a669",
+          "created_at": 1793603918
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Growth Rate",
+          "description": "Companies that hired to 2021 growth rate and never right-sized are hurting",
+          "keywords": "Artificially Elevated,High",
+          "weight": 1.0,
+          "source_id": "gd_f335200b1b152ebd57131e72-chunk-005",
+          "file_path": "gd_f335200b1b152ebd57131e72",
+          "created_at": 1793586640
+        },
+        {
+          "src_id": "Braze",
+          "tgt_id": "Cloudflare",
+          "description": "Braze and Cloudflare are both SaaS and Cloud leaders with big enterprise customers fueling growth.",
+          "keywords": "Cloud,SaaS,growth,relationship_keywords: customers",
+          "weight": 1.0,
+          "source_id": "gd_47fbbf612af3204e5ab5ce5e-chunk-000",
+          "file_path": "gd_47fbbf612af3204e5ab5ce5e",
+          "created_at": 1793493404
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Zoominfo",
+          "description": "Zoominfo has seen a decrease in its stock price from 2021 to 2023.",
+          "keywords": "2023,Below",
+          "weight": 1.0,
+          "source_id": "gd_468b5135ea05ec7beab9cfd0-chunk-000",
+          "file_path": "gd_468b5135ea05ec7beab9cfd0",
+          "created_at": 1793503284
+        },
+        {
+          "src_id": "Bill",
+          "tgt_id": "Cloudflare",
+          "description": "Cloudflare and Bill are top SaaS companies mentioned in the context of CROs taking on additional responsibilities.",
+          "keywords": "related",
+          "weight": 1.0,
+          "source_id": "gd_c4d88074f382c56078d251bf-chunk-002",
+          "file_path": "gd_c4d88074f382c56078d251bf",
+          "created_at": 1793508401
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Q1 2025",
+          "description": "Q1 2025 saw 210 enterprise SaaS M&A deals completed, a significant jump from Q1 of 2021's 165 deals.",
+          "keywords": "Comparison,Contrast",
+          "weight": 4.0,
+          "source_id": "gd_605e0c1f4fd4724182870b9e-chunk-001",
+          "file_path": "gd_605e0c1f4fd4724182870b9e",
+          "created_at": 1793643714
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "UserTesting",
+          "description": "UserTesting experienced strong growth acceleration in 2021.",
+          "keywords": "Year",
+          "weight": 1.0,
+          "source_id": "gd_81bbd7bc18b73e6c09bfbc28-chunk-000",
+          "file_path": "gd_81bbd7bc18b73e6c09bfbc28",
+          "created_at": 1793512896
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Crunchbase",
+          "description": "Crunchbase provided data on the unicorn market in 2021.",
+          "keywords": "unicorn data",
+          "weight": 1.0,
+          "source_id": "gd_b47d0381318f8c03ba8b235e-chunk-000",
+          "file_path": "gd_b47d0381318f8c03ba8b235e",
+          "created_at": 1793498739
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Battery Ventures",
+          "description": "Battery Ventures compared valuations in 2021 to those in the present day, finding that public multiples have fallen -66%.",
+          "keywords": "compared to,valuations",
+          "weight": 1.0,
+          "source_id": "gd_a2133043d53f3401aad628c3-chunk-000",
+          "file_path": "gd_a2133043d53f3401aad628c3",
+          "created_at": 1793516943
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "DataDog",
+          "description": "Strategic partnership for AI infrastructure",
+          "keywords": "partnership",
+          "weight": 1.0,
+          "source_id": "gd_7579e8b1402637800b33e210-chunk-003",
+          "file_path": "gd_7579e8b1402637800b33e210",
+          "created_at": 1793620820
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "CB Insights",
+          "description": "CB Insights provided data on the unicorn market in 2021.",
+          "keywords": "unicorn data",
+          "weight": 1.0,
+          "source_id": "gd_b47d0381318f8c03ba8b235e-chunk-000",
+          "file_path": "gd_b47d0381318f8c03ba8b235e",
+          "created_at": 1793498739
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Hiring",
+          "description": "Hiring trends in 2021 are used as a reference point for comparison.",
+          "keywords": "Comparison",
+          "weight": 1.0,
+          "source_id": "gd_6554e830c0e68876e0d2c9d7-chunk-000",
+          "file_path": "gd_6554e830c0e68876e0d2c9d7",
+          "created_at": 1793528044
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "year",
+          "description": "It is a specific year.",
+          "keywords": "specific",
+          "weight": 1.0,
+          "source_id": "gd_6554e830c0e68876e0d2c9d7-chunk-001",
+          "file_path": "gd_6554e830c0e68876e0d2c9d7",
+          "created_at": 1793528044
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "SPACs",
+          "description": "SPACs were throwing money at anything cloud-related<SEP>2021's exit value was influenced by SPACs.<SEP>SPACs drove 2021's 12-18 month window.",
+          "keywords": "Cause,Exit Environment,Exit Value",
+          "weight": 3.0,
+          "source_id": "gd_90f0625e16d8673be75aae16-chunk-000<SEP>gd_90f0625e16d8673be75aae16-chunk-006<SEP>gd_90f0625e16d8673be75aae16-chunk-007",
+          "file_path": "gd_90f0625e16d8673be75aae16",
+          "created_at": 1793627656
+        },
+        {
+          "src_id": "Quarter",
+          "tgt_id": "Reps",
+          "description": "Reps measure their performance against quarterly targets.",
+          "keywords": "Measures",
+          "weight": 1.0,
+          "source_id": "gd_50b0145865c1ee018c11796f-chunk-001",
+          "file_path": "gd_50b0145865c1ee018c11796f",
+          "created_at": 1793515383
+        },
+        {
+          "src_id": "CrowdStrike",
+          "tgt_id": "Q4",
+          "description": "CrowdStrike's remaining performance obligations grew to $9.0 billion in Q4, up from $6.5 billion a year ago.",
+          "keywords": "growth",
+          "weight": 1.0,
+          "source_id": "gd_132a794bad65f88dee461787-chunk-004",
+          "file_path": "gd_132a794bad65f88dee461787",
+          "created_at": 1793605187
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "we",
+          "description": "The year 2021 is no longer present.",
+          "keywords": "gone",
+          "weight": 1.0,
+          "source_id": "gd_72b009a80ea6cf84fc300a5d-chunk-001",
+          "file_path": "gd_72b009a80ea6cf84fc300a5d",
+          "created_at": 1793493387
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "T3D2",
+          "description": "Many startups met the T3D2 bar in 2021, but now they no longer do.",
+          "keywords": "Many Met Bar",
+          "weight": 1.0,
+          "source_id": "gd_704a724ff302ab18043fedf2-chunk-000",
+          "file_path": "gd_704a724ff302ab18043fedf2",
+          "created_at": 1793510940
+        },
+        {
+          "src_id": "2019",
+          "tgt_id": "2021",
+          "description": "2021 generated more exit value and had unprecedented fundraising compared to 2019",
+          "keywords": "Exit value and fundraising",
+          "weight": 1.0,
+          "source_id": "gd_90f0625e16d8673be75aae16-chunk-000",
+          "file_path": "gd_90f0625e16d8673be75aae16",
+          "created_at": 1793627656
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "Iconiq Capital",
+          "description": "Iconiq Capital provides investment services to Cloudflare.",
+          "keywords": "Financial Services,Investment",
+          "weight": 1.0,
+          "source_id": "gd_ed532f1494cf2bbcdf7fd169-chunk-008",
+          "file_path": "gd_ed532f1494cf2bbcdf7fd169",
+          "created_at": 1793639149
+        },
+        {
+          "src_id": "2018",
+          "tgt_id": "2021",
+          "description": "2021 had more mega-deals and unprecedented fundraising compared to 2018",
+          "keywords": "Mega-deals and fundraising",
+          "weight": 1.0,
+          "source_id": "gd_90f0625e16d8673be75aae16-chunk-000",
+          "file_path": "gd_90f0625e16d8673be75aae16",
+          "created_at": 1793627656
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "COVID",
+          "description": "COVID contributed to the 2021 liquidity through pull-forward.",
+          "keywords": "contributes",
+          "weight": 1.0,
+          "source_id": "gd_90f0625e16d8673be75aae16-chunk-008",
+          "file_path": "gd_90f0625e16d8673be75aae16",
+          "created_at": 1793627658
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Q422",
+          "description": "Q4’22 was worse than 2021 in terms of startup funding.<SEP>2021 was worse than Q4’22 in terms of startup funding.",
+          "keywords": "worse_than",
+          "weight": 2.0,
+          "source_id": "gd_3a5f356153b9a32a14dc97fc-chunk-000",
+          "file_path": "gd_3a5f356153b9a32a14dc97fc",
+          "created_at": 1793490483
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "they",
+          "description": "The year 2021 was surpassed by the current year.<SEP>They have experienced a radical slow down compared to 2021.",
+          "keywords": "lapped,radical slow down",
+          "weight": 2.0,
+          "source_id": "gd_72b009a80ea6cf84fc300a5d-chunk-001<SEP>gd_4305ca7b896da20cc09c6c3b-chunk-001",
+          "file_path": "gd_72b009a80ea6cf84fc300a5d<SEP>gd_4305ca7b896da20cc09c6c3b",
+          "created_at": 1793583119
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "Enterprise SaaS",
+          "description": "Cloudflare's developer community is already building AI-powered applications on their platform, demonstrating the effectiveness of infrastructure positioning.",
+          "keywords": "AI,Infrastructure",
+          "weight": 1.0,
+          "source_id": "gd_9809d37cd527c2958295b062-chunk-012",
+          "file_path": "gd_9809d37cd527c2958295b062",
+          "created_at": 1793645943
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Kyle Porter",
+          "description": "Kyle Porter exited Salesloft in 2021.",
+          "keywords": "exited,sold",
+          "weight": 1.0,
+          "source_id": "gd_e73005b9f40be88c3e795228-chunk-001",
+          "file_path": "gd_e73005b9f40be88c3e795228",
+          "created_at": 1793603752
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "VC Industry",
+          "description": "The VC industry generated $774B in exits in 2021.",
+          "keywords": "Event",
+          "weight": 1.0,
+          "source_id": "gd_90f0625e16d8673be75aae16-chunk-007",
+          "file_path": "gd_90f0625e16d8673be75aae16",
+          "created_at": 1793627658
+        },
+        {
+          "src_id": "Cloudflare",
+          "tgt_id": "Freemium",
+          "description": "Business model",
+          "keywords": "Success",
+          "weight": 1.0,
+          "source_id": "gd_e396b212b0c5e080520b685b-chunk-000",
+          "file_path": "gd_e396b212b0c5e080520b685b",
+          "created_at": 1793557151
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "Decacorns",
+          "description": "Decacorns experienced significant growth in 2021.",
+          "keywords": "growth",
+          "weight": 1.0,
+          "source_id": "gd_b47d0381318f8c03ba8b235e-chunk-000",
+          "file_path": "gd_b47d0381318f8c03ba8b235e",
+          "created_at": 1793498739
+        }
+      ],
+      "chunks": [
+        {
+          "reference_id": "1",
+          "content": "So B2B SaaS has been up and down but security hasn’t missed a beat. Cloudflare has been one of biggest beneficiaries: •$1.7B+ ARR •28% growth (!) •15% non-GAAP profit •39 Billion market cap 👉 Cloudflare is what 20x ARR looks like at scale. 5 Interesting Learnings: #1. 221,000 Total Paying Customers, But 65% of Revenue From 3,200 Large Customers This is what you should see when a “long tail” engine is really working at scale. 100k+ paying customers, but in the end, at scale your largest customers are likely making up 50%+ of your revenue. Don’t neglect the small ones. They grow up into big ones! #2. $400,000 in Revenue Per Employee Cloudflare grew from $300k in revenue per employee at $1B ARR to $400k at $1.5B ARR or so and that seems to be its target to balance growth and efficiency. #3. 50% of Revenue Outside the U.S. Our weekly reminder to Go Global as early as you can! #4. Self-Serve for Customers Of All Sizes — Not Just Small Ones Cloudflare is committed to building a self-serve product that enterprises can try and buy on their own if they choose. It can be done! 🙂 #5. NRR Has Come Down a Bit, But Still Strong at 110%. Clouldflare’s growth remains top tier, but it has come down a bit, and a dip in NRR is one of the reasons. 110% is still world-class. But it’s down from 115% a year ago. That makes net new ARR growth just that much harder than before.",
+          "file_path": "gd_7212707c2707213a0b5b7a4b",
+          "chunk_id": "gd_7212707c2707213a0b5b7a4b-chunk-000"
+        },
+        {
+          "reference_id": "2",
+          "content": "So no question many folks, especially selling sales and marketing tools, are having a pretty tough time of it.  Leaders we admire and look up to from Zoominfo to Zoom to Box have had tough years on the stock market, no doubt.\nBut not everyone.  Not by far.  Overall, the BVP Nasdaq Emerging Cloud Index is up 22.97% this year.\nI went further and put together a quick list of 25+ SaaS and Cloud leaders to see how their share prices are doing.   On average, their share prices are up a stunning 68.50% and they are worth on average $26 Billion!\nNow it’s not all smiles, daisies and glory.  The ARR multiples in many cases here aren’t all that high.  And the growth for many of these leaders has come way down this year, even if in most cases, they’ve gotten far more efficient.  And importantly, many are still way off their 2021 highs.  The big stock price swings in 2023 in many cases are still under their 2021 peak.\nBut still a reminder, quietly, this isn’t too bad a year or a time for many SaaS and Cloud leaders.  Not all.   But many.\nAlmost Everyone’s Gotten Radically More Efficient in SaaS",
+          "file_path": "gd_468b5135ea05ec7beab9cfd0",
+          "chunk_id": "gd_468b5135ea05ec7beab9cfd0-chunk-000"
+        },
+        {
+          "reference_id": "3",
+          "content": "So Cloud and SaaS have had a bit of a rollercoaster the past 4 years, from the boom times of 2020-2021, to the tougher times overall of 2023, to the AI boom of 2024+.  But one thing has done well through all of it: security.  We always need it, and the threats keep coming.\nAnd Cloudflare has been one of the biggest beneficiaries.  It just keeps on going:\n$1.7B+ ARR\n28% growth (!)\n15% non-GAAP operating profit, and 11% free-cash flow margins … and ..\na $39 Billion market cap (!!), up 45% in past 12 months (!!!)\nCloudflare is what 20x ARR looks like at scale, post-IPO.  Top-tier growth, cash-flow positive, and very durable revenue.  The last point is key.  Wall Street wants revenue that is durable.\n5 Interesting Learnings:\n#1.  221,000 Total Paying Customers, But 65% of Revenue From 3,200 Large Customers\nThis is what you should see when a “long tail” engine is just working at scale.  100k+ paying customers, maybe even 1m+ free, but in the end, at scale your largest customers are likely making up 50%+ of your revenue.  Just don’t neglect the small ones.  They grow up into big ones!\n#2.  $400,000 in Revenue Per Employee\nCloudflare grew from $300k in revenue per employee at $1B ARR to $400k at $1.5B ARR or so and that seems to be its target to balance growth and efficiency.\n#3.  50% of Revenue Outside the U.S.\nOur reminder to Go Global as early as you can.\n\n[Omitted same-source text between these sections: 37 words.]\n\n#5.  NRR",
+          "file_path": "gd_ec32711adc8f9158a0b4a669",
+          "chunk_id": "gd_ec32711adc8f9158a0b4a669-chunk-000"
+        },
+        {
+          "reference_id": "4",
+          "content": ":\nWho cares?\n\nHere’s what changed: In 2021, everything was getting ridiculous multiples. Every SaaS company was trading at 30x ARR or higher. Now? The bar is higher. But if you clear the bar, the outcomes are\nbigger\n. OpenAI at $500B\nisn’t trading on vibes. It’s trading on the fact that they might do $15-20B in revenue in 2025. Databricks at $100B\nisn’t hope and dreams. It’s real revenue, real margins, and can be a $100B+ public company any time it wants. The multiples compressed for companies who have seen growth slow. But for\nexceptional\ncompanies—particularly in AI—we’re seeing valuations that exceed 2021 peaks. And unlike 2021, these companies have the fundamentals to support it. What the 2021 Singularity Is Really Telling Us About 2026-2028+\nGo back to that singular 2021 number: $12.5B to LPs in one year for A16Z, equaling the entire prior decade. And $774B in total exit value across the entire VC industry. That wasn’t just luck. The industry had:\nMade the right bets 5-7 years earlier (2014-2018 vintages)\nBuilt positions large enough to matter\nHelped companies execute through the window\nHad enough portfolio companies at the right stage simultaneously\nThe 2021 singularity happened because 2014-2018 portfolios all matured at once into a perfect exit environment. Now look at 2020-2023 portfolios across the industry. Heavily weighted toward AI. Thesis-driven investments in foundation models, AI infrastructure, AI applications across every vertical. Those portfolios are maturing right now. Into what might be an even bigger exit environment than 2021.\n\nThe recovery is already visible in A16Z’s numbers:\n2024: $5",
+          "file_path": "gd_90f0625e16d8673be75aae16",
+          "chunk_id": "gd_90f0625e16d8673be75aae16-chunk-005"
+        },
+        {
+          "reference_id": "5",
+          "content": "’t build. When the alternative to your agent is a $150,000/year employee who takes 6 months to ramp and then leaves, $50,000/year for an AI that compounds its learning and never quits seems like the deal of a lifetime. This is what B2B founders should be building in 2026: products where customers would rather work with your agent than hire a human.\n\nIf you can deliver that, people will line up at your door. If you’re still building tools that make humans 8% more efficient, you’re building for a market that’s evaporating.\n\n5. The Era of Gentle Deceleration is Dead. Only Reacceleration Matters. CrowdStrike beat expectations this quarter but guided to 23% growth (down from 27%). The stock traded down. This pattern is playing out everywhere in public B2B. From 2022 through late 2025, the market tolerated “gentle deceleration”: slower growth with expanding margins. That playbook was the accepted path for scaled B2B companies. Not anymore. The market has completely abandoned companies that aren’t reaccelerating, and it’s happening at every tier. At the top end, companies like Cloudflare have figured it out: 27% growth a year ago, 34% growth last quarter, 40% year-over-year increase in net new customers. That’s what the market rewards. At the bottom end, companies trading at 8 to 9x EBITDA have been re-rated to what they’re fundamentally worth with zero growth premium. No pixie dust. Wix is the perfect case study. They acquired Base44 (which hit $100 million ARR), a legitimate vibe coding product. But Wix’s core paid customer base declined 1-2% last year. Even with $100 million of AI revenue, it’s not enough to move the needle on a $2 billion revenue base. For Base44 to save Wix, it needs to follow the Lovable/Re",
+          "file_path": "gd_1ea75faaa1a24bb0a1573ab5",
+          "chunk_id": "gd_1ea75faaa1a24bb0a1573ab5-chunk-006"
+        },
+        {
+          "reference_id": "6",
+          "content": "really, really good at closing big deals.  Still, overall customer count is growing the fastest at 65%, so Confluent isn’t leaving the small folks behind.  Confluent is still sticking with its developer-focused, self-serve, and PLG motions to get going.  That’s good to see.  Customers also start with and stick with a primarily consumption-based model.\n#10.  A PLG+ Sales Motion, at least in part\n.  Like MongoDB and other leaders with similar models,\nmany customers start with free or pay-as-you-go plans and sales monitors usage.\nThey engage once they see metrics that cross a certain threshold:\n“This is often done with free credits or in a pay-as-you-go model that lets them start quickly and with low risk. In 2021, the traction of our self-service cloud adoption helped us grow our customer base 65% year-over-year to approximately 3,470 customers. Our sales team engages early in the customer life cycle to help customers that are progressing towards production to ensure their needs are met.”\n#11.  NRR of 130%\n.  Impressive, although fairly consistent with other somewhat similar core consumption-based B2D models.   So about what we’d expect.  Even more impressive, they are committing to keeping NRR at 130%+.  Another reminder top-tier NRR can scale just about forever in SaaS and Cloud.\n“Driven by strong gross retention and expansion across both of our product offerings, NRR was comfortably above 130%. This marks the third consecutive quarter of exceeding both our near-term target of greater than 120% and our long-term target of greater than 130%”\nI also really like this visualization of the power of select customer account expansion over the years:\nWow, what a story!",
+          "file_path": "gd_35bba6f7fbcad146853237d3",
+          "chunk_id": "gd_35bba6f7fbcad146853237d3-chunk-003"
+        },
+        {
+          "reference_id": "7",
+          "content": "that compress margins.\nFor B2B founders and investors, 2025 is proving several key themes:\nProduct-market fit isn’t binary anymore\n– it’s a spectrum, and you need to keep climbing it. The companies thriving are those that continuously deepen their value proposition rather than just expanding their feature set.\nCategory creation still matters\n, but category leadership matters more. Figma didn’t just build design software; they created the collaborative design category. Cloudflare isn’t just a CDN; they’re building the infrastructure for the edge-first internet.\nFinancial discipline is back in vogue\n. The market is rewarding sustainable growth metrics over growth-at-all-costs. Rule of 40 companies are commanding premium multiples while cash burners are getting punished.\nThe divergence also reveals a fundamental shift in how enterprises buy software.\nProcurement has gotten sophisticated\n. IT buyers are better at evaluating ROI, demanding proof of value, and switching costs have decreased across most categories. The days of selling on relationships and getting sticky through complexity are largely over.\nTrack It All\nWant to stay on top of these market movements and more? Check out\nsaastr.ai/insights\n– our new platform that lets you track all the ups and downs in public markets for B2B and AI companies. Get real-time data, historical analysis, and insights to help you navigate this tale of two markets.\nThe B2B markets never sleep, and neither should your market intelligence.",
+          "file_path": "gd_9aaaf87c9b9d043595bc5848",
+          "chunk_id": "gd_9aaaf87c9b9d043595bc5848-chunk-004"
+        },
+        {
+          "reference_id": "8",
+          "content": "words.]\n\n1. The Fundamentals Foundation\nUnlike 2021’s “growth at any cost” mentality, this cohort emphasizes profitability and sustainable unit economics. As PwC’s Mike Bellin noted:\n“Profitability and fundamentals are huge. Some companies were very conservative with their prices because we’re still in an uncertain market.”\n\n2. Conservative Pricing Creates Sustainable Pops\nThe 5-15% first-day gains across most IPOs signal healthy market dynamics—enough upside to reward early investors without the unsustainable 100%+ pops that marked 2021’s bubble.\n\n3. Investor Selectivity Is Actually Good News\nBank of America’s Jim Cooney reports IPO roadshows are “the busiest they’ve been since mid-2021,” but investors are choosing quality over quantity. This selectivity creates a more sustainable foundation for continued activity.\n\n4. The Pipeline Is Real\nNext week’s lineup includes StubHub, Netskope, and others targeting another $2.53 billion combined—potentially marking the first back-to-back weeks of such volume since December 2021. The Latest B2B IPO is Netskope. And it’s Fire.  $700m ARR, Growing 33%. The Next IPOs Will Be Even Better. The Broader Market Context\nPost-2021 Reality Check\nThe IPO market has been in recovery mode since the spectacular 2021 peak of $142.4 billion in proceeds. The journey through 2022-2024 was painful:\n2022: Sharp downturn as inflation spiked and rates rose\n2023: Slow recovery with just $30 billion in proceeds\n2024: Steady building to $29.6 billion\n2025: Already at $25 billion with four months remaining\nThe New Normal Metrics\nToday’s successful IPOs share common characteristics:\nMature age\n: Companies are going public older than ever (average 16 years vs. 12 in 2015)\nProven profitability\n: Clear path to sustainable earnings",
+          "file_path": "gd_0488dbe0d1821eacec1cd206",
+          "chunk_id": "gd_0488dbe0d1821eacec1cd206-chunk-005"
+        },
+        {
+          "reference_id": "9",
+          "content": "is growing 47% at $1 Billion in ARR!\nA great proxy for Cloud overall.  And that’s\nbasically as fast as they were growing at $500m in ARR\n.  Yes, some deals are harder to close today.  But the overall trends in Cloud and SaaS still benefit Cloudflare.\n\n#10.  Shopify growing 22% at $5.5 Billion in ARR.\nWhile the crazy days of growth of Shopify during lock-down are behind us, faster growth has resumed for Shopify, up from 16% in Q2.  eCommerce is up from its low point earlier in the year.\nSo no one is saying times aren’t, in many ways, tougher.  You have to sell harder.  You have to sell smarter, and to more stakeholders.  The days of just order taking in SaaS are behind us.\nBut also, excuses are what you make of them.  The best in SaaS and Cloud are all still growing.  Some, faster than ever, like MongoDB,  Some, not quite as fast as before, but still very fast, like Monday and Atlassian.  And others like Okta and Cloudflare are just doing what it takes to grow just as fast as when they were half their size.\nHow about you?",
+          "file_path": "gd_ee1953fb4d4e788a8fcd0076",
+          "chunk_id": "gd_ee1953fb4d4e788a8fcd0076-chunk-003"
+        },
+        {
+          "reference_id": "10",
+          "content": "So when\nSalesforce announced its last quarter, everything was still humming\n. While the stock price was hit along with everyone else, the business wasn’t. Benioff\nnoted\nhe just wasn’t seeing any slowdown. Well, now he is. Salesforce had another blow-out quarter.\nhitting almost $31 Billion in ARR and growing a still stunning 22% at this scale. Breathtaking. But, it’s gotten a bit harder, in some segments at least:\n“Sales cycles can get stretched, deals are inspected by higher levels of management and all of this we began to start to see in July,” Benioff said. “Nearly everyone I’ve talked to is taking a more measured approach to their business. We expect these trends to continue in the near term, and we’ve reflected this in our guidance.” – per\nCNBC\nSalesforce saw demand from SMBs slow, and demand slow in retail, consumer, and communications / media. But support and sales clouds remained strong, with little impact on demand. And it saw Slack accelerating to $1.5 Billion in revenue. A great barometer that collaboration software remains on fire, with little downturn there (see also, Monday, Asana, etc). Salesforce really now plays in all key categories, from commerce to infrastructure, from sales to support, and more. Perhaps it’s a good look at what’s happening overall:\nTech infrastructure spend like Snowflake and Datadog and Cloudflare appear to have no downturn at all. Workday\nannounced it was seeing no downturn at all\n. And at the other end of the spectrum, folks at the intersection of commerce and SMB like Shopify have taken the biggest hit to post-Covid growth.",
+          "file_path": "gd_127b7c531bf91ae60817b680",
+          "chunk_id": "gd_127b7c531bf91ae60817b680-chunk-000"
+        },
+        {
+          "reference_id": "11",
+          "content": "The B2B markets bifurcated in 2025 — and the laggards all share one thing in common.\n2025 has been the year of the Great B2B Bifurcation. On one side: Palantir up 142%. Cloudflare up 80%. MongoDB up 70%. Security stocks printing money. On the other side: HubSpot down 51%. ServiceNow down 26%. Monday.com down 36%. Even though they all still had decent years of revenue growth. Same macro environment. Same interest rates. Same customers. Completely different outcomes. What happened? And more importantly, what does it tell us about where B2B is headed?\n\n[Omitted same-source text between these sections: 234 words.]\n\nEnterprise CRM Asana (ASAN): -31% — Work management Klaviyo (KVYO): -29% — Marketing automation ServiceNow (NOW): -26% — IT service management HubSpot Stock Was Unloved in 2025 — Despite a Strong Business HubSpot has fallen from ~$880 to ~$370 — a 51% decline that makes it the roughest performing major B2B SaaS stock of the year.\n\nThe irony? The\nbusiness\nis actually performing fine:\n18-20% revenue growth\nExpanding margins\nBeat Q3 estimates\nStill the go-to platform for SMB go-to-market\nSo why the destruction? The market is pricing in maximum AI disruption risk for SMB-focused horizontal SaaS. HubSpot launched Breeze AI in September 2024, including customer agents, prospecting agents, and content agents. They’ve announced 200+ AI features. Their Breeze Customer Agent reportedly resolves 50%+ of support tickets. But here’s what the market is worried about:\nThe SMB customer is most vulnerable to AI disruption. A 50-person company that used to need 3 SDRs and 2 customer support reps might need 1 of each with good AI tools —",
+          "file_path": "gd_9809d37cd527c2958295b062",
+          "chunk_id": "gd_9809d37cd527c2958295b062-chunk-000"
+        },
+        {
+          "reference_id": "12",
+          "content": "So we’ve covered Atlassian a lot on the 5 Interesting Learning series — for good reason.  First, it’s a Cloud and SaaS leader we all look up to and know.  And also, it’s interesting in that it straddles the line between business and developer markets.  So while “B2B2B” has seen a lot of headwinds and challenges the past 24 months, the developer, infrastructure and Cloud side of the world has been stronger overall.  Cloudflare, GitLab, etc. remain on fire.\nSo Atlassian as you’d expect is also in the middle.  They not only grew 20% last quarter — but are still projecting 20%+ growth in the coming years — even at $4.4 Billion in ARR!  (Although they are projecting a dip to 16% next year due to the wind down of migrating on-prem to Cloud customers).  But they are also seeing some continued macro impacts at the same time.\n5 Interesting Learnings:\n#1.  $1m+ Customers Growing the Fastest (48%), With 98% Logo Retention\nThis isn’t unique to Atlassian, but a reminder of how much the biggest customers are the fuel for growth for many SaaS and Cloud leaders today.  Not only are $1m+ customers growing 48%, but they stay.  Logo retention is 98%+.\n#2.  $10k+ Customer Count Still Growing 18% a Year\nIt’s tough to stay in growth mode if\nyour customer count doesn’t keep growing\n.  Even at Atlassian’s scale, it’s still finding new customers.  Its $10k+ customers are still growing 18% a year, and they now have 45,842 of them.  Many SaaS and Cloud leaders are seeing new customer count slow or even stop.  But not Atlassian.  This is a",
+          "file_path": "gd_efbaa09ea2525e90e20556df",
+          "chunk_id": "gd_efbaa09ea2525e90e20556df-chunk-000"
+        }
+      ],
+      "references": [
+        {
+          "reference_id": "1",
+          "file_path": "gd_7212707c2707213a0b5b7a4b"
+        },
+        {
+          "reference_id": "2",
+          "file_path": "gd_468b5135ea05ec7beab9cfd0"
+        },
+        {
+          "reference_id": "3",
+          "file_path": "gd_ec32711adc8f9158a0b4a669"
+        },
+        {
+          "reference_id": "4",
+          "file_path": "gd_90f0625e16d8673be75aae16"
+        },
+        {
+          "reference_id": "5",
+          "file_path": "gd_1ea75faaa1a24bb0a1573ab5"
+        },
+        {
+          "reference_id": "6",
+          "file_path": "gd_35bba6f7fbcad146853237d3"
+        },
+        {
+          "reference_id": "7",
+          "file_path": "gd_9aaaf87c9b9d043595bc5848"
+        },
+        {
+          "reference_id": "8",
+          "file_path": "gd_0488dbe0d1821eacec1cd206"
+        },
+        {
+          "reference_id": "9",
+          "file_path": "gd_ee1953fb4d4e788a8fcd0076"
+        },
+        {
+          "reference_id": "10",
+          "file_path": "gd_127b7c531bf91ae60817b680"
+        },
+        {
+          "reference_id": "11",
+          "file_path": "gd_9809d37cd527c2958295b062"
+        },
+        {
+          "reference_id": "12",
+          "file_path": "gd_efbaa09ea2525e90e20556df"
+        }
+      ]
+    },
+    "metadata": {
+      "query_mode": "hybrid",
+      "keywords": {
+        "high_level": [
+          "B2B",
+          "Cloudflare",
+          "quarterly results"
+        ],
+        "low_level": [
+          "Cloudflare",
+          "2021",
+          "quarter"
+        ]
+      },
+      "processing_info": {
+        "total_entities_found": 37,
+        "total_relations_found": 248,
+        "entities_after_truncation": 19,
+        "relations_after_truncation": 141,
+        "merged_chunks_count": 175,
+        "final_chunks_count": 12
+      }
+    },
+    "query": "While Most B2B Companies Are Decelerating, Cloudflare Just Had Its Best Quarter Since 2021. 10 Numbers That Explain Why"
+  },
+  "retrieval_seconds": 13.567,
+  "graph_summary": {
+    "status": "recorded",
+    "raw_entity_count": 19,
+    "raw_relationship_count": 141,
+    "raw_chunk_count": 12,
+    "entity_description_count": 19,
+    "entity_descriptions_nonempty": 19,
+    "entity_description_available": true,
+    "excluded_reason_counts": {
+      "omission_marker_span": 1,
+      "generated_summary_not_a_source_span": 160
+    },
+    "accepted_relationships": 31,
+    "rejected_relationships": 110,
+    "quarantined_relationships": 0,
+    "relationship_reason_counts": {
+      "generated_summary_not_supported_by_source": 24,
+      "weak_entity_name": 85,
+      "endpoints_not_in_source": 1
+    },
+    "missing_source_or_provenance_exclusions": 0,
+    "relationship_validation_status": "recorded",
+    "two_hop_path_count": 0,
+    "two_hop_path_available": false,
+    "path_status": "recorded",
+    "normalization": {
+      "payload_shape": "aquery_data",
+      "mode": "hybrid",
+      "entity_descriptions_not_retained": 0,
+      "malformed_records": 0,
+      "notes": [
+        "hits_already_budgeted_raw_chunks_not_added",
+        "validated_against_supplied_catalog"
+      ],
+      "validation_contract": "source-verified-relationship-v1",
+      "separator": "<SEP>",
+      "profile": "multihop",
+      "direct_edges": 31,
+      "paths": 24,
+      "withheld_edges": 110
+    },
+    "direct_edge_count": 31
+  }
+}

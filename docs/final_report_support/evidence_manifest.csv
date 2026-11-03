@@ -1,0 +1,24 @@
+path,role,used_for
+results/model-f-handoff-v1/architecture_comparison.json,official medium=all comparison,figures 01-12 and results tables
+results/model-f-handoff-v1/aggregate_summary.json,Model F eligible selector metrics,eligible writing quality 3.2662
+results/model-f-handoff-v1/per_medium.json,published Model F per-medium rows,cross-check
+results/model-f-handoff-v1/deterministic_audit_summary.json,pre-judge audit counts,52/120 numbers and 7/120 source copy
+results/model-f-handoff-v1/provenance.json,graph counts arm selection judge identity,graph and arm sections
+results/model-f-panel-rows-v1/judge_scores.csv,Model F unified_eval.v1 rows,recomputed Model F metrics and latency
+results/model-f-panel-rows-v1/deterministic_flags.csv,per-draft audit flags,figures 13-16 and 18
+results/model-f-panel-rows-v1/manifest.json,export hashes and private zip,handoff safety
+docs/evaluation/examples/data/architecture/kevin_base_llama31_rows.jsonl,Base seed-42 rows,architecture metrics
+docs/evaluation/examples/data/architecture/colab_personarag_seed42_rows.jsonl,PersonaRAG rows,architecture metrics
+docs/evaluation/examples/data/relabel_rag_off_rows.jsonl,Relabel RAG off seed-42 rows,architecture metrics
+docs/evaluation/examples/data/relabel_rag_on_rows.jsonl,Relabel + RAG seed-42 rows,architecture metrics
+experiments/EXP-20261102-001-model-f-unified-panel/diagnostics/descriptive_omissions.json,omission event list,figure 17
+docs/model_f_architecture.md,construction and generator settings,graph and pipeline sections
+docs/model_f_experiments.md,pilot and stage-2 selection,arm history
+docs/model_f_results.md,narrative of judge versus audit,failure analysis
+docs/evaluation/UNIFIED_120_COMPARISON.md,how A-E rows were produced; stale on Model F measured status,retrospective
+docs/teammate_handoff.md,zip hashes and integration gap,deployment
+docs/DECISION_LOG.md,DEC-006 through DEC-010,retrospective
+docs/PROJECT_CONTEXT.md,problem statement,retrospective
+docs/deployment/DEPLOYMENT_HANDOFF.md,Model E deployment choice,selection
+backend/main.py,older FastAPI generate path,architecture gap
+README.md,current Model F and Model E entry points,architecture

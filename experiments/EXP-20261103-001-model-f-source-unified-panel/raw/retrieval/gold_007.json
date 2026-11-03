@@ -1,0 +1,743 @@
+{
+  "status": "complete",
+  "question_id": "gold_007",
+  "query": "Why Now Is the Biggest Change in SaaS Sales in 15+ Years",
+  "retrieval": {
+    "backend": "lightrag",
+    "mode": "hybrid",
+    "evidence_budget": 4,
+    "top_k": 20
+  },
+  "payload": {
+    "status": "success",
+    "message": "Query processed successfully",
+    "data": {
+      "entities": [
+        {
+          "entity_name": "15+ years",
+          "entity_type": "concept",
+          "description": "A period of time",
+          "source_id": "gd_7852b0d6ee65d5769a9a7ad8-chunk-000",
+          "file_path": "gd_7852b0d6ee65d5769a9a7ad8",
+          "created_at": 1793500645
+        },
+        {
+          "entity_name": "SaaStr",
+          "entity_type": "organization",
+          "description": "**SaaStr: A Comprehensive Overview**\n\nSaaStr is a multifaceted platform that serves as a hub for SaaS founders and leaders, a popular SaaS industry publication and community, and a company focused on providing resources and tools for startups. At its core, SaaStr is a community for SaaS founders and executives to learn from each other's experiences and best practices, fostering a collaborative environment for growth and innovation.\n\nThe platform offers a wealth of information and resources, including articles, webinars, and conference events, which cater to the diverse needs of SaaS professionals. SaaStr's community is comprised of SaaS founders and investors, who come together to share knowledge, network, and stay updated on industry trends. This collective expertise and experience enable SaaS professionals to navigate the challenges of building and scaling successful SaaS businesses.\n\nSaaStr hosts various events, including conferences and AI-related events, which provide a unique opportunity for SaaS professionals to engage with industry leaders, learn from their experiences, and gain insights into the latest industry trends. The company's commitment to providing resources and tools for startups has made it a go-to destination for SaaS founders and entrepreneurs seeking guidance and support.\n\nThrough its online community, SaaStr offers a platform for SaaS professionals to connect, share knowledge, and stay informed about industry developments. The platform's popularity stems from its ability to bring together SaaS founders, leaders, and investors, creating a vibrant ecosystem that drives innovation and growth in the SaaS industry.\n\nIn addition to its online presence, SaaStr also hosts meet-ups in various locations, including Miami, providing a physical space for SaaS professionals to network and connect with one another. The company's annual conference is a premier event for startup founders and executives, offering a unique opportunity to learn from industry leaders and gain insights into the latest industry trends.\n\nSaaStr's founder, Jason Lemkin, has successfully transitioned the product into a lasting venture, expanding its scope and impact within the SaaS industry. The company's commitment to providing resources and tools for startups has made it a valuable resource for SaaS founders and entrepreneurs, helping them navigate the challenges of building and scaling successful SaaS businesses.\n\nIt's worth noting that SaaStr also utilizes Salesforce's Agentforce, a tool that enables companies to manage their sales teams and customer relationships more effectively. This integration highlights SaaStr's focus on providing practical solutions and resources for SaaS professionals to succeed in the industry.\n\nSaaStr's annual conference is a leading event in the SaaS industry, attracting B2B founders and executives from around the world. The conference features various sessions, speakers, and networking opportunities, providing a unique platform for SaaS professionals to learn from industry experts and connect with like-minded individuals.\n\nAdditionally, SaaStr has distributed teams today, and its sponsors have reported a 10% higher logo retention and 40% higher revenue per sponsor when they participate in in-person visits. SaaStr also emphasizes the importance of meeting in-person today and uses its sponsors as a lab to keep learnings on sales and marketing fresh. With over 150+ sponsors, SaaStr continues to be a leading platform for SaaS professionals to learn and share knowledge.\n\nIt's also worth mentioning that SaaStr has hosted the SaaStr AI Summit 2025, where the reality check on AI was revealed, and has been a leading SaaS industry publication and community, a conference for SaaS companies and their sponsors, featuring a Product Roadmap Review session, a community for startup founders and entrepreneurs, and a leading conference and community for SaaS professionals, focusing on sales, marketing, and customer success.<SEP>SaaStr is an organization hosting events on the campus.<SEP>SaaStr is a platform that provides insights and resources for startups, founded by Andrew Chen.<SEP>A community for SaaS founders and professionals.",
+          "source_id": "gd_0e1afddaca819c17829b209e-chunk-000<SEP>gd_087a4675a11cf57ae08ea7cf-chunk-000<SEP>gd_00808ccaeb7073dfcf899559-chunk-000<SEP>gd_0e243f9c16a81abe061b3496-chunk-000<SEP>gd_0e243f9c16a81abe061b3496-chunk-001<SEP>gd_028b8a676781e0db7a6b323d-chunk-000<SEP>gd_14530da4ea39350d8431fea6-chunk-000<SEP>gd_03e15c39b23c76a73a12a032-chunk-000<SEP>gd_021ab9a9824bd98a6d45fe72-chunk-000<SEP>gd_0543e28be565211f29c7e3d4-chunk-000<SEP>gd_1586430bce2fffea00a8cd83-chunk-000<SEP>gd_01c4f3dd39890d28a5dfedd6-chunk-000<SEP>gd_01c4f3dd39890d28a5dfedd6-chunk-001<SEP>gd_11eb12a906f6fd665fab2d11-chunk-000<SEP>gd_06b8eb6625a9fb6e2a62b0bc-chunk-000<SEP>gd_84a451c83e9831b81f0767db-chunk-000<SEP>gd_1354204b842e11ae5bc077c9-chunk-000<SEP>gd_0a63f84731a3ae990120db4a-chunk-000<SEP>gd_0f493e0cf0ff9dfd725aba4f-chunk-000<SEP>gd_04f20313cc3831bfa62af1c8-chunk-000<SEP>gd_0b6743ce6338d33e96dc8605-chunk-000<SEP>gd_1bd11726aa0e0351aefe21ce-chunk-000<SEP>gd_0633915a8565a63d11f310ba-chunk-000<SEP>gd_1dad17108c5e8ae8202bc982-chunk-000<SEP>gd_1c79d03ae7c72eea56093c66-chunk-000<SEP>gd_072a958576c3d08d325dd01b-chunk-000<SEP>gd_072a958576c3d08d325dd01b-chunk-001<SEP>gd_e202a1afd3c9d493a094de48-chunk-000<SEP>gd_e202a1afd3c9d493a094de48-chunk-001<SEP>gd_e202a1afd3c9d493a094de48-chunk-002<SEP>gd_163c0c0b28dde995c92e72f4-chunk-000<SEP>gd_5b470ee5398fb5a9ffde5b9f-chunk-000<SEP>gd_0f84eb0397d3f9ebe9982fe6-chunk-000<SEP>gd_ad5ace08d7fa6c197773d33b-chunk-000<SEP>gd_1cc7db10c34d802d7c089d9f-chunk-000<SEP>gd_6c75dd2c2258e8a1cbdbd024-chunk-000<SEP>gd_120a3c3451bb99437cbaa161-chunk-000<SEP>gd_120a3c3451bb99437cbaa161-chunk-001<SEP>gd_00ac0cdc41bdf0deae43ef5b-chunk-000<SEP>gd_1e26981a9dc01e979a564ff0-chunk-000<SEP>gd_09267d6dfab254529a946b18-chunk-001<SEP>gd_09267d6dfab254529a946b18-chunk-003<SEP>gd_00be868863058a8e9a4cb603-chunk-000<SEP>gd_15d187637520cc4b1b5726e1-chunk-002<SEP>gd_1e2d1944a05912b229a6616f-chunk-000<SEP>gd_09fb9e5d797e0828baa6a4e3-chunk-000<SEP>gd_1c7b97735560846975c87037-chunk-001<SEP>gd_23aa8cd4020f1d2df5102cfc-chunk-000<SEP>gd_35c0de66f11cd0f9ff35bd4f-chunk-000<SEP>gd_9e7b7d19767447153ac587a9-chunk-000<SEP>gd_4fe03de948798e408f8e23aa-chunk-000<SEP>gd_5339ef95acf5382961a2350a-chunk-000<SEP>gd_35709eb4ce9c8ee27e006220-chunk-000<SEP>gd_5b4dcd8b8dcce699f8e93c2f-chunk-000<SEP>gd_3c421a313a0af4daa71cf30f-chunk-000<SEP>gd_3a88f1d2afd6a79f4002151e-chunk-000<SEP>gd_20cd75017412215cbb8739e8-chunk-000<SEP>gd_26d25c49eba38c34a181fe17-chunk-000<SEP>gd_7865bc0261d26a8a8da9a626-chunk-000<SEP>gd_7865bc0261d26a8a8da9a626-chunk-001<SEP>gd_3e57636142fb1e9e171c6629-chunk-000<SEP>gd_3e5e1c326bac97e2282285bd-chunk-000<SEP>gd_3e5e1c326bac97e2282285bd-chunk-001<SEP>gd_21919aca3c400d60f87d44a8-chunk-000<SEP>gd_41f4f21aee44fd832fdd25ba-chunk-000<SEP>gd_47d3e3437acc5698cf178a84-chunk-000<SEP>gd_249fb073b7c26bcc5a12b822-chunk-000<SEP>gd_243034475e44ac6592eb8cf0-chunk-000<SEP>gd_299bf0f9224b09fba3a17c32-chunk-000<SEP>gd_4b77249b336ac427b9990749-chunk-000<SEP>gd_08c8df651b0c304cd548004a-chunk-000<SEP>gd_4f2e478678037e796a58bacd-chunk-000<SEP>gd_2cc56f4022d63af2f1308876-chunk-000<SEP>gd_4a569da30d92a593b20a7b59-chunk-000<SEP>gd_809b156788083b552503a587-chunk-000<SEP>gd_2e6b49d50566bba6c1b35f04-chunk-000<SEP>gd_17ec0a740f815b471f557b82-chunk-000<SEP>gd_5448911bf1d9e8cb3ec3f5e9-chunk-000<SEP>gd_5221c2ca672f7ffa4d2109b4-chunk-000<SEP>gd_319670abac439d85128abe9e-chunk-000<SEP>gd_319670abac439d85128abe9e-chunk-002<SEP>gd_34c141c6933eafc6a555342b-chunk-000<SEP>gd_3ebf3023f70e6b3f8139191f-chunk-000<SEP>gd_591cd71ca6604931510aece8-chunk-000<SEP>gd_1936bf908fd5ac0ef21ae0f6-chunk-002<SEP>gd_373d523ec5ab7e990eef1ec7-chunk-000<SEP>gd_596adaa8220c87fb248341d2-chunk-000<SEP>gd_60d4047adb3d13428a00a49c-chunk-000<SEP>gd_0aa6b0568926344f0ed17487-chunk-000<SEP>gd_5067e7d465b1c8e7c23adc37-chunk-003<SEP>gd_685189794087858c0dba6918-chunk-000<SEP>gd_19e03611f1ed50347b81fb3e-chunk-000<SEP>gd_38df17cff9eb3cf9451f1893-chunk-000<SEP>gd_36834ee214bcfc2b751a3463-chunk-000<SEP>gd_6b0443a195bddf2b5a84a40a-chunk-000<SEP>gd_3fb7986c4e1e23f2010f1d95-chunk-000<SEP>gd_6bbd9f87d5f3da64cd6e9e0a-chunk-000<SEP>gd_3ac038553a6efee0e6c187a0-chunk-000<SEP>gd_9048ed4b6c5a9f3e40238ec5-chunk-000<SEP>gd_40efae5878ea2fd115c6d9d8-chunk-000<SEP>gd_60a6d4c0ee8dfca941117d3e-chunk-000<SEP>gd_60a6d4c0ee8dfca941117d3e-chunk-001<SEP>gd_1bb89f0881d846204f69d052-chunk-000<SEP>gd_1bb89f0881d846204f69d052-chunk-001<SEP>gd_63b752186f04b5c7b94740de-chunk-000<SEP>gd_6fb60835ce398d0db2fac037-chunk-000<SEP>gd_6fb60835ce398d0db2fac037-chunk-001<SEP>gd_6fb60835ce398d0db2fac037-chunk-003<SEP>gd_664cf6e9be1f1d56a814b26c-chunk-000<SEP>gd_4e8e411a20b69ff98e60d556-chunk-002<SEP>gd_a6016d6c72ddea604b995fd3-chunk-000<SEP>gd_99c95b8be92d3bd3aa1be287-chunk-000<SEP>gd_02c919f5dc7714ddf44c6d9f-chunk-000<SEP>gd_54067867888814c1f99f5d38-chunk-000<SEP>gd_49072335923e70b6d8913de1-chunk-000<SEP>gd_48e33c739374b10eb5af5570-chunk-000<SEP>gd_49680c3435cac4dcd7706c17-chunk-000<SEP>gd_179963266b84ebecb1409519-chunk-000<SEP>gd_179963266b84ebecb1409519-chunk-001<SEP>gd_74f885fb4d40a7d23380e616-chunk-000<SEP>gd_74f885fb4d40a7d23380e616-chunk-001<SEP>gd_74f885fb4d40a7d23380e616-chunk-002<SEP>gd_1e07c5d8a5539b7e896c47b5-chunk-000<SEP>gd_a3e275f3acee0bd0245068a0-chunk-000<SEP>gd_500ff2f7a5996e8bcc0fea93-chunk-000<SEP>gd_2bf0ddaf4dd05006ad24493b-chunk-000<SEP>gd_7932b0cb72425a0f799285e1-chunk-000<SEP>gd_20969cb9a1054f9bfe90e5a1-chunk-000<SEP>gd_52580e80aacd01c8a80e48c2-chunk-000<SEP>gd_52580e80aacd01c8a80e48c2-chunk-001<SEP>gd_21063d148764ad3581efebd5-chunk-000<SEP>gd_4f6908ae4b2f4c4e20daccaa-chunk-000<SEP>gd_75ccaa0f63ea46308ec419cc-chunk-000<SEP>gd_816304ae833fa148e165ce04-chunk-000<SEP>gd_5426676fd0b6371f544f6fde-chunk-000<SEP>gd_b4c53fb8fd83195a32e12cb7-chunk-000<SEP>gd_ba8cfcf37a4829e6738e3817-chunk-000<SEP>gd_58ec534d2346ec246ab80c43-chunk-000<SEP>gd_51082f5f33da67daee39dc90-chunk-000<SEP>gd_51082f5f33da67daee39dc90-chunk-001<SEP>gd_4f4f02fc0ba8d92486f98586-chunk-000<SEP>gd_59786235ec03f6fe9fcba771-chunk-000<SEP>gd_28e630372aae90eb9315f28e-chunk-000<SEP>gd_28e630372aae90eb9315f28e-chunk-001<SEP>gd_28e630372aae90eb9315f28e-chunk-002<SEP>gd_7fbefa9a8ed2d27e45cbea65-chunk-001<SEP>gd_679de09e1d49afa5e1d56e41-chunk-000<SEP>gd_5c7333ad23ae9c2e22a18390-chunk-000<SEP>gd_55a2ca607db6bde28a3561e5-chunk-000<SEP>gd_03ad86f78a3f911e6e7f4493-chunk-000<SEP>gd_2e55186f0f79af43e6118167-chunk-000<SEP>gd_8dd87bbf61a18138ea19d0ee-chunk-000<SEP>gd_8dd87bbf61a18138ea19d0ee-chunk-001<SEP>gd_60de4000b7fcfd0de9e07c8e-chunk-000<SEP>gd_d8fe4e83f86b82e6fd92f383-chunk-000<SEP>gd_79858ea6162573644fe3e173-chunk-000<SEP>gd_8d92d5d37545d321e820c655-chunk-000<SEP>gd_29f68dd5d21caeef086b7329-chunk-000<SEP>gd_03e29f4054ae6baa669b4ad3-chunk-000<SEP>gd_90814726a2ea956e4f678d03-chunk-000<SEP>gd_90dfdba2d42ce3be7435fa31-chunk-000<SEP>gd_605db38f375511061b99e6ee-chunk-000<SEP>gd_71e628f86d3b2233b7cb22b0-chunk-000<SEP>gd_71e628f86d3b2233b7cb22b0-chunk-005<SEP>gd_71e628f86d3b2233b7cb22b0-chunk-007<SEP>gd_93db829a67b16eaaacdf2d76-chunk-000<SEP>gd_664fe6dcbe5aa6b58b62db31-chunk-000<SEP>gd_2d0b6bec781ad89f23b8f957-chunk-000<SEP>gd_e6e70dc6bd3b3665dbbe64de-chunk-000<SEP>gd_642a90a31d8746170449bebe-chunk-000<SEP>gd_9418ca008522c1893ccfe898-chunk-000<SEP>gd_9b5dc2c121e06663621065c9-chunk-000<SEP>gd_66aca202cec270b3060603e0-chunk-000<SEP>gd_68cb736bea20f2941b1d42fb-chunk-000<SEP>gd_0450ead0159ae6da78b4356e-chunk-000<SEP>gd_b536cc0ad4219b960caa5daf-chunk-000<SEP>gd_6a4eb140bd13343c8b8962ce-chunk-000<SEP>gd_ac679e1af09ddfb0d195761c-chunk-000<SEP>gd_31ba1c8d581ac1985f549c14-chunk-000<SEP>gd_7214c699e42a2318dd33d09f-chunk-000<SEP>gd_b2c6d9a62156309c209d1d0e-chunk-000<SEP>gd_826943ff016f1c9f4e16a02f-chunk-000<SEP>gd_ffd5f004817ff0cfde057945-chunk-000<SEP>gd_c387616945e788682c23c05d-chunk-000<SEP>gd_72031c12a77cdfbb371e1f07-chunk-000<SEP>gd_1c930366074ea339319c9cad-chunk-000<SEP>gd_7259ae8fb5c14b7e4a7171d6-chunk-000<SEP>gd_7259ae8fb5c14b7e4a7171d6-chunk-001<SEP>gd_3700a72c04912b7acab40b91-chunk-000<SEP>gd_3700a72c04912b7acab40b91-chunk-001<SEP>gd_cbc65b3eb8efa09f32370cb3-chunk-000<SEP>gd_72e9e76a2cf7a8ea84a21acb-chunk-000<SEP>gd_9c1de7a2ab341b06e7031b53-chunk-000<SEP>gd_d7b8041c0c9c2339807b7bd0-chunk-000<SEP>gd_3a9e187b9b599b728aa6cbb5-chunk-000<SEP>gd_3a9e187b9b599b728aa6cbb5-chunk-001<SEP>gd_3a9e187b9b599b728aa6cbb5-chunk-003<SEP>gd_e8ade92cb8044ab9740caa7f-chunk-001<SEP>gd_d8634952bd688ae7ed11f624-chunk-000<SEP>gd_8726db00060d66cc7ae76734-chunk-000",
+          "file_path": "gd_0e1afddaca819c17829b209e<SEP>gd_087a4675a11cf57ae08ea7cf<SEP>gd_00808ccaeb7073dfcf899559<SEP>gd_0e243f9c16a81abe061b3496<SEP>gd_028b8a676781e0db7a6b323d<SEP>gd_14530da4ea39350d8431fea6<SEP>gd_03e15c39b23c76a73a12a032<SEP>gd_021ab9a9824bd98a6d45fe72<SEP>gd_0543e28be565211f29c7e3d4<SEP>gd_1586430bce2fffea00a8cd83<SEP>gd_01c4f3dd39890d28a5dfedd6<SEP>gd_11eb12a906f6fd665fab2d11<SEP>gd_06b8eb6625a9fb6e2a62b0bc<SEP>gd_84a451c83e9831b81f0767db<SEP>gd_1354204b842e11ae5bc077c9<SEP>gd_0a63f84731a3ae990120db4a<SEP>gd_0f493e0cf0ff9dfd725aba4f<SEP>gd_04f20313cc3831bfa62af1c8<SEP>gd_0b6743ce6338d33e96dc8605<SEP>gd_1bd11726aa0e0351aefe21ce<SEP>gd_0633915a8565a63d11f310ba<SEP>gd_1dad17108c5e8ae8202bc982<SEP>gd_1c79d03ae7c72eea56093c66<SEP>gd_072a958576c3d08d325dd01b<SEP>gd_e202a1afd3c9d493a094de48<SEP>gd_163c0c0b28dde995c92e72f4<SEP>gd_5b470ee5398fb5a9ffde5b9f<SEP>gd_0f84eb0397d3f9ebe9982fe6<SEP>gd_ad5ace08d7fa6c197773d33b<SEP>gd_1cc7db10c34d802d7c089d9f<SEP>gd_6c75dd2c2258e8a1cbdbd024<SEP>gd_120a3c3451bb99437cbaa161<SEP>gd_00ac0cdc41bdf0deae43ef5b<SEP>gd_1e26981a9dc01e979a564ff0<SEP>gd_09267d6dfab254529a946b18<SEP>gd_00be868863058a8e9a4cb603<SEP>gd_15d187637520cc4b1b5726e1<SEP>gd_1e2d1944a05912b229a6616f<SEP>gd_09fb9e5d797e0828baa6a4e3<SEP>gd_1c7b97735560846975c87037<SEP>gd_23aa8cd4020f1d2df5102cfc<SEP>gd_35c0de66f11cd0f9ff35bd4f<SEP>gd_9e7b7d19767447153ac587a9<SEP>gd_4fe03de948798e408f8e23aa<SEP>gd_5339ef95acf5382961a2350a<SEP>gd_35709eb4ce9c8ee27e006220<SEP>gd_5b4dcd8b8dcce699f8e93c2f<SEP>gd_3c421a313a0af4daa71cf30f<SEP>gd_3a88f1d2afd6a79f4002151e<SEP>gd_20cd75017412215cbb8739e8<SEP>gd_26d25c49eba38c34a181fe17<SEP>gd_7865bc0261d26a8a8da9a626<SEP>gd_3e57636142fb1e9e171c6629<SEP>gd_3e5e1c326bac97e2282285bd<SEP>gd_21919aca3c400d60f87d44a8<SEP>gd_41f4f21aee44fd832fdd25ba<SEP>gd_47d3e3437acc5698cf178a84<SEP>gd_249fb073b7c26bcc5a12b822<SEP>gd_243034475e44ac6592eb8cf0<SEP>gd_299bf0f9224b09fba3a17c32<SEP>gd_4b77249b336ac427b9990749<SEP>gd_08c8df651b0c304cd548004a<SEP>gd_4f2e478678037e796a58bacd<SEP>gd_2cc56f4022d63af2f1308876<SEP>gd_4a569da30d92a593b20a7b59<SEP>gd_809b156788083b552503a587<SEP>gd_2e6b49d50566bba6c1b35f04<SEP>gd_17ec0a740f815b471f557b82<SEP>gd_5448911bf1d9e8cb3ec3f5e9<SEP>gd_5221c2ca672f7ffa4d2109b4<SEP>gd_319670abac439d85128abe9e<SEP>gd_34c141c6933eafc6a555342b<SEP>gd_3ebf3023f70e6b3f8139191f<SEP>gd_591cd71ca6604931510aece8<SEP>gd_1936bf908fd5ac0ef21ae0f6<SEP>...truncated...(KEEP Old)",
+          "created_at": 1793499999
+        },
+        {
+          "entity_name": "20+ years",
+          "entity_type": "other",
+          "description": "A period of time that the author has been in the SaaS industry.<SEP>20+ years is mentioned as the experience of the author after which they learned the importance of leaving best people alone.",
+          "source_id": "gd_38bb13c79d43c1ce65fb04e5-chunk-000<SEP>gd_01e271b8aec4e0245e10aea0-chunk-002",
+          "file_path": "gd_38bb13c79d43c1ce65fb04e5<SEP>gd_01e271b8aec4e0245e10aea0",
+          "created_at": 1793574494
+        },
+        {
+          "entity_name": "Sales Magician",
+          "entity_type": "concept",
+          "description": "A sales representative who is highly skilled and knowledgeable about the product, often possessing a deep understanding of the industry and its trends.<SEP>A sales representative who can intuitively understand the value of a product and effectively communicate it to buyers.<SEP>A sales representative who is highly knowledgeable about the product, customers, and mission, and can effectively communicate their passion to potential buyers.<SEP>A Sales Magician is a skilled sales representative.<SEP>A game-changing sales representative who can significantly impact a company's sales performance.<SEP>A salesperson who can create demand for a product and close deals that make no logical sense.<SEP>A salesperson who achieves exceptional sales results, often due to a combination of factors such as a strong product, effective marketing, and a favorable market position.",
+          "source_id": "gd_eb9bcbd89eab0c1c3fd0c93f-chunk-000<SEP>gd_6a07bf133abaec4909a359f1-chunk-000<SEP>gd_6a07bf133abaec4909a359f1-chunk-001<SEP>gd_6a07bf133abaec4909a359f1-chunk-002<SEP>gd_bc117af2a43394941320b118-chunk-000<SEP>gd_3e8732484211557041408d86-chunk-000<SEP>gd_3e8732484211557041408d86-chunk-001",
+          "file_path": "gd_eb9bcbd89eab0c1c3fd0c93f<SEP>gd_6a07bf133abaec4909a359f1<SEP>gd_bc117af2a43394941320b118<SEP>gd_3e8732484211557041408d86",
+          "created_at": 1793607049
+        },
+        {
+          "entity_name": "4-5 years",
+          "entity_type": "concept",
+          "description": "A prolonged period of time, often associated with burnout.",
+          "source_id": "gd_8973b57e1db9606f712d65c5-chunk-000",
+          "file_path": "gd_8973b57e1db9606f712d65c5",
+          "created_at": 1793554580
+        },
+        {
+          "entity_name": "Change Management",
+          "entity_type": "concept",
+          "description": "Change Management refers to the processes and systems in place to manage changes to a system or application, ensuring that modifications are authorized and tracked. This process involves planning and implementing changes to an organization's processes and systems, as well as helping customers adapt to a new way of working. Change management expertise should be built into the customer success function early to ensure a smooth transition.\n\nIn addition to managing changes in business processes and technology, change management also involves managing the transition to new technologies and systems. This process requires careful planning and implementation to minimize disruptions and ensure that all stakeholders are informed and prepared for the changes. The process of managing change in an organization is critical to its success, and requires a structured approach to ensure that changes are authorized, tracked, and implemented effectively.\n\nChange management requirements for shifting development paradigms are also an important consideration. This involves managing the transition from one development approach to another, such as from waterfall to agile, and ensuring that all stakeholders are aware of the changes and their implications. By building change management expertise into the customer success function and following a structured approach to managing change, organizations can minimize the risks associated with change and ensure a successful transition to new technologies and systems.",
+          "source_id": "gd_71e628f86d3b2233b7cb22b0-chunk-003<SEP>gd_b80d7d772933d7964f9d8df7-chunk-001<SEP>gd_e95c09643e99385d630cd19c-chunk-003<SEP>gd_113e0fbb8166dfa5ea576718-chunk-005<SEP>gd_376a91437f248e422036d70c-chunk-008<SEP>gd_547c5075e66aa644c0ab2a4f-chunk-007<SEP>gd_4ca05c1482a9b33757040d2a-chunk-002<SEP>gd_1e5d3c87e4c9db630255f794-chunk-007",
+          "file_path": "gd_71e628f86d3b2233b7cb22b0<SEP>gd_b80d7d772933d7964f9d8df7<SEP>gd_e95c09643e99385d630cd19c<SEP>gd_113e0fbb8166dfa5ea576718<SEP>gd_376a91437f248e422036d70c<SEP>gd_547c5075e66aa644c0ab2a4f<SEP>gd_4ca05c1482a9b33757040d2a<SEP>gd_1e5d3c87e4c9db630255f794",
+          "created_at": 1793639964
+        },
+        {
+          "entity_name": "26 years",
+          "entity_type": "concept",
+          "description": "26 years is the time period over which the 100 million leads were accumulated.",
+          "source_id": "gd_869914f6788fdfc5460c226b-chunk-002",
+          "file_path": "gd_869914f6788fdfc5460c226b",
+          "created_at": 1793598892
+        },
+        {
+          "entity_name": "Sales Engineers (SEs)",
+          "entity_type": "person",
+          "description": "Sales Engineers are responsible for closing deals and providing product expertise to customers.",
+          "source_id": "gd_547c5075e66aa644c0ab2a4f-chunk-007",
+          "file_path": "gd_547c5075e66aa644c0ab2a4f",
+          "created_at": 1793608648
+        },
+        {
+          "entity_name": "13 years",
+          "entity_type": "concept",
+          "description": "13 years of pattern-matching is a concept.",
+          "source_id": "gd_fe622fa2eae579716b604273-chunk-003",
+          "file_path": "gd_fe622fa2eae579716b604273",
+          "created_at": 1793573916
+        },
+        {
+          "entity_name": "SaaS",
+          "entity_type": "product",
+          "description": "**Software as a Service (SaaS)**\n\nSoftware as a Service (SaaS) is a cloud computing model in which software applications are hosted, managed, and delivered over the internet. This delivery model allows customers to access and use software applications without the need for local installation, maintenance, or updates. Instead, the software is hosted by a third-party provider, who is responsible for ensuring the software's availability, security, and performance.\n\nThe SaaS business model is a key component of cloud computing, providing a flexible and scalable way for organizations to deploy and use software applications. By leveraging the internet, SaaS enables users to access software applications from anywhere, at any time, and on any device with an internet connection. This has revolutionized the way businesses operate, allowing them to be more agile, responsive, and cost-effective.\n\nSaaS has experienced rapid growth and change in the pace of innovation, driven by its benefits, including scalability, flexibility, and cost-effectiveness. It has transformed the way software applications are developed, deployed, and used, enabling resourceful people to focus on their expertise and less on manual effort and tooling. As a result, the SaaS industry or platform has become a significant player in the software market, offering a range of applications and services to organizations of all sizes and types.\n\nIn addition to its core characteristics, SaaS can be applied to various domains, including property management, where software is used to manage properties, and specific applications, which have a significant advantage over traditional AI approaches. The SaaS model requires a range of skills and expertise, including software development, deployment, and management, as well as ensuring the security and integrity of the software, and providing ongoing support and maintenance to customers.\n\nThe SaaS industry encompasses a wide range of companies that offer multiple products and platforms, providing a diverse array of software applications and services to meet the needs of various organizations. Despite challenges, the SaaS market is still growing, driven by its benefits and the increasing demand for cloud-based solutions.\n\nIt's worth noting that the term \"SaaS\" has been used to describe a software-as-a-service model that is considered geriatric and dying, but this is not a widely accepted or accurate description of the SaaS model. Overall, SaaS is a powerful and flexible delivery model that has transformed the way software applications are developed, deployed, and used, and continues to be a popular choice for organizations of all sizes and types.\n\nThe SaaS industry is a significant component of business software spend, accounting for $200 Billion. SaaS companies offer a range of software applications and services, including software-as-a-service products that require scaling and management, and software as a service products that provide built integrations and functionality.\n\nNote: Figma is a part of the SaaS delivery model, and the SaaS concept is not dying, as mentioned in one of the descriptions. The industry is still growing, and the term \"SaaS\" is widely accepted and used to describe the software-as-a-service model.<SEP>Software as a service, a software delivery model in which software applications are hosted and managed remotely.<SEP>Software as a Service (SaaS) industry<SEP>A software as a service model.<SEP>SaaS refers to Software as a Service, a business model mentioned in the context of successful companies.<SEP>Software as a Service, a model for delivering software over the internet.<SEP>Software as a Service, a business model for delivering software applications over the internet.",
+          "source_id": "gd_00808ccaeb7073dfcf899559-chunk-001<SEP>gd_6cfd6bdb0808ecd788793abf-chunk-000<SEP>gd_0053dd1a4f72ee24575075da-chunk-000<SEP>gd_0b67639eb1fa724c952557b1-chunk-000<SEP>gd_0cf4677ed9c64844dce49e18-chunk-000<SEP>gd_17c3b096c9e3f1e1c46be346-chunk-000<SEP>gd_17c3b096c9e3f1e1c46be346-chunk-001<SEP>gd_17c3b096c9e3f1e1c46be346-chunk-002<SEP>gd_17b19760754f113f649c8895-chunk-000<SEP>gd_17e80c2501a5955d6d7842f4-chunk-001<SEP>gd_03e5f02ad00b688cf11f3c6d-chunk-000<SEP>gd_29dd163820fee392c084bc4e-chunk-000<SEP>gd_5d90a51419eeab4b82b0d089-chunk-001<SEP>gd_1724012892b59b00ff593328-chunk-000<SEP>gd_2a6e9c1f1f6b721386546a99-chunk-001<SEP>gd_1e26981a9dc01e979a564ff0-chunk-001<SEP>gd_09267d6dfab254529a946b18-chunk-003<SEP>gd_2740d9c87f5393610ce047ff-chunk-000<SEP>gd_10111223ae8fbb3533277c55-chunk-000<SEP>gd_464b71a4ce79f78b8ab2f484-chunk-000<SEP>gd_3a5f356153b9a32a14dc97fc-chunk-000<SEP>gd_35709eb4ce9c8ee27e006220-chunk-000<SEP>gd_1ff134cad37b3145694b65c9-chunk-000<SEP>gd_1ff134cad37b3145694b65c9-chunk-001<SEP>gd_5b4dcd8b8dcce699f8e93c2f-chunk-001<SEP>gd_d1423816ab12475e55e09a39-chunk-001<SEP>gd_13e89e60c3f8b41c3f077c76-chunk-000<SEP>gd_13e89e60c3f8b41c3f077c76-chunk-002<SEP>gd_087d1d57d2263adb70e18521-chunk-000<SEP>gd_070a59055548e31a4e2d028a-chunk-001<SEP>gd_16319806a8bc21c0b84682c3-chunk-001<SEP>gd_591cd71ca6604931510aece8-chunk-000<SEP>gd_325cd64471734ab31072948f-chunk-000<SEP>gd_325cd64471734ab31072948f-chunk-001<SEP>gd_5067e7d465b1c8e7c23adc37-chunk-002<SEP>gd_5a04f624b0b82c40ff9a36b5-chunk-000<SEP>gd_3a1abe6cc8ce1e3e0b241ddc-chunk-000<SEP>gd_e0505c1150b5f1aa25fed30c-chunk-000<SEP>gd_e0505c1150b5f1aa25fed30c-chunk-004<SEP>gd_1ad10391f7c7d8033e146f8c-chunk-000<SEP>gd_1ad10391f7c7d8033e146f8c-chunk-001<SEP>gd_db92ac60df8c2f40359a91ca-chunk-000<SEP>gd_72b009a80ea6cf84fc300a5d-chunk-000<SEP>gd_1c4574bfd38001677b67039b-chunk-000<SEP>gd_98e4167c524ebe4713ad0624-chunk-000<SEP>gd_4182662f07427c92033d1898-chunk-000<SEP>gd_736f2bbad99428fc07ad0ea6-chunk-000<SEP>gd_4e8e411a20b69ff98e60d556-chunk-002<SEP>gd_1cecc55f11c942f850f19543-chunk-000<SEP>gd_e755a8f5060b27b2a62364ae-chunk-000<SEP>gd_4fb3c24cf8e2bbec99593d3f-chunk-000<SEP>gd_a8179110308a2171a9c35286-chunk-000<SEP>gd_502247d4518750fbaafabb2c-chunk-000<SEP>gd_1e07c5d8a5539b7e896c47b5-chunk-000<SEP>gd_1e07c5d8a5539b7e896c47b5-chunk-001<SEP>gd_f96de79de439a0ca72feae4f-chunk-000<SEP>gd_4f29175b4c599edc6f63ea81-chunk-000<SEP>gd_03659fa17ea4f3e3a9dc9298-chunk-000<SEP>gd_876a5093c19836d00564b7a3-chunk-000<SEP>gd_58ec534d2346ec246ab80c43-chunk-000<SEP>gd_22f503d26e4d8faf8274b928-chunk-001<SEP>gd_9577e24156503230c8b62990-chunk-000<SEP>gd_03754892c6a9b88886fb661a-chunk-000<SEP>gd_895dedc29953222d000c7f1a-chunk-000<SEP>gd_25ceb76e34b0404af1e8edec-chunk-000<SEP>gd_25ceb76e34b0404af1e8edec-chunk-001<SEP>gd_6b1a49b4098b8d5ced9cbc54-chunk-000<SEP>gd_60de4000b7fcfd0de9e07c8e-chunk-000<SEP>gd_2958666636289bce0b65b6ef-chunk-000<SEP>gd_81ae300a5441b910da999070-chunk-000<SEP>gd_64ee673f1818fe8a43d10d08-chunk-000<SEP>gd_64ee673f1818fe8a43d10d08-chunk-002<SEP>gd_6602b8352d3730cde21081ed-chunk-000<SEP>gd_2c6f9645343251c1f939e00a-chunk-000<SEP>gd_2d72fe9469e9f2b08dcd24ea-chunk-001<SEP>gd_e93488dc685e6f329218fa9e-chunk-000<SEP>gd_8aea7ce0c020b69d721aae29-chunk-000<SEP>gd_70b6d21359f3ae0fd46e93c8-chunk-000<SEP>gd_1f1326be6f041bdd902a302b-chunk-000<SEP>gd_c387616945e788682c23c05d-chunk-001<SEP>gd_c387616945e788682c23c05d-chunk-002<SEP>gd_b42ff3af2d17e5abb47d2fab-chunk-001<SEP>gd_9393f5107171bfdba2765a73-chunk-000<SEP>gd_b47d0381318f8c03ba8b235e-chunk-000<SEP>gd_3d00a2ad35f7082a70310e88-chunk-000<SEP>gd_8bb47c1249e0948d8a5ef1bb-chunk-000<SEP>gd_053b554ac65802053e4e742c-chunk-000<SEP>gd_108d51bff7d17593c9295648-chunk-000<SEP>gd_3e7922025c7cacb5580e3bbe-chunk-000<SEP>gd_111b6b23b20d3f5268f61598-chunk-000<SEP>gd_23189f869ee2368df3e55e93-chunk-000<SEP>gd_dd1ac351d28d024a888e6412-chunk-000<SEP>gd_dd1ac351d28d024a888e6412-chunk-001<SEP>gd_3eb0d6dd205274318ede670c-chunk-002<SEP>gd_05cc4351b31197c0b9223169-chunk-000<SEP>gd_df3285fbd174b768d904c41b-chunk-001<SEP>gd_83f8805152f3bf7e5d5d77a7-chunk-002<SEP>gd_83f8805152f3bf7e5d5d77a7-chunk-001<SEP>gd_f7ba8eca90542f70f780bc35-chunk-000<SEP>gd_409c0da0777cbb41bc6655ae-chunk-000<SEP>gd_409c0da0777cbb41bc6655ae-chunk-001<SEP>gd_409c0da0777cbb41bc6655ae-chunk-002<SEP>gd_bb32e1c07e86dae286d8bcd3-chunk-000<SEP>gd_280903d61f7e80aee775c52b-chunk-000<SEP>gd_43594d2f7bc2be440a5dcaab-chunk-000<SEP>gd_cb959a227139675df942287f-chunk-000<SEP>gd_ba0fcb46e470223578c37a8f-chunk-000<SEP>gd_cc8e0a9c7c8c3eaa2c8d4ac3-chunk-000<SEP>gd_cc6b5207100a4e6335ded9da-chunk-000<SEP>gd_66188e68eea695f287823796-chunk-000<SEP>gd_9bef8d767947839d50a36423-chunk-000<SEP>gd_9bef8d767947839d50a36423-chunk-001<SEP>gd_52c269fc25e507d2d184b463-chunk-000<SEP>gd_9e35b3dbdbff90869a31a717-chunk-000<SEP>gd_9e35b3dbdbff90869a31a717-chunk-001<SEP>gd_9c328b8c5305e596c95c958f-chunk-000<SEP>gd_6c3806301b3cb82fcd265335-chunk-000<SEP>gd_4d1077b8bd608022a2166c3f-chunk-000<SEP>gd_cbaa6c66435557483e83346d-chunk-000<SEP>gd_adc48d6a3d64d3c85e7af534-chunk-001<SEP>gd_4d3bc1fda477bad7aa02e5b6-chunk-000<SEP>gd_afcc2a3eb186119ed5062c31-chunk-001<SEP>gd_5cb830e3555cd27666dd65ad-chunk-000<SEP>gd_aa01fc06c899106c220037a7-chunk-000<SEP>gd_6c62d1105a7781fe43d5b5c3-chunk-000<SEP>gd_ab890a3f6fa03f33cf08f29f-chunk-000<SEP>gd_81cb113e66af3876fd2fc794-chunk-000<SEP>gd_f87b63c3e88f345595a20d8f-chunk-000<SEP>gd_5492d4d586da10f9d01192dd-chunk-001<SEP>gd_faead248acb155f9a68f81a5-chunk-000<SEP>gd_faead248acb155f9a68f81a5-chunk-001<SEP>gd_b450394f687756dbe35a5ae0-chunk-000<SEP>gd_54bd4156ae896dbaad104bd8-chunk-000<SEP>gd_54bd4156ae896dbaad104bd8-chunk-001<SEP>gd_55bc540b610064fdcfa76b04-chunk-000<SEP>gd_55bc540b610064fdcfa76b04-chunk-001<SEP>gd_8b0f897aaca9070243a07cb5-chunk-000<SEP>gd_562428ed0fbfd2c7c9e7e139-chunk-000<SEP>gd_bbbf4213f2403aaaf1cf9394-chunk-000<SEP>gd_5800c214ae9e8b5b722bd8e8-chunk-001<SEP>gd_2568bb11c77922603ee35b63-chunk-001<SEP>gd_b473ac30ca1f132ce5440bba-chunk-001<SEP>gd_ac85e65ccfab6fbe34bc29fc-chunk-000<SEP>gd_ac85e65ccfab6fbe34bc29fc-chunk-001<SEP>gd_5842a34ea92c5bf8829796a9-chunk-000<SEP>gd_bf4f57347219fef2c5475db9-chunk-000<SEP>gd_bf4f57347219fef2c5475db9-chunk-001<SEP>gd_027f1f4d4a5f1427dc9cf748-chunk-000<SEP>gd_0f29be943a0bc77ae84acc1d-chunk-000<SEP>gd_8d516a7626f0267d802ac581-chunk-001<SEP>gd_cb17d802afa999aa5a2020f3-chunk-003<SEP>gd_5e20cff6ce7a8e57427b469b-chunk-000<SEP>gd_5e20cff6ce7a8e57427b469b-chunk-001<SEP>gd_cb6f7f1ed90ef9c2a5407c3e-chunk-000<SEP>gd_cb6f7f1ed90ef9c2a5407c3e-chunk-001<SEP>gd_5ebe9ad0324f615be28ce5a6-chunk-002<SEP>gd_5ebe9ad0324f615be28ce5a6-chunk-000<SEP>gd_5ebe9ad0324f615be28ce5a6-chunk-001<SEP>gd_9b89531c39517c4db328881d-chunk-000<SEP>gd_d0997b9825dde450f885028e-chunk-000<SEP>gd_d29571a237d5aebbcf2e7959-chunk-000<SEP>gd_b91094960e87c92b6158bc8a-chunk-000<SEP>gd_db2a00ddbaae4ba4dae9d6b7-chunk-000<SEP>gd_64f2b6036a15f010be7f3a1d-chunk-000<SEP>gd_6b007f03167b87bbac2e346b-chunk-000<SEP>gd_6b007f03167b87bbac2e346b-chunk-001<SEP>gd_e3bb15b7c818245a220b9ed8-chunk-001<SEP>gd_8d70e8e8a1094b7be78b99b3-chunk-001<SEP>gd_6c0640632fd219338512a716-chunk-001<SEP>gd_a6fbf8f37d2f0906d276118e-chunk-000<SEP>gd_f5f9ed8360f239ae1fb3b192-chunk-000<SEP>gd_704a724ff302ab18043fedf2-chunk-000<SEP>gd_fc560134d5cd034812dc8b69-chunk-002<SEP>gd_fc560134d5cd034812dc8b69-chunk-003<SEP>gd_707b2dc875d442be99cf826c-chunk-000<SEP>gd_32f5e4f1f3af8c48fe6d19b5-chunk-000<SEP>gd_de3967876a8f223511714e23-chunk-000<SEP>gd_7298e57f5a8875ad3995649a-chunk-000<SEP>gd_7298e57f5a8875ad3995649a-chunk-001<SEP>gd_031aceca5cbe7d0ead6c10cc-chunk-002<SEP>gd_80a6226f739cb5a531b3ca01-chunk-000<SEP>gd_80a6226f739cb5a531b3ca01-chunk-001<SEP>gd_f894240d5952145c067ff0f6-chunk-000<SEP>gd_78db847c7c7234a8eb04acc1-chunk-000<SEP>gd_78db847c7c7234a8eb04acc1-chunk-001<SEP>gd_797f4c605871b4eaa3c89596-chunk-001<SEP>gd_0ebe200504c2767b18fadc12-chunk-000<SEP>gd_0ebe200504c2767b18fadc12-chunk-001<SEP>gd_0ebe200504c2767b18fadc12-chunk-002<SEP>gd_7f185cdc6615bc5ea7567c8a-chunk-000<SEP>gd_12fe030017ff3b7201e562ae-chunk-000<SEP>gd_13446d288a2e459ebe9333df-chunk-002<SEP>gd_13446d288a2e459ebe9333df-chunk-003<SEP>gd_19d3cb4a0d9ac32e95b41c33-chunk-001<SEP>gd_818ba64738491131923f436e-chunk-000<SEP>gd_35545a4e5cadf30ca1df395c-chunk-000<SEP>gd_1a02f8692430d0f4f1f4f6be-chunk-002<SEP>gd_8377d68cef2cdef818baa2e8-chunk-001<SEP>gd_1b9124f2109ba18c8a2b0ba1-chunk-000<SEP>gd_12994885c5997ebf0f2950fd-chunk-000",
+          "file_path": "gd_00808ccaeb7073dfcf899559<SEP>gd_6cfd6bdb0808ecd788793abf<SEP>gd_0053dd1a4f72ee24575075da<SEP>gd_0b67639eb1fa724c952557b1<SEP>gd_0cf4677ed9c64844dce49e18<SEP>gd_17c3b096c9e3f1e1c46be346<SEP>gd_17b19760754f113f649c8895<SEP>gd_17e80c2501a5955d6d7842f4<SEP>gd_03e5f02ad00b688cf11f3c6d<SEP>gd_29dd163820fee392c084bc4e<SEP>gd_5d90a51419eeab4b82b0d089<SEP>gd_1724012892b59b00ff593328<SEP>gd_2a6e9c1f1f6b721386546a99<SEP>gd_1e26981a9dc01e979a564ff0<SEP>gd_09267d6dfab254529a946b18<SEP>gd_2740d9c87f5393610ce047ff<SEP>gd_10111223ae8fbb3533277c55<SEP>gd_464b71a4ce79f78b8ab2f484<SEP>gd_3a5f356153b9a32a14dc97fc<SEP>gd_35709eb4ce9c8ee27e006220<SEP>gd_1ff134cad37b3145694b65c9<SEP>gd_5b4dcd8b8dcce699f8e93c2f<SEP>gd_d1423816ab12475e55e09a39<SEP>gd_13e89e60c3f8b41c3f077c76<SEP>gd_087d1d57d2263adb70e18521<SEP>gd_070a59055548e31a4e2d028a<SEP>gd_16319806a8bc21c0b84682c3<SEP>gd_591cd71ca6604931510aece8<SEP>gd_325cd64471734ab31072948f<SEP>gd_5067e7d465b1c8e7c23adc37<SEP>gd_3a1abe6cc8ce1e3e0b241ddc<SEP>gd_e0505c1150b5f1aa25fed30c<SEP>gd_1ad10391f7c7d8033e146f8c<SEP>gd_db92ac60df8c2f40359a91ca<SEP>gd_72b009a80ea6cf84fc300a5d<SEP>gd_1c4574bfd38001677b67039b<SEP>gd_98e4167c524ebe4713ad0624<SEP>gd_4182662f07427c92033d1898<SEP>gd_736f2bbad99428fc07ad0ea6<SEP>gd_4e8e411a20b69ff98e60d556<SEP>gd_1cecc55f11c942f850f19543<SEP>gd_e755a8f5060b27b2a62364ae<SEP>gd_4fb3c24cf8e2bbec99593d3f<SEP>gd_a8179110308a2171a9c35286<SEP>gd_502247d4518750fbaafabb2c<SEP>gd_1e07c5d8a5539b7e896c47b5<SEP>gd_f96de79de439a0ca72feae4f<SEP>gd_4f29175b4c599edc6f63ea81<SEP>gd_03659fa17ea4f3e3a9dc9298<SEP>gd_876a5093c19836d00564b7a3<SEP>gd_58ec534d2346ec246ab80c43<SEP>gd_22f503d26e4d8faf8274b928<SEP>gd_9577e24156503230c8b62990<SEP>gd_03754892c6a9b88886fb661a<SEP>gd_895dedc29953222d000c7f1a<SEP>gd_25ceb76e34b0404af1e8edec<SEP>gd_6b1a49b4098b8d5ced9cbc54<SEP>gd_60de4000b7fcfd0de9e07c8e<SEP>gd_2958666636289bce0b65b6ef<SEP>gd_81ae300a5441b910da999070<SEP>gd_64ee673f1818fe8a43d10d08<SEP>gd_6602b8352d3730cde21081ed<SEP>gd_2c6f9645343251c1f939e00a<SEP>gd_2d72fe9469e9f2b08dcd24ea<SEP>gd_e93488dc685e6f329218fa9e<SEP>gd_8aea7ce0c020b69d721aae29<SEP>gd_70b6d21359f3ae0fd46e93c8<SEP>gd_1f1326be6f041bdd902a302b<SEP>gd_c387616945e788682c23c05d<SEP>gd_b42ff3af2d17e5abb47d2fab<SEP>gd_9393f5107171bfdba2765a73<SEP>gd_b47d0381318f8c03ba8b235e<SEP>gd_3d00a2ad35f7082a70310e88<SEP>gd_8bb47c1249e0948d8a5ef1bb<SEP>gd_053b554ac65802053e4e742c<SEP>...truncated...(KEEP Old)",
+          "created_at": 1793513555
+        },
+        {
+          "entity_name": "three years",
+          "entity_type": "time",
+          "description": "A period of time equal to 36 months.",
+          "source_id": "gd_46ffa32789f344463230a831-chunk-007",
+          "file_path": "gd_46ffa32789f344463230a831",
+          "created_at": 1793608762
+        },
+        {
+          "entity_name": "Success",
+          "entity_type": "concept",
+          "description": "**Success**\n\nSuccess refers to achieving a desired outcome or goal, often measured by metrics such as revenue, customer satisfaction, or market share. It can also be defined as a specific business idea, referring to achieving a high level of accomplishment. In a business context, success is often associated with the company's success team, which is responsible for ensuring customer satisfaction and loyalty.\n\nHowever, success can also be a state of achieving desired outcomes or goals, and it may not always be as straightforward as it seems. On the surface, success might be masking fundamental problems with go-to-market efficiency. Marketing and success teams have to be efficient in their efforts to achieve desired outcomes.\n\nIn essence, success is a multifaceted concept that encompasses both the achievement of desired outcomes and the efficiency of the processes involved in achieving them. It is a state that is often measured by various metrics, including revenue, customer satisfaction, and market share.<SEP>The process of achieving a desired outcome or goal.<SEP>A product or service provided by the company related to customer satisfaction.<SEP>The process of ensuring customer satisfaction and retention, often involving human representatives.<SEP>Success requires more than favorable markets-it demands the kind of operational excellence and financial discipline that both StubHub and Netskope demonstrated throughout their journey to public markets.<SEP>The desired outcome or result that a customer is seeking.<SEP>Achieving a desired result or outcome.",
+          "source_id": "gd_256a41d38f56ea0d66e64b45-chunk-000<SEP>gd_7b8e1734f0309e1ac887f899-chunk-001<SEP>gd_4f75b0a196e37ff6fef25fab-chunk-001<SEP>gd_de3967876a8f223511714e23-chunk-001<SEP>gd_257d14e0a4f4fd8c87630df1-chunk-002<SEP>gd_b5598f901756b268dfaf7770-chunk-001<SEP>gd_93344fa8750f80b4032fe722-chunk-004<SEP>gd_e2a836034c2fbbd00b9cc82a-chunk-003<SEP>gd_e570bc885c853fe839d0ee57-chunk-004<SEP>gd_e570bc885c853fe839d0ee57-chunk-005<SEP>gd_97843612d08bfd01e9f83879-chunk-004<SEP>gd_4bffee088c217385e9ed7cf0-chunk-007<SEP>gd_2421b9e4087e6b542f229901-chunk-000<SEP>gd_73c06efd8b5772a9ba7bbdd0-chunk-008",
+          "file_path": "gd_256a41d38f56ea0d66e64b45<SEP>gd_7b8e1734f0309e1ac887f899<SEP>gd_4f75b0a196e37ff6fef25fab<SEP>gd_de3967876a8f223511714e23<SEP>gd_257d14e0a4f4fd8c87630df1<SEP>gd_b5598f901756b268dfaf7770<SEP>gd_93344fa8750f80b4032fe722<SEP>gd_e2a836034c2fbbd00b9cc82a<SEP>gd_e570bc885c853fe839d0ee57<SEP>gd_97843612d08bfd01e9f83879<SEP>gd_4bffee088c217385e9ed7cf0<SEP>gd_2421b9e4087e6b542f229901<SEP>gd_73c06efd8b5772a9ba7bbdd0",
+          "created_at": 1793638390
+        },
+        {
+          "entity_name": "20 years",
+          "entity_type": "concept",
+          "description": "The amount of time that the best founders remain curious, still learning, still energized by customer problems.",
+          "source_id": "gd_5f2a2450d3a44b4adf954c06-chunk-009",
+          "file_path": "gd_5f2a2450d3a44b4adf954c06",
+          "created_at": 1793639331
+        },
+        {
+          "entity_name": "Market",
+          "entity_type": "concept",
+          "description": "**Market**\n\nThe Market is a multifaceted concept that encompasses various aspects of business and commerce. At its core, the Market refers to the audience or customers that a business is targeting with its products or services. This can be a specific segment of a larger Market where a company operates, or a specific geographic area where a product or service is sold. In a broader sense, the Market is the business environment where companies compete and operate, interacting with buyers and sellers to exchange goods and services.\n\nThe Market can also refer to the overall demand and supply of a product or service, as well as a specific area or industry where a startup operates. In some cases, the Market can be a place or system where buyers and sellers interact to exchange goods, services, or assets, or simply a place where products or services are sold. Additionally, the Market can be the value of a company or asset based on its current Market conditions and prices.\n\nA Market can be defined as a group of potential customers with similar needs and preferences, which is a key consideration for businesses looking to target a specific audience. It can also refer to a specific segment or area of business that a SaaS company operates in, highlighting the importance of understanding the nuances of different Markets and industries.\n\nThe current Market conditions and trends are also a significant consideration for businesses, as they can impact the success of a product or service. The Market's belief in a product is also a crucial factor in its success. Furthermore, the Market has correctly identified a structural break in the model, and companies need to focus on their products and internal issues rather than external competition.\n\nIn terms of geographic scope, a Market can be a specific area or region where a product or service is sold, or a demographic group that a product or service is targeted towards. Entities that operate within a specific geographic area or industry are also considered part of the Market.\n\nThe overall economic conditions and trends that affect a company's performance are also an important aspect of the Market. Currently, the funding environment is still tight, and growth expectations are still high. However, the Market is also changing due to new technology paradigms, and companies need to be adaptable to succeed.\n\nThe Market size is projected to be between $676-912 billion in 2025, with a growth rate of 16-21% CAGR through 2030. By 2030, the Market size is projected to be between $2.3T – $2.6T, and by 2034, it is projected to reach $5.1T.\n\nIt's worth noting that the Market can also be affected by external factors such as the overall sales environment, which may be affecting the company's performance. Additionally, the Market can be a place or situation where goods or services are bought and sold, used to describe a factor that can affect business decisions.\n\nThe Market has a massive bifurcation, with a handful of AI companies raising billion-dollar rounds, while everyone else is fighting for scraps. This highlights the importance of being adaptable and innovative in a rapidly changing Market. The Market can also be a group of investors and buyers, or a group of people who have a need for a product or service.\n\nEntering a large Market can be easier, and the Market refers to the industry or sector in which a business operates. The area or industry in which a company operates is also an important aspect of the Market. Having a lot of competitors who talk about a product but few who can actually deliver is a common challenge in the Market.\n\nThe Market refers to the financial Market, which includes the stock Market, bond Market, and other financial Markets. Market is a concept that refers to a Market or industry, and the ranking of companies in the Market, where #5 received the same premium as #1, is a notable aspect of the Market.\n\nOverall, the Market is a complex and multifaceted concept that requires a deep understanding of its various aspects and nuances. By understanding the Market and its various components, businesses can better navigate its complexities and make informed decisions to succeed.",
+          "source_id": "gd_072a958576c3d08d325dd01b-chunk-001<SEP>gd_e202a1afd3c9d493a094de48-chunk-003<SEP>gd_21919aca3c400d60f87d44a8-chunk-000<SEP>gd_5448911bf1d9e8cb3ec3f5e9-chunk-000<SEP>gd_325cd64471734ab31072948f-chunk-000<SEP>gd_6bbd9f87d5f3da64cd6e9e0a-chunk-001<SEP>gd_3ac038553a6efee0e6c187a0-chunk-001<SEP>gd_47fbbf612af3204e5ab5ce5e-chunk-002<SEP>gd_8aa8fb2b9328e174364a4ff2-chunk-000<SEP>gd_1e07c5d8a5539b7e896c47b5-chunk-000<SEP>gd_715f8f4234bd072860c827a5-chunk-000<SEP>gd_9864ca1feb02f2cb55a1a9c2-chunk-000<SEP>gd_59786235ec03f6fe9fcba771-chunk-000<SEP>gd_673777877ba804b6adcb05c7-chunk-000<SEP>gd_31ba1c8d581ac1985f549c14-chunk-003<SEP>gd_ae46602503f51cde09054ac5-chunk-001<SEP>gd_81bde9d299daaec71f7d4b59-chunk-001<SEP>gd_905be8c3f8d3ed19a7f2a935-chunk-000<SEP>gd_af58f56a6c6ec855ea85b303-chunk-001<SEP>gd_f69e3705f2346e4c5790bb90-chunk-000<SEP>gd_a004fa7f87187d6b6f18a664-chunk-001<SEP>gd_b34fa0b5c05ac1d04fa62aa7-chunk-000<SEP>gd_e2447a83645e8c86cf82915d-chunk-000<SEP>gd_29b51d2dab14acadfc88e927-chunk-000<SEP>gd_32f5e4f1f3af8c48fe6d19b5-chunk-001<SEP>gd_fc5e3d369b99c8319468b0c7-chunk-000<SEP>gd_09aff9d34799836ada09cb39-chunk-000<SEP>gd_797f4c605871b4eaa3c89596-chunk-002<SEP>gd_7d9ae6c91b92a3f115f2c36d-chunk-001<SEP>gd_19d3cb4a0d9ac32e95b41c33-chunk-002<SEP>gd_1ec6e750a5915487f6b0f4fa-chunk-001<SEP>gd_750070fac576fb48120f9904-chunk-000<SEP>gd_8c5d383d6700632b00ecfb79-chunk-001<SEP>gd_ef0a3cc3b5933f0a5cd3fccb-chunk-000<SEP>gd_d6aa012be158b9d77ddffb46-chunk-000<SEP>gd_d81bb6cc0098a4c65b6265fe-chunk-000<SEP>gd_e1c7894260cde2622274f477-chunk-002<SEP>gd_ec005f90a4cbb6409aac509c-chunk-002<SEP>gd_1ae501bfdb3a7f714e292862-chunk-001<SEP>gd_1fd95d7bd6ed45e81b456fce-chunk-002<SEP>gd_346b6035bf8be7b5b8fd6cff-chunk-001<SEP>gd_346b6035bf8be7b5b8fd6cff-chunk-002<SEP>gd_37c9bf3c519ccfb55eca9483-chunk-000<SEP>gd_638504ad2255cea838cacfbf-chunk-000<SEP>gd_638504ad2255cea838cacfbf-chunk-001<SEP>gd_09ee42740580eeee1bc58b01-chunk-000<SEP>gd_1db8851ad56bec3e841dbf86-chunk-003<SEP>gd_4d77f67e4d236b7029d83bb8-chunk-000<SEP>gd_4d77f67e4d236b7029d83bb8-chunk-001<SEP>gd_2f4df5abef725f9b0f5db9bd-chunk-002<SEP>gd_3431ce388885d39d6d44c6b6-chunk-004<SEP>gd_56d7f8faeb5930b1eda7e2c9-chunk-000<SEP>gd_56d7f8faeb5930b1eda7e2c9-chunk-003<SEP>gd_56d7f8faeb5930b1eda7e2c9-chunk-004<SEP>gd_6439c400c1d09acb6a66a591-chunk-000<SEP>gd_6439c400c1d09acb6a66a591-chunk-002<SEP>gd_6439c400c1d09acb6a66a591-chunk-001<SEP>gd_7234fba9ded2d36b213af4f5-chunk-000<SEP>gd_7a9a67266e89c0a8630f6fbb-chunk-002<SEP>gd_1b9bbe7ebbb40cc7edaaca04-chunk-002<SEP>gd_1b9bbe7ebbb40cc7edaaca04-chunk-003<SEP>gd_999472ab9bf390630ebf1126-chunk-001<SEP>gd_a68c9faa653f5e712be83386-chunk-000<SEP>gd_4fbe2efd627b9252bdea5ea3-chunk-002<SEP>gd_72aeec36a95526889d6cc973-chunk-001<SEP>gd_a120d398e57a33365886f6a6-chunk-003<SEP>gd_c91e035894efec4c6e9873e9-chunk-001<SEP>gd_e2a836034c2fbbd00b9cc82a-chunk-003<SEP>gd_e4c7335907a173919efb58a2-chunk-000<SEP>gd_3acffa3c074be68c09c17ae4-chunk-000<SEP>gd_3acffa3c074be68c09c17ae4-chunk-001<SEP>gd_81574416d816b9ed5a9e6fb1-chunk-003<SEP>gd_81574416d816b9ed5a9e6fb1-chunk-004<SEP>gd_b0a33090385448bab0fdb263-chunk-001<SEP>gd_e23054549f6afebbe65a7649-chunk-003<SEP>gd_062fdba1eb0375bef6607116-chunk-003<SEP>gd_062fdba1eb0375bef6607116-chunk-004<SEP>gd_0d5ce0b3e04a8314ef86c827-chunk-005<SEP>gd_f8a9bb89d833767e5b63d5a7-chunk-000<SEP>gd_f8a9bb89d833767e5b63d5a7-chunk-001<SEP>gd_1489f32c404f2e386e0e108a-chunk-004<SEP>gd_36f51e2dd08bfeca036d42ad-chunk-002<SEP>gd_36f51e2dd08bfeca036d42ad-chunk-003<SEP>gd_45039ea6215ace79f501d25d-chunk-001<SEP>gd_45039ea6215ace79f501d25d-chunk-005<SEP>gd_3c94d3509d88df4c189a0b68-chunk-006<SEP>gd_3dd5c02a7eda4361172441d2-chunk-000<SEP>gd_3dd5c02a7eda4361172441d2-chunk-001<SEP>gd_3dd5c02a7eda4361172441d2-chunk-002<SEP>gd_5041ab8c996980f3b7b34675-chunk-001<SEP>gd_85e65f7b38f06f45f9272493-chunk-001<SEP>gd_ec228e8695e416170bcef74e-chunk-007<SEP>gd_dd2fb5e9c77a521dabfbfd09-chunk-003<SEP>gd_fe9184e0ab77202749f57674-chunk-004<SEP>gd_015d273393160169bc16ee3e-chunk-004<SEP>gd_16b616fcb6970053eaa0f408-chunk-003<SEP>gd_67605307e29f9fce4d4d6064-chunk-003<SEP>gd_180cfcbda9d5aa945583d82e-chunk-002<SEP>gd_8e0c4eb5068da67dbb8ad247-chunk-004<SEP>gd_9fd8e6443d56bea959fbffdc-chunk-001<SEP>gd_9fd8e6443d56bea959fbffdc-chunk-002<SEP>gd_6f5a1d107624d40a3141bbb7-chunk-002<SEP>gd_6f5a1d107624d40a3141bbb7-chunk-003<SEP>gd_e01477e17866ee5836e50828-chunk-005<SEP>gd_e01477e17866ee5836e50828-chunk-001<SEP>gd_88b45eaf937a5ab5039dba4e-chunk-005<SEP>gd_f335200b1b152ebd57131e72-chunk-005<SEP>gd_9e84be7a06bff0542f4f560e-chunk-000<SEP>gd_ab2b44c18919e9af9f28a4d4-chunk-003<SEP>gd_d19ef462293cbfaf17f910e6-chunk-004<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-007<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-005<SEP>gd_40a1e7bc45542f2904568d95-chunk-000<SEP>gd_e570bc885c853fe839d0ee57-chunk-001<SEP>gd_eed02ca0e99ddce2117cfb23-chunk-003<SEP>gd_03e19ade06e9e20d35a7a989-chunk-002<SEP>gd_03e19ade06e9e20d35a7a989-chunk-005<SEP>gd_03e19ade06e9e20d35a7a989-chunk-006<SEP>gd_03e19ade06e9e20d35a7a989-chunk-000<SEP>gd_5d983738ccb8063f7f8a2ced-chunk-001<SEP>gd_57de1d1dfc0b96aff9b97b1f-chunk-005<SEP>gd_e0e8f051a95a2e0ce0fb9f89-chunk-000<SEP>gd_1ea75faaa1a24bb0a1573ab5-chunk-006<SEP>gd_2565933e9e131902a1c3741b-chunk-003<SEP>gd_889757c8b0469b376564324e-chunk-010<SEP>gd_8c7c46de206e2398293aa7cd-chunk-000<SEP>gd_132a794bad65f88dee461787-chunk-005<SEP>gd_132a794bad65f88dee461787-chunk-006<SEP>gd_3aae8a7c065a234aa5cc25dc-chunk-005<SEP>gd_3e8732484211557041408d86-chunk-005<SEP>gd_3e8732484211557041408d86-chunk-006<SEP>gd_5452a21f583d7a1ce5646101-chunk-005<SEP>gd_8fdb2b4384c2295b581058ff-chunk-005<SEP>gd_6a3a9ea47e89d7f04a9415ee-chunk-003<SEP>gd_6f7cec99215f9ff2f03605c0-chunk-007<SEP>gd_35814a36a9b1f3b837986159-chunk-001<SEP>gd_df32839420b6112dc0266e66-chunk-005<SEP>gd_df32839420b6112dc0266e66-chunk-006<SEP>gd_9e15f38f2f6fafa680da9f0c-chunk-001<SEP>gd_249ae5f1a28ad2b6389c7b37-chunk-001<SEP>gd_249ae5f1a28ad2b6389c7b37-chunk-006<SEP>gd_249ae5f1a28ad2b6389c7b37-chunk-015<SEP>gd_0c20659f1cea960e88f6bb0b-chunk-005<SEP>gd_14eaa99f6b156bd8099dd6b7-chunk-028<SEP>gd_39135822a5638787a5a43dd3-chunk-001<SEP>gd_7c0a2c0006a5bc39ac8e59fc-chunk-004<SEP>gd_825ec3c64d586d4857342d32-chunk-002<SEP>gd_930b21b904954df9b1d85c3b-chunk-002<SEP>gd_930b21b904954df9b1d85c3b-chunk-005<SEP>gd_930b21b904954df9b1d85c3b-chunk-004<SEP>gd_a32a13229e6ff834fda4827a-chunk-007<SEP>gd_d7608d7e6dac4d722fb90de0-chunk-003<SEP>gd_f6c00e0b3dd6d992b151a870-chunk-006<SEP>gd_fe5cda8843f27d3cb5268a08-chunk-004<SEP>gd_6f67421c00686b7efde013a1-chunk-008<SEP>gd_e6d10122d4b3f67d0762c9ad-chunk-000<SEP>gd_5aa00b3ad8097a02a532ea01-chunk-005<SEP>gd_6d36e9d789605a02741458e1-chunk-006<SEP>gd_7df7dbd1ef357295466a8e49-chunk-007<SEP>gd_b0ed35375cd1112218e7da45-chunk-004<SEP>gd_b80524f908bad21aeaf41dfe-chunk-005<SEP>gd_faa2e63d5acfd50ac326251d-chunk-003<SEP>gd_203f248339b833dc26e44807-chunk-006<SEP>gd_18882942a86ac5a7c53bf0cb-chunk-002<SEP>gd_2b1b8318e2ec523237dbf3e3-chunk-008<SEP>gd_66374b54f26da8ea58393cdf-chunk-003<SEP>gd_e697a048be1ba443df9f5c20-chunk-000<SEP>gd_87131f4a34d2f70295f0cf04-chunk-005<SEP>gd_c3146fb15d0855ad8bbb5a02-chunk-003<SEP>gd_0ac6be7c075d45e2006382f0-chunk-007<SEP>gd_0488dbe0d1821eacec1cd206-chunk-009<SEP>gd_bd5af2f19abc9f9115e0783f-chunk-007<SEP>gd_57f40ea85543a2a411181d29-chunk-000",
+          "file_path": "gd_072a958576c3d08d325dd01b<SEP>gd_e202a1afd3c9d493a094de48<SEP>gd_21919aca3c400d60f87d44a8<SEP>gd_6bbd9f87d5f3da64cd6e9e0a<SEP>gd_3ac038553a6efee0e6c187a0<SEP>gd_47fbbf612af3204e5ab5ce5e<SEP>gd_8aa8fb2b9328e174364a4ff2<SEP>gd_1e07c5d8a5539b7e896c47b5<SEP>gd_9864ca1feb02f2cb55a1a9c2<SEP>gd_59786235ec03f6fe9fcba771<SEP>gd_673777877ba804b6adcb05c7<SEP>gd_31ba1c8d581ac1985f549c14<SEP>gd_ae46602503f51cde09054ac5<SEP>gd_81bde9d299daaec71f7d4b59<SEP>gd_905be8c3f8d3ed19a7f2a935<SEP>gd_af58f56a6c6ec855ea85b303<SEP>gd_f69e3705f2346e4c5790bb90<SEP>gd_a004fa7f87187d6b6f18a664<SEP>gd_b34fa0b5c05ac1d04fa62aa7<SEP>gd_e2447a83645e8c86cf82915d<SEP>gd_29b51d2dab14acadfc88e927<SEP>gd_32f5e4f1f3af8c48fe6d19b5<SEP>gd_fc5e3d369b99c8319468b0c7<SEP>gd_09aff9d34799836ada09cb39<SEP>gd_19d3cb4a0d9ac32e95b41c33<SEP>gd_1ec6e750a5915487f6b0f4fa<SEP>gd_8c5d383d6700632b00ecfb79<SEP>gd_ef0a3cc3b5933f0a5cd3fccb<SEP>gd_d6aa012be158b9d77ddffb46<SEP>gd_e1c7894260cde2622274f477<SEP>gd_ec005f90a4cbb6409aac509c<SEP>gd_1ae501bfdb3a7f714e292862<SEP>gd_346b6035bf8be7b5b8fd6cff<SEP>gd_37c9bf3c519ccfb55eca9483<SEP>gd_638504ad2255cea838cacfbf<SEP>gd_09ee42740580eeee1bc58b01<SEP>gd_1db8851ad56bec3e841dbf86<SEP>gd_4d77f67e4d236b7029d83bb8<SEP>gd_2f4df5abef725f9b0f5db9bd<SEP>gd_3431ce388885d39d6d44c6b6<SEP>gd_56d7f8faeb5930b1eda7e2c9<SEP>gd_6439c400c1d09acb6a66a591<SEP>gd_7a9a67266e89c0a8630f6fbb<SEP>gd_1b9bbe7ebbb40cc7edaaca04<SEP>gd_999472ab9bf390630ebf1126<SEP>gd_4fbe2efd627b9252bdea5ea3<SEP>gd_72aeec36a95526889d6cc973<SEP>gd_a120d398e57a33365886f6a6<SEP>gd_c91e035894efec4c6e9873e9<SEP>gd_e2a836034c2fbbd00b9cc82a<SEP>gd_3acffa3c074be68c09c17ae4<SEP>gd_81574416d816b9ed5a9e6fb1<SEP>gd_b0a33090385448bab0fdb263<SEP>gd_e23054549f6afebbe65a7649<SEP>gd_062fdba1eb0375bef6607116<SEP>gd_0d5ce0b3e04a8314ef86c827<SEP>gd_f8a9bb89d833767e5b63d5a7<SEP>gd_36f51e2dd08bfeca036d42ad<SEP>gd_45039ea6215ace79f501d25d<SEP>gd_3c94d3509d88df4c189a0b68<SEP>gd_3dd5c02a7eda4361172441d2<SEP>gd_5041ab8c996980f3b7b34675<SEP>gd_85e65f7b38f06f45f9272493<SEP>gd_015d273393160169bc16ee3e<SEP>gd_16b616fcb6970053eaa0f408<SEP>gd_67605307e29f9fce4d4d6064<SEP>gd_180cfcbda9d5aa945583d82e<SEP>gd_8e0c4eb5068da67dbb8ad247<SEP>gd_9fd8e6443d56bea959fbffdc<SEP>gd_6f5a1d107624d40a3141bbb7<SEP>gd_e01477e17866ee5836e50828<SEP>gd_9e84be7a06bff0542f4f560e<SEP>gd_ab2b44c18919e9af9f28a4d4<SEP>gd_2a4d7b8a58e1c3110dd4d692<SEP>gd_40a1e7bc45542f2904568d95<SEP>...truncated...(KEEP Old)",
+          "created_at": 1793645088
+        },
+        {
+          "entity_name": "Mature age",
+          "entity_type": "concept",
+          "description": "Companies are going public older than ever (average 16 years vs. 12 in 2015)",
+          "source_id": "gd_0488dbe0d1821eacec1cd206-chunk-006",
+          "file_path": "gd_0488dbe0d1821eacec1cd206",
+          "created_at": 1793643349
+        },
+        {
+          "entity_name": "Platform shift",
+          "entity_type": "event",
+          "description": "Platform shift is a significant change in the underlying technology or business model of an industry.",
+          "source_id": "gd_e68aacea13804104b99303da-chunk-009",
+          "file_path": "gd_e68aacea13804104b99303da",
+          "created_at": 1793639677
+        },
+        {
+          "entity_name": "11.7 years",
+          "entity_type": "UNKNOWN",
+          "description": "Carta's data shows that it takes an average of 11.7 years to reach a $1B+ exit.",
+          "source_id": "gd_896c0b8d98209b19593f7e43-chunk-001",
+          "file_path": "gd_896c0b8d98209b19593f7e43",
+          "created_at": 1793501970
+        },
+        {
+          "entity_name": "SaaS world",
+          "entity_type": "concept",
+          "description": "SaaS world is the software-as-a-service industry.",
+          "source_id": "gd_e68aacea13804104b99303da-chunk-009",
+          "file_path": "gd_e68aacea13804104b99303da",
+          "created_at": 1793639677
+        },
+        {
+          "entity_name": "5-10 years",
+          "entity_type": "concept",
+          "description": "A time period indicating the expected lifetime of a customer.",
+          "source_id": "gd_b80d7d772933d7964f9d8df7-chunk-000",
+          "file_path": "gd_b80d7d772933d7964f9d8df7",
+          "created_at": 1793523249
+        },
+        {
+          "entity_name": "Enterprise",
+          "entity_type": "concept",
+          "description": "The Enterprise refers to large-scale businesses or organizations that operate on a complex level, with high expectations and complex needs. These entities are characterized by their size, scope, and organizational structure, often requiring advanced features and support from various platforms and services.\n\nIn the context of customer engagement, the Enterprise typically refers to large businesses or organizations that utilize platforms such as Braze's to manage customer relationships and automate tasks. This may involve leveraging services like Salesforce's to manage customer interactions and optimize business processes. Large-scale businesses with longer sales cycles, such as those lasting 6-12 months, are also considered part of the Enterprise category.\n\nThe term Enterprise encompasses a broad range of large-scale businesses and organizations, each with unique characteristics and requirements. These entities are often defined by their size, complexity, and need for advanced features and support. They typically have a significant number of employees and a substantial market share, with an average contract value (ACV) of $71k.\n\nSome common characteristics of the Enterprise include large size, with more than 1,000 employees, complex organizational structure, high expectations and complex needs, requirement for advanced features and support from various platforms and services, use of complex systems and high-stakes decision-making, and utilization of customized software solutions.\n\nIn addition, the Enterprise can also refer to a high-end or more powerful version of a product or service, catering to the needs of bigger companies that want to buy from smaller AI teams. Furthermore, the Enterprise is a level of customer relationship where a company has achieved a certain level of commitment from the customer, and it is also a business model where companies offer a range of products and services to large organizations.\n\nIn the realm of video conferencing, the Enterprise refers to large businesses or corporations that require more advanced features and support from Zoom. These organizations often have complex communication needs, necessitating the use of specialized tools and services to facilitate collaboration and productivity.\n\nThe Enterprise is also characterized by its size, complexity, and need for advanced features and support, making it a distinct category within the business world. Large-scale SaaS customers, for instance, are a key segment within the Enterprise, while enterprise workflows are valuable for companies like Sprinklr. Enterprise customers are a growing segment for Zoom, but growth is still challenging in this area.\n\nIt's worth noting that the Enterprise can also refer to a specific segment of restaurants that Olo focuses on, and it can also refer to a large business entity that requires efficient representatives to be profitable. Additionally, Domo targets a specific market segment referred to as Enterprise, and Sprout Social identifies a specific segment of revenue referred to as Enterprise, indicating a higher level of customer engagement and revenue.\n\nIn summary, the Enterprise is a complex and multifaceted concept that encompasses a wide range of large-scale businesses and organizations, each with unique characteristics and requirements.<SEP>Most people in the enterprise don’t feel empowered to make decisions on what to use or who to bring in.<SEP>A large organization or business.<SEP>Large-scale businesses that are less vulnerable to AI commoditization.",
+          "source_id": "gd_5e5a08212de37032e6d7f6ef-chunk-000<SEP>gd_fffeab476928134deffcd852-chunk-000<SEP>gd_024849f4b94ca9c289fa892b-chunk-001<SEP>gd_15d187637520cc4b1b5726e1-chunk-003<SEP>gd_1bb89f0881d846204f69d052-chunk-001<SEP>gd_47fbbf612af3204e5ab5ce5e-chunk-001<SEP>gd_524c287c9d24eb09b58604a0-chunk-000<SEP>gd_22f503d26e4d8faf8274b928-chunk-000<SEP>gd_22f503d26e4d8faf8274b928-chunk-001<SEP>gd_81ae300a5441b910da999070-chunk-000<SEP>gd_9393f5107171bfdba2765a73-chunk-000<SEP>gd_7259ae8fb5c14b7e4a7171d6-chunk-000<SEP>gd_111b6b23b20d3f5268f61598-chunk-001<SEP>gd_2c7c5bbaddd81a82246a197c-chunk-000<SEP>gd_4539e662ea7b31c661ff01a2-chunk-002<SEP>gd_57fa3f9a3c4f8de50eeb4882-chunk-001<SEP>gd_e3f684c5851e821f92345403-chunk-000<SEP>gd_9c57682be96afbe8594a7d56-chunk-000<SEP>gd_df5bccd709fa0585bb8d0509-chunk-001<SEP>gd_bf4f57347219fef2c5475db9-chunk-001<SEP>gd_5aad825cc360da16fcbbd647-chunk-000<SEP>gd_5aad825cc360da16fcbbd647-chunk-001<SEP>gd_62e43cdf25037819011bad9a-chunk-002<SEP>gd_81bbd7bc18b73e6c09bfbc28-chunk-001<SEP>gd_aff22cfcaff5e7bbcca05126-chunk-001<SEP>gd_928c6555503d6e90d241cf1e-chunk-002<SEP>gd_950767c5c3a3596311dbbda5-chunk-000<SEP>gd_3375b711cc2faff9ba670010-chunk-001<SEP>gd_3375b711cc2faff9ba670010-chunk-002<SEP>gd_3e259415f45afa9ddd480b31-chunk-001<SEP>gd_a317deb61e243cd08d76cca3-chunk-002<SEP>gd_a54f5bf886b30a7e8324893d-chunk-000<SEP>gd_5dfaf70730c3fda27c1e436f-chunk-002<SEP>gd_cd33756bd319ab7b66758a0d-chunk-000<SEP>gd_d3046abbff56769a90cbeea0-chunk-001<SEP>gd_d9290ed0e1780f3bb8b02f05-chunk-000<SEP>gd_949d1d180af15cb12944c20a-chunk-001<SEP>gd_dd13d18c16228c212a2cf778-chunk-000<SEP>gd_dd13d18c16228c212a2cf778-chunk-001<SEP>gd_ddc7dc8f7ea37c8335c55003-chunk-001<SEP>gd_de4f1cbf6a8bd8e3c5b1cd8f-chunk-002<SEP>gd_e1dfd752f2d87263a2213397-chunk-000<SEP>gd_e69f04ea7a8a4ea4c0ce26c7-chunk-000<SEP>gd_e69f04ea7a8a4ea4c0ce26c7-chunk-001<SEP>gd_f73c0f4e98a454788b21abf4-chunk-001<SEP>gd_c7c952be7d593a9e41580e4f-chunk-000<SEP>gd_c7c952be7d593a9e41580e4f-chunk-001<SEP>gd_cda981ad247a4046cb23c1c3-chunk-003<SEP>gd_d6922837935a40c18c58a550-chunk-002<SEP>gd_d981b5f28d512ce3174a36d3-chunk-002<SEP>gd_0fe1906994e83df5c0f7c8c5-chunk-002<SEP>gd_e574a81616d0929a802ea105-chunk-000<SEP>gd_e574a81616d0929a802ea105-chunk-001<SEP>gd_1c043696010f2091f1290bdc-chunk-001<SEP>gd_1d334f5cfd7bb7603fe5b3d8-chunk-000<SEP>gd_1d8159452be5bb0ad3f50cf3-chunk-001<SEP>gd_1fd95d7bd6ed45e81b456fce-chunk-002<SEP>gd_21ad29dbc91188b19766598c-chunk-000<SEP>gd_28b7a01469df284bcf16e7da-chunk-000<SEP>gd_28b7a01469df284bcf16e7da-chunk-001<SEP>gd_43c58eec07c53d9d42856441-chunk-001<SEP>gd_48aa7a1fedc2078897c63322-chunk-000<SEP>gd_4c9a84c75fac927c1308ee49-chunk-001<SEP>gd_1db8851ad56bec3e841dbf86-chunk-003<SEP>gd_4d77f67e4d236b7029d83bb8-chunk-001<SEP>gd_4082d9286441e5d1b2ab3d21-chunk-001<SEP>gd_5cee12338f5781cf3fc86de2-chunk-001<SEP>gd_602ec044e3ecdf3d2d224081-chunk-000<SEP>gd_777f00c3ae66d359daa39f22-chunk-001<SEP>gd_7c7a216c8745503a287b7942-chunk-000<SEP>gd_827de18357c3b1abbf9c7ae7-chunk-001<SEP>gd_c513cd5cd47320b3679f9406-chunk-000<SEP>gd_c513cd5cd47320b3679f9406-chunk-001<SEP>gd_885984971dbc1d1315ea4765-chunk-002<SEP>gd_885984971dbc1d1315ea4765-chunk-003<SEP>gd_9021ddbc4daccae39880d4e2-chunk-001<SEP>gd_9021ddbc4daccae39880d4e2-chunk-002<SEP>gd_01660f9354b0e95cd03ed553-chunk-002<SEP>gd_01660f9354b0e95cd03ed553-chunk-003<SEP>gd_995edd43bb903497883c63ce-chunk-002<SEP>gd_58cf6619fe8ac95ceb1217f7-chunk-002<SEP>gd_58cf6619fe8ac95ceb1217f7-chunk-004<SEP>gd_bd97c14fa0476835df73618f-chunk-001<SEP>gd_bd97c14fa0476835df73618f-chunk-000<SEP>gd_93344fa8750f80b4032fe722-chunk-002<SEP>gd_93344fa8750f80b4032fe722-chunk-003<SEP>gd_ca4e8d2f61b3ea64d1188e6c-chunk-002<SEP>gd_c18e9e2084c3edbd8ff46b65-chunk-001<SEP>gd_db887d3a74cf8d8893e4a1e8-chunk-000<SEP>gd_dd626eb5f79a12db1cce58c5-chunk-000<SEP>gd_dd626eb5f79a12db1cce58c5-chunk-001<SEP>gd_de4b319e76c4f0d48550e144-chunk-002<SEP>gd_de849f9697aac7fb10faa6dd-chunk-001<SEP>gd_e2a836034c2fbbd00b9cc82a-chunk-003<SEP>gd_e396b212b0c5e080520b685b-chunk-001<SEP>gd_e8aa22104a9f2b1ed41859ae-chunk-001<SEP>gd_fd2a720d5ccdbfd8e0349e77-chunk-001<SEP>gd_3c170c81339973a0d99251d4-chunk-000<SEP>gd_74e769a0705a5d3d3ef12451-chunk-001<SEP>gd_74e769a0705a5d3d3ef12451-chunk-000<SEP>gd_c2e469668cef31159b842ec8-chunk-000<SEP>gd_e23054549f6afebbe65a7649-chunk-001<SEP>gd_e4735d696b4fc29d7ad881a1-chunk-001<SEP>gd_eafeeeaf963693320917c689-chunk-000<SEP>gd_36f51e2dd08bfeca036d42ad-chunk-001<SEP>gd_6883af2ee760af258eff9978-chunk-005<SEP>gd_69681401f790e22eda7aea44-chunk-000<SEP>gd_b29b631ae0499187a517b9d7-chunk-000<SEP>gd_b59420b8a4157ccee2549a6f-chunk-004<SEP>gd_cb4d1fe2519ac6e0de295c6c-chunk-003<SEP>gd_cb4d1fe2519ac6e0de295c6c-chunk-006<SEP>gd_cb4d1fe2519ac6e0de295c6c-chunk-005<SEP>gd_d6e2503b0360a9909720cf18-chunk-006<SEP>gd_9aaaf87c9b9d043595bc5848-chunk-002<SEP>gd_d2e5e17168d573c0e46f7b9c-chunk-001<SEP>gd_30b975e27b27dccba55465d5-chunk-003<SEP>gd_fe9184e0ab77202749f57674-chunk-004<SEP>gd_63ee9e6fa74f4ab2dcfa2c10-chunk-000<SEP>gd_6fef5fe1dbbd9efcd44ed4b3-chunk-001<SEP>gd_3e9857fef8b3ef58b19416dc-chunk-001<SEP>gd_6f5a1d107624d40a3141bbb7-chunk-004<SEP>gd_71bc7b69137fc8525a9f25a9-chunk-003<SEP>gd_71bc7b69137fc8525a9f25a9-chunk-004<SEP>gd_de31354bc29d919e01e7cce0-chunk-000<SEP>gd_e01477e17866ee5836e50828-chunk-005<SEP>gd_e95c09643e99385d630cd19c-chunk-004<SEP>gd_989099458fed4b50438939c7-chunk-000<SEP>gd_98daa4e0c059d6a11d469b3d-chunk-001<SEP>gd_98daa4e0c059d6a11d469b3d-chunk-003<SEP>gd_af823c28b3f6988087e69112-chunk-000<SEP>gd_113e0fbb8166dfa5ea576718-chunk-002<SEP>gd_113e0fbb8166dfa5ea576718-chunk-003<SEP>gd_cdb688c70f3a971827ac4543-chunk-003<SEP>gd_1beecb9796b7c63021f0263a-chunk-002<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-001<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-004<SEP>gd_823279392f3517de14a0233e-chunk-002<SEP>gd_3e0efa5053a2e02acbe0b66b-chunk-002<SEP>gd_03e19ade06e9e20d35a7a989-chunk-003<SEP>gd_64793cab1af0d27d1426c6c8-chunk-000<SEP>gd_68ac04ba3ad5f88436c7c9a1-chunk-002<SEP>gd_25029ba6a8314662d07258c4-chunk-000<SEP>gd_25029ba6a8314662d07258c4-chunk-001<SEP>gd_e5a50c2ff661c40c848e4a99-chunk-000<SEP>gd_e5a50c2ff661c40c848e4a99-chunk-001<SEP>gd_fc1aa6c9d79f8c0df65f23b8-chunk-000<SEP>gd_3e8732484211557041408d86-chunk-006<SEP>gd_69caa78963c10481cba0741f-chunk-011<SEP>gd_6c21fd9b0458af7ce4556f60-chunk-005<SEP>gd_6f7cec99215f9ff2f03605c0-chunk-007<SEP>gd_a778054a479869a17bf96165-chunk-006<SEP>gd_abfe41334169db7a9fdcf906-chunk-005<SEP>gd_8fe15d1e1f4d6d874c6ce1bb-chunk-006<SEP>gd_dc18c861c82269cf5cc7e98b-chunk-005<SEP>gd_c1eda59785faf7ce5addae75-chunk-012<SEP>gd_c1eda59785faf7ce5addae75-chunk-017<SEP>gd_90b1cf67dee4bd6ee78afcbc-chunk-000<SEP>gd_a32a13229e6ff834fda4827a-chunk-000<SEP>gd_d7608d7e6dac4d722fb90de0-chunk-000<SEP>gd_f760bf8d8f76b485077edce0-chunk-006<SEP>gd_6d917ace55e200531e8fda7e-chunk-000<SEP>gd_9892f4cb159a2427a2e6b59b-chunk-007<SEP>gd_7d6b408bcde324e8e7717ce7-chunk-003<SEP>gd_edb89a81cdf24ecbe37d430f-chunk-001<SEP>gd_edb89a81cdf24ecbe37d430f-chunk-002<SEP>gd_5f2a2450d3a44b4adf954c06-chunk-010<SEP>gd_235360b752f8c3285228290d-chunk-000<SEP>gd_235360b752f8c3285228290d-chunk-001<SEP>gd_c9d98795dee9f031d425f4ea-chunk-002<SEP>gd_87131f4a34d2f70295f0cf04-chunk-000<SEP>gd_87131f4a34d2f70295f0cf04-chunk-005<SEP>gd_c3146fb15d0855ad8bbb5a02-chunk-002<SEP>gd_605e0c1f4fd4724182870b9e-chunk-008<SEP>gd_59c785375f34b0507b64485d-chunk-005<SEP>gd_9809d37cd527c2958295b062-chunk-006",
+          "file_path": "gd_5e5a08212de37032e6d7f6ef<SEP>gd_fffeab476928134deffcd852<SEP>gd_024849f4b94ca9c289fa892b<SEP>gd_15d187637520cc4b1b5726e1<SEP>gd_1bb89f0881d846204f69d052<SEP>gd_47fbbf612af3204e5ab5ce5e<SEP>gd_524c287c9d24eb09b58604a0<SEP>gd_22f503d26e4d8faf8274b928<SEP>gd_81ae300a5441b910da999070<SEP>gd_9393f5107171bfdba2765a73<SEP>gd_7259ae8fb5c14b7e4a7171d6<SEP>gd_111b6b23b20d3f5268f61598<SEP>gd_2c7c5bbaddd81a82246a197c<SEP>gd_4539e662ea7b31c661ff01a2<SEP>gd_57fa3f9a3c4f8de50eeb4882<SEP>gd_e3f684c5851e821f92345403<SEP>gd_9c57682be96afbe8594a7d56<SEP>gd_bf4f57347219fef2c5475db9<SEP>gd_5aad825cc360da16fcbbd647<SEP>gd_62e43cdf25037819011bad9a<SEP>gd_81bbd7bc18b73e6c09bfbc28<SEP>gd_aff22cfcaff5e7bbcca05126<SEP>gd_928c6555503d6e90d241cf1e<SEP>gd_950767c5c3a3596311dbbda5<SEP>gd_3375b711cc2faff9ba670010<SEP>gd_3e259415f45afa9ddd480b31<SEP>gd_a317deb61e243cd08d76cca3<SEP>gd_a54f5bf886b30a7e8324893d<SEP>gd_5dfaf70730c3fda27c1e436f<SEP>gd_cd33756bd319ab7b66758a0d<SEP>gd_d3046abbff56769a90cbeea0<SEP>gd_d9290ed0e1780f3bb8b02f05<SEP>gd_949d1d180af15cb12944c20a<SEP>gd_dd13d18c16228c212a2cf778<SEP>gd_de4f1cbf6a8bd8e3c5b1cd8f<SEP>gd_e1dfd752f2d87263a2213397<SEP>gd_e69f04ea7a8a4ea4c0ce26c7<SEP>gd_f73c0f4e98a454788b21abf4<SEP>gd_c7c952be7d593a9e41580e4f<SEP>gd_cda981ad247a4046cb23c1c3<SEP>gd_d6922837935a40c18c58a550<SEP>gd_d981b5f28d512ce3174a36d3<SEP>gd_0fe1906994e83df5c0f7c8c5<SEP>gd_e574a81616d0929a802ea105<SEP>gd_1c043696010f2091f1290bdc<SEP>gd_1d8159452be5bb0ad3f50cf3<SEP>gd_1fd95d7bd6ed45e81b456fce<SEP>gd_21ad29dbc91188b19766598c<SEP>gd_28b7a01469df284bcf16e7da<SEP>gd_43c58eec07c53d9d42856441<SEP>gd_48aa7a1fedc2078897c63322<SEP>gd_4c9a84c75fac927c1308ee49<SEP>gd_1db8851ad56bec3e841dbf86<SEP>gd_4d77f67e4d236b7029d83bb8<SEP>gd_4082d9286441e5d1b2ab3d21<SEP>gd_5cee12338f5781cf3fc86de2<SEP>gd_602ec044e3ecdf3d2d224081<SEP>gd_777f00c3ae66d359daa39f22<SEP>gd_7c7a216c8745503a287b7942<SEP>gd_827de18357c3b1abbf9c7ae7<SEP>gd_c513cd5cd47320b3679f9406<SEP>gd_885984971dbc1d1315ea4765<SEP>gd_9021ddbc4daccae39880d4e2<SEP>gd_01660f9354b0e95cd03ed553<SEP>gd_995edd43bb903497883c63ce<SEP>gd_58cf6619fe8ac95ceb1217f7<SEP>gd_bd97c14fa0476835df73618f<SEP>gd_93344fa8750f80b4032fe722<SEP>gd_ca4e8d2f61b3ea64d1188e6c<SEP>gd_c18e9e2084c3edbd8ff46b65<SEP>gd_db887d3a74cf8d8893e4a1e8<SEP>gd_dd626eb5f79a12db1cce58c5<SEP>gd_de4b319e76c4f0d48550e144<SEP>gd_de849f9697aac7fb10faa6dd<SEP>gd_e2a836034c2fbbd00b9cc82a<SEP>...truncated...(KEEP Old)",
+          "created_at": 1793645884
+        },
+        {
+          "entity_name": "2010",
+          "entity_type": "year",
+          "description": "The starting year of the 14-year period.<SEP>A year in which the company focused on ease-of-use.",
+          "source_id": "gd_a6fbf8f37d2f0906d276118e-chunk-002<SEP>gd_5e67031298ebee4dd12bd5c3-chunk-002",
+          "file_path": "gd_a6fbf8f37d2f0906d276118e<SEP>gd_5e67031298ebee4dd12bd5c3",
+          "created_at": 1793530482
+        },
+        {
+          "entity_name": "Renewals",
+          "entity_type": "concept",
+          "description": "Renewals refer to the process of extending or continuing a customer's subscription or contract for a product or service. This process involves sending renewal invoices to customers in a timely manner, ideally early, to ensure that payments are made on time. In fact, getting all renewals paid on time can have a significant impact on a company's cash flow, potentially pulling it forward by 20% or more.\n\nRenewals are a crucial aspect of a business's revenue stream, as they generate recurring revenue from existing customers. The process of extending or continuing a contract or agreement is essential for maintaining customer relationships and ensuring continued revenue. Periodic review and update of software contracts are also an essential part of the renewal process.\n\nInterestingly, renewals account for a significant portion of total SaaS spend, with 87% of total spend attributed to this process. Furthermore, renewals present a key opportunity to reduce costs by right-sizing licenses, renegotiating terms, eliminating redundant tools, or walking away entirely. This process is essential for retaining customers by offering them the opportunity to continue using a product or service.\n\nIn essence, the process of renewing a service or contract is a critical aspect of a company's operations, and it requires careful management to ensure that customer relationships are maintained and revenue is generated.<SEP>Process of extending customer contracts and agreements.<SEP>The process of retaining existing customers.",
+          "source_id": "gd_81cb113e66af3876fd2fc794-chunk-001<SEP>gd_398d2e70e82899806f0a81c2-chunk-001<SEP>gd_cb58fda6b14417ccf4f1d9f9-chunk-001<SEP>gd_d981b5f28d512ce3174a36d3-chunk-002<SEP>gd_de5623a10d1c9531112cfe54-chunk-000<SEP>gd_4082d9286441e5d1b2ab3d21-chunk-003<SEP>gd_7c7a216c8745503a287b7942-chunk-000<SEP>gd_995edd43bb903497883c63ce-chunk-000<SEP>gd_99d17e0b73db2cd5429d2a76-chunk-000<SEP>gd_062fdba1eb0375bef6607116-chunk-001<SEP>gd_bb6777cec9990f70dd72539b-chunk-002<SEP>gd_bb6777cec9990f70dd72539b-chunk-003<SEP>gd_bb6777cec9990f70dd72539b-chunk-004<SEP>gd_ea79d7a4834b712d3b143587-chunk-001<SEP>gd_fd52d37dd59bde552d67922f-chunk-002<SEP>gd_89e828fc3de2117ed06de0b1-chunk-001<SEP>gd_d282f245a6a7c1b2c786a46d-chunk-000<SEP>gd_d93cd85b4e41b272f86ed3de-chunk-001<SEP>gd_d93cd85b4e41b272f86ed3de-chunk-002<SEP>gd_ec4952faf291c054baf7a979-chunk-001",
+          "file_path": "gd_81cb113e66af3876fd2fc794<SEP>gd_398d2e70e82899806f0a81c2<SEP>gd_cb58fda6b14417ccf4f1d9f9<SEP>gd_de5623a10d1c9531112cfe54<SEP>gd_4082d9286441e5d1b2ab3d21<SEP>gd_7c7a216c8745503a287b7942<SEP>gd_99d17e0b73db2cd5429d2a76<SEP>gd_062fdba1eb0375bef6607116<SEP>gd_bb6777cec9990f70dd72539b<SEP>gd_ea79d7a4834b712d3b143587<SEP>gd_fd52d37dd59bde552d67922f<SEP>gd_89e828fc3de2117ed06de0b1<SEP>gd_d282f245a6a7c1b2c786a46d<SEP>gd_d93cd85b4e41b272f86ed3de<SEP>gd_ec4952faf291c054baf7a979",
+          "created_at": 1793620971
+        },
+        {
+          "entity_name": "13 months",
+          "entity_type": "concept",
+          "description": "A specific period of time.",
+          "source_id": "gd_019a6f50cee0326c5feb06b7-chunk-000",
+          "file_path": "gd_019a6f50cee0326c5feb06b7",
+          "created_at": 1793491961
+        },
+        {
+          "entity_name": "VP Sales",
+          "entity_type": "person",
+          "description": "**VP Sales**\n\nThe **VP Sales** is a high-level executive position responsible for leading the sales team and driving revenue growth within a company. This role involves developing and implementing sales strategies, as well as managing and hiring sales representatives to achieve business objectives. The Vice President of Sales is a key member of the executive team, often reporting directly to the CEO, and is responsible for challenging and advising the CEO on sales-related matters.\n\nIn this capacity, the VP Sales is responsible for leading the sales team, which may include sales representatives, account managers, and other support staff. The role requires strong leadership and management skills, as well as the ability to develop and execute effective sales strategies that drive revenue growth. The VP Sales must also be able to analyze sales data and market trends to identify opportunities and challenges, and make informed decisions to drive business success.\n\nThe VP Sales position is often found in companies that rely heavily on sales revenue, such as software as a service (SaaS) companies, where the role is critical to driving growth and expansion. In these organizations, the VP Sales is responsible for leading the sales efforts, developing sales strategies, and managing the sales team to achieve business objectives.\n\nTo be effective in this role, the VP Sales should have a deep understanding of the product and its features, as well as the ability to communicate effectively with the sales team and other stakeholders. This requires a strong leadership and management style, as well as the ability to develop and execute effective sales strategies that drive revenue growth.\n\nThe VP Sales is also expected to have expertise in sales, sales processes, and building and scaling a sales team. They are a high-ranking sales executive responsible for leading and managing sales teams to achieve revenue targets. Overall, the **VP Sales** is a critical role in any organization that relies on sales revenue, requiring strong leadership, management, and strategic skills to drive business success.\n\nNote: The output is a comprehensive summary of the provided descriptions, integrating all key information and presenting it in a clear and concise manner. The length of the output is within the specified limit of 600 tokens.",
+          "source_id": "gd_b8035aab92e5483954ad2ddd-chunk-000<SEP>gd_445d6e51f636df8635eac7d1-chunk-001<SEP>gd_424f107ed70013b1cb56204d-chunk-000<SEP>gd_bffb70d6ba96de0c690fcf5c-chunk-001<SEP>gd_bffb70d6ba96de0c690fcf5c-chunk-002<SEP>gd_0b8f922e50984dc168e44b3d-chunk-003<SEP>gd_28afe47b9b878d0011571004-chunk-000<SEP>gd_e1c7894260cde2622274f477-chunk-000<SEP>gd_56731aa28abf16226001a40e-chunk-000<SEP>gd_e5e2c2f0b32f6a1f5001b325-chunk-004<SEP>gd_25e0d1be23b4cec665bf128f-chunk-000<SEP>gd_25e0d1be23b4cec665bf128f-chunk-004<SEP>gd_0175eae7258669776836e7c6-chunk-002<SEP>gd_0175eae7258669776836e7c6-chunk-003<SEP>gd_0175eae7258669776836e7c6-chunk-005<SEP>gd_35e0f840f0e610e78f36a169-chunk-002<SEP>gd_f8fb7772addf6fc5de4ce4d2-chunk-001<SEP>gd_f8fb7772addf6fc5de4ce4d2-chunk-002<SEP>gd_f8fb7772addf6fc5de4ce4d2-chunk-003<SEP>gd_f8fb7772addf6fc5de4ce4d2-chunk-004<SEP>gd_f8fb7772addf6fc5de4ce4d2-chunk-005<SEP>gd_fb163a389ea88c48ce1a606e-chunk-001<SEP>gd_fb163a389ea88c48ce1a606e-chunk-002<SEP>gd_fb163a389ea88c48ce1a606e-chunk-003<SEP>gd_fb163a389ea88c48ce1a606e-chunk-004<SEP>gd_fb163a389ea88c48ce1a606e-chunk-005<SEP>gd_ea79d7a4834b712d3b143587-chunk-000<SEP>gd_9120b3a4129b207cf4bc200e-chunk-001<SEP>gd_9120b3a4129b207cf4bc200e-chunk-002<SEP>gd_9120b3a4129b207cf4bc200e-chunk-006<SEP>gd_9120b3a4129b207cf4bc200e-chunk-007<SEP>gd_b8eb6e3ba01a5f6fbefb7bb3-chunk-003<SEP>gd_8089ccf1cf2e3da0d6897103-chunk-002<SEP>gd_88fa2a01316805b041df7e91-chunk-001<SEP>gd_7a79bfcadc266e750d3d31b6-chunk-000<SEP>gd_7a79bfcadc266e750d3d31b6-chunk-001<SEP>gd_7a79bfcadc266e750d3d31b6-chunk-002<SEP>gd_7a79bfcadc266e750d3d31b6-chunk-004<SEP>gd_3e8732484211557041408d86-chunk-001<SEP>gd_3e8732484211557041408d86-chunk-007<SEP>gd_547c5075e66aa644c0ab2a4f-chunk-006<SEP>gd_35814a36a9b1f3b837986159-chunk-000<SEP>gd_35814a36a9b1f3b837986159-chunk-001<SEP>gd_35814a36a9b1f3b837986159-chunk-002<SEP>gd_35814a36a9b1f3b837986159-chunk-003<SEP>gd_35814a36a9b1f3b837986159-chunk-004<SEP>gd_35814a36a9b1f3b837986159-chunk-005<SEP>gd_35814a36a9b1f3b837986159-chunk-006<SEP>gd_35814a36a9b1f3b837986159-chunk-008<SEP>gd_35814a36a9b1f3b837986159-chunk-009<SEP>gd_35814a36a9b1f3b837986159-chunk-010<SEP>gd_35814a36a9b1f3b837986159-chunk-011<SEP>gd_35814a36a9b1f3b837986159-chunk-012",
+          "file_path": "gd_b8035aab92e5483954ad2ddd<SEP>gd_445d6e51f636df8635eac7d1<SEP>gd_424f107ed70013b1cb56204d<SEP>gd_bffb70d6ba96de0c690fcf5c<SEP>gd_0b8f922e50984dc168e44b3d<SEP>gd_28afe47b9b878d0011571004<SEP>gd_e1c7894260cde2622274f477<SEP>gd_56731aa28abf16226001a40e<SEP>gd_e5e2c2f0b32f6a1f5001b325<SEP>gd_25e0d1be23b4cec665bf128f<SEP>gd_0175eae7258669776836e7c6<SEP>gd_35e0f840f0e610e78f36a169<SEP>gd_f8fb7772addf6fc5de4ce4d2<SEP>gd_fb163a389ea88c48ce1a606e<SEP>gd_ea79d7a4834b712d3b143587<SEP>gd_9120b3a4129b207cf4bc200e<SEP>gd_b8eb6e3ba01a5f6fbefb7bb3<SEP>gd_8089ccf1cf2e3da0d6897103<SEP>gd_88fa2a01316805b041df7e91<SEP>gd_7a79bfcadc266e750d3d31b6<SEP>gd_3e8732484211557041408d86<SEP>gd_547c5075e66aa644c0ab2a4f<SEP>gd_35814a36a9b1f3b837986159",
+          "created_at": 1793619556
+        },
+        {
+          "entity_name": "23 years",
+          "entity_type": "concept",
+          "description": "The time it took Model N to reach $200m ARR.",
+          "source_id": "gd_928c6555503d6e90d241cf1e-chunk-002",
+          "file_path": "gd_928c6555503d6e90d241cf1e",
+          "created_at": 1793514248
+        },
+        {
+          "entity_name": "Initial Scale",
+          "entity_type": "concept",
+          "description": "Initial Scale is a critical stage in a company's growth, marking a significant milestone where it has reached a certain level of maturity and is able to sustain its growth. This phase typically occurs around $10M in Annual Recurring Revenue (ARR), and it is characterized by rapid growth and expansion. At this stage, the company has achieved a certain level of revenue and customer acquisition, and is now focused on scaling and investing in growth.\n\nDuring Initial Scale, a company begins to experience significant growth, and its operations are expanding. It is a phase where a SaaS company has achieved significant growth and is preparing for further expansion. The company's growth becomes more sustainable and stable, allowing for more investments and growth. Initial Scale is a phase in a company's growth where it has achieved significant revenue and is expanding its operations.\n\nIt is worth noting that the exact definition and characteristics of Initial Scale may vary depending on the source and context. However, in general, it refers to the stage in a company's growth where it has reached a certain level of maturity and is able to sustain its growth, typically around $10M in ARR.\n\nIn this phase, a company is able to sustain itself without external funding, and its growth becomes self-sustaining, allowing it to drive and influence its own growth. This stage is characterized by the company's ability to expand its operations, increase its revenue, and hire more people to support its growth. The company has achieved significant growth and has a sufficient growth rate to sustain itself, making it a critical stage in its development.\n\nInitial Scale is often preceded by Initial Traction, where a company has achieved a certain level of success and is now looking to expand further. This phase is a natural progression from Initial Traction, where the company has a brand, a fully baked team, a robust product, and a self-generating stream of new leads and new business.<SEP>Initial Scale is a concept where a company reaches a certain level of ARR and becomes a real line of business.",
+          "source_id": "gd_0327fd5c4fc1590df1481cc3-chunk-000<SEP>gd_0011ae744ca49f3de80ffa70-chunk-000<SEP>gd_74fa8567086173e6d517e67c-chunk-003<SEP>gd_9bef8d767947839d50a36423-chunk-001<SEP>gd_0ebe200504c2767b18fadc12-chunk-002<SEP>gd_676ceb1d508acba0f3613cd1-chunk-000<SEP>gd_a678b9c53d6c304ce6752527-chunk-000<SEP>gd_a4c78be1e3b24c0947e39618-chunk-004<SEP>gd_4b4bf04e76ce09618e708a2a-chunk-001<SEP>gd_b0a33090385448bab0fdb263-chunk-001<SEP>gd_b93fa625fb27e1273a2d301d-chunk-000<SEP>gd_1475e3e6808bcf1fde45f610-chunk-000<SEP>gd_b59420b8a4157ccee2549a6f-chunk-005<SEP>gd_d94d3f9d2ce04cefe79715db-chunk-000<SEP>gd_d94d3f9d2ce04cefe79715db-chunk-002<SEP>gd_d94d3f9d2ce04cefe79715db-chunk-003<SEP>gd_d94d3f9d2ce04cefe79715db-chunk-005<SEP>gd_d94d3f9d2ce04cefe79715db-chunk-006<SEP>gd_8c9e1465c803d5cab436c220-chunk-003",
+          "file_path": "gd_0327fd5c4fc1590df1481cc3<SEP>gd_0011ae744ca49f3de80ffa70<SEP>gd_74fa8567086173e6d517e67c<SEP>gd_9bef8d767947839d50a36423<SEP>gd_0ebe200504c2767b18fadc12<SEP>gd_676ceb1d508acba0f3613cd1<SEP>gd_a678b9c53d6c304ce6752527<SEP>gd_a4c78be1e3b24c0947e39618<SEP>gd_4b4bf04e76ce09618e708a2a<SEP>gd_b0a33090385448bab0fdb263<SEP>gd_b93fa625fb27e1273a2d301d<SEP>gd_1475e3e6808bcf1fde45f610<SEP>gd_b59420b8a4157ccee2549a6f<SEP>gd_d94d3f9d2ce04cefe79715db<SEP>gd_8c9e1465c803d5cab436c220",
+          "created_at": 1793586835
+        },
+        {
+          "entity_name": "5 Years",
+          "entity_type": "concept",
+          "description": "A specific period of time, mentioned as a milestone in the speaker's experience with running a successful startup.",
+          "source_id": "gd_5426676fd0b6371f544f6fde-chunk-001",
+          "file_path": "gd_5426676fd0b6371f544f6fde",
+          "created_at": 1793494694
+        },
+        {
+          "entity_name": "SaaS company",
+          "entity_type": "organization",
+          "description": "**SaaS Company: A Comprehensive Overview**\n\nA SaaS company is a software as a service provider that offers customers access to software applications over the internet. This delivery model is a type of software delivery model in which software is licensed on a subscription basis. In essence, a SaaS company provides software as a service, allowing users to access and utilize software applications without the need for local installation or maintenance.\n\nSaaS companies can vary in size and revenue, with some generating up to $1 million in annual recurring revenue (ARR) and others exceeding $200 million in annual revenue. These companies specialize in providing various digital solutions, including software applications, and often have a significant presence in the market.\n\nThe key characteristics of a SaaS company include its ability to provide software applications over the internet, its subscription-based licensing model, and its focus on delivering digital solutions to customers. By offering software as a service, SaaS companies have become a popular choice for businesses and individuals looking to access software applications without the need for upfront costs or maintenance responsibilities.\n\nIt's worth noting that SaaS companies can provide software solutions for a long period of time, typically 30+ years, as seen in some cases. Additionally, these companies can be categorized as businesses that operate in the Software as a Service (SaaS) industry, providing software solutions to customers on a subscription basis.\n\nIn terms of growth and challenges, some SaaS companies are growing quickly but struggle with sales and marketing alignment. However, many SaaS companies are able to provide scalable and durable solutions to their customers, making them a popular choice for businesses and individuals.\n\nOverall, a SaaS company is a business that provides software over the internet, offering cloud-based software solutions to customers. They are a type of software-as-a-service provider that has become increasingly popular in recent years due to their flexibility and cost-effectiveness.",
+          "source_id": "gd_5d24f3c1d80904b037e72e76-chunk-000<SEP>gd_3da3607bda34d36f64e5ae00-chunk-000<SEP>gd_24f77dbf4b59912a1115a97e-chunk-000<SEP>gd_303dd3e2c7fc3438092c5462-chunk-000<SEP>gd_cd24c01cc5dae9b805dfd724-chunk-001<SEP>gd_0b8f922e50984dc168e44b3d-chunk-003<SEP>gd_545a33a881beeb183329d2d6-chunk-002<SEP>gd_676ceb1d508acba0f3613cd1-chunk-000<SEP>gd_6b112dbc69c055374b7b44a8-chunk-001<SEP>gd_6eb39dfa97bc0c5b2a621007-chunk-000<SEP>gd_750070fac576fb48120f9904-chunk-000<SEP>gd_d981b5f28d512ce3174a36d3-chunk-003<SEP>gd_346b6035bf8be7b5b8fd6cff-chunk-000<SEP>gd_6ef8fec5c9a0aa516c6819a0-chunk-000<SEP>gd_fd38abac1ff711f478d75bee-chunk-003<SEP>gd_2a49878130a3a94891f1c22f-chunk-001<SEP>gd_5fcd96075c9c8c56ec80e1ba-chunk-002<SEP>gd_0175eae7258669776836e7c6-chunk-000<SEP>gd_45d625247214f2e5d3dc11aa-chunk-000<SEP>gd_7085506accefd59fc219c446-chunk-000<SEP>gd_a2d7ef76ca4b7af6d6f7cf6d-chunk-004<SEP>gd_9120b3a4129b207cf4bc200e-chunk-001<SEP>gd_9120b3a4129b207cf4bc200e-chunk-002<SEP>gd_9120b3a4129b207cf4bc200e-chunk-005<SEP>gd_e68aacea13804104b99303da-chunk-003",
+          "file_path": "gd_5d24f3c1d80904b037e72e76<SEP>gd_3da3607bda34d36f64e5ae00<SEP>gd_24f77dbf4b59912a1115a97e<SEP>gd_303dd3e2c7fc3438092c5462<SEP>gd_cd24c01cc5dae9b805dfd724<SEP>gd_0b8f922e50984dc168e44b3d<SEP>gd_545a33a881beeb183329d2d6<SEP>gd_676ceb1d508acba0f3613cd1<SEP>gd_6b112dbc69c055374b7b44a8<SEP>gd_6eb39dfa97bc0c5b2a621007<SEP>gd_750070fac576fb48120f9904<SEP>gd_d981b5f28d512ce3174a36d3<SEP>gd_346b6035bf8be7b5b8fd6cff<SEP>gd_6ef8fec5c9a0aa516c6819a0<SEP>gd_fd38abac1ff711f478d75bee<SEP>gd_2a49878130a3a94891f1c22f<SEP>gd_5fcd96075c9c8c56ec80e1ba<SEP>gd_0175eae7258669776836e7c6<SEP>gd_45d625247214f2e5d3dc11aa<SEP>gd_7085506accefd59fc219c446<SEP>gd_a2d7ef76ca4b7af6d6f7cf6d<SEP>gd_9120b3a4129b207cf4bc200e",
+          "created_at": 1793595143
+        },
+        {
+          "entity_name": "10+ Year Customer",
+          "entity_type": "concept",
+          "description": "A customer who has been using a SaaS product for 10 or more years.",
+          "source_id": "gd_aff22cfcaff5e7bbcca05126-chunk-000",
+          "file_path": "gd_aff22cfcaff5e7bbcca05126",
+          "created_at": 1793512959
+        }
+      ],
+      "relationships": [
+        {
+          "src_id": "10+ Year Customer",
+          "tgt_id": "SaaStr",
+          "description": "Customers who have been using a SaaS product for 10 or more years are related to the SaaStr community.",
+          "keywords": "related_to",
+          "weight": 1.0,
+          "source_id": "gd_aff22cfcaff5e7bbcca05126-chunk-000",
+          "file_path": "gd_aff22cfcaff5e7bbcca05126",
+          "created_at": 1793512963
+        },
+        {
+          "src_id": "SaaStr",
+          "tgt_id": "Sales Magician",
+          "description": "relationship_description: A Sales Magician is a game-changing sales representative who can significantly impact a company's sales performance, and SaaStr is a community and platform that provides resources and support for SaaS founders and professionals.",
+          "keywords": "SaaS,Sales Representative,relationship_keywords: Game-changer",
+          "weight": 1.0,
+          "source_id": "gd_bc117af2a43394941320b118-chunk-000",
+          "file_path": "gd_bc117af2a43394941320b118",
+          "created_at": 1793584082
+        },
+        {
+          "src_id": "Companies",
+          "tgt_id": "Mature age",
+          "description": "Companies are going public older than ever (average 16 years vs. 12 in 2015)",
+          "keywords": "average",
+          "weight": 1.0,
+          "source_id": "gd_0488dbe0d1821eacec1cd206-chunk-006",
+          "file_path": "gd_0488dbe0d1821eacec1cd206",
+          "created_at": 1793643368
+        },
+        {
+          "src_id": "Change Management",
+          "tgt_id": "Sales Engineers (SEs)",
+          "description": "Sales Engineers handle change management by explaining complex AI systems and technical integration to customers.",
+          "keywords": "Handles,Manages",
+          "weight": 1.0,
+          "source_id": "gd_547c5075e66aa644c0ab2a4f-chunk-007",
+          "file_path": "gd_547c5075e66aa644c0ab2a4f",
+          "created_at": 1793608663
+        },
+        {
+          "src_id": "13 months",
+          "tgt_id": "I",
+          "description": "The speaker took 13 months.",
+          "keywords": "took",
+          "weight": 1.0,
+          "source_id": "gd_019a6f50cee0326c5feb06b7-chunk-000",
+          "file_path": "gd_019a6f50cee0326c5feb06b7",
+          "created_at": 1793491961
+        },
+        {
+          "src_id": "SaaS",
+          "tgt_id": "Success",
+          "description": "Success in SaaS requires companies to adapt to changes in the market and take advantage of growth opportunities.",
+          "keywords": "Keywords: growth,change,opportunity",
+          "weight": 1.0,
+          "source_id": "gd_e2a836034c2fbbd00b9cc82a-chunk-003",
+          "file_path": "gd_e2a836034c2fbbd00b9cc82a",
+          "created_at": 1793556999
+        },
+        {
+          "src_id": "5 Years",
+          "tgt_id": "Start-up",
+          "description": "The startup has been successful for 5 years.",
+          "keywords": "success",
+          "weight": 1.0,
+          "source_id": "gd_5426676fd0b6371f544f6fde-chunk-001",
+          "file_path": "gd_5426676fd0b6371f544f6fde",
+          "created_at": 1793494697
+        },
+        {
+          "src_id": "Market",
+          "tgt_id": "SaaS",
+          "description": "Software has never traded at a discount to the S&P 500 in the modern era. That is either a historic buying opportunity or a sign that the market has correctly identified a structural break in the model.<SEP>The market for SaaS can grow and change over time, providing opportunities for companies to take advantage of these changes.",
+          "keywords": "Discount,Keywords: growth,change,opportunity",
+          "weight": 3.0,
+          "source_id": "gd_1db8851ad56bec3e841dbf86-chunk-003<SEP>gd_e2a836034c2fbbd00b9cc82a-chunk-003",
+          "file_path": "gd_1db8851ad56bec3e841dbf86<SEP>gd_e2a836034c2fbbd00b9cc82a",
+          "created_at": 1793556999
+        },
+        {
+          "src_id": "12-24 Months Ago",
+          "tgt_id": "Okta",
+          "description": "Okta split its sales team to manage SMB accounts, one team focusing on new business and the other on upsell, a strategy that was not in place 12-24 months ago.",
+          "keywords": "One on New Business and One on Upsell,Split Sales Team Managing SMB Accounts Into 2 Teams",
+          "weight": 1.0,
+          "source_id": "gd_f006f6ca7bfb307626d61034-chunk-001",
+          "file_path": "gd_f006f6ca7bfb307626d61034",
+          "created_at": 1793557693
+        },
+        {
+          "src_id": "Platform shift",
+          "tgt_id": "SaaS world",
+          "description": "The platform shift in the SaaS world is a significant change in the underlying technology or business model of the industry.",
+          "keywords": "The SaaS world is experiencing the most significant platform shift since the move to cloud.",
+          "weight": 1.0,
+          "source_id": "gd_e68aacea13804104b99303da-chunk-009",
+          "file_path": "gd_e68aacea13804104b99303da",
+          "created_at": 1793639688
+        },
+        {
+          "src_id": "11.7 years",
+          "tgt_id": "Carta",
+          "description": "Carta's data shows that it takes an average of 11.7 years to reach a $1B+ exit.",
+          "keywords": "Average Time to Exit",
+          "weight": 1.0,
+          "source_id": "gd_896c0b8d98209b19593f7e43-chunk-001",
+          "file_path": "gd_896c0b8d98209b19593f7e43",
+          "created_at": 1793501970
+        },
+        {
+          "src_id": "Enterprise",
+          "tgt_id": "Market",
+          "description": "The market for SaaS can expand and grow, providing opportunities for companies to enter the enterprise market.<SEP>Enterprise's market is shifting, and it needs to adapt.",
+          "keywords": "Keywords: expansion,growth,shifting",
+          "weight": 3.0,
+          "source_id": "gd_e2a836034c2fbbd00b9cc82a-chunk-003<SEP>gd_87131f4a34d2f70295f0cf04-chunk-005",
+          "file_path": "gd_e2a836034c2fbbd00b9cc82a<SEP>gd_87131f4a34d2f70295f0cf04",
+          "created_at": 1793641661
+        },
+        {
+          "src_id": "5 Years",
+          "tgt_id": "Speaker",
+          "description": "The speaker has experience running a successful startup for 5 years.",
+          "keywords": "experience",
+          "weight": 1.0,
+          "source_id": "gd_5426676fd0b6371f544f6fde-chunk-001",
+          "file_path": "gd_5426676fd0b6371f544f6fde",
+          "created_at": 1793494697
+        },
+        {
+          "src_id": "Renewals",
+          "tgt_id": "SaaS",
+          "description": "relationship_description: Renewals are a key source of profits for SaaS companies, with minimal marketing and sales costs.<SEP>Customers are experiencing downgrades during SaaS renewals.",
+          "keywords": "Downgrade,marketing,relationship_keywords: profits,sales",
+          "weight": 2.0,
+          "source_id": "gd_d981b5f28d512ce3174a36d3-chunk-002<SEP>gd_995edd43bb903497883c63ce-chunk-000",
+          "file_path": "gd_d981b5f28d512ce3174a36d3<SEP>gd_995edd43bb903497883c63ce",
+          "created_at": 1793533951
+        },
+        {
+          "src_id": "5-10 years",
+          "tgt_id": "deal",
+          "description": "The lifetime value of a customer is 5-10 years.",
+          "keywords": "Relationship_keywords: migration,process,templates",
+          "weight": 1.0,
+          "source_id": "gd_b80d7d772933d7964f9d8df7-chunk-000",
+          "file_path": "gd_b80d7d772933d7964f9d8df7",
+          "created_at": 1793523256
+        },
+        {
+          "src_id": "SaaS",
+          "tgt_id": "VP Sales",
+          "description": "A good VP can improve things quickly in SaaS<SEP>The VP Sales is responsible for leading the sales team at the SaaS company.",
+          "keywords": "Hires,grow,relationship_keywords: improve",
+          "weight": 2.0,
+          "source_id": "gd_28afe47b9b878d0011571004-chunk-000<SEP>gd_7a79bfcadc266e750d3d31b6-chunk-001",
+          "file_path": "gd_28afe47b9b878d0011571004<SEP>gd_7a79bfcadc266e750d3d31b6",
+          "created_at": 1793599398
+        },
+        {
+          "src_id": "4-5 years",
+          "tgt_id": "Burnout",
+          "description": "relationship_description: A prolonged period of time, often associated with burnout.",
+          "keywords": "burnout,period,relationship_keywords: prolonged,time",
+          "weight": 1.0,
+          "source_id": "gd_8973b57e1db9606f712d65c5-chunk-000",
+          "file_path": "gd_8973b57e1db9606f712d65c5",
+          "created_at": 1793554580
+        },
+        {
+          "src_id": "Initial Scale",
+          "tgt_id": "SaaS company",
+          "description": "A software-as-a-service (SaaS) company that provides software solutions to customers on a subscription basis.",
+          "keywords": "Keywords: revenue,customer acquisition,scaling",
+          "weight": 1.0,
+          "source_id": "gd_676ceb1d508acba0f3613cd1-chunk-000",
+          "file_path": "gd_676ceb1d508acba0f3613cd1",
+          "created_at": 1793519325
+        },
+        {
+          "src_id": "2010",
+          "tgt_id": "Global Edition",
+          "description": "The Global Edition feature focused on ease-of-use in 2010.",
+          "keywords": "Focused on ease-of-use in",
+          "weight": 1.0,
+          "source_id": "gd_5e67031298ebee4dd12bd5c3-chunk-002",
+          "file_path": "gd_5e67031298ebee4dd12bd5c3",
+          "created_at": 1793530482
+        },
+        {
+          "src_id": "AI",
+          "tgt_id": "Transactional Sales",
+          "description": "Transactional sales will be most dramatically changed by AI.",
+          "keywords": "Change",
+          "weight": 1.0,
+          "source_id": "gd_97843612d08bfd01e9f83879-chunk-009",
+          "file_path": "gd_97843612d08bfd01e9f83879",
+          "created_at": 1793605105
+        },
+        {
+          "src_id": "SaaS",
+          "tgt_id": "Years",
+          "description": "relationship_description: The SaaS market has undergone significant changes over the years, with many new products and categories emerging.",
+          "keywords": "relationship_keywords: market,trend",
+          "weight": 1.0,
+          "source_id": "gd_25ceb76e34b0404af1e8edec-chunk-001",
+          "file_path": "gd_25ceb76e34b0404af1e8edec",
+          "created_at": 1793495441
+        },
+        {
+          "src_id": "SaaS sales",
+          "tgt_id": "VP of Sales",
+          "description": "The VP of Sales is responsible for overseeing SaaS sales, which can be affected by their performance.",
+          "keywords": "affects,related to",
+          "weight": 1.0,
+          "source_id": "gd_5b4dcd8b8dcce699f8e93c2f-chunk-000",
+          "file_path": "gd_5b4dcd8b8dcce699f8e93c2f",
+          "created_at": 1793490570
+        },
+        {
+          "src_id": "New Year's Resolutions",
+          "tgt_id": "SaaS",
+          "description": "AI is remaking many categories in the SaaS industry.<SEP>The SaaS industry has seen significant growth over the years, but many companies are still struggling to improve.",
+          "keywords": "Grow Faster,Remake",
+          "weight": 2.0,
+          "source_id": "gd_111b6b23b20d3f5268f61598-chunk-000<SEP>gd_e4735d696b4fc29d7ad881a1-chunk-000",
+          "file_path": "gd_111b6b23b20d3f5268f61598<SEP>gd_e4735d696b4fc29d7ad881a1",
+          "created_at": 1793562977
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "2022",
+          "description": "2022 saw widespread layoffs in the SaaS industry.<SEP>Market changes and low multiples<SEP>2021's \"growth at any cost\" mentality led to a sharp downturn in 2022 due to inflation and rising rates.",
+          "keywords": "Continues,inflation,rates,sharp downturn,significant changes",
+          "weight": 3.0,
+          "source_id": "gd_7cf3e77240970cd17fe2178d-chunk-000<SEP>gd_9b8c7ee744bab17138f98f95-chunk-000<SEP>gd_0488dbe0d1821eacec1cd206-chunk-005",
+          "file_path": "gd_7cf3e77240970cd17fe2178d<SEP>gd_9b8c7ee744bab17138f98f95<SEP>gd_0488dbe0d1821eacec1cd206",
+          "created_at": 1793643368
+        },
+        {
+          "src_id": "SaaS",
+          "tgt_id": "VP of Sales",
+          "description": "VPs of Sales need to understand how to sell SaaS products.<SEP>The SaaS model relies on the VP of Sales to generate revenue.<SEP>The VP of Sales relies on the SaaS model to generate revenue.<SEP>The VP of Sales manages and sells software as a service.<SEP>The shift to SaaS has led to changes in the role of the VP of Sales.",
+          "keywords": "influenced_by,manages,require,revenue_source,sell,sells",
+          "weight": 5.0,
+          "source_id": "gd_64ee673f1818fe8a43d10d08-chunk-002<SEP>gd_b414f3ae82d1cf67bb537a11-chunk-004<SEP>gd_b2cbf2042a041b1d4ced9070-chunk-003<SEP>gd_9f939dd40cf1e1538750c863-chunk-000",
+          "file_path": "gd_64ee673f1818fe8a43d10d08<SEP>gd_b414f3ae82d1cf67bb537a11<SEP>gd_b2cbf2042a041b1d4ced9070<SEP>gd_9f939dd40cf1e1538750c863",
+          "created_at": 1793562089
+        },
+        {
+          "src_id": "Business Process Change",
+          "tgt_id": "SaaS",
+          "description": "The author mentioned that a true solution to an enterprise-grade problem usually requires business process change.",
+          "keywords": "connection,importance",
+          "weight": 1.0,
+          "source_id": "gd_d3046abbff56769a90cbeea0-chunk-000",
+          "file_path": "gd_d3046abbff56769a90cbeea0",
+          "created_at": 1793520737
+        },
+        {
+          "src_id": "Asana",
+          "tgt_id": "Public SaaS Companies",
+          "description": "Relationship Description: Public SaaS companies like Asana have added sales capabilities to their platforms.",
+          "keywords": "Keywords: added sales",
+          "weight": 1.0,
+          "source_id": "gd_ec3d26e97aaf29783bf1cc74-chunk-001",
+          "file_path": "gd_ec3d26e97aaf29783bf1cc74",
+          "created_at": 1793522853
+        },
+        {
+          "src_id": "Day 1",
+          "tgt_id": "SaaS",
+          "description": "A SaaS product and team will look very different in 3-7 years than it does on Day 1.",
+          "keywords": "change,look different",
+          "weight": 1.0,
+          "source_id": "gd_1e07c5d8a5539b7e896c47b5-chunk-001",
+          "file_path": "gd_1e07c5d8a5539b7e896c47b5",
+          "created_at": 1793494146
+        },
+        {
+          "src_id": "Disruption",
+          "tgt_id": "Platform shift",
+          "description": "The platform shift is the cause of the disruption in the SaaS world.",
+          "keywords": "The platform shift in the SaaS world is a significant change in the underlying technology or business model of the industry.",
+          "weight": 1.0,
+          "source_id": "gd_e68aacea13804104b99303da-chunk-009",
+          "file_path": "gd_e68aacea13804104b99303da",
+          "created_at": 1793639688
+        },
+        {
+          "src_id": "SaaS",
+          "tgt_id": "Sales",
+          "description": "SaaS sales is challenging due to the need to constantly prove one's value and the lack of appreciation for the contributions of sales professionals.<SEP>Relationship keywords: \"rules\", \"make sense\", \"confusing\", \"misleading\", Relationship description: SaaS has rules that can be confusing or misleading at times.",
+          "keywords": "Must have,is tough",
+          "weight": 2.0,
+          "source_id": "gd_b29b631ae0499187a517b9d7-chunk-000<SEP>gd_63ee9e6fa74f4ab2dcfa2c10-chunk-000",
+          "file_path": "gd_b29b631ae0499187a517b9d7<SEP>gd_63ee9e6fa74f4ab2dcfa2c10",
+          "created_at": 1793579682
+        }
+      ],
+      "chunks": [
+        {
+          "reference_id": "1",
+          "content": "A lot has changed in SaaS the past 2-3 years, and so much of the old go-go days sales playbook just doesn’t work today.  So a lot of SaaS companies experiencing slow or even no growth are running what I call the Brutish Sales Playbook.\nWhat do I mean? It’s growing revenue at any cost. I get it. But also, it’s brutal.\nI see a lot of b2b startups moving to multiyear pricing from monthly or annual.  I think this is usually a bad idea.  It hides customer delight issues.  It lengthens sales cycles.   Overall, it just reduces the signal startups need.\n— Brian Halligan (@bhalligan)\nAugust 2, 2024\nSome examples. And you are probably running some of these plays too. Even though just a few years ago — you never would have:\n1. Incessant Price Increases on The Base\nThey just keep going up and up and up. Especially unearned price increases on the existing customer base. Same product, same features, now priced higher. Many have raised prices every year the past 3 years. We used to hesitate here, to keep NPS up. But if growth has slowed to say 20%? Then a price increase is the simplest way to hit the plan. On paper at least.  Raise prices for new customers?  At least they get to choose.  Force annual pricing increases on existing customers?  That’s something quite different.\n2. CRO Constantly Pushing Upsells\nI’ve seen this so many times. Heads of Sales jumping into every top customer call, not to help — but to find some pressure point to ask for even more money. The other day, we did a vendor call with a VP of CS. The CRO joined 20 minutes late — and asked for $50,000 to fix a critical bug. Personally, I no longer",
+          "file_path": "gd_78db847c7c7234a8eb04acc1",
+          "chunk_id": "gd_78db847c7c7234a8eb04acc1-chunk-000"
+        },
+        {
+          "reference_id": "2",
+          "content": "So this is a very specific post, but I’m hoping it helps just a few.\nWe’ve all gone though so much change since March 2020.\nFrom lockdown, to shutdowns, to market explosions, to the Bloom of 1,000+ Unicorns, to Market Crash, to a Semi-Downturn, and back to a few IPOs now again in the back half of 2023.  So, so much change.\nAs part of that, the very way we build SaaS companies has changed multiple times.  We’ve gone from somewhat efficient through 2018 or so, to less efficient into 2020, to incredibly inefficient in late 2020 and 2021, to layoffs seemingly everywhere in 2022, and now to Efficient Growth.  It’s so much change.  To OTEs, to job specs, to how teams are staffed, and more.\nAnd if as part of that, your job stinks, well I get it.  Make a change.  Even now, find a way.\nBut what I’m also seeing is a big unforced error:  folks unhappy at home … taking it out on work.\nThe reality is, most of us truly excel with Happy Home, Happy Work.  If you’re in a pretty good environment 24 hours a day, that’s a special thing, to be cherished.  Almost all of us excel in that environment.\nIf both are bad — Home and Work — we tend to be truly miserable.  I see folks here go into a spiral that sometimes they aren’t able to pull themselves out of.  Go talk to your trusted friends.  Go make some big changes.  Make some new friends, fast.  Because I don’t think most of us can take it if Home and Work are both bad.\nNow if just one is bad, Home or Work, you can still do OK IMHO as long as one is truly good.  Maybe not",
+          "file_path": "gd_7cf3e77240970cd17fe2178d",
+          "chunk_id": "gd_7cf3e77240970cd17fe2178d-chunk-000"
+        },
+        {
+          "reference_id": "3",
+          "content": "Here’s why SaaS sales is tough:\nYou can’t hide — at least not for long\n. At some point, you have to put real points on the board. Everyone will know. But in many other roles, you can sort of skate by if you aren’t too senior. You get a lot of No’s. A lot of them. Most of us can’t take it. We get discouraged, we over-discount, we lose our confidence. Limited career path if don’t move into management\n. You’ll get a lot better in 2, 3, 5, 8 years. But ultimately, just becoming a more senior individual sales rep has a limit. Not everyone sees your value\n. It’s easy to see in many SaaS companies, but overall in the world, many people don’t really value the large contributions sales professionals make. If you do really well, folks take you a bit for granted. They assume sales is easy. Sales is never easy. The best just sometimes make it look that way. You can be just a number to the company\n. If you are part of a larger sales team, you may just be a number on a leaderboard in some sense. At the VP level, your job is always at risk. This is a real stressor\n. As a VP of Sales, every quarter you have to hit the number. You can miss a quarter or even two, but after that, your job is at high risk. High risk. Sales is a craft, an art. It really is. But not everyone appreciates it.Learn to, and your team will appreciate it. And be more loyal. And see less churn. Now AI is changing it all again. Enterprise sales is staying the most … the same. A deep dive on that here with Windsurf’s VP of Sales:\nBut SMB sales? It will be more and more automated with AI.",
+          "file_path": "gd_b29b631ae0499187a517b9d7",
+          "chunk_id": "gd_b29b631ae0499187a517b9d7-chunk-000"
+        },
+        {
+          "reference_id": "4",
+          "content": ", when it does it well.\nIs your product stronger than your brand?\nIf so, talking to prospects and customers can help them see that.\nDo you want to beat the competition more often?\nIf you talk to your prospects and customers, you can explain to them why you are the better solution. This increases the odds you win vs. the competition.\nDo you want to close faster?\nSales professionals create urgency.\nEventually, Slack added sales. Eventually, Zoom added sales. Twilio added sales. Eventually, even Atlassian added sales.  In fact,\nonly 11% of public SaaS companies only sell to SMBs and are primarily freemium\n… even if many started there, from Twilio to MongoDB to Asana and more:\nOnly 11% of Public SaaS Companies Sell Just to SMBs\nSales costs money. Sales adds friction. Sales changes your culture. Maybe you aren’t ready for that yet. But if you do it right — your revenue probably goes up.",
+          "file_path": "gd_ec3d26e97aaf29783bf1cc74",
+          "chunk_id": "gd_ec3d26e97aaf29783bf1cc74-chunk-001"
+        },
+        {
+          "reference_id": "5",
+          "content": "There’s a bit of a malaise hanging over the SaaS world today. AI excitement obscures it a bit, but it’s there. A feeling that:\nGrowth has slowed everywhere (true overall. The average public SaaS company is now growing less than 20% a year!)\nSales is so much harder, and the old playbooks aren’t working well\nFolks don’t want to work as hard anymore\nThere are even more competitors than ever\nEvery leader is competing with each other, trampling on their turf (Gong v. Outreach v. Salesloft v. Zoom, or Rippling vs. Deal vs. Gusto vs ….)\nLayoffs have become normalized\nCustomers are angry from endless price increases and upsells\nBudgets are being cut to find budget for AI (true)\nEvery renewal is not just a battle but a downgrade\nProfitability is all that matters\nVCs have checked out in a lot of non-AI SaaS\nA feeling we’re in a massive “downturn”, even as the overall U.S. economy still is booming\nA feeling products have fallen out of product-market fit, or at least, become more “nice to haves” vs. must haves\nEven healthy customers scrutinizing budgets in ways they haven’t in many years\nHappy customers churning simply because they have to cut apps\nA feeling things actually won’t ever get any better or easier in SaaS\nThe list goes on 🙂\nThere’s a lot of truth in all of this. What I think is really fueling it though is the length of the “downturn” in SaaS buying, in SaaS multiples, and SaaS valuations has been the longest of my career. Going on 3 Years:\nThe downturns in 2008, 2016 even were harder. They felt like the end of the world. But they were shorter.\n\nEven the SaaS downturn of 2008-2009, when the global economy almost",
+          "file_path": "gd_995edd43bb903497883c63ce",
+          "chunk_id": "gd_995edd43bb903497883c63ce-chunk-000"
+        },
+        {
+          "reference_id": "6",
+          "content": "2026, customers simply won’t accept:\nWaiting days for basic information\nSales reps who don’t know their own product\nComplex procurement processes for simple purchases\nBeing forced into unnecessary live conversations for transactional deals\nJust as consumers now expect Amazon-like experiences in all retail interactions, B2B buyers will expect AI-level efficiency, knowledge, and convenience in all sales processes. Companies that cling to outdated, high-friction sales models will find themselves at a severe competitive disadvantage.\nCustom Enterprise Selling Will Be Transformed, Not Eliminated\nWhile transactional sales will be most dramatically changed, even complex enterprise selling will be transformed by AI. The AI won’t replace the strategic relationship aspects, but it will:\nHandle all technical questions during complex sales processes\nAutomate customized proposals based on specific requirements\nManage complex procurement processes\nCoordinate between stakeholders\nMaintain momentum between human interactions\nEnterprise AEs will spend nearly all their time on relationship building, strategic guidance, and complex negotiations rather than the administrative and informational aspects that consume so much time today.\n4 Unexpected Learnings\nAI requires more pricing transparency\n– When AI is closing deals, you need clearer pricing structures with less room for games, forcing companies to simplify their offerings and be more upfront about costs and discounts\nSales terms will become more customer-centric\n– Monthly deals and easier opt-outs will likely replace long-term contracts with auto-renewals as customers expect more flexibility when buying through AI\nAI fills gaps you didn’t know existed\n– SaaStr discovered their AI could review speaker submissions and VC decks—use cases they hadn’t anticipated, showing how AI doesn’t just improve existing processes but creates entirely new value streams\nAI might make some sales reps better while making others obsolete\n– The best reps will leverage AI as “mech-AEs” while underperformers may be replaced entirely, creating a bifurcated future where top performers thrive and mediocre ones disappear\nThe bottom line: AI is already changing sales fundamentally. Companies that embrace these changes will thrive",
+          "file_path": "gd_97843612d08bfd01e9f83879",
+          "chunk_id": "gd_97843612d08bfd01e9f83879-chunk-009"
+        },
+        {
+          "reference_id": "7",
+          "content": "But overall, SaaS is in a bit of a rut. The average public SaaS company is predicting growth below 20% for the first time, ever. And Salesforce is predicting single-digit growth going forward\n. Despite Gartner predicting that overall, SaaS spend will grow 20% this year\n. What’s going on? It may not be as clear as Twitter / LinkedIn think it is, but a few things are clearly happening:\nTech customers remain in a cut, cut cycle\n. They are still looking to cut seats, cut spend, and still cut vendors in SaaS. Non-tech customers are as well, but it seems particularly acute with classic tech “B2B2B” buyers. Even after several rounds of cuts, they are still looking to cut more. I would have though we’d be past this by now, but we aren’t. Salesforce, Asana, ZoomInfo, and other leaders are clear it isn’t getting any easier for them yet. Salesforce has been clear that even there,\ncustomers are still looking to downsize spend on renewals\n. Budget being repurposed for AI\n. AI spend has to come from somewhere. It’s coming from even more cuts — to free up budget. Price increases and inflation eating up budgets\n. Existing vendors aggressively raised prices in 2023 and into 2024. This eats up budget. Post-ZIRP and high interest rates — maybe. To some extent\n. Does the downfall in SaaS multiples correlate with the rise of interest rates? For sure. But does this truly account for the stress in spend? Maybe. That’s not as clear. Nor is it magically clear that eventual cuts to interest rates will automatically lead to more spend. Deployment fatigue.\n\nMany enterprise are still clearly trying to just digest and deploy all the apps they bought from 2020-2022, often at unprecedented rates. So a lot is going on. But for years, SaaS and Cloud had at least",
+          "file_path": "gd_bd97c14fa0476835df73618f",
+          "chunk_id": "gd_bd97c14fa0476835df73618f-chunk-000"
+        },
+        {
+          "reference_id": "8",
+          "content": "Let’s all be clear, 2021 was insane:\n* SPACs worth billions with no revenue\n* Multiples magically tripled\n* Fintechs with 10% GMs worth same as 80% GMs\n* #5 in market got same premium as #1\n* Growth stage seen as free money\n* Seed VCs bought in $3B-10B rounds vs sell\n\nThere’s so much chatter on what’s going on in venture these days — and there should be\n. The industry has been turned on its head, as we went from private 100x ARR deals in 2021 to public SaaS companies trading at 5x ARR on average in 2H’22 and with multiples at all-time lows for the past 6 years. That’s\nmassive\nchange. This week in enterprise software: Top 10\n#SaaS\n#Cloud\nmultiples as of today's market close. The median multiple fell below 5x at market close for the first time since 2016 (when it briefly fell below 5x)\npic.twitter.com/QZ605lMswz\n— Jamin Ball (@jaminball)\nOctober 14, 2022\nAnd with it, the venture markets have clearly slowed down. Parts of the growth market have almost shut down completely. The IPO window is effectively closed. Not literally, but no one seems willing to IPO at today’s prices. But let’s step back a bit … where are we really? I really like the latest CB Insights data because we can use it to simplify a lot of complexity in the markets:\nFirst, yes, venture has truly plummeted. Funding by dollars has fallen a stunning 54% per CB Insights, and deals are down 19.5%. This makes sense\n. With unicorn rounds almost nonexistent, the biggest rounds are, in most cases, on hold. Smaller seed rounds, though, are still happening, even",
+          "file_path": "gd_9b8c7ee744bab17138f98f95",
+          "chunk_id": "gd_9b8c7ee744bab17138f98f95-chunk-000"
+        },
+        {
+          "reference_id": "9",
+          "content": "’s one of the raw materials of success. Just focus on doing what it takes to close\nmore\nof these deals, even if you are losing some / a lot / almost all of them. Drive the close rate up, even if it’s just bit-by-bit. Close feature gaps, improve the quality of the sales team and the marketing processes. Market Pull and Segmentation Down the Road Can Totally Change Things\n. You may go more enterprise. The market may get 100x larger and change as it does. Room at the Bottom can open up where none exists today. No matter what, things will change, and since you are almost certainly in a growing market — you can take advantage of those changes over time. Things aren’t static in SaaS. Measured over months, nothing changes. Over years, everything does. My uber-point is this: I think you have about 4-5 years to get “Somewhere” in SaaS. That’s the ultimate real check-in period on the 7-10 year journey to Something Big.",
+          "file_path": "gd_e2a836034c2fbbd00b9cc82a",
+          "chunk_id": "gd_e2a836034c2fbbd00b9cc82a-chunk-003"
+        },
+        {
+          "reference_id": "10",
+          "content": ".\nSo Is This a Buying Opportunity or a Warning?\nBoth cases exist, and they’re both serious.\nThe bull case\n: Software companies still have the data, the enterprise relationships, the integrations, and the distribution. They have 10-20 years of customer lock-in baked into workflows. AI doesn’t erase that overnight. At 22x forward earnings — now below the market — you are not paying for a growth premium anymore. If these businesses stabilize and grow at even moderate rates, the stocks are cheap.\nThe bear case\n: If you strip out seat expansion as the growth engine, and pricing power gets squeezed as buyers renegotiate, the earnings trajectory for many companies looks genuinely uncertain. A “fair” multiple on decelerating or declining earnings is not 22x.\nThe businesses winning right now are the ones that have become infrastructure for AI, not those competing with it. The ones losing are trying to reframe the same product as “AI-powered” without fundamentally rethinking how value is delivered.\nThat gap is going to widen over the next 18 months.\nSoftware Has Never Been on Sale Like This Before.  Ever.\nSoftware has never traded at a discount to the S&P 500 in the modern era. That is either a historic buying opportunity or a sign that the market has correctly identified a structural break in the model.\nEither way, it will resolve one direction or the other — and probably not slowly.\nFor founders: your next fundraise will be priced off public comps. If you are growing fast and capital-efficiently, you are fine. If you are counting on SaaS multiples recovering because they always have before, that assumption now requires more scrutiny than it used to.\nThe model was intact the last time they came back. That is the question worth asking today.",
+          "file_path": "gd_1db8851ad56bec3e841dbf86",
+          "chunk_id": "gd_1db8851ad56bec3e841dbf86-chunk-003"
+        },
+        {
+          "reference_id": "11",
+          "content": "We had an app we’d been reference customers for — for years. Our case study was on their website, we got them several of their largest customers via our direct recommendations. Then last year they told us had to pay another $20,000 a year to brand the app. I.e., to add a JPEG. Which we’d done for 5+ years. It wasn’t even a new feature. “Why?” we asked the new CRO, who had implemented the new fee. “Because we need the revenue”, the CRO answered directly. “So I’m forcing you to pay it.” This is why SaaS is Dying in 2025. Some of it is AI. Some of it is vendor consolidation. But some is self-inflicted. As growth slows, the leaders in SaaS keep sticking it to their installed base as the only source of reliable growth: ➡️ Excessive and endless price increases ➡️ Threats on leaving ➡️ “Customer Success” calls that are only about forcing you to buy new products you don’t want. And in doing so, they may hit the quarter. But they are slowly destroying their customer base. And themselves. Yes, for many growth is harder than it was in 2021. Of course it is. But the only way out is new, happy customers. Not sticking it to your base, year after year after year.",
+          "file_path": "gd_6b1a49b4098b8d5ced9cbc54",
+          "chunk_id": "gd_6b1a49b4098b8d5ced9cbc54-chunk-000"
+        },
+        {
+          "reference_id": "12",
+          "content": "built integrations and functionality very different than you planned in order to catch and pass the competition. Your SaaS product and team will look very different in 3-7 years than it does on Day 1.\nIf you don’t have these 3 in SaaS as well, you won’t be a big success.\nIf you don’t have 1, 2 and 3 in you (and most of us don’t have all 3), either don’t do it, or bring in a CEO who can do it for you.",
+          "file_path": "gd_1e07c5d8a5539b7e896c47b5",
+          "chunk_id": "gd_1e07c5d8a5539b7e896c47b5-chunk-001"
+        }
+      ],
+      "references": [
+        {
+          "reference_id": "1",
+          "file_path": "gd_78db847c7c7234a8eb04acc1"
+        },
+        {
+          "reference_id": "2",
+          "file_path": "gd_7cf3e77240970cd17fe2178d"
+        },
+        {
+          "reference_id": "3",
+          "file_path": "gd_b29b631ae0499187a517b9d7"
+        },
+        {
+          "reference_id": "4",
+          "file_path": "gd_ec3d26e97aaf29783bf1cc74"
+        },
+        {
+          "reference_id": "5",
+          "file_path": "gd_995edd43bb903497883c63ce"
+        },
+        {
+          "reference_id": "6",
+          "file_path": "gd_97843612d08bfd01e9f83879"
+        },
+        {
+          "reference_id": "7",
+          "file_path": "gd_bd97c14fa0476835df73618f"
+        },
+        {
+          "reference_id": "8",
+          "file_path": "gd_9b8c7ee744bab17138f98f95"
+        },
+        {
+          "reference_id": "9",
+          "file_path": "gd_e2a836034c2fbbd00b9cc82a"
+        },
+        {
+          "reference_id": "10",
+          "file_path": "gd_1db8851ad56bec3e841dbf86"
+        },
+        {
+          "reference_id": "11",
+          "file_path": "gd_6b1a49b4098b8d5ced9cbc54"
+        },
+        {
+          "reference_id": "12",
+          "file_path": "gd_1e07c5d8a5539b7e896c47b5"
+        }
+      ]
+    },
+    "metadata": {
+      "query_mode": "hybrid",
+      "keywords": {
+        "high_level": [
+          "SaaS",
+          "Sales",
+          "Change"
+        ],
+        "low_level": [
+          "15+ Years",
+          "Now"
+        ]
+      },
+      "processing_info": {
+        "total_entities_found": 48,
+        "total_relations_found": 30,
+        "entities_after_truncation": 29,
+        "relations_after_truncation": 30,
+        "merged_chunks_count": 104,
+        "final_chunks_count": 12
+      }
+    },
+    "query": "Why Now Is the Biggest Change in SaaS Sales in 15+ Years"
+  },
+  "retrieval_seconds": 12.942,
+  "graph_summary": {
+    "status": "recorded",
+    "raw_entity_count": 29,
+    "raw_relationship_count": 30,
+    "raw_chunk_count": 12,
+    "entity_description_count": 29,
+    "entity_descriptions_nonempty": 29,
+    "entity_description_available": true,
+    "excluded_reason_counts": {
+      "generated_summary_not_a_source_span": 59
+    },
+    "accepted_relationships": 11,
+    "rejected_relationships": 19,
+    "quarantined_relationships": 0,
+    "relationship_reason_counts": {
+      "generated_summary_not_supported_by_source": 10,
+      "weak_entity_name": 7,
+      "endpoints_not_in_source": 2
+    },
+    "missing_source_or_provenance_exclusions": 0,
+    "relationship_validation_status": "recorded",
+    "two_hop_path_count": 12,
+    "two_hop_path_available": true,
+    "path_status": "recorded",
+    "normalization": {
+      "payload_shape": "aquery_data",
+      "mode": "hybrid",
+      "entity_descriptions_not_retained": 0,
+      "malformed_records": 0,
+      "notes": [
+        "hits_already_budgeted_raw_chunks_not_added",
+        "validated_against_supplied_catalog"
+      ],
+      "validation_contract": "source-verified-relationship-v1",
+      "separator": "<SEP>",
+      "profile": "multihop",
+      "direct_edges": 11,
+      "paths": 23,
+      "withheld_edges": 19
+    },
+    "direct_edge_count": 11
+  }
+}

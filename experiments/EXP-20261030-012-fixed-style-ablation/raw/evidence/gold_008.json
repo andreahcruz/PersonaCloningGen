@@ -1,0 +1,95 @@
+{
+  "proposed": [
+    {
+      "source_id": "train_22819",
+      "claim": "VCs can't cause significant harm",
+      "claim_type": "fact",
+      "support_span": "dont worry about what VCs can \"do to you\""
+    },
+    {
+      "source_id": "train_7403",
+      "claim": "Sharing all fears is not recommended",
+      "claim_type": "fact",
+      "support_span": "But don’t share all your fears."
+    },
+    {
+      "source_id": "train_7403",
+      "claim": "Sharing most fears is recommended",
+      "claim_type": "fact",
+      "support_span": "Share the risks, and most of your concerns"
+    },
+    {
+      "source_id": "train_7765",
+      "claim": "Sharing all fears is not recommended",
+      "claim_type": "fact",
+      "support_span": "But don’t share all your fears"
+    },
+    {
+      "source_id": "train_7765",
+      "claim": "Sharing fears can lead to a downward spiral",
+      "claim_type": "fact",
+      "support_span": "If they see you sweat, they’ll get scared/nervous too, and it will spiral downward"
+    },
+    {
+      "source_id": "train_15003",
+      "claim": "VCs can't make money on growth rounds with current 5x-6x public multiples",
+      "claim_type": "fact",
+      "support_span": "Probably... not"
+    }
+  ],
+  "raw_extraction": "[\n  {\n    \"source_id\": \"train_22819\",\n    \"claim\": \"VCs can't cause significant harm\",\n    \"claim_type\": \"fact\",\n    \"support_span\": \"dont worry about what VCs can \\\"do to you\\\"\"\n  },\n  {\n    \"source_id\": \"train_7403\",\n    \"claim\": \"Sharing all fears is not recommended\",\n    \"claim_type\": \"fact\",\n    \"support_span\": \"But don’t share all your fears.\"\n  },\n  {\n    \"source_id\": \"train_7403\",\n    \"claim\": \"Sharing most fears is recommended\",\n    \"claim_type\": \"fact\",\n    \"support_span\": \"Share the risks, and most of your concerns\"\n  },\n  {\n    \"source_id\": \"train_7765\",\n    \"claim\": \"Sharing all fears is not recommended\",\n    \"claim_type\": \"fact\",\n    \"support_span\": \"But don’t share all your fears\"\n  },\n  {\n    \"source_id\": \"train_7765\",\n    \"claim\": \"Sharing fears can lead to a downward spiral\",\n    \"claim_type\": \"fact\",\n    \"support_span\": \"If they see you sweat, they’ll get scared/nervous too, and it will spiral downward\"\n  },\n  {\n    \"source_id\": \"train_15003\",\n    \"claim\": \"VCs can't make money on growth rounds with current 5x-6x public multiples\",\n    \"claim_type\": \"fact\",\n    \"support_span\": \"Probably... not\"\n  }\n]",
+  "validation_rejected": [
+    {
+      "source_id": "train_7765",
+      "claim": "Sharing fears can lead to a downward spiral",
+      "support_span": "If they see you sweat, they’ll get scared/nervous too, and it will spiral downward",
+      "claim_type": "fact",
+      "reason": "interrogative_assertion"
+    },
+    {
+      "source_id": "train_15003",
+      "claim": "VCs can't make money on growth rounds with current 5x-6x public multiples",
+      "support_span": "Probably... not",
+      "claim_type": "fact",
+      "reason": "support_not_in_source"
+    }
+  ],
+  "verifier_rejected": [],
+  "verified": [
+    {
+      "source_id": "train_22819",
+      "claim": "VCs can't cause significant harm",
+      "support_span": "dont worry about what VCs can \"do to you\"",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_7403",
+      "claim": "Sharing all fears is not recommended",
+      "support_span": "But don’t share all your fears.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_7403",
+      "claim": "Sharing most fears is recommended",
+      "support_span": "Share the risks, and most of your concerns",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_7765",
+      "claim": "Sharing all fears is not recommended",
+      "support_span": "But don’t share all your fears",
+      "claim_type": "fact"
+    }
+  ],
+  "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] VCs can't cause significant harm\n[E2] Sharing all fears is not recommended\n[E3] Sharing most fears is recommended\n[E4] Sharing all fears is not recommended",
+  "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too?\n\nSource passages:\n[train_22819]\ndont worry about what VCs can \"do to you\"\n\ndo have someone you trust on the board\n\n[train_7403]\n4. But don’t share\nall\nyour fears.  Maybe 80% is enough\n.\nHighlight risks for your VCs, but even with them, don’t let them see you sweat. If they see you sweat too much, they’ll get scared/nervous too, and it will spiral downward.  Share the risks, and most of your concerns — but come with a plan.\n\n[train_7765]\n4. But don’t share\nall\nyour fears\n.\nHighlight risks for your VCs, but even with them, don’t let them see you sweat. If they see you sweat, they’ll get scared/nervous too, and it will spiral downward.\n\n[train_15003]\n\"Can VCs make money on growth rounds with current 5x-6x public multiples?  Probably ... not\" with \n@HarryStebbings\n\nFull convo here -> \nhttps://youtu.be/6IM-yO1gZOE?si=P1WOQ2cILZYHhpsX\n…",
+  "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too?\n\nSource passages:\n[train_22819]\ndont worry about what VCs can \"do to you\"\n\ndo have someone you trust on the board\n\n[train_7403]\n4. But don’t share\nall\nyour fears.  Maybe 80% is enough\n.\nHighlight risks for your VCs, but even with them, don’t let them see you sweat. If they see you sweat too much, they’ll get scared/nervous too, and it will spiral downward.  Share the risks, and most of your concerns — but come with a plan.\n\n[train_7765]\n4. But don’t share\nall\nyour fears\n.\nHighlight risks for your VCs, but even with them, don’t let them see you sweat. If they see you sweat, they’ll get scared/nervous too, and it will spiral downward.\n\n[train_15003]\n\"Can VCs make money on growth rounds with current 5x-6x public multiples?  Probably ... not\" with \n@HarryStebbings\n\nFull convo here -> \nhttps://youtu.be/6IM-yO1gZOE?si=P1WOQ2cILZYHhpsX\n…<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+  "extraction_seconds": 8.434,
+  "verification_seconds": 0.0,
+  "verification_records": [],
+  "allowed_numeric_values": [],
+  "reason": null,
+  "extraction_stop_reason": "eos",
+  "extraction_attempts": 1,
+  "evidence_status": "verified"
+}

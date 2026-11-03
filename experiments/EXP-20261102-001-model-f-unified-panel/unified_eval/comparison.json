@@ -1,0 +1,1860 @@
+{
+  "rows": [
+    {
+      "architecture": "Base",
+      "medium": "all",
+      "drafts": 120,
+      "eligible": 45,
+      "gates": {
+        "completion": {
+          "pass_rate": 0.375,
+          "n": 120,
+          "failures": 75,
+          "missing": 0
+        },
+        "format": {
+          "pass_rate": 1.0,
+          "n": 120,
+          "failures": 0,
+          "missing": 0
+        },
+        "copying_memorization": {
+          "pass_rate": 1.0,
+          "n": 120,
+          "failures": 0,
+          "missing": 0
+        },
+        "grounding": {
+          "pass_rate": null,
+          "n": 0,
+          "failures": null,
+          "missing": 120
+        }
+      },
+      "metrics": {
+        "writing_quality": {
+          "mean": 3.57778,
+          "n": 120,
+          "missing": 0
+        },
+        "task_adherence": {
+          "mean": 0.743217,
+          "n": 120,
+          "missing": 0
+        },
+        "stance_consistency": {
+          "mean": 0.969136,
+          "n": 108,
+          "missing": 12
+        },
+        "style_distance": {
+          "mean": 1.043073,
+          "n": 90,
+          "missing": 30
+        },
+        "persona_utility": {
+          "mean": 0.619635,
+          "n": 20,
+          "missing": 100
+        },
+        "claim_support": {
+          "mean": null,
+          "n": 0,
+          "missing": 120
+        },
+        "word_count": {
+          "mean": 352.108333,
+          "n": 120,
+          "missing": 0
+        },
+        "latency_seconds": {
+          "mean": null,
+          "n": 0,
+          "missing": 120
+        }
+      }
+    },
+    {
+      "architecture": "Base",
+      "medium": "blog",
+      "drafts": 30,
+      "eligible": 20,
+      "gates": {
+        "completion": {
+          "pass_rate": 0.666667,
+          "n": 30,
+          "failures": 10,
+          "missing": 0
+        },
+        "format": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "copying_memorization": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "grounding": {
+          "pass_rate": null,
+          "n": 0,
+          "failures": null,
+          "missing": 30
+        }
+      },
+      "metrics": {
+        "writing_quality": {
+          "mean": 3.638887,
+          "n": 30,
+          "missing": 0
+        },
+        "task_adherence": {
+          "mean": 0.75951,
+          "n": 30,
+          "missing": 0
+        },
+        "stance_consistency": {
+          "mean": 1.0,
+          "n": 27,
+          "missing": 3
+        },
+        "style_distance": {
+          "mean": 1.867123,
+          "n": 30,
+          "missing": 0
+        },
+        "persona_utility": {
+          "mean": 0.619635,
+          "n": 20,
+          "missing": 10
+        },
+        "claim_support": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        },
+        "word_count": {
+          "mean": 515.2,
+          "n": 30,
+          "missing": 0
+        },
+        "latency_seconds": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        }
+      }
+    },
+    {
+      "architecture": "Base",
+      "medium": "linkedin",
+      "drafts": 30,
+      "eligible": 5,
+      "gates": {
+        "completion": {
+          "pass_rate": 0.166667,
+          "n": 30,
+          "failures": 25,
+          "missing": 0
+        },
+        "format": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "copying_memorization": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "grounding": {
+          "pass_rate": null,
+          "n": 0,
+          "failures": null,
+          "missing": 30
+        }
+      },
+      "metrics": {
+        "writing_quality": {
+          "mean": 3.844443,
+          "n": 30,
+          "missing": 0
+        },
+        "task_adherence": {
+          "mean": 0.746387,
+          "n": 30,
+          "missing": 0
+        },
+        "stance_consistency": {
+          "mean": 0.950619,
+          "n": 27,
+          "missing": 3
+        },
+        "style_distance": {
+          "mean": 0.739537,
+          "n": 30,
+          "missing": 0
+        },
+        "persona_utility": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        },
+        "claim_support": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        },
+        "word_count": {
+          "mean": 240.166667,
+          "n": 30,
+          "missing": 0
+        },
+        "latency_seconds": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        }
+      }
+    },
+    {
+      "architecture": "Base",
+      "medium": "x",
+      "drafts": 30,
+      "eligible": 3,
+      "gates": {
+        "completion": {
+          "pass_rate": 0.1,
+          "n": 30,
+          "failures": 27,
+          "missing": 0
+        },
+        "format": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "copying_memorization": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "grounding": {
+          "pass_rate": null,
+          "n": 0,
+          "failures": null,
+          "missing": 30
+        }
+      },
+      "metrics": {
+        "writing_quality": {
+          "mean": 3.061127,
+          "n": 30,
+          "missing": 0
+        },
+        "task_adherence": {
+          "mean": 0.704013,
+          "n": 30,
+          "missing": 0
+        },
+        "stance_consistency": {
+          "mean": 0.923077,
+          "n": 26,
+          "missing": 4
+        },
+        "style_distance": {
+          "mean": 0.52256,
+          "n": 30,
+          "missing": 0
+        },
+        "persona_utility": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        },
+        "claim_support": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        },
+        "word_count": {
+          "mean": 116.7,
+          "n": 30,
+          "missing": 0
+        },
+        "latency_seconds": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        }
+      }
+    },
+    {
+      "architecture": "Base",
+      "medium": "talk",
+      "drafts": 30,
+      "eligible": 17,
+      "gates": {
+        "completion": {
+          "pass_rate": 0.566667,
+          "n": 30,
+          "failures": 13,
+          "missing": 0
+        },
+        "format": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "copying_memorization": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "grounding": {
+          "pass_rate": null,
+          "n": 0,
+          "failures": null,
+          "missing": 30
+        }
+      },
+      "metrics": {
+        "writing_quality": {
+          "mean": 3.766663,
+          "n": 30,
+          "missing": 0
+        },
+        "task_adherence": {
+          "mean": 0.76296,
+          "n": 30,
+          "missing": 0
+        },
+        "stance_consistency": {
+          "mean": 1.0,
+          "n": 28,
+          "missing": 2
+        },
+        "style_distance": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        },
+        "persona_utility": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        },
+        "claim_support": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        },
+        "word_count": {
+          "mean": 536.366667,
+          "n": 30,
+          "missing": 0
+        },
+        "latency_seconds": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        }
+      }
+    },
+    {
+      "architecture": "PersonaRAG",
+      "medium": "all",
+      "drafts": 120,
+      "eligible": 57,
+      "gates": {
+        "completion": {
+          "pass_rate": 0.591667,
+          "n": 120,
+          "failures": 49,
+          "missing": 0
+        },
+        "format": {
+          "pass_rate": 1.0,
+          "n": 120,
+          "failures": 0,
+          "missing": 0
+        },
+        "copying_memorization": {
+          "pass_rate": 1.0,
+          "n": 120,
+          "failures": 0,
+          "missing": 0
+        },
+        "grounding": {
+          "pass_rate": 0.833333,
+          "n": 120,
+          "failures": 20,
+          "missing": 0
+        }
+      },
+      "metrics": {
+        "writing_quality": {
+          "mean": 3.598603,
+          "n": 120,
+          "missing": 0
+        },
+        "task_adherence": {
+          "mean": 0.724916,
+          "n": 120,
+          "missing": 0
+        },
+        "stance_consistency": {
+          "mean": 0.990291,
+          "n": 103,
+          "missing": 17
+        },
+        "style_distance": {
+          "mean": 0.906062,
+          "n": 90,
+          "missing": 30
+        },
+        "persona_utility": {
+          "mean": 0.6306,
+          "n": 19,
+          "missing": 101
+        },
+        "claim_support": {
+          "mean": 1.0,
+          "n": 100,
+          "missing": 20
+        },
+        "word_count": {
+          "mean": 296.475,
+          "n": 120,
+          "missing": 0
+        },
+        "latency_seconds": {
+          "mean": null,
+          "n": 0,
+          "missing": 120
+        }
+      }
+    },
+    {
+      "architecture": "PersonaRAG",
+      "medium": "blog",
+      "drafts": 30,
+      "eligible": 23,
+      "gates": {
+        "completion": {
+          "pass_rate": 0.933333,
+          "n": 30,
+          "failures": 2,
+          "missing": 0
+        },
+        "format": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "copying_memorization": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "grounding": {
+          "pass_rate": 0.833333,
+          "n": 30,
+          "failures": 5,
+          "missing": 0
+        }
+      },
+      "metrics": {
+        "writing_quality": {
+          "mean": 3.722217,
+          "n": 30,
+          "missing": 0
+        },
+        "task_adherence": {
+          "mean": 0.74589,
+          "n": 30,
+          "missing": 0
+        },
+        "stance_consistency": {
+          "mean": 1.0,
+          "n": 26,
+          "missing": 4
+        },
+        "style_distance": {
+          "mean": 1.552077,
+          "n": 30,
+          "missing": 0
+        },
+        "persona_utility": {
+          "mean": 0.6306,
+          "n": 19,
+          "missing": 11
+        },
+        "claim_support": {
+          "mean": 1.0,
+          "n": 25,
+          "missing": 5
+        },
+        "word_count": {
+          "mean": 390.9,
+          "n": 30,
+          "missing": 0
+        },
+        "latency_seconds": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        }
+      }
+    },
+    {
+      "architecture": "PersonaRAG",
+      "medium": "linkedin",
+      "drafts": 30,
+      "eligible": 6,
+      "gates": {
+        "completion": {
+          "pass_rate": 0.333333,
+          "n": 30,
+          "failures": 20,
+          "missing": 0
+        },
+        "format": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "copying_memorization": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "grounding": {
+          "pass_rate": 0.8,
+          "n": 30,
+          "failures": 6,
+          "missing": 0
+        }
+      },
+      "metrics": {
+        "writing_quality": {
+          "mean": 3.761097,
+          "n": 30,
+          "missing": 0
+        },
+        "task_adherence": {
+          "mean": 0.710313,
+          "n": 30,
+          "missing": 0
+        },
+        "stance_consistency": {
+          "mean": 1.0,
+          "n": 24,
+          "missing": 6
+        },
+        "style_distance": {
+          "mean": 0.68217,
+          "n": 30,
+          "missing": 0
+        },
+        "persona_utility": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        },
+        "claim_support": {
+          "mean": 1.0,
+          "n": 24,
+          "missing": 6
+        },
+        "word_count": {
+          "mean": 241.966667,
+          "n": 30,
+          "missing": 0
+        },
+        "latency_seconds": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        }
+      }
+    },
+    {
+      "architecture": "PersonaRAG",
+      "medium": "x",
+      "drafts": 30,
+      "eligible": 4,
+      "gates": {
+        "completion": {
+          "pass_rate": 0.133333,
+          "n": 30,
+          "failures": 26,
+          "missing": 0
+        },
+        "format": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "copying_memorization": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "grounding": {
+          "pass_rate": 0.866667,
+          "n": 30,
+          "failures": 4,
+          "missing": 0
+        }
+      },
+      "metrics": {
+        "writing_quality": {
+          "mean": 3.122217,
+          "n": 30,
+          "missing": 0
+        },
+        "task_adherence": {
+          "mean": 0.711527,
+          "n": 30,
+          "missing": 0
+        },
+        "stance_consistency": {
+          "mean": 1.0,
+          "n": 25,
+          "missing": 5
+        },
+        "style_distance": {
+          "mean": 0.48394,
+          "n": 30,
+          "missing": 0
+        },
+        "persona_utility": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        },
+        "claim_support": {
+          "mean": 1.0,
+          "n": 26,
+          "missing": 4
+        },
+        "word_count": {
+          "mean": 124.566667,
+          "n": 30,
+          "missing": 0
+        },
+        "latency_seconds": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        }
+      }
+    },
+    {
+      "architecture": "PersonaRAG",
+      "medium": "talk",
+      "drafts": 30,
+      "eligible": 24,
+      "gates": {
+        "completion": {
+          "pass_rate": 0.966667,
+          "n": 30,
+          "failures": 1,
+          "missing": 0
+        },
+        "format": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "copying_memorization": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "grounding": {
+          "pass_rate": 0.833333,
+          "n": 30,
+          "failures": 5,
+          "missing": 0
+        }
+      },
+      "metrics": {
+        "writing_quality": {
+          "mean": 3.78888,
+          "n": 30,
+          "missing": 0
+        },
+        "task_adherence": {
+          "mean": 0.731933,
+          "n": 30,
+          "missing": 0
+        },
+        "stance_consistency": {
+          "mean": 0.964286,
+          "n": 28,
+          "missing": 2
+        },
+        "style_distance": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        },
+        "persona_utility": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        },
+        "claim_support": {
+          "mean": 1.0,
+          "n": 25,
+          "missing": 5
+        },
+        "word_count": {
+          "mean": 428.466667,
+          "n": 30,
+          "missing": 0
+        },
+        "latency_seconds": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        }
+      }
+    },
+    {
+      "architecture": "Relabel RAG off",
+      "medium": "all",
+      "drafts": 120,
+      "eligible": 77,
+      "gates": {
+        "completion": {
+          "pass_rate": 0.658333,
+          "n": 120,
+          "failures": 41,
+          "missing": 0
+        },
+        "format": {
+          "pass_rate": 0.958333,
+          "n": 120,
+          "failures": 5,
+          "missing": 0
+        },
+        "copying_memorization": {
+          "pass_rate": 0.991667,
+          "n": 120,
+          "failures": 1,
+          "missing": 0
+        },
+        "grounding": {
+          "pass_rate": null,
+          "n": 0,
+          "failures": null,
+          "missing": 120
+        }
+      },
+      "metrics": {
+        "writing_quality": {
+          "mean": 3.000003,
+          "n": 120,
+          "missing": 0
+        },
+        "task_adherence": {
+          "mean": 0.700902,
+          "n": 120,
+          "missing": 0
+        },
+        "stance_consistency": {
+          "mean": 0.957517,
+          "n": 102,
+          "missing": 18
+        },
+        "style_distance": {
+          "mean": 0.749901,
+          "n": 90,
+          "missing": 30
+        },
+        "persona_utility": {
+          "mean": 0.70497,
+          "n": 23,
+          "missing": 97
+        },
+        "claim_support": {
+          "mean": null,
+          "n": 0,
+          "missing": 120
+        },
+        "word_count": {
+          "mean": 192.908333,
+          "n": 120,
+          "missing": 0
+        },
+        "latency_seconds": {
+          "mean": null,
+          "n": 0,
+          "missing": 120
+        }
+      }
+    },
+    {
+      "architecture": "Relabel RAG off",
+      "medium": "blog",
+      "drafts": 30,
+      "eligible": 28,
+      "gates": {
+        "completion": {
+          "pass_rate": 0.966667,
+          "n": 30,
+          "failures": 1,
+          "missing": 0
+        },
+        "format": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "copying_memorization": {
+          "pass_rate": 0.966667,
+          "n": 30,
+          "failures": 1,
+          "missing": 0
+        },
+        "grounding": {
+          "pass_rate": null,
+          "n": 0,
+          "failures": null,
+          "missing": 30
+        }
+      },
+      "metrics": {
+        "writing_quality": {
+          "mean": 3.57778,
+          "n": 30,
+          "missing": 0
+        },
+        "task_adherence": {
+          "mean": 0.706507,
+          "n": 30,
+          "missing": 0
+        },
+        "stance_consistency": {
+          "mean": 0.958333,
+          "n": 24,
+          "missing": 6
+        },
+        "style_distance": {
+          "mean": 0.709477,
+          "n": 30,
+          "missing": 0
+        },
+        "persona_utility": {
+          "mean": 0.70497,
+          "n": 23,
+          "missing": 7
+        },
+        "claim_support": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        },
+        "word_count": {
+          "mean": 284.833333,
+          "n": 30,
+          "missing": 0
+        },
+        "latency_seconds": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        }
+      }
+    },
+    {
+      "architecture": "Relabel RAG off",
+      "medium": "linkedin",
+      "drafts": 30,
+      "eligible": 7,
+      "gates": {
+        "completion": {
+          "pass_rate": 0.233333,
+          "n": 30,
+          "failures": 23,
+          "missing": 0
+        },
+        "format": {
+          "pass_rate": 0.866667,
+          "n": 30,
+          "failures": 4,
+          "missing": 0
+        },
+        "copying_memorization": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "grounding": {
+          "pass_rate": null,
+          "n": 0,
+          "failures": null,
+          "missing": 30
+        }
+      },
+      "metrics": {
+        "writing_quality": {
+          "mean": 3.16112,
+          "n": 30,
+          "missing": 0
+        },
+        "task_adherence": {
+          "mean": 0.68462,
+          "n": 30,
+          "missing": 0
+        },
+        "stance_consistency": {
+          "mean": 0.956522,
+          "n": 23,
+          "missing": 7
+        },
+        "style_distance": {
+          "mean": 0.754507,
+          "n": 30,
+          "missing": 0
+        },
+        "persona_utility": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        },
+        "claim_support": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        },
+        "word_count": {
+          "mean": 174.4,
+          "n": 30,
+          "missing": 0
+        },
+        "latency_seconds": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        }
+      }
+    },
+    {
+      "architecture": "Relabel RAG off",
+      "medium": "x",
+      "drafts": 30,
+      "eligible": 14,
+      "gates": {
+        "completion": {
+          "pass_rate": 0.466667,
+          "n": 30,
+          "failures": 16,
+          "missing": 0
+        },
+        "format": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "copying_memorization": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "grounding": {
+          "pass_rate": null,
+          "n": 0,
+          "failures": null,
+          "missing": 30
+        }
+      },
+      "metrics": {
+        "writing_quality": {
+          "mean": 1.91668,
+          "n": 30,
+          "missing": 0
+        },
+        "task_adherence": {
+          "mean": 0.719187,
+          "n": 30,
+          "missing": 0
+        },
+        "stance_consistency": {
+          "mean": 0.9321,
+          "n": 27,
+          "missing": 3
+        },
+        "style_distance": {
+          "mean": 0.78572,
+          "n": 30,
+          "missing": 0
+        },
+        "persona_utility": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        },
+        "claim_support": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        },
+        "word_count": {
+          "mean": 33.9,
+          "n": 30,
+          "missing": 0
+        },
+        "latency_seconds": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        }
+      }
+    },
+    {
+      "architecture": "Relabel RAG off",
+      "medium": "talk",
+      "drafts": 30,
+      "eligible": 28,
+      "gates": {
+        "completion": {
+          "pass_rate": 0.966667,
+          "n": 30,
+          "failures": 1,
+          "missing": 0
+        },
+        "format": {
+          "pass_rate": 0.966667,
+          "n": 30,
+          "failures": 1,
+          "missing": 0
+        },
+        "copying_memorization": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "grounding": {
+          "pass_rate": null,
+          "n": 0,
+          "failures": null,
+          "missing": 30
+        }
+      },
+      "metrics": {
+        "writing_quality": {
+          "mean": 3.344433,
+          "n": 30,
+          "missing": 0
+        },
+        "task_adherence": {
+          "mean": 0.693293,
+          "n": 30,
+          "missing": 0
+        },
+        "stance_consistency": {
+          "mean": 0.982143,
+          "n": 28,
+          "missing": 2
+        },
+        "style_distance": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        },
+        "persona_utility": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        },
+        "claim_support": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        },
+        "word_count": {
+          "mean": 278.5,
+          "n": 30,
+          "missing": 0
+        },
+        "latency_seconds": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        }
+      }
+    },
+    {
+      "architecture": "Relabel + RAG",
+      "medium": "all",
+      "drafts": 120,
+      "eligible": 72,
+      "gates": {
+        "completion": {
+          "pass_rate": 0.7,
+          "n": 120,
+          "failures": 36,
+          "missing": 0
+        },
+        "format": {
+          "pass_rate": 0.975,
+          "n": 120,
+          "failures": 3,
+          "missing": 0
+        },
+        "copying_memorization": {
+          "pass_rate": 0.983333,
+          "n": 120,
+          "failures": 2,
+          "missing": 0
+        },
+        "grounding": {
+          "pass_rate": 0.883333,
+          "n": 120,
+          "failures": 14,
+          "missing": 0
+        }
+      },
+      "metrics": {
+        "writing_quality": {
+          "mean": 2.895834,
+          "n": 120,
+          "missing": 0
+        },
+        "task_adherence": {
+          "mean": 0.709304,
+          "n": 120,
+          "missing": 0
+        },
+        "stance_consistency": {
+          "mean": 0.972518,
+          "n": 94,
+          "missing": 26
+        },
+        "style_distance": {
+          "mean": 0.805381,
+          "n": 90,
+          "missing": 30
+        },
+        "persona_utility": {
+          "mean": 0.687753,
+          "n": 19,
+          "missing": 101
+        },
+        "claim_support": {
+          "mean": 0.993981,
+          "n": 108,
+          "missing": 12
+        },
+        "word_count": {
+          "mean": 183.066667,
+          "n": 120,
+          "missing": 0
+        },
+        "latency_seconds": {
+          "mean": null,
+          "n": 0,
+          "missing": 120
+        }
+      }
+    },
+    {
+      "architecture": "Relabel + RAG",
+      "medium": "blog",
+      "drafts": 30,
+      "eligible": 25,
+      "gates": {
+        "completion": {
+          "pass_rate": 0.966667,
+          "n": 30,
+          "failures": 1,
+          "missing": 0
+        },
+        "format": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "copying_memorization": {
+          "pass_rate": 0.966667,
+          "n": 30,
+          "failures": 1,
+          "missing": 0
+        },
+        "grounding": {
+          "pass_rate": 0.9,
+          "n": 30,
+          "failures": 3,
+          "missing": 0
+        }
+      },
+      "metrics": {
+        "writing_quality": {
+          "mean": 3.35555,
+          "n": 30,
+          "missing": 0
+        },
+        "task_adherence": {
+          "mean": 0.709217,
+          "n": 30,
+          "missing": 0
+        },
+        "stance_consistency": {
+          "mean": 0.979167,
+          "n": 24,
+          "missing": 6
+        },
+        "style_distance": {
+          "mean": 0.813503,
+          "n": 30,
+          "missing": 0
+        },
+        "persona_utility": {
+          "mean": 0.687753,
+          "n": 19,
+          "missing": 11
+        },
+        "claim_support": {
+          "mean": 1.0,
+          "n": 27,
+          "missing": 3
+        },
+        "word_count": {
+          "mean": 259.7,
+          "n": 30,
+          "missing": 0
+        },
+        "latency_seconds": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        }
+      }
+    },
+    {
+      "architecture": "Relabel + RAG",
+      "medium": "linkedin",
+      "drafts": 30,
+      "eligible": 9,
+      "gates": {
+        "completion": {
+          "pass_rate": 0.333333,
+          "n": 30,
+          "failures": 20,
+          "missing": 0
+        },
+        "format": {
+          "pass_rate": 0.9,
+          "n": 30,
+          "failures": 3,
+          "missing": 0
+        },
+        "copying_memorization": {
+          "pass_rate": 0.966667,
+          "n": 30,
+          "failures": 1,
+          "missing": 0
+        },
+        "grounding": {
+          "pass_rate": 0.9,
+          "n": 30,
+          "failures": 3,
+          "missing": 0
+        }
+      },
+      "metrics": {
+        "writing_quality": {
+          "mean": 2.922227,
+          "n": 30,
+          "missing": 0
+        },
+        "task_adherence": {
+          "mean": 0.703253,
+          "n": 30,
+          "missing": 0
+        },
+        "stance_consistency": {
+          "mean": 0.94,
+          "n": 25,
+          "missing": 5
+        },
+        "style_distance": {
+          "mean": 0.82763,
+          "n": 30,
+          "missing": 0
+        },
+        "persona_utility": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        },
+        "claim_support": {
+          "mean": 1.0,
+          "n": 27,
+          "missing": 3
+        },
+        "word_count": {
+          "mean": 151.933333,
+          "n": 30,
+          "missing": 0
+        },
+        "latency_seconds": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        }
+      }
+    },
+    {
+      "architecture": "Relabel + RAG",
+      "medium": "x",
+      "drafts": 30,
+      "eligible": 12,
+      "gates": {
+        "completion": {
+          "pass_rate": 0.5,
+          "n": 30,
+          "failures": 15,
+          "missing": 0
+        },
+        "format": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "copying_memorization": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "grounding": {
+          "pass_rate": 0.866667,
+          "n": 30,
+          "failures": 4,
+          "missing": 0
+        }
+      },
+      "metrics": {
+        "writing_quality": {
+          "mean": 2.00556,
+          "n": 30,
+          "missing": 0
+        },
+        "task_adherence": {
+          "mean": 0.71924,
+          "n": 30,
+          "missing": 0
+        },
+        "stance_consistency": {
+          "mean": 0.983335,
+          "n": 20,
+          "missing": 10
+        },
+        "style_distance": {
+          "mean": 0.77501,
+          "n": 30,
+          "missing": 0
+        },
+        "persona_utility": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        },
+        "claim_support": {
+          "mean": 0.985714,
+          "n": 28,
+          "missing": 2
+        },
+        "word_count": {
+          "mean": 39.466667,
+          "n": 30,
+          "missing": 0
+        },
+        "latency_seconds": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        }
+      }
+    },
+    {
+      "architecture": "Relabel + RAG",
+      "medium": "talk",
+      "drafts": 30,
+      "eligible": 26,
+      "gates": {
+        "completion": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "format": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "copying_memorization": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "grounding": {
+          "pass_rate": 0.866667,
+          "n": 30,
+          "failures": 4,
+          "missing": 0
+        }
+      },
+      "metrics": {
+        "writing_quality": {
+          "mean": 3.3,
+          "n": 30,
+          "missing": 0
+        },
+        "task_adherence": {
+          "mean": 0.705507,
+          "n": 30,
+          "missing": 0
+        },
+        "stance_consistency": {
+          "mean": 0.99,
+          "n": 25,
+          "missing": 5
+        },
+        "style_distance": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        },
+        "persona_utility": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        },
+        "claim_support": {
+          "mean": 0.990385,
+          "n": 26,
+          "missing": 4
+        },
+        "word_count": {
+          "mean": 281.166667,
+          "n": 30,
+          "missing": 0
+        },
+        "latency_seconds": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        }
+      }
+    },
+    {
+      "architecture": "Model F",
+      "medium": "all",
+      "drafts": 120,
+      "eligible": 67,
+      "gates": {
+        "completion": {
+          "pass_rate": 0.7,
+          "n": 120,
+          "failures": 36,
+          "missing": 0
+        },
+        "format": {
+          "pass_rate": 0.966667,
+          "n": 120,
+          "failures": 4,
+          "missing": 0
+        },
+        "copying_memorization": {
+          "pass_rate": 1.0,
+          "n": 120,
+          "failures": 0,
+          "missing": 0
+        },
+        "grounding": {
+          "pass_rate": 0.816667,
+          "n": 120,
+          "failures": 22,
+          "missing": 0
+        }
+      },
+      "metrics": {
+        "writing_quality": {
+          "mean": 3.165278,
+          "n": 120,
+          "missing": 0
+        },
+        "task_adherence": {
+          "mean": 0.695375,
+          "n": 120,
+          "missing": 0
+        },
+        "stance_consistency": {
+          "mean": 1.0,
+          "n": 101,
+          "missing": 19
+        },
+        "style_distance": {
+          "mean": 0.739002,
+          "n": 90,
+          "missing": 30
+        },
+        "persona_utility": {
+          "mean": null,
+          "n": 0,
+          "missing": 120
+        },
+        "claim_support": {
+          "mean": 1.0,
+          "n": 98,
+          "missing": 22
+        },
+        "word_count": {
+          "mean": 203.108333,
+          "n": 120,
+          "missing": 0
+        },
+        "latency_seconds": {
+          "mean": 20.068958,
+          "n": 120,
+          "missing": 0
+        }
+      }
+    },
+    {
+      "architecture": "Model F",
+      "medium": "blog",
+      "drafts": 30,
+      "eligible": 22,
+      "gates": {
+        "completion": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "format": {
+          "pass_rate": 0.966667,
+          "n": 30,
+          "failures": 1,
+          "missing": 0
+        },
+        "copying_memorization": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "grounding": {
+          "pass_rate": 0.766667,
+          "n": 30,
+          "failures": 7,
+          "missing": 0
+        }
+      },
+      "metrics": {
+        "writing_quality": {
+          "mean": 3.57777,
+          "n": 30,
+          "missing": 0
+        },
+        "task_adherence": {
+          "mean": 0.700267,
+          "n": 30,
+          "missing": 0
+        },
+        "stance_consistency": {
+          "mean": 1.0,
+          "n": 24,
+          "missing": 6
+        },
+        "style_distance": {
+          "mean": 0.819967,
+          "n": 30,
+          "missing": 0
+        },
+        "persona_utility": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        },
+        "claim_support": {
+          "mean": 1.0,
+          "n": 23,
+          "missing": 7
+        },
+        "word_count": {
+          "mean": 246.4,
+          "n": 30,
+          "missing": 0
+        },
+        "latency_seconds": {
+          "mean": 24.040733,
+          "n": 30,
+          "missing": 0
+        }
+      }
+    },
+    {
+      "architecture": "Model F",
+      "medium": "linkedin",
+      "drafts": 30,
+      "eligible": 11,
+      "gates": {
+        "completion": {
+          "pass_rate": 0.433333,
+          "n": 30,
+          "failures": 17,
+          "missing": 0
+        },
+        "format": {
+          "pass_rate": 0.933333,
+          "n": 30,
+          "failures": 2,
+          "missing": 0
+        },
+        "copying_memorization": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "grounding": {
+          "pass_rate": 0.866667,
+          "n": 30,
+          "failures": 4,
+          "missing": 0
+        }
+      },
+      "metrics": {
+        "writing_quality": {
+          "mean": 3.072223,
+          "n": 30,
+          "missing": 0
+        },
+        "task_adherence": {
+          "mean": 0.68538,
+          "n": 30,
+          "missing": 0
+        },
+        "stance_consistency": {
+          "mean": 1.0,
+          "n": 24,
+          "missing": 6
+        },
+        "style_distance": {
+          "mean": 0.794733,
+          "n": 30,
+          "missing": 0
+        },
+        "persona_utility": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        },
+        "claim_support": {
+          "mean": 1.0,
+          "n": 26,
+          "missing": 4
+        },
+        "word_count": {
+          "mean": 186.033333,
+          "n": 30,
+          "missing": 0
+        },
+        "latency_seconds": {
+          "mean": 19.652633,
+          "n": 30,
+          "missing": 0
+        }
+      }
+    },
+    {
+      "architecture": "Model F",
+      "medium": "x",
+      "drafts": 30,
+      "eligible": 11,
+      "gates": {
+        "completion": {
+          "pass_rate": 0.4,
+          "n": 30,
+          "failures": 18,
+          "missing": 0
+        },
+        "format": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "copying_memorization": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "grounding": {
+          "pass_rate": 0.8,
+          "n": 30,
+          "failures": 6,
+          "missing": 0
+        }
+      },
+      "metrics": {
+        "writing_quality": {
+          "mean": 2.661113,
+          "n": 30,
+          "missing": 0
+        },
+        "task_adherence": {
+          "mean": 0.725217,
+          "n": 30,
+          "missing": 0
+        },
+        "stance_consistency": {
+          "mean": 1.0,
+          "n": 25,
+          "missing": 5
+        },
+        "style_distance": {
+          "mean": 0.602307,
+          "n": 30,
+          "missing": 0
+        },
+        "persona_utility": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        },
+        "claim_support": {
+          "mean": 1.0,
+          "n": 24,
+          "missing": 6
+        },
+        "word_count": {
+          "mean": 90.033333,
+          "n": 30,
+          "missing": 0
+        },
+        "latency_seconds": {
+          "mean": 9.621667,
+          "n": 30,
+          "missing": 0
+        }
+      }
+    },
+    {
+      "architecture": "Model F",
+      "medium": "talk",
+      "drafts": 30,
+      "eligible": 23,
+      "gates": {
+        "completion": {
+          "pass_rate": 0.966667,
+          "n": 30,
+          "failures": 1,
+          "missing": 0
+        },
+        "format": {
+          "pass_rate": 0.966667,
+          "n": 30,
+          "failures": 1,
+          "missing": 0
+        },
+        "copying_memorization": {
+          "pass_rate": 1.0,
+          "n": 30,
+          "failures": 0,
+          "missing": 0
+        },
+        "grounding": {
+          "pass_rate": 0.833333,
+          "n": 30,
+          "failures": 5,
+          "missing": 0
+        }
+      },
+      "metrics": {
+        "writing_quality": {
+          "mean": 3.350007,
+          "n": 30,
+          "missing": 0
+        },
+        "task_adherence": {
+          "mean": 0.670637,
+          "n": 30,
+          "missing": 0
+        },
+        "stance_consistency": {
+          "mean": 1.0,
+          "n": 28,
+          "missing": 2
+        },
+        "style_distance": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        },
+        "persona_utility": {
+          "mean": null,
+          "n": 0,
+          "missing": 30
+        },
+        "claim_support": {
+          "mean": 1.0,
+          "n": 25,
+          "missing": 5
+        },
+        "word_count": {
+          "mean": 289.966667,
+          "n": 30,
+          "missing": 0
+        },
+        "latency_seconds": {
+          "mean": 26.9608,
+          "n": 30,
+          "missing": 0
+        }
+      }
+    }
+  ],
+  "composite_score": null,
+  "rank": null,
+  "schema": "unified_eval.v1",
+  "judge_model": "qwen2.5:14b",
+  "rows_excluded": [],
+  "reweighted": false
+}

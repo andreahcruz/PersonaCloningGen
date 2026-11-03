@@ -1,0 +1,134 @@
+{
+  "proposed": [
+    {
+      "source_id": "train_16129",
+      "claim": "A few angry customers can become an avalanche.",
+      "support_span": "What I saw from that was how, if you aren’t careful, a few angry customers can become an avalanche.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_921",
+      "claim": "The ones who chose a competitor are where the truth lives.",
+      "support_span": "Not your happy customers. The ones who chose a competitor. The ones who went with “do nothing.” That’s where the truth lives.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_11274",
+      "claim": "Sales teams may engage in 'churn and burn' deals to hit their numbers.",
+      "support_span": "“Churn and burn” deals, where customers are promised functionality that doesn’t really exist just to close them",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_11274",
+      "claim": "Sales reps may use threats to create urgency for discounts.",
+      "support_span": "Discounts that explode — with a threat. Discounts do need to have an expiration period, usually, to create urgency.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_11274",
+      "claim": "Sales reps may hide cheaper editions to increase sales.",
+      "support_span": "Hiding cheaper editions",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_11274",
+      "claim": "Sales reps may go after customers who share licenses/seats to increase sales.",
+      "support_span": "Do some of your customers share licenses / seats? Do some have more seats than they are allotted?",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_11274",
+      "claim": "Excessive spam-level cadence can create customer resentment.",
+      "support_span": "Excessive spam-level cadence",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_4669",
+      "claim": "Customer marketing should start when the customer first e-signs.",
+      "support_span": "if 90% of the revenue from customers is after the first dollar in, and especially if you see NRR of 100% or more, then marketing should only start when the customer first e-signs",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_4669",
+      "claim": "Customer marketing should be at least 20% of marketing dollars and time.",
+      "support_span": "Add a real Customer Marketing function, and spend at least 20% of your marketing dollars and time on existing customers.",
+      "claim_type": "fact"
+    }
+  ],
+  "raw_extraction": "[\n  {\n    \"source_id\": \"train_16129\",\n    \"claim\": \"A few angry customers can become an avalanche.\",\n    \"support_span\": \"What I saw from that was how, if you aren’t careful, a few angry customers can become an avalanche.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_921\",\n    \"claim\": \"The ones who chose a competitor are where the truth lives.\",\n    \"support_span\": \"Not your happy customers. The ones who chose a competitor. The ones who went with “do nothing.” That’s where the truth lives.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_11274\",\n    \"claim\": \"Sales teams may engage in 'churn and burn' deals to hit their numbers.\",\n    \"support_span\": \"“Churn and burn” deals, where customers are promised functionality that doesn’t really exist just to close them\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_11274\",\n    \"claim\": \"Sales reps may use threats to create urgency for discounts.\",\n    \"support_span\": \"Discounts that explode — with a threat. Discounts do need to have an expiration period, usually, to create urgency.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_11274\",\n    \"claim\": \"Sales reps may hide cheaper editions to increase sales.\",\n    \"support_span\": \"Hiding cheaper editions\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_11274\",\n    \"claim\": \"Sales reps may go after customers who share licenses/seats to increase sales.\",\n    \"support_span\": \"Do some of your customers share licenses / seats? Do some have more seats than they are allotted?\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_11274\",\n    \"claim\": \"Excessive spam-level cadence can create customer resentment.\",\n    \"support_span\": \"Excessive spam-level cadence\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_4669\",\n    \"claim\": \"Customer marketing should start when the customer first e-signs.\",\n    \"support_span\": \"if 90% of the revenue from customers is after the first dollar in, and especially if you see NRR of 100% or more, then marketing should only start when the customer first e-signs\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_4669\",\n    \"claim\": \"Customer marketing should be at least 20% of marketing dollars and time.\",\n    \"support_span\": \"Add a real Customer Marketing function, and spend at least 20% of your marketing dollars and time on existing customers.\",\n    \"claim_type\": \"fact\"\n  }\n]",
+  "validation_rejected": [
+    {
+      "source_id": "train_16129",
+      "claim": "A few angry customers can become an avalanche.",
+      "support_span": "What I saw from that was how, if you aren’t careful, a few angry customers can become an avalanche.",
+      "claim_type": "fact",
+      "reason": "interrogative_assertion"
+    },
+    {
+      "source_id": "train_11274",
+      "claim": "Sales reps may go after customers who share licenses/seats to increase sales.",
+      "support_span": "Do some of your customers share licenses / seats? Do some have more seats than they are allotted?",
+      "claim_type": "fact",
+      "reason": "interrogative_assertion"
+    },
+    {
+      "source_id": "train_4669",
+      "claim": "Customer marketing should start when the customer first e-signs.",
+      "support_span": "if 90% of the revenue from customers is after the first dollar in, and especially if you see NRR of 100% or more, then marketing should only start when the customer first e-signs",
+      "claim_type": "fact",
+      "reason": "interrogative_assertion"
+    }
+  ],
+  "verifier_rejected": [],
+  "verified": [
+    {
+      "source_id": "train_921",
+      "claim": "The ones who chose a competitor are where the truth lives.",
+      "support_span": "Not your happy customers. The ones who chose a competitor. The ones who went with “do nothing.” That’s where the truth lives.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_11274",
+      "claim": "Sales teams may engage in 'churn and burn' deals to hit their numbers.",
+      "support_span": "“Churn and burn” deals, where customers are promised functionality that doesn’t really exist just to close them",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_11274",
+      "claim": "Sales reps may use threats to create urgency for discounts.",
+      "support_span": "Discounts that explode — with a threat. Discounts do need to have an expiration period, usually, to create urgency.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_11274",
+      "claim": "Sales reps may hide cheaper editions to increase sales.",
+      "support_span": "Hiding cheaper editions",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_11274",
+      "claim": "Excessive spam-level cadence can create customer resentment.",
+      "support_span": "Excessive spam-level cadence",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_4669",
+      "claim": "Customer marketing should be at least 20% of marketing dollars and time.",
+      "support_span": "Add a real Customer Marketing function, and spend at least 20% of your marketing dollars and time on existing customers.",
+      "claim_type": "fact"
+    }
+  ],
+  "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] The ones who chose a competitor are where the truth lives.\n[E2] Sales teams may engage in 'churn and burn' deals to hit their numbers.\n[E3] Sales reps may use threats to create urgency for discounts.\n[E4] Sales reps may hide cheaper editions to increase sales.\n[E5] Excessive spam-level cadence can create customer resentment.\n[E6] Customer marketing should be at least 20% of marketing dollars and time.",
+  "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: 6 Tactics to Retain Angry Customers\n\nSource passages:\n[train_16129]\n“What I saw from that was how, if you aren’t careful, a few angry customers can become an avalanche.”\n\nYou'll Lose Customers. It Hurts. But Don't Let Them Become Angry Ex-Customers. | SaaStr\n\n[train_921]\n2. Talk to the customers you’re NOT winning.\nNot your happy customers. The ones who chose a competitor. The ones who went with “do nothing.” That’s where the truth lives.\n\n[train_11274]\nQ: Your sales manager is under great pressure to increase sales. At a recent meeting of the entire sales staff, this person said, “We have to hit our numbers no matter what it takes!” Does this emotional appeal change your way of dealing with customers? The struggle to hit the base plan can indeed produce some less than ideal behavior in sales teams:\n“Churn and burn” deals, where customers are promised functionality that doesn’t really exist just to close them\n. The customers depart as soon as they realize it. A bit more on this here:\n5 Tips To Minimize “Churn and Burn” Behavior in Your Sales Team | SaaStr\nDiscounts that explode — with a threat. Discounts do need to have an expiration period, usually, to create urgency. But a sales rep recently told us if we didn’t take the discount this month, we could never buy the product. Mediocre sales reps especially sometimes add threats to exploding discounts. It can sort of work, sometimes. It will leave a very bad taste in the customer’s mouth, however. Hiding cheaper editions\n. Sales can be incented to hide or downplay cheaper editions that might work just as well. Going after customers “cheating a bit”\n. Do some of your customers share licenses / seats? Do some have more seats than they are allotted? If so, does it matter? In tougher times, sales will go after them to get them to pay up more. Done carefully, this is fine. Done aggressively, it creates customer resentment. Excessive spam-level cadence\n. Spamming everyone in your customer base too many times doesn’t help.\n\n[train_4669]\n7.  Add a real Customer Marketing function, and spend at least 20% of your marketing dollars and time on\nexisting\ncustomers.\nAlmost all of us wait way too long to add Customer Marketing.  But if 90% of the revenue from customers is after the first dollar in, and especially if you see NRR of 100% or more, then marketing should only start when the customer first e-signs.  You’ll job is to increase the odds they stay happy, and buy more from you.  More content, more webinars, more drip marketing, more help, more events, more steak dinners more your\nexisting\ncustomers.  Not just the potential ones.  Ultimately you need to have a full-time here.  But you can probably start with whatever resources you have now.\nYou Aren’t Doing Enough Customer Marketing\nScaling a B2B company past, say, 100 customers, even just $1m ARR, is as much about making fewer mistakes than it is about going faster, bigger, strong.  Take as many actions as you can to just do a bit better.\nAnd the above are 7 or so you can take this week.\nMake it so.",
+  "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: 6 Tactics to Retain Angry Customers\n\nSource passages:\n[train_16129]\n“What I saw from that was how, if you aren’t careful, a few angry customers can become an avalanche.”\n\nYou'll Lose Customers. It Hurts. But Don't Let Them Become Angry Ex-Customers. | SaaStr\n\n[train_921]\n2. Talk to the customers you’re NOT winning.\nNot your happy customers. The ones who chose a competitor. The ones who went with “do nothing.” That’s where the truth lives.\n\n[train_11274]\nQ: Your sales manager is under great pressure to increase sales. At a recent meeting of the entire sales staff, this person said, “We have to hit our numbers no matter what it takes!” Does this emotional appeal change your way of dealing with customers? The struggle to hit the base plan can indeed produce some less than ideal behavior in sales teams:\n“Churn and burn” deals, where customers are promised functionality that doesn’t really exist just to close them\n. The customers depart as soon as they realize it. A bit more on this here:\n5 Tips To Minimize “Churn and Burn” Behavior in Your Sales Team | SaaStr\nDiscounts that explode — with a threat. Discounts do need to have an expiration period, usually, to create urgency. But a sales rep recently told us if we didn’t take the discount this month, we could never buy the product. Mediocre sales reps especially sometimes add threats to exploding discounts. It can sort of work, sometimes. It will leave a very bad taste in the customer’s mouth, however. Hiding cheaper editions\n. Sales can be incented to hide or downplay cheaper editions that might work just as well. Going after customers “cheating a bit”\n. Do some of your customers share licenses / seats? Do some have more seats than they are allotted? If so, does it matter? In tougher times, sales will go after them to get them to pay up more. Done carefully, this is fine. Done aggressively, it creates customer resentment. Excessive spam-level cadence\n. Spamming everyone in your customer base too many times doesn’t help.\n\n[train_4669]\n7.  Add a real Customer Marketing function, and spend at least 20% of your marketing dollars and time on\nexisting\ncustomers.\nAlmost all of us wait way too long to add Customer Marketing.  But if 90% of the revenue from customers is after the first dollar in, and especially if you see NRR of 100% or more, then marketing should only start when the customer first e-signs.  You’ll job is to increase the odds they stay happy, and buy more from you.  More content, more webinars, more drip marketing, more help, more events, more steak dinners more your\nexisting\ncustomers.  Not just the potential ones.  Ultimately you need to have a full-time here.  But you can probably start with whatever resources you have now.\nYou Aren’t Doing Enough Customer Marketing\nScaling a B2B company past, say, 100 customers, even just $1m ARR, is as much about making fewer mistakes than it is about going faster, bigger, strong.  Take as many actions as you can to just do a bit better.\nAnd the above are 7 or so you can take this week.\nMake it so.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+  "extraction_seconds": 16.17,
+  "verification_seconds": 0.0,
+  "verification_records": [],
+  "allowed_numeric_values": [
+    "pct:20"
+  ],
+  "reason": null,
+  "extraction_stop_reason": "eos",
+  "extraction_attempts": 1,
+  "evidence_status": "verified"
+}

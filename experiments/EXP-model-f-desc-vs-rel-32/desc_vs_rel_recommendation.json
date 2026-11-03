@@ -1,0 +1,18 @@
+{
+  "artifact": "desc_vs_rel_recommendation",
+  "compared_questions": 26,
+  "context_tokens_are_not_a_score": true,
+  "does_not_replace": "experiments/EXP-model-f-quick-pilot/arm_selection.json",
+  "echo_is_not_a_win": true,
+  "experiment_id": "EXP-20261102-003-model-f-desc-vs-rel",
+  "frozen_pilot_unchanged": true,
+  "question_ties": 18,
+  "question_wins": {
+    "F-DESC": 4,
+    "F-REL": 4
+  },
+  "reason": "F-REL leads on echo-adjusted faithfulness or, given a tie, on copy and leakage",
+  "rule": "Compare only questions where F-REL and F-DESC are both complete. Primary key: echo-adjusted faithfulness. A cell counts as a pass only when the existing deterministic faithfulness check passes and the saved answer is not a question echo. Echoes use repeats_topic and embeds_topic and are not a factual success. Secondary key: source-copy or citation-leak failure rate from the existing scorer. An arm wins only when its primary rate is strictly higher, or the primary rates tie and its secondary failure rate is strictly lower. Equal primary and secondary rates are inconclusive. Numeric failures, prompt length, latency, graph-context tokens, and omission counts are reported and are not used to choose an arm. A higher context-token count is not higher factual quality.",
+  "selected_arm": "F-REL",
+  "status": "selected"
+}

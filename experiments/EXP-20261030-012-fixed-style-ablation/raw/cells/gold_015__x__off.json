@@ -1,0 +1,578 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "topic_id": "gold_015",
+  "medium": "x",
+  "arm": "off",
+  "seed": 100,
+  "attempts": 1,
+  "evidence_sha256": "d88cbb86b616b2a67899dc05108e0e19ab955aa2e2963475d4240dceae76ae7d",
+  "retrieval_hit_ids": [
+    "train_4226",
+    "train_12625",
+    "train_13789",
+    "train_11900"
+  ],
+  "retrieval_query": "The “Buyers Won’t Trust an AI” Objection Is Already Collapsing",
+  "retrieval_filter": null,
+  "style_applied": false,
+  "style_in_prompt": false,
+  "prompt_tokens": 695,
+  "generated_tokens_including_stop": 160,
+  "latency_seconds": 11.592,
+  "exemplar_ids": [],
+  "saved_at": "2026-10-30T09:45:59.458741+00:00",
+  "trace": {
+    "id": "gold_015",
+    "format": "x_thread",
+    "topic": "The “Buyers Won’t Trust an AI” Objection Is Already Collapsing",
+    "audience": "B2B SaaS founders and operators",
+    "goal": "Explain why buyer trust in AI is changing and what that means for B2B companies.",
+    "cta": "none",
+    "k": 8,
+    "expected_facts": [
+      "The answer should argue that buyer skepticism toward AI is falling in practice.",
+      "It should explain that trust is increasingly earned through usefulness and results rather than labels.",
+      "It should clarify that trust still depends on guardrails, reliability, and deployment context."
+    ],
+    "rubric_must_haves": [
+      "States the market shift clearly.",
+      "Explains why the objection is weakening.",
+      "Balances optimism with operational realism.",
+      "Connects the trend to a founder action or product implication."
+    ],
+    "gold_reference": "A strong answer should say that many buyers now care less about whether a workflow is powered by AI and more about whether it works, saves time, or drives revenue. The deeper lesson is that trust is moving from abstract skepticism to practical proof, but companies still need reliability, transparency, and strong deployment design to hold that trust.",
+    "medium": "x",
+    "prompt": "Write an X post in the style of Jason Lemkin about: The “Buyers Won’t Trust an AI” Objection Is Already Collapsing\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] A basic factual error signals that either you don't have proper quality control processes or you're not paying attention to details or you're over-relying on automation without human oversight.\n[E2] New!!\n[E3] The AI sales rep already: - is available 24x7 - knows product cold - doesn’t lie or make stuff up to close a deal\n[E4] Many think this is silly … but most of those that do haven’t bought software is a while themselves, or used a great AI in this context yet.\n[E5] Go try to buy a routine piece of SaaS software.\n[E6] See how painful it is, how long it takes, how hard it is to get the precise answers you need for your own flow and use case.\n[E7] Are the tools here today? Not quite.\n[E8] But they will be soon.\n[E9] But they are coming soon.\n[E10] Some will enhance AEs, and make them Mech AEs, for sure.\n[E11] Some will create agents that make humans better.\n[E12] Other products will run basic sales autonomously, but kick up exceptions and other issues to humans.\n[E13] AI support already works this way pretty well.\n[E14] And some products, some will basically enable AI to handle 90% of sales on its own.\n[E15] This will require highly transparent pricing, the ability to truly one-click cancel, and the ability to auto-onboard in many cases.\n[E16] But many founders will choose to build the latter.\n[E17] Even if you disagree with this, realize it’s already here in coding, in support, even in SaaStr’s own AI.\n[E18] And things are getting so, so much better in AI every single day.\n[E19] The rate of improvement and change is like nothing we’ve ever seen in B2B and SaaS.\n\nNow write the requested X post about: The “Buyers Won’t Trust an AI” Objection Is Already Collapsing",
+    "rendered_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nWrite an X post in the style of Jason Lemkin about: The “Buyers Won’t Trust an AI” Objection Is Already Collapsing\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] A basic factual error signals that either you don't have proper quality control processes or you're not paying attention to details or you're over-relying on automation without human oversight.\n[E2] New!!\n[E3] The AI sales rep already: - is available 24x7 - knows product cold - doesn’t lie or make stuff up to close a deal\n[E4] Many think this is silly … but most of those that do haven’t bought software is a while themselves, or used a great AI in this context yet.\n[E5] Go try to buy a routine piece of SaaS software.\n[E6] See how painful it is, how long it takes, how hard it is to get the precise answers you need for your own flow and use case.\n[E7] Are the tools here today? Not quite.\n[E8] But they will be soon.\n[E9] But they are coming soon.\n[E10] Some will enhance AEs, and make them Mech AEs, for sure.\n[E11] Some will create agents that make humans better.\n[E12] Other products will run basic sales autonomously, but kick up exceptions and other issues to humans.\n[E13] AI support already works this way pretty well.\n[E14] And some products, some will basically enable AI to handle 90% of sales on its own.\n[E15] This will require highly transparent pricing, the ability to truly one-click cancel, and the ability to auto-onboard in many cases.\n[E16] But many founders will choose to build the latter.\n[E17] Even if you disagree with this, realize it’s already here in coding, in support, even in SaaStr’s own AI.\n[E18] And things are getting so, so much better in AI every single day.\n[E19] The rate of improvement and change is like nothing we’ve ever seen in B2B and SaaS.\n\nNow write the requested X post about: The “Buyers Won’t Trust an AI” Objection Is Already Collapsing<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "answer": "The \"Buyers Won't Trust an AI\" Objection Is Already Collapsing\n\nWe've all heard the concerns:\n\nCustomers won't trust AI-powered sales interactions because—well, why would they?\n\nBut new data from \n@DeloitteInsights\n shows buyers actually prefer interacting with AI chatbots over traditional digital experiences (51%) and phone calls (46%).\n\nAnd when comparing two identical products—one sold by an AI agent and one sold by a human—the preference goes overwhelmingly toward the AI experience.\n\nWhy? Because AI agents can answer questions instantly, 24/7, and don't make false promises or pretend to know things they clearly don't.\n\nThese results aren't hypothetical—they're real data from actual buyer behavior. The gap between human- and AI-driven experiences isn't closing—it",
+    "raw_model_output": "The \"Buyers Won't Trust an AI\" Objection Is Already Collapsing\n\nWe've all heard the concerns:\n\nCustomers won't trust AI-powered sales interactions because—well, why would they?\n\nBut new data from \n@DeloitteInsights\n shows buyers actually prefer interacting with AI chatbots over traditional digital experiences (51%) and phone calls (46%).\n\nAnd when comparing two identical products—one sold by an AI agent and one sold by a human—the preference goes overwhelmingly toward the AI experience.\n\nWhy? Because AI agents can answer questions instantly, 24/7, and don't make false promises or pretend to know things they clearly don't.\n\nThese results aren't hypothetical—they're real data from actual buyer behavior. The gap between human- and AI-driven experiences isn't closing—it",
+    "deployment_output": "The \"Buyers Won't Trust an AI\" Objection Is Already Collapsing\n\nWe've all heard the concerns:\n\nCustomers won't trust AI-powered sales interactions because—well, why would they?\n\nBut new data from \n@DeloitteInsights\n shows buyers actually prefer interacting with AI chatbots over traditional digital experiences (51%) and phone calls (46%).\n\nAnd when comparing two identical products—one sold by an AI agent and one sold by a human—the preference goes overwhelmingly toward the AI experience.\n\nWhy? Because AI agents can answer questions instantly, 24/7, and don't make false promises or pretend to know things they clearly don't.\n\nThese results aren't hypothetical—they're real data from actual buyer behavior. The gap between human- and AI-driven experiences isn't closing—it",
+    "first_attempt_answer": "The \"Buyers Won't Trust an AI\" Objection Is Already Collapsing\n\nWe've all heard the concerns:\n\nCustomers won't trust AI-powered sales interactions because—well, why would they?\n\nBut new data from \n@DeloitteInsights\n shows buyers actually prefer interacting with AI chatbots over traditional digital experiences (51%) and phone calls (46%).\n\nAnd when comparing two identical products—one sold by an AI agent and one sold by a human—the preference goes overwhelmingly toward the AI experience.\n\nWhy? Because AI agents can answer questions instantly, 24/7, and don't make false promises or pretend to know things they clearly don't.\n\nThese results aren't hypothetical—they're real data from actual buyer behavior. The gap between human- and AI-driven experiences isn't closing—it",
+    "retry_answer": null,
+    "query": "The “Buyers Won’t Trust an AI” Objection Is Already Collapsing",
+    "max_new_tokens": 160,
+    "seed": 100,
+    "retry_seed": null,
+    "deployment_accepted": true,
+    "repair_occurred": false,
+    "generation_attempt": {
+      "seed": 100,
+      "answer": "The \"Buyers Won't Trust an AI\" Objection Is Already Collapsing\n\nWe've all heard the concerns:\n\nCustomers won't trust AI-powered sales interactions because—well, why would they?\n\nBut new data from \n@DeloitteInsights\n shows buyers actually prefer interacting with AI chatbots over traditional digital experiences (51%) and phone calls (46%).\n\nAnd when comparing two identical products—one sold by an AI agent and one sold by a human—the preference goes overwhelmingly toward the AI experience.\n\nWhy? Because AI agents can answer questions instantly, 24/7, and don't make false promises or pretend to know things they clearly don't.\n\nThese results aren't hypothetical—they're real data from actual buyer behavior. The gap between human- and AI-driven experiences isn't closing—it",
+      "numeric_grounding": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [
+          "pct:90"
+        ],
+        "values": [
+          {
+            "value": "51%",
+            "canonical": "pct:51",
+            "sentence": "shows buyers actually prefer interacting with AI chatbots over traditional digital experiences (51%) and phone calls (46%).",
+            "start": 312,
+            "end": 315
+          },
+          {
+            "value": "46%",
+            "canonical": "pct:46",
+            "sentence": "shows buyers actually prefer interacting with AI chatbots over traditional digital experiences (51%) and phone calls (46%).",
+            "start": 334,
+            "end": 337
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "51%",
+            "canonical": "pct:51",
+            "sentence": "shows buyers actually prefer interacting with AI chatbots over traditional digital experiences (51%) and phone calls (46%).",
+            "start": 312,
+            "end": 315
+          },
+          {
+            "value": "46%",
+            "canonical": "pct:46",
+            "sentence": "shows buyers actually prefer interacting with AI chatbots over traditional digital experiences (51%) and phone calls (46%).",
+            "start": 334,
+            "end": 337
+          }
+        ]
+      },
+      "rag_source_copying": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 3,
+        "document_id": "train_11900",
+        "matched_generated_span": "trust an ai",
+        "matched_retrieved_span": "trust an ai"
+      },
+      "stop_reason": "length"
+    },
+    "repair_attempt": null,
+    "accepted_attempt": 1,
+    "rag_source_copying": {
+      "applicable": true,
+      "threshold": 12,
+      "pass": true,
+      "flagged": false,
+      "max_contiguous_words": 3,
+      "document_id": "train_11900",
+      "matched_generated_span": "trust an ai",
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 3,
+        "document_id": "train_11900",
+        "matched_generated_span": "trust an ai",
+        "matched_retrieved_span": "trust an ai"
+      },
+      "retry": null,
+      "retry_occurred": false,
+      "repair_occurred": false
+    },
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": false,
+      "failure": "unsupported_numeric_grounding",
+      "unsupported": [
+        {
+          "value": "51%",
+          "canonical": "pct:51",
+          "sentence": "shows buyers actually prefer interacting with AI chatbots over traditional digital experiences (51%) and phone calls (46%).",
+          "start": 312,
+          "end": 315
+        },
+        {
+          "value": "46%",
+          "canonical": "pct:46",
+          "sentence": "shows buyers actually prefer interacting with AI chatbots over traditional digital experiences (51%) and phone calls (46%).",
+          "start": 334,
+          "end": 337
+        }
+      ],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [
+          "pct:90"
+        ],
+        "values": [
+          {
+            "value": "51%",
+            "canonical": "pct:51",
+            "sentence": "shows buyers actually prefer interacting with AI chatbots over traditional digital experiences (51%) and phone calls (46%).",
+            "start": 312,
+            "end": 315
+          },
+          {
+            "value": "46%",
+            "canonical": "pct:46",
+            "sentence": "shows buyers actually prefer interacting with AI chatbots over traditional digital experiences (51%) and phone calls (46%).",
+            "start": 334,
+            "end": 337
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "51%",
+            "canonical": "pct:51",
+            "sentence": "shows buyers actually prefer interacting with AI chatbots over traditional digital experiences (51%) and phone calls (46%).",
+            "start": 312,
+            "end": 315
+          },
+          {
+            "value": "46%",
+            "canonical": "pct:46",
+            "sentence": "shows buyers actually prefer interacting with AI chatbots over traditional digital experiences (51%) and phone calls (46%).",
+            "start": 334,
+            "end": 337
+          }
+        ]
+      },
+      "retry": null
+    },
+    "prompt_tokens": 695,
+    "backend": "unsloth",
+    "retrieval": true,
+    "retrieval_query": "The “Buyers Won’t Trust an AI” Objection Is Already Collapsing",
+    "retrieval_filter": null,
+    "retrieval_k": 4,
+    "retrieval_hits": [
+      {
+        "id": "train_4226",
+        "text": "When you’re selling to sophisticated buyers, they’re evaluating not just your product, but your operational competence. A basic factual error signals that either:\nYou don’t have proper quality control processes\nYou’re not paying attention to details\nYou’re over-relying on automation without human oversight\nNone of these are good signals for a potential vendor relationship. The Path Forward\nAI in sales isn’t going away—nor should it. But the companies that win will be those that combine AI’s scalability with human judgment and oversight. The goal isn’t to eliminate AI from your sales process. It’s to eliminate the scenarios where AI can blow your shot. Build systems that let AI do what it does best (scale, personalize, optimize) while ensuring humans catch what AI does worst (context, nuance, basic fact-checking). Because in B2B sales, 90% right is 100% wrong. Especially when you don’t already know and trust the vendor.",
+        "medium": "blog",
+        "group_id": "4040ef0d1ef81f50e9e4b422d7b5db0d616650b03491e557352e1474958b5e00",
+        "row_id": 4226,
+        "split": "train",
+        "distance": 0.2640029788017273
+      },
+      {
+        "id": "train_12625",
+        "text": "If you think you are safe from AI disruption, you are going to lose.\n\nHere is why: someone will build the #1 AI Agents in your space.  They will have insane ROI, and customers will rush to adopt them.  Even in vertical SaaS, even in fintech.\n\nThey may still buy your product, but",
+        "medium": "x",
+        "group_id": "f0486dddab21c7796361c0e73a7ae58bc080673f8dfa8b8fb97d5ceff78d42c8",
+        "row_id": 12625,
+        "split": "train",
+        "distance": 0.26637697219848633
+      },
+      {
+        "id": "train_13789",
+        "text": "New!!  Will Buyers Ultimately Pay More for AI? Vendr’s Data Says … Maybe Not",
+        "medium": "x",
+        "group_id": "0b011b4ec3985cd9b20e602074d1cb6e1ab0972b21cee1bb2c78e6b16e3893e7",
+        "row_id": 13789,
+        "split": "train",
+        "distance": 0.26800650358200073
+      },
+      {
+        "id": "train_11900",
+        "text": "If I trust an AI more than a human sales rep … Then I will buy from an AI over a human sales rep. That day is pretty close to here today already. The AI sales rep already: - is available 24x7 - knows product cold - doesn’t lie or make stuff up to close a deal Many think this is silly … but most of those that do haven’t bought software is a while themselves, or used a great AI in this context yet. Go try to buy a routine piece of SaaS software. See how painful it is, how long it takes, how hard it is to get the precise answers you need for your own flow and use case. Are the tools here today? Not quite. But they will be soon. If we had the quality of dev teams working on OpenAI and Cursor that are working on AI AEs, the products would already be great. But they are coming soon. Some will enhance AEs, and make them Mech AEs, for sure. Some will create agents that make humans better. Other products will run basic sales autonomously, but kick up exceptions and other issues to humans. AI support already works this way pretty well. And some products, some will basically enable AI to handle 90% of sales on its own. This will require highly transparent pricing, the ability to truly one-click cancel, and the ability to auto-onboard in many cases. But many founders will choose to build the latter. Even if you disagree with this, realize it’s already here in coding, in support, even in SaaStr’s own AI. And things are getting so, so much better in AI every single day. The rate of improvement and change is like nothing we’ve ever seen in B2B and SaaS.",
+        "medium": "linkedin",
+        "group_id": "5d976090bc8ee10eb58c1c47cd141b3e8ee66088150a9716dd2791c3315ce49b",
+        "row_id": 11900,
+        "split": "train",
+        "distance": 0.27001893520355225
+      }
+    ],
+    "copying": [
+      {
+        "id": "train_4226",
+        "shared_word_span": 1
+      },
+      {
+        "id": "train_12625",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_13789",
+        "shared_word_span": 1
+      },
+      {
+        "id": "train_11900",
+        "shared_word_span": 2
+      }
+    ],
+    "retrieval_backend": "dense",
+    "proposed_atomic_claims": [
+      {
+        "source_id": "train_4226",
+        "claim": "A basic factual error signals that either you don't have proper quality control processes or you're not paying attention to details or you're over-relying on automation without human oversight.",
+        "support_span": "A basic factual error signals that either: You don’t have proper quality control processes You’re not paying attention to details You’re over-relying on automation without human oversight",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_12625",
+        "claim": "Someone will build the #1 AI Agents in your space.",
+        "support_span": "They will build the #1 AI Agents in your space.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_13789",
+        "claim": "New!!",
+        "support_span": "New!!",
+        "claim_type": "position"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "The AI sales rep already: - is available 24x7 - knows product cold - doesn’t lie or make stuff up to close a deal",
+        "support_span": "The AI sales rep already: - is available 24x7 - knows product cold - doesn’t lie or make stuff up to close a deal",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "If I trust an AI more than a human sales rep … Then I will buy from an AI over a human sales rep.",
+        "support_span": "If I trust an AI more than a human sales rep … Then I will buy from an AI over a human sales rep.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "Many think this is silly … but most of those that do haven’t bought software is a while themselves, or used a great AI in this context yet.",
+        "support_span": "Many think this is silly … but most of those that do haven’t bought software is a while themselves, or used a great AI in this context yet.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "Go try to buy a routine piece of SaaS software.",
+        "support_span": "Go try to buy a routine piece of SaaS software.",
+        "claim_type": "example"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "See how painful it is, how long it takes, how hard it is to get the precise answers you need for your own flow and use case.",
+        "support_span": "See how painful it is, how long it takes, how hard it is to get the precise answers you need for your own flow and use case.",
+        "claim_type": "example"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "Are the tools here today? Not quite.",
+        "support_span": "Are the tools here today? Not quite.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "But they will be soon.",
+        "support_span": "But they will be soon.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "If we had the quality of dev teams working on OpenAI and Cursor that are working on AI AEs, the products would already be great.",
+        "support_span": "If we had the quality of dev teams working on OpenAI and Cursor that are working on AI AEs, the products would already be great.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "But they are coming soon.",
+        "support_span": "But they are coming soon.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "Some will enhance AEs, and make them Mech AEs, for sure.",
+        "support_span": "Some will enhance AEs, and make them Mech AEs, for sure.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "Some will create agents that make humans better.",
+        "support_span": "Some will create agents that make humans better.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "Other products will run basic sales autonomously, but kick up exceptions and other issues to humans.",
+        "support_span": "Other products will run basic sales autonomously, but kick up exceptions and other issues to humans.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "AI support already works this way pretty well.",
+        "support_span": "AI support already works this way pretty well.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "And some products, some will basically enable AI to handle 90% of sales on its own.",
+        "support_span": "And some products, some will basically enable AI to handle 90% of sales on its own.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "This will require highly transparent pricing, the ability to truly one-click cancel, and the ability to auto-onboard in many cases.",
+        "support_span": "This will require highly transparent pricing, the ability to truly one-click cancel, and the ability to auto-onboard in many cases.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "But many founders will choose to build the latter.",
+        "support_span": "But many founders will choose to build the latter.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "Even if you disagree with this, realize it’s already here in coding, in support, even in SaaStr’s own AI.",
+        "support_span": "Even if you disagree with this, realize it’s already here in coding, in support, even in SaaStr’s own AI.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "And things are getting so, so much better in AI every single day.",
+        "support_span": "And things are getting so, so much better in AI every single day.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "The rate of improvement and change is like nothing we’ve ever seen in B2B and SaaS.",
+        "support_span": "The rate of improvement and change is like nothing we’ve ever seen in B2B and SaaS.",
+        "claim_type": "fact"
+      }
+    ],
+    "validation_rejected": [
+      {
+        "source_id": "train_12625",
+        "claim": "Someone will build the #1 AI Agents in your space.",
+        "support_span": "They will build the #1 AI Agents in your space.",
+        "claim_type": "fact",
+        "reason": "support_not_in_source"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "If I trust an AI more than a human sales rep … Then I will buy from an AI over a human sales rep.",
+        "support_span": "If I trust an AI more than a human sales rep … Then I will buy from an AI over a human sales rep.",
+        "claim_type": "fact",
+        "reason": "interrogative_assertion"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "If we had the quality of dev teams working on OpenAI and Cursor that are working on AI AEs, the products would already be great.",
+        "support_span": "If we had the quality of dev teams working on OpenAI and Cursor that are working on AI AEs, the products would already be great.",
+        "claim_type": "fact",
+        "reason": "interrogative_assertion"
+      }
+    ],
+    "verifier_rejected": [],
+    "verified_claims": [
+      {
+        "source_id": "train_4226",
+        "claim": "A basic factual error signals that either you don't have proper quality control processes or you're not paying attention to details or you're over-relying on automation without human oversight.",
+        "support_span": "A basic factual error signals that either: You don’t have proper quality control processes You’re not paying attention to details You’re over-relying on automation without human oversight",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_13789",
+        "claim": "New!!",
+        "support_span": "New!!",
+        "claim_type": "position"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "The AI sales rep already: - is available 24x7 - knows product cold - doesn’t lie or make stuff up to close a deal",
+        "support_span": "The AI sales rep already: - is available 24x7 - knows product cold - doesn’t lie or make stuff up to close a deal",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "Many think this is silly … but most of those that do haven’t bought software is a while themselves, or used a great AI in this context yet.",
+        "support_span": "Many think this is silly … but most of those that do haven’t bought software is a while themselves, or used a great AI in this context yet.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "Go try to buy a routine piece of SaaS software.",
+        "support_span": "Go try to buy a routine piece of SaaS software.",
+        "claim_type": "example"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "See how painful it is, how long it takes, how hard it is to get the precise answers you need for your own flow and use case.",
+        "support_span": "See how painful it is, how long it takes, how hard it is to get the precise answers you need for your own flow and use case.",
+        "claim_type": "example"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "Are the tools here today? Not quite.",
+        "support_span": "Are the tools here today? Not quite.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "But they will be soon.",
+        "support_span": "But they will be soon.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "But they are coming soon.",
+        "support_span": "But they are coming soon.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "Some will enhance AEs, and make them Mech AEs, for sure.",
+        "support_span": "Some will enhance AEs, and make them Mech AEs, for sure.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "Some will create agents that make humans better.",
+        "support_span": "Some will create agents that make humans better.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "Other products will run basic sales autonomously, but kick up exceptions and other issues to humans.",
+        "support_span": "Other products will run basic sales autonomously, but kick up exceptions and other issues to humans.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "AI support already works this way pretty well.",
+        "support_span": "AI support already works this way pretty well.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "And some products, some will basically enable AI to handle 90% of sales on its own.",
+        "support_span": "And some products, some will basically enable AI to handle 90% of sales on its own.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "This will require highly transparent pricing, the ability to truly one-click cancel, and the ability to auto-onboard in many cases.",
+        "support_span": "This will require highly transparent pricing, the ability to truly one-click cancel, and the ability to auto-onboard in many cases.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "But many founders will choose to build the latter.",
+        "support_span": "But many founders will choose to build the latter.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "Even if you disagree with this, realize it’s already here in coding, in support, even in SaaStr’s own AI.",
+        "support_span": "Even if you disagree with this, realize it’s already here in coding, in support, even in SaaStr’s own AI.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "And things are getting so, so much better in AI every single day.",
+        "support_span": "And things are getting so, so much better in AI every single day.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11900",
+        "claim": "The rate of improvement and change is like nothing we’ve ever seen in B2B and SaaS.",
+        "support_span": "The rate of improvement and change is like nothing we’ve ever seen in B2B and SaaS.",
+        "claim_type": "fact"
+      }
+    ],
+    "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] A basic factual error signals that either you don't have proper quality control processes or you're not paying attention to details or you're over-relying on automation without human oversight.\n[E2] New!!\n[E3] The AI sales rep already: - is available 24x7 - knows product cold - doesn’t lie or make stuff up to close a deal\n[E4] Many think this is silly … but most of those that do haven’t bought software is a while themselves, or used a great AI in this context yet.\n[E5] Go try to buy a routine piece of SaaS software.\n[E6] See how painful it is, how long it takes, how hard it is to get the precise answers you need for your own flow and use case.\n[E7] Are the tools here today? Not quite.\n[E8] But they will be soon.\n[E9] But they are coming soon.\n[E10] Some will enhance AEs, and make them Mech AEs, for sure.\n[E11] Some will create agents that make humans better.\n[E12] Other products will run basic sales autonomously, but kick up exceptions and other issues to humans.\n[E13] AI support already works this way pretty well.\n[E14] And some products, some will basically enable AI to handle 90% of sales on its own.\n[E15] This will require highly transparent pricing, the ability to truly one-click cancel, and the ability to auto-onboard in many cases.\n[E16] But many founders will choose to build the latter.\n[E17] Even if you disagree with this, realize it’s already here in coding, in support, even in SaaStr’s own AI.\n[E18] And things are getting so, so much better in AI every single day.\n[E19] The rate of improvement and change is like nothing we’ve ever seen in B2B and SaaS.",
+    "raw_extraction": "[\n  {\n    \"source_id\": \"train_4226\",\n    \"claim\": \"A basic factual error signals that either you don't have proper quality control processes or you're not paying attention to details or you're over-relying on automation without human oversight.\",\n    \"support_span\": \"A basic factual error signals that either: You don’t have proper quality control processes You’re not paying attention to details You’re over-relying on automation without human oversight\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_12625\",\n    \"claim\": \"Someone will build the #1 AI Agents in your space.\",\n    \"support_span\": \"They will build the #1 AI Agents in your space.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_13789\",\n    \"claim\": \"New!!\",\n    \"support_span\": \"New!!\",\n    \"claim_type\": \"position\"\n  },\n  {\n    \"source_id\": \"train_11900\",\n    \"claim\": \"The AI sales rep already: - is available 24x7 - knows product cold - doesn’t lie or make stuff up to close a deal\",\n    \"support_span\": \"The AI sales rep already: - is available 24x7 - knows product cold - doesn’t lie or make stuff up to close a deal\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_11900\",\n    \"claim\": \"If I trust an AI more than a human sales rep … Then I will buy from an AI over a human sales rep.\",\n    \"support_span\": \"If I trust an AI more than a human sales rep … Then I will buy from an AI over a human sales rep.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_11900\",\n    \"claim\": \"Many think this is silly … but most of those that do haven’t bought software is a while themselves, or used a great AI in this context yet.\",\n    \"support_span\": \"Many think this is silly … but most of those that do haven’t bought software is a while themselves, or used a great AI in this context yet.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_11900\",\n    \"claim\": \"Go try to buy a routine piece of SaaS software.\",\n    \"support_span\": \"Go try to buy a routine piece of SaaS software.\",\n    \"claim_type\": \"example\"\n  },\n  {\n    \"source_id\": \"train_11900\",\n    \"claim\": \"See how painful it is, how long it takes, how hard it is to get the precise answers you need for your own flow and use case.\",\n    \"support_span\": \"See how painful it is, how long it takes, how hard it is to get the precise answers you need for your own flow and use case.\",\n    \"claim_type\": \"example\"\n  },\n  {\n    \"source_id\": \"train_11900\",\n    \"claim\": \"Are the tools here today? Not quite.\",\n    \"support_span\": \"Are the tools here today? Not quite.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_11900\",\n    \"claim\": \"But they will be soon.\",\n    \"support_span\": \"But they will be soon.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_11900\",\n    \"claim\": \"If we had the quality of dev teams working on OpenAI and Cursor that are working on AI AEs, the products would already be great.\",\n    \"support_span\": \"If we had the quality of dev teams working on OpenAI and Cursor that are working on AI AEs, the products would already be great.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_11900\",\n    \"claim\": \"But they are coming soon.\",\n    \"support_span\": \"But they are coming soon.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_11900\",\n    \"claim\": \"Some will enhance AEs, and make them Mech AEs, for sure.\",\n    \"support_span\": \"Some will enhance AEs, and make them Mech AEs, for sure.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_11900\",\n    \"claim\": \"Some will create agents that make humans better.\",\n    \"support_span\": \"Some will create agents that make humans better.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_11900\",\n    \"claim\": \"Other products will run basic sales autonomously, but kick up exceptions and other issues to humans.\",\n    \"support_span\": \"Other products will run basic sales autonomously, but kick up exceptions and other issues to humans.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_11900\",\n    \"claim\": \"AI support already works this way pretty well.\",\n    \"support_span\": \"AI support already works this way pretty well.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_11900\",\n    \"claim\": \"And some products, some will basically enable AI to handle 90% of sales on its own.\",\n    \"support_span\": \"And some products, some will basically enable AI to handle 90% of sales on its own.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_11900\",\n    \"claim\": \"This will require highly transparent pricing, the ability to truly one-click cancel, and the ability to auto-onboard in many cases.\",\n    \"support_span\": \"This will require highly transparent pricing, the ability to truly one-click cancel, and the ability to auto-onboard in many cases.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_11900\",\n    \"claim\": \"But many founders will choose to build the latter.\",\n    \"support_span\": \"But many founders will choose to build the latter.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_11900\",\n    \"claim\": \"Even if you disagree with this, realize it’s already here in coding, in support, even in SaaStr’s own AI.\",\n    \"support_span\": \"Even if you disagree with this, realize it’s already here in coding, in support, even in SaaStr’s own AI.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_11900\",\n    \"claim\": \"And things are getting so, so much better in AI every single day.\",\n    \"support_span\": \"And things are getting so, so much better in AI every single day.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_11900\",\n    \"claim\": \"The rate of improvement and change is like nothing we’ve ever seen in B2B and SaaS.\",\n    \"support_span\": \"The rate of improvement and change is like nothing we’ve ever seen in B2B and SaaS.\",\n    \"claim_type\": \"fact\"\n  }\n]",
+    "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: The “Buyers Won’t Trust an AI” Objection Is Already Collapsing\n\nSource passages:\n[train_4226]\nWhen you’re selling to sophisticated buyers, they’re evaluating not just your product, but your operational competence. A basic factual error signals that either:\nYou don’t have proper quality control processes\nYou’re not paying attention to details\nYou’re over-relying on automation without human oversight\nNone of these are good signals for a potential vendor relationship. The Path Forward\nAI in sales isn’t going away—nor should it. But the companies that win will be those that combine AI’s scalability with human judgment and oversight. The goal isn’t to eliminate AI from your sales process. It’s to eliminate the scenarios where AI can blow your shot. Build systems that let AI do what it does best (scale, personalize, optimize) while ensuring humans catch what AI does worst (context, nuance, basic fact-checking). Because in B2B sales, 90% right is 100% wrong. Especially when you don’t already know and trust the vendor.\n\n[train_12625]\nIf you think you are safe from AI disruption, you are going to lose.\n\nHere is why: someone will build the #1 AI Agents in your space.  They will have insane ROI, and customers will rush to adopt them.  Even in vertical SaaS, even in fintech.\n\nThey may still buy your product, but\n\n[train_13789]\nNew!!  Will Buyers Ultimately Pay More for AI? Vendr’s Data Says … Maybe Not\n\n[train_11900]\nIf I trust an AI more than a human sales rep … Then I will buy from an AI over a human sales rep. That day is pretty close to here today already. The AI sales rep already: - is available 24x7 - knows product cold - doesn’t lie or make stuff up to close a deal Many think this is silly … but most of those that do haven’t bought software is a while themselves, or used a great AI in this context yet. Go try to buy a routine piece of SaaS software. See how painful it is, how long it takes, how hard it is to get the precise answers you need for your own flow and use case. Are the tools here today? Not quite. But they will be soon. If we had the quality of dev teams working on OpenAI and Cursor that are working on AI AEs, the products would already be great. But they are coming soon. Some will enhance AEs, and make them Mech AEs, for sure. Some will create agents that make humans better. Other products will run basic sales autonomously, but kick up exceptions and other issues to humans. AI support already works this way pretty well. And some products, some will basically enable AI to handle 90% of sales on its own. This will require highly transparent pricing, the ability to truly one-click cancel, and the ability to auto-onboard in many cases. But many founders will choose to build the latter. Even if you disagree with this, realize it’s already here in coding, in support, even in SaaStr’s own AI. And things are getting so, so much better in AI every single day. The rate of improvement and change is like nothing we’ve ever seen in B2B and SaaS.",
+    "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: The “Buyers Won’t Trust an AI” Objection Is Already Collapsing\n\nSource passages:\n[train_4226]\nWhen you’re selling to sophisticated buyers, they’re evaluating not just your product, but your operational competence. A basic factual error signals that either:\nYou don’t have proper quality control processes\nYou’re not paying attention to details\nYou’re over-relying on automation without human oversight\nNone of these are good signals for a potential vendor relationship. The Path Forward\nAI in sales isn’t going away—nor should it. But the companies that win will be those that combine AI’s scalability with human judgment and oversight. The goal isn’t to eliminate AI from your sales process. It’s to eliminate the scenarios where AI can blow your shot. Build systems that let AI do what it does best (scale, personalize, optimize) while ensuring humans catch what AI does worst (context, nuance, basic fact-checking). Because in B2B sales, 90% right is 100% wrong. Especially when you don’t already know and trust the vendor.\n\n[train_12625]\nIf you think you are safe from AI disruption, you are going to lose.\n\nHere is why: someone will build the #1 AI Agents in your space.  They will have insane ROI, and customers will rush to adopt them.  Even in vertical SaaS, even in fintech.\n\nThey may still buy your product, but\n\n[train_13789]\nNew!!  Will Buyers Ultimately Pay More for AI? Vendr’s Data Says … Maybe Not\n\n[train_11900]\nIf I trust an AI more than a human sales rep … Then I will buy from an AI over a human sales rep. That day is pretty close to here today already. The AI sales rep already: - is available 24x7 - knows product cold - doesn’t lie or make stuff up to close a deal Many think this is silly … but most of those that do haven’t bought software is a while themselves, or used a great AI in this context yet. Go try to buy a routine piece of SaaS software. See how painful it is, how long it takes, how hard it is to get the precise answers you need for your own flow and use case. Are the tools here today? Not quite. But they will be soon. If we had the quality of dev teams working on OpenAI and Cursor that are working on AI AEs, the products would already be great. But they are coming soon. Some will enhance AEs, and make them Mech AEs, for sure. Some will create agents that make humans better. Other products will run basic sales autonomously, but kick up exceptions and other issues to humans. AI support already works this way pretty well. And some products, some will basically enable AI to handle 90% of sales on its own. This will require highly transparent pricing, the ability to truly one-click cancel, and the ability to auto-onboard in many cases. But many founders will choose to build the latter. Even if you disagree with this, realize it’s already here in coding, in support, even in SaaStr’s own AI. And things are getting so, so much better in AI every single day. The rate of improvement and change is like nothing we’ve ever seen in B2B and SaaS.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "extraction_seconds": 40.326,
+    "verification_seconds": 0.0,
+    "verification_records": [],
+    "llm_verifier_on_critical_path": false,
+    "allowed_numeric_values": [
+      "pct:90"
+    ],
+    "distillation_adapter_enabled": false,
+    "verification_adapter_enabled": false,
+    "distillation_backend": "same_loaded_4bit_base_adapter_off",
+    "distillation_do_sample": false,
+    "extraction_max_new_tokens": 2560,
+    "verification_max_new_tokens": 24,
+    "distillation_seed": 0,
+    "support_spans_in_generator_prompt": false,
+    "evidence_stage_reason": null,
+    "evidence_status": "verified",
+    "extraction_attempts": 1,
+    "extraction_stop_reason": "eos",
+    "prompt_contract": "factual-reliability-v1",
+    "fixed_style_enabled": false,
+    "style_applied": false,
+    "style_exemplar_count": 0,
+    "latency_seconds": 11.592,
+    "generated_tokens_including_stop": 160,
+    "last_token_id": 44603,
+    "effective_eos_token_ids": [
+      128001,
+      128008,
+      128009
+    ],
+    "stop_reason": "length",
+    "budget_fraction": 1.0,
+    "early_eos": false,
+    "first_attempt_stop_reason": "length",
+    "retry_stop_reason": null
+  }
+}

@@ -1,0 +1,1962 @@
+{
+  "status": "complete",
+  "question_id": "gold_013",
+  "query": "Dear SaaStr: Should I Use an AI SDR Before I Have a Working Human SDR motion?",
+  "retrieval": {
+    "backend": "lightrag",
+    "mode": "hybrid",
+    "evidence_budget": 4,
+    "top_k": 20
+  },
+  "payload": {
+    "status": "success",
+    "message": "Query processed successfully",
+    "data": {
+      "entities": [
+        {
+          "entity_name": "AI SDR System",
+          "entity_type": "product",
+          "description": "The AI SDR system is a software solution that tackles the challenge of demand exceeding human capacity to respond by using an \"omni-channel supervisor\" to coordinate between human agents and digital agents.",
+          "source_id": "gd_56ce429513ba63d601778b83-chunk-003",
+          "file_path": "gd_56ce429513ba63d601778b83",
+          "created_at": 1793603340
+        },
+        {
+          "entity_name": "Coding",
+          "entity_type": "organization",
+          "description": "Category of AI adoption that includes tasks such as lines of code shipped and pull requests merged.<SEP>Coding refers to the process of writing code for software development.<SEP>A business idea of using AI tools to achieve productivity gains.<SEP>Coding is a department that had the data in the repo.",
+          "source_id": "gd_aba23bfdcaed571db61db702-chunk-002<SEP>gd_daf1ebb11f0e32fe93411859-chunk-000<SEP>gd_c8095a5972b407e222f3253f-chunk-001<SEP>gd_20e60735f48eae1b55d1b0a4-chunk-001<SEP>gd_9fe02dec94a00cf58c6fa576-chunk-005<SEP>gd_e259b4464cd93452130f852e-chunk-007",
+          "file_path": "gd_aba23bfdcaed571db61db702<SEP>gd_daf1ebb11f0e32fe93411859<SEP>gd_20e60735f48eae1b55d1b0a4<SEP>gd_e259b4464cd93452130f852e",
+          "created_at": 1793640258
+        },
+        {
+          "entity_name": "AI SDRs (Sales Development Representatives)",
+          "entity_type": "product",
+          "description": "AI SDRs are software that use AI to automate sales development tasks.",
+          "source_id": "gd_524880b12b236d68016d66fa-chunk-004",
+          "file_path": "gd_524880b12b236d68016d66fa",
+          "created_at": 1793587745
+        },
+        {
+          "entity_name": "Sales",
+          "entity_type": "concept",
+          "description": "**The Sales Process**\n\nThe Sales process refers to the systematic approach of promoting and selling a company's products or services to customers. It involves a series of steps, including identifying potential customers, building relationships, and negotiating agreements. The sales team plays a crucial role in this process, responsible for interacting with prospects and generating revenue for the company.\n\nThe sales process typically includes various stages, such as prospecting, qualifying, presenting, handling objections, and closing deals. Sales professionals must possess strong communication and negotiation skills to effectively promote and sell products or services to customers. They must also stay up-to-date with market trends, customer needs, and competitor activity to remain competitive.\n\nIn addition to individual sales efforts, companies often have dedicated sales teams or departments responsible for generating revenue and driving sales growth. These teams may be organized by product, region, or industry, and may employ various sales strategies, including account management, business development, and customer success.\n\nHowever, it's worth noting that the sales process can sometimes prioritize hitting sales numbers over budget and cost considerations, which can lead to stress for customers, particularly when involved in upselling and renewals. Clear pricing and incentives are necessary to avoid giving away products for free.\n\nUltimately, the sales process is a critical component of a company's revenue generation, and sales teams must balance their efforts to meet customer needs while driving business growth. Sales professionals must be able to create urgency and understand customer needs, market trends, and company goals to optimize sales strategies and drive business growth.\n\nIn some cases, sales teams may face challenges such as grinding the same product into a shrinking market, but they must adapt and innovate to remain competitive. The sales process is a complex and multifaceted field that requires a deep understanding of customer needs, market trends, and company goals to optimize sales strategies and drive business growth.\n\nIt's also worth noting that a long-term career in sales can be a rewarding and challenging profession, requiring a combination of skills, knowledge, and personal qualities. Sales professionals must be able to generate leads and close deals, while also providing support to customers and promoting a company's products or services.\n\nThe rate of sales that the company is experiencing is an important metric that can indicate the success of the sales team and the overall health of the business. At Glean, sales is a key function responsible for building relationships with customers and driving revenue growth. The department or team responsible for generating revenue through the sale of products or services is a critical component of any business.\n\nIn summary, the sales process is a critical component of a company's revenue generation, and sales teams must balance their efforts to meet customer needs while driving business growth. Sales professionals must possess strong communication and negotiation skills, stay up-to-date with market trends, and adapt to changing customer needs and market conditions to remain competitive.\n\nSales is a named product or service that the company offers, and it is also a science with defined stages and processes that anyone can learn, requiring strategic thinking, data analysis, empathy, clear communication, and disciplined processes. The sales team responsible for closing deals and generating revenue works closely with marketing to align on core KPIs and ensure a consistent flow of high-quality leads.\n\nIt's worth noting that the traditional sales approach is no longer effective in today's B2B buying landscape, and companies must adapt and innovate to remain competitive. This may involve using AI-powered SDRs to outperform human reps and drive business growth.\n\nIn terms of software, there are tools available for managing sales processes, which can help streamline and optimize the sales process, making it easier for sales teams to focus on building relationships and driving revenue growth.<SEP>Sales involves using ChatGPT to prepare for calls and meetings.",
+          "source_id": "gd_1586430bce2fffea00a8cd83-chunk-003<SEP>gd_08cf5b88795dfae6870d4064-chunk-000<SEP>gd_2393372188cddc4e115b41ab-chunk-000<SEP>gd_09267d6dfab254529a946b18-chunk-002<SEP>gd_256a41d38f56ea0d66e64b45-chunk-000<SEP>gd_1ff134cad37b3145694b65c9-chunk-000<SEP>gd_4a1db13237771f628ac9bc2c-chunk-001<SEP>gd_551eb7c9d7d5ff4094f1f51b-chunk-000<SEP>gd_502247d4518750fbaafabb2c-chunk-002<SEP>gd_d1840e931c8712170e3a9122-chunk-000<SEP>gd_64ee673f1818fe8a43d10d08-chunk-000<SEP>gd_8f7d1a721212ed724717d7bb-chunk-000<SEP>gd_859a0b3a8894d29a34128c12-chunk-000<SEP>gd_74fa8567086173e6d517e67c-chunk-003<SEP>gd_1527f012ea2c6c867f226869-chunk-000<SEP>gd_108d51bff7d17593c9295648-chunk-001<SEP>gd_81a8fb81aa8b94288300e068-chunk-002<SEP>gd_c5da06af782b37a56d757551-chunk-000<SEP>gd_4f75b0a196e37ff6fef25fab-chunk-001<SEP>gd_57fa3f9a3c4f8de50eeb4882-chunk-002<SEP>gd_9c328b8c5305e596c95c958f-chunk-001<SEP>gd_42d9f30043790b6434fb7c20-chunk-000<SEP>gd_490259ae216c7d38a715cfb7-chunk-001<SEP>gd_55bc540b610064fdcfa76b04-chunk-001<SEP>gd_9fbfe59451f165bdbe869eee-chunk-000<SEP>gd_9faad83e0a7e9cfbbf7435be-chunk-000<SEP>gd_b53d31c15af78360acf10ee8-chunk-000<SEP>gd_3e1a01be91ac3ea01f208dc6-chunk-000<SEP>gd_bffb70d6ba96de0c690fcf5c-chunk-002<SEP>gd_c481ad6a3095befd2e0989e4-chunk-003<SEP>gd_d388b3ee2eea7c93cd5a89d3-chunk-002<SEP>gd_7d5ded150f873e39b4ff8790-chunk-000<SEP>gd_f8aec0ba52dbef1f0d858ec4-chunk-000<SEP>gd_de3967876a8f223511714e23-chunk-001<SEP>gd_031aceca5cbe7d0ead6c10cc-chunk-001<SEP>gd_12fe030017ff3b7201e562ae-chunk-000<SEP>gd_1bc1ca14c3d0e348065ae74c-chunk-002<SEP>gd_12994885c5997ebf0f2950fd-chunk-000<SEP>gd_8bfdd2b067df03dfe42bfd16-chunk-001<SEP>gd_2ab1e3a03f3d50096c7ab6ed-chunk-000<SEP>gd_2ab1e3a03f3d50096c7ab6ed-chunk-002<SEP>gd_2fd938822405dfa1bd1a090e-chunk-000<SEP>gd_f87b6447ffb0fde342d3e7c3-chunk-001<SEP>gd_f87b6447ffb0fde342d3e7c3-chunk-002<SEP>gd_3e5702e837723b042f3194f2-chunk-001<SEP>gd_3e5702e837723b042f3194f2-chunk-002<SEP>gd_4c4a5ac20c57f7f42509d190-chunk-001<SEP>gd_4c4a5ac20c57f7f42509d190-chunk-002<SEP>gd_5218e82ee196498fcf0ff88e-chunk-001<SEP>gd_b3c813040c96089df47b4b77-chunk-001<SEP>gd_676ceb1d508acba0f3613cd1-chunk-002<SEP>gd_68c4bad7befcf56510eda4bc-chunk-001<SEP>gd_e3df480f3f7326de39cdd4d2-chunk-000<SEP>gd_b9da4c38ae9a1cb3ff415e0e-chunk-000<SEP>gd_6de40238dec47236f483880c-chunk-001<SEP>gd_7fac60d93ad89a262ec31409-chunk-002<SEP>gd_8ed2bda7b3456893ea384f71-chunk-000<SEP>gd_906ef5196b8f7ab71fff80c3-chunk-001<SEP>gd_906ef5196b8f7ab71fff80c3-chunk-000<SEP>gd_d9ea34f00f4b82baa3450186-chunk-000<SEP>gd_949d1d180af15cb12944c20a-chunk-001<SEP>gd_989a9f944654ad07bf38af36-chunk-002<SEP>gd_de4f1cbf6a8bd8e3c5b1cd8f-chunk-002<SEP>gd_a6ad2eaf169aed9b7f8a5f51-chunk-000<SEP>gd_ee48ad719b59c4df12151952-chunk-001<SEP>gd_bf7ad7fdcd83738eb7d097c7-chunk-000<SEP>gd_bf7ad7fdcd83738eb7d097c7-chunk-001<SEP>gd_c82b6638dbe58be010fd593c-chunk-001<SEP>gd_d38bc5de76dea4c45c10753d-chunk-000<SEP>gd_d981b5f28d512ce3174a36d3-chunk-003<SEP>gd_de5623a10d1c9531112cfe54-chunk-001<SEP>gd_eb9bcbd89eab0c1c3fd0c93f-chunk-001<SEP>gd_efafcab53b7bc6909e6d8baf-chunk-000<SEP>gd_1c043696010f2091f1290bdc-chunk-000<SEP>gd_fba4a530b5b60ebb4643c003-chunk-001<SEP>gd_767335dfe9f4c30cb6eb6ab0-chunk-001<SEP>gd_4e7fd53d3d57eeb978245741-chunk-000<SEP>gd_2f4df5abef725f9b0f5db9bd-chunk-000<SEP>gd_4082d9286441e5d1b2ab3d21-chunk-000<SEP>gd_56731aa28abf16226001a40e-chunk-001<SEP>gd_5a6d47bf6677b3617a06ee99-chunk-000<SEP>gd_73df91a3d3076d3a9388eb48-chunk-000<SEP>gd_97240520fb902da9bd3fea4e-chunk-002<SEP>gd_f623182a1b5011ff58dbdc15-chunk-001<SEP>gd_01660f9354b0e95cd03ed553-chunk-002<SEP>gd_04221d86ca97f3a5d5009cb0-chunk-001<SEP>gd_257d14e0a4f4fd8c87630df1-chunk-002<SEP>gd_a753d199b9c468b7c9b06a64-chunk-001<SEP>gd_b5598f901756b268dfaf7770-chunk-001<SEP>gd_72aeec36a95526889d6cc973-chunk-001<SEP>gd_bb8500ff7693b3f67f77f68c-chunk-000<SEP>gd_81df2c388bd8cae226612dc4-chunk-003<SEP>gd_a4c78be1e3b24c0947e39618-chunk-000<SEP>gd_abec5724b77815cf1198b62f-chunk-000<SEP>gd_b2cbf2042a041b1d4ced9070-chunk-004<SEP>gd_d0bdda0c1411f4f4c6b6b127-chunk-002<SEP>gd_d41775f7696f5ceaa33be6ca-chunk-000<SEP>gd_d41775f7696f5ceaa33be6ca-chunk-001<SEP>gd_dd626eb5f79a12db1cce58c5-chunk-001<SEP>gd_db83b3635bdade9c5ae7ff47-chunk-004<SEP>gd_e21bb91d6a512f6e85c20553-chunk-002<SEP>gd_e21bb91d6a512f6e85c20553-chunk-003<SEP>gd_e21bb91d6a512f6e85c20553-chunk-000<SEP>gd_6f376b67f06dfd9e023c8c61-chunk-001<SEP>gd_f4804f30c08b277f5a0cc977-chunk-002<SEP>gd_13748852582b62cb8d40e795-chunk-000<SEP>gd_13748852582b62cb8d40e795-chunk-001<SEP>gd_2a49878130a3a94891f1c22f-chunk-000<SEP>gd_2a49878130a3a94891f1c22f-chunk-001<SEP>gd_2c01c27748878ad03067d439-chunk-001<SEP>gd_4a7726039f8baee5407978ce-chunk-001<SEP>gd_76c045ab1705e7a1934e7771-chunk-002<SEP>gd_7c3babf5b078d002943bbce4-chunk-000<SEP>gd_870b39baf25a5bbb671daf87-chunk-001<SEP>gd_9f939dd40cf1e1538750c863-chunk-001<SEP>gd_ae3f5c50899392de90f55b3d-chunk-000<SEP>gd_ae3f5c50899392de90f55b3d-chunk-002<SEP>gd_a9ce3f99835be884bcfda4b8-chunk-001<SEP>gd_c0713c351046251ffaf03c4f-chunk-001<SEP>gd_f8a9bb89d833767e5b63d5a7-chunk-000<SEP>gd_1111076e178e7284eab11cf6-chunk-007<SEP>gd_36f51e2dd08bfeca036d42ad-chunk-001<SEP>gd_36f51e2dd08bfeca036d42ad-chunk-002<SEP>gd_4b2e5709134e6a5edbcd6f5f-chunk-005<SEP>gd_74b40e89e37082750f565b60-chunk-006<SEP>gd_7b69a630faffe55c35682b43-chunk-001<SEP>gd_7d218b14604c16a4b2ba51cc-chunk-004<SEP>gd_69681401f790e22eda7aea44-chunk-000<SEP>gd_b29b631ae0499187a517b9d7-chunk-000<SEP>gd_b29b631ae0499187a517b9d7-chunk-001<SEP>gd_6edf1c4b231b887f2e70c763-chunk-000<SEP>gd_c75af687e9a8e78065ced9f2-chunk-000<SEP>gd_c75af687e9a8e78065ced9f2-chunk-004<SEP>gd_c85d08b0a614790a6e60f5d3-chunk-003<SEP>gd_8487cf4cdde888dbbc0cfd03-chunk-002<SEP>gd_e46f59f79188834a8b9d39b0-chunk-001<SEP>gd_f552761c4b30ea4f778c6527-chunk-004<SEP>gd_0175eae7258669776836e7c6-chunk-005<SEP>gd_0175eae7258669776836e7c6-chunk-006<SEP>gd_0bc1abfa4e6084d46e2595c5-chunk-003<SEP>gd_3cea7d46018c3d0b13e37539-chunk-001<SEP>gd_f35535f3ce32b871e0c0705a-chunk-000<SEP>gd_63ee9e6fa74f4ab2dcfa2c10-chunk-000<SEP>gd_34886e1a288792f07a43f42e-chunk-000<SEP>gd_8721a060426f25a8026402d1-chunk-000<SEP>gd_7085506accefd59fc219c446-chunk-000<SEP>gd_e01477e17866ee5836e50828-chunk-003<SEP>gd_e01477e17866ee5836e50828-chunk-005<SEP>gd_fb163a389ea88c48ce1a606e-chunk-002<SEP>gd_524880b12b236d68016d66fa-chunk-003<SEP>gd_ab2b44c18919e9af9f28a4d4-chunk-001<SEP>gd_ab2b44c18919e9af9f28a4d4-chunk-002<SEP>gd_e17729e5eca8acb5235bb5b2-chunk-001<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-002<SEP>gd_e570bc885c853fe839d0ee57-chunk-001<SEP>gd_e570bc885c853fe839d0ee57-chunk-004<SEP>gd_e570bc885c853fe839d0ee57-chunk-005<SEP>gd_5b445ae4452b1cd5ee770467-chunk-006<SEP>gd_823279392f3517de14a0233e-chunk-001<SEP>gd_823279392f3517de14a0233e-chunk-002<SEP>gd_89058fef72a71da839bab5ad-chunk-000<SEP>gd_89058fef72a71da839bab5ad-chunk-003<SEP>gd_9120b3a4129b207cf4bc200e-chunk-006<SEP>gd_9c5b3ffd65a6602d115b46e5-chunk-003<SEP>gd_9c5b3ffd65a6602d115b46e5-chunk-004<SEP>gd_20e60735f48eae1b55d1b0a4-chunk-001<SEP>gd_b8eb6e3ba01a5f6fbefb7bb3-chunk-000<SEP>gd_b8eb6e3ba01a5f6fbefb7bb3-chunk-003<SEP>gd_3aee61f2fda0aaba4b885eac-chunk-000<SEP>gd_ed396b2b09f9738240728d5f-chunk-004<SEP>gd_ed396b2b09f9738240728d5f-chunk-003<SEP>gd_65a4761071aa56f6364c237e-chunk-007<SEP>gd_65a4761071aa56f6364c237e-chunk-006<SEP>gd_7a79bfcadc266e750d3d31b6-chunk-002<SEP>gd_d959edaac730da7d91d984ad-chunk-001<SEP>gd_d959edaac730da7d91d984ad-chunk-003<SEP>gd_89e828fc3de2117ed06de0b1-chunk-000<SEP>gd_376a91437f248e422036d70c-chunk-005<SEP>gd_dc30a2a2bbf6e4ce491270cd-chunk-000<SEP>gd_889757c8b0469b376564324e-chunk-010<SEP>gd_8c7c46de206e2398293aa7cd-chunk-000<SEP>gd_97843612d08bfd01e9f83879-chunk-004<SEP>gd_3e8732484211557041408d86-chunk-011<SEP>gd_a778054a479869a17bf96165-chunk-009<SEP>gd_8fe15d1e1f4d6d874c6ce1bb-chunk-011<SEP>gd_9f64b63b5ae698d29604d98b-chunk-012<SEP>gd_35814a36a9b1f3b837986159-chunk-011<SEP>gd_c1eda59785faf7ce5addae75-chunk-006<SEP>gd_94b981f68982d9531084806a-chunk-010<SEP>gd_e6d10122d4b3f67d0762c9ad-chunk-005<SEP>gd_e6d10122d4b3f67d0762c9ad-chunk-006<SEP>gd_1330305cc3f41f63189528f0-chunk-000<SEP>gd_1330305cc3f41f63189528f0-chunk-001<SEP>gd_e259b4464cd93452130f852e-chunk-002<SEP>gd_e259b4464cd93452130f852e-chunk-007<SEP>gd_e259b4464cd93452130f852e-chunk-008<SEP>gd_f48a977e1650f3bc0a64c768-chunk-000<SEP>gd_d618018f549027002a61d265-chunk-001<SEP>gd_87131f4a34d2f70295f0cf04-chunk-009<SEP>gd_c62e40dc5cee6f29714ff360-chunk-004",
+          "file_path": "gd_1586430bce2fffea00a8cd83<SEP>gd_08cf5b88795dfae6870d4064<SEP>gd_2393372188cddc4e115b41ab<SEP>gd_09267d6dfab254529a946b18<SEP>gd_256a41d38f56ea0d66e64b45<SEP>gd_1ff134cad37b3145694b65c9<SEP>gd_4a1db13237771f628ac9bc2c<SEP>gd_551eb7c9d7d5ff4094f1f51b<SEP>gd_d1840e931c8712170e3a9122<SEP>gd_64ee673f1818fe8a43d10d08<SEP>gd_8f7d1a721212ed724717d7bb<SEP>gd_859a0b3a8894d29a34128c12<SEP>gd_74fa8567086173e6d517e67c<SEP>gd_1527f012ea2c6c867f226869<SEP>gd_81a8fb81aa8b94288300e068<SEP>gd_c5da06af782b37a56d757551<SEP>gd_4f75b0a196e37ff6fef25fab<SEP>gd_57fa3f9a3c4f8de50eeb4882<SEP>gd_9c328b8c5305e596c95c958f<SEP>gd_490259ae216c7d38a715cfb7<SEP>gd_9faad83e0a7e9cfbbf7435be<SEP>gd_b53d31c15af78360acf10ee8<SEP>gd_3e1a01be91ac3ea01f208dc6<SEP>gd_bffb70d6ba96de0c690fcf5c<SEP>gd_d388b3ee2eea7c93cd5a89d3<SEP>gd_7d5ded150f873e39b4ff8790<SEP>gd_f8aec0ba52dbef1f0d858ec4<SEP>gd_de3967876a8f223511714e23<SEP>gd_031aceca5cbe7d0ead6c10cc<SEP>gd_12fe030017ff3b7201e562ae<SEP>gd_1bc1ca14c3d0e348065ae74c<SEP>gd_12994885c5997ebf0f2950fd<SEP>gd_8bfdd2b067df03dfe42bfd16<SEP>gd_2ab1e3a03f3d50096c7ab6ed<SEP>gd_2fd938822405dfa1bd1a090e<SEP>gd_f87b6447ffb0fde342d3e7c3<SEP>gd_3e5702e837723b042f3194f2<SEP>gd_4c4a5ac20c57f7f42509d190<SEP>gd_5218e82ee196498fcf0ff88e<SEP>gd_b3c813040c96089df47b4b77<SEP>gd_676ceb1d508acba0f3613cd1<SEP>gd_68c4bad7befcf56510eda4bc<SEP>gd_e3df480f3f7326de39cdd4d2<SEP>gd_b9da4c38ae9a1cb3ff415e0e<SEP>gd_6de40238dec47236f483880c<SEP>gd_7fac60d93ad89a262ec31409<SEP>gd_8ed2bda7b3456893ea384f71<SEP>gd_906ef5196b8f7ab71fff80c3<SEP>gd_d9ea34f00f4b82baa3450186<SEP>gd_949d1d180af15cb12944c20a<SEP>gd_989a9f944654ad07bf38af36<SEP>gd_de4f1cbf6a8bd8e3c5b1cd8f<SEP>gd_a6ad2eaf169aed9b7f8a5f51<SEP>gd_ee48ad719b59c4df12151952<SEP>gd_bf7ad7fdcd83738eb7d097c7<SEP>gd_c82b6638dbe58be010fd593c<SEP>gd_d38bc5de76dea4c45c10753d<SEP>gd_d981b5f28d512ce3174a36d3<SEP>gd_de5623a10d1c9531112cfe54<SEP>gd_eb9bcbd89eab0c1c3fd0c93f<SEP>gd_1c043696010f2091f1290bdc<SEP>gd_fba4a530b5b60ebb4643c003<SEP>gd_767335dfe9f4c30cb6eb6ab0<SEP>gd_4e7fd53d3d57eeb978245741<SEP>gd_2f4df5abef725f9b0f5db9bd<SEP>gd_4082d9286441e5d1b2ab3d21<SEP>gd_56731aa28abf16226001a40e<SEP>gd_5a6d47bf6677b3617a06ee99<SEP>gd_97240520fb902da9bd3fea4e<SEP>gd_f623182a1b5011ff58dbdc15<SEP>gd_01660f9354b0e95cd03ed553<SEP>gd_04221d86ca97f3a5d5009cb0<SEP>gd_257d14e0a4f4fd8c87630df1<SEP>gd_a753d199b9c468b7c9b06a64<SEP>gd_b5598f901756b268dfaf7770<SEP>...truncated...(KEEP Old)",
+          "created_at": 1793642046
+        },
+        {
+          "entity_name": "AI SDR platform",
+          "entity_type": "concept",
+          "description": "A business concept that refers to the use of artificial intelligence (AI) to automate and optimize sales development processes.",
+          "source_id": "gd_9e15f38f2f6fafa680da9f0c-chunk-001",
+          "file_path": "gd_9e15f38f2f6fafa680da9f0c",
+          "created_at": 1793622277
+        },
+        {
+          "entity_name": "AI",
+          "entity_type": "product",
+          "description": "**Artificial Intelligence (AI)**\n\nArtificial Intelligence (AI) refers to the use of artificial intelligence in various applications. It is a technology that enables machines to perform tasks that typically require human intelligence. AI can perform tasks independently, transforming the customer experience within an app, across apps, and in every way that products overlap with human experience.\n\nAI is a specific business idea of more than one word, encompassing a wide range of applications and industries. It is a technology that can be applied in various sectors, including software as a service (SaaS), where AI is used to enhance the user experience and improve operational efficiency. The term AI is often used interchangeably with the concept of machine learning, which is a subset of AI that enables machines to learn from data and improve their performance over time. However, AI is a broader term that encompasses not only machine learning but also other techniques, such as natural language processing and computer vision.\n\nIn the context of SaaS, AI is used to provide personalized experiences for customers, predict their needs, and offer tailored recommendations. It is also used to automate routine tasks, freeing up human resources for more strategic and creative work. AI is a key driver of growth for companies like Snowflake, enabling them to provide more efficient and effective data management solutions.\n\nAI has also been used to deflect buyers from needing to talk to a sales representative, and is a type of artificial intelligence technology used in marketing automation. Additionally, AI has led to an explosion of budget going to new apps and new discovery, weakening brand moats and putting deals into play.\n\nFurthermore, AI is being used to enable businesses to perform tasks at a larger scale than ever before. It is a rapidly evolving field that has the potential to transform various aspects of our lives, from customer service to healthcare and education. Its applications are vast and varied, and it is likely to continue to shape the future of technology and society in the years to come.\n\nIn the context of sales, AI is used to perform tasks more efficiently than humans, such as automating routine tasks and providing personalized experiences for customers. AI tools, such as those used by SDRs, can also provide support and answer questions, enhancing sales performance. Overall, AI is a rapidly evolving field that is changing the pace of business, and its applications are vast and varied.\n\nThe adoption of AI in B2B and SaaS apps is rapidly accelerating, with many businesses using AI to stay ahead of the competition. AI investments are also on the rise, with many companies recognizing the potential of AI to drive growth and innovation. Additionally, AI is being used in content creation, enabling businesses to produce high-quality content more efficiently.\n\nIt's worth noting that AI systems require daily management, training, and refinement to achieve results, and AI excels at pattern matching, asking the right questions, recognizing signals, and routing appropriately. However, AI still requires human oversight and management, particularly in tasks such as marketing and sales.\n\nIn summary, AI is a technology that has become increasingly important for businesses, with its value lying in specificity and application rather than data size. It is a rapidly evolving field that has the potential to transform various aspects of our lives, and its applications are vast and varied.\n\nAI is also a technology that can write code and assist in coding, enabling new innovations and improvements in business processes and decision-making. It is a key investment focus area for many firms, and its transformative benefits are becoming increasingly necessary for businesses to stay competitive.\n\nIn essence, AI is a technology that enables machines to perform tasks that typically require human intelligence, and its applications are vast and varied, from customer service to healthcare and education. Its adoption is rapidly accelerating, and its transformative benefits are becoming increasingly necessary for businesses to stay competitive.<SEP>A subset of computer science that focuses on creating intelligent machines capable of performing tasks that typically require human intelligence.<SEP>AI is a dominant force in the industry, with a significant impact on sales, marketing, and customer value.<SEP>AI refers to artificial intelligence, a technology used by many startups mentioned in the article.<SEP>Artificial Intelligence is a field of computer science that focuses on creating intelligent machines that can perform tasks that typically require human intelligence.<SEP>Artificial Intelligence<SEP>Artificial Intelligence, a technology that enables machines to perform tasks that typically require human intelligence.",
+          "source_id": "gd_014b45cb99cfee97ee337556-chunk-000<SEP>gd_756878d4d219336489c49168-chunk-000<SEP>gd_756878d4d219336489c49168-chunk-002<SEP>gd_0e1afddaca819c17829b209e-chunk-000<SEP>gd_0019c5e0dad1cf6315645b67-chunk-000<SEP>gd_18496897e5422a11b9860676-chunk-000<SEP>gd_00f0fd1277363a92e5cb2ada-chunk-001<SEP>gd_03e15c39b23c76a73a12a032-chunk-000<SEP>gd_14d8f66ab72709464e7b1f54-chunk-001<SEP>gd_14fcf58446d7e49d02fe50fe-chunk-000<SEP>gd_0d9ed295c2bb4d2ef2626774-chunk-000<SEP>gd_0e9a94d9a2c6bd5596deca87-chunk-000<SEP>gd_e202a1afd3c9d493a094de48-chunk-003<SEP>gd_ad5ace08d7fa6c197773d33b-chunk-000<SEP>gd_23e08535a0d07b419df49dea-chunk-000<SEP>gd_16d19bd83634475f86b34ee9-chunk-000<SEP>gd_b15e60fb25deec55942c00d1-chunk-000<SEP>gd_15d187637520cc4b1b5726e1-chunk-000<SEP>gd_15d187637520cc4b1b5726e1-chunk-001<SEP>gd_177014eb9b039d2307248c03-chunk-000<SEP>gd_23aa8cd4020f1d2df5102cfc-chunk-001<SEP>gd_256a41d38f56ea0d66e64b45-chunk-000<SEP>gd_4fe03de948798e408f8e23aa-chunk-000<SEP>gd_4fe03de948798e408f8e23aa-chunk-001<SEP>gd_21bd6da71e6015eb12202fb3-chunk-000<SEP>gd_5339ef95acf5382961a2350a-chunk-001<SEP>gd_1282420851c57a65c41b3c9b-chunk-000<SEP>gd_1282420851c57a65c41b3c9b-chunk-001<SEP>gd_26e354d96348044e49c9f661-chunk-000<SEP>gd_2aeb737f1fc3578904a93fac-chunk-000<SEP>gd_22462fc0c151ee5a1d880b8f-chunk-000<SEP>gd_2864ed857c89cc1a33e60bc8-chunk-000<SEP>gd_7b8e1734f0309e1ac887f899-chunk-001<SEP>gd_243034475e44ac6592eb8cf0-chunk-001<SEP>gd_070a59055548e31a4e2d028a-chunk-001<SEP>gd_4c93dd06bf96421a31a4ec23-chunk-000<SEP>gd_2fdbffb33fcf38e16b8d19ea-chunk-000<SEP>gd_34c141c6933eafc6a555342b-chunk-000<SEP>gd_3ebf3023f70e6b3f8139191f-chunk-000<SEP>gd_3ebf3023f70e6b3f8139191f-chunk-001<SEP>gd_3ebf3023f70e6b3f8139191f-chunk-002<SEP>gd_3ebf3023f70e6b3f8139191f-chunk-003<SEP>gd_3ebf3023f70e6b3f8139191f-chunk-004<SEP>gd_33efad0196fd9206d0c57889-chunk-001<SEP>gd_4a1db13237771f628ac9bc2c-chunk-000<SEP>gd_4a1db13237771f628ac9bc2c-chunk-002<SEP>gd_385277f88221b595a4db19fa-chunk-000<SEP>gd_5067e7d465b1c8e7c23adc37-chunk-000<SEP>gd_a46480025a7b5344f9662b4e-chunk-001<SEP>gd_a46480025a7b5344f9662b4e-chunk-003<SEP>gd_5b98c2f68eb577d75332ad5f-chunk-000<SEP>gd_3c61fb52257edcd986840507-chunk-000<SEP>gd_e0505c1150b5f1aa25fed30c-chunk-004<SEP>gd_3cc6a49aba6331ce2e244f8a-chunk-000<SEP>gd_40121b246ff5bf58c30968ac-chunk-000<SEP>gd_501507d3da37dc0bee391abb-chunk-000<SEP>gd_44e87b15a12b4d77479d4f58-chunk-000<SEP>gd_44d0a6964b4f43fd522b107e-chunk-000<SEP>gd_4e8e411a20b69ff98e60d556-chunk-002<SEP>gd_a6016d6c72ddea604b995fd3-chunk-000<SEP>gd_a6016d6c72ddea604b995fd3-chunk-001<SEP>gd_48e33c739374b10eb5af5570-chunk-000<SEP>gd_1e07c5d8a5539b7e896c47b5-chunk-000<SEP>gd_514be900e352775092392632-chunk-000<SEP>gd_524c287c9d24eb09b58604a0-chunk-000<SEP>gd_75ccaa0f63ea46308ec419cc-chunk-000<SEP>gd_4f29175b4c599edc6f63ea81-chunk-000<SEP>gd_ba8cfcf37a4829e6738e3817-chunk-000<SEP>gd_ba8cfcf37a4829e6738e3817-chunk-001<SEP>gd_51082f5f33da67daee39dc90-chunk-000<SEP>gd_51082f5f33da67daee39dc90-chunk-001<SEP>gd_5487b59a91d25df6759963f2-chunk-000<SEP>gd_5a3012ecffcc0968826fc7e3-chunk-000<SEP>gd_3aab2ebe3d4a17a4ae74909b-chunk-000<SEP>gd_673777877ba804b6adcb05c7-chunk-000<SEP>gd_d8fe4e83f86b82e6fd92f383-chunk-000<SEP>gd_6fcb1801ba88d3d8f13ac9c7-chunk-000<SEP>gd_79858ea6162573644fe3e173-chunk-002<SEP>gd_79858ea6162573644fe3e173-chunk-006<SEP>gd_364d266152046eb1076d048a-chunk-002<SEP>gd_364d266152046eb1076d048a-chunk-007<SEP>gd_2c6f9645343251c1f939e00a-chunk-000<SEP>gd_2c6f9645343251c1f939e00a-chunk-002<SEP>gd_72a49edcf9ab2df09ba6c1c2-chunk-001<SEP>gd_71e628f86d3b2233b7cb22b0-chunk-005<SEP>gd_93db829a67b16eaaacdf2d76-chunk-000<SEP>gd_e6e70dc6bd3b3665dbbe64de-chunk-000<SEP>gd_e6e70dc6bd3b3665dbbe64de-chunk-001<SEP>gd_2d72fe9469e9f2b08dcd24ea-chunk-001<SEP>gd_753bb0e35f420a30e8b62d0b-chunk-000<SEP>gd_80c909a7620b380ba1b1df0c-chunk-000<SEP>gd_896b59f47a2fe051ace06a99-chunk-000<SEP>gd_896b59f47a2fe051ace06a99-chunk-001<SEP>gd_33efe7307fb3edd348590ee0-chunk-000<SEP>gd_826943ff016f1c9f4e16a02f-chunk-000<SEP>gd_82b65319408f738f77ded8bf-chunk-000<SEP>gd_9393f5107171bfdba2765a73-chunk-000<SEP>gd_cbc65b3eb8efa09f32370cb3-chunk-000<SEP>gd_859a0b3a8894d29a34128c12-chunk-000<SEP>gd_7771f9bb68a925a92a480935-chunk-000<SEP>gd_a4ae7e6eac7817fa6bf9357c-chunk-000<SEP>gd_8bb47c1249e0948d8a5ef1bb-chunk-000<SEP>gd_8bb47c1249e0948d8a5ef1bb-chunk-001<SEP>gd_aad2f9895e2d25f92408db27-chunk-000<SEP>gd_111b6b23b20d3f5268f61598-chunk-000<SEP>gd_ae46602503f51cde09054ac5-chunk-000<SEP>gd_ae46602503f51cde09054ac5-chunk-001<SEP>gd_81bde9d299daaec71f7d4b59-chunk-000<SEP>gd_b73b97865652097b570441e9-chunk-000<SEP>gd_8a7aa9f4a15477216fce77cc-chunk-000<SEP>gd_2f8e003679c6373e09a7daaf-chunk-000<SEP>gd_bb32e1c07e86dae286d8bcd3-chunk-000<SEP>gd_b0b8352ace4c12ea7df2e79a-chunk-001<SEP>gd_b0b8352ace4c12ea7df2e79a-chunk-000<SEP>gd_8f909671968a906eeff62bdc-chunk-000<SEP>gd_cc8e0a9c7c8c3eaa2c8d4ac3-chunk-000<SEP>gd_9b8a38716e9eac83516f7e0a-chunk-000<SEP>gd_57fa3f9a3c4f8de50eeb4882-chunk-000<SEP>gd_57fa3f9a3c4f8de50eeb4882-chunk-002<SEP>gd_cc6b5207100a4e6335ded9da-chunk-000<SEP>gd_66188e68eea695f287823796-chunk-000<SEP>gd_d3df09f00aa74d92c37c1684-chunk-000<SEP>gd_ceabea397f77e9318083a0d7-chunk-000<SEP>gd_ceabea397f77e9318083a0d7-chunk-001<SEP>gd_9f977490d0bbe113a221d6cf-chunk-000<SEP>gd_dd042f359b0051fd3ba764b0-chunk-000<SEP>gd_afcc2a3eb186119ed5062c31-chunk-000<SEP>gd_afcc2a3eb186119ed5062c31-chunk-001<SEP>gd_aad660ab69b0ba4d4b48f2b8-chunk-000<SEP>gd_51731a67cd5c06c0815006d8-chunk-000<SEP>gd_f87b63c3e88f345595a20d8f-chunk-000<SEP>gd_aba23bfdcaed571db61db702-chunk-001<SEP>gd_b371f6e011973dd23106e53b-chunk-000<SEP>gd_5492d4d586da10f9d01192dd-chunk-001<SEP>gd_faead248acb155f9a68f81a5-chunk-001<SEP>gd_b450394f687756dbe35a5ae0-chunk-000<SEP>gd_ed53e87406e11d3445a6960e-chunk-000<SEP>gd_b96370547a5625dcaf50f606-chunk-000<SEP>gd_94dacf60a04c5ef0578e1af6-chunk-000<SEP>gd_f9158d711643f379e605325f-chunk-000<SEP>gd_bbbf4213f2403aaaf1cf9394-chunk-000<SEP>gd_f11d1026fe24b42d822cf22a-chunk-000<SEP>gd_beab654fbbc93fa3cf45a5c6-chunk-000<SEP>gd_46073547d3ecb8101d23128e-chunk-001<SEP>gd_bf207746ae273a5fc7e8618e-chunk-000<SEP>gd_c481ad6a3095befd2e0989e4-chunk-002<SEP>gd_c481ad6a3095befd2e0989e4-chunk-003<SEP>gd_cb17d802afa999aa5a2020f3-chunk-001<SEP>gd_cb17d802afa999aa5a2020f3-chunk-002<SEP>gd_cb17d802afa999aa5a2020f3-chunk-003<SEP>gd_cb17d802afa999aa5a2020f3-chunk-000<SEP>gd_9afc3fc5d51d8286d88af633-chunk-000<SEP>gd_9afc3fc5d51d8286d88af633-chunk-001<SEP>gd_5f4341352a06f4cbdef81bcc-chunk-000<SEP>gd_5f4341352a06f4cbdef81bcc-chunk-002<SEP>gd_5f4341352a06f4cbdef81bcc-chunk-003<SEP>gd_67aa9b21cc5ba8ca31945889-chunk-001<SEP>gd_67aa9b21cc5ba8ca31945889-chunk-003<SEP>gd_66bbfcd9b1f8b6bca75fe3f6-chunk-001<SEP>gd_6c0640632fd219338512a716-chunk-000<SEP>gd_6d674ffb138083b614124cff-chunk-002<SEP>gd_6d674ffb138083b614124cff-chunk-003<SEP>gd_6d674ffb138083b614124cff-chunk-004<SEP>gd_91f0124cd7f6c9cbe24df3e8-chunk-001<SEP>gd_91f0124cd7f6c9cbe24df3e8-chunk-002<SEP>gd_eef9b72c02c79480022b348b-chunk-000<SEP>gd_ea1b5c4442520f0bde10ef16-chunk-001<SEP>gd_0056db36f6124156e233c201-chunk-001<SEP>gd_0056db36f6124156e233c201-chunk-002<SEP>gd_813a663b6045ef3222cc6a96-chunk-000<SEP>gd_19d3cb4a0d9ac32e95b41c33-chunk-001<SEP>gd_19d3cb4a0d9ac32e95b41c33-chunk-002<SEP>gd_818ba64738491131923f436e-chunk-000<SEP>gd_1a02f8692430d0f4f1f4f6be-chunk-000<SEP>gd_8377d68cef2cdef818baa2e8-chunk-001<SEP>gd_84b389880b4e28a3333696a3-chunk-000<SEP>gd_d036f97a47d2121009f8326f-chunk-000<SEP>gd_05120473ace42af384d71ac1-chunk-000<SEP>gd_05120473ace42af384d71ac1-chunk-005<SEP>gd_950767c5c3a3596311dbbda5-chunk-000<SEP>gd_e5881e127e64d27c29297266-chunk-002<SEP>gd_e5881e127e64d27c29297266-chunk-004<SEP>gd_e5881e127e64d27c29297266-chunk-006<SEP>gd_e5881e127e64d27c29297266-chunk-007<SEP>gd_a2133043d53f3401aad628c3-chunk-001<SEP>gd_daf1ebb11f0e32fe93411859-chunk-000<SEP>gd_3f3546419c8af125d66414d7-chunk-002<SEP>gd_d52716db8e6942a0d024b8a0-chunk-000<SEP>gd_d52716db8e6942a0d024b8a0-chunk-001<SEP>gd_d52716db8e6942a0d024b8a0-chunk-002<SEP>gd_a173a4cadbd0b240296376ca-chunk-000<SEP>gd_cce155b4479bad7b55306d48-chunk-000<SEP>gd_cce155b4479bad7b55306d48-chunk-001<SEP>gd_cce155b4479bad7b55306d48-chunk-002<SEP>gd_000c9a2f62aa1edcababf25c-chunk-001<SEP>gd_0027ef0c6f1b522de8f93543-chunk-003<SEP>gd_dac4461c759fbef3c85beabc-chunk-000<SEP>gd_24e298cda6ab82b9dd6500f8-chunk-000<SEP>gd_19772d999a49aa7c05c1ed66-chunk-000<SEP>gd_48c4d7d8835df970f970f08b-chunk-001",
+          "file_path": "gd_014b45cb99cfee97ee337556<SEP>gd_756878d4d219336489c49168<SEP>gd_0e1afddaca819c17829b209e<SEP>gd_0019c5e0dad1cf6315645b67<SEP>gd_18496897e5422a11b9860676<SEP>gd_00f0fd1277363a92e5cb2ada<SEP>gd_03e15c39b23c76a73a12a032<SEP>gd_14d8f66ab72709464e7b1f54<SEP>gd_14fcf58446d7e49d02fe50fe<SEP>gd_0d9ed295c2bb4d2ef2626774<SEP>gd_0e9a94d9a2c6bd5596deca87<SEP>gd_e202a1afd3c9d493a094de48<SEP>gd_ad5ace08d7fa6c197773d33b<SEP>gd_23e08535a0d07b419df49dea<SEP>gd_16d19bd83634475f86b34ee9<SEP>gd_b15e60fb25deec55942c00d1<SEP>gd_15d187637520cc4b1b5726e1<SEP>gd_177014eb9b039d2307248c03<SEP>gd_23aa8cd4020f1d2df5102cfc<SEP>gd_256a41d38f56ea0d66e64b45<SEP>gd_4fe03de948798e408f8e23aa<SEP>gd_21bd6da71e6015eb12202fb3<SEP>gd_5339ef95acf5382961a2350a<SEP>gd_1282420851c57a65c41b3c9b<SEP>gd_26e354d96348044e49c9f661<SEP>gd_2aeb737f1fc3578904a93fac<SEP>gd_22462fc0c151ee5a1d880b8f<SEP>gd_2864ed857c89cc1a33e60bc8<SEP>gd_7b8e1734f0309e1ac887f899<SEP>gd_243034475e44ac6592eb8cf0<SEP>gd_070a59055548e31a4e2d028a<SEP>gd_4c93dd06bf96421a31a4ec23<SEP>gd_2fdbffb33fcf38e16b8d19ea<SEP>gd_34c141c6933eafc6a555342b<SEP>gd_3ebf3023f70e6b3f8139191f<SEP>gd_33efad0196fd9206d0c57889<SEP>gd_4a1db13237771f628ac9bc2c<SEP>gd_385277f88221b595a4db19fa<SEP>gd_5067e7d465b1c8e7c23adc37<SEP>gd_a46480025a7b5344f9662b4e<SEP>gd_5b98c2f68eb577d75332ad5f<SEP>gd_e0505c1150b5f1aa25fed30c<SEP>gd_3cc6a49aba6331ce2e244f8a<SEP>gd_40121b246ff5bf58c30968ac<SEP>gd_501507d3da37dc0bee391abb<SEP>gd_44e87b15a12b4d77479d4f58<SEP>gd_44d0a6964b4f43fd522b107e<SEP>gd_4e8e411a20b69ff98e60d556<SEP>gd_a6016d6c72ddea604b995fd3<SEP>gd_48e33c739374b10eb5af5570<SEP>gd_1e07c5d8a5539b7e896c47b5<SEP>gd_514be900e352775092392632<SEP>gd_524c287c9d24eb09b58604a0<SEP>gd_4f29175b4c599edc6f63ea81<SEP>gd_ba8cfcf37a4829e6738e3817<SEP>gd_51082f5f33da67daee39dc90<SEP>gd_5487b59a91d25df6759963f2<SEP>gd_5a3012ecffcc0968826fc7e3<SEP>gd_3aab2ebe3d4a17a4ae74909b<SEP>gd_673777877ba804b6adcb05c7<SEP>gd_d8fe4e83f86b82e6fd92f383<SEP>gd_6fcb1801ba88d3d8f13ac9c7<SEP>gd_79858ea6162573644fe3e173<SEP>gd_364d266152046eb1076d048a<SEP>gd_2c6f9645343251c1f939e00a<SEP>gd_72a49edcf9ab2df09ba6c1c2<SEP>gd_93db829a67b16eaaacdf2d76<SEP>gd_e6e70dc6bd3b3665dbbe64de<SEP>gd_2d72fe9469e9f2b08dcd24ea<SEP>gd_753bb0e35f420a30e8b62d0b<SEP>gd_896b59f47a2fe051ace06a99<SEP>gd_33efe7307fb3edd348590ee0<SEP>gd_826943ff016f1c9f4e16a02f<SEP>gd_82b65319408f738f77ded8bf<SEP>gd_9393f5107171bfdba2765a73<SEP>...truncated...(KEEP Old)",
+          "created_at": 1793529293
+        },
+        {
+          "entity_name": "AI SDR tool",
+          "entity_type": "product",
+          "description": "A software tool designed to automate sales tasks using artificial intelligence.<SEP>An AI-powered sales development tool that requires training and daily iteration.",
+          "source_id": "gd_89ef45091a4dc6b15419376f-chunk-001<SEP>gd_c5fd94ac349d025fb78a37d0-chunk-003",
+          "file_path": "gd_89ef45091a4dc6b15419376f<SEP>gd_c5fd94ac349d025fb78a37d0",
+          "created_at": 1793596634
+        },
+        {
+          "entity_name": "Sales Development Representative (SDR)",
+          "entity_type": "person",
+          "description": "A sales development representative who is responsible for generating leads and setting appointments for the sales team.<SEP>A sales professional responsible for generating new leads and opportunities for a company.",
+          "source_id": "gd_e5881e127e64d27c29297266-chunk-001<SEP>gd_f9d25c28348724609cb4e3da-chunk-000",
+          "file_path": "gd_e5881e127e64d27c29297266<SEP>gd_f9d25c28348724609cb4e3da",
+          "created_at": 1793557095
+        },
+        {
+          "entity_name": "AI SDR Platforms",
+          "entity_type": "product",
+          "description": "AI-powered sales development platforms that send 10x more messages with better response rates.",
+          "source_id": "gd_c1eda59785faf7ce5addae75-chunk-012",
+          "file_path": "gd_c1eda59785faf7ce5addae75",
+          "created_at": 1793621574
+        },
+        {
+          "entity_name": "AI SDR",
+          "entity_type": "product",
+          "description": "**AI SDR: A Comprehensive Summary**\n\nAI SDR, or Artificial Intelligence Sales Development Representative, is a software tool that leverages artificial intelligence to enhance sales and customer interactions. This AI-powered sales development representative excels in product knowledge and can handle complex questions, making it an invaluable asset for sales teams. AI SDR is designed to work 24/7 without breaks or complaints, providing a significant advantage over human sales development representatives.\n\nAI SDR is an artificial intelligence-powered tool specifically designed for Sales Development Representatives (SDRs), which has already demonstrated its capabilities by booking more meetings than humans. This tool generates high-quality leads that humans might not otherwise obtain, making it an essential component of any sales strategy. Furthermore, AI SDR is mentioned as having booked a meeting with Jason, highlighting its effectiveness in real-world applications.\n\nIn essence, AI SDR is an artificial intelligence-powered sales development representative that combines the strengths of human sales development representatives with the capabilities of artificial intelligence. By automating routine tasks and providing exceptional product knowledge, AI SDR enables sales teams to focus on high-value activities, ultimately driving business growth and success.\n\nAI SDRs are running 24/7, handling prospecting, qualification, follow-ups, and even booking meetings at a fraction of the cost of a human SDR. The tool requires constant fine-tuning to ensure optimal performance and can send a large volume of emails, such as 3,000+ per month. AI SDR is a software application that uses artificial intelligence to assist with sales development and customer engagement, automating sales outreach and follow-up tasks.\n\nHowever, the success of AI SDR depends on the approach and input of the sales team, as it is a tool that amplifies their efforts. It is essential to note that AI SDR is not a replacement for human sales development representatives but rather a complementary tool that can enhance their capabilities.\n\nAI SDR can also be described as a type of artificial intelligence-powered sales development representative, a sales representative who uses artificial intelligence to handle a high volume of sales tasks, an AI-powered sales development tool that helps businesses automate sales processes, an AI-powered sales development tool that automatically reaches out to form submissions, a sales development tool that uses AI, and a concept that refers to the use of AI for sales development or the use of artificial intelligence in sales development.\n\nIn some cases, AI SDR has been known to book six-figure deals, demonstrating its potential for significant revenue growth. Overall, AI SDR is a powerful tool that can help businesses streamline their sales processes, increase efficiency, and drive revenue growth.\n\nIt's worth noting that AI SDR is a product of Salesforce, which has the potential to generate $3.6 billion in additional revenue with a 30% uplift. Additionally, AI SDR requires real setup time, real ongoing maintenance, and real human judgment to run well, highlighting the importance of proper implementation and maintenance.\n\nSpecialized AI SDRs can be designed for different use cases, and the tool can be trained to perform sales tasks. In one instance, an AI SDR handled sponsor inquiries and required 47 iterations before it stopped being too aggressive on pricing discussions. Furthermore, AI SDRs can be used to automate sales outreach tasks, generate leads, and even book meetings.\n\nThe price of AI SDR is reported to be in the range of $50k-$100k/year. Overall, AI SDR is a highly productive tool that makes possible what was impossible before, and it has the potential to build up a significant pipeline in a short period, as seen in one instance where it built up $500,000 in pipeline in its first few weeks.",
+          "source_id": "gd_23aa8cd4020f1d2df5102cfc-chunk-000<SEP>gd_3784621e331dc81f75510555-chunk-000<SEP>gd_4a1db13237771f628ac9bc2c-chunk-003<SEP>gd_38df17cff9eb3cf9451f1893-chunk-000<SEP>gd_40fff6305e814a310e970593-chunk-000<SEP>gd_e4f465b861a77e3bc41927c1-chunk-000<SEP>gd_7935ec63c0428c5b7c372279-chunk-000<SEP>gd_e5881e127e64d27c29297266-chunk-001<SEP>gd_e5881e127e64d27c29297266-chunk-002<SEP>gd_27d143d3e8d916ef234fccfe-chunk-001<SEP>gd_43e212d0edcb1c2810230fe2-chunk-002<SEP>gd_829c748931b4ffb3558e0adc-chunk-003<SEP>gd_829c748931b4ffb3558e0adc-chunk-004<SEP>gd_8f5f71a1378d0350779d0bd7-chunk-000<SEP>gd_8f5f71a1378d0350779d0bd7-chunk-001<SEP>gd_aea7c965af3368761d8786d3-chunk-001<SEP>gd_aea7c965af3368761d8786d3-chunk-002<SEP>gd_aea7c965af3368761d8786d3-chunk-003<SEP>gd_358fbb324b7f44e4b1825ded-chunk-004<SEP>gd_65427bc55aea7156a7d39bfe-chunk-004<SEP>gd_6575aade24641b1cc94fc561-chunk-000<SEP>gd_70fbe3aeece3874aa5c26594-chunk-004<SEP>gd_d6e2503b0360a9909720cf18-chunk-000<SEP>gd_e82e6511ade6122ac0c71b46-chunk-000<SEP>gd_e82e6511ade6122ac0c71b46-chunk-006<SEP>gd_e82e6511ade6122ac0c71b46-chunk-008<SEP>gd_f4b7879f1fde287961a29eb3-chunk-000<SEP>gd_f4b7879f1fde287961a29eb3-chunk-002<SEP>gd_f4b7879f1fde287961a29eb3-chunk-004<SEP>gd_f4b7879f1fde287961a29eb3-chunk-005<SEP>gd_17ed878e2ce1e1b54809f97a-chunk-001<SEP>gd_17ed878e2ce1e1b54809f97a-chunk-002<SEP>gd_cc80ae8a393a1ee4cf628117-chunk-002<SEP>gd_cc80ae8a393a1ee4cf628117-chunk-005<SEP>gd_f374b222227a6a91a8bc883c-chunk-001<SEP>gd_f374b222227a6a91a8bc883c-chunk-003<SEP>gd_23ebc282dfbfcee03fe01904-chunk-001<SEP>gd_5b445ae4452b1cd5ee770467-chunk-001<SEP>gd_869914f6788fdfc5460c226b-chunk-005<SEP>gd_6206569683c386ee6c92ce17-chunk-003<SEP>gd_6206569683c386ee6c92ce17-chunk-005<SEP>gd_6206569683c386ee6c92ce17-chunk-002<SEP>gd_56ce429513ba63d601778b83-chunk-007<SEP>gd_103dd66256994169ffe0170e-chunk-001<SEP>gd_103dd66256994169ffe0170e-chunk-002<SEP>gd_417b957752ce712ce5874976-chunk-001<SEP>gd_417b957752ce712ce5874976-chunk-002<SEP>gd_417b957752ce712ce5874976-chunk-003<SEP>gd_417b957752ce712ce5874976-chunk-009<SEP>gd_417b957752ce712ce5874976-chunk-010<SEP>gd_3ffa319b9d5140c80f90ee3c-chunk-001<SEP>gd_3ffa319b9d5140c80f90ee3c-chunk-005<SEP>gd_3f9119ed9837d5ab5732aafa-chunk-005<SEP>gd_c5553f609a98fd5ceb200638-chunk-002<SEP>gd_c5553f609a98fd5ceb200638-chunk-003<SEP>gd_c5553f609a98fd5ceb200638-chunk-005<SEP>gd_9f64b63b5ae698d29604d98b-chunk-005<SEP>gd_9f64b63b5ae698d29604d98b-chunk-012<SEP>gd_9f64b63b5ae698d29604d98b-chunk-014<SEP>gd_9f64b63b5ae698d29604d98b-chunk-015<SEP>gd_ec4952faf291c054baf7a979-chunk-005<SEP>gd_ec4952faf291c054baf7a979-chunk-006<SEP>gd_c1eda59785faf7ce5addae75-chunk-001<SEP>gd_c1eda59785faf7ce5addae75-chunk-015<SEP>gd_c1eda59785faf7ce5addae75-chunk-016<SEP>gd_c1eda59785faf7ce5addae75-chunk-019<SEP>gd_03663f68906e5fe37d85d810-chunk-000<SEP>gd_03663f68906e5fe37d85d810-chunk-002<SEP>gd_57e4f799ef3cc8109831930f-chunk-001<SEP>gd_57e4f799ef3cc8109831930f-chunk-003<SEP>gd_9139ba799e84ced68ddaf157-chunk-003<SEP>gd_45895bb382839086f6554318-chunk-004<SEP>gd_45895bb382839086f6554318-chunk-005<SEP>gd_45895bb382839086f6554318-chunk-006<SEP>gd_bf8397f656238e9eba87fda2-chunk-000",
+          "file_path": "gd_23aa8cd4020f1d2df5102cfc<SEP>gd_3784621e331dc81f75510555<SEP>gd_4a1db13237771f628ac9bc2c<SEP>gd_38df17cff9eb3cf9451f1893<SEP>gd_40fff6305e814a310e970593<SEP>gd_e4f465b861a77e3bc41927c1<SEP>gd_7935ec63c0428c5b7c372279<SEP>gd_e5881e127e64d27c29297266<SEP>gd_27d143d3e8d916ef234fccfe<SEP>gd_43e212d0edcb1c2810230fe2<SEP>gd_829c748931b4ffb3558e0adc<SEP>gd_8f5f71a1378d0350779d0bd7<SEP>gd_aea7c965af3368761d8786d3<SEP>gd_358fbb324b7f44e4b1825ded<SEP>gd_65427bc55aea7156a7d39bfe<SEP>gd_6575aade24641b1cc94fc561<SEP>gd_70fbe3aeece3874aa5c26594<SEP>gd_d6e2503b0360a9909720cf18<SEP>gd_e82e6511ade6122ac0c71b46<SEP>gd_f4b7879f1fde287961a29eb3<SEP>gd_17ed878e2ce1e1b54809f97a<SEP>gd_cc80ae8a393a1ee4cf628117<SEP>gd_f374b222227a6a91a8bc883c<SEP>gd_23ebc282dfbfcee03fe01904<SEP>gd_5b445ae4452b1cd5ee770467<SEP>gd_869914f6788fdfc5460c226b<SEP>gd_6206569683c386ee6c92ce17<SEP>gd_56ce429513ba63d601778b83<SEP>gd_103dd66256994169ffe0170e<SEP>gd_417b957752ce712ce5874976<SEP>gd_3ffa319b9d5140c80f90ee3c<SEP>gd_3f9119ed9837d5ab5732aafa<SEP>gd_c5553f609a98fd5ceb200638<SEP>gd_9f64b63b5ae698d29604d98b<SEP>gd_ec4952faf291c054baf7a979<SEP>gd_c1eda59785faf7ce5addae75<SEP>gd_03663f68906e5fe37d85d810<SEP>gd_57e4f799ef3cc8109831930f<SEP>gd_9139ba799e84ced68ddaf157<SEP>gd_45895bb382839086f6554318<SEP>gd_bf8397f656238e9eba87fda2",
+          "created_at": 1793644542
+        },
+        {
+          "entity_name": "Enterprise SDR",
+          "entity_type": "concept",
+          "description": "A sales development representative who navigates complex organizations and handles high-touch sales.",
+          "source_id": "gd_f4b7879f1fde287961a29eb3-chunk-004",
+          "file_path": "gd_f4b7879f1fde287961a29eb3",
+          "created_at": 1793572979
+        },
+        {
+          "entity_name": "AI SDR Platform",
+          "entity_type": "product",
+          "description": "A platform used for AI-powered sales development.<SEP>A platform for automating sales outreach and lead generation using AI.<SEP>A platform that enables AI-powered sales development activities.",
+          "source_id": "gd_cd0a5d64ec64d242e99c5ad1-chunk-002<SEP>gd_cd0a5d64ec64d242e99c5ad1-chunk-003<SEP>gd_17ed878e2ce1e1b54809f97a-chunk-003",
+          "file_path": "gd_cd0a5d64ec64d242e99c5ad1<SEP>gd_17ed878e2ce1e1b54809f97a",
+          "created_at": 1793576263
+        },
+        {
+          "entity_name": "Human SDR",
+          "entity_type": "person",
+          "description": "The Human Sales Development Representative (SDR) is a crucial role in the sales process, responsible for interacting with customers and prospects to generate leads and qualify potential customers. This individual is a human, as opposed to an automated system, and is responsible for performing sales outreach manually. They often struggle with complex questions and technical product representation, which can be a challenge for them.\n\nIn some cases, Human SDRs may lack product knowledge, which can hinder their ability to effectively communicate with customers and prospects. This can lead to a high turnover rate, as they may require explicit instructions to perform their duties. However, when equipped with the necessary knowledge and support, Human SDRs can focus on deals that actually require human interaction, freeing them to concentrate on high-value activities.\n\nOn average, a Human SDR sends between 75-285 emails per month, which can be a time-consuming and labor-intensive task. Despite these challenges, Human SDRs play a vital role in building relationships and driving sales growth. They use traditional sales outreach methods to reach out to potential customers, and their ability to interact with customers and prospects is essential for qualifying leads and setting up meetings with sales teams.\n\nIt's worth noting that Human SDRs may not always have the answer to a sponsor question and may guess, punt, or delay in such situations. However, this does not diminish their importance in the sales process. In fact, their human interaction with customers and prospects is essential for generating leads and qualifying potential customers. Overall, the Human SDR is a critical component of the sales team, and their skills and knowledge are essential for driving sales growth and building strong relationships with customers and prospects.<SEP>Human SDR refers to a human sales development representative who handles sales and customer service tasks.<SEP>A human sales development representative who can be trained to perform sales tasks.<SEP>A human sales development representative that typically requires 4-6 hours per week per rep for management.<SEP>A human sales development representative who responds to high-intent conversations and handles complex accounts.",
+          "source_id": "gd_3784621e331dc81f75510555-chunk-000<SEP>gd_08b0a35493e3f370346bb127-chunk-000<SEP>gd_e5881e127e64d27c29297266-chunk-000<SEP>gd_27d143d3e8d916ef234fccfe-chunk-001<SEP>gd_43e212d0edcb1c2810230fe2-chunk-002<SEP>gd_829c748931b4ffb3558e0adc-chunk-003<SEP>gd_829c748931b4ffb3558e0adc-chunk-004<SEP>gd_8f5f71a1378d0350779d0bd7-chunk-004<SEP>gd_8f5f71a1378d0350779d0bd7-chunk-000<SEP>gd_aea7c965af3368761d8786d3-chunk-001<SEP>gd_6250b027a6a90083aaee57cf-chunk-001<SEP>gd_f4b7879f1fde287961a29eb3-chunk-000<SEP>gd_f374b222227a6a91a8bc883c-chunk-002<SEP>gd_f374b222227a6a91a8bc883c-chunk-003<SEP>gd_417b957752ce712ce5874976-chunk-001<SEP>gd_417b957752ce712ce5874976-chunk-002<SEP>gd_417b957752ce712ce5874976-chunk-009<SEP>gd_c1eda59785faf7ce5addae75-chunk-018<SEP>gd_c1eda59785faf7ce5addae75-chunk-019<SEP>gd_03663f68906e5fe37d85d810-chunk-000<SEP>gd_9139ba799e84ced68ddaf157-chunk-003",
+          "file_path": "gd_3784621e331dc81f75510555<SEP>gd_08b0a35493e3f370346bb127<SEP>gd_e5881e127e64d27c29297266<SEP>gd_27d143d3e8d916ef234fccfe<SEP>gd_43e212d0edcb1c2810230fe2<SEP>gd_829c748931b4ffb3558e0adc<SEP>gd_8f5f71a1378d0350779d0bd7<SEP>gd_aea7c965af3368761d8786d3<SEP>gd_6250b027a6a90083aaee57cf<SEP>gd_f4b7879f1fde287961a29eb3<SEP>gd_f374b222227a6a91a8bc883c<SEP>gd_417b957752ce712ce5874976<SEP>gd_c1eda59785faf7ce5addae75<SEP>gd_03663f68906e5fe37d85d810<SEP>gd_9139ba799e84ced68ddaf157",
+          "created_at": 1793627732
+        },
+        {
+          "entity_name": "AI SDR tools",
+          "entity_type": "product",
+          "description": "Artificial intelligence-powered sales development tools.",
+          "source_id": "gd_46ffa32789f344463230a831-chunk-006<SEP>gd_46ffa32789f344463230a831-chunk-007",
+          "file_path": "gd_46ffa32789f344463230a831",
+          "created_at": 1793608762
+        },
+        {
+          "entity_name": "AI SDRs",
+          "entity_type": "concept",
+          "description": "**AI SDRs**\n\nAI SDRs, or Artificial Intelligence-powered Sales Development Representatives, are a crucial component in modern sales strategies. These AI-powered tools are designed to assist sales development representatives in identifying and engaging with potential customers. By leveraging artificial intelligence, AI SDRs can automate tasks such as lead generation, research, and outreach, freeing up human representatives to focus on high-value activities like building relationships and closing deals.\n\nThe primary function of AI SDRs is to provide sales development representatives with AI-driven insights and recommendations to improve their outreach efforts. This can include identifying the most promising leads, crafting personalized messages, and even sending automated follow-up communications. By doing so, AI SDRs aim to increase the efficiency and effectiveness of sales development teams, ultimately driving revenue growth for organizations.\n\nAI SDRs have evolved over time, with advancements in AI technology and data analytics making them a valuable asset for sales teams. Some companies even provide AI tools specifically designed for sales development, further emphasizing the importance of AI SDRs in modern sales strategies. In terms of performance, AI SDRs have shown promising results, with some reports indicating response rates of 5-7% when sending automated messages.\n\nAI SDRs can handle a range of tasks, including prospecting, qualification, follow-ups, and even booking meetings at a fraction of the cost of a human SDR. They can also automate and scale sales outreach, making them an essential component in the sales development process. Additionally, AI SDRs can handle ticket inquiries, sponsor outreach, and sales support, making them a versatile tool for sales teams.\n\nIt's worth noting that AI SDRs can handle a high volume of conversations, possess better product knowledge, and excel in technical conversations. They can also provide sales development representatives with AI-driven insights and recommendations to improve their outreach efforts. Overall, AI SDRs have become a key component in the sales development process, and their importance is likely to continue growing as the sales landscape evolves.\n\nIn summary, AI SDRs are artificial intelligence-powered sales development tools that can work well with proper training and hyper-personalization at scale. They are designed to assist sales development representatives in identifying and engaging with potential customers, and can automate tasks such as lead generation, research, and outreach. With advancements in AI technology and data analytics, AI SDRs have become a valuable asset for sales teams, and their importance is likely to continue growing in the future.<SEP>AI SDRs are a type of artificial intelligence software designed for sales and customer service.<SEP>Artificial intelligence-powered sales development representatives.<SEP>AI-powered sales development representatives that work at scale in production systems.",
+          "source_id": "gd_35c0de66f11cd0f9ff35bd4f-chunk-000<SEP>gd_35c0de66f11cd0f9ff35bd4f-chunk-001<SEP>gd_329e9dcc5d03af62830b01e0-chunk-000<SEP>gd_20969cb9a1054f9bfe90e5a1-chunk-000<SEP>gd_a956d6defae69ac68c5d4cb9-chunk-000<SEP>gd_aad2f9895e2d25f92408db27-chunk-000<SEP>gd_8e98891bed97aad494c47a75-chunk-000<SEP>gd_e5881e127e64d27c29297266-chunk-003<SEP>gd_0027ef0c6f1b522de8f93543-chunk-000<SEP>gd_27d143d3e8d916ef234fccfe-chunk-000<SEP>gd_43e212d0edcb1c2810230fe2-chunk-001<SEP>gd_829c748931b4ffb3558e0adc-chunk-000<SEP>gd_829c748931b4ffb3558e0adc-chunk-001<SEP>gd_829c748931b4ffb3558e0adc-chunk-002<SEP>gd_8f5f71a1378d0350779d0bd7-chunk-002<SEP>gd_8f5f71a1378d0350779d0bd7-chunk-003<SEP>gd_cd0a5d64ec64d242e99c5ad1-chunk-004<SEP>gd_cd0a5d64ec64d242e99c5ad1-chunk-003<SEP>gd_aea7c965af3368761d8786d3-chunk-000<SEP>gd_358fbb324b7f44e4b1825ded-chunk-003<SEP>gd_65427bc55aea7156a7d39bfe-chunk-001<SEP>gd_65427bc55aea7156a7d39bfe-chunk-000<SEP>gd_7753ef947d383d366dbbdd5a-chunk-003<SEP>gd_89ef45091a4dc6b15419376f-chunk-000<SEP>gd_cc80ae8a393a1ee4cf628117-chunk-000<SEP>gd_cc80ae8a393a1ee4cf628117-chunk-001<SEP>gd_f374b222227a6a91a8bc883c-chunk-000<SEP>gd_f374b222227a6a91a8bc883c-chunk-006<SEP>gd_524880b12b236d68016d66fa-chunk-005<SEP>gd_524880b12b236d68016d66fa-chunk-006<SEP>gd_23ebc282dfbfcee03fe01904-chunk-004<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-000<SEP>gd_5b445ae4452b1cd5ee770467-chunk-000<SEP>gd_5b445ae4452b1cd5ee770467-chunk-003<SEP>gd_869914f6788fdfc5460c226b-chunk-000<SEP>gd_869914f6788fdfc5460c226b-chunk-001<SEP>gd_869914f6788fdfc5460c226b-chunk-003<SEP>gd_6206569683c386ee6c92ce17-chunk-008<SEP>gd_31e53199562273779b464f4d-chunk-003<SEP>gd_79c396c5dba7ced9a1a0f4c7-chunk-002<SEP>gd_1c786168860b4c364f13ef3b-chunk-006<SEP>gd_1c786168860b4c364f13ef3b-chunk-005<SEP>gd_c5553f609a98fd5ceb200638-chunk-000<SEP>gd_c5553f609a98fd5ceb200638-chunk-004<SEP>gd_9f64b63b5ae698d29604d98b-chunk-003<SEP>gd_9f64b63b5ae698d29604d98b-chunk-004<SEP>gd_c1eda59785faf7ce5addae75-chunk-000<SEP>gd_c1eda59785faf7ce5addae75-chunk-011<SEP>gd_c1eda59785faf7ce5addae75-chunk-017<SEP>gd_c1eda59785faf7ce5addae75-chunk-018<SEP>gd_c1eda59785faf7ce5addae75-chunk-020<SEP>gd_03663f68906e5fe37d85d810-chunk-001<SEP>gd_57e4f799ef3cc8109831930f-chunk-004<SEP>gd_759a598bed674f64e17e1fa0-chunk-003",
+          "file_path": "gd_35c0de66f11cd0f9ff35bd4f<SEP>gd_329e9dcc5d03af62830b01e0<SEP>gd_20969cb9a1054f9bfe90e5a1<SEP>gd_a956d6defae69ac68c5d4cb9<SEP>gd_aad2f9895e2d25f92408db27<SEP>gd_8e98891bed97aad494c47a75<SEP>gd_e5881e127e64d27c29297266<SEP>gd_0027ef0c6f1b522de8f93543<SEP>gd_27d143d3e8d916ef234fccfe<SEP>gd_43e212d0edcb1c2810230fe2<SEP>gd_829c748931b4ffb3558e0adc<SEP>gd_8f5f71a1378d0350779d0bd7<SEP>gd_cd0a5d64ec64d242e99c5ad1<SEP>gd_aea7c965af3368761d8786d3<SEP>gd_358fbb324b7f44e4b1825ded<SEP>gd_65427bc55aea7156a7d39bfe<SEP>gd_7753ef947d383d366dbbdd5a<SEP>gd_89ef45091a4dc6b15419376f<SEP>gd_cc80ae8a393a1ee4cf628117<SEP>gd_f374b222227a6a91a8bc883c<SEP>gd_524880b12b236d68016d66fa<SEP>gd_23ebc282dfbfcee03fe01904<SEP>gd_2a4d7b8a58e1c3110dd4d692<SEP>gd_5b445ae4452b1cd5ee770467<SEP>gd_869914f6788fdfc5460c226b<SEP>gd_6206569683c386ee6c92ce17<SEP>gd_31e53199562273779b464f4d<SEP>gd_79c396c5dba7ced9a1a0f4c7<SEP>gd_1c786168860b4c364f13ef3b<SEP>gd_c5553f609a98fd5ceb200638<SEP>gd_9f64b63b5ae698d29604d98b<SEP>gd_c1eda59785faf7ce5addae75<SEP>gd_03663f68906e5fe37d85d810<SEP>gd_57e4f799ef3cc8109831930f<SEP>gd_759a598bed674f64e17e1fa0",
+          "created_at": 1793626641
+        },
+        {
+          "entity_name": "AI Sales Tools",
+          "entity_type": "product",
+          "description": "Software solutions designed to augment human sales efforts with AI-powered personalization and automation.<SEP>Software applications designed to assist sales teams in tasks such as product knowledge and initial qualification.<SEP>Software solutions that utilize artificial intelligence to aid in sales processes.<SEP>Software applications that utilize artificial intelligence to support sales processes.<SEP>AI sales tools are products that can be used to automate sales processes.",
+          "source_id": "gd_cd0a5d64ec64d242e99c5ad1-chunk-004<SEP>gd_4b2e5709134e6a5edbcd6f5f-chunk-004<SEP>gd_89ef45091a4dc6b15419376f-chunk-000<SEP>gd_89ef45091a4dc6b15419376f-chunk-004<SEP>gd_89ef45091a4dc6b15419376f-chunk-003<SEP>gd_ed396b2b09f9738240728d5f-chunk-002",
+          "file_path": "gd_cd0a5d64ec64d242e99c5ad1<SEP>gd_4b2e5709134e6a5edbcd6f5f<SEP>gd_89ef45091a4dc6b15419376f<SEP>gd_ed396b2b09f9738240728d5f",
+          "created_at": 1793597726
+        },
+        {
+          "entity_name": "AI SDR Instances",
+          "entity_type": "product",
+          "description": "Artificial Intelligence-powered Sales Development Representatives",
+          "source_id": "gd_3ffa319b9d5140c80f90ee3c-chunk-000",
+          "file_path": "gd_3ffa319b9d5140c80f90ee3c",
+          "created_at": 1793607936
+        },
+        {
+          "entity_name": "AI-First Companies",
+          "entity_type": "concept",
+          "description": "Companies that prioritize AI development and integration<SEP>Companies using AI to innovate and gain competitive advantage.<SEP>A business idea of innovative companies that use AI to eat into other businesses' growth.",
+          "source_id": "gd_5041ab8c996980f3b7b34675-chunk-004<SEP>gd_20e60735f48eae1b55d1b0a4-chunk-000<SEP>gd_20e60735f48eae1b55d1b0a4-chunk-001",
+          "file_path": "gd_5041ab8c996980f3b7b34675<SEP>gd_20e60735f48eae1b55d1b0a4",
+          "created_at": 1793595727
+        },
+        {
+          "entity_name": "Human SDRs/BDRs",
+          "entity_type": "UNKNOWN",
+          "description": "Human SDRs/BDRs evolving into “AI operators” who fine-tune messaging and handle edge cases",
+          "source_id": "gd_65427bc55aea7156a7d39bfe-chunk-001",
+          "file_path": "gd_65427bc55aea7156a7d39bfe",
+          "created_at": 1793567444
+        },
+        {
+          "entity_name": "SE",
+          "entity_type": "person",
+          "description": "Sales Engineer Helping with Technical Issues<SEP>A subject matter expert who is responsible for providing technical support and guidance to the sales team.<SEP>A Sales Engineer, a technical sales professional.<SEP>Software engineers who specialize in solving technical problems for customers.<SEP>Sales Engineer.",
+          "source_id": "gd_2443495fc85009b081428b80-chunk-000<SEP>gd_fb163a389ea88c48ce1a606e-chunk-003<SEP>gd_5b445ae4452b1cd5ee770467-chunk-001<SEP>gd_547c5075e66aa644c0ab2a4f-chunk-003<SEP>gd_547c5075e66aa644c0ab2a4f-chunk-006",
+          "file_path": "gd_2443495fc85009b081428b80<SEP>gd_fb163a389ea88c48ce1a606e<SEP>gd_5b445ae4452b1cd5ee770467<SEP>gd_547c5075e66aa644c0ab2a4f",
+          "created_at": 1793608636
+        },
+        {
+          "entity_name": "AI SDR Experiment",
+          "entity_type": "concept",
+          "description": "An AI-powered sales development experiment that achieved #1 performance on a platform by sending 4,495 hyper-personalized emails in two weeks.",
+          "source_id": "gd_17ed878e2ce1e1b54809f97a-chunk-003",
+          "file_path": "gd_17ed878e2ce1e1b54809f97a",
+          "created_at": 1793576259
+        },
+        {
+          "entity_name": "Vice President of Sales (VP of Sales)",
+          "entity_type": "person",
+          "description": "A high-level executive responsible for leading a company's sales team and developing sales strategies.",
+          "source_id": "gd_65427bc55aea7156a7d39bfe-chunk-000",
+          "file_path": "gd_65427bc55aea7156a7d39bfe",
+          "created_at": 1793567420
+        },
+        {
+          "entity_name": "Human SDR Roles",
+          "entity_type": "concept",
+          "description": "Roles of human SDRs that are being replaced by AI SDRs.",
+          "source_id": "gd_c1eda59785faf7ce5addae75-chunk-000",
+          "file_path": "gd_c1eda59785faf7ce5addae75",
+          "created_at": 1793621532
+        },
+        {
+          "entity_name": "SDR",
+          "entity_type": "concept",
+          "description": "**Sales Development Representative (SDR)**\n\nThe Sales Development Representative (SDR) is a critical role in driving sales growth and revenue for companies. In recent years, the momentum in the SF Bay has concentrated on founders, senior executives, and funding, but the average SDR or Account Executive (AE) may not be as affected. This role is crucial in winning back customers' business, as a sales development representative reaches out to customers to re-engage them.\n\nThe primary responsibilities of an SDR include generating leads and setting appointments, as well as qualifying potential customers to ensure a strong sales pipeline. In the context of 2025 and beyond, the role of the Sales Development Representative is expected to continue evolving, with a focus on generating high-quality leads and building strong relationships with potential customers.\n\nSDR hiring is also expected to be impacted by the decline in support hiring. Sales Development Representatives from competitors are also a key consideration for companies looking to expand their sales teams. The skills and expertise of an SDR are in high demand, and their role is essential in driving sales growth and revenue for companies.\n\nThere are different types of SDRs, including AI-powered SDRs, which use artificial intelligence to automate sales tasks. However, the core responsibilities and skills required for an SDR remain the same, regardless of the tools or technology used. SDRs are typically the first point of contact for potential customers, and they play a critical role in qualifying leads and setting appointments for sales reps.\n\nIn addition to generating new leads and opportunities, SDRs are also responsible for closing deals, but they may not always be as efficient as AI in certain tasks. However, the role of an SDR is not expected to be replaced by AI, but rather to continue evolving to meet the changing needs of companies and their customers.\n\nThe SDR role is a concept that refers to the process of outbound sales, and it is essential for companies to have a strong SDR team in place to drive sales growth and revenue. SDR stands for Sales Development Representative, a role that involves qualifying leads and connecting prospects with sales reps. Overall, the Sales Development Representative is a sales professional responsible for generating new leads and opportunities, and plays a critical role in driving sales growth and revenue for companies.\n\nIt's worth noting that some companies are backfilling their SDR roles with AI, which is expected to impact the hiring process for SDRs. Additionally, SDRs are responsible for sending emails to potential customers, but some may not be doing so. The role of an SDR is evolving, and companies are looking for individuals who can work effectively with AI-powered tools to drive sales growth and revenue.<SEP>Sales development representative, a role responsible for generating new leads and opportunities.",
+          "source_id": "gd_b15e60fb25deec55942c00d1-chunk-000<SEP>gd_2864ed857c89cc1a33e60bc8-chunk-000<SEP>gd_7932b0cb72425a0f799285e1-chunk-000<SEP>gd_58ec534d2346ec246ab80c43-chunk-000<SEP>gd_e6e70dc6bd3b3665dbbe64de-chunk-000<SEP>gd_e2477eaaf4a38d5d955e5d98-chunk-000<SEP>gd_f69e3705f2346e4c5790bb90-chunk-000<SEP>gd_e2447a83645e8c86cf82915d-chunk-001<SEP>gd_24c3ba056cba9ad4dae3d409-chunk-001<SEP>gd_24c3ba056cba9ad4dae3d409-chunk-002<SEP>gd_2ab1e3a03f3d50096c7ab6ed-chunk-000<SEP>gd_956e8a0995c87d3c1371ebeb-chunk-001<SEP>gd_956e8a0995c87d3c1371ebeb-chunk-002<SEP>gd_e5881e127e64d27c29297266-chunk-006<SEP>gd_e5881e127e64d27c29297266-chunk-007<SEP>gd_bf45dffac4dbf133d8eb9177-chunk-000<SEP>gd_6b112dbc69c055374b7b44a8-chunk-000<SEP>gd_a12721c0e193cfcccf235132-chunk-001<SEP>gd_eaeca2bf33d264c65e63cdb8-chunk-002<SEP>gd_c188efcd001afbd3f2ccccd5-chunk-000<SEP>gd_cce155b4479bad7b55306d48-chunk-001<SEP>gd_d5dd5718c4d9070f399d45a0-chunk-001<SEP>gd_e574a81616d0929a802ea105-chunk-000<SEP>gd_4e9a15488128b2178d0769a7-chunk-000<SEP>gd_21d2833750d0ecf95dae5b15-chunk-001<SEP>gd_8f5f71a1378d0350779d0bd7-chunk-001<SEP>gd_37f607fa6221f3f2f29989e0-chunk-001<SEP>gd_37f607fa6221f3f2f29989e0-chunk-002<SEP>gd_a753d199b9c468b7c9b06a64-chunk-001<SEP>gd_cbce5e6622c8c301403e5d87-chunk-000<SEP>gd_cbce5e6622c8c301403e5d87-chunk-002<SEP>gd_d41775f7696f5ceaa33be6ca-chunk-000<SEP>gd_db83b3635bdade9c5ae7ff47-chunk-002<SEP>gd_63ffc1ac108a3235d9a1d24e-chunk-000<SEP>gd_76c045ab1705e7a1934e7771-chunk-001<SEP>gd_65427bc55aea7156a7d39bfe-chunk-001<SEP>gd_65427bc55aea7156a7d39bfe-chunk-004<SEP>gd_6b0bb4f6eea86f76dabfe5ec-chunk-002<SEP>gd_7b69a630faffe55c35682b43-chunk-001<SEP>gd_85e65f7b38f06f45f9272493-chunk-001<SEP>gd_85e65f7b38f06f45f9272493-chunk-003<SEP>gd_f4b7879f1fde287961a29eb3-chunk-004<SEP>gd_f4b7879f1fde287961a29eb3-chunk-005<SEP>gd_2d7b7e7000a27d7ddc3ef566-chunk-000<SEP>gd_34886e1a288792f07a43f42e-chunk-000<SEP>gd_34886e1a288792f07a43f42e-chunk-001<SEP>gd_89ef45091a4dc6b15419376f-chunk-002<SEP>gd_c8095a5972b407e222f3253f-chunk-002<SEP>gd_f374b222227a6a91a8bc883c-chunk-002<SEP>gd_f374b222227a6a91a8bc883c-chunk-005<SEP>gd_fb163a389ea88c48ce1a606e-chunk-005<SEP>gd_113e0fbb8166dfa5ea576718-chunk-004<SEP>gd_cdb688c70f3a971827ac4543-chunk-002<SEP>gd_fd52d37dd59bde552d67922f-chunk-002<SEP>gd_6206569683c386ee6c92ce17-chunk-009<SEP>gd_6206569683c386ee6c92ce17-chunk-002<SEP>gd_97843612d08bfd01e9f83879-chunk-002<SEP>gd_97843612d08bfd01e9f83879-chunk-003<SEP>gd_3e8732484211557041408d86-chunk-002<SEP>gd_3e8732484211557041408d86-chunk-009<SEP>gd_417b957752ce712ce5874976-chunk-003<SEP>gd_417b957752ce712ce5874976-chunk-009<SEP>gd_4ca05c1482a9b33757040d2a-chunk-005<SEP>gd_8188f705a58f509db9190d86-chunk-002<SEP>gd_1c786168860b4c364f13ef3b-chunk-013<SEP>gd_ec4952faf291c054baf7a979-chunk-002<SEP>gd_ec4952faf291c054baf7a979-chunk-007<SEP>gd_ec4952faf291c054baf7a979-chunk-011<SEP>gd_c1eda59785faf7ce5addae75-chunk-014<SEP>gd_c1eda59785faf7ce5addae75-chunk-015<SEP>gd_03663f68906e5fe37d85d810-chunk-004<SEP>gd_03663f68906e5fe37d85d810-chunk-005<SEP>gd_2c0bc9bf16dd6011f14e4ee0-chunk-006<SEP>gd_57e4f799ef3cc8109831930f-chunk-005<SEP>gd_57e4f799ef3cc8109831930f-chunk-012<SEP>gd_57e4f799ef3cc8109831930f-chunk-013<SEP>gd_9139ba799e84ced68ddaf157-chunk-002",
+          "file_path": "gd_b15e60fb25deec55942c00d1<SEP>gd_2864ed857c89cc1a33e60bc8<SEP>gd_7932b0cb72425a0f799285e1<SEP>gd_58ec534d2346ec246ab80c43<SEP>gd_e6e70dc6bd3b3665dbbe64de<SEP>gd_e2477eaaf4a38d5d955e5d98<SEP>gd_f69e3705f2346e4c5790bb90<SEP>gd_e2447a83645e8c86cf82915d<SEP>gd_24c3ba056cba9ad4dae3d409<SEP>gd_2ab1e3a03f3d50096c7ab6ed<SEP>gd_956e8a0995c87d3c1371ebeb<SEP>gd_e5881e127e64d27c29297266<SEP>gd_bf45dffac4dbf133d8eb9177<SEP>gd_6b112dbc69c055374b7b44a8<SEP>gd_a12721c0e193cfcccf235132<SEP>gd_eaeca2bf33d264c65e63cdb8<SEP>gd_c188efcd001afbd3f2ccccd5<SEP>gd_cce155b4479bad7b55306d48<SEP>gd_d5dd5718c4d9070f399d45a0<SEP>gd_e574a81616d0929a802ea105<SEP>gd_4e9a15488128b2178d0769a7<SEP>gd_21d2833750d0ecf95dae5b15<SEP>gd_8f5f71a1378d0350779d0bd7<SEP>gd_37f607fa6221f3f2f29989e0<SEP>gd_a753d199b9c468b7c9b06a64<SEP>gd_cbce5e6622c8c301403e5d87<SEP>gd_d41775f7696f5ceaa33be6ca<SEP>gd_db83b3635bdade9c5ae7ff47<SEP>gd_63ffc1ac108a3235d9a1d24e<SEP>gd_76c045ab1705e7a1934e7771<SEP>gd_65427bc55aea7156a7d39bfe<SEP>gd_6b0bb4f6eea86f76dabfe5ec<SEP>gd_7b69a630faffe55c35682b43<SEP>gd_85e65f7b38f06f45f9272493<SEP>gd_f4b7879f1fde287961a29eb3<SEP>gd_2d7b7e7000a27d7ddc3ef566<SEP>gd_34886e1a288792f07a43f42e<SEP>gd_89ef45091a4dc6b15419376f<SEP>gd_c8095a5972b407e222f3253f<SEP>gd_f374b222227a6a91a8bc883c<SEP>gd_fb163a389ea88c48ce1a606e<SEP>gd_113e0fbb8166dfa5ea576718<SEP>gd_cdb688c70f3a971827ac4543<SEP>gd_fd52d37dd59bde552d67922f<SEP>gd_6206569683c386ee6c92ce17<SEP>gd_97843612d08bfd01e9f83879<SEP>gd_3e8732484211557041408d86<SEP>gd_417b957752ce712ce5874976<SEP>gd_4ca05c1482a9b33757040d2a<SEP>gd_8188f705a58f509db9190d86<SEP>gd_1c786168860b4c364f13ef3b<SEP>gd_ec4952faf291c054baf7a979<SEP>gd_c1eda59785faf7ce5addae75<SEP>gd_03663f68906e5fe37d85d810<SEP>gd_2c0bc9bf16dd6011f14e4ee0<SEP>gd_57e4f799ef3cc8109831930f<SEP>gd_9139ba799e84ced68ddaf157",
+          "created_at": 1793627732
+        },
+        {
+          "entity_name": "AI SDR equivalent",
+          "entity_type": "concept",
+          "description": "A sales development representative who is an AI-based solution and is responsible for generating leads and qualifying potential customers.",
+          "source_id": "gd_f374b222227a6a91a8bc883c-chunk-002",
+          "file_path": "gd_f374b222227a6a91a8bc883c",
+          "created_at": 1793586760
+        },
+        {
+          "entity_name": "Artificial Intelligence",
+          "entity_type": "concept",
+          "description": "A technology used to automate tasks and improve decision-making.<SEP>A technology used by HubSpot<SEP>Artificial intelligence is a technology that Shah has integrated into HubSpot's platform.<SEP>Artificial Intelligence is a rapidly growing field that is projected to hit $1.8T by 2030, surpassing the growth of cloud computing.<SEP>Artificial intelligence, a field of computer science that focuses on creating intelligent machines that can perform tasks that typically require human intelligence.",
+          "source_id": "gd_f69e3705f2346e4c5790bb90-chunk-001<SEP>gd_5cbb8c3e936dfe48fbc0ea0e-chunk-001<SEP>gd_5cbb8c3e936dfe48fbc0ea0e-chunk-003<SEP>gd_5041ab8c996980f3b7b34675-chunk-000<SEP>gd_bb6777cec9990f70dd72539b-chunk-001",
+          "file_path": "gd_f69e3705f2346e4c5790bb90<SEP>gd_5cbb8c3e936dfe48fbc0ea0e<SEP>gd_5041ab8c996980f3b7b34675<SEP>gd_bb6777cec9990f70dd72539b",
+          "created_at": 1793575165
+        },
+        {
+          "entity_name": "Human SDRs/AEs",
+          "entity_type": "person",
+          "description": "Respond to high-intent conversations AI surfaces, Handle complex, high-value accounts, Refine messaging and positioning, Close deals and build relationships",
+          "source_id": "gd_9139ba799e84ced68ddaf157-chunk-004",
+          "file_path": "gd_9139ba799e84ced68ddaf157",
+          "created_at": 1793627732
+        },
+        {
+          "entity_name": "Sales Development Representative",
+          "entity_type": "product",
+          "description": "A sales professional responsible for generating new leads and setting appointments for the sales team.<SEP>Sales professionals responsible for generating leads.<SEP>Sales development representatives are responsible for generating leads and qualifying potential customers for the sales team.<SEP>Role responsible for generating new leads for a sales team.",
+          "source_id": "gd_f69e3705f2346e4c5790bb90-chunk-001<SEP>gd_f623182a1b5011ff58dbdc15-chunk-000<SEP>gd_5395cd6a012af4fe3daa1ace-chunk-001<SEP>gd_3ffa319b9d5140c80f90ee3c-chunk-005",
+          "file_path": "gd_f69e3705f2346e4c5790bb90<SEP>gd_f623182a1b5011ff58dbdc15<SEP>gd_5395cd6a012af4fe3daa1ace<SEP>gd_3ffa319b9d5140c80f90ee3c",
+          "created_at": 1793607958
+        },
+        {
+          "entity_name": "AI SDR Tool",
+          "entity_type": "product",
+          "description": "Software solutions for AI-powered sales development.",
+          "source_id": "gd_ec4952faf291c054baf7a979-chunk-011",
+          "file_path": "gd_ec4952faf291c054baf7a979",
+          "created_at": 1793620986
+        },
+        {
+          "entity_name": "SaaStr.ai",
+          "entity_type": "organization",
+          "description": "**SaaStr.ai: A Comprehensive Platform for SaaS Industry Professionals**\n\nSaaStr.ai is a multifaceted platform designed for SaaS industry professionals, founders, and funders. At its core, it serves as a connection hub where individuals can learn, grow, and network with like-minded professionals. The platform offers a range of innovative tools and features, including AI-powered content curation, a sandbox environment for experimentation, and a suite of free AI tools specifically designed to aid founders in preparing for fundraising.\n\nThese AI tools, such as the AI Start-Up Valuation Calculator, AI VC Pitch Analyzer, Real Time Benchmarking, and AI VC Matchmaking, provide valuable insights and data that are typically only accessible to venture capitalists. By leveraging actual market data and AI, SaaStr.ai offers a unique perspective that helps founders and funders make informed decisions. The platform's tools are designed to level the playing field, giving startups a more equitable chance to secure funding.\n\nBeyond its AI-powered tools, SaaStr.ai also provides a platform for building and hosting web applications. This feature allows users to create and deploy applications quickly and efficiently, utilizing a range of AI-powered tools and services. The platform's focus on innovation and experimentation makes it an attractive resource for B2B founders looking to stay ahead of the curve.\n\nIn addition to its features and tools, SaaStr.ai has a large user base, with over 500,000+ users, and is built using AI agents and tools. The platform is also a hub for the SaaStr community, providing a space for sharing knowledge and insights on software as a service (SaaS) and related topics. With its comprehensive suite of tools and features, SaaStr.ai is an invaluable resource for founders, funders, and industry professionals alike.\n\nSaaStr.ai is also a company that provides resources and mentorship for startups, and its platform is designed to support the SaaS industry in various ways. It offers a range of resources and insights on scaling and growth, making it an attractive resource for startup founders and entrepreneurs. Overall, SaaStr.ai is a multifaceted platform that combines the benefits of networking, learning, and AI-powered tooling to support the SaaS industry.\n\nIt's worth noting that SaaStr.ai has also been described as a platform that connects founders with capital in real-time, having onboarded 300+ top VCs, and a platform that uses AI to build and deploy web applications, having shipped 10+ vibe coded apps into production. Additionally, it has been referred to as a platform providing insights and resources for SaaS professionals, a platform for AI research and development, and a platform providing 24/7 guidance to the community through an AI mentor.\n\nThe platform is built entirely on Replit and serves 15-20,000 users monthly, with automated AI chat, B2B news aggregation, and stock market integration. It also features a valuation calculator that has processed over 259,000 startup valuations, and provides organic social media content and tools for founders and businesses.\n\nIn summary, SaaStr.ai is a comprehensive platform that offers a range of innovative tools and features to support the SaaS industry, including AI-powered content curation, a sandbox environment for experimentation, and a suite of free AI tools for founders. With its large user base, AI-powered tools, and focus on innovation and experimentation, SaaStr.ai is an invaluable resource for founders, funders, and industry professionals alike.",
+          "source_id": "gd_09e160ccf7663729c581d1e2-chunk-000<SEP>gd_14530da4ea39350d8431fea6-chunk-000<SEP>gd_709d7e8e2108c4354bc8e875-chunk-000<SEP>gd_709d7e8e2108c4354bc8e875-chunk-001<SEP>gd_35c0de66f11cd0f9ff35bd4f-chunk-000<SEP>gd_49072335923e70b6d8913de1-chunk-000<SEP>gd_4fc1edc35474b0bd286f9132-chunk-000<SEP>gd_7f100146cba44358898e53af-chunk-000<SEP>gd_2e55186f0f79af43e6118167-chunk-000<SEP>gd_364d266152046eb1076d048a-chunk-000<SEP>gd_364d266152046eb1076d048a-chunk-007<SEP>gd_71e628f86d3b2233b7cb22b0-chunk-001<SEP>gd_71e628f86d3b2233b7cb22b0-chunk-002<SEP>gd_781cf17b154da9f65066fb9f-chunk-000<SEP>gd_b34fa0b5c05ac1d04fa62aa7-chunk-002<SEP>gd_daf1ebb11f0e32fe93411859-chunk-000<SEP>gd_daf1ebb11f0e32fe93411859-chunk-004<SEP>gd_27d143d3e8d916ef234fccfe-chunk-000<SEP>gd_c513cd5cd47320b3679f9406-chunk-004<SEP>gd_2ae4837fbbe4b5fbc2b412bd-chunk-001<SEP>gd_2ae4837fbbe4b5fbc2b412bd-chunk-003<SEP>gd_2ae4837fbbe4b5fbc2b412bd-chunk-004<SEP>gd_15a070dc95aa3ff6e00d03e0-chunk-000<SEP>gd_1c2c4466317bf96df4add7d8-chunk-000<SEP>gd_358fbb324b7f44e4b1825ded-chunk-005<SEP>gd_3a30edd5abd227a1d27df8f9-chunk-000<SEP>gd_3a30edd5abd227a1d27df8f9-chunk-001<SEP>gd_3a30edd5abd227a1d27df8f9-chunk-003<SEP>gd_3a30edd5abd227a1d27df8f9-chunk-004<SEP>gd_3a30edd5abd227a1d27df8f9-chunk-005<SEP>gd_f4b7879f1fde287961a29eb3-chunk-005<SEP>gd_a7c61a59e40262414bfd8f20-chunk-002<SEP>gd_a7c61a59e40262414bfd8f20-chunk-003<SEP>gd_0bc1abfa4e6084d46e2595c5-chunk-000<SEP>gd_536b8e8143a9a6d616f95b8a-chunk-001<SEP>gd_536b8e8143a9a6d616f95b8a-chunk-003<SEP>gd_536b8e8143a9a6d616f95b8a-chunk-004<SEP>gd_e95c09643e99385d630cd19c-chunk-001<SEP>gd_1fd2b9d62813a3a21d9e3a6c-chunk-000<SEP>gd_1fd2b9d62813a3a21d9e3a6c-chunk-006<SEP>gd_9766ff5367bd30c141196a4c-chunk-000<SEP>gd_9766ff5367bd30c141196a4c-chunk-001<SEP>gd_9766ff5367bd30c141196a4c-chunk-004<SEP>gd_9766ff5367bd30c141196a4c-chunk-005<SEP>gd_9c5b3ffd65a6602d115b46e5-chunk-005<SEP>gd_9c5b3ffd65a6602d115b46e5-chunk-006<SEP>gd_7617c95bfd9367eb7469a610-chunk-002<SEP>gd_7617c95bfd9367eb7469a610-chunk-003<SEP>gd_57de1d1dfc0b96aff9b97b1f-chunk-004<SEP>gd_57de1d1dfc0b96aff9b97b1f-chunk-005<SEP>gd_8a750106d4513616691b5198-chunk-006<SEP>gd_5a82a5a11309c93654f577f0-chunk-000<SEP>gd_5a82a5a11309c93654f577f0-chunk-004<SEP>gd_5fe0e24210e667539d05d4de-chunk-001<SEP>gd_5fe0e24210e667539d05d4de-chunk-002<SEP>gd_5fe0e24210e667539d05d4de-chunk-007<SEP>gd_5fe0e24210e667539d05d4de-chunk-008<SEP>gd_5fe0e24210e667539d05d4de-chunk-012<SEP>gd_79c396c5dba7ced9a1a0f4c7-chunk-000<SEP>gd_79c396c5dba7ced9a1a0f4c7-chunk-001<SEP>gd_79c396c5dba7ced9a1a0f4c7-chunk-004<SEP>gd_79c396c5dba7ced9a1a0f4c7-chunk-005<SEP>gd_abfe41334169db7a9fdcf906-chunk-003<SEP>gd_c5553f609a98fd5ceb200638-chunk-005<SEP>gd_c1eda59785faf7ce5addae75-chunk-006<SEP>gd_249ae5f1a28ad2b6389c7b37-chunk-000<SEP>gd_a0acb205dc04ba5f42369d7a-chunk-003<SEP>gd_a0acb205dc04ba5f42369d7a-chunk-004<SEP>gd_187175124950b21b5f4d57e6-chunk-000<SEP>gd_187175124950b21b5f4d57e6-chunk-002<SEP>gd_187175124950b21b5f4d57e6-chunk-004<SEP>gd_187175124950b21b5f4d57e6-chunk-005<SEP>gd_45895bb382839086f6554318-chunk-003<SEP>gd_b0ed35375cd1112218e7da45-chunk-004<SEP>gd_b0ed35375cd1112218e7da45-chunk-005<SEP>gd_8fb6aa290d8ac667817c8b57-chunk-000<SEP>gd_8fb6aa290d8ac667817c8b57-chunk-001<SEP>gd_8fb6aa290d8ac667817c8b57-chunk-009<SEP>gd_2b1b8318e2ec523237dbf3e3-chunk-011",
+          "file_path": "gd_09e160ccf7663729c581d1e2<SEP>gd_14530da4ea39350d8431fea6<SEP>gd_709d7e8e2108c4354bc8e875<SEP>gd_35c0de66f11cd0f9ff35bd4f<SEP>gd_49072335923e70b6d8913de1<SEP>gd_4fc1edc35474b0bd286f9132<SEP>gd_7f100146cba44358898e53af<SEP>gd_2e55186f0f79af43e6118167<SEP>gd_364d266152046eb1076d048a<SEP>gd_71e628f86d3b2233b7cb22b0<SEP>gd_781cf17b154da9f65066fb9f<SEP>gd_b34fa0b5c05ac1d04fa62aa7<SEP>gd_daf1ebb11f0e32fe93411859<SEP>gd_27d143d3e8d916ef234fccfe<SEP>gd_c513cd5cd47320b3679f9406<SEP>gd_2ae4837fbbe4b5fbc2b412bd<SEP>gd_15a070dc95aa3ff6e00d03e0<SEP>gd_1c2c4466317bf96df4add7d8<SEP>gd_358fbb324b7f44e4b1825ded<SEP>gd_3a30edd5abd227a1d27df8f9<SEP>gd_a7c61a59e40262414bfd8f20<SEP>gd_0bc1abfa4e6084d46e2595c5<SEP>gd_536b8e8143a9a6d616f95b8a<SEP>gd_e95c09643e99385d630cd19c<SEP>gd_1fd2b9d62813a3a21d9e3a6c<SEP>gd_9766ff5367bd30c141196a4c<SEP>gd_9c5b3ffd65a6602d115b46e5<SEP>gd_7617c95bfd9367eb7469a610<SEP>gd_57de1d1dfc0b96aff9b97b1f<SEP>gd_8a750106d4513616691b5198<SEP>gd_5a82a5a11309c93654f577f0<SEP>gd_5fe0e24210e667539d05d4de<SEP>gd_79c396c5dba7ced9a1a0f4c7<SEP>gd_abfe41334169db7a9fdcf906<SEP>gd_c5553f609a98fd5ceb200638<SEP>gd_c1eda59785faf7ce5addae75<SEP>gd_249ae5f1a28ad2b6389c7b37<SEP>gd_a0acb205dc04ba5f42369d7a<SEP>gd_187175124950b21b5f4d57e6<SEP>gd_45895bb382839086f6554318<SEP>gd_b0ed35375cd1112218e7da45<SEP>gd_8fb6aa290d8ac667817c8b57<SEP>gd_2b1b8318e2ec523237dbf3e3",
+          "created_at": 1793640446
+        },
+        {
+          "entity_name": "Human SDR or AE",
+          "entity_type": "person",
+          "description": "A human sales representative or account executive who writes messaging frameworks.",
+          "source_id": "gd_c5553f609a98fd5ceb200638-chunk-002",
+          "file_path": "gd_c5553f609a98fd5ceb200638",
+          "created_at": 1793618378
+        }
+      ],
+      "relationships": [
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "SaaStr",
+          "description": "**AI SDR (Sales Development) at SaaStr**\n\nSaaStr, a prominent organization, has successfully implemented AI-powered Sales Development Representatives (SDRs) to enhance its sales development efforts. This innovative approach has yielded significant results, including a substantial increase in pipeline and revenue. The AI SDR has been instrumental in assisting over 40,000 founders with their B2B questions, demonstrating its effectiveness in addressing the needs of its members.\n\nThe company has deployed AI SDRs across multiple platforms, leveraging their capabilities to automate sales outreach and generate leads. Notably, the AI SDR has achieved a 72% open rate on ghosted leads, underscoring its ability to effectively engage with potential customers. SaaStr's commitment to AI adoption is evident in its development and utilization of AI SDRs, which has become a key component of its sales strategy.\n\nIn addition to its technical expertise, SaaStr also provides training and resources on AI SDR implementation to its members, facilitating their understanding and effective use of this technology. This comprehensive approach enables SaaStr's members to capitalize on the benefits of AI SDRs, ultimately driving business growth and success. By focusing on segments where relationships already exist, building institutional knowledge, and expanding outward, companies that succeed with AI SDRs without strong brand recognition can establish a solid foundation for their sales efforts.<SEP>SaaStr now manages AI SDRs, which requires 3-4 hours per agent per week.<SEP>The AI SDR built $500,000 in pipeline in its first few weeks.<SEP>including fine-tuning, quality checks, and optimization, with the Chief AI Officer overseeing the process.",
+          "keywords": "72% open rates,Built,Development,Has Implemented,Keywords: deployment,Managed,Requires daily management,Resources,Training,Usage,Uses,data,generates leads,implementation,relationship_keywords: deployed,relationship_keywords: uses,results,setup,success,training,uses AI SDR to generate leads",
+          "weight": 12.0,
+          "source_id": "gd_8f5f71a1378d0350779d0bd7-chunk-000<SEP>gd_d6e2503b0360a9909720cf18-chunk-000<SEP>gd_f4b7879f1fde287961a29eb3-chunk-000<SEP>gd_5b445ae4452b1cd5ee770467-chunk-001<SEP>gd_869914f6788fdfc5460c226b-chunk-005<SEP>gd_6206569683c386ee6c92ce17-chunk-002<SEP>gd_6206569683c386ee6c92ce17-chunk-003<SEP>gd_c5553f609a98fd5ceb200638-chunk-003<SEP>gd_c5553f609a98fd5ceb200638-chunk-005<SEP>gd_03663f68906e5fe37d85d810-chunk-000<SEP>gd_57e4f799ef3cc8109831930f-chunk-001",
+          "file_path": "gd_8f5f71a1378d0350779d0bd7<SEP>gd_d6e2503b0360a9909720cf18<SEP>gd_f4b7879f1fde287961a29eb3<SEP>gd_5b445ae4452b1cd5ee770467<SEP>gd_869914f6788fdfc5460c226b<SEP>gd_6206569683c386ee6c92ce17<SEP>gd_c5553f609a98fd5ceb200638<SEP>gd_03663f68906e5fe37d85d810<SEP>gd_57e4f799ef3cc8109831930f",
+          "created_at": 1793622794
+        },
+        {
+          "src_id": "Coding",
+          "tgt_id": "Sales",
+          "description": "Coding and sales use AI-powered SDRs to outperform human reps.",
+          "keywords": "AI-Powered SDRs",
+          "weight": 1.0,
+          "source_id": "gd_20e60735f48eae1b55d1b0a4-chunk-001",
+          "file_path": "gd_20e60735f48eae1b55d1b0a4",
+          "created_at": 1793595749
+        },
+        {
+          "src_id": "AI SDRs",
+          "tgt_id": "SaaStr",
+          "description": "**AI SDRs, SaaStr**\n\nSaaStr has successfully integrated AI-powered Sales Development Representatives (SDRs) into its sales and marketing efforts. These AI SDRs are designed to automate and scale sales outreach, allowing the company to handle a significantly higher volume of leads compared to human SDRs. According to SaaStr's data, AI SDRs have demonstrated a substantial advantage over their human counterparts, achieving a 6% response rate.\n\nThe deployment of AI SDRs has also enabled SaaStr to improve its sales and marketing efforts, with the company having deployed over 20 AI agents to support this initiative. By leveraging AI capabilities, SaaStr has been able to monetize its AI investments through the use of AI SDRs. This strategic move has not only enhanced the company's sales performance but also optimized its operational costs, as AI SDRs are cost-effective and can handle a much higher volume of leads compared to human SDRs.\n\nIt's worth noting that daily management and review of the AI SDRs are required to ensure their optimal performance and alignment with SaaStr's sales and marketing objectives. Overall, the integration of AI SDRs has been a key factor in SaaStr's success, enabling the company to scale its sales outreach efforts while maintaining a high level of efficiency and effectiveness.<SEP>Achieved #1 response rates by treating AI SDR deployment like hiring a human (note: this relationship was partially extracted in the previous task, but the keywords were missing)<SEP>Requires intensive human orchestration to work effectively (note: this relationship was partially extracted in the previous task, but the keywords were missing)<SEP>SaaStr achieved #1 response rates by treating AI SDR deployment like hiring a human.<SEP>provides effective implementation<SEP>sponsor outreach, and sales support.",
+          "keywords": "6% response rate,Achieved,Achieved high response rates,Deploying AI SDRs,Deploys,Handles ticket inquiries,High-Performing,Implements,Product,Requires human orchestration,Used,and sales support,cost-effective,deployed AI agents,monetize,provides effective implementation,sponsor outreach",
+          "weight": 15.0,
+          "source_id": "gd_27d143d3e8d916ef234fccfe-chunk-000<SEP>gd_43e212d0edcb1c2810230fe2-chunk-001<SEP>gd_829c748931b4ffb3558e0adc-chunk-000<SEP>gd_829c748931b4ffb3558e0adc-chunk-001<SEP>gd_f374b222227a6a91a8bc883c-chunk-000<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-000<SEP>gd_5b445ae4452b1cd5ee770467-chunk-000<SEP>gd_869914f6788fdfc5460c226b-chunk-000<SEP>gd_869914f6788fdfc5460c226b-chunk-001<SEP>gd_869914f6788fdfc5460c226b-chunk-003<SEP>gd_57e4f799ef3cc8109831930f-chunk-004",
+          "file_path": "gd_27d143d3e8d916ef234fccfe<SEP>gd_43e212d0edcb1c2810230fe2<SEP>gd_829c748931b4ffb3558e0adc<SEP>gd_f374b222227a6a91a8bc883c<SEP>gd_2a4d7b8a58e1c3110dd4d692<SEP>gd_5b445ae4452b1cd5ee770467<SEP>gd_869914f6788fdfc5460c226b<SEP>gd_57e4f799ef3cc8109831930f",
+          "created_at": 1793622794
+        },
+        {
+          "src_id": "AI",
+          "tgt_id": "Sales Development Representative (SDR)",
+          "description": "AI can help SDRs with tasks such as researching prospects and crafting customized emails.",
+          "keywords": "Assistance,Augmentation",
+          "weight": 1.0,
+          "source_id": "gd_f9d25c28348724609cb4e3da-chunk-000",
+          "file_path": "gd_f9d25c28348724609cb4e3da",
+          "created_at": 1793557118
+        },
+        {
+          "src_id": "AI SDR Platform",
+          "tgt_id": "SaaStr",
+          "description": "The AI SDR Platform is used by SaaStr to automate sales outreach and lead generation.",
+          "keywords": "Uses,Utilizes",
+          "weight": 1.0,
+          "source_id": "gd_cd0a5d64ec64d242e99c5ad1-chunk-003",
+          "file_path": "gd_cd0a5d64ec64d242e99c5ad1",
+          "created_at": 1793555960
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Enterprise SDR",
+          "description": "The AI SDR complements the Enterprise SDR by handling high-touch sales and complex organizations.",
+          "keywords": "complements_human_sales",
+          "weight": 1.0,
+          "source_id": "gd_f4b7879f1fde287961a29eb3-chunk-004",
+          "file_path": "gd_f4b7879f1fde287961a29eb3",
+          "created_at": 1793572979
+        },
+        {
+          "src_id": "AI SDR agents",
+          "tgt_id": "SaaStr",
+          "description": "The company has deployed AI SDR agents to automate sales development tasks.<SEP>The company's AI SDR agents are used to automate sales development tasks.<SEP>The company uses AI SDR agents to automate sales development tasks.",
+          "keywords": "Has,Is,Uses",
+          "weight": 3.0,
+          "source_id": "gd_417b957752ce712ce5874976-chunk-000",
+          "file_path": "gd_417b957752ce712ce5874976",
+          "created_at": 1793607310
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Human SDR",
+          "description": "**AI SDR (Artificial Intelligence Sales Development Representative) and Human SDR (Sales Development Representative)**\n\nThe AI SDR and Human SDR are two distinct approaches to sales development, each with its own strengths and weaknesses. AI SDRs are more effective than human SDRs in handling complex questions and product knowledge, as well as outperforming them in terms of productivity and effectiveness. In fact, AI SDRs have been shown to outperform human SDRs in terms of open rate and revenue generated.\n\nHowever, human SDRs are not entirely obsolete. They can be freed to focus on deals that actually require a human touch, allowing them to build stronger relationships with clients and close more deals. In fact, the goal of an AI SDR is to clone the best person on a team, which in this case is the Human SDR. By working together, AI SDRs and human SDRs can provide hyper-segmentation and proven copy, which outperforms a human SDR alone.\n\nIn terms of cost, the cost of AI SDRs is roughly equivalent to the cost of one human SDR for enterprise-grade agents with FDE support. However, for 70-80% of the output, human SDRs can be replaced by AI SDRs, resulting in a 3x-15x cost reduction. This makes AI SDRs an attractive option for companies looking to optimize their sales development process.\n\nIt's worth noting that AI SDRs are not meant to replace human SDRs entirely, but rather to augment their capabilities. The AI SDR is better than a mediocre human SDR, and when used in conjunction with human SDRs, they can provide a more effective and efficient sales development process.<SEP>The AI SDR is trained and iterated upon daily, similar to how a human SDR would be trained and iterated upon.",
+          "keywords": "15% of total revenue,Better,Compared,Compared to,High-volume,Iteration,Keywords: 72% open rate,Task Allocation,Training,automate,clone,cost reduction,equivalent cost,low-touch,outperformed_by,outperforms,relationship_keywords: used together",
+          "weight": 11.0,
+          "source_id": "gd_3784621e331dc81f75510555-chunk-000<SEP>gd_43e212d0edcb1c2810230fe2-chunk-002<SEP>gd_829c748931b4ffb3558e0adc-chunk-003<SEP>gd_f4b7879f1fde287961a29eb3-chunk-000<SEP>gd_f374b222227a6a91a8bc883c-chunk-003<SEP>gd_417b957752ce712ce5874976-chunk-001<SEP>gd_417b957752ce712ce5874976-chunk-002<SEP>gd_417b957752ce712ce5874976-chunk-009<SEP>gd_c1eda59785faf7ce5addae75-chunk-019",
+          "file_path": "gd_3784621e331dc81f75510555<SEP>gd_43e212d0edcb1c2810230fe2<SEP>gd_829c748931b4ffb3558e0adc<SEP>gd_f4b7879f1fde287961a29eb3<SEP>gd_f374b222227a6a91a8bc883c<SEP>gd_417b957752ce712ce5874976<SEP>gd_c1eda59785faf7ce5addae75",
+          "created_at": 1793621617
+        },
+        {
+          "src_id": "AI SDR tool",
+          "tgt_id": "SaaStr",
+          "description": "relationship_description: SaaStr portfolio companies use AI SDR tools for sales training.",
+          "keywords": "AI,SaaS,relationship_keywords: training,sales",
+          "weight": 1.0,
+          "source_id": "gd_89ef45091a4dc6b15419376f-chunk-001",
+          "file_path": "gd_89ef45091a4dc6b15419376f",
+          "created_at": 1793582614
+        },
+        {
+          "src_id": "AI SDRs",
+          "tgt_id": "AI Sales Tools",
+          "description": "The AI SDRs are a component of the AI sales tools.",
+          "keywords": "Component,Keywords: artificially intelligent,representatives",
+          "weight": 1.0,
+          "source_id": "gd_89ef45091a4dc6b15419376f-chunk-000",
+          "file_path": "gd_89ef45091a4dc6b15419376f",
+          "created_at": 1793582614
+        },
+        {
+          "src_id": "AI",
+          "tgt_id": "AI SDR",
+          "description": "Meet our new AI SDR! Our AI engineer!",
+          "keywords": "Amplification",
+          "weight": 1.0,
+          "source_id": "gd_103dd66256994169ffe0170e-chunk-002",
+          "file_path": "gd_103dd66256994169ffe0170e",
+          "created_at": 1793603719
+        },
+        {
+          "src_id": "AI-First Companies",
+          "tgt_id": "Sales",
+          "description": "AI-First companies use AI-powered SDRs to outperform human reps.",
+          "keywords": "AI-Powered SDRs",
+          "weight": 1.0,
+          "source_id": "gd_20e60735f48eae1b55d1b0a4-chunk-001",
+          "file_path": "gd_20e60735f48eae1b55d1b0a4",
+          "created_at": 1793595749
+        },
+        {
+          "src_id": "AI",
+          "tgt_id": "Human SDRs and BDRs",
+          "description": "Human SDRs and BDRs cannot perform tasks that AI can.",
+          "keywords": "Keywords: cannot,perform",
+          "weight": 1.0,
+          "source_id": "gd_9139ba799e84ced68ddaf157-chunk-001",
+          "file_path": "gd_9139ba799e84ced68ddaf157",
+          "created_at": 1793627739
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "SE",
+          "description": "AI SDR assists SE in sales efforts.",
+          "keywords": "Assistance",
+          "weight": 1.0,
+          "source_id": "gd_5b445ae4452b1cd5ee770467-chunk-001",
+          "file_path": "gd_5b445ae4452b1cd5ee770467",
+          "created_at": 1793594147
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "VP of Sales",
+          "description": "relationship_description: The VP of Sales is responsible for managing the sales team, including recruiting and training.",
+          "keywords": "recruiting,relationship_keywords: manages sales team",
+          "weight": 1.0,
+          "source_id": "gd_e4f465b861a77e3bc41927c1-chunk-000",
+          "file_path": "gd_e4f465b861a77e3bc41927c1",
+          "created_at": 1793496968
+        },
+        {
+          "src_id": "AI SDRs",
+          "tgt_id": "Vice President of Sales (VP of Sales)",
+          "description": "The VP of Sales should be familiar with AI-powered sales representatives (SDRs) and their capabilities.",
+          "keywords": "They Actually Understand AI Sales Tools - And Have Opinions",
+          "weight": 1.0,
+          "source_id": "gd_65427bc55aea7156a7d39bfe-chunk-000",
+          "file_path": "gd_65427bc55aea7156a7d39bfe",
+          "created_at": 1793567444
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Jason",
+          "description": "Jason was booked a meeting by an AI SDR.",
+          "keywords": "Booked Meeting",
+          "weight": 1.0,
+          "source_id": "gd_e5881e127e64d27c29297266-chunk-002",
+          "file_path": "gd_e5881e127e64d27c29297266",
+          "created_at": 1793516013
+        },
+        {
+          "src_id": "AI",
+          "tgt_id": "SDR",
+          "description": "**AI (Artificial Intelligence) and Sales Development Representatives (SDRs)**\n\nThe integration of AI and SDRs has transformed the sales landscape, enabling GTM (Go-to-Market) Teams to redeploy humans to more complex tasks. AI is being used to augment and integrate with SDR teams, improving efficiency and effectiveness. In fact, SDR teams that previously required 20 people to hit quota now need only 8, with AI handling research, sequencing, and initial outreach.\n\nAI is replacing SDRs in certain tasks, such as qualifying leads, demo products, negotiating deals, and closing sales. However, it is essential to note that AI is not replacing SDRs entirely, but rather augmenting their capabilities. SDRs are being augmented with AI to improve their performance, allowing them to focus on higher-value tasks that require human expertise and judgment.\n\nThe relationship between AI and SDRs is one of assistance and collaboration. AI assists SDRs in outbound sales by automating tasks, freeing up time for SDRs to focus on building relationships and closing deals. Conversely, SDRs handle outbound sales through AI, leveraging the technology to improve their productivity and effectiveness.\n\nOverall, the integration of AI and SDRs has the potential to revolutionize the sales process, enabling GTM Teams to achieve their goals more efficiently and effectively. By leveraging the strengths of both humans and machines, organizations can unlock new levels of sales performance and drive business growth.<SEP>Relationship Description: AI is deployed by SDR.<SEP>SDRs are being backfilled with AI.<SEP>AI is used by SDRs to increase volume and efficiency.",
+          "keywords": "Backfilling,Relationship Keywords: AI,Replacement,Replaces,SDR,augmentation,augmented,close,demo,deployment,efficiency,initial,integrated,integration,negotiation,outbound,outreach,qualification,relationship_keywords: assists,relationship_keywords: handles,relationship_keywords: handling,relationship_keywords: replaces,research,sequencing,volume",
+          "weight": 11.0,
+          "source_id": "gd_e5881e127e64d27c29297266-chunk-007<SEP>gd_85e65f7b38f06f45f9272493-chunk-003<SEP>gd_2d7b7e7000a27d7ddc3ef566-chunk-000<SEP>gd_6206569683c386ee6c92ce17-chunk-009<SEP>gd_97843612d08bfd01e9f83879-chunk-002<SEP>gd_97843612d08bfd01e9f83879-chunk-003<SEP>gd_c1eda59785faf7ce5addae75-chunk-014<SEP>gd_57e4f799ef3cc8109831930f-chunk-012<SEP>gd_9139ba799e84ced68ddaf157-chunk-002",
+          "file_path": "gd_e5881e127e64d27c29297266<SEP>gd_85e65f7b38f06f45f9272493<SEP>gd_2d7b7e7000a27d7ddc3ef566<SEP>gd_6206569683c386ee6c92ce17<SEP>gd_97843612d08bfd01e9f83879<SEP>gd_c1eda59785faf7ce5addae75<SEP>gd_57e4f799ef3cc8109831930f<SEP>gd_9139ba799e84ced68ddaf157",
+          "created_at": 1793627739
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Salesforce",
+          "description": "relationship_description: AI SDR helps Salesforce generate high-quality leads that humans might not otherwise get.<SEP>Salesforce's CRM and marketing automation platform is integrated with AI SDR software.<SEP>The AI SDR integrates with Salesforce to send messages.<SEP>The CRM doesn’t become less important. It becomes the operating system.<SEP>AI SDRs are hooked up to Salesforce to ingest data and keep working with humans.",
+          "keywords": "Hooks Up,Integration,Partnership,improves sales,integrates,provides infrastructure,relationship_keywords: generates leads,works with",
+          "weight": 5.0,
+          "source_id": "gd_e4f465b861a77e3bc41927c1-chunk-000<SEP>gd_869914f6788fdfc5460c226b-chunk-005<SEP>gd_417b957752ce712ce5874976-chunk-003<SEP>gd_3ffa319b9d5140c80f90ee3c-chunk-005<SEP>gd_9f64b63b5ae698d29604d98b-chunk-005",
+          "file_path": "gd_e4f465b861a77e3bc41927c1<SEP>gd_869914f6788fdfc5460c226b<SEP>gd_417b957752ce712ce5874976<SEP>gd_3ffa319b9d5140c80f90ee3c<SEP>gd_9f64b63b5ae698d29604d98b",
+          "created_at": 1793618851
+        },
+        {
+          "src_id": "Artificial Intelligence",
+          "tgt_id": "Sales Development Representative",
+          "description": "The SDR uses AI to automate tasks and improve decision-making.",
+          "keywords": "Leverage,Technology",
+          "weight": 1.0,
+          "source_id": "gd_f69e3705f2346e4c5790bb90-chunk-001",
+          "file_path": "gd_f69e3705f2346e4c5790bb90",
+          "created_at": 1793505897
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Company",
+          "description": "The company uses the AI SDR product to handle sales and outreach tasks.<SEP>The companies that succeed at AI SDRs without strong brand start with segments where relationship already exists, build institutional knowledge, and then expand outward.<SEP>The company implements and maintains the AI SDR, allocating budget and time for its use.<SEP>The company scales and expands the use of the AI SDR as it becomes more effective.",
+          "keywords": "Expansion,Handles,Implementation,Maintenance,Scaling,Uses,data,implementation,results",
+          "weight": 4.0,
+          "source_id": "gd_c5553f609a98fd5ceb200638-chunk-002<SEP>gd_c5553f609a98fd5ceb200638-chunk-005<SEP>gd_c1eda59785faf7ce5addae75-chunk-019",
+          "file_path": "gd_c5553f609a98fd5ceb200638<SEP>gd_c1eda59785faf7ce5addae75",
+          "created_at": 1793621617
+        },
+        {
+          "src_id": "AI SDRs",
+          "tgt_id": "SaaStr.ai",
+          "description": "SaaStr.ai provides AI-powered tools for sales development representatives.",
+          "keywords": "AI-powered,Relationship_keywords: tool,sales development representatives",
+          "weight": 1.0,
+          "source_id": "gd_35c0de66f11cd0f9ff35bd4f-chunk-000",
+          "file_path": "gd_35c0de66f11cd0f9ff35bd4f",
+          "created_at": 1793490064
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "HubSpot",
+          "description": "AI SDRs are also hooked up to HubSpot to ingest data and keep working with humans.",
+          "keywords": "Hooks Up",
+          "weight": 1.0,
+          "source_id": "gd_9f64b63b5ae698d29604d98b-chunk-005",
+          "file_path": "gd_9f64b63b5ae698d29604d98b",
+          "created_at": 1793618851
+        },
+        {
+          "src_id": "AI",
+          "tgt_id": "SDRs",
+          "description": "Provides SDRs with a tool to ask questions and receive support.<SEP>AI can replace most outbound SDRs with AI today.<SEP>SDRs follow up on potential prospects with AI.<SEP>The writing’s on the wall.  We won’t need more of them.<SEP>relationship_description: AI technology is used to automate sales tasks performed by SDRs.<SEP>AI SDRs require proper training on adding value to specific personas and scraping real-time signals about prospects.<SEP>Outbound SDR work is less risky than inbound because you’re not trusting agents with precious inbound leads-you’re trying to generate pipeline that wasn’t being generated before.",
+          "keywords": "AI,Can Replace,Has Access,Risk,Training,Unnecessary,Writing on the Wall,follows up,interacts,relationship_keywords: automation,sales",
+          "weight": 8.0,
+          "source_id": "gd_5339ef95acf5382961a2350a-chunk-001<SEP>gd_3ebf3023f70e6b3f8139191f-chunk-000<SEP>gd_f9d25c28348724609cb4e3da-chunk-004<SEP>gd_7b69a630faffe55c35682b43-chunk-000<SEP>gd_89ef45091a4dc6b15419376f-chunk-001<SEP>gd_6206569683c386ee6c92ce17-chunk-007<SEP>gd_57e4f799ef3cc8109831930f-chunk-014",
+          "file_path": "gd_5339ef95acf5382961a2350a<SEP>gd_3ebf3023f70e6b3f8139191f<SEP>gd_f9d25c28348724609cb4e3da<SEP>gd_7b69a630faffe55c35682b43<SEP>gd_89ef45091a4dc6b15419376f<SEP>gd_6206569683c386ee6c92ce17<SEP>gd_57e4f799ef3cc8109831930f",
+          "created_at": 1793622799
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Founder",
+          "description": "The AI SDR hands off complex sales to the founder, who may be involved in the handoff process.<SEP>The founder is involved in the handoff process with the AI SDR.",
+          "keywords": "handoff_process",
+          "weight": 2.0,
+          "source_id": "gd_f4b7879f1fde287961a29eb3-chunk-004",
+          "file_path": "gd_f4b7879f1fde287961a29eb3",
+          "created_at": 1793572979
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "CEO",
+          "description": "CEOs wonder if AI-powered sales tools can replace human sales efforts.",
+          "keywords": "Can't an AI SDR just get me all the leads I need anyway?",
+          "weight": 1.0,
+          "source_id": "gd_bf8397f656238e9eba87fda2-chunk-000",
+          "file_path": "gd_bf8397f656238e9eba87fda2",
+          "created_at": 1793644553
+        },
+        {
+          "src_id": "AI AE",
+          "tgt_id": "AI SDR",
+          "description": "AI SDR and AI AE are related concepts in the context of the evolution of artificial intelligence in sales.<SEP>The future of AI in sales will involve the development of AI AE capabilities.",
+          "keywords": "evolution of AI in sales,future of AI in sales,relationship_description",
+          "weight": 2.0,
+          "source_id": "gd_e82e6511ade6122ac0c71b46-chunk-006",
+          "file_path": "gd_e82e6511ade6122ac0c71b46",
+          "created_at": 1793572669
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "VCs",
+          "description": "VCs will fund at least 1,000 AI SDR tools.",
+          "keywords": "funds",
+          "weight": 1.0,
+          "source_id": "gd_7935ec63c0428c5b7c372279-chunk-000",
+          "file_path": "gd_7935ec63c0428c5b7c372279",
+          "created_at": 1793507168
+        },
+        {
+          "src_id": "AI SDRs",
+          "tgt_id": "AI-augmented sales",
+          "description": "relationship_description: AI-powered Sales Development Representatives are a key component of AI implementation.",
+          "keywords": "AI implementation,relationship_keywords: key component",
+          "weight": 1.0,
+          "source_id": "gd_524880b12b236d68016d66fa-chunk-005",
+          "file_path": "gd_524880b12b236d68016d66fa",
+          "created_at": 1793587750
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "SaaStr Annual",
+          "description": "The AI SDR integrates with SaaStr Annual to support its deployment.",
+          "keywords": "integrates,works with",
+          "weight": 1.0,
+          "source_id": "gd_417b957752ce712ce5874976-chunk-003",
+          "file_path": "gd_417b957752ce712ce5874976",
+          "created_at": 1793607314
+        },
+        {
+          "src_id": "AI Solution Architecture",
+          "tgt_id": "SDRs",
+          "description": "The AI Solution Architecture integrates with SDRs to manage sales interactions.",
+          "keywords": "Integration",
+          "weight": 1.0,
+          "source_id": "gd_869914f6788fdfc5460c226b-chunk-002",
+          "file_path": "gd_869914f6788fdfc5460c226b",
+          "created_at": 1793598909
+        },
+        {
+          "src_id": "AI SDRs",
+          "tgt_id": "Founders",
+          "description": "Founders assume AI SDRs can automate and scale sales outreach without human input.<SEP>Founders train and oversee AI SDRs to ensure they are effective.",
+          "keywords": "Assuming AI SDRs Can Figure Out Everything,Oversight,Training",
+          "weight": 2.0,
+          "source_id": "gd_829c748931b4ffb3558e0adc-chunk-000<SEP>gd_6206569683c386ee6c92ce17-chunk-008",
+          "file_path": "gd_829c748931b4ffb3558e0adc<SEP>gd_6206569683c386ee6c92ce17",
+          "created_at": 1793601429
+        },
+        {
+          "src_id": "AI SDR platform",
+          "tgt_id": "Jason",
+          "description": "Jason has experience with AI-powered sales development platforms, which automate and optimize sales processes.",
+          "keywords": "Concept",
+          "weight": 1.0,
+          "source_id": "gd_9e15f38f2f6fafa680da9f0c-chunk-001",
+          "file_path": "gd_9e15f38f2f6fafa680da9f0c",
+          "created_at": 1793622311
+        },
+        {
+          "src_id": "AI SDRs",
+          "tgt_id": "Salesforce",
+          "description": "Salesforce uses AI SDRs to follow up on leads<SEP>The companies that treat AI implementation like a $500K revenue initiative get exactly that.<SEP>Salesforce implemented AI SDRs to solve a capacity constraint.",
+          "keywords": "AI SDRs are used to follow up on leads,AI implementation,Implemented,Product,reducing the need for human support staff,successful case study",
+          "weight": 3.0,
+          "source_id": "gd_a956d6defae69ac68c5d4cb9-chunk-000<SEP>gd_23ebc282dfbfcee03fe01904-chunk-004<SEP>gd_869914f6788fdfc5460c226b-chunk-001",
+          "file_path": "gd_a956d6defae69ac68c5d4cb9<SEP>gd_23ebc282dfbfcee03fe01904<SEP>gd_869914f6788fdfc5460c226b",
+          "created_at": 1793598906
+        },
+        {
+          "src_id": "AI SDR System",
+          "tgt_id": "Salesforce",
+          "description": "Salesforce uses the AI SDR system to tackle the challenge of demand exceeding human capacity to respond.",
+          "keywords": "Implements,Uses",
+          "weight": 1.0,
+          "source_id": "gd_56ce429513ba63d601778b83-chunk-003",
+          "file_path": "gd_56ce429513ba63d601778b83",
+          "created_at": 1793603354
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Customer",
+          "description": "AI SDRs can help companies understand customer pain points and needs.",
+          "keywords": "Understanding",
+          "weight": 1.0,
+          "source_id": "gd_829c748931b4ffb3558e0adc-chunk-003",
+          "file_path": "gd_829c748931b4ffb3558e0adc",
+          "created_at": 1793531255
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Snowflake",
+          "description": "AI SDRs are hooked up to Snowflake to ingest data and keep working with humans.",
+          "keywords": "Hooks Up",
+          "weight": 1.0,
+          "source_id": "gd_9f64b63b5ae698d29604d98b-chunk-005",
+          "file_path": "gd_9f64b63b5ae698d29604d98b",
+          "created_at": 1793618851
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Replit",
+          "description": "relationship_description=AI SDR market growth is compared to Replit's achievement in AI-driven app building.",
+          "keywords": "achievement,relationship_keywords=growth",
+          "weight": 1.0,
+          "source_id": "gd_e82e6511ade6122ac0c71b46-chunk-000",
+          "file_path": "gd_e82e6511ade6122ac0c71b46",
+          "created_at": 1793572667
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Companies",
+          "description": "Companies can use AI SDR, a highly productive tool that makes possible what was impossible before.",
+          "keywords": "Using AI SDR",
+          "weight": 1.0,
+          "source_id": "gd_45895bb382839086f6554318-chunk-006",
+          "file_path": "gd_45895bb382839086f6554318",
+          "created_at": 1793632665
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Product",
+          "description": "AI SDRs have knowledge of the product they are selling.",
+          "keywords": "has_knowledge_of",
+          "weight": 1.0,
+          "source_id": "gd_3784621e331dc81f75510555-chunk-000",
+          "file_path": "gd_3784621e331dc81f75510555",
+          "created_at": 1793492116
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Cursor",
+          "description": "relationship_description=AI SDR market growth is compared to Cursor's achievement in AI-driven engineering.<SEP>Cursor's AI GTM tools present an opportunity for the AI SDR market.<SEP>Keywords: Future, Thinking, Selling, AI GTM tools.",
+          "keywords": "Future,achievement,opportunity for AI GTM,relationship_description,relationship_keywords=growth",
+          "weight": 3.0,
+          "source_id": "gd_e82e6511ade6122ac0c71b46-chunk-000<SEP>gd_e82e6511ade6122ac0c71b46-chunk-006<SEP>gd_e82e6511ade6122ac0c71b46-chunk-008",
+          "file_path": "gd_e82e6511ade6122ac0c71b46",
+          "created_at": 1793572667
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Rory",
+          "description": "relationship_description: Rory’s analysis was particularly illuminating: For foundation models to justify these valuations, “you actually need these things to take vast chunks out of the labor budget and be worth 20, 30, $40,000 almost a head to the enterprise for the math to work.”",
+          "keywords": "AI,investment,relationship_keywords: valuation",
+          "weight": 1.0,
+          "source_id": "gd_56ce429513ba63d601778b83-chunk-007",
+          "file_path": "gd_56ce429513ba63d601778b83",
+          "created_at": 1793603354
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "CRO",
+          "description": "Requires training and iteration to understand AI technology.<SEP>AI SDR can be used by CROs to optimize sales development.",
+          "keywords": "Hands-on experience,Use Case",
+          "weight": 2.0,
+          "source_id": "gd_4a1db13237771f628ac9bc2c-chunk-003<SEP>gd_ec4952faf291c054baf7a979-chunk-005",
+          "file_path": "gd_4a1db13237771f628ac9bc2c<SEP>gd_ec4952faf291c054baf7a979",
+          "created_at": 1793620991
+        },
+        {
+          "src_id": "AI SDRs",
+          "tgt_id": "Companies",
+          "description": "Companies expect AI SDRs to magically generate leads without figuring out what messaging works, what audiences convert, or what their actual sales process should be.",
+          "keywords": "Expectation",
+          "weight": 1.0,
+          "source_id": "gd_c1eda59785faf7ce5addae75-chunk-000",
+          "file_path": "gd_c1eda59785faf7ce5addae75",
+          "created_at": 1793621607
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Claude",
+          "description": "provides hyper-segmentation and proven copy, relationship_description: Claude and AI SDR are used together to provide hyper-segmentation and proven copy, which outperforms a human SDR.",
+          "keywords": "relationship_keywords: used together",
+          "weight": 1.0,
+          "source_id": "gd_417b957752ce712ce5874976-chunk-002",
+          "file_path": "gd_417b957752ce712ce5874976",
+          "created_at": 1793607314
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "founders",
+          "description": "relationship_description: Founders deploy AI SDR agents on specific segments of their business.",
+          "keywords": "Agent,Segment,relationship_keywords: Deploy",
+          "weight": 1.0,
+          "source_id": "gd_cc80ae8a393a1ee4cf628117-chunk-005",
+          "file_path": "gd_cc80ae8a393a1ee4cf628117",
+          "created_at": 1793584800
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "B2B",
+          "description": "AI SDR was developed and used for B2B sales and marketing.",
+          "keywords": "Development,Usage",
+          "weight": 1.0,
+          "source_id": "gd_5b445ae4452b1cd5ee770467-chunk-001",
+          "file_path": "gd_5b445ae4452b1cd5ee770467",
+          "created_at": 1793594147
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "I",
+          "description": "The person (I) trains users on how to properly deploy AI SDRs.",
+          "keywords": "Trains",
+          "weight": 1.0,
+          "source_id": "gd_9f64b63b5ae698d29604d98b-chunk-005",
+          "file_path": "gd_9f64b63b5ae698d29604d98b",
+          "created_at": 1793618851
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "LinkedIn",
+          "description": "The AI SDR used LinkedIn to verify information.",
+          "keywords": "Used,Verified",
+          "weight": 1.0,
+          "source_id": "gd_417b957752ce712ce5874976-chunk-009",
+          "file_path": "gd_417b957752ce712ce5874976",
+          "created_at": 1793607317
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "CMO",
+          "description": "Requires QA'ing AI content outputs at scale to set the right quality bar.",
+          "keywords": "Quality bar",
+          "weight": 1.0,
+          "source_id": "gd_4a1db13237771f628ac9bc2c-chunk-003",
+          "file_path": "gd_4a1db13237771f628ac9bc2c",
+          "created_at": 1793492253
+        },
+        {
+          "src_id": "AI Agent",
+          "tgt_id": "AI SDR",
+          "description": "The AI SDR requires interaction with the AI Agent.",
+          "keywords": "requires",
+          "weight": 1.0,
+          "source_id": "gd_417b957752ce712ce5874976-chunk-010",
+          "file_path": "gd_417b957752ce712ce5874976",
+          "created_at": 1793607317
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Qualified",
+          "description": "The AI SDR integrates with Qualified to send messages.<SEP>relationship_description: AI SDR was deployed by Qualified and achieved success in increasing conversion rates through inbound follow-up.",
+          "keywords": "integrates,relationship_keywords: deployment,success,works with",
+          "weight": 2.0,
+          "source_id": "gd_417b957752ce712ce5874976-chunk-003<SEP>gd_c5553f609a98fd5ceb200638-chunk-003",
+          "file_path": "gd_417b957752ce712ce5874976<SEP>gd_c5553f609a98fd5ceb200638",
+          "created_at": 1793618384
+        },
+        {
+          "src_id": "AI SDRs",
+          "tgt_id": "You",
+          "description": "AI SDRs have not been successful for the majority of the audience.",
+          "keywords": "have_not_worked",
+          "weight": 1.0,
+          "source_id": "gd_8e98891bed97aad494c47a75-chunk-000",
+          "file_path": "gd_8e98891bed97aad494c47a75",
+          "created_at": 1793502282
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "SaaStr AI",
+          "description": "The AI SDR is similar to the SaaStr AI in terms of its functionality.",
+          "keywords": "Similar to",
+          "weight": 1.0,
+          "source_id": "gd_23aa8cd4020f1d2df5102cfc-chunk-000",
+          "file_path": "gd_23aa8cd4020f1d2df5102cfc",
+          "created_at": 1793489934
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "AI SDRs",
+          "description": "AI SDRs can orchestrate prospecting research → personalization → multi-channel sequencing → response handling → meeting scheduling, while AI Agents can break down complex workflows, delegate tasks, coordinate results, and handle exceptions.",
+          "keywords": "handles,orchestrates",
+          "weight": 1.0,
+          "source_id": "gd_759a598bed674f64e17e1fa0-chunk-003",
+          "file_path": "gd_759a598bed674f64e17e1fa0",
+          "created_at": 1793626648
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Meta",
+          "description": "The AI SDR was provided by Meta.",
+          "keywords": "Provided,Used",
+          "weight": 1.0,
+          "source_id": "gd_417b957752ce712ce5874976-chunk-009",
+          "file_path": "gd_417b957752ce712ce5874976",
+          "created_at": 1793607317
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "SDRs",
+          "description": "Relationship_description: AI SDR beats most of the human SDRs.",
+          "keywords": "Relationship_keywords: beat,most of them",
+          "weight": 1.0,
+          "source_id": "gd_40fff6305e814a310e970593-chunk-000",
+          "file_path": "gd_40fff6305e814a310e970593",
+          "created_at": 1793493088
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Artisan",
+          "description": "Relationship_description: AI SDR does not have to beat the best humans, it just has to beat most of them.<SEP>The AI SDR integrates with Artisan to send messages.",
+          "keywords": "Relationship_keywords: does not have to,integrates,works with",
+          "weight": 2.0,
+          "source_id": "gd_40fff6305e814a310e970593-chunk-000<SEP>gd_417b957752ce712ce5874976-chunk-003",
+          "file_path": "gd_40fff6305e814a310e970593<SEP>gd_417b957752ce712ce5874976",
+          "created_at": 1793607314
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Lovable",
+          "description": "Lovable has a higher ARR/FTE ratio than AI SDR.",
+          "keywords": "Comparison",
+          "weight": 1.0,
+          "source_id": "gd_45895bb382839086f6554318-chunk-006",
+          "file_path": "gd_45895bb382839086f6554318",
+          "created_at": 1793632665
+        },
+        {
+          "src_id": "AE",
+          "tgt_id": "AI SDR",
+          "description": "The AI SDR hands off complex sales to the AE, who navigates high-touch sales.<SEP>The AE is involved in the handoff process with the AI SDR.<SEP>AI SDR assists AE in sales efforts.<SEP>The AI SDR is better than an AE.<SEP>The AI SDR will replace AEs who don't know the product cold.",
+          "keywords": "Assistance,Better,Compared,Product Knowledge,Replace,handoff_process",
+          "weight": 5.0,
+          "source_id": "gd_f4b7879f1fde287961a29eb3-chunk-004<SEP>gd_5b445ae4452b1cd5ee770467-chunk-001<SEP>gd_417b957752ce712ce5874976-chunk-009<SEP>gd_9f64b63b5ae698d29604d98b-chunk-012",
+          "file_path": "gd_f4b7879f1fde287961a29eb3<SEP>gd_5b445ae4452b1cd5ee770467<SEP>gd_417b957752ce712ce5874976<SEP>gd_9f64b63b5ae698d29604d98b",
+          "created_at": 1793618854
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Amelia",
+          "description": "Amelia trains users on how to properly deploy AI SDRs.",
+          "keywords": "Trains",
+          "weight": 1.0,
+          "source_id": "gd_9f64b63b5ae698d29604d98b-chunk-005",
+          "file_path": "gd_9f64b63b5ae698d29604d98b",
+          "created_at": 1793618851
+        },
+        {
+          "src_id": "AI SDRs",
+          "tgt_id": "Claude",
+          "description": "Claude's improvement enabled better performance in AI SDRs.<SEP>Claude's release enabled the effective use of AI SDRs.",
+          "keywords": "Better Performance,Enabled,Improved Performance",
+          "weight": 2.0,
+          "source_id": "gd_329e9dcc5d03af62830b01e0-chunk-000<SEP>gd_9f64b63b5ae698d29604d98b-chunk-004",
+          "file_path": "gd_329e9dcc5d03af62830b01e0<SEP>gd_9f64b63b5ae698d29604d98b",
+          "created_at": 1793618851
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "SDR",
+          "description": "The AI SDR has instant access to the SDR's technical documentation and product updates.<SEP>The AI SDR handles cold leads and automates follow-ups that human SDRs consider too small or too cold.<SEP>The SDR complements the AI SDR by handling high-touch sales and complex organizations.<SEP>Will not replace a great enterprise SDR.<SEP>The AI SDR outperforms a human SDR in terms of consistency and scale.<SEP>A human SDR has limitations in terms of consistency and scale, which are addressed by the AI SDR.<SEP>The AI SDR is better than a human SDR.",
+          "keywords": "Always,Better,Compared,Perfect Product Knowledge,automates_follow_ups,beats,complements_human_sales,downgrade,handles_cold_leads,has limitations,is limited by,outperforms,replace",
+          "weight": 7.0,
+          "source_id": "gd_8f5f71a1378d0350779d0bd7-chunk-001<SEP>gd_f4b7879f1fde287961a29eb3-chunk-004<SEP>gd_f4b7879f1fde287961a29eb3-chunk-005<SEP>gd_417b957752ce712ce5874976-chunk-003<SEP>gd_417b957752ce712ce5874976-chunk-009",
+          "file_path": "gd_8f5f71a1378d0350779d0bd7<SEP>gd_f4b7879f1fde287961a29eb3<SEP>gd_417b957752ce712ce5874976",
+          "created_at": 1793607314
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Data",
+          "description": "The AI SDR is trained and iterated upon daily using the company's data.",
+          "keywords": "Iteration,Training",
+          "weight": 1.0,
+          "source_id": "gd_c1eda59785faf7ce5addae75-chunk-019",
+          "file_path": "gd_c1eda59785faf7ce5addae75",
+          "created_at": 1793621617
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Agentforce",
+          "description": "Keywords: Achievement, 72% open rates, AI GTM tools.<SEP>Keywords: Achievement, Six-figure deals, AI GTM tools.<SEP>The AI SDR amplifies the ICP and performs well in CRM reactivation and other use cases with Agentforce.<SEP>relationship_description: AI SDR was deployed by Agentforce and achieved success in reactivating dormant trials.",
+          "keywords": "Achievement,amplifies,performs well,relationship_keywords: deployment,success",
+          "weight": 4.0,
+          "source_id": "gd_e82e6511ade6122ac0c71b46-chunk-008<SEP>gd_f4b7879f1fde287961a29eb3-chunk-002<SEP>gd_c5553f609a98fd5ceb200638-chunk-003",
+          "file_path": "gd_e82e6511ade6122ac0c71b46<SEP>gd_f4b7879f1fde287961a29eb3<SEP>gd_c5553f609a98fd5ceb200638",
+          "created_at": 1793618384
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Humans",
+          "description": "relationship_description=AI SDR automates tasks and potentially replaces human sales development representatives.<SEP>relationship keywords: automation, replacement, relationship description: Humans are being augmented or replaced by AI SDRs in the sales process.",
+          "keywords": "Augmentation,relationship_keywords=automation,replacement",
+          "weight": 2.0,
+          "source_id": "gd_aea7c965af3368761d8786d3-chunk-002<SEP>gd_c1eda59785faf7ce5addae75-chunk-016",
+          "file_path": "gd_aea7c965af3368761d8786d3<SEP>gd_c1eda59785faf7ce5addae75",
+          "created_at": 1793621617
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Prospect",
+          "description": "relationship_description: Prospects interact and communicate with AI SDRs.<SEP>Your inbound qualification agent should know that a prospect already had an outreach sequence.<SEP>The AI SDR personalizes and handles outreach to the prospect.",
+          "keywords": "Communicates,Handles,Personalizes,relationship_keywords: Interacts,requires knowledge of customer history",
+          "weight": 3.0,
+          "source_id": "gd_aea7c965af3368761d8786d3-chunk-001<SEP>gd_3ffa319b9d5140c80f90ee3c-chunk-005<SEP>gd_c5553f609a98fd5ceb200638-chunk-002",
+          "file_path": "gd_aea7c965af3368761d8786d3<SEP>gd_3ffa319b9d5140c80f90ee3c<SEP>gd_c5553f609a98fd5ceb200638",
+          "created_at": 1793618382
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Benioff",
+          "description": "relationship_description: Benioff delivered his most passionate response when addressing suggestions that SaaS applications would become “just CRUD databases,” and AI SDR potentially generates $3.6 billion in additional revenue with a 30% uplift.",
+          "keywords": "AI,relationship_keywords: investment,revenue",
+          "weight": 1.0,
+          "source_id": "gd_56ce429513ba63d601778b83-chunk-007",
+          "file_path": "gd_56ce429513ba63d601778b83",
+          "created_at": 1793603354
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "LLMs",
+          "description": "relationship_description: LLMs benefit SaaStr's AI SDR by surfacing high-quality content to answer questions.",
+          "keywords": "AI tools,relationship_keywords: benefits",
+          "weight": 1.0,
+          "source_id": "gd_6206569683c386ee6c92ce17-chunk-003",
+          "file_path": "gd_6206569683c386ee6c92ce17",
+          "created_at": 1793601429
+        },
+        {
+          "src_id": "AEs",
+          "tgt_id": "AI SDR",
+          "description": "AEs can close deals with the help of AI SDR.",
+          "keywords": "Can Close Deals",
+          "weight": 1.0,
+          "source_id": "gd_f374b222227a6a91a8bc883c-chunk-001",
+          "file_path": "gd_f374b222227a6a91a8bc883c",
+          "created_at": 1793586772
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Digital Jason",
+          "description": "relationship_description: Digital Jason was compared to AI SDR in terms of performance.",
+          "keywords": "performed,relationship_keywords: compared",
+          "weight": 1.0,
+          "source_id": "gd_57e4f799ef3cc8109831930f-chunk-003",
+          "file_path": "gd_57e4f799ef3cc8109831930f",
+          "created_at": 1793622794
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Marc Benioff",
+          "description": "relationship_description: Marc Benioff is the CEO of Salesforce, which uses AI SDR to generate leads.<SEP>Marc Benioff supports the use of AI SDR tools to deliver value to customers.",
+          "keywords": "Salesforce,Supports,relationship_keywords: CEO",
+          "weight": 2.0,
+          "source_id": "gd_e4f465b861a77e3bc41927c1-chunk-000<SEP>gd_6206569683c386ee6c92ce17-chunk-005",
+          "file_path": "gd_e4f465b861a77e3bc41927c1<SEP>gd_6206569683c386ee6c92ce17",
+          "created_at": 1793601429
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Zapier",
+          "description": "The AI SDR shares data with Zapier through exports and imports.",
+          "keywords": "Exports,Imports",
+          "weight": 1.0,
+          "source_id": "gd_6575aade24641b1cc94fc561-chunk-000",
+          "file_path": "gd_6575aade24641b1cc94fc561",
+          "created_at": 1793567608
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Person",
+          "description": "The person wants the AI SDR to get a certain amount of quota and perform a specific workflow.<SEP>Requires massive human effort to generate leads.",
+          "keywords": "Depends on,Quota,Replace,Workflow",
+          "weight": 2.0,
+          "source_id": "gd_9f64b63b5ae698d29604d98b-chunk-012<SEP>gd_c1eda59785faf7ce5addae75-chunk-015",
+          "file_path": "gd_9f64b63b5ae698d29604d98b<SEP>gd_c1eda59785faf7ce5addae75",
+          "created_at": 1793621617
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "ClickUp",
+          "description": "ClickUp uses AI SDR to automatically reach out to form submissions.",
+          "keywords": "Use",
+          "weight": 1.0,
+          "source_id": "gd_70fbe3aeece3874aa5c26594-chunk-004",
+          "file_path": "gd_70fbe3aeece3874aa5c26594",
+          "created_at": 1793568256
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Buyer",
+          "description": "Buyers want to figure out how to use AI SDR.",
+          "keywords": "Top three problem",
+          "weight": 1.0,
+          "source_id": "gd_9f64b63b5ae698d29604d98b-chunk-014",
+          "file_path": "gd_9f64b63b5ae698d29604d98b",
+          "created_at": 1793618854
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Agent",
+          "description": "An agent outperforms a human SDR in terms of consistency and scale.",
+          "keywords": "beats,outperforms",
+          "weight": 1.0,
+          "source_id": "gd_417b957752ce712ce5874976-chunk-003",
+          "file_path": "gd_417b957752ce712ce5874976",
+          "created_at": 1793607314
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Clay",
+          "description": "The AI SDR was built using Clay.",
+          "keywords": "Built,Used",
+          "weight": 1.0,
+          "source_id": "gd_417b957752ce712ce5874976-chunk-009",
+          "file_path": "gd_417b957752ce712ce5874976",
+          "created_at": 1793607317
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Salesloft",
+          "description": "The AI SDR tool is integrated with the Salesloft platform.",
+          "keywords": "Integrated With",
+          "weight": 1.0,
+          "source_id": "gd_6206569683c386ee6c92ce17-chunk-005",
+          "file_path": "gd_6206569683c386ee6c92ce17",
+          "created_at": 1793601429
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "VP of Customer Success",
+          "description": "Requires testing edge cases with a support agent to know where the landmines are.",
+          "keywords": "Landmines",
+          "weight": 1.0,
+          "source_id": "gd_4a1db13237771f628ac9bc2c-chunk-003",
+          "file_path": "gd_4a1db13237771f628ac9bc2c",
+          "created_at": 1793492253
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Sales Leader",
+          "description": "Sales leaders wonder if AI-powered sales tools can replace human sales efforts.",
+          "keywords": "Can't an AI SDR just get me all the leads I need anyway?",
+          "weight": 1.0,
+          "source_id": "gd_bf8397f656238e9eba87fda2-chunk-000",
+          "file_path": "gd_bf8397f656238e9eba87fda2",
+          "created_at": 1793644553
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "ICP",
+          "description": "The AI SDR amplifies the ICP.<SEP>The ICP amplifies the AI SDR.<SEP>The AI SDR defines the target audience and messaging based on the ideal customer profile.<SEP>The ICP defines the target audience for the AI SDR.<SEP>AI SDRs are used to improve customer interactions and preferences.<SEP>Requires a correct Ideal Customer Profile to work effectively.",
+          "keywords": "Depends on,amplifies,customer interactions,defines_target_audience,preferences",
+          "weight": 7.0,
+          "source_id": "gd_f4b7879f1fde287961a29eb3-chunk-002<SEP>gd_f4b7879f1fde287961a29eb3-chunk-004<SEP>gd_c5553f609a98fd5ceb200638-chunk-005<SEP>gd_c1eda59785faf7ce5addae75-chunk-015",
+          "file_path": "gd_f4b7879f1fde287961a29eb3<SEP>gd_c5553f609a98fd5ceb200638<SEP>gd_c1eda59785faf7ce5addae75",
+          "created_at": 1793621617
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Brand",
+          "description": "AI SDRs can maintain a brand's reputation and quality.<SEP>The AI SDR uses brand recognition to handle sales and outreach tasks.",
+          "keywords": "Handles,High-quality,Uses,consistent",
+          "weight": 2.0,
+          "source_id": "gd_829c748931b4ffb3558e0adc-chunk-003<SEP>gd_c5553f609a98fd5ceb200638-chunk-002",
+          "file_path": "gd_829c748931b4ffb3558e0adc<SEP>gd_c5553f609a98fd5ceb200638",
+          "created_at": 1793618382
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Scale",
+          "description": "The AI SDR operates at genuinely infinite scale.",
+          "keywords": "infinite",
+          "weight": 1.0,
+          "source_id": "gd_417b957752ce712ce5874976-chunk-010",
+          "file_path": "gd_417b957752ce712ce5874976",
+          "created_at": 1793607317
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Pipeline",
+          "description": "relationship_description>AI SDR generates a pipeline and its ROI is measured.",
+          "keywords": "measurement,relationship_keywords=generation",
+          "weight": 1.0,
+          "source_id": "gd_aea7c965af3368761d8786d3-chunk-002",
+          "file_path": "gd_aea7c965af3368761d8786d3",
+          "created_at": 1793562279
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "CRM",
+          "description": "The AI SDR integrates with the CRM system to manage customer interactions.<SEP>The CRM system integrates with the AI SDR.<SEP>AI SDRs connect to CRM to automate sales outreach.<SEP>AI agents need clean records. Defined fields. Consistent data entry.<SEP>Higher ACV through TAM expansion<SEP>AI SDR and CRM are being compared in terms of price.",
+          "keywords": "Connects,Integrates,TAM Expansion,integrates_with_CRM,price comparison,requires structured data",
+          "weight": 6.0,
+          "source_id": "gd_f4b7879f1fde287961a29eb3-chunk-004<SEP>gd_23ebc282dfbfcee03fe01904-chunk-001<SEP>gd_3ffa319b9d5140c80f90ee3c-chunk-005<SEP>gd_45895bb382839086f6554318-chunk-004<SEP>gd_45895bb382839086f6554318-chunk-005",
+          "file_path": "gd_f4b7879f1fde287961a29eb3<SEP>gd_23ebc282dfbfcee03fe01904<SEP>gd_3ffa319b9d5140c80f90ee3c<SEP>gd_45895bb382839086f6554318",
+          "created_at": 1793632665
+        },
+        {
+          "src_id": "AI SDRs",
+          "tgt_id": "Zendesk",
+          "description": "AI SDRs have limited capability compared to Zendesk's enterprise version, which ingests more data and requires more customization.",
+          "keywords": "limited capability",
+          "weight": 1.0,
+          "source_id": "gd_c1eda59785faf7ce5addae75-chunk-011",
+          "file_path": "gd_c1eda59785faf7ce5addae75",
+          "created_at": 1793621614
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Monaco",
+          "description": "The AI SDR integrates with Monaco to automatically refill the pipeline.",
+          "keywords": "integrates,works with",
+          "weight": 1.0,
+          "source_id": "gd_417b957752ce712ce5874976-chunk-003",
+          "file_path": "gd_417b957752ce712ce5874976",
+          "created_at": 1793607314
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Outbound",
+          "description": "The goal of an AI SDR is to clone the best person on a team, which in this case is the Outbound sales approach.<SEP>Requires a functioning outbound process to work with humans.",
+          "keywords": "Depends on,automate,clone",
+          "weight": 2.0,
+          "source_id": "gd_417b957752ce712ce5874976-chunk-001<SEP>gd_c1eda59785faf7ce5addae75-chunk-015",
+          "file_path": "gd_417b957752ce712ce5874976<SEP>gd_c1eda59785faf7ce5addae75",
+          "created_at": 1793621617
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Emergence Capital",
+          "description": "AI SDR was developed and used by Emergence Capital.",
+          "keywords": "Development,Usage",
+          "weight": 1.0,
+          "source_id": "gd_5b445ae4452b1cd5ee770467-chunk-001",
+          "file_path": "gd_5b445ae4452b1cd5ee770467",
+          "created_at": 1793594147
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "API",
+          "description": "The AI SDR has instant access to the API's technical documentation and product updates.",
+          "keywords": "Always,Perfect Product Knowledge",
+          "weight": 1.0,
+          "source_id": "gd_8f5f71a1378d0350779d0bd7-chunk-001",
+          "file_path": "gd_8f5f71a1378d0350779d0bd7",
+          "created_at": 1793531737
+        },
+        {
+          "src_id": "AI Agents",
+          "tgt_id": "AI SDR Experiment",
+          "description": "The AI SDR experiment was executed by AI agents.",
+          "keywords": "Executes",
+          "weight": 1.0,
+          "source_id": "gd_17ed878e2ce1e1b54809f97a-chunk-003",
+          "file_path": "gd_17ed878e2ce1e1b54809f97a",
+          "created_at": 1793576266
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "G2",
+          "description": "relationship_description: AI SDR was integrated with G2 and achieved success in reaching out to people actively researching the company's category.",
+          "keywords": "relationship_keywords: integration,success",
+          "weight": 1.0,
+          "source_id": "gd_c5553f609a98fd5ceb200638-chunk-003",
+          "file_path": "gd_c5553f609a98fd5ceb200638",
+          "created_at": 1793618384
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Agent Force",
+          "description": "Companies navigate the challenges of AI adoption by providing AI-powered sales development solutions.",
+          "keywords": "helps_with,related_to",
+          "weight": 1.0,
+          "source_id": "gd_9f64b63b5ae698d29604d98b-chunk-015",
+          "file_path": "gd_9f64b63b5ae698d29604d98b",
+          "created_at": 1793618854
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "CIO",
+          "description": "CIO has difficulty communicating with AI SDR due to lack of technical understanding<SEP>The AI SDR has instant access to the CIO's technical documentation and product updates.<SEP>AI SDR can answer tough questions from CIOs.",
+          "keywords": "Always,Can Answer Questions,Has Difficulty Communicating,Perfect Product Knowledge",
+          "weight": 3.0,
+          "source_id": "gd_8f5f71a1378d0350779d0bd7-chunk-000<SEP>gd_8f5f71a1378d0350779d0bd7-chunk-001<SEP>gd_f374b222227a6a91a8bc883c-chunk-001",
+          "file_path": "gd_8f5f71a1378d0350779d0bd7<SEP>gd_f374b222227a6a91a8bc883c",
+          "created_at": 1793586772
+        },
+        {
+          "src_id": "AI SDRs",
+          "tgt_id": "SaaStr Fund",
+          "description": "SaaStr Fund provides data on the performance of AI SDRs.",
+          "keywords": "data,provides",
+          "weight": 1.0,
+          "source_id": "gd_8f5f71a1378d0350779d0bd7-chunk-002",
+          "file_path": "gd_8f5f71a1378d0350779d0bd7",
+          "created_at": 1793531737
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Marketer",
+          "description": "Marketers wonder if AI-powered sales tools can replace human sales efforts.",
+          "keywords": "Can't an AI SDR just get me all the leads I need anyway?",
+          "weight": 1.0,
+          "source_id": "gd_bf8397f656238e9eba87fda2-chunk-000",
+          "file_path": "gd_bf8397f656238e9eba87fda2",
+          "created_at": 1793644553
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "They",
+          "description": "relationship_description: The candidate plans to hire AI SDRs to find their first people.",
+          "keywords": "AI,relationship_keywords: Hiring",
+          "weight": 1.0,
+          "source_id": "gd_65427bc55aea7156a7d39bfe-chunk-004",
+          "file_path": "gd_65427bc55aea7156a7d39bfe",
+          "created_at": 1793567444
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "VP of Engineering",
+          "description": "VP of Engineering has difficulty communicating with AI SDR due to lack of technical understanding<SEP>AI SDR can answer tough questions from VPs of Engineering.",
+          "keywords": "Can Answer Questions,Has Difficulty Communicating",
+          "weight": 2.0,
+          "source_id": "gd_8f5f71a1378d0350779d0bd7-chunk-000<SEP>gd_f374b222227a6a91a8bc883c-chunk-001",
+          "file_path": "gd_8f5f71a1378d0350779d0bd7<SEP>gd_f374b222227a6a91a8bc883c",
+          "created_at": 1793586772
+        },
+        {
+          "src_id": "AI SDRs",
+          "tgt_id": "Qualified",
+          "description": "Utilize Qualified for AI-powered sales development.<SEP>Qualified's AI SDRs don't currently communicate with each other.",
+          "keywords": "Relationship,Use Tool",
+          "weight": 2.0,
+          "source_id": "gd_1c786168860b4c364f13ef3b-chunk-006<SEP>gd_c1eda59785faf7ce5addae75-chunk-017",
+          "file_path": "gd_1c786168860b4c364f13ef3b<SEP>gd_c1eda59785faf7ce5addae75",
+          "created_at": 1793621617
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Q4",
+          "description": "AI SDR performed well in Q4.",
+          "keywords": "Performance",
+          "weight": 1.0,
+          "source_id": "gd_5b445ae4452b1cd5ee770467-chunk-001",
+          "file_path": "gd_5b445ae4452b1cd5ee770467",
+          "created_at": 1793594147
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Google Sheets",
+          "description": "The AI SDR shares data with Google Sheets through exports and imports.",
+          "keywords": "Exports,Imports",
+          "weight": 1.0,
+          "source_id": "gd_6575aade24641b1cc94fc561-chunk-000",
+          "file_path": "gd_6575aade24641b1cc94fc561",
+          "created_at": 1793567608
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Chatbot",
+          "description": "The AI SDR and Chatbot share data through exports and imports.",
+          "keywords": "Exports,Imports",
+          "weight": 1.0,
+          "source_id": "gd_6575aade24641b1cc94fc561-chunk-000",
+          "file_path": "gd_6575aade24641b1cc94fc561",
+          "created_at": 1793567608
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Playbook",
+          "description": "Before deploying an AI SDR, a working sales playbook must be created.",
+          "keywords": "automate,require",
+          "weight": 1.0,
+          "source_id": "gd_417b957752ce712ce5874976-chunk-001",
+          "file_path": "gd_417b957752ce712ce5874976",
+          "created_at": 1793607314
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Industry",
+          "description": "Expect 2-4% - at or slightly above industry average performance with AI SDRs.",
+          "keywords": "average,performance",
+          "weight": 1.0,
+          "source_id": "gd_c5553f609a98fd5ceb200638-chunk-005",
+          "file_path": "gd_c5553f609a98fd5ceb200638",
+          "created_at": 1793618384
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Product Marketing",
+          "description": "AI SDR has difficulty communicating with Product Marketing due to lack of technical understanding<SEP>The AI SDR has instant access to the Product Marketing team's technical documentation and product updates.",
+          "keywords": "Always,Has Difficulty Communicating,Perfect Product Knowledge",
+          "weight": 2.0,
+          "source_id": "gd_8f5f71a1378d0350779d0bd7-chunk-000<SEP>gd_8f5f71a1378d0350779d0bd7-chunk-001",
+          "file_path": "gd_8f5f71a1378d0350779d0bd7",
+          "created_at": 1793531737
+        },
+        {
+          "src_id": "AI SDRs",
+          "tgt_id": "Twitter",
+          "description": "relationship_description: Twitter is a platform where Scott Martinis shares his thoughts on AI SDRs.",
+          "keywords": "AI SDRs,relationship_keywords: platform,tool",
+          "weight": 1.0,
+          "source_id": "gd_aea7c965af3368761d8786d3-chunk-000",
+          "file_path": "gd_aea7c965af3368761d8786d3",
+          "created_at": 1793562279
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "BDR",
+          "description": "AI SDRs and BDRs have similar functionality, but AI SDRs are more advanced<SEP>Companies navigate the challenges of AI adoption by identifying and pursuing new business opportunities.",
+          "keywords": "Has Similar Functionality,helps_with,related_to",
+          "weight": 2.0,
+          "source_id": "gd_8f5f71a1378d0350779d0bd7-chunk-000<SEP>gd_9f64b63b5ae698d29604d98b-chunk-015",
+          "file_path": "gd_8f5f71a1378d0350779d0bd7<SEP>gd_9f64b63b5ae698d29604d98b",
+          "created_at": 1793618854
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Jira",
+          "description": "Higher ACV through TAM expansion",
+          "keywords": "TAM Expansion",
+          "weight": 1.0,
+          "source_id": "gd_45895bb382839086f6554318-chunk-004",
+          "file_path": "gd_45895bb382839086f6554318",
+          "created_at": 1793632665
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "humans",
+          "description": "relationship_description: AI SDR helps humans generate high-quality leads that they might not otherwise get.",
+          "keywords": "improves sales,relationship_keywords: generates leads",
+          "weight": 1.0,
+          "source_id": "gd_e4f465b861a77e3bc41927c1-chunk-000",
+          "file_path": "gd_e4f465b861a77e3bc41927c1",
+          "created_at": 1793496968
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Content AI",
+          "description": "relationship_description: AI SDR reviewed and submitted content to Content AI.",
+          "keywords": "relationship_keywords: reviewed,submitted",
+          "weight": 1.0,
+          "source_id": "gd_57e4f799ef3cc8109831930f-chunk-003",
+          "file_path": "gd_57e4f799ef3cc8109831930f",
+          "created_at": 1793622794
+        },
+        {
+          "src_id": "AI SDR Platform",
+          "tgt_id": "Claude",
+          "description": "The AI SDR Platform uses Claude for call intelligence.",
+          "keywords": "Used By,Uses,Utilized By,Utilizes",
+          "weight": 2.0,
+          "source_id": "gd_cd0a5d64ec64d242e99c5ad1-chunk-003",
+          "file_path": "gd_cd0a5d64ec64d242e99c5ad1",
+          "created_at": 1793555960
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "SLA",
+          "description": "The AI SDR defines the service level agreement (SLA) for human response time after an AI handoff.",
+          "keywords": "defines_response_time",
+          "weight": 1.0,
+          "source_id": "gd_f4b7879f1fde287961a29eb3-chunk-004",
+          "file_path": "gd_f4b7879f1fde287961a29eb3",
+          "created_at": 1793572979
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Cost",
+          "description": "The AI SDR delivers results at a fraction of the cost.",
+          "keywords": "fraction_of",
+          "weight": 1.0,
+          "source_id": "gd_417b957752ce712ce5874976-chunk-010",
+          "file_path": "gd_417b957752ce712ce5874976",
+          "created_at": 1793607317
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "GTM Team",
+          "description": "The AI SDR produces mediocre work that can be done faster and cheaper than human teams.",
+          "keywords": "mediocre,produces",
+          "weight": 1.0,
+          "source_id": "gd_e5881e127e64d27c29297266-chunk-001",
+          "file_path": "gd_e5881e127e64d27c29297266",
+          "created_at": 1793516013
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "CPO",
+          "description": "CPO has difficulty communicating with AI SDR due to lack of technical understanding<SEP>The AI SDR has instant access to the CPO's technical documentation and product updates.<SEP>AI SDR can answer tough questions from CPOs.",
+          "keywords": "Always,Can Answer Questions,Has Difficulty Communicating,Perfect Product Knowledge",
+          "weight": 3.0,
+          "source_id": "gd_8f5f71a1378d0350779d0bd7-chunk-000<SEP>gd_8f5f71a1378d0350779d0bd7-chunk-001<SEP>gd_f374b222227a6a91a8bc883c-chunk-001",
+          "file_path": "gd_8f5f71a1378d0350779d0bd7<SEP>gd_f374b222227a6a91a8bc883c",
+          "created_at": 1793586772
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "CMO Summit",
+          "description": "The AI SDR improved the CMO Summit registrations.",
+          "keywords": "Improved,Used",
+          "weight": 1.0,
+          "source_id": "gd_417b957752ce712ce5874976-chunk-009",
+          "file_path": "gd_417b957752ce712ce5874976",
+          "created_at": 1793607317
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Self-Serve",
+          "description": "Pure self-serve + AI chat. No human sales involvement.",
+          "keywords": "Functionality",
+          "weight": 1.0,
+          "source_id": "gd_43e212d0edcb1c2810230fe2-chunk-002",
+          "file_path": "gd_43e212d0edcb1c2810230fe2",
+          "created_at": 1793530311
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "The Daily Discipline Framework",
+          "description": "relationship_description: The Daily Discipline Framework is implemented by using AI SDR.",
+          "keywords": "Utilizes,relationship_keywords: Implements",
+          "weight": 1.0,
+          "source_id": "gd_aea7c965af3368761d8786d3-chunk-001",
+          "file_path": "gd_aea7c965af3368761d8786d3",
+          "created_at": 1793562279
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Call Intelligence Agent",
+          "description": "The AI SDR and Call Intelligence Agent share data through exports and imports.",
+          "keywords": "Exports,Imports",
+          "weight": 1.0,
+          "source_id": "gd_6575aade24641b1cc94fc561-chunk-000",
+          "file_path": "gd_6575aade24641b1cc94fc561",
+          "created_at": 1793567608
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Content Review Agent",
+          "description": "The AI SDR and Content Review Agent share data through exports and imports.",
+          "keywords": "Exports,Imports",
+          "weight": 1.0,
+          "source_id": "gd_6575aade24641b1cc94fc561-chunk-000",
+          "file_path": "gd_6575aade24641b1cc94fc561",
+          "created_at": 1793567608
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Deal Flow Matcher",
+          "description": "The AI SDR and Deal Flow Matcher share data through exports and imports.",
+          "keywords": "Exports,Imports",
+          "weight": 1.0,
+          "source_id": "gd_6575aade24641b1cc94fc561-chunk-000",
+          "file_path": "gd_6575aade24641b1cc94fc561",
+          "created_at": 1793567608
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Inbound Meetings Booker",
+          "description": "The AI SDR and Inbound Meetings Booker share data through exports and imports.",
+          "keywords": "Exports,Imports",
+          "weight": 1.0,
+          "source_id": "gd_6575aade24641b1cc94fc561-chunk-000",
+          "file_path": "gd_6575aade24641b1cc94fc561",
+          "created_at": 1793567608
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "SaaStr AI SDR team",
+          "description": "The SaaStr AI SDR team uses AI SDRs to generate $1M+ in sponsor pipeline.",
+          "keywords": "Generates,Uses",
+          "weight": 1.0,
+          "source_id": "gd_23ebc282dfbfcee03fe01904-chunk-001",
+          "file_path": "gd_23ebc282dfbfcee03fe01904",
+          "created_at": 1793592516
+        },
+        {
+          "src_id": "AI SDRs",
+          "tgt_id": "Artisan",
+          "description": "Utilize Artisan for AI-powered sales development.<SEP>Artisan's AI SDRs don't currently communicate with each other.",
+          "keywords": "Relationship,Use Tool",
+          "weight": 2.0,
+          "source_id": "gd_1c786168860b4c364f13ef3b-chunk-006<SEP>gd_c1eda59785faf7ce5addae75-chunk-017",
+          "file_path": "gd_1c786168860b4c364f13ef3b<SEP>gd_c1eda59785faf7ce5addae75",
+          "created_at": 1793621617
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Messaging",
+          "description": "Requires correct messaging to work effectively.",
+          "keywords": "Depends on",
+          "weight": 1.0,
+          "source_id": "gd_c1eda59785faf7ce5addae75-chunk-015",
+          "file_path": "gd_c1eda59785faf7ce5addae75",
+          "created_at": 1793621617
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Senior Executive",
+          "description": "Requires hands-on keyboard experience to develop judgment.",
+          "keywords": "Hands-on experience",
+          "weight": 1.0,
+          "source_id": "gd_4a1db13237771f628ac9bc2c-chunk-003",
+          "file_path": "gd_4a1db13237771f628ac9bc2c",
+          "created_at": 1793492253
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Segment Ruthlessly",
+          "description": "Segmenting customers ruthlessly is required to effectively use an AI SDR, which can then tailor the sales outreach to each segment.",
+          "keywords": "require,tailor",
+          "weight": 1.0,
+          "source_id": "gd_417b957752ce712ce5874976-chunk-001",
+          "file_path": "gd_417b957752ce712ce5874976",
+          "created_at": 1793607314
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Human Judgment",
+          "description": "The AI SDR requires real human judgment to run well.",
+          "keywords": "requires",
+          "weight": 1.0,
+          "source_id": "gd_417b957752ce712ce5874976-chunk-010",
+          "file_path": "gd_417b957752ce712ce5874976",
+          "created_at": 1793607317
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Honest Performance Benchmarking",
+          "description": "relationship_description: AI SDR utilizes and implements Honest Performance Benchmarking.<SEP>relationship_description=AI vs. human performance is evaluated and compared using Honest Performance Benchmarking.",
+          "keywords": "Implements,comparison,relationship_keywords: Utilizes,relationship_keywords=evaluation",
+          "weight": 2.0,
+          "source_id": "gd_aea7c965af3368761d8786d3-chunk-001<SEP>gd_aea7c965af3368761d8786d3-chunk-002",
+          "file_path": "gd_aea7c965af3368761d8786d3",
+          "created_at": 1793562279
+        },
+        {
+          "src_id": "95%",
+          "tgt_id": "AI SDR",
+          "description": "AI SDRs have an advantage over human SDRs in understanding the product",
+          "keywords": "Has Advantage Over",
+          "weight": 1.0,
+          "source_id": "gd_8f5f71a1378d0350779d0bd7-chunk-000",
+          "file_path": "gd_8f5f71a1378d0350779d0bd7",
+          "created_at": 1793531737
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Message Quality Control",
+          "description": "relationship_description: AI SDR utilizes and implements Message Quality Control.",
+          "keywords": "Implements,relationship_keywords: Utilizes",
+          "weight": 1.0,
+          "source_id": "gd_aea7c965af3368761d8786d3-chunk-001",
+          "file_path": "gd_aea7c965af3368761d8786d3",
+          "created_at": 1793562279
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Response Velocity",
+          "description": "relationship_description: AI SDR utilizes and implements Response Velocity.",
+          "keywords": "Implements,relationship_keywords: Utilizes",
+          "weight": 1.0,
+          "source_id": "gd_aea7c965af3368761d8786d3-chunk-001",
+          "file_path": "gd_aea7c965af3368761d8786d3",
+          "created_at": 1793562279
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "human team",
+          "description": "Used to cover motions where speed and volume matter most.",
+          "keywords": "scale,volume",
+          "weight": 1.0,
+          "source_id": "gd_f4b7879f1fde287961a29eb3-chunk-005",
+          "file_path": "gd_f4b7879f1fde287961a29eb3",
+          "created_at": 1793572979
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Message Architecture",
+          "description": "AI SDRs are trained to reference recent interactions, competitor moves, and industry trends using Message Architecture.",
+          "keywords": "Implements,Trains",
+          "weight": 1.0,
+          "source_id": "gd_23ebc282dfbfcee03fe01904-chunk-001",
+          "file_path": "gd_23ebc282dfbfcee03fe01904",
+          "created_at": 1793592516
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Quality Gate",
+          "description": "AI SDRs ensure every AI email is better than what a human SDR would send using Quality Gate.",
+          "keywords": "Ensures,Implements",
+          "weight": 1.0,
+          "source_id": "gd_23ebc282dfbfcee03fe01904-chunk-001",
+          "file_path": "gd_23ebc282dfbfcee03fe01904",
+          "created_at": 1793592516
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "SaaStrs AI inbound agent",
+          "description": "SaaStr’s AI inbound agent was used in development of AI SDR.",
+          "keywords": "Development,Usage",
+          "weight": 1.0,
+          "source_id": "gd_5b445ae4452b1cd5ee770467-chunk-001",
+          "file_path": "gd_5b445ae4452b1cd5ee770467",
+          "created_at": 1793594147
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "ROI Calculator",
+          "description": "The AI SDR tool can replace traditional ROI calculators.",
+          "keywords": "Replaces",
+          "weight": 1.0,
+          "source_id": "gd_6206569683c386ee6c92ce17-chunk-005",
+          "file_path": "gd_6206569683c386ee6c92ce17",
+          "created_at": 1793601429
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Use Case",
+          "description": "The AI SDR is applied and used in a specific use case or scenario.",
+          "keywords": "Application,Scenario",
+          "weight": 1.0,
+          "source_id": "gd_c1eda59785faf7ce5addae75-chunk-019",
+          "file_path": "gd_c1eda59785faf7ce5addae75",
+          "created_at": 1793621617
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Tough Questions",
+          "description": "AI SDRs can answer tough questions from executives.",
+          "keywords": "can_answer",
+          "weight": 1.0,
+          "source_id": "gd_3784621e331dc81f75510555-chunk-000",
+          "file_path": "gd_3784621e331dc81f75510555",
+          "created_at": 1793492116
+        },
+        {
+          "src_id": "AI Chat",
+          "tgt_id": "AI SDR",
+          "description": "AI chat can handle qualification and even closing for simpler deals.",
+          "keywords": "Functionality",
+          "weight": 1.0,
+          "source_id": "gd_43e212d0edcb1c2810230fe2-chunk-002",
+          "file_path": "gd_43e212d0edcb1c2810230fe2",
+          "created_at": 1793530311
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Data Lineage",
+          "description": "AI SDR understands data lineage and can communicate effectively",
+          "keywords": "Understands",
+          "weight": 1.0,
+          "source_id": "gd_8f5f71a1378d0350779d0bd7-chunk-000",
+          "file_path": "gd_8f5f71a1378d0350779d0bd7",
+          "created_at": 1793531737
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Technical Buyer",
+          "description": "The AI SDR has instant access to the Technical Buyer's technical documentation and product updates.",
+          "keywords": "Always,Perfect Product Knowledge",
+          "weight": 1.0,
+          "source_id": "gd_8f5f71a1378d0350779d0bd7-chunk-001",
+          "file_path": "gd_8f5f71a1378d0350779d0bd7",
+          "created_at": 1793531737
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "GTM AI tools",
+          "description": "GTM AI tools and AI SDR are related concepts in the context of go-to-market strategies.",
+          "keywords": "relationship_description,similar concepts",
+          "weight": 1.0,
+          "source_id": "gd_e82e6511ade6122ac0c71b46-chunk-006",
+          "file_path": "gd_e82e6511ade6122ac0c71b46",
+          "created_at": 1793572669
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Tool costs",
+          "description": "For basic tools, the cost of AI SDRs is $2K-$8K annually, which is equivalent to the loaded cost of one human SDR.",
+          "keywords": "equivalent cost",
+          "weight": 1.0,
+          "source_id": "gd_f374b222227a6a91a8bc883c-chunk-003",
+          "file_path": "gd_f374b222227a6a91a8bc883c",
+          "created_at": 1793586772
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Integration and setup",
+          "description": "The integration and setup of AI SDRs requires 20-40 hours of engineering time.",
+          "keywords": "eng time",
+          "weight": 1.0,
+          "source_id": "gd_f374b222227a6a91a8bc883c-chunk-003",
+          "file_path": "gd_f374b222227a6a91a8bc883c",
+          "created_at": 1793586772
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Workshop Track 1",
+          "description": "AI SDRs focus on deploying AI SDRs in Workshop Track 1.",
+          "keywords": "Deploys,Focuses",
+          "weight": 1.0,
+          "source_id": "gd_23ebc282dfbfcee03fe01904-chunk-001",
+          "file_path": "gd_23ebc282dfbfcee03fe01904",
+          "created_at": 1793592516
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Founder-led Sales",
+          "description": "Before deploying an AI SDR, a working sales playbook must be created through founder-led sales.",
+          "keywords": "automate,require",
+          "weight": 1.0,
+          "source_id": "gd_417b957752ce712ce5874976-chunk-001",
+          "file_path": "gd_417b957752ce712ce5874976",
+          "created_at": 1793607314
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Agency",
+          "description": "The agency deployed the AI SDR without proper training.",
+          "keywords": "Deployed",
+          "weight": 1.0,
+          "source_id": "gd_9f64b63b5ae698d29604d98b-chunk-005",
+          "file_path": "gd_9f64b63b5ae698d29604d98b",
+          "created_at": 1793618851
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "AI Support agent",
+          "description": "The AI SDR and AI Support agent need constant fine-tuning, quality checks, and optimization.",
+          "keywords": "Iterations,Training",
+          "weight": 1.0,
+          "source_id": "gd_03663f68906e5fe37d85d810-chunk-002",
+          "file_path": "gd_03663f68906e5fe37d85d810",
+          "created_at": 1793621701
+        },
+        {
+          "src_id": "AI SDR",
+          "tgt_id": "Traditional SDR",
+          "description": "AI SDRs are running 24/7, handling prospecting, qualification, follow-ups, and even booking meetings at a fraction of the cost of a human SDR.<SEP>relationship_description: AI SDRs are more efficient and cost-effective than traditional SDRs.",
+          "keywords": "Cost Reduction,Traditional,relationship_keywords: AI",
+          "weight": 2.0,
+          "source_id": "gd_43e212d0edcb1c2810230fe2-chunk-002<SEP>gd_65427bc55aea7156a7d39bfe-chunk-004",
+          "file_path": "gd_43e212d0edcb1c2810230fe2<SEP>gd_65427bc55aea7156a7d39bfe",
+          "created_at": 1793567444
+        }
+      ],
+      "chunks": [
+        {
+          "reference_id": "3",
+          "content": "Dear SaaStr: I Want to Roll Out an AI SDR. How Do I Start?\nFirst, get clear on what you’re actually buying — and what it actually does.\nWe’ve now been running AI SDRs at SaaStr for over a year. Multiple platforms. Real data. Real pipeline. And the honest answer is: it works. But it works very differently than most vendors will tell you, and the gap between a good deployment and a wasted one comes down almost entirely to how you set it up.\nHere’s what we actually learned.\nThe Single Best Use Case to Start With: The Leads Your Team Is Ignoring\nThis is the insight that changed how we think about AI SDRs entirely.\nYour human SDRs are force-ranking in their heads every single day. They’re chasing the big deals, the warm inbound, the accounts that feel like they could close this quarter. The leads they consider “not worth it” — return event attendees, old website visitors, ghosted CRM contacts — those get nothing. Not bad follow-up. Nothing.\nThat’s where AI SDRs absolutely shine.\nWhen we deployed AI on the leads our human team refused to work — people who had engaged with SaaStr but never got follow-up — we got a\n72% open rate\non Agentforce and generated\n15% of our London event revenue\nfrom a segment that would have produced zero without AI.\nNot 15% incremental lift. 15% of total revenue from leads that were producing $0.\nSo before you start thinking about AI SDRs as a way to scale your best motion, ask yourself: what’s the motion your team isn’t running at all? Start there.\nThe Data on What’s Actually Possible\nHere’s what we’ve seen across our AI SDR stack, with real numbers:\nArtisan (outbound AI SDR):\n3,221 emails per month from a single platform\nPrevious human SDR volume: 75–285 emails per rep per month\nThat’s an",
+          "file_path": "gd_f4b7879f1fde287961a29eb3",
+          "chunk_id": "gd_f4b7879f1fde287961a29eb3-chunk-000"
+        },
+        {
+          "reference_id": "1",
+          "content": "We’ve now been running AI SDR agents for 10+ months at SaaStr. We use four different vendors in daily rotation (Artisan, Salesforce AgentForce, Qualified, and Monaco), we’ve sent hundreds of thousands of outbound messages, processed 1.5 million inbound sessions on a single website, and we’ve made every mistake you can make along the way.\nSomeone asked us the other day to break down what they should know before rolling out their very first AI SDR. So here are the 10 biggest lessons, drawn from real deployment data, real failures, and real results.\n1. You Probably Only Need One Vendor\nWe run four AI SDR tools. You do not need to do that. We hyper-segment across platforms because each one does something slightly different well, but for 90%+ of use cases, one vendor will handle the bulk of what you need.\nAt most, you might end up with two: one for outbound, one for inbound. But do not start by buying three or four tools. Pick one that covers the majority of what you want to accomplish and go deep with it.\nThe tool matters far less than the strategy you bring to it.\n2. Your Human Playbook Has to Work First\nThis is the single biggest mistake we see, and it cuts across company stage. We see it from raw startups at $1M ARR and from multi-billion-dollar public companies alike.\nThe pattern is always the same: they want to turn on an AI SDR without first proving that their human sales motion works. Or they use the AI SDR to “test new copy” they’ve never tried before.\nThat is backwards.\nIf you have not gotten outbound to work with humans, buying an AI to do it will not fix that. We did not deploy our first AI SDR until we knew exactly what was working with our human SDRs: which messaging converted, which segments responded, what cadences performed. Then we fed all of that into the agent.\nThe goal",
+          "file_path": "gd_417b957752ce712ce5874976",
+          "chunk_id": "gd_417b957752ce712ce5874976-chunk-000"
+        },
+        {
+          "reference_id": "4",
+          "content": "AI SDRs can work incredibly well, but only if you’re willing to invest the time to train them properly. This isn’t about replacing humans — it’s about augmenting what humans can do with hyper-personalization at scale. The companies that figure this out first will have a massive advantage.\n\nThe ones that just turn it on and walk away will wonder why they’re getting the same terrible response rates they always have. Pick your platform, commit to the training, and prepare to spend more time on orchestration than you expect. But if you do it right, you’ll be sending thousands of emails that sound like you actually wrote them. What We’re Looking to Do Next\nWe’re literally onboarding two more AI sales tools this week. The outbound piece is working, but we want to go deeper across the entire sales cycle. We’re still hunting for a really good AI marketing tool — if you know of one that actually works (not just another content generator), hit us up. We’re also hiring someone specifically to manage our AI operations. A human 🙂 This is becoming a full-time role and frankly, we need someone whose entire job is orchestrating these systems. If you know someone good at both AI and revenue operations, send them our way. The goal is to have AI touching every part of our sales and marketing funnel by the end of the year, but doing it right — with proper training, human oversight, and real value creation. Amelia Lerutte is SVP + GM at SaaStr. You can reach her at ai@saastr.com or connect on LinkedIn. Yes, that inbox is monitored by both AI and humans — and you probably won’t be able to tell the difference.",
+          "file_path": "gd_cd0a5d64ec64d242e99c5ad1",
+          "chunk_id": "gd_cd0a5d64ec64d242e99c5ad1-chunk-004"
+        },
+        {
+          "reference_id": "5",
+          "content": "humans for strategy, relationship building, and complex problem-solving. AI Does What We Need, But No One Wants To Do\nThe future of SaaS isn’t about AI replacing humans. It’s about AI doing the essential work that humans will do poorly or not at all because it’s repetitive, unrewarding, or doesn’t scale. Companies that embrace this reality first will have operational advantages that compound over time. They’ll have cleaner data, more consistent processes, better follow-through, and human teams focused on work that actually drives satisfaction and retention. The technology is almost there. The question is whether your organization is ready to let AI handle the jobs that, frankly, no one really wants to do anyway. When that happens, everything else becomes possible. Why We Have 11+ AI Agents Already in Production Ourselves\nIt’s true at tiny team SaaStr, too. Too many core functions … humans didn’t want to do:\nWe couldn’t get our SDRs to follow up on most potential prospects. They didn’t see the return. We couldn’t get our content team to review 1,000s+ of submissions. Too many to find the diamonds in the rough. We couldn’t get our sales team to chase lapsed sponsors and partners. They didn’t see the ROI. We couldn’t get our AEs to do any prospecting at all. Few want to. We couldn’t get the GTM team to follow up on leads instantly. We couldn’t get our sales team to update our collateral consistently. Or to make custom pitch decks for sponsors (Gamma does this now).",
+          "file_path": "gd_f9d25c28348724609cb4e3da",
+          "chunk_id": "gd_f9d25c28348724609cb4e3da-chunk-004"
+        },
+        {
+          "reference_id": "1",
+          "content": "without first proving that their human sales motion works. Or they use the AI SDR to “test new copy” they’ve never tried before.\nThat is backwards.\nIf you have not gotten outbound to work with humans, buying an AI to do it will not fix that. We did not deploy our first AI SDR until we knew exactly what was working with our human SDRs: which messaging converted, which segments responded, what cadences performed. Then we fed all of that into the agent.\nThe goal of an AI SDR is to clone the best person on your team. If it is just you, clone you. If you have four people and one is crushing it at outbound, clone that person. These tools, in the beginning, are cloning machines. They take context word for word and use it to build out their brain. If you feed them garbage context, or untested context, they will produce garbage results.\nYou basically have to have done founder-led sales before you hand it off to an agent. The playbook has to work, at least a little, before you automate it.\nAnd watch out: some vendors will steer you toward using their tool for “pure cold testing.” Sure, you can do that. But you will likely be disappointed compared to scaling something that already converts. Do not fall into that trap.\n3. Segment Ruthlessly\nThis one we cannot overstate. Segment ruthlessly. Literally every day.\nEvery AI SDR tool we have tried, and that is over a dozen, has some version of functionality where you can tell the agent who to reach out to and give it specific context for that segment. The difference between one generic campaign brain and hyper-segmented campaigns with tailored context is enormous.\nHere is a concrete example. We initially treated our inbound agent as one big bucket: “they’re inbound to the website.” But that was wrong. We actually have brand-new visitors, people who came via a social ad, prior sponsors returning, current customers checking on something",
+          "file_path": "gd_417b957752ce712ce5874976",
+          "chunk_id": "gd_417b957752ce712ce5874976-chunk-001"
+        },
+        {
+          "reference_id": "6",
+          "content": "Artisan sends 3,221 emails/month for us. Our human SDRs sent 75-285. But the stat that actually matters: 11-12% positive response rate on warm audiences. Volume is not the metric. Response is. An AI SDR won't beat the best humans. But it doesn't have to. All it has to do is beat most of them. 24x7.",
+          "file_path": "gd_40fff6305e814a310e970593",
+          "chunk_id": "gd_40fff6305e814a310e970593-chunk-000"
+        },
+        {
+          "reference_id": "2",
+          "content": "’s all true, but it misses the bigger story.\nAI SDRs are fundamentally better at the job than humans.\nHere’s why:\nPerfect Product Knowledge, Always\nAn AI SDR has instant access to your entire technical documentation, every product update, every integration detail, every compliance framework. It doesn’t “forget” features. It doesn’t give outdated information. It doesn’t punt technical questions to someone else.\nConsistent Technical Credibility\nWhen a VP of Engineering asks about your API’s authentication methods, an AI SDR can immediately explain OAuth 2.0 flows, token refresh mechanisms, and security best practices. Without skipping a beat.\nReal-Time Learning and Adaptation\nHuman SDRs need weeks of training for each product update. AI SDRs incorporate new information instantly. They’re always current, always accurate, always ready.  And you’ll train your AI SDRs every day, and they won’t forget.  They’ll all remember the ‘manual’ training, too.\nNo Ego, No Politics, No Bad Days\nHuman SDRs have off days. They get frustrated. They take shortcuts. They develop preferences for “easier” prospects. AI SDRs don’t. They treat every conversation with the same level of preparation and professionalism.\nThe Data\nI’ve been tracking this roughly across multiple\nSaaStr Fund\nportfolio companies:\nAverage technical questions answered immediately\n: Human SDRs 15%, AI SDRs 87%\nCalls requiring technical follow-up\n: Human SDRs 73%, AI SDRs 22%\nTime to technical qualification\n: Human SDRs 8.3 days, AI SDRs 2.1 days\nTechnical buyer satisfaction scores\n: Human SDRs 6.2/10, AI SDRs 8.4/10\nThe productivity gains are massive (AI SDRs handle 3-5x more conversations), but the\nquality\nimprovement is what will drive adoption.\nWhat This Means for Sales Leaders\nIf you’re",
+          "file_path": "gd_8f5f71a1378d0350779d0bd7",
+          "chunk_id": "gd_8f5f71a1378d0350779d0bd7-chunk-002"
+        },
+        {
+          "reference_id": "7",
+          "content": "matters more than the tool. The Economics\nThe math is undeniable:\nHuman SDR:\nBase salary: $75K-$95K\nBenefits, taxes, overhead: Add 25-35%\nTotal loaded cost: $100K-$130K annually\nRamp time: 3-6 months\nManagement overhead: Weekly 1:1s, reviews, coaching\nAI SDR equivalent:\nTool costs: $2K-$8K annually for basic; $50K-$100K for enterprise with FDE support\nIntegration and setup: One-time, 20-40 hours of eng time\nRamp time: Days to weeks (if you put in the training work)\nManagement overhead: Prompt refinement, daily monitoring\nFor basic tools, we’re talking about\n3x-15x cost reduction\nfor 70-80% of the output. For enterprise-grade agents with FDE support, you’re looking at roughly equivalent cost to one human but with the ability to scale to 10x the volume.\n\nCustomer Success: 60%+ Don’t Add Value Anymore\nWe need better AI platforms here, but we don’t need 60%+ of the CSMs we have today. CSMs that don’t solve problems and just do QBRs without adding true value are not necessary in the age of AI. You can probably move on from them today. Engineering: Actually\nMore\nProductive, Not Fewer\nI’m not seeing that AI lets you reduce net headcount in engineering at all. What I see is a 20%-40% productivity boost, net net. Far more for prototypes and proof-of-concept production. But it becomes an arms race. Everyone is more productive, software is shipping faster, so you need more great engineers than ever. It’s a cracked arms race in product development today. AI Isn’t Magic. Especially If You Don’t Put In The Work. Klarna CEO Sebastian Siemiatkowski became AI’s",
+          "file_path": "gd_f374b222227a6a91a8bc883c",
+          "chunk_id": "gd_f374b222227a6a91a8bc883c-chunk-003"
+        },
+        {
+          "reference_id": "8",
+          "content": "95% of human SDRs do not really know the product they are ‘selling’. 95% of human SDRs can’t answer a tough question from a VP Eng, a CPO, a CIO, etc. 95% of human SDRs have to wait until they can grab some human to help you. This is why AI SDRs will rapidly win. The productivity benefits are real, too. Huge. But the truth is, an AI SDRs is much, much better than a human one. Almost always.",
+          "file_path": "gd_3784621e331dc81f75510555",
+          "chunk_id": "gd_3784621e331dc81f75510555-chunk-000"
+        },
+        {
+          "reference_id": "9",
+          "content": "100 million leads over 26 years represents nearly 4 million annually that went completely uncontacted due to human capacity constraints. The AI Solution Architecture\nBenioff’s implementation centers on what he calls an “omni-channel supervisor”—an AI orchestration system that coordinates between human agents and digital agents.\n\nThis isn’t simple automation; it’s intelligent workflow management that determines when human intervention is required and when AI can handle interactions independently. The system handles:\nAutomated outreach\nto the massive backlog of uncontacted leads\nConversation management\nthrough natural language interactions\nQualification and routing\nbased on engagement patterns\nSeamless handoffs\nto human SDRs when complexity thresholds are reached\nIntegration\nwith existing CRM and sales processes\n“This agentic sales is calling everyone back and having conversations with them and then deeply integrating it through the omni-channel supervisor into our new agentic sales product,” Benioff noted. The Economic Impact\nThe revenue implications are staggering. If even 1% of those 100 million leads could convert at Salesforce’s average deal size, that represents millions in previously inaccessible revenue annually. This demonstrates AI’s true value proposition: expanding addressable market rather than just optimizing existing processes. More importantly, Benioff positioned this as workforce optimization rather than replacement: “I’ve been able to take that headcount and then rebalance it into other parts of my company where I need more help and need more support because we’re still growing.”\nSaaStr’s Real-World AI SDR Playbook\nWhile Benioff operates at massive scale, SaaStr’s experience provides tactical insights for companies looking to implement AI SDRs effectively.\n\nTheir results were impressive: #1 response rates on their platform within 30 days, with 4,495 hyper-personalized messages sent in just two weeks. The Training Investment Reality\nSaaStr’s most important insight contradicts the “turn it on and watch magic happen” narrative. Their approach required:\nTwo weeks of intensive training\n(",
+          "file_path": "gd_869914f6788fdfc5460c226b",
+          "chunk_id": "gd_869914f6788fdfc5460c226b-chunk-002"
+        },
+        {
+          "reference_id": "2",
+          "content": "I’ve been in SaaS since 2005 (!). I’ve worked with a number of great SDRs … and a bunch that were there and gone in just a flash. I’ve sat through thousands of sales calls.\nAnd now that we’ve rolled out 4+ AI SDRs and BDRs at SaaStr itself, we’ve learned so much:\nAn AI SDR really, really has to be trained to work well\n.  There is no set-and-forget today.  Not yet at least.\nAn AI SDR has to be “QA’d” every single day to get better and better\n.  I.e., it has to managed just like human SDRs.  Just differently.\nBut also a critical if obvious learning: an AI SDR almost always knows the product itself far, far better than any human SDR\n.  Far better.\nAfter all, you can train an AI SDR on\neverything\n.  On every page of your website, every piece of collateral, every objection.\nAnd … 95% of human SDRs fundamentally don’t understand what they’re selling.\nNot “they need more training.” Not “they’re still ramping.” They genuinely cannot articulate the technical value proposition of their product when pressed by someone who actually knows what they’re talking about.  And they certainly can’t engage in a real conversation around it.  They have to go … get someone.\nThe Product Knowledge Disconnect Nobody Talks About\nHere’s what happens in the real world:\nA VP of Engineering gets on a discovery call. They ask a simple technical question: “How does your API handle rate limiting at scale?”\nThe SDR freezes.\n“That’s a great question! Let me connect you with our solutions engineer who can dive deep into the technical details.”\nThis happens 95% of the time.\nWhen a CPO asks about data lineage capabilities, the SDR punts to product marketing.\nWhen a CIO wants to understand compliance frameworks, the SDR schedules a follow-up with the security team",
+          "file_path": "gd_8f5f71a1378d0350779d0bd7",
+          "chunk_id": "gd_8f5f71a1378d0350779d0bd7-chunk-000"
+        },
+        {
+          "reference_id": "10",
+          "content": "to call back. We just have not had the people. That’s just all there is to it.”\nThis wasn’t a technology problem—it was a human capacity constraint that plagued even one of the world’s most successful software companies. Despite having “like 15,000 sales people,” Salesforce simply didn’t have enough SDRs to handle the volume of inbound interest. The math was brutal: 100 million leads over 26 years represents nearly 4 million leads annually that went completely uncontacted.\nThink about the revenue implications. If even 1% of those 100 million leads could have converted to customers at Salesforce’s average deal size, that’s millions in lost revenue annually. This represents the classic enterprise software scaling problem: demand exceeding human capacity to respond.\nThe AI SDR Solution in Action\nBenioff described how their AI SDR system now tackles this previously impossible challenge: “We have this agentic sales now. And not only are we doing support, but this agentic sales is calling everyone back and having conversations with them and then deeply integrating it through the omni-channel supervisor into our new agentic sales product.”\nThe system works through what Benioff called an “omni-channel supervisor”—an AI orchestration layer that coordinates between human agents and digital agents. This isn’t simple automation; it’s intelligent triage and routing that determines when human intervention is required and when AI can handle interactions independently.\nThe AI SDR process includes:\nAutomated outreach\nto previously uncontacted leads from the 100 million backlog\nConversation management\nthrough natural language interactions\nQualification and scoring\nbased on response patterns and engagement\nSeamless handoff\nto human SDRs when conversations reach complexity thresholds\nIntegration\nwith existing sales processes and CRM data\nThe “Customer Zero” Validation Strategy\nBenioff emphasized that Salesforce serves as “customer zero” for their AI products, using their own 100 million lead challenge as the proving ground. This approach provides compelling advantages:\nCredible case studies",
+          "file_path": "gd_56ce429513ba63d601778b83",
+          "chunk_id": "gd_56ce429513ba63d601778b83-chunk-003"
+        }
+      ],
+      "references": [
+        {
+          "reference_id": "1",
+          "file_path": "gd_417b957752ce712ce5874976"
+        },
+        {
+          "reference_id": "2",
+          "file_path": "gd_8f5f71a1378d0350779d0bd7"
+        },
+        {
+          "reference_id": "3",
+          "file_path": "gd_f4b7879f1fde287961a29eb3"
+        },
+        {
+          "reference_id": "4",
+          "file_path": "gd_cd0a5d64ec64d242e99c5ad1"
+        },
+        {
+          "reference_id": "5",
+          "file_path": "gd_f9d25c28348724609cb4e3da"
+        },
+        {
+          "reference_id": "6",
+          "file_path": "gd_40fff6305e814a310e970593"
+        },
+        {
+          "reference_id": "7",
+          "file_path": "gd_f374b222227a6a91a8bc883c"
+        },
+        {
+          "reference_id": "8",
+          "file_path": "gd_3784621e331dc81f75510555"
+        },
+        {
+          "reference_id": "9",
+          "file_path": "gd_869914f6788fdfc5460c226b"
+        },
+        {
+          "reference_id": "10",
+          "file_path": "gd_56ce429513ba63d601778b83"
+        }
+      ]
+    },
+    "metadata": {
+      "query_mode": "hybrid",
+      "keywords": {
+        "high_level": [
+          "AI",
+          "SDR",
+          "Sales"
+        ],
+        "low_level": [
+          "AI SDR",
+          "Human SDR"
+        ]
+      },
+      "processing_info": {
+        "total_entities_found": 40,
+        "total_relations_found": 283,
+        "entities_after_truncation": 31,
+        "relations_after_truncation": 151,
+        "merged_chunks_count": 143,
+        "final_chunks_count": 12
+      }
+    },
+    "query": "Dear SaaStr: Should I Use an AI SDR Before I Have a Working Human SDR motion?"
+  },
+  "retrieval_seconds": 13.244,
+  "graph_summary": {
+    "status": "recorded",
+    "raw_entity_count": 31,
+    "raw_relationship_count": 151,
+    "raw_chunk_count": 12,
+    "entity_description_count": 31,
+    "entity_descriptions_nonempty": 31,
+    "entity_description_available": true,
+    "excluded_reason_counts": {
+      "generated_summary_not_a_source_span": 182
+    },
+    "accepted_relationships": 46,
+    "rejected_relationships": 101,
+    "quarantined_relationships": 4,
+    "relationship_reason_counts": {
+      "weak_entity_name": 14,
+      "generated_summary_not_supported_by_source": 80,
+      "endpoints_not_in_source": 7,
+      "unresolved_conflict": 4
+    },
+    "missing_source_or_provenance_exclusions": 0,
+    "relationship_validation_status": "recorded",
+    "two_hop_path_count": 0,
+    "two_hop_path_available": false,
+    "path_status": "recorded",
+    "normalization": {
+      "payload_shape": "aquery_data",
+      "mode": "hybrid",
+      "entity_descriptions_not_retained": 0,
+      "malformed_records": 0,
+      "notes": [
+        "hits_already_budgeted_raw_chunks_not_added",
+        "validated_against_supplied_catalog"
+      ],
+      "validation_contract": "source-verified-relationship-v1",
+      "separator": "<SEP>",
+      "profile": "multihop",
+      "direct_edges": 46,
+      "paths": 24,
+      "withheld_edges": 105
+    },
+    "direct_edge_count": 46
+  }
+}

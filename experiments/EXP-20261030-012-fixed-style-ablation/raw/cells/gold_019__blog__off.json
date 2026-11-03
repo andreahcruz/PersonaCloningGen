@@ -1,0 +1,457 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "topic_id": "gold_019",
+  "medium": "blog",
+  "arm": "off",
+  "seed": 114,
+  "attempts": 1,
+  "evidence_sha256": "5c62b7202d9be43b887de3894c1c1597e5c3823a2b2004ae85d9a95b2811df3d",
+  "retrieval_hit_ids": [
+    "train_14164",
+    "train_21688",
+    "train_10562",
+    "train_21682"
+  ],
+  "retrieval_query": "Dear SaaStr: At What Stage Should a Startup Hire a CMO?",
+  "retrieval_filter": null,
+  "style_applied": false,
+  "style_in_prompt": false,
+  "prompt_tokens": 413,
+  "generated_tokens_including_stop": 346,
+  "latency_seconds": 25.091,
+  "exemplar_ids": [],
+  "saved_at": "2026-10-30T09:53:17.885037+00:00",
+  "trace": {
+    "id": "gold_019",
+    "format": "blog_draft",
+    "topic": "Dear SaaStr: At What Stage Should a Startup Hire a CMO?",
+    "audience": "B2B SaaS founders and operators",
+    "goal": "Give stage-appropriate advice on when a startup really needs a CMO.",
+    "cta": "none",
+    "k": 8,
+    "expected_facts": [
+      "The answer should say that many startups hire a CMO too early.",
+      "It should explain that the role only works once there is enough repeatability and scope to justify it.",
+      "It should distinguish between tactical marketing needs and true CMO-level leadership."
+    ],
+    "rubric_must_haves": [
+      "Takes a clear stage-based position.",
+      "Explains what must already exist before the hire works.",
+      "Distinguishes leader type from function needs.",
+      "Uses direct founder advice."
+    ],
+    "gold_reference": "A strong answer should say that founders usually need demand generation, product marketing, or content help before they need a true CMO. The CMO hire works when there is already enough scale, budget, and strategic complexity to support a full executive owner. Hiring one too early often creates expensive confusion instead of leverage.",
+    "medium": "blog",
+    "prompt": "Write a blog post in the style of Jason Lemkin about: Dear SaaStr: At What Stage Should a Startup Hire a CMO?\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] You want a VP of Everything (Sales, Marketing, Product, Eng) by about $1m-$2m ARR\n[E2] The CFO is often the last, the CMO often the first “C” level officer\n[E3] You probably have to hire them one at a time, a bit slowly\n[E4] By $10m ARR, bootstrapped SaaS companies mint enough cash to fund all these hires\n[E5] You want to start adding CXOs around $15m-$20m ARR\n\nNow write the requested blog post about: Dear SaaStr: At What Stage Should a Startup Hire a CMO?",
+    "rendered_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nWrite a blog post in the style of Jason Lemkin about: Dear SaaStr: At What Stage Should a Startup Hire a CMO?\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] You want a VP of Everything (Sales, Marketing, Product, Eng) by about $1m-$2m ARR\n[E2] The CFO is often the last, the CMO often the first “C” level officer\n[E3] You probably have to hire them one at a time, a bit slowly\n[E4] By $10m ARR, bootstrapped SaaS companies mint enough cash to fund all these hires\n[E5] You want to start adding CXOs around $15m-$20m ARR\n\nNow write the requested blog post about: Dear SaaStr: At What Stage Should a Startup Hire a CMO?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "answer": "Dear SaaStr: At what stage should I hire my CMO?\nThere’s no hard-and-fast rule on when you need to bring in a Chief Marketing Officer (CMO). It really depends on your company’s size, maturity, and needs. But here’s how most startups think through this hiring:\nEarly Days (<$1M ARR):\nAt this stage, you’re still building the foundation. Most founders wear multiple hats including marketing until they can afford dedicated roles. Your initial focus will likely be on word-of-mouth, product-led growth, and maybe some basic SEO/PPC advertising. If you don’t already know how to market effectively yourself, hiring someone now might just confuse things more than help.\nScaling Phase ($1M–$10M+ ARR)\n:\nAs you hit $1M ARR, you’ll start seeing the value of having a marketing leader who can scale with you. They’ll help refine your messaging, build out your brand, and develop strategies for scaling demand generation. A great CMO at this phase can drive significant revenue growth—think an additional $500K–$1M in pipeline each year, depending on their experience and execution. This is especially important if you’re entering new markets or segments where you need professional-grade marketing expertise. Bootstrapping vs VC Backed\nIt’s worth noting that timing varies based on funding status. VCs often push for earlier marketing investments because they see the potential for exponential returns. Bootstrappers tend to hold off longer, focusing on organic growth before bringing in dedicated resources. Either way, once you’ve secured some traction, a seasoned CMO becomes invaluable—they can amplify your message, optimize your funnel, and position you for bigger opportunities.",
+    "raw_model_output": "Dear SaaStr: At what stage should I hire my CMO?\nThere’s no hard-and-fast rule on when you need to bring in a Chief Marketing Officer (CMO). It really depends on your company’s size, maturity, and needs. But here’s how most startups think through this hiring:\nEarly Days (<$1M ARR):\nAt this stage, you’re still building the foundation. Most founders wear multiple hats including marketing until they can afford dedicated roles. Your initial focus will likely be on word-of-mouth, product-led growth, and maybe some basic SEO/PPC advertising. If you don’t already know how to market effectively yourself, hiring someone now might just confuse things more than help.\nScaling Phase ($1M–$10M+ ARR)\n:\nAs you hit $1M ARR, you’ll start seeing the value of having a marketing leader who can scale with you. They’ll help refine your messaging, build out your brand, and develop strategies for scaling demand generation. A great CMO at this phase can drive significant revenue growth—think an additional $500K–$1M in pipeline each year, depending on their experience and execution. This is especially important if you’re entering new markets or segments where you need professional-grade marketing expertise. Bootstrapping vs VC Backed\nIt’s worth noting that timing varies based on funding status. VCs often push for earlier marketing investments because they see the potential for exponential returns. Bootstrappers tend to hold off longer, focusing on organic growth before bringing in dedicated resources. Either way, once you’ve secured some traction, a seasoned CMO becomes invaluable—they can amplify your message, optimize your funnel, and position you for bigger opportunities.",
+    "deployment_output": "Dear SaaStr: At what stage should I hire my CMO?\nThere’s no hard-and-fast rule on when you need to bring in a Chief Marketing Officer (CMO). It really depends on your company’s size, maturity, and needs. But here’s how most startups think through this hiring:\nEarly Days (<$1M ARR):\nAt this stage, you’re still building the foundation. Most founders wear multiple hats including marketing until they can afford dedicated roles. Your initial focus will likely be on word-of-mouth, product-led growth, and maybe some basic SEO/PPC advertising. If you don’t already know how to market effectively yourself, hiring someone now might just confuse things more than help.\nScaling Phase ($1M–$10M+ ARR)\n:\nAs you hit $1M ARR, you’ll start seeing the value of having a marketing leader who can scale with you. They’ll help refine your messaging, build out your brand, and develop strategies for scaling demand generation. A great CMO at this phase can drive significant revenue growth—think an additional $500K–$1M in pipeline each year, depending on their experience and execution. This is especially important if you’re entering new markets or segments where you need professional-grade marketing expertise. Bootstrapping vs VC Backed\nIt’s worth noting that timing varies based on funding status. VCs often push for earlier marketing investments because they see the potential for exponential returns. Bootstrappers tend to hold off longer, focusing on organic growth before bringing in dedicated resources. Either way, once you’ve secured some traction, a seasoned CMO becomes invaluable—they can amplify your message, optimize your funnel, and position you for bigger opportunities.",
+    "first_attempt_answer": "Dear SaaStr: At what stage should I hire my CMO?\nThere’s no hard-and-fast rule on when you need to bring in a Chief Marketing Officer (CMO). It really depends on your company’s size, maturity, and needs. But here’s how most startups think through this hiring:\nEarly Days (<$1M ARR):\nAt this stage, you’re still building the foundation. Most founders wear multiple hats including marketing until they can afford dedicated roles. Your initial focus will likely be on word-of-mouth, product-led growth, and maybe some basic SEO/PPC advertising. If you don’t already know how to market effectively yourself, hiring someone now might just confuse things more than help.\nScaling Phase ($1M–$10M+ ARR)\n:\nAs you hit $1M ARR, you’ll start seeing the value of having a marketing leader who can scale with you. They’ll help refine your messaging, build out your brand, and develop strategies for scaling demand generation. A great CMO at this phase can drive significant revenue growth—think an additional $500K–$1M in pipeline each year, depending on their experience and execution. This is especially important if you’re entering new markets or segments where you need professional-grade marketing expertise. Bootstrapping vs VC Backed\nIt’s worth noting that timing varies based on funding status. VCs often push for earlier marketing investments because they see the potential for exponential returns. Bootstrappers tend to hold off longer, focusing on organic growth before bringing in dedicated resources. Either way, once you’ve secured some traction, a seasoned CMO becomes invaluable—they can amplify your message, optimize your funnel, and position you for bigger opportunities.",
+    "retry_answer": null,
+    "query": "Dear SaaStr: At What Stage Should a Startup Hire a CMO?",
+    "max_new_tokens": 768,
+    "seed": 114,
+    "retry_seed": null,
+    "deployment_accepted": true,
+    "repair_occurred": false,
+    "generation_attempt": {
+      "seed": 114,
+      "answer": "Dear SaaStr: At what stage should I hire my CMO?\nThere’s no hard-and-fast rule on when you need to bring in a Chief Marketing Officer (CMO). It really depends on your company’s size, maturity, and needs. But here’s how most startups think through this hiring:\nEarly Days (<$1M ARR):\nAt this stage, you’re still building the foundation. Most founders wear multiple hats including marketing until they can afford dedicated roles. Your initial focus will likely be on word-of-mouth, product-led growth, and maybe some basic SEO/PPC advertising. If you don’t already know how to market effectively yourself, hiring someone now might just confuse things more than help.\nScaling Phase ($1M–$10M+ ARR)\n:\nAs you hit $1M ARR, you’ll start seeing the value of having a marketing leader who can scale with you. They’ll help refine your messaging, build out your brand, and develop strategies for scaling demand generation. A great CMO at this phase can drive significant revenue growth—think an additional $500K–$1M in pipeline each year, depending on their experience and execution. This is especially important if you’re entering new markets or segments where you need professional-grade marketing expertise. Bootstrapping vs VC Backed\nIt’s worth noting that timing varies based on funding status. VCs often push for earlier marketing investments because they see the potential for exponential returns. Bootstrappers tend to hold off longer, focusing on organic growth before bringing in dedicated resources. Either way, once you’ve secured some traction, a seasoned CMO becomes invaluable—they can amplify your message, optimize your funnel, and position you for bigger opportunities.",
+      "numeric_grounding": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [
+          "usd:1000000",
+          "usd:10000000",
+          "usd:15000000",
+          "usd:2000000",
+          "usd:20000000"
+        ],
+        "values": [
+          {
+            "value": "$1M",
+            "canonical": "usd:1000000",
+            "sentence": "Early Days (<$1M ARR):",
+            "start": 273,
+            "end": 276
+          },
+          {
+            "value": "$1M",
+            "canonical": "usd:1000000",
+            "sentence": "Scaling Phase ($1M–$10M+ ARR)",
+            "start": 680,
+            "end": 683
+          },
+          {
+            "value": "$10M+",
+            "canonical": "usd:10000000",
+            "sentence": "Scaling Phase ($1M–$10M+ ARR)",
+            "start": 684,
+            "end": 689
+          },
+          {
+            "value": "$1M",
+            "canonical": "usd:1000000",
+            "sentence": "As you hit $1M ARR, you’ll start seeing the value of having a marketing leader who can scale with you",
+            "start": 708,
+            "end": 711
+          },
+          {
+            "value": "$500K",
+            "canonical": "usd:500000",
+            "sentence": "A great CMO at this phase can drive significant revenue growth—think an additional $500K–$1M in pipeline each year, depending on their experience and execution",
+            "start": 995,
+            "end": 1000
+          },
+          {
+            "value": "$1M",
+            "canonical": "usd:1000000",
+            "sentence": "A great CMO at this phase can drive significant revenue growth—think an additional $500K–$1M in pipeline each year, depending on their experience and execution",
+            "start": 1001,
+            "end": 1004
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "$500K",
+            "canonical": "usd:500000",
+            "sentence": "A great CMO at this phase can drive significant revenue growth—think an additional $500K–$1M in pipeline each year, depending on their experience and execution",
+            "start": 995,
+            "end": 1000
+          }
+        ]
+      },
+      "rag_source_copying": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 3,
+        "document_id": "train_10562",
+        "matched_generated_span": "you need to",
+        "matched_retrieved_span": "you need to"
+      },
+      "stop_reason": "eos"
+    },
+    "repair_attempt": null,
+    "accepted_attempt": 1,
+    "rag_source_copying": {
+      "applicable": true,
+      "threshold": 12,
+      "pass": true,
+      "flagged": false,
+      "max_contiguous_words": 3,
+      "document_id": "train_10562",
+      "matched_generated_span": "you need to",
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 3,
+        "document_id": "train_10562",
+        "matched_generated_span": "you need to",
+        "matched_retrieved_span": "you need to"
+      },
+      "retry": null,
+      "retry_occurred": false,
+      "repair_occurred": false
+    },
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": false,
+      "failure": "unsupported_numeric_grounding",
+      "unsupported": [
+        {
+          "value": "$500K",
+          "canonical": "usd:500000",
+          "sentence": "A great CMO at this phase can drive significant revenue growth—think an additional $500K–$1M in pipeline each year, depending on their experience and execution",
+          "start": 995,
+          "end": 1000
+        }
+      ],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [
+          "usd:1000000",
+          "usd:10000000",
+          "usd:15000000",
+          "usd:2000000",
+          "usd:20000000"
+        ],
+        "values": [
+          {
+            "value": "$1M",
+            "canonical": "usd:1000000",
+            "sentence": "Early Days (<$1M ARR):",
+            "start": 273,
+            "end": 276
+          },
+          {
+            "value": "$1M",
+            "canonical": "usd:1000000",
+            "sentence": "Scaling Phase ($1M–$10M+ ARR)",
+            "start": 680,
+            "end": 683
+          },
+          {
+            "value": "$10M+",
+            "canonical": "usd:10000000",
+            "sentence": "Scaling Phase ($1M–$10M+ ARR)",
+            "start": 684,
+            "end": 689
+          },
+          {
+            "value": "$1M",
+            "canonical": "usd:1000000",
+            "sentence": "As you hit $1M ARR, you’ll start seeing the value of having a marketing leader who can scale with you",
+            "start": 708,
+            "end": 711
+          },
+          {
+            "value": "$500K",
+            "canonical": "usd:500000",
+            "sentence": "A great CMO at this phase can drive significant revenue growth—think an additional $500K–$1M in pipeline each year, depending on their experience and execution",
+            "start": 995,
+            "end": 1000
+          },
+          {
+            "value": "$1M",
+            "canonical": "usd:1000000",
+            "sentence": "A great CMO at this phase can drive significant revenue growth—think an additional $500K–$1M in pipeline each year, depending on their experience and execution",
+            "start": 1001,
+            "end": 1004
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "$500K",
+            "canonical": "usd:500000",
+            "sentence": "A great CMO at this phase can drive significant revenue growth—think an additional $500K–$1M in pipeline each year, depending on their experience and execution",
+            "start": 995,
+            "end": 1000
+          }
+        ]
+      },
+      "retry": null
+    },
+    "prompt_tokens": 413,
+    "backend": "unsloth",
+    "retrieval": true,
+    "retrieval_query": "Dear SaaStr: At What Stage Should a Startup Hire a CMO?",
+    "retrieval_filter": null,
+    "retrieval_k": 4,
+    "retrieval_hits": [
+      {
+        "id": "train_14164",
+        "text": "\"Dear SaaStr: When Should a Bootstrapped Startup Hire a CFO, COO, CMO, etc.?\"",
+        "medium": "x",
+        "group_id": "a022d73992511db5684a9dd23aba3151df15129dd22b2b6fe6b0950ada0c2af3",
+        "row_id": 14164,
+        "split": "train",
+        "distance": 0.12540602684020996
+      },
+      {
+        "id": "train_21688",
+        "text": "What are the top 3 tasks of a CMO in a SaaS startup at $1M ARR? \nhttps://quora.com/What-are-the-top-3-tasks-of-a-CMO-in-a-SaaS-startup-at-1M-ARR/answer/Jason-M.-Lemkin?share=c8726acf\n…",
+        "medium": "x",
+        "group_id": "aecb8098619b9ff23f91ebac01600e76b9e8614e7605a3b61b8196a0f0883812",
+        "row_id": 21688,
+        "split": "train",
+        "distance": 0.21658289432525635
+      },
+      {
+        "id": "train_10562",
+        "text": "Q:  When should a bootstrapped startup hire a (CFO, COO, CMO)? How can a CEO hire those C-level positions for the first time as a CEO and entrepreneur? What skills should he or she look for?\nHere are some rough rules:\nYou want a VP of Everything (Sales, Marketing, Product, Eng) by about $1m-$2m ARR\n. Not all at once, but you can benefit from all of them by then. A bit more\nhere\n.\nYou want to start adding CXOs around $15m-$20m ARR\n.\nThe CFO is often the last, the CMO often the first “C” level officer.\nNow how does bootstrapping change this? Not that much. Certainly, it slows down how many VPs you can hire after $1m-$2m ARR. You probably have to hire them one at a time, a bit slowly.\nBut by $10m ARR, bootstrapped SaaS companies mint enough cash to fund all these hires. $10m ARR bootstrapped companies start to converge and look a lot like $10m ARR venutre-backed SaaS companies.  This is the key insight.  If you are bootstrapped in SaaS, you won’t have enough capital to build your management team as fast you need to for quite a while.  But as you approach $8m-$10m ARR, there will be enough revenue.  And no excuses not to have a fully built management team by then.\nAnd thus the next level C-level hiring process ends up being about the same, bootstrapped or not.\nIME, rough order to make hires in:\nVPM: $0.2m ARR\nVPS: $1-$1.5m ARR\nVPCS: $2m ARR\nVPP: $3m-$4m ARR\nVPE:  $5m-$6m ARR\nCFO: $10m ARR\nCOO: $20m ARR\nMore here:\nhttps://t.co/dYgFU0H1pp",
+        "medium": "blog",
+        "group_id": "60a909c7b260527c6127663fbb7f69afa2ee30fe5d56868ffdb4389cac6bd6fb",
+        "row_id": 10562,
+        "split": "train",
+        "distance": 0.21934711933135986
+      },
+      {
+        "id": "train_21682",
+        "text": "What are the top 3 tasks of a CMO in a SaaS startup at $1M ARR? by Jason M. Lemkin \nhttps://quora.com/What-are-the-top-3-tasks-of-a-CMO-in-a-SaaS-startup-at-1M-ARR/answer/Jason-M.-Lemkin?share=c8726acf&srid=dc\n…",
+        "medium": "x",
+        "group_id": "aecb8098619b9ff23f91ebac01600e76b9e8614e7605a3b61b8196a0f0883812",
+        "row_id": 21682,
+        "split": "train",
+        "distance": 0.22331452369689941
+      }
+    ],
+    "copying": [
+      {
+        "id": "train_14164",
+        "shared_word_span": 1
+      },
+      {
+        "id": "train_21688",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_10562",
+        "shared_word_span": 3
+      },
+      {
+        "id": "train_21682",
+        "shared_word_span": 2
+      }
+    ],
+    "retrieval_backend": "dense",
+    "proposed_atomic_claims": [
+      {
+        "source_id": "train_10562",
+        "claim": "You want a VP of Everything (Sales, Marketing, Product, Eng) by about $1m-$2m ARR",
+        "support_span": "You want a VP of Everything (Sales, Marketing, Product, Eng) by about $1m-$2m ARR",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_10562",
+        "claim": "The CFO is often the last, the CMO often the first “C” level officer",
+        "support_span": "The CFO is often the last, the CMO often the first “C” level officer",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_10562",
+        "claim": "You probably have to hire them one at a time, a bit slowly",
+        "support_span": "You probably have to hire them one at a time, a bit slowly",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_10562",
+        "claim": "By $10m ARR, bootstrapped SaaS companies mint enough cash to fund all these hires",
+        "support_span": "But by $10m ARR, bootstrapped SaaS companies mint enough cash to fund all these hires",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_10562",
+        "claim": "You want to start adding CXOs around $15m-$20m ARR",
+        "support_span": "You want to start adding CXOs around $15m-$20m ARR",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_10562",
+        "claim": "IME, rough order to make hires in: VPM: $0.2m ARR, VPS: $1-$1.5m ARR, VPCS: $2m ARR, VPP: $3m-$4m ARR, VPE:  $5m-$6m ARR, CFO: $10m ARR, COO: $20m ARR",
+        "support_span": "IME, rough order to make hires in: VPM: $0.2m ARR, VPS: $1-$1.5m ARR, VPCS: $2m ARR, VPP: $3m-$4m ARR, VPE:  $5m-$6m ARR, CFO: $10m ARR, COO: $20m ARR",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_21688",
+        "claim": "What are the top 3 tasks of a CMO in a SaaS startup at $1M ARR",
+        "support_span": "What are the top 3 tasks of a CMO in a SaaS startup at $1M ARR",
+        "claim_type": "question"
+      },
+      {
+        "source_id": "train_21682",
+        "claim": "What are the top 3 tasks of a CMO in a SaaS startup at $1M ARR",
+        "support_span": "What are the top 3 tasks of a CMO in a SaaS startup at $1M ARR",
+        "claim_type": "question"
+      }
+    ],
+    "validation_rejected": [
+      {
+        "source_id": "train_10562",
+        "claim": "IME, rough order to make hires in: VPM: $0.2m ARR, VPS: $1-$1.5m ARR, VPCS: $2m ARR, VPP: $3m-$4m ARR, VPE:  $5m-$6m ARR, CFO: $10m ARR, COO: $20m ARR",
+        "support_span": "IME, rough order to make hires in: VPM: $0.2m ARR, VPS: $1-$1.5m ARR, VPCS: $2m ARR, VPP: $3m-$4m ARR, VPE:  $5m-$6m ARR, CFO: $10m ARR, COO: $20m ARR",
+        "claim_type": "fact",
+        "reason": "support_not_in_source"
+      },
+      {
+        "source_id": "train_21688",
+        "claim": "What are the top 3 tasks of a CMO in a SaaS startup at $1M ARR",
+        "support_span": "What are the top 3 tasks of a CMO in a SaaS startup at $1M ARR",
+        "claim_type": "question",
+        "reason": "invalid_claim_type"
+      },
+      {
+        "source_id": "train_21682",
+        "claim": "What are the top 3 tasks of a CMO in a SaaS startup at $1M ARR",
+        "support_span": "What are the top 3 tasks of a CMO in a SaaS startup at $1M ARR",
+        "claim_type": "question",
+        "reason": "invalid_claim_type"
+      }
+    ],
+    "verifier_rejected": [],
+    "verified_claims": [
+      {
+        "source_id": "train_10562",
+        "claim": "You want a VP of Everything (Sales, Marketing, Product, Eng) by about $1m-$2m ARR",
+        "support_span": "You want a VP of Everything (Sales, Marketing, Product, Eng) by about $1m-$2m ARR",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_10562",
+        "claim": "The CFO is often the last, the CMO often the first “C” level officer",
+        "support_span": "The CFO is often the last, the CMO often the first “C” level officer",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_10562",
+        "claim": "You probably have to hire them one at a time, a bit slowly",
+        "support_span": "You probably have to hire them one at a time, a bit slowly",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_10562",
+        "claim": "By $10m ARR, bootstrapped SaaS companies mint enough cash to fund all these hires",
+        "support_span": "But by $10m ARR, bootstrapped SaaS companies mint enough cash to fund all these hires",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_10562",
+        "claim": "You want to start adding CXOs around $15m-$20m ARR",
+        "support_span": "You want to start adding CXOs around $15m-$20m ARR",
+        "claim_type": "fact"
+      }
+    ],
+    "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] You want a VP of Everything (Sales, Marketing, Product, Eng) by about $1m-$2m ARR\n[E2] The CFO is often the last, the CMO often the first “C” level officer\n[E3] You probably have to hire them one at a time, a bit slowly\n[E4] By $10m ARR, bootstrapped SaaS companies mint enough cash to fund all these hires\n[E5] You want to start adding CXOs around $15m-$20m ARR",
+    "raw_extraction": "[\n  {\n    \"source_id\": \"train_10562\",\n    \"claim\": \"You want a VP of Everything (Sales, Marketing, Product, Eng) by about $1m-$2m ARR\",\n    \"support_span\": \"You want a VP of Everything (Sales, Marketing, Product, Eng) by about $1m-$2m ARR\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_10562\",\n    \"claim\": \"The CFO is often the last, the CMO often the first “C” level officer\",\n    \"support_span\": \"The CFO is often the last, the CMO often the first “C” level officer\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_10562\",\n    \"claim\": \"You probably have to hire them one at a time, a bit slowly\",\n    \"support_span\": \"You probably have to hire them one at a time, a bit slowly\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_10562\",\n    \"claim\": \"By $10m ARR, bootstrapped SaaS companies mint enough cash to fund all these hires\",\n    \"support_span\": \"But by $10m ARR, bootstrapped SaaS companies mint enough cash to fund all these hires\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_10562\",\n    \"claim\": \"You want to start adding CXOs around $15m-$20m ARR\",\n    \"support_span\": \"You want to start adding CXOs around $15m-$20m ARR\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_10562\",\n    \"claim\": \"IME, rough order to make hires in: VPM: $0.2m ARR, VPS: $1-$1.5m ARR, VPCS: $2m ARR, VPP: $3m-$4m ARR, VPE:  $5m-$6m ARR, CFO: $10m ARR, COO: $20m ARR\",\n    \"support_span\": \"IME, rough order to make hires in: VPM: $0.2m ARR, VPS: $1-$1.5m ARR, VPCS: $2m ARR, VPP: $3m-$4m ARR, VPE:  $5m-$6m ARR, CFO: $10m ARR, COO: $20m ARR\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_21688\",\n    \"claim\": \"What are the top 3 tasks of a CMO in a SaaS startup at $1M ARR\",\n    \"support_span\": \"What are the top 3 tasks of a CMO in a SaaS startup at $1M ARR\",\n    \"claim_type\": \"question\"\n  },\n  {\n    \"source_id\": \"train_21682\",\n    \"claim\": \"What are the top 3 tasks of a CMO in a SaaS startup at $1M ARR\",\n    \"support_span\": \"What are the top 3 tasks of a CMO in a SaaS startup at $1M ARR\",\n    \"claim_type\": \"question\"\n  }\n]",
+    "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Dear SaaStr: At What Stage Should a Startup Hire a CMO?\n\nSource passages:\n[train_14164]\n\"Dear SaaStr: When Should a Bootstrapped Startup Hire a CFO, COO, CMO, etc.?\"\n\n[train_21688]\nWhat are the top 3 tasks of a CMO in a SaaS startup at $1M ARR? \nhttps://quora.com/What-are-the-top-3-tasks-of-a-CMO-in-a-SaaS-startup-at-1M-ARR/answer/Jason-M.-Lemkin?share=c8726acf\n…\n\n[train_10562]\nQ:  When should a bootstrapped startup hire a (CFO, COO, CMO)? How can a CEO hire those C-level positions for the first time as a CEO and entrepreneur? What skills should he or she look for?\nHere are some rough rules:\nYou want a VP of Everything (Sales, Marketing, Product, Eng) by about $1m-$2m ARR\n. Not all at once, but you can benefit from all of them by then. A bit more\nhere\n.\nYou want to start adding CXOs around $15m-$20m ARR\n.\nThe CFO is often the last, the CMO often the first “C” level officer.\nNow how does bootstrapping change this? Not that much. Certainly, it slows down how many VPs you can hire after $1m-$2m ARR. You probably have to hire them one at a time, a bit slowly.\nBut by $10m ARR, bootstrapped SaaS companies mint enough cash to fund all these hires. $10m ARR bootstrapped companies start to converge and look a lot like $10m ARR venutre-backed SaaS companies.  This is the key insight.  If you are bootstrapped in SaaS, you won’t have enough capital to build your management team as fast you need to for quite a while.  But as you approach $8m-$10m ARR, there will be enough revenue.  And no excuses not to have a fully built management team by then.\nAnd thus the next level C-level hiring process ends up being about the same, bootstrapped or not.\nIME, rough order to make hires in:\nVPM: $0.2m ARR\nVPS: $1-$1.5m ARR\nVPCS: $2m ARR\nVPP: $3m-$4m ARR\nVPE:  $5m-$6m ARR\nCFO: $10m ARR\nCOO: $20m ARR\nMore here:\nhttps://t.co/dYgFU0H1pp\n\n[train_21682]\nWhat are the top 3 tasks of a CMO in a SaaS startup at $1M ARR? by Jason M. Lemkin \nhttps://quora.com/What-are-the-top-3-tasks-of-a-CMO-in-a-SaaS-startup-at-1M-ARR/answer/Jason-M.-Lemkin?share=c8726acf&srid=dc\n…",
+    "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Dear SaaStr: At What Stage Should a Startup Hire a CMO?\n\nSource passages:\n[train_14164]\n\"Dear SaaStr: When Should a Bootstrapped Startup Hire a CFO, COO, CMO, etc.?\"\n\n[train_21688]\nWhat are the top 3 tasks of a CMO in a SaaS startup at $1M ARR? \nhttps://quora.com/What-are-the-top-3-tasks-of-a-CMO-in-a-SaaS-startup-at-1M-ARR/answer/Jason-M.-Lemkin?share=c8726acf\n…\n\n[train_10562]\nQ:  When should a bootstrapped startup hire a (CFO, COO, CMO)? How can a CEO hire those C-level positions for the first time as a CEO and entrepreneur? What skills should he or she look for?\nHere are some rough rules:\nYou want a VP of Everything (Sales, Marketing, Product, Eng) by about $1m-$2m ARR\n. Not all at once, but you can benefit from all of them by then. A bit more\nhere\n.\nYou want to start adding CXOs around $15m-$20m ARR\n.\nThe CFO is often the last, the CMO often the first “C” level officer.\nNow how does bootstrapping change this? Not that much. Certainly, it slows down how many VPs you can hire after $1m-$2m ARR. You probably have to hire them one at a time, a bit slowly.\nBut by $10m ARR, bootstrapped SaaS companies mint enough cash to fund all these hires. $10m ARR bootstrapped companies start to converge and look a lot like $10m ARR venutre-backed SaaS companies.  This is the key insight.  If you are bootstrapped in SaaS, you won’t have enough capital to build your management team as fast you need to for quite a while.  But as you approach $8m-$10m ARR, there will be enough revenue.  And no excuses not to have a fully built management team by then.\nAnd thus the next level C-level hiring process ends up being about the same, bootstrapped or not.\nIME, rough order to make hires in:\nVPM: $0.2m ARR\nVPS: $1-$1.5m ARR\nVPCS: $2m ARR\nVPP: $3m-$4m ARR\nVPE:  $5m-$6m ARR\nCFO: $10m ARR\nCOO: $20m ARR\nMore here:\nhttps://t.co/dYgFU0H1pp\n\n[train_21682]\nWhat are the top 3 tasks of a CMO in a SaaS startup at $1M ARR? by Jason M. Lemkin \nhttps://quora.com/What-are-the-top-3-tasks-of-a-CMO-in-a-SaaS-startup-at-1M-ARR/answer/Jason-M.-Lemkin?share=c8726acf&srid=dc\n…<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "extraction_seconds": 18.548,
+    "verification_seconds": 0.0,
+    "verification_records": [],
+    "llm_verifier_on_critical_path": false,
+    "allowed_numeric_values": [
+      "usd:1000000",
+      "usd:10000000",
+      "usd:15000000",
+      "usd:2000000",
+      "usd:20000000"
+    ],
+    "distillation_adapter_enabled": false,
+    "verification_adapter_enabled": false,
+    "distillation_backend": "same_loaded_4bit_base_adapter_off",
+    "distillation_do_sample": false,
+    "extraction_max_new_tokens": 2560,
+    "verification_max_new_tokens": 24,
+    "distillation_seed": 0,
+    "support_spans_in_generator_prompt": false,
+    "evidence_stage_reason": null,
+    "evidence_status": "verified",
+    "extraction_attempts": 1,
+    "extraction_stop_reason": "eos",
+    "prompt_contract": "factual-reliability-v1",
+    "fixed_style_enabled": false,
+    "style_applied": false,
+    "style_exemplar_count": 0,
+    "latency_seconds": 25.091,
+    "generated_tokens_including_stop": 346,
+    "last_token_id": 128009,
+    "effective_eos_token_ids": [
+      128001,
+      128008,
+      128009
+    ],
+    "stop_reason": "eos",
+    "budget_fraction": 0.4505208333333333,
+    "early_eos": true,
+    "first_attempt_stop_reason": "eos",
+    "retry_stop_reason": null
+  }
+}

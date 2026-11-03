@@ -1,0 +1,604 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "topic_id": "gold_021",
+  "medium": "linkedin",
+  "arm": "on",
+  "seed": 123,
+  "attempts": 1,
+  "evidence_sha256": "b3d24566406d158af04d41bdfd2bf960bba05f18854588bfcb67290e77af6c87",
+  "retrieval_hit_ids": [
+    "train_2689",
+    "train_1243",
+    "train_14260",
+    "train_2138"
+  ],
+  "retrieval_query": "If Your AI Feature Didn’t Materially Boost Revenue, It Doesn’t Count. Try Again.",
+  "retrieval_filter": null,
+  "style_applied": true,
+  "style_in_prompt": true,
+  "prompt_tokens": 715,
+  "generated_tokens_including_stop": 320,
+  "latency_seconds": 15.679,
+  "exemplar_ids": [
+    11552,
+    11554
+  ],
+  "saved_at": "2026-10-30T09:59:20.343320+00:00",
+  "trace": {
+    "id": "gold_021",
+    "format": "linkedin_post",
+    "topic": "If Your AI Feature Didn’t Materially Boost Revenue, It Doesn’t Count. Try Again.",
+    "audience": "B2B SaaS founders and operators",
+    "goal": "Argue for a stricter standard on judging AI feature success.",
+    "cta": "none",
+    "k": 8,
+    "expected_facts": [
+      "The answer should argue that AI features need business impact, not just launch buzz.",
+      "It should connect product work to revenue, retention, expansion, or meaningful usage.",
+      "It should reject vanity metrics as proof of success."
+    ],
+    "rubric_must_haves": [
+      "States a clear business standard early.",
+      "Explains what counts as impact and what does not.",
+      "Uses direct, non-hyped language.",
+      "Connects the point to product prioritization."
+    ],
+    "gold_reference": "A strong answer should say that shipping an AI feature is not success if it does not move revenue, retention, or a truly material usage metric. Founders need to hold AI work to the same standard as any other product investment: measurable business value. Otherwise the feature is theater, not progress.",
+    "medium": "linkedin",
+    "prompt": "Write a LinkedIn post in the style of Jason Lemkin about: If Your AI Feature Didn’t Materially Boost Revenue, It Doesn’t Count. Try Again.\n\nStyle examples from train-owned source text.\nUse them for voice only. They are not evidence for claims.\nDo not copy long passages verbatim.\n[Style 1]\nA truly great human is still better than any AI agent at most complex, judgment-intensive work. Full stop. If you can find and keep exceptional people, do it. But here’s the honest truth: most hires aren’t great hires. A lot of folks don't want to discuss it, or want to challenge it. But deploying a great AI Agent is just easier, and less stressful, than making a mediocre hire. This is why 2027 will be brutal for tech employment. We'll default to picking an AI Agent over a human for many \"hires\" because it's just ... easier.\n[Style 2]\nI know so many CROs and VPs of Sales that used to be truly great ... And are just burnt now. Fried. Some tried to mask it by hiring CROs and VPs under them to do the work. And sometimes, that does work. But man sales isn't easy. Each month, each quarter, it's a new battle. It's epic but also can take its toll. Just make sure when you hire one with the perfect LinkedIn ... that they really, truly can go into battle again. Not just talk the talk. And share great stories, of epic battles past.\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] Deploying AI without clear business metrics is a mistake.\n[E2] Companies that captured AI spend are operating at 6x-12x the efficiency of traditional SaaS companies.\n[E3] Folks that are pretending they have AI, or have slapped on some very basic functionality into their app, aren’t seeing any revenue boost from it.\n[E4] Capturing at least a few basis points of the massive AI spend should be table stakes for companies in a category where AI spending is happening.\n[E5] There is a massive point spread between companies that captured AI spend and those that didn’t.\n\nNow write the requested LinkedIn post about: If Your AI Feature Didn’t Materially Boost Revenue, It Doesn’t Count. Try Again.",
+    "rendered_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nWrite a LinkedIn post in the style of Jason Lemkin about: If Your AI Feature Didn’t Materially Boost Revenue, It Doesn’t Count. Try Again.\n\nStyle examples from train-owned source text.\nUse them for voice only. They are not evidence for claims.\nDo not copy long passages verbatim.\n[Style 1]\nA truly great human is still better than any AI agent at most complex, judgment-intensive work. Full stop. If you can find and keep exceptional people, do it. But here’s the honest truth: most hires aren’t great hires. A lot of folks don't want to discuss it, or want to challenge it. But deploying a great AI Agent is just easier, and less stressful, than making a mediocre hire. This is why 2027 will be brutal for tech employment. We'll default to picking an AI Agent over a human for many \"hires\" because it's just ... easier.\n[Style 2]\nI know so many CROs and VPs of Sales that used to be truly great ... And are just burnt now. Fried. Some tried to mask it by hiring CROs and VPs under them to do the work. And sometimes, that does work. But man sales isn't easy. Each month, each quarter, it's a new battle. It's epic but also can take its toll. Just make sure when you hire one with the perfect LinkedIn ... that they really, truly can go into battle again. Not just talk the talk. And share great stories, of epic battles past.\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] Deploying AI without clear business metrics is a mistake.\n[E2] Companies that captured AI spend are operating at 6x-12x the efficiency of traditional SaaS companies.\n[E3] Folks that are pretending they have AI, or have slapped on some very basic functionality into their app, aren’t seeing any revenue boost from it.\n[E4] Capturing at least a few basis points of the massive AI spend should be table stakes for companies in a category where AI spending is happening.\n[E5] There is a massive point spread between companies that captured AI spend and those that didn’t.\n\nNow write the requested LinkedIn post about: If Your AI Feature Didn’t Materially Boost Revenue, It Doesn’t Count. Try Again.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "answer": "If Your AI Feature Didn’t Materially Boost Revenue, It Doesn’t Count. Try Again. “The amount of hype around AI right now is genuinely insane,” Rory O’Driscoll wrote recently. He’s been doing this since 2000—he was investing in Salesforce before Salesforce had a product yet. So when someone tells him his analysis is wrong, he knows he’s heard it all before. His advice? Stop listening and start acting. The market doesn’t care what you think about AI. It cares about who can actually capture the money flowing toward it. Here’s What Actually Matters In Today’s Market: Efficiency vs. Hype Why the Efficiency Play Wins Every Time Right now we’re living through one of the biggest shifts in how software gets built—and bought—in history. And I’m telling founders something counterintuitive: if your AI feature hasn’t materially boosted revenue, it literally doesn’t count. Let me explain exactly why this matters more than anything else in B2B today. The Great AI Spend Migration Is Happening Now The capital flooding into artificial intelligence is unlike anything we’ve seen before. As O’Driscoll noted, Anthropic alone raised $10 billion to hit $8 billion in revenue—on pace to double every year until 2030. OpenAI has secured billions in funding across multiple rounds. Scale AI’s valuation skyrocketed to $80 billion after raising at a $64 billion private equity round. Meanwhile, Google Cloud CEO Thomas Kurian said AI revenue grew nearly fivefold in fiscal 2025 compared to prior years, reaching almost $25 billion—a",
+    "raw_model_output": "If Your AI Feature Didn’t Materially Boost Revenue, It Doesn’t Count. Try Again. “The amount of hype around AI right now is genuinely insane,” Rory O’Driscoll wrote recently. He’s been doing this since 2000—he was investing in Salesforce before Salesforce had a product yet. So when someone tells him his analysis is wrong, he knows he’s heard it all before. His advice? Stop listening and start acting. The market doesn’t care what you think about AI. It cares about who can actually capture the money flowing toward it. Here’s What Actually Matters In Today’s Market: Efficiency vs. Hype Why the Efficiency Play Wins Every Time Right now we’re living through one of the biggest shifts in how software gets built—and bought—in history. And I’m telling founders something counterintuitive: if your AI feature hasn’t materially boosted revenue, it literally doesn’t count. Let me explain exactly why this matters more than anything else in B2B today. The Great AI Spend Migration Is Happening Now The capital flooding into artificial intelligence is unlike anything we’ve seen before. As O’Driscoll noted, Anthropic alone raised $10 billion to hit $8 billion in revenue—on pace to double every year until 2030. OpenAI has secured billions in funding across multiple rounds. Scale AI’s valuation skyrocketed to $80 billion after raising at a $64 billion private equity round. Meanwhile, Google Cloud CEO Thomas Kurian said AI revenue grew nearly fivefold in fiscal 2025 compared to prior years, reaching almost $25 billion—a",
+    "deployment_output": "If Your AI Feature Didn’t Materially Boost Revenue, It Doesn’t Count. Try Again. “The amount of hype around AI right now is genuinely insane,” Rory O’Driscoll wrote recently. He’s been doing this since 2000—he was investing in Salesforce before Salesforce had a product yet. So when someone tells him his analysis is wrong, he knows he’s heard it all before. His advice? Stop listening and start acting. The market doesn’t care what you think about AI. It cares about who can actually capture the money flowing toward it. Here’s What Actually Matters In Today’s Market: Efficiency vs. Hype Why the Efficiency Play Wins Every Time Right now we’re living through one of the biggest shifts in how software gets built—and bought—in history. And I’m telling founders something counterintuitive: if your AI feature hasn’t materially boosted revenue, it literally doesn’t count. Let me explain exactly why this matters more than anything else in B2B today. The Great AI Spend Migration Is Happening Now The capital flooding into artificial intelligence is unlike anything we’ve seen before. As O’Driscoll noted, Anthropic alone raised $10 billion to hit $8 billion in revenue—on pace to double every year until 2030. OpenAI has secured billions in funding across multiple rounds. Scale AI’s valuation skyrocketed to $80 billion after raising at a $64 billion private equity round. Meanwhile, Google Cloud CEO Thomas Kurian said AI revenue grew nearly fivefold in fiscal 2025 compared to prior years, reaching almost $25 billion—a",
+    "first_attempt_answer": "If Your AI Feature Didn’t Materially Boost Revenue, It Doesn’t Count. Try Again. “The amount of hype around AI right now is genuinely insane,” Rory O’Driscoll wrote recently. He’s been doing this since 2000—he was investing in Salesforce before Salesforce had a product yet. So when someone tells him his analysis is wrong, he knows he’s heard it all before. His advice? Stop listening and start acting. The market doesn’t care what you think about AI. It cares about who can actually capture the money flowing toward it. Here’s What Actually Matters In Today’s Market: Efficiency vs. Hype Why the Efficiency Play Wins Every Time Right now we’re living through one of the biggest shifts in how software gets built—and bought—in history. And I’m telling founders something counterintuitive: if your AI feature hasn’t materially boosted revenue, it literally doesn’t count. Let me explain exactly why this matters more than anything else in B2B today. The Great AI Spend Migration Is Happening Now The capital flooding into artificial intelligence is unlike anything we’ve seen before. As O’Driscoll noted, Anthropic alone raised $10 billion to hit $8 billion in revenue—on pace to double every year until 2030. OpenAI has secured billions in funding across multiple rounds. Scale AI’s valuation skyrocketed to $80 billion after raising at a $64 billion private equity round. Meanwhile, Google Cloud CEO Thomas Kurian said AI revenue grew nearly fivefold in fiscal 2025 compared to prior years, reaching almost $25 billion—a",
+    "retry_answer": null,
+    "query": "If Your AI Feature Didn’t Materially Boost Revenue, It Doesn’t Count. Try Again.",
+    "max_new_tokens": 320,
+    "seed": 123,
+    "retry_seed": null,
+    "deployment_accepted": true,
+    "repair_occurred": false,
+    "generation_attempt": {
+      "seed": 123,
+      "answer": "If Your AI Feature Didn’t Materially Boost Revenue, It Doesn’t Count. Try Again. “The amount of hype around AI right now is genuinely insane,” Rory O’Driscoll wrote recently. He’s been doing this since 2000—he was investing in Salesforce before Salesforce had a product yet. So when someone tells him his analysis is wrong, he knows he’s heard it all before. His advice? Stop listening and start acting. The market doesn’t care what you think about AI. It cares about who can actually capture the money flowing toward it. Here’s What Actually Matters In Today’s Market: Efficiency vs. Hype Why the Efficiency Play Wins Every Time Right now we’re living through one of the biggest shifts in how software gets built—and bought—in history. And I’m telling founders something counterintuitive: if your AI feature hasn’t materially boosted revenue, it literally doesn’t count. Let me explain exactly why this matters more than anything else in B2B today. The Great AI Spend Migration Is Happening Now The capital flooding into artificial intelligence is unlike anything we’ve seen before. As O’Driscoll noted, Anthropic alone raised $10 billion to hit $8 billion in revenue—on pace to double every year until 2030. OpenAI has secured billions in funding across multiple rounds. Scale AI’s valuation skyrocketed to $80 billion after raising at a $64 billion private equity round. Meanwhile, Google Cloud CEO Thomas Kurian said AI revenue grew nearly fivefold in fiscal 2025 compared to prior years, reaching almost $25 billion—a",
+      "numeric_grounding": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [],
+        "values": [
+          {
+            "value": "$10 billion",
+            "canonical": "usd:10000000000",
+            "sentence": "As O’Driscoll noted, Anthropic alone raised $10 billion to hit $8 billion in revenue—on pace to double every year until 2030",
+            "start": 1128,
+            "end": 1139
+          },
+          {
+            "value": "$8 billion",
+            "canonical": "usd:8000000000",
+            "sentence": "As O’Driscoll noted, Anthropic alone raised $10 billion to hit $8 billion in revenue—on pace to double every year until 2030",
+            "start": 1147,
+            "end": 1157
+          },
+          {
+            "value": "$80 billion",
+            "canonical": "usd:80000000000",
+            "sentence": "Scale AI’s valuation skyrocketed to $80 billion after raising at a $64 billion private equity round",
+            "start": 1309,
+            "end": 1320
+          },
+          {
+            "value": "$64 billion",
+            "canonical": "usd:64000000000",
+            "sentence": "Scale AI’s valuation skyrocketed to $80 billion after raising at a $64 billion private equity round",
+            "start": 1340,
+            "end": 1351
+          },
+          {
+            "value": "$25 billion",
+            "canonical": "usd:25000000000",
+            "sentence": "Meanwhile, Google Cloud CEO Thomas Kurian said AI revenue grew nearly fivefold in fiscal 2025 compared to prior years, reaching almost $25 billion—a",
+            "start": 1509,
+            "end": 1520
+          },
+          {
+            "value": "2000",
+            "canonical": "year:2000",
+            "sentence": "He’s been doing this since 2000—he was investing in Salesforce before Salesforce had a product yet",
+            "start": 202,
+            "end": 206
+          },
+          {
+            "value": "2030",
+            "canonical": "year:2030",
+            "sentence": "As O’Driscoll noted, Anthropic alone raised $10 billion to hit $8 billion in revenue—on pace to double every year until 2030",
+            "start": 1204,
+            "end": 1208
+          },
+          {
+            "value": "2025",
+            "canonical": "year:2025",
+            "sentence": "Meanwhile, Google Cloud CEO Thomas Kurian said AI revenue grew nearly fivefold in fiscal 2025 compared to prior years, reaching almost $25 billion—a",
+            "start": 1463,
+            "end": 1467
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "$10 billion",
+            "canonical": "usd:10000000000",
+            "sentence": "As O’Driscoll noted, Anthropic alone raised $10 billion to hit $8 billion in revenue—on pace to double every year until 2030",
+            "start": 1128,
+            "end": 1139
+          },
+          {
+            "value": "$8 billion",
+            "canonical": "usd:8000000000",
+            "sentence": "As O’Driscoll noted, Anthropic alone raised $10 billion to hit $8 billion in revenue—on pace to double every year until 2030",
+            "start": 1147,
+            "end": 1157
+          },
+          {
+            "value": "$80 billion",
+            "canonical": "usd:80000000000",
+            "sentence": "Scale AI’s valuation skyrocketed to $80 billion after raising at a $64 billion private equity round",
+            "start": 1309,
+            "end": 1320
+          },
+          {
+            "value": "$64 billion",
+            "canonical": "usd:64000000000",
+            "sentence": "Scale AI’s valuation skyrocketed to $80 billion after raising at a $64 billion private equity round",
+            "start": 1340,
+            "end": 1351
+          },
+          {
+            "value": "$25 billion",
+            "canonical": "usd:25000000000",
+            "sentence": "Meanwhile, Google Cloud CEO Thomas Kurian said AI revenue grew nearly fivefold in fiscal 2025 compared to prior years, reaching almost $25 billion—a",
+            "start": 1509,
+            "end": 1520
+          },
+          {
+            "value": "2000",
+            "canonical": "year:2000",
+            "sentence": "He’s been doing this since 2000—he was investing in Salesforce before Salesforce had a product yet",
+            "start": 202,
+            "end": 206
+          },
+          {
+            "value": "2030",
+            "canonical": "year:2030",
+            "sentence": "As O’Driscoll noted, Anthropic alone raised $10 billion to hit $8 billion in revenue—on pace to double every year until 2030",
+            "start": 1204,
+            "end": 1208
+          },
+          {
+            "value": "2025",
+            "canonical": "year:2025",
+            "sentence": "Meanwhile, Google Cloud CEO Thomas Kurian said AI revenue grew nearly fivefold in fiscal 2025 compared to prior years, reaching almost $25 billion—a",
+            "start": 1463,
+            "end": 1467
+          }
+        ]
+      },
+      "rag_source_copying": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 4,
+        "document_id": "train_1243",
+        "matched_generated_span": "t count let me",
+        "matched_retrieved_span": "t count let me"
+      },
+      "stop_reason": "length"
+    },
+    "repair_attempt": null,
+    "accepted_attempt": 1,
+    "rag_source_copying": {
+      "applicable": true,
+      "threshold": 12,
+      "pass": true,
+      "flagged": false,
+      "max_contiguous_words": 4,
+      "document_id": "train_1243",
+      "matched_generated_span": "t count let me",
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 4,
+        "document_id": "train_1243",
+        "matched_generated_span": "t count let me",
+        "matched_retrieved_span": "t count let me"
+      },
+      "retry": null,
+      "retry_occurred": false,
+      "repair_occurred": false
+    },
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": false,
+      "failure": "unsupported_numeric_grounding",
+      "unsupported": [
+        {
+          "value": "$10 billion",
+          "canonical": "usd:10000000000",
+          "sentence": "As O’Driscoll noted, Anthropic alone raised $10 billion to hit $8 billion in revenue—on pace to double every year until 2030",
+          "start": 1128,
+          "end": 1139
+        },
+        {
+          "value": "$8 billion",
+          "canonical": "usd:8000000000",
+          "sentence": "As O’Driscoll noted, Anthropic alone raised $10 billion to hit $8 billion in revenue—on pace to double every year until 2030",
+          "start": 1147,
+          "end": 1157
+        },
+        {
+          "value": "$80 billion",
+          "canonical": "usd:80000000000",
+          "sentence": "Scale AI’s valuation skyrocketed to $80 billion after raising at a $64 billion private equity round",
+          "start": 1309,
+          "end": 1320
+        },
+        {
+          "value": "$64 billion",
+          "canonical": "usd:64000000000",
+          "sentence": "Scale AI’s valuation skyrocketed to $80 billion after raising at a $64 billion private equity round",
+          "start": 1340,
+          "end": 1351
+        },
+        {
+          "value": "$25 billion",
+          "canonical": "usd:25000000000",
+          "sentence": "Meanwhile, Google Cloud CEO Thomas Kurian said AI revenue grew nearly fivefold in fiscal 2025 compared to prior years, reaching almost $25 billion—a",
+          "start": 1509,
+          "end": 1520
+        },
+        {
+          "value": "2000",
+          "canonical": "year:2000",
+          "sentence": "He’s been doing this since 2000—he was investing in Salesforce before Salesforce had a product yet",
+          "start": 202,
+          "end": 206
+        },
+        {
+          "value": "2030",
+          "canonical": "year:2030",
+          "sentence": "As O’Driscoll noted, Anthropic alone raised $10 billion to hit $8 billion in revenue—on pace to double every year until 2030",
+          "start": 1204,
+          "end": 1208
+        },
+        {
+          "value": "2025",
+          "canonical": "year:2025",
+          "sentence": "Meanwhile, Google Cloud CEO Thomas Kurian said AI revenue grew nearly fivefold in fiscal 2025 compared to prior years, reaching almost $25 billion—a",
+          "start": 1463,
+          "end": 1467
+        }
+      ],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [],
+        "values": [
+          {
+            "value": "$10 billion",
+            "canonical": "usd:10000000000",
+            "sentence": "As O’Driscoll noted, Anthropic alone raised $10 billion to hit $8 billion in revenue—on pace to double every year until 2030",
+            "start": 1128,
+            "end": 1139
+          },
+          {
+            "value": "$8 billion",
+            "canonical": "usd:8000000000",
+            "sentence": "As O’Driscoll noted, Anthropic alone raised $10 billion to hit $8 billion in revenue—on pace to double every year until 2030",
+            "start": 1147,
+            "end": 1157
+          },
+          {
+            "value": "$80 billion",
+            "canonical": "usd:80000000000",
+            "sentence": "Scale AI’s valuation skyrocketed to $80 billion after raising at a $64 billion private equity round",
+            "start": 1309,
+            "end": 1320
+          },
+          {
+            "value": "$64 billion",
+            "canonical": "usd:64000000000",
+            "sentence": "Scale AI’s valuation skyrocketed to $80 billion after raising at a $64 billion private equity round",
+            "start": 1340,
+            "end": 1351
+          },
+          {
+            "value": "$25 billion",
+            "canonical": "usd:25000000000",
+            "sentence": "Meanwhile, Google Cloud CEO Thomas Kurian said AI revenue grew nearly fivefold in fiscal 2025 compared to prior years, reaching almost $25 billion—a",
+            "start": 1509,
+            "end": 1520
+          },
+          {
+            "value": "2000",
+            "canonical": "year:2000",
+            "sentence": "He’s been doing this since 2000—he was investing in Salesforce before Salesforce had a product yet",
+            "start": 202,
+            "end": 206
+          },
+          {
+            "value": "2030",
+            "canonical": "year:2030",
+            "sentence": "As O’Driscoll noted, Anthropic alone raised $10 billion to hit $8 billion in revenue—on pace to double every year until 2030",
+            "start": 1204,
+            "end": 1208
+          },
+          {
+            "value": "2025",
+            "canonical": "year:2025",
+            "sentence": "Meanwhile, Google Cloud CEO Thomas Kurian said AI revenue grew nearly fivefold in fiscal 2025 compared to prior years, reaching almost $25 billion—a",
+            "start": 1463,
+            "end": 1467
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "$10 billion",
+            "canonical": "usd:10000000000",
+            "sentence": "As O’Driscoll noted, Anthropic alone raised $10 billion to hit $8 billion in revenue—on pace to double every year until 2030",
+            "start": 1128,
+            "end": 1139
+          },
+          {
+            "value": "$8 billion",
+            "canonical": "usd:8000000000",
+            "sentence": "As O’Driscoll noted, Anthropic alone raised $10 billion to hit $8 billion in revenue—on pace to double every year until 2030",
+            "start": 1147,
+            "end": 1157
+          },
+          {
+            "value": "$80 billion",
+            "canonical": "usd:80000000000",
+            "sentence": "Scale AI’s valuation skyrocketed to $80 billion after raising at a $64 billion private equity round",
+            "start": 1309,
+            "end": 1320
+          },
+          {
+            "value": "$64 billion",
+            "canonical": "usd:64000000000",
+            "sentence": "Scale AI’s valuation skyrocketed to $80 billion after raising at a $64 billion private equity round",
+            "start": 1340,
+            "end": 1351
+          },
+          {
+            "value": "$25 billion",
+            "canonical": "usd:25000000000",
+            "sentence": "Meanwhile, Google Cloud CEO Thomas Kurian said AI revenue grew nearly fivefold in fiscal 2025 compared to prior years, reaching almost $25 billion—a",
+            "start": 1509,
+            "end": 1520
+          },
+          {
+            "value": "2000",
+            "canonical": "year:2000",
+            "sentence": "He’s been doing this since 2000—he was investing in Salesforce before Salesforce had a product yet",
+            "start": 202,
+            "end": 206
+          },
+          {
+            "value": "2030",
+            "canonical": "year:2030",
+            "sentence": "As O’Driscoll noted, Anthropic alone raised $10 billion to hit $8 billion in revenue—on pace to double every year until 2030",
+            "start": 1204,
+            "end": 1208
+          },
+          {
+            "value": "2025",
+            "canonical": "year:2025",
+            "sentence": "Meanwhile, Google Cloud CEO Thomas Kurian said AI revenue grew nearly fivefold in fiscal 2025 compared to prior years, reaching almost $25 billion—a",
+            "start": 1463,
+            "end": 1467
+          }
+        ]
+      },
+      "retry": null
+    },
+    "prompt_tokens": 715,
+    "backend": "unsloth",
+    "retrieval": true,
+    "retrieval_query": "If Your AI Feature Didn’t Materially Boost Revenue, It Doesn’t Count. Try Again.",
+    "retrieval_filter": null,
+    "retrieval_k": 4,
+    "retrieval_hits": [
+      {
+        "id": "train_2689",
+        "text": "2. Measuring AI by “Cool Factor” Instead of ROI\nChris noted customers initially bought AI tools “just because it’s AI” but that’s changing. The mistake: deploying AI without clear business metrics. Snowflake learned early to ask: “Is it generating more money or saving more money?” If you can’t measure 418 hours saved per week or 90% time reduction on specific tasks or real-time ad spend optimization ROI, you’re implementing technology without business justification. The bill comes due eventually.",
+        "medium": "blog",
+        "group_id": "dd8be1ce2a86b1e88d708a91ffd35b8293700f2f2d784a25cd30810543a1f381",
+        "row_id": 2689,
+        "split": "train",
+        "distance": 0.18917512893676758
+      },
+      {
+        "id": "train_1243",
+        "text": "The Brutal Truth: AI Features Alone Don’t Count\nLet me be very direct here: you need to tap into the AI budget, not just make your existing product better with AI features. The real AI budget is going to three categories:\nReplace humans\n(AI Contact Center, AI SDR)\nAugment humans dramatically\n(Cursor, Harvey, Claude + ChatGPT)\nHighly productive tools that make possible what was impossible before\n(Replit, Gamma, AI video tools)\nMost classic SaaS leaders are not going this far with their AI offerings. They’re just making their products… better. Great. But that’s table stakes now. And it’s extremely hard to monetize because customers expect AI features as part of the base product. If your AI strategy is “we added a copilot,” you’re not accessing the AI budget. You’re fighting for scraps from the traditional software budget, which is flat-to-down after price increases. Leaner Teams Are Very Real (Yes, That Means Fewer Humans)\nThe efficiency gains from AI are showing up in real numbers:\nLooking at ARR ($M) / FTE across companies:\nCursor\n: 6.1x\nLovable\n: 3.4x\nOpenAI\n: 1.5x\nAnthropic\n: 1.2x\nAtlassian\n: 0.46x\nDatadog\n: 0.51x\nServiceNow\n: 0.49x\nGitlab\n: 0.54x\nThe newer, AI-native companies are operating at 6x-12x the efficiency of traditional SaaS companies. And this advantage compounds over time. According to Iconiq Capital, AI-native companies show superior burn efficiency driven by faster compounding of ARR.",
+        "medium": "blog",
+        "group_id": "babbe9979a87a93cacea108fe71155461373ffc167427bc023937229807846c4",
+        "row_id": 1243,
+        "split": "train",
+        "distance": 0.19340860843658447
+      },
+      {
+        "id": "train_14260",
+        "text": "One thing seems clear to me in AI for SaaS:\n\nFolks that are sort of pretending they have AI, or have slapped on some very basic functionality into their app …\n\nAren’t seeing any revenue boost from it",
+        "medium": "x",
+        "group_id": "d979e8e403e4c9464bc59c1070d3af1931eea73f043db6120b767083b873f57c",
+        "row_id": 14260,
+        "split": "train",
+        "distance": 0.19839560985565186
+      },
+      {
+        "id": "train_2138",
+        "text": "By now, you should have:\nShipped AI features that customers actually want\nSeen some revenue acceleration from AI adoption\nCaptured at least a few basis points of the massive AI spend\nI’m not expecting you went from 30% growth to 300% growth. That’s unrealistic for most companies. But going from 15% to 25% growth? From 10% to 20%? That should be table stakes\nif you’re remotely positioned in a category where AI spending is happening. As I said on our 20VC pod this week:\n“Going into next year, you sure better have seen re-acceleration because of AI because there’s so much money there. If you got none of it guys, you had 18 months to not launch a single feature, tap into a single trend to reaccelerate. If you’re not growing faster at the end of 2025 than the start as a founder, I give you an F minus. There’s so much money and you don’t have to be Harvey to get a little piece of it. Twilio and MongoDB and Cloudflare and tons of folks have a little piece of it. A little piece of that massive pie.”\nThe Point Spread Between Winners and Losers\nRory O’Driscoll nailed this on our show: There’s a\nmassive point spread\nbetween companies that captured AI spend and those that didn’t.",
+        "medium": "blog",
+        "group_id": "3daf8c1d544918b62d0bc4f99a6fd863efc10ebb3a81f8d944fe5d9d3a1ed5a6",
+        "row_id": 2138,
+        "split": "train",
+        "distance": 0.20475459098815918
+      }
+    ],
+    "copying": [
+      {
+        "id": "train_2689",
+        "shared_word_span": 1
+      },
+      {
+        "id": "train_1243",
+        "shared_word_span": 3
+      },
+      {
+        "id": "train_14260",
+        "shared_word_span": 1
+      },
+      {
+        "id": "train_2138",
+        "shared_word_span": 2
+      }
+    ],
+    "retrieval_backend": "dense",
+    "proposed_atomic_claims": [
+      {
+        "source_id": "train_2689",
+        "claim": "Deploying AI without clear business metrics is a mistake.",
+        "support_span": "The mistake: deploying AI without clear business metrics.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_1243",
+        "claim": "The real AI budget is in three categories: Replace humans, Augment humans dramatically, and Highly productive tools that make possible what was impossible before.",
+        "support_span": "The real AI budget is going to three categories:",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_1243",
+        "claim": "Companies that captured AI spend are operating at 6x-12x the efficiency of traditional SaaS companies.",
+        "support_span": "The newer, AI-native companies are operating at 6x-12x the efficiency of traditional SaaS companies.",
+        "claim_type": "comparison"
+      },
+      {
+        "source_id": "train_14260",
+        "claim": "Folks that are pretending they have AI, or have slapped on some very basic functionality into their app, aren’t seeing any revenue boost from it.",
+        "support_span": "Aren’t seeing any revenue boost from it",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_2138",
+        "claim": "Capturing at least a few basis points of the massive AI spend should be table stakes for companies in a category where AI spending is happening.",
+        "support_span": "Captured at least a few basis points of the massive AI spend",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_2138",
+        "claim": "Going from 15% to 25% growth or from 10% to 20% growth should be table stakes for companies in a category where AI spending is happening.",
+        "support_span": "But going from 15% to 25% growth? From 10% to 20%? That should be table stakes",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_2138",
+        "claim": "There is a massive point spread between companies that captured AI spend and those that didn’t.",
+        "support_span": "There’s a massive point spread between companies that captured AI spend and those that didn’t",
+        "claim_type": "fact"
+      }
+    ],
+    "validation_rejected": [
+      {
+        "source_id": "train_1243",
+        "claim": "The real AI budget is in three categories: Replace humans, Augment humans dramatically, and Highly productive tools that make possible what was impossible before.",
+        "support_span": "The real AI budget is going to three categories:",
+        "claim_type": "fact",
+        "reason": "entity_not_in_source"
+      },
+      {
+        "source_id": "train_2138",
+        "claim": "Going from 15% to 25% growth or from 10% to 20% growth should be table stakes for companies in a category where AI spending is happening.",
+        "support_span": "But going from 15% to 25% growth? From 10% to 20%? That should be table stakes",
+        "claim_type": "fact",
+        "reason": "interrogative_assertion"
+      }
+    ],
+    "verifier_rejected": [],
+    "verified_claims": [
+      {
+        "source_id": "train_2689",
+        "claim": "Deploying AI without clear business metrics is a mistake.",
+        "support_span": "The mistake: deploying AI without clear business metrics.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_1243",
+        "claim": "Companies that captured AI spend are operating at 6x-12x the efficiency of traditional SaaS companies.",
+        "support_span": "The newer, AI-native companies are operating at 6x-12x the efficiency of traditional SaaS companies.",
+        "claim_type": "comparison"
+      },
+      {
+        "source_id": "train_14260",
+        "claim": "Folks that are pretending they have AI, or have slapped on some very basic functionality into their app, aren’t seeing any revenue boost from it.",
+        "support_span": "Aren’t seeing any revenue boost from it",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_2138",
+        "claim": "Capturing at least a few basis points of the massive AI spend should be table stakes for companies in a category where AI spending is happening.",
+        "support_span": "Captured at least a few basis points of the massive AI spend",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_2138",
+        "claim": "There is a massive point spread between companies that captured AI spend and those that didn’t.",
+        "support_span": "There’s a massive point spread between companies that captured AI spend and those that didn’t",
+        "claim_type": "fact"
+      }
+    ],
+    "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] Deploying AI without clear business metrics is a mistake.\n[E2] Companies that captured AI spend are operating at 6x-12x the efficiency of traditional SaaS companies.\n[E3] Folks that are pretending they have AI, or have slapped on some very basic functionality into their app, aren’t seeing any revenue boost from it.\n[E4] Capturing at least a few basis points of the massive AI spend should be table stakes for companies in a category where AI spending is happening.\n[E5] There is a massive point spread between companies that captured AI spend and those that didn’t.",
+    "raw_extraction": "[\n  {\n    \"source_id\": \"train_2689\",\n    \"claim\": \"Deploying AI without clear business metrics is a mistake.\",\n    \"support_span\": \"The mistake: deploying AI without clear business metrics.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_1243\",\n    \"claim\": \"The real AI budget is in three categories: Replace humans, Augment humans dramatically, and Highly productive tools that make possible what was impossible before.\",\n    \"support_span\": \"The real AI budget is going to three categories:\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_1243\",\n    \"claim\": \"Companies that captured AI spend are operating at 6x-12x the efficiency of traditional SaaS companies.\",\n    \"support_span\": \"The newer, AI-native companies are operating at 6x-12x the efficiency of traditional SaaS companies.\",\n    \"claim_type\": \"comparison\"\n  },\n  {\n    \"source_id\": \"train_14260\",\n    \"claim\": \"Folks that are pretending they have AI, or have slapped on some very basic functionality into their app, aren’t seeing any revenue boost from it.\",\n    \"support_span\": \"Aren’t seeing any revenue boost from it\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_2138\",\n    \"claim\": \"Capturing at least a few basis points of the massive AI spend should be table stakes for companies in a category where AI spending is happening.\",\n    \"support_span\": \"Captured at least a few basis points of the massive AI spend\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_2138\",\n    \"claim\": \"Going from 15% to 25% growth or from 10% to 20% growth should be table stakes for companies in a category where AI spending is happening.\",\n    \"support_span\": \"But going from 15% to 25% growth? From 10% to 20%? That should be table stakes\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_2138\",\n    \"claim\": \"There is a massive point spread between companies that captured AI spend and those that didn’t.\",\n    \"support_span\": \"There’s a massive point spread between companies that captured AI spend and those that didn’t\",\n    \"claim_type\": \"fact\"\n  }\n]",
+    "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: If Your AI Feature Didn’t Materially Boost Revenue, It Doesn’t Count. Try Again.\n\nSource passages:\n[train_2689]\n2. Measuring AI by “Cool Factor” Instead of ROI\nChris noted customers initially bought AI tools “just because it’s AI” but that’s changing. The mistake: deploying AI without clear business metrics. Snowflake learned early to ask: “Is it generating more money or saving more money?” If you can’t measure 418 hours saved per week or 90% time reduction on specific tasks or real-time ad spend optimization ROI, you’re implementing technology without business justification. The bill comes due eventually.\n\n[train_1243]\nThe Brutal Truth: AI Features Alone Don’t Count\nLet me be very direct here: you need to tap into the AI budget, not just make your existing product better with AI features. The real AI budget is going to three categories:\nReplace humans\n(AI Contact Center, AI SDR)\nAugment humans dramatically\n(Cursor, Harvey, Claude + ChatGPT)\nHighly productive tools that make possible what was impossible before\n(Replit, Gamma, AI video tools)\nMost classic SaaS leaders are not going this far with their AI offerings. They’re just making their products… better. Great. But that’s table stakes now. And it’s extremely hard to monetize because customers expect AI features as part of the base product. If your AI strategy is “we added a copilot,” you’re not accessing the AI budget. You’re fighting for scraps from the traditional software budget, which is flat-to-down after price increases. Leaner Teams Are Very Real (Yes, That Means Fewer Humans)\nThe efficiency gains from AI are showing up in real numbers:\nLooking at ARR ($M) / FTE across companies:\nCursor\n: 6.1x\nLovable\n: 3.4x\nOpenAI\n: 1.5x\nAnthropic\n: 1.2x\nAtlassian\n: 0.46x\nDatadog\n: 0.51x\nServiceNow\n: 0.49x\nGitlab\n: 0.54x\nThe newer, AI-native companies are operating at 6x-12x the efficiency of traditional SaaS companies. And this advantage compounds over time. According to Iconiq Capital, AI-native companies show superior burn efficiency driven by faster compounding of ARR.\n\n[train_14260]\nOne thing seems clear to me in AI for SaaS:\n\nFolks that are sort of pretending they have AI, or have slapped on some very basic functionality into their app …\n\nAren’t seeing any revenue boost from it\n\n[train_2138]\nBy now, you should have:\nShipped AI features that customers actually want\nSeen some revenue acceleration from AI adoption\nCaptured at least a few basis points of the massive AI spend\nI’m not expecting you went from 30% growth to 300% growth. That’s unrealistic for most companies. But going from 15% to 25% growth? From 10% to 20%? That should be table stakes\nif you’re remotely positioned in a category where AI spending is happening. As I said on our 20VC pod this week:\n“Going into next year, you sure better have seen re-acceleration because of AI because there’s so much money there. If you got none of it guys, you had 18 months to not launch a single feature, tap into a single trend to reaccelerate. If you’re not growing faster at the end of 2025 than the start as a founder, I give you an F minus. There’s so much money and you don’t have to be Harvey to get a little piece of it. Twilio and MongoDB and Cloudflare and tons of folks have a little piece of it. A little piece of that massive pie.”\nThe Point Spread Between Winners and Losers\nRory O’Driscoll nailed this on our show: There’s a\nmassive point spread\nbetween companies that captured AI spend and those that didn’t.",
+    "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: If Your AI Feature Didn’t Materially Boost Revenue, It Doesn’t Count. Try Again.\n\nSource passages:\n[train_2689]\n2. Measuring AI by “Cool Factor” Instead of ROI\nChris noted customers initially bought AI tools “just because it’s AI” but that’s changing. The mistake: deploying AI without clear business metrics. Snowflake learned early to ask: “Is it generating more money or saving more money?” If you can’t measure 418 hours saved per week or 90% time reduction on specific tasks or real-time ad spend optimization ROI, you’re implementing technology without business justification. The bill comes due eventually.\n\n[train_1243]\nThe Brutal Truth: AI Features Alone Don’t Count\nLet me be very direct here: you need to tap into the AI budget, not just make your existing product better with AI features. The real AI budget is going to three categories:\nReplace humans\n(AI Contact Center, AI SDR)\nAugment humans dramatically\n(Cursor, Harvey, Claude + ChatGPT)\nHighly productive tools that make possible what was impossible before\n(Replit, Gamma, AI video tools)\nMost classic SaaS leaders are not going this far with their AI offerings. They’re just making their products… better. Great. But that’s table stakes now. And it’s extremely hard to monetize because customers expect AI features as part of the base product. If your AI strategy is “we added a copilot,” you’re not accessing the AI budget. You’re fighting for scraps from the traditional software budget, which is flat-to-down after price increases. Leaner Teams Are Very Real (Yes, That Means Fewer Humans)\nThe efficiency gains from AI are showing up in real numbers:\nLooking at ARR ($M) / FTE across companies:\nCursor\n: 6.1x\nLovable\n: 3.4x\nOpenAI\n: 1.5x\nAnthropic\n: 1.2x\nAtlassian\n: 0.46x\nDatadog\n: 0.51x\nServiceNow\n: 0.49x\nGitlab\n: 0.54x\nThe newer, AI-native companies are operating at 6x-12x the efficiency of traditional SaaS companies. And this advantage compounds over time. According to Iconiq Capital, AI-native companies show superior burn efficiency driven by faster compounding of ARR.\n\n[train_14260]\nOne thing seems clear to me in AI for SaaS:\n\nFolks that are sort of pretending they have AI, or have slapped on some very basic functionality into their app …\n\nAren’t seeing any revenue boost from it\n\n[train_2138]\nBy now, you should have:\nShipped AI features that customers actually want\nSeen some revenue acceleration from AI adoption\nCaptured at least a few basis points of the massive AI spend\nI’m not expecting you went from 30% growth to 300% growth. That’s unrealistic for most companies. But going from 15% to 25% growth? From 10% to 20%? That should be table stakes\nif you’re remotely positioned in a category where AI spending is happening. As I said on our 20VC pod this week:\n“Going into next year, you sure better have seen re-acceleration because of AI because there’s so much money there. If you got none of it guys, you had 18 months to not launch a single feature, tap into a single trend to reaccelerate. If you’re not growing faster at the end of 2025 than the start as a founder, I give you an F minus. There’s so much money and you don’t have to be Harvey to get a little piece of it. Twilio and MongoDB and Cloudflare and tons of folks have a little piece of it. A little piece of that massive pie.”\nThe Point Spread Between Winners and Losers\nRory O’Driscoll nailed this on our show: There’s a\nmassive point spread\nbetween companies that captured AI spend and those that didn’t.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "extraction_seconds": 14.157,
+    "verification_seconds": 0.0,
+    "verification_records": [],
+    "llm_verifier_on_critical_path": false,
+    "allowed_numeric_values": [],
+    "distillation_adapter_enabled": false,
+    "verification_adapter_enabled": false,
+    "distillation_backend": "same_loaded_4bit_base_adapter_off",
+    "distillation_do_sample": false,
+    "extraction_max_new_tokens": 2560,
+    "verification_max_new_tokens": 24,
+    "distillation_seed": 0,
+    "support_spans_in_generator_prompt": false,
+    "evidence_stage_reason": null,
+    "evidence_status": "verified",
+    "extraction_attempts": 1,
+    "extraction_stop_reason": "eos",
+    "prompt_contract": "factual-reliability-v1",
+    "fixed_style_enabled": true,
+    "style_applied": true,
+    "style_exemplar_count": 2,
+    "latency_seconds": 15.679,
+    "generated_tokens_including_stop": 320,
+    "last_token_id": 29096,
+    "effective_eos_token_ids": [
+      128001,
+      128008,
+      128009
+    ],
+    "stop_reason": "length",
+    "budget_fraction": 1.0,
+    "early_eos": false,
+    "first_attempt_stop_reason": "length",
+    "retry_stop_reason": null
+  }
+}

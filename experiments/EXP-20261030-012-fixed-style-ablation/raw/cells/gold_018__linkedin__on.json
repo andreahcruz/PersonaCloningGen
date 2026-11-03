@@ -1,0 +1,367 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "topic_id": "gold_018",
+  "medium": "linkedin",
+  "arm": "on",
+  "seed": 111,
+  "attempts": 1,
+  "evidence_sha256": "cfaaa1bbd03b6752da607f402e500e520137b0a922ca26ce8c108344a6e46715",
+  "retrieval_hit_ids": [
+    "train_16129",
+    "train_921",
+    "train_11274",
+    "train_4669"
+  ],
+  "retrieval_query": "6 Tactics to Retain Angry Customers",
+  "retrieval_filter": null,
+  "style_applied": true,
+  "style_in_prompt": true,
+  "prompt_tokens": 683,
+  "generated_tokens_including_stop": 320,
+  "latency_seconds": 22.745,
+  "exemplar_ids": [
+    11552,
+    11554
+  ],
+  "saved_at": "2026-10-30T09:52:25.735788+00:00",
+  "trace": {
+    "id": "gold_018",
+    "format": "linkedin_post",
+    "topic": "6 Tactics to Retain Angry Customers",
+    "audience": "B2B SaaS founders and operators",
+    "goal": "Give concrete retention advice for high-risk customer situations.",
+    "cta": "none",
+    "k": 8,
+    "expected_facts": [
+      "The answer should prioritize speed, ownership, and clarity in handling angry customers.",
+      "It should recommend specific retention tactics rather than generic empathy language.",
+      "It should explain that some churn risk is really a failure in trust recovery, not just product support."
+    ],
+    "rubric_must_haves": [
+      "Uses a tactic-based structure.",
+      "Includes practical customer-facing actions.",
+      "Explains why each tactic works.",
+      "Avoids fluffy customer-success advice."
+    ],
+    "gold_reference": "A strong answer should focus on fast response, clear ownership, honest diagnosis, and concrete recovery plans. Angry customers stay when they feel someone senior owns the problem, the issue is understood, and the path forward is credible. The lesson is not to over-apologize; it is to restore trust through decisive action.",
+    "medium": "linkedin",
+    "prompt": "Write a LinkedIn post in the style of Jason Lemkin about: 6 Tactics to Retain Angry Customers\n\nStyle examples from train-owned source text.\nUse them for voice only. They are not evidence for claims.\nDo not copy long passages verbatim.\n[Style 1]\nA truly great human is still better than any AI agent at most complex, judgment-intensive work. Full stop. If you can find and keep exceptional people, do it. But here’s the honest truth: most hires aren’t great hires. A lot of folks don't want to discuss it, or want to challenge it. But deploying a great AI Agent is just easier, and less stressful, than making a mediocre hire. This is why 2027 will be brutal for tech employment. We'll default to picking an AI Agent over a human for many \"hires\" because it's just ... easier.\n[Style 2]\nI know so many CROs and VPs of Sales that used to be truly great ... And are just burnt now. Fried. Some tried to mask it by hiring CROs and VPs under them to do the work. And sometimes, that does work. But man sales isn't easy. Each month, each quarter, it's a new battle. It's epic but also can take its toll. Just make sure when you hire one with the perfect LinkedIn ... that they really, truly can go into battle again. Not just talk the talk. And share great stories, of epic battles past.\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] The ones who chose a competitor are where the truth lives.\n[E2] Sales teams may engage in 'churn and burn' deals to hit their numbers.\n[E3] Sales reps may use threats to create urgency for discounts.\n[E4] Sales reps may hide cheaper editions to increase sales.\n[E5] Excessive spam-level cadence can create customer resentment.\n[E6] Customer marketing should be at least 20% of marketing dollars and time.\n\nNow write the requested LinkedIn post about: 6 Tactics to Retain Angry Customers\n\nThe draft stopped mid-sentence. Finish the last sentence. Do not add new numbers.",
+    "rendered_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nWrite a LinkedIn post in the style of Jason Lemkin about: 6 Tactics to Retain Angry Customers\n\nStyle examples from train-owned source text.\nUse them for voice only. They are not evidence for claims.\nDo not copy long passages verbatim.\n[Style 1]\nA truly great human is still better than any AI agent at most complex, judgment-intensive work. Full stop. If you can find and keep exceptional people, do it. But here’s the honest truth: most hires aren’t great hires. A lot of folks don't want to discuss it, or want to challenge it. But deploying a great AI Agent is just easier, and less stressful, than making a mediocre hire. This is why 2027 will be brutal for tech employment. We'll default to picking an AI Agent over a human for many \"hires\" because it's just ... easier.\n[Style 2]\nI know so many CROs and VPs of Sales that used to be truly great ... And are just burnt now. Fried. Some tried to mask it by hiring CROs and VPs under them to do the work. And sometimes, that does work. But man sales isn't easy. Each month, each quarter, it's a new battle. It's epic but also can take its toll. Just make sure when you hire one with the perfect LinkedIn ... that they really, truly can go into battle again. Not just talk the talk. And share great stories, of epic battles past.\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] The ones who chose a competitor are where the truth lives.\n[E2] Sales teams may engage in 'churn and burn' deals to hit their numbers.\n[E3] Sales reps may use threats to create urgency for discounts.\n[E4] Sales reps may hide cheaper editions to increase sales.\n[E5] Excessive spam-level cadence can create customer resentment.\n[E6] Customer marketing should be at least 20% of marketing dollars and time.\n\nNow write the requested LinkedIn post about: 6 Tactics to Retain Angry Customers\n\nThe draft stopped mid-sentence. Finish the last sentence. Do not add new numbers.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "answer": "We all get angry sometimes. We buy software we didn't quite need, expecting it would solve some problem. Then later, we realize it doesn't -- and we're stuck in a multi-year deal. Or maybe our rep told us it did something it couldn't actually do. Maybe even lied a bit on pricing. I'm pretty sure this happens more often than anyone wants to admit, especially during a sales push. So what do you do if your customers are getting angry? Here are my top 10 suggestions (and there are probably far more): 1⃣ Let Them Vent - Sometimes, they just want to vent. You have to listen without defensiveness. And let them vent. Most importantly, don't interrupt them. Don't try to solve every issue at once. Let them tell you exactly how unhappy they are, and listen carefully. Listen to all their complaints. Even if they say stuff that isn't fair or accurate. That you could win the argument on, yes. But also, acknowledge the emotion. Acknowledge the pain. 2⃣ Be Present In-Person If Possible - This is hard these days. But being physically present is magic. Go visit. Go see them in person. Especially if things seem like they might be going off the rails. When you show up in person, even if you weren't involved before, you often earn trust immediately. Because everyone knows you came just to help. And you show you care. This alone almost always solves issues. At least half the time, you can resolve everything right then and there.",
+    "raw_model_output": "So there are so many reasons customers get angry these days, especially as software budgets continue to grow and more SaaS companies try to squeeze out every extra penny from existing customers. I’m going to list some tactics to retain unhappy customers. None are magical. But if done well … they often help. Don’t ignore them. Make sure everyone on your team knows this. Sometimes, angry customers are worth saving. Especially once they’ve churned. You’ll lose all their future revenue if they leave forever. Even if it seems hopeless today. So what can you do? First, make sure no one else makes things worse. No one loves working with frustrated, angry customers. Everyone wants to move them off the phone / out of chat. Get those poor customers to someone that cares — ideally, someone in support or success that doesn’t have to worry about hitting quota. Second, ask them why they left. And listen carefully to the answer. Maybe you lost the deal due to a product gap. Or maybe a direct competitor was simply stronger. Whatever the reason, fix it. Third, send them something awesome back in the box. If your competitors beat you up on price, send them a free upgrade after a few months. If you couldn’t close the sale (and it wasn’t your fault), invite them to a special customer-only event later. Fourth, offer to buy them dinner or coffee or lunch. Yes, this works even in the age of AI. Fifth, tell them you appreciate how much they care. Tell them thank you. Sixth, show them you’ll never sell their data",
+    "deployment_output": "We all get angry sometimes. We buy software we didn't quite need, expecting it would solve some problem. Then later, we realize it doesn't -- and we're stuck in a multi-year deal. Or maybe our rep told us it did something it couldn't actually do. Maybe even lied a bit on pricing. I'm pretty sure this happens more often than anyone wants to admit, especially during a sales push. So what do you do if your customers are getting angry? Here are my top 10 suggestions (and there are probably far more): 1⃣ Let Them Vent - Sometimes, they just want to vent. You have to listen without defensiveness. And let them vent. Most importantly, don't interrupt them. Don't try to solve every issue at once. Let them tell you exactly how unhappy they are, and listen carefully. Listen to all their complaints. Even if they say stuff that isn't fair or accurate. That you could win the argument on, yes. But also, acknowledge the emotion. Acknowledge the pain. 2⃣ Be Present In-Person If Possible - This is hard these days. But being physically present is magic. Go visit. Go see them in person. Especially if things seem like they might be going off the rails. When you show up in person, even if you weren't involved before, you often earn trust immediately. Because everyone knows you came just to help. And you show you care. This alone almost always solves issues. At least half the time, you can resolve everything right then and there.",
+    "first_attempt_answer": "So there are so many reasons customers get angry these days, especially as software budgets continue to grow and more SaaS companies try to squeeze out every extra penny from existing customers. I’m going to list some tactics to retain unhappy customers. None are magical. But if done well … they often help. Don’t ignore them. Make sure everyone on your team knows this. Sometimes, angry customers are worth saving. Especially once they’ve churned. You’ll lose all their future revenue if they leave forever. Even if it seems hopeless today. So what can you do? First, make sure no one else makes things worse. No one loves working with frustrated, angry customers. Everyone wants to move them off the phone / out of chat. Get those poor customers to someone that cares — ideally, someone in support or success that doesn’t have to worry about hitting quota. Second, ask them why they left. And listen carefully to the answer. Maybe you lost the deal due to a product gap. Or maybe a direct competitor was simply stronger. Whatever the reason, fix it. Third, send them something awesome back in the box. If your competitors beat you up on price, send them a free upgrade after a few months. If you couldn’t close the sale (and it wasn’t your fault), invite them to a special customer-only event later. Fourth, offer to buy them dinner or coffee or lunch. Yes, this works even in the age of AI. Fifth, tell them you appreciate how much they care. Tell them thank you. Sixth, show them you’ll never sell their data",
+    "retry_answer": "We all get angry sometimes. We buy software we didn't quite need, expecting it would solve some problem. Then later, we realize it doesn't -- and we're stuck in a multi-year deal. Or maybe our rep told us it did something it couldn't actually do. Maybe even lied a bit on pricing. I'm pretty sure this happens more often than anyone wants to admit, especially during a sales push. So what do you do if your customers are getting angry? Here are my top 10 suggestions (and there are probably far more): 1⃣ Let Them Vent - Sometimes, they just want to vent. You have to listen without defensiveness. And let them vent. Most importantly, don't interrupt them. Don't try to solve every issue at once. Let them tell you exactly how unhappy they are, and listen carefully. Listen to all their complaints. Even if they say stuff that isn't fair or accurate. That you could win the argument on, yes. But also, acknowledge the emotion. Acknowledge the pain. 2⃣ Be Present In-Person If Possible - This is hard these days. But being physically present is magic. Go visit. Go see them in person. Especially if things seem like they might be going off the rails. When you show up in person, even if you weren't involved before, you often earn trust immediately. Because everyone knows you came just to help. And you show you care. This alone almost always solves issues. At least half the time, you can resolve everything right then and there.",
+    "query": "6 Tactics to Retain Angry Customers",
+    "max_new_tokens": 320,
+    "seed": 111,
+    "retry_seed": 10111,
+    "deployment_accepted": true,
+    "repair_occurred": false,
+    "generation_attempt": {
+      "seed": 111,
+      "answer": "So there are so many reasons customers get angry these days, especially as software budgets continue to grow and more SaaS companies try to squeeze out every extra penny from existing customers. I’m going to list some tactics to retain unhappy customers. None are magical. But if done well … they often help. Don’t ignore them. Make sure everyone on your team knows this. Sometimes, angry customers are worth saving. Especially once they’ve churned. You’ll lose all their future revenue if they leave forever. Even if it seems hopeless today. So what can you do? First, make sure no one else makes things worse. No one loves working with frustrated, angry customers. Everyone wants to move them off the phone / out of chat. Get those poor customers to someone that cares — ideally, someone in support or success that doesn’t have to worry about hitting quota. Second, ask them why they left. And listen carefully to the answer. Maybe you lost the deal due to a product gap. Or maybe a direct competitor was simply stronger. Whatever the reason, fix it. Third, send them something awesome back in the box. If your competitors beat you up on price, send them a free upgrade after a few months. If you couldn’t close the sale (and it wasn’t your fault), invite them to a special customer-only event later. Fourth, offer to buy them dinner or coffee or lunch. Yes, this works even in the age of AI. Fifth, tell them you appreciate how much they care. Tell them thank you. Sixth, show them you’ll never sell their data",
+      "numeric_grounding": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [
+          "pct:20"
+        ],
+        "values": [],
+        "unsupported": []
+      },
+      "rag_source_copying": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 3,
+        "document_id": "train_16129",
+        "matched_generated_span": "you ll lose",
+        "matched_retrieved_span": "you ll lose"
+      },
+      "stop_reason": "length"
+    },
+    "repair_attempt": null,
+    "accepted_attempt": 2,
+    "rag_source_copying": {
+      "applicable": true,
+      "threshold": 12,
+      "pass": true,
+      "flagged": false,
+      "max_contiguous_words": 3,
+      "document_id": "train_11274",
+      "matched_generated_span": "we didn t",
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 3,
+        "document_id": "train_16129",
+        "matched_generated_span": "you ll lose",
+        "matched_retrieved_span": "you ll lose"
+      },
+      "retry": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 3,
+        "document_id": "train_11274",
+        "matched_generated_span": "we didn t",
+        "matched_retrieved_span": "we didn t"
+      },
+      "retry_occurred": true,
+      "repair_occurred": false
+    },
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [
+          "pct:20"
+        ],
+        "values": [],
+        "unsupported": []
+      },
+      "retry": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [
+          "pct:20"
+        ],
+        "values": [],
+        "unsupported": []
+      }
+    },
+    "prompt_tokens": 683,
+    "backend": "unsloth",
+    "retrieval": true,
+    "retrieval_query": "6 Tactics to Retain Angry Customers",
+    "retrieval_filter": null,
+    "retrieval_k": 4,
+    "retrieval_hits": [
+      {
+        "id": "train_16129",
+        "text": "“What I saw from that was how, if you aren’t careful, a few angry customers can become an avalanche.”\n\nYou'll Lose Customers. It Hurts. But Don't Let Them Become Angry Ex-Customers. | SaaStr",
+        "medium": "x",
+        "group_id": "46c0f99b33c1012e036460e53f0b0d9c8243896629f93373fe77f40a51dbfabb",
+        "row_id": 16129,
+        "split": "train",
+        "distance": 0.2642238140106201
+      },
+      {
+        "id": "train_921",
+        "text": "2. Talk to the customers you’re NOT winning.\nNot your happy customers. The ones who chose a competitor. The ones who went with “do nothing.” That’s where the truth lives.",
+        "medium": "blog",
+        "group_id": "c6827cd4076f2f57812dde7c901c9bdab231e1ba1fc56aea259964b6a36e0e4d",
+        "row_id": 921,
+        "split": "train",
+        "distance": 0.2848406434059143
+      },
+      {
+        "id": "train_11274",
+        "text": "Q: Your sales manager is under great pressure to increase sales. At a recent meeting of the entire sales staff, this person said, “We have to hit our numbers no matter what it takes!” Does this emotional appeal change your way of dealing with customers? The struggle to hit the base plan can indeed produce some less than ideal behavior in sales teams:\n“Churn and burn” deals, where customers are promised functionality that doesn’t really exist just to close them\n. The customers depart as soon as they realize it. A bit more on this here:\n5 Tips To Minimize “Churn and Burn” Behavior in Your Sales Team | SaaStr\nDiscounts that explode — with a threat. Discounts do need to have an expiration period, usually, to create urgency. But a sales rep recently told us if we didn’t take the discount this month, we could never buy the product. Mediocre sales reps especially sometimes add threats to exploding discounts. It can sort of work, sometimes. It will leave a very bad taste in the customer’s mouth, however. Hiding cheaper editions\n. Sales can be incented to hide or downplay cheaper editions that might work just as well. Going after customers “cheating a bit”\n. Do some of your customers share licenses / seats? Do some have more seats than they are allotted? If so, does it matter? In tougher times, sales will go after them to get them to pay up more. Done carefully, this is fine. Done aggressively, it creates customer resentment. Excessive spam-level cadence\n. Spamming everyone in your customer base too many times doesn’t help.",
+        "medium": "blog",
+        "group_id": "b3e96f88978dc87c6f315473f2466438cb35e4e1b1ffe781990377889952ddfe",
+        "row_id": 11274,
+        "split": "train",
+        "distance": 0.2933098077774048
+      },
+      {
+        "id": "train_4669",
+        "text": "7.  Add a real Customer Marketing function, and spend at least 20% of your marketing dollars and time on\nexisting\ncustomers.\nAlmost all of us wait way too long to add Customer Marketing.  But if 90% of the revenue from customers is after the first dollar in, and especially if you see NRR of 100% or more, then marketing should only start when the customer first e-signs.  You’ll job is to increase the odds they stay happy, and buy more from you.  More content, more webinars, more drip marketing, more help, more events, more steak dinners more your\nexisting\ncustomers.  Not just the potential ones.  Ultimately you need to have a full-time here.  But you can probably start with whatever resources you have now.\nYou Aren’t Doing Enough Customer Marketing\nScaling a B2B company past, say, 100 customers, even just $1m ARR, is as much about making fewer mistakes than it is about going faster, bigger, strong.  Take as many actions as you can to just do a bit better.\nAnd the above are 7 or so you can take this week.\nMake it so.",
+        "medium": "blog",
+        "group_id": "33d373c26c3944659510032e9ca809e9a3d9310c4cc2133cd6f015a45269f4b5",
+        "row_id": 4669,
+        "split": "train",
+        "distance": 0.3080322742462158
+      }
+    ],
+    "copying": [
+      {
+        "id": "train_16129",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_921",
+        "shared_word_span": 1
+      },
+      {
+        "id": "train_11274",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_4669",
+        "shared_word_span": 2
+      }
+    ],
+    "retrieval_backend": "dense",
+    "proposed_atomic_claims": [
+      {
+        "source_id": "train_16129",
+        "claim": "A few angry customers can become an avalanche.",
+        "support_span": "What I saw from that was how, if you aren’t careful, a few angry customers can become an avalanche.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_921",
+        "claim": "The ones who chose a competitor are where the truth lives.",
+        "support_span": "Not your happy customers. The ones who chose a competitor. The ones who went with “do nothing.” That’s where the truth lives.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11274",
+        "claim": "Sales teams may engage in 'churn and burn' deals to hit their numbers.",
+        "support_span": "“Churn and burn” deals, where customers are promised functionality that doesn’t really exist just to close them",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11274",
+        "claim": "Sales reps may use threats to create urgency for discounts.",
+        "support_span": "Discounts that explode — with a threat. Discounts do need to have an expiration period, usually, to create urgency.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11274",
+        "claim": "Sales reps may hide cheaper editions to increase sales.",
+        "support_span": "Hiding cheaper editions",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11274",
+        "claim": "Sales reps may go after customers who share licenses/seats to increase sales.",
+        "support_span": "Do some of your customers share licenses / seats? Do some have more seats than they are allotted?",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11274",
+        "claim": "Excessive spam-level cadence can create customer resentment.",
+        "support_span": "Excessive spam-level cadence",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_4669",
+        "claim": "Customer marketing should start when the customer first e-signs.",
+        "support_span": "if 90% of the revenue from customers is after the first dollar in, and especially if you see NRR of 100% or more, then marketing should only start when the customer first e-signs",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_4669",
+        "claim": "Customer marketing should be at least 20% of marketing dollars and time.",
+        "support_span": "Add a real Customer Marketing function, and spend at least 20% of your marketing dollars and time on existing customers.",
+        "claim_type": "fact"
+      }
+    ],
+    "validation_rejected": [
+      {
+        "source_id": "train_16129",
+        "claim": "A few angry customers can become an avalanche.",
+        "support_span": "What I saw from that was how, if you aren’t careful, a few angry customers can become an avalanche.",
+        "claim_type": "fact",
+        "reason": "interrogative_assertion"
+      },
+      {
+        "source_id": "train_11274",
+        "claim": "Sales reps may go after customers who share licenses/seats to increase sales.",
+        "support_span": "Do some of your customers share licenses / seats? Do some have more seats than they are allotted?",
+        "claim_type": "fact",
+        "reason": "interrogative_assertion"
+      },
+      {
+        "source_id": "train_4669",
+        "claim": "Customer marketing should start when the customer first e-signs.",
+        "support_span": "if 90% of the revenue from customers is after the first dollar in, and especially if you see NRR of 100% or more, then marketing should only start when the customer first e-signs",
+        "claim_type": "fact",
+        "reason": "interrogative_assertion"
+      }
+    ],
+    "verifier_rejected": [],
+    "verified_claims": [
+      {
+        "source_id": "train_921",
+        "claim": "The ones who chose a competitor are where the truth lives.",
+        "support_span": "Not your happy customers. The ones who chose a competitor. The ones who went with “do nothing.” That’s where the truth lives.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11274",
+        "claim": "Sales teams may engage in 'churn and burn' deals to hit their numbers.",
+        "support_span": "“Churn and burn” deals, where customers are promised functionality that doesn’t really exist just to close them",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11274",
+        "claim": "Sales reps may use threats to create urgency for discounts.",
+        "support_span": "Discounts that explode — with a threat. Discounts do need to have an expiration period, usually, to create urgency.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11274",
+        "claim": "Sales reps may hide cheaper editions to increase sales.",
+        "support_span": "Hiding cheaper editions",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_11274",
+        "claim": "Excessive spam-level cadence can create customer resentment.",
+        "support_span": "Excessive spam-level cadence",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_4669",
+        "claim": "Customer marketing should be at least 20% of marketing dollars and time.",
+        "support_span": "Add a real Customer Marketing function, and spend at least 20% of your marketing dollars and time on existing customers.",
+        "claim_type": "fact"
+      }
+    ],
+    "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] The ones who chose a competitor are where the truth lives.\n[E2] Sales teams may engage in 'churn and burn' deals to hit their numbers.\n[E3] Sales reps may use threats to create urgency for discounts.\n[E4] Sales reps may hide cheaper editions to increase sales.\n[E5] Excessive spam-level cadence can create customer resentment.\n[E6] Customer marketing should be at least 20% of marketing dollars and time.",
+    "raw_extraction": "[\n  {\n    \"source_id\": \"train_16129\",\n    \"claim\": \"A few angry customers can become an avalanche.\",\n    \"support_span\": \"What I saw from that was how, if you aren’t careful, a few angry customers can become an avalanche.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_921\",\n    \"claim\": \"The ones who chose a competitor are where the truth lives.\",\n    \"support_span\": \"Not your happy customers. The ones who chose a competitor. The ones who went with “do nothing.” That’s where the truth lives.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_11274\",\n    \"claim\": \"Sales teams may engage in 'churn and burn' deals to hit their numbers.\",\n    \"support_span\": \"“Churn and burn” deals, where customers are promised functionality that doesn’t really exist just to close them\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_11274\",\n    \"claim\": \"Sales reps may use threats to create urgency for discounts.\",\n    \"support_span\": \"Discounts that explode — with a threat. Discounts do need to have an expiration period, usually, to create urgency.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_11274\",\n    \"claim\": \"Sales reps may hide cheaper editions to increase sales.\",\n    \"support_span\": \"Hiding cheaper editions\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_11274\",\n    \"claim\": \"Sales reps may go after customers who share licenses/seats to increase sales.\",\n    \"support_span\": \"Do some of your customers share licenses / seats? Do some have more seats than they are allotted?\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_11274\",\n    \"claim\": \"Excessive spam-level cadence can create customer resentment.\",\n    \"support_span\": \"Excessive spam-level cadence\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_4669\",\n    \"claim\": \"Customer marketing should start when the customer first e-signs.\",\n    \"support_span\": \"if 90% of the revenue from customers is after the first dollar in, and especially if you see NRR of 100% or more, then marketing should only start when the customer first e-signs\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_4669\",\n    \"claim\": \"Customer marketing should be at least 20% of marketing dollars and time.\",\n    \"support_span\": \"Add a real Customer Marketing function, and spend at least 20% of your marketing dollars and time on existing customers.\",\n    \"claim_type\": \"fact\"\n  }\n]",
+    "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: 6 Tactics to Retain Angry Customers\n\nSource passages:\n[train_16129]\n“What I saw from that was how, if you aren’t careful, a few angry customers can become an avalanche.”\n\nYou'll Lose Customers. It Hurts. But Don't Let Them Become Angry Ex-Customers. | SaaStr\n\n[train_921]\n2. Talk to the customers you’re NOT winning.\nNot your happy customers. The ones who chose a competitor. The ones who went with “do nothing.” That’s where the truth lives.\n\n[train_11274]\nQ: Your sales manager is under great pressure to increase sales. At a recent meeting of the entire sales staff, this person said, “We have to hit our numbers no matter what it takes!” Does this emotional appeal change your way of dealing with customers? The struggle to hit the base plan can indeed produce some less than ideal behavior in sales teams:\n“Churn and burn” deals, where customers are promised functionality that doesn’t really exist just to close them\n. The customers depart as soon as they realize it. A bit more on this here:\n5 Tips To Minimize “Churn and Burn” Behavior in Your Sales Team | SaaStr\nDiscounts that explode — with a threat. Discounts do need to have an expiration period, usually, to create urgency. But a sales rep recently told us if we didn’t take the discount this month, we could never buy the product. Mediocre sales reps especially sometimes add threats to exploding discounts. It can sort of work, sometimes. It will leave a very bad taste in the customer’s mouth, however. Hiding cheaper editions\n. Sales can be incented to hide or downplay cheaper editions that might work just as well. Going after customers “cheating a bit”\n. Do some of your customers share licenses / seats? Do some have more seats than they are allotted? If so, does it matter? In tougher times, sales will go after them to get them to pay up more. Done carefully, this is fine. Done aggressively, it creates customer resentment. Excessive spam-level cadence\n. Spamming everyone in your customer base too many times doesn’t help.\n\n[train_4669]\n7.  Add a real Customer Marketing function, and spend at least 20% of your marketing dollars and time on\nexisting\ncustomers.\nAlmost all of us wait way too long to add Customer Marketing.  But if 90% of the revenue from customers is after the first dollar in, and especially if you see NRR of 100% or more, then marketing should only start when the customer first e-signs.  You’ll job is to increase the odds they stay happy, and buy more from you.  More content, more webinars, more drip marketing, more help, more events, more steak dinners more your\nexisting\ncustomers.  Not just the potential ones.  Ultimately you need to have a full-time here.  But you can probably start with whatever resources you have now.\nYou Aren’t Doing Enough Customer Marketing\nScaling a B2B company past, say, 100 customers, even just $1m ARR, is as much about making fewer mistakes than it is about going faster, bigger, strong.  Take as many actions as you can to just do a bit better.\nAnd the above are 7 or so you can take this week.\nMake it so.",
+    "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: 6 Tactics to Retain Angry Customers\n\nSource passages:\n[train_16129]\n“What I saw from that was how, if you aren’t careful, a few angry customers can become an avalanche.”\n\nYou'll Lose Customers. It Hurts. But Don't Let Them Become Angry Ex-Customers. | SaaStr\n\n[train_921]\n2. Talk to the customers you’re NOT winning.\nNot your happy customers. The ones who chose a competitor. The ones who went with “do nothing.” That’s where the truth lives.\n\n[train_11274]\nQ: Your sales manager is under great pressure to increase sales. At a recent meeting of the entire sales staff, this person said, “We have to hit our numbers no matter what it takes!” Does this emotional appeal change your way of dealing with customers? The struggle to hit the base plan can indeed produce some less than ideal behavior in sales teams:\n“Churn and burn” deals, where customers are promised functionality that doesn’t really exist just to close them\n. The customers depart as soon as they realize it. A bit more on this here:\n5 Tips To Minimize “Churn and Burn” Behavior in Your Sales Team | SaaStr\nDiscounts that explode — with a threat. Discounts do need to have an expiration period, usually, to create urgency. But a sales rep recently told us if we didn’t take the discount this month, we could never buy the product. Mediocre sales reps especially sometimes add threats to exploding discounts. It can sort of work, sometimes. It will leave a very bad taste in the customer’s mouth, however. Hiding cheaper editions\n. Sales can be incented to hide or downplay cheaper editions that might work just as well. Going after customers “cheating a bit”\n. Do some of your customers share licenses / seats? Do some have more seats than they are allotted? If so, does it matter? In tougher times, sales will go after them to get them to pay up more. Done carefully, this is fine. Done aggressively, it creates customer resentment. Excessive spam-level cadence\n. Spamming everyone in your customer base too many times doesn’t help.\n\n[train_4669]\n7.  Add a real Customer Marketing function, and spend at least 20% of your marketing dollars and time on\nexisting\ncustomers.\nAlmost all of us wait way too long to add Customer Marketing.  But if 90% of the revenue from customers is after the first dollar in, and especially if you see NRR of 100% or more, then marketing should only start when the customer first e-signs.  You’ll job is to increase the odds they stay happy, and buy more from you.  More content, more webinars, more drip marketing, more help, more events, more steak dinners more your\nexisting\ncustomers.  Not just the potential ones.  Ultimately you need to have a full-time here.  But you can probably start with whatever resources you have now.\nYou Aren’t Doing Enough Customer Marketing\nScaling a B2B company past, say, 100 customers, even just $1m ARR, is as much about making fewer mistakes than it is about going faster, bigger, strong.  Take as many actions as you can to just do a bit better.\nAnd the above are 7 or so you can take this week.\nMake it so.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "extraction_seconds": 16.17,
+    "verification_seconds": 0.0,
+    "verification_records": [],
+    "llm_verifier_on_critical_path": false,
+    "allowed_numeric_values": [
+      "pct:20"
+    ],
+    "distillation_adapter_enabled": false,
+    "verification_adapter_enabled": false,
+    "distillation_backend": "same_loaded_4bit_base_adapter_off",
+    "distillation_do_sample": false,
+    "extraction_max_new_tokens": 2560,
+    "verification_max_new_tokens": 24,
+    "distillation_seed": 0,
+    "support_spans_in_generator_prompt": false,
+    "evidence_stage_reason": null,
+    "evidence_status": "verified",
+    "extraction_attempts": 1,
+    "extraction_stop_reason": "eos",
+    "prompt_contract": "factual-reliability-v1",
+    "fixed_style_enabled": true,
+    "style_applied": true,
+    "style_exemplar_count": 2,
+    "latency_seconds": 22.745,
+    "generated_tokens_including_stop": 320,
+    "last_token_id": 13,
+    "effective_eos_token_ids": [
+      128001,
+      128008,
+      128009
+    ],
+    "stop_reason": "length",
+    "budget_fraction": 1.0,
+    "early_eos": false,
+    "first_attempt_stop_reason": "length",
+    "retry_stop_reason": "length"
+  }
+}

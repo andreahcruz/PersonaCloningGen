@@ -1,0 +1,110 @@
+{
+  "proposed": [
+    {
+      "source_id": "train_176",
+      "claim": "It takes a significant amount of time to set up an AI SDR.",
+      "support_span": "The real implementation involves: ICP and messaging work: 2–4 weeks of your best sales brain. Don't rush this. Integration and setup: 1–2 weeks of technical lift depending on your CRM and stack.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_180",
+      "claim": "A well-deployed AI SDR will do the work your human team isn't doing.",
+      "support_span": "A well-deployed AI SDR in 2026 will do the work your human team isn't doing — the segments they consider too small, the leads they consider too cold, the follow-ups they keep meaning to send.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_78",
+      "claim": "99% of people are happy to interact with your AI agent.",
+      "support_span": "Get above the quality bar, and 99% of people are happy to interact with your AI agent.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_13350",
+      "claim": "The AI SDR can generate a high number of meetings.",
+      "support_span": "Already got 15 meetings from it, 7.5% hit rate",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_13350",
+      "claim": "The AI SDR can outperform human SDRs in terms of meeting generation.",
+      "support_span": "That's more than any human SDR did in 30+ days before",
+      "claim_type": "comparison"
+    },
+    {
+      "source_id": "train_176",
+      "claim": "AI SDRs can generate a high open rate.",
+      "support_span": "72% open rate",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_180",
+      "claim": "Ongoing tuning of an AI SDR requires a significant amount of time.",
+      "support_span": "Ongoing tuning: 30–45 minutes per day, minimum, for the first 60–90 days. Then 20–30 minutes daily after that.",
+      "claim_type": "fact"
+    }
+  ],
+  "raw_extraction": "[\n  {\n    \"source_id\": \"train_176\",\n    \"claim\": \"It takes a significant amount of time to set up an AI SDR.\",\n    \"support_span\": \"The real implementation involves: ICP and messaging work: 2–4 weeks of your best sales brain. Don't rush this. Integration and setup: 1–2 weeks of technical lift depending on your CRM and stack.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_180\",\n    \"claim\": \"A well-deployed AI SDR will do the work your human team isn't doing.\",\n    \"support_span\": \"A well-deployed AI SDR in 2026 will do the work your human team isn't doing — the segments they consider too small, the leads they consider too cold, the follow-ups they keep meaning to send.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_78\",\n    \"claim\": \"99% of people are happy to interact with your AI agent.\",\n    \"support_span\": \"Get above the quality bar, and 99% of people are happy to interact with your AI agent.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_13350\",\n    \"claim\": \"The AI SDR can generate a high number of meetings.\",\n    \"support_span\": \"Already got 15 meetings from it, 7.5% hit rate\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_13350\",\n    \"claim\": \"The AI SDR can outperform human SDRs in terms of meeting generation.\",\n    \"support_span\": \"That's more than any human SDR did in 30+ days before\",\n    \"claim_type\": \"comparison\"\n  },\n  {\n    \"source_id\": \"train_176\",\n    \"claim\": \"AI SDRs can generate a high open rate.\",\n    \"support_span\": \"72% open rate\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_180\",\n    \"claim\": \"Ongoing tuning of an AI SDR requires a significant amount of time.\",\n    \"support_span\": \"Ongoing tuning: 30–45 minutes per day, minimum, for the first 60–90 days. Then 20–30 minutes daily after that.\",\n    \"claim_type\": \"fact\"\n  }\n]",
+  "validation_rejected": [
+    {
+      "source_id": "train_176",
+      "claim": "It takes a significant amount of time to set up an AI SDR.",
+      "support_span": "The real implementation involves: ICP and messaging work: 2–4 weeks of your best sales brain. Don't rush this. Integration and setup: 1–2 weeks of technical lift depending on your CRM and stack.",
+      "claim_type": "fact",
+      "reason": "support_not_in_source"
+    },
+    {
+      "source_id": "train_13350",
+      "claim": "The AI SDR can outperform human SDRs in terms of meeting generation.",
+      "support_span": "That's more than any human SDR did in 30+ days before",
+      "claim_type": "comparison",
+      "reason": "entity_not_in_source"
+    },
+    {
+      "source_id": "train_176",
+      "claim": "AI SDRs can generate a high open rate.",
+      "support_span": "72% open rate",
+      "claim_type": "number",
+      "reason": "entity_not_in_source"
+    }
+  ],
+  "verifier_rejected": [],
+  "verified": [
+    {
+      "source_id": "train_180",
+      "claim": "A well-deployed AI SDR will do the work your human team isn't doing.",
+      "support_span": "A well-deployed AI SDR in 2026 will do the work your human team isn't doing — the segments they consider too small, the leads they consider too cold, the follow-ups they keep meaning to send.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_78",
+      "claim": "99% of people are happy to interact with your AI agent.",
+      "support_span": "Get above the quality bar, and 99% of people are happy to interact with your AI agent.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_13350",
+      "claim": "The AI SDR can generate a high number of meetings.",
+      "support_span": "Already got 15 meetings from it, 7.5% hit rate",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_180",
+      "claim": "Ongoing tuning of an AI SDR requires a significant amount of time.",
+      "support_span": "Ongoing tuning: 30–45 minutes per day, minimum, for the first 60–90 days. Then 20–30 minutes daily after that.",
+      "claim_type": "fact"
+    }
+  ],
+  "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] A well-deployed AI SDR will do the work your human team isn't doing.\n[E2] 99% of people are happy to interact with your AI agent.\n[E3] The AI SDR can generate a high number of meetings.\n[E4] Ongoing tuning of an AI SDR requires a significant amount of time.",
+  "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Dear SaaStr: How Long Does It Take to Deploy an AI SDR?\n\nSource passages:\n[train_176]\nDear SaaStr: I Want to Roll Out an AI SDR. How Do I Start? First, get clear on what you’re actually buying — and what it actually does. We’ve now been running AI SDRs at SaaStr for over a year. Multiple platforms. Real data. Real pipeline. And the honest answer is: it works. But it works very differently than most vendors will tell you, and the gap between a good deployment and a wasted one comes down almost entirely to how you set it up. Here’s what we actually learned. The Single Best Use Case to Start With: The Leads Your Team Is Ignoring\nThis is the insight that changed how we think about AI SDRs entirely. Your human SDRs are force-ranking in their heads every single day. They’re chasing the big deals, the warm inbound, the accounts that feel like they could close this quarter. The leads they consider “not worth it” — return event attendees, old website visitors, ghosted CRM contacts — those get nothing. Not bad follow-up. Nothing. That’s where AI SDRs absolutely shine. When we deployed AI on the leads our human team refused to work — people who had engaged with SaaStr but never got follow-up — we got a\n72% open rate\non Agentforce and generated\n15% of our London event revenue\nfrom a segment that would have produced zero without AI. Not 15% incremental lift. 15% of total revenue from leads that were producing $0. So before you start thinking about AI SDRs as a way to scale your best motion, ask yourself: what’s the motion your team isn’t running at all? Start there.\n\n[train_180]\nThe real implementation involves:\nICP and messaging work:\n2–4 weeks of your best sales brain. Don’t rush this. Integration and setup:\n1–2 weeks of technical lift depending on your CRM and stack. Ongoing tuning:\n30–45 minutes per day, minimum, for the first 60–90 days. Then 20–30 minutes daily after that. This is not set-it-and-forget-it. The vendors will tell you it takes an afternoon to set up. You can turn it on in an afternoon. That’s very different from having it work. The Honest Expectation\nA well-deployed AI SDR in 2026 will do the work your human team isn’t doing — the segments they consider too small, the leads they consider too cold, the follow-ups they keep meaning to send. That’s where the ROI is clearest and fastest. It will also scale your warm outbound to volumes no human team can match. We went from 285 emails per rep per month to 3,221 per month on a single platform, with equivalent or better response rates. What it won’t do is replace a great enterprise SDR who navigates complex organizations and handles nuanced objections in real-time. That’s still a human job — at least for now. Use AI SDRs to cover the motions where speed and volume matter most. Redeploy your human SDRs to the work where judgment and relationships matter most. That’s not a downgrade for your team. That’s a better use of everyone’s time — and more pipeline from leads that would have otherwise produced nothing. Have a question for SaaStr? We answer the real ones at\nSaaStr.ai\n.\n\n[train_78]\nSDR turnover is the highest of any go-to-market role. The best SDRs want to be AEs within six months. Get above the quality bar, and 99% of people are happy to interact with your AI agent. The 1% who get frustrated are a rounding error, and about half of those are just people trying to prompt-inject your bot for fun. The AI SDR is not a magic bullet. It requires real setup time, real ongoing maintenance, and real human judgment to run well. But if you do the work, the results are better than what most human SDR teams deliver, at a fraction of the cost and at genuinely infinite scale.\n\n[train_13350]\nRolling out our AI SDR this morning.  It took a bunch of training, tooling, etc.  But ...\n\nAlready got 15 meetings from it, 7.5% hit rate\n\nThat’s more than any human SDR did in 30+ days before\n\n(More to come)",
+  "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Dear SaaStr: How Long Does It Take to Deploy an AI SDR?\n\nSource passages:\n[train_176]\nDear SaaStr: I Want to Roll Out an AI SDR. How Do I Start? First, get clear on what you’re actually buying — and what it actually does. We’ve now been running AI SDRs at SaaStr for over a year. Multiple platforms. Real data. Real pipeline. And the honest answer is: it works. But it works very differently than most vendors will tell you, and the gap between a good deployment and a wasted one comes down almost entirely to how you set it up. Here’s what we actually learned. The Single Best Use Case to Start With: The Leads Your Team Is Ignoring\nThis is the insight that changed how we think about AI SDRs entirely. Your human SDRs are force-ranking in their heads every single day. They’re chasing the big deals, the warm inbound, the accounts that feel like they could close this quarter. The leads they consider “not worth it” — return event attendees, old website visitors, ghosted CRM contacts — those get nothing. Not bad follow-up. Nothing. That’s where AI SDRs absolutely shine. When we deployed AI on the leads our human team refused to work — people who had engaged with SaaStr but never got follow-up — we got a\n72% open rate\non Agentforce and generated\n15% of our London event revenue\nfrom a segment that would have produced zero without AI. Not 15% incremental lift. 15% of total revenue from leads that were producing $0. So before you start thinking about AI SDRs as a way to scale your best motion, ask yourself: what’s the motion your team isn’t running at all? Start there.\n\n[train_180]\nThe real implementation involves:\nICP and messaging work:\n2–4 weeks of your best sales brain. Don’t rush this. Integration and setup:\n1–2 weeks of technical lift depending on your CRM and stack. Ongoing tuning:\n30–45 minutes per day, minimum, for the first 60–90 days. Then 20–30 minutes daily after that. This is not set-it-and-forget-it. The vendors will tell you it takes an afternoon to set up. You can turn it on in an afternoon. That’s very different from having it work. The Honest Expectation\nA well-deployed AI SDR in 2026 will do the work your human team isn’t doing — the segments they consider too small, the leads they consider too cold, the follow-ups they keep meaning to send. That’s where the ROI is clearest and fastest. It will also scale your warm outbound to volumes no human team can match. We went from 285 emails per rep per month to 3,221 per month on a single platform, with equivalent or better response rates. What it won’t do is replace a great enterprise SDR who navigates complex organizations and handles nuanced objections in real-time. That’s still a human job — at least for now. Use AI SDRs to cover the motions where speed and volume matter most. Redeploy your human SDRs to the work where judgment and relationships matter most. That’s not a downgrade for your team. That’s a better use of everyone’s time — and more pipeline from leads that would have otherwise produced nothing. Have a question for SaaStr? We answer the real ones at\nSaaStr.ai\n.\n\n[train_78]\nSDR turnover is the highest of any go-to-market role. The best SDRs want to be AEs within six months. Get above the quality bar, and 99% of people are happy to interact with your AI agent. The 1% who get frustrated are a rounding error, and about half of those are just people trying to prompt-inject your bot for fun. The AI SDR is not a magic bullet. It requires real setup time, real ongoing maintenance, and real human judgment to run well. But if you do the work, the results are better than what most human SDR teams deliver, at a fraction of the cost and at genuinely infinite scale.\n\n[train_13350]\nRolling out our AI SDR this morning.  It took a bunch of training, tooling, etc.  But ...\n\nAlready got 15 meetings from it, 7.5% hit rate\n\nThat’s more than any human SDR did in 30+ days before\n\n(More to come)<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+  "extraction_seconds": 13.919,
+  "verification_seconds": 0.0,
+  "verification_records": [],
+  "allowed_numeric_values": [
+    "pct:99"
+  ],
+  "reason": null,
+  "extraction_stop_reason": "eos",
+  "extraction_attempts": 1,
+  "evidence_status": "verified"
+}

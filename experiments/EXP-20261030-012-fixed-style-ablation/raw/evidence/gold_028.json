@@ -1,0 +1,143 @@
+{
+  "proposed": [
+    {
+      "source_id": "train_12540",
+      "claim": "DigitalOcean is up 12.9% year-to-date.",
+      "support_span": "Up 12.9% year-to-date.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_10085",
+      "claim": "DigitalOcean's revenue is 30% in Europe and 22% in Asia.",
+      "support_span": "30% in Europe, and 22% in Asia",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_623",
+      "claim": "The software market is growing at 14.7% in 2026.",
+      "support_span": "The revised 14.7% reflects a more sustainable growth trajectory, not a softening market.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_623",
+      "claim": "The software market is growing at 14.7% in 2026.",
+      "support_span": "$1.4 trillion in software spend growing at 14.7%",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_623",
+      "claim": "The software market is growing at 14.7% in 2026.",
+      "support_span": "$180 billion in net new software spending in 2026 alone",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_11597",
+      "claim": "The software market is growing at 14.7% in 2026.",
+      "support_span": "Gartner now predicts global software spend will >accelerate< and growing a stunning 14.7% to $1.4 Trillion in 2026",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_623",
+      "claim": "The software market is $1.4 trillion.",
+      "support_span": "$1.4T+",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_623",
+      "claim": "Data center systems are growing at 31.7%.",
+      "support_span": "up 31.7%",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_623",
+      "claim": "Devices are growing at 6.1%.",
+      "support_span": "up 6.1%",
+      "claim_type": "fact"
+    }
+  ],
+  "raw_extraction": "[\n  {\n    \"source_id\": \"train_12540\",\n    \"claim\": \"DigitalOcean is up 12.9% year-to-date.\",\n    \"support_span\": \"Up 12.9% year-to-date.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_10085\",\n    \"claim\": \"DigitalOcean's revenue is 30% in Europe and 22% in Asia.\",\n    \"support_span\": \"30% in Europe, and 22% in Asia\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_623\",\n    \"claim\": \"The software market is growing at 14.7% in 2026.\",\n    \"support_span\": \"The revised 14.7% reflects a more sustainable growth trajectory, not a softening market.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_623\",\n    \"claim\": \"The software market is growing at 14.7% in 2026.\",\n    \"support_span\": \"$1.4 trillion in software spend growing at 14.7%\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_623\",\n    \"claim\": \"The software market is growing at 14.7% in 2026.\",\n    \"support_span\": \"$180 billion in net new software spending in 2026 alone\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_11597\",\n    \"claim\": \"The software market is growing at 14.7% in 2026.\",\n    \"support_span\": \"Gartner now predicts global software spend will >accelerate< and growing a stunning 14.7% to $1.4 Trillion in 2026\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_623\",\n    \"claim\": \"The software market is $1.4 trillion.\",\n    \"support_span\": \"$1.4T+\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"train_623\",\n    \"claim\": \"Data center systems are growing at 31.7%.\",\n    \"support_span\": \"up 31.7%\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_623\",\n    \"claim\": \"Devices are growing at 6.1%.\",\n    \"support_span\": \"up 6.1%\",\n    \"claim_type\": \"fact\"\n  }\n]",
+  "validation_rejected": [
+    {
+      "source_id": "train_623",
+      "claim": "The software market is growing at 14.7% in 2026.",
+      "support_span": "The revised 14.7% reflects a more sustainable growth trajectory, not a softening market.",
+      "claim_type": "fact",
+      "reason": "numeric_not_in_span"
+    },
+    {
+      "source_id": "train_623",
+      "claim": "The software market is growing at 14.7% in 2026.",
+      "support_span": "$1.4 trillion in software spend growing at 14.7%",
+      "claim_type": "fact",
+      "reason": "numeric_not_in_span"
+    },
+    {
+      "source_id": "train_623",
+      "claim": "The software market is growing at 14.7% in 2026.",
+      "support_span": "$180 billion in net new software spending in 2026 alone",
+      "claim_type": "fact",
+      "reason": "numeric_not_in_span"
+    }
+  ],
+  "verifier_rejected": [],
+  "verified": [
+    {
+      "source_id": "train_12540",
+      "claim": "DigitalOcean is up 12.9% year-to-date.",
+      "support_span": "Up 12.9% year-to-date.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_10085",
+      "claim": "DigitalOcean's revenue is 30% in Europe and 22% in Asia.",
+      "support_span": "30% in Europe, and 22% in Asia",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_11597",
+      "claim": "The software market is growing at 14.7% in 2026.",
+      "support_span": "Gartner now predicts global software spend will >accelerate< and growing a stunning 14.7% to $1.4 Trillion in 2026",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_623",
+      "claim": "The software market is $1.4 trillion.",
+      "support_span": "$1.4T+",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "train_623",
+      "claim": "Data center systems are growing at 31.7%.",
+      "support_span": "up 31.7%",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_623",
+      "claim": "Devices are growing at 6.1%.",
+      "support_span": "up 6.1%",
+      "claim_type": "fact"
+    }
+  ],
+  "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] DigitalOcean is up 12.9% year-to-date.\n[E2] DigitalOcean's revenue is 30% in Europe and 22% in Asia.\n[E3] The software market is growing at 14.7% in 2026.\n[E4] The software market is $1.4 trillion.\n[E5] Data center systems are growing at 31.7%.\n[E6] Devices are growing at 6.1%.",
+  "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: DigitalOcean? It’s Up 12% in 2026. While The Rest of Software Is Down 24%. Here’s Why.\n\nSource passages:\n[train_12540]\n“And in the middle of all of this carnage\n\nDigitalOcean (DOCN) is sitting at $54.62. Up 12.9% year-to-date. Up 29% over the past year.”\n\n[train_10085]\n#7.  Only 38% of revenue in North America.\nThe Cloud is global, and DigitalOcean has followed it.  With 30% in Europe, and 22% in Asia, DigitalOcean’s revenue is truly global.\nWow, what a story!!  A niche of a free and super-cheap Cloud for individual and small developers that just grew and grew into a $500m ARR engine.  Even as the Big Guys went more and more enterprise.\n\n[train_623]\nThe revised 14.7% reflects a more sustainable growth trajectory, not a softening market. And $1.4 trillion in software spend growing at 14.7% still means roughly\n$180 billion in net new software spending\nin 2026 alone\n. That’s nearly the entire software market from 15 years ago showing up as incremental spend in a single year. If your B2B company isn’t growing at least 14.7% this year, you’re losing share to someone who is. Where the Money Is Actually Going\nLet’s break down the IT spending categories so you can see where the dollars flow:\nData Center Systems: $650B+ (up 31.7%\n)\n— This is the AI infrastructure build-out. Servers, networking, storage. Hyperscalers are driving most of it, but enterprise on-prem AI infrastructure is growing too. Software: $1.4T+ (up 14.7%)\n— The biggest single category in IT spending and still accelerating. Application software plus infrastructure software. This is where B2B companies live. IT Services: growing steadily\n— Consulting, implementation, managed services. Growth is solid but slower than software and data center. Devices: $836B (up 6.1%)\n— Phones, PCs, tablets. Growth is decelerating from 2025 due to rising memory prices and pulled-forward demand. Telecom: modest growth\n— The slowest-growing category, as usual. The story here is straightforward: infrastructure and software are eating everything. If you sell B2B software, the total addressable market just got bigger. Again. The Uncertainty Pause Is Over. But the Reallocation Continues. Remember the “uncertainty pause” from Q2-Q3 2025?\n\n[train_11597]\nCall it a lot of things -- but don't call it a downturn. And don't call it a slowdown. Gartner now predicts global software spend will >accelerate< and growing a stunning 14.7% to $1.4 Trillion in 2026. That's net new $180B+ of software spend this year. Go get your share.",
+  "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: DigitalOcean? It’s Up 12% in 2026. While The Rest of Software Is Down 24%. Here’s Why.\n\nSource passages:\n[train_12540]\n“And in the middle of all of this carnage\n\nDigitalOcean (DOCN) is sitting at $54.62. Up 12.9% year-to-date. Up 29% over the past year.”\n\n[train_10085]\n#7.  Only 38% of revenue in North America.\nThe Cloud is global, and DigitalOcean has followed it.  With 30% in Europe, and 22% in Asia, DigitalOcean’s revenue is truly global.\nWow, what a story!!  A niche of a free and super-cheap Cloud for individual and small developers that just grew and grew into a $500m ARR engine.  Even as the Big Guys went more and more enterprise.\n\n[train_623]\nThe revised 14.7% reflects a more sustainable growth trajectory, not a softening market. And $1.4 trillion in software spend growing at 14.7% still means roughly\n$180 billion in net new software spending\nin 2026 alone\n. That’s nearly the entire software market from 15 years ago showing up as incremental spend in a single year. If your B2B company isn’t growing at least 14.7% this year, you’re losing share to someone who is. Where the Money Is Actually Going\nLet’s break down the IT spending categories so you can see where the dollars flow:\nData Center Systems: $650B+ (up 31.7%\n)\n— This is the AI infrastructure build-out. Servers, networking, storage. Hyperscalers are driving most of it, but enterprise on-prem AI infrastructure is growing too. Software: $1.4T+ (up 14.7%)\n— The biggest single category in IT spending and still accelerating. Application software plus infrastructure software. This is where B2B companies live. IT Services: growing steadily\n— Consulting, implementation, managed services. Growth is solid but slower than software and data center. Devices: $836B (up 6.1%)\n— Phones, PCs, tablets. Growth is decelerating from 2025 due to rising memory prices and pulled-forward demand. Telecom: modest growth\n— The slowest-growing category, as usual. The story here is straightforward: infrastructure and software are eating everything. If you sell B2B software, the total addressable market just got bigger. Again. The Uncertainty Pause Is Over. But the Reallocation Continues. Remember the “uncertainty pause” from Q2-Q3 2025?\n\n[train_11597]\nCall it a lot of things -- but don't call it a downturn. And don't call it a slowdown. Gartner now predicts global software spend will >accelerate< and growing a stunning 14.7% to $1.4 Trillion in 2026. That's net new $180B+ of software spend this year. Go get your share.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+  "extraction_seconds": 14.933,
+  "verification_seconds": 0.0,
+  "verification_records": [],
+  "allowed_numeric_values": [
+    "pct:12",
+    "pct:12.9",
+    "pct:14.7",
+    "pct:22",
+    "pct:24",
+    "pct:30",
+    "pct:31.7",
+    "pct:6.1",
+    "usd:1",
+    "year:2026"
+  ],
+  "reason": null,
+  "extraction_stop_reason": "eos",
+  "extraction_attempts": 1,
+  "evidence_status": "verified"
+}

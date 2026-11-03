@@ -1,0 +1,280 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "topic_id": "gold_004",
+  "medium": "x",
+  "arm": "on",
+  "seed": 56,
+  "attempts": 1,
+  "evidence_sha256": "4e8073d703f3b0b868270d9d7128e43363d3e44088c5ac7864808c416ec52ab7",
+  "retrieval_hit_ids": [
+    "train_7976",
+    "train_7930",
+    "train_7590",
+    "train_7888"
+  ],
+  "retrieval_query": "Doubling Down: Mark Roberge, Co-Founder and Managing Director at Stage 2 Capital",
+  "retrieval_filter": null,
+  "style_applied": true,
+  "style_in_prompt": true,
+  "prompt_tokens": 546,
+  "generated_tokens_including_stop": 21,
+  "latency_seconds": 4.28,
+  "exemplar_ids": [
+    12508,
+    12509
+  ],
+  "saved_at": "2026-10-30T09:20:43.525007+00:00",
+  "trace": {
+    "id": "gold_004",
+    "format": "x_thread",
+    "topic": "Doubling Down: Mark Roberge, Co-Founder and Managing Director at Stage 2 Capital",
+    "audience": "B2B SaaS founders and operators",
+    "goal": "Teach one concrete operator lesson with specific examples and conviction.",
+    "cta": "none",
+    "k": 8,
+    "expected_facts": [
+      "The answer should extract at least one scaling lesson tied to Mark Roberge's operator/investor perspective.",
+      "It should connect growth-stage execution to repeatability, metrics, or hiring discipline.",
+      "It should explain what 'doubling down' means in operational terms rather than treating it as a slogan."
+    ],
+    "rubric_must_haves": [
+      "Identifies one concrete scaling lesson.",
+      "Uses a founder-operator lens rather than a generic profile piece.",
+      "Includes specific examples, metrics, or stage-based guidance.",
+      "Avoids turning the piece into biography-only content."
+    ],
+    "gold_reference": "A strong answer uses Mark Roberge as a hook to talk about disciplined scale: doubling down only works when the core motion already has evidence, metrics, and a repeatable playbook behind it. The best version should explain how founders know what to double down on, what signals matter, and why premature scaling remains the bigger risk.",
+    "medium": "x",
+    "prompt": "Write an X post in the style of Jason Lemkin about: Doubling Down: Mark Roberge, Co-Founder and Managing Director at Stage 2 Capital\n\nStyle examples from train-owned source text.\nUse them for voice only. They are not evidence for claims.\nDo not copy long passages verbatim.\n[Style 1]\nEveryone has an AI strategy. Almost nobody has agents in production.\n\nThat's the gap.\n\nGet ahead of the pack. Take 1 day our and join \nhttp://SaaStrDeploy.com '26 — our first-ever AI GTM Agent Summit inside of SaaStr AI 2026. May 12, SF.\n\nOne day. One mission. Deploy your AI agents.  No more excuses.\n[Style 2]\n\"The public markets just don't believe public leaders' revenue is durable anymore.\n\nSo the markets are going to panic every time we see any evidence their revenue might be even ... less durable.\" with \n@HarryStebbings\n \n@rodriscoll\n + me\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] There is a new series called 'Doubling Down'\n[E2] Jay Levy is Managing Partner at Zelkova Ventures\n[E3] There is a new series called 'Doubling Down'\n[E4] Mary D'Onofrio is Partner at Bessemer Venture Partners\n\nNow write the requested X post about: Doubling Down: Mark Roberge, Co-Founder and Managing Director at Stage 2 Capital",
+    "rendered_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nWrite an X post in the style of Jason Lemkin about: Doubling Down: Mark Roberge, Co-Founder and Managing Director at Stage 2 Capital\n\nStyle examples from train-owned source text.\nUse them for voice only. They are not evidence for claims.\nDo not copy long passages verbatim.\n[Style 1]\nEveryone has an AI strategy. Almost nobody has agents in production.\n\nThat's the gap.\n\nGet ahead of the pack. Take 1 day our and join \nhttp://SaaStrDeploy.com '26 — our first-ever AI GTM Agent Summit inside of SaaStr AI 2026. May 12, SF.\n\nOne day. One mission. Deploy your AI agents.  No more excuses.\n[Style 2]\n\"The public markets just don't believe public leaders' revenue is durable anymore.\n\nSo the markets are going to panic every time we see any evidence their revenue might be even ... less durable.\" with \n@HarryStebbings\n \n@rodriscoll\n + me\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] There is a new series called 'Doubling Down'\n[E2] Jay Levy is Managing Partner at Zelkova Ventures\n[E3] There is a new series called 'Doubling Down'\n[E4] Mary D'Onofrio is Partner at Bessemer Venture Partners\n\nNow write the requested X post about: Doubling Down: Mark Roberge, Co-Founder and Managing Director at Stage 2 Capital<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "answer": "Doubling Down: Mark Roberge, Co-Founder and Managing Director at Stage 2 Capital",
+    "raw_model_output": "Doubling Down: Mark Roberge, Co-Founder and Managing Director at Stage 2 Capital",
+    "deployment_output": "Doubling Down: Mark Roberge, Co-Founder and Managing Director at Stage 2 Capital",
+    "first_attempt_answer": "Doubling Down: Mark Roberge, Co-Founder and Managing Director at Stage 2 Capital",
+    "retry_answer": null,
+    "query": "Doubling Down: Mark Roberge, Co-Founder and Managing Director at Stage 2 Capital",
+    "max_new_tokens": 160,
+    "seed": 56,
+    "retry_seed": null,
+    "deployment_accepted": true,
+    "repair_occurred": false,
+    "generation_attempt": {
+      "seed": 56,
+      "answer": "Doubling Down: Mark Roberge, Co-Founder and Managing Director at Stage 2 Capital",
+      "numeric_grounding": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [],
+        "values": [],
+        "unsupported": []
+      },
+      "rag_source_copying": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 2,
+        "document_id": "train_7976",
+        "matched_generated_span": "doubling down",
+        "matched_retrieved_span": "doubling down"
+      },
+      "stop_reason": "eos"
+    },
+    "repair_attempt": null,
+    "accepted_attempt": 1,
+    "rag_source_copying": {
+      "applicable": true,
+      "threshold": 12,
+      "pass": true,
+      "flagged": false,
+      "max_contiguous_words": 2,
+      "document_id": "train_7976",
+      "matched_generated_span": "doubling down",
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 2,
+        "document_id": "train_7976",
+        "matched_generated_span": "doubling down",
+        "matched_retrieved_span": "doubling down"
+      },
+      "retry": null,
+      "retry_occurred": false,
+      "repair_occurred": false
+    },
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": true,
+      "failure": null,
+      "unsupported": [],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "failure": null,
+        "allowed": [],
+        "values": [],
+        "unsupported": []
+      },
+      "retry": null
+    },
+    "prompt_tokens": 546,
+    "backend": "unsloth",
+    "retrieval": true,
+    "retrieval_query": "Doubling Down: Mark Roberge, Co-Founder and Managing Director at Stage 2 Capital",
+    "retrieval_filter": null,
+    "retrieval_k": 4,
+    "retrieval_hits": [
+      {
+        "id": "train_7976",
+        "text": "“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market. Kicking us off is Jay Levy, Managing Partner at Zelkova Ventures.",
+        "medium": "blog",
+        "group_id": "25ca28f78d12d21d38220b51198bbc5d033c682e8f6aeb365a43b7b03cc2a2a8",
+        "row_id": 7976,
+        "split": "train",
+        "distance": 0.2835395336151123
+      },
+      {
+        "id": "train_7930",
+        "text": "“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market. We had a great one last week with Jay Levy, Managing Partner at Zelkova Ventures. Check that out\nhere\n.\nThis week we’re focusing on Mary D’Onofrio, Partner at Bessemer Venture Partners!",
+        "medium": "blog",
+        "group_id": "406ccb3366e58818b2debc350678dc193be93de687c06525d91829275efa50fc",
+        "row_id": 7930,
+        "split": "train",
+        "distance": 0.2881518006324768
+      },
+      {
+        "id": "train_7590",
+        "text": "“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market. We had a great one last time with Peter Specht, Partner at Creandum. Check that out\nhere\n.\nThis week we’re focusing on Lucy Deland, Co-founder & General Partner at Inspired Capital!",
+        "medium": "blog",
+        "group_id": "7b7b4a2524e1f06baa0633251d0308cdfcdb21a5c649b61ef4d6cfd6d2f3af06",
+        "row_id": 7590,
+        "split": "train",
+        "distance": 0.29265618324279785
+      },
+      {
+        "id": "train_7888",
+        "text": "“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market. We had a great one last week with Mary D’Onofrio, Partner at Bessemer Venture Partners. Check that out\nhere\n.\nThis week we’re focusing on Rebecca Lynn, Co-Founder & General Partner at Canvas Ventures!",
+        "medium": "blog",
+        "group_id": "406ccb3366e58818b2debc350678dc193be93de687c06525d91829275efa50fc",
+        "row_id": 7888,
+        "split": "train",
+        "distance": 0.29578572511672974
+      }
+    ],
+    "copying": [
+      {
+        "id": "train_7976",
+        "shared_word_span": 1
+      },
+      {
+        "id": "train_7930",
+        "shared_word_span": 1
+      },
+      {
+        "id": "train_7590",
+        "shared_word_span": 1
+      },
+      {
+        "id": "train_7888",
+        "shared_word_span": 1
+      }
+    ],
+    "retrieval_backend": "dense",
+    "proposed_atomic_claims": [
+      {
+        "source_id": "train_7976",
+        "claim": "There is a new series called 'Doubling Down'",
+        "support_span": "“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7930",
+        "claim": "Jay Levy is Managing Partner at Zelkova Ventures",
+        "support_span": "Jay Levy, Managing Partner at Zelkova Ventures.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7590",
+        "claim": "There is a new series called 'Doubling Down'",
+        "support_span": "“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7888",
+        "claim": "Mary D'Onofrio is Partner at Bessemer Venture Partners",
+        "support_span": "Mary D’Onofrio, Partner at Bessemer Venture Partners.",
+        "claim_type": "fact"
+      }
+    ],
+    "validation_rejected": [],
+    "verifier_rejected": [],
+    "verified_claims": [
+      {
+        "source_id": "train_7976",
+        "claim": "There is a new series called 'Doubling Down'",
+        "support_span": "“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7930",
+        "claim": "Jay Levy is Managing Partner at Zelkova Ventures",
+        "support_span": "Jay Levy, Managing Partner at Zelkova Ventures.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7590",
+        "claim": "There is a new series called 'Doubling Down'",
+        "support_span": "“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7888",
+        "claim": "Mary D'Onofrio is Partner at Bessemer Venture Partners",
+        "support_span": "Mary D’Onofrio, Partner at Bessemer Venture Partners.",
+        "claim_type": "fact"
+      }
+    ],
+    "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] There is a new series called 'Doubling Down'\n[E2] Jay Levy is Managing Partner at Zelkova Ventures\n[E3] There is a new series called 'Doubling Down'\n[E4] Mary D'Onofrio is Partner at Bessemer Venture Partners",
+    "raw_extraction": "[\n  {\n    \"source_id\": \"train_7976\",\n    \"claim\": \"There is a new series called 'Doubling Down'\",\n    \"support_span\": \"“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7930\",\n    \"claim\": \"Jay Levy is Managing Partner at Zelkova Ventures\",\n    \"support_span\": \"Jay Levy, Managing Partner at Zelkova Ventures.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7590\",\n    \"claim\": \"There is a new series called 'Doubling Down'\",\n    \"support_span\": \"“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_7888\",\n    \"claim\": \"Mary D'Onofrio is Partner at Bessemer Venture Partners\",\n    \"support_span\": \"Mary D’Onofrio, Partner at Bessemer Venture Partners.\",\n    \"claim_type\": \"fact\"\n  }\n]",
+    "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Doubling Down: Mark Roberge, Co-Founder and Managing Director at Stage 2 Capital\n\nSource passages:\n[train_7976]\n“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market. Kicking us off is Jay Levy, Managing Partner at Zelkova Ventures.\n\n[train_7930]\n“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market. We had a great one last week with Jay Levy, Managing Partner at Zelkova Ventures. Check that out\nhere\n.\nThis week we’re focusing on Mary D’Onofrio, Partner at Bessemer Venture Partners!\n\n[train_7590]\n“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market. We had a great one last time with Peter Specht, Partner at Creandum. Check that out\nhere\n.\nThis week we’re focusing on Lucy Deland, Co-founder & General Partner at Inspired Capital!\n\n[train_7888]\n“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market. We had a great one last week with Mary D’Onofrio, Partner at Bessemer Venture Partners. Check that out\nhere\n.\nThis week we’re focusing on Rebecca Lynn, Co-Founder & General Partner at Canvas Ventures!",
+    "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Doubling Down: Mark Roberge, Co-Founder and Managing Director at Stage 2 Capital\n\nSource passages:\n[train_7976]\n“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market. Kicking us off is Jay Levy, Managing Partner at Zelkova Ventures.\n\n[train_7930]\n“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market. We had a great one last week with Jay Levy, Managing Partner at Zelkova Ventures. Check that out\nhere\n.\nThis week we’re focusing on Mary D’Onofrio, Partner at Bessemer Venture Partners!\n\n[train_7590]\n“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market. We had a great one last time with Peter Specht, Partner at Creandum. Check that out\nhere\n.\nThis week we’re focusing on Lucy Deland, Co-founder & General Partner at Inspired Capital!\n\n[train_7888]\n“Doubling Down” is a new series where we hear from top B2B SaaS investors on their most recent activities and takes on the current market. We had a great one last week with Mary D’Onofrio, Partner at Bessemer Venture Partners. Check that out\nhere\n.\nThis week we’re focusing on Rebecca Lynn, Co-Founder & General Partner at Canvas Ventures!<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "extraction_seconds": 7.112,
+    "verification_seconds": 0.0,
+    "verification_records": [],
+    "llm_verifier_on_critical_path": false,
+    "allowed_numeric_values": [],
+    "distillation_adapter_enabled": false,
+    "verification_adapter_enabled": false,
+    "distillation_backend": "same_loaded_4bit_base_adapter_off",
+    "distillation_do_sample": false,
+    "extraction_max_new_tokens": 2560,
+    "verification_max_new_tokens": 24,
+    "distillation_seed": 0,
+    "support_spans_in_generator_prompt": false,
+    "evidence_stage_reason": null,
+    "evidence_status": "verified",
+    "extraction_attempts": 1,
+    "extraction_stop_reason": "eos",
+    "prompt_contract": "factual-reliability-v1",
+    "fixed_style_enabled": true,
+    "style_applied": true,
+    "style_exemplar_count": 2,
+    "latency_seconds": 4.28,
+    "generated_tokens_including_stop": 21,
+    "last_token_id": 128009,
+    "effective_eos_token_ids": [
+      128001,
+      128008,
+      128009
+    ],
+    "stop_reason": "eos",
+    "budget_fraction": 0.13125,
+    "early_eos": true,
+    "first_attempt_stop_reason": "eos",
+    "retry_stop_reason": null
+  }
+}

@@ -1,0 +1,452 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "topic_id": "gold_008",
+  "medium": "linkedin",
+  "arm": "on",
+  "seed": 71,
+  "attempts": 1,
+  "evidence_sha256": "f17315854b0c01d49b50def4a692ba6516d8c9bc0e1e06c8878a33638f435dbb",
+  "retrieval_hit_ids": [
+    "train_22819",
+    "train_7403",
+    "train_7765",
+    "train_15003"
+  ],
+  "retrieval_query": "Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too?",
+  "retrieval_filter": null,
+  "style_applied": true,
+  "style_in_prompt": true,
+  "prompt_tokens": 633,
+  "generated_tokens_including_stop": 320,
+  "latency_seconds": 21.764,
+  "exemplar_ids": [
+    11552,
+    11554
+  ],
+  "saved_at": "2026-10-30T09:29:57.911617+00:00",
+  "trace": {
+    "id": "gold_008",
+    "format": "linkedin_post",
+    "topic": "Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too?",
+    "audience": "B2B SaaS founders and operators",
+    "goal": "Teach one concrete operator lesson with specific examples and conviction.",
+    "cta": "none",
+    "k": 8,
+    "expected_facts": [
+      "The answer should explain that public multiples matter because they shape private funding expectations and exit math.",
+      "It should distinguish between what founders can control and what they cannot.",
+      "It should advise founders to focus on fundamentals rather than obsessing over market chatter."
+    ],
+    "rubric_must_haves": [
+      "Makes the public/private linkage clear.",
+      "Provides practical founder guidance, not just investor commentary.",
+      "Includes at least one example of how multiples affect fundraising, burn, or planning.",
+      "Balances realism with actionable advice."
+    ],
+    "gold_reference": "A strong answer should say that founders cannot ignore public multiples because they influence valuation, fundraising, and investor psychology, but they also should not let them run the company. The right move is to understand the implications, tighten execution, and build the kind of business that works under tougher market assumptions.",
+    "medium": "linkedin",
+    "prompt": "Write a LinkedIn post in the style of Jason Lemkin about: Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too?\n\nStyle examples from train-owned source text.\nUse them for voice only. They are not evidence for claims.\nDo not copy long passages verbatim.\n[Style 1]\nA truly great human is still better than any AI agent at most complex, judgment-intensive work. Full stop. If you can find and keep exceptional people, do it. But here’s the honest truth: most hires aren’t great hires. A lot of folks don't want to discuss it, or want to challenge it. But deploying a great AI Agent is just easier, and less stressful, than making a mediocre hire. This is why 2027 will be brutal for tech employment. We'll default to picking an AI Agent over a human for many \"hires\" because it's just ... easier.\n[Style 2]\nI know so many CROs and VPs of Sales that used to be truly great ... And are just burnt now. Fried. Some tried to mask it by hiring CROs and VPs under them to do the work. And sometimes, that does work. But man sales isn't easy. Each month, each quarter, it's a new battle. It's epic but also can take its toll. Just make sure when you hire one with the perfect LinkedIn ... that they really, truly can go into battle again. Not just talk the talk. And share great stories, of epic battles past.\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] VCs can't cause significant harm\n[E2] Sharing all fears is not recommended\n[E3] Sharing most fears is recommended\n[E4] Sharing all fears is not recommended\n\nNow write the requested LinkedIn post about: Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too?",
+    "rendered_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nWrite a LinkedIn post in the style of Jason Lemkin about: Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too?\n\nStyle examples from train-owned source text.\nUse them for voice only. They are not evidence for claims.\nDo not copy long passages verbatim.\n[Style 1]\nA truly great human is still better than any AI agent at most complex, judgment-intensive work. Full stop. If you can find and keep exceptional people, do it. But here’s the honest truth: most hires aren’t great hires. A lot of folks don't want to discuss it, or want to challenge it. But deploying a great AI Agent is just easier, and less stressful, than making a mediocre hire. This is why 2027 will be brutal for tech employment. We'll default to picking an AI Agent over a human for many \"hires\" because it's just ... easier.\n[Style 2]\nI know so many CROs and VPs of Sales that used to be truly great ... And are just burnt now. Fried. Some tried to mask it by hiring CROs and VPs under them to do the work. And sometimes, that does work. But man sales isn't easy. Each month, each quarter, it's a new battle. It's epic but also can take its toll. Just make sure when you hire one with the perfect LinkedIn ... that they really, truly can go into battle again. Not just talk the talk. And share great stories, of epic battles past.\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] VCs can't cause significant harm\n[E2] Sharing all fears is not recommended\n[E3] Sharing most fears is recommended\n[E4] Sharing all fears is not recommended\n\nNow write the requested LinkedIn post about: Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "answer": "Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too? There’s no shortage of concerns right now. The public markets have been in a funk since early 2026, with nearly half of S&P 500 companies trading below their forward earnings multiples — something we haven’t seen in decades. Many unicorns are burning cash fast, and even some decacorn status companies like Databricks and Stripe are seeing valuations fall sharply despite strong revenue growth. What this means for your company depends on where you stand in the journey. If you’re pre-product-market fit, nothing changes dramatically. Investors aren’t going to walk away from funding deals based on what happens in the public markets. Their job is to pick winners before anyone else sees the value. If you’ve got product-market fit and growing rapidly (say, $10M+ ARR), you’ll likely see more scrutiny around burn multiple. That’s fair. Venture investors need to believe you’re capital-efficient enough to reach profitability without needing massive follow-on rounds down the road. But if you’re at scale ($100M+ ARR) and already profitable or close, then yes, these dynamics matter directly to your fundraising prospects. Here’s my advice: Don’t Panic Yet Keep doing what works: drive towards efficient growth and build a business that could thrive regardless of market conditions. Yes, being profitable matters. But “profitable” doesn’t mean you should slow down. It means you should optimize your unit economics while maintaining top-line momentum. Most importantly, focus on building real businesses, not paper returns",
+    "raw_model_output": "Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too? There’s no shortage of concerns right now. The public markets have been in a funk since early 2026, with nearly half of S&P 500 companies trading below their forward earnings multiples — something we haven’t seen in decades. Many unicorns are burning cash fast, and even some decacorn status companies like Databricks and Stripe are seeing valuations fall sharply despite strong revenue growth. What this means for your company depends on where you stand in the journey. If you’re pre-product-market fit, nothing changes dramatically. Investors aren’t going to walk away from funding deals based on what happens in the public markets. Their job is to pick winners before anyone else sees the value. If you’ve got product-market fit and growing rapidly (say, $10M+ ARR), you’ll likely see more scrutiny around burn multiple. That’s fair. Venture investors need to believe you’re capital-efficient enough to reach profitability without needing massive follow-on rounds down the road. But if you’re at scale ($100M+ ARR) and already profitable or close, then yes, these dynamics matter directly to your fundraising prospects. Here’s my advice: Don’t Panic Yet Keep doing what works: drive towards efficient growth and build a business that could thrive regardless of market conditions. Yes, being profitable matters. But “profitable” doesn’t mean you should slow down. It means you should optimize your unit economics while maintaining top-line momentum. Most importantly, focus on building real businesses, not paper returns",
+    "deployment_output": "Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too? There’s no shortage of concerns right now. The public markets have been in a funk since early 2026, with nearly half of S&P 500 companies trading below their forward earnings multiples — something we haven’t seen in decades. Many unicorns are burning cash fast, and even some decacorn status companies like Databricks and Stripe are seeing valuations fall sharply despite strong revenue growth. What this means for your company depends on where you stand in the journey. If you’re pre-product-market fit, nothing changes dramatically. Investors aren’t going to walk away from funding deals based on what happens in the public markets. Their job is to pick winners before anyone else sees the value. If you’ve got product-market fit and growing rapidly (say, $10M+ ARR), you’ll likely see more scrutiny around burn multiple. That’s fair. Venture investors need to believe you’re capital-efficient enough to reach profitability without needing massive follow-on rounds down the road. But if you’re at scale ($100M+ ARR) and already profitable or close, then yes, these dynamics matter directly to your fundraising prospects. Here’s my advice: Don’t Panic Yet Keep doing what works: drive towards efficient growth and build a business that could thrive regardless of market conditions. Yes, being profitable matters. But “profitable” doesn’t mean you should slow down. It means you should optimize your unit economics while maintaining top-line momentum. Most importantly, focus on building real businesses, not paper returns",
+    "first_attempt_answer": "Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too? There’s no shortage of concerns right now. The public markets have been in a funk since early 2026, with nearly half of S&P 500 companies trading below their forward earnings multiples — something we haven’t seen in decades. Many unicorns are burning cash fast, and even some decacorn status companies like Databricks and Stripe are seeing valuations fall sharply despite strong revenue growth. What this means for your company depends on where you stand in the journey. If you’re pre-product-market fit, nothing changes dramatically. Investors aren’t going to walk away from funding deals based on what happens in the public markets. Their job is to pick winners before anyone else sees the value. If you’ve got product-market fit and growing rapidly (say, $10M+ ARR), you’ll likely see more scrutiny around burn multiple. That’s fair. Venture investors need to believe you’re capital-efficient enough to reach profitability without needing massive follow-on rounds down the road. But if you’re at scale ($100M+ ARR) and already profitable or close, then yes, these dynamics matter directly to your fundraising prospects. Here’s my advice: Don’t Panic Yet Keep doing what works: drive towards efficient growth and build a business that could thrive regardless of market conditions. Yes, being profitable matters. But “profitable” doesn’t mean you should slow down. It means you should optimize your unit economics while maintaining top-line momentum. Most importantly, focus on building real businesses, not paper returns",
+    "retry_answer": null,
+    "query": "Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too?",
+    "max_new_tokens": 320,
+    "seed": 71,
+    "retry_seed": null,
+    "deployment_accepted": true,
+    "repair_occurred": false,
+    "generation_attempt": {
+      "seed": 71,
+      "answer": "Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too? There’s no shortage of concerns right now. The public markets have been in a funk since early 2026, with nearly half of S&P 500 companies trading below their forward earnings multiples — something we haven’t seen in decades. Many unicorns are burning cash fast, and even some decacorn status companies like Databricks and Stripe are seeing valuations fall sharply despite strong revenue growth. What this means for your company depends on where you stand in the journey. If you’re pre-product-market fit, nothing changes dramatically. Investors aren’t going to walk away from funding deals based on what happens in the public markets. Their job is to pick winners before anyone else sees the value. If you’ve got product-market fit and growing rapidly (say, $10M+ ARR), you’ll likely see more scrutiny around burn multiple. That’s fair. Venture investors need to believe you’re capital-efficient enough to reach profitability without needing massive follow-on rounds down the road. But if you’re at scale ($100M+ ARR) and already profitable or close, then yes, these dynamics matter directly to your fundraising prospects. Here’s my advice: Don’t Panic Yet Keep doing what works: drive towards efficient growth and build a business that could thrive regardless of market conditions. Yes, being profitable matters. But “profitable” doesn’t mean you should slow down. It means you should optimize your unit economics while maintaining top-line momentum. Most importantly, focus on building real businesses, not paper returns",
+      "numeric_grounding": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [],
+        "values": [
+          {
+            "value": "$10M+",
+            "canonical": "usd:10000000",
+            "sentence": "If you’ve got product-market fit and growing rapidly (say, $10M+ ARR), you’ll likely see more scrutiny around burn multiple",
+            "start": 830,
+            "end": 835
+          },
+          {
+            "value": "$100M+",
+            "canonical": "usd:100000000",
+            "sentence": "But if you’re at scale ($100M+ ARR) and already profitable or close, then yes, these dynamics matter directly to your fundraising prospects",
+            "start": 1078,
+            "end": 1084
+          },
+          {
+            "value": "2026",
+            "canonical": "year:2026",
+            "sentence": "The public markets have been in a funk since early 2026, with nearly half of S&P 500 companies trading below their forward earnings multiples — something we haven’t seen in decades",
+            "start": 166,
+            "end": 170
+          },
+          {
+            "value": "500",
+            "canonical": "n:500",
+            "sentence": "The public markets have been in a funk since early 2026, with nearly half of S&P 500 companies trading below their forward earnings multiples — something we haven’t seen in decades",
+            "start": 196,
+            "end": 199
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "$10M+",
+            "canonical": "usd:10000000",
+            "sentence": "If you’ve got product-market fit and growing rapidly (say, $10M+ ARR), you’ll likely see more scrutiny around burn multiple",
+            "start": 830,
+            "end": 835
+          },
+          {
+            "value": "$100M+",
+            "canonical": "usd:100000000",
+            "sentence": "But if you’re at scale ($100M+ ARR) and already profitable or close, then yes, these dynamics matter directly to your fundraising prospects",
+            "start": 1078,
+            "end": 1084
+          },
+          {
+            "value": "2026",
+            "canonical": "year:2026",
+            "sentence": "The public markets have been in a funk since early 2026, with nearly half of S&P 500 companies trading below their forward earnings multiples — something we haven’t seen in decades",
+            "start": 166,
+            "end": 170
+          },
+          {
+            "value": "500",
+            "canonical": "n:500",
+            "sentence": "The public markets have been in a funk since early 2026, with nearly half of S&P 500 companies trading below their forward earnings multiples — something we haven’t seen in decades",
+            "start": 196,
+            "end": 199
+          }
+        ]
+      },
+      "rag_source_copying": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 2,
+        "document_id": "train_7403",
+        "matched_generated_span": "your vcs",
+        "matched_retrieved_span": "your vcs"
+      },
+      "stop_reason": "length"
+    },
+    "repair_attempt": null,
+    "accepted_attempt": 1,
+    "rag_source_copying": {
+      "applicable": true,
+      "threshold": 12,
+      "pass": true,
+      "flagged": false,
+      "max_contiguous_words": 2,
+      "document_id": "train_7403",
+      "matched_generated_span": "your vcs",
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 2,
+        "document_id": "train_7403",
+        "matched_generated_span": "your vcs",
+        "matched_retrieved_span": "your vcs"
+      },
+      "retry": null,
+      "retry_occurred": false,
+      "repair_occurred": false
+    },
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": false,
+      "failure": "unsupported_numeric_grounding",
+      "unsupported": [
+        {
+          "value": "$10M+",
+          "canonical": "usd:10000000",
+          "sentence": "If you’ve got product-market fit and growing rapidly (say, $10M+ ARR), you’ll likely see more scrutiny around burn multiple",
+          "start": 830,
+          "end": 835
+        },
+        {
+          "value": "$100M+",
+          "canonical": "usd:100000000",
+          "sentence": "But if you’re at scale ($100M+ ARR) and already profitable or close, then yes, these dynamics matter directly to your fundraising prospects",
+          "start": 1078,
+          "end": 1084
+        },
+        {
+          "value": "2026",
+          "canonical": "year:2026",
+          "sentence": "The public markets have been in a funk since early 2026, with nearly half of S&P 500 companies trading below their forward earnings multiples — something we haven’t seen in decades",
+          "start": 166,
+          "end": 170
+        },
+        {
+          "value": "500",
+          "canonical": "n:500",
+          "sentence": "The public markets have been in a funk since early 2026, with nearly half of S&P 500 companies trading below their forward earnings multiples — something we haven’t seen in decades",
+          "start": 196,
+          "end": 199
+        }
+      ],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [],
+        "values": [
+          {
+            "value": "$10M+",
+            "canonical": "usd:10000000",
+            "sentence": "If you’ve got product-market fit and growing rapidly (say, $10M+ ARR), you’ll likely see more scrutiny around burn multiple",
+            "start": 830,
+            "end": 835
+          },
+          {
+            "value": "$100M+",
+            "canonical": "usd:100000000",
+            "sentence": "But if you’re at scale ($100M+ ARR) and already profitable or close, then yes, these dynamics matter directly to your fundraising prospects",
+            "start": 1078,
+            "end": 1084
+          },
+          {
+            "value": "2026",
+            "canonical": "year:2026",
+            "sentence": "The public markets have been in a funk since early 2026, with nearly half of S&P 500 companies trading below their forward earnings multiples — something we haven’t seen in decades",
+            "start": 166,
+            "end": 170
+          },
+          {
+            "value": "500",
+            "canonical": "n:500",
+            "sentence": "The public markets have been in a funk since early 2026, with nearly half of S&P 500 companies trading below their forward earnings multiples — something we haven’t seen in decades",
+            "start": 196,
+            "end": 199
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "$10M+",
+            "canonical": "usd:10000000",
+            "sentence": "If you’ve got product-market fit and growing rapidly (say, $10M+ ARR), you’ll likely see more scrutiny around burn multiple",
+            "start": 830,
+            "end": 835
+          },
+          {
+            "value": "$100M+",
+            "canonical": "usd:100000000",
+            "sentence": "But if you’re at scale ($100M+ ARR) and already profitable or close, then yes, these dynamics matter directly to your fundraising prospects",
+            "start": 1078,
+            "end": 1084
+          },
+          {
+            "value": "2026",
+            "canonical": "year:2026",
+            "sentence": "The public markets have been in a funk since early 2026, with nearly half of S&P 500 companies trading below their forward earnings multiples — something we haven’t seen in decades",
+            "start": 166,
+            "end": 170
+          },
+          {
+            "value": "500",
+            "canonical": "n:500",
+            "sentence": "The public markets have been in a funk since early 2026, with nearly half of S&P 500 companies trading below their forward earnings multiples — something we haven’t seen in decades",
+            "start": 196,
+            "end": 199
+          }
+        ]
+      },
+      "retry": null
+    },
+    "prompt_tokens": 633,
+    "backend": "unsloth",
+    "retrieval": true,
+    "retrieval_query": "Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too?",
+    "retrieval_filter": null,
+    "retrieval_k": 4,
+    "retrieval_hits": [
+      {
+        "id": "train_22819",
+        "text": "dont worry about what VCs can \"do to you\"\n\ndo have someone you trust on the board",
+        "medium": "x",
+        "group_id": "0d0ea1f782ef405cfb8fa7880e09edbdca98c39e6f502094f257112459a50536",
+        "row_id": 22819,
+        "split": "train",
+        "distance": 0.2996854782104492
+      },
+      {
+        "id": "train_7403",
+        "text": "4. But don’t share\nall\nyour fears.  Maybe 80% is enough\n.\nHighlight risks for your VCs, but even with them, don’t let them see you sweat. If they see you sweat too much, they’ll get scared/nervous too, and it will spiral downward.  Share the risks, and most of your concerns — but come with a plan.",
+        "medium": "blog",
+        "group_id": "8fd42429582c749d9918c76ade81f2f927285afe204ab72a0341d2418635ad88",
+        "row_id": 7403,
+        "split": "train",
+        "distance": 0.3011927604675293
+      },
+      {
+        "id": "train_7765",
+        "text": "4. But don’t share\nall\nyour fears\n.\nHighlight risks for your VCs, but even with them, don’t let them see you sweat. If they see you sweat, they’ll get scared/nervous too, and it will spiral downward.",
+        "medium": "blog",
+        "group_id": "8fd42429582c749d9918c76ade81f2f927285afe204ab72a0341d2418635ad88",
+        "row_id": 7765,
+        "split": "train",
+        "distance": 0.31981611251831055
+      },
+      {
+        "id": "train_15003",
+        "text": "\"Can VCs make money on growth rounds with current 5x-6x public multiples?  Probably ... not\" with \n@HarryStebbings\n\nFull convo here -> \nhttps://youtu.be/6IM-yO1gZOE?si=P1WOQ2cILZYHhpsX\n…",
+        "medium": "x",
+        "group_id": "19901b7b08087b45f291ac9d4a2010fc1deca2a852c74eb484118808fb902d12",
+        "row_id": 15003,
+        "split": "train",
+        "distance": 0.32515329122543335
+      }
+    ],
+    "copying": [
+      {
+        "id": "train_22819",
+        "shared_word_span": 1
+      },
+      {
+        "id": "train_7403",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_7765",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_15003",
+        "shared_word_span": 1
+      }
+    ],
+    "retrieval_backend": "dense",
+    "proposed_atomic_claims": [
+      {
+        "source_id": "train_22819",
+        "claim": "VCs can't cause significant harm",
+        "claim_type": "fact",
+        "support_span": "dont worry about what VCs can \"do to you\""
+      },
+      {
+        "source_id": "train_7403",
+        "claim": "Sharing all fears is not recommended",
+        "claim_type": "fact",
+        "support_span": "But don’t share all your fears."
+      },
+      {
+        "source_id": "train_7403",
+        "claim": "Sharing most fears is recommended",
+        "claim_type": "fact",
+        "support_span": "Share the risks, and most of your concerns"
+      },
+      {
+        "source_id": "train_7765",
+        "claim": "Sharing all fears is not recommended",
+        "claim_type": "fact",
+        "support_span": "But don’t share all your fears"
+      },
+      {
+        "source_id": "train_7765",
+        "claim": "Sharing fears can lead to a downward spiral",
+        "claim_type": "fact",
+        "support_span": "If they see you sweat, they’ll get scared/nervous too, and it will spiral downward"
+      },
+      {
+        "source_id": "train_15003",
+        "claim": "VCs can't make money on growth rounds with current 5x-6x public multiples",
+        "claim_type": "fact",
+        "support_span": "Probably... not"
+      }
+    ],
+    "validation_rejected": [
+      {
+        "source_id": "train_7765",
+        "claim": "Sharing fears can lead to a downward spiral",
+        "support_span": "If they see you sweat, they’ll get scared/nervous too, and it will spiral downward",
+        "claim_type": "fact",
+        "reason": "interrogative_assertion"
+      },
+      {
+        "source_id": "train_15003",
+        "claim": "VCs can't make money on growth rounds with current 5x-6x public multiples",
+        "support_span": "Probably... not",
+        "claim_type": "fact",
+        "reason": "support_not_in_source"
+      }
+    ],
+    "verifier_rejected": [],
+    "verified_claims": [
+      {
+        "source_id": "train_22819",
+        "claim": "VCs can't cause significant harm",
+        "support_span": "dont worry about what VCs can \"do to you\"",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7403",
+        "claim": "Sharing all fears is not recommended",
+        "support_span": "But don’t share all your fears.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7403",
+        "claim": "Sharing most fears is recommended",
+        "support_span": "Share the risks, and most of your concerns",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_7765",
+        "claim": "Sharing all fears is not recommended",
+        "support_span": "But don’t share all your fears",
+        "claim_type": "fact"
+      }
+    ],
+    "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] VCs can't cause significant harm\n[E2] Sharing all fears is not recommended\n[E3] Sharing most fears is recommended\n[E4] Sharing all fears is not recommended",
+    "raw_extraction": "[\n  {\n    \"source_id\": \"train_22819\",\n    \"claim\": \"VCs can't cause significant harm\",\n    \"claim_type\": \"fact\",\n    \"support_span\": \"dont worry about what VCs can \\\"do to you\\\"\"\n  },\n  {\n    \"source_id\": \"train_7403\",\n    \"claim\": \"Sharing all fears is not recommended\",\n    \"claim_type\": \"fact\",\n    \"support_span\": \"But don’t share all your fears.\"\n  },\n  {\n    \"source_id\": \"train_7403\",\n    \"claim\": \"Sharing most fears is recommended\",\n    \"claim_type\": \"fact\",\n    \"support_span\": \"Share the risks, and most of your concerns\"\n  },\n  {\n    \"source_id\": \"train_7765\",\n    \"claim\": \"Sharing all fears is not recommended\",\n    \"claim_type\": \"fact\",\n    \"support_span\": \"But don’t share all your fears\"\n  },\n  {\n    \"source_id\": \"train_7765\",\n    \"claim\": \"Sharing fears can lead to a downward spiral\",\n    \"claim_type\": \"fact\",\n    \"support_span\": \"If they see you sweat, they’ll get scared/nervous too, and it will spiral downward\"\n  },\n  {\n    \"source_id\": \"train_15003\",\n    \"claim\": \"VCs can't make money on growth rounds with current 5x-6x public multiples\",\n    \"claim_type\": \"fact\",\n    \"support_span\": \"Probably... not\"\n  }\n]",
+    "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too?\n\nSource passages:\n[train_22819]\ndont worry about what VCs can \"do to you\"\n\ndo have someone you trust on the board\n\n[train_7403]\n4. But don’t share\nall\nyour fears.  Maybe 80% is enough\n.\nHighlight risks for your VCs, but even with them, don’t let them see you sweat. If they see you sweat too much, they’ll get scared/nervous too, and it will spiral downward.  Share the risks, and most of your concerns — but come with a plan.\n\n[train_7765]\n4. But don’t share\nall\nyour fears\n.\nHighlight risks for your VCs, but even with them, don’t let them see you sweat. If they see you sweat, they’ll get scared/nervous too, and it will spiral downward.\n\n[train_15003]\n\"Can VCs make money on growth rounds with current 5x-6x public multiples?  Probably ... not\" with \n@HarryStebbings\n\nFull convo here -> \nhttps://youtu.be/6IM-yO1gZOE?si=P1WOQ2cILZYHhpsX\n…",
+    "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Your VCs Are Worried About Public Multiples. Do You Need To Worry, Too?\n\nSource passages:\n[train_22819]\ndont worry about what VCs can \"do to you\"\n\ndo have someone you trust on the board\n\n[train_7403]\n4. But don’t share\nall\nyour fears.  Maybe 80% is enough\n.\nHighlight risks for your VCs, but even with them, don’t let them see you sweat. If they see you sweat too much, they’ll get scared/nervous too, and it will spiral downward.  Share the risks, and most of your concerns — but come with a plan.\n\n[train_7765]\n4. But don’t share\nall\nyour fears\n.\nHighlight risks for your VCs, but even with them, don’t let them see you sweat. If they see you sweat, they’ll get scared/nervous too, and it will spiral downward.\n\n[train_15003]\n\"Can VCs make money on growth rounds with current 5x-6x public multiples?  Probably ... not\" with \n@HarryStebbings\n\nFull convo here -> \nhttps://youtu.be/6IM-yO1gZOE?si=P1WOQ2cILZYHhpsX\n…<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "extraction_seconds": 8.434,
+    "verification_seconds": 0.0,
+    "verification_records": [],
+    "llm_verifier_on_critical_path": false,
+    "allowed_numeric_values": [],
+    "distillation_adapter_enabled": false,
+    "verification_adapter_enabled": false,
+    "distillation_backend": "same_loaded_4bit_base_adapter_off",
+    "distillation_do_sample": false,
+    "extraction_max_new_tokens": 2560,
+    "verification_max_new_tokens": 24,
+    "distillation_seed": 0,
+    "support_spans_in_generator_prompt": false,
+    "evidence_stage_reason": null,
+    "evidence_status": "verified",
+    "extraction_attempts": 1,
+    "extraction_stop_reason": "eos",
+    "prompt_contract": "factual-reliability-v1",
+    "fixed_style_enabled": true,
+    "style_applied": true,
+    "style_exemplar_count": 2,
+    "latency_seconds": 21.764,
+    "generated_tokens_including_stop": 320,
+    "last_token_id": 4780,
+    "effective_eos_token_ids": [
+      128001,
+      128008,
+      128009
+    ],
+    "stop_reason": "length",
+    "budget_fraction": 1.0,
+    "early_eos": false,
+    "first_attempt_stop_reason": "length",
+    "retry_stop_reason": null
+  }
+}

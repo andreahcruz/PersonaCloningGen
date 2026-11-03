@@ -1,0 +1,12 @@
+{
+  "artifact": "posthoc_engineering_selection",
+  "does_not_modify": "experiments/EXP-model-f-desc-vs-rel-32/desc_vs_rel_recommendation.json",
+  "does_not_replace": "experiments/EXP-model-f-quick-pilot/arm_selection.json",
+  "frozen": false,
+  "frozen_pilot_arm": "F-SOURCE",
+  "frozen_pilot_unchanged": true,
+  "reason": "F-REL is the engineering profile for this panel. The frozen pilot remains F-SOURCE. The stage-2 recommendation file is unchanged. This panel was not used to make the choice.",
+  "selected_arm": "F-REL",
+  "stage2_recommendation_unchanged": true,
+  "uses_120_prompt_panel_for_selection": false
+}

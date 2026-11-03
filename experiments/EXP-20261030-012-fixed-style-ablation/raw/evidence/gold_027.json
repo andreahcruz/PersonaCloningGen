@@ -1,0 +1,85 @@
+{
+  "proposed": [
+    {
+      "source_id": "train_1707",
+      "claim": "Companies deploying working AI agents are operating with 30-50% fewer humans in key functions.",
+      "support_span": "Because here’s what I’m seeing: companies deploying working AI agents are operating with 30-50% fewer humans in key functions.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_1707",
+      "claim": "Companies deploying working AI agents are operating with 30-50% fewer humans in key functions.",
+      "support_span": "Because here’s what I’m seeing: companies deploying working AI agents are operating with 30-50% fewer humans in key functions.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_12557",
+      "claim": "How to manage 20+ AI Agents without them stepping all over each other",
+      "support_span": "How we manage 20+ AI Agents without them stepping all over each other...",
+      "claim_type": "position"
+    },
+    {
+      "source_id": "train_5556",
+      "claim": "Our AI can help you figure out what to do about churn and other issues",
+      "support_span": "Our AI Can Help You Figure Out What To Do About Churn and Other Issues",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_12610",
+      "claim": "SaaStr AI 2026 will answer the question of how many AI agents a B2B company should be running",
+      "support_span": "At SaaStr AI 2026, we answer that. With receipts.",
+      "claim_type": "fact"
+    }
+  ],
+  "raw_extraction": "[\n  {\n    \"source_id\": \"train_1707\",\n    \"claim\": \"Companies deploying working AI agents are operating with 30-50% fewer humans in key functions.\",\n    \"support_span\": \"Because here’s what I’m seeing: companies deploying working AI agents are operating with 30-50% fewer humans in key functions.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_1707\",\n    \"claim\": \"Companies deploying working AI agents are operating with 30-50% fewer humans in key functions.\",\n    \"support_span\": \"Because here’s what I’m seeing: companies deploying working AI agents are operating with 30-50% fewer humans in key functions.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_12557\",\n    \"claim\": \"How to manage 20+ AI Agents without them stepping all over each other\",\n    \"support_span\": \"How we manage 20+ AI Agents without them stepping all over each other...\",\n    \"claim_type\": \"position\"\n  },\n  {\n    \"source_id\": \"train_5556\",\n    \"claim\": \"Our AI can help you figure out what to do about churn and other issues\",\n    \"support_span\": \"Our AI Can Help You Figure Out What To Do About Churn and Other Issues\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_12610\",\n    \"claim\": \"SaaStr AI 2026 will answer the question of how many AI agents a B2B company should be running\",\n    \"support_span\": \"At SaaStr AI 2026, we answer that. With receipts.\",\n    \"claim_type\": \"fact\"\n  }\n]",
+  "validation_rejected": [
+    {
+      "source_id": "train_12557",
+      "claim": "How to manage 20+ AI Agents without them stepping all over each other",
+      "support_span": "How we manage 20+ AI Agents without them stepping all over each other...",
+      "claim_type": "position",
+      "reason": "support_not_in_source"
+    }
+  ],
+  "verifier_rejected": [],
+  "verified": [
+    {
+      "source_id": "train_1707",
+      "claim": "Companies deploying working AI agents are operating with 30-50% fewer humans in key functions.",
+      "support_span": "Because here’s what I’m seeing: companies deploying working AI agents are operating with 30-50% fewer humans in key functions.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_1707",
+      "claim": "Companies deploying working AI agents are operating with 30-50% fewer humans in key functions.",
+      "support_span": "Because here’s what I’m seeing: companies deploying working AI agents are operating with 30-50% fewer humans in key functions.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_5556",
+      "claim": "Our AI can help you figure out what to do about churn and other issues",
+      "support_span": "Our AI Can Help You Figure Out What To Do About Churn and Other Issues",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "train_12610",
+      "claim": "SaaStr AI 2026 will answer the question of how many AI agents a B2B company should be running",
+      "support_span": "At SaaStr AI 2026, we answer that. With receipts.",
+      "claim_type": "fact"
+    }
+  ],
+  "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] Companies deploying working AI agents are operating with 30-50% fewer humans in key functions.\n[E2] Companies deploying working AI agents are operating with 30-50% fewer humans in key functions.\n[E3] Our AI can help you figure out what to do about churn and other issues\n[E4] SaaStr AI 2026 will answer the question of how many AI agents a B2B company should be running",
+  "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: We Have 30 AI Agents in Production. Here Are the Top 5 Issues No One Talks About\n\nSource passages:\n[train_1707]\n#5. Launch Your First AI Agent That Actually Works.  And That You Can Really Sell.\nNot an AI feature. Not a chatbot. A real AI agent that handles actual workflows end-to-end.\nI’ve deployed 20+ AI agents across SaaStr’s operations. Support agents. Content agents. Sales qualification agents. Together they’ve generated over $1M in revenue while reducing our headcount needs.\nMost founders are still debating whether to add AI to their product. That’s table stakes now. The real question is: are you using AI agents to fundamentally transform your own operations?\nBecause here’s what I’m seeing: companies deploying working AI agents are operating with 30-50% fewer humans in key functions. Customer support. Sales development. Content creation. Implementation. Legal review.\nThose aren’t future capabilities. They’re working today. At scale. And if you’re not deploying them, your competitors are.\nLaunch one high value agent in Q1. Get it working. Learn. Then launch two more by end of year.\nThe companies that figure out AI agents first will have massive cost advantages and speed advantages over everyone else. Don’t wait.\n\n[train_12557]\nHow we manage 20+ AI Agents without them stepping all over each other ...\n\n[train_5556]\n#5.  Our AI Can Help You Figure Out What To Do About Churn and Other Issues\nShare all your challenges and metrics, and our AI will help come up with a game plan for you.\n\n[train_12610]\nEvery B2B company I talk to right now has the same question: \"How many AI agents should we be running?\"\n\nAt SaaStr AI 2026, we answer that. With receipts.\n\nMay 12-14. SF Bay.",
+  "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: We Have 30 AI Agents in Production. Here Are the Top 5 Issues No One Talks About\n\nSource passages:\n[train_1707]\n#5. Launch Your First AI Agent That Actually Works.  And That You Can Really Sell.\nNot an AI feature. Not a chatbot. A real AI agent that handles actual workflows end-to-end.\nI’ve deployed 20+ AI agents across SaaStr’s operations. Support agents. Content agents. Sales qualification agents. Together they’ve generated over $1M in revenue while reducing our headcount needs.\nMost founders are still debating whether to add AI to their product. That’s table stakes now. The real question is: are you using AI agents to fundamentally transform your own operations?\nBecause here’s what I’m seeing: companies deploying working AI agents are operating with 30-50% fewer humans in key functions. Customer support. Sales development. Content creation. Implementation. Legal review.\nThose aren’t future capabilities. They’re working today. At scale. And if you’re not deploying them, your competitors are.\nLaunch one high value agent in Q1. Get it working. Learn. Then launch two more by end of year.\nThe companies that figure out AI agents first will have massive cost advantages and speed advantages over everyone else. Don’t wait.\n\n[train_12557]\nHow we manage 20+ AI Agents without them stepping all over each other ...\n\n[train_5556]\n#5.  Our AI Can Help You Figure Out What To Do About Churn and Other Issues\nShare all your challenges and metrics, and our AI will help come up with a game plan for you.\n\n[train_12610]\nEvery B2B company I talk to right now has the same question: \"How many AI agents should we be running?\"\n\nAt SaaStr AI 2026, we answer that. With receipts.\n\nMay 12-14. SF Bay.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+  "extraction_seconds": 9.969,
+  "verification_seconds": 0.0,
+  "verification_records": [],
+  "allowed_numeric_values": [
+    "pct:50",
+    "year:2026"
+  ],
+  "reason": null,
+  "extraction_stop_reason": "eos",
+  "extraction_attempts": 1,
+  "evidence_status": "verified"
+}

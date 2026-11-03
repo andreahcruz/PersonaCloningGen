@@ -1,0 +1,20 @@
+{
+  "finished_at": "2026-10-30T10:19:51.681567+00:00",
+  "elapsed_seconds": 4015.354,
+  "smoke_ok": true,
+  "completed_topics": 30,
+  "gpu": {
+    "available": true,
+    "name": "NVIDIA GeForce RTX 5070 Ti",
+    "allocated_mb": 6031.9,
+    "reserved_mb": 6152.0,
+    "max_allocated_mb": 7025.2
+  },
+  "git": {
+    "commit": "95db4f54a518cb273ea9118b10b9175eeb9668be",
+    "dirty": true
+  },
+  "budget_seconds": 18000.0,
+  "frozen_retrieval": "experiments\\EXP-20261030-012-fixed-style-ablation\\raw\\frozen_chroma_v2.jsonl",
+  "adapter": "host_finetune\\output\\lemkin_lora_relabel"
+}

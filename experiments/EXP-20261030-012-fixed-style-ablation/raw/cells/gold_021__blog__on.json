@@ -1,0 +1,359 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "topic_id": "gold_021",
+  "medium": "blog",
+  "arm": "on",
+  "seed": 122,
+  "attempts": 1,
+  "evidence_sha256": "b3d24566406d158af04d41bdfd2bf960bba05f18854588bfcb67290e77af6c87",
+  "retrieval_hit_ids": [
+    "train_2689",
+    "train_1243",
+    "train_14260",
+    "train_2138"
+  ],
+  "retrieval_query": "If Your AI Feature Didn’t Materially Boost Revenue, It Doesn’t Count. Try Again.",
+  "retrieval_filter": null,
+  "style_applied": true,
+  "style_in_prompt": true,
+  "prompt_tokens": 955,
+  "generated_tokens_including_stop": 320,
+  "latency_seconds": 22.172,
+  "exemplar_ids": [
+    718,
+    787
+  ],
+  "saved_at": "2026-10-30T09:59:04.650400+00:00",
+  "trace": {
+    "id": "gold_021",
+    "format": "blog_draft",
+    "topic": "If Your AI Feature Didn’t Materially Boost Revenue, It Doesn’t Count. Try Again.",
+    "audience": "B2B SaaS founders and operators",
+    "goal": "Argue for a stricter standard on judging AI feature success.",
+    "cta": "none",
+    "k": 8,
+    "expected_facts": [
+      "The answer should argue that AI features need business impact, not just launch buzz.",
+      "It should connect product work to revenue, retention, expansion, or meaningful usage.",
+      "It should reject vanity metrics as proof of success."
+    ],
+    "rubric_must_haves": [
+      "States a clear business standard early.",
+      "Explains what counts as impact and what does not.",
+      "Uses direct, non-hyped language.",
+      "Connects the point to product prioritization."
+    ],
+    "gold_reference": "A strong answer should say that shipping an AI feature is not success if it does not move revenue, retention, or a truly material usage metric. Founders need to hold AI work to the same standard as any other product investment: measurable business value. Otherwise the feature is theater, not progress.",
+    "medium": "blog",
+    "prompt": "Write a blog post in the style of Jason Lemkin about: If Your AI Feature Didn’t Materially Boost Revenue, It Doesn’t Count. Try Again.\n\nStyle examples from train-owned source text.\nUse them for voice only. They are not evidence for claims.\nDo not copy long passages verbatim.\n[Style 1]\nDear SaaStr: How Can You Ensure a Smooth Transition When A New Team Member Takes Over a Customer Account?\nAdd value in the first interaction.  This is so rare.\nThere’s nothing more frustrating than getting a random email, “Hi, Tony is gone from the company. I know nothing about you, but I’m your new rep. Can we schedule a call?”\nFind some way to add value.\nOne great way is to demo upcoming features / an upcoming release.\n“Hi, I’m Jason, your next account exec. I’d love to find a way to help even more. Can I show you or anyone on your team the new AI features we’re launching shortly? There’s no additional cost for them and based on what I can see, they may radically increase your efficiency.”\nNot perfect. But much better.\nA second, albeit riskier, way to add value is to set up a call asking for “honest feedback on how we’re doing.”\nThis works, too.  Customers often just want to be heard.  The “problem” is you might have to do something about it.\n[Style 2]\nDear SaaStr: When Is It Too Soon to Target Enterprise Customers in SaaS?\nIt too soon to target enterprise clients when you can’t support their needs 90 days\nafter\nyou close them.\nIt’s sort of OK in the enterprise to promise features and functionality that are sort of there … so long as you deliver them fairly promptly after the deal closes.\nIn fact, it happens all the time. Enterprise customers will even sign contracts agreeing to buy so long as you implement a key feature with X number of days.\nBut if you don’t have the team, commitment and experience to deliver that functionality at least X days after you close a Big Customer … you aren’t ready.  They’ll churn or at least, never fully deploy.\nYou don’t have to have the full enterprise package in the early days to close enterprise customers, especially if they have interest in you.  You’ll get some slack as a new, emerging vendor.  Especially if you have a strong deployment team.\nBut you have to meet your commitments and promises to them fairly soon after the deal closes.\nMore here:\nSecrets to Closing Your First 6 Figure Deal (Video + Transcript) | SaaStr\nSecrets to Closing Your First 6 Figure Deal (Video + Transcript)\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] Deploying AI without clear business metrics is a mistake.\n[E2] Companies that captured AI spend are operating at 6x-12x the efficiency of traditional SaaS companies.\n[E3] Folks that are pretending they have AI, or have slapped on some very basic functionality into their app, aren’t seeing any revenue boost from it.\n[E4] Capturing at least a few basis points of the massive AI spend should be table stakes for companies in a category where AI spending is happening.\n[E5] There is a massive point spread between companies that captured AI spend and those that didn’t.\n\nNow write the requested blog post about: If Your AI Feature Didn’t Materially Boost Revenue, It Doesn’t Count. Try Again.",
+    "rendered_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nWrite a blog post in the style of Jason Lemkin about: If Your AI Feature Didn’t Materially Boost Revenue, It Doesn’t Count. Try Again.\n\nStyle examples from train-owned source text.\nUse them for voice only. They are not evidence for claims.\nDo not copy long passages verbatim.\n[Style 1]\nDear SaaStr: How Can You Ensure a Smooth Transition When A New Team Member Takes Over a Customer Account?\nAdd value in the first interaction.  This is so rare.\nThere’s nothing more frustrating than getting a random email, “Hi, Tony is gone from the company. I know nothing about you, but I’m your new rep. Can we schedule a call?”\nFind some way to add value.\nOne great way is to demo upcoming features / an upcoming release.\n“Hi, I’m Jason, your next account exec. I’d love to find a way to help even more. Can I show you or anyone on your team the new AI features we’re launching shortly? There’s no additional cost for them and based on what I can see, they may radically increase your efficiency.”\nNot perfect. But much better.\nA second, albeit riskier, way to add value is to set up a call asking for “honest feedback on how we’re doing.”\nThis works, too.  Customers often just want to be heard.  The “problem” is you might have to do something about it.\n[Style 2]\nDear SaaStr: When Is It Too Soon to Target Enterprise Customers in SaaS?\nIt too soon to target enterprise clients when you can’t support their needs 90 days\nafter\nyou close them.\nIt’s sort of OK in the enterprise to promise features and functionality that are sort of there … so long as you deliver them fairly promptly after the deal closes.\nIn fact, it happens all the time. Enterprise customers will even sign contracts agreeing to buy so long as you implement a key feature with X number of days.\nBut if you don’t have the team, commitment and experience to deliver that functionality at least X days after you close a Big Customer … you aren’t ready.  They’ll churn or at least, never fully deploy.\nYou don’t have to have the full enterprise package in the early days to close enterprise customers, especially if they have interest in you.  You’ll get some slack as a new, emerging vendor.  Especially if you have a strong deployment team.\nBut you have to meet your commitments and promises to them fairly soon after the deal closes.\nMore here:\nSecrets to Closing Your First 6 Figure Deal (Video + Transcript) | SaaStr\nSecrets to Closing Your First 6 Figure Deal (Video + Transcript)\n\nUse only the factual specifics provided in ALLOWED FACTUAL EVIDENCE.\nDo not add factual numbers, percentages, dollar amounts, dates, customer counts, ARR, NRR, growth rates, or other specific metrics from memory.\nIf a factual detail is not in the evidence, omit it.\nPrompt contract: factual-reliability-v1.\nWhen a claim has a Speaker line, attribute that statement to that person. Do not present it as Jason Lemkin's own words unless the claim says he agrees.\nDo not give a person a title, employer, or role unless that title and organization are both written in the evidence.\nDo not copy speaker labels or evidence tags into the draft.\nDo not repeat the user's question as the draft or as its opening line.\nFinish the last sentence.\nA LinkedIn post must be at least 40 words. An X post must be at least 20 words.\nYou may provide analysis, opinion, transitions, and stylistic commentary, but specific factual claims must come from the evidence.\n\nALLOWED FACTUAL EVIDENCE\n\n[E1] Deploying AI without clear business metrics is a mistake.\n[E2] Companies that captured AI spend are operating at 6x-12x the efficiency of traditional SaaS companies.\n[E3] Folks that are pretending they have AI, or have slapped on some very basic functionality into their app, aren’t seeing any revenue boost from it.\n[E4] Capturing at least a few basis points of the massive AI spend should be table stakes for companies in a category where AI spending is happening.\n[E5] There is a massive point spread between companies that captured AI spend and those that didn’t.\n\nNow write the requested blog post about: If Your AI Feature Didn’t Materially Boost Revenue, It Doesn’t Count. Try Again.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "answer": "The Hard Truth About AI Features Nobody Wants To Hear\nI’ve been in B2B software since 1999, and right now I’m hearing more founders talk about AI features than ever before. And honestly? Most of these efforts feel like nothing more than noise. So let me ask you directly: Did your AI feature actually move the needle this year? Because if it didn’t — if you haven’t seen real ROI from your AI investments yet — then you’re doing it wrong. And worse, you probably shouldn’t keep trying. At Least Not Like That. Let me share two stories that illustrate exactly why this matters. Story #1: The Founder Who Got It Right\nRecently, I met with a founder who had deployed ChatGPT-style interfaces across his entire product suite. He wasn’t using generic APIs—he was building true conversational agents powered by Claude and GPT-4. But here’s what made him different: he tracked every single conversation his AI handled. Every interaction. Every resolution. Every follow-up action taken. What did he learn? Conversations were driving measurable value. Real users were finding answers faster through chat interactions than through traditional search. His team could triage issues more effectively because conversations provided context beyond ticket descriptions alone. The impact showed up in metrics:\nReduced support tickets due to self-resolution\nHigher quality of incoming requests (users prepared for support)\nImproved knowledge base adoption (people found information naturally rather than searching manually)\nEnhanced UX scores (faster problem resolution = happier customers)\nBut here’s the kicker—this wasn’t just vanity metrics.",
+    "raw_model_output": "The Hard Truth About AI Features Nobody Wants To Hear\nI’ve been in B2B software since 1999, and right now I’m hearing more founders talk about AI features than ever before. And honestly? Most of these efforts feel like nothing more than noise. So let me ask you directly: Did your AI feature actually move the needle this year? Because if it didn’t — if you haven’t seen real ROI from your AI investments yet — then you’re doing it wrong. And worse, you probably shouldn’t keep trying. At Least Not Like That. Let me share two stories that illustrate exactly why this matters. Story #1: The Founder Who Got It Right\nRecently, I met with a founder who had deployed ChatGPT-style interfaces across his entire product suite. He wasn’t using generic APIs—he was building true conversational agents powered by Claude and GPT-4. But here’s what made him different: he tracked every single conversation his AI handled. Every interaction. Every resolution. Every follow-up action taken. What did he learn? Conversations were driving measurable value. Real users were finding answers faster through chat interactions than through traditional search. His team could triage issues more effectively because conversations provided context beyond ticket descriptions alone. The impact showed up in metrics:\nReduced support tickets due to self-resolution\nHigher quality of incoming requests (users prepared for support)\nImproved knowledge base adoption (people found information naturally rather than searching manually)\nEnhanced UX scores (faster problem resolution = happier customers)\nBut here’s the kicker—this wasn’t just vanity metrics.",
+    "deployment_output": "The Hard Truth About AI Features Nobody Wants To Hear\nI’ve been in B2B software since 1999, and right now I’m hearing more founders talk about AI features than ever before. And honestly? Most of these efforts feel like nothing more than noise. So let me ask you directly: Did your AI feature actually move the needle this year? Because if it didn’t — if you haven’t seen real ROI from your AI investments yet — then you’re doing it wrong. And worse, you probably shouldn’t keep trying. At Least Not Like That. Let me share two stories that illustrate exactly why this matters. Story #1: The Founder Who Got It Right\nRecently, I met with a founder who had deployed ChatGPT-style interfaces across his entire product suite. He wasn’t using generic APIs—he was building true conversational agents powered by Claude and GPT-4. But here’s what made him different: he tracked every single conversation his AI handled. Every interaction. Every resolution. Every follow-up action taken. What did he learn? Conversations were driving measurable value. Real users were finding answers faster through chat interactions than through traditional search. His team could triage issues more effectively because conversations provided context beyond ticket descriptions alone. The impact showed up in metrics:\nReduced support tickets due to self-resolution\nHigher quality of incoming requests (users prepared for support)\nImproved knowledge base adoption (people found information naturally rather than searching manually)\nEnhanced UX scores (faster problem resolution = happier customers)\nBut here’s the kicker—this wasn’t just vanity metrics.",
+    "first_attempt_answer": "The Hard Truth About AI Features Nobody Wants To Hear\nI’ve been in B2B software since 1999, and right now I’m hearing more founders talk about AI features than ever before. And honestly? Most of these efforts feel like nothing more than noise. So let me ask you directly: Did your AI feature actually move the needle this year? Because if it didn’t — if you haven’t seen real ROI from your AI investments yet — then you’re doing it wrong. And worse, you probably shouldn’t keep trying. At Least Not Like That. Let me share two stories that illustrate exactly why this matters. Story #1: The Founder Who Got It Right\nRecently, I met with a founder who had deployed ChatGPT-style interfaces across his entire product suite. He wasn’t using generic APIs—he was building true conversational agents powered by Claude and GPT-4. But here’s what made him different: he tracked every single conversation his AI handled. Every interaction. Every resolution. Every follow-up action taken. What did he learn? Conversations were driving measurable value. Real users were finding answers faster through chat interactions than through traditional search. His team could triage issues more effectively because conversations provided context beyond ticket descriptions alone. The impact showed up in metrics:\nReduced support tickets due to self-resolution\nHigher quality of incoming requests (users prepared for support)\nImproved knowledge base adoption (people found information naturally rather than searching manually)\nEnhanced UX scores (faster problem resolution = happier customers)\nBut here’s the kicker—this wasn’t just vanity metrics.",
+    "retry_answer": null,
+    "query": "If Your AI Feature Didn’t Materially Boost Revenue, It Doesn’t Count. Try Again.",
+    "max_new_tokens": 768,
+    "seed": 122,
+    "retry_seed": null,
+    "deployment_accepted": true,
+    "repair_occurred": false,
+    "generation_attempt": {
+      "seed": 122,
+      "answer": "The Hard Truth About AI Features Nobody Wants To Hear\nI’ve been in B2B software since 1999, and right now I’m hearing more founders talk about AI features than ever before. And honestly? Most of these efforts feel like nothing more than noise. So let me ask you directly: Did your AI feature actually move the needle this year? Because if it didn’t — if you haven’t seen real ROI from your AI investments yet — then you’re doing it wrong. And worse, you probably shouldn’t keep trying. At Least Not Like That. Let me share two stories that illustrate exactly why this matters. Story #1: The Founder Who Got It Right\nRecently, I met with a founder who had deployed ChatGPT-style interfaces across his entire product suite. He wasn’t using generic APIs—he was building true conversational agents powered by Claude and GPT-4. But here’s what made him different: he tracked every single conversation his AI handled. Every interaction. Every resolution. Every follow-up action taken. What did he learn? Conversations were driving measurable value. Real users were finding answers faster through chat interactions than through traditional search. His team could triage issues more effectively because conversations provided context beyond ticket descriptions alone. The impact showed up in metrics:\nReduced support tickets due to self-resolution\nHigher quality of incoming requests (users prepared for support)\nImproved knowledge base adoption (people found information naturally rather than searching manually)\nEnhanced UX scores (faster problem resolution = happier customers)\nBut here’s the kicker—this wasn’t just vanity metrics.",
+      "numeric_grounding": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [],
+        "values": [
+          {
+            "value": "1999",
+            "canonical": "year:1999",
+            "sentence": "I’ve been in B2B software since 1999, and right now I’m hearing more founders talk about AI features than ever before",
+            "start": 86,
+            "end": 90
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "1999",
+            "canonical": "year:1999",
+            "sentence": "I’ve been in B2B software since 1999, and right now I’m hearing more founders talk about AI features than ever before",
+            "start": 86,
+            "end": 90
+          }
+        ]
+      },
+      "rag_source_copying": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 2,
+        "document_id": "train_2689",
+        "matched_generated_span": "if you",
+        "matched_retrieved_span": "if you"
+      },
+      "stop_reason": "eos"
+    },
+    "repair_attempt": null,
+    "accepted_attempt": 1,
+    "rag_source_copying": {
+      "applicable": true,
+      "threshold": 12,
+      "pass": true,
+      "flagged": false,
+      "max_contiguous_words": 2,
+      "document_id": "train_2689",
+      "matched_generated_span": "if you",
+      "first_attempt": {
+        "applicable": true,
+        "pass": true,
+        "threshold": 12,
+        "max_contiguous_words": 2,
+        "document_id": "train_2689",
+        "matched_generated_span": "if you",
+        "matched_retrieved_span": "if you"
+      },
+      "retry": null,
+      "retry_occurred": false,
+      "repair_occurred": false
+    },
+    "numeric_grounding": {
+      "role": "diagnostic_only",
+      "applicable": true,
+      "pass": false,
+      "failure": "unsupported_numeric_grounding",
+      "unsupported": [
+        {
+          "value": "1999",
+          "canonical": "year:1999",
+          "sentence": "I’ve been in B2B software since 1999, and right now I’m hearing more founders talk about AI features than ever before",
+          "start": 86,
+          "end": 90
+        }
+      ],
+      "blocks_output": false,
+      "first_attempt": {
+        "applicable": true,
+        "pass": false,
+        "failure": "unsupported_numeric_grounding",
+        "allowed": [],
+        "values": [
+          {
+            "value": "1999",
+            "canonical": "year:1999",
+            "sentence": "I’ve been in B2B software since 1999, and right now I’m hearing more founders talk about AI features than ever before",
+            "start": 86,
+            "end": 90
+          }
+        ],
+        "unsupported": [
+          {
+            "value": "1999",
+            "canonical": "year:1999",
+            "sentence": "I’ve been in B2B software since 1999, and right now I’m hearing more founders talk about AI features than ever before",
+            "start": 86,
+            "end": 90
+          }
+        ]
+      },
+      "retry": null
+    },
+    "prompt_tokens": 955,
+    "backend": "unsloth",
+    "retrieval": true,
+    "retrieval_query": "If Your AI Feature Didn’t Materially Boost Revenue, It Doesn’t Count. Try Again.",
+    "retrieval_filter": null,
+    "retrieval_k": 4,
+    "retrieval_hits": [
+      {
+        "id": "train_2689",
+        "text": "2. Measuring AI by “Cool Factor” Instead of ROI\nChris noted customers initially bought AI tools “just because it’s AI” but that’s changing. The mistake: deploying AI without clear business metrics. Snowflake learned early to ask: “Is it generating more money or saving more money?” If you can’t measure 418 hours saved per week or 90% time reduction on specific tasks or real-time ad spend optimization ROI, you’re implementing technology without business justification. The bill comes due eventually.",
+        "medium": "blog",
+        "group_id": "dd8be1ce2a86b1e88d708a91ffd35b8293700f2f2d784a25cd30810543a1f381",
+        "row_id": 2689,
+        "split": "train",
+        "distance": 0.18917512893676758
+      },
+      {
+        "id": "train_1243",
+        "text": "The Brutal Truth: AI Features Alone Don’t Count\nLet me be very direct here: you need to tap into the AI budget, not just make your existing product better with AI features. The real AI budget is going to three categories:\nReplace humans\n(AI Contact Center, AI SDR)\nAugment humans dramatically\n(Cursor, Harvey, Claude + ChatGPT)\nHighly productive tools that make possible what was impossible before\n(Replit, Gamma, AI video tools)\nMost classic SaaS leaders are not going this far with their AI offerings. They’re just making their products… better. Great. But that’s table stakes now. And it’s extremely hard to monetize because customers expect AI features as part of the base product. If your AI strategy is “we added a copilot,” you’re not accessing the AI budget. You’re fighting for scraps from the traditional software budget, which is flat-to-down after price increases. Leaner Teams Are Very Real (Yes, That Means Fewer Humans)\nThe efficiency gains from AI are showing up in real numbers:\nLooking at ARR ($M) / FTE across companies:\nCursor\n: 6.1x\nLovable\n: 3.4x\nOpenAI\n: 1.5x\nAnthropic\n: 1.2x\nAtlassian\n: 0.46x\nDatadog\n: 0.51x\nServiceNow\n: 0.49x\nGitlab\n: 0.54x\nThe newer, AI-native companies are operating at 6x-12x the efficiency of traditional SaaS companies. And this advantage compounds over time. According to Iconiq Capital, AI-native companies show superior burn efficiency driven by faster compounding of ARR.",
+        "medium": "blog",
+        "group_id": "babbe9979a87a93cacea108fe71155461373ffc167427bc023937229807846c4",
+        "row_id": 1243,
+        "split": "train",
+        "distance": 0.19340860843658447
+      },
+      {
+        "id": "train_14260",
+        "text": "One thing seems clear to me in AI for SaaS:\n\nFolks that are sort of pretending they have AI, or have slapped on some very basic functionality into their app …\n\nAren’t seeing any revenue boost from it",
+        "medium": "x",
+        "group_id": "d979e8e403e4c9464bc59c1070d3af1931eea73f043db6120b767083b873f57c",
+        "row_id": 14260,
+        "split": "train",
+        "distance": 0.19839560985565186
+      },
+      {
+        "id": "train_2138",
+        "text": "By now, you should have:\nShipped AI features that customers actually want\nSeen some revenue acceleration from AI adoption\nCaptured at least a few basis points of the massive AI spend\nI’m not expecting you went from 30% growth to 300% growth. That’s unrealistic for most companies. But going from 15% to 25% growth? From 10% to 20%? That should be table stakes\nif you’re remotely positioned in a category where AI spending is happening. As I said on our 20VC pod this week:\n“Going into next year, you sure better have seen re-acceleration because of AI because there’s so much money there. If you got none of it guys, you had 18 months to not launch a single feature, tap into a single trend to reaccelerate. If you’re not growing faster at the end of 2025 than the start as a founder, I give you an F minus. There’s so much money and you don’t have to be Harvey to get a little piece of it. Twilio and MongoDB and Cloudflare and tons of folks have a little piece of it. A little piece of that massive pie.”\nThe Point Spread Between Winners and Losers\nRory O’Driscoll nailed this on our show: There’s a\nmassive point spread\nbetween companies that captured AI spend and those that didn’t.",
+        "medium": "blog",
+        "group_id": "3daf8c1d544918b62d0bc4f99a6fd863efc10ebb3a81f8d944fe5d9d3a1ed5a6",
+        "row_id": 2138,
+        "split": "train",
+        "distance": 0.20475459098815918
+      }
+    ],
+    "copying": [
+      {
+        "id": "train_2689",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_1243",
+        "shared_word_span": 2
+      },
+      {
+        "id": "train_14260",
+        "shared_word_span": 1
+      },
+      {
+        "id": "train_2138",
+        "shared_word_span": 2
+      }
+    ],
+    "retrieval_backend": "dense",
+    "proposed_atomic_claims": [
+      {
+        "source_id": "train_2689",
+        "claim": "Deploying AI without clear business metrics is a mistake.",
+        "support_span": "The mistake: deploying AI without clear business metrics.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_1243",
+        "claim": "The real AI budget is in three categories: Replace humans, Augment humans dramatically, and Highly productive tools that make possible what was impossible before.",
+        "support_span": "The real AI budget is going to three categories:",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_1243",
+        "claim": "Companies that captured AI spend are operating at 6x-12x the efficiency of traditional SaaS companies.",
+        "support_span": "The newer, AI-native companies are operating at 6x-12x the efficiency of traditional SaaS companies.",
+        "claim_type": "comparison"
+      },
+      {
+        "source_id": "train_14260",
+        "claim": "Folks that are pretending they have AI, or have slapped on some very basic functionality into their app, aren’t seeing any revenue boost from it.",
+        "support_span": "Aren’t seeing any revenue boost from it",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_2138",
+        "claim": "Capturing at least a few basis points of the massive AI spend should be table stakes for companies in a category where AI spending is happening.",
+        "support_span": "Captured at least a few basis points of the massive AI spend",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_2138",
+        "claim": "Going from 15% to 25% growth or from 10% to 20% growth should be table stakes for companies in a category where AI spending is happening.",
+        "support_span": "But going from 15% to 25% growth? From 10% to 20%? That should be table stakes",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_2138",
+        "claim": "There is a massive point spread between companies that captured AI spend and those that didn’t.",
+        "support_span": "There’s a massive point spread between companies that captured AI spend and those that didn’t",
+        "claim_type": "fact"
+      }
+    ],
+    "validation_rejected": [
+      {
+        "source_id": "train_1243",
+        "claim": "The real AI budget is in three categories: Replace humans, Augment humans dramatically, and Highly productive tools that make possible what was impossible before.",
+        "support_span": "The real AI budget is going to three categories:",
+        "claim_type": "fact",
+        "reason": "entity_not_in_source"
+      },
+      {
+        "source_id": "train_2138",
+        "claim": "Going from 15% to 25% growth or from 10% to 20% growth should be table stakes for companies in a category where AI spending is happening.",
+        "support_span": "But going from 15% to 25% growth? From 10% to 20%? That should be table stakes",
+        "claim_type": "fact",
+        "reason": "interrogative_assertion"
+      }
+    ],
+    "verifier_rejected": [],
+    "verified_claims": [
+      {
+        "source_id": "train_2689",
+        "claim": "Deploying AI without clear business metrics is a mistake.",
+        "support_span": "The mistake: deploying AI without clear business metrics.",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_1243",
+        "claim": "Companies that captured AI spend are operating at 6x-12x the efficiency of traditional SaaS companies.",
+        "support_span": "The newer, AI-native companies are operating at 6x-12x the efficiency of traditional SaaS companies.",
+        "claim_type": "comparison"
+      },
+      {
+        "source_id": "train_14260",
+        "claim": "Folks that are pretending they have AI, or have slapped on some very basic functionality into their app, aren’t seeing any revenue boost from it.",
+        "support_span": "Aren’t seeing any revenue boost from it",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_2138",
+        "claim": "Capturing at least a few basis points of the massive AI spend should be table stakes for companies in a category where AI spending is happening.",
+        "support_span": "Captured at least a few basis points of the massive AI spend",
+        "claim_type": "fact"
+      },
+      {
+        "source_id": "train_2138",
+        "claim": "There is a massive point spread between companies that captured AI spend and those that didn’t.",
+        "support_span": "There’s a massive point spread between companies that captured AI spend and those that didn’t",
+        "claim_type": "fact"
+      }
+    ],
+    "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] Deploying AI without clear business metrics is a mistake.\n[E2] Companies that captured AI spend are operating at 6x-12x the efficiency of traditional SaaS companies.\n[E3] Folks that are pretending they have AI, or have slapped on some very basic functionality into their app, aren’t seeing any revenue boost from it.\n[E4] Capturing at least a few basis points of the massive AI spend should be table stakes for companies in a category where AI spending is happening.\n[E5] There is a massive point spread between companies that captured AI spend and those that didn’t.",
+    "raw_extraction": "[\n  {\n    \"source_id\": \"train_2689\",\n    \"claim\": \"Deploying AI without clear business metrics is a mistake.\",\n    \"support_span\": \"The mistake: deploying AI without clear business metrics.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_1243\",\n    \"claim\": \"The real AI budget is in three categories: Replace humans, Augment humans dramatically, and Highly productive tools that make possible what was impossible before.\",\n    \"support_span\": \"The real AI budget is going to three categories:\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_1243\",\n    \"claim\": \"Companies that captured AI spend are operating at 6x-12x the efficiency of traditional SaaS companies.\",\n    \"support_span\": \"The newer, AI-native companies are operating at 6x-12x the efficiency of traditional SaaS companies.\",\n    \"claim_type\": \"comparison\"\n  },\n  {\n    \"source_id\": \"train_14260\",\n    \"claim\": \"Folks that are pretending they have AI, or have slapped on some very basic functionality into their app, aren’t seeing any revenue boost from it.\",\n    \"support_span\": \"Aren’t seeing any revenue boost from it\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_2138\",\n    \"claim\": \"Capturing at least a few basis points of the massive AI spend should be table stakes for companies in a category where AI spending is happening.\",\n    \"support_span\": \"Captured at least a few basis points of the massive AI spend\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_2138\",\n    \"claim\": \"Going from 15% to 25% growth or from 10% to 20% growth should be table stakes for companies in a category where AI spending is happening.\",\n    \"support_span\": \"But going from 15% to 25% growth? From 10% to 20%? That should be table stakes\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"train_2138\",\n    \"claim\": \"There is a massive point spread between companies that captured AI spend and those that didn’t.\",\n    \"support_span\": \"There’s a massive point spread between companies that captured AI spend and those that didn’t\",\n    \"claim_type\": \"fact\"\n  }\n]",
+    "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: If Your AI Feature Didn’t Materially Boost Revenue, It Doesn’t Count. Try Again.\n\nSource passages:\n[train_2689]\n2. Measuring AI by “Cool Factor” Instead of ROI\nChris noted customers initially bought AI tools “just because it’s AI” but that’s changing. The mistake: deploying AI without clear business metrics. Snowflake learned early to ask: “Is it generating more money or saving more money?” If you can’t measure 418 hours saved per week or 90% time reduction on specific tasks or real-time ad spend optimization ROI, you’re implementing technology without business justification. The bill comes due eventually.\n\n[train_1243]\nThe Brutal Truth: AI Features Alone Don’t Count\nLet me be very direct here: you need to tap into the AI budget, not just make your existing product better with AI features. The real AI budget is going to three categories:\nReplace humans\n(AI Contact Center, AI SDR)\nAugment humans dramatically\n(Cursor, Harvey, Claude + ChatGPT)\nHighly productive tools that make possible what was impossible before\n(Replit, Gamma, AI video tools)\nMost classic SaaS leaders are not going this far with their AI offerings. They’re just making their products… better. Great. But that’s table stakes now. And it’s extremely hard to monetize because customers expect AI features as part of the base product. If your AI strategy is “we added a copilot,” you’re not accessing the AI budget. You’re fighting for scraps from the traditional software budget, which is flat-to-down after price increases. Leaner Teams Are Very Real (Yes, That Means Fewer Humans)\nThe efficiency gains from AI are showing up in real numbers:\nLooking at ARR ($M) / FTE across companies:\nCursor\n: 6.1x\nLovable\n: 3.4x\nOpenAI\n: 1.5x\nAnthropic\n: 1.2x\nAtlassian\n: 0.46x\nDatadog\n: 0.51x\nServiceNow\n: 0.49x\nGitlab\n: 0.54x\nThe newer, AI-native companies are operating at 6x-12x the efficiency of traditional SaaS companies. And this advantage compounds over time. According to Iconiq Capital, AI-native companies show superior burn efficiency driven by faster compounding of ARR.\n\n[train_14260]\nOne thing seems clear to me in AI for SaaS:\n\nFolks that are sort of pretending they have AI, or have slapped on some very basic functionality into their app …\n\nAren’t seeing any revenue boost from it\n\n[train_2138]\nBy now, you should have:\nShipped AI features that customers actually want\nSeen some revenue acceleration from AI adoption\nCaptured at least a few basis points of the massive AI spend\nI’m not expecting you went from 30% growth to 300% growth. That’s unrealistic for most companies. But going from 15% to 25% growth? From 10% to 20%? That should be table stakes\nif you’re remotely positioned in a category where AI spending is happening. As I said on our 20VC pod this week:\n“Going into next year, you sure better have seen re-acceleration because of AI because there’s so much money there. If you got none of it guys, you had 18 months to not launch a single feature, tap into a single trend to reaccelerate. If you’re not growing faster at the end of 2025 than the start as a founder, I give you an F minus. There’s so much money and you don’t have to be Harvey to get a little piece of it. Twilio and MongoDB and Cloudflare and tons of folks have a little piece of it. A little piece of that massive pie.”\nThe Point Spread Between Winners and Losers\nRory O’Driscoll nailed this on our show: There’s a\nmassive point spread\nbetween companies that captured AI spend and those that didn’t.",
+    "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: If Your AI Feature Didn’t Materially Boost Revenue, It Doesn’t Count. Try Again.\n\nSource passages:\n[train_2689]\n2. Measuring AI by “Cool Factor” Instead of ROI\nChris noted customers initially bought AI tools “just because it’s AI” but that’s changing. The mistake: deploying AI without clear business metrics. Snowflake learned early to ask: “Is it generating more money or saving more money?” If you can’t measure 418 hours saved per week or 90% time reduction on specific tasks or real-time ad spend optimization ROI, you’re implementing technology without business justification. The bill comes due eventually.\n\n[train_1243]\nThe Brutal Truth: AI Features Alone Don’t Count\nLet me be very direct here: you need to tap into the AI budget, not just make your existing product better with AI features. The real AI budget is going to three categories:\nReplace humans\n(AI Contact Center, AI SDR)\nAugment humans dramatically\n(Cursor, Harvey, Claude + ChatGPT)\nHighly productive tools that make possible what was impossible before\n(Replit, Gamma, AI video tools)\nMost classic SaaS leaders are not going this far with their AI offerings. They’re just making their products… better. Great. But that’s table stakes now. And it’s extremely hard to monetize because customers expect AI features as part of the base product. If your AI strategy is “we added a copilot,” you’re not accessing the AI budget. You’re fighting for scraps from the traditional software budget, which is flat-to-down after price increases. Leaner Teams Are Very Real (Yes, That Means Fewer Humans)\nThe efficiency gains from AI are showing up in real numbers:\nLooking at ARR ($M) / FTE across companies:\nCursor\n: 6.1x\nLovable\n: 3.4x\nOpenAI\n: 1.5x\nAnthropic\n: 1.2x\nAtlassian\n: 0.46x\nDatadog\n: 0.51x\nServiceNow\n: 0.49x\nGitlab\n: 0.54x\nThe newer, AI-native companies are operating at 6x-12x the efficiency of traditional SaaS companies. And this advantage compounds over time. According to Iconiq Capital, AI-native companies show superior burn efficiency driven by faster compounding of ARR.\n\n[train_14260]\nOne thing seems clear to me in AI for SaaS:\n\nFolks that are sort of pretending they have AI, or have slapped on some very basic functionality into their app …\n\nAren’t seeing any revenue boost from it\n\n[train_2138]\nBy now, you should have:\nShipped AI features that customers actually want\nSeen some revenue acceleration from AI adoption\nCaptured at least a few basis points of the massive AI spend\nI’m not expecting you went from 30% growth to 300% growth. That’s unrealistic for most companies. But going from 15% to 25% growth? From 10% to 20%? That should be table stakes\nif you’re remotely positioned in a category where AI spending is happening. As I said on our 20VC pod this week:\n“Going into next year, you sure better have seen re-acceleration because of AI because there’s so much money there. If you got none of it guys, you had 18 months to not launch a single feature, tap into a single trend to reaccelerate. If you’re not growing faster at the end of 2025 than the start as a founder, I give you an F minus. There’s so much money and you don’t have to be Harvey to get a little piece of it. Twilio and MongoDB and Cloudflare and tons of folks have a little piece of it. A little piece of that massive pie.”\nThe Point Spread Between Winners and Losers\nRory O’Driscoll nailed this on our show: There’s a\nmassive point spread\nbetween companies that captured AI spend and those that didn’t.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "extraction_seconds": 14.157,
+    "verification_seconds": 0.0,
+    "verification_records": [],
+    "llm_verifier_on_critical_path": false,
+    "allowed_numeric_values": [],
+    "distillation_adapter_enabled": false,
+    "verification_adapter_enabled": false,
+    "distillation_backend": "same_loaded_4bit_base_adapter_off",
+    "distillation_do_sample": false,
+    "extraction_max_new_tokens": 2560,
+    "verification_max_new_tokens": 24,
+    "distillation_seed": 0,
+    "support_spans_in_generator_prompt": false,
+    "evidence_stage_reason": null,
+    "evidence_status": "verified",
+    "extraction_attempts": 1,
+    "extraction_stop_reason": "eos",
+    "prompt_contract": "factual-reliability-v1",
+    "fixed_style_enabled": true,
+    "style_applied": true,
+    "style_exemplar_count": 2,
+    "latency_seconds": 22.172,
+    "generated_tokens_including_stop": 320,
+    "last_token_id": 128009,
+    "effective_eos_token_ids": [
+      128001,
+      128008,
+      128009
+    ],
+    "stop_reason": "eos",
+    "budget_fraction": 0.4166666666666667,
+    "early_eos": true,
+    "first_attempt_stop_reason": "eos",
+    "retry_stop_reason": null
+  }
+}

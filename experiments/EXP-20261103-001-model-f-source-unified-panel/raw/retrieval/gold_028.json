@@ -1,0 +1,1491 @@
+{
+  "status": "complete",
+  "question_id": "gold_028",
+  "query": "DigitalOcean? It’s Up 12% in 2026. While The Rest of Software Is Down 24%. Here’s Why.",
+  "retrieval": {
+    "backend": "lightrag",
+    "mode": "hybrid",
+    "evidence_budget": 4,
+    "top_k": 20
+  },
+  "payload": {
+    "status": "success",
+    "message": "Query processed successfully",
+    "data": {
+      "entities": [
+        {
+          "entity_name": "2026 guidance",
+          "entity_type": "concept",
+          "description": "The 2026 guidance assumes no improvement in the selling environment compared to 2025.",
+          "source_id": "gd_c18e9e2084c3edbd8ff46b65-chunk-001",
+          "file_path": "gd_c18e9e2084c3edbd8ff46b65",
+          "created_at": 1793555635
+        },
+        {
+          "entity_name": "DigitalOcean",
+          "entity_type": "organization",
+          "description": "Atlassian has a very small direct sales force, similar to DigitalOcean.<SEP>DigitalOcean is a software company worth $4.5B.<SEP>DigitalOcean is a cloud platform that provides scalable and on-demand infrastructure for businesses.<SEP>A cloud infrastructure provider.<SEP>DigitalOcean is a SaaS company.",
+          "source_id": "gd_ad4399ea29a32c2b3537e550-chunk-000<SEP>gd_37c9bf3c519ccfb55eca9483-chunk-001<SEP>gd_402ba37a6bc85a4d1b4c34cb-chunk-000<SEP>gd_6a2266e909d63b201cd71ce7-chunk-000<SEP>gd_e0e8f051a95a2e0ce0fb9f89-chunk-000",
+          "file_path": "gd_ad4399ea29a32c2b3537e550<SEP>gd_37c9bf3c519ccfb55eca9483<SEP>gd_402ba37a6bc85a4d1b4c34cb<SEP>gd_6a2266e909d63b201cd71ce7<SEP>gd_e0e8f051a95a2e0ce0fb9f89",
+          "created_at": 1793603517
+        },
+        {
+          "entity_name": "Up, Up and Up",
+          "entity_type": "concept",
+          "description": "A period of time characterized by a surge in venture capital investments and a sense of optimism in the startup ecosystem.",
+          "source_id": "gd_5a797c7a9ce1c480eb2813b2-chunk-000",
+          "file_path": "gd_5a797c7a9ce1c480eb2813b2",
+          "created_at": 1793507959
+        },
+        {
+          "entity_name": "Google",
+          "entity_type": "organization",
+          "description": "**Google**\n\nGoogle is a multinational technology company that specializes in Internet-related services and products. Founded by Larry Page and Sergey Brin, Google is known for its innovative approach to technology and its commitment to making the world's information accessible to everyone. The company's early development was marked by the creation of Claude, a search engine that was later replaced by Google, which was launched in 1998.\n\nGoogle's primary business is its search engine, which is the most widely used search engine in the world. However, the company has expanded its services to include a wide range of products and platforms, including email, cloud storage, and YouTube, which is a video-sharing platform that Google acquired in 2006. Google's services are used by millions of people around the world, and the company's impact on the technology industry is immeasurable.\n\nIn addition to its technology products and services, Google is also known for its philanthropic efforts. The company's founders, Larry Page and Sergey Brin, have pledged to give away the majority of their wealth during their lifetimes, and Google has established the Google Foundation, which supports a wide range of charitable causes around the world.\n\nGoogle has a significant presence in the Bay Area and is a lessee in Riverpark Towers. The company is also a B2B entity that has been considered for partnership opportunities by Team SaaStr. With its headquarters in Mountain View, California, Google continues to be a leading player in the technology industry, shaping the way people access and use information.\n\nAs a multinational technology company, Google serves as an example of successful co-foundership, with Larry Page and Sergey Brin's partnership being a key factor in the company's success. The company's commitment to innovation and making information accessible to everyone has made it a household name, and its impact on the technology industry is undeniable.\n\nGoogle Cloud is a cloud platform that provides a wide range of services for computing, storage, and analytics. This platform is a key part of Google's offerings, providing businesses with the tools they need to succeed in the digital age.\n\nGoogle has also been involved in various partnerships and investments, including a planned $200M investment with Scale AI in 2025, although this was later pulled back after Meta's investment. Additionally, the company has been involved in a dispute with Nvidia over Groq's inference IP.\n\nIn terms of its financial performance, Google has crossed $400 billion in annual revenue and is growing its search and cloud businesses. The company's AI infrastructure has also been a significant area of investment, with a massive AI product, Gemini, boasting 750M MAUs.\n\nIt's worth noting that Google also uses Fielo's incentive software, which is a paid advertising platform that allows businesses to create and manage their own incentive programs. This platform is designed to help businesses increase sales and revenue by providing incentives to customers and partners.\n\nGoogle is also the parent company of Wiz, a technology company that offers a cloud-based platform with a consumption-based pricing model. The company has a significant presence in the Bay Area and is a lessee in Riverpark Towers.\n\nIn 2023, Google acquired Windsurf, a technology company, for $2.4 billion. The acquisition was notable for the significant amount paid for just leadership and licensing.\n\nGoogle is also a hyperscaler that has invested in AI compute, and the company has been involved in various partnerships and investments in the AI space. Additionally, Google has been recognized as a leader in the technology industry, with its commitment to innovation and making information accessible to everyone.\n\nOverall, Google is a technology company that has made a significant impact on the world. Its commitment to innovation, philanthropy, and making information accessible to everyone has made it a household name, and its influence on the technology industry is undeniable.<SEP>A technology company developing AGI.<SEP>Google is a technology company that specializes in internet-related services and products.<SEP>Google is a multinational technology company that specializes in Internet-related services and products.<SEP>No LLM (which Google has).<SEP>Technology company that invested $13 billion in Waymo",
+          "source_id": "gd_1ba5b6429d4f7d40a66b28cc-chunk-000<SEP>gd_5ccf11b899a8d7d75d0990ec-chunk-002<SEP>gd_3e5e1c326bac97e2282285bd-chunk-001<SEP>gd_43bf884994672448c45ff7f3-chunk-000<SEP>gd_9aba062947c51a2b9c015fc4-chunk-000<SEP>gd_9048ed4b6c5a9f3e40238ec5-chunk-000<SEP>gd_501507d3da37dc0bee391abb-chunk-000<SEP>gd_4561147ae4b4a79577d41c1c-chunk-000<SEP>gd_6df7a15d5f370e75b0ab8f25-chunk-002<SEP>gd_6df7a15d5f370e75b0ab8f25-chunk-003<SEP>gd_98c83ccec636227b2a7f7b07-chunk-000<SEP>gd_c387616945e788682c23c05d-chunk-000<SEP>gd_c387616945e788682c23c05d-chunk-001<SEP>gd_04778b54908b62472c7de29a-chunk-000<SEP>gd_83de48d1c3212650ca366a4e-chunk-000<SEP>gd_aad2f9895e2d25f92408db27-chunk-000<SEP>gd_27b0e2f075add8bcb4729bd8-chunk-000<SEP>gd_2dd93b6005056c1c7e39a189-chunk-000<SEP>gd_fb798d3019afee06b2636d46-chunk-000<SEP>gd_ab890a3f6fa03f33cf08f29f-chunk-000<SEP>gd_ab890a3f6fa03f33cf08f29f-chunk-001<SEP>gd_0f69d58d97b893c261245148-chunk-000<SEP>gd_b91094960e87c92b6158bc8a-chunk-000<SEP>gd_66bbfcd9b1f8b6bca75fe3f6-chunk-003<SEP>gd_66bbfcd9b1f8b6bca75fe3f6-chunk-002<SEP>gd_6d674ffb138083b614124cff-chunk-000<SEP>gd_a6fbf8f37d2f0906d276118e-chunk-004<SEP>gd_b72ec052f08ad24523c4b9bd-chunk-000<SEP>gd_cbb1fcbc03eab829018c09f8-chunk-000<SEP>gd_8377d68cef2cdef818baa2e8-chunk-000<SEP>gd_8377d68cef2cdef818baa2e8-chunk-001<SEP>gd_1b9124f2109ba18c8a2b0ba1-chunk-002<SEP>gd_86c3f93917994af72e5fb2d7-chunk-000<SEP>gd_956e8a0995c87d3c1371ebeb-chunk-000<SEP>gd_ae3a12bfd94ba9317fab7a7a-chunk-000<SEP>gd_b740a4f2a516a3f3a59a462d-chunk-000<SEP>gd_84a99c18e32a6a3af3df2372-chunk-002<SEP>gd_93c3f50c7ddebd6750401de9-chunk-000<SEP>gd_f1918e1772488f6f58adb5dc-chunk-000<SEP>gd_f1918e1772488f6f58adb5dc-chunk-001<SEP>gd_9da2d51cf4e9ef2cc0ff544d-chunk-002<SEP>gd_9da2d51cf4e9ef2cc0ff544d-chunk-003<SEP>gd_a9cb3aa7fddefa1484ccdea9-chunk-002<SEP>gd_b127fece42e28ee1e64a63ce-chunk-000<SEP>gd_f6156caa4c31f918c461f330-chunk-000<SEP>gd_f70b08b50e252ea315d757da-chunk-000<SEP>gd_f70b08b50e252ea315d757da-chunk-001<SEP>gd_fb87546d14423eb7e21c5ce8-chunk-001<SEP>gd_fb87546d14423eb7e21c5ce8-chunk-002<SEP>gd_0b07114179a95a92796b9f5b-chunk-000<SEP>gd_402ba37a6bc85a4d1b4c34cb-chunk-000<SEP>gd_43942905c1222c1c0f30c1aa-chunk-000<SEP>gd_48c4d7d8835df970f970f08b-chunk-000<SEP>gd_4c9a84c75fac927c1308ee49-chunk-000<SEP>gd_4e7fd53d3d57eeb978245741-chunk-000<SEP>gd_3431ce388885d39d6d44c6b6-chunk-000<SEP>gd_3431ce388885d39d6d44c6b6-chunk-003<SEP>gd_5274f9ec1b322a6126bb936d-chunk-000<SEP>gd_5274f9ec1b322a6126bb936d-chunk-001<SEP>gd_5e67031298ebee4dd12bd5c3-chunk-001<SEP>gd_5e67031298ebee4dd12bd5c3-chunk-002<SEP>gd_6439c400c1d09acb6a66a591-chunk-000<SEP>gd_685109a529dd46a0e19d6f2a-chunk-002<SEP>gd_88a6020edd68591d23fa8ac6-chunk-000<SEP>gd_88a6020edd68591d23fa8ac6-chunk-001<SEP>gd_aece9c47f084112a109da7b9-chunk-000<SEP>gd_b0cf00d553e8880b1c31910f-chunk-000<SEP>gd_b0cf00d553e8880b1c31910f-chunk-001<SEP>gd_b0cf00d553e8880b1c31910f-chunk-002<SEP>gd_b0cf00d553e8880b1c31910f-chunk-003<SEP>gd_b0cf00d553e8880b1c31910f-chunk-004<SEP>gd_885984971dbc1d1315ea4765-chunk-003<SEP>gd_609b5d80b08281193e809245-chunk-002<SEP>gd_81df2c388bd8cae226612dc4-chunk-001<SEP>gd_c6d06f63e6dba3706c539568-chunk-000<SEP>gd_c91e035894efec4c6e9873e9-chunk-000<SEP>gd_c91e035894efec4c6e9873e9-chunk-001<SEP>gd_ca4e8d2f61b3ea64d1188e6c-chunk-001<SEP>gd_c19cd54fed6d5f7cfae5bbc2-chunk-001<SEP>gd_e193b37a0639e96b45943576-chunk-001<SEP>gd_e2a836034c2fbbd00b9cc82a-chunk-001<SEP>gd_e424b816b7ffc8ed454f8d82-chunk-001<SEP>gd_e5a71114e0ca6630e06972a5-chunk-001<SEP>gd_e5a71114e0ca6630e06972a5-chunk-002<SEP>gd_e87489426f4b2721f66ba5a8-chunk-000<SEP>gd_e966c68c8b64742b54a64f35-chunk-001<SEP>gd_e966c68c8b64742b54a64f35-chunk-002<SEP>gd_380ffacf8dabce7eb3826617-chunk-000<SEP>gd_737423395e5334f2472de593-chunk-000<SEP>gd_8e96eb3d7daa50e42f4f6c4e-chunk-001<SEP>gd_a267a7a4c9ff37bad4bc0f7a-chunk-000<SEP>gd_1475e3e6808bcf1fde45f610-chunk-003<SEP>gd_1475e3e6808bcf1fde45f610-chunk-004<SEP>gd_1c9f0c1497d224d0411bf40f-chunk-004<SEP>gd_1c9f0c1497d224d0411bf40f-chunk-005<SEP>gd_1ae9b4571e84b8b887bf810d-chunk-002<SEP>gd_21bcdb79915adf02cb5ac281-chunk-001<SEP>gd_21bcdb79915adf02cb5ac281-chunk-003<SEP>gd_2e5fc1972640f43b4892f397-chunk-003<SEP>gd_2e5fc1972640f43b4892f397-chunk-004<SEP>gd_2e5fc1972640f43b4892f397-chunk-005<SEP>gd_2e5fc1972640f43b4892f397-chunk-002<SEP>gd_334014d96e325de76de53eb7-chunk-000<SEP>gd_334014d96e325de76de53eb7-chunk-001<SEP>gd_334014d96e325de76de53eb7-chunk-002<SEP>gd_334014d96e325de76de53eb7-chunk-003<SEP>gd_334014d96e325de76de53eb7-chunk-004<SEP>gd_4765cbd3559619036cfba977-chunk-000<SEP>gd_4765cbd3559619036cfba977-chunk-003<SEP>gd_509c4eab34454621d9840bc6-chunk-000<SEP>gd_509c4eab34454621d9840bc6-chunk-001<SEP>gd_70fbe3aeece3874aa5c26594-chunk-003<SEP>gd_70fbe3aeece3874aa5c26594-chunk-004<SEP>gd_7b69a630faffe55c35682b43-chunk-002<SEP>gd_a9d9de4d6e05f2263c7403ee-chunk-000<SEP>gd_a9d9de4d6e05f2263c7403ee-chunk-001<SEP>gd_a9d9de4d6e05f2263c7403ee-chunk-003<SEP>gd_a9d9de4d6e05f2263c7403ee-chunk-004<SEP>gd_b62b6ad34d4ba7357f8052f1-chunk-003<SEP>gd_9aaaf87c9b9d043595bc5848-chunk-003<SEP>gd_9b0a0e48daf169f6dd14b6a2-chunk-003<SEP>gd_9b0a0e48daf169f6dd14b6a2-chunk-004<SEP>gd_c8d661ff192a95ef88336de6-chunk-001<SEP>gd_c8d661ff192a95ef88336de6-chunk-003<SEP>gd_c8d661ff192a95ef88336de6-chunk-004<SEP>gd_c8d661ff192a95ef88336de6-chunk-002<SEP>gd_d2e5e17168d573c0e46f7b9c-chunk-001<SEP>gd_d2e5e17168d573c0e46f7b9c-chunk-002<SEP>gd_282e9cd68bbd478ae4fb0115-chunk-000<SEP>gd_dd2fb5e9c77a521dabfbfd09-chunk-000<SEP>gd_dd2fb5e9c77a521dabfbfd09-chunk-001<SEP>gd_dd2fb5e9c77a521dabfbfd09-chunk-003<SEP>gd_dd2fb5e9c77a521dabfbfd09-chunk-004<SEP>gd_3cea7d46018c3d0b13e37539-chunk-000<SEP>gd_7070389b6ad9bb595965eca5-chunk-003<SEP>gd_7070389b6ad9bb595965eca5-chunk-002<SEP>gd_8201b392ff7f7b6dd0a20f81-chunk-000<SEP>gd_8bab8d02da7bc2e8912b06e1-chunk-002<SEP>gd_8bab8d02da7bc2e8912b06e1-chunk-005<SEP>gd_3e9857fef8b3ef58b19416dc-chunk-000<SEP>gd_3e9857fef8b3ef58b19416dc-chunk-001<SEP>gd_3e9857fef8b3ef58b19416dc-chunk-004<SEP>gd_71bc7b69137fc8525a9f25a9-chunk-000<SEP>gd_71bc7b69137fc8525a9f25a9-chunk-001<SEP>gd_7849200fd59aa068293f37a0-chunk-001<SEP>gd_88b45eaf937a5ab5039dba4e-chunk-000<SEP>gd_88b45eaf937a5ab5039dba4e-chunk-001<SEP>gd_8c9e1465c803d5cab436c220-chunk-004<SEP>gd_9e84be7a06bff0542f4f560e-chunk-000<SEP>gd_33656f4f7511eae366de5715-chunk-000<SEP>gd_9ff5d1fe7942088fed58c9e9-chunk-001<SEP>gd_9ff5d1fe7942088fed58c9e9-chunk-002<SEP>gd_9ff5d1fe7942088fed58c9e9-chunk-003<SEP>gd_9ff5d1fe7942088fed58c9e9-chunk-004<SEP>gd_cdb688c70f3a971827ac4543-chunk-003<SEP>gd_cdb688c70f3a971827ac4543-chunk-004<SEP>gd_d19ef462293cbfaf17f910e6-chunk-000<SEP>gd_d19ef462293cbfaf17f910e6-chunk-001<SEP>gd_d9a2d04e717bef151e9c5a38-chunk-000<SEP>gd_de3687092a58dc2959f02ba2-chunk-000<SEP>gd_e569b162bd704a1f08dfbf1c-chunk-000<SEP>gd_eb80566a617b57e47caec5bf-chunk-000<SEP>gd_eb80566a617b57e47caec5bf-chunk-001<SEP>gd_eb80566a617b57e47caec5bf-chunk-002<SEP>gd_b88c92b4f10cf414596ad164-chunk-006<SEP>gd_c0b7bd08bc413e3e345d580d-chunk-001<SEP>gd_5965fa9fb21505d682caeb90-chunk-000<SEP>gd_5965fa9fb21505d682caeb90-chunk-001<SEP>gd_97389d68b67ed25ed76e7401-chunk-002<SEP>gd_57de1d1dfc0b96aff9b97b1f-chunk-006<SEP>gd_57de1d1dfc0b96aff9b97b1f-chunk-007<SEP>gd_6206569683c386ee6c92ce17-chunk-003<SEP>gd_e7d8f3c724d6b1461b36dc79-chunk-004<SEP>gd_8223a31e412ad6da256d3a2a-chunk-009<SEP>gd_8223a31e412ad6da256d3a2a-chunk-010<SEP>gd_1ea75faaa1a24bb0a1573ab5-chunk-002<SEP>gd_1ea75faaa1a24bb0a1573ab5-chunk-003<SEP>gd_f224b92d594e096cf9f7eef5-chunk-003<SEP>gd_4bffee088c217385e9ed7cf0-chunk-005<SEP>gd_69caa78963c10481cba0741f-chunk-008<SEP>gd_69caa78963c10481cba0741f-chunk-009<SEP>gd_7fceffa45398125f8711e9a1-chunk-001<SEP>gd_7fceffa45398125f8711e9a1-chunk-002<SEP>gd_7fceffa45398125f8711e9a1-chunk-006<SEP>gd_7fceffa45398125f8711e9a1-chunk-007<SEP>gd_7fceffa45398125f8711e9a1-chunk-009<SEP>gd_8b689300edb9b47ecab97557-chunk-002<SEP>gd_4ca05c1482a9b33757040d2a-chunk-001<SEP>gd_79c396c5dba7ced9a1a0f4c7-chunk-005<SEP>gd_7c33831a350919761745fb50-chunk-000<SEP>gd_b7769ae41d22fc197ddc2e8c-chunk-000<SEP>gd_b7769ae41d22fc197ddc2e8c-chunk-007<SEP>gd_1c786168860b4c364f13ef3b-chunk-010<SEP>gd_1c786168860b4c364f13ef3b-chunk-016<SEP>gd_ab600b7a0207951be08be45e-chunk-005<SEP>gd_59707322e6a2495f8caca90a-chunk-001<SEP>gd_b4834e67822b74209783fdec-chunk-007<SEP>gd_8fe15d1e1f4d6d874c6ce1bb-chunk-005<SEP>gd_8fe15d1e1f4d6d874c6ce1bb-chunk-007<SEP>gd_8fe15d1e1f4d6d874c6ce1bb-chunk-002",
+          "file_path": "gd_1ba5b6429d4f7d40a66b28cc<SEP>gd_5ccf11b899a8d7d75d0990ec<SEP>gd_3e5e1c326bac97e2282285bd<SEP>gd_43bf884994672448c45ff7f3<SEP>gd_9aba062947c51a2b9c015fc4<SEP>gd_9048ed4b6c5a9f3e40238ec5<SEP>gd_501507d3da37dc0bee391abb<SEP>gd_4561147ae4b4a79577d41c1c<SEP>gd_98c83ccec636227b2a7f7b07<SEP>gd_c387616945e788682c23c05d<SEP>gd_04778b54908b62472c7de29a<SEP>gd_83de48d1c3212650ca366a4e<SEP>gd_aad2f9895e2d25f92408db27<SEP>gd_27b0e2f075add8bcb4729bd8<SEP>gd_2dd93b6005056c1c7e39a189<SEP>gd_fb798d3019afee06b2636d46<SEP>gd_ab890a3f6fa03f33cf08f29f<SEP>gd_0f69d58d97b893c261245148<SEP>gd_b91094960e87c92b6158bc8a<SEP>gd_66bbfcd9b1f8b6bca75fe3f6<SEP>gd_6d674ffb138083b614124cff<SEP>gd_a6fbf8f37d2f0906d276118e<SEP>gd_b72ec052f08ad24523c4b9bd<SEP>gd_cbb1fcbc03eab829018c09f8<SEP>gd_8377d68cef2cdef818baa2e8<SEP>gd_1b9124f2109ba18c8a2b0ba1<SEP>gd_86c3f93917994af72e5fb2d7<SEP>gd_956e8a0995c87d3c1371ebeb<SEP>gd_ae3a12bfd94ba9317fab7a7a<SEP>gd_b740a4f2a516a3f3a59a462d<SEP>gd_84a99c18e32a6a3af3df2372<SEP>gd_93c3f50c7ddebd6750401de9<SEP>gd_f1918e1772488f6f58adb5dc<SEP>gd_9da2d51cf4e9ef2cc0ff544d<SEP>gd_a9cb3aa7fddefa1484ccdea9<SEP>gd_b127fece42e28ee1e64a63ce<SEP>gd_f6156caa4c31f918c461f330<SEP>gd_f70b08b50e252ea315d757da<SEP>gd_fb87546d14423eb7e21c5ce8<SEP>gd_0b07114179a95a92796b9f5b<SEP>gd_402ba37a6bc85a4d1b4c34cb<SEP>gd_43942905c1222c1c0f30c1aa<SEP>gd_48c4d7d8835df970f970f08b<SEP>gd_4c9a84c75fac927c1308ee49<SEP>gd_4e7fd53d3d57eeb978245741<SEP>gd_3431ce388885d39d6d44c6b6<SEP>gd_5274f9ec1b322a6126bb936d<SEP>gd_5e67031298ebee4dd12bd5c3<SEP>gd_6439c400c1d09acb6a66a591<SEP>gd_685109a529dd46a0e19d6f2a<SEP>gd_88a6020edd68591d23fa8ac6<SEP>gd_aece9c47f084112a109da7b9<SEP>gd_b0cf00d553e8880b1c31910f<SEP>gd_885984971dbc1d1315ea4765<SEP>gd_609b5d80b08281193e809245<SEP>gd_81df2c388bd8cae226612dc4<SEP>gd_c6d06f63e6dba3706c539568<SEP>gd_c91e035894efec4c6e9873e9<SEP>gd_ca4e8d2f61b3ea64d1188e6c<SEP>gd_c19cd54fed6d5f7cfae5bbc2<SEP>gd_e193b37a0639e96b45943576<SEP>gd_e2a836034c2fbbd00b9cc82a<SEP>gd_e424b816b7ffc8ed454f8d82<SEP>gd_e5a71114e0ca6630e06972a5<SEP>gd_e87489426f4b2721f66ba5a8<SEP>gd_e966c68c8b64742b54a64f35<SEP>gd_380ffacf8dabce7eb3826617<SEP>gd_737423395e5334f2472de593<SEP>gd_8e96eb3d7daa50e42f4f6c4e<SEP>gd_a267a7a4c9ff37bad4bc0f7a<SEP>gd_1475e3e6808bcf1fde45f610<SEP>gd_1c9f0c1497d224d0411bf40f<SEP>gd_1ae9b4571e84b8b887bf810d<SEP>gd_21bcdb79915adf02cb5ac281<SEP>gd_2e5fc1972640f43b4892f397<SEP>...truncated...(KEEP Old)",
+          "created_at": 1793617656
+        },
+        {
+          "entity_name": "2026 Crash",
+          "entity_type": "event",
+          "description": "A predicted market downturn in 2026.",
+          "source_id": "gd_03e19ade06e9e20d35a7a989-chunk-005",
+          "file_path": "gd_03e19ade06e9e20d35a7a989",
+          "created_at": 1793598020
+        },
+        {
+          "entity_name": "AWS",
+          "entity_type": "organization",
+          "description": "Amazon Web Services (AWS) is a multinational cloud computing company that provides a comprehensive suite of cloud infrastructure and platform services to businesses of all sizes. As the largest partner of Crowdstrike, AWS has established itself as a leader in the cloud computing industry. With a strong growth rate of 16% year-over-year, AWS has a run rate of $85 billion, making it one of the Titans of Cloud infrastructure, competing with other major providers such as Digital Ocean.\n\nAWS offers scalable and on-demand infrastructure for businesses, allowing them to quickly and easily deploy applications and services without the need for upfront capital expenditures. The company's cloud platform is designed to provide a highly secure and reliable environment for businesses to operate in, with a large customer base and faster growth compared to Digital Ocean. In addition to its cloud infrastructure services, AWS also provides a range of other services, including machine learning (ML) capabilities, which have been leveraged by individuals such as Alex Pathrushev to gain leadership experience.\n\nThe company hosts the annual AWS Reinvent conference, which brings together industry leaders and experts to share knowledge and best practices in cloud computing. AWS is also a cloud computing platform that provides a range of services, including computing power, storage, and analytics. It is a company that has experienced growth, but with a slower rate compared to some of its competitors. However, with its strong growth rate and large customer base, AWS is well-positioned to continue to lead the way in cloud computing for years to come.\n\nAWS is also a cloud provider competing with Databricks, and it offers managed cloud services, including infrastructure, identity management, and compliance certifications. The company is a cloud computing platform that provides a wide range of services, including computing power, storage, and networking, and it is a cloud-based platform for hosting applications and services.\n\nIn addition to its core services, AWS also offers AI services through Bedrock usage, and it is a company that pays Anthropic. The company's cloud platform provides a consumption-based pricing model, making it an attractive option for businesses looking to scale their operations without incurring significant upfront costs.\n\nAWS is also a platform that allows for the development of SaaS companies, and it has been targeted by marketing efforts from companies such as Datadog. Overall, AWS is a major player in the cloud computing industry, well-positioned to continue to lead the way in cloud computing for years to come.\n\nIt's worth noting that AWS has also been described as a competitor to Azure, and has experienced a slower growth rate compared to some of its competitors, such as Microsoft, Oracle, Google, and Broadcom, in the AI race. However, with its strong growth rate and large customer base, AWS remains a dominant force in the cloud computing industry.",
+          "source_id": "gd_13e89e60c3f8b41c3f077c76-chunk-001<SEP>gd_13e89e60c3f8b41c3f077c76-chunk-002<SEP>gd_5067e7d465b1c8e7c23adc37-chunk-000<SEP>gd_736f2bbad99428fc07ad0ea6-chunk-000<SEP>gd_3d00a2ad35f7082a70310e88-chunk-000<SEP>gd_3d00a2ad35f7082a70310e88-chunk-001<SEP>gd_3d00a2ad35f7082a70310e88-chunk-002<SEP>gd_d00cdd8f7dcaa74b08c9472f-chunk-000<SEP>gd_d0997b9825dde450f885028e-chunk-000<SEP>gd_67aa9b21cc5ba8ca31945889-chunk-001<SEP>gd_67aa9b21cc5ba8ca31945889-chunk-002<SEP>gd_8d70e8e8a1094b7be78b99b3-chunk-000<SEP>gd_b37537874999ed6e7cc1b2eb-chunk-000<SEP>gd_a0696753f1104322d83dd959-chunk-000<SEP>gd_a0696753f1104322d83dd959-chunk-001<SEP>gd_3e1e129a8206331df24e51bb-chunk-000<SEP>gd_a0a7fac44cacd59c4debc742-chunk-001<SEP>gd_a0a7fac44cacd59c4debc742-chunk-002<SEP>gd_5f88a04a8254899f62e5dece-chunk-000<SEP>gd_606606c10d0a838faa49fd61-chunk-000<SEP>gd_19772d999a49aa7c05c1ed66-chunk-000<SEP>gd_37c9bf3c519ccfb55eca9483-chunk-001<SEP>gd_402ba37a6bc85a4d1b4c34cb-chunk-000<SEP>gd_48c4d7d8835df970f970f08b-chunk-000<SEP>gd_f006f6ca7bfb307626d61034-chunk-002<SEP>gd_1ae9b4571e84b8b887bf810d-chunk-002<SEP>gd_4765cbd3559619036cfba977-chunk-001<SEP>gd_4765cbd3559619036cfba977-chunk-005<SEP>gd_4d74c8d25456712731b2794d-chunk-003<SEP>gd_a2a196fcdd6409c49ba31408-chunk-000<SEP>gd_a2a196fcdd6409c49ba31408-chunk-001<SEP>gd_b59420b8a4157ccee2549a6f-chunk-001<SEP>gd_d2e5e17168d573c0e46f7b9c-chunk-001<SEP>gd_51f61376ab02cc151f9c2e33-chunk-002<SEP>gd_7070389b6ad9bb595965eca5-chunk-003<SEP>gd_7070389b6ad9bb595965eca5-chunk-002<SEP>gd_27a4326e7ae80477834dd461-chunk-003<SEP>gd_27a4326e7ae80477834dd461-chunk-004<SEP>gd_bbbfaf2a3dff5c657489eacb-chunk-000<SEP>gd_ea5d4c64aa777e800ddbbf30-chunk-002<SEP>gd_88b45eaf937a5ab5039dba4e-chunk-002<SEP>gd_e17729e5eca8acb5235bb5b2-chunk-001<SEP>gd_e17729e5eca8acb5235bb5b2-chunk-002<SEP>gd_b708bafdb3e9448eaa9a7fcd-chunk-003<SEP>gd_a2681a200e84051105426224-chunk-004<SEP>gd_a2681a200e84051105426224-chunk-005<SEP>gd_264f36d1cab20f425e0992cf-chunk-000<SEP>gd_264f36d1cab20f425e0992cf-chunk-001<SEP>gd_7fceffa45398125f8711e9a1-chunk-004<SEP>gd_fdfc938e80525a46455d9f0f-chunk-000<SEP>gd_df32839420b6112dc0266e66-chunk-004<SEP>gd_df32839420b6112dc0266e66-chunk-007<SEP>gd_869bec1b88bfc735253c3fc5-chunk-002<SEP>gd_03d4a048b430d78e6eb154b6-chunk-003<SEP>gd_14eaa99f6b156bd8099dd6b7-chunk-021<SEP>gd_14eaa99f6b156bd8099dd6b7-chunk-022<SEP>gd_14eaa99f6b156bd8099dd6b7-chunk-028<SEP>gd_14eaa99f6b156bd8099dd6b7-chunk-020<SEP>gd_87e883631b8660ea245be6c6-chunk-000<SEP>gd_40eabf17d415f412ef592066-chunk-003<SEP>gd_9c63ca3cd132590f56cc4437-chunk-003<SEP>gd_9f2a7fa73db28fe0ce323908-chunk-002<SEP>gd_1e5d3c87e4c9db630255f794-chunk-004<SEP>gd_1e5d3c87e4c9db630255f794-chunk-005<SEP>gd_52ff2dbd2bdbc3a647908bb4-chunk-005<SEP>gd_efa8aec12cb457a88f80a4fa-chunk-008<SEP>gd_75006881beac4c60179417cf-chunk-001<SEP>gd_75006881beac4c60179417cf-chunk-002<SEP>gd_75006881beac4c60179417cf-chunk-003<SEP>gd_0adbace75ffc5e3ea7aadf77-chunk-007<SEP>gd_0adbace75ffc5e3ea7aadf77-chunk-008<SEP>gd_9809d37cd527c2958295b062-chunk-014",
+          "file_path": "gd_13e89e60c3f8b41c3f077c76<SEP>gd_5067e7d465b1c8e7c23adc37<SEP>gd_736f2bbad99428fc07ad0ea6<SEP>gd_3d00a2ad35f7082a70310e88<SEP>gd_d00cdd8f7dcaa74b08c9472f<SEP>gd_d0997b9825dde450f885028e<SEP>gd_67aa9b21cc5ba8ca31945889<SEP>gd_8d70e8e8a1094b7be78b99b3<SEP>gd_b37537874999ed6e7cc1b2eb<SEP>gd_a0696753f1104322d83dd959<SEP>gd_a0a7fac44cacd59c4debc742<SEP>gd_5f88a04a8254899f62e5dece<SEP>gd_606606c10d0a838faa49fd61<SEP>gd_19772d999a49aa7c05c1ed66<SEP>gd_37c9bf3c519ccfb55eca9483<SEP>gd_402ba37a6bc85a4d1b4c34cb<SEP>gd_48c4d7d8835df970f970f08b<SEP>gd_f006f6ca7bfb307626d61034<SEP>gd_1ae9b4571e84b8b887bf810d<SEP>gd_4765cbd3559619036cfba977<SEP>gd_4d74c8d25456712731b2794d<SEP>gd_a2a196fcdd6409c49ba31408<SEP>gd_b59420b8a4157ccee2549a6f<SEP>gd_d2e5e17168d573c0e46f7b9c<SEP>gd_51f61376ab02cc151f9c2e33<SEP>gd_7070389b6ad9bb595965eca5<SEP>gd_27a4326e7ae80477834dd461<SEP>gd_bbbfaf2a3dff5c657489eacb<SEP>gd_ea5d4c64aa777e800ddbbf30<SEP>gd_88b45eaf937a5ab5039dba4e<SEP>gd_e17729e5eca8acb5235bb5b2<SEP>gd_b708bafdb3e9448eaa9a7fcd<SEP>gd_a2681a200e84051105426224<SEP>gd_264f36d1cab20f425e0992cf<SEP>gd_7fceffa45398125f8711e9a1<SEP>gd_fdfc938e80525a46455d9f0f<SEP>gd_df32839420b6112dc0266e66<SEP>gd_869bec1b88bfc735253c3fc5<SEP>gd_03d4a048b430d78e6eb154b6<SEP>gd_14eaa99f6b156bd8099dd6b7<SEP>gd_87e883631b8660ea245be6c6<SEP>gd_40eabf17d415f412ef592066<SEP>gd_9c63ca3cd132590f56cc4437<SEP>gd_9f2a7fa73db28fe0ce323908<SEP>gd_1e5d3c87e4c9db630255f794<SEP>gd_efa8aec12cb457a88f80a4fa<SEP>gd_75006881beac4c60179417cf<SEP>gd_0adbace75ffc5e3ea7aadf77<SEP>gd_9809d37cd527c2958295b062",
+          "created_at": 1793645911
+        },
+        {
+          "entity_name": "upround",
+          "entity_type": "event",
+          "description": "An upround is a situation where a startup's valuation increases, making it easier for investors to write a new check.",
+          "source_id": "gd_ea4ee72bf374a052ed1fa27e-chunk-001",
+          "file_path": "gd_ea4ee72bf374a052ed1fa27e",
+          "created_at": 1793594038
+        },
+        {
+          "entity_name": "Digital Ocean",
+          "entity_type": "product",
+          "description": "Digital Ocean is a cloud infrastructure and platform provider that offers a range of scalable and secure cloud computing services. Founded on the principle of providing a cheaper and simpler alternative to established cloud providers such as AWS, Azure, and Google Cloud, Digital Ocean has established itself as a major player in the cloud infrastructure market. The company's focus on customer satisfaction and retention has been key to its success, particularly in the Long Tail of Cloud, where it has carved out a niche for itself despite slower growth compared to larger competitors.\n\nDigital Ocean's cloud infrastructure platform provides on-demand infrastructure for businesses, allowing them to quickly and efficiently scale their operations as needed. The company's platform is designed to be highly secure, with robust measures in place to protect customer data and applications. With a strong focus on customer satisfaction, Digital Ocean has built a loyal customer base and has been successful in generating significant free cash flow, with $150m of free cash flow on $500m in revenue. Additionally, the company's EBITDA has been impressive, with $152m on $490m in ARR.\n\nDigital Ocean's success can be attributed to its ability to provide a scalable and secure cloud computing experience at a lower cost than its competitors. The company's platform is designed to be highly flexible, allowing customers to easily scale their resources up or down as needed. This flexibility, combined with Digital Ocean's strong focus on customer satisfaction and retention, has made it a popular choice among businesses looking for a cloud infrastructure provider.",
+          "source_id": "gd_59d3c90463b37c53f2c312bb-chunk-000<SEP>gd_59d3c90463b37c53f2c312bb-chunk-001<SEP>gd_3d00a2ad35f7082a70310e88-chunk-000<SEP>gd_3d00a2ad35f7082a70310e88-chunk-001<SEP>gd_3d00a2ad35f7082a70310e88-chunk-002<SEP>gd_ad4399ea29a32c2b3537e550-chunk-000<SEP>gd_402ba37a6bc85a4d1b4c34cb-chunk-001<SEP>gd_d7608d7e6dac4d722fb90de0-chunk-003<SEP>gd_a6563952729bc853829369cf-chunk-000",
+          "file_path": "gd_59d3c90463b37c53f2c312bb<SEP>gd_3d00a2ad35f7082a70310e88<SEP>gd_ad4399ea29a32c2b3537e550<SEP>gd_402ba37a6bc85a4d1b4c34cb<SEP>gd_d7608d7e6dac4d722fb90de0<SEP>gd_a6563952729bc853829369cf",
+          "created_at": 1793645661
+        },
+        {
+          "entity_name": "2025-2026",
+          "entity_type": "concept",
+          "description": "The 2025-2026 period marks the beginning of a new era in sales, where representatives must adapt to changing products and intense competition. This time period is also characterized by the acceleration of artificial intelligence (AI), which has fundamentally changed the world. Companies are now required to figure out how to become the recommended answer, adding an extra layer of complexity to their operations.\n\nDuring this era, the role of humans in sales has shifted, with a greater emphasis on adding value. It is a time of increased work effort, as companies strive to stay ahead in the market. The 2025-2026 period is also mentioned as a target for lower-middle market SaaS companies to become attractive M&A propositions, indicating a significant shift in the business landscape.\n\nFurthermore, this time period has brought about a change in profitability expectations, with companies needing to reassess their strategies to remain competitive. The 2025-2026 period is also specifically mentioned in the context of rebuilding sales motion, highlighting the need for companies to adapt and innovate in response to changing market conditions. Overall, the 2025-2026 period is a transformative time for businesses, requiring them to be agile and responsive to the changing needs of their customers and the market.",
+          "source_id": "gd_385277f88221b595a4db19fa-chunk-000<SEP>gd_1c9f0c1497d224d0411bf40f-chunk-002<SEP>gd_1c9f0c1497d224d0411bf40f-chunk-001<SEP>gd_eb80566a617b57e47caec5bf-chunk-005<SEP>gd_20e60735f48eae1b55d1b0a4-chunk-002<SEP>gd_20e60735f48eae1b55d1b0a4-chunk-001<SEP>gd_547c5075e66aa644c0ab2a4f-chunk-003<SEP>gd_547c5075e66aa644c0ab2a4f-chunk-004<SEP>gd_605e0c1f4fd4724182870b9e-chunk-010<SEP>gd_2278ccbbb419f2b27781cfed-chunk-003",
+          "file_path": "gd_385277f88221b595a4db19fa<SEP>gd_1c9f0c1497d224d0411bf40f<SEP>gd_eb80566a617b57e47caec5bf<SEP>gd_20e60735f48eae1b55d1b0a4<SEP>gd_547c5075e66aa644c0ab2a4f<SEP>gd_605e0c1f4fd4724182870b9e<SEP>gd_2278ccbbb419f2b27781cfed",
+          "created_at": 1793645054
+        },
+        {
+          "entity_name": "Zoom",
+          "entity_type": "product",
+          "description": "**Zoom**\n\nZoom is a cloud-based video conferencing platform that offers a range of features for remote meetings and collaboration. It is primarily used for remote communication and collaboration, allowing users to hold virtual meetings and conferences. The platform provides a convenient and efficient way for individuals and businesses to connect with each other from anywhere in the world.\n\nZoom's features include high-quality video and audio, screen sharing, and virtual whiteboarding, making it an ideal tool for remote work, online education, and virtual events. Additionally, Zoom helps businesses scale and grow by providing a platform for remote communication and collaboration, enabling teams to work together more effectively and efficiently.\n\nThe company has undergone significant changes in its business model, shifting from a focus on small and medium-sized businesses (SMBs) to a focus on enterprise customers. Zoom has experienced rapid growth in revenue, increasing from $1B to $3.5B ARR in just one year. Zoom has a large customer base, with over 2,900 customers generating $100k+ in revenue per year.\n\nZoom has a strong enterprise sales team and is building out its enterprise sales motions. The company has been successful in generating revenue and cash flow, with 3 million users contributing to its revenue. Zoom has partnered with various organizations, including SaaStr, for various sessions, and is used by companies like Braze for remote sales and customer engagement.\n\nIt's worth noting that while Zoom is primarily known as a video conferencing platform, it has also been mentioned as a potential headquarters for SaaS companies, and has been used for remote meetings, including pitch meetings. Additionally, Zoom offers a free edition, and has been used by companies like Braze for remote sales and customer engagement.\n\nZoom gained popularity during the COVID-19 pandemic for its ease of use and ability to keep people connected during lockdown. The platform has evolved from a self-serve model to a enterprise-focused leader in collaboration. Overall, Zoom is a cloud-based video conferencing platform that offers a range of features for remote meetings and collaboration, with a strong focus on enterprise customers and a successful track record of generating revenue and cash flow.\n\nIn addition to its core video conferencing features, Zoom has also expanded its capabilities through strategic acquisitions, including the acquisition of Five9 to accelerate its presence in the enterprise call center. This move demonstrates Zoom's commitment to innovation and its desire to stay ahead of the competition in the rapidly evolving video conferencing market.\n\nZoom is also a software company that returns a significant amount of cash as free cash flow, making it an attractive option for investors. The company has taken a big piece of the IT budget, and its video conferencing platform has become a staple for many businesses. As a result, Zoom has gone public and continues to grow its customer base and revenue.\n\nIt's also worth noting that Zoom is used by traditional VCs to close deals quickly, and is a popular platform for remote meetings and customer interactions.",
+          "source_id": "gd_5d6131d1672df3a46cf50af4-chunk-000<SEP>gd_b69603cf3ff1c56f5acd6d17-chunk-001<SEP>gd_1bd11726aa0e0351aefe21ce-chunk-000<SEP>gd_1cc7db10c34d802d7c089d9f-chunk-000<SEP>gd_1cc7db10c34d802d7c089d9f-chunk-001<SEP>gd_5d90a51419eeab4b82b0d089-chunk-000<SEP>gd_1c7b97735560846975c87037-chunk-001<SEP>gd_1c7b97735560846975c87037-chunk-002<SEP>gd_19771f76507a7d55cdf66fb1-chunk-001<SEP>gd_7865bc0261d26a8a8da9a626-chunk-000<SEP>gd_7865bc0261d26a8a8da9a626-chunk-001<SEP>gd_13aa38370d7255559def2519-chunk-001<SEP>gd_d1423816ab12475e55e09a39-chunk-001<SEP>gd_d1423816ab12475e55e09a39-chunk-002<SEP>gd_48ff16ec2e5560a86e6edea1-chunk-000<SEP>gd_17ec0a740f815b471f557b82-chunk-000<SEP>gd_235342391fdde0066f0ee0eb-chunk-000<SEP>gd_685189794087858c0dba6918-chunk-000<SEP>gd_47fbbf612af3204e5ab5ce5e-chunk-001<SEP>gd_47fbbf612af3204e5ab5ce5e-chunk-000<SEP>gd_4561147ae4b4a79577d41c1c-chunk-000<SEP>gd_179963266b84ebecb1409519-chunk-000<SEP>gd_74f885fb4d40a7d23380e616-chunk-000<SEP>gd_ba8cfcf37a4829e6738e3817-chunk-000<SEP>gd_22f503d26e4d8faf8274b928-chunk-000<SEP>gd_22f503d26e4d8faf8274b928-chunk-001<SEP>gd_22f503d26e4d8faf8274b928-chunk-002<SEP>gd_23323bf99bc8f192e7bc55c7-chunk-000<SEP>gd_60f7ec77f0785ad96797ddf2-chunk-000<SEP>gd_60f7ec77f0785ad96797ddf2-chunk-001<SEP>gd_69e981f3c64705e2d8b2b7d5-chunk-000<SEP>gd_2d72fe9469e9f2b08dcd24ea-chunk-000<SEP>gd_30eff1507c63be40216a7465-chunk-000<SEP>gd_30eff1507c63be40216a7465-chunk-001<SEP>gd_896b59f47a2fe051ace06a99-chunk-000<SEP>gd_896b59f47a2fe051ace06a99-chunk-001<SEP>gd_1ebff232ac1e9ad1c7cac4de-chunk-000<SEP>gd_c387616945e788682c23c05d-chunk-000<SEP>gd_3d00a2ad35f7082a70310e88-chunk-001<SEP>gd_d032b97ad647886e0e116542-chunk-000<SEP>gd_7d74a4e133eb43988eaa38f9-chunk-000<SEP>gd_7d74a4e133eb43988eaa38f9-chunk-001<SEP>gd_3eb0d6dd205274318ede670c-chunk-002<SEP>gd_df3285fbd174b768d904c41b-chunk-000<SEP>gd_83f8805152f3bf7e5d5d77a7-chunk-000<SEP>gd_40842015ea048621b1aee5ee-chunk-001<SEP>gd_c3979c9f267bec7d23352d3e-chunk-000<SEP>gd_fdc06d575c8bc962e662ebaa-chunk-000<SEP>gd_0907c1098f08172d46eda211-chunk-000<SEP>gd_24f77dbf4b59912a1115a97e-chunk-001<SEP>gd_468b5135ea05ec7beab9cfd0-chunk-000<SEP>gd_83f13ed898b44588b56c0ee3-chunk-000<SEP>gd_562428ed0fbfd2c7c9e7e139-chunk-000<SEP>gd_562428ed0fbfd2c7c9e7e139-chunk-001<SEP>gd_562428ed0fbfd2c7c9e7e139-chunk-002<SEP>gd_384531654f71cbf6646ce131-chunk-000<SEP>gd_5725912896d753f08e70e274-chunk-001<SEP>gd_ab388e36b2c46d1b6afc8c4d-chunk-000<SEP>gd_5842a34ea92c5bf8829796a9-chunk-000<SEP>gd_5a74e007239d6fa585aa9d42-chunk-000<SEP>gd_5a74e007239d6fa585aa9d42-chunk-001<SEP>gd_ec98065364cfc525c93b67ce-chunk-001<SEP>gd_ec98065364cfc525c93b67ce-chunk-002<SEP>gd_87e4169fe38c1cc0f4c4cb5f-chunk-000<SEP>gd_0f29be943a0bc77ae84acc1d-chunk-000<SEP>gd_c4d88074f382c56078d251bf-chunk-002<SEP>gd_c4d88074f382c56078d251bf-chunk-003<SEP>gd_5ebe9ad0324f615be28ce5a6-chunk-000<SEP>gd_d16a1e88c49c3199a99bd49d-chunk-001<SEP>gd_8d70e8e8a1094b7be78b99b3-chunk-000<SEP>gd_b1567604058b6fc7e7d88e9c-chunk-000<SEP>gd_6cc9536a8c08885ebea1a265-chunk-000<SEP>gd_24f21a5dbfdfd8e557428dbe-chunk-001<SEP>gd_7298e57f5a8875ad3995649a-chunk-000<SEP>gd_744aedf69774b9787271020d-chunk-000<SEP>gd_dd32c9e4383b69e45ec833e8-chunk-000<SEP>gd_0aa2c1232edf29ef850211c5-chunk-000<SEP>gd_7d9ae6c91b92a3f115f2c36d-chunk-000<SEP>gd_13446d288a2e459ebe9333df-chunk-002<SEP>gd_85fb721c8c61021864128cd9-chunk-000<SEP>gd_928c6555503d6e90d241cf1e-chunk-000<SEP>gd_3d60c7b3488bd68318d785c2-chunk-000<SEP>gd_28afe47b9b878d0011571004-chunk-000<SEP>gd_956e8a0995c87d3c1371ebeb-chunk-002<SEP>gd_f87b6447ffb0fde342d3e7c3-chunk-002<SEP>gd_a317deb61e243cd08d76cca3-chunk-000<SEP>gd_a317deb61e243cd08d76cca3-chunk-001<SEP>gd_a61bd5a262b3206434038339-chunk-000<SEP>gd_98c310f33b529f8d44d3350e-chunk-000<SEP>gd_aafe6164084bc84cbf056a39-chunk-000<SEP>gd_aafe6164084bc84cbf056a39-chunk-001<SEP>gd_aafe6164084bc84cbf056a39-chunk-002<SEP>gd_aafe6164084bc84cbf056a39-chunk-003<SEP>gd_ad4399ea29a32c2b3537e550-chunk-000<SEP>gd_53d1d4d7cbdb83f9dd2abc9c-chunk-000<SEP>gd_545a33a881beeb183329d2d6-chunk-003<SEP>gd_21785bfd1839a4c309194464-chunk-000<SEP>gd_5c912fefa31e5fba2a3e6a7f-chunk-000<SEP>gd_68c4bad7befcf56510eda4bc-chunk-000<SEP>gd_bdb7a3958d115cc79af181f3-chunk-000<SEP>gd_c46a4714d0edfa9fffe154cc-chunk-002<SEP>gd_cd33756bd319ab7b66758a0d-chunk-002<SEP>gd_cf7c0e5f010ba75dff9e3d7a-chunk-000<SEP>gd_d3046abbff56769a90cbeea0-chunk-000<SEP>gd_8ed2bda7b3456893ea384f71-chunk-000<SEP>gd_8ed2bda7b3456893ea384f71-chunk-001<SEP>gd_906ef5196b8f7ab71fff80c3-chunk-000<SEP>gd_dbd1ff1a0fadf0dcb04b5f45-chunk-000<SEP>gd_dd13d18c16228c212a2cf778-chunk-000<SEP>gd_dd13d18c16228c212a2cf778-chunk-001<SEP>gd_de4f1cbf6a8bd8e3c5b1cd8f-chunk-001<SEP>gd_deab4259d7f30666e4d2f1a5-chunk-000<SEP>gd_9c2e5ea13cd633d8cc823ba7-chunk-000<SEP>gd_cd8ec99b2960e41e6d206a46-chunk-000<SEP>gd_a6ad2eaf169aed9b7f8a5f51-chunk-000<SEP>gd_ec3d26e97aaf29783bf1cc74-chunk-000<SEP>gd_ec3d26e97aaf29783bf1cc74-chunk-001<SEP>gd_b80d7d772933d7964f9d8df7-chunk-001<SEP>gd_f3529cbb5ac4aa2e54f8622c-chunk-000<SEP>gd_f8ae6dd6116877ca7df38ed1-chunk-001<SEP>gd_d1f01ef7528f12c11f10247c-chunk-000<SEP>gd_d6922837935a40c18c58a550-chunk-001<SEP>gd_d6922837935a40c18c58a550-chunk-002<SEP>gd_d981b5f28d512ce3174a36d3-chunk-000<SEP>gd_05f2397819ebd334bff64e5b-chunk-000<SEP>gd_09eef031dac3be82655d9682-chunk-001<SEP>gd_e405a5b2373dc1ae2bcb1cb6-chunk-000<SEP>gd_2da2607f440be8eb7f834419-chunk-002<SEP>gd_346b6035bf8be7b5b8fd6cff-chunk-000<SEP>gd_3ee14687ce9032e056d1cdfc-chunk-000<SEP>gd_3ee14687ce9032e056d1cdfc-chunk-001<SEP>gd_6ef8fec5c9a0aa516c6819a0-chunk-000<SEP>gd_6ef8fec5c9a0aa516c6819a0-chunk-001<SEP>gd_43c58eec07c53d9d42856441-chunk-000<SEP>gd_43c58eec07c53d9d42856441-chunk-001<SEP>gd_43c58eec07c53d9d42856441-chunk-002<SEP>gd_4490a7d0a51a56a2b81cc489-chunk-000<SEP>gd_44d3149492b8c0b2ab981b6c-chunk-000<SEP>gd_4bde0767eaeffe8fda34ff9e-chunk-002<SEP>gd_527cf19c180b81c183c674a4-chunk-001<SEP>gd_535dfe10c25ba8a8c83581c2-chunk-002<SEP>gd_59b91b90c7bca58b13cca2ba-chunk-000<SEP>gd_59b91b90c7bca58b13cca2ba-chunk-001<SEP>gd_6b7f3b7e043820d20c7a761d-chunk-002<SEP>gd_6b7f3b7e043820d20c7a761d-chunk-003<SEP>gd_70a4342562c701cb49469cde-chunk-001<SEP>gd_70a4342562c701cb49469cde-chunk-002<SEP>gd_b414f3ae82d1cf67bb537a11-chunk-002<SEP>gd_88c41e8fa8fc316e33319e5b-chunk-000<SEP>gd_88c41e8fa8fc316e33319e5b-chunk-001<SEP>gd_8c21892693a7f5fa4fc4e1f0-chunk-000<SEP>gd_995edd43bb903497883c63ce-chunk-000<SEP>gd_1b9bbe7ebbb40cc7edaaca04-chunk-001<SEP>gd_99d17e0b73db2cd5429d2a76-chunk-001<SEP>gd_b7a9c3d6a7a69a54d821cd14-chunk-000<SEP>gd_6eff26b54da2626095c45d1e-chunk-000<SEP>gd_bb8500ff7693b3f67f77f68c-chunk-000<SEP>gd_bb8500ff7693b3f67f77f68c-chunk-003<SEP>gd_c07fc83a924848f0be87fc81-chunk-000<SEP>gd_c07fc83a924848f0be87fc81-chunk-001<SEP>gd_d1ee1b80cb9f51a51d4a2b27-chunk-000<SEP>gd_d1ee1b80cb9f51a51d4a2b27-chunk-001<SEP>gd_d1ee1b80cb9f51a51d4a2b27-chunk-002<SEP>gd_d1ee1b80cb9f51a51d4a2b27-chunk-003<SEP>gd_d37dd301b6f71a48ce01f589-chunk-000<SEP>gd_d003453b3956b242efc0eccf-chunk-000<SEP>gd_d003453b3956b242efc0eccf-chunk-001<SEP>gd_de4b319e76c4f0d48550e144-chunk-001<SEP>gd_e21bb91d6a512f6e85c20553-chunk-001<SEP>gd_e2a836034c2fbbd00b9cc82a-chunk-001<SEP>gd_e396b212b0c5e080520b685b-chunk-000<SEP>gd_e424b816b7ffc8ed454f8d82-chunk-000<SEP>gd_e424b816b7ffc8ed454f8d82-chunk-001<SEP>gd_e8aa22104a9f2b1ed41859ae-chunk-001<SEP>gd_e966c68c8b64742b54a64f35-chunk-001<SEP>gd_f006f6ca7bfb307626d61034-chunk-000<SEP>gd_0519f1abfcc0fb0a1e118638-chunk-001<SEP>gd_0519f1abfcc0fb0a1e118638-chunk-002<SEP>gd_feca2c921fdab73af023cec9-chunk-001<SEP>gd_4ea801b73bba8ebe41a278fa-chunk-000<SEP>gd_9f939dd40cf1e1538750c863-chunk-000<SEP>gd_98df9475436f334c15f92ad2-chunk-000<SEP>gd_c9017b2c5b7fe53e70a885a4-chunk-000<SEP>gd_c9017b2c5b7fe53e70a885a4-chunk-001<SEP>gd_e3052debb61086184aea82f0-chunk-000<SEP>gd_e3052debb61086184aea82f0-chunk-001<SEP>gd_1cc87df378d79d9def33d0df-chunk-000<SEP>gd_38bb13c79d43c1ce65fb04e5-chunk-001<SEP>gd_6b0bb4f6eea86f76dabfe5ec-chunk-005<SEP>gd_6b0bb4f6eea86f76dabfe5ec-chunk-006<SEP>gd_553a30b96ae700aac99318da-chunk-002<SEP>gd_73b1fbb61314669cee940374-chunk-000<SEP>gd_73b1fbb61314669cee940374-chunk-001<SEP>gd_5ea880eb3548d655f51b5285-chunk-000<SEP>gd_6883af2ee760af258eff9978-chunk-001<SEP>gd_6883af2ee760af258eff9978-chunk-002<SEP>gd_6883af2ee760af258eff9978-chunk-004<SEP>gd_696d949b6e655b2d0cca062f-chunk-000<SEP>gd_696d949b6e655b2d0cca062f-chunk-001<SEP>gd_696d949b6e655b2d0cca062f-chunk-004",
+          "file_path": "gd_5d6131d1672df3a46cf50af4<SEP>gd_b69603cf3ff1c56f5acd6d17<SEP>gd_1bd11726aa0e0351aefe21ce<SEP>gd_1cc7db10c34d802d7c089d9f<SEP>gd_5d90a51419eeab4b82b0d089<SEP>gd_1c7b97735560846975c87037<SEP>gd_19771f76507a7d55cdf66fb1<SEP>gd_7865bc0261d26a8a8da9a626<SEP>gd_13aa38370d7255559def2519<SEP>gd_d1423816ab12475e55e09a39<SEP>gd_48ff16ec2e5560a86e6edea1<SEP>gd_17ec0a740f815b471f557b82<SEP>gd_235342391fdde0066f0ee0eb<SEP>gd_685189794087858c0dba6918<SEP>gd_47fbbf612af3204e5ab5ce5e<SEP>gd_4561147ae4b4a79577d41c1c<SEP>gd_179963266b84ebecb1409519<SEP>gd_ba8cfcf37a4829e6738e3817<SEP>gd_22f503d26e4d8faf8274b928<SEP>gd_23323bf99bc8f192e7bc55c7<SEP>gd_60f7ec77f0785ad96797ddf2<SEP>gd_69e981f3c64705e2d8b2b7d5<SEP>gd_2d72fe9469e9f2b08dcd24ea<SEP>gd_30eff1507c63be40216a7465<SEP>gd_896b59f47a2fe051ace06a99<SEP>gd_1ebff232ac1e9ad1c7cac4de<SEP>gd_c387616945e788682c23c05d<SEP>gd_3d00a2ad35f7082a70310e88<SEP>gd_d032b97ad647886e0e116542<SEP>gd_7d74a4e133eb43988eaa38f9<SEP>gd_3eb0d6dd205274318ede670c<SEP>gd_df3285fbd174b768d904c41b<SEP>gd_83f8805152f3bf7e5d5d77a7<SEP>gd_40842015ea048621b1aee5ee<SEP>gd_c3979c9f267bec7d23352d3e<SEP>gd_fdc06d575c8bc962e662ebaa<SEP>gd_0907c1098f08172d46eda211<SEP>gd_24f77dbf4b59912a1115a97e<SEP>gd_468b5135ea05ec7beab9cfd0<SEP>gd_83f13ed898b44588b56c0ee3<SEP>gd_562428ed0fbfd2c7c9e7e139<SEP>gd_384531654f71cbf6646ce131<SEP>gd_5725912896d753f08e70e274<SEP>gd_ab388e36b2c46d1b6afc8c4d<SEP>gd_5842a34ea92c5bf8829796a9<SEP>gd_5a74e007239d6fa585aa9d42<SEP>gd_ec98065364cfc525c93b67ce<SEP>gd_87e4169fe38c1cc0f4c4cb5f<SEP>gd_0f29be943a0bc77ae84acc1d<SEP>gd_c4d88074f382c56078d251bf<SEP>gd_5ebe9ad0324f615be28ce5a6<SEP>gd_d16a1e88c49c3199a99bd49d<SEP>gd_8d70e8e8a1094b7be78b99b3<SEP>gd_b1567604058b6fc7e7d88e9c<SEP>gd_6cc9536a8c08885ebea1a265<SEP>gd_24f21a5dbfdfd8e557428dbe<SEP>gd_7298e57f5a8875ad3995649a<SEP>gd_dd32c9e4383b69e45ec833e8<SEP>gd_0aa2c1232edf29ef850211c5<SEP>gd_7d9ae6c91b92a3f115f2c36d<SEP>gd_13446d288a2e459ebe9333df<SEP>gd_85fb721c8c61021864128cd9<SEP>gd_928c6555503d6e90d241cf1e<SEP>gd_3d60c7b3488bd68318d785c2<SEP>gd_28afe47b9b878d0011571004<SEP>gd_956e8a0995c87d3c1371ebeb<SEP>gd_f87b6447ffb0fde342d3e7c3<SEP>gd_a317deb61e243cd08d76cca3<SEP>gd_98c310f33b529f8d44d3350e<SEP>gd_aafe6164084bc84cbf056a39<SEP>gd_ad4399ea29a32c2b3537e550<SEP>gd_53d1d4d7cbdb83f9dd2abc9c<SEP>gd_545a33a881beeb183329d2d6<SEP>gd_21785bfd1839a4c309194464<SEP>gd_5c912fefa31e5fba2a3e6a7f<SEP>...truncated...(KEEP Old)",
+          "created_at": 1793569378
+        },
+        {
+          "entity_name": "Wake up",
+          "entity_type": "concept",
+          "description": "Waking up is a daily activity mentioned in the context of both 2024 and 2025.",
+          "source_id": "gd_79ef312e7983b8ea4ed0764c-chunk-000",
+          "file_path": "gd_79ef312e7983b8ea4ed0764c",
+          "created_at": 1793497525
+        },
+        {
+          "entity_name": "Datadog",
+          "entity_type": "product",
+          "description": "Datadog is a leading provider of cloud-based monitoring and analytics solutions, with a strong presence in the industry and a diverse customer base. Founded by a team of experienced software developers, Datadog has established itself as a reputable software company with a proven brand and infrastructure.\n\nThe company's software is designed to provide real-time insights into application performance and security, making it a valuable tool for businesses looking to track and optimize their performance. Datadog's platform offers a range of features, including log management, network monitoring, and application performance monitoring. Its software is scalable and can be easily integrated with a variety of third-party tools and services.\n\nDatadog has achieved significant growth through effective marketing and has expanded its product portfolio to include logs, application performance monitoring (APM), and other features. The company's revenue growth has been impressive, with a 61% year-over-year increase at approximately $700 million in annual recurring revenue (ARR). Datadog is approaching $1 billion in ARR and is considered a product observability engine.\n\nThe company's customer base is diverse and growing, with 60% of revenue growth coming from existing customers. Datadog has a significant number of large customers, with 1,107 customers generating over $100,000 in revenue. Additionally, 20%+ of customers now use 4 or more products, and 75% of revenue comes from $100,000+ customers. Datadog has also achieved a Net Revenue Retention (NRR) rate of over 130% for 13 consecutive quarters.\n\nDatadog prioritizes customer-centric culture and trains its managers to care about the details of customer complaints and feedback. This approach has contributed to the company's rapid growth, as it has made two acquisitions, both heavily tilted toward the tech platform, product, and team-not revenue streams to add to their sales engine.\n\nDatadog is also an organization that processes 4-5 trillion customer metrics per day, providing real-time insights into IT infrastructure performance and security. Its monitoring and analytics platform helps businesses understand their customers and improve their products, making it a valuable tool for businesses looking to track and optimize their performance.\n\nIn terms of infrastructure monitoring, Datadog's platform is designed to provide real-time insights into downtime costs, which can be millions of dollars. This highlights the importance of monitoring and analytics in preventing costly downtime and ensuring the smooth operation of IT infrastructure.\n\nIt's worth noting that Datadog has been implementing selective price increases during renewal negotiations throughout 2025, but this has not been a major across-the-board increase. Additionally, the company has seen real reacceleration due to its distribution advantages and AI integration, and is considered an infrastructure layer company that benefits from AI spend without being an \"AI company\".",
+          "source_id": "gd_1cc7db10c34d802d7c089d9f-chunk-000<SEP>gd_22900bfc7fd815aa940fd8ac-chunk-000<SEP>gd_48ff16ec2e5560a86e6edea1-chunk-000<SEP>gd_179963266b84ebecb1409519-chunk-001<SEP>gd_64ee673f1818fe8a43d10d08-chunk-002<SEP>gd_112ea69bb6a3ea5e091e34f2-chunk-001<SEP>gd_40842015ea048621b1aee5ee-chunk-000<SEP>gd_33db139c95f5187d07f2a853-chunk-001<SEP>gd_b9fb560509e773f69c0822bd-chunk-000<SEP>gd_54bd4156ae896dbaad104bd8-chunk-000<SEP>gd_562428ed0fbfd2c7c9e7e139-chunk-001<SEP>gd_df5bccd709fa0585bb8d0509-chunk-000<SEP>gd_df5bccd709fa0585bb8d0509-chunk-001<SEP>gd_bffb70d6ba96de0c690fcf5c-chunk-000<SEP>gd_5ebe9ad0324f615be28ce5a6-chunk-000<SEP>gd_a51aabf5779c2323c9b3bd84-chunk-000<SEP>gd_a51aabf5779c2323c9b3bd84-chunk-001<SEP>gd_6ac1c91f4cda2d936c6e05c7-chunk-000<SEP>gd_66bbfcd9b1f8b6bca75fe3f6-chunk-000<SEP>gd_66bbfcd9b1f8b6bca75fe3f6-chunk-001<SEP>gd_66bbfcd9b1f8b6bca75fe3f6-chunk-002<SEP>gd_7298e57f5a8875ad3995649a-chunk-000<SEP>gd_7f185cdc6615bc5ea7567c8a-chunk-002<SEP>gd_85fb721c8c61021864128cd9-chunk-000<SEP>gd_8fbcd623cdcd2da8cedf9758-chunk-000<SEP>gd_3d60c7b3488bd68318d785c2-chunk-000<SEP>gd_0fe5bfa809852c656d1f2f40-chunk-000<SEP>gd_f4a0aad5582252bb48f32929-chunk-000<SEP>gd_68c4bad7befcf56510eda4bc-chunk-000<SEP>gd_748726369fa6b46ca8f2c0c7-chunk-000<SEP>gd_748726369fa6b46ca8f2c0c7-chunk-001<SEP>gd_748726369fa6b46ca8f2c0c7-chunk-002<SEP>gd_f6156caa4c31f918c461f330-chunk-000<SEP>gd_fb87546d14423eb7e21c5ce8-chunk-001<SEP>gd_37c9bf3c519ccfb55eca9483-chunk-001<SEP>gd_4490a7d0a51a56a2b81cc489-chunk-000<SEP>gd_47d74459673a0a1e6372f0aa-chunk-000<SEP>gd_47d74459673a0a1e6372f0aa-chunk-001<SEP>gd_47d74459673a0a1e6372f0aa-chunk-002<SEP>gd_4bde0767eaeffe8fda34ff9e-chunk-002<SEP>gd_535dfe10c25ba8a8c83581c2-chunk-000<SEP>gd_39aac781b0bdeaf45aebf21d-chunk-000<SEP>gd_5f5e08697c4149fb86d92202-chunk-000<SEP>gd_5f5e08697c4149fb86d92202-chunk-001<SEP>gd_674534f65c5990a2632ae6a2-chunk-000<SEP>gd_7e66e7cef2564ee679d8470d-chunk-000<SEP>gd_86e630050935a1edf9737112-chunk-000<SEP>gd_97f0d826a67928b2b5cd544a-chunk-000<SEP>gd_97f0d826a67928b2b5cd544a-chunk-001<SEP>gd_bea119fa63714fe4d9176aa5-chunk-000<SEP>gd_d37dd301b6f71a48ce01f589-chunk-000<SEP>gd_d37dd301b6f71a48ce01f589-chunk-001<SEP>gd_dd626eb5f79a12db1cce58c5-chunk-000<SEP>gd_e3466d3d0dcfc9810320f04a-chunk-000<SEP>gd_e3466d3d0dcfc9810320f04a-chunk-001<SEP>gd_e424b816b7ffc8ed454f8d82-chunk-000<SEP>gd_e424b816b7ffc8ed454f8d82-chunk-001<SEP>gd_3723607ee84804f35394ef75-chunk-000<SEP>gd_98df9475436f334c15f92ad2-chunk-000<SEP>gd_2e5fc1972640f43b4892f397-chunk-007<SEP>gd_5ea880eb3548d655f51b5285-chunk-000<SEP>gd_5ea880eb3548d655f51b5285-chunk-001<SEP>gd_6883af2ee760af258eff9978-chunk-000<SEP>gd_d553ceb07bd923001f7820f3-chunk-000<SEP>gd_d553ceb07bd923001f7820f3-chunk-001<SEP>gd_2d7b7e7000a27d7ddc3ef566-chunk-003<SEP>gd_046a67ab28edc774bd401b53-chunk-000<SEP>gd_127b7c531bf91ae60817b680-chunk-000<SEP>gd_4305ca7b896da20cc09c6c3b-chunk-000<SEP>gd_82308e0b379557a8c5fbc53f-chunk-000<SEP>gd_82308e0b379557a8c5fbc53f-chunk-001<SEP>gd_82308e0b379557a8c5fbc53f-chunk-003<SEP>gd_e17729e5eca8acb5235bb5b2-chunk-000<SEP>gd_e17729e5eca8acb5235bb5b2-chunk-001<SEP>gd_e17729e5eca8acb5235bb5b2-chunk-002<SEP>gd_e17729e5eca8acb5235bb5b2-chunk-004<SEP>gd_ad079debb3a22f38cb6c1f3e-chunk-000<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-003<SEP>gd_e5fd52c7cfe02c717c8d6b06-chunk-001<SEP>gd_6e1afbbe5a2b3630ccc3c07e-chunk-001<SEP>gd_3c8d2efa348e102a23b24a6b-chunk-001<SEP>gd_3c8d2efa348e102a23b24a6b-chunk-002<SEP>gd_3c8d2efa348e102a23b24a6b-chunk-005<SEP>gd_7fceffa45398125f8711e9a1-chunk-001<SEP>gd_7fceffa45398125f8711e9a1-chunk-006<SEP>gd_7fceffa45398125f8711e9a1-chunk-007<SEP>gd_a778054a479869a17bf96165-chunk-009<SEP>gd_dc18c861c82269cf5cc7e98b-chunk-000<SEP>gd_dc18c861c82269cf5cc7e98b-chunk-001<SEP>gd_dc18c861c82269cf5cc7e98b-chunk-002<SEP>gd_dc18c861c82269cf5cc7e98b-chunk-003<SEP>gd_dc18c861c82269cf5cc7e98b-chunk-004<SEP>gd_dc18c861c82269cf5cc7e98b-chunk-005<SEP>gd_dc18c861c82269cf5cc7e98b-chunk-006<SEP>gd_dc18c861c82269cf5cc7e98b-chunk-007<SEP>gd_dc18c861c82269cf5cc7e98b-chunk-008<SEP>gd_dc18c861c82269cf5cc7e98b-chunk-010<SEP>gd_dc18c861c82269cf5cc7e98b-chunk-011<SEP>gd_dc18c861c82269cf5cc7e98b-chunk-012<SEP>gd_dc18c861c82269cf5cc7e98b-chunk-013<SEP>gd_dc18c861c82269cf5cc7e98b-chunk-014<SEP>gd_a0acb205dc04ba5f42369d7a-chunk-000<SEP>gd_de224f44af7a01a27aa7d4bf-chunk-003<SEP>gd_45895bb382839086f6554318-chunk-006<SEP>gd_45895bb382839086f6554318-chunk-007<SEP>gd_6d36e9d789605a02741458e1-chunk-003<SEP>gd_6d36e9d789605a02741458e1-chunk-004<SEP>gd_6d36e9d789605a02741458e1-chunk-005<SEP>gd_9892f4cb159a2427a2e6b59b-chunk-001<SEP>gd_9892f4cb159a2427a2e6b59b-chunk-002<SEP>gd_9892f4cb159a2427a2e6b59b-chunk-003<SEP>gd_9892f4cb159a2427a2e6b59b-chunk-004<SEP>gd_b80524f908bad21aeaf41dfe-chunk-001<SEP>gd_b80524f908bad21aeaf41dfe-chunk-002<SEP>gd_d27c1c4b9ca0dc0f6e7b58a6-chunk-000<SEP>gd_815d204b1d3505892f9cc05a-chunk-003<SEP>gd_815d204b1d3505892f9cc05a-chunk-004<SEP>gd_14b875b7fc4c7d4068c628c6-chunk-008<SEP>gd_7dfa5cacf1a97241351b1915-chunk-006<SEP>gd_0adbace75ffc5e3ea7aadf77-chunk-009<SEP>gd_0adbace75ffc5e3ea7aadf77-chunk-014<SEP>gd_a6563952729bc853829369cf-chunk-015",
+          "file_path": "gd_1cc7db10c34d802d7c089d9f<SEP>gd_22900bfc7fd815aa940fd8ac<SEP>gd_48ff16ec2e5560a86e6edea1<SEP>gd_179963266b84ebecb1409519<SEP>gd_64ee673f1818fe8a43d10d08<SEP>gd_112ea69bb6a3ea5e091e34f2<SEP>gd_40842015ea048621b1aee5ee<SEP>gd_33db139c95f5187d07f2a853<SEP>gd_b9fb560509e773f69c0822bd<SEP>gd_54bd4156ae896dbaad104bd8<SEP>gd_562428ed0fbfd2c7c9e7e139<SEP>gd_df5bccd709fa0585bb8d0509<SEP>gd_bffb70d6ba96de0c690fcf5c<SEP>gd_5ebe9ad0324f615be28ce5a6<SEP>gd_a51aabf5779c2323c9b3bd84<SEP>gd_6ac1c91f4cda2d936c6e05c7<SEP>gd_66bbfcd9b1f8b6bca75fe3f6<SEP>gd_7298e57f5a8875ad3995649a<SEP>gd_7f185cdc6615bc5ea7567c8a<SEP>gd_85fb721c8c61021864128cd9<SEP>gd_8fbcd623cdcd2da8cedf9758<SEP>gd_3d60c7b3488bd68318d785c2<SEP>gd_0fe5bfa809852c656d1f2f40<SEP>gd_f4a0aad5582252bb48f32929<SEP>gd_68c4bad7befcf56510eda4bc<SEP>gd_748726369fa6b46ca8f2c0c7<SEP>gd_f6156caa4c31f918c461f330<SEP>gd_fb87546d14423eb7e21c5ce8<SEP>gd_37c9bf3c519ccfb55eca9483<SEP>gd_4490a7d0a51a56a2b81cc489<SEP>gd_47d74459673a0a1e6372f0aa<SEP>gd_4bde0767eaeffe8fda34ff9e<SEP>gd_535dfe10c25ba8a8c83581c2<SEP>gd_39aac781b0bdeaf45aebf21d<SEP>gd_5f5e08697c4149fb86d92202<SEP>gd_674534f65c5990a2632ae6a2<SEP>gd_7e66e7cef2564ee679d8470d<SEP>gd_86e630050935a1edf9737112<SEP>gd_97f0d826a67928b2b5cd544a<SEP>gd_bea119fa63714fe4d9176aa5<SEP>gd_d37dd301b6f71a48ce01f589<SEP>gd_dd626eb5f79a12db1cce58c5<SEP>gd_e3466d3d0dcfc9810320f04a<SEP>gd_e424b816b7ffc8ed454f8d82<SEP>gd_3723607ee84804f35394ef75<SEP>gd_98df9475436f334c15f92ad2<SEP>gd_2e5fc1972640f43b4892f397<SEP>gd_5ea880eb3548d655f51b5285<SEP>gd_6883af2ee760af258eff9978<SEP>gd_d553ceb07bd923001f7820f3<SEP>gd_2d7b7e7000a27d7ddc3ef566<SEP>gd_046a67ab28edc774bd401b53<SEP>gd_127b7c531bf91ae60817b680<SEP>gd_4305ca7b896da20cc09c6c3b<SEP>gd_82308e0b379557a8c5fbc53f<SEP>gd_e17729e5eca8acb5235bb5b2<SEP>gd_ad079debb3a22f38cb6c1f3e<SEP>gd_2a4d7b8a58e1c3110dd4d692<SEP>gd_e5fd52c7cfe02c717c8d6b06<SEP>gd_6e1afbbe5a2b3630ccc3c07e<SEP>gd_3c8d2efa348e102a23b24a6b<SEP>gd_7fceffa45398125f8711e9a1<SEP>gd_a778054a479869a17bf96165<SEP>gd_dc18c861c82269cf5cc7e98b<SEP>gd_a0acb205dc04ba5f42369d7a<SEP>gd_de224f44af7a01a27aa7d4bf<SEP>gd_45895bb382839086f6554318<SEP>gd_6d36e9d789605a02741458e1<SEP>gd_9892f4cb159a2427a2e6b59b<SEP>gd_b80524f908bad21aeaf41dfe<SEP>gd_d27c1c4b9ca0dc0f6e7b58a6<SEP>gd_815d204b1d3505892f9cc05a<SEP>gd_14b875b7fc4c7d4068c628c6<SEP>gd_7dfa5cacf1a97241351b1915<SEP>gd_0adbace75ffc5e3ea7aadf77<SEP>...truncated...(KEEP Old)",
+          "created_at": 1793645689
+        },
+        {
+          "entity_name": "2026 IPO",
+          "entity_type": "event",
+          "description": "A class of initial public offerings that is expected to take place in 2026.",
+          "source_id": "gd_faa2e63d5acfd50ac326251d-chunk-004",
+          "file_path": "gd_faa2e63d5acfd50ac326251d",
+          "created_at": 1793637097
+        },
+        {
+          "entity_name": "Azure",
+          "entity_type": "organization",
+          "description": "**Azure: A Comprehensive Cloud Computing Platform**\n\nAzure is a cloud computing platform provided by Microsoft, which has experienced significant growth in recent years. With a year-over-year growth rate of 31%, Azure has reached an estimated run rate of over $60 billion. This growth is also reflected in its annual recurring revenue (ARR), which has seen a 30% increase. As one of the Titans of Cloud infrastructure, Azure competes with other major providers, including Digital Ocean.\n\nThe platform has also seen significant growth in AI-related sales, making it a key player in the cloud computing market. In addition to its core cloud infrastructure services, Azure provides a range of AI models and services, as well as a platform for building, deploying, and managing applications. Overall, Azure is a leading software company that continues to expand its offerings and capabilities in the cloud computing space.\n\nAzure is a cloud platform that provides a wide range of services for computing, storage, and analytics. It is a cloud computing platform and a key business unit of Microsoft, designed to provide a scalable and secure way to build, deploy, and manage applications and services. Azure is a cloud computing service provided by Microsoft, offering a comprehensive set of services for computing, storage, and analytics.\n\nIn addition to its core services, Azure is also a cloud provider competing with Databricks, making it a significant player in the cloud computing market. With its focus on scalability, security, and innovation, Azure continues to be a leading choice for businesses and organizations looking to leverage the power of cloud computing.\n\nAzure offers a range of services, including computing power, storage, and artificial intelligence capabilities. It is a cloud-based platform for computing, storage, and networking services. The platform has been perceived as getting a lift from being an OpenAI vendor selling Azure. Azure is a cloud computing company that provides AI infrastructure, and it is also a hyperscaler that provides a range of cloud services, including data storage and analytics.\n\nNote: The output is a comprehensive summary of the provided descriptions, integrating all key information and maintaining an objective, third-person perspective. The summary is written in English, with proper nouns retained in their original language where possible. The total length of the summary is within the 600-token limit.<SEP>A cloud computing service provided by Microsoft that has seen a 33% increase in revenue in the fiscal first quarter.<SEP>Azure is a cloud computing platform.<SEP>Azure is a cloud computing platform that provides AI training workloads.",
+          "source_id": "gd_736f2bbad99428fc07ad0ea6-chunk-000<SEP>gd_2c6f9645343251c1f939e00a-chunk-000<SEP>gd_3d00a2ad35f7082a70310e88-chunk-000<SEP>gd_c481ad6a3095befd2e0989e4-chunk-000<SEP>gd_8d5a01e786e521ceef6a39d4-chunk-000<SEP>gd_aec168a7f2430a0bb7254c92-chunk-001<SEP>gd_aec168a7f2430a0bb7254c92-chunk-002<SEP>gd_37c9bf3c519ccfb55eca9483-chunk-001<SEP>gd_402ba37a6bc85a4d1b4c34cb-chunk-000<SEP>gd_6f1418bcf20adce8251249cd-chunk-000<SEP>gd_6f1418bcf20adce8251249cd-chunk-001<SEP>gd_6f1418bcf20adce8251249cd-chunk-002<SEP>gd_1ae9b4571e84b8b887bf810d-chunk-002<SEP>gd_27a4326e7ae80477834dd461-chunk-003<SEP>gd_27a4326e7ae80477834dd461-chunk-004<SEP>gd_e95c09643e99385d630cd19c-chunk-001<SEP>gd_0009bb20814c4ae25bb9d86a-chunk-001<SEP>gd_8fe15d1e1f4d6d874c6ce1bb-chunk-005<SEP>gd_8fe15d1e1f4d6d874c6ce1bb-chunk-004<SEP>gd_14eaa99f6b156bd8099dd6b7-chunk-001<SEP>gd_14eaa99f6b156bd8099dd6b7-chunk-028<SEP>gd_40eabf17d415f412ef592066-chunk-003<SEP>gd_9c63ca3cd132590f56cc4437-chunk-003<SEP>gd_c4bb467854b46e1211181bac-chunk-004<SEP>gd_efa8aec12cb457a88f80a4fa-chunk-008<SEP>gd_9809d37cd527c2958295b062-chunk-014",
+          "file_path": "gd_736f2bbad99428fc07ad0ea6<SEP>gd_2c6f9645343251c1f939e00a<SEP>gd_3d00a2ad35f7082a70310e88<SEP>gd_c481ad6a3095befd2e0989e4<SEP>gd_8d5a01e786e521ceef6a39d4<SEP>gd_aec168a7f2430a0bb7254c92<SEP>gd_37c9bf3c519ccfb55eca9483<SEP>gd_402ba37a6bc85a4d1b4c34cb<SEP>gd_6f1418bcf20adce8251249cd<SEP>gd_1ae9b4571e84b8b887bf810d<SEP>gd_27a4326e7ae80477834dd461<SEP>gd_e95c09643e99385d630cd19c<SEP>gd_0009bb20814c4ae25bb9d86a<SEP>gd_8fe15d1e1f4d6d874c6ce1bb<SEP>gd_14eaa99f6b156bd8099dd6b7<SEP>gd_40eabf17d415f412ef592066<SEP>gd_9c63ca3cd132590f56cc4437<SEP>gd_c4bb467854b46e1211181bac<SEP>gd_efa8aec12cb457a88f80a4fa<SEP>gd_9809d37cd527c2958295b062",
+          "created_at": 1793645906
+        },
+        {
+          "entity_name": "2026",
+          "entity_type": "concept",
+          "description": "**2026: A Year of Transformation in B2B Interactions and AI Advancements**\n\nThe year 2026 is a significant milestone in the evolution of business-to-business (B2B) interactions and artificial intelligence (AI) advancements. According to predictions, B2B interactions are expected to replace Integrated Development Environments (IDEs) by this year, marking a major shift in the way businesses operate and interact with each other.\n\nAs a specific year mentioned in various contexts, 2026 is also notable for its association with significant events and predictions. Gartner predicts that global software spend will accelerate and grow by 14.7% to $1.4 Trillion in 2026, indicating a substantial increase in investment in software and technology. Furthermore, 2026 is expected to be a year of exciting developments in AI B2B applications, with AI capabilities anticipated to have advanced significantly by this time, enabling more sophisticated and efficient B2B interactions.\n\nHowever, it is worth noting that not all predictions for 2026 are positive. Some sources suggest that the SaaS markets have crashed in 2026, which could have significant implications for businesses and the technology industry as a whole. This crash is predicted to be a rude awakening for sales teams, and it is expected to be a year of significant changes in sales and support processes.\n\nIn terms of operational efficiency, Replit is expected to run 24x7 by late 2026, showcasing the potential for continuous improvement and optimization. Additionally, Freshworks is predicted to reach $1 billion in Annual Recurring Revenue (ARR) by 2026, marking a major milestone for the company.\n\nThe year 2026 is also notable for the SaaStr Annual conference, which is scheduled to take place during this time. Moreover, the company plans to double down on AI investments in 2026, indicating a strong focus on AI-driven growth and innovation.\n\nIn the context of sales, 2026 is expected to be a year of significant changes, with AI AEs and AI VPs of Marketing expected to be more effective and AI GTM anticipated to be available. Private Equity's changing investment strategies are also discussed in the context of 2026, highlighting the potential for new opportunities and challenges in the industry.\n\nLenny invited SaaStr back to talk about AI and GTM in 2026, marking a significant event in the industry. The author believes that the sales process for AI agents will change in 2026, with vendors offering more streamlined and efficient deployment options.\n\nThe year 2026 is also expected to mark the start of the real AI GTM era, a significant change in the field. High-growth companies plan to dedicate 37% of engineering to AI in 2026, indicating a strong focus on AI-driven growth and innovation.\n\nShopify's stock is down 28% in 2026, a notable event in the industry. For B2B founders, 2026 is a critical year, requiring adaptability and responsiveness to changing circumstances in order to succeed.\n\nIn addition to these predictions, 2026 is also expected to be a year of significant changes in job hunting, with attrition affecting the process. The year is also predicted to see a significant increase in Invisible Unemployment.\n\nIt is worth noting that 2026 is also a year in which human sales reps are expected to be replaced by AI in routine sales, and a year in which playbooks from 2021 will not work. Additionally, 2026 is expected to be a year in which the future of sales is expected to be a hybrid model, with a combination of human and AI-driven sales processes.\n\nThe report \"The State of Subscription Apps 2026\" is also published in 2026, providing valuable insights into the state of subscription apps. Furthermore, 2026 is the year when SaaStr AI will take place, and it is also mentioned as a deadline for go-to-market executives to deploy AI agents.\n\nIn summary, 2026 is a year of significant transformation and change in the B2B interactions and AI advancements, with both opportunities and challenges arising from these developments.\n\nGartner forecasts worldwide IT spending to grow 9.8% and exceed $6 trillion for the first time in 2026. This significant growth is expected to have a profound impact on the technology industry, with companies investing heavily in AI and other emerging technologies.\n\nCanva's potential IPO valuation is also expected to occur in 2026, marking a significant milestone for the company. Additionally, the full scorecard of the IPO reopening of 2025 was released in 2026, providing valuable insights into the performance of companies that went public in 2025.\n\nElevenLabs is expected to be worth more than Twilio in 2026, highlighting the potential for significant growth and innovation in the industry. Burn multiples are also expected to tick up in 2026 as companies invest in capturing the AI opportunity.\n\nServiceNow's TAM is expected to expand in 2026, while AI spending is expected to reach $2 trillion globally. The growth of AI budget is also expected to be significant in 2026, with companies investing heavily in AI-driven growth and innovation.\n\nOverall, 2026 is a year of significant transformation and change in the B2B interactions and AI advancements, with both opportunities and challenges arising from these developments.<SEP>Year<SEP>2026 is a year in which the market is expected to see significant growth in companies that effectively utilize AI.<SEP>A year mentioned as a deadline for companies to deliver in terms of AI adoption.<SEP>The year by which companies must be relevant to AI.<SEP>A year in which the market may see a reversal of fortunes for certain stocks that were undervalued in 2025.<SEP>A year in which AI is expected to become actual members of the team, leading to a revenue explosion.",
+          "source_id": "gd_1d6644620e79d4578de7e457-chunk-000<SEP>gd_24e26e17f24550bd491a6a15-chunk-000<SEP>gd_2aeb737f1fc3578904a93fac-chunk-000<SEP>gd_329e9dcc5d03af62830b01e0-chunk-000<SEP>gd_3a1525a79255325f169513f5-chunk-000<SEP>gd_5e275660a8df19f03253776d-chunk-000<SEP>gd_500ff2f7a5996e8bcc0fea93-chunk-001<SEP>gd_22e2af05587860f4e41f0ece-chunk-001<SEP>gd_22e2af05587860f4e41f0ece-chunk-002<SEP>gd_994e488c5d0c37ba02975e60-chunk-000<SEP>gd_28e630372aae90eb9315f28e-chunk-000<SEP>gd_28e630372aae90eb9315f28e-chunk-006<SEP>gd_5a48adaa31f9323285eae73b-chunk-000<SEP>gd_853051b49a076dc2389d4553-chunk-000<SEP>gd_70777d85f7f19bff88e7d8d7-chunk-000<SEP>gd_83de48d1c3212650ca366a4e-chunk-000<SEP>gd_a4ae7e6eac7817fa6bf9357c-chunk-000<SEP>gd_860e3a31c459f5a4ebfa33dd-chunk-000<SEP>gd_9f958dd43d0ae0b6840970ce-chunk-000<SEP>gd_acd538a58481d77ef5876a63-chunk-000<SEP>gd_c5da06af782b37a56d757551-chunk-000<SEP>gd_cc8e0a9c7c8c3eaa2c8d4ac3-chunk-000<SEP>gd_4d1077b8bd608022a2166c3f-chunk-003<SEP>gd_ed91c6f6935a201a6b91e194-chunk-000<SEP>gd_beab654fbbc93fa3cf45a5c6-chunk-000<SEP>gd_91f0124cd7f6c9cbe24df3e8-chunk-003<SEP>gd_0056db36f6124156e233c201-chunk-001<SEP>gd_0056db36f6124156e233c201-chunk-002<SEP>gd_1a02f8692430d0f4f1f4f6be-chunk-001<SEP>gd_1a02f8692430d0f4f1f4f6be-chunk-002<SEP>gd_8d5a01e786e521ceef6a39d4-chunk-000<SEP>gd_f8379e32c2f158cdff4c2a06-chunk-002<SEP>gd_0027ef0c6f1b522de8f93543-chunk-003<SEP>gd_27d143d3e8d916ef234fccfe-chunk-004<SEP>gd_2f4df5abef725f9b0f5db9bd-chunk-001<SEP>gd_3431ce388885d39d6d44c6b6-chunk-002<SEP>gd_43e212d0edcb1c2810230fe2-chunk-002<SEP>gd_b8803d2a2e69fdacce7f2d8f-chunk-001<SEP>gd_0ddad4f1999e5f43ddc98a8a-chunk-001<SEP>gd_0ddad4f1999e5f43ddc98a8a-chunk-003<SEP>gd_0ddad4f1999e5f43ddc98a8a-chunk-004<SEP>gd_0ddad4f1999e5f43ddc98a8a-chunk-005<SEP>gd_1489f32c404f2e386e0e108a-chunk-005<SEP>gd_334014d96e325de76de53eb7-chunk-001<SEP>gd_334014d96e325de76de53eb7-chunk-002<SEP>gd_7753ef947d383d366dbbdd5a-chunk-004<SEP>gd_7d218b14604c16a4b2ba51cc-chunk-000<SEP>gd_809239d05954fc972f3537b0-chunk-003<SEP>gd_e82e6511ade6122ac0c71b46-chunk-009<SEP>gd_ec228e8695e416170bcef74e-chunk-004<SEP>gd_faa157494978fdae540fd08c-chunk-001<SEP>gd_b7d6d3bd89951116557fa67d-chunk-000<SEP>gd_bb2df0933484691709bc2edf-chunk-000<SEP>gd_d2e5e17168d573c0e46f7b9c-chunk-001<SEP>gd_47c445645895a885cb89d415-chunk-003<SEP>gd_fe9184e0ab77202749f57674-chunk-001<SEP>gd_536b8e8143a9a6d616f95b8a-chunk-000<SEP>gd_8bab8d02da7bc2e8912b06e1-chunk-005<SEP>gd_8bab8d02da7bc2e8912b06e1-chunk-006<SEP>gd_8bab8d02da7bc2e8912b06e1-chunk-008<SEP>gd_8bab8d02da7bc2e8912b06e1-chunk-007<SEP>gd_989e1c4a4966b73e9dfa5937-chunk-001<SEP>gd_989e1c4a4966b73e9dfa5937-chunk-003<SEP>gd_c7547b1952af643a14fd7405-chunk-000<SEP>gd_c7547b1952af643a14fd7405-chunk-002<SEP>gd_c7547b1952af643a14fd7405-chunk-003<SEP>gd_cc80ae8a393a1ee4cf628117-chunk-006<SEP>gd_82308e0b379557a8c5fbc53f-chunk-002<SEP>gd_f374b222227a6a91a8bc883c-chunk-002<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-000<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-001<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-002<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-004<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-005<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-006<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-007<SEP>gd_3ca68dc5b6f09166e4348fa9-chunk-005<SEP>gd_5b445ae4452b1cd5ee770467-chunk-004<SEP>gd_8cf6c97fbe61520083d3196a-chunk-000<SEP>gd_8cf6c97fbe61520083d3196a-chunk-005<SEP>gd_03e19ade06e9e20d35a7a989-chunk-001<SEP>gd_03e19ade06e9e20d35a7a989-chunk-002<SEP>gd_03e19ade06e9e20d35a7a989-chunk-006<SEP>gd_a23c7d8cc392e782e22bb499-chunk-001<SEP>gd_31e53199562273779b464f4d-chunk-005<SEP>gd_547c5075e66aa644c0ab2a4f-chunk-000<SEP>gd_547c5075e66aa644c0ab2a4f-chunk-004<SEP>gd_547c5075e66aa644c0ab2a4f-chunk-010<SEP>gd_55cf1d202b4f378f36410cec-chunk-000<SEP>gd_55cf1d202b4f378f36410cec-chunk-002<SEP>gd_55cf1d202b4f378f36410cec-chunk-004<SEP>gd_8a750106d4513616691b5198-chunk-000<SEP>gd_5a82a5a11309c93654f577f0-chunk-000<SEP>gd_70ca318c0d67e8b62254fb7d-chunk-000<SEP>gd_70ca318c0d67e8b62254fb7d-chunk-002<SEP>gd_70ca318c0d67e8b62254fb7d-chunk-003<SEP>gd_70ca318c0d67e8b62254fb7d-chunk-004<SEP>gd_79c396c5dba7ced9a1a0f4c7-chunk-006<SEP>gd_7c2b868d50567a6b40c7c279-chunk-003<SEP>gd_7c2b868d50567a6b40c7c279-chunk-009<SEP>gd_b7769ae41d22fc197ddc2e8c-chunk-003<SEP>gd_818ac5c045781eca64ca056a-chunk-000<SEP>gd_818ac5c045781eca64ca056a-chunk-002<SEP>gd_92e55324cda2a73734ceb972-chunk-003<SEP>gd_59707322e6a2495f8caca90a-chunk-009<SEP>gd_cee3fa988d8406247d556896-chunk-009<SEP>gd_9f64b63b5ae698d29604d98b-chunk-006<SEP>gd_cf4ae0c7b6bfbc4756ff5422-chunk-007<SEP>gd_bdde7399e550d0e1ca3c228a-chunk-005<SEP>gd_bdde7399e550d0e1ca3c228a-chunk-006<SEP>gd_7579e8b1402637800b33e210-chunk-011<SEP>gd_fd88decf2f277fd53c2293b7-chunk-000<SEP>gd_9e15f38f2f6fafa680da9f0c-chunk-007<SEP>gd_57e4f799ef3cc8109831930f-chunk-016<SEP>gd_20ccd2f0f91b9f75d6fb855b-chunk-002<SEP>gd_39135822a5638787a5a43dd3-chunk-004<SEP>gd_39135822a5638787a5a43dd3-chunk-005<SEP>gd_40eabf17d415f412ef592066-chunk-000<SEP>gd_40eabf17d415f412ef592066-chunk-006<SEP>gd_40eabf17d415f412ef592066-chunk-007<SEP>gd_759a598bed674f64e17e1fa0-chunk-003<SEP>gd_759a598bed674f64e17e1fa0-chunk-004<SEP>gd_759a598bed674f64e17e1fa0-chunk-005<SEP>gd_759a598bed674f64e17e1fa0-chunk-006<SEP>gd_90f0625e16d8673be75aae16-chunk-006<SEP>gd_a0acb205dc04ba5f42369d7a-chunk-005<SEP>gd_92fde8b193ba1fefa69b27f7-chunk-001<SEP>gd_92fde8b193ba1fefa69b27f7-chunk-000<SEP>gd_45895bb382839086f6554318-chunk-002<SEP>gd_d0fa7487e0b39fe68571cad6-chunk-000<SEP>gd_faa2e63d5acfd50ac326251d-chunk-000<SEP>gd_faa2e63d5acfd50ac326251d-chunk-005<SEP>gd_f3a600e06b633a7a629e469f-chunk-000<SEP>gd_7d6b408bcde324e8e7717ce7-chunk-006<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-000<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-001<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-004<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-007<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-009<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-010<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-005<SEP>gd_e259b4464cd93452130f852e-chunk-000<SEP>gd_bd5af2f19abc9f9115e0783f-chunk-015<SEP>gd_bd5af2f19abc9f9115e0783f-chunk-001<SEP>gd_bd5af2f19abc9f9115e0783f-chunk-005<SEP>gd_0adbace75ffc5e3ea7aadf77-chunk-009<SEP>gd_0adbace75ffc5e3ea7aadf77-chunk-015<SEP>gd_9809d37cd527c2958295b062-chunk-006<SEP>gd_39b6f4d40075e7b8d3ea719d-chunk-004",
+          "file_path": "gd_1d6644620e79d4578de7e457<SEP>gd_24e26e17f24550bd491a6a15<SEP>gd_2aeb737f1fc3578904a93fac<SEP>gd_329e9dcc5d03af62830b01e0<SEP>gd_3a1525a79255325f169513f5<SEP>gd_5e275660a8df19f03253776d<SEP>gd_500ff2f7a5996e8bcc0fea93<SEP>gd_22e2af05587860f4e41f0ece<SEP>gd_994e488c5d0c37ba02975e60<SEP>gd_28e630372aae90eb9315f28e<SEP>gd_5a48adaa31f9323285eae73b<SEP>gd_853051b49a076dc2389d4553<SEP>gd_70777d85f7f19bff88e7d8d7<SEP>gd_83de48d1c3212650ca366a4e<SEP>gd_a4ae7e6eac7817fa6bf9357c<SEP>gd_860e3a31c459f5a4ebfa33dd<SEP>gd_9f958dd43d0ae0b6840970ce<SEP>gd_acd538a58481d77ef5876a63<SEP>gd_c5da06af782b37a56d757551<SEP>gd_cc8e0a9c7c8c3eaa2c8d4ac3<SEP>gd_4d1077b8bd608022a2166c3f<SEP>gd_ed91c6f6935a201a6b91e194<SEP>gd_beab654fbbc93fa3cf45a5c6<SEP>gd_91f0124cd7f6c9cbe24df3e8<SEP>gd_0056db36f6124156e233c201<SEP>gd_1a02f8692430d0f4f1f4f6be<SEP>gd_8d5a01e786e521ceef6a39d4<SEP>gd_f8379e32c2f158cdff4c2a06<SEP>gd_0027ef0c6f1b522de8f93543<SEP>gd_27d143d3e8d916ef234fccfe<SEP>gd_2f4df5abef725f9b0f5db9bd<SEP>gd_3431ce388885d39d6d44c6b6<SEP>gd_43e212d0edcb1c2810230fe2<SEP>gd_b8803d2a2e69fdacce7f2d8f<SEP>gd_0ddad4f1999e5f43ddc98a8a<SEP>gd_1489f32c404f2e386e0e108a<SEP>gd_334014d96e325de76de53eb7<SEP>gd_7d218b14604c16a4b2ba51cc<SEP>gd_809239d05954fc972f3537b0<SEP>gd_e82e6511ade6122ac0c71b46<SEP>gd_ec228e8695e416170bcef74e<SEP>gd_faa157494978fdae540fd08c<SEP>gd_b7d6d3bd89951116557fa67d<SEP>gd_bb2df0933484691709bc2edf<SEP>gd_d2e5e17168d573c0e46f7b9c<SEP>gd_47c445645895a885cb89d415<SEP>gd_fe9184e0ab77202749f57674<SEP>gd_536b8e8143a9a6d616f95b8a<SEP>gd_8bab8d02da7bc2e8912b06e1<SEP>gd_989e1c4a4966b73e9dfa5937<SEP>gd_c7547b1952af643a14fd7405<SEP>gd_cc80ae8a393a1ee4cf628117<SEP>gd_82308e0b379557a8c5fbc53f<SEP>gd_f374b222227a6a91a8bc883c<SEP>gd_2a4d7b8a58e1c3110dd4d692<SEP>gd_3ca68dc5b6f09166e4348fa9<SEP>gd_5b445ae4452b1cd5ee770467<SEP>gd_8cf6c97fbe61520083d3196a<SEP>gd_03e19ade06e9e20d35a7a989<SEP>gd_a23c7d8cc392e782e22bb499<SEP>gd_31e53199562273779b464f4d<SEP>gd_547c5075e66aa644c0ab2a4f<SEP>gd_55cf1d202b4f378f36410cec<SEP>gd_8a750106d4513616691b5198<SEP>gd_5a82a5a11309c93654f577f0<SEP>gd_70ca318c0d67e8b62254fb7d<SEP>gd_79c396c5dba7ced9a1a0f4c7<SEP>gd_7c2b868d50567a6b40c7c279<SEP>gd_b7769ae41d22fc197ddc2e8c<SEP>gd_818ac5c045781eca64ca056a<SEP>gd_92e55324cda2a73734ceb972<SEP>gd_59707322e6a2495f8caca90a<SEP>gd_cee3fa988d8406247d556896<SEP>gd_9f64b63b5ae698d29604d98b<SEP>gd_cf4ae0c7b6bfbc4756ff5422<SEP>...truncated...(KEEP Old)",
+          "created_at": 1793646130
+        },
+        {
+          "entity_name": "North America",
+          "entity_type": "region",
+          "description": "North America is a geographic region that encompasses the United States, Canada, and Mexico. It is a significant market for various companies, including Cvent, which generates 86% of its revenue from this region. Additionally, North America is a crucial region for Snowflake, with the company generating a substantial portion of its revenue from this area. Specifically, Snowflake still generates 80% of its revenue from North America, highlighting the region's importance to the company's financials. Wix also has a significant presence in North America, with a notable portion of its revenue coming from this region. As a geographical region, North America is part of the Western Hemisphere and is characterized by its diverse geography, climate, and cultures. It is also the fastest growth segment for Wix, with the company experiencing significant revenue growth in this region.\n\nFurthermore, North America is a continent that includes the United States, Canada, and Mexico, and is a region that includes these same countries. Digital Ocean also generates a substantial portion of its revenue from North America, with 38% of its revenue coming from this region. It is worth noting that while North America is a significant market for many companies, it is not the only source of revenue for these companies. In fact, 50% of revenue for some companies is generated outside of North America, highlighting the importance of global markets for these businesses.\n\nIn addition to its economic significance, North America is also a region where many SaaS companies operate, with 85% of companies being headquartered there. MongoDB also generates a substantial portion of its revenue from North America, with 55% of its revenue coming from this region. North America is also a region that accounts for 74% of ServiceNow's revenue. Atlassian generates 50% of its revenue from North America, making it a crucial market for the company.\n\nIt is worth noting that while North America is a significant market for many companies, it is not the only source of revenue for these companies. In fact, 50% of revenue for some companies is generated outside of North America, highlighting the importance of global markets for these businesses. Additionally, North America has a 29.5% market share in AI, but the Asia-Pacific region is growing fastest in this area. Overall, North America is a diverse and economically significant region that plays a crucial role in the global economy.\n\nNorth America is also a region where WalkMe conducts most of its business, and it has a high download-to-paid conversion rate of 2.8% and a high annual RLTV per payer of $32. The region has a significant market with a median revenue per install at Day 60 of $0.55, and a high annual pricing of $39.99. However, it is also a region where the app is growing, but monetizes at significantly lower rates compared to other regions. Furthermore, North America is a region where web revenue is 4.9% of total revenue globally, and it represents 86.2% of global AI funding.<SEP>North America accounts for 36.28% of the global HR payroll software market.",
+          "source_id": "gd_18771289802258996e9afe7d-chunk-001<SEP>gd_18771289802258996e9afe7d-chunk-002<SEP>gd_3eb0d6dd205274318ede670c-chunk-003<SEP>gd_5492d4d586da10f9d01192dd-chunk-001<SEP>gd_d0997b9825dde450f885028e-chunk-001<SEP>gd_d0997b9825dde450f885028e-chunk-002<SEP>gd_6a8515d06bc3b3b1aae863ab-chunk-001<SEP>gd_8377d68cef2cdef818baa2e8-chunk-001<SEP>gd_95b3a94a3095519b7c98c7d4-chunk-002<SEP>gd_bdb7a3958d115cc79af181f3-chunk-002<SEP>gd_c46a4714d0edfa9fffe154cc-chunk-002<SEP>gd_cd33756bd319ab7b66758a0d-chunk-001<SEP>gd_cd33756bd319ab7b66758a0d-chunk-000<SEP>gd_7fe0eca2827d883d8617fc1e-chunk-000<SEP>gd_402ba37a6bc85a4d1b4c34cb-chunk-001<SEP>gd_402ba37a6bc85a4d1b4c34cb-chunk-000<SEP>gd_602ec044e3ecdf3d2d224081-chunk-001<SEP>gd_602ec044e3ecdf3d2d224081-chunk-002<SEP>gd_69ae1aed521dd3c09889a6c5-chunk-000<SEP>gd_b414f3ae82d1cf67bb537a11-chunk-003<SEP>gd_b414f3ae82d1cf67bb537a11-chunk-004<SEP>gd_b8803d2a2e69fdacce7f2d8f-chunk-000<SEP>gd_9e2d016a1add7c06ba742fa3-chunk-002<SEP>gd_b9da22c04e0fa0f306cd64d9-chunk-000<SEP>gd_d2ae8fcc4620bb77f501c1ce-chunk-001<SEP>gd_d2ae8fcc4620bb77f501c1ce-chunk-002<SEP>gd_d37dd301b6f71a48ce01f589-chunk-001<SEP>gd_d37dd301b6f71a48ce01f589-chunk-002<SEP>gd_0519f1abfcc0fb0a1e118638-chunk-001<SEP>gd_fd2a720d5ccdbfd8e0349e77-chunk-001<SEP>gd_5041ab8c996980f3b7b34675-chunk-002<SEP>gd_6b0bb4f6eea86f76dabfe5ec-chunk-007<SEP>gd_ec228e8695e416170bcef74e-chunk-000<SEP>gd_bbbfaf2a3dff5c657489eacb-chunk-000<SEP>gd_c6f21bde42fb4a0c42f82a9e-chunk-001<SEP>gd_c6f21bde42fb4a0c42f82a9e-chunk-002<SEP>gd_b6ea59c27151e687ab7e2f3d-chunk-001<SEP>gd_bcbe4ca585050d0f27567137-chunk-000<SEP>gd_d5144f57b9a017f12de51182-chunk-000<SEP>gd_8a750106d4513616691b5198-chunk-000<SEP>gd_cee3fa988d8406247d556896-chunk-007<SEP>gd_cee3fa988d8406247d556896-chunk-008<SEP>gd_cee3fa988d8406247d556896-chunk-009<SEP>gd_7df7dbd1ef357295466a8e49-chunk-004",
+          "file_path": "gd_18771289802258996e9afe7d<SEP>gd_3eb0d6dd205274318ede670c<SEP>gd_5492d4d586da10f9d01192dd<SEP>gd_d0997b9825dde450f885028e<SEP>gd_6a8515d06bc3b3b1aae863ab<SEP>gd_8377d68cef2cdef818baa2e8<SEP>gd_95b3a94a3095519b7c98c7d4<SEP>gd_bdb7a3958d115cc79af181f3<SEP>gd_cd33756bd319ab7b66758a0d<SEP>gd_7fe0eca2827d883d8617fc1e<SEP>gd_402ba37a6bc85a4d1b4c34cb<SEP>gd_602ec044e3ecdf3d2d224081<SEP>gd_69ae1aed521dd3c09889a6c5<SEP>gd_b414f3ae82d1cf67bb537a11<SEP>gd_b8803d2a2e69fdacce7f2d8f<SEP>gd_9e2d016a1add7c06ba742fa3<SEP>gd_b9da22c04e0fa0f306cd64d9<SEP>gd_d2ae8fcc4620bb77f501c1ce<SEP>gd_d37dd301b6f71a48ce01f589<SEP>gd_0519f1abfcc0fb0a1e118638<SEP>gd_fd2a720d5ccdbfd8e0349e77<SEP>gd_5041ab8c996980f3b7b34675<SEP>gd_6b0bb4f6eea86f76dabfe5ec<SEP>gd_ec228e8695e416170bcef74e<SEP>gd_bbbfaf2a3dff5c657489eacb<SEP>gd_c6f21bde42fb4a0c42f82a9e<SEP>gd_b6ea59c27151e687ab7e2f3d<SEP>gd_bcbe4ca585050d0f27567137<SEP>gd_d5144f57b9a017f12de51182<SEP>gd_8a750106d4513616691b5198<SEP>gd_cee3fa988d8406247d556896<SEP>gd_7df7dbd1ef357295466a8e49",
+          "created_at": 1793634192
+        }
+      ],
+      "relationships": [
+        {
+          "src_id": "2026",
+          "tgt_id": "SaaStr",
+          "description": "The 2026 SaaStr conference is expected to be hosted by AI-native companies, AI-curious founders, developers, and operators.<SEP>SaaStr is experiencing +132% growth in 2026, driven by its focus on AI in B2B.<SEP>Will be present in 2026<SEP>SaaStr is starting to fundamentally rethink their budget models, TAM expansion strategies, and go-to-market motion around AI capabilities in 2026.",
+          "keywords": "Future,Host,Significant Growth,start",
+          "weight": 4.0,
+          "source_id": "gd_0ddad4f1999e5f43ddc98a8a-chunk-001<SEP>gd_0ddad4f1999e5f43ddc98a8a-chunk-005<SEP>gd_8bab8d02da7bc2e8912b06e1-chunk-008<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-000",
+          "file_path": "gd_0ddad4f1999e5f43ddc98a8a<SEP>gd_8bab8d02da7bc2e8912b06e1<SEP>gd_2a4d7b8a58e1c3110dd4d692",
+          "created_at": 1793592698
+        },
+        {
+          "src_id": "DigitalOcean",
+          "tgt_id": "Google",
+          "description": "DigitalOcean competes with Google Cloud in the cloud market.",
+          "keywords": "Competition",
+          "weight": 1.0,
+          "source_id": "gd_402ba37a6bc85a4d1b4c34cb-chunk-000",
+          "file_path": "gd_402ba37a6bc85a4d1b4c34cb",
+          "created_at": 1793528134
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "AI",
+          "description": "AI is expected to play a significant role in shaping the future of GTM in 2026.<SEP>Companies need to tap into real AI budgets to succeed in 2026.<SEP>2026 is the year in which AI spending is set to continue growing.<SEP>The foundation for AI applications is finally solid enough to build transformative applications on top of in 2026.<SEP>2026 is the year when AI becomes a team member.",
+          "keywords": "Budgets,Foundation Solid,Prediction,Transformation,Year,future,role",
+          "weight": 5.0,
+          "source_id": "gd_0027ef0c6f1b522de8f93543-chunk-003<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-006<SEP>gd_8a750106d4513616691b5198-chunk-000<SEP>gd_759a598bed674f64e17e1fa0-chunk-005<SEP>gd_bd5af2f19abc9f9115e0783f-chunk-005",
+          "file_path": "gd_0027ef0c6f1b522de8f93543<SEP>gd_2a4d7b8a58e1c3110dd4d692<SEP>gd_8a750106d4513616691b5198<SEP>gd_759a598bed674f64e17e1fa0<SEP>gd_bd5af2f19abc9f9115e0783f",
+          "created_at": 1793644468
+        },
+        {
+          "src_id": "AWS",
+          "tgt_id": "DigitalOcean",
+          "description": "DigitalOcean is growing more slowly than AWS.<SEP>DigitalOcean competes with AWS in the cloud market.",
+          "keywords": "Competition,growth_rate",
+          "weight": 2.0,
+          "source_id": "gd_37c9bf3c519ccfb55eca9483-chunk-001<SEP>gd_402ba37a6bc85a4d1b4c34cb-chunk-000",
+          "file_path": "gd_37c9bf3c519ccfb55eca9483<SEP>gd_402ba37a6bc85a4d1b4c34cb",
+          "created_at": 1793528134
+        },
+        {
+          "src_id": "2025-2026",
+          "tgt_id": "AI",
+          "description": "AI will raise customer expectations 10x or more in the era of 2025-2026.<SEP>AI agents are getting shockingly good at handling text-based communication and sales tasks, and deep technical expertise is helping customers understand what's possible in 2025-2026.",
+          "keywords": "Deep technical expertise,Increased Expectations",
+          "weight": 2.0,
+          "source_id": "gd_385277f88221b595a4db19fa-chunk-000<SEP>gd_547c5075e66aa644c0ab2a4f-chunk-003",
+          "file_path": "gd_385277f88221b595a4db19fa<SEP>gd_547c5075e66aa644c0ab2a4f",
+          "created_at": 1793608663
+        },
+        {
+          "src_id": "Digital Ocean",
+          "tgt_id": "Zoom",
+          "description": "Similar challenges in NRR declines in smaller customers over the past 18+ months.<SEP>DigitalOcean is primarily self-serve, similar to Zoom's self-service business.",
+          "keywords": "self-serve,similar_challenges",
+          "weight": 2.0,
+          "source_id": "gd_3d00a2ad35f7082a70310e88-chunk-001<SEP>gd_ad4399ea29a32c2b3537e550-chunk-000",
+          "file_path": "gd_3d00a2ad35f7082a70310e88<SEP>gd_ad4399ea29a32c2b3537e550",
+          "created_at": 1793518466
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "SaaS",
+          "description": "relationship_description: 2026 and SaaS are mentioned as a reference point for setting goals and making decisions related to a business model.",
+          "keywords": "model,relationship_keywords: business",
+          "weight": 1.0,
+          "source_id": "gd_1a02f8692430d0f4f1f4f6be-chunk-002",
+          "file_path": "gd_1a02f8692430d0f4f1f4f6be",
+          "created_at": 1793513091
+        },
+        {
+          "src_id": "Datadog",
+          "tgt_id": "DigitalOcean",
+          "description": "DigitalOcean is still worth billions despite growing more slowly than Datadog.",
+          "keywords": "worth",
+          "weight": 1.0,
+          "source_id": "gd_37c9bf3c519ccfb55eca9483-chunk-001",
+          "file_path": "gd_37c9bf3c519ccfb55eca9483",
+          "created_at": 1793527975
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "Jason",
+          "description": "relationship_description: Jason believes Nvidia is a potential investment opportunity in 2026.<SEP>Jason emphasizes that go-to-market executives need to deploy AI agents by 2026 to remain employable.<SEP>Jason predicts that 2026 will be a great year for companies attached to AI budget.",
+          "keywords": "Deadline,opportunity,relationship_keywords: investment,relationship_keywords=predicts_future",
+          "weight": 3.0,
+          "source_id": "gd_8bab8d02da7bc2e8912b06e1-chunk-005<SEP>gd_bdde7399e550d0e1ca3c228a-chunk-005<SEP>gd_bd5af2f19abc9f9115e0783f-chunk-001",
+          "file_path": "gd_8bab8d02da7bc2e8912b06e1<SEP>gd_bdde7399e550d0e1ca3c228a<SEP>gd_bd5af2f19abc9f9115e0783f",
+          "created_at": 1793644468
+        },
+        {
+          "src_id": "Azure",
+          "tgt_id": "DigitalOcean",
+          "description": "DigitalOcean is growing more slowly than Azure.<SEP>DigitalOcean competes with Azure in the cloud market.",
+          "keywords": "Competition,growth_rate",
+          "weight": 2.0,
+          "source_id": "gd_37c9bf3c519ccfb55eca9483-chunk-001<SEP>gd_402ba37a6bc85a4d1b4c34cb-chunk-000",
+          "file_path": "gd_37c9bf3c519ccfb55eca9483<SEP>gd_402ba37a6bc85a4d1b4c34cb",
+          "created_at": 1793528134
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "Company",
+          "description": "The company is investing in AI in 2026.",
+          "keywords": "Investing",
+          "weight": 1.0,
+          "source_id": "gd_28e630372aae90eb9315f28e-chunk-006",
+          "file_path": "gd_28e630372aae90eb9315f28e",
+          "created_at": 1793495351
+        },
+        {
+          "src_id": "DigitalOcean",
+          "tgt_id": "North America",
+          "description": "DigitalOcean has a significant presence in North America, with 38% of its revenue coming from this region.",
+          "keywords": "Market",
+          "weight": 1.0,
+          "source_id": "gd_402ba37a6bc85a4d1b4c34cb-chunk-000",
+          "file_path": "gd_402ba37a6bc85a4d1b4c34cb",
+          "created_at": 1793528134
+        },
+        {
+          "src_id": "Founder",
+          "tgt_id": "Upround",
+          "description": "relationship_description: Founders create successful startups with the help of VC investments.",
+          "keywords": "investment,relationship_keywords: startup,success",
+          "weight": 1.0,
+          "source_id": "gd_68ac04ba3ad5f88436c7c9a1-chunk-000",
+          "file_path": "gd_68ac04ba3ad5f88436c7c9a1",
+          "created_at": 1793599122
+        },
+        {
+          "src_id": "DigitalOcean",
+          "tgt_id": "SMB Cloud",
+          "description": "DigitalOcean targets the SMB Cloud market.",
+          "keywords": "Market",
+          "weight": 1.0,
+          "source_id": "gd_402ba37a6bc85a4d1b4c34cb-chunk-000",
+          "file_path": "gd_402ba37a6bc85a4d1b4c34cb",
+          "created_at": 1793528134
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "Jason Lemkin",
+          "description": "Jason Lemkin predicts that several companies will go public in 2026.",
+          "keywords": "Prediction",
+          "weight": 1.0,
+          "source_id": "gd_8bab8d02da7bc2e8912b06e1-chunk-007",
+          "file_path": "gd_8bab8d02da7bc2e8912b06e1",
+          "created_at": 1793582804
+        },
+        {
+          "src_id": "DigitalOcean",
+          "tgt_id": "Europe",
+          "description": "DigitalOcean has a significant presence in Europe, with 30% of its revenue coming from this region.",
+          "keywords": "Market",
+          "weight": 1.0,
+          "source_id": "gd_402ba37a6bc85a4d1b4c34cb-chunk-000",
+          "file_path": "gd_402ba37a6bc85a4d1b4c34cb",
+          "created_at": 1793528134
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "Anthropic",
+          "description": "Anthropic has been \"remarkably sober-minded and sensible\" about their financial plan and could be one of the companies going public in 2026.",
+          "keywords": "IPO,Relationship_keywords: valuation",
+          "weight": 1.0,
+          "source_id": "gd_40eabf17d415f412ef592066-chunk-000",
+          "file_path": "gd_40eabf17d415f412ef592066",
+          "created_at": 1793625599
+        },
+        {
+          "src_id": "ARR",
+          "tgt_id": "DigitalOcean",
+          "description": "DigitalOcean's ARR has grown significantly over time, reaching $490m.",
+          "keywords": "Growth",
+          "weight": 1.0,
+          "source_id": "gd_402ba37a6bc85a4d1b4c34cb-chunk-000",
+          "file_path": "gd_402ba37a6bc85a4d1b4c34cb",
+          "created_at": 1793528134
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "VC",
+          "description": "Companies need to create real enterprise value with VC money in 2026.",
+          "keywords": "Growth,Value",
+          "weight": 1.0,
+          "source_id": "gd_2a4d7b8a58e1c3110dd4d692-chunk-006",
+          "file_path": "gd_2a4d7b8a58e1c3110dd4d692",
+          "created_at": 1793592700
+        },
+        {
+          "src_id": "Asia",
+          "tgt_id": "DigitalOcean",
+          "description": "DigitalOcean has a significant presence in Asia, with 22% of its revenue coming from this region.",
+          "keywords": "Market",
+          "weight": 1.0,
+          "source_id": "gd_402ba37a6bc85a4d1b4c34cb-chunk-000",
+          "file_path": "gd_402ba37a6bc85a4d1b4c34cb",
+          "created_at": 1793528134
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "Replit",
+          "description": "Imagine by late 2026 if Replit could run 24x7.",
+          "keywords": "run 24x7",
+          "weight": 1.0,
+          "source_id": "gd_994e488c5d0c37ba02975e60-chunk-000",
+          "file_path": "gd_994e488c5d0c37ba02975e60",
+          "created_at": 1793495235
+        },
+        {
+          "src_id": "DigitalOcean",
+          "tgt_id": "Yancey Spruill",
+          "description": "Cloud infrastructure provider",
+          "keywords": "CEO",
+          "weight": 1.0,
+          "source_id": "gd_6a2266e909d63b201cd71ce7-chunk-000",
+          "file_path": "gd_6a2266e909d63b201cd71ce7",
+          "created_at": 1793599233
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "Databricks",
+          "description": "Databricks trades at a 20x multiple and could be one of the companies going public in 2026.",
+          "keywords": "IPO,Relationship_keywords: valuation",
+          "weight": 1.0,
+          "source_id": "gd_40eabf17d415f412ef592066-chunk-000",
+          "file_path": "gd_40eabf17d415f412ef592066",
+          "created_at": 1793625599
+        },
+        {
+          "src_id": "DigitalOcean",
+          "tgt_id": "EBITDA",
+          "description": "DigitalOcean's EBITDA has grown significantly over time, reaching $152m.",
+          "keywords": "Growth",
+          "weight": 1.0,
+          "source_id": "gd_402ba37a6bc85a4d1b4c34cb-chunk-000",
+          "file_path": "gd_402ba37a6bc85a4d1b4c34cb",
+          "created_at": 1793528134
+        },
+        {
+          "src_id": "2026 IPO",
+          "tgt_id": "Anthropic",
+          "description": "Generational companies.",
+          "keywords": "valuation",
+          "weight": 2.0,
+          "source_id": "gd_faa2e63d5acfd50ac326251d-chunk-004",
+          "file_path": "gd_faa2e63d5acfd50ac326251d",
+          "created_at": 1793637105
+        },
+        {
+          "src_id": "Atlassian",
+          "tgt_id": "DigitalOcean",
+          "description": "Atlassian has a very small direct sales force, similar to DigitalOcean.",
+          "keywords": "small direct sales force",
+          "weight": 1.0,
+          "source_id": "gd_ad4399ea29a32c2b3537e550-chunk-000",
+          "file_path": "gd_ad4399ea29a32c2b3537e550",
+          "created_at": 1793518466
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "Companies",
+          "description": "Companies will have to work harder to succeed in 2026<SEP>Companies must be relevant to AI by 2026.",
+          "keywords": "Relevance,relationship_keywords: will be affected by,will face",
+          "weight": 2.0,
+          "source_id": "gd_39135822a5638787a5a43dd3-chunk-005<SEP>gd_0adbace75ffc5e3ea7aadf77-chunk-015",
+          "file_path": "gd_39135822a5638787a5a43dd3<SEP>gd_0adbace75ffc5e3ea7aadf77",
+          "created_at": 1793645525
+        },
+        {
+          "src_id": "DigitalOcean",
+          "tgt_id": "NRR",
+          "description": "DigitalOcean's NRR has grown significantly over time, contributing to its revenue growth.",
+          "keywords": "Growth",
+          "weight": 1.0,
+          "source_id": "gd_402ba37a6bc85a4d1b4c34cb-chunk-000",
+          "file_path": "gd_402ba37a6bc85a4d1b4c34cb",
+          "created_at": 1793528134
+        },
+        {
+          "src_id": "VC",
+          "tgt_id": "upround",
+          "description": "VCs find it easy to invest during an upround.",
+          "keywords": "Ease",
+          "weight": 1.0,
+          "source_id": "gd_ea4ee72bf374a052ed1fa27e-chunk-001",
+          "file_path": "gd_ea4ee72bf374a052ed1fa27e",
+          "created_at": 1793594041
+        },
+        {
+          "src_id": "Cloud",
+          "tgt_id": "Digital Ocean",
+          "description": "Digital Ocean offers cloud infrastructure services to its customers.",
+          "keywords": "Provider",
+          "weight": 1.0,
+          "source_id": "gd_3d00a2ad35f7082a70310e88-chunk-000",
+          "file_path": "gd_3d00a2ad35f7082a70310e88",
+          "created_at": 1793500313
+        },
+        {
+          "src_id": "Upround",
+          "tgt_id": "VC",
+          "description": "relationship_description: VCs invest in uprounds, hoping for high returns.",
+          "keywords": "funding,relationship_keywords: investment,success",
+          "weight": 1.0,
+          "source_id": "gd_68ac04ba3ad5f88436c7c9a1-chunk-000",
+          "file_path": "gd_68ac04ba3ad5f88436c7c9a1",
+          "created_at": 1793599122
+        },
+        {
+          "src_id": "ARPU",
+          "tgt_id": "DigitalOcean",
+          "description": "DigitalOcean's ARPU has grown significantly over time, reaching 24% year-over-year.",
+          "keywords": "Growth",
+          "weight": 1.0,
+          "source_id": "gd_402ba37a6bc85a4d1b4c34cb-chunk-000",
+          "file_path": "gd_402ba37a6bc85a4d1b4c34cb",
+          "created_at": 1793528134
+        },
+        {
+          "src_id": "2026 IPO",
+          "tgt_id": "Databricks",
+          "description": "Generational companies.",
+          "keywords": "valuation",
+          "weight": 2.0,
+          "source_id": "gd_faa2e63d5acfd50ac326251d-chunk-004",
+          "file_path": "gd_faa2e63d5acfd50ac326251d",
+          "created_at": 1793637107
+        },
+        {
+          "src_id": "DigitalOcean",
+          "tgt_id": "Zoom",
+          "description": "Zoom has a substantial sales force for bigger deals, but its self-service business is almost entirely viral, similar to DigitalOcean.",
+          "keywords": "self-serve,substantial sales force",
+          "weight": 1.0,
+          "source_id": "gd_ad4399ea29a32c2b3537e550-chunk-000",
+          "file_path": "gd_ad4399ea29a32c2b3537e550",
+          "created_at": 1793518466
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "Market",
+          "description": "2026 is expected to be a year of market growth and increased AI budgets, but this is not a direct relationship as 2026 is not directly related to market growth.",
+          "keywords": "Growth",
+          "weight": 1.0,
+          "source_id": "gd_2a4d7b8a58e1c3110dd4d692-chunk-005",
+          "file_path": "gd_2a4d7b8a58e1c3110dd4d692",
+          "created_at": 1793592700
+        },
+        {
+          "src_id": "Blackline",
+          "tgt_id": "DigitalOcean",
+          "description": "Blackline's market cap is behind DigitalOcean's.",
+          "keywords": "Market Comparison",
+          "weight": 1.0,
+          "source_id": "gd_e0e8f051a95a2e0ce0fb9f89-chunk-000",
+          "file_path": "gd_e0e8f051a95a2e0ce0fb9f89",
+          "created_at": 1793603517
+        },
+        {
+          "src_id": "2025-2026",
+          "tgt_id": "Microsoft",
+          "description": "Microsoft is already transitioning to solution engineers in the era of 2025-2026.",
+          "keywords": "Transition",
+          "weight": 1.0,
+          "source_id": "gd_385277f88221b595a4db19fa-chunk-000",
+          "file_path": "gd_385277f88221b595a4db19fa",
+          "created_at": 1793492490
+        },
+        {
+          "src_id": "Digital Ocean",
+          "tgt_id": "SaaS",
+          "description": "Digital Ocean provides SaaS solutions to its customers.",
+          "keywords": "Provider",
+          "weight": 1.0,
+          "source_id": "gd_3d00a2ad35f7082a70310e88-chunk-000",
+          "file_path": "gd_3d00a2ad35f7082a70310e88",
+          "created_at": 1793500313
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "Claude",
+          "description": "Provides more advanced analysis and insights compared to previous years.",
+          "keywords": "Improves upon",
+          "weight": 1.0,
+          "source_id": "gd_500ff2f7a5996e8bcc0fea93-chunk-001",
+          "file_path": "gd_500ff2f7a5996e8bcc0fea93",
+          "created_at": 1793494209
+        },
+        {
+          "src_id": "Digital Ocean",
+          "tgt_id": "Long Tail of Cloud",
+          "description": "Digital Ocean is a key player in the Long Tail of Cloud market segment, providing cloud infrastructure and platforms to small and medium-sized businesses.",
+          "keywords": "market segment,provider",
+          "weight": 1.0,
+          "source_id": "gd_3d00a2ad35f7082a70310e88-chunk-002",
+          "file_path": "gd_3d00a2ad35f7082a70310e88",
+          "created_at": 1793500313
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "B2B",
+          "description": "The B2B model is expected to be implemented in 2026.<SEP>2026 is the time to build the best AI-native B2B product.<SEP>B2B companies face budget constraints due to average IT budget increase of 2.79% and average vendor price increases of 9%.",
+          "keywords": "Budget constraints,Implementation,Opportunity",
+          "weight": 3.0,
+          "source_id": "gd_a23c7d8cc392e782e22bb499-chunk-001<SEP>gd_759a598bed674f64e17e1fa0-chunk-005<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-001",
+          "file_path": "gd_a23c7d8cc392e782e22bb499<SEP>gd_759a598bed674f64e17e1fa0<SEP>gd_ed532f1494cf2bbcdf7fd169",
+          "created_at": 1793639149
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "SaaS companies",
+          "description": "By 2026, the highest-performing SaaS companies will have AI agents handling 40-60% of initial prospect interactions and a significant portion of operational work.",
+          "keywords": "AI-deploying,High-performing",
+          "weight": 1.0,
+          "source_id": "gd_57e4f799ef3cc8109831930f-chunk-016",
+          "file_path": "gd_57e4f799ef3cc8109831930f",
+          "created_at": 1793622799
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "AI Agent",
+          "description": "AI Agents are expected to play a significant role in the growth of AI budget in 2026",
+          "keywords": "AI budget,Growth",
+          "weight": 1.0,
+          "source_id": "gd_ed532f1494cf2bbcdf7fd169-chunk-009",
+          "file_path": "gd_ed532f1494cf2bbcdf7fd169",
+          "created_at": 1793639149
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "Gartner",
+          "description": "Gartner predicts global software spend will accelerate and grow by 14.7% to $1.4 Trillion in 2026.<SEP>Gartner predicts that software spending will accelerate to 15.2% in 2026.<SEP>Gartner forecasts global IT spending will grow 9.8% to exceed $6 trillion in 2026.",
+          "keywords": "Forecasted IT spending,Predicts,predicts software spending",
+          "weight": 3.0,
+          "source_id": "gd_5e275660a8df19f03253776d-chunk-000<SEP>gd_55cf1d202b4f378f36410cec-chunk-000<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-001",
+          "file_path": "gd_5e275660a8df19f03253776d<SEP>gd_55cf1d202b4f378f36410cec<SEP>gd_ed532f1494cf2bbcdf7fd169",
+          "created_at": 1793639149
+        },
+        {
+          "src_id": "2025",
+          "tgt_id": "2026",
+          "description": "The (2025, 2026) relation refers to the transition and developments in the B2B (Business-to-Business) sector, particularly with regards to Artificial Intelligence (AI) applications and their impact on the job market and company performance.\n\nIn 2025, the job market is expected to be more challenging, with fewer senior roles and more AI-first workflows, which is expected to continue into 2026. This shift is a result of the increasing adoption of AI tools and the subsequent transition from AI tools to AI team members. The year 2025 also marks the difference between AI and non-AI companies becoming apparent, with the B2B reality normalizing in 2026.\n\nThe budget constraints faced by B2B companies in 2025 will continue into 2026, but this may also lead to a reversal of fortunes for certain stocks. Those that were undervalued in 2025 may potentially become winners in 2026. The year 2026 is expected to be exciting for AI B2B applications, with the Agentic Unlock achieved in 2025 paving the way for further advancements.\n\nFurthermore, 2026 is predicted to be the year when AI + B2B starts to get exciting, with the normalization of the B2B reality and the potential for significant growth and opportunities. However, it's also possible that 2026 could be the mother of all IPO years, following the down rounds experienced in 2025.",
+          "keywords": "AI-driven workflows,Budget constraints,Exciting Developments,Follows,IPO years,Improvement,Market,Relationship_keywords: down rounds,Transition,Undervaluation,continuation,follows",
+          "weight": 8.0,
+          "source_id": "gd_329e9dcc5d03af62830b01e0-chunk-000<SEP>gd_2f4df5abef725f9b0f5db9bd-chunk-001<SEP>gd_39135822a5638787a5a43dd3-chunk-004<SEP>gd_40eabf17d415f412ef592066-chunk-000<SEP>gd_759a598bed674f64e17e1fa0-chunk-003<SEP>gd_ed532f1494cf2bbcdf7fd169-chunk-001<SEP>gd_bd5af2f19abc9f9115e0783f-chunk-005<SEP>gd_9809d37cd527c2958295b062-chunk-006",
+          "file_path": "gd_329e9dcc5d03af62830b01e0<SEP>gd_2f4df5abef725f9b0f5db9bd<SEP>gd_39135822a5638787a5a43dd3<SEP>gd_40eabf17d415f412ef592066<SEP>gd_759a598bed674f64e17e1fa0<SEP>gd_ed532f1494cf2bbcdf7fd169<SEP>gd_bd5af2f19abc9f9115e0783f<SEP>gd_9809d37cd527c2958295b062",
+          "created_at": 1793645933
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "SaaStr AI",
+          "description": "The SaaStr AI conference is a successor to the traditional SaaStr conference, which started in 2026.",
+          "keywords": "Predecessor",
+          "weight": 1.0,
+          "source_id": "gd_0ddad4f1999e5f43ddc98a8a-chunk-001",
+          "file_path": "gd_0ddad4f1999e5f43ddc98a8a",
+          "created_at": 1793563590
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "Freshworks",
+          "description": "Freshworks predicts reaching $1 billion in ARR by 2026",
+          "keywords": "Predicted $1 Billion in ARR",
+          "weight": 1.0,
+          "source_id": "gd_22e2af05587860f4e41f0ece-chunk-002",
+          "file_path": "gd_22e2af05587860f4e41f0ece",
+          "created_at": 1793494719
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "Unicorns",
+          "description": "Unicorns are back in the market and growing.",
+          "keywords": "Growth,Market",
+          "weight": 1.0,
+          "source_id": "gd_2a4d7b8a58e1c3110dd4d692-chunk-006",
+          "file_path": "gd_2a4d7b8a58e1c3110dd4d692",
+          "created_at": 1793592700
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "Competitors",
+          "description": "The foundational models are getting better every quarter. The tooling is getting easier. Your competitors are figuring it out.",
+          "keywords": "window is closing,window wont stay open forever",
+          "weight": 1.0,
+          "source_id": "gd_70ca318c0d67e8b62254fb7d-chunk-002",
+          "file_path": "gd_70ca318c0d67e8b62254fb7d",
+          "created_at": 1793612279
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "Agentforce",
+          "description": "Ranked as the top agentic AI platform",
+          "keywords": "AI Platform Rankings",
+          "weight": 1.0,
+          "source_id": "gd_ed532f1494cf2bbcdf7fd169-chunk-005",
+          "file_path": "gd_ed532f1494cf2bbcdf7fd169",
+          "created_at": 1793639149
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "ElevenLabs",
+          "description": "ElevenLabs is expected to be worth more than Twilio by 2026.",
+          "keywords": "expectation,prediction",
+          "weight": 1.0,
+          "source_id": "gd_f3a600e06b633a7a629e469f-chunk-000",
+          "file_path": "gd_f3a600e06b633a7a629e469f",
+          "created_at": 1793638023
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "M&A",
+          "description": "M&A is starting to thaw and companies are growing in 2026.",
+          "keywords": "Growth,Thaw",
+          "weight": 1.0,
+          "source_id": "gd_2a4d7b8a58e1c3110dd4d692-chunk-006",
+          "file_path": "gd_2a4d7b8a58e1c3110dd4d692",
+          "created_at": 1793592700
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "Sales Teams",
+          "description": "2026 is predicted to be a rude awakening for sales teams.",
+          "keywords": "Impact",
+          "weight": 1.0,
+          "source_id": "gd_5b445ae4452b1cd5ee770467-chunk-004",
+          "file_path": "gd_5b445ae4452b1cd5ee770467",
+          "created_at": 1793594147
+        },
+        {
+          "src_id": "2024",
+          "tgt_id": "2026",
+          "description": "The year 2026 will separate companies that can grow and be profitable from those that cannot.",
+          "keywords": "Growth,Profitability",
+          "weight": 1.0,
+          "source_id": "gd_2a4d7b8a58e1c3110dd4d692-chunk-006",
+          "file_path": "gd_2a4d7b8a58e1c3110dd4d692",
+          "created_at": 1793592700
+        },
+        {
+          "src_id": "2023",
+          "tgt_id": "2026",
+          "description": "The company focuses on reaching SaaS buyers in 2023 and plans to reach AI builders and deployers in 2026.<SEP>The companies that were SaaStr's best customers in 2022-2023 have reallocated their budgets to other areas, including AI transformation initiatives.<SEP>The year 2026 will separate companies that can grow and be profitable from those that cannot.",
+          "keywords": "Budget Re-allocation,Growth,Profitability,focus,plan",
+          "weight": 3.0,
+          "source_id": "gd_0ddad4f1999e5f43ddc98a8a-chunk-003<SEP>gd_0ddad4f1999e5f43ddc98a8a-chunk-005<SEP>gd_2a4d7b8a58e1c3110dd4d692-chunk-006",
+          "file_path": "gd_0ddad4f1999e5f43ddc98a8a<SEP>gd_2a4d7b8a58e1c3110dd4d692",
+          "created_at": 1793592700
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "2025-2026",
+          "description": "The world fundamentally changed between 2021 and 2025-2026 due to AI acceleration.<SEP>Investors' expectations have shifted from funding growth at any cost to prioritizing profitability.",
+          "keywords": "Event,change,relationship_keywords=shift",
+          "weight": 2.0,
+          "source_id": "gd_1c9f0c1497d224d0411bf40f-chunk-002<SEP>gd_2278ccbbb419f2b27781cfed-chunk-003",
+          "file_path": "gd_1c9f0c1497d224d0411bf40f<SEP>gd_2278ccbbb419f2b27781cfed",
+          "created_at": 1793645059
+        },
+        {
+          "src_id": "2026 IPO",
+          "tgt_id": "Stripe",
+          "description": "Generational companies.",
+          "keywords": "valuation",
+          "weight": 2.0,
+          "source_id": "gd_faa2e63d5acfd50ac326251d-chunk-004",
+          "file_path": "gd_faa2e63d5acfd50ac326251d",
+          "created_at": 1793637107
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "The Author",
+          "description": "The author predicts that AI agents will become an integral part of software development teams in 2026.",
+          "keywords": "Prediction",
+          "weight": 1.0,
+          "source_id": "gd_0056db36f6124156e233c201-chunk-002",
+          "file_path": "gd_0056db36f6124156e233c201",
+          "created_at": 1793512437
+        },
+        {
+          "src_id": "2021",
+          "tgt_id": "2026-2028",
+          "description": "The success of A16Z's investments in the 2014-2018 vintages has the potential to result in significant growth and exit value in 2026-2028, as the 2020-2023 portfolios mature.<SEP>2026-2028 combined will far exceed what 2021 did, perhaps by as much as 10x-but across multiple years rather than one explosive moment.<SEP>2026-2028 will be a period of epic liquidity due to AI companies from 2020-2024 exiting into a market where every major tech company needs AI capabilities to survive.",
+          "keywords": "AI,Exit Value,Potential,follows",
+          "weight": 3.0,
+          "source_id": "gd_90f0625e16d8673be75aae16-chunk-005<SEP>gd_90f0625e16d8673be75aae16-chunk-006<SEP>gd_90f0625e16d8673be75aae16-chunk-008",
+          "file_path": "gd_90f0625e16d8673be75aae16",
+          "created_at": 1793627658
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "A16Z",
+          "description": "A16Z's exit value is expected to reach $8-10B in 2026, driven primarily by AI companies.",
+          "keywords": "AI,Exit Value",
+          "weight": 1.0,
+          "source_id": "gd_90f0625e16d8673be75aae16-chunk-006",
+          "file_path": "gd_90f0625e16d8673be75aae16",
+          "created_at": 1793627658
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "Rory ODriscoll",
+          "description": "Rory O’Driscoll predicts that several companies will go public in 2026.",
+          "keywords": "Prediction",
+          "weight": 1.0,
+          "source_id": "gd_8bab8d02da7bc2e8912b06e1-chunk-007",
+          "file_path": "gd_8bab8d02da7bc2e8912b06e1",
+          "created_at": 1793582804
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "B2B Leaders",
+          "description": "The companies that figure out how to operationalize AI agents in 2025 will have a massive operational advantage by 2026.",
+          "keywords": "Benefit",
+          "weight": 1.0,
+          "source_id": "gd_27d143d3e8d916ef234fccfe-chunk-004",
+          "file_path": "gd_27d143d3e8d916ef234fccfe",
+          "created_at": 1793529812
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "Enterprises",
+          "description": "It’s time to decide and make 2026 count.",
+          "keywords": "Action,Decision",
+          "weight": 1.0,
+          "source_id": "gd_2a4d7b8a58e1c3110dd4d692-chunk-007",
+          "file_path": "gd_2a4d7b8a58e1c3110dd4d692",
+          "created_at": 1793592700
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "Duolingo",
+          "description": "Duolingo's failure in 2025 presents a challenge for the company in 2026.",
+          "keywords": "Challenge",
+          "weight": 1.0,
+          "source_id": "gd_bd5af2f19abc9f9115e0783f-chunk-015",
+          "file_path": "gd_bd5af2f19abc9f9115e0783f",
+          "created_at": 1793644468
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "DataDog",
+          "description": "DataDog's success in 2025 positions it for opportunity in 2026.",
+          "keywords": "Opportunity",
+          "weight": 1.0,
+          "source_id": "gd_bd5af2f19abc9f9115e0783f-chunk-015",
+          "file_path": "gd_bd5af2f19abc9f9115e0783f",
+          "created_at": 1793644468
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "The Bottom Line",
+          "description": "2026 will be an inflection point for companies, with those that can grow and be profitable succeeding.",
+          "keywords": "Growth,Inflection",
+          "weight": 2.0,
+          "source_id": "gd_2a4d7b8a58e1c3110dd4d692-chunk-006",
+          "file_path": "gd_2a4d7b8a58e1c3110dd4d692",
+          "created_at": 1793592700
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "SaaStr AI Annual 2026",
+          "description": "The event will take place in the year 2026.",
+          "keywords": "Keywords: year,date",
+          "weight": 1.0,
+          "source_id": "gd_3a1525a79255325f169513f5-chunk-000",
+          "file_path": "gd_3a1525a79255325f169513f5",
+          "created_at": 1793492739
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "SpaceX",
+          "description": "SpaceX is pursuing an $800 billion valuation and could be one of the companies going public in 2026.",
+          "keywords": "IPO,Relationship_keywords: valuation",
+          "weight": 1.0,
+          "source_id": "gd_40eabf17d415f412ef592066-chunk-000",
+          "file_path": "gd_40eabf17d415f412ef592066",
+          "created_at": 1793625598
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "20VC",
+          "description": "Will be present in 2026",
+          "keywords": "Future",
+          "weight": 1.0,
+          "source_id": "gd_8bab8d02da7bc2e8912b06e1-chunk-008",
+          "file_path": "gd_8bab8d02da7bc2e8912b06e1",
+          "created_at": 1793582804
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "Cognigy",
+          "description": "Cognigy expected to deliver $115M revenue in 2026",
+          "keywords": "Expectation",
+          "weight": 1.0,
+          "source_id": "gd_92fde8b193ba1fefa69b27f7-chunk-000",
+          "file_path": "gd_92fde8b193ba1fefa69b27f7",
+          "created_at": 1793630525
+        },
+        {
+          "src_id": "2024-2025",
+          "tgt_id": "2026",
+          "description": "The companies deploying AI agents effectively in 2024-2025 will dominate their markets in 2026.<SEP>The real AI GTM era is expected to start in 2026, marking a significant change from the automation era of 2024-2025.",
+          "keywords": "Comparison,Era transition,Year of change",
+          "weight": 2.0,
+          "source_id": "gd_7753ef947d383d366dbbdd5a-chunk-004<SEP>gd_e82e6511ade6122ac0c71b46-chunk-009",
+          "file_path": "gd_7753ef947d383d366dbbdd5a<SEP>gd_e82e6511ade6122ac0c71b46",
+          "created_at": 1793572669
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "SaaS markets",
+          "description": "The SaaS markets have crashed in 2026.",
+          "keywords": "Relationship keywords: crash,year",
+          "weight": 1.0,
+          "source_id": "gd_a4ae7e6eac7817fa6bf9357c-chunk-000",
+          "file_path": "gd_a4ae7e6eac7817fa6bf9357c",
+          "created_at": 1793500353
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "Harry Stebbings and Rory O'Driscoll",
+          "description": "Harry Stebbings and Rory O'Driscoll are expected to play a significant role in shaping the future of GTM in 2026.",
+          "keywords": "future,role",
+          "weight": 1.0,
+          "source_id": "gd_0027ef0c6f1b522de8f93543-chunk-003",
+          "file_path": "gd_0027ef0c6f1b522de8f93543",
+          "created_at": 1793525209
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "2027",
+          "description": "The window for building AI B2B companies is open in 2026 but will close by 2027.<SEP>The window for building AI B2B companies will be closing by 2027.",
+          "keywords": "Window Closing,Window Open",
+          "weight": 2.0,
+          "source_id": "gd_759a598bed674f64e17e1fa0-chunk-005",
+          "file_path": "gd_759a598bed674f64e17e1fa0",
+          "created_at": 1793626648
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "Q4 2025",
+          "description": "The ones still “exploring” will be playing catch-up in 2026.",
+          "keywords": "Comparison",
+          "weight": 1.0,
+          "source_id": "gd_7753ef947d383d366dbbdd5a-chunk-004",
+          "file_path": "gd_7753ef947d383d366dbbdd5a",
+          "created_at": 1793568614
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "AI AEs",
+          "description": "Relationship Description: AI AEs are expected to be more effective in 2026.",
+          "keywords": "Relationship Keywords: improvement,effectiveness",
+          "weight": 1.0,
+          "source_id": "gd_acd538a58481d77ef5876a63-chunk-000",
+          "file_path": "gd_acd538a58481d77ef5876a63",
+          "created_at": 1793502191
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "AI GTM",
+          "description": "Relationship Description: AI GTM is anticipated to be available in 2026 to run marketing activities.",
+          "keywords": "Relationship Keywords: availability,marketing activities",
+          "weight": 1.0,
+          "source_id": "gd_acd538a58481d77ef5876a63-chunk-000",
+          "file_path": "gd_acd538a58481d77ef5876a63",
+          "created_at": 1793502191
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "Agent Deployment Expert",
+          "description": "Becoming an Agent Deployment Expert is related to the year 2026",
+          "keywords": "related to",
+          "weight": 1.0,
+          "source_id": "gd_9f64b63b5ae698d29604d98b-chunk-006",
+          "file_path": "gd_9f64b63b5ae698d29604d98b",
+          "created_at": 1793618851
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "Our Team",
+          "description": "The company asks its team to adapt to the demands of the Age of AI in 2026.",
+          "keywords": "ask",
+          "weight": 1.0,
+          "source_id": "gd_0ddad4f1999e5f43ddc98a8a-chunk-003",
+          "file_path": "gd_0ddad4f1999e5f43ddc98a8a",
+          "created_at": 1793563590
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "FDE model",
+          "description": "The FDE model is expected to drive adoption of AI agents in 2026, as vendors offer more streamlined and efficient deployment options.",
+          "keywords": "adoption",
+          "weight": 1.0,
+          "source_id": "gd_809239d05954fc972f3537b0-chunk-003",
+          "file_path": "gd_809239d05954fc972f3537b0",
+          "created_at": 1793571123
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "Agentic AI company",
+          "description": "The year 2026 is expected to have a significant impact on agentic AI companies.",
+          "keywords": "Impact on",
+          "weight": 1.0,
+          "source_id": "gd_f374b222227a6a91a8bc883c-chunk-002",
+          "file_path": "gd_f374b222227a6a91a8bc883c",
+          "created_at": 1793586772
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "JasonLK's sales team",
+          "description": "JasonLK's sales team is part of the future of sales and AI in 2026.",
+          "keywords": "Future Of",
+          "weight": 1.0,
+          "source_id": "gd_70ca318c0d67e8b62254fb7d-chunk-000",
+          "file_path": "gd_70ca318c0d67e8b62254fb7d",
+          "created_at": 1793612279
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "Your Job In AI + B2B",
+          "description": "The article discusses the expected adoption of AI in B2B companies by 2026.",
+          "keywords": "related_to",
+          "weight": 1.0,
+          "source_id": "gd_79c396c5dba7ced9a1a0f4c7-chunk-006",
+          "file_path": "gd_79c396c5dba7ced9a1a0f4c7",
+          "created_at": 1793613746
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "AI Buyers",
+          "description": "AI buyers convert at a higher rate than SaaS buyers in 2026.",
+          "keywords": "Convert",
+          "weight": 1.0,
+          "source_id": "gd_ed532f1494cf2bbcdf7fd169-chunk-010",
+          "file_path": "gd_ed532f1494cf2bbcdf7fd169",
+          "created_at": 1793639149
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "AI VPs of Marketing",
+          "description": "Relationship Description: AI VPs of Marketing are expected to be available in 2026 to run 90%+ of marketing activities autonomously.",
+          "keywords": "Relationship Keywords: autonomy,marketing activities",
+          "weight": 1.0,
+          "source_id": "gd_acd538a58481d77ef5876a63-chunk-000",
+          "file_path": "gd_acd538a58481d77ef5876a63",
+          "created_at": 1793502191
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "One Interview Question That Tells You Everything",
+          "description": "The new interview question is related to the year 2026.",
+          "keywords": "Related to",
+          "weight": 1.0,
+          "source_id": "gd_faa157494978fdae540fd08c-chunk-001",
+          "file_path": "gd_faa157494978fdae540fd08c",
+          "created_at": 1793573719
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "Trough of Disillusionment",
+          "description": "The trough of disillusionment is expected to occur in 2026.",
+          "keywords": "technology,year",
+          "weight": 1.0,
+          "source_id": "gd_55cf1d202b4f378f36410cec-chunk-002",
+          "file_path": "gd_55cf1d202b4f378f36410cec",
+          "created_at": 1793609477
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "The window",
+          "description": "The foundational models are getting better every quarter. The tooling is getting easier. Your competitors are figuring it out.",
+          "keywords": "window is closing,window wont stay open forever",
+          "weight": 1.0,
+          "source_id": "gd_70ca318c0d67e8b62254fb7d-chunk-002",
+          "file_path": "gd_70ca318c0d67e8b62254fb7d",
+          "created_at": 1793612279
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "Hero App",
+          "description": "2026 is targeted for deployment of the hero app.",
+          "keywords": "Targeted For Deployment",
+          "weight": 1.0,
+          "source_id": "gd_9e15f38f2f6fafa680da9f0c-chunk-007",
+          "file_path": "gd_9e15f38f2f6fafa680da9f0c",
+          "created_at": 1793622311
+        },
+        {
+          "src_id": "2026",
+          "tgt_id": "AI Team Members",
+          "description": "2026 is the year when AI technology is expected to become a team member, not just a tool.",
+          "keywords": "Prediction",
+          "weight": 1.0,
+          "source_id": "gd_bd5af2f19abc9f9115e0783f-chunk-005",
+          "file_path": "gd_bd5af2f19abc9f9115e0783f",
+          "created_at": 1793644468
+        },
+        {
+          "src_id": "B2B companies",
+          "tgt_id": "SaaS Crash of 2026",
+          "description": "B2B companies are predicted to be victims of the SaaS Crash of 2026.",
+          "keywords": "prediction",
+          "weight": 1.0,
+          "source_id": "gd_2278ccbbb419f2b27781cfed-chunk-005",
+          "file_path": "gd_2278ccbbb419f2b27781cfed",
+          "created_at": 1793645059
+        },
+        {
+          "src_id": "Digital Jason",
+          "tgt_id": "February 2026",
+          "description": "Digital Jason handled a large number of conversations in February 2026, which was a significant month for the company.",
+          "keywords": "Relationship_keywords: handled,conversations",
+          "weight": 1.0,
+          "source_id": "gd_fe622fa2eae579716b604273-chunk-001",
+          "file_path": "gd_fe622fa2eae579716b604273",
+          "created_at": 1793573921
+        },
+        {
+          "src_id": "2026-2028",
+          "tgt_id": "A16Z",
+          "description": "A16Z's investments in the 2020-2023 portfolios have the potential to result in significant growth and exit value in 2026-2028.",
+          "keywords": "Potential",
+          "weight": 1.0,
+          "source_id": "gd_90f0625e16d8673be75aae16-chunk-005",
+          "file_path": "gd_90f0625e16d8673be75aae16",
+          "created_at": 1793627658
+        },
+        {
+          "src_id": "2026 State of the Markets report",
+          "tgt_id": "SVB",
+          "description": "SVB publishes an annual report on the state of the venture and startup ecosystem.",
+          "keywords": "produces",
+          "weight": 1.0,
+          "source_id": "gd_7d6b408bcde324e8e7717ce7-chunk-000",
+          "file_path": "gd_7d6b408bcde324e8e7717ce7",
+          "created_at": 1793638546
+        },
+        {
+          "src_id": "AI-native startups",
+          "tgt_id": "SaaS Crash of 2026",
+          "description": "AI-native startups are predicted to be unaffected by the SaaS Crash of 2026.",
+          "keywords": "prediction",
+          "weight": 1.0,
+          "source_id": "gd_2278ccbbb419f2b27781cfed-chunk-005",
+          "file_path": "gd_2278ccbbb419f2b27781cfed",
+          "created_at": 1793645059
+        },
+        {
+          "src_id": "2026 IPO",
+          "tgt_id": "SpaceX",
+          "description": "Generational companies.",
+          "keywords": "valuation",
+          "weight": 2.0,
+          "source_id": "gd_faa2e63d5acfd50ac326251d-chunk-004",
+          "file_path": "gd_faa2e63d5acfd50ac326251d",
+          "created_at": 1793637105
+        },
+        {
+          "src_id": "upround",
+          "tgt_id": "valuation",
+          "description": "Uprounds result in an increase in valuation.",
+          "keywords": "Increase",
+          "weight": 1.0,
+          "source_id": "gd_ea4ee72bf374a052ed1fa27e-chunk-001",
+          "file_path": "gd_ea4ee72bf374a052ed1fa27e",
+          "created_at": 1793594041
+        },
+        {
+          "src_id": "DISCO",
+          "tgt_id": "SaaS Crash of 2026",
+          "description": "The company DISCO is a potential victim of the predicted SaaS Crash of 2026.",
+          "keywords": "prediction",
+          "weight": 1.0,
+          "source_id": "gd_2278ccbbb419f2b27781cfed-chunk-005",
+          "file_path": "gd_2278ccbbb419f2b27781cfed",
+          "created_at": 1793645059
+        },
+        {
+          "src_id": "CS Disco",
+          "tgt_id": "SaaS Crash of 2026",
+          "description": "The product CS Disco is a potential victim of the predicted SaaS Crash of 2026.",
+          "keywords": "prediction",
+          "weight": 1.0,
+          "source_id": "gd_2278ccbbb419f2b27781cfed-chunk-005",
+          "file_path": "gd_2278ccbbb419f2b27781cfed",
+          "created_at": 1793645059
+        },
+        {
+          "src_id": "2025-2026",
+          "tgt_id": "Products",
+          "description": "Products change weekly in the era of 2025-2026.<SEP>Will require increased effort and AI integration",
+          "keywords": "Change,Will",
+          "weight": 2.0,
+          "source_id": "gd_385277f88221b595a4db19fa-chunk-000<SEP>gd_20e60735f48eae1b55d1b0a4-chunk-002",
+          "file_path": "gd_385277f88221b595a4db19fa<SEP>gd_20e60735f48eae1b55d1b0a4",
+          "created_at": 1793595752
+        },
+        {
+          "src_id": "Private Equity Firms",
+          "tgt_id": "SaaS Crash of 2026",
+          "description": "The SaaS crash of 2026 has a significant impact on private equity firms, making it harder for them to invest in SaaS companies.",
+          "keywords": "Impact",
+          "weight": 1.0,
+          "source_id": "gd_b7d6d3bd89951116557fa67d-chunk-001",
+          "file_path": "gd_b7d6d3bd89951116557fa67d",
+          "created_at": 1793574580
+        },
+        {
+          "src_id": "2025-2026",
+          "tgt_id": "SF",
+          "description": "Sales reps in SF will struggle in the era of 2025-2026.",
+          "keywords": "Struggle",
+          "weight": 1.0,
+          "source_id": "gd_385277f88221b595a4db19fa-chunk-000",
+          "file_path": "gd_385277f88221b595a4db19fa",
+          "created_at": 1793492490
+        },
+        {
+          "src_id": "2020-2021",
+          "tgt_id": "2025-2026",
+          "description": "The era of 2025-2026 will require sales reps to work significantly harder than the era of 2020-2021.<SEP>The eras of work are 2020-2021 and 2025-2026.<SEP>Marked a significant shift from reduced to increased work effort",
+          "keywords": "Eras of Work,Harder Work,Transitioned",
+          "weight": 5.0,
+          "source_id": "gd_385277f88221b595a4db19fa-chunk-000<SEP>gd_20e60735f48eae1b55d1b0a4-chunk-001<SEP>gd_20e60735f48eae1b55d1b0a4-chunk-002",
+          "file_path": "gd_385277f88221b595a4db19fa<SEP>gd_20e60735f48eae1b55d1b0a4",
+          "created_at": 1793595749
+        },
+        {
+          "src_id": "2025-2026",
+          "tgt_id": "The World",
+          "description": "The article suggests that the world has fundamentally changed between 2021 and now, making it harder for companies that prioritize work-life balance to succeed.",
+          "keywords": "context",
+          "weight": 1.0,
+          "source_id": "gd_1c9f0c1497d224d0411bf40f-chunk-001",
+          "file_path": "gd_1c9f0c1497d224d0411bf40f",
+          "created_at": 1793564546
+        },
+        {
+          "src_id": "2026-2028",
+          "tgt_id": "AI Boom",
+          "description": "2026-2028 will be a sustained wave as AI companies mature at different rates.",
+          "keywords": "Event",
+          "weight": 2.0,
+          "source_id": "gd_90f0625e16d8673be75aae16-chunk-007",
+          "file_path": "gd_90f0625e16d8673be75aae16",
+          "created_at": 1793627658
+        },
+        {
+          "src_id": "2025 IPO",
+          "tgt_id": "2026 IPO",
+          "description": "Market will test valuation.",
+          "keywords": "valuation",
+          "weight": 2.0,
+          "source_id": "gd_faa2e63d5acfd50ac326251d-chunk-004",
+          "file_path": "gd_faa2e63d5acfd50ac326251d",
+          "created_at": 1793637105
+        },
+        {
+          "src_id": "2025-2026",
+          "tgt_id": "New Sales Reps",
+          "description": "New sales reps will have to compete with AIs that know the product cold in the era of 2025-2026.",
+          "keywords": "Competition",
+          "weight": 1.0,
+          "source_id": "gd_385277f88221b595a4db19fa-chunk-000",
+          "file_path": "gd_385277f88221b595a4db19fa",
+          "created_at": 1793492490
+        },
+        {
+          "src_id": "SaaS Crash of 2026",
+          "tgt_id": "US Tech Credit Market",
+          "description": "The SaaS crash of 2026 is causing stress in the US tech credit market.",
+          "keywords": "Cause",
+          "weight": 1.0,
+          "source_id": "gd_b7d6d3bd89951116557fa67d-chunk-001",
+          "file_path": "gd_b7d6d3bd89951116557fa67d",
+          "created_at": 1793574580
+        },
+        {
+          "src_id": "SaaS Crash of 2026",
+          "tgt_id": "Tech Bond Distressed Ratio",
+          "description": "The SaaS crash of 2026 is causing the tech bond distressed ratio to rise.",
+          "keywords": "Cause",
+          "weight": 1.0,
+          "source_id": "gd_b7d6d3bd89951116557fa67d-chunk-001",
+          "file_path": "gd_b7d6d3bd89951116557fa67d",
+          "created_at": 1793574580
+        },
+        {
+          "src_id": "VC firm",
+          "tgt_id": "upround",
+          "description": "VC firms find it easy to invest during an upround.",
+          "keywords": "Ease",
+          "weight": 1.0,
+          "source_id": "gd_ea4ee72bf374a052ed1fa27e-chunk-001",
+          "file_path": "gd_ea4ee72bf374a052ed1fa27e",
+          "created_at": 1793594041
+        },
+        {
+          "src_id": "Check slack",
+          "tgt_id": "Wake up",
+          "description": "Waking up is followed by checking slack, indicating a daily routine.",
+          "keywords": "Daily routine",
+          "weight": 1.0,
+          "source_id": "gd_79ef312e7983b8ea4ed0764c-chunk-000",
+          "file_path": "gd_79ef312e7983b8ea4ed0764c",
+          "created_at": 1793497525
+        },
+        {
+          "src_id": "2026-2028",
+          "tgt_id": "400-600B",
+          "description": "2026-2028 combined will see a total exit value of $400-600B, driven primarily by AI companies.",
+          "keywords": "AI,Exit Value",
+          "weight": 1.0,
+          "source_id": "gd_90f0625e16d8673be75aae16-chunk-006",
+          "file_path": "gd_90f0625e16d8673be75aae16",
+          "created_at": 1793627658
+        },
+        {
+          "src_id": "Check email",
+          "tgt_id": "Wake up",
+          "description": "Waking up is followed by checking email, indicating a progression of time.<SEP>Waking up is followed by checking email, indicating a daily routine.",
+          "keywords": "Daily routine,Time progression",
+          "weight": 2.0,
+          "source_id": "gd_79ef312e7983b8ea4ed0764c-chunk-000",
+          "file_path": "gd_79ef312e7983b8ea4ed0764c",
+          "created_at": 1793497525
+        },
+        {
+          "src_id": "2020-2021 Hangover",
+          "tgt_id": "2026 version",
+          "description": "The 2020-2021 Hangover is different from the 2026 version, with the latter being structural.",
+          "keywords": "cause",
+          "weight": 1.0,
+          "source_id": "gd_f335200b1b152ebd57131e72-chunk-000",
+          "file_path": "gd_f335200b1b152ebd57131e72",
+          "created_at": 1793586640
+        },
+        {
+          "src_id": "2022-2023 SaaS crash",
+          "tgt_id": "2026 version",
+          "description": "The 2022-2023 SaaS crash is different from the 2026 version, with the latter being structural.",
+          "keywords": "cause",
+          "weight": 1.0,
+          "source_id": "gd_f335200b1b152ebd57131e72-chunk-000",
+          "file_path": "gd_f335200b1b152ebd57131e72",
+          "created_at": 1793586640
+        },
+        {
+          "src_id": "FY25",
+          "tgt_id": "Q1 FY26",
+          "description": "Okta's revenue growth decelerated by 3 points from FY25 to Q1 FY26, which is a sign of its revenue growth continuing to follow the classic SaaS maturity curve.",
+          "keywords": "Relationship",
+          "weight": 1.0,
+          "source_id": "gd_7c8278d1de75266255de50d7-chunk-000",
+          "file_path": "gd_7c8278d1de75266255de50d7",
+          "created_at": 1793599624
+        }
+      ],
+      "chunks": [
+        {
+          "reference_id": "1",
+          "content": "#2.  Sticking to their knitting of companies with < 500 employees\n.  DigitialOcean doesn’t want to take AWS, Azure, and Google on in the enterprise and doesn’t really try.  It knows its strengths and the SMB Cloud segment is still growing 27% a year.\n#3. The Growth is in the 100,000 customers paying more than $50 a Month.  They are only 15% of the customers, but 83% of the revenue\n.  Even in the smallest of SMB, you can still tilt a little upmarket — and DigitalOcean has.  Its sub-$50 a month customers, while 83% of their customer base, are only growing 6% year-over-year and now are just 17% of their revenue overall.  But its 100k $50+ a month customers are growing quickly, at 24% year-over-year.\n\n#4.  Growth accelerated after $300,000,000 in ARR\n.  Another great challenge to the idea growth has to always slow in Cloud and SaaS.  Growth for DigitalOcean did slow for a while, but they reignited the past 2 years:\n\n#5.  A 25% increase in ARPU fuels growth.\nA benefit from both growing NRR and focusing on $50+ a month customers.  A big piece of DigitialOcean’s acceleration after $300m ARR has come from driving up Monthly ARPU:\nAnd a few bonus learnings:\n\n#6.  Digital Ocean is generating significant free cash flow — $152m of EBITDA on $490m in ARR\n.  That’s impressive.  31% of each dollar flows to free cash flow.\n\n#7.  Only 38% of revenue in North America.\nThe Cloud is global, and DigitalOcean has followed it.  With 30% in Europe, and 22% in Asia, DigitalOcean’s revenue is truly global.",
+          "file_path": "gd_402ba37a6bc85a4d1b4c34cb",
+          "chunk_id": "gd_402ba37a6bc85a4d1b4c34cb-chunk-000"
+        },
+        {
+          "reference_id": "3",
+          "content": "After digging into every one of these companies, the patterns are unmistakable. Here’s what they all share:\n\n1. Growth Stalled or Went Negative\nThis is the single biggest factor. Of the twelve companies,\neight are growing less than 5% or actively shrinking\n. The median growth rate across this group is roughly flat to slightly negative.\nAt that growth rate, a B2B company isn’t just “slow growing” — it’s signaling that demand is saturated, that customers are churning, or that new competitors are eating its lunch. And the market prices that in brutally.\nThe contrast is sharp. Five9 at +13% growth gets 2.5x. Upland at -23% gets 0.2x. Growth rate explains more variance in these multiples than any other single factor.\n\n2. The 2020-2021 Hangover Never Ended\nEvery single one of these companies peaked between 2019 and 2021. Most at absurd multiples — RingCentral hit $53B on $1.5B revenue (35x!). Teladoc hit $50B. Fastly hit $12B on $300M in revenue.\nThe pull-forward effect from COVID was real. Remote work, telemedicine, digital everything — these companies rode a demand wave that was borrowing from 2023-2025. When that demand normalized, growth rates collapsed, and the stocks never recovered.\nWhat’s different now versus the 2022-2023 SaaS crash is that this isn’t about interest rates anymore. Rates have come down. The S&P is near all-time highs. This group isn’t recovering because their\nbusinesses\naren’t recovering. The 2022 crash was macro. The 2026 version is structural.\n\n3. No Compelling AI Story\nHere’s the one that matters most going forward. Look at what the market\nis\nrewarding in B2B right now: Palantir trades at",
+          "file_path": "gd_f335200b1b152ebd57131e72",
+          "chunk_id": "gd_f335200b1b152ebd57131e72-chunk-000"
+        },
+        {
+          "reference_id": "4",
+          "content": "Call it a lot of things -- but don't call it a downturn. And don't call it a slowdown. Gartner now predicts global software spend will >accelerate< and growing a stunning 14.7% to $1.4 Trillion in 2026. That's net new $180B+ of software spend this year. Go get your share.",
+          "file_path": "gd_5e275660a8df19f03253776d",
+          "chunk_id": "gd_5e275660a8df19f03253776d-chunk-000"
+        },
+        {
+          "reference_id": "5",
+          "content": "and still win big. Remote work was new and exciting, not a productivity drag. AI wasn’t eating everyone’s lunch yet.\nToday? Zilch.\nIn fact, every start-up I work with focused on balance is losing\n.  Maybe losing slowly, a few points of market share here and there.  But they are losing.\nWhy 2025-2026 Is Different (And Harder)\nThe world fundamentally changed between 2021 and now. Here’s what’s driving this new reality:\nAI Has Accelerated Everything\n:\nYour competitors aren’t just working faster—they’re using AI to work 10x faster. The startup that’s willing to integrate AI into every process, every decision, every customer interaction is going to lap the one that treats it as a side project.\nGrowth Insanity\n:\nThe best of the best in AI B2B are growing at rates we’ve never seen before.  That just ratchets up the expecations everywhere.  From making raising VC harder, to expectations for top execs and employees.\nCustomer Expectations\n:\nB2B buyers expect AI-powered solutions, instant responses, and continuous innovation.  If that’s not you, everyone will see you as too slow.  As dated.  You probably are.\nThe Balance Trap\nHere’s what I see happening with “balanced” startup teams:\nSlower Decision Making:\nWhen your leadership team isn’t available nights and weekends, critical decisions wait until Monday\nMissed Opportunities\n:\nThat enterprise customer who wants to talk at 7 PM Pacific? The European prospect who needs a demo at 6 AM your time? The Slow Roll team misses these\nInnovation Lag\n:\nWhile you’re protecting work-life balance, your competitors are iterating, testing, and shipping\nTalent Disadvantage:\nThe best engineers, salespeople, and operators want to work with obsessed leaders who are going after massive opportunities\nIf You Want Balance, Here’s Your Path\nI’m not saying balance",
+          "file_path": "gd_1c9f0c1497d224d0411bf40f",
+          "chunk_id": "gd_1c9f0c1497d224d0411bf40f-chunk-002"
+        },
+        {
+          "reference_id": "1",
+          "content": "And a few bonus learnings:\n\n#6.  Digital Ocean is generating significant free cash flow — $152m of EBITDA on $490m in ARR\n.  That’s impressive.  31% of each dollar flows to free cash flow.\n\n#7.  Only 38% of revenue in North America.\nThe Cloud is global, and DigitalOcean has followed it.  With 30% in Europe, and 22% in Asia, DigitalOcean’s revenue is truly global.\nWow, what a story!!  A niche of a free and super-cheap Cloud for individual and small developers that just grew and grew into a $500m ARR engine.  Even as the Big Guys went more and more enterprise.",
+          "file_path": "gd_402ba37a6bc85a4d1b4c34cb",
+          "chunk_id": "gd_402ba37a6bc85a4d1b4c34cb-chunk-001"
+        },
+        {
+          "reference_id": "6",
+          "content": "“death by a thousand cuts” has begun:\nDeals are getting smaller\nNet Retention is steadily declining\nWin rates dropping by 10-15%\n(from 90% to 78%)\nExisting customers downgrading\nThis isn’t about total displacement (yet). It’s about getting “maimed” as innovative AI-first companies eat into your business—not by destroying you, but by steadily cutting away at your growth.\n\n[Omitted same-source text between these sections: 225 words.]\n\nWhat “AI-First” Actually Looks Like Now\nThis isn’t theoretical. Look at what’s already happening:\nCustomer Support:\n20-40% of interactions already fully handled by AI (with humans in the loop)\nCoding:\nTeams achieving 30-50% productivity gains using AI tools\nSales:\nAI-powered SDRs outperforming average (not top) human reps\nContent:\nCreating in minutes what took days/weeks before\nLook at companies like HubSpot completely transforming their products in 12 months. Or Palantir reaccelerating to 39% growth at $3.5B scale—all driven by enterprise AI deals.\nBeware the “AI Slow Roll” in Your Organization\nThe most dangerous anti-pattern? What I call the “AI Slow Roll”—when teams subtly resist change while pretending to embrace it:\n“Let’s set up a committee to evaluate AI options”\n“We need to study this more before implementing”\n“Our customers aren’t ready yet”\n“Let’s wait until the technology matures”\nThe brutal reality: this resistance is often coming from people who simply don’t want their comfortable work patterns disrupted. And it’s poison to your company’s future.\n2020-2021 was an era where we all had to work … a bit less hard.  Products were static, demand was insatiable.\nNew sales reps could close 3-4 deals their first day on the job.\n2025-2026 is the start of an era where we all have to work",
+          "file_path": "gd_20e60735f48eae1b55d1b0a4",
+          "chunk_id": "gd_20e60735f48eae1b55d1b0a4-chunk-001"
+        },
+        {
+          "reference_id": "7",
+          "content": "Hyperscale cloud providers are the primary driver. They’re building AI infrastructure at a pace that keeps surprising even the analysts tracking it quarter by quarter.\nThe Software Revision Downward Is Actually Good News\nGartner trimmed the software growth forecast from 15.2% to 14.7%. That sounds like bad news. It’s not.\nHere’s why: the October forecast was built during the Q4 2025 budget flush, when enterprises were racing to deploy capital before year-end. Some of that demand got pulled forward into late 2025. The revised 14.7% reflects a more sustainable growth trajectory, not a softening market.\nAnd $1.4 trillion in software spend growing at 14.7% still means roughly\n$180 billion in net new software spending\nin 2026 alone\n. That’s nearly the entire software market from 15 years ago showing up as incremental spend in a single year.\nIf your B2B company isn’t growing at least 14.7% this year, you’re losing share to someone who is.\nWhere the Money Is Actually Going\nLet’s break down the IT spending categories so you can see where the dollars flow:\nData Center Systems: $650B+ (up 31.7%\n)\n— This is the AI infrastructure build-out. Servers, networking, storage. Hyperscalers are driving most of it, but enterprise on-prem AI infrastructure is growing too.\nSoftware: $1.4T+ (up 14.7%)\n— The biggest single category in IT spending and still accelerating. Application software plus infrastructure software. This is where B2B companies live.\nIT Services: growing steadily\n— Consulting, implementation, managed services. Growth is solid but slower than software and data center.\nDevices: $836B (up 6.1%)\n— Phones, PCs, tablets. Growth is decelerating from 2025 due to rising memory prices and pulled-forward demand.\nTelecom",
+          "file_path": "gd_818ac5c045781eca64ca056a",
+          "chunk_id": "gd_818ac5c045781eca64ca056a-chunk-002"
+        },
+        {
+          "reference_id": "8",
+          "content": ",000 new enterprise customers in one quarter\nfor Agentforce—while everyone else was talking about an AI bubble. Current remaining performance obligations are up 15% (versus 10% estimates).\nThe Futurum Group placed Salesforce at the top of its agentic AI platform rankings, slightly ahead of Microsoft. That matters for 2026.\nCrowdStrike: Security = Non-Discretionary AI Budget\nCrowdStrike is up 51% YTD despite a major outage in July 2024. Why? Security spending is\nnon-discretionary\n. CIOs told Morgan Stanley they expect cybersecurity spending to grow\n50% faster than overall software spending.\nTheir Falcon platform now includes endpoint, cloud workload, identity, and SIEM.\n49% of customers use 6+ modules.\nQ3 showed subscription revenue up 21% to $1.17 billion, with net new ARR of $265 million (up 73% YoY).\nTheir AI SIEM business grew\n95% in 2025\n. The ambitious target:\n$20 billion ARR by fiscal year 2036.\n\"Here's my simple rule: if growth isn't accelerating, you're not an AI company.\"\n@jasonlk\ncalls out legacy software companies for their \"performative\" adoption of AI:\n\"This is the flaw with the publics: look at why Microsoft crashed. On one hand, the AI side of the business is…\npic.twitter.com/zXiTplTbj0\n— TBPN (@tbpn)\nJanuary 31, 2026\nThe Losers: What Went Wrong\nHubSpot: The SMB AI Problem\nHubSpot fell from $880 to $370—a 51% decline—making it the worst-performing major B2B stock of 2025. The irony? The business is actually performing fine: Q2 revenue hit $760.9 million (up 19.4%), and they raised full-year guidance to $3.08 billion.\nThe problem is",
+          "file_path": "gd_ed532f1494cf2bbcdf7fd169",
+          "chunk_id": "gd_ed532f1494cf2bbcdf7fd169-chunk-005"
+        },
+        {
+          "reference_id": "9",
+          "content": "Limited enterprise traction despite Musk’s platform, but quickly up from basically 0%\nGoogle: 1%\n– Severely understated due to bundled/contract spending patterns\nDeepSeek: <1%\n– Minimal commercial adoption despite open-source buzz\nForward-Looking Market Projections: The 2026-2027 Landscape\nCredit Card Spending Projections:\nAnthropic:\nCould reach 20-25% of discrete spending by 2026, driven by continued enterprise subscription growth and their steeper velocity curve\nOpenAI:\nLikely plateaus around 40-45% in this segment as customers graduate to enterprise contracts and growth curve flattens\nOverall Adoption:\nCredit card-based adoption will hit 70-80% by 2027, but this represents the smaller, visible portion of total AI spending\nThe Real Market Reality:\nTotal enterprise AI spending is likely 3-5x larger than credit card data suggests, with most volume flowing through existing cloud contracts and enterprise agreements.\nThe Strategic Blind Spot: Why This Data Matters Despite Its Limitations\nGo-to-Market Intelligence:\nEven though this represents a subset of total AI spending, it captures the most important segment for most B2B companies—businesses making tactical, departmental AI purchases. This is where product-led growth happens.\nCompetitive Dynamics:\nAnthropic’s acceleration in this segment suggests they’re winning the “land and expand” battle. Teams start with Claude subscriptions, then enterprises negotiate broader contracts. That bottom-up motion is how software categories get disrupted.\nPricing and Packaging Insights:\nThe fact that 44.5% of businesses are paying for discrete AI subscriptions (rather than just using free tiers) validates that AI has crossed the “willingness to pay” threshold. That’s crucial market validation for AI-first startups.\nThe API vs. Subscription Signal:\nThis data tracks paid subscriptions, not API usage. That distinction matters enormously. Subscription growth indicates businesses are making institutional commitments to AI tooling, not just experimental API calls. This is the",
+          "file_path": "gd_d2e5e17168d573c0e46f7b9c",
+          "chunk_id": "gd_d2e5e17168d573c0e46f7b9c-chunk-002"
+        },
+        {
+          "reference_id": "2",
+          "content": ":\nWho cares?\n\nHere’s what changed: In 2021, everything was getting ridiculous multiples. Every SaaS company was trading at 30x ARR or higher. Now? The bar is higher. But if you clear the bar, the outcomes are\nbigger\n. OpenAI at $500B\nisn’t trading on vibes. It’s trading on the fact that they might do $15-20B in revenue in 2025. Databricks at $100B\nisn’t hope and dreams. It’s real revenue, real margins, and can be a $100B+ public company any time it wants. The multiples compressed for companies who have seen growth slow. But for\nexceptional\ncompanies—particularly in AI—we’re seeing valuations that exceed 2021 peaks. And unlike 2021, these companies have the fundamentals to support it. What the 2021 Singularity Is Really Telling Us About 2026-2028+\nGo back to that singular 2021 number: $12.5B to LPs in one year for A16Z, equaling the entire prior decade. And $774B in total exit value across the entire VC industry. That wasn’t just luck. The industry had:\nMade the right bets 5-7 years earlier (2014-2018 vintages)\nBuilt positions large enough to matter\nHelped companies execute through the window\nHad enough portfolio companies at the right stage simultaneously\nThe 2021 singularity happened because 2014-2018 portfolios all matured at once into a perfect exit environment. Now look at 2020-2023 portfolios across the industry. Heavily weighted toward AI. Thesis-driven investments in foundation models, AI infrastructure, AI applications across every vertical. Those portfolios are maturing right now. Into what might be an even bigger exit environment than 2021.\n\nThe recovery is already visible in A16Z’s numbers:\n2024: $5",
+          "file_path": "gd_90f0625e16d8673be75aae16",
+          "chunk_id": "gd_90f0625e16d8673be75aae16-chunk-005"
+        },
+        {
+          "reference_id": "10",
+          "content": "is down 26.9% YTD. Twenty-seven percent in eighteen days. This is a company that basically invented modern developer collaboration. Jira is in every engineering org on the planet. Intuit\nis down 17.7% YTD. The company that owns TurboTax, QuickBooks, and Mailchimp. Printing money for decades. Adobe\nis down 15.4% YTD. The creative cloud monopoly.\n\nEvery designer, every marketer, every content creator. Workday\nis down 13% YTD. The HCM giant that replaced Oracle and SAP at half the Fortune 500. Datadog\nis down 12.5% YTD. One of the best-run cloud infrastructure companies of the past decade. These aren’t speculative bets. These are category-defining, cash-generating, moat-having software businesses. And they’re getting absolutely hammered. Wall Street is calling it a “software slaughter.” KeyBanc’s analyst literally downgraded ServiceNow citing the “death of SaaS” narrative. Meanwhile, In Private AI Land: The Numbers Are Absolutely Insane\nThe contrast couldn’t be more stark. Let me just walk you through what happened in private AI funding over the past twelve months, because I don’t think people fully grasp the scale here. OpenAI\nraised $40 billion. At a $500 billion valuation. The largest private funding round in tech history. They’re projecting $13.5 billion in revenue for 2025. Anthropic\nraised $16.5 billion across two rounds in 2025 alone—first a $3.5B Series E at $61.5B, then a $13B Series F at $183 billion to $350 billion in January 2026. Revenue grew from $1B to $5.5B+ run-rate in just 10 months, and on to $9B-$10B today.\nxAI\nhit $230 billion valuation with their latest",
+          "file_path": "gd_a0acb205dc04ba5f42369d7a",
+          "chunk_id": "gd_a0acb205dc04ba5f42369d7a-chunk-000"
+        },
+        {
+          "reference_id": "2",
+          "content": ". We’re already in the next wave—and it’s going to be massive. The AI valuations are already here. The revenue growth is already here. The exits are starting. And unlike 2021’s 12-18 month window driven by ZIRP and SPACs, this will run for years and be driven by fundamental technology adoption. If you’re building in AI right now, you’re building into what could match or exceed 2021’s liquidity over a 3-year period.\n\nNot as one explosive year, but as a sustained multi-year wave.\n2021 was epic because portfolio companies from 2014-2018 all exited at once into a perfect storm of low rates, SPACs, and COVID pull-forward.\n2026-2028 will be epic because AI companies from 2020-2024 will exit into a market where:\nEvery major tech company needs AI capabilities to survive\nThe technology is actually delivering productivity gains\nThe revenue growth is real and sustainable\nStrategic acquirers have unlimited capital and existential need\nThe window is open. And it’s massive. What are you building?",
+          "file_path": "gd_90f0625e16d8673be75aae16",
+          "chunk_id": "gd_90f0625e16d8673be75aae16-chunk-008"
+        }
+      ],
+      "references": [
+        {
+          "reference_id": "1",
+          "file_path": "gd_402ba37a6bc85a4d1b4c34cb"
+        },
+        {
+          "reference_id": "2",
+          "file_path": "gd_90f0625e16d8673be75aae16"
+        },
+        {
+          "reference_id": "3",
+          "file_path": "gd_f335200b1b152ebd57131e72"
+        },
+        {
+          "reference_id": "4",
+          "file_path": "gd_5e275660a8df19f03253776d"
+        },
+        {
+          "reference_id": "5",
+          "file_path": "gd_1c9f0c1497d224d0411bf40f"
+        },
+        {
+          "reference_id": "6",
+          "file_path": "gd_20e60735f48eae1b55d1b0a4"
+        },
+        {
+          "reference_id": "7",
+          "file_path": "gd_818ac5c045781eca64ca056a"
+        },
+        {
+          "reference_id": "8",
+          "file_path": "gd_ed532f1494cf2bbcdf7fd169"
+        },
+        {
+          "reference_id": "9",
+          "file_path": "gd_d2e5e17168d573c0e46f7b9c"
+        },
+        {
+          "reference_id": "10",
+          "file_path": "gd_a0acb205dc04ba5f42369d7a"
+        }
+      ]
+    },
+    "metadata": {
+      "query_mode": "hybrid",
+      "keywords": {
+        "high_level": [
+          "DigitalOcean",
+          "Software"
+        ],
+        "low_level": [
+          "Up",
+          "Down",
+          "2026"
+        ]
+      },
+      "processing_info": {
+        "total_entities_found": 41,
+        "total_relations_found": 116,
+        "entities_after_truncation": 16,
+        "relations_after_truncation": 116,
+        "merged_chunks_count": 113,
+        "final_chunks_count": 12
+      }
+    },
+    "query": "DigitalOcean? It’s Up 12% in 2026. While The Rest of Software Is Down 24%. Here’s Why."
+  },
+  "retrieval_seconds": 12.924,
+  "graph_summary": {
+    "status": "recorded",
+    "raw_entity_count": 16,
+    "raw_relationship_count": 116,
+    "raw_chunk_count": 12,
+    "entity_description_count": 16,
+    "entity_descriptions_nonempty": 16,
+    "entity_description_available": true,
+    "excluded_reason_counts": {
+      "generated_summary_not_a_source_span": 132
+    },
+    "accepted_relationships": 9,
+    "rejected_relationships": 107,
+    "quarantined_relationships": 0,
+    "relationship_reason_counts": {
+      "generated_summary_not_supported_by_source": 29,
+      "weak_entity_name": 74,
+      "endpoints_not_in_source": 4
+    },
+    "missing_source_or_provenance_exclusions": 0,
+    "relationship_validation_status": "recorded",
+    "two_hop_path_count": 4,
+    "two_hop_path_available": true,
+    "path_status": "recorded",
+    "normalization": {
+      "payload_shape": "aquery_data",
+      "mode": "hybrid",
+      "entity_descriptions_not_retained": 0,
+      "malformed_records": 0,
+      "notes": [
+        "hits_already_budgeted_raw_chunks_not_added",
+        "validated_against_supplied_catalog"
+      ],
+      "validation_contract": "source-verified-relationship-v1",
+      "separator": "<SEP>",
+      "profile": "multihop",
+      "direct_edges": 9,
+      "paths": 13,
+      "withheld_edges": 107
+    },
+    "direct_edge_count": 9
+  }
+}

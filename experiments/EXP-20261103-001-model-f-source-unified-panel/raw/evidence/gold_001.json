@@ -1,0 +1,112 @@
+{
+  "verified": [
+    {
+      "source_id": "gd_51a534a3f30a2c80dd1defbb",
+      "claim": "Mark Zuckerberg paid 10% of Facebook's stock for WhatsApp and 10% for Instagram.",
+      "support_span": "Mark Zuckerberg did this twice.  He paid 10% of Facebook’s stock for WhatsApp, and 10% for Instagram.",
+      "claim_type": "fact",
+      "attribution_status": "publication_page"
+    },
+    {
+      "source_id": "gd_9ea23b583c285de38a692eec",
+      "claim": "CS Disco is a $155M revenue company.",
+      "support_span": "DISCO is a $155M revenue company with real customers, real gross margins, and a real AI product.",
+      "claim_type": "number",
+      "attribution_status": "publication_page"
+    },
+    {
+      "source_id": "gd_035e6daf50c84177119962e0",
+      "claim": "From 1-10 employees, startups are family.",
+      "support_span": "From 1-10 employees, startups are family.",
+      "claim_type": "fact",
+      "attribution_status": "author_account"
+    },
+    {
+      "source_id": "gd_73b1fbb61314669cee940374",
+      "claim": "CIOs began to move to a more methodical cut-cut mode.",
+      "support_span": "and pay for the Cloud. But CIOs began to move to a more methodical cut-cut mode.",
+      "claim_type": "fact",
+      "attribution_status": "publication_page"
+    }
+  ],
+  "evidence_status": "verified",
+  "proposed": [
+    {
+      "source_id": "gd_51a534a3f30a2c80dd1defbb",
+      "claim": "The SEC generally defines 10% of market cap as'material'.",
+      "support_span": "The SEC generally defines this as “material”.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "gd_51a534a3f30a2c80dd1defbb",
+      "claim": "Mark Zuckerberg paid 10% of Facebook's stock for WhatsApp and 10% for Instagram.",
+      "support_span": "Mark Zuckerberg did this twice.  He paid 10% of Facebook’s stock for WhatsApp, and 10% for Instagram.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "gd_9ea23b583c285de38a692eec",
+      "claim": "CS Disco is a $155M revenue company.",
+      "support_span": "DISCO is a $155M revenue company with real customers, real gross margins, and a real AI product.",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "gd_9ea23b583c285de38a692eec",
+      "claim": "The market values the business itself — net of cash — at roughly what Harvey raises in a single funding round.",
+      "support_span": "If you’re running a pre-AI B2B company growing under 10%, this should keep you up at night. Because CS Disco says: yes, 1x ARR — or even just 1x cash — might be where this ends. The only way out is to either accelerate growth dramatically, get acquired before the market fully reprices you, or prove that your AI capabilities are genuinely competitive with the AI-native players.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "gd_035e6daf50c84177119962e0",
+      "claim": "From 1-10 employees, startups are family.",
+      "support_span": "From 1-10 employees, startups are family.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "gd_73b1fbb61314669cee940374",
+      "claim": "CIOs began to move to a more methodical cut-cut mode.",
+      "support_span": "and pay for the Cloud. But CIOs began to move to a more methodical cut-cut mode.",
+      "claim_type": "fact"
+    }
+  ],
+  "validation_rejected": [
+    {
+      "source_id": "gd_51a534a3f30a2c80dd1defbb",
+      "claim": "The SEC generally defines 10% of market cap as'material'.",
+      "support_span": "The SEC generally defines this as “material”.",
+      "claim_type": "fact",
+      "reason": "numeric_not_in_span"
+    },
+    {
+      "source_id": "gd_9ea23b583c285de38a692eec",
+      "claim": "The market values the business itself — net of cash — at roughly what Harvey raises in a single funding round.",
+      "support_span": "If you’re running a pre-AI B2B company growing under 10%, this should keep you up at night. Because CS Disco says: yes, 1x ARR — or even just 1x cash — might be where this ends. The only way out is to either accelerate growth dramatically, get acquired before the market fully reprices you, or prove that your AI capabilities are genuinely competitive with the AI-native players.",
+      "claim_type": "fact",
+      "reason": "interrogative_assertion"
+    }
+  ],
+  "verifier_rejected": [],
+  "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] Mark Zuckerberg paid 10% of Facebook's stock for WhatsApp and 10% for Instagram.\n[E2] CS Disco is a $155M revenue company.\n[E3] From 1-10 employees, startups are family.\n[E4] CIOs began to move to a more methodical cut-cut mode.",
+  "raw_extraction": "[\n  {\n    \"source_id\": \"gd_51a534a3f30a2c80dd1defbb\",\n    \"claim\": \"The SEC generally defines 10% of market cap as'material'.\",\n    \"support_span\": \"The SEC generally defines this as “material”.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"gd_51a534a3f30a2c80dd1defbb\",\n    \"claim\": \"Mark Zuckerberg paid 10% of Facebook's stock for WhatsApp and 10% for Instagram.\",\n    \"support_span\": \"Mark Zuckerberg did this twice.  He paid 10% of Facebook’s stock for WhatsApp, and 10% for Instagram.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"gd_9ea23b583c285de38a692eec\",\n    \"claim\": \"CS Disco is a $155M revenue company.\",\n    \"support_span\": \"DISCO is a $155M revenue company with real customers, real gross margins, and a real AI product.\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"gd_9ea23b583c285de38a692eec\",\n    \"claim\": \"The market values the business itself — net of cash — at roughly what Harvey raises in a single funding round.\",\n    \"support_span\": \"If you’re running a pre-AI B2B company growing under 10%, this should keep you up at night. Because CS Disco says: yes, 1x ARR — or even just 1x cash — might be where this ends. The only way out is to either accelerate growth dramatically, get acquired before the market fully reprices you, or prove that your AI capabilities are genuinely competitive with the AI-native players.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"gd_035e6daf50c84177119962e0\",\n    \"claim\": \"From 1-10 employees, startups are family.\",\n    \"support_span\": \"From 1-10 employees, startups are family.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"gd_73b1fbb61314669cee940374\",\n    \"claim\": \"CIOs began to move to a more methodical cut-cut mode.\",\n    \"support_span\": \"and pay for the Cloud. But CIOs began to move to a more methodical cut-cut mode.\",\n    \"claim_type\": \"fact\"\n  }\n]",
+  "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Can an 8-Person StartUp Sell to a CIO? Yes — If You Understand The Social Contract.\n\nSource passages:\n[gd_51a534a3f30a2c80dd1defbb]\nAttribution status: publication_page. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nSo there’s a strategy exercise I like to go through with startups I’ve invested in that are past $20m-$30m ARR or so:\nWho would you buy with 10% of your market cap?\nI.e., who would you give 10% of your company away to buy?  It turns out this is an important threshold.  The SEC generally defines this as “material”.  It’s also enough of your company that everyone will suffer a lot of dilution, and enough that you can’t do more than a handful of these deals ever.  Versus later, when you are bigger, you can do a ton of tiny acquisitions.  If you are worth $10 Billion and buy a small startup for, say $50m, really, you’ll never notice the dilution or, in some cases, even the cash spent.\nBut I like this exercise because it focuses founders that are starting to achieve scale on maybe just one out-of-the-box idea for combining with someone to do something even bigger and better.\nAnd now is a good time to think about this.  Times are tougher, and egos are muted.  Now might be a good time to buy one of your top partners, a smaller but scrappier competition, or someone that’s built that key part of your vision that you yourself haven’t been able to build.\nMark Zuckerberg did this twice.  He paid 10% of Facebook’s stock for WhatsApp, and 10% for Instagram.  He knew.  He knew those deals, while big ones, would add far more than 10% value to Facebook.  Imagine, indeed, where Facebook would be today without either of them.\n\n[gd_9ea23b583c285de38a692eec]\nAttribution status: publication_page. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nSome are approaching 1x. CS Disco might be the 1x ARR canary in the coal mine. But it won’t be the last. Think about the math. If you’re a B2B company doing $100-200M in revenue, growing single digits, still not profitable, and you’re competing against AI-native startups that are growing 300-400% with hundreds of millions in VC backing — what’s your terminal multiple? The answer might be 1x. Or less. It might just be your cash balance. That’s the real fear. Not that these companies go bankrupt — most have years of runway. But that the public market essentially says:\nwe’ll pay you book value for your cash and your customer base, and nothing for the software itself, because we think AI-native competitors will eventually take it. This is different from previous B2B corrections. In 2022-2023, multiples compressed because interest rates went up and growth slowed. But the underlying assumption was still that these were durable, defensible software businesses. What’s happening now is more existential. The market is starting to question whether pre-AI SaaS platforms have structural defensibility at all when a three-year-old startup can rebuild the core functionality on top of frontier models and sell it at a fraction of the price.\n\nDISCO is a $155M revenue company with real customers, real gross margins, and a real AI product. And the market values the business itself — net of cash — at roughly what Harvey raises in a single funding round. If you’re running a pre-AI B2B company growing under 10%, this should keep you up at night. Because CS Disco says: yes, 1x ARR — or even just 1x cash — might be where this ends. The only way out is to either accelerate growth dramatically, get acquired before the market fully reprices you, or prove that your AI capabilities are genuinely competitive with the AI-native players.\n\n[gd_035e6daf50c84177119962e0]\nAttribution status: author_account. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nFrom 1-10 employees, startups are family. After ~150 it starts to become a traditional heirarchical structure. \nhttp://buff.ly/1NADHvn\n\n[gd_73b1fbb61314669cee940374]\nAttribution status: publication_page. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nand pay for the Cloud. But CIOs began to move to a more methodical cut-cut mode.  To cut anything they didn’t need to move their teams to work-from-home.  The checkbooks opened for what they now needed though.  And it wasn’t just Zoom.\nMay Phase:  There are Winners Phase.\nIn May, the “Covid Beneficiaries” beyond Zoom started to become very clear.  eCommerce started to accelerate a decade in just months.  Other collaboration tools beyond Zoom started to see record growth as teams had the mental bandwidth to settle in for a long haul and figure out how this was all going to work.  Call center software, whiteboard software, document collaboration, all took off.\nJune-July:  The Getting it Figured Out Now Phase\n.  We then went through about 60 days where we all started to become mini-experts in this new Almost All of Tech is Working from Home phase.  We’re good — so we adjusted.  We adjusted sales and marketing.  We moved field budgets to digital budgets.  We learned new ways to onboard customers, faster.  And our reforecasts “held”, so we knew pretty much what the rest of the year was going to look like from a budget perspective.  Many folks began hiring again, and venture capital came back with a roar.\nThat’s like 4+ years of change all rolled into just a few months.  That’s more than almost any of us can process and keep up with.\nSo where are we now?  We’ve figured out how to make it work in the New Normal at work.  It’s different.  Many things are harder, some are easier.  But we know.  We have a pace, a cadence.  A new set of processes and tools.\nEven the “SaaStr Inc.” events team — with no IRL events at all happening — had a record July.  How?  The",
+  "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Can an 8-Person StartUp Sell to a CIO? Yes — If You Understand The Social Contract.\n\nSource passages:\n[gd_51a534a3f30a2c80dd1defbb]\nAttribution status: publication_page. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nSo there’s a strategy exercise I like to go through with startups I’ve invested in that are past $20m-$30m ARR or so:\nWho would you buy with 10% of your market cap?\nI.e., who would you give 10% of your company away to buy?  It turns out this is an important threshold.  The SEC generally defines this as “material”.  It’s also enough of your company that everyone will suffer a lot of dilution, and enough that you can’t do more than a handful of these deals ever.  Versus later, when you are bigger, you can do a ton of tiny acquisitions.  If you are worth $10 Billion and buy a small startup for, say $50m, really, you’ll never notice the dilution or, in some cases, even the cash spent.\nBut I like this exercise because it focuses founders that are starting to achieve scale on maybe just one out-of-the-box idea for combining with someone to do something even bigger and better.\nAnd now is a good time to think about this.  Times are tougher, and egos are muted.  Now might be a good time to buy one of your top partners, a smaller but scrappier competition, or someone that’s built that key part of your vision that you yourself haven’t been able to build.\nMark Zuckerberg did this twice.  He paid 10% of Facebook’s stock for WhatsApp, and 10% for Instagram.  He knew.  He knew those deals, while big ones, would add far more than 10% value to Facebook.  Imagine, indeed, where Facebook would be today without either of them.\n\n[gd_9ea23b583c285de38a692eec]\nAttribution status: publication_page. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nSome are approaching 1x. CS Disco might be the 1x ARR canary in the coal mine. But it won’t be the last. Think about the math. If you’re a B2B company doing $100-200M in revenue, growing single digits, still not profitable, and you’re competing against AI-native startups that are growing 300-400% with hundreds of millions in VC backing — what’s your terminal multiple? The answer might be 1x. Or less. It might just be your cash balance. That’s the real fear. Not that these companies go bankrupt — most have years of runway. But that the public market essentially says:\nwe’ll pay you book value for your cash and your customer base, and nothing for the software itself, because we think AI-native competitors will eventually take it. This is different from previous B2B corrections. In 2022-2023, multiples compressed because interest rates went up and growth slowed. But the underlying assumption was still that these were durable, defensible software businesses. What’s happening now is more existential. The market is starting to question whether pre-AI SaaS platforms have structural defensibility at all when a three-year-old startup can rebuild the core functionality on top of frontier models and sell it at a fraction of the price.\n\nDISCO is a $155M revenue company with real customers, real gross margins, and a real AI product. And the market values the business itself — net of cash — at roughly what Harvey raises in a single funding round. If you’re running a pre-AI B2B company growing under 10%, this should keep you up at night. Because CS Disco says: yes, 1x ARR — or even just 1x cash — might be where this ends. The only way out is to either accelerate growth dramatically, get acquired before the market fully reprices you, or prove that your AI capabilities are genuinely competitive with the AI-native players.\n\n[gd_035e6daf50c84177119962e0]\nAttribution status: author_account. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nFrom 1-10 employees, startups are family. After ~150 it starts to become a traditional heirarchical structure. \nhttp://buff.ly/1NADHvn\n\n[gd_73b1fbb61314669cee940374]\nAttribution status: publication_page. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nand pay for the Cloud. But CIOs began to move to a more methodical cut-cut mode.  To cut anything they didn’t need to move their teams to work-from-home.  The checkbooks opened for what they now needed though.  And it wasn’t just Zoom.\nMay Phase:  There are Winners Phase.\nIn May, the “Covid Beneficiaries” beyond Zoom started to become very clear.  eCommerce started to accelerate a decade in just months.  Other collaboration tools beyond Zoom started to see record growth as teams had the mental bandwidth to settle in for a long haul and figure out how this was all going to work.  Call center software, whiteboard software, document collaboration, all took off.\nJune-July:  The Getting it Figured Out Now Phase\n.  We then went through about 60 days where we all started to become mini-experts in this new Almost All of Tech is Working from Home phase.  We’re good — so we adjusted.  We adjusted sales and marketing.  We moved field budgets to digital budgets.  We learned new ways to onboard customers, faster.  And our reforecasts “held”, so we knew pretty much what the rest of the year was going to look like from a budget perspective.  Many folks began hiring again, and venture capital came back with a roar.\nThat’s like 4+ years of change all rolled into just a few months.  That’s more than almost any of us can process and keep up with.\nSo where are we now?  We’ve figured out how to make it work in the New Normal at work.  It’s different.  Many things are harder, some are easier.  But we know.  We have a pace, a cadence.  A new set of processes and tools.\nEven the “SaaStr Inc.” events team — with no IRL events at all happening — had a record July.  How?  The<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+  "extraction_seconds": 18.033,
+  "verification_seconds": 0.0,
+  "verification_records": [],
+  "allowed_numeric_values": [
+    "pct:10",
+    "usd:155000000"
+  ],
+  "reason": null,
+  "extraction_attempts": 1,
+  "extraction_stop_reason": "eos",
+  "extraction_hits_used": [
+    "gd_51a534a3f30a2c80dd1defbb",
+    "gd_9ea23b583c285de38a692eec",
+    "gd_035e6daf50c84177119962e0",
+    "gd_73b1fbb61314669cee940374"
+  ],
+  "extraction_hits_omitted": [],
+  "extraction_prompt_tokens": 1624,
+  "extraction_context_limit": 2048,
+  "extraction_input_truncated": false
+}

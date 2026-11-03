@@ -1,0 +1,148 @@
+{
+  "verified": [
+    {
+      "source_id": "gd_f4b7879f1fde287961a29eb3",
+      "claim": "AI SDRs work",
+      "support_span": "We’ve now been running AI SDRs at SaaStr for over a year. Multiple platforms. Real data. Real pipeline. And the honest answer is: it works.",
+      "claim_type": "fact",
+      "attribution_status": "publication_page"
+    },
+    {
+      "source_id": "gd_f4b7879f1fde287961a29eb3",
+      "claim": "AI SDRs shine on ignored leads",
+      "support_span": "That’s where AI SDRs absolutely shine.",
+      "claim_type": "fact",
+      "attribution_status": "publication_page"
+    },
+    {
+      "source_id": "gd_417b957752ce712ce5874976",
+      "claim": "You probably only need one AI SDR vendor",
+      "support_span": "You do not need to do that. We hyper-segment across platforms because each one does something slightly different well, but for 90%+ of use cases, one vendor will handle the bulk of what you need.",
+      "claim_type": "fact",
+      "attribution_status": "publication_page"
+    },
+    {
+      "source_id": "gd_f9d25c28348724609cb4e3da",
+      "claim": "AI can handle repetitive and unrewarding tasks",
+      "support_span": "The future of SaaS isn’t about AI replacing humans. It’s about AI doing the essential work that humans will do poorly or not at all because it’s repetitive, unrewarding, or doesn’t scale.",
+      "claim_type": "fact",
+      "attribution_status": "publication_page"
+    }
+  ],
+  "evidence_status": "verified",
+  "proposed": [
+    {
+      "source_id": "gd_f4b7879f1fde287961a29eb3",
+      "claim": "AI SDRs work",
+      "support_span": "We’ve now been running AI SDRs at SaaStr for over a year. Multiple platforms. Real data. Real pipeline. And the honest answer is: it works.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "gd_f4b7879f1fde287961a29eb3",
+      "claim": "AI SDRs work differently than most vendors claim",
+      "support_span": "But it works very differently than most vendors will tell you, and the gap between a good deployment and a wasted one comes down almost entirely to how you set it up.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "gd_f4b7879f1fde287961a29eb3",
+      "claim": "AI SDRs shine on ignored leads",
+      "support_span": "That’s where AI SDRs absolutely shine.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "gd_f4b7879f1fde287961a29eb3",
+      "claim": "AI SDRs generated 15% of total revenue from ignored leads",
+      "support_span": "generated 15% of our London event revenue from a segment that would have produced zero without AI.",
+      "claim_type": "number"
+    },
+    {
+      "source_id": "gd_417b957752ce712ce5874976",
+      "claim": "You probably only need one AI SDR vendor",
+      "support_span": "You do not need to do that. We hyper-segment across platforms because each one does something slightly different well, but for 90%+ of use cases, one vendor will handle the bulk of what you need.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "gd_417b957752ce712ce5874976",
+      "claim": "Your human playbook must work before deploying AI SDRs",
+      "support_span": "The single biggest mistake we see, and it cuts across company stage. We see it from raw startups at $1M ARR and from multi-billion-dollar public companies alike.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "gd_cd0a5d64ec64d242e99c5ad1",
+      "claim": "AI SDRs require training and orchestration",
+      "support_span": "Pick your platform, commit to the training, and prepare to spend more time on orchestration than you expect.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "gd_cd0a5d64ec64d242e99c5ad1",
+      "claim": "AI SDRs can augment human capabilities",
+      "support_span": "This isn’t about replacing humans — it’s about augmenting what humans can do with hyper-personalization at scale.",
+      "claim_type": "fact"
+    },
+    {
+      "source_id": "gd_f9d25c28348724609cb4e3da",
+      "claim": "AI can handle repetitive and unrewarding tasks",
+      "support_span": "The future of SaaS isn’t about AI replacing humans. It’s about AI doing the essential work that humans will do poorly or not at all because it’s repetitive, unrewarding, or doesn’t scale.",
+      "claim_type": "fact"
+    }
+  ],
+  "validation_rejected": [
+    {
+      "source_id": "gd_f4b7879f1fde287961a29eb3",
+      "claim": "AI SDRs work differently than most vendors claim",
+      "support_span": "But it works very differently than most vendors will tell you, and the gap between a good deployment and a wasted one comes down almost entirely to how you set it up.",
+      "claim_type": "fact",
+      "reason": "entity_not_in_source"
+    },
+    {
+      "source_id": "gd_f4b7879f1fde287961a29eb3",
+      "claim": "AI SDRs generated 15% of total revenue from ignored leads",
+      "support_span": "generated 15% of our London event revenue from a segment that would have produced zero without AI.",
+      "claim_type": "number",
+      "reason": "entity_not_in_source"
+    },
+    {
+      "source_id": "gd_417b957752ce712ce5874976",
+      "claim": "Your human playbook must work before deploying AI SDRs",
+      "support_span": "The single biggest mistake we see, and it cuts across company stage. We see it from raw startups at $1M ARR and from multi-billion-dollar public companies alike.",
+      "claim_type": "fact",
+      "reason": "entity_not_in_source"
+    },
+    {
+      "source_id": "gd_cd0a5d64ec64d242e99c5ad1",
+      "claim": "AI SDRs require training and orchestration",
+      "support_span": "Pick your platform, commit to the training, and prepare to spend more time on orchestration than you expect.",
+      "claim_type": "fact",
+      "reason": "entity_not_in_source"
+    },
+    {
+      "source_id": "gd_cd0a5d64ec64d242e99c5ad1",
+      "claim": "AI SDRs can augment human capabilities",
+      "support_span": "This isn’t about replacing humans — it’s about augmenting what humans can do with hyper-personalization at scale.",
+      "claim_type": "fact",
+      "reason": "entity_not_in_source"
+    }
+  ],
+  "verifier_rejected": [],
+  "evidence_block": "ALLOWED FACTUAL EVIDENCE\n\n[E1] AI SDRs work\n[E2] AI SDRs shine on ignored leads\n[E3] You probably only need one AI SDR vendor\n[E4] AI can handle repetitive and unrewarding tasks",
+  "raw_extraction": "[\n  {\n    \"source_id\": \"gd_f4b7879f1fde287961a29eb3\",\n    \"claim\": \"AI SDRs work\",\n    \"support_span\": \"We’ve now been running AI SDRs at SaaStr for over a year. Multiple platforms. Real data. Real pipeline. And the honest answer is: it works.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"gd_f4b7879f1fde287961a29eb3\",\n    \"claim\": \"AI SDRs work differently than most vendors claim\",\n    \"support_span\": \"But it works very differently than most vendors will tell you, and the gap between a good deployment and a wasted one comes down almost entirely to how you set it up.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"gd_f4b7879f1fde287961a29eb3\",\n    \"claim\": \"AI SDRs shine on ignored leads\",\n    \"support_span\": \"That’s where AI SDRs absolutely shine.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"gd_f4b7879f1fde287961a29eb3\",\n    \"claim\": \"AI SDRs generated 15% of total revenue from ignored leads\",\n    \"support_span\": \"generated 15% of our London event revenue from a segment that would have produced zero without AI.\",\n    \"claim_type\": \"number\"\n  },\n  {\n    \"source_id\": \"gd_417b957752ce712ce5874976\",\n    \"claim\": \"You probably only need one AI SDR vendor\",\n    \"support_span\": \"You do not need to do that. We hyper-segment across platforms because each one does something slightly different well, but for 90%+ of use cases, one vendor will handle the bulk of what you need.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"gd_417b957752ce712ce5874976\",\n    \"claim\": \"Your human playbook must work before deploying AI SDRs\",\n    \"support_span\": \"The single biggest mistake we see, and it cuts across company stage. We see it from raw startups at $1M ARR and from multi-billion-dollar public companies alike.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"gd_cd0a5d64ec64d242e99c5ad1\",\n    \"claim\": \"AI SDRs require training and orchestration\",\n    \"support_span\": \"Pick your platform, commit to the training, and prepare to spend more time on orchestration than you expect.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"gd_cd0a5d64ec64d242e99c5ad1\",\n    \"claim\": \"AI SDRs can augment human capabilities\",\n    \"support_span\": \"This isn’t about replacing humans — it’s about augmenting what humans can do with hyper-personalization at scale.\",\n    \"claim_type\": \"fact\"\n  },\n  {\n    \"source_id\": \"gd_f9d25c28348724609cb4e3da\",\n    \"claim\": \"AI can handle repetitive and unrewarding tasks\",\n    \"support_span\": \"The future of SaaS isn’t about AI replacing humans. It’s about AI doing the essential work that humans will do poorly or not at all because it’s repetitive, unrewarding, or doesn’t scale.\",\n    \"claim_type\": \"fact\"\n  }\n]",
+  "extraction_prompt": "You are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Dear SaaStr: Should I Use an AI SDR Before I Have a Working Human SDR motion?\n\nSource passages:\n[gd_f4b7879f1fde287961a29eb3]\nAttribution status: publication_page. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nDear SaaStr: I Want to Roll Out an AI SDR. How Do I Start?\nFirst, get clear on what you’re actually buying — and what it actually does.\nWe’ve now been running AI SDRs at SaaStr for over a year. Multiple platforms. Real data. Real pipeline. And the honest answer is: it works. But it works very differently than most vendors will tell you, and the gap between a good deployment and a wasted one comes down almost entirely to how you set it up.\nHere’s what we actually learned.\nThe Single Best Use Case to Start With: The Leads Your Team Is Ignoring\nThis is the insight that changed how we think about AI SDRs entirely.\nYour human SDRs are force-ranking in their heads every single day. They’re chasing the big deals, the warm inbound, the accounts that feel like they could close this quarter. The leads they consider “not worth it” — return event attendees, old website visitors, ghosted CRM contacts — those get nothing. Not bad follow-up. Nothing.\nThat’s where AI SDRs absolutely shine.\nWhen we deployed AI on the leads our human team refused to work — people who had engaged with SaaStr but never got follow-up — we got a\n72% open rate\non Agentforce and generated\n15% of our London event revenue\nfrom a segment that would have produced zero without AI.\nNot 15% incremental lift. 15% of total revenue from leads that were producing $0.\nSo before you start thinking about AI SDRs as a way to scale your best motion, ask yourself: what’s the motion your team isn’t running at all? Start there.\nThe Data on What’s Actually Possible\nHere’s what we’ve seen across our AI SDR stack, with real numbers:\nArtisan (outbound AI SDR):\n3,221 emails per month from a single platform\nPrevious human SDR volume: 75–285 emails per rep per month\nThat’s an\n\n[gd_417b957752ce712ce5874976]\nAttribution status: publication_page. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nWe’ve now been running AI SDR agents for 10+ months at SaaStr. We use four different vendors in daily rotation (Artisan, Salesforce AgentForce, Qualified, and Monaco), we’ve sent hundreds of thousands of outbound messages, processed 1.5 million inbound sessions on a single website, and we’ve made every mistake you can make along the way.\nSomeone asked us the other day to break down what they should know before rolling out their very first AI SDR. So here are the 10 biggest lessons, drawn from real deployment data, real failures, and real results.\n1. You Probably Only Need One Vendor\nWe run four AI SDR tools. You do not need to do that. We hyper-segment across platforms because each one does something slightly different well, but for 90%+ of use cases, one vendor will handle the bulk of what you need.\nAt most, you might end up with two: one for outbound, one for inbound. But do not start by buying three or four tools. Pick one that covers the majority of what you want to accomplish and go deep with it.\nThe tool matters far less than the strategy you bring to it.\n2. Your Human Playbook Has to Work First\nThis is the single biggest mistake we see, and it cuts across company stage. We see it from raw startups at $1M ARR and from multi-billion-dollar public companies alike.\nThe pattern is always the same: they want to turn on an AI SDR without first proving that their human sales motion works. Or they use the AI SDR to “test new copy” they’ve never tried before.\nThat is backwards.\nIf you have not gotten outbound to work with humans, buying an AI to do it will not fix that. We did not deploy our first AI SDR until we knew exactly what was working with our human SDRs: which messaging converted, which segments responded, what cadences performed. Then we fed all of that into the agent.\nThe goal\n\n[gd_cd0a5d64ec64d242e99c5ad1]\nAttribution status: publication_page. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nAI SDRs can work incredibly well, but only if you’re willing to invest the time to train them properly. This isn’t about replacing humans — it’s about augmenting what humans can do with hyper-personalization at scale. The companies that figure this out first will have a massive advantage.\n\nThe ones that just turn it on and walk away will wonder why they’re getting the same terrible response rates they always have. Pick your platform, commit to the training, and prepare to spend more time on orchestration than you expect. But if you do it right, you’ll be sending thousands of emails that sound like you actually wrote them. What We’re Looking to Do Next\nWe’re literally onboarding two more AI sales tools this week. The outbound piece is working, but we want to go deeper across the entire sales cycle. We’re still hunting for a really good AI marketing tool — if you know of one that actually works (not just another content generator), hit us up. We’re also hiring someone specifically to manage our AI operations. A human 🙂 This is becoming a full-time role and frankly, we need someone whose entire job is orchestrating these systems. If you know someone good at both AI and revenue operations, send them our way. The goal is to have AI touching every part of our sales and marketing funnel by the end of the year, but doing it right — with proper training, human oversight, and real value creation. Amelia Lerutte is SVP + GM at SaaStr. You can reach her at ai@saastr.com or connect on LinkedIn. Yes, that inbox is monitored by both AI and humans — and you probably won’t be able to tell the difference.\n\n[gd_f9d25c28348724609cb4e3da]\nAttribution status: publication_page. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nhumans for strategy, relationship building, and complex problem-solving. AI Does What We Need, But No One Wants To Do\nThe future of SaaS isn’t about AI replacing humans. It’s about AI doing the essential work that humans will do poorly or not at all because it’s repetitive, unrewarding, or doesn’t scale. Companies that embrace this reality first will have operational advantages that compound over time. They’ll have cleaner data, more consistent processes, better follow-through, and human teams focused on work that actually drives satisfaction and retention. The technology is almost there. The question is whether your organization is ready to let AI handle the jobs that, frankly, no one really wants to do anyway. When that happens, everything else becomes possible. Why We Have 11+ AI Agents Already in Production Ourselves\nIt’s true at tiny team SaaStr, too. Too many core functions … humans didn’t want to do:\nWe couldn’t get our SDRs to follow up on most potential prospects. They didn’t see the return. We couldn’t get our content team to review 1,000s+ of submissions. Too many to find the diamonds in the rough. We couldn’t get our sales team to chase lapsed sponsors and partners. They didn’t see the ROI. We couldn’t get our AEs to do any prospecting at all. Few want to. We couldn’t get the GTM team to follow up on leads instantly. We couldn’t get our sales team to update our collateral consistently. Or to make custom pitch decks for sponsors (Gamma does this now).",
+  "rendered_extraction_prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nYou are extracting evidence from source passages.\nFor each useful claim:\n1. state one short neutral claim\n2. identify the source document\n3. provide the exact source span that supports it\nDo not add information that is not explicitly supported.\nDo not infer generic advice.\nDo not combine unrelated facts.\nIf a source is only a title or stub, extract only what that title or stub states.\nIf the source is a question or a title, do not answer it and do not turn it into a factual assertion.\nDo not expand it with background knowledge.\nDo not imitate Jason Lemkin.\nDo not write the final blog, LinkedIn, X, or talk.\nReturn structured JSON only.\n\nReturn a JSON array. Each item uses these keys: source_id, claim, support_span, claim_type.\nclaim_type must be one of: fact, number, comparison, position, example.\nsupport_span must be copied exactly from that source. Use the shortest exact phrase that supports the claim.\n\nTopic: Dear SaaStr: Should I Use an AI SDR Before I Have a Working Human SDR motion?\n\nSource passages:\n[gd_f4b7879f1fde287961a29eb3]\nAttribution status: publication_page. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nDear SaaStr: I Want to Roll Out an AI SDR. How Do I Start?\nFirst, get clear on what you’re actually buying — and what it actually does.\nWe’ve now been running AI SDRs at SaaStr for over a year. Multiple platforms. Real data. Real pipeline. And the honest answer is: it works. But it works very differently than most vendors will tell you, and the gap between a good deployment and a wasted one comes down almost entirely to how you set it up.\nHere’s what we actually learned.\nThe Single Best Use Case to Start With: The Leads Your Team Is Ignoring\nThis is the insight that changed how we think about AI SDRs entirely.\nYour human SDRs are force-ranking in their heads every single day. They’re chasing the big deals, the warm inbound, the accounts that feel like they could close this quarter. The leads they consider “not worth it” — return event attendees, old website visitors, ghosted CRM contacts — those get nothing. Not bad follow-up. Nothing.\nThat’s where AI SDRs absolutely shine.\nWhen we deployed AI on the leads our human team refused to work — people who had engaged with SaaStr but never got follow-up — we got a\n72% open rate\non Agentforce and generated\n15% of our London event revenue\nfrom a segment that would have produced zero without AI.\nNot 15% incremental lift. 15% of total revenue from leads that were producing $0.\nSo before you start thinking about AI SDRs as a way to scale your best motion, ask yourself: what’s the motion your team isn’t running at all? Start there.\nThe Data on What’s Actually Possible\nHere’s what we’ve seen across our AI SDR stack, with real numbers:\nArtisan (outbound AI SDR):\n3,221 emails per month from a single platform\nPrevious human SDR volume: 75–285 emails per rep per month\nThat’s an\n\n[gd_417b957752ce712ce5874976]\nAttribution status: publication_page. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nWe’ve now been running AI SDR agents for 10+ months at SaaStr. We use four different vendors in daily rotation (Artisan, Salesforce AgentForce, Qualified, and Monaco), we’ve sent hundreds of thousands of outbound messages, processed 1.5 million inbound sessions on a single website, and we’ve made every mistake you can make along the way.\nSomeone asked us the other day to break down what they should know before rolling out their very first AI SDR. So here are the 10 biggest lessons, drawn from real deployment data, real failures, and real results.\n1. You Probably Only Need One Vendor\nWe run four AI SDR tools. You do not need to do that. We hyper-segment across platforms because each one does something slightly different well, but for 90%+ of use cases, one vendor will handle the bulk of what you need.\nAt most, you might end up with two: one for outbound, one for inbound. But do not start by buying three or four tools. Pick one that covers the majority of what you want to accomplish and go deep with it.\nThe tool matters far less than the strategy you bring to it.\n2. Your Human Playbook Has to Work First\nThis is the single biggest mistake we see, and it cuts across company stage. We see it from raw startups at $1M ARR and from multi-billion-dollar public companies alike.\nThe pattern is always the same: they want to turn on an AI SDR without first proving that their human sales motion works. Or they use the AI SDR to “test new copy” they’ve never tried before.\nThat is backwards.\nIf you have not gotten outbound to work with humans, buying an AI to do it will not fix that. We did not deploy our first AI SDR until we knew exactly what was working with our human SDRs: which messaging converted, which segments responded, what cadences performed. Then we fed all of that into the agent.\nThe goal\n\n[gd_cd0a5d64ec64d242e99c5ad1]\nAttribution status: publication_page. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nAI SDRs can work incredibly well, but only if you’re willing to invest the time to train them properly. This isn’t about replacing humans — it’s about augmenting what humans can do with hyper-personalization at scale. The companies that figure this out first will have a massive advantage.\n\nThe ones that just turn it on and walk away will wonder why they’re getting the same terrible response rates they always have. Pick your platform, commit to the training, and prepare to spend more time on orchestration than you expect. But if you do it right, you’ll be sending thousands of emails that sound like you actually wrote them. What We’re Looking to Do Next\nWe’re literally onboarding two more AI sales tools this week. The outbound piece is working, but we want to go deeper across the entire sales cycle. We’re still hunting for a really good AI marketing tool — if you know of one that actually works (not just another content generator), hit us up. We’re also hiring someone specifically to manage our AI operations. A human 🙂 This is becoming a full-time role and frankly, we need someone whose entire job is orchestrating these systems. If you know someone good at both AI and revenue operations, send them our way. The goal is to have AI touching every part of our sales and marketing funnel by the end of the year, but doing it right — with proper training, human oversight, and real value creation. Amelia Lerutte is SVP + GM at SaaStr. You can reach her at ai@saastr.com or connect on LinkedIn. Yes, that inbox is monitored by both AI and humans — and you probably won’t be able to tell the difference.\n\n[gd_f9d25c28348724609cb4e3da]\nAttribution status: publication_page. Do not treat the passage as Jason Lemkin's personal position unless the passage itself says so.\nhumans for strategy, relationship building, and complex problem-solving. AI Does What We Need, But No One Wants To Do\nThe future of SaaS isn’t about AI replacing humans. It’s about AI doing the essential work that humans will do poorly or not at all because it’s repetitive, unrewarding, or doesn’t scale. Companies that embrace this reality first will have operational advantages that compound over time. They’ll have cleaner data, more consistent processes, better follow-through, and human teams focused on work that actually drives satisfaction and retention. The technology is almost there. The question is whether your organization is ready to let AI handle the jobs that, frankly, no one really wants to do anyway. When that happens, everything else becomes possible. Why We Have 11+ AI Agents Already in Production Ourselves\nIt’s true at tiny team SaaStr, too. Too many core functions … humans didn’t want to do:\nWe couldn’t get our SDRs to follow up on most potential prospects. They didn’t see the return. We couldn’t get our content team to review 1,000s+ of submissions. Too many to find the diamonds in the rough. We couldn’t get our sales team to chase lapsed sponsors and partners. They didn’t see the ROI. We couldn’t get our AEs to do any prospecting at all. Few want to. We couldn’t get the GTM team to follow up on leads instantly. We couldn’t get our sales team to update our collateral consistently. Or to make custom pitch decks for sponsors (Gamma does this now).<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+  "extraction_seconds": 21.873,
+  "verification_seconds": 0.0,
+  "verification_records": [],
+  "allowed_numeric_values": [],
+  "reason": null,
+  "extraction_attempts": 1,
+  "extraction_stop_reason": "eos",
+  "extraction_hits_used": [
+    "gd_f4b7879f1fde287961a29eb3",
+    "gd_417b957752ce712ce5874976",
+    "gd_cd0a5d64ec64d242e99c5ad1",
+    "gd_f9d25c28348724609cb4e3da"
+  ],
+  "extraction_hits_omitted": [],
+  "extraction_prompt_tokens": 1926,
+  "extraction_context_limit": 2048,
+  "extraction_input_truncated": false
+}
