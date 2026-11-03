@@ -1,6 +1,6 @@
 # Teammate handoff — Model F
 
-Read this before the longer notes. The GitHub repository is public (`andreahcruz/PersonaCloningGen`). This handoff publishes code, tests, and aggregate metrics. It does not publish the graph, the adapter, prompts, retrieved passages, or full drafts.
+Read this before the longer notes. The GitHub repository is public (`andreahcruz/PersonaCloningGen`). This handoff publishes code, tests, aggregate metrics, and the 120-row judge and audit tables. It does not publish the graph, the adapter, prompts, retrieved passages, or the 120 draft texts.
 
 ## Quickstart
 
@@ -58,6 +58,23 @@ python -m host_finetune.model_f_experiment verify --snapshot PATH\TO\storage_exp
 `verify` refuses a directory whose path contains the live store name `storage_expand_v1`. Copy the verified extract to a runtime directory before any query. LightRAG can rewrite the working directory it opens.
 
 Also needed, and not in the zips: the 4-bit Llama base (Hugging Face `unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit`), Ollama `nomic-embed-text`, and Ollama `llama3.1:latest`.
+
+## Row-level scores on GitHub
+
+[`results/model-f-panel-rows-v1/`](../results/model-f-panel-rows-v1/) has the 120 Qwen rows and the 120 deterministic audit flags.
+
+| File | What it is |
+|---|---|
+| `judge_scores.csv` | One judge row per `question_id` and `medium` |
+| `deterministic_flags.csv` | Unsupported numbers, source copy, topic echo, mid-sentence stop, token-cap stop |
+| `manifest.json` | Generation hash, gold hash, export hashes, private-zip hash |
+| `README.md` | Column definitions and the judge-versus-number-check limit |
+
+Join on `question_id` and `medium`. Empty cells are missing values.
+
+The 120 response texts are not in Git. Seven drafts fail the saved 12-word source-copy check, ten share 8 or more words with a retrieved passage, and two contain a URL. This repository is public, and publication permission for those responses was not established. The private archive `model-f-frel-120-evaluation.zip` keeps all 120 responses unchanged. It also keeps the judge CSV, the flag CSV, `unified_eval/rows.jsonl`, and the audit `cells.jsonl`. It does not contain prompts, retrieved passages, the LightRAG snapshot, or the LoRA adapter.
+
+Ask the person who built the panel for that zip. Check SHA-256 `324d44f941b93396f62147095e12bb959e34ff726978c608936d25decd9b4813` and size 101,769 bytes. Receipt of this zip, and receipt of the earlier snapshot and adapter zips, has not been confirmed from a teammate machine.
 
 ## Inspect results without a GPU
 

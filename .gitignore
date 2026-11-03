@@ -54,6 +54,9 @@ data/*.zip
 # Local bundles that carry adapters or Chroma copies.
 deployment_handoff/
 
+# Full F-REL drafts and the private evaluation zip. Not for the public remote.
+private_handoff/
+
 # Model F local graph copies, query caches, and full generation dumps.
 # Share results/model-f-handoff-v1 instead of these directories.
 experiments/EXP-20261102-001-model-f-unified-panel/raw/

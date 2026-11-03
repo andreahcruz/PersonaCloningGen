@@ -1,0 +1,50 @@
+{
+  "experiment_id": "EXP-20261102-001-model-f-unified-panel",
+  "profile": "F-REL",
+  "generation_sha256": "6ed2af4f47c3f592aa833c643dc6354956b0ea7f96b7634b98a902b2a746724c",
+  "generation_sha256_meaning": "SHA-256 of experiments/EXP-20261102-001-model-f-unified-panel/raw/judge_inputs.jsonl, recomputed and matched. That trace file contains prompts and is not in either export.",
+  "gold_sha256": "d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e",
+  "judge_model": "qwen2.5:14b",
+  "judge_protocol": "unified_eval.v1",
+  "judge_temperature": 0,
+  "judge_blinded": true,
+  "rows": {
+    "generations": 120,
+    "judge_scores": 120,
+    "deterministic_flags": 120
+  },
+  "authoritative_sources": {
+    "generations": "experiments/EXP-20261102-001-model-f-unified-panel/raw/generations/gold_*__F-REL__*.json",
+    "judge_rows": "experiments/EXP-20261102-001-model-f-unified-panel/unified_eval/rows.jsonl",
+    "audit_cells": "audits/AUDIT-20261102-001-model-f-frel-prejudge/cells.jsonl"
+  },
+  "metrics_rows_jsonl_sha256": "41c282edf0dcc11c2c14b46f738d0e52f52f85057e1e7e9c79e4fdc3d92be28b",
+  "unified_eval_rows_jsonl_sha256": "41c282edf0dcc11c2c14b46f738d0e52f52f85057e1e7e9c79e4fdc3d92be28b",
+  "metrics_rows_match_unified_eval_rows": true,
+  "public_omits_generation_text": true,
+  "safety": {
+    "source_copy_fail_cells": 7,
+    "source_copy_span_at_least_8_cells": 10,
+    "cells_with_urls": 2,
+    "cells_with_prompt_markers": 2,
+    "cells_with_email_addresses": 0,
+    "cells_with_secret_patterns": 0
+  },
+  "export_sha256": {
+    "generations.jsonl": "5912ebbf1fba5278364514b8be743174fcf33996b6b6e5a06e9a3aa086ba1356",
+    "judge_scores.csv": "4b4fd1630a967024f93b677c2942980a0c68fce188e088a91cfef9614346ca50",
+    "deterministic_flags.csv": "d04e6f959a2c1488b73cfb871643308870ecb605a5033ee15cbf6372ec3d634b",
+    "README.md": "2c61a783c298f407868cec6834b3032b128989990a2b173825948c8dc62e4d3e",
+    "safety_review.json": "124b68092360ba8c675d1ea57fcb2e06af6c63d54750ac96452293a1d4648248"
+  },
+  "private_zip": {
+    "filename": "model-f-frel-120-evaluation.zip",
+    "bytes": 101769,
+    "sha256": "324d44f941b93396f62147095e12bb959e34ff726978c608936d25decd9b4813",
+    "contains_all_120_responses": true,
+    "contains_prompts": false,
+    "contains_retrieved_passages": false,
+    "contains_lightrag_snapshot": false,
+    "contains_lora_adapter": false
+  }
+}
