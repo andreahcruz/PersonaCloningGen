@@ -116,6 +116,18 @@ export function mockGenerate(req: GenerateRequest): GenerateResult {
       sourceTypes: [...new Set(sources.map((source) => source.sourceType))],
       scope: "operational",
     },
+    checks: {
+      completion: { status: "pass", detail: "Ends with terminal punctuation.", value: null },
+      formatCompliance: { status: "pass", detail: "Sample draft matches its selected mock format.", value: null },
+      promptEcho: { status: "pass", detail: "No long exact instruction span was repeated.", value: 0 },
+      unsupportedNumbers: sources.length
+        ? { status: "pass", detail: "All detected numeric forms appear in returned sources.", value: 0 }
+        : { status: "na", detail: "N/A: this method did not retrieve source evidence.", value: null },
+      sourceCopying: sources.length
+        ? { status: "pass", detail: "No long exact source span was copied.", value: 0 }
+        : { status: "na", detail: "N/A: this method did not retrieve source evidence.", value: null },
+      scope: "deterministic",
+    },
     mock: true,
   };
 }

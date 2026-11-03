@@ -70,6 +70,14 @@ describe("live mode", () => {
         model: "lemkin-clone",
         latency_ms: 4820,
         request_id: "abc",
+        checks: {
+          completion: { status: "pass", detail: "Ends with terminal punctuation.", value: null },
+          format_compliance: { status: "fail", detail: "280 words; expected 120–220", value: null },
+          prompt_echo: { status: "pass", detail: "No long exact instruction span was repeated.", value: 0 },
+          unsupported_numbers: { status: "na", detail: "N/A: no sources.", value: null },
+          source_copying: { status: "na", detail: "N/A: no sources.", value: null },
+          scope: "deterministic",
+        },
         sources: [
           { text: "Passage", score: 0.87, source_type: "Blog" },
           { text: "Other", source_type: "podcast" },
@@ -84,6 +92,11 @@ describe("live mode", () => {
     expect(res.sources[0]).toMatchObject({ sourceType: "blog", score: 0.87 });
     expect(res.sources[1]).toMatchObject({ sourceType: "unknown", score: null });
     expect(res.metrics).toMatchObject({ wordCount: 1, sourceCount: 2, scope: "operational" });
+    expect(res.checks).toMatchObject({
+      completion: { status: "pass" },
+      formatCompliance: { status: "fail" },
+      unsupportedNumbers: { status: "na" },
+    });
   });
 
   it("preserves server-side operational metrics for a live comparison", async () => {

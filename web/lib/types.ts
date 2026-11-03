@@ -74,6 +74,24 @@ export interface DraftMetrics {
   scope: "operational";
 }
 
+export type DraftCheckStatus = "pass" | "warn" | "fail" | "na";
+
+/** A transparent rule-based diagnostic, not a model-judged quality score. */
+export interface DraftCheck {
+  status: DraftCheckStatus;
+  detail: string;
+  value: number | null;
+}
+
+export interface DraftChecks {
+  completion: DraftCheck;
+  formatCompliance: DraftCheck;
+  promptEcho: DraftCheck;
+  unsupportedNumbers: DraftCheck;
+  sourceCopying: DraftCheck;
+  scope: "deterministic";
+}
+
 export interface GenerateResult {
   content: string;
   sources: Source[];
@@ -83,6 +101,7 @@ export interface GenerateResult {
   requestId?: string;
   method: GenerationMethod;
   metrics: DraftMetrics;
+  checks: DraftChecks;
   /** True when the data is sample data, not real model output. */
   mock: boolean;
 }

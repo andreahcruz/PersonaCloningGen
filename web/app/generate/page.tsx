@@ -9,6 +9,7 @@ import {
   type FormatId,
   type GenerationMethod,
   type GenerateResult,
+  type DraftCheckStatus,
   type GrammarCheckResult,
   type ModelFStatus,
   type PersonaProfile,
@@ -89,6 +90,17 @@ function qloraTopicOnly(value: string): string {
 
 function qloraPrompt(format: FormatId, topic: string): string {
   return QLORA_TEMPLATES[format].replace("{topic}", topic || "[your topic]");
+}
+
+const CHECK_STATUS_CLASS: Record<DraftCheckStatus, string> = {
+  pass: "border-emerald-500/40 bg-emerald-500/10 text-emerald-300",
+  warn: "border-amber-500/40 bg-amber-500/10 text-amber-200",
+  fail: "border-red-500/40 bg-red-500/10 text-red-200",
+  na: "border-line bg-panel text-mute",
+};
+
+function checkLabel(status: DraftCheckStatus): string {
+  return status === "na" ? "N/A" : status === "warn" ? "Warning" : status[0].toUpperCase() + status.slice(1);
 }
 
 function slug(text: string): string {
@@ -522,6 +534,34 @@ export default function GeneratorPage() {
                   <p className="mt-2 text-xs text-mute">
                     These are comparable runtime/output measurements, not a score of factuality, writing quality, or persona voice.
                   </p>
+                </div>
+                <div className="mt-4 rounded-xl border border-line bg-bg p-3">
+                  <p className="text-sm font-medium">Deterministic draft checks</p>
+                  <p className="mt-1 text-xs text-mute">
+                    Transparent rule-based diagnostics, not an overall quality or factuality grade.
+                  </p>
+                  <div className="mt-3 space-y-2">
+                    {[
+                      ["Completion", result.checks.completion],
+                      ["Format compliance", result.checks.formatCompliance],
+                      ["Prompt echo", result.checks.promptEcho],
+                      ["Unsupported numbers", result.checks.unsupportedNumbers],
+                      ["Source copying", result.checks.sourceCopying],
+                    ].map(([label, check]) => {
+                      const item = check as typeof result.checks.completion;
+                      return (
+                        <div key={label as string} className="flex flex-wrap items-start justify-between gap-2 rounded-lg border border-line p-2 text-xs">
+                          <div className="min-w-0">
+                            <p className="font-medium text-text">{label as string}</p>
+                            <p className="mt-0.5 text-mute">{item.detail}</p>
+                          </div>
+                          <span className={`shrink-0 rounded-full border px-2 py-0.5 font-medium ${CHECK_STATUS_CLASS[item.status]}`}>
+                            {checkLabel(item.status)}
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
                 <div className="mt-4 rounded-xl border border-line bg-bg p-3">
                   <div className="flex flex-wrap items-center justify-between gap-2">

@@ -12,6 +12,7 @@ import {
 import type {
   EvaluationData,
   DraftMetrics,
+  DraftChecks,
   FormatId,
   GenerateRequest,
   GenerateResult,
@@ -177,6 +178,14 @@ interface RawGenerate {
     source_types?: string[];
     scope?: "operational";
   };
+  checks?: {
+    completion?: { status?: "pass" | "warn" | "fail" | "na"; detail?: string; value?: number | null };
+    format_compliance?: { status?: "pass" | "warn" | "fail" | "na"; detail?: string; value?: number | null };
+    prompt_echo?: { status?: "pass" | "warn" | "fail" | "na"; detail?: string; value?: number | null };
+    unsupported_numbers?: { status?: "pass" | "warn" | "fail" | "na"; detail?: string; value?: number | null };
+    source_copying?: { status?: "pass" | "warn" | "fail" | "na"; detail?: string; value?: number | null };
+    scope?: "deterministic";
+  };
 }
 
 const SOURCE_TYPES: SourceType[] = ["blog", "linkedin", "x", "youtube"];
@@ -191,6 +200,35 @@ function mapSource(s: RawSource, i: number): Source {
     title: s.title,
     url: s.url,
     date: s.date,
+  };
+}
+
+function unavailableChecks(): DraftChecks {
+  const unavailable = { status: "na" as const, detail: "Not returned by this backend version.", value: null };
+  return {
+    completion: unavailable,
+    formatCompliance: unavailable,
+    promptEcho: unavailable,
+    unsupportedNumbers: unavailable,
+    sourceCopying: unavailable,
+    scope: "deterministic",
+  };
+}
+
+function mapChecks(raw: RawGenerate["checks"]): DraftChecks {
+  if (!raw) return unavailableChecks();
+  const map = (check: { status?: "pass" | "warn" | "fail" | "na"; detail?: string; value?: number | null } | undefined) => ({
+    status: check?.status ?? "na" as const,
+    detail: check?.detail ?? "Not returned by this backend version.",
+    value: typeof check?.value === "number" ? check.value : null,
+  });
+  return {
+    completion: map(raw.completion),
+    formatCompliance: map(raw.format_compliance),
+    promptEcho: map(raw.prompt_echo),
+    unsupportedNumbers: map(raw.unsupported_numbers),
+    sourceCopying: map(raw.source_copying),
+    scope: raw.scope ?? "deterministic",
   };
 }
 
@@ -228,6 +266,7 @@ export async function generate(req: GenerateRequest): Promise<GenerateResult> {
     requestId: raw.request_id,
     method: raw.method ?? req.method,
     metrics,
+    checks: mapChecks(raw.checks),
     mock: false,
   };
 }

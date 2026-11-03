@@ -109,6 +109,40 @@ def test_grammar_rejects_oversized_text():
     assert response.status_code == 422
 
 
+def test_draft_checks_are_deterministic_and_scope_evidence_diagnostics():
+    request = main.GenerateRequest(
+        format="linkedin_post",
+        topic="Hiring a first sales leader",
+        audience="founders",
+        goal="explain the tradeoff",
+        cta="none",
+        method="qlora",
+    )
+    echoed = main._draft_checks(
+        "Write a LinkedIn post in the style of Jason Lemkin about Hiring a first sales leader.",
+        [],
+        request,
+        "Write a LinkedIn post in the style of Jason Lemkin about Hiring a first sales leader.",
+    )
+
+    assert echoed.completion.status == "pass"
+    assert echoed.prompt_echo.status == "warn"
+    assert echoed.unsupported_numbers.status == "na"
+    assert echoed.source_copying.status == "na"
+
+    evidence_request = request.model_copy(update={"method": "personarag"})
+    evidence = main._draft_checks(
+        "The 25% retention gain comes from keeping customers for longer.",
+        [{"chunk_text": "The 20% retention gain comes from keeping customers for longer."}],
+        evidence_request,
+        "Write a LinkedIn post about retention.",
+    )
+
+    assert evidence.unsupported_numbers.status == "warn"
+    assert evidence.unsupported_numbers.value == 1
+    assert evidence.source_copying.status == "pass"
+
+
 def test_generate_returns_real_source_metadata(monkeypatch, tmp_path):
     persona = tmp_path / "persona_profile.json"
     persona.write_text("{}", encoding="utf-8")

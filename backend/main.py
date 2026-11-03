@@ -10,6 +10,7 @@ import os
 import re
 import time
 import uuid
+from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Any, Literal
 
@@ -81,6 +82,25 @@ class DraftMetrics(BaseModel):
     scope: Literal["operational"] = "operational"
 
 
+class DraftCheck(BaseModel):
+    """One explainable, deterministic check for a completed draft."""
+
+    status: Literal["pass", "warn", "fail", "na"]
+    detail: str
+    value: int | None = None
+
+
+class DraftChecks(BaseModel):
+    """CPU-safe diagnostic checks. They are signals, not an overall grade."""
+
+    completion: DraftCheck
+    format_compliance: DraftCheck
+    prompt_echo: DraftCheck
+    unsupported_numbers: DraftCheck
+    source_copying: DraftCheck
+    scope: Literal["deterministic"] = "deterministic"
+
+
 class GenerateResponse(BaseModel):
     draft: str
     sources: list[dict[str, Any]]
@@ -89,6 +109,7 @@ class GenerateResponse(BaseModel):
     request_id: str
     method: Literal["baseline", "personarag", "qlora", "model_f"]
     metrics: DraftMetrics
+    checks: DraftChecks
 
 
 class PersonaResponse(BaseModel):
@@ -198,6 +219,127 @@ def _draft_metrics(draft: str, sources: list[dict[str, Any]]) -> DraftMetrics:
         sentence_count=sentence_count,
         source_count=len(sources),
         source_types=source_types,
+    )
+
+
+def _normalized_words(text: str) -> list[str]:
+    """Lower-case lexical tokens used only for transparent exact-match checks."""
+    return re.findall(r"[a-z0-9]+(?:['’][a-z0-9]+)?", text.lower())
+
+
+def _terminal_punctuation(text: str) -> bool:
+    """Treat closing markdown punctuation as a completed final sentence."""
+    ending = text.strip().rstrip(' \t\n\"\'”’)]}')
+    return bool(ending) and ending[-1:] in {".", "!", "?", "…"}
+
+
+def _longest_shared_run(left: list[str], right: list[str]) -> int:
+    if not left or not right:
+        return 0
+    return SequenceMatcher(a=left, b=right, autojunk=False).find_longest_match().size
+
+
+def _number_tokens(text: str) -> set[str]:
+    """Normalize basic numeric forms without treating this as factual verification."""
+    raw = re.findall(r"(?<![\w.])\d[\d,]*(?:\.\d+)?%?", text)
+    return {value.replace(",", "").lower() for value in raw}
+
+
+def _format_check(format_name: str, method: str, draft: str) -> DraftCheck:
+    """Check only explicit, observable format constraints—not writing quality."""
+    words = _word_count(draft)
+    if method in {"qlora", "model_f"}:
+        ranges = {
+            "linkedin_post": (40, 140),
+            "blog_draft": (150, 450),
+            "x_thread": (1, 60),
+            "youtube_script": (100, 300),
+        }
+    else:
+        ranges = {
+            "linkedin_post": (120, 220),
+            "blog_draft": (600, 1000),
+            "x_thread": (40, 560),
+            "youtube_script": (450, 900),
+        }
+    low, high = ranges.get(format_name, (1, 10_000))
+    violations: list[str] = []
+    if not low <= words <= high:
+        violations.append(f"{words} words; expected {low}–{high}")
+
+    if format_name == "x_thread" and method in {"qlora", "model_f"}:
+        sentences = len(re.findall(r"[^.!?]+[.!?]+(?:\s|$)", draft.strip()))
+        if sentences != 3:
+            violations.append(f"{sentences} sentences; expected 3")
+        if "#" in draft:
+            violations.append("contains a hashtag")
+    elif format_name == "x_thread":
+        labels = len(re.findall(r"(?m)^\s*(?:post\s+)?\d+[/.)]", draft, flags=re.IGNORECASE))
+        if labels < 3:
+            violations.append("fewer than 3 numbered posts")
+    elif format_name == "linkedin_post" and method in {"qlora", "model_f"} and "#" in draft:
+        violations.append("contains a hashtag")
+
+    if violations:
+        return DraftCheck(status="fail", detail="; ".join(violations))
+    return DraftCheck(status="pass", detail=f"Matches the selected format's observable constraints ({words} words).", value=words)
+
+
+def _draft_checks(
+    draft: str,
+    sources: list[dict[str, Any]],
+    req: GenerateRequest,
+    echo_reference: str,
+) -> DraftChecks:
+    """Return per-draft diagnostics without calling another model or service."""
+    normalized_draft = _normalized_words(draft)
+    completed = _terminal_punctuation(draft)
+    completion = DraftCheck(
+        status="pass" if completed else "fail",
+        detail="Ends with terminal punctuation." if completed else "Ends without terminal punctuation; the response may be truncated.",
+    )
+
+    # A long exact run of the production instruction is an echo. A topic by
+    # itself is intentionally not enough to trigger this check.
+    echoed_words = _longest_shared_run(_normalized_words(echo_reference), normalized_draft)
+    prompt_echo = DraftCheck(
+        status="warn" if echoed_words >= 8 else "pass",
+        detail=(f"Longest exact instruction overlap: {echoed_words} words."
+                if echoed_words >= 8 else "No long exact instruction span was repeated."),
+        value=echoed_words,
+    )
+
+    source_text = "\n".join(
+        str(chunk.get("chunk_text") or chunk.get("text") or "") for chunk in sources
+    )
+    if not source_text.strip():
+        unsupported_numbers = DraftCheck(status="na", detail="N/A: this method did not retrieve source evidence.")
+        source_copying = DraftCheck(status="na", detail="N/A: this method did not retrieve source evidence.")
+    else:
+        draft_numbers = _number_tokens(draft)
+        source_numbers = _number_tokens(source_text)
+        unmatched_numbers = sorted(draft_numbers - source_numbers)
+        unsupported_numbers = DraftCheck(
+            status="warn" if unmatched_numbers else "pass",
+            detail=(f"{len(unmatched_numbers)} number(s) not found in returned sources: {', '.join(unmatched_numbers[:6])}. "
+                    "This is a warning, not proof of a hallucination."
+                    if unmatched_numbers else "All detected numeric forms appear in returned sources."),
+            value=len(unmatched_numbers),
+        )
+        shared_words = _longest_shared_run(normalized_draft, _normalized_words(source_text))
+        source_copying = DraftCheck(
+            status="warn" if shared_words >= 12 else "pass",
+            detail=(f"Longest exact source overlap: {shared_words} words."
+                    if shared_words >= 12 else "No long exact source span was copied."),
+            value=shared_words,
+        )
+
+    return DraftChecks(
+        completion=completion,
+        format_compliance=_format_check(req.format, req.method, draft),
+        prompt_echo=prompt_echo,
+        unsupported_numbers=unsupported_numbers,
+        source_copying=source_copying,
     )
 
 
@@ -589,4 +731,12 @@ def generate(req: GenerateRequest) -> GenerateResponse:
         request_id=request_id,
         method=req.method,
         metrics=_draft_metrics(draft, chunks),
+        checks=_draft_checks(
+            draft,
+            chunks,
+            req,
+            direct_qlora_prompt(req.format, req.topic)
+            if req.method in {"qlora", "model_f"}
+            else baseline_prompt(req.format, req.topic, req.audience, req.goal, req.cta),
+        ),
     )
