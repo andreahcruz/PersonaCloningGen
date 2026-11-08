@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionStart": [
+      {
+        "command": "python -m project_pm cursor-session-start",
+        "timeout": 15
+      }
+    ],
+    "stop": [
+      {
+        "command": "python -m project_pm cursor-stop",
+        "timeout": 20,
+        "loop_limit": 1
+      }
+    ]
+  }
+}

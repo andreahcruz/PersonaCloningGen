@@ -1,0 +1,16 @@
+{
+  "checks": {
+    "training_dataset_hash_matches_run": true,
+    "split_hash_matches_run": true,
+    "training_loader_code_matches_recorded_commit": true,
+    "completed_two_epoch_run_evidence": false,
+    "gold_family_counts_reproduced": true,
+    "index_parity": true,
+    "24_distinct_provenanced_candidates": true,
+    "no_candidate_lexical_duplicates": true,
+    "snapshotted_inputs_and_prior_runs_unchanged": true
+  },
+  "failures": [
+    "completed_two_epoch_run_evidence"
+  ]
+}

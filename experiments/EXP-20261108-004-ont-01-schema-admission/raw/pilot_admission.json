@@ -1,0 +1,369 @@
+{
+  "schema_version": "pilot_admission.v1",
+  "contract_version": "author_claim.v1",
+  "expected_author": "Jason Lemkin",
+  "status": "pending_human_review",
+  "selection": "five fixed candidates from frozen development-source locators; no inferred author verification",
+  "snapshot": {
+    "documents": [
+      {
+        "provenance": {
+          "source_file": "jasonlemkin_blog.jsonl",
+          "source_line": 108,
+          "raw_file_sha256": "8492ef11acacd767ce6bcdbdf6215467b6ba74d3e57dc50ffcd0af7deebc34a8",
+          "cleaned_file_sha256": "07dc0623f567ec5e05cee71b3577e62be143ddf651bec4257b9955593f2a7bab",
+          "cleaned_record_sha256": "8edddffe2849cca1196c41b5598f52157db9a0642ecdb47e0f742176f1e56373",
+          "dataset_sha256": "1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b",
+          "split_sha256": "6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb",
+          "gold_sha256": "d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e",
+          "selection_code_sha256": "8f05df0ffa51a22da9cf4d4e6334aef53bbeca8d4b077e6c23a202bf4d7eabbc",
+          "row_ids": [
+            718
+          ],
+          "group_ids": [
+            "5bbde357ba1ca702b92b0c5000582c9e0f1357a1f45fbcae4038bd4ed0f12a4d"
+          ],
+          "split": "train",
+          "selection_eligible": true
+        },
+        "source_url": "https://www.saastr.com/dear-saastr-how-can-you-ensure-a-smooth-transition-when-a-new-team-member-takes-over-a-customer-account/",
+        "body_sha256": "50ad29de9f5531d70edfe14de25015a054eff0df3388e4c5af2b64f68088f833",
+        "publication_date": "2024-07-08T11:43:21+00:00",
+        "author_signals": [],
+        "content_kind": "blog",
+        "body_locator": "cleaned.content.unmodified"
+      },
+      {
+        "provenance": {
+          "source_file": "jasonlemkin_blog.jsonl",
+          "source_line": 623,
+          "raw_file_sha256": "8492ef11acacd767ce6bcdbdf6215467b6ba74d3e57dc50ffcd0af7deebc34a8",
+          "cleaned_file_sha256": "07dc0623f567ec5e05cee71b3577e62be143ddf651bec4257b9955593f2a7bab",
+          "cleaned_record_sha256": "a3c7db66add439a34da9736336831a7d439a0676050360aaaa98b90213b582af",
+          "dataset_sha256": "1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b",
+          "split_sha256": "6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb",
+          "gold_sha256": "d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e",
+          "selection_code_sha256": "8f05df0ffa51a22da9cf4d4e6334aef53bbeca8d4b077e6c23a202bf4d7eabbc",
+          "row_ids": [
+            3977
+          ],
+          "group_ids": [
+            "d542fe308a7315eca500123f523ff3761529a89acfb045a16c944f902eab3849"
+          ],
+          "split": "train",
+          "selection_eligible": true
+        },
+        "source_url": "https://www.saastr.com/raising-prices-has-its-place-but-it-shouldnt-be-one-of-your-best-ideas/",
+        "body_sha256": "6343ac62f63234ff826f2fbe146570a52c9a575b38e75c922f1ee94df1453488",
+        "publication_date": "2025-08-06T12:10:09+00:00",
+        "author_signals": [],
+        "content_kind": "blog",
+        "body_locator": "cleaned.content.unmodified"
+      },
+      {
+        "provenance": {
+          "source_file": "jasonlemkin_blog.jsonl",
+          "source_line": 1943,
+          "raw_file_sha256": "8492ef11acacd767ce6bcdbdf6215467b6ba74d3e57dc50ffcd0af7deebc34a8",
+          "cleaned_file_sha256": "07dc0623f567ec5e05cee71b3577e62be143ddf651bec4257b9955593f2a7bab",
+          "cleaned_record_sha256": "00ce9ee9b7ea185cd89ee250eec461ae0f0c12fd019de14dea65a43aba330e68",
+          "dataset_sha256": "1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b",
+          "split_sha256": "6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb",
+          "gold_sha256": "d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e",
+          "selection_code_sha256": "8f05df0ffa51a22da9cf4d4e6334aef53bbeca8d4b077e6c23a202bf4d7eabbc",
+          "row_ids": [
+            8068
+          ],
+          "group_ids": [
+            "67fbdfbb57a78d974a6805761f1de3bf53aadf10e015d3c3fc3514d4769bdf2b"
+          ],
+          "split": "train",
+          "selection_eligible": true
+        },
+        "source_url": "https://www.saastr.com/does-the-wise-advice-to-always-say-no-to-sponsored-features-would-also-apply-to-a-saas-startup-selling-to-mid-market-acv-20k-to-50k-and-has-yet-only-2-clients/",
+        "body_sha256": "ce6ca8f1c3f837a3838663d00c8682c84cf3b43903fd398a869c9711ff2cb0f0",
+        "publication_date": "2023-10-23T13:14:48+00:00",
+        "author_signals": [],
+        "content_kind": "blog",
+        "body_locator": "cleaned.content.unmodified"
+      },
+      {
+        "provenance": {
+          "source_file": "jasonlemkin_blog.jsonl",
+          "source_line": 2871,
+          "raw_file_sha256": "8492ef11acacd767ce6bcdbdf6215467b6ba74d3e57dc50ffcd0af7deebc34a8",
+          "cleaned_file_sha256": "07dc0623f567ec5e05cee71b3577e62be143ddf651bec4257b9955593f2a7bab",
+          "cleaned_record_sha256": "07b790f1c1421ae67933dcebf1b591d0a60e7de98030db3a4c943bf9f5b23005",
+          "dataset_sha256": "1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b",
+          "split_sha256": "6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb",
+          "gold_sha256": "d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e",
+          "selection_code_sha256": "8f05df0ffa51a22da9cf4d4e6334aef53bbeca8d4b077e6c23a202bf4d7eabbc",
+          "row_ids": [
+            10250
+          ],
+          "group_ids": [
+            "c3095680620f83e80de1d5a84f80e246aec604e82b6d7bf2246e1b01b52f15f0"
+          ],
+          "split": "train",
+          "selection_eligible": true
+        },
+        "source_url": "https://www.saastr.com/what-is-the-norm-for-a-rainy-days-bank-buffer-considering-payroll-rent-and-everything-in-between/",
+        "body_sha256": "c4a3de298b0e8d9f86a32a1df8f42223e5d5795ca32c157922dc52fffa20ac4a",
+        "publication_date": "2022-01-21T14:34:12+00:00",
+        "author_signals": [],
+        "content_kind": "blog",
+        "body_locator": "cleaned.content.unmodified"
+      },
+      {
+        "provenance": {
+          "source_file": "jasonlemkin_blog.jsonl",
+          "source_line": 3178,
+          "raw_file_sha256": "8492ef11acacd767ce6bcdbdf6215467b6ba74d3e57dc50ffcd0af7deebc34a8",
+          "cleaned_file_sha256": "07dc0623f567ec5e05cee71b3577e62be143ddf651bec4257b9955593f2a7bab",
+          "cleaned_record_sha256": "4bbe38cd65aca9e9cb170b0b971ea10d07ceb7853291f47d4eb04d1efa2d7202",
+          "dataset_sha256": "1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b",
+          "split_sha256": "6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb",
+          "gold_sha256": "d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e",
+          "selection_code_sha256": "8f05df0ffa51a22da9cf4d4e6334aef53bbeca8d4b077e6c23a202bf4d7eabbc",
+          "row_ids": [
+            10931
+          ],
+          "group_ids": [
+            "3fbb0ea54d6a706f04a9350d35e8a8efff54ab3aa07605e1fb67a37773285701"
+          ],
+          "split": "train",
+          "selection_eligible": true
+        },
+        "source_url": "https://www.saastr.com/as-you-scale-most-of-your-new-revenue-may-come-from-existing-customers/",
+        "body_sha256": "9cc2e8c571f68392e919baf827fa2dc939a12f00236931904aa0f70231f5f83a",
+        "publication_date": "2021-04-09T14:10:08+00:00",
+        "author_signals": [],
+        "content_kind": "blog",
+        "body_locator": "cleaned.content.unmodified"
+      }
+    ],
+    "decisions": [
+      {
+        "document_id": "document:df113b3b90adca9ee746d1567a52c2203de83fb5647a43fb437edfa7f366b3ad",
+        "document_sha256": "8b719ab8bbb80160a8df7c5d5a442d9c27c85fe52288e32418297b83d9478f96",
+        "status": "pending_review",
+        "author": null,
+        "authorship_proof_sha256": null,
+        "proof_source_url": null,
+        "review": {
+          "subject_sha256": "31b43052f7f63740ce7ed770dffe004fa1b7a968a68f2f6b60bd89791b8da9eb",
+          "status": "pending",
+          "reviewer": null,
+          "reviewed_at": null,
+          "reference": null
+        },
+        "reasons": [
+          "human_review_pending",
+          "missing_attribution"
+        ],
+        "previous_decision_id": null
+      },
+      {
+        "document_id": "document:f7328e23e82542c396c4628545ce1704a50595a6fd1a34703d0e756b65b9eea7",
+        "document_sha256": "9bcd1ea1de4c20528413773cdbf0b0ce5e56d6fab9fd28bb42cdecb837f69157",
+        "status": "pending_review",
+        "author": null,
+        "authorship_proof_sha256": null,
+        "proof_source_url": null,
+        "review": {
+          "subject_sha256": "1b1068891ce7e0303ff5142719b61783da99fcc49f1641cc50f583304dba8058",
+          "status": "pending",
+          "reviewer": null,
+          "reviewed_at": null,
+          "reference": null
+        },
+        "reasons": [
+          "human_review_pending",
+          "missing_attribution"
+        ],
+        "previous_decision_id": null
+      },
+      {
+        "document_id": "document:17c4d68fa9ce96b3490d5569f1361a42a22909b1a26a2ac21b15ba2b387dce7b",
+        "document_sha256": "9150d0492d88c13728489e236e6d2b48908a5cb27e8551fa0f106e402f3fe29a",
+        "status": "pending_review",
+        "author": null,
+        "authorship_proof_sha256": null,
+        "proof_source_url": null,
+        "review": {
+          "subject_sha256": "1fd90c7da4508ab6b0bb56cf5a886c768b60795646e096d961cf74185a33784f",
+          "status": "pending",
+          "reviewer": null,
+          "reviewed_at": null,
+          "reference": null
+        },
+        "reasons": [
+          "human_review_pending",
+          "missing_attribution"
+        ],
+        "previous_decision_id": null
+      },
+      {
+        "document_id": "document:3f1fe0a55dbc8e7f5aa8a4bb1dfab4863ba678f4a0009c37a73e7f8466a555b9",
+        "document_sha256": "a24a8aac8c8299dd1fb3b9ca9c682cc7dfd469586a9983216a6c19be7d7daf33",
+        "status": "pending_review",
+        "author": null,
+        "authorship_proof_sha256": null,
+        "proof_source_url": null,
+        "review": {
+          "subject_sha256": "43a40d6e9dc93d34e85b4153f90ef5005ec96b6390f9ff2e8f028d48fe4300f1",
+          "status": "pending",
+          "reviewer": null,
+          "reviewed_at": null,
+          "reference": null
+        },
+        "reasons": [
+          "human_review_pending",
+          "missing_attribution"
+        ],
+        "previous_decision_id": null
+      },
+      {
+        "document_id": "document:4e19ee6711a209ab340771263d3d19a9bbd163291b32ce19fd27370e3b8d50e1",
+        "document_sha256": "185b25366312b215bf50938f079b6c980e22e9d5e6c6ecfef0637a899a148344",
+        "status": "pending_review",
+        "author": null,
+        "authorship_proof_sha256": null,
+        "proof_source_url": null,
+        "review": {
+          "subject_sha256": "83f2e2a7ba6874e604999ec9f63c7b120bd7474dc5476ddd92fadce53bcac2b1",
+          "status": "pending",
+          "reviewer": null,
+          "reviewed_at": null,
+          "reference": null
+        },
+        "reasons": [
+          "human_review_pending",
+          "missing_attribution"
+        ],
+        "previous_decision_id": null
+      }
+    ],
+    "passages": [
+      {
+        "document_id": "document:df113b3b90adca9ee746d1567a52c2203de83fb5647a43fb437edfa7f366b3ad",
+        "start": 0,
+        "end": 958,
+        "text_sha256": "50ad29de9f5531d70edfe14de25015a054eff0df3388e4c5af2b64f68088f833"
+      },
+      {
+        "document_id": "document:f7328e23e82542c396c4628545ce1704a50595a6fd1a34703d0e756b65b9eea7",
+        "start": 0,
+        "end": 1357,
+        "text_sha256": "6343ac62f63234ff826f2fbe146570a52c9a575b38e75c922f1ee94df1453488"
+      },
+      {
+        "document_id": "document:17c4d68fa9ce96b3490d5569f1361a42a22909b1a26a2ac21b15ba2b387dce7b",
+        "start": 0,
+        "end": 1454,
+        "text_sha256": "ce6ca8f1c3f837a3838663d00c8682c84cf3b43903fd398a869c9711ff2cb0f0"
+      },
+      {
+        "document_id": "document:3f1fe0a55dbc8e7f5aa8a4bb1dfab4863ba678f4a0009c37a73e7f8466a555b9",
+        "start": 0,
+        "end": 1035,
+        "text_sha256": "c4a3de298b0e8d9f86a32a1df8f42223e5d5795ca32c157922dc52fffa20ac4a"
+      },
+      {
+        "document_id": "document:4e19ee6711a209ab340771263d3d19a9bbd163291b32ce19fd27370e3b8d50e1",
+        "start": 0,
+        "end": 1079,
+        "text_sha256": "9cc2e8c571f68392e919baf827fa2dc939a12f00236931904aa0f70231f5f83a"
+      }
+    ],
+    "spans": [],
+    "entities": [],
+    "supports": [],
+    "assertions": [],
+    "conflicts": [],
+    "schema_version": "author_claim.v1"
+  },
+  "source_links": [
+    {
+      "document_id": "document:df113b3b90adca9ee746d1567a52c2203de83fb5647a43fb437edfa7f366b3ad",
+      "decision_id": "admission:0fb8bd853713f60af7f4a296646b76925e065e9e557271d29e358dccab3a438b",
+      "passage_id": "passage:4bd0415f8e71ba452f387ca80fc357c4a33c1e59c10734ae2fb4be3244c27827",
+      "development_question_id": "dev_candidate_001",
+      "cleaned_source_path": "data/cleaned/jasonlemkin_blog.jsonl",
+      "body_field": "content",
+      "review_required": [
+        "byline tied to this source version",
+        "authorship signals",
+        "guest/interview/third-party content",
+        "source lineage",
+        "quotation and endorsement boundaries"
+      ],
+      "manual_approval_recorded": false
+    },
+    {
+      "document_id": "document:f7328e23e82542c396c4628545ce1704a50595a6fd1a34703d0e756b65b9eea7",
+      "decision_id": "admission:09d2df5edea65ff2c2294042cf9cb412dd141c94bdf70757fd52c71a101004fa",
+      "passage_id": "passage:3d0cd3cf9b43d33b17bfc22e2ad7155650c4ec76a629c9eb99138e02d7abe8ba",
+      "development_question_id": "dev_candidate_013",
+      "cleaned_source_path": "data/cleaned/jasonlemkin_blog.jsonl",
+      "body_field": "content",
+      "review_required": [
+        "byline tied to this source version",
+        "authorship signals",
+        "guest/interview/third-party content",
+        "source lineage",
+        "quotation and endorsement boundaries"
+      ],
+      "manual_approval_recorded": false
+    },
+    {
+      "document_id": "document:17c4d68fa9ce96b3490d5569f1361a42a22909b1a26a2ac21b15ba2b387dce7b",
+      "decision_id": "admission:7a1c97255e111aa2c25b0da382942c6d2957eee122ff814f38ddaafee16d435c",
+      "passage_id": "passage:b6ead8ae1357b05a7c8fc8292eac9595f5df0ee5ad56d14996520ada7b75da17",
+      "development_question_id": "dev_candidate_014",
+      "cleaned_source_path": "data/cleaned/jasonlemkin_blog.jsonl",
+      "body_field": "content",
+      "review_required": [
+        "byline tied to this source version",
+        "authorship signals",
+        "guest/interview/third-party content",
+        "source lineage",
+        "quotation and endorsement boundaries"
+      ],
+      "manual_approval_recorded": false
+    },
+    {
+      "document_id": "document:3f1fe0a55dbc8e7f5aa8a4bb1dfab4863ba678f4a0009c37a73e7f8466a555b9",
+      "decision_id": "admission:543c4569025ce6384fbfd616a39231ed68d0e2f28015bc528f9bd175dd7e3fdc",
+      "passage_id": "passage:88f7be3e2ba196aaa341578c3b5fcaa8d12d8ede898284799804656d7a972c30",
+      "development_question_id": "dev_candidate_020",
+      "cleaned_source_path": "data/cleaned/jasonlemkin_blog.jsonl",
+      "body_field": "content",
+      "review_required": [
+        "byline tied to this source version",
+        "authorship signals",
+        "guest/interview/third-party content",
+        "source lineage",
+        "quotation and endorsement boundaries"
+      ],
+      "manual_approval_recorded": false
+    },
+    {
+      "document_id": "document:4e19ee6711a209ab340771263d3d19a9bbd163291b32ce19fd27370e3b8d50e1",
+      "decision_id": "admission:52bc2facb7a70f8660a2895b4d2bc4aec1313c42d91d20ce3bf9e7105fb52e58",
+      "passage_id": "passage:cfa0c59434ecb83090a853f8e53e4c51ae86b7165a73eac68266252706e115aa",
+      "development_question_id": "dev_candidate_024",
+      "cleaned_source_path": "data/cleaned/jasonlemkin_blog.jsonl",
+      "body_field": "content",
+      "review_required": [
+        "byline tied to this source version",
+        "authorship signals",
+        "guest/interview/third-party content",
+        "source lineage",
+        "quotation and endorsement boundaries"
+      ],
+      "manual_approval_recorded": false
+    }
+  ],
+  "review_policy": "Do not edit existing decisions. Append a new content-bound decision referencing previous_decision_id after actual human review. Capture proof text locally and pass its hash/content to validation. No claims are eligible merely because a document is a candidate."
+}

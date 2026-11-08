@@ -1,0 +1,77 @@
+{
+  "timestamp": "2026-11-08T08:19:36.363088+00:00",
+  "git": {
+    "commit": "b40ff1738d57e30a06ad2ebd7ba9b4cf6b060f5e",
+    "branch": "codex/task-002-gold-partition",
+    "dirty": true
+  },
+  "input_sha256": {
+    "experiments/EXP-20261003-004-relabel-continuations/raw/dataset.jsonl": "1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b",
+    "experiments/EXP-20261003-004-relabel-continuations/raw/split_assignments.jsonl": "6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb",
+    "experiments/EXP-20261003-003-complete-source-sft-v3/raw/dispositions.jsonl": "e91d17a948d3dd77cf95922560a4943830f68795094bdcee160336c9487097ec",
+    "data/openai_ft/lemkin_gold_eval.jsonl": "d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e",
+    "experiments/EXP-20261003-005-relabel-qlora/manifest.yaml": "05fd530f95bfc5951e40d282032e50e2b16bc42e21b17332006629654edc897d",
+    "experiments/EXP-20261003-005-relabel-qlora/config/commands.txt": "2d1d1a9f61320154b43758d08f6eb5bb5c0c4e225a9a587b97acf8458f76ef9a",
+    "experiments/EXP-20261003-005-relabel-qlora/raw/train.log": "295155642990e3d331953d09be486bb349e08470b881f0e37b1f3a359884625f",
+    "host_finetune/output/lemkin_lora_relabel/checkpoint-2674/trainer_state.json": "797e219acf11c41aee005c9240a8eca1cbdd370d8c53161299ba7fa30a41051a",
+    "host_finetune/finetune.py": "3d7a63b903566a94c668c14bbb46127cb59da533841e26879f2d787188355444",
+    "host_finetune/config.py": "97651e231ba0205b41bab01db7fdb02c20c12a4d35145370ab341f71837391ed",
+    "host_finetune/split_groups.py": "386bf7b0558a43c7b024be98e74859674bf80e356475e97e4b6ec6b1c342bf7a",
+    "host_finetune/llama_chat_format.py": "eb3cd9e785a22901bf746405ae500e4250681cc7ecda13935e390f825f004aa6",
+    "host_finetune/relabel_continuations.py": "b2f12b2f312bc47f316669da7c41fd07c18bea61bbf309fa3d449b8971faa0c0",
+    "host_finetune/best_metric_checkpoints.py": "16c57e5c28d625fc28f40865026fd8b8430828e9fc497448c6c933ab7d1b6e0c",
+    "host_finetune/gold_partition_audit.py": "c29fe6c4a080d52f6d30e7530118b0d5329f43ca61cb23ae85f0834a446901a8",
+    "tests/test_gold_partition_audit.py": "196fb1b154ba92d46ca76697b4f60300de4a86293f8b6605f4c8a5dede795005",
+    "host_finetune/output/chroma_lemkin_train_only/chroma.sqlite3": "a87c12d31eda36cc81f831bb6b5114d3c545e5e98e1fb20836a7ca718b1e7bb9",
+    "data/cleaned/jasonlemkin_blog.jsonl": "07dc0623f567ec5e05cee71b3577e62be143ddf651bec4257b9955593f2a7bab",
+    "data/jasonlemkin_blog.jsonl": "8492ef11acacd767ce6bcdbdf6215467b6ba74d3e57dc50ffcd0af7deebc34a8",
+    "project_pm/check.py": "ad026673802fc8e5c46858767bdb2f0fb54a963fdfcd3c0a4b51b435bf345de5",
+    "docs/project/state.json": "8264d3ec8992d454ed25696fc3bf5225cbbe5b16be37af6ff20bcc1b4b1e7b0f",
+    "docs/project/tasks.json": "7886764ce094c5da99c047ef2edf1e725a318a67d4fdfcc4062db9bb60da41a0",
+    "docs/project/HANDOFF.md": "697ddc69abb1f8587d9a8620b28829208fc33124d16a95034ba0a131ba6dbe84",
+    "experiments/EXP-20261108-001-gold-partition-audit/manifest.yaml": "554aa6271780d276b82e77a42f204d05c4947e3f579666844f6252c9e83a6c1c",
+    "experiments/EXP-20261108-001-gold-partition-audit/notes.md": "6fa05e490636d1319701e8120be41b93751600c8f6c3f3721bc06d884d681a67",
+    "experiments/EXP-20261108-001-gold-partition-audit/config/audit.json": "62f5882fe408f858d26da578fd8300a888b2d5f3e87d4f17d6057e8682b91ec4",
+    "experiments/EXP-20261108-001-gold-partition-audit/config/packages.txt": "791dfceadd70c9670207ff561237e874d3b19b41ae5c78da153b5aa9571367db",
+    "experiments/EXP-20261108-001-gold-partition-audit/metrics/checks.json": "1093a46c014ba3cc616c5b069862146c347b8cbba722f970e290346e92115445",
+    "experiments/EXP-20261108-001-gold-partition-audit/raw/audit.json": "fde73d37befdac6ccf053e6f2973c44d47f70bc09629299dd159feb08447b008",
+    "experiments/EXP-20261108-001-gold-partition-audit/raw/development_questions.jsonl": "c907f674dfe423423a2c59601050ec33e92850cf4e44561284effd76da62e2d6",
+    "experiments/EXP-20261108-001-gold-partition-audit/raw/provenance.json": "9be90bcfa01b48abaf18daa2146356857d512301b7e94baf336569bc3ba5e62e",
+    "experiments/EXP-20261108-001-gold-partition-audit/raw/verification.json": "4419849676efcf31fa05c681088be96fe81402e83aff240895bf2d345fed9d76",
+    "experiments/EXP-20261003-005-relabel-qlora/notes.md": "03f3fe6bdb861086029c7718000760ce23f2616913394ae6a830bc0004bce6d5",
+    "AGENTS.md": "208a221234a9ead4f942149bbdb3a644ede7f339b6aad48d4afc31cba7429c5c",
+    "docs/DECISION_LOG.md": "0e35475f0176c798d75f3aac11c3f805497e4b1911a1a571a8dd3ca1d37db906",
+    "docs/PLAN.md": "f8e46bea2b7983b2d204c5d54ec735afdf8981a8c2e216d480c413a651706571",
+    "docs/PROJECT_CONTEXT.md": "666e5b55f3d50dc4e18f7d0f2c6e00e82edb0961ca849d4bf2e9d807e73cb723",
+    "docs/evaluation/UNIFIED_120_COMPARISON.md": "7cf2c67deb7a3bd03ac1ba4da30029f958a942c0df0e3959da96cbcdc6f527e1",
+    "docs/final_report_support/00_executive_summary.md": "2afb2bf86f1d2e85cf5fd977f42a8efe3da7c10ec8da96d4a3e8519d05a0f9bc",
+    "docs/final_report_support/01_project_retrospective.md": "87c411f00d178cf21ab2a7b93e40eb324914e6817d423462a39cc3d7117d4ce9",
+    "docs/final_report_support/11_missing_work_and_priorities.md": "cdbc9416d68ee6b0f0a1d264d81c8a99a449e2ac06ae682906763c770b51be5d",
+    "docs/final_report_support/13_final_report_outline.md": "64672905ce9210960e8fd8d91975129c0645d05ffdff70c9b590fdcfdbd35998",
+    "docs/final_report_support/README.md": "de493db118a0d59225e074c1c08a40b6787440b8ea643b32c791cf1a489f30cd",
+    "docs/project_state.md": "01ba12efa2c4d39beaf0a1aa0a3f435d06d035bd09c426863c249f3fda283329",
+    "experiments/EXP-20261103-001-model-f-source-unified-panel/unified_eval/judge_cache.jsonl": "7d5a0f4f85b7ac3ff271c7801710fa5eb67f057511cfc14ef5759a72c3cac0e5",
+    "experiments/EXP-20261103-001-model-f-source-unified-panel/unified_eval/rows.jsonl": "c8c40585acd8704b3923d09e583fe4944823a166fad7daede3a09e879adc5ece",
+    "experiments/README.md": "5b11e0a5cdc7d260604c9fb08341a14c494a0f391d201e8c4098ddeeea97b798"
+  },
+  "training_code_commit_parity": {
+    "host_finetune/finetune.py": {
+      "historical_blob_sha256": "22661d879c8115e2fb5dc119c7601ed886e3723a2a482cbc368b1d841874444b",
+      "current_commit_blob_sha256": "22661d879c8115e2fb5dc119c7601ed886e3723a2a482cbc368b1d841874444b",
+      "same_at_recorded_commit_and_HEAD": true,
+      "worktree_equal_after_newline_folding": true
+    },
+    "host_finetune/config.py": {
+      "historical_blob_sha256": "f40de072d5583695b407ddd41f337fbd154c465806ea3e304af5d1c5ea96042f",
+      "current_commit_blob_sha256": "f40de072d5583695b407ddd41f337fbd154c465806ea3e304af5d1c5ea96042f",
+      "same_at_recorded_commit_and_HEAD": true,
+      "worktree_equal_after_newline_folding": true
+    },
+    "host_finetune/llama_chat_format.py": {
+      "historical_blob_sha256": "21afdb0ccc4987a8c09085d26d549ffeae2a10229d240ad57fcc0c0160cbd78e",
+      "current_commit_blob_sha256": "21afdb0ccc4987a8c09085d26d549ffeae2a10229d240ad57fcc0c0160cbd78e",
+      "same_at_recorded_commit_and_HEAD": true,
+      "worktree_equal_after_newline_folding": true
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "schema": "project-tasks.v1",
+  "tasks": [
+    {
+      "id": "TASK-001",
+      "objective": "Add a shared Cursor and Codex project-state layer without changing the ML system.",
+      "agent": "cursor",
+      "branch": "model-f-handoff",
+      "depends_on": [],
+      "status": "done",
+      "owns_files": [
+        "AGENTS.md",
+        "docs/project/",
+        "docs/PLAN.md",
+        "docs/PROJECT_CONTEXT.md",
+        "docs/DECISION_LOG.md",
+        "docs/project_state.md",
+        "experiments/README.md",
+        "project_pm/",
+        "tests/test_project_pm.py",
+        ".cursor/"
+      ],
+      "acceptance": [
+        "python -m project_pm check exits 0 on this worktree",
+        "pytest tests/test_project_pm.py passes",
+        "Existing DEC identifiers and frozen experiment directories are unchanged"
+      ],
+      "verification": "2026-11-07: python -m project_pm check exited 0 with 2 known_unregistered_experiment warnings. .venv-test python -m pytest tests/test_project_pm.py -q passed 16 tests.",
+      "decision_id": "DEC-011",
+      "files": [
+        "AGENTS.md",
+        "docs/project/state.json",
+        "docs/project/tasks.json",
+        "docs/project/HANDOFF.md",
+        "project_pm/check.py"
+      ]
+    },
+    {
+      "id": "TASK-002",
+      "objective": "Lightweight read-only check that the recorded gold-family exclusion and the absence of train_26148 match the persisted 21,193-document index, plus a proposed development-question list. Do not rerun historical experiments, regenerate data, or change splits.",
+      "agent": "codex",
+      "branch": "codex/task-002-gold-partition",
+      "depends_on": [
+        "TASK-001"
+      ],
+      "status": "done",
+      "owns_files": [
+        "host_finetune/gold_partition_audit.py",
+        "tests/test_gold_partition_audit.py",
+        "experiments/EXP-20261108-001-gold-partition-audit/",
+        "experiments/EXP-20261108-002-gold-exposure-review/",
+        "experiments/EXP-20261108-003-gold-exposure-review/"
+      ],
+      "acceptance": [
+        "The new experiment manifest records the already published exclusion counts and does not copy source spans into git",
+        "Proposed development ids do not collide with gold_001 through gold_030 or with a gold-overlap family",
+        "The audit does not authorize a split change and does not edit docs/project/, ontology files, or frozen experiments"
+      ],
+      "verification": "2026-11-08: EXP-001 audit preserved; corrected EXP-20261108-003-gold-exposure-review audit checks passed, training input/split hashes match EXP-005, 184/16/4 family-row split mapping checked, 24 development candidates source-reviewed, and 21,193-document index parity passed. Unit-test, manifest, and proposed-state verification: experiments/EXP-20261108-003-gold-exposure-review/raw/verification.json. Owner must apply this proposed snapshot and rerun the full live checker before accepting closure.",
+      "decision_id": "",
+      "files": [
+        "host_finetune/gold_partition_audit.py",
+        "tests/test_gold_partition_audit.py",
+        "experiments/EXP-20261108-001-gold-partition-audit/",
+        "experiments/EXP-20261108-002-gold-exposure-review/",
+        "experiments/EXP-20261108-003-gold-exposure-review/"
+      ]
+    },
+    {
+      "id": "TASK-003",
+      "objective": "Plan the minimum blog claim ontology in a design note. Planning does not wait for TASK-002. Do not implement extraction or open the frozen LightRAG snapshot in this task.",
+      "agent": "cursor",
+      "branch": "cursor/task-003-ontology-plan",
+      "depends_on": [
+        "TASK-001"
+      ],
+      "status": "proposed",
+      "owns_files": [
+        "docs/architecture/ONTOLOGY_PLAN.md"
+      ],
+      "acceptance": [
+        "The note states the closed schema, the blog-only inclusion rule, and the comparison against Model E",
+        "It does not create a graph store, edit host_finetune/gold_partition_audit.py, or edit docs/project/",
+        "Claims without a verbatim support span are specified as not retrievable"
+      ],
+      "verification": "",
+      "decision_id": "",
+      "files": []
+    }
+  ]
+}

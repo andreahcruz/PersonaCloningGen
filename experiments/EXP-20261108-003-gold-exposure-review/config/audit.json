@@ -1,0 +1,102 @@
+{
+  "command": "python -m host_finetune.gold_partition_audit --review",
+  "question_seeds": [
+    [
+      718,
+      "How should a SaaS team hand a customer account to a new owner?"
+    ],
+    [
+      787,
+      "When should a young SaaS company start pursuing enterprise buyers?"
+    ],
+    [
+      812,
+      "What should founders consider before sharing the CEO role?"
+    ],
+    [
+      813,
+      "Which step deserves the most attention when trying to close a sale?"
+    ],
+    [
+      1014,
+      "How should founders think about their ownership by the time of an exit?"
+    ],
+    [
+      1077,
+      "Which habits distinguish exceptional sales representatives?"
+    ],
+    [
+      1259,
+      "How should a founder handle a sales representative who misled customers?"
+    ],
+    [
+      1446,
+      "What are the tradeoffs of releasing a SaaS product very early?"
+    ],
+    [
+      1669,
+      "When is it useful for both founders to attend an investor pitch?"
+    ],
+    [
+      1732,
+      "How can sales managers keep their strongest performers?"
+    ],
+    [
+      1972,
+      "How should a SaaS team approach winning back customers who left?"
+    ],
+    [
+      2298,
+      "How can a cofounder decide whether it is time to leave the company?"
+    ],
+    [
+      3977,
+      "When does increasing prices fail to address the underlying cause of slow growth?"
+    ],
+    [
+      8068,
+      "Under what conditions should a mid-market SaaS vendor build a customer-requested feature?"
+    ],
+    [
+      8349,
+      "Who should choose a young SaaS company's CRM, and why?"
+    ],
+    [
+      8470,
+      "How can a startup relate an advisor's equity grant to the value and timing of their work?"
+    ],
+    [
+      8534,
+      "Which early customer and growth signals suggest product-market fit?"
+    ],
+    [
+      8925,
+      "How can a SaaS founder recognize an emerging brand within a narrow market?"
+    ],
+    [
+      9902,
+      "Which technical experiences should founders seek in engineering and product leaders?"
+    ],
+    [
+      10250,
+      "How can a SaaS founder size a cash reserve for unexpected setbacks?"
+    ],
+    [
+      10983,
+      "How should a SaaS founder weigh customer concentration against opportunities to grow?"
+    ],
+    [
+      11325,
+      "How can an early SaaS team estimate customer lifetime value before it has enough history?"
+    ],
+    [
+      8205,
+      "What does the author's customer-visit example suggest, and what causal claims would go beyond it?"
+    ],
+    [
+      10931,
+      "How can company scale and customer size affect the share of new revenue from existing accounts?"
+    ]
+  ],
+  "selection_rules": "unchanged: train, blog, unchanged role, selected non-gold family, one per family, no existing gold lexical hit"
+}

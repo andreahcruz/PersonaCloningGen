@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-11-08T08:32:32.111877+00:00",
+  "git_commit": "b40ff1738d57e30a06ad2ebd7ba9b4cf6b060f5e",
+  "audit_code_sha256": "8ad3753a43b8ed19deede124377d8c2b8e40d5d33ff3b582387035c4547899c9",
+  "log_sha256": "295155642990e3d331953d09be486bb349e08470b881f0e37b1f3a359884625f",
+  "log_encoding": "UTF-16 BOM",
+  "log_checks": {
+    "full_train_count": true,
+    "full_partition_counts": true,
+    "adapter_saved": true,
+    "head_subset_logged": false
+  },
+  "checkpoint": {
+    "epoch": 2,
+    "global_step": 2674,
+    "max_steps": 2674,
+    "num_train_epochs": 2
+  },
+  "saved_training_arguments": {
+    "per_device_train_batch_size": 1,
+    "num_train_epochs": 2,
+    "max_steps": -1,
+    "gradient_accumulation_steps": 16,
+    "load_best_model_at_end": true,
+    "seed": 42,
+    "dataloader_drop_last": false,
+    "train_sampling_strategy": "random",
+    "dataset_text_field": "text",
+    "max_length": 512,
+    "packing": false,
+    "completion_only_loss": null,
+    "assistant_only_loss": false
+  },
+  "execution_command": ".\\.venv-test\\Scripts\\python.exe -c \"from host_finetune.gold_partition_audit import *; t=read_training_log(TRAIN_RUN/'raw/train.log'); s=json.loads(TRAINER_STATE.read_text()); print(json.dumps({'timestamp':datetime.now(timezone.utc).isoformat(),'git_commit':git('rev-parse','HEAD'),'audit_code_sha256':file_sha256(Path('host_finetune/gold_partition_audit.py')),'log_sha256':file_sha256(TRAIN_RUN/'raw/train.log'),'log_encoding':'UTF-16 BOM','log_checks':{'full_train_count':'Num examples = 21,377' in t,'full_partition_counts':'train=21377 eval=2588' in t,'adapter_saved':'Saving LoRA adapter ->' in t,'head_subset_logged':'FINETUNE_TRAIN_HEAD_N=' in t},'checkpoint':{k:s[k] for k in ['epoch','global_step','max_steps','num_train_epochs']},'saved_training_arguments':saved_training_arguments(TRAINER_STATE.parent/'training_args.bin')},indent=2))\""
+}

@@ -1,0 +1,34 @@
+{
+  "timestamp": "2026-11-08T08:09:50.830817+00:00",
+  "git": {
+    "commit": "b40ff1738d57e30a06ad2ebd7ba9b4cf6b060f5e",
+    "branch": "codex/task-002-gold-partition",
+    "dirty": true
+  },
+  "input_sha256": {
+    "experiments/EXP-20261003-004-relabel-continuations/raw/dataset.jsonl": "1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b",
+    "experiments/EXP-20261003-004-relabel-continuations/raw/split_assignments.jsonl": "6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb",
+    "experiments/EXP-20261003-003-complete-source-sft-v3/raw/dispositions.jsonl": "e91d17a948d3dd77cf95922560a4943830f68795094bdcee160336c9487097ec",
+    "data/openai_ft/lemkin_gold_eval.jsonl": "d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e",
+    "experiments/EXP-20261004-009-dense-rag-v1/metrics/corpus.json": "73dcb740bce10ee966bafa95dfba758cc6c640d336b135b3e59db98462d44b0c",
+    "experiments/EXP-20261003-004-relabel-continuations/manifest.yaml": "9cfe50206fb0e4584add4cc157ff27151181dec92ded55da6471e450040ec353",
+    "host_finetune/gold_partition_audit.py": "467d2e4a2bff71946856bc9187e207a0912e8f37390a8298595ae3e1dabb1952",
+    "tests/test_gold_partition_audit.py": "a108793aa976827141f4afbe816304b1024f0c83a65cd46c1f463faf9a16bf75",
+    "host_finetune/output/chroma_lemkin_train_only/chroma.sqlite3": "a87c12d31eda36cc81f831bb6b5114d3c545e5e98e1fb20836a7ca718b1e7bb9",
+    "data/jasonlemkin_blog.jsonl": "8492ef11acacd767ce6bcdbdf6215467b6ba74d3e57dc50ffcd0af7deebc34a8",
+    "data/jasonlemkinlinkedin.jsonl": "a2899576ac75ebb5fe05af15bdd0425eef9636de42bb058e82b9c456ae71ef09",
+    "data/jasonlk_originals.jsonl": "a2021528bf4a34cd34c074d252d6bf246fddbe422033e7b88ebc0e11c74044c1",
+    "data/jasonmlemkinyoutubetranscripts.jsonl": "a943eb049b79b75e6aa17073cfcd4a7431e7a163b3a4276f4f8116cc31a1e337",
+    "data/saastryoutubetranscripts.jsonl": "89e4de78a7e3e947625523b27fbc29a0b75ef217f5c6e7a76d1aaca41916560d",
+    "data/cleaned/jasonlemkin_blog.jsonl": "07dc0623f567ec5e05cee71b3577e62be143ddf651bec4257b9955593f2a7bab",
+    "data/cleaned/jasonlemkinlinkedin.jsonl": "da4361c56f93820291fb583d3386e7a211aadaf9e66d8d0a971873a9920ccbf2",
+    "data/cleaned/jasonlk_originals.jsonl": "e779f42fbb951d6ea4da9e8e35862563bd267d0fb635c2619aefb1ba593770c5",
+    "data/cleaned/jasonmlemkinyoutubetranscripts.jsonl": "e13d7f0a45b4279281dd2ae4946a702b9036b4349ea90a220364d017a18e8484",
+    "data/cleaned/saastryoutubetranscripts.jsonl": "b673ee254840edd2e26bfcd3f8ab88d5033ba8b9f896de73eaccafbf21024cb7"
+  },
+  "index": {
+    "collection_id": "1f1eb529-74cd-4ad5-808a-97952acd868b",
+    "metadata_segment_id": "aea99dd1-b037-4be7-8fc6-5e95a5262e03",
+    "space": "cosine"
+  }
+}

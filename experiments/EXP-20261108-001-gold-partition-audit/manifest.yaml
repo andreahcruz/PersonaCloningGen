@@ -1,0 +1,65 @@
+experiment_id: "EXP-20261108-001-gold-partition-audit"
+timestamp: "2026-11-08T08:09:50.830817+00:00"
+status: "MEASURED"
+execution_commands: ["C:\\Users\\okevi\\SJSU\\DATA298\\298P\\.venv-test\\Scripts\\python.exe -m host_finetune.gold_partition_audit"]
+git:
+  commit: "b40ff1738d57e30a06ad2ebd7ba9b4cf6b060f5e"
+  branch: "codex/task-002-gold-partition"
+  dirty: true
+data:
+  source_manifest: "raw/provenance.json"
+  source_hashes:
+    experiments/EXP-20261003-004-relabel-continuations/raw/dataset.jsonl: "1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b"
+    experiments/EXP-20261003-004-relabel-continuations/raw/split_assignments.jsonl: "6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb"
+    experiments/EXP-20261003-003-complete-source-sft-v3/raw/dispositions.jsonl: "e91d17a948d3dd77cf95922560a4943830f68795094bdcee160336c9487097ec"
+    data/openai_ft/lemkin_gold_eval.jsonl: "d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e"
+    experiments/EXP-20261004-009-dense-rag-v1/metrics/corpus.json: "73dcb740bce10ee966bafa95dfba758cc6c640d336b135b3e59db98462d44b0c"
+    experiments/EXP-20261003-004-relabel-continuations/manifest.yaml: "9cfe50206fb0e4584add4cc157ff27151181dec92ded55da6471e450040ec353"
+    host_finetune/gold_partition_audit.py: "467d2e4a2bff71946856bc9187e207a0912e8f37390a8298595ae3e1dabb1952"
+    tests/test_gold_partition_audit.py: "a108793aa976827141f4afbe816304b1024f0c83a65cd46c1f463faf9a16bf75"
+    host_finetune/output/chroma_lemkin_train_only/chroma.sqlite3: "a87c12d31eda36cc81f831bb6b5114d3c545e5e98e1fb20836a7ca718b1e7bb9"
+    data/jasonlemkin_blog.jsonl: "8492ef11acacd767ce6bcdbdf6215467b6ba74d3e57dc50ffcd0af7deebc34a8"
+    data/jasonlemkinlinkedin.jsonl: "a2899576ac75ebb5fe05af15bdd0425eef9636de42bb058e82b9c456ae71ef09"
+    data/jasonlk_originals.jsonl: "a2021528bf4a34cd34c074d252d6bf246fddbe422033e7b88ebc0e11c74044c1"
+    data/jasonmlemkinyoutubetranscripts.jsonl: "a943eb049b79b75e6aa17073cfcd4a7431e7a163b3a4276f4f8116cc31a1e337"
+    data/saastryoutubetranscripts.jsonl: "89e4de78a7e3e947625523b27fbc29a0b75ef217f5c6e7a76d1aaca41916560d"
+    data/cleaned/jasonlemkin_blog.jsonl: "07dc0623f567ec5e05cee71b3577e62be143ddf651bec4257b9955593f2a7bab"
+    data/cleaned/jasonlemkinlinkedin.jsonl: "da4361c56f93820291fb583d3386e7a211aadaf9e66d8d0a971873a9920ccbf2"
+    data/cleaned/jasonlk_originals.jsonl: "e779f42fbb951d6ea4da9e8e35862563bd267d0fb635c2619aefb1ba593770c5"
+    data/cleaned/jasonmlemkinyoutubetranscripts.jsonl: "e13d7f0a45b4279281dd2ae4946a702b9036b4349ea90a220364d017a18e8484"
+    data/cleaned/saastryoutubetranscripts.jsonl: "b673ee254840edd2e26bfcd3f8ab88d5033ba8b9f896de73eaccafbf21024cb7"
+  processed_dataset_hash: "1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b"
+  split_manifest_hash: "6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb"
+  gold_eval_hash: "d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e"
+rag:
+  persona_profile_hash: "n/a: no retrieval"
+  chroma_collection: "lemkin_train_only"
+  index_version_or_snapshot:
+    collection_id: "1f1eb529-74cd-4ad5-808a-97952acd868b"
+    metadata_segment_id: "aea99dd1-b037-4be7-8fc6-5e95a5262e03"
+    space: "cosine"
+    sqlite_sha256: "a87c12d31eda36cc81f831bb6b5114d3c545e5e98e1fb20836a7ca718b1e7bb9"
+    logical_content_sha256: "3f6927b77a0cb0b0ff2c5612c843b4c81ce7f3b10e48cc6f3d8e99e75f90f4bd"
+  embedding_model: "nomic-embed-text (recorded index model; not loaded or independently verified)"
+model:
+  model_name: "n/a: no model executed"
+  model_or_adapter_hash: "n/a: no weights accessed"
+  config: "config/audit.json"
+  random_seed: "n/a: deterministic, no sampling"
+evaluation:
+  evaluator_commit: "b40ff1738d57e30a06ad2ebd7ba9b4cf6b060f5e"
+  judge_model: "n/a: no scoring"
+  judge_config: "n/a: no judge"
+  audit_code_sha256: "467d2e4a2bff71946856bc9187e207a0912e8f37390a8298595ae3e1dabb1952"
+environment:
+  python_version: "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]"
+  package_snapshot: "config/packages.txt"
+  hardware: "CPU only; Windows-10-10.0.26200-SP0; AMD64; GPU unused"
+outputs:
+  raw: ["raw/audit.json", "raw/provenance.json", "raw/development_questions.jsonl", "raw/verification.json"]
+  metrics: ["metrics/checks.json"]
+  warnings_and_failures:
+    failures: []
+    post_run_verification: "raw/verification.json: 51 tests passed, 1 live-project-state test failed; full project_pm check reports stale branch and three unlisted owned paths. Manifest and --no-git checks pass. Shared state edits prohibited by user."
+    interrupted_attempt: "Initial CPU-only attempt interrupted before any artifacts were written; repeated single-field normalization replaced with existing batched matcher before the registered execution."
+    limitations: ["Lexical audit uses existing exact/title/8-word containment and token Jaccard >=0.80 rules; semantic paraphrases and unrecorded source-family links can remain undetected.", "Gold is the reused 30-topic comparison benchmark, not an untouched final test.", "Family exclusions apply to retrieval selection, not removal from the frozen fine-tuning dataset. Overlap rows by split remain present there; no split changes are authorized.", "Questions are manually paraphrased proposals anchored to unchanged train blog rows. They are neither independent test items nor verified answerable benchmarks; human review is still needed.", "No source bodies, answers, or expected facts exported. No training, model generation, scoring, embedding, vector search, or graph access performed.", "SQLite metadata/content parity does not validate HNSW vectors or retrieval quality. No historical experiment was rerun.", "Shared project state intentionally unchanged under user instructions; task status and branch fields require owner reconciliation."]

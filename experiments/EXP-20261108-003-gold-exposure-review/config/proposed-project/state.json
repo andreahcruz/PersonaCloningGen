@@ -1,0 +1,92 @@
+{
+  "schema": "project-state.v1",
+  "updated": "2026-11-08",
+  "git": {
+    "branch": "codex/task-002-gold-partition",
+    "commit": "b40ff1738d57e30a06ad2ebd7ba9b4cf6b060f5e",
+    "worktree": "dirty",
+    "known_dirty_prefixes": [
+      "experiments/EXP-20261102-001-model-f-unified-panel/raw.zip",
+      "experiments/EXP-20261103-001-model-f-source-unified-panel/",
+      "experiments/EXP-20261103-002-model-f-desc-unified-panel/",
+      "AGENTS.md",
+      "docs/PLAN.md",
+      "docs/PROJECT_CONTEXT.md",
+      "docs/DECISION_LOG.md",
+      "docs/project_state.md",
+      "docs/project/",
+      "docs/evaluation/UNIFIED_120_COMPARISON.md",
+      "docs/final_report_support/",
+      "experiments/README.md",
+      "project_pm/",
+      "tests/test_project_pm.py",
+      ".cursor/",
+      "host_finetune/gold_partition_audit.py",
+      "tests/test_gold_partition_audit.py",
+      "experiments/EXP-20261108-001-gold-partition-audit/",
+      "experiments/EXP-20261108-002-gold-exposure-review/",
+      "experiments/EXP-20261108-003-gold-exposure-review/"
+    ]
+  },
+  "phase": "ready-for-ontology-planning",
+  "next_task": "TASK-003",
+  "objective": "Generate author-faithful Jason Lemkin / SaaStr B2B content and measure what improves quality.",
+  "scored_research_path": "host_finetune/",
+  "historical_application_path": "generate.py, backend/main.py, and Chroma collection lemkin_content",
+  "implemented": [
+    "Relabel QLoRA adapter lemkin_lora_relabel from EXP-20261003-005",
+    "Train-only dense retrieval lemkin_train_only and atomic evidence (Model E)",
+    "LightRAG hybrid retrieval with source-checked relationship lines (Model F, official profile F-REL)",
+    "unified_eval.v1 judged by qwen2.5:14b"
+  ],
+  "not_implemented": [
+    "Typed ontology-grounded retrieval (DEC-010: LightRAG is not that system)",
+    "A second fine-tune",
+    "An independent final evaluation set"
+  ],
+  "blockers": [
+    "Demo UI in this checkout still calls the older generate.py path and has no LightRAG route",
+    "F-SOURCE and F-DESC 120-cell panels are uncommitted and are not the published comparison"
+  ],
+  "results_authority": "results/model-f-handoff-v1 for official Model F profile F-REL. Uncommitted EXP-20261103-001 F-SOURCE and EXP-20261103-002 F-DESC are unregistered and are not that result.",
+  "chroma_train_only": {
+    "collection": "lemkin_train_only",
+    "current_document_count": 21193,
+    "authority": "experiments/EXP-20261004-009-dense-rag-v1/metrics/corpus.json",
+    "train_26148_present": false,
+    "historical_exit_count": 21194,
+    "historical_meaning": "2026-10-04 rebuild log and the selection before headline removal of train_26148. Preserved in the train-only DEC-007 record and docs/project_state.md."
+  },
+  "decision_identifier_collision": "Two DEC-007 headings remain. The earlier is voice preference. The later is the train-only index. They were not renumbered.",
+  "evaluation": {
+    "gold_path": "data/openai_ft/lemkin_gold_eval.jsonl",
+    "gold_sha256": "d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e",
+    "topics": 30,
+    "role": "Established 30-topic development and comparison benchmark. The train-only DEC-007 record keeps gold-overlap families out of the index. The same topics were reused for development comparisons, so this file is not an untouched final test.",
+    "leakage_audit": "TASK-002: EXP-20261108-003-gold-exposure-review. Verified 184 train, 16 validation, 4 test gold-family rows; 184 are actual training-dataset members, with completed two-epoch consumption strongly supported but no per-row ledger. 24 proposed train-source development questions; exact gold-family exclusions retained in the 21,193-document index. Gold remains a reused comparison benchmark, not an independent final test.",
+    "future_sets": "Use new questions to tune ontology retrieval, then an independent final comparison of the selected architectures."
+  },
+  "experiments": {
+    "validate_id_date_on_or_after": "20261108",
+    "known_unregistered": [
+      "experiments/EXP-20261103-001-model-f-source-unified-panel",
+      "experiments/EXP-20261103-002-model-f-desc-unified-panel"
+    ],
+    "frozen_do_not_edit": [
+      "experiments/EXP-20261102-001-model-f-unified-panel"
+    ]
+  },
+  "evidence": [
+    "docs/DECISION_LOG.md",
+    "docs/model_f_architecture.md",
+    "docs/final_report_support/00_executive_summary.md",
+    "experiments/README.md",
+    "data/openai_ft/lemkin_gold_eval.jsonl",
+    "experiments/EXP-20261003-005-relabel-qlora/manifest.yaml",
+    "experiments/EXP-20261005-003-relabel-rag-final/manifest.yaml",
+    "experiments/EXP-20261004-009-dense-rag-v1/metrics/corpus.json",
+    "results/model-f-handoff-v1/architecture_comparison.json",
+    "experiments/EXP-20261108-003-gold-exposure-review/manifest.yaml",
+    "experiments/EXP-20261108-003-gold-exposure-review/notes.md"
+  ]
+}

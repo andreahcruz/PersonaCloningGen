@@ -1,0 +1,47 @@
+# TASK-002 corrected training-exposure and development-question review
+
+This is the successful corrected CPU-only follow-up to EXP-20261108-002-gold-exposure-review. That incomplete attempt and the finished EXP-20261108-001-gold-partition-audit were preserved byte-for-byte during execution. The previous attempt's UTF-16 log-decoding defect was fixed with BOM-aware strict decoding and regression tests. All nine audit checks passed in this run. This run audits data and recorded training evidence; it does not train, run, or score a model.
+
+## Training evidence and interpretation
+
+The EXP-005 command names EXP-004 raw/dataset.jsonl and raw/split_assignments.jsonl. The dataset SHA-256 is 1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b and the split SHA-256 is 6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb, matching the frozen training manifest. The split header also binds those dataset bytes. The actual loader body was reused without importing the GPU trainer, and the existing split-verification and selection functions were reused.
+
+The 26,545-row file supplies 21,377 training rows, 2,588 validation rows, and 2,580 held-out test rows. All 184 gold-family train rows are members of the actual training selection, not merely of an upstream source corpus. The 16 gold-family validation rows are used for validation loss/checkpoint selection rather than gradient training. The four test-family rows enter neither trainer dataset. Existing Relabel preprocessing already filtered unsuitable fragments, retained the selected output bodies, relabeled opening/continuation instructions, and inherited split ownership. The trainer skips preparation when SPLIT_MANIFEST is set, maps rows to chat text, and selects by the recorded split; it does not apply the retrieval-only gold-family exclusions to fine-tuning.
+
+The decoded registered log records 21,377 examples, two epochs, 2,674 optimizer steps, and adapter saving. The saved checkpoint records epoch 2.0 and global step 2,674. Safe scalar opcode inspection of training_args.bin confirms random sampling, no dropped final batch, two epochs, no explicit step cap, batch 1, accumulation 16, seed 42, packing off, and a 512-token limit. The current trainer, configuration, and chat-format code match the training commit and current HEAD after newline folding. These observations strongly support consumption of the 184 selected rows during the completed training run.
+
+Individual visits and effective loss tokens are not independently proved: there is no per-row batch ledger or frozen tokenized dataset. The run was dirty and recorded no runtime code hashes or complete dependency lock, so exact historical runtime identity is not proved by committed-code correspondence. The assistant-only Unsloth masking wrapper is distinct from the saved TRL assistant_only_loss=false flag. Instruction labels are masked, but prompt content still conditions target prediction. No weights, optimizer state, serialized Python object, or model was loaded; the saved arguments were inspected without executing pickle instructions.
+
+## Literal text and source-family distinctions
+
+There are 149 selected train instructions containing a complete gold-topic string as a case-sensitive literal substring, and four selected train outputs containing a complete topic string. Across both locations, 24 gold topic IDs appear. No complete gold reference or complete expected-fact string appears verbatim in train outputs under the complete-field check. Partial answer phrases or paraphrases are not ruled out.
+
+None of the complete training user messages equals a current retrieval-off benchmark user message: zero exact matches in train, validation, or test. These complete-message checks reuse prompt_for and user_message_from_alpaca_row. Literal topic exposure therefore must not be described as an exact match of the full benchmark prompt. Complete chat token sequences and historical retrieval-on prompts were not compared.
+
+Of the 184 train-family rows, 77 directly match a gold field under the existing output/title lexical predicates; 107 are sibling-family members without a direct output/title match. Family linkage, punctuation/URL-normalized matches, containment, Jaccard >=0.80 near-duplicates, and semantic paraphrases are different types of evidence. This audit does not quantify semantic similarity or certify semantic independence.
+
+Author-corpus familiarity is intended for this project. The findings do not establish that every family overlap is invalid leakage, quantify bias in the existing scores, prove memorization, or justify retraining. Literal topic exposure plus benchmark reuse limits claims of unseen-question performance and independent final generalization. Existing comparisons remain controlled comparisons on a reused benchmark, subject to their existing gates and diagnostic-score policy. No evaluation policy is changed here.
+
+## Retrieval isolation
+
+The current lemkin_train_only collection has 21,193 documents and exactly matches the existing selection in IDs, bodies, and metadata. train_26148 is absent. No selected gold-family document or remaining gold-field lexical match is detected. EXP-005 had no retrieval stage. The earlier family-only selection of 21,194 included train_26148 before the existing headline exclusion; the precise historical removal time and every earlier request's exposure cannot be reconstructed here. The broad lemkin_content collection, HNSW vector integrity, and frozen graph snapshots were not audited. No blanket isolation claim is made for those resources.
+
+## Development questions
+
+The original shortfall was an omission: the first implementation supplied 12 hard-coded seeds and rejected none. No eligibility limit forced the count, and tasks.json did not encode a numerical target. This corrected run produces 24 proposed questions using unchanged rules: selected train rows, blog medium, unchanged role, outside detected gold families, one per family, and no gold lexical match in the question or source body/title.
+
+All 24 have distinct family IDs, source hashes, cleaned-source file/line locators, source URLs/dates, and available source bodies containing the selected output after normalization. The first 12 question IDs/texts are retained. No exact or near-duplicate pair was detected among the questions or their source bodies. Per-question topic/review annotations are in raw/development_questions.jsonl; the review summary is raw/question_review.json.
+
+The expansion adds pricing, custom-feature conditions, executive tool choice, advisor compensation, product-market fit, brand, technical hiring, cash planning, concentration risk, lifetime value, customer visits, and revenue expansion. Broad themes still intersect gold, especially enterprise sales and founder departure. The set emphasizes founder-advice blogs rather than all media or claim types. Numerical claims remain source-era observations needing attribution and dates. Source availability and manual relevance review are not measured retrieval recall or validated ontology quality. These are train/retrieval-exposed development questions, not an independent final test, and no ontology or answer key was implemented.
+
+## Verification and closure
+
+Exact commands and exit codes are recorded in raw/verification.json after final checks. All 52 audit, train-selection, split, and relabel unit tests pass. The combined run with project-management tests has 67 passes and one failure, test_live_repository_check. Manifest validation passes. The structural checker (--no-git) passes with the two known unregistered-experiment warnings.
+
+The live checker reports stale_branch and five unlisted TASK-002 paths. The original three paths are already owned in tasks.json, but status proposed makes them inactive for the checker. The two additional run directories need ownership registration. These are stale operational state/task-configuration issues. The separate audit log-decoding implementation defect has been corrected and tested.
+
+config/coordination-proposal.patch and config/proposed-project/ contain exact owner-review changes to state.json, tasks.json, and HANDOFF.md. The proposed snapshot records the current branch, updates ownership and verification, registers only the five exact still-uncommitted owned paths through existing known_dirty_prefixes for closure, and points TASK-003 at design-note planning. It does not switch branches or alter validation rules. raw/coordination_proposal.json records a dry run of the real full checker with only the proposed document contents substituted; live files remain unchanged. Check the recorded current hashes and concurrent Cursor work before applying the approved snapshot.
+
+The technical acceptance items are satisfied: registered exclusion counts and provenance, no exported source spans, 24 distinct non-gold-family candidate IDs, unchanged protected inputs, and no split changes. TASK-002 remains open in shared state until the owner approves/applies coordination changes and the full live checker/test pass. Historical artifacts, datasets, splits, model weights, indexes, graph snapshots, and unrelated changes were preserved. No training, model evaluation, ontology implementation, commit, merge, push, or deployment occurred.
+
+Recommendation: approve the exact coordination patch, apply its three files together, rerun the full checker and live-state test, then close TASK-002 and begin TASK-003 planning only.

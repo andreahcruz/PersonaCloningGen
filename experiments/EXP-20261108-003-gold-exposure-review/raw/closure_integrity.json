@@ -1,0 +1,15 @@
+{
+  "snapshotted_input_count": 67,
+  "approved_shared_state_changes": [
+    "docs/project/state.json",
+    "docs/project/tasks.json",
+    "docs/project/HANDOFF.md"
+  ],
+  "unexpected_snapshot_changes": [],
+  "approved_content_mismatches": [],
+  "task_002_status": "done",
+  "next_task": "TASK-003",
+  "recorded_branch": "codex/task-002-gold-partition",
+  "task_003_status": "proposed",
+  "execution_command": ".\\.venv-test\\Scripts\\python.exe -c \"from pathlib import Path; import json; from host_finetune.split_groups import file_sha256; root=Path.cwd(); run=root/'experiments/EXP-20261108-003-gold-exposure-review'; p=json.loads((run/'raw/provenance.json').read_text()); approved=json.loads((run/'raw/approved_coordination_update.json').read_text()); allowed={x['path']:x['after_bytes_sha256'] for x in approved['changes']}; changed=[s for s,h in p['input_sha256'].items() if file_sha256(root/s)!=h]; unexpected=[s for s in changed if s not in allowed]; bad_approved=[s for s,h in allowed.items() if file_sha256(root/s)!=h]; state=json.loads((root/'docs/project/state.json').read_text()); tasks=json.loads((root/'docs/project/tasks.json').read_text()); task=next(x for x in tasks['tasks'] if x['id']=='TASK-002'); result={'snapshotted_input_count':len(p['input_sha256']),'approved_shared_state_changes':changed,'unexpected_snapshot_changes':unexpected,'approved_content_mismatches':bad_approved,'task_002_status':task['status'],'next_task':state['next_task'],'recorded_branch':state['git']['branch'],'task_003_status':next(x['status'] for x in tasks['tasks'] if x['id']=='TASK-003')}; print(json.dumps(result,indent=2)); assert not unexpected and not bad_approved; assert task['status']=='done' and state['next_task']=='TASK-003'\""
+}

@@ -1,0 +1,68 @@
+{
+  "timestamp": "2026-11-08T22:13:32.167325+00:00",
+  "validation": {
+    "documents": [
+      {
+        "record_id": "document:df113b3b90adca9ee746d1567a52c2203de83fb5647a43fb437edfa7f366b3ad",
+        "state": "pending_review",
+        "reasons": [
+          "human_review_pending"
+        ]
+      },
+      {
+        "record_id": "document:f7328e23e82542c396c4628545ce1704a50595a6fd1a34703d0e756b65b9eea7",
+        "state": "pending_review",
+        "reasons": [
+          "human_review_pending"
+        ]
+      },
+      {
+        "record_id": "document:17c4d68fa9ce96b3490d5569f1361a42a22909b1a26a2ac21b15ba2b387dce7b",
+        "state": "pending_review",
+        "reasons": [
+          "human_review_pending"
+        ]
+      },
+      {
+        "record_id": "document:3f1fe0a55dbc8e7f5aa8a4bb1dfab4863ba678f4a0009c37a73e7f8466a555b9",
+        "state": "pending_review",
+        "reasons": [
+          "human_review_pending"
+        ]
+      },
+      {
+        "record_id": "document:4e19ee6711a209ab340771263d3d19a9bbd163291b32ce19fd27370e3b8d50e1",
+        "state": "pending_review",
+        "reasons": [
+          "human_review_pending"
+        ]
+      }
+    ],
+    "assertions": []
+  },
+  "final_input_sha256": {
+    "experiments/EXP-20261003-004-relabel-continuations/raw/dataset.jsonl": "1231835ecc5dcb608fefa0357d325affb2afbdc3aeade2a63b1dc42b2920897b",
+    "experiments/EXP-20261003-004-relabel-continuations/raw/split_assignments.jsonl": "6e31aedf33bbc81488641e3a2d0d284199bd7c3e724d97d27e801a37010ea7fb",
+    "experiments/EXP-20261003-003-complete-source-sft-v3/raw/dispositions.jsonl": "e91d17a948d3dd77cf95922560a4943830f68795094bdcee160336c9487097ec",
+    "data/openai_ft/lemkin_gold_eval.jsonl": "d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e",
+    "experiments/EXP-20261108-003-gold-exposure-review/raw/development_questions.jsonl": "2a742b6497ba964aff7462339c315e29508ef91601ffafe08ebe05e8140375a8",
+    "data/cleaned/jasonlemkin_blog.jsonl": "07dc0623f567ec5e05cee71b3577e62be143ddf651bec4257b9955593f2a7bab",
+    "data/jasonlemkin_blog.jsonl": "8492ef11acacd767ce6bcdbdf6215467b6ba74d3e57dc50ffcd0af7deebc34a8",
+    "experiments/EXP-20261108-004-ont-01-schema-admission/config/build_admission.py": "5898d1d2720a956100fa787fe4f979ea1134fbc3ad60ff82fc4b96ce90dc57d9",
+    "host_finetune/ontology_contract.py": "306e6a5341f822f4b5bc4240b05254a416a156ff3e5996e58a25ccbb463e5529",
+    "tests/test_ontology_contract.py": "4677b757a17b5bd9bd2aaec68d4eaba8fa99c7c524904fbbe0581b6157fff0de",
+    "host_finetune/graph_ready.py": "a5c67d336525a3febb70164f884078a85880379d31b229f6504353506103bc43",
+    "host_finetune/train_only_index.py": "8f05df0ffa51a22da9cf4d4e6334aef53bbeca8d4b077e6c23a202bf4d7eabbc",
+    "host_finetune/split_groups.py": "386bf7b0558a43c7b024be98e74859674bf80e356475e97e4b6ec6b1c342bf7a",
+    "host_finetune/rag_active.json": "70067ca99e2e046bafed5d955168e713fdd19975861650da024558f4018b03d8"
+  },
+  "post_build_code_changes": [
+    "host_finetune/ontology_contract.py",
+    "tests/test_ontology_contract.py"
+  ],
+  "post_build_change_reason": "Exact Decimal monetary precision and invalid year-zero quarter regression hardening; initial recorded builder output retained and manifest revalidated with final contracts.",
+  "protected_data_hashes_unchanged": true,
+  "pending": 5,
+  "admitted": 0,
+  "real_assertions": 0
+}

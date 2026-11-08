@@ -1,0 +1,141 @@
+--- a/docs/project/state.json
++++ b/docs/project/state.json
+@@ -1,8 +1,8 @@
+ {
+   "schema": "project-state.v1",
+-  "updated": "2026-11-07",
++  "updated": "2026-11-08",
+   "git": {
+-    "branch": "model-f-handoff",
++    "branch": "codex/task-002-gold-partition",
+     "commit": "b40ff1738d57e30a06ad2ebd7ba9b4cf6b060f5e",
+     "worktree": "dirty",
+     "known_dirty_prefixes": [
+@@ -20,11 +20,16 @@
+       "experiments/README.md",
+       "project_pm/",
+       "tests/test_project_pm.py",
+-      ".cursor/"
++      ".cursor/",
++      "host_finetune/gold_partition_audit.py",
++      "tests/test_gold_partition_audit.py",
++      "experiments/EXP-20261108-001-gold-partition-audit/",
++      "experiments/EXP-20261108-002-gold-exposure-review/",
++      "experiments/EXP-20261108-003-gold-exposure-review/"
+     ]
+   },
+-  "phase": "ready-for-parallel-prep",
+-  "next_task": "TASK-002",
++  "phase": "ready-for-ontology-planning",
++  "next_task": "TASK-003",
+   "objective": "Generate author-faithful Jason Lemkin / SaaStr B2B content and measure what improves quality.",
+   "scored_research_path": "host_finetune/",
+   "historical_application_path": "generate.py, backend/main.py, and Chroma collection lemkin_content",
+@@ -58,7 +63,7 @@
+     "gold_sha256": "d7c4f997899e28f28eb3ea9aa3417857da6f0666acbf72fd8ac31422034e520e",
+     "topics": 30,
+     "role": "Established 30-topic development and comparison benchmark. The train-only DEC-007 record keeps gold-overlap families out of the index. The same topics were reused for development comparisons, so this file is not an untouched final test.",
+-    "leakage_audit": "TASK-002 is a lightweight check and development-question list. It does not rerun historical experiments and does not block TASK-003 planning.",
++    "leakage_audit": "TASK-002: EXP-20261108-003-gold-exposure-review. Verified 184 train, 16 validation, 4 test gold-family rows; 184 are actual training-dataset members, with completed two-epoch consumption strongly supported but no per-row ledger. 24 proposed train-source development questions; exact gold-family exclusions retained in the 21,193-document index. Gold remains a reused comparison benchmark, not an independent final test.",
+     "future_sets": "Use new questions to tune ontology retrieval, then an independent final comparison of the selected architectures."
+   },
+   "experiments": {
+@@ -80,6 +85,8 @@
+     "experiments/EXP-20261003-005-relabel-qlora/manifest.yaml",
+     "experiments/EXP-20261005-003-relabel-rag-final/manifest.yaml",
+     "experiments/EXP-20261004-009-dense-rag-v1/metrics/corpus.json",
+-    "results/model-f-handoff-v1/architecture_comparison.json"
++    "results/model-f-handoff-v1/architecture_comparison.json",
++    "experiments/EXP-20261108-003-gold-exposure-review/manifest.yaml",
++    "experiments/EXP-20261108-003-gold-exposure-review/notes.md"
+   ]
+ }
+--- a/docs/project/tasks.json
++++ b/docs/project/tasks.json
+@@ -40,28 +40,40 @@
+       "objective": "Lightweight read-only check that the recorded gold-family exclusion and the absence of train_26148 match the persisted 21,193-document index, plus a proposed development-question list. Do not rerun historical experiments, regenerate data, or change splits.",
+       "agent": "codex",
+       "branch": "codex/task-002-gold-partition",
+-      "depends_on": ["TASK-001"],
+-      "status": "proposed",
++      "depends_on": [
++        "TASK-001"
++      ],
++      "status": "done",
+       "owns_files": [
+         "host_finetune/gold_partition_audit.py",
+         "tests/test_gold_partition_audit.py",
+-        "experiments/EXP-20261108-001-gold-partition-audit/"
++        "experiments/EXP-20261108-001-gold-partition-audit/",
++        "experiments/EXP-20261108-002-gold-exposure-review/",
++        "experiments/EXP-20261108-003-gold-exposure-review/"
+       ],
+       "acceptance": [
+         "The new experiment manifest records the already published exclusion counts and does not copy source spans into git",
+         "Proposed development ids do not collide with gold_001 through gold_030 or with a gold-overlap family",
+         "The audit does not authorize a split change and does not edit docs/project/, ontology files, or frozen experiments"
+       ],
+-      "verification": "",
++      "verification": "2026-11-08: EXP-001 audit preserved; corrected EXP-20261108-003-gold-exposure-review audit checks passed, training input/split hashes match EXP-005, 184/16/4 family-row split mapping checked, 24 development candidates source-reviewed, and 21,193-document index parity passed. Unit-test, manifest, and proposed-state verification: experiments/EXP-20261108-003-gold-exposure-review/raw/verification.json. Owner must apply this proposed snapshot and rerun the full live checker before accepting closure.",
+       "decision_id": "",
+-      "files": []
++      "files": [
++        "host_finetune/gold_partition_audit.py",
++        "tests/test_gold_partition_audit.py",
++        "experiments/EXP-20261108-001-gold-partition-audit/",
++        "experiments/EXP-20261108-002-gold-exposure-review/",
++        "experiments/EXP-20261108-003-gold-exposure-review/"
++      ]
+     },
+     {
+       "id": "TASK-003",
+       "objective": "Plan the minimum blog claim ontology in a design note. Planning does not wait for TASK-002. Do not implement extraction or open the frozen LightRAG snapshot in this task.",
+       "agent": "cursor",
+       "branch": "cursor/task-003-ontology-plan",
+-      "depends_on": ["TASK-001"],
++      "depends_on": [
++        "TASK-001"
++      ],
+       "status": "proposed",
+       "owns_files": [
+         "docs/architecture/ONTOLOGY_PLAN.md"
+--- a/docs/project/HANDOFF.md
++++ b/docs/project/HANDOFF.md
+@@ -1,15 +1,15 @@
+ # Session handoff
+ 
+-- updated: 2026-11-07
++- updated: 2026-11-08
+ - git_commit: b40ff1738d57e30a06ad2ebd7ba9b4cf6b060f5e
+-- git_branch: model-f-handoff
+-- active_task: TASK-002
++- git_branch: codex/task-002-gold-partition
++- active_task: TASK-003
+ - session: active
+-- next_action: Assign TASK-002 to Codex on branch codex/task-002-gold-partition. Cursor may plan TASK-003 only inside docs/architecture/ONTOLOGY_PLAN.md. Neither agent edits docs/project/ while the other is working.
++- next_action: Begin TASK-003 planning only in docs/architecture/ONTOLOGY_PLAN.md on its assigned branch when the owner starts it. Do not implement ontology extraction or alter frozen data or indexes.
+ 
+ ## Current context
+ 
+-Phase is `ready-for-parallel-prep`. Official Model F is F-REL in `results/model-f-handoff-v1`. Persisted `lemkin_train_only` has 21,193 documents. The 21,194 figure is the 2026-10-04 exit log. Two DEC-007 headings remain on purpose.
++Phase is `ready-for-ontology-planning`. Official Model F is F-REL in `results/model-f-handoff-v1`. Persisted `lemkin_train_only` has 21,193 documents. The 21,194 figure is the 2026-10-04 exit log. Two DEC-007 headings remain on purpose.
+ 
+ ## Latest completed work
+ 
+@@ -17,7 +17,7 @@
+ 
+ ## Agent boundaries
+ 
+-Codex, TASK-002, status proposed: `host_finetune/gold_partition_audit.py`, `tests/test_gold_partition_audit.py`, and `experiments/EXP-20261108-001-gold-partition-audit/`. Read-only against existing indexes and splits. Do not rerun historical experiments.
++Codex, TASK-002, status done after owner applies this closure snapshot and verifies the live checker: `host_finetune/gold_partition_audit.py`, `tests/test_gold_partition_audit.py`, and `experiments/EXP-20261108-001-gold-partition-audit/`. Also owns `experiments/EXP-20261108-002-gold-exposure-review/` (incomplete UTF-16 parsing attempt) and `experiments/EXP-20261108-003-gold-exposure-review/` (corrected follow-up). See that run's notes and verification. Read-only against existing indexes and splits. Do not rerun historical experiments.
+ 
+ Cursor, TASK-003, status proposed: `docs/architecture/ONTOLOGY_PLAN.md` only. Planning does not wait for TASK-002. Do not implement extraction in this task.
+ 
+@@ -33,3 +33,7 @@
+ - `docs/evaluation/UNIFIED_120_COMPARISON.md`
+ - `results/model-f-handoff-v1/architecture_comparison.json`
+ - `experiments/EXP-20261004-009-dense-rag-v1/metrics/corpus.json`
++
++## TASK-002 closure evidence
++
++Corrected follow-up: `experiments/EXP-20261108-003-gold-exposure-review/notes.md`. 184 gold-family train rows were selected by the historical trainer; completed two-epoch consumption is strongly supported, without per-row proof. Literal topic exposure limits independent-question claims; it is not automatic invalid leakage. The 24 development questions are proposed train-source material. Retrieval parity is unchanged. No retraining or split change is authorized. TASK-003 remains planning only.

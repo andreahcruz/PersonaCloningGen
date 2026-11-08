@@ -1,0 +1,155 @@
+{
+  "schema": "project-tasks.v1",
+  "tasks": [
+    {
+      "id": "TASK-001",
+      "objective": "Add a shared Cursor and Codex project-state layer without changing the ML system.",
+      "agent": "cursor",
+      "branch": "model-f-handoff",
+      "depends_on": [],
+      "status": "done",
+      "owns_files": [
+        "AGENTS.md",
+        "docs/project/",
+        "docs/PLAN.md",
+        "docs/PROJECT_CONTEXT.md",
+        "docs/DECISION_LOG.md",
+        "docs/project_state.md",
+        "experiments/README.md",
+        "project_pm/",
+        "tests/test_project_pm.py",
+        ".cursor/"
+      ],
+      "acceptance": [
+        "python -m project_pm check exits 0 on this worktree",
+        "pytest tests/test_project_pm.py passes",
+        "Existing DEC identifiers and frozen experiment directories are unchanged"
+      ],
+      "verification": "2026-11-07: python -m project_pm check exited 0 with 2 known_unregistered_experiment warnings. .venv-test python -m pytest tests/test_project_pm.py -q passed 16 tests.",
+      "decision_id": "DEC-011",
+      "files": [
+        "AGENTS.md",
+        "docs/project/state.json",
+        "docs/project/tasks.json",
+        "docs/project/HANDOFF.md",
+        "project_pm/check.py"
+      ]
+    },
+    {
+      "id": "TASK-002",
+      "objective": "Lightweight read-only check that the recorded gold-family exclusion and the absence of train_26148 match the persisted 21,193-document index, plus a proposed development-question list. Do not rerun historical experiments, regenerate data, or change splits.",
+      "agent": "codex",
+      "branch": "codex/task-002-gold-partition",
+      "depends_on": [
+        "TASK-001"
+      ],
+      "status": "done",
+      "owns_files": [
+        "host_finetune/gold_partition_audit.py",
+        "tests/test_gold_partition_audit.py",
+        "experiments/EXP-20261108-001-gold-partition-audit/",
+        "experiments/EXP-20261108-002-gold-exposure-review/",
+        "experiments/EXP-20261108-003-gold-exposure-review/"
+      ],
+      "acceptance": [
+        "The new experiment manifest records the already published exclusion counts and does not copy source spans into git",
+        "Proposed development ids do not collide with gold_001 through gold_030 or with a gold-overlap family",
+        "The audit does not authorize a split change and does not edit docs/project/, ontology files, or frozen experiments"
+      ],
+      "verification": "2026-11-08: EXP-001 audit preserved; corrected EXP-20261108-003-gold-exposure-review audit checks passed, training input/split hashes match EXP-005, 184/16/4 family-row split mapping checked, 24 development candidates source-reviewed, and 21,193-document index parity passed. Unit-test, manifest, and proposed-state verification: experiments/EXP-20261108-003-gold-exposure-review/raw/verification.json. Owner must apply this proposed snapshot and rerun the full live checker before accepting closure.",
+      "decision_id": "",
+      "files": [
+        "host_finetune/gold_partition_audit.py",
+        "tests/test_gold_partition_audit.py",
+        "experiments/EXP-20261108-001-gold-partition-audit/",
+        "experiments/EXP-20261108-002-gold-exposure-review/",
+        "experiments/EXP-20261108-003-gold-exposure-review/"
+      ]
+    },
+    {
+      "id": "TASK-003",
+      "objective": "Design the practical ontology-grounded author-claim RAG architecture, integration points, alternatives, MVP, experiments, tests, and phased backlog. Design only: no extraction, inference, training, indexing, split changes, or frozen-snapshot access.",
+      "agent": "codex",
+      "branch": "codex/task-003-ontology-plan",
+      "depends_on": [
+        "TASK-001"
+      ],
+      "status": "done",
+      "owns_files": [
+        "docs/architecture/ONTOLOGY_PLAN.md",
+        "docs/DECISION_LOG.md"
+      ],
+      "acceptance": [
+        "The note specifies the closed ontology schema, author-attributed verbatim-evidence gates, blog-only MVP, and actual repository integration points",
+        "Alternatives, Model E and official Model F comparisons, resource bounds, tests, risks, rubric traceability, and a phased implementation backlog are documented",
+        "The unchanged 30-topic gold benchmark remains primary; the 24 candidates are development material; an independent final question set is optional and nonblocking; exposure/reuse limitations are explicit",
+        "Only the design note, appended DEC-012, and user-approved shared-state coordination are edited; no graph store, inference, training, dataset/split, frozen experiment, or TASK-002 code changes",
+        "Claims without verified attribution and verbatim source support are specified as not retrievable, and python -m project_pm check exits 0"
+      ],
+      "verification": "2026-11-08: Design-only ONTOLOGY_PLAN.md completed; DEC-012 appended without changing existing decision bytes. All 19 local links resolved, 15 required sections and two Mermaid diagrams checked, gold SHA-256 unchanged, and 24 distinct development families retained. Integrity comparison of 293 pre-existing files found only the four approved shared-document changes and the new design note. python -m project_pm check exited 0 with two known historical warnings; tests/test_project_pm.py passed all 16 tests. Architecture remains PROPOSED pending review; no extraction, inference, training, indexing, data/split changes, or frozen artifact edits.",
+      "decision_id": "DEC-012",
+      "files": [
+        "docs/architecture/ONTOLOGY_PLAN.md",
+        "docs/DECISION_LOG.md"
+      ]
+    },
+    {
+      "id": "ONT-01",
+      "objective": "Implement minimal immutable ontology schema/validation contracts and a five-document pending-review pilot admission manifest. No extraction, inference, index builds, or output revision.",
+      "agent": "codex",
+      "branch": "codex/ont-01-schema-admission",
+      "depends_on": [
+        "TASK-003"
+      ],
+      "status": "done",
+      "owns_files": [
+        "host_finetune/ontology_contract.py",
+        "tests/test_ontology_contract.py",
+        "experiments/EXP-20261108-004-ont-01-schema-admission/",
+        "docs/architecture/ONT_01_REPORT.md",
+        "docs/architecture/ONTOLOGY_PLAN.md",
+        "docs/DECISION_LOG.md"
+      ],
+      "acceptance": [
+        "Executable immutable contracts cover provenance, authorship, offsets, entities, typed assertions, scoped quantities/conditions/time, support, review, conflicts and rejection states",
+        "Five distinct eligible train-blog candidates have recorded hashes/lineage and pending human admission; no invented author approval or retrievable real claims",
+        "Synthetic negative tests cover every requested failure class and fail-closed promotion, immutable reviews/decisions and duplicate/conflict handling",
+        "Approved existing-Chroma plus DuckDB expansion direction is recorded in DEC-013 and plan revisions; capsule/numeric changes are proposals only",
+        "Relevant tests, manifest validation and python -m project_pm check pass; protected inputs and historical work remain unchanged"
+      ],
+      "verification": "2026-11-08: Immutable author_claim.v1 contracts implemented; 53 ontology tests and 169 relevant tests passed. EXP-20261108-004 has five pending-review candidates, zero admitted documents and zero real/retrievable assertions. Manifest validation and project_pm check passed (two known historical unregistered-experiment warnings). Final hashes, source snapshots and check logs are recorded in raw/final_validation.json, raw/verification.json and raw/closure_verification.json. DEC-013 appended; existing Chroma expansion and shared validation policies documented. Human admission and ONT-01 review remain pending; ONT-02 is not started.",
+      "decision_id": "DEC-013",
+      "files": [
+        "host_finetune/ontology_contract.py",
+        "tests/test_ontology_contract.py",
+        "experiments/EXP-20261108-004-ont-01-schema-admission/",
+        "docs/architecture/ONT_01_REPORT.md",
+        "docs/architecture/ONTOLOGY_PLAN.md",
+        "docs/DECISION_LOG.md"
+      ]
+    },
+    {
+      "id": "ONT-HANDOFF",
+      "objective": "Prepare self-contained engineering handoff for teammate-owned ONT-02 through ONT-04; documentation and coordination proposal only.",
+      "agent": "codex",
+      "branch": "codex/ont-01-schema-admission",
+      "depends_on": [
+        "ONT-01"
+      ],
+      "status": "done",
+      "owns_files": [
+        "docs/architecture/ONTOLOGY_HANDOFF.md"
+      ],
+      "acceptance": [
+        "Handoff matches executable contracts, pending sources and DEC-012/013, with exact files/commands and actionable ONT-02 through ONT-04 specifications",
+        "Parallel ownership and Git checkpoint strategy are proposed without reassigning fine-tuning or implementing ontology code",
+        "Local references resolve; relevant existing tests and project_pm check pass; existing code, accepted decisions, datasets and experiments unchanged"
+      ],
+      "verification": "2026-11-08: Self-contained ONTOLOGY_HANDOFF.md prepared from executable contracts, pending admission manifest, accepted decisions and current integration code. All 24 local links resolve; 169 relevant tests pass; manifest check passes; project-state check has zero errors and two existing historical warnings. Integrity comparison found 2,162 of 2,165 pre-existing files unchanged; only the three authorized coordination documents changed, and the handoff is the sole new file. Implementation ownership remains proposed; no ONT-02 task activated, inference executed, contracts modified or historical artifacts changed. See the handoff for readiness gates and checkpoint/coordination blockers.",
+      "decision_id": "",
+      "files": [
+        "docs/architecture/ONTOLOGY_HANDOFF.md"
+      ]
+    }
+  ]
+}

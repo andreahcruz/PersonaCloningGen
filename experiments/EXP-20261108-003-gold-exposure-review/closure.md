@@ -1,0 +1,11 @@
+# TASK-002 closed after approved coordination update
+
+The user explicitly approved the exact three-file coordination patch and rerunning checks. Before applying it, the live file byte hashes and proposed logical-text hashes were verified, and a reconstructed diff was checked against the approved patch. Windows CRLF bytes account for the difference between saved proposal byte hashes and its LF-normalized logical hashes. Only docs/project/state.json, tasks.json, and HANDOFF.md were updated, with the exact approved proposed-file contents.
+
+Post-application verification passed: all 68 relevant unit tests, including test_live_repository_check; python -m project_pm check (exit 0, zero errors); and the corrected run's manifest validation (exit 0, zero warnings). The two remaining project-check warnings are the previously known unregistered EXP-20261103-001 F-SOURCE and EXP-20261103-002 F-DESC experiments. They were preserved and were not registered retroactively.
+
+Exact commands, outputs, and exit codes are in raw/closure_verification.json. Authorization and before/after identities are in raw/approved_coordination_update.json. The snapshot-preservation check is raw/closure_integrity.json: only the three approved shared-state files changed among the 67 snapshotted inputs; every other snapshotted source, prior-run artifact, index, and unrelated tracked change retained its hash. Earlier failed verification records and audit attempts remain unchanged as history.
+
+TASK-002 now has status done and a verification string in tasks.json. Its technical acceptance criteria are met: recorded gold-family exclusions and index parity, provenance and required manifest fields, 24 proposed questions outside detected gold families, no exported source spans, and preservation of frozen sources/splits/results. No model training or evaluation, split change, ontology implementation, commit, merge, push, or deployment was performed.
+
+The approved state and handoff point to TASK-003, which remains proposed and restricted to its ontology design note. This session does not begin that task. Recommendation: begin TASK-003 planning in its assigned file and branch when ready; use the 24 questions only as development material and retain the training-exposure limitations documented in notes.md.

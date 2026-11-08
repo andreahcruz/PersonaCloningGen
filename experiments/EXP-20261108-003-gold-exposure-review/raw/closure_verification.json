@@ -1,0 +1,32 @@
+{
+  "approval": "User approved applying the exact coordination patch and rerunning checks.",
+  "results": [
+    {
+      "name": "tests",
+      "command": ".\\.venv-test\\Scripts\\python.exe -m pytest tests/test_gold_partition_audit.py tests/test_train_only_index.py tests/test_split_groups.py tests/test_relabel_continuations.py tests/test_project_pm.py -q",
+      "chunk_id": "623741",
+      "wall_time_seconds": 2.2630848,
+      "exit_code": 0,
+      "original_token_count": 26,
+      "output": "....................................................................     [100%]\r\n68 passed in 1.41s\r\n"
+    },
+    {
+      "name": "project_check",
+      "command": ".\\.venv-test\\Scripts\\python.exe -m project_pm check",
+      "chunk_id": "b4f7b7",
+      "wall_time_seconds": 0.6551623,
+      "exit_code": 0,
+      "original_token_count": 133,
+      "output": "{\r\n  \"ok\": true,\r\n  \"error_count\": 0,\r\n  \"warning_count\": 2,\r\n  \"findings\": [\r\n    {\r\n      \"severity\": \"warning\",\r\n      \"code\": \"known_unregistered_experiment\",\r\n      \"message\": \"experiments/EXP-20261103-002-model-f-desc-unified-panel has no manifest.yaml and is not a registered result\"\r\n    },\r\n    {\r\n      \"severity\": \"warning\",\r\n      \"code\": \"known_unregistered_experiment\",\r\n      \"message\": \"experiments/EXP-20261103-001-model-f-source-unified-panel has no manifest.yaml and is not a registered result\"\r\n    }\r\n  ]\r\n}\r\n"
+    },
+    {
+      "name": "manifest_check",
+      "command": ".\\.venv-test\\Scripts\\python.exe -m project_pm check-manifest experiments/EXP-20261108-003-gold-exposure-review/manifest.yaml",
+      "chunk_id": "c9e575",
+      "wall_time_seconds": 0.4715834,
+      "exit_code": 0,
+      "original_token_count": 21,
+      "output": "{\r\n  \"ok\": true,\r\n  \"error_count\": 0,\r\n  \"warning_count\": 0,\r\n  \"findings\": []\r\n}\r\n"
+    }
+  ]
+}

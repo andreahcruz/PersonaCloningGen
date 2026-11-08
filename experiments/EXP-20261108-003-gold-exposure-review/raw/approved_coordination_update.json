@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-11-08T09:21:40.450066+00:00",
+  "authorization": "User explicitly approved the exact three-file patch and rerunning checks.",
+  "applied_exact_approved_patch": true,
+  "line_endings": "Copied proposed file bytes; proposal hashes are newline-normalized logical text identities.",
+  "changes": [
+    {
+      "path": "docs/project/state.json",
+      "before_sha256": "8264d3ec8992d454ed25696fc3bf5225cbbe5b16be37af6ff20bcc1b4b1e7b0f",
+      "after_bytes_sha256": "7f48ab06d834cb4d4be03163fd2f63f91b5185b78307cc58956447e587ac6603",
+      "after_logical_text_sha256": "37c5922ac6c40277e29e48ebe3054015804185968b0e6aee9032571db73a7dcc"
+    },
+    {
+      "path": "docs/project/tasks.json",
+      "before_sha256": "7886764ce094c5da99c047ef2edf1e725a318a67d4fdfcc4062db9bb60da41a0",
+      "after_bytes_sha256": "68577efd7de20273e2b1e481a505d9eef8d85aab7fc7e6faef90ce9511df25aa",
+      "after_logical_text_sha256": "8dbc6315bf4309aada30e7ffbd04a95434c1373c05132a647bfc9111d99a7742"
+    },
+    {
+      "path": "docs/project/HANDOFF.md",
+      "before_sha256": "697ddc69abb1f8587d9a8620b28829208fc33124d16a95034ba0a131ba6dbe84",
+      "after_bytes_sha256": "434b001cda6b980745f8b83ae3762ce06389c05b54e02a0305a4d02fdad092e1",
+      "after_logical_text_sha256": "ecaba8234b6ef103263ad87dd91346712eefc59e6e3d7f45ef01bee43fe9e37d"
+    }
+  ]
+}

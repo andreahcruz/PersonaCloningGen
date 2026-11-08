@@ -1,0 +1,44 @@
+{
+  "timestamp": "2026-11-08T22:17:33.523324+00:00",
+  "baseline_file_count": 296,
+  "changed_preexisting_files": [
+    "docs/DECISION_LOG.md",
+    "docs/architecture/ONTOLOGY_PLAN.md",
+    "docs/project/HANDOFF.md",
+    "docs/project/state.json",
+    "docs/project/tasks.json"
+  ],
+  "all_other_baseline_files_unchanged": true,
+  "accepted_decisions_exact_prefix_unchanged": true,
+  "git_branch": "codex/ont-01-schema-admission",
+  "git_commit": "b40ff1738d57e30a06ad2ebd7ba9b4cf6b060f5e",
+  "source_snapshot_sha256": {
+    "config/source_snapshot/host_finetune/gold_partition_audit.py": "8ad3753a43b8ed19deede124377d8c2b8e40d5d33ff3b582387035c4547899c9",
+    "config/source_snapshot/host_finetune/graph_ready.py": "a5c67d336525a3febb70164f884078a85880379d31b229f6504353506103bc43",
+    "config/source_snapshot/host_finetune/ontology_contract.py": "306e6a5341f822f4b5bc4240b05254a416a156ff3e5996e58a25ccbb463e5529",
+    "config/source_snapshot/host_finetune/split_groups.py": "386bf7b0558a43c7b024be98e74859674bf80e356475e97e4b6ec6b1c342bf7a",
+    "config/source_snapshot/host_finetune/train_only_index.py": "8f05df0ffa51a22da9cf4d4e6334aef53bbeca8d4b077e6c23a202bf4d7eabbc",
+    "config/source_snapshot/tests/test_ontology_contract.py": "4677b757a17b5bd9bd2aaec68d4eaba8fa99c7c524904fbbe0581b6157fff0de"
+  },
+  "final_verifier_sha256": "8a68b5e27860efbdc07205de04107694c7a06b2d526abfffb12f4488a48ab26e",
+  "results": [
+    {
+      "command": "C:\\Users\\okevi\\SJSU\\DATA298\\298P\\.venv-test\\Scripts\\python.exe -m pytest tests/test_ontology_contract.py tests/test_evidence_capsule.py tests/test_numeric_grounding.py tests/test_factual_reliability.py tests/test_graph_ready.py tests/test_retrieval_by_medium.py tests/test_train_only_index.py tests/test_split_groups.py tests/test_gold_partition_audit.py tests/test_project_pm.py -q",
+      "exit_code": 0,
+      "stdout": "........................................................................ [ 42%]\n........................................................................ [ 85%]\n.........................                                                [100%]\n169 passed in 1.66s\n",
+      "stderr": ""
+    },
+    {
+      "command": "C:\\Users\\okevi\\SJSU\\DATA298\\298P\\.venv-test\\Scripts\\python.exe -m project_pm check-manifest experiments\\EXP-20261108-004-ont-01-schema-admission\\manifest.yaml",
+      "exit_code": 0,
+      "stdout": "{\n  \"ok\": true,\n  \"error_count\": 0,\n  \"warning_count\": 0,\n  \"findings\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "C:\\Users\\okevi\\SJSU\\DATA298\\298P\\.venv-test\\Scripts\\python.exe -m project_pm check",
+      "exit_code": 0,
+      "stdout": "{\n  \"ok\": true,\n  \"error_count\": 0,\n  \"warning_count\": 2,\n  \"findings\": [\n    {\n      \"severity\": \"warning\",\n      \"code\": \"known_unregistered_experiment\",\n      \"message\": \"experiments/EXP-20261103-002-model-f-desc-unified-panel has no manifest.yaml and is not a registered result\"\n    },\n    {\n      \"severity\": \"warning\",\n      \"code\": \"known_unregistered_experiment\",\n      \"message\": \"experiments/EXP-20261103-001-model-f-source-unified-panel has no manifest.yaml and is not a registered result\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    }
+  ]
+}

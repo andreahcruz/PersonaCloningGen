@@ -1,0 +1,63 @@
+{
+  "splits": {
+    "train": 21377,
+    "validation": 2588,
+    "test": 2580
+  },
+  "recorded_blocked_family_count": 34,
+  "family_only_selection": {
+    "rows": 26545,
+    "train_rows": 21377,
+    "excluded_split": 5168,
+    "excluded_gold": 183,
+    "empty_output": 0,
+    "indexed": 21194
+  },
+  "final_selection": {
+    "rows": 26545,
+    "train_rows": 21377,
+    "excluded_split": 5168,
+    "excluded_gold": 184,
+    "empty_output": 0,
+    "indexed": 21193
+  },
+  "additional_overlap_families": [
+    {
+      "row_id": 26148,
+      "group_id": "d845dcfa02d2bd1ed87e0edeb38ed7a8c9cdf409a0f04ca22ec338c6df0f2f0a",
+      "split": "train",
+      "source_platform": "x",
+      "source_file": "jasonlk_originals.jsonl",
+      "source_line": 23833,
+      "hits": [
+        {
+          "gold_id": "gold_001",
+          "field": "topic",
+          "jaccard": 1.0
+        }
+      ]
+    }
+  ],
+  "removed_after_headline_check": [
+    "train_26148"
+  ],
+  "overlap_rows_by_split": {
+    "validation": 16,
+    "train": 184,
+    "test": 4
+  },
+  "remaining_selected_overlap_families": [],
+  "selected_membership_sha256": "627971967d7bbdcc2b8eacc36b9223c08d6b3a3cba114fcf0c42f73acff299a4",
+  "persisted_index": {
+    "document_count": 21193,
+    "train_26148_present": false,
+    "missing_ids": [],
+    "unexpected_ids": [],
+    "content_or_metadata_mismatch_ids": [],
+    "non_train_ids": [],
+    "blocked_family_ids": [],
+    "remaining_lexical_overlaps": [],
+    "logical_content_sha256": "3f6927b77a0cb0b0ff2c5612c843b4c81ce7f3b10e48cc6f3d8e99e75f90f4bd"
+  },
+  "rejected_candidates": []
+}

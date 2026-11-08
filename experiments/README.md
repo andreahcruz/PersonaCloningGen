@@ -115,3 +115,5 @@ Record, when applicable:
 - raw outputs
 - metrics
 - warnings and failures
+
+New experiment directories whose id date is on or after `validate_id_date_on_or_after` in `docs/project/state.json` are checked by `python -m project_pm check`. `python -m project_pm check-manifest <path>` checks one manifest. Neither command edits the directory. A manifest may set `status: incomplete`; missing fields then stay visible as warnings and the run is not a finished result. Do not add that status to a frozen experiment to silence the checker.

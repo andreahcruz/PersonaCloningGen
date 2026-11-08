@@ -1,0 +1,6 @@
+---
+description: Load the shared DATA 298B handoff before non-trivial work
+alwaysApply: true
+---
+
+Read `docs/project/HANDOFF.md` first, then follow `AGENTS.md`. Current phase and next task: `docs/project/state.json`. Use `docs/project/README.md` for what else to load. Do not read `docs/research/` unless the task is architectural, experimental, or a report change. Before finishing substantial work, run `python -m project_pm check`.

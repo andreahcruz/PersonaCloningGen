@@ -1,0 +1,50 @@
+{
+  "approval_required": true,
+  "live_docs_edited": false,
+  "changes": [
+    {
+      "path": "docs/project/state.json",
+      "required_current_sha256": "8264d3ec8992d454ed25696fc3bf5225cbbe5b16be37af6ff20bcc1b4b1e7b0f",
+      "proposed_content_sha256": "37c5922ac6c40277e29e48ebe3054015804185968b0e6aee9032571db73a7dcc"
+    },
+    {
+      "path": "docs/project/tasks.json",
+      "required_current_sha256": "7886764ce094c5da99c047ef2edf1e725a318a67d4fdfcc4062db9bb60da41a0",
+      "proposed_content_sha256": "8dbc6315bf4309aada30e7ffbd04a95434c1373c05132a647bfc9111d99a7742"
+    },
+    {
+      "path": "docs/project/HANDOFF.md",
+      "required_current_sha256": "697ddc69abb1f8587d9a8620b28829208fc33124d16a95034ba0a131ba6dbe84",
+      "proposed_content_sha256": "ecaba8234b6ef103263ad87dd91346712eefc59e6e3d7f45ef01bee43fe9e37d"
+    }
+  ],
+  "proposed_state_full_checker_dry_run": {
+    "ok": false,
+    "error_count": 2,
+    "warning_count": 2,
+    "findings": [
+      {
+        "severity": "warning",
+        "code": "known_unregistered_experiment",
+        "message": "experiments/EXP-20261103-002-model-f-desc-unified-panel has no manifest.yaml and is not a registered result"
+      },
+      {
+        "severity": "warning",
+        "code": "known_unregistered_experiment",
+        "message": "experiments/EXP-20261103-001-model-f-source-unified-panel has no manifest.yaml and is not a registered result"
+      },
+      {
+        "severity": "error",
+        "code": "missing_evidence",
+        "message": "state.json evidence path does not exist: experiments/EXP-20261108-003-gold-exposure-review/manifest.yaml"
+      },
+      {
+        "severity": "error",
+        "code": "missing_evidence",
+        "message": "state.json evidence path does not exist: experiments/EXP-20261108-003-gold-exposure-review/notes.md"
+      }
+    ]
+  },
+  "procedure": "Owner reviews patch and current hashes; after approval, apply all three files together, then run the full checker and live-state test. Recheck concurrent Cursor changes before applying. No branch switch, commits, or validator weakening.",
+  "known_dirty_rationale": "Only the five exact TASK-002-owned paths are registered because done-task ownership is not used by the live checker and the user prohibited commits. Existing unrelated dirty prefixes remain unchanged."
+}

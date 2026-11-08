@@ -1,0 +1,40 @@
+{
+  "initial_count_explanation": "Only 12 seeds were supplied; all 12 passed. This was a preparation omission, not an eligibility limit. No target of 24 was encoded in tasks.json or the original code.",
+  "count": 24,
+  "topic_areas": {
+    "customer success": 1,
+    "enterprise readiness": 1,
+    "founder governance": 1,
+    "sales execution": 1,
+    "founder ownership": 1,
+    "sales productivity": 1,
+    "sales governance": 1,
+    "product launch": 1,
+    "fundraising process": 1,
+    "sales leadership": 1,
+    "customer reactivation": 1,
+    "founder sustainability": 1,
+    "pricing strategy": 1,
+    "product roadmap": 1,
+    "tool ownership": 1,
+    "advisor compensation": 1,
+    "product-market fit": 1,
+    "brand development": 1,
+    "technical hiring": 1,
+    "cash planning": 1,
+    "customer concentration": 1,
+    "unit economics": 1,
+    "customer engagement": 1,
+    "revenue expansion": 1
+  },
+  "rejected": [],
+  "near_duplicate_question_pairs": [],
+  "near_duplicate_source_pairs": [],
+  "limitations": [
+    "All sources are train and retrieval members, so questions are not independent final tests.",
+    "Family and lexical separation are verified; broad themes remain shared with gold (e.g. founder departure and enterprise sales).",
+    "Blog sources emphasize founder advice; they do not represent all media, claim types, or the author's corpus.",
+    "Source presence and manual relevance review do not prove retrieval recall or validate a future ontology.",
+    "Source-era numerical assertions require dates, attribution, and source spans in future work. No factual claims were newly scored."
+  ]
+}
