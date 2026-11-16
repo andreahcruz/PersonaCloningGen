@@ -2,6 +2,7 @@
 # Keep separate from requirements.txt — that file includes Airflow, which pins email-validator<2
 # and conflicts with Pydantic v2 / Chroma / FastAPI (needs email-validator>=2).
 streamlit==1.29.0
+pyarrow==14.0.2
 chromadb==1.5.5
 requests==2.31.0
 pyyaml==6.0.1
