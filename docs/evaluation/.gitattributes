@@ -1,0 +1,3 @@
+# PDFs made with reportlab are plain ASCII inside, so git could treat them as text and convert line endings,
+# which corrupts them on Windows checkouts. Keep them byte-exact.
+*.pdf binary
