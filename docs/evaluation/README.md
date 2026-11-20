@@ -40,6 +40,8 @@ flowchart LR
 | A length-neutral voice score | Done: fixed-length score, Kevin's choice (`eval_tools.voice_fixed`, [`VOICE_FIXED_LENGTH.md`](VOICE_FIXED_LENGTH.md)) |
 | A PersonaRAG run on the 120 prompts, and more seeds of the Relabel adapter with RAG on | Done on Colab (2026-10-27). PersonaRAG is an approximation (base Llama 3.1 + train-only retrieval, one run); **someone should confirm it is the right stand-in** |
 | Architecture comparison on the new data (Base, PersonaRAG, Relabel with and without RAG) | Done: [`ARCHITECTURE_COMPARISON.md`](ARCHITECTURE_COMPARISON.md) |
+| Research backing: each metric mapped to published papers, with the wrong library PDFs listed | Done: [`METRICS_RESEARCH_BACKING.pdf`](METRICS_RESEARCH_BACKING.pdf) and `.md` |
+| A trained "does it look like Lemkin" check, with validity controls, run on every system | Done: `authorship_classifier/` and [`AUTHORSHIP_CLASSIFIER_RESULTS.pdf`](AUTHORSHIP_CLASSIFIER_RESULTS.pdf). A proxy for style, never proof of authorship |
 | Review of this PR | **Needs a teammate** |
 | Harder calibration controls, outside-world truth check, human check, cost and speed | Open, not started |
 
@@ -52,6 +54,8 @@ docs/evaluation/
   ARCHITECTURE_COMPARISON.md     <- Base, PersonaRAG and Relabel (RAG on and off) compared on the new data
   GRAMMAR_LANGUAGETOOL.md        <- grammar with LanguageTool: what it catches, how noisy it is, results
   VOICE_FIXED_LENGTH.md          <- the voice score on a fixed number of words, and what it changes
+  METRICS_RESEARCH_BACKING.pdf   <- every metric mapped to papers (authors, year, venue, links), and what is safe to claim
+  AUTHORSHIP_CLASSIFIER_RESULTS.pdf <- the classifier check: method, validity checks, results, limits (code in authorship_classifier/)
   colab/                         <- the Colab notebook that made the new runs, with its output
   figures/                       <- the three charts and the script that draws them
   examples/
@@ -134,6 +138,7 @@ We tested this rule on real data with the true difference set to zero (A and B s
 | 5 | Relabel against repaired (no RAG) keeps its direction in all three seeds for writing quality, blog voice and blog length. That comparison repeats | `examples/seed_stability_relabel_vs_repaired.md` |
 | 6 | Grammar. 82 percent of what the check flags on a fresh sample of real posts is a real error (33 of 40). It catches 56 to 100 percent of the errors it has rules for. It catches 0 of 40 ordinary grammar mistakes (tense, wrong word, missing article and so on) | `examples/grammar_audit.md`, `examples/grammar_precision_audit.csv` |
 | 7 | Some scores sit at the ceiling (stance 0.99, claim support 0.994), so they cannot separate architectures. The claim judge says 99 percent of claims are supported, while the number check flags half of the drafts | `METRIC_MAP.md`, gaps G5 and G6 |
+| 8 | A trained authorship classifier (real Lemkin against Paul Graham and plain Llama text) ranks the systems the same way as the fixed-length voice score. Blog mean P(looks like Lemkin): Base 0.35, PersonaRAG 0.38, QLoRA repaired 0.79, E 0.86, E with retrieval 0.82, F 0.80. Fine-tuning moves it a lot; retrieval and the graph give no clear gain. Validity: real Lemkin against unseen plain Llama text AUC 0.97 (blog). A version trained against Paul Graham only was invalid (it scored plain Llama as Lemkin) and is not used | `AUTHORSHIP_CLASSIFIER_RESULTS.pdf`, `authorship_classifier/outputs_colab/` |
 
 The full list of 12 gaps and the 10 recommended fixes, with numbers, is in `METRIC_MAP.md`.
 
@@ -179,3 +184,5 @@ The length check needs a checkout of Kevin's branch without its 480 MB of adapte
 - `METRIC_MAP.md`: the full review.
 - `eval_tools/README.md`: how to run each tool and how to read the verdicts.
 - `examples/`: the worked results behind every number on this page.
+- `METRICS_RESEARCH_BACKING.pdf`: which published papers back each metric, and which claims are safe to make.
+- `AUTHORSHIP_CLASSIFIER_RESULTS.pdf` and `authorship_classifier/README.md`: the classifier check and how to re-run it, including the Colab notebook that makes its plain-Llama negatives.

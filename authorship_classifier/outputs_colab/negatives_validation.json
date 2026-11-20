@@ -1,0 +1,33 @@
+{
+  "checksum_matches_manifest": null,
+  "gold_topic_overlaps": 0,
+  "n_rows": 900,
+  "flags": {
+    "ok": 897,
+    "copies_lemkin_train_12gram": 3
+  },
+  "kept_per_medium": {
+    "blog": 449,
+    "linkedin": 298,
+    "talk": 150
+  },
+  "usable_share": 0.997,
+  "refusal_share": 0.0,
+  "copy_share": 0.003,
+  "copy_share_raw_incl_topic_title_repeats": 0.057,
+  "hit_token_limit_share": 0.406,
+  "median_words": {
+    "blog": 520.5,
+    "linkedin": 241.0,
+    "talk": 535.5
+  },
+  "verdict": {
+    "checksum": true,
+    "no_gold_overlap": true,
+    "enough_per_medium": true,
+    "refusals_le_2pct": true,
+    "copying_le_5pct": true,
+    "usable_ge_90pct": true
+  },
+  "PASS": true
+}

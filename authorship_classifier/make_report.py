@@ -1,5 +1,5 @@
 """Builds figures and the PDF report from outputs/results.json. Every number is read from the results file."""
-import csv, json, pathlib, collections
+import csv, json, pathlib, collections, sys
 import numpy as np
 import matplotlib
 matplotlib.use("Agg")
@@ -11,8 +11,12 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.platypus import BaseDocTemplate, PageTemplate, Frame, Paragraph, Spacer, Table, TableStyle, PageBreak, Image
 
 ROOT = pathlib.Path(__file__).resolve().parent
-OUT = ROOT / "outputs"
+RES_DIR = sys.argv[1] if len(sys.argv) > 1 else "outputs"      # outputs = earlier version, outputs_colab = final version
+OUT = ROOT / RES_DIR
+COLAB = RES_DIR != "outputs"
 R = json.load(open(OUT / "results.json", encoding="utf-8"))
+OLD = json.load(open(ROOT / "outputs" / "results.json", encoding="utf-8")) if COLAB else None
+NEGVAL = json.load(open(OUT / "negatives_validation.json", encoding="utf-8")) if COLAB else None
 ROWS = list(csv.DictReader(open(OUT / "scores_per_draft.csv", encoding="utf-8")))
 _docs = ROOT.parent / "docs" / "evaluation"
 PDF = (_docs if _docs.exists() else ROOT.parent) / "AUTHORSHIP_CLASSIFIER_RESULTS.pdf"
@@ -156,7 +160,10 @@ S.append(P(f"<b>1.</b> Each bar is how often a model's blog draft looks like Lem
 S.append(P(f"<b>2.</b> Fine-tuning is what moves the score. Model E (no retrieval) is {f2(pair(b, 'style', 'E Relabel, no retrieval minus A Base Llama')['mean_diff'])} above Base Llama, "
            f"interval {f2(pair(b, 'style', 'E Relabel, no retrieval minus A Base Llama')['ci_low'])} to {f2(pair(b, 'style', 'E Relabel, no retrieval minus A Base Llama')['ci_high'])}.", BUL))
 S.append(P("<b>3.</b> Turning on retrieval (E with retrieval) and the graph (Model F) do not give a clear gain on this measure. This agrees with the fixed-length voice score from our PUK-28 work and with Kevin's finding that retrieval and the graph do not clearly improve voice, which is the point: a different method reaches the same conclusion. (It says nothing about writing quality or factual support, which other metrics cover.)", BUL))
-S.append(P("<b>4.</b> The checks in Section 2 are what make this believable. One version of the classifier failed them and was thrown away (Section 2, check 0).", BUL))
+if COLAB:
+    S.append(P(f"<b>4.</b> In the final version the plain-Llama negatives are 900 fresh Llama 3.1 8B texts written on 450 non-gold Lemkin titles, so none of our systems' drafts is used in training. "
+               f"This removed the main caveat of the earlier version. The blog ranking is identical, validity went up, and one change stands out: PersonaRAG now scores {f2(c_pr['mean_P'])}, close to Base Llama ({f2(a_base['mean_P'])}), where before it looked better ({f2(OLD['media']['blog']['systems']['style']['C PersonaRAG stand-in']['mean_P'])}). See the before-and-after table in Section 3b.", BUL))
+S.append(P("<b>5.</b> The checks in Section 2 are what make this believable. One version of the classifier failed them and was thrown away (Section 2, check 0).", BUL))
 S.append(PageBreak())
 
 # ================= page 2
@@ -164,7 +171,7 @@ S.append(P("1. How it works, in plain words", H1))
 S.append(table([
     ["Step", "What happens", "Why"],
     ["1. Real examples", "Real Lemkin blog posts from Kevin's training split. The families of the 30 gold topics are removed, so no test topic leaks in.", "Positive examples."],
-    ["2. Two kinds of 'not Lemkin'", "Paul Graham essays (another human writer) and plain base-Llama text. Both are needed: with Paul Graham alone the classifier called base-Llama drafts 'Lemkin' (check 0).", "Negative examples. Using LLM text as a negative follows the 'AI detection' check in [004]."],
+    ["2. Two kinds of 'not Lemkin'", ("Paul Graham essays (another human writer) and 900 fresh texts written by plain Llama 3.1 8B on 450 non-gold Lemkin titles (made on Colab). No system's draft is used for training. Both are needed: with Paul Graham alone the classifier called base-Llama drafts 'Lemkin' (check 0)." if COLAB else "Paul Graham essays (another human writer) and plain base-Llama text taken from our own Base Llama drafts on other topics. Both are needed: with Paul Graham alone the classifier called base-Llama drafts 'Lemkin' (check 0)."), "Negative examples. Using LLM text as a negative follows the 'AI detection' check in [004]."],
     ["3. Fixed length", "Every text is cut to its first 100 words (60 for LinkedIn). Real posts and drafts are treated the same.", "Length cannot help one system. Same idea as our fixed-length voice score."],
     ["4. Unseen topics", "Five topic folds. A draft is scored by a model that never saw that draft's topic.", "Stops the model memorising topics."],
     ["5. Two views", "'Style' view hides every content word and keeps only small function words and punctuation. 'All words' view uses everything. A third view also ignores numbers.", "If topic words or numbers drove the result, the views would disagree. They agree."],
@@ -204,9 +211,12 @@ rows = [
     ["2", "Held-out real Lemkin posts against base-Llama text on <b>unseen topics</b> (the key check)",
      f"AUC {f3(v2[0])} ({f3(v2[1])} to {f3(v2[2])}). Without numbers: {f3(v2n[0])}. LinkedIn: {f3(lv2[0])}.",
      "It tells real Lemkin from plain LLM writing on topics it never saw. This is the check that matters most."],
+    *([["2b", "The Colab negatives file was checked before use (pass/fail rules fixed in advance)",
+        f"{NEGVAL['n_rows']} texts, {NEGVAL['gold_topic_overlaps']} gold-topic overlaps, {NEGVAL['refusal_share']*100:.0f}% refusals, usable {NEGVAL['usable_share']*100:.1f}%. Copying (12-word runs, ignoring the topic title as Kevin's gate does): {NEGVAL['copy_share']*100:.1f}%. Raw count before ignoring titles: {NEGVAL['copy_share_raw_incl_topic_title_repeats']*100:.1f}%.",
+        "The text is plain Llama writing and not Lemkin's. Note: the first version of the copy rule did not ignore title repeats and failed at 5.7%. 48 of 51 flags were only the model repeating the topic title. The rule was corrected to match Kevin's gate after that first run, and both numbers are shown."]] if COLAB else []),
     ["3", "Label-shuffle control (labels mixed up, 20 times)",
      f"Real against Paul Graham: mean AUC {f2(v3['auc_real_vs_pg_mean'])}, range {f2(v3['auc_real_vs_pg_min_max'][0])} to {f2(v3['auc_real_vs_pg_min_max'][1])}. Real against base Llama: mean {f2(v3['auc_real_vs_base_llama_mean'])}, range {f2(v3['auc_real_vs_base_llama_min_max'][0])} to {f2(v3['auc_real_vs_base_llama_min_max'][1])}.",
-     f"With no real signal the scores scatter around chance, far below the real {f3(v2[0])}. So the result is not a leak or a bug. (The shuffled runs sit a little under 0.5 against Llama text, which we note openly.)"],
+     f"With no real signal the scores scatter around chance, far below the real {f3(v2[0])}. So the result is not a leak or a bug." + (" (The shuffled runs sit a little under 0.5 against Llama text, which we note openly.)" if v3["auc_real_vs_base_llama_mean"] < 0.45 else "")],
     ["4", "Topic-hiding and number-free views against the all-words view",
      f"System ranking agreement (rank correlation): style vs all words {f2(rob['style_vs_full'])}; style vs number-free {f2(rob['style_vs_style_nonum'])}.",
      "Hiding topic words or numbers does not change the picture, so topic and invented figures are not driving the ranking."],
@@ -267,21 +277,55 @@ S.append(P("X posts and talks are not supported: X drafts are mostly shorter tha
 S.append(PageBreak())
 
 # ================= limits
+
+if COLAB:
+    S.append(P("3b. Before and after the Colab negatives", H1))
+    S.append(P("Earlier version: negatives were our own Base Llama drafts on other topics (cross-fitted). Final version: 900 fresh Llama texts on non-gold topics. Everything else is identical.", B))
+    ob, nb_ = OLD["media"]["blog"], R["media"]["blog"]
+    ol, nl = OLD["media"]["linkedin"], R["media"]["linkedin"]
+    sysn = ["A Base Llama", "C PersonaRAG stand-in", "D QLoRA repaired", "E Relabel, no retrieval", "E Relabel + retrieval", "F Model F (F-REL)"]
+    rk = lambda m: [SHORT[x] for x in sorted(sysn, key=lambda y: -m["systems"]["style"][y]["mean_P"])]
+    chg = lambda a, b: [k for k in a if a[k]["verdict"] != b[k]["verdict"]]
+    pa = {p["B_minus_A"]: p for p in ob["paired"]["style"]}
+    pb = {p["B_minus_A"]: p for p in nb_["paired"]["style"]}
+    pla = {p["B_minus_A"]: p for p in ol["paired"]["style"]}
+    plb = {p["B_minus_A"]: p for p in nl["paired"]["style"]}
+    pln = {p["B_minus_A"]: p for p in nl["paired"]["style_nonum"]}
+    k_v2 = "V2_real_lemkin_vs_heldout_topic_base_llama_auc"
+    li_changes = "; ".join(f"{k}: {pla[k]['verdict']} to {plb[k]['verdict']} (Holm p {plb[k]['p_holm']:.3f}, number-free view: {pln[k]['verdict']})" for k in chg(pla, plb)) or "None changed"
+    rows_ba = [
+        ["Item", "Earlier version", "Final version", "Reading"],
+        ["Check 2, blog: real Lemkin vs unseen plain Llama text (AUC)", f3(ob["validity"]["style_C1.0"][k_v2][0]), f3(nb_["validity"]["style_C1.0"][k_v2][0]), "Better, and above 0.90"],
+        ["Check 2, LinkedIn (exploratory)", f3(ol["validity"]["style_C1.0"][k_v2][0]), f3(nl["validity"]["style_C1.0"][k_v2][0]), "Better, but still under 0.90"],
+        ["Label-shuffle control, blog, real vs Llama (mean AUC)", f3(ob["validity"]["V3_label_shuffle_control"]["auc_real_vs_base_llama_mean"]), f3(nb_["validity"]["V3_label_shuffle_control"]["auc_real_vs_base_llama_mean"]), "Now centred on chance (0.5)"],
+        ["Blog system ranking (best to worst)", ", ".join(rk(ob)), ", ".join(rk(nb_)), "Same order" if rk(ob) == rk(nb_) else "Order changed"],
+        ["Blog verdicts that changed (of 8 comparisons)", "-", str(len(chg(pa, pb))), "None changed" if not chg(pa, pb) else ", ".join(chg(pa, pb))],
+        ["LinkedIn verdicts that changed (of 8)", "-", str(len(chg(pla, plb))), li_changes],
+    ]
+    notes = {"A Base Llama": "No longer in the negative class", "C PersonaRAG stand-in": "Biggest change: now close to Base Llama"}
+    for sname in sysn:
+        rows_ba.append([f"Blog mean P(Lemkin): {sname}", f3(ob["systems"]["style"][sname]["mean_P"]), f3(nb_["systems"]["style"][sname]["mean_P"]), notes.get(sname, "Small drop, same level")])
+    S.append(table(rows_ba, [3.5 * inch, 2.3 * inch, 2.3 * inch, W - 8.1 * inch]))
+    S.append(Spacer(1, 4))
+    S.append(P("Conclusion: the main findings do not depend on the earlier caveat. Fine-tuning moves the score a lot, retrieval and the graph give no clear gain, and the ranking agrees with our voice score. PersonaRAG, which looked partly better than Base Llama before, is now about the same as Base Llama on this measure.", B))
+    S.append(PageBreak())
+
 S.append(P("4. Limits, stated plainly", H1))
 lim = [
     ["Limit", "Why it matters", "What we would do"],
-    ["Plain base Llama text was used as a negative, taken from our own base-Llama drafts on other topics.", "System A (Base Llama) is partly in the negative class, so its low score is partly built in. PersonaRAG was not trained on and still scores low (0.51), and check 2 uses unseen topics, which limits the damage.", "Generate several hundred base-Llama drafts on non-gold topics on Colab, then run: python -X utf8 run_pipeline.py --llm-negatives their_file.jsonl --out-dir outputs_colab. The option is built and tested; the Colab generation step is not done yet."],
+    *([["The negatives come from one model and one prompt.", "Llama 3.1 8B (Hugging Face weights, bf16) with the Lemkin-style prompt. The old Base Llama drafts came from the Ollama build, so wording differs slightly. 76 percent of the LinkedIn negatives hit the token limit, which does not matter because only the first 60 words are read.", "Fine as is. A second model or prompt would show whether the classifier only learns Llama-specific wording."]] if COLAB else [["Plain base Llama text was used as a negative, taken from our own base-Llama drafts on other topics.", "System A (Base Llama) is partly in the negative class, so its low score is partly built in. PersonaRAG was not trained on and still scores low (0.51), and check 2 uses unseen topics, which limits the damage.", "Generate several hundred base-Llama drafts on non-gold topics on Colab, then run: python -X utf8 run_pipeline.py --llm-negatives their_file.jsonl --out-dir outputs_colab."]]),
     ["It reads surface style: em dashes, quotation marks, short sentences.", "A model could raise its score by imitating these without sounding more like him. Numbers and symbols were tested and do not change the ranking.", "Keep it as one metric among several, never as proof of authorship."],
     ["Paul Graham is the only other human writer and writes about different topics.", "Mitigated by the style view and by check 2, but not removed.", "Add other modern business writers if we can find usable text."],
     ["Same 30 gold topics as the rest of our evaluation, one run each for A, C and F.", "A development panel, not a new test. Intervals are wide for F (28 blog drafts long enough).", "State it. Add F-SOURCE and more seeds if Kevin wants."],
     ["No human has checked it.", "[063] notes that human agreement on style is low, but a small check would still help.", "Team decision (DEC-007). Left out."],
-    ["E against D (repaired) is borderline.", "Clear in the style view, not in the number-free view.", "Report as uncertain."],
+    ["E against D (repaired) is borderline.", "On blogs it is clear in the style view but not in the number-free view. On LinkedIn it flipped between the two classifier versions.", "Report as uncertain."],
+    ["LinkedIn is weaker than blog.", "Much less training text, and check 2 reaches only about 0.88 AUC.", "Treat LinkedIn as exploratory."],
 ]
 S.append(table(lim, [3.2 * inch, 4.0 * inch, W - 7.2 * inch]))
 S.append(P("5. How to re-run and where the files are", H2))
 S.append(P("Folder: <b>authorship_classifier/</b> in the repository (branch vb-puk-28-authorship-classifier). "
            "Collect the inputs with <b>python authorship_classifier/prepare_inputs.py</b>, then run <b>python -X utf8 run_pipeline.py</b> (about 3 minutes, laptop only) and <b>python -X utf8 make_report.py</b>. "
-           "Outputs: outputs/results.json, outputs/scores_per_draft.csv (every draft's score, no draft text), three figures, this report. "
+           "Outputs: outputs/ (earlier version) and outputs_colab/ (final version): results.json, scores_per_draft.csv (every draft's score, no draft text), three figures. Final report: python -X utf8 make_report.py outputs_colab. "
            "13 automatic tests check the leak-prone steps: python -X utf8 -m pytest authorship_classifier/tests.", B))
 
 # ================= references

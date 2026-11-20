@@ -1,0 +1,49 @@
+{
+  "purpose": "plain-LLM negatives for the DATA 298B authorship classifier (PUK-28)",
+  "model": "unsloth/Meta-Llama-3.1-8B-Instruct",
+  "precision": "bf16",
+  "seed": 42,
+  "sampling": {
+    "do_sample": true,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "repetition_penalty": 1.15
+  },
+  "max_new_tokens": {
+    "blog": 768,
+    "linkedin": 320,
+    "talk": 768
+  },
+  "instruction_templates": {
+    "blog": "Write a blog post in the style of Jason Lemkin about: {topic}",
+    "linkedin": "Write a LinkedIn post in the style of Jason Lemkin about: {topic}",
+    "talk": "Write a talk in the style of Jason Lemkin about: {topic}"
+  },
+  "plan": {
+    "blog": [
+      0,
+      450
+    ],
+    "talk": [
+      0,
+      150
+    ],
+    "linkedin": [
+      150,
+      450
+    ]
+  },
+  "n_topics": 450,
+  "n_rows": 900,
+  "rows_per_medium": {
+    "blog": 450,
+    "linkedin": 300,
+    "talk": 150
+  },
+  "jsonl_sha256": "6c6b2fbaef920f99dde379715be999009a6b1e6a221aa413336da618294cfd2f",
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "torch": "2.14.1+cu130",
+  "python": "3.13.16",
+  "created_utc": "2026-11-20T11:55:42Z",
+  "note": "Same prompt wording and sampling as the Base Llama baseline EXP-20261001-010, but the HF fp16/4-bit weights, not the Ollama Q4_K_M build used for that baseline, so wording will differ slightly."
+}

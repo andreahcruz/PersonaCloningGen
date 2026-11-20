@@ -1,0 +1,2607 @@
+{
+  "provenance": {
+    "E_alone_seed42": {
+      "sha256": "5d7ebfb57e93150288602e6523f83de300cd79a600c3ee119a48ca1a97a62f67",
+      "matches_PUK28_record": true
+    },
+    "E_alone_seed43": {
+      "sha256": "8c5da8462c9a14733057d07a657ef6fca66cba79f8b8674daba618baa5b56e99",
+      "matches_PUK28_record": true
+    },
+    "E_alone_seed44": {
+      "sha256": "50ed43f3d9f01e4091685292de0eb0632ee2ed990b13f7f5bf56cac5b03107f8",
+      "matches_PUK28_record": true
+    },
+    "E_rag_seed42": {
+      "sha256": "1dca8e3afd4ca3cdb21225afc58bb111a007cac7e58db2ebaca8d3da7086f2d7",
+      "matches_PUK28_record": true
+    },
+    "E_rag_seed43": {
+      "sha256": "32abc777fa8a96c6275a761e6895dc2e9c1eaf5e13200ef22fd7f6fe0f9c6ac5",
+      "matches_PUK28_record": true
+    },
+    "E_rag_seed44": {
+      "sha256": "12981eb4075116e713eb0887296fff02bdde6a81a3ba20cca969c0bba3ab942e",
+      "matches_PUK28_record": true
+    },
+    "C_personarag_seed42": {
+      "sha256": "381fa68c5d04a7576eeb887e869d2687260bb99f0474102802514a232afe013f",
+      "matches_PUK28_record": true
+    },
+    "A_base_llama": {
+      "sha256": "fa460a01e5bd92694b6fccbefe2d00d4d669fa60ecb2f1c3a1536c6dd75c57c9",
+      "matches_PUK28_record": true
+    }
+  },
+  "settings": {
+    "views": [
+      "style",
+      "style_nonum",
+      "full"
+    ],
+    "C_main": 1.0,
+    "C_sensitivity": [
+      0.3,
+      3.0
+    ],
+    "folds": 5,
+    "windows": {
+      "blog": 100,
+      "linkedin": 60
+    }
+  },
+  "media": {
+    "blog": {
+      "validity": {
+        "style_C1.0": {
+          "V1_real_lemkin_vs_paul_graham_auc": [
+            0.9864133799396151,
+            0.9790242247123933,
+            0.9934192685533887
+          ],
+          "V2_real_lemkin_vs_heldout_topic_base_llama_auc": [
+            0.9663760744372578,
+            0.9548224317563436,
+            0.9776708009783508
+          ],
+          "mean_P_real_lemkin": 0.844301554781202,
+          "mean_P_paul_graham": 0.17154505944013895,
+          "mean_P_heldout_base_llama": 0.2683675338675135,
+          "n_real": 566,
+          "n_pg": 371,
+          "n_llm": 289
+        },
+        "style_nonum_C1.0": {
+          "V1_real_lemkin_vs_paul_graham_auc": [
+            0.982051184364672,
+            0.9731042402826856,
+            0.9902034984013156
+          ],
+          "V2_real_lemkin_vs_heldout_topic_base_llama_auc": [
+            0.9618399012067933,
+            0.9479152975106068,
+            0.9730348409599621
+          ],
+          "mean_P_real_lemkin": 0.8200731142372617,
+          "mean_P_paul_graham": 0.18887476961704344,
+          "mean_P_heldout_base_llama": 0.2871630513573301,
+          "n_real": 566,
+          "n_pg": 371,
+          "n_llm": 289
+        },
+        "full_C1.0": {
+          "V1_real_lemkin_vs_paul_graham_auc": [
+            0.9991427999961903,
+            0.9982221248797696,
+            0.9997004601966027
+          ],
+          "V2_real_lemkin_vs_heldout_topic_base_llama_auc": [
+            0.9878953867974127,
+            0.9806843869499976,
+            0.9926425347930036
+          ],
+          "mean_P_real_lemkin": 0.8724910520567077,
+          "mean_P_paul_graham": 0.1429618428632704,
+          "mean_P_heldout_base_llama": 0.3020274480500949,
+          "n_real": 566,
+          "n_pg": 371,
+          "n_llm": 289
+        },
+        "style_C0.3": {
+          "V1_real_lemkin_vs_paul_graham_auc": [
+            0.9812511310277827,
+            0.9713396268033733,
+            0.9911056807789033
+          ],
+          "V2_real_lemkin_vs_heldout_topic_base_llama_auc": [
+            0.9509518627654763,
+            0.9311161431127779,
+            0.9664004632258943
+          ],
+          "mean_P_real_lemkin": 0.7712673678544654,
+          "mean_P_paul_graham": 0.23198377967889075,
+          "mean_P_heldout_base_llama": 0.3218494228919695,
+          "n_real": 566,
+          "n_pg": 371,
+          "n_llm": 289
+        },
+        "style_C3.0": {
+          "V1_real_lemkin_vs_paul_graham_auc": [
+            0.9886659110607373,
+            0.9821668559889473,
+            0.9946704595103716
+          ],
+          "V2_real_lemkin_vs_heldout_topic_base_llama_auc": [
+            0.9731803342829546,
+            0.9637512771637566,
+            0.9826543746615054
+          ],
+          "mean_P_real_lemkin": 0.8914235037116115,
+          "mean_P_paul_graham": 0.13523912003320848,
+          "mean_P_heldout_base_llama": 0.2318739276250696,
+          "n_real": 566,
+          "n_pg": 371,
+          "n_llm": 289
+        },
+        "V3_label_shuffle_control": {
+          "n_shuffles": 20,
+          "auc_real_vs_pg_mean": 0.4974405436552914,
+          "auc_real_vs_pg_min_max": [
+            0.4641357042850476,
+            0.5575181202556361
+          ],
+          "auc_real_vs_base_llama_mean": 0.49658789752650173,
+          "auc_real_vs_base_llama_min_max": [
+            0.3813414941948511,
+            0.6161345280161534
+          ],
+          "expected": "scatter around 0.5 (no consistent signal) if the real result is not a leak or a bug"
+        },
+        "V0_paul_graham_only_classifier": {
+          "style": {
+            "auc_real_vs_pg": 0.9937233910832151,
+            "mean_P_real_lemkin": 0.9119287689476315,
+            "mean_P_paul_graham": 0.1748607703228504,
+            "mean_P_base_llama_drafts": 0.9288796937012077,
+            "n_base_llama_drafts": 30,
+            "verdict": "INVALID: base Llama drafts score as Lemkin"
+          },
+          "full": {
+            "auc_real_vs_pg": 0.9992666177745183,
+            "mean_P_real_lemkin": 0.9312837782852985,
+            "mean_P_paul_graham": 0.1652615815851033,
+            "mean_P_base_llama_drafts": 0.9126876080838484,
+            "n_base_llama_drafts": 30,
+            "verdict": "INVALID: base Llama drafts score as Lemkin"
+          }
+        }
+      },
+      "systems": {
+        "style": {
+          "A Base Llama": {
+            "mean_P": 0.3526044045119304,
+            "ci_low": 0.2753613077488165,
+            "ci_high": 0.4389352225368587,
+            "n_topics": 30,
+            "share_above_0.5": 0.2
+          },
+          "C PersonaRAG stand-in": {
+            "mean_P": 0.38116764971086464,
+            "ci_low": 0.29846278136212523,
+            "ci_high": 0.47146240720899857,
+            "n_topics": 30,
+            "share_above_0.5": 0.3
+          },
+          "D QLoRA repaired": {
+            "mean_P": 0.7890050433765842,
+            "ci_low": 0.744091304569774,
+            "ci_high": 0.834832456492946,
+            "n_topics": 30,
+            "share_above_0.5": 1.0
+          },
+          "E Relabel, no retrieval": {
+            "mean_P": 0.8552424478899263,
+            "ci_low": 0.8264813807810788,
+            "ci_high": 0.8826304158786092,
+            "n_topics": 30,
+            "share_above_0.5": 1.0
+          },
+          "E Relabel + retrieval": {
+            "mean_P": 0.8235604062315057,
+            "ci_low": 0.7821201439417321,
+            "ci_high": 0.8621454118701668,
+            "n_topics": 30,
+            "share_above_0.5": 1.0
+          },
+          "F Model F (F-REL)": {
+            "mean_P": 0.7957540863311113,
+            "ci_low": 0.7358022540784467,
+            "ci_high": 0.8532459185054968,
+            "n_topics": 28,
+            "share_above_0.5": 0.9285714285714286
+          }
+        },
+        "style_no_copy": {
+          "A Base Llama": {
+            "mean_P": 0.3500464833243417,
+            "ci_low": 0.2689530130584451,
+            "ci_high": 0.43699828266866264,
+            "n_topics": 29,
+            "share_above_0.5": 0.20689655172413793
+          },
+          "C PersonaRAG stand-in": {
+            "mean_P": 0.38166565541387976,
+            "ci_low": 0.2834719666206846,
+            "ci_high": 0.4888554748135585,
+            "n_topics": 23,
+            "share_above_0.5": 0.34782608695652173
+          },
+          "D QLoRA repaired": {
+            "mean_P": 0.7937725279963884,
+            "ci_low": 0.7469280486385296,
+            "ci_high": 0.8393729611558096,
+            "n_topics": 29,
+            "share_above_0.5": 1.0
+          },
+          "E Relabel, no retrieval": {
+            "mean_P": 0.8477742335440617,
+            "ci_low": 0.8121450798670904,
+            "ci_high": 0.8785033989526844,
+            "n_topics": 28,
+            "share_above_0.5": 1.0
+          },
+          "E Relabel + retrieval": {
+            "mean_P": 0.8495996736661647,
+            "ci_low": 0.813546193649862,
+            "ci_high": 0.8844646117123595,
+            "n_topics": 26,
+            "share_above_0.5": 1.0
+          },
+          "F Model F (F-REL)": {
+            "mean_P": 0.8046358786534715,
+            "ci_low": 0.7411297011954594,
+            "ci_high": 0.8647605274738188,
+            "n_topics": 23,
+            "share_above_0.5": 0.9565217391304348
+          }
+        },
+        "style_nonum": {
+          "A Base Llama": {
+            "mean_P": 0.3476891359947184,
+            "ci_low": 0.2760051506428717,
+            "ci_high": 0.42452420097644317,
+            "n_topics": 30,
+            "share_above_0.5": 0.16666666666666666
+          },
+          "C PersonaRAG stand-in": {
+            "mean_P": 0.3820058750331304,
+            "ci_low": 0.3081094340195152,
+            "ci_high": 0.4627738809018798,
+            "n_topics": 30,
+            "share_above_0.5": 0.23333333333333334
+          },
+          "D QLoRA repaired": {
+            "mean_P": 0.7979310163319536,
+            "ci_low": 0.756025736681724,
+            "ci_high": 0.8400197478096818,
+            "n_topics": 30,
+            "share_above_0.5": 1.0
+          },
+          "E Relabel, no retrieval": {
+            "mean_P": 0.8431147423630314,
+            "ci_low": 0.8162917614699319,
+            "ci_high": 0.8690415494943508,
+            "n_topics": 30,
+            "share_above_0.5": 1.0
+          },
+          "E Relabel + retrieval": {
+            "mean_P": 0.8183853937757352,
+            "ci_low": 0.7675819661757525,
+            "ci_high": 0.8628290898858998,
+            "n_topics": 30,
+            "share_above_0.5": 0.9666666666666667
+          },
+          "F Model F (F-REL)": {
+            "mean_P": 0.7614457956057002,
+            "ci_low": 0.6955599298298565,
+            "ci_high": 0.8245744991450782,
+            "n_topics": 28,
+            "share_above_0.5": 0.8928571428571429
+          }
+        },
+        "style_nonum_no_copy": {
+          "A Base Llama": {
+            "mean_P": 0.3420124038075785,
+            "ci_low": 0.26837842754876884,
+            "ci_high": 0.42292364315891384,
+            "n_topics": 29,
+            "share_above_0.5": 0.13793103448275862
+          },
+          "C PersonaRAG stand-in": {
+            "mean_P": 0.3740265188290489,
+            "ci_low": 0.2838781812498654,
+            "ci_high": 0.472242762366086,
+            "n_topics": 23,
+            "share_above_0.5": 0.21739130434782608
+          },
+          "D QLoRA repaired": {
+            "mean_P": 0.8055268696774398,
+            "ci_low": 0.762835079944413,
+            "ci_high": 0.8477011819830251,
+            "n_topics": 29,
+            "share_above_0.5": 1.0
+          },
+          "E Relabel, no retrieval": {
+            "mean_P": 0.8422332138971375,
+            "ci_low": 0.8082271227443356,
+            "ci_high": 0.873329753069419,
+            "n_topics": 28,
+            "share_above_0.5": 1.0
+          },
+          "E Relabel + retrieval": {
+            "mean_P": 0.8504374838862633,
+            "ci_low": 0.8117954266722595,
+            "ci_high": 0.8872595820719037,
+            "n_topics": 26,
+            "share_above_0.5": 1.0
+          },
+          "F Model F (F-REL)": {
+            "mean_P": 0.7676915783152253,
+            "ci_low": 0.7023404702047779,
+            "ci_high": 0.8304055265233525,
+            "n_topics": 23,
+            "share_above_0.5": 0.9130434782608695
+          }
+        },
+        "full": {
+          "A Base Llama": {
+            "mean_P": 0.33816771767491877,
+            "ci_low": 0.27502585776421873,
+            "ci_high": 0.4053139432529199,
+            "n_topics": 30,
+            "share_above_0.5": 0.26666666666666666
+          },
+          "C PersonaRAG stand-in": {
+            "mean_P": 0.4547711551703449,
+            "ci_low": 0.37940404305458997,
+            "ci_high": 0.5308146386866753,
+            "n_topics": 30,
+            "share_above_0.5": 0.36666666666666664
+          },
+          "D QLoRA repaired": {
+            "mean_P": 0.8167975903998773,
+            "ci_low": 0.7751350659972324,
+            "ci_high": 0.857125912508004,
+            "n_topics": 30,
+            "share_above_0.5": 1.0
+          },
+          "E Relabel, no retrieval": {
+            "mean_P": 0.8777269964450843,
+            "ci_low": 0.8538940450739202,
+            "ci_high": 0.9001833578387489,
+            "n_topics": 30,
+            "share_above_0.5": 1.0
+          },
+          "E Relabel + retrieval": {
+            "mean_P": 0.841364566472828,
+            "ci_low": 0.8051241611983093,
+            "ci_high": 0.8763922190350448,
+            "n_topics": 30,
+            "share_above_0.5": 1.0
+          },
+          "F Model F (F-REL)": {
+            "mean_P": 0.763538359798965,
+            "ci_low": 0.7024111584137114,
+            "ci_high": 0.8239973625929159,
+            "n_topics": 28,
+            "share_above_0.5": 0.9285714285714286
+          }
+        },
+        "full_no_copy": {
+          "A Base Llama": {
+            "mean_P": 0.34578310038114624,
+            "ci_low": 0.2825458334366261,
+            "ci_high": 0.4107192032193199,
+            "n_topics": 29,
+            "share_above_0.5": 0.27586206896551724
+          },
+          "C PersonaRAG stand-in": {
+            "mean_P": 0.45045667542112666,
+            "ci_low": 0.37569022164122506,
+            "ci_high": 0.5284804283931696,
+            "n_topics": 23,
+            "share_above_0.5": 0.30434782608695654
+          },
+          "D QLoRA repaired": {
+            "mean_P": 0.8235996139890012,
+            "ci_low": 0.7815717799813927,
+            "ci_high": 0.8631080255926462,
+            "n_topics": 29,
+            "share_above_0.5": 1.0
+          },
+          "E Relabel, no retrieval": {
+            "mean_P": 0.8879323694047964,
+            "ci_low": 0.8664698480399184,
+            "ci_high": 0.9091306635611831,
+            "n_topics": 28,
+            "share_above_0.5": 1.0
+          },
+          "E Relabel + retrieval": {
+            "mean_P": 0.8544872701636874,
+            "ci_low": 0.8202915961027007,
+            "ci_high": 0.8886274493550035,
+            "n_topics": 26,
+            "share_above_0.5": 1.0
+          },
+          "F Model F (F-REL)": {
+            "mean_P": 0.770444730893724,
+            "ci_low": 0.6952238210162471,
+            "ci_high": 0.8408474583581316,
+            "n_topics": 23,
+            "share_above_0.5": 0.9130434782608695
+          }
+        }
+      },
+      "paired": {
+        "style": [
+          {
+            "n": 30,
+            "n_clusters": 30,
+            "mean_diff": 0.502638,
+            "median_diff": 0.540019,
+            "ci_low": 0.414627,
+            "ci_high": 0.580663,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 2.1456,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus A Base Llama",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          },
+          {
+            "n": 30,
+            "n_clusters": 30,
+            "mean_diff": 0.474075,
+            "median_diff": 0.472838,
+            "ci_low": 0.398266,
+            "ci_high": 0.55041,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 2.1489,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus C PersonaRAG stand-in",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          },
+          {
+            "n": 30,
+            "n_clusters": 30,
+            "mean_diff": 0.066237,
+            "median_diff": 0.054517,
+            "ci_low": 0.026765,
+            "ci_high": 0.106628,
+            "ci_level": 0.95,
+            "p_value": 0.00285,
+            "effect_size_dz": 0.597,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus D QLoRA repaired",
+            "p_holm": 0.0114,
+            "verdict": "B higher"
+          },
+          {
+            "n": 30,
+            "n_clusters": 30,
+            "mean_diff": -0.031682,
+            "median_diff": -0.017938,
+            "ci_low": -0.077367,
+            "ci_high": 0.012361,
+            "ci_level": 0.95,
+            "p_value": 0.185391,
+            "effect_size_dz": -0.248,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel + retrieval minus E Relabel, no retrieval",
+            "p_holm": 0.370782,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 30,
+            "n_clusters": 30,
+            "mean_diff": 0.442393,
+            "median_diff": 0.470924,
+            "ci_low": 0.350023,
+            "ci_high": 0.529486,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 1.7316,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel + retrieval minus C PersonaRAG stand-in",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          },
+          {
+            "n": 28,
+            "n_clusters": 28,
+            "mean_diff": -0.02767,
+            "median_diff": -0.012783,
+            "ci_low": -0.097098,
+            "ci_high": 0.042622,
+            "ci_level": 0.95,
+            "p_value": 0.449728,
+            "effect_size_dz": -0.1444,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "F Model F (F-REL) minus E Relabel + retrieval",
+            "p_holm": 0.449728,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 28,
+            "n_clusters": 28,
+            "mean_diff": -0.061068,
+            "median_diff": -0.055588,
+            "ci_low": -0.118309,
+            "ci_high": -0.003161,
+            "ci_level": 0.95,
+            "p_value": 0.049548,
+            "effect_size_dz": -0.3904,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "F Model F (F-REL) minus E Relabel, no retrieval",
+            "p_holm": 0.148644,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 30,
+            "n_clusters": 30,
+            "mean_diff": 0.436401,
+            "median_diff": 0.409148,
+            "ci_low": 0.34919,
+            "ci_high": 0.517323,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 1.7896,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "D QLoRA repaired minus A Base Llama",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          }
+        ],
+        "style_no_copy": [
+          {
+            "n": 27,
+            "n_clusters": 27,
+            "mean_diff": 0.506968,
+            "median_diff": 0.54641,
+            "ci_low": 0.41399,
+            "ci_high": 0.594808,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 2.0646,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus A Base Llama",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          },
+          {
+            "n": 22,
+            "n_clusters": 22,
+            "mean_diff": 0.480616,
+            "median_diff": 0.501956,
+            "ci_low": 0.384951,
+            "ci_high": 0.570494,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 2.0962,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus C PersonaRAG stand-in",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          },
+          {
+            "n": 28,
+            "n_clusters": 28,
+            "mean_diff": 0.055305,
+            "median_diff": 0.046822,
+            "ci_low": 0.015564,
+            "ci_high": 0.097417,
+            "ci_level": 0.95,
+            "p_value": 0.013349,
+            "effect_size_dz": 0.495,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus D QLoRA repaired",
+            "p_holm": 0.053396,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 26,
+            "n_clusters": 26,
+            "mean_diff": 0.000505,
+            "median_diff": 0.010205,
+            "ci_low": -0.041183,
+            "ci_high": 0.042825,
+            "ci_level": 0.95,
+            "p_value": 0.980501,
+            "effect_size_dz": 0.0046,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel + retrieval minus E Relabel, no retrieval",
+            "p_holm": 0.980501,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 20,
+            "n_clusters": 20,
+            "mean_diff": 0.476526,
+            "median_diff": 0.485891,
+            "ci_low": 0.373835,
+            "ci_high": 0.5733,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 2.0314,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel + retrieval minus C PersonaRAG stand-in",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          },
+          {
+            "n": 23,
+            "n_clusters": 23,
+            "mean_diff": -0.042712,
+            "median_diff": -0.022889,
+            "ci_low": -0.10883,
+            "ci_high": 0.022367,
+            "ci_level": 0.95,
+            "p_value": 0.235238,
+            "effect_size_dz": -0.2552,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "F Model F (F-REL) minus E Relabel + retrieval",
+            "p_holm": 0.57342,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 23,
+            "n_clusters": 23,
+            "mean_diff": -0.047645,
+            "median_diff": -0.055013,
+            "ci_low": -0.11295,
+            "ci_high": 0.019011,
+            "ci_level": 0.95,
+            "p_value": 0.19114,
+            "effect_size_dz": -0.2841,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "F Model F (F-REL) minus E Relabel, no retrieval",
+            "p_holm": 0.57342,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 28,
+            "n_clusters": 28,
+            "mean_diff": 0.453138,
+            "median_diff": 0.455934,
+            "ci_low": 0.36276,
+            "ci_high": 0.539188,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 1.8517,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "D QLoRA repaired minus A Base Llama",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          }
+        ],
+        "style_nonum": [
+          {
+            "n": 30,
+            "n_clusters": 30,
+            "mean_diff": 0.495426,
+            "median_diff": 0.535434,
+            "ci_low": 0.412526,
+            "ci_high": 0.573166,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 2.1845,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus A Base Llama",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          },
+          {
+            "n": 30,
+            "n_clusters": 30,
+            "mean_diff": 0.461109,
+            "median_diff": 0.511572,
+            "ci_low": 0.387561,
+            "ci_high": 0.536391,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 2.1367,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus C PersonaRAG stand-in",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          },
+          {
+            "n": 30,
+            "n_clusters": 30,
+            "mean_diff": 0.045184,
+            "median_diff": 0.036128,
+            "ci_low": 0.008689,
+            "ci_high": 0.082579,
+            "ci_level": 0.95,
+            "p_value": 0.025699,
+            "effect_size_dz": 0.4292,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus D QLoRA repaired",
+            "p_holm": 0.102796,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 30,
+            "n_clusters": 30,
+            "mean_diff": -0.024729,
+            "median_diff": -0.001904,
+            "ci_low": -0.071772,
+            "ci_high": 0.019337,
+            "ci_level": 0.95,
+            "p_value": 0.302835,
+            "effect_size_dz": -0.1911,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel + retrieval minus E Relabel, no retrieval",
+            "p_holm": 0.321484,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 30,
+            "n_clusters": 30,
+            "mean_diff": 0.43638,
+            "median_diff": 0.456248,
+            "ci_low": 0.346501,
+            "ci_high": 0.523905,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 1.7176,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel + retrieval minus C PersonaRAG stand-in",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          },
+          {
+            "n": 28,
+            "n_clusters": 28,
+            "mean_diff": -0.056239,
+            "median_diff": -0.054116,
+            "ci_low": -0.130219,
+            "ci_high": 0.019377,
+            "ci_level": 0.95,
+            "p_value": 0.160742,
+            "effect_size_dz": -0.2703,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "F Model F (F-REL) minus E Relabel + retrieval",
+            "p_holm": 0.321484,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 28,
+            "n_clusters": 28,
+            "mean_diff": -0.083332,
+            "median_diff": -0.055659,
+            "ci_low": -0.152144,
+            "ci_high": -0.014463,
+            "ci_level": 0.95,
+            "p_value": 0.028899,
+            "effect_size_dz": -0.4402,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "F Model F (F-REL) minus E Relabel, no retrieval",
+            "p_holm": 0.102796,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 30,
+            "n_clusters": 30,
+            "mean_diff": 0.450242,
+            "median_diff": 0.446711,
+            "ci_low": 0.365015,
+            "ci_high": 0.530463,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 1.9058,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "D QLoRA repaired minus A Base Llama",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          }
+        ],
+        "style_nonum_no_copy": [
+          {
+            "n": 27,
+            "n_clusters": 27,
+            "mean_diff": 0.514794,
+            "median_diff": 0.554756,
+            "ci_low": 0.42807,
+            "ci_high": 0.599416,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 2.1767,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus A Base Llama",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          },
+          {
+            "n": 22,
+            "n_clusters": 22,
+            "mean_diff": 0.479914,
+            "median_diff": 0.546371,
+            "ci_low": 0.38377,
+            "ci_high": 0.571741,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 2.0695,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus C PersonaRAG stand-in",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          },
+          {
+            "n": 28,
+            "n_clusters": 28,
+            "mean_diff": 0.037903,
+            "median_diff": 0.007361,
+            "ci_low": -0.002095,
+            "ci_high": 0.079829,
+            "ci_level": 0.95,
+            "p_value": 0.086146,
+            "effect_size_dz": 0.3368,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus D QLoRA repaired",
+            "p_holm": 0.250788,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 26,
+            "n_clusters": 26,
+            "mean_diff": 0.006683,
+            "median_diff": 0.019819,
+            "ci_low": -0.037723,
+            "ci_high": 0.051636,
+            "ci_level": 0.95,
+            "p_value": 0.778711,
+            "effect_size_dz": 0.0571,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel + retrieval minus E Relabel, no retrieval",
+            "p_holm": 0.778711,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 20,
+            "n_clusters": 20,
+            "mean_diff": 0.471993,
+            "median_diff": 0.511617,
+            "ci_low": 0.367503,
+            "ci_high": 0.570802,
+            "ci_level": 0.95,
+            "p_value": 0.0001,
+            "effect_size_dz": 1.9974,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel + retrieval minus C PersonaRAG stand-in",
+            "p_holm": 0.0005,
+            "verdict": "B higher"
+          },
+          {
+            "n": 23,
+            "n_clusters": 23,
+            "mean_diff": -0.081017,
+            "median_diff": -0.089482,
+            "ci_low": -0.15203,
+            "ci_high": -0.012986,
+            "ci_level": 0.95,
+            "p_value": 0.034898,
+            "effect_size_dz": -0.4685,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "F Model F (F-REL) minus E Relabel + retrieval",
+            "p_holm": 0.139592,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 23,
+            "n_clusters": 23,
+            "mean_diff": -0.07439,
+            "median_diff": -0.040919,
+            "ci_low": -0.154005,
+            "ci_high": 0.00255,
+            "ci_level": 0.95,
+            "p_value": 0.083596,
+            "effect_size_dz": -0.3789,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "F Model F (F-REL) minus E Relabel, no retrieval",
+            "p_holm": 0.250788,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 28,
+            "n_clusters": 28,
+            "mean_diff": 0.475331,
+            "median_diff": 0.469377,
+            "ci_low": 0.393312,
+            "ci_high": 0.55724,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 2.0456,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "D QLoRA repaired minus A Base Llama",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          }
+        ],
+        "full": [
+          {
+            "n": 30,
+            "n_clusters": 30,
+            "mean_diff": 0.539559,
+            "median_diff": 0.581194,
+            "ci_low": 0.475011,
+            "ci_high": 0.596386,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 3.13,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus A Base Llama",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          },
+          {
+            "n": 30,
+            "n_clusters": 30,
+            "mean_diff": 0.422956,
+            "median_diff": 0.455789,
+            "ci_low": 0.352379,
+            "ci_high": 0.489826,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 2.1965,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus C PersonaRAG stand-in",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          },
+          {
+            "n": 30,
+            "n_clusters": 30,
+            "mean_diff": 0.060929,
+            "median_diff": 0.04578,
+            "ci_low": 0.024255,
+            "ci_high": 0.097315,
+            "ci_level": 0.95,
+            "p_value": 0.003,
+            "effect_size_dz": 0.5927,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus D QLoRA repaired",
+            "p_holm": 0.009,
+            "verdict": "B higher"
+          },
+          {
+            "n": 30,
+            "n_clusters": 30,
+            "mean_diff": -0.036362,
+            "median_diff": -0.027796,
+            "ci_low": -0.065756,
+            "ci_high": -0.008535,
+            "ci_level": 0.95,
+            "p_value": 0.020399,
+            "effect_size_dz": -0.4389,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel + retrieval minus E Relabel, no retrieval",
+            "p_holm": 0.040798,
+            "verdict": "B lower"
+          },
+          {
+            "n": 30,
+            "n_clusters": 30,
+            "mean_diff": 0.386593,
+            "median_diff": 0.415199,
+            "ci_low": 0.316169,
+            "ci_high": 0.451694,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 2.0599,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel + retrieval minus C PersonaRAG stand-in",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          },
+          {
+            "n": 28,
+            "n_clusters": 28,
+            "mean_diff": -0.075334,
+            "median_diff": -0.081682,
+            "ci_low": -0.136623,
+            "ci_high": -0.015686,
+            "ci_level": 0.95,
+            "p_value": 0.021899,
+            "effect_size_dz": -0.4664,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "F Model F (F-REL) minus E Relabel + retrieval",
+            "p_holm": 0.040798,
+            "verdict": "B lower"
+          },
+          {
+            "n": 28,
+            "n_clusters": 28,
+            "mean_diff": -0.115892,
+            "median_diff": -0.10638,
+            "ci_low": -0.168818,
+            "ci_high": -0.066679,
+            "ci_level": 0.95,
+            "p_value": 0.0002,
+            "effect_size_dz": -0.8308,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "F Model F (F-REL) minus E Relabel, no retrieval",
+            "p_holm": 0.0008,
+            "verdict": "B lower"
+          },
+          {
+            "n": 30,
+            "n_clusters": 30,
+            "mean_diff": 0.47863,
+            "median_diff": 0.554045,
+            "ci_low": 0.399122,
+            "ci_high": 0.551213,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 2.2262,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "D QLoRA repaired minus A Base Llama",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          }
+        ],
+        "full_no_copy": [
+          {
+            "n": 27,
+            "n_clusters": 27,
+            "mean_diff": 0.54522,
+            "median_diff": 0.576266,
+            "ci_low": 0.483877,
+            "ci_high": 0.605135,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 3.2699,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus A Base Llama",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          },
+          {
+            "n": 22,
+            "n_clusters": 22,
+            "mean_diff": 0.43715,
+            "median_diff": 0.455789,
+            "ci_low": 0.361486,
+            "ci_high": 0.512138,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 2.4312,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus C PersonaRAG stand-in",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          },
+          {
+            "n": 28,
+            "n_clusters": 28,
+            "mean_diff": 0.066314,
+            "median_diff": 0.044233,
+            "ci_low": 0.023611,
+            "ci_high": 0.108655,
+            "ci_level": 0.95,
+            "p_value": 0.00515,
+            "effect_size_dz": 0.5756,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus D QLoRA repaired",
+            "p_holm": 0.01545,
+            "verdict": "B higher"
+          },
+          {
+            "n": 26,
+            "n_clusters": 26,
+            "mean_diff": -0.035939,
+            "median_diff": -0.026038,
+            "ci_low": -0.065632,
+            "ci_high": -0.008157,
+            "ci_level": 0.95,
+            "p_value": 0.024599,
+            "effect_size_dz": -0.4587,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel + retrieval minus E Relabel, no retrieval",
+            "p_holm": 0.049198,
+            "verdict": "B lower"
+          },
+          {
+            "n": 20,
+            "n_clusters": 20,
+            "mean_diff": 0.392694,
+            "median_diff": 0.402734,
+            "ci_low": 0.318889,
+            "ci_high": 0.460855,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 2.3367,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel + retrieval minus C PersonaRAG stand-in",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          },
+          {
+            "n": 23,
+            "n_clusters": 23,
+            "mean_diff": -0.08226,
+            "median_diff": -0.053665,
+            "ci_low": -0.15443,
+            "ci_high": -0.011999,
+            "ci_level": 0.95,
+            "p_value": 0.039998,
+            "effect_size_dz": -0.4617,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "F Model F (F-REL) minus E Relabel + retrieval",
+            "p_holm": 0.049198,
+            "verdict": "B lower"
+          },
+          {
+            "n": 23,
+            "n_clusters": 23,
+            "mean_diff": -0.116152,
+            "median_diff": -0.088041,
+            "ci_low": -0.177225,
+            "ci_high": -0.057277,
+            "ci_level": 0.95,
+            "p_value": 0.00125,
+            "effect_size_dz": -0.7714,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "F Model F (F-REL) minus E Relabel, no retrieval",
+            "p_holm": 0.005,
+            "verdict": "B lower"
+          },
+          {
+            "n": 28,
+            "n_clusters": 28,
+            "mean_diff": 0.487101,
+            "median_diff": 0.544427,
+            "ci_low": 0.406512,
+            "ci_high": 0.563853,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 2.2736,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "D QLoRA repaired minus A Base Llama",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          }
+        ]
+      },
+      "robustness": {
+        "style_vs_full": 0.942857142857143,
+        "style_vs_style_nonum": 0.942857142857143,
+        "style_vs_style_no_copy": 0.942857142857143,
+        "style_C0.3_vs_style_C1.0": 1.0,
+        "style_C3.0_vs_style_C1.0": 1.0,
+        "draft_level_spearman_P_vs_negative_PUK28_voice_distance": {
+          "rho": 0.41415720711073034,
+          "p": 5.478365143023615e-11,
+          "n": 231
+        },
+        "system_level_spearman_P_vs_negative_PUK28_voice_distance": 1.0,
+        "draft_level_spearman_P_vs_total_draft_words": {
+          "rho": -0.48636988097767797,
+          "p": 4.0431572030623585e-15
+        },
+        "within_system_spearman_P_vs_draft_words": {
+          "A Base Llama": {
+            "rho": -0.30218069283944377,
+            "p": 0.10459311077008689,
+            "n": 30
+          },
+          "C PersonaRAG stand-in": {
+            "rho": -0.23856683203026224,
+            "p": 0.20423158286337995,
+            "n": 30
+          },
+          "E Relabel + retrieval": {
+            "rho": -0.04314722216566449,
+            "p": 0.7003146006427222,
+            "n": 82
+          },
+          "E Relabel, no retrieval": {
+            "rho": -0.14415480621368978,
+            "p": 0.1777291470877531,
+            "n": 89
+          }
+        }
+      },
+      "n_drafts_scored": {
+        "A Base Llama": 30,
+        "C PersonaRAG stand-in": 30,
+        "D QLoRA repaired": 83,
+        "E Relabel, no retrieval": 89,
+        "E Relabel + retrieval": 82,
+        "F Model F (F-REL)": 28
+      },
+      "n_drafts_dropped_for_copy": {
+        "C PersonaRAG stand-in": 7,
+        "D QLoRA repaired": 5,
+        "E Relabel, no retrieval": 11,
+        "F Model F (F-REL)": 5,
+        "E Relabel + retrieval": 13,
+        "A Base Llama": 1
+      }
+    },
+    "linkedin": {
+      "validity": {
+        "style_C1.0": {
+          "V1_real_lemkin_vs_paul_graham_auc": [
+            0.9319588553658463,
+            0.8983971790009728,
+            0.9577439233669242
+          ],
+          "V2_real_lemkin_vs_heldout_topic_base_llama_auc": [
+            0.8749350874156137,
+            0.825639201708366,
+            0.9188027114226915
+          ],
+          "mean_P_real_lemkin": 0.671109500358868,
+          "mean_P_paul_graham": 0.27128400089395693,
+          "mean_P_heldout_base_llama": 0.33435430715561343,
+          "n_real": 106,
+          "n_pg": 631,
+          "n_llm": 109
+        },
+        "style_nonum_C1.0": {
+          "V1_real_lemkin_vs_paul_graham_auc": [
+            0.932257871602428,
+            0.9042952467199415,
+            0.9577594084374745
+          ],
+          "V2_real_lemkin_vs_heldout_topic_base_llama_auc": [
+            0.8684438289769776,
+            0.8205313029215173,
+            0.9119244265880079
+          ],
+          "mean_P_real_lemkin": 0.610430690278815,
+          "mean_P_paul_graham": 0.3005463280611523,
+          "mean_P_heldout_base_llama": 0.3524207091975855,
+          "n_real": 106,
+          "n_pg": 631,
+          "n_llm": 109
+        },
+        "full_C1.0": {
+          "V1_real_lemkin_vs_paul_graham_auc": [
+            0.9917770534940048,
+            0.9827161701060685,
+            0.9988824813911414
+          ],
+          "V2_real_lemkin_vs_heldout_topic_base_llama_auc": [
+            0.9476371819283365,
+            0.9100981192549589,
+            0.9764839947151267
+          ],
+          "mean_P_real_lemkin": 0.6819521984578227,
+          "mean_P_paul_graham": 0.2730510791745702,
+          "mean_P_heldout_base_llama": 0.35031772408952977,
+          "n_real": 106,
+          "n_pg": 631,
+          "n_llm": 109
+        },
+        "style_C0.3": {
+          "V1_real_lemkin_vs_paul_graham_auc": [
+            0.9170528959722514,
+            0.8802444889745917,
+            0.9471795227524973
+          ],
+          "V2_real_lemkin_vs_heldout_topic_base_llama_auc": [
+            0.8481045525359183,
+            0.7941751774277306,
+            0.8994882917789758
+          ],
+          "mean_P_real_lemkin": 0.6135398766022677,
+          "mean_P_paul_graham": 0.35761091849839977,
+          "mean_P_heldout_base_llama": 0.4026230845752307,
+          "n_real": 106,
+          "n_pg": 631,
+          "n_llm": 109
+        },
+        "style_C3.0": {
+          "V1_real_lemkin_vs_paul_graham_auc": [
+            0.9459976676733547,
+            0.9172503165509697,
+            0.9673588189119076
+          ],
+          "V2_real_lemkin_vs_heldout_topic_base_llama_auc": [
+            0.8939761121689459,
+            0.8497554959321447,
+            0.9329806516422083
+          ],
+          "mean_P_real_lemkin": 0.7101283554582818,
+          "mean_P_paul_graham": 0.19484936608001807,
+          "mean_P_heldout_base_llama": 0.2724428328970737,
+          "n_real": 106,
+          "n_pg": 631,
+          "n_llm": 109
+        },
+        "V3_label_shuffle_control": {
+          "n_shuffles": 20,
+          "auc_real_vs_pg_mean": 0.46328902909427977,
+          "auc_real_vs_pg_min_max": [
+            0.31761504649702477,
+            0.578252549113417
+          ],
+          "auc_real_vs_base_llama_mean": 0.519361063464837,
+          "auc_real_vs_base_llama_min_max": [
+            0.2701543739279588,
+            0.7212692967409947
+          ],
+          "expected": "scatter around 0.5 (no consistent signal) if the real result is not a leak or a bug"
+        },
+        "V0_paul_graham_only_classifier": {
+          "style": {
+            "auc_real_vs_pg": 0.9610830368088987,
+            "mean_P_real_lemkin": 0.7726844666056114,
+            "mean_P_paul_graham": 0.3291669062380721,
+            "mean_P_base_llama_drafts": 0.7560287391070191,
+            "n_base_llama_drafts": 30,
+            "verdict": "INVALID: base Llama drafts score as Lemkin"
+          },
+          "full": {
+            "auc_real_vs_pg": 0.9987441318063571,
+            "mean_P_real_lemkin": 0.7994075290827475,
+            "mean_P_paul_graham": 0.35135749956343276,
+            "mean_P_base_llama_drafts": 0.7689832173275677,
+            "n_base_llama_drafts": 30,
+            "verdict": "INVALID: base Llama drafts score as Lemkin"
+          }
+        }
+      },
+      "systems": {
+        "style": {
+          "A Base Llama": {
+            "mean_P": 0.3377013112015933,
+            "ci_low": 0.27810359268557217,
+            "ci_high": 0.399159172991959,
+            "n_topics": 30,
+            "share_above_0.5": 0.2
+          },
+          "C PersonaRAG stand-in": {
+            "mean_P": 0.3607149083997407,
+            "ci_low": 0.2888832362027462,
+            "ci_high": 0.43680362964568425,
+            "n_topics": 30,
+            "share_above_0.5": 0.3
+          },
+          "D QLoRA repaired": {
+            "mean_P": 0.5897112199186925,
+            "ci_low": 0.5340545617965905,
+            "ci_high": 0.6474386303597329,
+            "n_topics": 30,
+            "share_above_0.5": 0.6666666666666666
+          },
+          "E Relabel, no retrieval": {
+            "mean_P": 0.6596919077981926,
+            "ci_low": 0.5975385581052375,
+            "ci_high": 0.7215064109755313,
+            "n_topics": 28,
+            "share_above_0.5": 0.7857142857142857
+          },
+          "E Relabel + retrieval": {
+            "mean_P": 0.5928066145231816,
+            "ci_low": 0.5281059415205579,
+            "ci_high": 0.6574213505808155,
+            "n_topics": 30,
+            "share_above_0.5": 0.6666666666666666
+          },
+          "F Model F (F-REL)": {
+            "mean_P": 0.5673875855690859,
+            "ci_low": 0.48961235077869314,
+            "ci_high": 0.6471854391485176,
+            "n_topics": 24,
+            "share_above_0.5": 0.625
+          }
+        },
+        "style_no_copy": {
+          "A Base Llama": {
+            "mean_P": 0.35036882270958813,
+            "ci_low": 0.2837477982466106,
+            "ci_high": 0.41771381187661816,
+            "n_topics": 27,
+            "share_above_0.5": 0.2222222222222222
+          },
+          "C PersonaRAG stand-in": {
+            "mean_P": 0.3561042817928883,
+            "ci_low": 0.2785494455572016,
+            "ci_high": 0.44184239282474624,
+            "n_topics": 27,
+            "share_above_0.5": 0.2962962962962963
+          },
+          "D QLoRA repaired": {
+            "mean_P": 0.595364780743834,
+            "ci_low": 0.524581595703649,
+            "ci_high": 0.6689696165153277,
+            "n_topics": 24,
+            "share_above_0.5": 0.6666666666666666
+          },
+          "E Relabel, no retrieval": {
+            "mean_P": 0.6859794897166801,
+            "ci_low": 0.6097757359018892,
+            "ci_high": 0.7609295500133136,
+            "n_topics": 19,
+            "share_above_0.5": 0.8421052631578947
+          },
+          "E Relabel + retrieval": {
+            "mean_P": 0.606701149983972,
+            "ci_low": 0.5190750798441058,
+            "ci_high": 0.6895857405574151,
+            "n_topics": 20,
+            "share_above_0.5": 0.7
+          },
+          "F Model F (F-REL)": {
+            "mean_P": 0.562109703628151,
+            "ci_low": 0.4746280744759253,
+            "ci_high": 0.652150878587688,
+            "n_topics": 18,
+            "share_above_0.5": 0.6666666666666666
+          }
+        },
+        "style_nonum": {
+          "A Base Llama": {
+            "mean_P": 0.3615325524422805,
+            "ci_low": 0.30769928679107167,
+            "ci_high": 0.417404225072429,
+            "n_topics": 30,
+            "share_above_0.5": 0.2
+          },
+          "C PersonaRAG stand-in": {
+            "mean_P": 0.33510305377015703,
+            "ci_low": 0.27876535925433354,
+            "ci_high": 0.39348609543463775,
+            "n_topics": 30,
+            "share_above_0.5": 0.13333333333333333
+          },
+          "D QLoRA repaired": {
+            "mean_P": 0.5559067993272949,
+            "ci_low": 0.5211969170228564,
+            "ci_high": 0.5897240477777108,
+            "n_topics": 30,
+            "share_above_0.5": 0.6666666666666666
+          },
+          "E Relabel, no retrieval": {
+            "mean_P": 0.5982602898810846,
+            "ci_low": 0.5517542742716667,
+            "ci_high": 0.642282181810822,
+            "n_topics": 28,
+            "share_above_0.5": 0.7857142857142857
+          },
+          "E Relabel + retrieval": {
+            "mean_P": 0.557105371022954,
+            "ci_low": 0.5065707671304805,
+            "ci_high": 0.6074262933963527,
+            "n_topics": 30,
+            "share_above_0.5": 0.6666666666666666
+          },
+          "F Model F (F-REL)": {
+            "mean_P": 0.512322266451876,
+            "ci_low": 0.4639764713985869,
+            "ci_high": 0.5609882680004166,
+            "n_topics": 24,
+            "share_above_0.5": 0.5833333333333334
+          }
+        },
+        "style_nonum_no_copy": {
+          "A Base Llama": {
+            "mean_P": 0.3674106392294906,
+            "ci_low": 0.30721502015383645,
+            "ci_high": 0.4268428474696307,
+            "n_topics": 27,
+            "share_above_0.5": 0.2222222222222222
+          },
+          "C PersonaRAG stand-in": {
+            "mean_P": 0.32430953793334527,
+            "ci_low": 0.2645305941238748,
+            "ci_high": 0.3909839012262843,
+            "n_topics": 27,
+            "share_above_0.5": 0.14814814814814814
+          },
+          "D QLoRA repaired": {
+            "mean_P": 0.5669577570641798,
+            "ci_low": 0.5254396556154026,
+            "ci_high": 0.6062550988151943,
+            "n_topics": 24,
+            "share_above_0.5": 0.7083333333333334
+          },
+          "E Relabel, no retrieval": {
+            "mean_P": 0.6048453259929265,
+            "ci_low": 0.5520725863451652,
+            "ci_high": 0.6572234053363765,
+            "n_topics": 19,
+            "share_above_0.5": 0.7894736842105263
+          },
+          "E Relabel + retrieval": {
+            "mean_P": 0.5692960225968283,
+            "ci_low": 0.5054357742373771,
+            "ci_high": 0.6290428227117805,
+            "n_topics": 20,
+            "share_above_0.5": 0.7
+          },
+          "F Model F (F-REL)": {
+            "mean_P": 0.5216899373552867,
+            "ci_low": 0.4664110602454338,
+            "ci_high": 0.5801939772768383,
+            "n_topics": 18,
+            "share_above_0.5": 0.5555555555555556
+          }
+        },
+        "full": {
+          "A Base Llama": {
+            "mean_P": 0.3723759081001881,
+            "ci_low": 0.3274521222710466,
+            "ci_high": 0.4167169911083694,
+            "n_topics": 30,
+            "share_above_0.5": 0.13333333333333333
+          },
+          "C PersonaRAG stand-in": {
+            "mean_P": 0.4190317854437866,
+            "ci_low": 0.37339901926900565,
+            "ci_high": 0.4639038158088016,
+            "n_topics": 30,
+            "share_above_0.5": 0.36666666666666664
+          },
+          "D QLoRA repaired": {
+            "mean_P": 0.6076021770013581,
+            "ci_low": 0.5690184933801298,
+            "ci_high": 0.6474751225826649,
+            "n_topics": 30,
+            "share_above_0.5": 0.8
+          },
+          "E Relabel, no retrieval": {
+            "mean_P": 0.6677696240942664,
+            "ci_low": 0.6254040124445593,
+            "ci_high": 0.7066756037142116,
+            "n_topics": 28,
+            "share_above_0.5": 0.9285714285714286
+          },
+          "E Relabel + retrieval": {
+            "mean_P": 0.6073687715810797,
+            "ci_low": 0.5663388903251786,
+            "ci_high": 0.6453678221400794,
+            "n_topics": 30,
+            "share_above_0.5": 0.8333333333333334
+          },
+          "F Model F (F-REL)": {
+            "mean_P": 0.585374243968936,
+            "ci_low": 0.5133415984088993,
+            "ci_high": 0.657659170586157,
+            "n_topics": 24,
+            "share_above_0.5": 0.625
+          }
+        },
+        "full_no_copy": {
+          "A Base Llama": {
+            "mean_P": 0.3780348340377188,
+            "ci_low": 0.330093364194959,
+            "ci_high": 0.42652231059197515,
+            "n_topics": 27,
+            "share_above_0.5": 0.14814814814814814
+          },
+          "C PersonaRAG stand-in": {
+            "mean_P": 0.43377911355543464,
+            "ci_low": 0.38732334917271705,
+            "ci_high": 0.480030222757385,
+            "n_topics": 27,
+            "share_above_0.5": 0.4074074074074074
+          },
+          "D QLoRA repaired": {
+            "mean_P": 0.6049901201496374,
+            "ci_low": 0.5622467868049337,
+            "ci_high": 0.6470934948826051,
+            "n_topics": 24,
+            "share_above_0.5": 0.7916666666666666
+          },
+          "E Relabel, no retrieval": {
+            "mean_P": 0.681253242600064,
+            "ci_low": 0.6327251270564684,
+            "ci_high": 0.7226679773036034,
+            "n_topics": 19,
+            "share_above_0.5": 0.9473684210526315
+          },
+          "E Relabel + retrieval": {
+            "mean_P": 0.6158569188788474,
+            "ci_low": 0.5554651631928378,
+            "ci_high": 0.6710447421749064,
+            "n_topics": 20,
+            "share_above_0.5": 0.8
+          },
+          "F Model F (F-REL)": {
+            "mean_P": 0.5904889996943339,
+            "ci_low": 0.4998271145315671,
+            "ci_high": 0.6796278936022598,
+            "n_topics": 18,
+            "share_above_0.5": 0.6111111111111112
+          }
+        }
+      },
+      "paired": {
+        "style": [
+          {
+            "n": 28,
+            "n_clusters": 28,
+            "mean_diff": 0.317023,
+            "median_diff": 0.302189,
+            "ci_low": 0.250652,
+            "ci_high": 0.383958,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 1.7138,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus A Base Llama",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          },
+          {
+            "n": 28,
+            "n_clusters": 28,
+            "mean_diff": 0.294828,
+            "median_diff": 0.328892,
+            "ci_low": 0.237848,
+            "ci_high": 0.351805,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 1.8309,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus C PersonaRAG stand-in",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          },
+          {
+            "n": 28,
+            "n_clusters": 28,
+            "mean_diff": 0.06464,
+            "median_diff": 0.061806,
+            "ci_low": 0.017998,
+            "ci_high": 0.11337,
+            "ci_level": 0.95,
+            "p_value": 0.011199,
+            "effect_size_dz": 0.5088,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus D QLoRA repaired",
+            "p_holm": 0.044796,
+            "verdict": "B higher"
+          },
+          {
+            "n": 28,
+            "n_clusters": 28,
+            "mean_diff": -0.049365,
+            "median_diff": -0.043596,
+            "ci_low": -0.097073,
+            "ci_high": -0.004236,
+            "ci_level": 0.95,
+            "p_value": 0.051847,
+            "effect_size_dz": -0.3826,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel + retrieval minus E Relabel, no retrieval",
+            "p_holm": 0.155541,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 30,
+            "n_clusters": 30,
+            "mean_diff": 0.232092,
+            "median_diff": 0.229463,
+            "ci_low": 0.164984,
+            "ci_high": 0.297203,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 1.2164,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel + retrieval minus C PersonaRAG stand-in",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          },
+          {
+            "n": 24,
+            "n_clusters": 24,
+            "mean_diff": -0.004897,
+            "median_diff": 0.0214,
+            "ci_low": -0.076,
+            "ci_high": 0.06145,
+            "ci_level": 0.95,
+            "p_value": 0.887206,
+            "effect_size_dz": -0.028,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "F Model F (F-REL) minus E Relabel + retrieval",
+            "p_holm": 0.887206,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 22,
+            "n_clusters": 22,
+            "mean_diff": -0.058313,
+            "median_diff": -0.069029,
+            "ci_low": -0.118213,
+            "ci_high": 0.003118,
+            "ci_level": 0.95,
+            "p_value": 0.080496,
+            "effect_size_dz": -0.3948,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "F Model F (F-REL) minus E Relabel, no retrieval",
+            "p_holm": 0.160992,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 30,
+            "n_clusters": 30,
+            "mean_diff": 0.25201,
+            "median_diff": 0.233393,
+            "ci_low": 0.188474,
+            "ci_high": 0.316986,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 1.3496,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "D QLoRA repaired minus A Base Llama",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          }
+        ],
+        "style_no_copy": [
+          {
+            "n": 19,
+            "n_clusters": 19,
+            "mean_diff": 0.343083,
+            "median_diff": 0.336203,
+            "ci_low": 0.265092,
+            "ci_high": 0.420726,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 1.8757,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus A Base Llama",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          },
+          {
+            "n": 19,
+            "n_clusters": 19,
+            "mean_diff": 0.280977,
+            "median_diff": 0.304689,
+            "ci_low": 0.217119,
+            "ci_high": 0.344297,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 1.905,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus C PersonaRAG stand-in",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          },
+          {
+            "n": 19,
+            "n_clusters": 19,
+            "mean_diff": 0.05648,
+            "median_diff": 0.041137,
+            "ci_low": 0.01838,
+            "ci_high": 0.098778,
+            "ci_level": 0.95,
+            "p_value": 0.011549,
+            "effect_size_dz": 0.6075,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus D QLoRA repaired",
+            "p_holm": 0.046196,
+            "verdict": "B higher"
+          },
+          {
+            "n": 18,
+            "n_clusters": 18,
+            "mean_diff": -0.063545,
+            "median_diff": -0.058756,
+            "ci_low": -0.127293,
+            "ci_high": 0.000701,
+            "ci_level": 0.95,
+            "p_value": 0.076546,
+            "effect_size_dz": -0.4453,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel + retrieval minus E Relabel, no retrieval",
+            "p_holm": 0.153092,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 20,
+            "n_clusters": 20,
+            "mean_diff": 0.235206,
+            "median_diff": 0.241048,
+            "ci_low": 0.144574,
+            "ci_high": 0.327651,
+            "ci_level": 0.95,
+            "p_value": 0.00025,
+            "effect_size_dz": 1.0748,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel + retrieval minus C PersonaRAG stand-in",
+            "p_holm": 0.00125,
+            "verdict": "B higher"
+          },
+          {
+            "n": 17,
+            "n_clusters": 17,
+            "mean_diff": -0.031314,
+            "median_diff": -0.009614,
+            "ci_low": -0.12357,
+            "ci_high": 0.054728,
+            "ci_level": 0.95,
+            "p_value": 0.504325,
+            "effect_size_dz": -0.1662,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "F Model F (F-REL) minus E Relabel + retrieval",
+            "p_holm": 0.504325,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 15,
+            "n_clusters": 15,
+            "mean_diff": -0.093484,
+            "median_diff": -0.124689,
+            "ci_low": -0.159983,
+            "ci_high": -0.026206,
+            "ci_level": 0.95,
+            "p_value": 0.017049,
+            "effect_size_dz": -0.6908,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "F Model F (F-REL) minus E Relabel, no retrieval",
+            "p_holm": 0.051147,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 23,
+            "n_clusters": 23,
+            "mean_diff": 0.254925,
+            "median_diff": 0.249655,
+            "ci_low": 0.181565,
+            "ci_high": 0.325403,
+            "ci_level": 0.95,
+            "p_value": 0.0001,
+            "effect_size_dz": 1.3865,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "D QLoRA repaired minus A Base Llama",
+            "p_holm": 0.0006,
+            "verdict": "B higher"
+          }
+        ],
+        "style_nonum": [
+          {
+            "n": 28,
+            "n_clusters": 28,
+            "mean_diff": 0.232679,
+            "median_diff": 0.220923,
+            "ci_low": 0.171202,
+            "ci_high": 0.294718,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 1.3744,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus A Base Llama",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          },
+          {
+            "n": 28,
+            "n_clusters": 28,
+            "mean_diff": 0.263988,
+            "median_diff": 0.319391,
+            "ci_low": 0.19046,
+            "ci_high": 0.333877,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 1.3152,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus C PersonaRAG stand-in",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          },
+          {
+            "n": 28,
+            "n_clusters": 28,
+            "mean_diff": 0.038154,
+            "median_diff": 0.019765,
+            "ci_low": -0.001345,
+            "ci_high": 0.081183,
+            "ci_level": 0.95,
+            "p_value": 0.080646,
+            "effect_size_dz": 0.3414,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus D QLoRA repaired",
+            "p_holm": 0.241938,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 28,
+            "n_clusters": 28,
+            "mean_diff": -0.028871,
+            "median_diff": -0.028766,
+            "ci_low": -0.069412,
+            "ci_high": 0.011348,
+            "ci_level": 0.95,
+            "p_value": 0.183591,
+            "effect_size_dz": -0.2573,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel + retrieval minus E Relabel, no retrieval",
+            "p_holm": 0.367182,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 30,
+            "n_clusters": 30,
+            "mean_diff": 0.222002,
+            "median_diff": 0.23032,
+            "ci_low": 0.152298,
+            "ci_high": 0.289709,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 1.1313,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel + retrieval minus C PersonaRAG stand-in",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          },
+          {
+            "n": 24,
+            "n_clusters": 24,
+            "mean_diff": -0.032853,
+            "median_diff": -0.00077,
+            "ci_low": -0.09604,
+            "ci_high": 0.023427,
+            "ci_level": 0.95,
+            "p_value": 0.309985,
+            "effect_size_dz": -0.2147,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "F Model F (F-REL) minus E Relabel + retrieval",
+            "p_holm": 0.367182,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 22,
+            "n_clusters": 22,
+            "mean_diff": -0.073684,
+            "median_diff": -0.063174,
+            "ci_low": -0.133884,
+            "ci_high": -0.016663,
+            "ci_level": 0.95,
+            "p_value": 0.023149,
+            "effect_size_dz": -0.5066,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "F Model F (F-REL) minus E Relabel, no retrieval",
+            "p_holm": 0.092596,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 30,
+            "n_clusters": 30,
+            "mean_diff": 0.194374,
+            "median_diff": 0.176658,
+            "ci_low": 0.132549,
+            "ci_high": 0.257468,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 1.0817,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "D QLoRA repaired minus A Base Llama",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          }
+        ],
+        "style_nonum_no_copy": [
+          {
+            "n": 19,
+            "n_clusters": 19,
+            "mean_diff": 0.21981,
+            "median_diff": 0.212053,
+            "ci_low": 0.151934,
+            "ci_high": 0.291808,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 1.3389,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus A Base Llama",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          },
+          {
+            "n": 19,
+            "n_clusters": 19,
+            "mean_diff": 0.242022,
+            "median_diff": 0.311842,
+            "ci_low": 0.162227,
+            "ci_high": 0.316981,
+            "ci_level": 0.95,
+            "p_value": 0.0002,
+            "effect_size_dz": 1.3577,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus C PersonaRAG stand-in",
+            "p_holm": 0.0012,
+            "verdict": "B higher"
+          },
+          {
+            "n": 19,
+            "n_clusters": 19,
+            "mean_diff": 0.024253,
+            "median_diff": 0.002853,
+            "ci_low": -0.010856,
+            "ci_high": 0.066532,
+            "ci_level": 0.95,
+            "p_value": 0.283086,
+            "effect_size_dz": 0.2657,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus D QLoRA repaired",
+            "p_holm": 0.566172,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 18,
+            "n_clusters": 18,
+            "mean_diff": -0.040115,
+            "median_diff": -0.036223,
+            "ci_low": -0.087752,
+            "ci_high": 0.010626,
+            "ci_level": 0.95,
+            "p_value": 0.138493,
+            "effect_size_dz": -0.3657,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel + retrieval minus E Relabel, no retrieval",
+            "p_holm": 0.415479,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 20,
+            "n_clusters": 20,
+            "mean_diff": 0.228623,
+            "median_diff": 0.23032,
+            "ci_low": 0.142663,
+            "ci_high": 0.314928,
+            "ci_level": 0.95,
+            "p_value": 0.00025,
+            "effect_size_dz": 1.1147,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel + retrieval minus C PersonaRAG stand-in",
+            "p_holm": 0.00125,
+            "verdict": "B higher"
+          },
+          {
+            "n": 17,
+            "n_clusters": 17,
+            "mean_diff": -0.042773,
+            "median_diff": -0.000276,
+            "ci_low": -0.125745,
+            "ci_high": 0.032878,
+            "ci_level": 0.95,
+            "p_value": 0.319884,
+            "effect_size_dz": -0.2513,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "F Model F (F-REL) minus E Relabel + retrieval",
+            "p_holm": 0.566172,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 15,
+            "n_clusters": 15,
+            "mean_diff": -0.08,
+            "median_diff": -0.061652,
+            "ci_low": -0.157967,
+            "ci_high": -0.01061,
+            "ci_level": 0.95,
+            "p_value": 0.050097,
+            "effect_size_dz": -0.5337,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "F Model F (F-REL) minus E Relabel, no retrieval",
+            "p_holm": 0.200388,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 23,
+            "n_clusters": 23,
+            "mean_diff": 0.187813,
+            "median_diff": 0.178043,
+            "ci_low": 0.117049,
+            "ci_high": 0.262994,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 1.0213,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "D QLoRA repaired minus A Base Llama",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          }
+        ],
+        "full": [
+          {
+            "n": 28,
+            "n_clusters": 28,
+            "mean_diff": 0.29241,
+            "median_diff": 0.274391,
+            "ci_low": 0.250593,
+            "ci_high": 0.335902,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 2.4435,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus A Base Llama",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          },
+          {
+            "n": 28,
+            "n_clusters": 28,
+            "mean_diff": 0.246413,
+            "median_diff": 0.24094,
+            "ci_low": 0.206739,
+            "ci_high": 0.287541,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 2.1749,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus C PersonaRAG stand-in",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          },
+          {
+            "n": 28,
+            "n_clusters": 28,
+            "mean_diff": 0.052595,
+            "median_diff": 0.063887,
+            "ci_low": 0.019588,
+            "ci_high": 0.085725,
+            "ci_level": 0.95,
+            "p_value": 0.0055,
+            "effect_size_dz": 0.5771,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus D QLoRA repaired",
+            "p_holm": 0.022,
+            "verdict": "B higher"
+          },
+          {
+            "n": 28,
+            "n_clusters": 28,
+            "mean_diff": -0.050069,
+            "median_diff": -0.021959,
+            "ci_low": -0.085902,
+            "ci_high": -0.018059,
+            "ci_level": 0.95,
+            "p_value": 0.00885,
+            "effect_size_dz": -0.5302,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel + retrieval minus E Relabel, no retrieval",
+            "p_holm": 0.02655,
+            "verdict": "B lower"
+          },
+          {
+            "n": 30,
+            "n_clusters": 30,
+            "mean_diff": 0.188337,
+            "median_diff": 0.198256,
+            "ci_low": 0.145669,
+            "ci_high": 0.231107,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 1.5382,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel + retrieval minus C PersonaRAG stand-in",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          },
+          {
+            "n": 24,
+            "n_clusters": 24,
+            "mean_diff": -0.027182,
+            "median_diff": -0.00894,
+            "ci_low": -0.087333,
+            "ci_high": 0.02701,
+            "ci_level": 0.95,
+            "p_value": 0.372631,
+            "effect_size_dz": -0.1879,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "F Model F (F-REL) minus E Relabel + retrieval",
+            "p_holm": 0.372631,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 22,
+            "n_clusters": 22,
+            "mean_diff": -0.078734,
+            "median_diff": -0.088615,
+            "ci_low": -0.145385,
+            "ci_high": -0.013805,
+            "ci_level": 0.95,
+            "p_value": 0.034248,
+            "effect_size_dz": -0.4787,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "F Model F (F-REL) minus E Relabel, no retrieval",
+            "p_holm": 0.068496,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 30,
+            "n_clusters": 30,
+            "mean_diff": 0.235226,
+            "median_diff": 0.264584,
+            "ci_low": 0.189383,
+            "ci_high": 0.281456,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 1.7978,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "D QLoRA repaired minus A Base Llama",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          }
+        ],
+        "full_no_copy": [
+          {
+            "n": 19,
+            "n_clusters": 19,
+            "mean_diff": 0.303615,
+            "median_diff": 0.287885,
+            "ci_low": 0.246712,
+            "ci_high": 0.361277,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 2.2886,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus A Base Llama",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          },
+          {
+            "n": 19,
+            "n_clusters": 19,
+            "mean_diff": 0.233792,
+            "median_diff": 0.181615,
+            "ci_low": 0.182108,
+            "ci_high": 0.290693,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 1.8188,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus C PersonaRAG stand-in",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          },
+          {
+            "n": 19,
+            "n_clusters": 19,
+            "mean_diff": 0.055054,
+            "median_diff": 0.053048,
+            "ci_low": 0.012934,
+            "ci_high": 0.100935,
+            "ci_level": 0.95,
+            "p_value": 0.022349,
+            "effect_size_dz": 0.5477,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel, no retrieval minus D QLoRA repaired",
+            "p_holm": 0.067047,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 18,
+            "n_clusters": 18,
+            "mean_diff": -0.060794,
+            "median_diff": -0.032977,
+            "ci_low": -0.104937,
+            "ci_high": -0.019034,
+            "ci_level": 0.95,
+            "p_value": 0.013849,
+            "effect_size_dz": -0.6463,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel + retrieval minus E Relabel, no retrieval",
+            "p_holm": 0.055396,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 20,
+            "n_clusters": 20,
+            "mean_diff": 0.17749,
+            "median_diff": 0.175582,
+            "ci_low": 0.115402,
+            "ci_high": 0.241592,
+            "ci_level": 0.95,
+            "p_value": 0.0002,
+            "effect_size_dz": 1.2288,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "E Relabel + retrieval minus C PersonaRAG stand-in",
+            "p_holm": 0.001,
+            "verdict": "B higher"
+          },
+          {
+            "n": 17,
+            "n_clusters": 17,
+            "mean_diff": -0.024512,
+            "median_diff": -0.007021,
+            "ci_low": -0.106014,
+            "ci_high": 0.043712,
+            "ci_level": 0.95,
+            "p_value": 0.551972,
+            "effect_size_dz": -0.1505,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "F Model F (F-REL) minus E Relabel + retrieval",
+            "p_holm": 0.551972,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 15,
+            "n_clusters": 15,
+            "mean_diff": -0.105461,
+            "median_diff": -0.130234,
+            "ci_low": -0.200724,
+            "ci_high": -0.014838,
+            "ci_level": 0.95,
+            "p_value": 0.044748,
+            "effect_size_dz": -0.5628,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "F Model F (F-REL) minus E Relabel, no retrieval",
+            "p_holm": 0.089496,
+            "verdict": "no clear difference"
+          },
+          {
+            "n": 23,
+            "n_clusters": 23,
+            "mean_diff": 0.224238,
+            "median_diff": 0.234402,
+            "ci_low": 0.16292,
+            "ci_high": 0.285915,
+            "ci_level": 0.95,
+            "p_value": 5e-05,
+            "effect_size_dz": 1.4462,
+            "share_zero_diff": 0.0,
+            "note": null,
+            "B_minus_A": "D QLoRA repaired minus A Base Llama",
+            "p_holm": 0.0004,
+            "verdict": "B higher"
+          }
+        ]
+      },
+      "robustness": {
+        "style_vs_full": 0.942857142857143,
+        "style_vs_style_nonum": 0.942857142857143,
+        "style_vs_style_no_copy": 1.0,
+        "style_C0.3_vs_style_C1.0": 0.942857142857143,
+        "style_C3.0_vs_style_C1.0": 1.0,
+        "draft_level_spearman_P_vs_negative_PUK28_voice_distance": {
+          "rho": 0.04404210727633498,
+          "p": 0.5399139618717315,
+          "n": 196
+        },
+        "system_level_spearman_P_vs_negative_PUK28_voice_distance": 1.0,
+        "draft_level_spearman_P_vs_total_draft_words": {
+          "rho": -0.3029659419375944,
+          "p": 1.5868579192215508e-05
+        },
+        "within_system_spearman_P_vs_draft_words": {
+          "A Base Llama": {
+            "rho": -0.43931874230881685,
+            "p": 0.015142698054047476,
+            "n": 30
+          },
+          "C PersonaRAG stand-in": {
+            "rho": -0.24668826369934777,
+            "p": 0.18878801458854,
+            "n": 30
+          },
+          "E Relabel + retrieval": {
+            "rho": -0.09060472808251303,
+            "p": 0.44265171572242545,
+            "n": 74
+          },
+          "E Relabel, no retrieval": {
+            "rho": -0.17286657149418344,
+            "p": 0.14079121718824428,
+            "n": 74
+          }
+        }
+      },
+      "n_drafts_scored": {
+        "A Base Llama": 30,
+        "C PersonaRAG stand-in": 30,
+        "D QLoRA repaired": 86,
+        "E Relabel, no retrieval": 74,
+        "E Relabel + retrieval": 74,
+        "F Model F (F-REL)": 24
+      },
+      "n_drafts_dropped_for_copy": {
+        "A Base Llama": 3,
+        "C PersonaRAG stand-in": 3,
+        "D QLoRA repaired": 25,
+        "E Relabel, no retrieval": 24,
+        "E Relabel + retrieval": 23,
+        "F Model F (F-REL)": 6
+      }
+    }
+  },
+  "top_features": {
+    "blog_style": {
+      "toward_lemkin": [
+        "\u2014",
+        "* \u2014",
+        "# *",
+        "#",
+        ". .",
+        "\"",
+        "* . the",
+        ". the *",
+        "* * \u2014",
+        ". the",
+        "the * *",
+        "really",
+        "you are",
+        "%",
+        "+",
+        "# %",
+        "\u2014 *",
+        ". . .",
+        "* and",
+        "# * *"
+      ],
+      "toward_other": [
+        ". # .",
+        ";",
+        "\\",
+        "by",
+        "* . #",
+        "* ;",
+        ". #",
+        ", because",
+        "to *",
+        ". in",
+        "- -",
+        "like",
+        "the * of",
+        "* . in",
+        "by *",
+        "# \\",
+        "is that",
+        "* to *",
+        "would",
+        "to * *"
+      ]
+    },
+    "blog_style_nonum": {
+      "toward_lemkin": [
+        "\u2014",
+        "* \u2014",
+        ". . .",
+        "\"",
+        "* . the",
+        ". the *",
+        "* * \u2014",
+        "the * *",
+        ". the",
+        "really",
+        ". * .",
+        "you are",
+        "\u2014 *",
+        ": \"",
+        "/",
+        "almost",
+        ". not",
+        "at least",
+        "the *",
+        "* and"
+      ],
+      "toward_other": [
+        ". . *",
+        "\\",
+        ";",
+        "* . .",
+        "by",
+        "* ;",
+        "the * of",
+        ", because",
+        "to *",
+        "like",
+        ". in",
+        "is that",
+        "- -",
+        ". \\",
+        "* . in",
+        "to * *",
+        "by *",
+        "things",
+        "* to *",
+        "as"
+      ]
+    }
+  }
+}
