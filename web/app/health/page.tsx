@@ -36,6 +36,7 @@ export default function HealthPage() {
   return (
     <>
       <PageHeader
+        eyebrow="Operations"
         title="System health"
         subtitle="Status of the API, vector database, models and pipeline services."
         actions={
@@ -62,7 +63,7 @@ export default function HealthPage() {
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((s) => (
-          <Card key={s.name}>
+          <Card key={s.name} className="lift">
             <div className="flex items-center justify-between gap-3">
               <h2 className="font-medium">{s.name}</h2>
               <StatusBadge state={s.status} />

@@ -5,11 +5,14 @@ import {
   MOCK_MODELS,
   MOCK_PERSONA,
   MOCK_STATS,
+  mockAsk,
   mockGrammarCheck,
   mockGenerate,
   mockSearch,
 } from "./mock";
 import type {
+  AskRequest,
+  AskResult,
   EvaluationData,
   DraftMetrics,
   DraftChecks,
@@ -188,7 +191,7 @@ interface RawGenerate {
   };
 }
 
-const SOURCE_TYPES: SourceType[] = ["blog", "linkedin", "x", "youtube"];
+const SOURCE_TYPES: SourceType[] = ["blog", "linkedin", "x", "youtube", "interview"];
 
 function mapSource(s: RawSource, i: number): Source {
   const t = (s.source_type ?? "unknown").toLowerCase();
@@ -324,4 +327,33 @@ export async function checkGrammar(text: string): Promise<GrammarCheckResult> {
     method: "POST",
     body: JSON.stringify({ text }),
   });
+}
+
+// ---- Ask a persona (proposed: POST /ask) ----
+// Source-grounded answers for the Elon Musk persona. The retrieval index exists on Pukhraj's
+// feature/elon-musk-etl branch, but no API route serves it yet, so live mode reports
+// "not available" instead of showing anything made up.
+export async function askPersona(req: AskRequest): Promise<AskResult> {
+  if (IS_MOCK) {
+    await wait(1100);
+    return mockAsk(req);
+  }
+  const started = performance.now();
+  const raw = await request<{
+    answer?: string;
+    sources?: RawSource[];
+    model?: string;
+    latency_ms?: number;
+  }>("/ask", { method: "POST", body: JSON.stringify(req) });
+  const answer = raw.answer ?? "";
+  if (!answer.trim()) {
+    throw new ApiError("The model returned an empty answer.", 502, "Try again or rephrase the question.");
+  }
+  return {
+    answer,
+    sources: (raw.sources ?? []).map(mapSource),
+    model: raw.model ?? "default",
+    latencyMs: raw.latency_ms ?? Math.round(performance.now() - started),
+    mock: false,
+  };
 }

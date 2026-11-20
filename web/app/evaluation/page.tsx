@@ -18,6 +18,7 @@ export default function EvaluationPage() {
   return (
     <>
       <PageHeader
+        eyebrow="Research"
         title="Evaluation evidence"
         subtitle="Versioned research results, displayed without scoring your draft or calling an LLM judge."
       />
@@ -33,7 +34,7 @@ export default function EvaluationPage() {
           </Card>
 
           {data.groups.map((group) => (
-            <Card key={group.id}>
+            <Card key={group.id} className="fade-in">
               <div className="flex flex-wrap items-start justify-between gap-3">
                 <div>
                   <h2 className="font-semibold">{group.title}</h2>
@@ -46,7 +47,7 @@ export default function EvaluationPage() {
               <p className="mt-3 text-sm leading-relaxed text-mute">{group.summary}</p>
               <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
                 {group.metrics.map((metric) => (
-                  <div key={metric.label} className="rounded-xl border border-line bg-bg p-3">
+                  <div key={metric.label} className="rounded-xl border border-line bg-card-2/60 p-3">
                     <p className="text-xs text-mute">{metric.label}</p>
                     <p className="mt-1 text-lg font-semibold tabular-nums">{metric.value}</p>
                     <p className="mt-1 text-xs leading-relaxed text-mute">{metric.detail}</p>
@@ -58,12 +59,12 @@ export default function EvaluationPage() {
                 <div className="mt-5 overflow-x-auto">
                   <p className="mb-2 text-sm font-medium">{group.comparison.label}</p>
                   <table className="w-full text-left text-sm">
-                    <thead className="text-xs uppercase tracking-wide text-mute">
+                    <thead className="text-xs font-semibold uppercase tracking-wider text-mute">
                       <tr>{group.comparison.columns.map((column) => <th key={column} className="px-2 py-2 font-medium">{column}</th>)}</tr>
                     </thead>
                     <tbody>
                       {group.comparison.rows.map((row) => (
-                        <tr key={row[0]} className="border-t border-line">
+                        <tr key={row[0]} className="border-t border-line transition hover:bg-card-2/60">
                           {row.map((value, index) => <td key={`${row[0]}-${index}`} className="px-2 py-2 tabular-nums">{value}</td>)}
                         </tr>
                       ))}

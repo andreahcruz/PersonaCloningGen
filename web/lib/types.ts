@@ -18,7 +18,7 @@ export const FORMATS: FormatOption[] = [
   { id: "youtube_script", label: "YouTube script", blurb: "Spoken, with hooks" },
 ];
 
-export type SourceType = "blog" | "linkedin" | "x" | "youtube" | "unknown";
+export type SourceType = "blog" | "linkedin" | "x" | "youtube" | "interview" | "unknown";
 export type GenerationMethod = "baseline" | "personarag" | "qlora" | "model_f";
 
 /** Readiness of the optional LightRAG + Relabel deployment path. */
@@ -182,6 +182,22 @@ export interface GrammarCheckResult {
   issue_count: number;
   issues_per_100_words: number;
   issues: GrammarIssue[];
+}
+
+/** Request for the source-grounded "ask" mode (Elon Musk persona). */
+export interface AskRequest {
+  persona: string;
+  question: string;
+  k: number;
+}
+
+export interface AskResult {
+  answer: string;
+  sources: Source[];
+  model: string;
+  latencyMs: number | null;
+  /** True when the data is sample data, not real model output. */
+  mock: boolean;
 }
 
 export interface HistoryItem {

@@ -22,6 +22,7 @@ the nginx config on `pukhraj/integration-docs`). Local dev without a proxy: `htt
 | `GET /sources` | Proposed | Sources page | "Not available yet" message |
 | `GET /statistics` | Proposed | Dashboard | Dashboard shows a notice |
 | `GET /evaluation` | Proposed | Evaluation page | Shows the reported run bundled with the app |
+| `POST /ask` | Proposed | Elon Musk persona (ask mode) | Shows "not connected yet" in live mode, sample text in demo mode |
 
 ## Endpoints
 
@@ -182,3 +183,16 @@ that is committed today: `host_finetune/output/eval/gold_rag_summary_with_gold.j
 
 The current backend allows all origins, so the browser can call it directly in local dev. Behind
 nginx the `/api` proxy avoids CORS entirely. Restrict `allow_origins` before any cloud deployment.
+
+### `POST /ask` (proposed)
+
+Source-grounded answers for the Elon Musk persona. The retrieval index and a question-answering script
+exist on `feature/elon-musk-etl` (`persona_pipeline/jobs/elon_rag.py`, `elon_chat.py`), but no API route
+serves them yet. The answer cites passages as `[Source 1]`, `[Source 2]` and does not write as Elon Musk.
+
+Request: `{ "persona": "elon_musk", "question": "...", "k": 4 }`
+
+Response: `{ "answer": "...", "sources": [{ "id", "text", "score", "source_type", "title", "url" }], "model": "llama3.1", "latency_ms": 1200 }`
+
+`source_type` is `x` (tweets) or `interview` (Lex Fridman transcripts). Until this route exists the page says so
+instead of showing anything made up.

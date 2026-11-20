@@ -57,6 +57,7 @@ export default function SourcesPage() {
   return (
     <>
       <PageHeader
+        eyebrow="Knowledge base"
         title="Sources and knowledge base"
         subtitle="Browse the passages the generator retrieves from. This is the evidence that the drafts use RAG."
       />
@@ -78,7 +79,7 @@ export default function SourcesPage() {
               aria-pressed={type === t.id}
               className={`rounded-full border px-3 py-1 text-sm transition ${
                 type === t.id
-                  ? "border-primary bg-primary/15 text-primary"
+                  ? "border-primary bg-primary/10 font-medium text-primary"
                   : "border-line text-mute hover:border-primary/50"
               }`}
             >
@@ -106,7 +107,7 @@ export default function SourcesPage() {
         <ul className="grid gap-4 lg:grid-cols-2">
           {items.map((s) => (
             <li key={s.id}>
-              <Card className="h-full">
+              <Card className="lift h-full">
                 <div className="mb-2 flex items-center justify-between gap-2">
                   <SourceTag type={s.sourceType} />
                   {s.date ? <span className="text-xs text-mute">{s.date}</span> : null}

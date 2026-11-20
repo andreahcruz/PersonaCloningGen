@@ -19,8 +19,8 @@ const METHOD_LABEL: Record<GenerationMethod, string> = {
 
 function metric(value: string | number, label: string) {
   return (
-    <div className="rounded-lg border border-line bg-bg px-2 py-2">
-      <p className="text-[11px] uppercase tracking-wide text-mute">{label}</p>
+    <div className="rounded-lg border border-line bg-card-2/60 px-2 py-2">
+      <p className="text-[11px] font-semibold uppercase tracking-wider text-mute">{label}</p>
       <p className="mt-1 text-sm font-medium tabular-nums">{value}</p>
     </div>
   );
@@ -45,7 +45,7 @@ export function LiveComparison({ entries }: { entries: ComparisonEntry[] }) {
         {entries.map((entry) => {
           const result = entry.result;
           return (
-            <Card key={entry.method} className="min-w-0">
+            <Card key={entry.method} className="lift min-w-0">
               <div className="flex items-start justify-between gap-3">
                 <div>
                   <h3 className="font-medium">{METHOD_LABEL[entry.method]}</h3>
@@ -85,7 +85,7 @@ export function LiveComparison({ entries }: { entries: ComparisonEntry[] }) {
                       ? "Returned sources indicate retrieval was supplied, not that every claim is verified."
                       : "This method does not use retrieved source chunks."}
                   </p>
-                  <div className="mt-4 max-h-80 overflow-y-auto whitespace-pre-wrap wrap-break-word rounded-xl border border-line bg-bg p-3 text-sm leading-relaxed">
+                  <div className="mt-4 max-h-80 overflow-y-auto whitespace-pre-wrap wrap-break-word rounded-xl border border-line bg-card-2/60 p-3 text-sm leading-relaxed">
                     {result.content}
                   </div>
                   {result.sources.length ? (
@@ -93,7 +93,7 @@ export function LiveComparison({ entries }: { entries: ComparisonEntry[] }) {
                       <summary className="cursor-pointer text-mute">Show returned PersonaRAG sources</summary>
                       <ul className="mt-2 space-y-2">
                         {result.sources.map((source) => (
-                          <li key={source.id} className="rounded-lg border border-line bg-bg p-2">
+                          <li key={source.id} className="rounded-lg border border-line bg-card-2/60 p-2">
                             <div className="flex items-center justify-between gap-2">
                               <SourceTag type={source.sourceType} />
                               {source.title ? <span className="truncate text-mute">{source.title}</span> : null}

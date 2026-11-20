@@ -41,6 +41,7 @@ export default function DashboardPage() {
   return (
     <>
       <PageHeader
+        eyebrow="Overview"
         title="Dashboard"
         subtitle="The corpus behind the generator, current service status and your recent drafts."
         actions={

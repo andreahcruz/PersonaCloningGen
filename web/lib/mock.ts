@@ -1,4 +1,6 @@
 import type {
+  AskRequest,
+  AskResult,
   EvaluationData,
   FormatId,
   GenerateRequest,
@@ -164,4 +166,62 @@ export const EVALUATION: EvaluationData = {
 export function mockGrammarCheck(text: string): GrammarCheckResult {
   const wordCount = text.trim().split(/\s+/).filter(Boolean).length;
   return { word_count: wordCount, issue_count: 0, issues_per_100_words: 0, issues: [] };
+}
+
+// ---- Elon Musk persona (sample data for demo mode only) ----
+// The real index (Pukhraj's feature/elon-musk-etl) holds public tweets and Lex Fridman interview
+// transcripts. These samples are placeholders: they are not quotes and not real model output.
+
+export const MOCK_MUSK_PERSONA: PersonaProfile = {
+  name: "Elon Musk",
+  source: "Sample profile: public tweets and interview transcripts",
+  summary:
+    "Source-grounded answers about Elon Musk from public tweets and long-form interview transcripts. It cites what it retrieved and does not write as him.",
+  mock: true,
+};
+
+const MUSK_SAMPLE: Source[] = [
+  {
+    id: "musk-sample-1",
+    sourceType: "interview",
+    title: "Sample interview excerpt",
+    score: 0.84,
+    text: "[Sample text] A placeholder passage standing in for a long-form interview transcript chunk about how the company approaches hard engineering problems.",
+  },
+  {
+    id: "musk-sample-2",
+    sourceType: "x",
+    title: "Sample tweet excerpt",
+    score: 0.78,
+    text: "[Sample text] A placeholder passage standing in for a short public post on the same theme.",
+  },
+  {
+    id: "musk-sample-3",
+    sourceType: "interview",
+    title: "Sample interview excerpt",
+    score: 0.71,
+    text: "[Sample text] A placeholder passage standing in for a second transcript chunk with more context.",
+  },
+  {
+    id: "musk-sample-4",
+    sourceType: "x",
+    title: "Sample tweet excerpt",
+    score: 0.64,
+    text: "[Sample text] Another placeholder public post, shown only so the source list has something to display.",
+  },
+];
+
+export function mockAsk(req: AskRequest): AskResult {
+  const sources = MUSK_SAMPLE.slice(0, Math.max(1, Math.min(req.k, MUSK_SAMPLE.length)));
+  const answer =
+    `[Demo answer, not real model output]
+
+` +
+    `Question: ${req.question}
+
+` +
+    `Once the backend is connected, the answer appears here. It is written from the passages retrieved ` +
+    `below and cites them inline, for example [Source 1] and [Source 2]. If the sources do not cover the ` +
+    `question, it says so instead of guessing.`;
+  return { answer, sources, model: "llama3.1", latencyMs: 1100, mock: true };
 }

@@ -37,12 +37,13 @@ export default function AboutPage() {
   return (
     <>
       <PageHeader
+        eyebrow="DATA 298B"
         title="About the project"
         subtitle="DATA 298B, Group 2. AI-powered content generation inspired by Jason Lemkin's writing style."
       />
       <div className="grid gap-4 md:grid-cols-2">
         {SECTIONS.map((s) => (
-          <Card key={s.title}>
+          <Card key={s.title} className="lift">
             <h2 className="font-semibold">{s.title}</h2>
             <p className="mt-2 text-sm leading-relaxed text-mute">{s.body}</p>
           </Card>

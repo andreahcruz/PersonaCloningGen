@@ -26,6 +26,22 @@ NEXT_PUBLIC_API_BASE=http://localhost:8001
 Port 8001 is the backend published by `docker-compose.yml`. Restart `npm run dev` after changing
 env files.
 
+## Look and feel
+
+- Light theme by default (cool white and graphite, IBM Plex type, one blue accent) with a dark theme button in the top
+  bar. Elon Musk mode uses a deep green accent instead.
+  The choice is remembered in the browser.
+- A persona switch (Jason Lemkin or Elon Musk) in the top bar changes the colours, the home page and the Studio.
+  Lemkin writes drafts. Elon Musk is a source-grounded "ask" mode that cites tweets and interview transcripts and
+  does not write as him. The Musk screen shows sample data in demo mode and says "not connected yet" in live
+  mode, because the API route (`POST /ask`, see the contract) is not built.
+- Studio: tap-to-fill idea chips and recent briefs, a brief-readiness meter, a typewriter reveal, a real elapsed
+  timer while a draft is written, and tabs for Draft, Preview (post, thread, article or script layout), Checks and
+  Sources. Ctrl or Cmd + Enter generates.
+- Colours are CSS variables in `app/globals.css`. The theme and persona live in `lib/prefs.ts`, the persona
+  settings in `lib/personas.ts`, animation helpers in `lib/motion.ts`. Motion is turned off for visitors who ask
+  their system for reduced motion.
+
 ## Pages
 
 | Route | What it does |

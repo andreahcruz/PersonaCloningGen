@@ -1,58 +1,347 @@
 @import "tailwindcss";
 
-@theme {
-  --color-bg: #0b1020;
-  --color-card: #121a2b;
-  --color-card-2: #17213a;
-  --color-line: #1f2a44;
-  --color-primary: #4f8cff;
-  --color-violet: #8b5cf6;
-  --color-ok: #22c55e;
-  --color-warn: #f59e0b;
-  --color-bad: #ef4444;
-  --color-ink: #f8fafc;
-  --color-mute: #94a3b8;
-  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+/*
+  Design tokens live in CSS variables, so the whole app changes by switching two attributes on <html>:
+    data-theme   = "light" | "dark"
+    data-persona = "lemkin" | "musk"
+  Tailwind utilities such as bg-card, text-mute and border-line read these variables.
+*/
+@theme inline {
+  --color-bg: var(--bg);
+  --color-panel: var(--panel);
+  --color-card: var(--card);
+  --color-card-2: var(--card-2);
+  --color-line: var(--line);
+  --color-primary: var(--primary);
+  --color-primary-ink: var(--primary-ink);
+  --color-violet: var(--violet);
+  --color-ok: var(--ok);
+  --color-warn: var(--warn);
+  --color-bad: var(--bad);
+  --color-ink: var(--ink);
+  --color-text: var(--ink);
+  --color-mute: var(--mute);
+  --font-sans: var(--font-plex), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 
-:root {
+/* Tighter corners than the Tailwind defaults: a more serious, product-like feel. */
+@theme {
+  --radius-lg: 0.4rem;
+  --radius-xl: 0.5rem;
+  --radius-2xl: 0.65rem;
+  --radius-3xl: 0.85rem;
+}
+
+/* ---------- Jason Lemkin, light: cool white, graphite, one blue ---------- */
+:root,
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f5f6f8;
+  --panel: #edeff3;
+  --card: #ffffff;
+  --card-2: #f2f4f7;
+  --line: #dde1e8;
+  --primary: #1f55d6;
+  --primary-ink: #ffffff;
+  --violet: #5b4fc7;
+  --ok: #15803d;
+  --warn: #9a5a06;
+  --bad: #c4302b;
+  --ink: #0f1720;
+  --mute: #566274;
+  --shadow-soft: 0 1px 2px rgba(15, 23, 32, 0.05);
+  --shadow-lift: 0 1px 2px rgba(15, 23, 32, 0.06), 0 6px 18px rgba(15, 23, 32, 0.08);
+  --display-weight: 600;
+  --display-tracking: -0.025em;
+}
+
+/* ---------- Jason Lemkin, dark: graphite ---------- */
+:root[data-theme="dark"] {
   color-scheme: dark;
+  --bg: #0b0e13;
+  --panel: #0f131a;
+  --card: #121720;
+  --card-2: #181e29;
+  --line: #242c39;
+  --primary: #6b9bff;
+  --primary-ink: #07101f;
+  --violet: #a597ff;
+  --ok: #4ade80;
+  --warn: #f0b54a;
+  --bad: #f87171;
+  --ink: #edf1f6;
+  --mute: #98a4b5;
+  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-lift: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 22px rgba(0, 0, 0, 0.35);
+}
+
+/* ---------- Elon Musk, light: neutral with deep green ---------- */
+:root[data-persona="musk"][data-theme="light"] {
+  --bg: #f4f6f6;
+  --panel: #ecefef;
+  --card: #ffffff;
+  --card-2: #f0f3f3;
+  --line: #dbe1e1;
+  --primary: #0f766e;
+  --ink: #0e1514;
+  --mute: #54635f;
+}
+
+/* ---------- Elon Musk, dark ---------- */
+:root[data-persona="musk"][data-theme="dark"] {
+  --bg: #0a0e0e;
+  --panel: #0e1313;
+  --card: #111717;
+  --card-2: #172020;
+  --line: #222d2c;
+  --primary: #2dd4bf;
+  --primary-ink: #04201c;
+  --violet: #7dd3fc;
+  --ink: #ecf3f1;
+  --mute: #93a5a1;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--color-bg);
-  color: var(--color-ink);
+  background: var(--bg);
+  color: var(--ink);
   font-family: var(--font-sans);
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 ::selection {
-  background: rgba(79, 140, 255, 0.35);
+  background: color-mix(in srgb, var(--primary) 28%, transparent);
 }
 
 input,
 select,
 textarea {
-  color-scheme: dark;
+  color-scheme: inherit;
 }
 
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.font-display {
+  font-weight: var(--display-weight);
+  letter-spacing: var(--display-tracking);
+}
+
+/* ---------- Surfaces (kept as shared class names, now flat and quiet) ---------- */
+.page-glow {
+  position: relative;
+}
+
+.glass {
+  background: var(--card);
+}
+
+.text-gradient {
+  color: var(--primary);
+}
+
+.bg-accent-gradient {
+  background: var(--primary);
+}
+
+.shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+/* A very faint grid behind the hero, fading out toward the bottom. */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--ink) 6%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--ink) 6%, transparent) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(to bottom, #000 0%, transparent 85%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 85%);
+}
+
+.lift {
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.lift:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lift);
+  border-color: color-mix(in srgb, var(--primary) 45%, var(--line));
+}
+
+.spot {
+  position: relative;
+}
+
+/* ---------- Motion ---------- */
 .fade-in {
-  animation: fade-in 0.25s ease-out both;
+  animation: fade-in 0.3s ease-out both;
+}
+.rise {
+  animation: rise 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.pop {
+  animation: pop 0.25s ease-out both;
+}
+.float {
+  animation: none;
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--card-2) 0%,
+    color-mix(in srgb, var(--ink) 7%, var(--card-2)) 50%,
+    var(--card-2) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s linear infinite;
+}
+
+.caret::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 1.05em;
+  margin-left: 2px;
+  vertical-align: -0.16em;
+  background: var(--primary);
+  animation: blink 0.9s steps(2) infinite;
+}
+
+.dot-pulse {
+  position: relative;
+}
+.dot-pulse::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: inherit;
+  animation: ping 1.6s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Toggle switch */
+.switch {
+  position: relative;
+  width: 2.4rem;
+  height: 1.4rem;
+  border-radius: 9999px;
+  background: color-mix(in srgb, var(--ink) 22%, var(--card));
+  transition: background-color 0.2s ease;
+}
+.switch::after {
+  content: "";
+  position: absolute;
+  top: 0.2rem;
+  left: 0.2rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 9999px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s cubic-bezier(0.2, 1, 0.3, 1);
+}
+.switch[aria-checked="true"] {
+  background: var(--primary);
+}
+.switch[aria-checked="true"]::after {
+  transform: translateX(1rem);
+}
+
+/* Range slider that matches the theme. */
+input[type="range"].range {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--primary) var(--fill, 30%), var(--line) var(--fill, 30%));
+  outline-offset: 6px;
+}
+input[type="range"].range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background: var(--card);
+  border: 2px solid var(--primary);
+  box-shadow: var(--shadow-soft);
+  cursor: grab;
+}
+input[type="range"].range::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 9999px;
+  background: var(--card);
+  border: 2px solid var(--primary);
+  cursor: grab;
 }
 
 @keyframes fade-in {
   from {
     opacity: 0;
-    transform: translateY(4px);
+    transform: translateY(3px);
   }
   to {
     opacity: 1;
     transform: none;
   }
 }
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+@keyframes ping {
+  75%,
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
 
 @media (prefers-reduced-motion: reduce) {
-  .fade-in {
+  html {
+    scroll-behavior: auto;
+  }
+  .fade-in,
+  .rise,
+  .pop,
+  .shimmer,
+  .caret::after,
+  .dot-pulse::after {
     animation: none;
+  }
+  .lift:hover {
+    transform: none;
   }
 }
